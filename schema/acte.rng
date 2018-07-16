@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<!--
+À faire : 
+* meilleure combinaison des schémas à l'import, voir <notAllowed>
+
+-->
+<grammar
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+ >
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h1 id="acte.rng">Un acte diplomatique en TEI</h1>
+      <ul class="auteurs">
+        <li>[OGJ] Olivier Guyotjeannin (École nationale des chartes) direction scientifique</li>
+        <li>[OC] Olivier Canteaut (École nationale des chartes) direction éditoriale</li>
+        <li>[VJ] <a onmouseover="this.href='mailto'+'\x3A'+'vincent.jolivet'+'\x40'+'enc.sorbonne.fr'">Vincent Jolivet</a>  (École nationale des chartes) maintenance</li>
+        <li>[FG] <a onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes)</li>
+        <li>[CD] Camille Desenclos (École nationale des chartes) noms propres, apparat critique, parties du discours</li>
+        <li>[JC] Joana Casenave (École nationale des chartes) parties du discours</li>
+        <li>[RD] Richard Delaplace (Langues'O) tableau de la tradition (témoins, &lt;witness>)</li>
+        <li>[CH] Clément Hurel (École nationale des chartes) contribution technique</li>
+      </ul>
+    <p>
+  Ce schéma est conçu comme une bibliothèque de composants pour simplifier la définition
+  d'un projet d'édition d'actes en TEI. Il ne sert à rien seul, il vaut importé par un autre
+  schéma. Chaque projet doit pouvoir éviter de redéfinir les mêmes éléments, afin qu'une même chose
+  soit nommée de la même manière (avec les mêmes balises). La tradition de l'édition critique accepte
+  des variations nombreuses, avec cependant des structures communes qu'il vaut la peine de spécifier 
+  avec précision, cette définition facilitant l'exploitation plus large des corpus par leur normalisation.
+    </p>
+  <!--  
+    <ul>
+      <li><i>acte.front</i>, un cartouche d'entête avec différentes métadonnées obligatoires ou optionnelles (titre, date, analyse...)</li>
+      <li><i>acte.body</i>, un corps de texte (transcription, traduction...)</li>
+      <li><i>acte.back</i>, un pied ne constituant ni le texte, ni les métadonnées (notes, reparques, commentaires...)</li>
+    </ul>
+  -->
+  
+    <h2>Structure générale d'un recueil d'actes</h2>
+    
+  </a:documentation>
+  <start combine="choice">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">La structure générale d'un recueil d'actes comportera obligatoire un avant-texte avec titre et résumé (&lt;head>, &lt;argument>) afin d'assurer la génération d'un site web. L'élément racine portera en attribut un identifiant de fichier, unique pour l'éditeur.</a:documentation>
+    <element name="TEI">
+      <attribute name="xml:id"/>
+      <ref name="teiHeader"/>
+      <element name="text">
+        <ref name="front"/>
+        <ref name="acte.group"/>
+        <optional>
+          <ref name="back"/>
+        </optional>
+      </element>
+    </element>
+  </start>
+
+  <a:example>
+<TEI>
+  <teiHeader>...</teiHeader>
+  <text>
+    <front>
+      <head>Cartulaire ...</head>
+      <argument>
+        <p>Petit texte pour page d'accueil</p>
+      </argument>
+    </front>
+    <group>
+      <head>titre court</head>
+      <text>acte 1</text>
+      <text>acte 2</text>
+      <group>
+        <head>Possibilité de sous section</head>
+        <text>...</text>
+      </group>
+    </group>
+    <back>Index et autres tables</back>
+  </text>
+</TEI>
+  </a:example>
+    
+  <define name="acte.group">
+    <element name="group">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+          Une collection d'actes, par exemple un cartulaire, est considéré comme un groupe &lt;group>
+          de textes &lt;text>. Les actes sont souvent groupés en série linéaire,
+          il arrive cependant que des éditions (imprimées ou manuscrites)
+          définissent une organisation hiérarchique de la collection. En ce cas ces sections peuvent
+          être des groupes titrés &lt;head>, titres conçus pour pouvoir être utilisés dans une table des matières.
+        </p>
+      </a:documentation>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>tome</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <optional>
+        <ref name="pb"/>
+      </optional>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <optional>
+        <ref name="argument"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="acte"/>
+          <ref name="acte.group"/>
+          <ref name="pb"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Notice d'acte</h2>
+    <p>
+      Par notice d'acte on entendra le cartouche d'entête établi par l'éditeur.
+      L'information de ces nombreux champs est
+      inégalement disponible selon la provenance du texte électronique
+      (numérisation d'édition imprimée, base de données, édition sur l'original...).
+      Il est par contre essentiel de choisir les mêmes balises pour la même information, afin de simplifier
+      le traitement de différentes lots (exemple : rangement par date, table des actes, classement par type…).
+      On distinguera deux groupes d'informations : ce qui concerne l'acte tel qu'il a eu lieu (analyse diplomatique),
+      et ce qui concerne les témoins écrits de cet acte (codicologie). 
+    </p>
+    <p>
+      Quant à l'analyse diplomatique, l'attention a d'abord porté sur les consignes d'encodage des dates.
+      L'indication normalisée d'une langue est généralement portée par la transcription (quand il y en a une).
+      Un vocabulaire qualifiant la nature d'un acte est en cours d'élaboration sur les cartulaires franciliens. 
+      Pour tout acte, l'indication d'un lieu (avec identifiant INSEE), serait largement
+      souhaitée, mais l'effort n'est pas encore planifié.
+      La définition de types d'action juridique est souhaitée, mais pose encore trop de problèmes entre historiens 
+      pour qu'une liste soit imposée. 
+    </p>
+  </a:documentation>
+  
+  <define name="acte.no">
+    <element name="titlePart">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Numéro de l'acte. Peut être sous la forme d'un nombre ou d'un nom de folio.
+      Contient parfois des notes. Peut être répété.
+<!--      
+      <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-title">dc:title</a>&gt;, titre d'un acte, contiendra
+      aussi le titre du cartulaire dont il est extrait (voir teiHeader).</blockquote>
+-->
+      </a:documentation>
+      <attribute name="type">
+        <value>num</value>
+      </attribute>
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+ 
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Balisage des parties du discours diplomatique</h2>    
+  </a:documentation>  
+  <define name="diplomatique">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <p>Identification des parties du discours.</p>
+    </a:documentation>
+    <oneOrMore>
+      <choice>
+        <element name="seg">
+          <attribute name="function">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+              <p>
+                Définitions <a href="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</a> (G. Vogeler), pour chaque valeur de @function :<br/>
+                <ul>
+                  <li><i>invocation</i>, <a href="http://www.cei.lmu.de/VID/VID.php?185" target="blank">No. 185</a></li>
+                  <li><i>intitulatio</i>, <a href="http://www.cei.lmu.de/VID/VID.php?187" target="blank">No. 187</a></li>
+                  <li><i>address</i>, <a href="http://www.cei.lmu.de/VID/VID.php?192" target="blank">No. 192</a></li>
+                  <li><i>salutatio</i>, <a href="http://www.cei.lmu.de/VID/VID.php?194" target="blank">No. 194</a></li>
+                  <li><i>notification</i>, <a href="http://www.cei.lmu.de/VID/VID.php?notification" target="blank">No. 196b</a></li>
+                  <li><i>preamble</i>, <a href="http://www.cei.lmu.de/VID/VID.php?196" target="blank">No. 196</a></li>
+                  <li><i>corroboration</i>, <a href="http://www.cei.lmu.de/VID/VID.php?246" target="blank">No. 246</a></li>
+                  <li><i>witnessList</i>, <a href="http://www.cei.lmu.de/VID/VID.php?263" target="blank">No. 263</a></li>
+                  <li><i>dating</i>, <a href="http://www.cei.lmu.de/VID/VID.php?561" target="blank">No. 561</a></li>
+                  <li><i>apprecatio</i>, <a href="http://www.cei.lmu.de/VID/VID.php?251" target="blank">No. 251</a></li>
+                  <li><i>subscriptions</i>, <a href="http://www.cei.lmu.de/VID/VID.php?254" target="blank">No. 254</a></li>
+                  <li><i>esn</i>, <a href="http://www.cei.lmu.de/VID/VID.php?345" target="blank">No. 180</a></li>
+                </ul>
+              </p>
+            </a:documentation>
+            <choice>
+              <value h:title="invocation, invocation verbale">invocation</value>
+              <value h:title="suscription">intitulatio</value>
+              <value h:title="adresse">address</value>
+              <value h:title="salut, salutation">salutatio</value>
+              <value h:title="notification personnelle, notification universelle, notification">notification</value>
+              <value h:title="préambule">preamble</value>
+              <value h:title="exposé">narratio</value> <!-- on rappelle cette valeur plus bas pr le schema du vidime, on conserve ici ? IDEM AVEC LE DISPOSITIF -->
+              <value h:title="clause de corroboration -- peut aussi se trouver dans le dispositif">corroboration</value>
+              <value h:title="liste de témoins">witnessList</value>
+              <value h:title="formule de date, date">dating</value>
+              <value h:title="apprécation">apprecatio</value>
+              <value h:title="souscriptions">subscriptions</value>
+              <value h:title="mentions hors teneur, mentions de chancellerie">esn</value>
+            </choice>
+          </attribute>
+          <ref name="diplo.content"/>
+        </element>
+        <element name="seg">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+            <p>Le dispositif (dispositio) et ses sous-parties.</p>
+          </a:documentation>
+          <attribute name="function">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+              <p>
+                Définitions <a href="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</a> (G. Vogeler), pour chaque valeur de @function :<br/>
+                <ul>
+                  <li><i>dispositio</i>, <a href="http://www.cei.lmu.de/VID/VID.php?198" target="blank">No. 198</a></li>                  
+                </ul>
+              </p>
+            </a:documentation>
+            <value h:title="dispositif">dispositio</value>
+          </attribute>
+          <oneOrMore>
+            <choice>
+              <element name="seg">
+                <attribute name="function">
+                  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+                    <p>
+                      Définitions <a href="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</a> (G. Vogeler), pour chaque valeur de @function :<br/>
+                      <ul>
+                        <li><i>beneficiary</i>, <a href="http://www.cei.lmu.de/VID/VID.php?17" target="blank">No. 17</a></li>
+                        <li><i>verb</i>, pas de terme identifié dans le VID, mentionné pourtant dans la documentation du terme <a href="http://www.cei.lmu.de/VID/VID.php?198" target="blank">No. 198</a> (dispositif).</li>
+                        <li><i>donatio</i>, le terme donation existe en tant que type d'acte (<a href="http://www.cei.lmu.de/VID/VID.php?425" target="blank">No. 425</a>) mais pas en tant que partie du discours.</li>
+                        <li><i>clauses</i>, <a href="http://www.cei.lmu.de/VID/VID.php?205" target="blank">No. 205</a></li>
+                      </ul>
+                    </p>
+                  </a:documentation>
+                  <choice>
+                    <value h:title="bénéficiaire">beneficiary</value>
+                    <value h:title="verbe">verb</value>
+                    <!-- La corroboratio n'est pas inscrite nécessairement dans le dispositif (cf plus haut) -->
+                    <value h:title="corroboration">corroboration</value>
+                    <value h:title="donation?">donatio</value>
+                    <value h:title="clause">clauses</value>
+                  </choice>
+                </attribute>
+                <ref name="diplo.content"/>
+              </element>
+              <ref name="diplo.content"/>
+            </choice>
+          </oneOrMore>
+        </element>
+        <!-- acte vidimé, toujours inscrit dans la narratio -->
+        <element name="seg">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+              L'exposé (narratio) peut contenir un acte vidimé.<br/>
+              Définitions <a href="http://www.cei.lmu.de/VID/VID.php#7">des éléments du discours diplomatique, Vocabulaire international de Diplomatique</a> (G. Vogeler), pour chaque valeur de @function :<br/>
+              <ul>
+                <li><i>narratio</i>, <a href="http://www.cei.lmu.de/VID/VID.php?197" target="blank">No. 197</a></li>
+              </ul>
+            </p>
+          </a:documentation>
+          <attribute name="function">
+            <value h:title="exposé">narratio</value>
+          </attribute>
+          <oneOrMore>
+            <choice>
+              <text/>
+              <ref name="diplo.content"/>
+              <!-- appel récursif au pattern diplomatique -->
+              <optional>
+                <ref name="vidime"/>
+              </optional>
+            </choice>
+          </oneOrMore>
+        </element>  
+      </choice>
+    </oneOrMore>
+  </define>
+  <!-- l'acte vidimé peut apparaître dans la narratio, éventuellement dans le dispositif (à voir) -->
+  <define name="vidime">
+    <element name="quote">
+      <attribute name="type">
+        <value h:title="acte vidimé">vidime</value>
+      </attribute>
+      <optional>
+        <ref name="lang"/>        
+      </optional>
+      <ref name="diplomatique"/>
+    </element>    
+  </define>
+  <!-- le contenu des seg des parties du discours ; importe les motifs définis dans texte.rng
+    @combine permet de compléter ce pattern localement, dans le schéma d'un corpus spécifique.
+  -->
+  <define name="diplo.content" combine="interleave">
+    <oneOrMore>
+      <choice>
+        <text/>
+        <ref name="typo"/>
+        <ref name="note"/>
+        <ref name="lb"/>
+        <ref name="pb"/>
+        <ref name="foreign"/>
+      </choice>
+    </oneOrMore>
+  </define>
+
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Indexation des actes</h2>
+  </a:documentation>  
+  <define name="front.index">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Le motif nommé front.index définit la structure d'indexation par défaut.<br/>
+        Dans le schéma de corpus (corpus.rng), il faut l'appeler dans la définition du front.<br/>
+        On peut le surcharger dans corpus.rng pour contraindre ou non l'inscription d'éléments d'indexation spécifiques.
+      </p>
+    </a:documentation>
+    <element name="index">
+      <oneOrMore>
+        <ref name="auth_type"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <ref name="actual_country"></ref>
+      </zeroOrMore>
+    </element>    
+  </define>
+  
+  <define name="auth_type">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Indexation du type d'acte</h2>
+    </a:documentation>
+    <element name="term">
+      <attribute name="type">
+        <value h:title="Type d'auteur">auth_type</value>
+      </attribute>
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+          Indexation du type d'auteur, obligatoire, valeurs multiples possible. (cf OGJ : "l'accord passé au sujet d'un hommage entre l'abbé de Moissac et le comte de Toulouse est ainsi indexé à acte abbatial, acte princier, car les deux intervenants prennent la parole.")<br/>
+          NB: Dans les tableaux d'OGJ 2a (type d'auteurs) et 2b (type de documents) sont une même catégorie ; le 2b décrivant les documents qui ne sont pas des actes, on se limite pour l'instant qu'au 2a.
+        </p>
+      </a:documentation>
+      <attribute name="key">
+        <choice>
+          <value h:title="Actes pontificaux">act_pontif</value>
+          <value h:title="Actes épiscopaux">act_episc</value>
+          <value h:title="Actes abbatiaux">act_abbat</value>
+          <value h:title="Actes d'autres ecclésiastique">act_eccl</value>
+          <value h:title="Actes d'autre juridiction gracieuse ecclésiastique">act_eccl_grac</value>
+          <value h:title="Actes de souverains">act_souv</value>
+          <value h:title="Actes princiers">act_princ</value>
+          <value h:title="Actes de juridiction gracieuse laïque princière et royale">act_laic_grac</value>
+          <value h:title="Actes de l'administration locale (royale et princière)">act_admin</value>
+          <value h:title="Actes seigneuriaux">act_seig</value>
+          <value h:title="Actes communaux, consulaires et échevinaux [sauf juridiction gracieuse]">act_comm</value>
+          <value h:title="Actes d'échevinage et de consulat [juridiction gracieuse?]">act_ech_grac</value>
+          <value h:title="Chartes du haut Moyen Âge">chma</value>
+          <value h:title="Notices">not</value>
+          <value h:title="Actes sous le sceau de l'auteur">sc_aut</value>
+          <value h:title="Actes sous le sceau d'une autorité locale">sc_loc</value>
+          <value h:title="Actes de notaires publics">act_notr</value>
+          <value h:title="Actes d'officialité épiscopale">act_offepisc</value>
+          <!-- si aucune des valeurs proposées ne convient. Doit disparaître -->
+          <value h:title="Valeur libre si aucune des valeurs enregistrées ne convient"/>
+        </choice>
+      </attribute>
+      <optional>
+        <text/>
+      </optional>
+    </element>
+  </define>    
+  
+  <define name="actual_country">
+    <element name="term">
+      <attribute name="type">
+        <value h:title="Pays actuel">actual_country</value>
+      </attribute>
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        Indexation du pays concerné par l'action et non le ressort de l'auteur de l'acte, valeur répétable ; on inscrit le nom contemporain et non historique.<br/>
+        Élément répétable pour les valeurs multiples.<br/>
+        La source des codes utilisée pour représenter les noms de pays est la norme <a href="http://fr.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>.
+      </a:documentation>
+      <attribute name="key">
+        <choice>
+          <value h:title="Belgique">BE</value>
+          <value h:title="Suisse">CH</value>
+          <value h:title="République Tchèque">CZ</value>
+          <value h:title="Allemagne">DE</value>
+          <value h:title="Danemark">DK</value>
+          <value h:title="Espagne">ES</value>
+          <value h:title="France">FR</value>
+          <value h:title="Grande Bretagne">GB</value>
+          <value h:title="Croatie">HR</value>
+          <value h:title="Hongrie">HU</value>
+          <value h:title="Irlande">IE</value>
+          <value h:title="Italie">IT</value>
+          <value h:title="Pays-Bas">NL</value>
+          <value h:title="Portugal">PT</value>
+          <value h:title="Roumanie">RO</value>
+          <value h:title="Suède">SE</value>
+          <value h:title="Vatican">VA</value>
+        </choice>
+      </attribute>
+      <text/>
+    </element>
+    
+  </define>
+    
+  
+  <!-- définition d'un acte, à surcharger dans le schéma appelant -->
+  <define name="acte">
+    <notAllowed/>
+  </define>
+
+
+  <include href="texte.rng"
+    h:href="http://developpements.enc.sorbonne.fr/diple/schema/texte" 
+    h:title="Balisage général du texte"/>
+  <include 
+    href="teiHeader.rng"
+    h:href="http://developpements.enc.sorbonne.fr/diple/schema/teiHeader" 
+    h:title="Schéma de l'entête de métadonnées"/>
+  <include 
+    href="witness.rng"
+    h:href="http://developpements.enc.sorbonne.fr/diple/schema/witness" 
+    h:title="Tradition écrite de l'acte (témoins)"/>
+  <include 
+    href="date.rng"
+    h:href="http://developpements.enc.sorbonne.fr/diple/schema/date" 
+    h:title="Schéma d'encodage des dates"/>
+  
+</grammar>

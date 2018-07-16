@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<grammar
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+>
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h1 id="texte.rng">Balisage général du texte</h1>
+    <ul class="auteurs">
+      <li>[FG] <a href="#" onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes) conception et maintenance</li>
+      <li>[VJ] <a href="#" onmouseover="this.href='mailto'+'\x3A'+'vincent.jolivet'+'\x40'+'enc.sorbonne.fr'">Vincent Jolivet</a>  (École nationale des chartes) conception et maintenance</li>
+      <li>[CD] Camille Desenclos (École nationale des chartes) notes d'apparat critique, indexation des entités nommées</li>
+      <li>[CH] Clément Hurel (École nationale des chartes) contributions</li>
+    </ul>
+    <p>
+Ce schéma comporte des éléments génériques pour écrire du texte.
+On y trouvera au moins le nécessaire pour générer un HTML acceptable pour l'écran.
+Sont aussi définies des structures spécifiques à l'édition critique, avec leurs règles d'utilisation dans le contexte de ce site. 
+Il est conventionnel de diviser un schéma rédactionnel en trois niveaux : <i>texte</i> (balises en cours de ligne),
+<i>blocs</i> (boîtes de texte), <i>sections</i> (conteneur de blocs). L'exposition des éléments
+cherchera globalement à suivre cet ordre, sans cependant en adopter les divisions, qui seraient très déséquilibrées.
+Ce document veille aussi à détailler les pratiques d'édition électronique pour ce site.
+    </p>
+    <ul>
+      <li><a href="#def_bornes">Balises vides</a> : texte simple avec bornes pouvant se trouver à tout endroit, comme les sauts, ou les notes.</li>
+      <li><a href="#critique">Appareillage critique</a> : le balisage dédié aux corrections, ajouts, attributions... avec prise en charge spéciale (ex : génération de notes).</li>
+      <li><a href="#indexation">Indexation</a> : valeurs susceptibles d'être rassemblées
+      dans un index aidant la navigation (auteurs, personnes, lieux...).</li>
+      <li><a href="#fonctions">Fonctions</a> : fonction sémantique (susceptible de présentation typographique adaptées).</li>
+      <li><a href="#def_typo">Typographie</a> : typographie simple, sans fonction assumée, rendues sans interprétation (HTML).</li>
+    </ul>
+  </a:documentation>
+
+
+  <define name="p.content">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Macro décrivant le contenu de type paragraphe (tous les éléments de niveau ligne).</a:documentation>
+    <zeroOrMore>
+      <choice>
+        <text/>
+        <ref name="bornes"/>
+        <ref name="critique"/>
+        <ref name="indexation"/>
+        <ref name="biblio"/>
+        <ref name="typo"/>
+        <ref name="fonctions"/>
+        <ref name="quote"/>
+        <ref name="cit"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2 id="indexation">Balises d'indexation</h2>
+    <p>Cette section réunit différentes balises susceptibles d'indexation. Elles permettent d'étiqueter les noms 
+    de personnes, de lieux, ou les termes sujet... Ces balises sont particulièrement nombreuses dans les corpus
+    de chartes, où l'on trouve en moyenne quatre à cinq <i>noms</i> par phrase. 
+    La juste segmentation des noms a tout d'abord un objectif linguistique, elle permet d'isoler
+    les mots de la langue, pour par exemple mieux assurer une lemmatisation. Il s'agit ensuite
+    d'avancer vers la constitution d'index automatique fiable (ce qui ne dispense pas d'un travail érudit
+    de prosopographie, pour par exemple rassembler les différents noms d'une même personne sous une même
+    clés). On trouvera ici des règles et des exemples mis au point sur des corpus de chartes, elles
+    peuvent valoir pour tous textes.</p>
+    <p>Remarque, on déconseillera de baliser les saints comme des personnes lorsqu'ils apparaissent comme des fêtes repères dans le calendrier.</p>
+  </a:documentation>
+  <define name="indexation">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Les balises indexables regroupent les mots susceptibles de mériter un
+      index.</a:documentation>
+    <choice>
+      <ref name="persName"/>
+      <ref name="placeName"/>
+      <ref name="rs"/>
+      <ref name="term"/>
+      <ref name="name"/>
+    </choice>
+  </define>
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h3 id="noms-personne">Noms de personnes</h3>
+    <p>Les noms de personnes se présentent sous des formes très diverses: anthroponyme simple ("Gofredus"), anthroponyme complexe ("Gofredus de Sancto Martino"), titulature officielle ("Gofridus, dominus de Sancto Martino"), identification par filiation ("Gofredus, filius Petri"). Le traitement de ces noms doit s'adapter à cette mutliplicité. Le nom principal, destiné à devenir une entrée lors de la constitution automatique de l'index, doit être encodé à l'aide de &lt;persName>. Cependant dans le cas d'expressions complexes telles les titulatures, les autres composantes du nom doivent être encodées en fonction de leur nature, par exemple: &lt;placeName> pour les noms de domaines et l'ensemble de l'expression doit être insérée à l'intérieur d'un élément &lt;rs>, auquel on a ajouté un attribut @type de valeur "person", afin de notifier que l'expression désigne une seule personne et non des personnes ou lieux distincts et ainsi pouvoir identifier les divers acteurs intervenant dans les actes.</p>
+    <a:example>
+      <rs type="person"><persName>Symon</persName>, comes <placeName>Ebroicarum</placeName> et dominus <placeName>Montis Fortis</placeName></rs>
+    </a:example>
+    <a:example><rs type="person"><persName>Radulfus</persName> filius <persName>Guilleulmi</persName></rs></a:example>
+    <p>Les anthroponymes complexes nécessitent une attention particulière. Pour "Gofredus de Sancto Martino', il faut se demander si "Sancto-Martino" renvoie réellement à un lieu ou s'il n'a plus qu'une valeur anthroponymique, sans rapport identifiable avec une réalité géographique.  Pour l'époque moderne, il n'y a pas d'hésitations à avoir, surtout pour des expressions telles que "M<hi rend="super">lle</hi> de Guise": "Guise" est un nom de famille et n'a plus de valeur géographique; si la personne a lien avec la ville de Guise cela sera indiqué dans sa titulature. Pour le Moyen Age, il est impossible de dire si "Gofredus de Sancto Martino" est Gofredus qui habite à Saint-Martin, Gofredus venu de Saint-Martin, seigneur de Saint-Martin, ou Gofredus appartenant à la famille du nom de Saint-Martin. Pour les XI<hi rend="super">e</hi> et XII<hi rend="super">e</hi>, il est plus prudent d'encoder "Sancto Martino" à l'aide d'un élément &lt;placeName>, quand bien même cela conduit à la constitution d'expressions d'encodage peu satisfaisantes.</p>
+    <a:example><rs type="person">monseigneur de <placeName>Saint-Martin</placeName></rs></a:example>
+    <p>Idéalement l'anthroponyme complexe, s'il fait référence à un nom de lieu devrait donc être encodé à l'aide d'un élément &lt;placeName> au sein même de l'élément &lt;persName>. Cependant ce traitement peut s'avérer long dans le cas de corpus. Dans ce cas, on limitera l'utilisation de &lt;placeName> aux noms de terre.</p>
+  </a:documentation>
+  <define name="persName">
+    <element name="persName">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Est identifié comme &lt;persName> tout anthroponyme isolé, abrévié ou non ("G.", "Gofredus") et tout anthroponyme complexe, formé d'un prénom et d'un nom ("Gofredus de Sancto Martino") et à l'intérieur duquel ne s'intercale aucun mot de langue, hormis dans le cas des surnoms qui doivent être insérés dans le même élément &lt;persName> ("Robertus dictus Legrand").
+        <span class="persName">Nom de personne </span> </a:documentation>
+      <ref name="normid"/>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>author</value>
+            <data type="Name"/>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="surname"/>
+          <ref name="forename"/>
+          <ref name="addName"/>
+          <ref name="placeName"/>
+          <ref name="sic"/>
+          <ref name="num"/>
+          <ref name="abbr"/>
+          <!-- normalement dans <num> ou <abbr>, supprimable ? -->
+          <ref name="sup"/>
+          <ref name="foreign"/>
+          <!-- Pour conserver certains italiques dans l'original -->
+          <ref name="mentioned"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="surname">
+    <element name="surname">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nom de famille, souvent en petites capitales.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="addName">
+    <element name="addName">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nom additionnel, par exemple surnom.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="forename">
+    <element name="forename">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Prénom.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="orgName">
+    <element name="orgName">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nom de collectivité</a:documentation>
+      <ref name="normid"/>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>ordre</value>
+            <data type="Name"/>
+          </choice>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="placeName"/>
+          <ref name="num"/>
+          <ref name="abbr"/>
+          <ref name="sup"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h3 id="noms-lieux">Noms de lieux</h3>
+    <p>Tout nom de lieu clairement identifiable dans l'index doit être encodé à l'aide de l'élément &lt;placeName. Un nom de lieu est un ensemble continu à l'intérieur duquel ne s'intercale aucun mot de langue. Dans des expressions telles que "ecclesie Beate Marie", soit lorsque le mot de langue n'apporte pas de précision supplémentaire ("ecclesie" sert uniquement à qualifier "Beate Marie"), seul "Beate Marie" doit être encodé à l'aide de l'élément &lt;placeName>. Dans le cas de corpus de taille importante, il n'est pas recommandé d'encoder plus précisément les noms de lieux à l'aide d'un élément &lt;rs type="place">, quand bien même "Pontisare" ne désigne pas la même chose que "pontum Pontisare". Au contraire, ce type d'encodage (à l'aide de &lt;rs>) doit être utilisé pour les noms de rue.</p>
+    <a:example><rs type="place">rue de <placeName>Malessis</placeName></rs>
+    </a:example>
+  </a:documentation>
+  <define name="placeName">
+    <element name="placeName">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Est identifié comme &lt;placeName> tout nom de lieu à l'intérieur duquel ne s'insère aucun mot de langue ("jardinum", "ecclesie"...).<span class="placeName">Nom de lieu</span></a:documentation>
+      <ref name="normid"/>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes" />
+          <ref name="abbr"/>
+          <ref name="sic"/>
+          <ref name="foreign"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- VJ: petit ajout pour inscrire la réf normalisée à un pays, dans le witness par ex. -->
+  <define name="country">
+    <element name="country">
+      <ref name="normid"/>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="rs">
+    <element name="rs">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence à une entité nommée complexe, pouvant désigner une personne ou un lieu. &lt;rs> permet de réunir des noms et des mots de la langue devant être identifiés comme une seule entité nommée et devant apparaître comme tel dans l'index. De ce fait il peut contenir plusieurs noms de lieux ou de personnes. L'unité sémantique prévaut sur l'insertion de conjonctions ("autem") ou d'expressions ("Dei gratia") qui ne doivent pas faire oublier qu'il s'agit d'une seule et même personne; ces conjonctions doivent donc être insérées, s'il est impossible de faire autrement, à l'intérieur de l'élément &lt;rs>.</a:documentation>
+      <ref name="normid"/>
+      <attribute name="type">
+        <choice>
+          <value h:title="Personne">person</value>
+          <value h:title="Lieu">place</value>
+        </choice>
+      </attribute>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="persName" />
+          <ref name="placeName"/>
+          <ref name="seg"/>
+          <ref name="pb"/>
+          <ref name="lb"/>
+          <ref name="sic"/>
+          <ref name="abbr"/>
+          <ref name="rs"/>
+          <ref name="foreign"/>
+          <!-- Pour personne -->
+          <ref name="num"/>
+          <!-- Pour conserver certains italiques dans l'original -->
+          <ref name="mentioned"/>
+          <ref name="sup"/>
+          <!-- garder la possibilité d'avoir des exposants, ex: des abbréviations à l'intérieur de noms -->
+          <choice>
+            <ref name="note"/>
+            <ref name="ref.note"/>
+          </choice>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+    <define name="name">
+    <element name="name">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nom, lorsqu'il n'est pas possible de déterminer s'il s'agit d'une personne ou d'un lieu
+      (par exemple après balisage automatique des mots en majuscule).</a:documentation>
+      <optional>
+        <attribute name="type">
+          <text/>
+        </attribute>
+      </optional>
+      <ref name="normid"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes" />
+          <ref name="abbr"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="term">
+    <element name="term">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Terme pouvant être sujet d'indexation.</a:documentation>
+      <optional>
+        <attribute name="type">
+          <text/>
+        </attribute>
+      </optional>
+      <ref name="normid"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes" />
+          <ref name="abbr"/>
+          <ref name="i"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="normid">
+    <optional>
+      <attribute name="xml:id">
+        <!-- Pas indispensable, car les xml:id sont automatiquement vérifiés, et pose problème pour la validation du schéma avec Jing <data type="ID"/> -->
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ref">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">URI de référence pour une entité.</a:documentation>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="key">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Forme d'autorité du nom.</a:documentation>
+      </attribute>
+    </optional>
+  </define>
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2 id="biblio">Bibliographie</h2>
+    <p>TEI permet de structurer un enregistrement bibliographique </p>
+  </a:documentation>
+  
+  <define name="biblio">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Éléments de type bibliographique pouvant être contenus dans un paragraphe.</a:documentation>
+    <choice>
+      <ref name="title"/>
+      <ref name="bibl"/>
+      <ref name="cit"/>
+      <ref name="q"/>
+    </choice>
+  </define>
+  <define name="bibl">
+    <element name="bibl">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence bibliographique peu structurée.</a:documentation>
+      <optional>
+        <attribute name="corresp">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Utilisé comme clé de regroupement.</a:documentation>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="title"/>
+          <ref name="author"/>
+          <ref name="biblScope"/>
+          <ref name="bornes"/>
+          <ref name="num"/>
+          <ref name="abbr"/>
+          <ref name="foreign"/>
+          <ref name="typo"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+
+  <define name="title">
+    <element name="title">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Titre d'oeuvre. Certains titres peuvent contenir un titre (droit dans l'italique). </a:documentation>
+      <ref name="normid"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="title"/>
+          <ref name="q"/>
+          <ref name="abbr"/>
+          <ref name="num"/>
+          <ref name="sup"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="author">
+    <element name="author">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Auteur, généralement dans une référence bibliographique, peut servir à un
+        index des auteurs cités.</a:documentation>
+      <ref name="normid"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="surname"/>
+          <ref name="forename"/>
+          <ref name="date"/>
+          <ref name="abbr"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="biblScope">
+    <element name="biblScope">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Pagination précisant une référence bibliographique.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="abbr"/>
+          <ref name="num"/>
+          <ref name="sup"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="repository">
+    <element name="orgName">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Dépôt d'archive ; peut contenir le pays de l'institution de conservation inscrit dans l'élément <code>country</code></a:documentation>
+      <attribute name="type">
+        <value>repository</value>
+      </attribute>
+      <ref name="normid"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="country"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="idno">
+    <element name="num">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Cote d'archive</a:documentation>
+      <attribute name="type">
+        <value>idno</value>
+      </attribute>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="sc" />
+          <ref name="sup"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="cit">
+    <element name="cit">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Citation référencée. Le texte mêlé est autorisé.</a:documentation>
+      <optional>
+        <attribute name="ana">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de citation, permet par exemple de hiérarchiser des niveaux de fidélité à la référence.</a:documentation>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="n">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Numérotation, peut être interprété comme une note de bas de page pour indiquer la référence.</a:documentation>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="quote"/>
+          <ref name="bibl"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="quote">
+    <element name="quote">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Citation (dans un cit) html:q</a:documentation>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <ref name="lang"/>
+      </optional>
+      <choice>
+        <ref name="p.content"/>
+        <oneOrMore>
+          <ref name="p"/>
+        </oneOrMore>
+      </choice>
+    </element>
+  </define>
+
+  <define name="q">
+    <element name="q">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Selon la documentation TEI peut entre
+        autres signifier : soCalled, foreign, distinct, term, mentioned... htm:q. Un texte <i>cité</i>
+        peut contenir une citation.</a:documentation>
+      <optional>
+        <attribute name="rend">
+          <choice>
+            <value>i</value>
+            <value>sc</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="lang"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="q"/>
+          <ref name="cit"/>
+          <ref name="fonctions"/>
+          <ref name="typo"/>
+          <ref name="indexation"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+
+
+  
+  <define name="fonctions">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <h2 id="fonctions">Balisage fonctionnel</h2>
+      
+      Les balises <i>fonctionnelles</i>, à privilégier le plus possible relativement
+      aux balises typographiques, mais à ne pas utiliser si le besoin est juste
+      typographique.</a:documentation>
+    <choice>
+      <ref name="ref"/>
+      <ref name="num"/>
+      <ref name="abbr"/>
+      <ref name="mentioned"/>
+      <ref name="date"/>
+      <ref name="foreign"/>
+      <ref name="sic"/>
+    </choice>
+  </define>
+
+  <define name="seg">
+    <element name="seg">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Segment arbitraire de texte, par exemple pour isoler une formule dans une entité nommée.</a:documentation>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+
+
+  <define name="mentioned">
+    <element name="mentioned">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mentions, apparaissant généralement en italique, parfois en petites capitales (ex : inscriptions). Sur un acte médiéval, il arrive qu'une mention moderne fasse elle-même mention d'un texte plus ancien.
+      <a:example>
+<witness xml:id="smchamps_1163_A"><label>A.</label> Original existant jadis aux Archives de la paroisse Saint-Jacques-de-la-Boucherie, portant au dos <mentioned>« écrit plus récemment, mais d'un gothique ancien : <mentioned>Lettre de confirmation d'Agnès de Poissy, du don du chevet Saint-Jacques</mentioned> »</mentioned>.</witness>
+      </a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="rend">
+          <choice>
+            <value>sc</value>
+          </choice>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="num"/>
+          <ref name="abbr"/>
+          <ref name="persName"/>
+          <ref name="placeName"/>
+          <ref name="mentioned"/>
+          <ref name="rs"/>
+          <ref name="sic"/>
+          <ref name="ref.note"/>
+          <ref name="ref"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+
+  <define name="foreign">
+    <element name="foreign">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mot, expression, voire proposition dans une langue différente du contexte, généralement rendu en italique. Une classe CSS est inscrite dans le rendu html, afin de pouvoir ajuster le cas échéant une police de caractères (ex : grec accentué). &lt;dfn class="foreign @xml:lang"&gt;. On évitera d'indiquer ainsi les lieux ou personnes en langue étrangère (par exemple une nom de personne en ancien français dans une charte latine), préférer un attribut de langue sur la balise du terme indexé. Toutefois, certains textes multilingues peuvent contenir des fragments contenant du texte riche.</a:documentation>
+      <optional>
+        <ref name="lang"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <choice>
+            <ref name="note"/>
+            <ref name="ref.note"/>
+            <ref name="abbr"/>
+            <ref name="num"/>
+            <ref name="indexation"/>
+          </choice>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="lang" combine="interleave">
+    <attribute name="xml:lang">
+       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Code de langue
+          <p>Les codes de langues ont surtout un usage informatique, afin d'appliquer les meilleurs filtres de traitement. Ainsi par exemple, contrairement à la norme anglophone de la bibliothèque du congrès, aucune distinction n'est faîte entre ancien et moyen français.</p>
+       </a:documentation>
+      <choice>
+        <value h:title="français moderne">fra</value>
+        <value h:title="latin (notamment médiéval)">lat</value>
+        <value h:title="ancien et moyen français - French, Old">fro</value>
+        <value h:title="grec ancien (jusqu'à 1453)">grc</value>
+        <value h:title="occitan - Provençal">pro</value>
+        <value h:title="breton">bre</value>
+        <!--
+        <value h:title="moyen français (1400-1600)">frm</value>        
+        <value h:title="Latin médiéval français">lat_FR_med</value>
+        <value h:title="Latin médiéval européen">lat_EU_med</value>
+        <value h:title="Latin moderne français">lat_FR_mod</value>
+        <value h:title="allemand, moyen haut (ca. 1050-1500) ; Glossarium : german. Teuton">gmh</value>
+        <value h:title="néerlandais, moyen (ca. 1050-1350) ; Glossarium : Belgis">dum</value>
+        <value h:title="anglo-saxon (ca. 450-1100) ; Glossarium : saxon">ang</value>
+        <value h:title="italien">ita</value>
+        <value h:title="espagnol, castillan">spa</value>
+        <value h:title="polonais">pol</value>
+        <value h:title="hébreu">heb</value>
+        -->
+        <value h:title="langue indéterminée">xxx</value>
+      </choice>
+    </attribute>
+  </define>
+
+  <define name="date">
+    <element name="date">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date balisée, par défaut, obliger à sa résolution selon la norme ISO. Une date peut contenir une note explicative.</a:documentation>
+      <choice>
+        <group>
+          <attribute name="when">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+        <group>
+          <attribute name="notBefore">
+            <ref name="date.type"/>
+          </attribute>
+          <attribute name="notAfter">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+        <group>
+          <attribute name="from">
+            <ref name="date.type"/>
+          </attribute>
+          <attribute name="to">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+      </choice>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="sup"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="date.type">
+    <data type="string">
+      <param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</param>
+    </data>
+  </define>
+
+  <define name="num">
+    <element name="num">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nombre. Le balisage des nombres est notamment utile pour les chiffres romains, afin
+        qu'ils ne soient pas confondus avec des mots. Ils peuvent être mis en petites
+        capitales.</a:documentation>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="n">
+          <data type="integer"/>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="typo"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="abbr">
+    <element name="abbr">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Abréviations, contient les points qui ne servent pas à la ponctuation des phrases.
+(un frontière de phrase sera laissée à l'extérieur).<abbr title="forme
+étendu">Abrévation </abbr></a:documentation>
+      <optional>
+        <attribute name="rend">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">La forme étendue de l'abréviation sera contenue dans un attribut
+            optionnel @rend. (La proposition TEI d'un élément &lt;expan&gt; sera un problème
+            pour les exploitations ultérieures car elle ajoute un noeud texte qui n'est pas dans le
+            document encodé)</a:documentation>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="sup"/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+
+
+  <define name="typo">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Typographie de base</h2>
+      
+    Mise en forme typographique de caractères,
+    au contenu volontairement restreint pour encourager les balises fonctionnelles.</a:documentation>
+    <choice>
+      <ref name="emph"/>
+      <ref name="i"/>
+      <ref name="sc"/>
+      <ref name="b"/>
+      <ref name="ib"/>
+      <ref name="u"/>
+      <ref name="sub"/>
+      <ref name="sup"/>
+      <ref name="hi"/>
+    </choice>
+  </define>
+
+  <define name="typo.content">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Contenu d'une balise typographique</a:documentation>
+    <zeroOrMore>
+      <choice>
+        <text/>
+        <ref name="sup"/>
+        <ref name="sub"/>
+        <ref name="pb"/>
+        <!-- balisé automatiquement -->
+        <ref name="abbr"/>
+        <ref name="note"/>
+        <ref name="ref.note"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+
+  <define name="emph">
+    <element name="emph">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mis en valeur, <em>em</em></a:documentation>
+      <optional>
+        <attribute name="ana"/>
+      </optional>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="rend.mot">
+    <optional>
+      <attribute name="rend">
+        <choice>
+          <value>i</value>
+          <value>b</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+
+  <define name="hi">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mise en valeur, ornementation</a:documentation>
+      <attribute name="rend"/>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="i">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Italique, <i>italic</i></a:documentation>
+      <attribute name="rend">
+        <value>i</value>
+      </attribute>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="sc">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Petites capitales. <span style="font-variant:small-caps">smallcaps</span></a:documentation>
+      <attribute name="rend">
+        <value>sc</value>
+      </attribute>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="b">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Gras. <b>bold</b></a:documentation>
+      <attribute name="rend">
+        <value>b</value>
+      </attribute>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="u">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Souligné <u>underline</u></a:documentation>
+      <attribute name="rend">
+        <value>u</value>
+      </attribute>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+  <define name="ib">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Gras italique (très déconseillé) <i><b>italic bold</b></i></a:documentation>
+      <attribute name="rend">
+        <value>ib</value>
+      </attribute>
+      <ref name="typo.content"/>
+    </element>
+  </define>
+
+
+  <define name="sup">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Exposant. <sup>superscript</sup></a:documentation>
+      <attribute name="rend">
+        <choice>
+          <value>sup</value>
+          <value>sup sc</value>
+        </choice>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+
+  <define name="sub">
+    <element name="hi">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Indice. <sub>subscript</sub></a:documentation>
+      <attribute name="rend">
+        <value>sub</value>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+
+  <define name="ref">
+    <element name="ref">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lien simple. &lt;htm:a href="ref">texte&lt;/a></a:documentation>
+      <ref name="rend.mot"/>
+      <attribute name="target">
+        <text/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+
+  
+  <define name="bornes">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Bornes</h2>
+      
+      Regroupement des balises qui peuvent se retrouver dans tous les éléments textuels.</a:documentation>
+    <choice>
+      <ref name="note"/>
+      <ref name="ref.note"/>
+      <ref name="lb"/>
+      <ref name="cb"/>
+      <ref name="pb"/>
+      <ref name="figure"/>
+    </choice>
+  </define>
+
+  <define name="note">
+    <element name="note">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Une note est généralement du texte mêlé (sans
+      note), parfois plusieurs paragraphes.
+      <blockquote>&lt;htm:span class="note"&gt;</blockquote>
+      </a:documentation>
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="target"/>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <optional>
+        <attribute name="resp"/>
+      </optional>
+      <choice>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="typo"/>
+            <ref name="pb"/>
+            <ref name="lb"/>
+            <ref name="figure"/>
+            <ref name="indexation"/>
+            <ref name="biblio"/>
+            <ref name="fonctions"/>
+            <ref name="sic"/>
+          </choice>
+        </zeroOrMore>
+        <oneOrMore>
+          <choice>
+            <ref name="p"/>
+            <ref name="table"/>
+          </choice>
+        </oneOrMore>
+      </choice>
+    </element>
+  </define>
+
+  <define name="ref.note">
+    <element name="ref">
+<a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence à une note.htm:span class="ref" </a:documentation>
+      <attribute name="type">
+        <value>note</value>
+      </attribute>
+      <optional>
+        <attribute name="n">
+          <text/>
+        </attribute>
+      </optional>
+      <attribute name="target">
+        <text/>
+      </attribute>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+    </element>
+  </define>
+
+  <define name="figure">
+    <element name="figure">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Marque une information graphique qui n'est pas encodée textuellement.</a:documentation>
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="pb">
+    <element name="pb">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Pagination ou foliotation, pour édition électronique d'imprimé ou de manuscrit. Le numéro est obligatoire, sauf dans le cas de pages ou folios manquants, en ce cas une explication est nécessaire.</a:documentation>
+      <choice>
+        <attribute name="n">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Le numéro de page est obligatoire.</a:documentation>
+        </attribute>
+        <attribute name="ana">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Commentaire explicatif s'il n'y a pas de </a:documentation>
+        </attribute>
+      </choice>
+      <optional>
+        <attribute name="ed">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence au témoin dont est issu le numéro de page ou de folio inséré dans l'attribut n.</a:documentation>
+        </attribute>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+
+  <define name="cb">
+    <element name="cb">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Conservation des sauts de colonne de l'édition imprimée, notamment pour
+        lien à l'image de la colonne.</a:documentation>
+      <empty/>
+      <attribute name="n">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Le numéro de colonne est obligatoire, par exemple pour la troisième
+          colonne de la page 245 : 245c.</a:documentation>
+      </attribute>
+    </element>
+  </define>
+
+  <define name="lb">
+    <element name="lb">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Saut de ligne, ne pas en abuser, htm:br</a:documentation>
+      <empty/>
+    </element>
+  </define>
+
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2 id="blocs">Blocs</h2>
+  </a:documentation>
+  
+  <define name="bloc">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Blocs, les boîtes qui contiennent du texte (sans les titres).</a:documentation>
+    <choice>
+      <ref name="p"/>
+      <ref name="listBibl"/>
+      <ref name="table"/>
+      <ref name="list"/>
+      <ref name="cit"/>
+      <ref name="quote"/>
+      <ref name="label"/>
+      <ref name="desc"/>
+      <ref name="list.gloss"/>
+      <ref name="bibl"/>
+      <ref name="note"/>
+    </choice>
+  </define>
+  
+  <define name="p">
+    <element name="p">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Paragraphe.</a:documentation>
+      <optional>
+        <attribute name="rend">
+          <ref name="p.rend"/>
+        </attribute>
+      </optional>
+        <optional>
+          <attribute name="xml:id"/>
+        </optional>
+        <optional>
+          <attribute name="n"/>
+        </optional>
+      <optional>
+        <ref name="lang"/>
+      </optional>
+      <ref name="p.content"/>
+    </element>
+  </define>
+  <define name="p.rend" combine="choice">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Types de paragraphe</a:documentation>
+    <choice>
+      <value h:title="Centré">center</value>
+      <value h:title="Majuscules">uppercase</value>
+      <data type="Name"/>
+    </choice>
+  </define>
+  
+  <define name="desc">
+    <element name="desc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Description.</a:documentation>
+      <optional>
+        <attribute name="rend">
+          <choice>
+            <value>note</value>
+            <data type="Name"/>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+          <attribute name="n"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="fonctions"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="label">
+    <element name="label">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Étiquette.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="typo"/>
+          <ref name="fonctions"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  
+  <define name="head">
+    <element name="head">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Titre générique.</a:documentation>
+      <optional>
+        <ref name="lang"/>
+      </optional>
+      <ref name="p.content"/>
+    </element>
+  </define>
+
+  <define name="table">
+    <element name="table">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Tables simples (html:table).
+Titre de tableau obligatoire (html:caption).
+Sauts de pages ou colonnes ne coupant pas les lignes.
+      </a:documentation>
+      <optional>
+        <attribute name="rend"/>
+      </optional>
+      <ref name="head"/>
+      <oneOrMore>
+        <choice>
+          <element name="row">
+            <optional>
+              <attribute name="role">
+                <choice>
+                  <value h:title="(défaut) tr/html:td">data</value>
+                  <value h:title="tr/html:th">label</value>
+                </choice>
+              </attribute>
+            </optional>
+            <optional>
+              <attribute name="rend"/>
+            </optional>
+            <oneOrMore>
+              <element name="cell">
+                <optional>
+                  <attribute name="role">
+                    <choice>
+                      <value h:title="(défaut) html:td">data</value>
+                      <value h:title="html:th">label</value>
+                    </choice>
+                  </attribute>
+                </optional>
+                <optional>
+                  <attribute name="rows"/>
+                </optional>
+                <optional>
+                  <attribute name="cols"/>
+                </optional>
+                <ref name="p.content"/>
+              </element>
+            </oneOrMore>
+          </element>
+          <ref name="pb"/>
+          <ref name="cb"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Listes</h2>
+  </a:documentation>
+
+  <define name="list">
+    <element name="list">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Des listes simples.</a:documentation>
+      <attribute name="type">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de liste, indiqué par un caractère. Le nombre de valeurs est susceptible de s'étendre. 
+En cas d'encodage de texte existant, il peut être plus commode de reporter les numérotations difficiles à générer
+en attribut de l'item (@n).</a:documentation>
+        <choice>
+          <value h:title="Rien"></value>
+          <value h:title="Tiret">-</value>
+          <value h:title="Décimale">1</value>
+          <value h:title="Chiffres romains">I</value>
+          <value h:title="Puce">o</value>
+          <value h:title="Index avec navigation alphabétique">index</value>
+        </choice>
+      </attribute>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <oneOrMore>
+        <element name="item">
+          <optional>
+            <attribute name="xml:id"/>
+          </optional>
+          <optional>
+            <attribute name="n"/>
+          </optional>
+          <oneOrMore>
+            <choice>
+              <ref name="p.content"/>
+              <ref name="list"/>
+            </choice>
+          </oneOrMore>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="listBibl">
+    <element name="listBibl">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Liste de références bibliographiques.</a:documentation>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <oneOrMore>
+        <ref name="bibl"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="index.list">
+    <element name="list">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Liste pour encodage d'index imprimé. Le type 'index' permet de munir
+      la liste d'une barre d'exploration alphabétique. Une liste d'identifiants prévue à l'avance
+      permet de raffiner les comportements.</a:documentation>
+      <attribute name="type">
+        <value>index</value>
+      </attribute>
+      <attribute name="xml:id">
+        <choice>
+          <value>listName</value>
+          <value>listPlace</value>
+          <value>listPerson</value>
+          <value>listTerm</value>
+          <data type="Name"/>
+        </choice>
+      </attribute>
+      <ref name="head"/>
+      <oneOrMore>
+        <choice>
+          <ref name="pb"/>
+          <ref name="index.item"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="index.item">
+    <element name="item">
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="indexation"/>
+          <ref name="ref"/>
+          <ref name="abbr"/>
+          <ref name="num"/>
+          <ref name="emph"/>
+          <ref name="foreign"/>
+          <ref name="title"/>
+          <element name="list">
+            <oneOrMore>
+              <choice>
+                <ref name="pb"/>
+                <ref name="index.item"/>
+              </choice>
+            </oneOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+
+  <define name="list.gloss">
+    <element name="list">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Liste pour encodage d'un glossaire. Un identifiant normalisé permet d'appuyer 
+      certaines transformations spécifiques.</a:documentation>
+      <attribute name="type">
+        <value>gloss</value>
+      </attribute>
+      <optional>
+        <attribute name="xml:id">
+          <value>gloss</value>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <oneOrMore>
+        <optional>
+          <ref name="pb"/>
+        </optional>
+        <oneOrMore>
+          <ref name="label"/>
+        </oneOrMore>
+        <element name="item">
+          <choice>
+            <ref name="p.content"/>
+            <ref name="list"/>
+          </choice>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <!-- [CD]: la documentation et structuration de listPerson et listPlace est à compléter/améliorer -->
+  <define name="listPerson">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Index des noms de personnes permettant, en sus des liens vers les diverses occurences du texte, une description structurée de chaque personne mentionnée dans l'index (nom complet, dates et faits marquants de la biographie).</a:documentation>
+    <element name="listPerson">
+      <oneOrMore>
+        <ref name="person"/>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="person">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Entrée d'index (personnes). Un identifiant permet de faire référence à cette courte notice biographique à n'importe quel endroit du texte.</a:documentation>
+    <element name="person">
+      <attribute name="xml:id"/>
+      <oneOrMore>
+        <ref name="persName"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <choice>
+          <element name="birth">
+            <text/>
+          </element>
+          <element name="death">
+            <text/>
+          </element>
+          <element name="event">
+            <oneOrMore>
+              <ref name="p"/>
+            </oneOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="listPlace">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Index des noms de personnes permettant, en sus des liens vers les diverses occurences du texte, une description structurée de chaque lieu mentionné dans l'index (nom et localisation).</a:documentation>
+    <element name="listPlace">
+      <oneOrMore>
+        <ref name="place"/>
+      </oneOrMore>
+      </element>
+  </define>
+  
+  <define name="place">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Entrée d'index (lieu). Un identifiant permet de faire référence à cette courte notice à n'importe quel endroit du texte.</a:documentation>
+    <element name="place">
+      <attribute name="xml:id"/>
+      <oneOrMore>
+        <ref name="placeName"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <element name="location">
+          <zeroOrMore>
+            <ref name="country"/>
+          </zeroOrMore>
+          <oneOrMore>
+            <element name="district">
+              <attribute name="type">
+                <choice>
+                  <value>departement</value>
+                  <value>arrondissement</value>
+                  <value>canton</value>
+                  <data type="Name"/>
+                </choice>
+              </attribute>
+              <text/>
+            </element>
+          </oneOrMore>
+        </element>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2 id="sections">Sections</h2>
+    <p>Structuration d'un texte</p>
+  </a:documentation>
+  <define name="split.atts">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+Attributs obligatoires d'un élément à “spliter” (générer un fichier HTML).
+Le contenu de l'attribut @xml:id d'une division sert de nom de fichier.
+La granularité des divisions varie selon les documents. 
+Afin de pouvoir factoriser un code de fractionnement, les divisions seront marquées par l'attribut @subtype="item".
+    </a:documentation>
+    <attribute name="subtype">
+      <choice>
+        <value>article</value>
+        <value>split</value>
+      </choice>
+    </attribute>
+  </define>
+
+  <define name="div">
+    <element name="div">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Sectionnement du texte. Le modèle propose une alternative, soit une section
+      contient des blocs, soit une section ne contient que des sections (avec possibilité
+      d'introduction et de conclusion). 
+      Il s'agit d'éviter le mélange entre blocs avec textes et sections, 
+      afin par exemple de faciliter le traitement des notes
+      (affichées en bas de section).</a:documentation>
+      <optional>
+        <ref name="split.atts"/>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <data type="Name"/>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="head"/>
+          <ref name="prologue"/>
+          <ref name="opener"/>
+          <ref name="dateline"/>
+        </choice>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="bloc"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="div"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <choice>
+          <ref name="closer"/>
+          <ref name="epilogue"/>
+          <ref name="dateline"/>
+        </choice>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="postscript"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="byline">
+    <element name="byline">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mention de d'attribution</a:documentation>
+      <ref name="p.content"/>
+    </element>
+  </define>
+  <define name="dateline">
+    <element name="dateline">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mention de date : enregistement structurable, formule balisable, ou suite de paragraphes.</a:documentation>
+      <choice>
+        <zeroOrMore>
+          <ref name="p"/>
+        </zeroOrMore>
+        <ref name="p.content"/>
+      </choice>
+    </element>
+  </define>
+  <define name="opener">
+    <element name="opener">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Cartouche d'entrée d'une division, par exemple pour indiquer l'auteur d'une préface, d'une introduction.</a:documentation>
+      <ref name="p.content"/>
+    </element>
+  </define>
+  <define name="argument">
+    <element name="argument">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Résumé.</a:documentation>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <ref name="p"/>
+          <ref name="table"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="prologue">
+    <element name="prologue">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Distinction venue du théâtre, pertinente pour d'autres textes.</a:documentation>
+      <zeroOrMore>
+        <ref name="bloc"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="epilogue">
+    <element name="epilogue">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Distinction venue du théâtre, pertinente pour d'autres textes.</a:documentation>
+      <zeroOrMore>
+        <ref name="bloc"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="closer">
+    <element name="closer">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Conclusion d'une section.</a:documentation>
+      <ref name="p.content"/>
+    </element>
+  </define>
+  <define name="postscript">
+    <element name="postscript">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Conclusion d'une section.</a:documentation>
+      <ref name="label"/>
+      <zeroOrMore>
+        <ref name="p"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="front">
+    <element name="front">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Ce modèle de contenu sert d'entête de fichier
+      (à ne pas confondre avec le teiHeader qui porte les métadonnées).
+      Page de titre, préface, introductions, et autres paratextes d'une édition.</a:documentation>
+      <choice>
+        <ref name="titlePage"/>
+        <group>
+          <ref name="head"/>
+          <zeroOrMore>
+            <choice>
+              <ref name="docAuthor"/>
+              <ref name="docDate"/>
+            </choice>
+          </zeroOrMore>
+          <ref name="argument"/>
+          <optional>
+            <ref name="byline"/>
+          </optional>
+        </group>
+      </choice>
+      <zeroOrMore>
+        <ref name="div"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="back">
+    <element name="back">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Éléments en fin de livre, comme index, sommaires, glossaires.</a:documentation>
+      <optional>
+        <ref name="head"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="pb"/>
+          <element name="div">
+            <attribute name="type">
+              <value>notes</value>
+            </attribute>
+            <oneOrMore>
+              <ref name="note"/>
+            </oneOrMore>
+          </element>
+          <ref name="div"/>
+          <element name="div">
+            <optional>
+              <attribute name="type">
+                <value>index</value>
+              </attribute>
+            </optional>
+            <oneOrMore>
+              <choice>
+                <ref name="index.list"/>
+                <ref name="listBibl"/>
+                <ref name="list.gloss"/>
+                <ref name="listPerson"/>
+                <ref name="listPlace"/>
+              </choice>
+            </oneOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="titlePage">
+    <element name="titlePage">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Page de titre. Ne mettre que l'essentiel des informations visible sur la couverture.
+</a:documentation>
+      <oneOrMore>
+        <choice>
+          <element name="docTitle">
+            <oneOrMore>
+              <element name="titlePart">
+                <text/>
+              </element>
+            </oneOrMore>
+          </element>
+          <ref name="docAuthor"/>
+          <element name="docImprint">
+            <text/>
+          </element>
+          <ref name="docDate"/>
+          <ref name="head"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="docAuthor">
+    <element name="docAuthor">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Auteur d'un document.</a:documentation>
+      <text/>
+    </element>
+  </define>
+  <define name="docDate">
+    <element name="docDate">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Une ligne de date avec optionnellement un lieu.</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="date"/>
+          <ref name="placeName"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <!-- motif récursif pour valider tout TEI conforme -->
+  <define name="anyTEI">
+    <element ns="http://www.tei-c.org/ns/1.0">
+      <anyName/>      
+      <zeroOrMore>
+        <choice>
+          <attribute>
+            <anyName/>
+          </attribute>
+          <text/>
+          <ref name="anyTEI"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <start combine="choice">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nécessaire à la validation du schéma</a:documentation>
+    <ref name="p"/>
+  </start>
+
+  <!-- problème de cette dépendance pour la définition des motifs critique et sic -->
+  <include href="app.rng"/>
+
+</grammar>

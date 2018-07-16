@@ -1,0 +1,2128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Germain-en-Laye">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Le prieuré de Saint-Germain-en-Laye. Origines et cartulaire</title>
+        <author>Olivier Guyotjeannin</author>
+        
+        <respStmt>
+          <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
+          <resp>Direction éditoriale</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="FG">Frédéric Glorieux (École des chartes)
+            <email>frederic.glorieux@enc.sorbonne.fr</email></name>
+          <resp>Suivi technique (2007–…)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="JC">Joana Casenave (École des chartes)</name>
+          <resp>Édition électronique (2011)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="CD">Camille Desenclos (École des chartes)</name>
+          <resp>Édition électronique (2010)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="NR">Naomi Russo (École des chartes)</name>
+          <resp>Indexation diplomatique (2009)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="EG">Elise Girold (École des chartes)</name>
+          <resp>Indexation (2008)</resp>
+        </respStmt>
+
+        <respStmt>
+          <name xml:id="GP">Gautier Poupeau (École des chartes)</name>
+          <resp>première édition électronique (2006)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="JCM">Jean-Charles Martin (École des chartes)</name>
+          <resp>première édition électronique (2006)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="RM">Romain Morvillez (École des chartes)</name>
+          <resp>première édition électronique (2006)</resp>
+        </respStmt>
+
+
+      </titleStmt>
+      <extent/>
+      <publicationStmt>
+        <date>2009</date>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/sgelaye/</idno>
+        <publisher>Ecole nationale des chartes</publisher>
+        <address>
+          <addrLine>19, rue de la Sorbonne</addrLine>
+          <addrLine>75005 Paris</addrLine>
+          <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
+          <addrLine>http://enc.sorbonne.fr/</addrLine>
+          <addrLine>recherche@enc.sorbonne.fr</addrLine>
+        </address>
+        <availability status="restricted">
+          <p>L'École nationale des chartes met à disposition cette ressource électronique
+            structurée, protégée par le code de la propriété intellectuelle sur les bases de données
+              (<ref
+              target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
+              >L341-1</ref>), selon les termes de la licence Creative Commons : « <ref
+              target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+              d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
+          <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
+            et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
+            et de la recherche. Toute autorisation au-delà du champ de cette licence doit être
+            obtenue auprès de nous.</p>
+          <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique,
+            nous nous engageons à conserver et à toujours offrir publiquement la version la plus à
+            jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les
+            corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après
+            validation par un comité scientifique), et à référencer l'origine de ces contributions.
+            Toute modification de la ressource qui ne serait pas reversée à la version de référence
+            sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser
+            les contributions et de permettre les meilleures conditions possibles de collaboration
+            scientifique.</p>
+          <p><ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute
+            publication dérivée de ses ressources électroniques comporte : <list>
+              <item>un lien vers l'adresse pérenne de la dernière version de la ressource sur notre
+                site ;</item>
+              <item>la date du fichier source utilisé ;</item>
+              <item>nos noms.</item>
+            </list>
+          </p>
+          <p>Tout litige soulevé par le non respect des termes de cette licence sera soumis à la
+            juridiction des tribunaux de Paris.</p>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Éditions en ligne de l'École des Chartes</title>
+        <idno type="URI">http://elec.enc.sorbonne.fr/</idno>
+        <idno type="vol">11</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Le prieuré de Saint-Germain-en-Laye. Origines et cartulaire</title> par
+            <author>J. Depoin</author>, Versailles, <publisher>Cerf et Cie, Imprimeurs de la
+            préfecture</publisher>, <date>1895</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
+          cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes. Cette
+          numérisation a été effectuée, encodée et relue une première fois par la société Dataland.
+          Une première vérification a été effectuée par Romain Morvillez au sein de l'Ecole des
+          chartes. Une dernière vérification et l'ajout des informations du TEIHeader ont été
+          effectués par Jean-Charles Martin et Gautier Poupeau.</p>
+      </projectDesc>
+    </encodingDesc>
+    <revisionDesc>
+      <change when="2010-04" who="#NR">Indexation diplomatique</change>
+      <change when="2009-10" who="#CD">Vérifications noms et phrases</change>
+      <change when="2009-09" who="#EG">Entête</change>
+      <change when="2009-07" who="#EG">Dates</change>
+      <change when="2009-06" who="#FG">Langues</change>
+      <change when="2008-09" who="#FG">Phrases et noms (automatique supervisé)</change>
+      <change when="2008-05" who="#FG">Conversion TEI P5</change>
+      <change when="2007" who="#GP #JCM #RM">Première édition électronique</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <head>Joseph Depoin, <hi rend="i">Le prieuré de Saint-Germain-en-Laye, origines et
+          cartulaire</hi>, Versailles : Cerf et C<hi rend="sup">ie</hi> impimeurs, 1895,
+        30 p.</head>
+      <argument>
+        <p>Établissement : Saint-Vincent et Saint-Germain de Saint-Germain-en-Laye (Yvelines, ch.-l.
+          arr. ; diocèse ancien Paris). — Maison fondée par Robert le Pieux, rattachée au milieu du
+            XI<hi rend="i">e</hi> siècle à l’abbaye de Coulombs (Eure-et-Loir, cant. Nogent-le-Roi,
+          anc. dioc. Chartres) comme simple prieuré.</p>
+        <p>Carte de situation (Atlas de Cassini)</p>
+        <p>Type d’édition : édition partielle (abrégée ou sous forme de regestes pour certains des
+          actes tardifs) du cartulaire du prieuré (Arch. nat., T* 671<hi rend="sup">6</hi>).</p>
+        <p>Total des actes édités ou analysés : 27 (1 du XI<hi rend="sup">e</hi> siècle, 14 du
+            XII<hi rend="sup">e</hi> siècle, 4 du XIII<hi rend="sup">e</hi> siècle, 1 du XIV<hi
+            rend="sup">e</hi> siècle, 6 du XV<hi rend="sup">e</hi> siècle, 1 du XVI<hi rend="sup"
+            >e</hi> siècle).</p>
+      </argument>
+      <byline>Notice rédigée par Olivier Guyotjeannin en octobre 2007.</byline>
+      <div xml:id="S-Germain-en-Laye_etablissement" subtype="article">
+        <head>L’établissement</head>
+        <div type="historique">
+          <head>Historique</head>
+          <p> Résidence capétienne, Saint-Germain-en-Laye avait une vocation comme naturelle à
+            accueillir un établissement religieux, dont les premiers temps ne nous sont connus que
+            par de rapides mentions : la fondation d’une « église » dédiée à saint Vincent en forêt
+            de Laye par le roi Robert le Pieux (signalée par son biographe Helgaud de Fleury) ; un
+            acte s.d. du roi Henri I<hi rend="sup">er</hi> donnant l’<hi rend="i">abbatiola</hi>
+            maintenant dédiée à saint Germain à l’église cathédrale de Paris
+                (<bibl><abbr>ind.</abbr> Soehnée <abbr>n°</abbr> 29 ; <abbr>éd.</abbr> Tardif,
+                <title>Monuments historiques</title>
+              <abbr>n°</abbr> 279</bibl>) ; la cession de l’établissement à l’abbé de Coulombs <hi
+              rend="i">Gozfredus</hi> par l’évêque de Paris Imbert, donc avant le décès de ce
+            dernier en 1060/1061 au plus tard (<bibl>éd. Martène, <title>Amplissima
+                collectio</title>, <abbr>t.</abbr> I, <abbr>col.</abbr> 413-414</bibl>) ; la
+            dotation faite en 1073 par le roi Philippe I<hi rend="sup">er</hi>, qui détaille ses
+            largesses (acte n° I de l’édition Depoin ; une édition critique de l’acte a depuis été
+            donnée par <bibl><author>Maurice Prou</author>, <title>Recueil des actes de Philippe
+                  I<hi rend="sup">er</hi>…</title>, <abbr>n°</abbr> 63</bibl>). Ce dernier acte fut
+            repris et élargi en un diplôme général de confirmation délivré par le roi Louis VI en
+            1124 (<bibl>éd. Depoin <abbr>n°</abbr> III ; édition critique par <author>Jean
+                Dufour</author>, <title>Recueil des actes de Louis VI…</title>, <abbr>t.</abbr> I,
+                <abbr>n°</abbr> 221</bibl>). </p>
+        </div>
+        <div>
+          <head>Localisation du patrimoine à grands traits</head>
+          <p> La confirmation de Louis VI atteste que le prieuré avait la justice de la <hi rend="i"
+              >villa</hi> adjacente, les dîmes données par le roi à Trie-sur-Seine, Charlevanne
+            [auj. La Chaussée, comm. Bougival], Poissy, Auvers et en forêt d’Yveline, des usages en
+            forêt de Laye, des biens aux alentours et à Rucourt (comm. Poissy). D’autres actes
+            mentionnent particulièrement des droits sur la Seine, des possessions à Orgeval et
+            Abbecourt (comm. Orgeval)… On notera l’intérêt d’un acte de nomination et délimitation
+            des droits du maire de Saint-Germain (éd. Depoin n° IX). </p>
+        </div>
+        <div>
+          <head>Réseaux de bienfaiteurs</head>
+          <p>Sur le milieu des donateurs locaux, saisis de façon plutôt éclatée, tranchent le roi,
+            le seigneur Gasce de Poissy, les seigneurs du Pecq et de Pacy.</p>
+        </div>
+      </div>
+      <div xml:id="S-Germain-en-Laye_archives" subtype="article">
+        <head>Orientation archivistique</head>
+        <div type="chartrier">
+          <head>Le chartrier</head>
+          <p>Il ne subsiste apparemment plus, des archives propres du prieuré, que le cartulaire
+            édité par Depoin (voir ci-dessous).</p>
+          <p>Les archives centrales de l’abbaye de Coulombs (nationalisées et remises aux Archives
+            départementales d’Eure-et-Loir) renferment toutefois une documentation complémentaire,
+            limitée à quelques articles, mais digne d’intérêt et non exploitée par Depoin : H 1261,
+            Inventaire des titres de l’abbaye de Coulombs, XVIII<hi rend="sup">e</hi> siècle
+            (mentionne sur Saint-Germain des actes de 1124 à 1708 : <bibl><title>Inventaire
+                sommaire, série H</title>, <abbr>p.</abbr> 145</bibl>) ; H 1264 et H 1370, documents
+            sur Saint-Germain, 1606-1747.</p>
+          <p>Pour les sources complémentaires conservées aux Archives départementales des Yvelines,
+            voir le guide en ligne de cette institution :</p>
+          <p><ref target="http://www.yvelines.fr/archives/serieh/guideh"
+              >http://www.yvelines.fr/archives/serieh/guideh</ref></p>
+        </div>
+        <div type="cartulaires">
+          <head>Le cartulaire</head>
+          <p>Le cartulaire (Stein 3420) a été entrepris sur la fin du XV<hi rend="sup">e</hi> siècle
+            ; le volume, sur parchemin et de format in-4°, mais assez peu soigné, a été complété au
+            siècle suivant. Avant la Révolution, il était venu entre les mains d’un avoué près les
+            tribunaux, Étienne Le Duc. La confiscation des papiers de ce dernier, émigré, explique
+            que le cartulaire soit passé aux Archives nationales.</p>
+        </div>
+      </div>
+      <div xml:id="S-Germain-en-Laye_biblio" subtype="article">
+        <head>Orientation bibliographique</head>
+        <p>L’histoire du lieu a été refaite par <bibl><author>l’abbé Pierre Torry</author>,
+              <title>Une paroisse royale : Saint-Germain-en-Laye, origine et histoire</title>,
+            Mayenne, 1927</bibl>, qui repend en annexe, sous le titre de « Cartulaire » (p. 297-321)
+          les textes de l’édition Depoin, augmentés de quelques autres (dont les actes du roi Henri
+            I<hi rend="sup">er</hi> et de l’évêque Imbert).</p>
+      </div>
+      <div xml:id="S-Germain-en-Laye_edition" subtype="article">
+        <head>L’édition</head>
+        <div>
+          <head>L'éditeur : éléments biographiques</head>
+          <p>Joseph Depoin (1855-1924) était le fils d’un avocat de Pontoise. Membre fondateur puis
+            secrétaire général de la Société historique du Vexin pendant quarante-sept ans, il fut
+            aussi membre de la Commission des Antiquités et des arts de Seine-et-Oise et président
+            de l’institut sténographique de France. Il donna de nombreuses éditions de chartriers et
+            de cartulaires, souvent complétées de sources hagiographiques et de foisonnantes
+            reconstitutions généalogiques, en particulier pour l’abbaye Saint-Martin (1895-1904) et
+            l’Hôtel-Dieu (1886) de Pontoise, l’abbaye Notre-Dame la Royale de Maubuisson
+            (1882-1884), le prieuré clunisien de Saint-Martin-des-Champs à Paris (1913-1921)… Parmi
+            une riche production, se remarquent aussi de nombreuses études toponymiques et
+            généalogiques centrées sur la période du IX<hi rend="sup">e</hi> au XII<hi rend="sup"
+              >e</hi> siècle (comtes de Paris, vicomtes de Corbeil, comtes de Beaumont…).</p>
+          <p>Bibliographie : notices dans <bibl><title>Dictionnaire de biographie française</title>,
+                <abbr>t.</abbr> X (1965), <abbr>col.</abbr> 1102</bibl>, et dans
+                <bibl><title>Mémoires de la société historique et archéologique de Pontoise, du Val
+                d’Oise et du Vexin</title>, <abbr>t.</abbr> 83, 2000, <abbr>p.</abbr>
+            260.</bibl></p>
+        </div>
+        <div>
+          <head>Conception et contenu de l’édition</head>
+          <p>Les textes édités (coupés voire résumés pour les plus récents) sont traités comme des
+            pièces justificatives (p. 13-30, sans index) de l’exposé historique (p. 3-13), qui
+            rapporte les origines du prieuré et quelques épisodes tirés des actes, virant à la liste
+            chronologique des prieurs mais aussi des tabellions attestés dans les documents, un peu
+            à la manière d’une notice du <bibl><title>Gallia christiana</title></bibl>.</p>
+          <p>Rien n’est dit de la conception de l’édition (qui donne heureusement les références
+            précises des copies du cartulaire, seule source exploitée) : une collation complète avec
+            le manuscrit, comme une étude de celui-ci, restent à mener.</p>
+          <p>L’édition compte 27 pièces (numérotées I-XXVIII, le n° XXV sauté), ainsi réparties
+            (deux actes datés par fourchette, 1125-1131 et 1189-1217, sont ramenés à la décennie
+            centrale) :</p>
+          <table>
+            <head>Tableau de répartition chronologique des actes</head>
+            <row role="label">
+              <cell>XI<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>Seconde moitié XI<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1071-1080</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row role="label">
+              <cell>XII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">14</cell>
+            </row>
+            <row rend="head">
+              <cell>Première moitié XII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">5</cell>
+            </row>
+            <row>
+              <cell>1121-1130</cell>
+              <cell role="data">4</cell>
+            </row>
+            <row>
+              <cell>1141-1150</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>Seconde moitié XII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row>
+              <cell>1161-1170</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1171-1180</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>S.d. XII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">7</cell>
+            </row>
+            <row role="label">
+              <cell>XII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">4</cell>
+            </row>
+            <row rend="head">
+              <cell>Première moitié XIII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row>
+              <cell>1201-1210</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1221-1230</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>Seconde moitié XIII<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row>
+              <cell>1261-1270</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1291-1300</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row role="label">
+              <cell>XIV<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>Première moitié XIV<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1311-1320</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row role="label">
+              <cell>XV<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">6</cell>
+            </row>
+            <row rend="head">
+              <cell>Première moitié XV<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row>
+              <cell>1421-1430</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row rend="head">
+              <cell>Seconde moitié XV<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">4</cell>
+            </row>
+            <row>
+              <cell>1461-1470</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1471-1480</cell>
+              <cell role="data">2</cell>
+            </row>
+            <row>
+              <cell>1491-1400</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row role="label">
+              <cell>XVI<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row rend="head">
+              <cell>Première moitié XVI<hi rend="sup">e</hi> siècle</cell>
+              <cell role="data">1</cell>
+            </row>
+            <row>
+              <cell>1431-1440</cell>
+              <cell role="data">1</cell>
+            </row>
+          </table>
+        </div>
+      </div>
+    </front>
+    <group>
+      <head>Saint-Germain-en-Laye</head>
+      <group>
+        <head>Cartulaire</head>
+        <text xml:id="S-Germain-en-Laye_0001" n="I" subtype="article">
+          <pb n=""/>
+          <front>
+            <docDate>
+              <date notBefore="1073" notAfter="1073">1073</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Diplôme de <persName>Philippe <num>I<hi rend="sup">er</hi></num></persName>.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  75.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><seg type="theo">In nomine Sancte et Individue Trinitatis, Patris videlicet et
+                    Filii et Spiritus Sancti, Amen</seg>.</s>
+              </p>
+              <p>
+                <s><rs type="person">Ego <persName>Philippus</persName>
+                    <seg type="theo">gratia Dei</seg>
+                    <persName>Francorum</persName> Rex</rs>, notificari volo tam presentibus quam
+                  etati posterorum quatenus <rs type="person">avus meus
+                      <persName>Robertus</persName> Rex</rs> in honore Dei et <placeName>Sancti
+                    Germani</placeName> apud <rs type="place">Silvam</rs> que
+                    <placeName>Leya</placeName> vocatur, quoddam construxit monasterium, adhibitis
+                  necessariis ibidem servientium fratrum.</s>
+                <s>Pater vero meus, videlicet rex <persName>Henricus</persName>, qui post eum
+                    <placeName>Gallie</placeName> rexit imperium, concessit omnibus que ille
+                  dederat, plura tribuendo locum amplificavit.</s>
+              </p>
+              <pb n="14"/>
+              <p>
+                <s>Ego igitur, ut essem particeps tanti beneficii, supradicto monasterio, et
+                  monachis <placeName>Columbensibus</placeName>, eodem in loco Deo famulantibus,
+                  dedi omnem decimam vini et annone mee, que pertinet ad cellarium vel granarium
+                    <placeName>Pissiaci</placeName>, videlicet de <placeName>Trel</placeName> et de
+                    <placeName>Charlavana</placeName>, et de ipso <placeName>Pissiaco</placeName>,
+                  decimam etiam <placeName>Aulvers</placeName> vini et annone et leguminum, et
+                  advene, undecunque sit.</s>
+              </p>
+              <p>
+                <s>Similiter dedi omnem decimam annone mec, et avene et leguminum de
+                    <placeName>Aquilina</placeName> et omnium crementorum meorum que facta fuerint
+                  in ea ; <rs type="place">molendinum etiam
+                    <placeName>Filioli-Curtis</placeName></rs> dedi et terram
+                    <placeName>Gaudine</placeName> ; brancas etiam de <placeName>Laya</placeName>
+                  quantum necesse fuerit ad focum monachorum, necnon et mortuum lucum, quantum
+                  sufficit ad usum monachorum et hospitum suorum, et pasturam totam peccoribus
+                  monachorum et etiam hospitum suorum.</s>
+              </p>
+              <p>
+                <s>Dedi etiam vivum nemus quantum fuerit necessaruim ad edifficia monachorum, vel
+                  nova facienda, vel vetera reparanda.</s>
+              </p>
+              <p>
+                <s><persName>Gauterium</persName> quoque, quandam colibertum meum et omnem ejus
+                  posteritatem, et apud <placeName>Raoldicurtem</placeName>, quinque hospites
+                  predicto loco <placeName><abbr>B.</abbr> Germani</placeName> contuli.</s>
+              </p>
+              <p>
+                <s>Et ne memoria deleretur hujus beneficii, litteras inde fieri precepi quas ipse
+                  propria manu firmavi.</s>
+              </p>
+              <p>
+                <s>Testes etiam supradicte dacionis subtitulari precepi.</s>
+                <s>Considerans vero quod de die in diem, in pluribus hominum refrigessit karitas et
+                  habundat iniquitas, hec omnia in sigilli mei presidio et tucione subscribi feci,
+                  ut qui post nos venerint sciant quod pro anime mee et antecessorum meorum
+                  redemptione, monachis <placeName>Columbensibus</placeName>, Deo et <rs
+                    type="person">Sancto <persName>Germano</persName></rs> servientibus concessi vel
+                  dedi.</s>
+              </p>
+              <p>
+                <s>Actum publice <placeName>Parisius</placeName>
+                  <date><num>XII</num> Kal. Junii, regnante rege <persName>Philippo</persName>,
+                      <num>XIII</num> regni sui anno.</date></s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Gaufredi</persName>
+                    <placeName>Parisiorum</placeName> episcopi</rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Ivonis</persName> Comitis et
+                      <persName>Fromundi</persName> fratris ejus</rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Hugonis</persName> Comitis
+                      <persName>Mellenti</persName></rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Guillermi Albani</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Gaffridi</persName> filii
+                    <persName>Nivardi</persName></rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Simonis de Monteforti</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Gauterii</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Nivardi</persName> fratris ejus</rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Guidonis de Monteleherici</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Garnarii</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Hugonis</persName> filii <persName>Gauterii de
+                      Pissiaco</persName></rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <persName>Hugonis de Puterlo</persName>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Gauterii Infantis</persName>, fratris ejus</rs>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0002" n="II" subtype="article">
+          <pb n="14"/>
+          <front>
+            <docDate>
+              <date notBefore="1122" notAfter="1122">1122</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Le roi Louis <num>VI</num> renonce à élever un chateau-fort à Charlevanne.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 79</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><date>Anno ab Incarnatione <abbr>Dni</abbr>
+                    <num>millº centº xxii</num></date>, <rs type="person"
+                      ><persName>Ludovicus</persName> gloriosus Rex</rs>, superatis undique hostibus
+                  et oblata pace, Deo se adjuvante et prospera sibi tribuente, apud
+                    <placeName>Parisius</placeName> cum principibus disponens jura regni et
+                  previdens in futurum, consilium accepit Castrum edificandi in loco qui vocatur
+                    <placeName>Karolivana</placeName>, quod pagum <placeName>Parisiensem</placeName>
+                  ab inimicis custodiret.</s>
+                <s>Sed quia idem locus a <persName>Roberto</persName> rege <placeName>Sancto
+                    Germano</placeName> antiquitus jam fuerat in elemosina datus,
+                    <persName>Robertus</persName> monachus Regem adiit humiliter et suggerens donum
+                  ejusdem attavi sui.</s>
+              </p>
+              <p>
+                <s>Quod audiens Rex respondit benignissime elemosinas predecessorum suorum nullo
+                  modo a se velle diminutionem accipere, sed potius meliorationem.</s>
+              </p>
+              <p>
+                <s>Quid plura ? tradidit monacho omne ecclesiarum et omne decimarum ad ipsum locum
+                  pertinencium et omne reddituum suorum.</s>
+                <s>Precepit quoque monacho ut hoc donum super altare <placeName><abbr>S.</abbr>
+                    Germani</placeName> de sua parte necnon et <rs type="person">regine
+                      <persName>Adelaidis</persName></rs> filiique sui
+                  <persName>Philippi</persName>, mitteret.</s>
+                <s>Quod monachus accipiens procidit ad pedes ejus, osculans ejus manum.</s>
+              </p>
+              <p>
+                <s>Testes qui hoc viderunt sunt isti : <rs type="person"
+                      ><persName>Stephanus</persName> archidiaconus</rs>, <rs type="person"
+                      ><persName>Gislibertus</persName> frater ejus</rs>, <persName>Milo de
+                    Malerepast</persName>, <persName>Frogerius de Chaalons</persName>,
+                    <persName>Bartholomeus de Fulcris</persName>, <rs type="person"
+                      ><persName>Hugo</persName> filius <persName>Garnerie</persName></rs>.</s>
+              </p>
+              <p>
+                <s>Ex parte monachorum <persName>Robertus de Castello</persName>, <persName>Girelmus
+                    de Marleio</persName>, <persName>Garnerius</persName> prepositus.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0003" n="III" subtype="article">
+          <pb n="14"/>
+          <front>
+            <docDate>
+              <date notBefore="1124-08-13" notAfter="1125-03-29">13 août 1124 — 29 mars 1125</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Confirmation par Louis <num>VI</num> des biens du Prieuré</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 6.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>, <rs
+                    type="person">Ego <persName>Ludovicus</persName> Dei gratia
+                      <persName>Francorum</persName> Rex</rs>.</s>
+                <s><seg type="theo">Universis Dei et Eclesie</seg> cultoribus tam posteris quam
+                  instantibus et precipue successoribus nostris <persName>Francorum</persName>
+                  regibus certum haberi, firmum teneri volumus, quod universa beneficia que <rs
+                    type="person">antecessores nostri <persName>Francorum</persName> Reges</rs>
+                  ecclesie <placeName><abbr>B.</abbr> Vincencii</placeName> et
+                      <placeName><abbr>S.</abbr> Germani de Leya</placeName>, videlicet <rs
+                    type="person"><persName>Robertus</persName> Rex</rs> qui ecclesiam ipsam a
+                  fundamentis fundavit, et <rs type="person"><persName>Henricus</persName> rex
+                    filius ipsius</rs>, et <rs type="person"><persName>Philippus</persName> pater
+                    noster</rs>, contulerunt, vel in posterum quilibet concessuri vel donaturi sunt,
+                  et nos bona voluntate et utili concedimus et firmamus.</s>
+              </p>
+              <pb n="16"/>
+              <p>
+                <s>In primis totam villam predicte ecclesie adjacentem omnino liberam et quitam, cum
+                  sanguine et latrone et omnibus forisfactis in corpore ville factis, sive omnibus
+                  consuetudinibus de corpore ville moventibus.</s>
+              </p>
+              <p>
+                <s>Omnem quoque decimam vini et annone mee et avene que attinent ad cellarium vel
+                  granarium <placeName>Pissiaci</placeName> id est de <placeName>Trel</placeName> et
+                  de <placeName>Charlavana</placeName> et de ipso <placeName>Pissiaco</placeName>,
+                  et decimam <placeName>Alvers</placeName>, et annone et leguminum et avene
+                  undecumque sit.</s>
+                <s>Similiter et decimam et annone mee et avene et leguminum de
+                    <placeName>Acquilina</placeName> et omnium crescentiarum mearum, si que mea
+                  fuerunt facte.</s>
+              </p>
+              <p>
+                <s><rs type="place">Molendinum quoque <placeName>Filiolicurtis</placeName></rs>, et
+                  unum modium annone habendum perpetuo, unoquoque anno, de molendino quem, pacto
+                  tali, <placeName>Columbenses</placeName> monachi concesserunt fieri super Stagnum
+                    <placeName>Sancti Germani de Leya</placeName>
+                  <persName>Bertholomeo de Fulcoio</persName>.</s>
+              </p>
+              <p>
+                <s>Terram etiam <placeName>Gaudine</placeName>.</s>
+              </p>
+              <p>
+                <s>Similiter et brancas de <placeName>Leia</placeName>, quantum necesse fuerit ad
+                  focum monachorum, necnon et mortuum licnum, quantum sufficit ad usum monachorum et
+                  hospitum suorum, et pasturam totam pecoribus monachorum, et etiam hospitum suorum,
+                  et ut monachi <num>Centum</num> porcos habeant libere discurrentes per totam
+                    <placeName>Leiam</placeName> tempore glandium.</s>
+                <s>Vivum etiam nemus quantum fuerit necessarium ad edifficia monachorum, vel nova
+                  facienda, vel vetera reparanda.</s>
+              </p>
+              <p>
+                <s><persName>Galterum</persName> quoque colibertum, et omnem ejus posteritatem et
+                    <num>V</num> hospites apud <placeName>Ruoldicurtam</placeName>.</s>
+                <s>Hec omnia benigne concedimus monachis <placeName>Columbensibus</placeName> Deo
+                    <rs type="person">Sanctoque <persName>Germano</persName></rs> servientibus.</s>
+              </p>
+              <p>
+                <s>Que ne in posterum alicujus malivoli possint invidia infirmari vel vetustate
+                  deleri, nostri nominis karactere et sigillo signari et corroborari precepimus.</s>
+              </p>
+              <p>
+                <s>Actum publice apud <placeName>Sanctum Germanum</placeName>, presentibus episcopis
+                  nostris, <rs type="person"><placeName>Carnotensi</placeName> videlicet
+                      <persName>Gaufredo</persName></rs> et <rs type="person"
+                      ><persName>Manasserio</persName>
+                    <placeName>Meldensi</placeName></rs> cum clericis suis, abbate
+                      <placeName><abbr>Sti</abbr> Stephani de Vallera</placeName> et
+                    <persName>Hugone de Bugis</persName> preposito, et <rs type="person"
+                      ><persName>Galterio de Bona valle</persName> archidiacono</rs>, et aliis
+                  multis.</s>
+                <s>Data per manum <rs type="person"><persName>Stephani</persName> Cancellarii</rs> 
+                    <date>anno Incarnationis Verbi <num>millº centº vicesimo quarto</num> regni vero
+                    nostri <num>xxii º</num>, <persName>Adelaidis</persName> regine <num>x
+                    º</num></date>.</s>
+                <s>Astantibus...</s>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Stephani</persName> dapiferi</rs>.</s>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Gisleberti</persName> buticularii</rs>.</s>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Hugonis</persName> constabularii</rs>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0004" n="IV" subtype="article">
+          <pb n="16"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1131"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Don de la moitié de l'île Garnier, par Aston du Pecq.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 80</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Agnoscant omnes tam moderni quam futuri, <persName>Asthonem de Alpeco</persName>
+                  <placeName>Santo Germano</placeName> medietatem insule que dicitur
+                    <placeName>Garnerii</placeName>, monachisque inibi Deo servientibus, dedisse
+                  tempore <persName>Roberti</persName> prioris, pro hac re munere karitatis
+                    <num>XXX</num> solidos accepit.</s>
+                <s>Fecit vero hoc donum concedere uxori sue que vocatur
+                    <persName>Guiburgis</persName>, filiisque suis <persName>Gauterio</persName> et
+                    <persName>Odoni</persName>, videntibus et audientibus ejus parte <rs
+                    type="person"><persName>Richerio</persName> presbitero</rs> et <rs type="person"
+                      ><persName>Theobaldo</persName> gordario</rs>, <persName>Gauterio</persName>
+                  que majore domini <persName>Bucardi</persName>.</s>
+                <s>Ex nostra vero parte fuerunt dompnus abbas <persName>Rogerius</persName>, <rs
+                    type="person"><persName>Petrus</persName> ejus bajulus de
+                      <placeName>Ulmeto</placeName></rs>, idem <rs type="person">prior
+                      <persName>Robertus de Gallone</persName></rs>, <persName>Rainaldus de
+                    Reculato</persName>, <persName>Garinus de Maroil</persName>,
+                    <persName>Boisardus</persName>, <persName>Osmundus</persName>,
+                    <persName>Stephanus</persName>, famuli abbatis.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0005" n="V" subtype="article">
+          <pb n="16"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1131"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Le chevalier Josselin se fait moine à Saint-Germain.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 83.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Quia presentes vita et dies hominis breves sunt, et memoria mortalium labilis
+                  est, notum volumus... quod quidam miles, <persName>Joscelinus</persName> nomine,
+                  multociens rogando petebat ut monachus fieret.</s>
+                <s>Sed quia, ut beatus jubet <persName>Benedictus</persName>, talibus non est levis
+                  concedendus ingressus, nam sepe videatur penitere, a <rs type="person"
+                      ><persName>Petro</persName> tunc priore <placeName><abbr>S.</abbr>
+                      Germani</placeName></rs> ejus peticio anno integro et ejus susceptio dilata et
+                  prolongata est.</s>
+                <s>Ad ultimum vero idem miles coram rege <persName>Ludovico</persName> veniens,
+                  peticionem iteravit, et petente Rege et <persName>Bartholomeo</persName>, et <rs
+                    type="person">archidiacono <persName>Theobaldo</persName></rs>, multisque aliis,
+                  concessum est et a fratribus.</s>
+                <s>Ipse vero pro anima sua Deo et <rs type="person"><abbr>B.</abbr>
+                    <persName>Marie</persName></rs>
+                  <rs type="person">sanctoque <persName>Germano</persName></rs> concedens donum,
+                  super altare <placeName><abbr>S.</abbr> Vincencii</placeName>, astante
+                  archidiacono et multis aliis, posuit de ecclesia <placeName>Sancti Stephani
+                    Maruellii</placeName> ; eo die quoque juxta ecclesiam arream ad domum, et
+                  dimidium molendinum mundiminorum (?) viginti librarum parisiensium ; decimam
+                  quoque totius terre quam acceperat cum <rs type="person">conjuge sua
+                      <persName>Levis</persName></rs>, tam panis quam vini.</s>
+              </p>
+              <p>
+                <s>Actum est hoc <date>vigilia Purificationis Virginis Virginum</date>.</s>
+                <s><rs type="person">Filius vero ejus <persName>Villermus</persName></rs>, super hoc
+                  in crastinum festivitatis ejusdem apud <placeName>Pissiacum</placeName> a monachis
+                  coram Rege requisitus, tandem concessit omnia.</s>
+                <s>Ita autem Rege proloquente et <abbr>G.</abbr> concedente, quod nullo modo
+                  redimere poterit de denariis alterius vel pecuniis nisi de propriis.</s>
+                <s>Concessit similiter hoc donum <rs type="person"><persName>Galterius</persName>
+                    filius <persName>Grugerii</persName>, gener <persName>Joscelini</persName></rs>,
+                  cum <rs type="person">filia ipsius<pb n="18"/>
+                    <persName>Aeles</persName></rs>.</s>
+                <s>Inter monachos autem et <persName>Willelmum</persName> et filiam, <rs
+                    type="person">rex <persName>Ludovicus</persName></rs> et <rs type="person"
+                      ><persName>Stephanus</persName> dapifer</rs>, fidejussores existunt.</s>
+                <s>Testes vero <persName>Minardus<ref type="note" n="1" target="#n01a "
+                      xml:id="a01a"/></persName> ex parte <persName>Willelmi</persName>.</s>
+                <s>Ex parte monachorum, <rs type="person"><persName>Thieobaldus</persName>
+                    archidiaconus</rs>, <persName>Bartholomeus</persName>, <persName>Willelmus
+                    Rufinus</persName>, <persName>Hugo Brito</persName>, <rs type="person"
+                      ><persName>Abertus</persName> major et filius ejus</rs>.</s>
+                <s>Actum est hoc <date><num>M. C. XXVI</num>. Indictione <num>V.</num></date></s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="1" xml:id="n01a" target="#a01a ">Il faut apparemment lire <hi rend="i"
+                  >Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
+                autres transcrits dans le Cartulaire, a été l'objet de quelques erreurs de
+                lecture.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0006" n="VI" subtype="article">
+          <pb n="18"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1131"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Geoffroi, évêque de Chartres, vient bénir la chapelle élevée par Gasce de Poissy,
+                près de la tour d'Orgeval.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol 80.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><rs type="person"><persName>Gaufridus</persName>
+                    <seg type="theo">Dei gratia</seg>
+                    <placeName>Carnotensis</placeName> episcopus</rs>, bone consciencie testimonium
+                  omnibus in Christo fidelibus.</s>
+                <s>Noverint presentes, noverint et futuri, pie devocionis indicium, divinique amoris
+                  argumentum esse, quod <persName>Gato de Pissiaco</persName>, pro benedictione
+                  capelle quam ipse decenter ac studiose juxta turrim
+                    <placeName>Ordevallis</placeName> composuit, multociens quasi humili ac devota
+                  intencione nos supplicavit prout et quod exoptaverat ex nobis tandem jocundius
+                  impetrasset.</s>
+                <s>Consilio quidem nostro, et precum suarum assiduitate, <rs type="person"
+                      ><persName>Rogerius</persName> abbas <placeName>Columbensis</placeName></rs>
+                  et <rs type="person">frater <persName>Petrus</persName>, prior de
+                        <placeName><abbr>Sto</abbr> Germano</placeName></rs>, ceterique fratres
+                    <placeName>Columbensis</placeName>, in supradicta capella <seg type="theo">Dei
+                    servitium</seg> celebrare concedunt, tali vero pactione quod nullus ibi missam
+                  cantare presumat, nisi sacerdos ejusdem ville aut aliquis ab eo rogatus.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0007" n="VII" subtype="article">
+          <pb n="18"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1131"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>A cette occasion, Gasce de Poissy concède le don des menues dîmes d'Orgeval au
+                Prieuré.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  80.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Noverint instantes et futuri quod <persName>Adam<ref type="note" n="2"
+                      target="#n02a " xml:id="a02a"/> de Mareolo</persName> dedit Deo et <rs
+                    type="person"><abbr>S.</abbr>
+                    <persName>Germano</persName></rs> omnes minutas decimas quas habebat apud
+                    <placeName>Ordevallem</placeName>, scilicet decimam pecorum, agnorum, vitulorum,
+                  lane, straminum, canvri, lini.</s>
+                <s>Hoc donum posuit super altare <placeName><abbr>S.</abbr> Germani</placeName>.</s>
+                <s>Testes ex sua parte fuerunt : <rs type="person"><persName>Stephanus</persName>
+                    frater ejus</rs>, <persName>Hebericus de Marelo</persName>.</s>
+                <s>Ex parte monachorum : <rs type="person"><persName>Petrus</persName> prior,
+                      <persName>Albertus Pinguis</persName></rs>, <persName>Raherius</persName>,
+                    <persName>Galterius</persName>, <rs type="person"><persName>Albertus</persName>
+                    clericus</rs>, <rs type="person"><persName>Godefredis</persName> cementarius de
+                      <placeName>Villa poror</placeName></rs>.</s>
+                <s>Hoc etiam do<pb n="19"/> num misit ipse <persName>Adam</persName> in manu <rs
+                    type="person"><persName>Radulphi</persName> decani</rs> apud
+                    <placeName>Pissiacum</placeName> ante ecclesiam <placeName><abbr>S.</abbr>
+                    Marie</placeName>, de quo idem decanus, assensu episcopi, nos eadem hora
+                  revestivit.</s>
+                <s>Hoc testantur <rs type="person"><persName>Hugo</persName> sacerdos de
+                          <placeName><abbr>S<hi rend="sup">to</hi></abbr>
+                    Leodegario</placeName></rs>, <rs type="person"><persName>Marmadius</persName>
+                    (sic) sacerdos de <placeName>Mareolo</placeName></rs>.</s>
+              </p>
+              <p>
+                <s>Concessit etiam hoc donum <persName>Gascho de Pissiaco</persName>, ipse et uxor
+                  ejus et filii ejus, in turre sua <placeName>Hordevallis</placeName>, illa scilicet
+                  die que <persName>Petrus</persName> prior primam missam cantavit in capella que
+                  est juxta eandem turrim.</s>
+                <s>Hujus rei testes sunt <persName>Willelmus</persName> architenens,
+                    <persName>Gaufridus de Tresencourt</persName>, <persName>Radulphus</persName>
+                  sacerdos, <rs type="person"><persName>Fulco</persName> famulus
+                      <persName>Petri</persName></rs>.</s>
+              </p>
+              <p>
+                <s>Firmaverunt siquidem pactionem monachi et <persName>Adam</persName> de tractore
+                  decime <placeName>Ordevallis</placeName>, quod deincepts non habebit decimam
+                  garbarum sed decimam minarum et straminum in area<ref type="note" n="1"
+                    target="#n01b " xml:id="a01b"/>, et ideo reddiderunt <rs type="person">uxori
+                    G(er)uigerii</rs> tria sextaria formenti, monachi tres minas et
+                    <persName>Adam</persName> totidem, que ipse acciperat ab ea pro tractu illius
+                  anni.</s>
+                <s>Testes sunt <persName>Radulphus</persName> sacerdos, <persName>Hugo</persName>
+                  assatus.</s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="2" xml:id="n02a" target="#a02a ">Le texte porte, par une corruption évidente,
+                  <hi rend="i">quidam</hi>.</note>
+              <note n="1" xml:id="n01b" target="#a01b ">Le texte porte <hi rend="i">in
+                arta</hi>.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0008" n="VIII" subtype="article">
+          <pb n="19"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1131">Entre 1125 et 1131</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Aston du Pecq donne au Prieuré un gourd dans la Seine, en présence du Roi.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  81.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Notum fieri volumus quod quidem miles, <persName>Asto videlicet De
+                    Alpeco</persName>, huic ecclesie <placeName><abbr>S.</abbr>
+                    Vincencii</placeName> martiris et <placeName><abbr>S.</abbr> Germani</placeName>
+                  confessoris <rs type="person"><persName>Gauterio</persName> milite filio suo</rs>,
+                  juniore <persName>Odone</persName> scilicet concedente, gurgitem in
+                    <placeName>Sequana</placeName> dedit.</s>
+                <s>Sed quia de feodo erat, monachis illum accipere hesitantibus, et inde vexari
+                  metuentibus, ipse et <rs type="person"><persName>Odo</persName> filius ejus</rs>
+                  eum semper tuendum et omnibus diebus vite sue a domino de quo est, publice coram
+                  rege <persName>L.</persName> et <persName>L.</persName> regis filio et Regina, qui
+                  tune temporis hoc in loco morabuntur et multis astantibus.</s>
+                <s>Ex parte monachorum testibus <persName>Symone Ternel</persName>, <persName>Hugone
+                    de Manlia</persName>, <persName>Willelmo de Roslio</persName>, <rs type="person"
+                      ><persName>Sulpicio</persName> famulo</rs>, <rs type="person"
+                      ><persName>Goisleno</persName> ipsius filio</rs>, <rs type="person"
+                      ><persName>Gauterio</persName> filio <persName>Haemeri</persName></rs>.</s>
+                <s>Monachi qui tunc ibidem deservebant hi fuerunt : <rs type="person"
+                      ><persName>Raherius</persName> prior</rs>, <persName>Osbertus</persName>,
+                    <persName>Johannes</persName>, <persName>Goscelinus</persName>.</s>
+                <s><persName>Radulphus</persName> Ex parte vero <persName>Asthonis</persName>,
+                    <persName>Hugo Malnutritus</persName>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0009" n="IX" subtype="article">
+          <pb n="19"/>
+          <front>
+            <docDate>
+              <date notBefore="1125" notAfter="1143"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Nomination du maire de Saint-Germain par Roger abbé de Coulombs.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 77</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Quoniam diversorum mentes <persName>Ade</persName> filiorum, a traduce contracta
+                  ceca semper ligat oblevio, huic morbo satis compectens remedium patrum adinvenit
+                  sagacitas, ut quid memorie retineri oporteret, vivacitati litterarum commodatum
+                  sese occullis legencium quasi presens offerret, quamvis tempore longe transacto
+                  preterisset.</s>
+              </p>
+              <p>
+                <s>Nec presentes igitur lateat nec futuros quod <rs type="person">ego
+                      <persName>Rogerius</persName> abbas <placeName>Columbensis</placeName></rs> in
+                  communi Capitulo coram poscitis fratribus, <rs type="person"
+                      ><persName>Racherio</persName> filio <persName>Alberici</persName></rs>,
+                  majoratum <placeName><abbr>S.</abbr> Germani de Leya</placeName>, sicut <rs
+                    type="person">pater suus <persName>Albericus</persName></rs> vivens ante
+                  tenuerat, tenen dum concessi eo tenore quod alios majoratus aliis nostris
+                  majoribus concedimus.</s>
+              </p>
+              <p>
+                <s>Majoratus autem illius proprium majoris, homines cujusdam ville submonere in
+                  placitis in presencia prioris, districtum suum habere, domum suam liberam cum toto
+                  ambitu suo possidere in feodo.</s>
+              </p>
+              <p>
+                <s>Quandam tenet terram que est inter nemus et culturam <placeName>Camberiaci<ref
+                      type="note" n="1" target="#n01c" xml:id="a01c"/></placeName>, et aliam que est
+                  juxta domum <persName>Honorati Filiolicurtis</persName>, quam ab hoc die omnibus
+                  diebus vite sue ad censum unius denarii et in feudo tenebit.</s>
+              </p>
+              <p>
+                <s>Illas autem mensuras que pro nummo et pro abolo <sic>(sic)</sic> habentur faciet,
+                  et per eamdem villam discurrent, et quicumque easdem ab eo mensuras, causa
+                  vendendi vinum suum petet, quantum vini pro abolo habetur a petente, mensuras
+                  illas accipiet.</s>
+              </p>
+              <p>
+                <s>Cetere vero mensure majores monachorum sunt et per totam terram <placeName>Sancti
+                    Germani</placeName> discurrunt.</s>
+              </p>
+              <p>
+                <s>Si quis hominum illorum qui sub majoratu suo continentur ex aliquid forifecerit,
+                  eum, ut sibi in presencia sua satisfaciat in curiam suam, submonebit.</s>
+                <s>Si vero illorum alter alteri forifecerit, et ejus auribus clamorem aliquis
+                  intulerit, illos in curiam monachorum ducet, et ibi districtum suum in presentia
+                  eorumdem accipiet.</s>
+              </p>
+              <p>
+                <s>Si quis de aliquo revestendus fuerit, jussu prioris revestietur per manum
+                  majoris, et ipse major, quod pro revestitura habere debet, habebit, et
+                  quantumcumque prior voluerit, jussu suo submonebit.</s>
+              </p>
+              <pb n="21"/>
+              <p>
+                <s>Predictus siquidem <persName>Racherius</persName> in eodem capitulo quando de
+                  majoratu isto eum Abbas rivestivit, suus homo ligius devenit et omnia que sunt
+                      <placeName><abbr>S.</abbr> Germani</placeName>, terras, prata, vineas, census,
+                  redditus, molendinos, et si qua sunt alia fideliter custodienda<ref type="note"
+                    n="1" target="#n01d " xml:id="a01d"/> super sacrosanctum Evangelium juravit, si
+                  vero in aliquo per se vel per alium forifecisset, quod <num>XII</num> nummos per
+                  annum excedat, cognovit ultros <sic>(sic)</sic> ad priorem accedens et in quo
+                  foriffecerit et suggererit, ad voluntatem <abbr>ejusd.</abbr> prioris, prout ratio
+                  et justicia dictaverint, emendabit.</s>
+              </p>
+              <p>
+                <s>Horum testes sunt :</s>
+              </p>
+              <p>
+                <s><persName>Hugo de Bubiniaco</persName>, <persName>Robertus Bochet</persName>,
+                    <persName>Robertus major</persName>, <persName>Richardus Brisart</persName>, <rs
+                    type="person"><persName>Simon</persName> filius ejus, portarius,
+                      <persName>Berengerius</persName></rs>, <persName>Giroldus de
+                    Loucenis</persName>, <persName>Radulphus</persName>,
+                    <persName>Renoldus</persName>, <persName>Goslenus</persName>,
+                    <persName>Hectredus de Sancto Germano</persName>.</s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="1" xml:id="n01c" target="#a01c">Chambourcy.</note>
+              <note n="1" xml:id="n01d" target="#a01d ">Le texte porte <hi rend="i"
+                  >constituenda</hi>.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0010" n="X" subtype="article">
+          <pb n="21"/>
+          <front>
+            <docDate>
+              <date notBefore="1143-08-01" notAfter="1144-03-26">Ier août 1143 — 26 mars 1144</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Confirmation par Louis <num>VII</num> des biens du Prieuré.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 7.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>.</s>
+              </p>
+              <p>
+                <s><rs type="person"><persName>Ludovicus</persName>
+                    <seg type="theo">Dei gratia</seg>
+                    <persName>Francorum</persName> rex et dux
+                  <persName>Aquitanorum</persName></rs>.</s>
+                <s><abbr>N. f. o. t. f. q. p.</abbr> quoniam omnia que predecessores nostri reges,
+                    <persName>Robertus</persName> videlicet, <persName>Henricus</persName>,
+                    <persName>Philippus</persName> quoque, et genitor noster
+                    <persName>Ludovicus</persName> ecclesie <placeName><abbr>B.</abbr> Vincencii et
+                      <abbr>B.</abbr> Germani de Leia</placeName> contulerunt, nos quoque, ubicumque
+                  sint, pari benignitate concessimus, et nostra firmavimus auctoritate, videlicet
+                  omnem decimam vini et annone mee que attinent ad cellarium vel granavium
+                    <placeName>Pissiaci</placeName>, id de <placeName>Trel</placeName> et de
+                    <placeName>Charlavana</placeName>, et de ipso <placeName>Pissiaco</placeName>,
+                  et decimam <placeName>Alvers</placeName> et vini et annone et leguminis et avene,
+                  ubicumque sit.</s>
+                <s>Similiter et decimam annone mee et avene et leguminis de
+                    <placeName>Aquilina</placeName> et vini crescentiarum mearum, si que in ea
+                  fuerint facte...</s>
+              </p>
+              <p>
+                <s>Actum publice <placeName>Parisius</placeName>
+                  <date>anno ab Incarnatione <abbr>Dni</abbr>
+                    <num>mº centº quadragesimo tercio</num> regni vero</date> nestri
+                  <num>VIIº</num>.</s>
+                <s>Astantibus...</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Radulphi</persName>
+                    <placeName>Viromanduorum</placeName> comitis dapiferi nostri</rs>
+                  <abbr>S.</abbr>
+                  <rs type="person"><persName>Mathei</persName> camerarii</rs>.</s>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Mathei</persName> constabularii</rs>.</s>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Willelmi</persName> buticularii</rs>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0011" n="XI" subtype="article">
+          <pb n="21"/>
+          <front>
+            <docDate>
+              <date notBefore="1161" notAfter="1161"/>
+            </docDate>
+            <index>
+              <term type="nature" key="rjud"/>
+            </index>
+            <argument>
+              <p>Jugement de la Cour du Roi au sujet de l'étang de Feuillancourt.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  13.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>.</s>
+                <s><rs type="person">Ego <persName>Ludovicus</persName>
+                    <pb n="22"/><seg type="theo">Dei gratia</seg>
+                    <persName>Francorum</persName> rex</rs>.</s>
+                <s>In regia administratione summa extitit providentia intendere paci ecclesiarum et
+                  illud precavere, ne aliqua negligencia sive alia occasione, illi qui Deo serviunt
+                  in ecclesiis, ex suscepta professione turbebentur, et avulsi a quiete mentis, de
+                    forensibus<ref type="note" n="1" target="#n01e " xml:id="a01e"/> litigando, <seg
+                    type="theo">a servitio Dei</seg> retrahi er carpere cogantur.</s>
+              </p>
+              <p>
+                <s>Extat autem quoddam stagnum in valle <placeName>Filiolicurtis</placeName> subtus
+                    <placeName>S. Germanum in Leia</placeName>, quod abbatissa et sorores ecclesie
+                    <placeName>Montis martirum</placeName> dicebant suum esse, et contra monachi
+                      <placeName><abbr>S.</abbr> Germani de Leia</placeName> clamabant idem stagnum
+                  et suum esse dicebant.</s>
+              </p>
+              <p>
+                <s>Nos vero hanc controversiam diffinire et utrique ecclesie jus suum illibatum ex
+                  zelo Dei cupientes conservare, in presenciam nostram evocavimus partes ad diem, et
+                  convenerunt ad diem abbatissa et moniales, et protulerunt instrumenta sua.</s>
+                <s>Similiter abbas <placeName>Columbensis</placeName>, prior etiam
+                      <placeName><abbr>S.</abbr> Germani</placeName> et monachi venerunt ad diem cum
+                  munimentis suis et cum vivis testibus, quorum asseveratione in jus proprietatis
+                  stagnum devocabant, et decursibus et allegationibus huic et inde, res deducta est
+                  quoad judicium, et judici dicendi posita est dies.</s>
+              </p>
+              <p>
+                <s>Porro ad diem judicii abbas <placeName>Columbensis</placeName>
+                  <persName>Rogerius</persName> et monachi in sua justicia confidentes venerunt, sed
+                  abbatissa et moniales non venerunt, neque contra mandaverunt.</s>
+              </p>
+              <p>
+                <s>Notum itaque volumus esse <abbr>u. t. p. q. f.</abbr> quod pro tali defectu
+                  monialium, monachis et ecclesie <placeName><abbr>S.</abbr> Germani in
+                    Leia</placeName> data est jam dicti stagni vestitura, et adjudicata, quam eidem
+                  ecclesie pro immobili firmitate in postmodum scripture testimonio et sigilli
+                  nostri auctoritate confirmavimus sub inscripto nostri nominis karactere.</s>
+              </p>
+              <p>
+                <s>Actum publice <placeName>Parisius</placeName>
+                  <date>anno Incarnationis Verbi <num>mº cº lxº primo</num></date>,
+                  astantibus...</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person">Comitis <persName>Theobaldi</persName>, dapiferi
+                  nostri</rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Guidonis</persName> buticularii</rs>.</s>
+              </p>
+              <p>
+                <s><abbr>S.</abbr>
+                  <rs type="person"><persName>Mathei</persName> camerarii</rs>.</s>
+              </p>
+              <p>
+                <s>Constabulario nullo.</s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="1" xml:id="n01e" target="#a01e ">Le texte porte <hi rend="i"
+                >forvicesis</hi>.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0012" n="XII-XIII" subtype="article">
+          <pb n="22"/>
+          <front>
+            <docDate>
+              <date notBefore="1161" notAfter="1186"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Entente entre les moines de Saint-Germain et ceux de Marcheroux au sujet de la
+                chapelle d'Abbécourt.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.76.</witness>
+                <witness n="C">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 78.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Litterarum assertione ab antiquis signanda, posteris servanda, communitum.</s>
+              </p>
+              <pb n="23"/>
+              <p>
+                <s>Ego <persName>Guistopho de Pissiaco</persName>, multis precibus a venerabili
+                  abbate <persName>Columbensi Gumberto</persName> obtinui ut cappellam de
+                    <placeName>Haubecurt</placeName> que sui juris erat canonicis de
+                    <placeName>Marchesraoul</placeName> reparare et possidere permitteret, et
+                  edifficia sibi necessaria construere...</s>
+              </p>
+              <p>
+                <s>Et hujus pactionis tenende me fidejussorem et deffensorem protestor...</s>
+              </p>
+              <p>
+                <s>Hujus rei testes sunt <rs type="person">abbas
+                    <placeName>Columbensis</placeName></rs>, <rs type="person">abbas de
+                      <placeName>Marchesraoul</placeName></rs>, <rs type="person">abbas de
+                      <placeName>Ressuns</placeName></rs>, <rs type="person"><persName>Robertus de
+                      Montpincon</persName>, prior <placeName>Columbensis</placeName></rs>, <rs
+                    type="person"><persName>Philippus</persName> prior <placeName><abbr>S.</abbr>
+                      Germani de Leia</placeName></rs>, <persName>Robertus de Ibreio</persName>,
+                  monachi ; <persName>Gascho de Pissiaco</persName> et filii ejus
+                    <persName>Gascho</persName> et <persName>Robertus</persName> qui hoc
+                  concesserunt, <persName>Gaufredus de Chaneveres</persName> et duo filii ejus
+                    <persName>Simon</persName> et <persName>Matheus</persName>, <persName>Ansellus
+                    de Orgevalle</persName>, <persName>Gascho de Toroto</persName> et <rs
+                    type="person"><persName>Robertus</persName> frater ejus</rs>, et <rs
+                    type="person"><persName>Petrus</persName> presbiter de
+                      <placeName>Orgevalle</placeName></rs>.</s>
+              </p>
+              <p>
+                <s><rs type="person">Ego <persName>Arnulphus</persName> Dei <abbr>gr.</abbr> abbas
+                    de <placeName>Marchesraoul</placeName></rs>...</s>
+                <s><rs type="person">Venerabilis abbas <placeName>Columbensis</placeName></rs>,
+                  assensu totius sui capituli, capellam de <placeName>Haubercourt</placeName>, quam
+                  quidam miles, <persName>Albericus</persName> nomine, in fundo suo edificaverat et
+                  monachis <placeName>Columbensibus</placeName> donaverat... abbatie de
+                    <placeName>Marchesraoul</placeName> concessit...</s>
+              </p>
+              <p>
+                <s>Hujus rei testes sunt : <rs type="person">abbas
+                      <placeName>Columbensis</placeName></rs>, <rs type="person">abbas de
+                      <placeName>Ressons</placeName></rs>, <rs type="person"
+                      ><persName>Haimo</persName> loci illius prior</rs>, <rs type="person"
+                      ><persName>Robertus de Montpincon</persName> prior
+                      <placeName>Columbensis</placeName></rs>, <rs type="person"
+                      ><persName>Philippus</persName> prior <placeName><abbr>S.</abbr> Germani de
+                      Leya</placeName></rs>, <persName>Robertus de Breio</persName>, <rs
+                    type="person"><persName>Renaldus</persName> prior <placeName>Sancti
+                      Cosme</placeName></rs>, <rs type="person"><persName>Petrus</persName>
+                    presbiter <placeName>Orgivallis</placeName></rs>, <rs type="person"
+                      ><abbr>Dnus</abbr>
+                    <persName><abbr>G.</abbr> de Pissiaco</persName></rs> et filii ejus
+                    <persName>Gascho</persName> et <persName>Robertus</persName>, qui hoc
+                  concesserunt, <persName>Gaufredus de Canevieris</persName> et duo filii ejus
+                    <persName>Simon</persName> et <persName>Mateus</persName>, <persName>Ansellus de
+                    Orgivalle</persName>, <persName>Gascho de Torroto</persName> et <rs
+                    type="person"><persName>Robertus</persName> frater ejus</rs>, et
+                    <persName>Petrus d'Issy</persName>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0014" n="XIV" subtype="article">
+          <pb n="23"/>
+          <front>
+            <docDate>
+              <date notBefore="1161" notAfter="1186"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Notice relative aux dîmes d'Abbécourt.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  84.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Decima de <placeName>Herbercurt</placeName> in dominio monachis est
+                      <placeName><abbr>S.</abbr> Germani de Leya</placeName>, preter duorum camporum
+                  decimam ; medietas decime terre <placeName>Vallis de Helbecurt</placeName> eisdem
+                  in dominio.</s>
+                <s>Decime terre <persName>Gaufredi</persName> medietas <placeName><abbr>S.</abbr>
+                    Germani</placeName>, et cetera pars presbyteri.</s>
+                <s>Medietas decime de <placeName>Praella</placeName> in dominio
+                      <placeName><abbr>S.</abbr> Germani</placeName>.</s>
+                <s>Decima <placeName>campi Degnelis</placeName> tota <placeName><abbr>S.</abbr>
+                    Germani</placeName>.</s>
+                <s>Medietas decime terre quam lucratur <persName>Guibertus de Ordevalle</persName>,
+                  que est de feodo <persName>Hugonis Sanzaver<ref type="note" n="1" target="#n01f "
+                      xml:id="a01f"/></persName>
+                  <placeName>Sancti Germani</placeName> ; et altera medietas presbyteri.</s>
+                <s><pb n="24"/><rs type="place">Pomarium</rs> quod est in atrio
+                    <placeName>Ordevallis</placeName> et movet de feodo <persName>Letherici de
+                      Trinsencurt<ref type="note" n="1" target="#n01f " xml:id="a01g"/></persName>,
+                  in dominio <placeName><abbr>S.</abbr> Germani</placeName>.</s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="1" xml:id="n01f" target="#a01f"><hi rend="i">Hugues Sans-Avoir</hi>, de la
+                famille de <hi rend="i">Gautier Sans-Avoir</hi>.</note>
+              <note n="1" xml:id="n01g" target="#a01g ">Tessancourt.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0015" n="XV" subtype="article">
+          <pb n="24"/>
+          <front>
+            <docDate>
+              <date notBefore="1161" notAfter="1186"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Accord avec la prieure de Haute-Bruyère.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 7.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><rs type="person">Ego <persName>Eufemia</persName> ecclesie
+                        <placeName><abbr>S.</abbr> Marie de Altabrueria</placeName> humilis
+                    priorissa</rs>, et totus ejusdem loci fratrum et sororum conventus,..... notum
+                  fieri volumus compositionem illam que facta est inter
+                    <placeName>Columbensem</placeName> ecclesiam et nostram, super capella de
+                    <placeName>Haubertcourt</placeName>.</s>
+                <s>Capellam istam quidem miles, <persName>Albericus</persName> nomine, qui eam in
+                  fundo suo edificaverat, nobis donaverat.</s>
+                <s>Quem cum vellemus utpote nostram possidere, monachi
+                    <placeName>Columbenses</placeName> tam ex dono militis predicti quam ex jure
+                  parrochiali ecclesie de <placeName>Origevalle</placeName>, ad juridictionem suam
+                  dixerunt pertinere.</s>
+              </p>
+              <p>
+                <s>Cumque ergo inter nos et prefatos monachos super hoc negocio controversia
+                  versaretur, vir venerabilis <persName>Gatho de Pissiaco</persName> mediatoris
+                  functus officio, que sunt quomodo inter duas ecclesias sine utriusque dispendio
+                  componentur.</s>
+              </p>
+              <p>
+                <s>Modus compositionis fuit talis.</s>
+                <s><rs type="person">Vir reverendus <persName>Gumbertus</persName> abbas ecclesie
+                      <placeName>Columbensis</placeName></rs> assensu tocius conventus sui, quicquid
+                  in capella prefata habebat cum decima <num>x</num> agripennorum, v videlicet ex
+                  parte <persName>Stephani de Crisperiis</persName>, et v de sua, ecclesie nostre
+                  concessit, salvo tamen ecclesie de <placeName>Origevalle</placeName> jure
+                  parrochiali.</s>
+              </p>
+              <p>
+                <s>Erunt autem hii <num>x</num> agripenni infra metas assignatas, a superiori
+                  videlicet valle usque ad duas arbores subtus designatas, de aliis terris omnibus
+                  que sunt in decimatione <placeName>Columbensis</placeName> ecclesie, quas nos
+                  poterimus adquirere, tam in plano quam in nemore, et ad culturam protrahere,
+                  reddemus decimas <placeName>Columbensi</placeName> ecclesie, et hoc faciemus sine
+                  fraude, sine diminutione, sine dolo, sine contencione, nec unquuam alicujus Romani
+                  privilegii quod nunc habeamus vel in futuro habituri simus auctoritate munite, vel
+                  aliqua terrena potestate fulcite, resiliemus ab hac compositione.</s>
+              </p>
+              <p>
+                <s>Hujus rei testes sunt : <persName>Gatho de Pissiaco</persName>, <rs type="person"
+                      ><persName>Giralmus</persName> socerus ejus<ref type="note" n="2"
+                      target="#n02b " xml:id="a02b"/></rs>, <persName>Albericus de
+                    Haubercurt</persName>, <persName>Gauterus de Basemonte</persName> ; hii sunt
+                  milites.</s>
+                <s><rs type="person"><persName>Garinus</persName>,
+                      <placeName>Latiniacensis</placeName> ecclesie quondam<pb n="25"/> abbas</rs> ;
+                    <rs type="person"><persName>Geruagerius</persName>
+                    <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"
+                      ><persName>Gaufredus</persName> prior <placeName>Altebruerie<ref type="note"
+                        n="1" target="#n01h " xml:id="a01h"/></placeName></rs>; <rs type="person"
+                      ><persName>Paganus de Fulcosa</persName> clericus</rs> ; <rs type="person"
+                      ><persName>Stephanus de Crisperiis</persName>, burgensis</rs>.</s>
+              </p>
+              <p>
+                <s>Actum est hoc <date>anno Incarnati Verbi <num>mº centº
+                  octuagesimo</num></date>.</s>
+                <s>Ad majorera istius rei confirmationem <rs type="person">ego
+                      <persName>Maria</persName> Dei nutu <placeName>Fontiseb(raldi)</placeName>
+                    abbatissa</rs> sigillum nostrum presenti carte superaddimus, et concessionem
+                  factam concedimus.</s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="2" xml:id="n02b" target="#a02b ">Le texte porte <hi rend="i"
+                >Socius</hi>.</note>
+              <note n="1" xml:id="n01h" target="#a01h ">Haute-Bruyère, comme toutes les fondations
+                relevant de Fontevrault, comprenait une double communauté d'hommes et de femmes
+                ayant chacune un supérieur ; mais la direction du couvent appartenait aux
+                femmes.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0016" n="XVI" subtype="article">
+          <pb n="25"/>
+          <front>
+            <docDate>
+              <date notBefore="1186" notAfter="1217">entre 1186 et 1217</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Bail à métayage d'un vignoble, près Saint-Germain.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 79.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Universis <placeName>Sancte Matris Ecclesie</placeName> filiis notum fieri
+                  volumus quod <rs type="person">ego <persName>Theobaldus</persName> Dei
+                      <abbr>gr.</abbr>
+                    <placeName>Columbensis</placeName> ecclesie abbas</rs> et totus conventus vineam
+                  nostram que dicitur de <placeName>Fonte Sancti Martini</placeName> unum modium
+                  vini monialibus <placeName>Altebruerie</placeName> singulis annis reddentem
+                    <persName>Fulconi de Vineis</persName> et ejus heredi ad medietatem perpetuo
+                  possidendam et in melius reparandam tali pacto concessimus.</s>
+              </p>
+              <p>
+                <s>Vineam siquidem illam predictus <persName>Fulco</persName> et ejus heres ablato
+                  veteri et inutili plantario, novis et utilioribus vitibus restaurabunt, nos vero
+                  in vinee cultura nichil mutemus, et a sumptibus vendimiatorum et sarcinariorum
+                  liberi remanemus, quia medietatem vini idem <persName>Fulco</persName> et ejus
+                  heres accipient, et nos aliam.</s>
+                <s>Modius autem vini qui debetur predictis monialibus de communi redditur.</s>
+                <s>Si autem <persName>Fulconem</persName> vel ejus heredem in vinea illa tepidè vel
+                  negligenter operari contigerit, ita ut utiles facturas amictat, illos ad racionem
+                  mittemus et si vinee detrimenta emendare noluerunt, vineam in manu nostra
+                  capiemus.</s>
+              </p>
+              <p>
+                <s>Huic autem pactioni interfuerunt <rs type="person"><persName>Willermus</persName>
+                    prefectus</rs>, <persName>Johannes Marescotus</persName>, <persName>Banardus de
+                    Villaperosa</persName></s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0017" n="XVII" subtype="article">
+          <pb n="25"/>
+          <front>
+            <docDate>
+              <date notBefore="1217" notAfter="1261"/>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Fondation d'une chapellenie dans l'Hôtel-Dieu de Saint-Germain, par Renaud
+                L'Archer.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol 4.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><seg type="theo">In nomine <abbr>S. et I. T.</abbr></seg>
+                  <rs type="person"><persName>Ludovicus</persName> Dei <abbr>gr.</abbr>
+                    <persName>Francorum</persName> rex</rs>.</s>
+              </p>
+              <pb n="26"/>
+              <p>
+                <s>Noverint universi <abbr>p. p.</abbr> et <abbr>f.</abbr> quod cum
+                    <persName>Renoldus Arcuarius</persName> quondam serviens noster pro anima
+                    <persName>Philippi</persName> avi nostri bone memorie, et sua, de bonis suis
+                  procuravit capelle <placeName>Domus Dei de <abbr>S.</abbr> Germano in
+                    Laya</placeName> redditum assignandum, nos pro salute ejusdem anime Regis
+                    <persName>Philippi</persName> et <rs type="person">patris nostri
+                      <persName>Ludovici</persName></rs> inclite recordationis quondam regis
+                    <persName>Francorum</persName>, et nostra, piam assignationem dicti
+                    <persName>Renoldi</persName> in puram et <abbr>perp.</abbr> elemosinam volumus
+                  et approbamus...</s>
+                <s><rs type="person">Prior <placeName><abbr>S.</abbr> Germani in
+                    Laya</placeName></rs> quicumque fuerit, per unum monachorum suorum, diebus
+                  singulis in eadem capella tenetur facere divina officia celebrare, et nos redditum
+                  dicte capelle assignatum domui monachorum <placeName><abbr>B.</abbr>
+                    Germani</placeName>... concessimus perpetuo possidendum...</s>
+              </p>
+              <p>
+                <s>Actum apud <placeName><abbr>S.</abbr> Germanum in Laya</placeName>
+                  <date>anno <abbr>Dni</abbr>
+                    <num>mº ccº vicesimo nono</num> mense octobris</date>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0018" n="XVIII" subtype="article">
+          <pb n="26"/>
+          <front>
+            <docDate>
+              <date notBefore="1261" notAfter="1261">1261</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Le droit de fourches patibulaires est reconnu au prieur de Saint-Germain.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 85</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Cum prior <placeName><abbr>S.</abbr> Germani in Leya</placeName> fecisset furcas
+                  in justicia sua apud <placeName><abbr>S.</abbr> Germanum</placeName>, ad
+                  suspendendum quemdam latronem quem tenebat, conciergius <placeName><abbr>S.</abbr>
+                    Germani</placeName> eas destruxit, quia nunquam eas habuerit ibidem alias dictus
+                  prior.</s>
+                <s>Audita carta ipsius prioris, de libertate sibi fuerunt furche sue, inter
+                  arrestaciones, judicia et consillia <placeName>Parisius</placeName>
+                  <date>in parlamento octavarum Nativitatis <abbr>B.</abbr> Marie Virginis anno
+                      <abbr>Dni</abbr>
+                    <num>mº ccº sexagesimo primo</num></date>.</s>
+              </p>
+              <p xml:lang="fro">
+                <s>Collation faicte est.</s>
+              </p>
+              <p xml:lang="fro">
+                <s>Ainsi signé : <persName>Petavius<ref type="note" n="1" target="#n01i "
+                      xml:id="a01i"/></persName></s>
+              </p>
+            </div>
+          </body>
+          <back>
+            <div type="notes">
+              <note n="1" xml:id="n01i" target="#a01i ">Cet arrêt est cité dans Boutaric, <hi
+                  rend="i">Actes du Parlement de Paris</hi>, <abbr>t.</abbr>
+                <num>I</num>, nº 588, d'après les <hi rend="i">Olim</hi>, <num>I</num>, fol. 116,
+                vº.</note>
+            </div>
+          </back>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0019" n="XIX" subtype="article">
+          <pb n="26"/>
+          <front>
+            <docDate>
+              <date notBefore="1300" notAfter="1300">1300</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Le Roi accorde au Prieuré une compensation au sujet de la fondation du monastère de
+                Poissy.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  68.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s>Cum <rs type="person">prior <placeName><abbr>S.</abbr> Germani in
+                      Laya</placeName></rs> proponens quod <rs type="person">predecessores nostri
+                      <persName>Francorum</persName> reges</rs>, dicto prioratui concesserunt omnem
+                  decimam vini et annone que attinent ad cellarium vel<pb n="27"/> granarium
+                    <placeName>Pissiaci</placeName> de territoriis de <placeName>Triel</placeName>,
+                  de <placeName>Charlavana</placeName> et de <placeName>Pissiaco</placeName>,
+                  eidemque, ex eo quod monasterium <placeName><abbr>B.</abbr> Ludovici</placeName>
+                  edificamus in dicto loco de <placeName>Pissiaco</placeName>, idem prior in dicte
+                  decime perceptione, magnum sustinet detrimentum, peteret sibi per nos super hoc
+                  fieri recompensationem condignam ; et e contra procurator noster pluribus
+                  rationibus pro nobis proponerat nos proinde ad faciendam dicto prioratui
+                  recompensationem aliquam non teneri ; tandem auditis partibus hinc e indè, et
+                  visis litteris predecessorum nostrorum super concessione predicta, per judicium
+                  nostre curie dictum fuit nos dicto prioratui debere facere super hoc condignam
+                  recompensationem, secundum quod invenietur dicte decime perceptionem diminutam
+                  esse, ex editicatione monasterii supradicti.</s>
+              </p>
+              <p>
+                <s><date>In festo <abbr>B.</abbr> Thome inter arresta data in Parlamento omnium
+                    Sanctorum. Anno <abbr>Dni</abbr>
+                    <num>mº cccº</num></date>.</s>
+              </p>
+              <p>
+                <s>Collatio facta est, Extractum a registris curie
+                  <placeName>Parlamenti</placeName>.</s>
+                <s>Sic signum : <persName>Dutillet</persName>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0020" n="XX" subtype="article">
+          <pb n="27"/>
+          <front>
+            <docDate>
+              <date notBefore="1314" notAfter="1314">13l4</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>L'abbaye de Saint-Magloire cède au Roi le patronage de l'église Saint-Léger, près
+                Saint-Germain.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Bibl. nat. ms. lat. 5413, fol. 120.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="lat" type="transcription">
+              <p>
+                <s><rs type="person"><persName>Philippus</persName>
+                    <seg type="theo">Dei gratia</seg>
+                    <persName>Francorum</persName> rex</rs>.</s>
+              </p>
+              <p>
+                <s>Nos in restitutionem et recompensationem juris patronatus parrochialis ecclesie
+                  de <placeName><abbr>Ste</abbr> Leodegario</placeName> prope
+                      <placeName><abbr>Stum</abbr> Germanum in Laya</placeName>,
+                    <placeName>Carnotensis</placeName> dyocesis, quod jus abbas et conventus
+                      <placeName><abbr>Sti</abbr> Maglorii Paris</placeName>, ad quod pertinebat, in
+                  nos ex causa permutationis transtulerunt, jus patronatus ecclesie parrochialis de
+                    <placeName>Limaio</placeName> prope <placeName>Medontam</placeName>,
+                    <placeName>Rothomagensis</placeName> dyocessis, in nos per karissimam dominam
+                  matrem nostram <persName>Mariam</persName>
+                  <placeName>Francie</placeName> Reginam ad quam ratione sui dotalitii pertinebat
+                  translatum, eisdem... concedimus...</s>
+              </p>
+              <p>
+                <s>Actum <placeName>Pissiaci</placeName>
+                  <date>mense augusti, anno <abbr>Dni</abbr>
+                    <num>mº cccº quarto decimo</num></date>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0021" n="XXI" subtype="article">
+          <pb n="27"/>
+          <front>
+            <docDate>
+              <date when="1428-05-24">24 mai 1428</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Lettres du roi d'Angleterre Henri <num>VI</num>, à l'effet d'indemniser le prieuré
+                de la démolition d'édifices pour la fondation du château et basse-cour de
+                Saint-Germain.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 5.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="fro" type="transcription">
+              <p>
+                <s><rs type="person"><persName>Henry</persName>
+                    <seg type="theo">par la grâce de Dieu</seg> roy de <placeName>France</placeName>
+                    et d'<placeName>Angleterre</placeName></rs>,<pb n="28"/> à noz amez et féaulx
+                  gens de noz comptes et tresoriers à <placeName>Paris</placeName>, salut et
+                  dilection.</s>
+              </p>
+              <p>
+                <s>Reçeue avons humble supplicacion de noz bien amez les religieux et moynes de
+                      <placeName><abbr>St.</abbr> Germain en Laye</placeName>, contenant que comme
+                  ilz ayent droit de prendre et percepvoir par chacun an sur nostre recepte de
+                    <placeName>Paris</placeName> la somme de <num>vingt et une</num> livres
+                  parisis... <num>xiii</num>
+                  <abbr>liv.</abbr> pour la fondacion de leur église et <num>vii</num> livres en
+                  recompensation de certains heritaiges pieça demoliz pour la fondacion de nostre
+                  chastel et basse court <abbr>dud.</abbr>
+                  <placeName><abbr>S.</abbr> Germain</placeName>, et dont ilz leur en est deub
+                  d'arreraiges quatre ans... que les gens de noz comptes... different à faire
+                  payer... aud. supplians, parce qu'il dit que <abbr>led.</abbr>
+                  <placeName><abbr>S</abbr>. Germain en Laye</placeName> est de la conqueste fete
+                  par <rs type="person">nostre tres cher et tres amé oncle
+                      <persName>Jehan</persName>, regent nostre royaume de
+                      <placeName>France</placeName>, <persName>de Bedford</persName></rs>, qui est
+                  en leur très grand grief, prejudice et domaige et ou retardement du saint service
+                  divin qui chacun jour est celebré dans leur eglise...</s>
+                <s>Nous vous mandons que... les faciez payer et contenter de tout ce qui leur peut
+                  estre deu... nonobstant que <abbr>led.</abbr>
+                  <placeName><abbr>S.</abbr>Germain</placeName> soit de la conqueste fete par nostre
+                  dit oncle...</s>
+              </p>
+              <p>
+                <s>Donné à <placeName>Paris</placeName> le <date><num>xxiiii<hi rend="sup"
+                      >e</hi></num> jour de may l'an de grace mil <num>ccccxxviii</num> et de nostre
+                    regne le sixiesme</date>.</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0022" n="XXII" subtype="article">
+          <pb n="28"/>
+          <front>
+            <docDate>
+              <date when="1428-06-23">23 juin 1428</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Quittance par frère <hi rend="sc">Jehan de Vy</hi>, prieur à <hi rend="sc">P. de
+                  Saint-Amand</hi>, recepveur de Paris, de 70 <abbr>s. p.</abbr> en déduction de
+                celle de 14 liv. qui lui est due.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 5.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <p/>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0023" n="XXIII" subtype="article">
+          <pb n="28"/>
+          <front>
+            <docDate>
+              <date when="1465-05-15">15 mai 1465</date>
+            </docDate>
+            <index>
+              <term type="nature" key="rjud"/>
+            </index>
+            <argument>
+              <p>Arrêt du <placeName>Parlement</placeName> déclarant que l'évêque de <hi rend="i"
+                  >Chartres</hi> n'a aucun droit de visite ni de juridiction sur le prieuré de
+                    <placeName><abbr>St.</abbr> Germain</placeName></p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  27.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="fro" type="transcription">
+              <p>
+                <s>« nonobstant qu'il ait cité par devant lui le prieur et l'ait détenu prisonnier
+                  en ses prisons à <placeName>Chartres</placeName> par longue espace de temps, et
+                  pareillement un autre religieux commis par le prieur au gouvernement du monastère,
+                  et durant leur détention ont fait inventorier les biens et fait la visite du
+                  prieuré, exercé sa juridiction spirituelle, donné benediction et toutes autres
+                  choses comme s'il eust été en son<pb n="29"/> evesché, en troublant et empeschant
+                  les religieux en leurs possessions et saisines, à tort, sans cause, induement et
+                  de nouvel »</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0024" n="XXIV" subtype="article">
+          <pb n="29"/>
+          <front>
+            <docDate>
+              <date when="1473-03-30">30 mars 1473, <abbr>a. s.</abbr></date>
+            </docDate>
+            <index>
+              <term type="nature" key="rjud"/>
+            </index>
+            <argument>
+              <p>Sentence de <rs type="person"><persName>Jehan de l'Espine</persName>, prévôt de
+                    <placeName>Poissy</placeName></rs>, a la requête de <rs type="person"
+                    ><persName>Jehan Levesque</persName>, official du prieur de
+                      <placeName><abbr>S.</abbr> Germain</placeName></rs>, renvoyant devant sa
+                juridiction <rs type="person"><persName>Jehan le Sieur</persName>, le jeune, clerc,
+                  prisonnier à <placeName>Poissy</placeName></rs>.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  29.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="fro" type="transcription">
+              <p>
+                <s>« et ne pourra ledit prieur procéder à sa delivrance touchant les cas
+                  privillegiez sans appeler les officiers de <rs type="person">Monsieur le Vidame
+                      d'<placeName>Amyens</placeName>, seigneur <abbr>dud.</abbr>
+                    <placeName><abbr>S.</abbr>Germain</placeName></rs> »</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0026" n="XXVI" subtype="article">
+          <pb n="29"/>
+          <front>
+            <docDate>
+              <date when="1473-08-05">5 août 1473</date>
+            </docDate>
+            <index>
+              <term type="nature" key="rjud"/>
+            </index>
+            <argument>
+              <p>Sentence du prévôt de Paris renvoyant devant le prieur de Saint-Germain les auteurs
+                de méfaits commis dans la forêt.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 2.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <div xml:lang="fro" type="transcription">
+              <p>
+                <s><rs type="person"><persName>Hugues Aubriot</persName>, garde de la prévôté de
+                      <placeName>Paris</placeName>, bailli de
+                    <placeName>Saint-Germain</placeName></rs>, constate que « ès assises
+                  derrenièrement tenues aud. lieu par nostre lieutenant en ceste partie maistre
+                    <persName>Martin Double</persName>, une requeste avoit été baillée par
+                    <persName>Guiot le Fevre</persName> contre <persName>Jehan Luillier</persName>
+                  et <persName>Jehan Sauvaige</persName>, contenant que environ la <date>feste de
+                      <abbr>N.</abbr>
+                    <num>D.</num></date> derrenièrement passée <abbr>led.</abbr>
+                  <persName>Guillot</persName> qui s'en aloit de <placeName>Paris</placeName> à
+                    <placeName>Poissy</placeName> où il est demourant en passant par les <rs
+                    type="place">bois de <placeName>Laye</placeName></rs> avoit esté rencontré par
+                    <abbr>lesd.</abbr>
+                  <persName>Jehan Luillier</persName> et <persName>Jehan Sauvaige</persName> qui luy
+                  avoient demandé qui il estoit, auqueux il avoit respondu qu'il estoit ung des plus
+                  pouvres hommes de <placeName>Poissy</placeName>, et ils avoient dit qu'il avoit
+                  menti et qu'il est ung des plus riches hommes de <placeName>Poissy</placeName> et
+                  qu'il avoit vaillant plus de cent livres et pour ce qu'il avoit respondu que non,
+                  avoient sachées sur luy leurs espées, l'en avoient batu par la teste et plusieurs
+                  autres parties de son corps, qu'il en avoit longtemps esté malade au lit ; lequel
+                    <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr>
+                    <persName>Martin</persName></rs> de son office eust envoyé querre et fait venir
+                  par devers luy les dessus dits <persName>Jehan</persName> et
+                    <persName>Jehan</persName>, les eust avisé <abbr>dud.</abbr> cas, afin d'en
+                  savoir la vérité ; lesquels en déclinant la court et jurisdiction, se fussent
+                  advoués clercs, et à ce estoit present religieuse perssonne et honneste le <rs
+                    type="person">prieur de <placeName>Saint-Germain</placeName></rs><pb n="30"/>
+                  qui d'iceulx requist avoir remission et qu'ils luy fussent remis comme ses
+                  subgectz et justiciables en juridiction espirituelle, disant que aud. lieu de
+                    <placeName>Saint-Germain</placeName> il y avoit telle juridiction espirituelle
+                  comme avoit l'évesque en la ville et diocèse de
+                  <placeName>Paris</placeName>...</s>
+                <s>Lequel nostre lieutenant pour ce que de ce droit n'estoit pas informez et que
+                  aussi le cas des accusez estoit un cas de très mauvais exemple et digne de grande
+                  pugnition, eust arresté les dessusdits prisonniers de par le Roy, et comme touz
+                  prisonniers, considéré que encore n'avoit contre eulx aucune information, les eust
+                  eslargiz à comparoir par devant nous au <placeName>Chastellet de Paris</placeName>
+                  à certain jour, sur peine d'estre atains <abbr>dud.</abbr> cas et bannis du
+                  royaume de <placeName>France</placeName>.</s>
+                <s>Auquel jour <abbr>lesd.</abbr> prisonniers feissent comparuz en jugement... et
+                  aussi <abbr>led.</abbr> prieur disant que... veu que <abbr>lesd.</abbr>
+                  prisonniers sont clers, en habit et possession de tonsure, iceux nous lui devons
+                  rendre...</s>
+                <s>Veu sa requeste... attendu que <abbr>lesd.</abbr> prisonniers sont clers... les
+                  luy avons rendus... comme ses subgectz... pour leur faire sur icelluy cas raison
+                  et justice si comme au cas appartient. »</s>
+              </p>
+            </div>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0028" n="XXVIII" subtype="article">
+          <pb n="30"/>
+          <front>
+            <docDate>
+              <date when="1499-08">Lyon, août 1499</date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Lettres du Roi, à la requête de « nostre amé et féal conseiller et maistre des
+                requestes ordinaires de nostre hostel <rs type="person"><abbr>M<hi rend="sup"
+                      >re</hi></abbr>
+                  <persName>Jehan de Pierrepont</persName>, prieur de
+                    <placeName>Saint-Germain-en-Laye</placeName></rs>, » confirmant les droits et
+                usages du couvent dans la forêt de <placeName>Saint-Germain</placeName>, reconnus
+                par lettres du 10 juin 1417.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  97.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <p/>
+          </body>
+        </text>
+        <text xml:id="S-Germain-en-Laye_0029" n="XXIX" subtype="article">
+          <pb n="30"/>
+          <front>
+            <docDate>
+              <date when="1539-02-08">8 février 1539, <abbr>n. st.</abbr></date>
+            </docDate>
+            <index>
+              <term type="nature" key="act"/>
+            </index>
+            <argument>
+              <p>Lettres de « <rs type="person"><persName>Jehan Raoulx</persName>, licencié en lois,
+                  conseiller du Roy et lieutenant en la prévosté de son hostel</rs>, » renvoyant sur
+                sa requête devant l'Official de <placeName>Saint-Germain-en-Laye</placeName> « <rs
+                  type="person">maistre <persName>Anthoine Eschaume</persName>, prestre, clerc de
+                  chapelle de <rs type="person">Monseigneur le Dauphin</rs>, prisonnier es prisons
+                  de <placeName>Poissy</placeName></rs> », pour y être jugé.</p>
+            </argument>
+            <div type="tradition">
+              <listWit type="copie">
+                <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol.
+                  98.</witness>
+              </listWit>
+              <listWit type="édition">
+                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895.</witness>
+              </listWit>
+            </div>
+          </front>
+          <body>
+            <p/>
+          </body>
+        </text>
+      </group>
+    </group>
+  </text>
+</TEI>
