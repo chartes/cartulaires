@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../diple/modules/xrem/rng_html.xsl"?>
+<rng:grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+>
+  <a:documentation>
+    <h1 id="cartulaires.rng">
+      <a href="http://elec.enc.sorbonne.fr/cartulaires">Les cartulaires numérisés d'Ile-de-France</a>,
+   schéma de balisage</h1>
+    <ul class="auteurs">
+      <li>[OGJ] Olivier Guyotjeannin (École nationale des chartes) conseil diplomatique</li>
+      <li>[OC] Olivier Canteaut (École nationale des chartes) : définition diplomatique</li>
+      <li>[FG] Frédéric Glorieux (École nationale des chartes) conception</li>
+      <li>[CD] Camille Desenclos (École nationale des chartes) : maintenance et contributions</li>
+      <li>[CH] Clément Hurel (École nationale des chartes) : contribution technique</li>
+    </ul>
+    <p>Ce schéma spécifie les particularités d'un corpus TEI des éditions électroniques de l'École des chartes (ELEC) : <i>les cartulaires d'Île de France</i>.
+    Il importe plusieurs autres schémas partagés par d'autres corpus :
+    </p>
+    <ul>
+      <li><a href="#acte.rng">acte.rng</a> — Les aspects requis pour tout acte ELEC.</li>
+      <li><a href="#texte.rng">texte.rng</a> — Des modèles de contenus réutilisables pour des corpus autres que des chartes.</li>
+      <li><a href="#teiHeader.rng">teiHeader.rng</a> — Entête fixée de contenu pour tout fichier TEI.</li>
+    </ul>
+    Statistiques de balisage (au 5 décembre 2009). 
+    <table class="data" width="100%">
+      <caption>17 cartulaires, 23 Mo de TEI, 8,7 M caractères (avec notes et paratexte).
+      Texte médiéval : 7 M caractères, 1 M de mots, 27 K phrases. 4900 actes (dont 311 en ancien français).
+      </caption>
+      <tr><th width="30%">balise</th><th>effectif</th><th>Description</th></tr>
+      <tr><td align="right"><a href="#el_persName">persName</a> + <a href="#el_rs">rs type="person"</a></td>
+      <td align="right">37 844 + 14 150 = 51 994</td><td>Personnes</td></tr>
+      <tr>
+        <td align="right"><a href="#el_placeName">placeName</a> + <a href="#el_rs">rs type="place"</a></td>
+        <td align="right">26 333 + 483 = 26 816</td><td>Lieux</td>
+      </tr>
+      <tr><td align="right"><a href="#el_s">s</a></td><td align="right">27 234</td><td>Phrases</td></tr>
+      <tr>
+        <td align="right"><a href="#el_div-transcription">div type="transcription"</a></td>
+        <td align="right">4 909</td><td>Actes avec transcription</td>
+      </tr>
+      <tr><td align="right"><a href="#el_note">note</a></td><td align="right">10 416</td><td>Notes</td></tr>
+      <tr><td align="right">
+        <a href="#el_TEI">TEI</a>
+        
+      </td>
+      <td align="right">17</td><td>Nombre de cartulaires</td></tr>
+    </table>
+    <p>La particularité d'un corpus de chartes concerne généralement :</p>
+    <ul>
+      <li><a href="#cartouche">Analyse diplomatique</a> — La définition des métadonnées requises dans le cartouche d'entête.</li>
+      <li><a href="#tenor">Texte de l'acte</a> — La finesse et le type de balisage de l'acte (parties du discours diplomatique, philologie, paléographie...)</li>
+      <li><a href="#acte.pied">Après l'acte</a> — Autres informations à propos d'un acte.</li>
+    </ul>
+    <!--
+    <p>Historique du corpus</p>
+    
+    <ul>
+      <li>2010</li>
+      <li></li>
+    </ul>
+    -->
+  </a:documentation>
+  
+  <rng:define name="acte" combine="choice">
+    <rng:element name="text">
+      <a:documentation>
+        <h2 id="tenor">Structure générale d’un acte</h2>
+        <p>Pour un acte francilien de ce corpus, on trouvera une transcription de l'éditeur du XIX<sup>e</sup> ou XX<sup>e</sup> (pas de traduction, ni le texte original, avec les abréviations ou l'absence de ponctuation). Tout acte doit obligatoirement être identifié (@xml:id), numéroté (@n), et paginé (&lt;pb>).</p>
+        <dl>
+          <dt>@xml:id</dt>
+          <dd>L'identifiant aura été inscrit manuellement ou avec un processus supervisé, il est pensé pour être au plus proche de la numérotation du cartulaire, afin que les URIs soient à la fois courtes et signifiantes.</dd>
+          <dt>@n</dt>
+          <dd>Le numéro d'acte pour affichage. Les pratiques de numérotation des éditions de cartulaires varient beaucoup (chiffres décimaux, romains, avec des bis et des ter…). Certaines éditions n'en comportent pas. L'imprimé ne permet pas toujours de garder une logique parfaitement séquentielle, suite à des insertions ultérieures, ou des suppléments. Cependant ce numéro garde une importance de référence, certains actes sont connus par le numéro d'ordre attribué par l'éditeur. Il est conservé dans un attribut obligatoire, afin d'assurer une désignation courte des items.</dd>
+          <dt>&lt;pb></dt>
+          <dd>La page où commence l'acte est d'abord conservée pour résoudre les liens depuis les index. Le corpus est destiné à poursuivre une existence purement électronique, le recours à l'image de la page imprimé ne devrait plus être nécessaire. Son utilisation pour la génération d'une référence bibliographique par item est en réflexion.</dd>
+        </dl>
+      </a:documentation>
+      <rng:ref name="split.atts"/>
+      <rng:attribute name="xml:id"/>
+      <rng:attribute name="n"/>
+      <rng:ref name="pb"/>
+      <rng:ref name="acte.front"/>
+      <rng:element name="body">
+        <rng:zeroOrMore>
+          <rng:ref name="note"/>
+        </rng:zeroOrMore>
+        <rng:choice>
+          <rng:ref name="transcription"/>
+          <rng:element name="p">
+            <rng:empty/>
+          </rng:element>
+        </rng:choice>
+        <rng:zeroOrMore>
+          <rng:ref name="note"/>
+        </rng:zeroOrMore>
+      </rng:element>
+      <rng:optional>
+        <rng:element name="back">
+          <rng:ref name="acte.back"/>
+        </rng:element>
+      </rng:optional>
+    </rng:element>
+  </rng:define>
+
+  <h2 id="cartouche">Analyse diplomatique</h2>
+  <rng:define name="acte.front">
+    <rng:element name="front">
+      <a:documentation>
+        <p>Les actes franciliens correspondent aux pratiques éditoriales de la fin du
+      XIX<sup>e</sup> siècle et du début du XX<sup>e</sup>. Le cartouche commence à contenir
+      une partie des informations attendues selon les normes actuelles de l'édition,
+      mais la validation ne peut pas être très stricte. Des reprises manuelles doivent assurer la présence des
+      champs obligatoires.
+      <ul>
+        <li>Numéro (tel qu'indiqué dans l'édition imprimée) &lt;titlePart type="num"&gt; | @n</li>
+        <li>Identifiant, obligatoire, @xml:id</li>
+        <li>Date, obligatoire, &lt;docDate&gt;</li>
+        <li>Nature du document, obligatoire, &lt;index&gt;</li>
+        <li>Titre ou analyse, obligatoire, &lt;head&gt;|&lt;argument&gt;</li>
+        <li>Tableau de la tradition des témoins, bientôt obligatoire, &lt;div type="tradition"&gt;</li>
+      </ul>
+        </p>
+      </a:documentation>
+      <rng:ref name="acte.docDate"/>
+      <rng:element name="index">
+        <rng:element name="term">
+          <rng:attribute name="type">
+            <rng:value>nature</rng:value>
+          </rng:attribute>
+          <rng:attribute name="key">
+            <rng:choice>
+              <rng:value h:title="Actes">act</rng:value>
+              <rng:value h:title="Documents de gestion domaniale — censiers">cens</rng:value>
+              <rng:value h:title="Documents de gestion domaniale — terriers">ter</rng:value>
+              <rng:value h:title="Documents comptables">comp</rng:value>
+              <rng:value h:title="Documents propres à la justice — enquêtes">enq</rng:value>
+              <rng:value h:title="Documents propres à la justice — registres judiciaires">rjud</rng:value>
+              <rng:value h:title="Documents propres aux archives écclésiastiques — pouillés">pou</rng:value>
+              <rng:value h:title="Documents propres aux archives écclésiastiques — délibérations">del</rng:value>
+              <rng:value h:title="Documents propres aux archives écclésiastiques — documents nécrologiques">nec</rng:value>
+              <rng:value h:title="Documents propres aux archives écclésiastiques — visites">vis</rng:value>
+              <rng:value h:title="Documents narratifs — chroniques">chr</rng:value>
+              <rng:value h:title="Documents narratifs — textes hagiographiques">hag</rng:value>
+              <rng:value h:title="Documents épigraphiques">epi</rng:value>
+            </rng:choice>
+          </rng:attribute>
+          <rng:empty/>
+        </rng:element>
+      </rng:element>
+      <rng:choice>
+        <rng:ref name="head"/>
+        <rng:group>
+          <rng:optional>
+            <rng:ref name="head"/>
+          </rng:optional>        
+          <rng:ref name="argument"/>
+        </rng:group>
+      </rng:choice>
+      <rng:optional>
+        <rng:ref name="tradition"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="note"/>
+      </rng:optional>
+    </rng:element>
+  </rng:define>
+  
+  <a:documentation>
+    <h2 id="idf.tradition">Tableau de la tradition</h2>
+    <p>Pour 2010, il est prévu de revoir les références aux témoins manuscrits des 5000 actes franciliens, afin de fournir des cotes modernes.
+    Le balisage actuel est superficiel. Il conserve au moins la typographie originale (<i>italique</i>,
+    <span class="sc">Petites Capitales</span>, <sup>exposant</sup>). Quand l'éditeur de l'imprimé a suivi une règle ferme,
+    la typographie a été interprétée comme une fonction (ex : italique = titre). Cependant, ces références sont anciennes et
+    n'ont pas été vérifiées, rien n'assure que tous les témoins comportent au moins le dépôt et une cote.</p>
+
+    <h2>Transcription</h2>
+        <p>Un acte francilien est essentiellement une suite de paragraphes (supposés une suite de « phrases »). Un gros travail a été effectué sur le texte de la transcription, afin que ce corpus serve à alimenter des ressources linguistiques (bases lexicales, onomastique...).
+L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, en visant à terme que lieux et personnes puissent devenir éléments d'analyse syntaxique des phrases. Cet investissement initial pourrait être rentabilisé à l'avenir avec des procédures statistiques de reconnaissances de motifs.
+      </p>
+        <p>Plusieurs balises sont insérées par des processus automatisés, assistés, et en partie corrigés :</p>
+        <dl class="dl">
+          <dt>&lt;name&gt; <!-- listes de valeurs triées selon l'ordre 
+          <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/name-alpha.txt">alphabétique</a>, 
+          des <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/name-freq.txt">fréquences</a>--></dt>
+          <dd>Inférence automatique sur les mots en majuscules qui ne sont pas en début de phrase, du bruit, mais pas d'effet nuisible sur la typographie. On trouve des erreurs de diverses sortes, parfois symptôme d'erreur de balisage (actum), ou d'interprétation abusive de la majuscule (Abbas, Ecclesia). Retirer un &lt;name&gt; ne perd rien de la typographie imprimée.</dd>
+          <dt>&lt;persName&gt;<!--listes de valeurs triées selon l'ordre 
+          <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/persName-alpha.txt">alphabétique</a>, 
+          des <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/persName-freq.txt">fréquences</a>--></dt>
+          <dd>Inférence sur la typographie de certains éditeurs (souvent les petites capitales), excellent rendement. Les &lt;persName&gt; balisés répondent souvent à un besoin visuel adapté à l'imprimé, menant par exemple à ne pas distinguer le « dictus » d'un patronyme. Beaucoup de corrections sont nécessaires.</dd>
+          <dt>&lt;placeName&gt;<!--listes de valeurs triées selon l'ordre 
+          <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/placeName-alpha.txt">alphabétique</a>, 
+          des <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/placeName-freq.txt">fréquences</a>--></dt>
+          <dd>Inférence sur l'italique de certains éditeurs, plus d'erreurs que pour les &lt;persName&gt;, mais ces erreurs repèrent souvent d'autres segments à exclure de du texte latin.</dd>
+          <dt>&lt;date&gt;<!-- listes de valeurs triées selon l'ordre 
+          <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/date-alpha.txt">alphabétique</a>, 
+          des <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/date-freq.txt">fréquences</a> --></dt>
+          <dd>(À ne pas confondre avec les dates en métadonnées) des formules de datation d'un acte, permet de distinguer des noms de saints qui indiquent une date (fête), et non un lieu (église).</dd>
+          <dt>&lt;seg&gt;<!-- listes de valeurs triées selon l'ordre 
+          <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/seg-alpha.txt">alphabétique</a>, 
+          des <a href="http://elec.enc.sorbonne.fr/cartulairesIdF/stats/seg-freq.txt">fréquences</a>--></dt>
+          <dd>Balisage de formules standardisées, notamment religieuses, permettant d'isoler certains noms propres (« salutem in Domino ») ou des abréviations.</dd>
+        </dl>
+  </a:documentation>
+  <rng:define name="transcription">
+    <rng:element name="div">
+      <a:documentation>Texte de la transcription d'un acte, avec identification de la langue, considéré comme suite paragraphe contenant des phrases.
+      </a:documentation>
+      <rng:attribute name="type">
+        <rng:value>transcription</rng:value>
+      </rng:attribute>
+      <rng:ref name="lang"/>
+      <rng:oneOrMore>
+        <rng:choice>
+          <rng:ref name="pb"/>
+          <rng:ref name="table"/>
+          <rng:ref name="note"/>
+          <rng:element name="p">
+            <rng:optional>
+              <rng:ref name="lang"/>
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:ref name="pb"/>
+                <rng:ref name="note"/>
+                <rng:ref name="idf.s"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </rng:element>
+        </rng:choice>
+      </rng:oneOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="idf.s">
+    <rng:element name="s">
+      <a:documentation>Les phrases d'un acte francilien mêlent de la typographie de base
+      (surtout italique et petites capitales), des appels de notes, et différents segments
+      reconnus après traitements linguistiques.
+      </a:documentation>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="ref.note"/>
+          <rng:ref name="pb"/>
+          <rng:ref name="lb"/>
+          <rng:ref name="idf.seg"/>
+          <rng:ref name="idf.date"/>
+          <rng:ref name="abbr"/>
+          <rng:ref name="num"/>
+          <rng:ref name="foreign"/>
+          <rng:ref name="name"/>
+          <rng:ref name="persName"/>
+          <rng:ref name="placeName"/>
+          <rng:ref name="rs"/>
+          <rng:ref name="orgName"/>
+          <rng:ref name="sic"/>
+          <rng:ref name="q"/>
+          <rng:ref name="mentioned"/>
+          <rng:ref name="sc"/>
+          <rng:ref name="i"/>
+          <rng:ref name="note"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="idf.seg">
+    <rng:element name="seg">
+      <a:documentation>Formule ayant pu être reconnue automatiquement.</a:documentation>
+      <rng:attribute name="type">
+        <choice>
+          <value>theo</value>
+        </choice>
+      </rng:attribute>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="ref.note"/>
+          <rng:ref name="abbr"/>
+          <rng:ref name="typo"/>
+          <rng:ref name="pb"/>
+          <rng:ref name="persName"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="idf.date">
+    <rng:element name="date">
+      <a:documentation>Formule de datation segmentée automatiquement, à vérifier.</a:documentation>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="bornes"/>
+          <rng:ref name="num"/>
+          <rng:ref name="abbr"/>
+          <rng:ref name="persName"/>
+          <rng:ref name="placeName"/>
+          <rng:ref name="rs"/>
+          <rng:ref name="name"/>
+          <rng:ref name="sic"/>
+          <rng:ref name="mentioned"/>
+          <rng:ref name="foreign"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <a:documentation>
+    <h2 id="acte.pied">Après l'acte</h2>
+  </a:documentation>
+  <rng:define name="acte.back">
+    <a:documentation>Contient essentiellement les notes, dont des remarques de l'éditeur qui ne sont pas des notes de bas de page.</a:documentation>
+    <rng:zeroOrMore>
+      <rng:ref name="note"/>
+    </rng:zeroOrMore>
+    <rng:optional>
+      <rng:element name="div">
+        <a:documentation>
+        Les notes des actes franciliens sont généralement en bas de page.
+        Toutefois, il arrive souvent que les notes aient une numérotation sur tout l'ouvrage.
+        Parfois, sur une même personne ou un même lieu par exemple,
+        le conteneur n'est pas répété, mais juste référencé.
+        La note "145" peut n'avoir que (55) pour contenu (voir la note 55 dans les pages précédentes).
+        Le corpus a été préparé pour faciliter la résolution de ces notes à l'affichage.
+        </a:documentation>
+        <rng:attribute name="type">
+          <rng:value>notes</rng:value>
+        </rng:attribute>
+        <rng:oneOrMore>
+          <rng:ref name="note"/>
+        </rng:oneOrMore>
+      </rng:element>
+    </rng:optional>
+  </rng:define>
+  <rng:include href="acte.rng"/>
+</rng:grammar>

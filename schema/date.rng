@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<rng:grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+>
+  <a:documentation>
+    <h1 id="texte.rng">Encodage des dates</h1>
+    <ul class="auteurs">
+      <li>Olivier Guyotjeannin (École nationale des chartes) direction scientifique</li>
+      <li><a onmouseover="this.href='mailto'+'\x3A'+'olivier.canteaut'+'\x40'+'enc.sorbonne.fr'">Olivier Canteaut</a> (École nationale des chartes) direction éditoriale</li>
+      <li><a onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes) suivi technique</li>
+      <li>Élise Girold (École nationale des chartes)</li>
+    </ul>
+    <p>Conventions d’encodage normalisé des dates.</p>
+    <!-- NB // TODO : la documentation insiste sur l'encodage des dates d'un acte... dire que c'est aussi utile pour les correspondances, etc. -->
+  </a:documentation>
+
+  <rng:define name="acte.docDate">
+    <rng:element name="docDate">
+      <a:documentation>
+        <p>La date d'un acte (ou d'une dépêche) est composée idéalement de deux éléments : une date de temps (en nouveau style) et une date de lieu. Ces deux informations sont inégalement disponibles selon les documents et peuvent se trouver sous des formats variés.</p>
+        <p>L'éditeur s'efforcera donc de fournir les informations de datation les plus précises disponibles (par examen interne de l'acte ou par recours à des sources externes) dans l'ordre suivant: millésime, quantième et mois et encodera séparément les dates de temps et de lieu.</p>
+        <a:example>
+          <docDate>
+            <placeName>Saint-Germain-en-Laye</placeName>
+            <date when="1570-08-31">31 août 1570</date>
+          </docDate>
+        </a:example>
+        <p>D'autres usages, moins normalisés, ont parfois cours dans les éditions anciennes, en particulier au XIX<sup>e</sup> siècle. Le présent schéma propose également des solutions pour encoder les dates telles qu'elles peuvent être présentées dans ces éditions: « Donné le ... à ... ». En cas de reprise d'une édition ancienne, le balisage doit normaliser certaines usages de ponctuation
+          <ul>
+            <li>Retirer les parenthèses : <del> ( </del> 1er janvier ou 25 mars 1190 - fin 1190 <del> ) </del></li>
+            <li>Conserver les crochets (dates reconstituées) : [Vers 1176]</li></ul>
+	    Le reste de la ponctuation peut être conservée et insérée entre les différents éléments utilisés.
+        </p>
+         <a:example>
+          <docDate>à <placeName>Senlis</placeName>. <date when="0866-01-16">16 janvier 866</date></docDate>
+        </a:example>
+      </a:documentation>
+      <rng:mixed>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:ref name="acte.date"/>
+            <rng:ref name="acte.placeName"/>
+            <rng:ref name="note"/>
+          </rng:choice>
+        </rng:zeroOrMore>
+      </rng:mixed>
+    </rng:element>
+  </rng:define>
+  <rng:define name="acte.date">
+    <rng:element name="date">
+      <a:documentation>Date de temps avec attributs de normalisation (jour, mois, année, intervalles, approximations)
+        <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-date">dc:date</a>&gt;, 1 ou 2,
+          à inférer des combinaisons @when, @notBefore, @notAfter, et @scope.</blockquote>
+        
+        <p>Une normalisation de la date de temps proposée par le diplomatiste est indispensable : elle permet d'en faciliter l'exploitation lors des requêtes sur le corpus concerné (par exemple pour visualiser la répartition d'un mot selon les siècles ou pour définir des sous-ensembles chronologiques).</p>
+		    <p>Cette normalisation portera à la fois sur les dates fournies par les actes et sur les dates reconstituées. Toutefois, si elle est aisée lorsque la date est complète, elle peut parfois s'avérer plus délicate pour les dates reconstituées partiellement ou encore en raison de problèmes de conversion des styles anciens de datation.</p>
+        <p>
+          De fait, l'éditeur peut offrir à son lecteur maintes nuances pour décrire une date de temps. Cette finesse est destinée à la lecture humaine,
+          pas à la machine. L'encodage XML doit éviter de perdre de l'information, 
+          tout en visant des requêtes efficaces de type base de données.
+        </p>
+        <p>
+          Les dates sont normalisées selon le patron ISO <b>AAAA-MM-JJ</b>, en arrêtant la précision selon ce qui est possible, à l'année, au mois ou au jour près. La mention de l'année est obligatoirement requise&#160;: AAAA(-MM(-JJ)?)?.
+        </p>
+		   <a:example>
+		     <date when="0950">950</date>
+		     <date when="1048-04-17">1048, 17 avril</date>
+		   </a:example>
+        <p>Les formats de type <del>--01-01</del> sont donc à proscrire : ils servent normalement à signifier des dates récurrentes (tous les 1<sup>er</sup> janvier). Pour une date dont on ne connait pas l'année mais seulement le jour, il vaut mieux ne rien écrire, car les applications ne pourront pas exploiter utilement l'information. L'utilisation de points d'interrogation, sur le modèle <del>12??</del>, est également à proscrire : non seulement elle ne permet pas de fournir un intervalle précis, mais elle compliquerait les traitements. On encouragera plutôt l'éditeur électronique à déterminer un intervalle chronologique précis et explicite.
+        </p>
+        <dl class="dl">
+          <dt>Problèmes de conversion de style</dt>
+          <dd>
+            <p>Le soin des éditeurs pour convertir les dates en nouveau style (style du 1<sup>er</sup> janvier) est variable : il n'est donc pas toujours possible de se fier aux dates inscrites par l'éditeur. Aussi on se gardera d'exprimer une date sous le format @when="AAAA-MM-JJ" tant qu'il reste un doute sur le style de datation. Afin d'alerter les applications qu'une décision éditoriale n'a pas été prise, on adoptera un encodage sous forme d'un intervalle (voir ci-dessous).</p>
+            </dd>
+          <dt>Intervalles</dt>
+          <dd>
+            <p>Il est fréquent qu'une date de temps soit formulée sous forme d'un intervalle en raison d'un problème de conversion de style ou d'une reconstitution de la date grâce des sources extérieures. Par ailleurs dans le cas d'une date réduite au seul millésime, cet intervalle s'exprimera à partir d'une année-pivot (pas avant ni après cette même année).</p>
+                       <!-- former examples: <date notBefore="1190-01-01" notAfter="1190-12">1er janvier ou 25 mars 1190 - fin 1190</date>
+                         <date notBefore="1202-01" notAfter="1202-08">Janvier-août 1202</date>-->
+            <a:example>
+              <date notBefore="1123-03-26" notAfter="1123-08-03">26 Mars-3 Août 1123</date>
+              <date notBefore="1090" notAfter="1096">Entre 1090 et 1096</date>
+                      <date notBefore="1148-09" notAfter="1150-09">Automne 1148 — Été 1150</date>
+                         <date notBefore="1138" notAfter="1138">1138</date>
+            </a:example>
+          <p>Les alternatives entre plusieurs dates (1330 ou 1331, 3 avril ; 1330, 25 mars ou 1331, 3 avril) seront également traitées sous forme d'un intervalle contenant l'ensemble des dates possibles.</p>
+		               <a:example>
+              <date notBefore="1211-01-01" notAfter="1212-03-25">1er janvier ou 3 avril 1211 - 1er janvier ou 25 mars 1212</date>
+              <date notBefore="1171-01-25" notAfter="1181-01-25">Frascati, 25 janvier, 1171-1181</date>
+			              </a:example>
+						 			<p>L'intervalle proposé par l'historien peut également être extrêmement imprécis, faute de renseignements suffisants. Dans ce cas, il faut envisager l'intervalle le plus large possible.</p>
+            <a:example>
+              <date notBefore="1100" notAfter="1150">Début du xiie siècle</date>
+              <date notBefore="1150" notAfter="1200">Fin xiie siècle</date>
+              <date notBefore="1100" notAfter="1200">xiie siècle</date>
+            </a:example>
+ </dd>
+          <dt>Dates approximatives (<i>vers</i>, <i>circa</i>)</dt>
+          <dd>
+            <p>L'historien tient parfois à signaler qu'une date est proche, mais qu'elle
+            ne peut être précisée plus. L'attribut @scope est utilisé pour indiquer ce doute. Cet attribut peut être employé pour une date réduite au seul millésime ou non.</p>
+            <p>L'étendue de la période définie par cette approximation n'est pas à préciser au moment de l'édition du document : si elle pouvait être déterminée avec certitude, il conviendrait de recourir à un intervalle sous la forme @notAfter, @notBefore. Ce sera plutôt aux moteurs de recherche et aux applications de diffusion de déterminer l'interprétation à faire de cete date approximative, selon le corpus et l'usage que l'on veut en donner (par exemple, considérer que les dates approximatives doivent être traitées comme un intervalle de 5 ans de part et d'autre de la date fournie). </p>
+            <!-- former example: <date when="1176" scope="circa">[Vers 1176]</date> -->
+            <a:example>
+              <date when="1220" scope="circa">Circa 1220</date>
+              <date when="1196-09-16" scope="circa">Avant et après le 16 septembre 1196</date>
+              <date when="1148-03-25" scope="circa">25 Mars, vers 1148</date>
+            </a:example>
+          </dd>
+          <dt><i>Terminus a quo</i>, <i>terminus ante quem</i></dt>
+          <dd>
+            <p>Lors de la reconstitution d'une date, il n'est pas toujours possible de définir un intervalle de dates précis : un seul <i>terminus</i> peut être connu.</p>
+            <p>Comme pour les dates approximatives, c'est aux moteurs de recherche ou à l'application de diffusion de déterminer automatiquement, selon les besoins, le <i>terminus</i> manquant : même si certaines formules laissent parfois penser que l'écart peut être de moins d'un an, en l'absence de toute recherche complémentaire, on ne saurait fixer un <i>terminus</i> particulier dans ces cas.</p>
+            <!-- former examples: <date notAfter="1183">Avant 1183</date>
+              <date notBefore="1187">Après 1187</date> -->
+            <a:example>
+              <date notAfter="1206">Ante a. 1206</date>
+              <date notBefore="1181-06">Post. jun. 1181</date>
+              <date notBefore="1207-04-22">1207, peu après le 22 avril</date>
+              <date notBefore="1122-09-11">Peu après le 11 septembre 1122</date>
+            </a:example>
+          </dd>
+          <dt>Sans date ?</dt>
+          <dd>
+            <p>L'historien souhaitera évidemment laisser le moins possible de documents non datés.</p>
+            <p>Lors de l'encodage d'une édition imprimée, il arrive parfois que la balisage automatique ne retrouve pas une date. C'est très rarement un acte non daté : tantôt on peut par exemple lire <i>Même date</i>, tantôt la date est mentionnée en note. On conseillera d'ajouter cette information de manière invisible (sans modifier le texte encodé), afin qu'elle puisse renseigner l'application, par exemple avec un élément vide comme <a:example><date when="1202"/></a:example>. Lorsque l'acte ne peut réellement être daté, même approximativement, aucune information ne doit être indiquée, même un élément &lt;date> vide. L'interprétation de l'absence est laissée à l'application de publication.</p>
+          </dd>
+        </dl>
+          <!--
+            <dt>Difficile à classer</dt>
+            <dd>
+            <pre>
+            &lt;date when="1242-07">date Seconde édition de cette charte, avec la date de juillet 1242 
+            (Acte faux. - Copie interpolée, exécutée au XVIIe siècle, sur vélin, 
+            et accompagnée d'un sceau équestre dépourvu de légende, 
+            qui a été détaché d'un acte ancien à l'aide d'une lame chauffée, 
+            puis recollé assez visiblement).&lt;/date>
+            
+            </pre>
+            </dd>
+          -->
+        
+      </a:documentation>
+      <rng:optional>
+        <rng:choice>
+          <rng:group>
+            <rng:attribute name="when">
+              <rng:ref name="acte.date.type"/>
+            </rng:attribute>
+          </rng:group>
+          <rng:group>
+            <rng:attribute name="notBefore">
+              <rng:ref name="acte.date.type"/>
+            </rng:attribute>
+            <rng:attribute name="notAfter">
+              <rng:ref name="acte.date.type"/>
+            </rng:attribute>
+          </rng:group>
+          <rng:group>
+            <rng:attribute name="notAfter">
+              <rng:ref name="acte.date.type"/>
+            </rng:attribute>
+          </rng:group>
+          <rng:group>
+            <rng:attribute name="notBefore">
+              <rng:ref name="acte.date.type"/>
+            </rng:attribute>
+          </rng:group>
+        </rng:choice>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="scope">
+          <rng:choice>
+            <rng:value h:title="Vers">circa</rng:value>
+          </rng:choice>
+        </rng:attribute>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="abbr"/>
+          <rng:ref name="sup"/>
+          <rng:ref name="ref.note"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="acte.date.type">
+    <rng:data type="string">
+      <rng:param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</rng:param>
+    </rng:data>
+  </rng:define>
+  
+  <rng:define name="acte.placeName">
+    <rng:element name="placeName">
+      <a:documentation>
+        <p>Date de lieu sous sa forme moderne si elle a pu être identifiée ou à défaut sous sa forme originelle. Si l'acte ne donne pas de date de lieu, on ne cherchera pas à la restituer, à moins que l'omission ne présente un caractère exceptionnel, la date de lieu devant alors être insérée entre crochets.</p>
+        <p>La date de lieu, tout comme la date de temps, peut être normalisée afin de faciliter l'exploitation d'un corpus en fonction du lieu d'émission des actes à l'aide d'un attribut @key.</p>
+        <a:example>
+          <placeName key="Valence-Fr">Valence</placeName>
+        </a:example>
+        <p></p>
+     </a:documentation>
+      <rng:ref name="normid"/>
+      <rng:zeroOrMore>
+        <rng:text/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+
+  <!-- Nécessaire à la validation du schéma -->
+  <rng:start combine="choice">
+    <rng:ref name="p"/>
+  </rng:start>  
+  
+</rng:grammar>

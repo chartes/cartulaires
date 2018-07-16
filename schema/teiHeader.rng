@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<grammar
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+>
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h1 id="teiHeader">ENC TEI, schéma d'entête &lt;teiHeader&gt;</h1>
+    <ul class="auteurs">
+      <li>[OC] Olivier Canteaut (École nationale des chartes) validation</li>
+      <li>[VJ] <a onmouseover="this.href='mailto'+'\x3A'+'vincent.jolivet'+'\x40'+'enc.sorbonne.fr'">Vincent Jolivet</a> (École nationale des chartes) maintenance</li>
+      <li>[FG] <a onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes) création</li>
+    </ul>
+    <p>Ce schéma définit le cartouche d'entête attendu pour tous les fichiers TEI de l'ENC.
+    Il est largement inspiré des préconisations du logiciel
+    <a href="http://philologic.uchicago.edu/encoding.php">Philologic</a>,
+    qui propose une interprétation du teiHeader, testée sur une large variété de corpus.
+    </p>
+    <ul>
+      <li><a href="#teiHeader.xml">Modèle</a></li>
+      <li><a href="#teiHeader.def">Définition</a></li>
+      <li><a href="#teiHeader.ex">Exemples</a></li>
+    </ul>
+    <h2 id="teiHeader.xml">Modèle d'en-tête</h2>
+    <a:example href="teiHeader.xml"/>
+    <h2 id="licence">Licence</h2>
+    <ul><b>Objectifs</b>
+      <li>Promouvoir l'école en contribuant à l'enseignement et à la recherche</li>
+      <li>Éviter qu'un acteur plus fort remporte le crédit du travail et des investissements de l'école</li>
+    </ul>
+    <ul><b>Références</b>
+      <li><a href="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/legalcode">Creative Commons</a>, le texte légal de la licence "Paternité-Pas d'Utilisation Commerciale-Pas de Modification", selon un texte conforme au droit français</li>
+      <li><a href="http://www.legifrance.gouv.fr/html/licences/licences_notice.htm">licence Légifrance</a>, précédent formulé par des juristes considérant des textes du domaine public en XML comme relevant du droit des bases de données.</li>
+      <li><a href="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245">Article L341-1</a> - Le producteur d'une base de données, entendu comme la personne qui prend l'initiative et le risque des investissements correspondants, bénéficie d'une protection du contenu de la base lorsque la constitution, la vérification ou la présentation de celui-ci atteste d'un investissement financier, matériel ou humain substantiel. Cette protection est indépendante et s'exerce sans préjudice de celles résultant du droit d'auteur ou d'un autre droit sur la base de données ou un de ses éléments constitutifs.</li>
+      <li><a href="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279247">Article L342-1</a> - Le producteur de bases de données a le droit d'interdire :
+<br/>    1º L'extraction, par transfert permanent ou temporaire de la totalité ou d'une partie qualitativement ou quantitativement substantielle du contenu d'une base de données sur un autre support, par tout moyen et sous toute forme que ce soit ;
+<br/>    2º La réutilisation, par la mise à la disposition du public de la totalité ou d'une partie qualitativement ou quantitativement substantielle du contenu de la base, quelle qu'en soit la forme.
+<br/>    Ces droits peuvent être transmis ou cédés ou faire l'objet d'une licence.</li>
+      <li><a href="http://abu.cnam.fr/cgi-bin/donner_licence" >ABU</a> Licence des bibliophiles universels
+</li>
+      <li><a href="http://www.cnrtl.fr/lexiques/morphalou/licence_morphalou.php?version=2">Licence Morphalou</a>, une attitude intéressantes de la recherche publique, avec la particularité suivante : l'ATILF est propriétaire du TLF (qui est encore sous droits), Morphalou en dérive et peut donc hériter de ces propriétés.</li>
+      <li><a href="http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License">Gutemberg</a> Ebooks gratuits, droit américain</li>
+    </ul>
+  </a:documentation>
+  
+  <define name="availability">
+    <element name="availability">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Texte de licence validé avec la direction de l'école,
+à copier/coller depuis les exemples, sans modification.
+      <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-rights">dc:rights</a>&gt; (Prévoir ligne courte pour la licence)</blockquote>
+      </a:documentation>
+      <attribute name="status">
+        <value>restricted</value>
+      </attribute>
+      <oneOrMore>
+        <ref name="teiHeader.p"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="teiHeader">
+    <element name="teiHeader">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Entête de fichier TEI. Porte des informations documentaire, légales, techniques, pratiques...
+      Un entête articule surtout les blocs suivants :
+      <ul>
+        <li><a href="#el_titleStmt">titleStmt</a> : Description du fichier numérique.</li>
+        <li><a href="#el_publicationStmt">publicationStmt</a> : Informations légales.</li>
+        <li><a href="#el_sourceDesc">sourceDesc</a> : Description de la source (imprimée ou manuscrite).</li>
+      </ul>
+      On trouvera ci-dessous un <a href="#teiHeader.xml">exemple</a> complet permettant de naviguer cette documentation.
+      </a:documentation>
+      <optional>
+        <attribute name="xml:id">
+          <value>teiHeader</value>
+        </attribute>
+      </optional>
+      <element name="fileDesc">
+        <ref name="titleStmt"/>
+        <optional>
+          <element name="editionStmt">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Numéroter et dater une édition si au moins une est prévue dans le futur</a:documentation>
+            <attribute name="n"/>
+            <oneOrMore>
+              <ref name="teiHeader.p"/>
+            </oneOrMore>
+          </element>
+        </optional>
+        <element name="extent">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Ordre de grandeur de la ressources électronique,
+(mais pas la description physique de la source numérisée)</a:documentation>
+          <ref name="any"/>
+        </element>
+        <ref name="publicationStmt"/>
+        <!-- obligatoire pour l'ENC, peut-être à rendre optionnel -->
+        <ref name="seriesStmt.enc"/>
+        <!--
+        <optional>
+          <ref name="notesStmt"/>
+        </optional>
+        -->
+        <ref name="sourceDesc"/>
+      </element>
+      <optional>
+        <ref name="encodingDesc"/>
+      </optional>
+      <optional>
+        <ref name="profileDesc"/>
+      </optional>
+      <ref name="revisionDesc"/>
+    </element>
+  </define>
+
+  <define name="titleStmt">
+    <element name="titleStmt">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Informations sur la ressource électronique
+(pas la description de la source numérisé, voir <a href="#el_sourceDesc">sourceDesc</a>).
+Les titres répétables sont interprétés hiérarchiquement, 1) titre de corpus, 2) ouvrage dans le corpus, 
+3) partie d'ouvrage... Les mentions de responsabilité (auteur et/ou éditeur et/ou …) 
+acceptent des formats plus ou moins riches.
+      <a:example>
+<author>Nom, Prénom</author>
+<editor>Nom, Prénom <affiliation></affiliation></editor>
+      </a:example>
+      <blockquote>
+      &lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-creator">dc:creator</a>&gt;, prendre author et principal.</blockquote>
+</a:documentation>
+      <oneOrMore>
+        <ref name="teiHeader.title"/>
+      </oneOrMore>
+      <oneOrMore>
+        <choice>
+          <element name="principal">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Responsable de l'édition électronique.</a:documentation>
+            <attribute name="xml:id"/>
+            <ref name="teiHeader.name"/>
+          </element>
+          <element name="editor">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Contributeur à l'édition électronique.</a:documentation>
+            <ref name="teiHeader.name"/>
+          </element>
+          <element name="author">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Auteur du texte (pour original électronique).</a:documentation>
+            <ref name="teiHeader.name"/>
+          </element>
+          <element name="funder">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Financeur du projet (indiquer une date ?).</a:documentation>
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+      <oneOrMore>
+        <ref name="respStmt"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="teiHeader.name">
+    <zeroOrMore>
+      <choice>
+        <text/>
+        <element name="affiliation">
+          <optional>
+            <attribute name="ref"/>
+          </optional>
+          <text/>
+        </element>
+        <element name="roleName">
+          <optional>
+            <attribute name="ref"/>
+          </optional>
+          <text/>
+        </element>
+        <element name="email">
+          <text/>
+        </element>
+      </choice>
+    </zeroOrMore>
+  </define>
+  <define name="seriesStmt.enc">
+    <element name="seriesStmt">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Informations sur la collection électronique
+(pas la description de la source numérisé), avec URI et n° de volume (obligatoire pour l'ENC).
+<blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-isPartOf">dc:isPartOf</a>&gt; relation à un parent</blockquote>
+      </a:documentation>
+      <ref name="teiHeader.title"/>
+      <element name="idno">
+        <attribute name="type">
+          <value>URI</value>
+        </attribute>
+        <text/>
+      </element>
+      <element name="idno">
+        <attribute name="type">
+          <value>vol</value>
+        </attribute>
+        <text/>
+      </element>
+    </element>
+  </define>
+  <define name="respStmt">
+    <element name="respStmt">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Personne ayant une responsabilité dans l'élaboration de la ressource électronique,
+selon le format : Nom, Prénom (affiliation), avec initiales en attribut @xml:id (comme cible de liens,
+par exemple dans la liste des modifications &lt;<a href="#el_change">change</a>&gt;), 
+et un email optionnel en attribut @ref (privilégier des adresses pérennes 1 an).
+Ne pas mettre ici l'auteur ou l'éditeur de l'œuvre originale, mais uniquement les personnes responsables
+de la numérisation.
+<blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-contributor">dc:contributor</a>&gt;, à voir.</blockquote>
+      </a:documentation>
+    <element name="name">
+      <attribute name="xml:id"/>
+      <ref name="teiHeader.name"/>
+      <!--
+      <attribute name="from">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date de début d'intervention sur la ressource.</a:documentation>
+        <data type="string">
+          <param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</param>
+        </data>
+      </attribute>
+      <attribute name="to">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date de fin passée ou prévue d'intervention sur la ressource.</a:documentation>
+        <data type="string">
+          <param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</param>
+        </data>
+      </attribute>
+      -->
+      <text/>
+    </element>
+    <element name="resp">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Dates et nature de la responsabilité dans la vie de de la ressource.</a:documentation>
+      <text/>
+    </element>
+  </element>
+  </define>
+  <define name="revisionDesc">
+    <element name="revisionDesc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Historique des révisions du fichier (destiné à la collaboration entre chercheurs,
+et à informer l'utilisateur des améliorations apportées entre .</a:documentation>
+      <oneOrMore>
+        <element name="change">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nature de la modification.</a:documentation>
+          <attribute name="who">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Identifiant du responsable de la modification.</a:documentation>
+          </attribute>
+          <attribute name="when">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date de la modification.</a:documentation>
+            <data type="string">
+              <param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</param>
+            </data>
+          </attribute>
+          <text/>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="publicationStmt">
+    <element name="publicationStmt">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Section fixe, sauf la date et l'URI.</a:documentation>
+      <oneOrMore>
+        <element name="date">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date de publication au format ISO /AAAA((-MM)?-JJ)?/,
+  à précisément renseigner, afin que celui qui télécharge
+  le fichier sache la version qu'il a.
+          <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-date">dc:date</a>&gt; ou &lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-issued">dc:issued</a>&gt;, pour la date de publication électronique (uniquement)</blockquote>
+          </a:documentation>
+          <text/>
+        </element>
+      </oneOrMore>
+      <element name="idno">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">URI de référence du fichier, absolument indispensable à renseigner.
+        <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-identifier">dc:identifier</a>&gt;</blockquote>
+        </a:documentation>
+        <text/>
+      </element>
+      <oneOrMore>
+        <element name="publisher">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Généralement, École nationale des chartes. Permettre de répéter en cas de d'établissement associé. </a:documentation>
+          <text/>
+        </element>
+      </oneOrMore>
+      <element name="address">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Adresse postale de l'éditeur de la ressource, généralement l'École des chartes.</a:documentation>
+        <oneOrMore>
+          <element name="addrLine">
+            <text/>
+          </element>
+        </oneOrMore>
+      </element>
+      <optional>
+        <element name="distributor">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">A renseigner si différent du "publisher".</a:documentation>
+          <text/>
+        </element>
+      </optional>
+      <ref name="availability"/>
+    </element>
+  </define>
+  <define name="sourceDesc">
+    <element name="sourceDesc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Description de la source numérisée.
+Le modèle de contenu est pour l'instant limité à la description d'un imprimé (bibl).
+Il pourra être élargi à la description d'un manuscrit (msDesc).
+Cet élément (msDesc) mérite une réflexion attentive dans un schéma distinct.
+      <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-source">dc:source</a>&gt;, composer une ligne bibliographique avec les éléments contenus.
+      </blockquote>
+</a:documentation>
+      <element name="bibl">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence bibliographique de l'oeuvre numérisée, en texte mêlé ponctuée, avec typographie légère (italique).</a:documentation>
+        <optional>
+          <element name="abbr">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Forme courte de la référence bibliographique, par ex. pour l'inscription répétée de la foliotation.</a:documentation>
+            <text/>
+          </element>
+        </optional>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="teiHeader.title"/>
+            <element name="hi">
+              <attribute name="rend">
+                <choice>
+                  <value>i</value>
+                  <value>sup</value>
+                  <value>sc</value>
+                </choice>
+              </attribute>
+              <text/>
+            </element>
+            <element name="foreign">
+              <text/>
+            </element>
+            <element name="publisher">
+              <text/>
+            </element>
+            <element name="date">
+              <text/>
+            </element>
+            <element name="author">
+              <text/>
+            </element>
+          </choice>
+        </zeroOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="encodingDesc">
+    <element name="encodingDesc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Documentation technique de l'encodage.</a:documentation>
+      <element name="projectDesc">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Description scientifique du projet.
+        <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-description">dc:description</a>&gt;</blockquote>
+        </a:documentation>
+        <oneOrMore>
+          <ref name="teiHeader.p"/>
+        </oneOrMore>
+      </element>
+      <optional>
+        <element name="samplingDecl">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Etendue numérisée de la source. Préciser par exemple les pages
+  qui ne sont pas contenues dans le fichier, et pourquoi.</a:documentation>
+          <oneOrMore>
+            <ref name="teiHeader.p"/>
+          </oneOrMore>
+        </element>
+      </optional>
+      <optional>
+        <element name="editorialDecl">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Corrections apportées au document source.</a:documentation>
+          <oneOrMore>
+            <ref name="teiHeader.p"/>
+          </oneOrMore>
+        </element>
+      </optional>
+    </element>
+  </define>
+  <define name="profileDesc">
+    <element name="profileDesc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Langue.</a:documentation>
+      <element name="langUsage">
+        <oneOrMore>
+          <element name="language">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Intitulé lisible de la langue de la ressource.</a:documentation>
+            <attribute name="ident">
+              <a:documentation xmlns="http://www.w3.org/1999/xhtml">Code d'identification de la langue, avec extensions simili ISO si nécessaire (exemple : "latin moderne" = la_FR_mod). Prévoir liste d'autorité.
+              <blockquote>&lt;<a href="#">dc:language</a>&gt;</blockquote>
+              </a:documentation>
+              <text/>
+            </attribute>
+            <optional>
+              <attribute name="usage">
+                <a:documentation xmlns="http://www.w3.org/1999/xhtml">Proportion approximative de la langue dans la ressource.</a:documentation>
+                <text/>
+              </attribute>
+            </optional>
+            <text/>
+          </element>
+        </oneOrMore>
+      </element>
+      <optional>
+        <element name="textClass">
+          <element name="keywords">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Mots clés sujet.</a:documentation>
+            <ref name="keywords.list"/>
+          </element>
+          <element name="keywords">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Périodisation à établir selon ce que Philologic sait exploiter.</a:documentation>
+            <attribute name="scheme">
+              <value>period</value>
+            </attribute>
+            <ref name="keywords.list"/>
+          </element>
+          <zeroOrMore>
+            <element name="keywords">
+              <attribute name="scheme"/>
+              <ref name="keywords.list"/>
+            </element>
+          </zeroOrMore>
+        </element>
+      </optional>
+    </element>
+  </define>
+  <define name="imprint">
+    <element name="imprint">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Adresse éditoriale pour enregistrement bibliographique structuré,
+notamment dans une entête TEI.</a:documentation>
+      <element name="pubPlace">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lieu de publication dans une adresse éditoriale complète.</a:documentation>
+        <text/>
+      </element>
+      <element name="publisher">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Editeur, dans une adresse éditoriale complète.</a:documentation>
+        <text/>
+      </element>
+      <element name="date">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Année de publication de l'ouvrage numérisé /AAAA/,
+        <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-created">dc:created</a>&gt;, à bien distinguer de la date de publication électronique</blockquote>
+        </a:documentation>
+        <text/>
+      </element>
+    </element>
+  </define>
+  <define name="keywords.list">
+    <element name="list">
+      <oneOrMore>
+        <element name="item">
+          <text/>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="teiHeader.date">
+    <element name="date">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date libre qui n'a pas de raison d'être traitée</a:documentation>
+      <!--
+      <attribute name="when">
+        <data type="string">
+          <param name="pattern">([0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?)?</param>
+        </data>
+      </attribute>
+      -->
+      <text/>
+    </element>
+  </define>
+  <define name="teiHeader.title">
+    <element name="title">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Ligne permettant d'identifier une ressource.
+      <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-title">dc:title</a>&gt; titre de la notice</blockquote>
+      </a:documentation>
+      <text/>
+    </element>
+  </define>
+  <define name="teiHeader.p">
+    <element name="p">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Paragraphe pour l'entête TEI, sans dépendance, très libéral.</a:documentation>
+      <ref name="any"/>
+    </element>
+  </define>
+  <define name="any">
+    <zeroOrMore>
+      <choice>
+        <text/>
+        <element>
+          <anyName/>
+          <zeroOrMore>
+            <attribute>
+              <anyName/>
+            </attribute>
+          </zeroOrMore>
+          <ref name="any"/>
+        </element>
+      </choice>
+    </zeroOrMore>
+  </define>
+  <start combine="choice">
+    <ref name="teiHeader"/>
+  </start>
+</grammar>

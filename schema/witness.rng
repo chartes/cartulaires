@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<!--
+  À faire : 
+  * meilleure combinaison des schémas à l'import, voir <rng:notAllowed>
+  
+-->
+<rng:grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+  >
+  <h1 id="acte.rng">Tradition écrite de l'acte <!--(témoins)--></h1>
+  <ul class="auteurs">
+    <li>[OGJ] Olivier Guyotjeannin (École nationale des chartes) direction scientifique</li>
+    <li>[OC] Olivier Canteaut (École nationale des chartes) direction éditoriale</li>
+    <li>[FG] <a onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes) maintenance technique</li>
+    <li>[RD] Richard Delaplace (Langues'O) tableau de la tradition (témoins, &lt;witness>)</li>
+  </ul>
+  <a:documentation>
+    <p>Un acte juridique nous parvient généralement par une tradition écrite, notamment l'original manuscrit. L'intérêt des historiens diffère selon les époques étudiées et les spécialités, le nombre de propriétés renseignées peut largement varier, on trouvera ci dessous une liste développée. Pour tous les actes qu'elle édite, l'École des chartes voudrait d'abord établir le lieu actuel de conservation et sa cote. Ce travail en cours ne doit pas empêcher la conservation d'informations déjà inscrites par les éditeurs précédents, cependant l'exploitation n'en est pas prévue.</p>
+    <ul>
+      <li>
+        <b>Identification</b>
+        <ul>
+          <li>Lieu de conservation</li>
+          <li>Cote</li>
+          <li>Statut : original, copie, acte perdu...</li>
+          <li>Bibliographie (mention de la typologie des références bibliographiques : édition, mention, etc.)</li>
+          <li>Supports de substitution (microfilms avec cotes, fac-similé ; lien à une reproduction photographique)</li>
+        </ul>
+      </li>
+      <li>
+        <b>Description physique</b>
+        <ul>
+          <li>Dimensions
+            <ul>
+              <li>longueur (en mm)</li>
+              <li>largeur (en mm)</li>
+              <li>hauteur du repli</li>
+              <li>importance matérielle (nombre de peaux dans le cas des enquêtes)</li>
+            </ul>
+          </li>
+          <li>support</li>
+          <li>scellement</li>
+          <li>mentions hors teneur (peut être soit donneur d’ordre, notaires, transmission de l’acte) = texte en lui-même</li>
+          <li>mentions dorsales = texte en lui-même</li>
+          <li>état de conservation</li>
+          <li>écriture</li>
+          <li>décoration</li>
+          <li>pliage</li>
+        </ul>
+      </li>
+    </ul>
+  </a:documentation>
+  
+  <a:documentation>
+    <h2>Tableau de la tradition</h2>
+    <p>Le tableau de la tradition peut être structuré de manière variable selon les besoins et surtout selon sa taille. Dans la mesure du possible, il est préférable de regrouper au sein de différents éléments &lt;listWit&gt; les différents témoins selon leur nature.</p>
+    <a:example>
+      <div type="tradition">
+        <listWit type="original">
+          <witness n="A" facs="FRAD028_G_709_14">Original en parchemin. Arch. dép. Eure-et-Loir, G 709 (ancienne cote : fonds du Chapitre, carton X, A, 9).</witness>
+        </listWit>
+        <listWit type="copie">
+          <witness n="B">Bibl. nat. de France, cart. 28, p. 1 et 28 bis, fol. 1r°.</witness>
+        </listWit>
+        <listWit type="édition">
+          <witness n="a">Theodori penitent. II, 423.</witness>
+          <witness n="b">Jaffé, <title>Reg. pont. rom.</title> 596, n° 5880.</witness>
+          <witness n="c" ana="edited"><title>Cartulaire de Notre-Dame de Chartres</title>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, 1862.</witness>
+        </listWit>
+      </div>
+    </a:example>
+  </a:documentation>
+  
+ <rng:define name="tradition">
+    <rng:element name="div">
+      <a:documentation>
+      <p>Tableau de la tradition.</p>
+      </a:documentation>
+      <rng:attribute name="type">
+        <rng:value>tradition</rng:value>
+      </rng:attribute>
+      <rng:zeroOrMore>
+        <rng:ref name="listWit"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="p"/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="listWit">
+    <rng:element name="listWit">
+      <a:documentation>
+        <p>Liste des témoins manuscrits d'une édition critique. Il est préférable de regrouper les témoins selon une typologie définie dans @type (original, copie, édition, indiqué et fac-similé) dans différents éléments &lt;listWit&gt;.</p>
+      </a:documentation>
+      <rng:optional>
+        <rng:attribute name="xml:id"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="type">
+          <rng:ref name="listWit.atts"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:ref name="head"/>
+      </rng:optional>
+      <rng:oneOrMore>
+        <rng:ref name="witness"/>
+      </rng:oneOrMore>
+    </rng:element>
+  </rng:define>  
+  
+  <rng:define name="listWit.atts">
+    <a:documentation>Typologie générale des témoins pouvant être inséré au niveau soit d'un groupe de témoin (listWit/@type) soit du témoin lui-même (witness/term/@key).</a:documentation>
+    <rng:choice>
+      <rng:value>original</rng:value>
+      <rng:value>copie</rng:value>
+      <rng:value>édition</rng:value>
+      <rng:value>indiqué</rng:value>
+      <rng:value>fac-similé</rng:value>
+      <rng:data type="Name"/>
+    </rng:choice>
+  </rng:define>
+  
+  <a:documentation>
+    <h2>Description des témoins</h2>
+  </a:documentation>
+  
+  <rng:define name="witness">
+    <rng:element name="witness">
+      <a:documentation>Témoin manuscrit d'un acte, dans le tableau de la tradition d'une édition, ou dans un catalogue d'actes. 
+        <p>
+          La structure générale du contenu reprend l'expérience des références bibliographiques : laisser à l'auteur la souplesse d'agencer à sa convenace la ponctuation, la typographie et les composants, 
+          tout en assurant la définition exacte  de certains champs pour extraction vers base de données (dépôt d'archives, cote) ou navigation dans l'édition électronique (identifiant, sigle).
+          Le surbalisage est découragé au profit de la fiabilité sur la totalité des corpus.
+        </p>
+        <p>
+          Afin de rester conforme au modèle TEI, tout en restant commode pour le rédacteur, certains éléments autorisés sont interprétés avec souplesse.
+          S'il y a « outrage à l'étiquette » (tag abuse), c'est que les étiquettes peuvent mériter des aaménagement pour s'accomoder à la réalité.
+          Des remarques précisent les choix les moins naturels.
+        </p>
+        
+        <div><b>Exemple imprimé : </b> <i>Ordonnances des rois de France</i>, 1902—1992.</div>
+        <img alt="" src="http://subversion.cru.fr/diple/trunk/schema/witness.png"/>
+        
+        <p><b>Exemple de présentation</b> : <a href="http://elec.enc.sorbonne.fr/editsdepacification/edit_12#art_12_04">Édit de Nantes</a> (témoins et apparat critique)</p>
+        
+        <b>Exemples d'encodage</b>
+        <a:example>
+          <witness><term key="original">Orig.</term> <measure>(54 x 58 cm)</measure> <stamp>jadis sc. sur d. queue</stamp>. <orgName type="repository">Arch. de la Côte-d'Or</orgName>, <num type="idno">C 2971</num>.</witness>
+        </a:example>
+        <a:example>
+          <witness xml:id="edit_14_E"><label>E</label> : Bibl. nat. de France, <num>4° Ld<hi rend="sup">176</hi></num>. 50, p. 1-2 (<num>E<hi rend="sup">1</hi></num>) ;
+            <foreign>ibid.</foreign>, <num>4° Ld<hi rend="sup">176</hi></num>. 43, p. 1
+            (<num>E<hi rend="sup">2</hi></num>)<desc rend="note" n="1">Dans cette
+              édition, l’acte porte le titre suivant : “ Brevet accordé par Henry le Grand
+              à ses sujets de la Religion pretendue reformée le 30 (sic) avril 1598
+              ”.</desc> ; Anquez, p. 497-498 ; Garrisson, p. 91-93 ; Thomas, p. 73-74.</witness> 
+        </a:example>
+        <a:example>
+          <witness xml:id="edit_01_E"><label>E</label> : <title>Actes royaux</title>, <abbr>n<hi rend="sup">os</hi></abbr> 1667-1670 ; Fontanon, t. 4, p. 267-269 ; Isambert, t. 14, p. 124-129 ; Stegmann, p. 8-14.</witness>
+        </a:example>
+        <a:example>
+          <witness xml:id="smchamps_0896_A"><label>A.</label> Original S 1432, nº <num>4.</num> Sceaux intacts : a) équestre avec bouclier aux armes, très fin : <mentioned rend="sc">† Sigillvm Iohannis de Vernone</mentioned> ; revers à l'écu portant un sautoir alaisé : <mentioned rend="sc">† Clavis secreta</mentioned>. b) d'Élisabeth, en robe flottante à traîne et manteau de même étoffe légère, le bras droit levé approuvant, le gauche replié soutenant un oiseau : <mentioned rend="sc">† Isabellis dne de Nomalia</mentioned> <sic>(sic)</sic>, sans contre-sceau.</witness>
+        </a:example>
+        
+        <b>Compréhension de certains éléments dans le contexte d'un témoin &lt;witness></b>
+        
+        <dl>
+          <dt>&lt;label&gt; ou @n Sigle.</dt>
+          <dd>Lettre d'identification pour rappel du témoin dans le corps du texte. Une lettre peut être précisée par des numéros, pouvant paraître en exposant. Le balisage permet de mettre la lettre en gras.  Si @n permet un balisage plus léger et peut être utilisé dans la plupart des cas, &lt;label&gt; devra être utilisé systématiquement pour les sigles complexes (ex: chiffres en exposant).</dd>
+          <dt>@xml:id identifiant</dt>
+          <dd>Permet d'identifier le témoin pour référence ultérieure, par exemple pour des notes d'apparat critique structurées.</dd>
+          <dt>&lt;term key="…"> statut</dt>
+          <dd>Terme d'une liste contrôlée pour qualifier le statut de témoin (original, copie, perdu…)</dd>
+          <dt>&lt;orgName type="repository"> lieu (institution et pays) de conservation</dt>
+          <dd>(2010, TEI n'autorise pas encore  &lt;repository> dans &lt;witness>). Après débats, il a été entendu qu'un dépôt comme les <i>archives impériales</i>, maintenant <i>archives nationales</i> sont moins un lieu qu'une organisation (d'où &lt;orgName>). Ce détail philosophique a ici peu d'importance, pourvu que l'on assure l'attibut avec la valeur fixe <i>repository</i>.</dd>
+          <dt>&lt;num type="idno"> cote</dt>
+          <dd>La cote d'une pièce d'archive peut traditionnellement présenter des variations typographiques (exposant, petites capitales, parfois indice) ce qui ne permet d'utiliser l'élément &lt;idno>.</dd>
+          <dt>&lt;title> titre</dt>
+          <dd>Pour l'édition imprimée d'un acte (en italique).</dd>
+          <dt>&lt;mentioned> mentions</dt>
+          <dd>Texte de mentions dorsales ou hors teneur qui n'est pas reporté dans la transcription (ou dans une note).</dd>
+          <dt>&lt;stamp> sceau</dt>
+          <dd>Indications sigillographiques.</dd>
+          <dt>&lt;emph> italique</dt>
+          <dd>Italique sans fonction exploitée (TEI n'autorise pas &lt;hi> dans &lt;witness>)</dd>
+          <dt>&lt;abbr>, &lt;num></dt>
+          <dd>Suffisent généralement à encadrer les indications en exposant (TEI n'autorise pas &lt;hi> dans &lt;witness>)</dd>
+          <dt>&lt;desc type="note"&gt;  note</dt>
+          <dd>La TEI n'autorise pas les &lt;note> dans &lt;witness>, de nombreuses éditions imprimées comportent cependant de telles notes.</dd>
+        </dl>
+        
+        
+      </a:documentation>
+      <rng:ref name="witness.atts"/>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="label"/>
+          <rng:ref name="term"/>
+          <rng:ref name="repository"/>
+          <rng:ref name="num"/>
+          <rng:ref name="title"/>
+          <rng:ref name="abbr"/>
+          <rng:ref name="rs"/>
+          <rng:ref name="persName"/>
+          <rng:ref name="placeName"/>
+          <rng:ref name="emph"/>
+          <rng:ref name="foreign"/>
+          <rng:ref name="ref"/>
+          <rng:ref name="ref.note"/>
+          <rng:ref name="desc"/>
+          <rng:ref name="mentioned"/>
+          <rng:ref name="sic"/>
+          <rng:ref name="q"/>
+          <rng:element name="stamp">
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="i"/>
+                <rng:ref name="sc"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </rng:element>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="witness.atts">
+    <rng:optional>
+      <rng:attribute name="xml:id">
+        <data type="ID"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="n"/>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="facs"/>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="ana">
+        <rng:value>edited</rng:value>
+      </rng:attribute>
+    </rng:optional>
+  </rng:define>
+  
+  
+  
+</rng:grammar>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../modules/xrem/rng_html.xsl"?>
+<grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr"
+  >
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h1 id="texte.rng">Apparat critique</h1>
+    <ul class="auteurs">
+      <li>[OGJ] Olivier Guyotjeannin (École nationale des chartes) direction scientifique</li>
+      <li>[OC] Olivier Canteaut (École nationale des chartes) direction éditoriale</li>
+      <li>[VJ] <a onmouseover="this.href='mailto'+'\x3A'+'vincent.jolivet'+'\x40'+'enc.sorbonne.fr'">Vincent Jolivet</a>  (École nationale des chartes) maintenance</li>
+      <li>[FG] <a onmouseover="this.href='mailto'+'\x3A'+'frederic.glorieux'+'\x40'+'enc.sorbonne.fr'">Frédéric Glorieux</a> (École nationale des chartes) maintenance</li>
+      <li>[CD] <a onmouseover="this.href='mailto'+'\x3A'+'camille.desenclos'+'\x40'+'enc.sorbonne.fr'">Camille Desenclos</a> (École nationale des chartes) notes d'apparat critique</li>
+    </ul>
+    <p>Schéma utile à l'encodage des notes d'apparat critique.</p>
+  </a:documentation>
+  
+  <define name="critique">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Regroupement des balises d'édition critique (peuvent se retrouver dans tous les éléments du texte édité).</a:documentation>
+    <choice>
+      <ref name="app"/>
+      <ref name="app.table"/>
+      <ref name="space"/>
+      <ref name="sic"/>
+      <ref name="choice"/>
+      <ref name="supplied"/>
+      <ref name="gap"/>
+      <ref name="unclear"/>
+      <ref name="add"/>
+      <ref name="del"/>
+    </choice>
+  </define>
+  
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Lemme et variantes</h2>
+    <p>L'apparat critique est constitué de manière traditionnelle : d'un “lemme” &lt;lem>, la leçon retenue pour l'édition du texte, ainsi que d'une ou plusieurs variantes &lt;rdg> (<i>reading</i>) considérées comme fautives et rejetées en note. L'introduction de l'édition doit préciser si le texte édité est composite, ou bien sélectionner un témoin particulier comme base pour l'édition. </p>
+    <p>Pour la transformation du document balisé, le texte à afficher de manière privilégiée doit être contenu dans l'élément &lt;lem>; lorsque ce texte est issu d'une correction de l'éditeur et non d'un témoin, l'élément &lt;lem> doit être lié à l'éditeur responsable de ladite correction par l'attribut @resp qui pointe vers le nom de l'éditeur, identifié par un code (dans l'attribut @xml:id) dans l'en-tête &lt;teiHeader>. Chaque variante, les &lt;rdg> (parfois le &lt;lem>, en cas de reconstruction du texte), doit être liée au témoin qu'elle cite, par l'attribut @wit qui pointe vers un témoin &lt;witness>, identifié par un code (dans l'attribut @xml:id).</p>
+    <a:example>
+      <app>
+        <lem>qu’ilz feront</lem>
+        <rdg wit="#item_E">qui se feront</rdg>
+      </app>
+    </a:example>
+    Permet de générer une note comme :
+    <div><sup>(a)</sup> <i>E</i> : « qui se feront »</div>
+    <dl class="dl">
+      <dt>Ajouts</dt>
+      <dd>Pour indiquer que le texte édité ne comporte pas certains mots trouvés dans d'autres témoins :
+        <a:example>
+          <app>
+            <!-- position d'un ajout dans un témoin -->
+            <lem/>
+            <rdg wit="#item_E">texte ajouté par un témoin</rdg>
+          </app>
+        </a:example>
+        <div><sup>(a)</sup> <i>E</i>, ajout : « texte ajouté par un témoin »</div>
+        <a:example>
+          <app>
+            <!-- dans le cas d'un texte composite, position d'une omission dans certains témoins -->
+            <lem wit="#edit_12_A2 #edit_12_A3">profanes</lem><rdg/></app>
+        </a:example>
+        <div><sup>(d)</sup> <i>A2</i>, <i>A3</i>, ajout : « profanes »</div>
+        
+      </dd>
+      <dt>Omissions</dt>
+      <dd>Pour indiquer que le texte édité comporte des mots que l'on ne retrouve pas dans d'autres témoins :
+        <a:example>
+          <app>
+            <lem>texte qui ne se retrouve pas dans tous les témoins</lem>
+            <!-- texte absent d'un témoin consulté -->
+            <rdg wit="#item_E"/>
+          </app>
+        </a:example>
+        <div><sup>(i)</sup> <i>E</i>, omision : « texte qui ne se retrouve pas dans tous les témoins »</div>
+      </dd>
+      <dt>Notes libres d'apparat critique</dt>
+      <dd>L'éditeur a aussi la possibilité d'inscrire une note libre d'apparat critique libre, sans format imposé ni renvoi structuré aux témoins :
+        <a:example>
+          <app>
+            <note>Texte libre de la note d'apparat critique.</note>
+          </app>
+        </a:example>
+        <div><sup>(b)</sup> Texte libre de la note d'apparat critique.</div>
+      </dd>
+    </dl>
+  </a:documentation>
+  
+  <define name="app">
+   <element name="app">
+     <a:documentation xmlns="http://www.w3.org/1999/xhtml">Entrée d'apparat critique.</a:documentation>
+      <optional>
+        <attribute name="rend">
+          <choice>
+            <value h:title="Colonnes pour différentes versions">table</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="n">
+         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Numérotation pour appel de note.</a:documentation>
+        </attribute>
+      </optional>
+      <optional>
+        <element name="lem">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lemme.</a:documentation>
+          <optional>
+            <attribute name="wit"/>
+          </optional>
+          <optional>
+            <attribute name="resp"/>
+          </optional>
+          <zeroOrMore>
+            <choice>
+              <text/>
+              <ref name="num"/>
+            </choice>
+          </zeroOrMore>
+        </element>
+        <zeroOrMore>
+          <element name="rdg">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Leçon à l'intérieur d'une variante du texte.</a:documentation>
+            <attribute name="wit"/>
+            <optional>
+              <attribute name="resp"/>
+            </optional>
+            <zeroOrMore>
+              <choice>
+                <text/>
+                <ref name="num"/>
+              </choice>
+            </zeroOrMore>
+          </element>
+        </zeroOrMore>
+      </optional>
+      <optional>
+        <ref name="note"/>
+      </optional>      
+    </element>
+  </define>
+  
+  <define name="app.table">
+    <element name="app">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Présentation tabulaire de versions alternatives d'un même texte. Cette présentation ne doit être utilisée que si les variantes sont de taille importante et qu'aucune ne peut être considérée comme fautive par rapport à l'autre. De ce fait l'élément &lt;lem&gt; n'est pas utilisé dans ce contexte, les deux variantes étant posées sur le même plan au sein d'éléments &lt;rdg&gt;.</p>
+        <a:example>
+          <app rend="table">
+            <rdg wit="#edit_12_v1">Et si lesd. chambres ne sont establies dans lesd. six
+            mois, seront lesd. parlemens, Grand Conseil et chambre de l’eedict à
+            Paris interdictz de cognoistre et juger des causes de ceulx de lad.
+            Religion.</rdg>
+            <rdg wit="#edit_12_v2">Et si lesd. chambres ne sont establies dans trois mois
+              aprés la presentation qui y aura esté faicte de notre present eedit,
+              celuy de noz parlemens qui en aura faict reffus sera interdict de
+              congnoistre et juger des causes de ceulx de lad. Religion.</rdg>
+          </app>
+        </a:example>
+      </a:documentation>
+      <attribute name="rend">
+        <value>table</value>
+      </attribute>
+      <ref name="rdg.table"/>
+      <ref name="rdg.table"/>
+    </element>
+  </define>
+  
+  <define name="rdg.table">
+    <element name="rdg">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Version alternative d'un même texte, utilisé dans le cas de présentation tabulaire des différentes versions d'un texte composite.</a:documentation>
+      <attribute name="wit"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="app"/>
+          <ref name="note"/>
+          <ref name="num"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Corrections éditoriales</h2>
+  </a:documentation>
+  <!-- [CD] Les exemples pour cette partie sont extraits de la cité de Dieu. -->
+  
+  <define name="choice">
+    <element name="choice">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Mot ou passage jugé fautif (erreur de transcription du copiste, lettres oubliées, etc.) et corrigé par l'éditeur afin de rendre le texte compréhensible. &lt;choice&gt; contient nécessairement un élément &lt;sic&gt; avec le texte fautif et un élément &lt;corr&gt; avec la correction faite soit ex ingenio soit à partir d'un autre témoin.</p>
+        <p>&lt;choice&gt; ne doit pas être confondu avec &lt;app&gt;: le premier est utilisé lorsqu'il y a intervention de l'éditeur, que le texte de base est jugé  fautif et ne peut être compris sans sa correction, le second  lorsqu'il s'agit de  présenter de simples variantes changeant certes le sens mais fournissant dans  tous les cas un texte compréhensible. </p>
+        <a:example>
+          <choice>
+          <sic>pas</sic>
+          <corr source="#C1 #P17 #P11 #P31">par</corr>
+          </choice>
+        </a:example>
+      </a:documentation>
+      <ref name="sic"/>
+      <ref name="corr"/>
+    </element>
+  </define>
+  
+  <define name="sic">
+    <element name="sic">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte distingué par l'éditeur comme probablement fautif (apparaît en italique). &lt;sic&gt; peut être utilisé seul ou au sein de l'élément &lt;choice&gt;</p>
+        <a:example>
+          <sic>avotacions</sic>
+        </a:example>
+      </a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="corr">
+    <element name="corr">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte corrigé par l'éditeur. Dans le cas d'une correction ex ingenio, il conviendra insérer l'identifiant du correcteur dans un attribut @resp; dans celui d'une correction à partir d'un autre témoin, l'identifiant dudit témoin devra être inséré dans l'attribut @source. Par ailleurs un attribut @cert peut être utilisé pour préciser le degré de certitude associé à cette correction (low, medium, high).</p>
+        <a:example>
+          <corr source="#C1 #P17 #P11 #P31">est elle loee</corr>
+          <corr cert="high">de Romme</corr>
+        </a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="source"/>
+        <attribute name="resp"/>
+        <attribute name="cert"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="note"/>
+          <ref name="ref.note"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Lacunes</h2>
+    </a:documentation>
+  
+  <define name="gap">
+    <element name="gap">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Passage du texte pouvant être ni retranscrit ni restitué, le plus souvent en raison d'un dommage matériel (trou, tâche d'encre, ...). De fait l'élément &lt;gap&gt; est un élément vide auquel des informations complémentaires peuvent être ajoutées en attribut sur la cause de ce trou (@reason)  ou sur sa dimension (@extent).</p>
+        <p>&lt;gap&gt; ne doit pas être confondu ni combiné avec &lt;supplied&gt;: le premier est utilisé lorsqu'aucun mot ne peut être restitué, tandis que le second sert à encoder un passage ayant pu être restitué par l'éditeur (à l'aide du contexte ou d'un autre témoin).</p>
+        <a:example>Item X s. q ac B. Mazoeirs per los <gap extent="3"/></a:example>
+        <a:example>Item <gap reason="cancelled"/></a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="extent"/>
+        <attribute name="reason"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  
+  <define name="unclear">
+    <element name="unclear">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte en partie illisible (suppression ou domage matériel). Le texte peut être lu et retranscrit mais sans une parfaite certitude.</p>
+        <p>A ne pas confondre avec &lt;supplied&gt; qui retranscrit un texte entièrement illisible et restitué <i>ex ingenio</i> ou à l'aide d'une variante du texte.</p>
+        <a:example>d’Erbeirs e <unclear>tengui</unclear></a:example>
+      </a:documentation>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="supplied">
+    <element name="supplied">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte restitué par l'éditeur à la place d'un passage illisible souvent suite à des dommages matériels ou de pertes dans le document original. Si le texte a été restitué à partir d'un autre témoin, il est recommandé de le citer en insérant au sein d'un attribut @source le code du témoin concerné.</p>
+        <a:example>archidia<supplied>co</supplied>no</a:example>
+        <a:example>Encore que nous vous a<supplied source="#l-54-B">yons escript</supplied></a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="source"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="space">
+    <element name="space">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Espace laissé blanc par le scribe ou auteur et jugé significatif par l'éditeur. Ces blancs sont traditionnellement représentés à l'aide d'astérisques dans les éditions critiques papier. Des informations sur la taille de cet espace peuvent être ajoutées à l'aide des attributs @quantity et @unit.</p>
+        <a:example>
+          <space quantity="1" unit="cm"/>
+        </a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="extent"/>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+  
+  <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+    <h2>Additions et suppressions</h2>
+    <p>Les additions et corrections marginales ou interlinéaires seront intégrées à leur place dans l'édition, mais leur présence et leur position seront signalées en note, ainsi que, éventuellement, les mots raturés, dans la mesure où ils sont lisibles.</p>
+    <p>Cette section traite uniquement du texte ajouté ou supprimé par l'auteur du texte ou par un relecteur/correcteur postérieur et contenu dans le témoin de base, en aucun cas des corrections effectuées par l'éditeur ou contenues dans d'autres témoins.</p>
+  </a:documentation>
+  
+  <define name="add">
+    <element name="add">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte ajouté. Il est recommandé de préciser l'endroit où le texte est ajouté (marge, intralinéaire, bas de page, ...) à l'aide de l'attribut @place.</p>
+        <a:example>
+          <add place="intralinear">de chaque partie, c’est assavoir paier et garantir et est assuré que</add>
+        </a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="type"/>
+        <attribute name="place"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="typo"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="del">
+    <element name="del">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Texte supprimé. Des informations sur la manière dont le texte a été supprimé (biffé, partiellement effacé, ...) peuvent être insérées dans l'attribut @rend.</p>
+        <a:example>
+          <del rend="biffe" type="texte">P. Mazoeirs e Jo. Patriarcha, LX s que foront donat al chastela.</del>
+        </a:example>
+      </a:documentation>
+      <optional>
+        <attribute name="type"/>
+        <attribute name="rend"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="bornes"/>
+          <ref name="typo"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- insérer documentation sur <choice> dès que cela aura été validé. De même choice pourra être utilisé pour combiner add et del. -->
+  
+  <start combine="choice">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nécessaire à la validation du schéma</a:documentation>
+    <ref name="p"/>
+  </start>  
+  
+</grammar>
