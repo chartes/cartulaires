@@ -26,7 +26,7 @@
         </xsl:for-each>-->
         
         <xsl:result-document href="doc_types.csv">
-            <xsl:text></xsl:text>
+            <xsl:text>ID</xsl:text>
             <xsl:text>&#9;</xsl:text>
             <xsl:for-each select="$myTypes">
                 <xsl:sort/>
@@ -42,12 +42,17 @@
         </xsl:result-document>
         
         <xsl:result-document href="n_entites.csv">
-            <xsl:text></xsl:text>
+            <xsl:text>ID</xsl:text>
             <xsl:text>&#9;</xsl:text>
             <xsl:text>placeName</xsl:text>
             <xsl:text>&#9;</xsl:text>
             <xsl:text>persName</xsl:text>
             <xsl:text>&#9;</xsl:text>
+            <xsl:text>rs place</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+            <xsl:text>rs pers</xsl:text>
+            <xsl:text>&#9;</xsl:text>
+            <xsl:text>rs autre</xsl:text>
             <xsl:text>&#xA;</xsl:text>
             
             <xsl:apply-templates select="$myCollection/descendant::tei:TEI" mode="countNames"/>
@@ -80,6 +85,12 @@
         <xsl:value-of select="count(descendant::tei:placeName)"/>
         <xsl:text>&#9;</xsl:text>
         <xsl:value-of select="count(descendant::tei:persName)"/>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:value-of select="count(descendant::tei:rs[@type='place'])"/>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:value-of select="count(descendant::tei:rs[@type='person'])"/>
+        <xsl:text>&#9;</xsl:text>
+        <xsl:value-of select="count(descendant::tei:rs[not(@type=('person', 'place'))])"/>
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
     
