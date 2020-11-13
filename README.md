@@ -206,7 +206,7 @@ Exemples :
 doit devenir
 
 ```xml
-<rs type="person><persName>Radulphus</persName>, de <placeName>Pentin</placeName></rs>
+<rs type="person"><persName>Radulphus</persName>, de <placeName>Pentin</placeName></rs>
 ```
 
 
