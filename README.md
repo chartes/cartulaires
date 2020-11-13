@@ -16,6 +16,12 @@ Pour annoter les noms de lieu, nous utiliserons les balises `<rs>` (cf. II.1 ) e
 
 Ne sont pas inclus dans la balise :
 
+- les articles
+
+```xml
+l'<rs type="place">Arche de <placeName>Corbueil</placeName></rs>, ̀
+```
+
 - les diacritiques : ponctuation et guillemets
 
 exemple :
@@ -32,8 +38,7 @@ ego <rs type="person"><persName>Buccardus</persName> comes</rs>
 
 - les adjectifs
 
-
-Sauf si ils sont incluses dans l'empan de texte annoté :
+Sauf si ils sont inclus dans l'empan de texte annoté :
 ...
 TODO trouver un exemple
 
@@ -182,20 +187,49 @@ Par exemple :
 
 #### `placeName` dans `persName`
 
+**`placeName` dans `persName` ne devrait pas exister, en revanche, les deux peuvent faire partie d'un même `rs`**.
+
 Désignation d’une personne avec uniquement des noms propres de personne et de lieu.
 
 <!--- TODO on en fait quoi ?--->
-**!!! Attention :** Ne pas systématiser ce type d'annotation. Il en existe quelques cas dans les textes annotés (13 occurrences), annotation discutable.
+**!!! Attention :** 
+Ne pas systématiser ce type d'annotation. Il en existe quelques cas dans les textes annotés (13 occurrences), annotation discutable. Il faut plutôt **la corriger**.
 
 - xpath:`//persName//placeName`
 
 Exemples :
 
 ```xml
-<persName>Mathurina <placeName>Altebruerie</placeName></persName>
-```
-```xml
 <persName>Radulphus, de <placeName>Pentin</placeName></persName>
+```
+
+doit devenir
+
+```xml
+<rs type="person><persName>Radulphus</persName>, de <placeName>Pentin</placeName></rs>
+```
+
+
+```xml
+<persName>Anneti dicti Patoul de <placeName>Sancto Lupo</placeName></persName>
+```
+
+doit devenir
+
+```xml
+<rs type="person"><persName>Anneti dicti Patoul</persName> de <placeName>Sancto Lupo</placeName></rs>
+```
+
+(ou?
+```xml
+<rs type="person"><persName>Anneti</persName> dicti <persName>Patoul</persName> de <placeName>Sancto Lupo</placeName></rs>
+```
+?
+
+Autres exemples de cas problématiques:
+
+```xml
+<persName>Mathurina <placeName>Altebruerie</placeName></persName>
 ```
 ```xml
 <persName>Pierre le Provost de <placeName>Champaignes</placeName></persName>
@@ -203,48 +237,42 @@ Exemples :
 ```xml
 <persName>Gautier le Boucher de <placeName>Champaignes</placeName></persName>
 ```
-```xml
-<persName>Anneti dicti Patoul de <placeName>Sancto Lupo</placeName></persName>
-```
+
 ## III. Méthodes de travail proposées
 
 ### Principes généraux
 
 Chaque relectrice ou relecteur...
 -  travaillera sur un ensemble de fichiers définis. L'ensemble des fichiers à corriger sera réparti entre les correctrices ;
-- 
-**ATTENTION:** 3 fichiers ne contiennent pas d'EN :
-S-Germain-des-Pres.xml
-S-Gondon.xml
-Micy.xml
 
-Soit 10 fichiers pour Elena (de Chartres à Paris-S-Merri) et 10 pour Marguerite (de Pontoise-Hotel-Dieu à Vaux-de-Cernay) ???
+NB: lire la description de l'état du corpus sur le document partagé.
 
-Ainsi pour Elena : 
-src/Chartres-N-D.xml
-src/Corbeil-S-Spire.xml
-src/Epernon.xml
-src/Maintenon.xml
-src/Micy.xml
-src/Montmartre.xml
-src/Morienval.xml
-src/Orleans-S-Croix.xml
-src/Paris-S-Martin-des-Champs.xml
-src/Paris-S-Merri.xml
+Répartition proposée:
 
-Et pour Marguerite :
-src/Pontoise-Hotel-Dieu.xml
-src/Pontoise-S-Martin.xml
-src/Port-Royal.xml
-src/Roche.xml
-src/S-Christophe-en-Halatte.xml
-src/S-Germain-des-Pres.xml
-src/S-Germain-en-Laye.xml
-src/S-Gondon.xml
-src/S-Leu-d-Esserent.xml
-src/Vaux-de-Cernay.xml
+|ID|placeName|persName|rs place|rs pers|somme cumulée|répartition|
+|--|--|--|--|--|--|--|
+|Chartres-N-D|2932|3493|2|1624|8051|EG|
+|Corbeil-S-Spire|842|1177|22|552|10644|EG|
+|Epernon|981|876|5|421|12927|EG|
+|Maintenon|273|318|8|114|13640|EG|
+|Montmartre|1411|1837|77|625|17590|EG|
+|Morienval|987|1006|22|461|20066|EG|
+|Paris-S-Martin-des-Champs|10287|13717|40|6183|50293|EG|
+|Orleans-S-Croix|3362|3619|37|1381|58692|MV|
+|Paris-S-Merri|504|556|3|195|59950|MV|
+|Pontoise-Hotel-Dieu|1160|1505|45|123|62783|MV|
+|Pontoise-S-Martin|1560|3784|3|1128|69258|MV|
+|Port-Royal|1376|1625|65|515|72839|MV|
+|Roche|1215|1005|24|430|75513|MV|
+|S-Christophe-en-Halatte|601|469|18|193|76794|MV|
+|S-Germain-en-Laye|196|278|5|124|77397|MV|
+|S-Gondon|352|769|0|269|78787|MV|
+|S-Leu-d-Esserent|1046|1761|1|751|82346|MV|
+|Vaux-de-Cernay|6380|8941|106|3215|100988|MV|
+|**totaux**|35465|46736|483|18304|||
 
--  importera son jeu de données en local et le rapatriera régulièrement sur github (branch ner);
+
+-  importera son jeu de données en local et le rapatriera régulièrement sur github (branch ner) **via des pull requests**.
 - éditera les textes et travaillera sous Oxygen.
 
 ### Pistes de travail et requêtes Xpath
@@ -254,6 +282,10 @@ Il s'agit ici d'aider à prendre en main les données et le travail de relecture
 Les tâches suivantes ne sont ni exhaustives, ni donné dans un ordre à respecté obligatoirement, liberté à chacun et chacune d'adapter la tâche en fonction des besoins et constatations de travail. 
 
 Une requête xpath peut aider à vérifier l'exactitude des données et ne lister aucune erreur.
+
+#### Sondages et lecture proche
+
+Pour vérifier la qualité de la préannotation, il est demandé de procéder pour chaque document à un sondage: sélection de trois passages (quelle longueur?) au hasard, et relecture/inspection directe, pour se faire une idée des erreurs, bruit ou surtout silences.
 
 #### contenu de la balise `<rs>`
 
