@@ -77,7 +77,7 @@ La liste de valeurs proposées est :
 
 Le nom de lieu avec des mots de la langue.
 
-##### Cas 1 : `<rs type="place">`+`<placeName>`
+#### Cas 1 : `<rs type="place">`+`<placeName>`
 
 Nom de lieu contenant un nom propre de lieu. Le lieu annoté est *composite*, c'est-à-dire composé de mots de la langue et d'un nom propre de lieu (balise `<placeName>`).
 
@@ -91,7 +91,7 @@ Omnibus presentes litteras inspecturis, officialis <rs type="place">curie
  <placeName>Carnotensis</placeName></rs>, salutem in Domino.....
 ```
 
-##### Cas 2: `<rs type="place">`+`<persName>`
+#### Cas 2: `<rs type="place">`+`<persName>`
 
 Nom de lieu contenant un nom propre de personne. Le lieu annoté est *composite*, c'est-à-dire composé de mots de la langue et d'un nom propre de personne (balise `<persName>`).
 
@@ -111,7 +111,7 @@ infra pontem tornatilem et
 <rs type="place">portam molendini <persName>Folet</persName></rs>
 ```
 
-##### cas 3 : utilisation de la seule balise `<rs>`
+#### cas 3 : utilisation de la seule balise `<rs>`
 
 Il s'agit d'annoter des lieux désignés uniquement par des mots de la langue.
 
@@ -128,8 +128,43 @@ Exemples :
 <rs type="place">Silvam</rs>
 ```
 
+#### Ambiguïté
 
-##### Quantification, xpath et commentaires
+##### `persName` ou `placeName` ?
+Il peut être difficile de déterminer la nature (`placeName` ou `persName`) du nom propre contenu dans le nom de lieu (`rs`), par ex. :
+
+- "église Saint-Nicolas"
+- "ecclesiam Sanctæ Crucis"
+- "iter S. Jacobi"
+- "maison de Marguerite"
+- "carrière Lambert"
+
+**Règle : on retient la balise `persName` si la personne désignée doit figurer dans l’index des personnes.**  
+En cas d’indécision, on choisit toujours `persName` dans la mesure ou la nature de l’entité (lieu) est définie par l’élément parent `rs[@type='place']`.
+
+On retiendra donc :
+
+- `<rs type="place">église <placeName>Saint-Nicolas</placeName></rs>`
+- `<rs type="place">ecclesiam <placeName>Sanctæ Crucis</placeName></rs>`
+- `<rs type="place">iter <placeName><abbr>S.</abbr> Jacobi</placeName></rs>`
+- `<rs type="place">maison de <persName>Marguerite</persName></rs>`
+- `<rs type="place">carrière <persName>Lambert</persName></rs>`
+
+##### Les mots de la langue
+Pour les noms de lieux on ne conserve que les mots de la langue qui participent à la désignation du lieu qu’on sache ou non s’ils participent d’une appellation figée. Par ex. :
+
+- `<rs type="place">cheminum de <placeName>Magduno</placeName></rs>`
+- `<rs type="place">granea de <placeName>Crevenz</placeName></rs>`
+- `<rs type="place" >terra de <placeName>Ostentio</placeName></rs>`
+- `<rs type="place">fori <placeName>Balgenciaci</placeName></rs>`
+- `<rs type="place">molendinis <placeName>Firmitatis Nerbe</placeName></rs>`
+
+Certaines désignations peuvent être ambiguës (lieu OU organisation), par ex. : `<rs>capitulo <placeName>Sanctæ Crucis</placeName></rs>`. S’agit-il du lieu (`rs[@type='place']`) ou de l’institution (`orgName`) ? C’est à l’annotateur de choisir selon le contexte, et de signaler le doute dans l’annotation, à l’aide de l’attribut `@cert` :
+
+- `<rs type="place" cert="low">capitulo <placeName>Sanctæ Crucis</placeName></rs>`
+
+
+#### Quantification, xpath et commentaires
 
 **`rs[@type="place"]` : les lieux annotés contiennent au moins un mot de la langue.**
 
