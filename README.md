@@ -140,17 +140,20 @@ Il peut être difficile de déterminer la nature (`placeName` ou `persName`) du 
 - "carrière Lambert"
 
 **Règle : on retient la balise `persName` si la personne désignée doit figurer dans l’index des personnes.**  
-En cas d’indécision, on choisit toujours `persName` dans la mesure ou la nature de l’entité (lieu) est définie par l’élément parent `rs[@type='place']`.
+En cas d’indécision, et si l'on ne peut déterminer si le nom propre fait encore référence à une personne (propriétaire du lieu, habitant, etc.) ou est figé comme nom de lieu,
+ on choisit toujours `persName` dans la mesure ou la nature de l’entité (lieu) est définie par l’élément parent `rs[@type='place']`.
 
 On retiendra donc :
 
 - `<rs type="place">église <placeName>Saint-Nicolas</placeName></rs>`
 - `<rs type="place">ecclesiam <placeName>Sanctæ Crucis</placeName></rs>`
 - `<rs type="place">iter <placeName><abbr>S.</abbr> Jacobi</placeName></rs>`
-- `<rs type="place">maison de <persName>Marguerite</persName></rs>`
+- `<rs type="place">bosco <persName>Buchardi</persName></rs>`
 - `<rs type="place">carrière <persName>Lambert</persName></rs>`
+- `<rs type="place">portam molendini <persName>Folet</persName></rs>`
 
 ##### Les mots de la langue
+
 Pour les noms de lieux on ne conserve que les mots de la langue qui participent à la désignation du lieu qu’on sache ou non s’ils participent d’une appellation figée. Par ex. :
 
 - `<rs type="place">cheminum de <placeName>Magduno</placeName></rs>`
@@ -272,6 +275,60 @@ Autres exemples de cas problématiques:
 ```xml
 <persName>Gautier le Boucher de <placeName>Champaignes</placeName></persName>
 ```
+
+### 4. Imbrication des entités
+
+Dans certains cas, l'on peut être tenté d'imbriquer des entités et des balises (`rs`, `placeName` et `persName`). Ce paragraphe définit ou rappelle les règles à cette fin: 
+
+1. les `rs` peuvent contenir des `placeName` et `persName` (voir _supra_, §. 1-3);
+2. `placeName` et `persName` ne peuvent se contenir (ni l'un l'autre, ni eux-mêmes);
+3. en revanche, les `rs` peuvent contenir un `rs` sous certaines conditions. 
+
+Ces conditions sont:
+
+4. on n'imbriquera jamais deux entités `rs` d'un même type (pas de `rs type="place"` dans un `rs type="place"`);
+5. en conséquent, on choisira l'extension maximale, ex.
+
+```xml
+<rs type="person"><persName>Hugone</persName> filio <persName>Rainaldi</persName></rs>
+```
+
+et non
+
+```xml
+<rs type="person"><persName>Hugone</persName> filio <rs type="person"><persName>Rainaldi</persName></rs></rs>
+```
+
+6. et ce quelque soit la profondeur: autrement dit, on limitera l'imbrication à un seul niveau (`rs type="place"` dans un `rs type="person"` ou `rs type="person"` dans un `rs type="place"`, mais pas 
+`rs type="person"` dans un `rs type="place"` lui-même dans un `rs type="person"`), car cela contreviendrait à la règle précédente.
+
+On n'encodera donc pas le pré de Hugues du château de Bonneval,
+<!-- TODO: exemple fictif -> fix me avec vrai exemple -->
+```xml
+in <rs type="place">prata <rs type="person"><persName>Hugonis</persName> de <rs type="place">castello <placeName>Bonavallis</placeName></rs></rs></rs>
+```
+
+mais
+
+```xml
+in <rs type="place">prata <rs type="person"><persName>Hugonis</persName> de castello <placeName>Bonavallis</placeName></rs></rs>
+```
+
+Quelques exemples d'imbrication:
+
+```xml
+<rs type="person">capellanus <rs type="place">turris <placeName>Balgenciaci</placeName></rs></rs>
+
+<rs type="person"><rs type="place"><placeName>Carnotensis</placeName> ecclesie</rs> episcopus</rs>
+```
+
+
+Cas limites (à statuer?)
+
+```xml
+<rs type="person"><persName>Garinus</persName>, filius <persName>Achardi</persName> de <rs type="place>castello <placeName>Bonavallis</placeName></rs></rs>
+```
+
 
 ## III. Méthodes de travail proposées
 
