@@ -95,6 +95,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Est identifié comme &lt;persName> tout anthroponyme isolé, abrévié ou non ("G.", "Gofredus") et tout anthroponyme complexe, formé d'un prénom et d'un nom ("Gofredus de Sancto Martino") et à l'intérieur duquel ne s'intercale aucun mot de langue, hormis dans le cas des surnoms qui doivent être insérés dans le même élément &lt;persName> ("Robertus dictus Legrand").
         <span class="persName">Nom de personne </span> </a:documentation>
       <ref name="normid"/>
+      <ref name="certainty"/>
       <optional>
         <attribute name="type">
           <choice>
@@ -202,6 +203,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <optional>
         <attribute name="xml:lang"/>
       </optional>
+      <ref name="certainty"/>
       <zeroOrMore>
         <choice>
           <text/>
@@ -232,6 +234,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <value h:title="Lieu">place</value>
         </choice>
       </attribute>
+      <ref name="certainty"/>
       <zeroOrMore>
         <choice>
           <text/>
@@ -313,6 +316,18 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     <optional>
       <attribute name="key">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Forme d'autorité du nom.</a:documentation>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="certainty">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Expression de l’incertitude pour le balisage des entités nommées.</a:documentation>
+    <optional>
+      <attribute name="cert">
+        <choice>
+          <value>unknown</value>
+          <value>low</value>
+        </choice>
       </attribute>
     </optional>
   </define>
