@@ -1,99 +1,75 @@
 
-# Cartulaires. Guide d’annotation des Lieux
+# Cartulaires, guide d’annotation des lieux
 
-Plan :
-- principes généraux
-- balises et noms de lieu
-- méthodologie de corrections proposée
+- I. Principes généraux
+- II. Noms de lieu
+- III. Imbrications d’entités
+- IV. Consignes et méthode de travail
+- V. Analyse des annotations
+
 
 ## I. Principes généraux
 
-### balises utilisées 
+### Balises utilisées 
 
-Pour annoter les noms de lieu, nous utiliserons les balises `<rs>` (cf. II.1 ) et `<placeName>` (cf. II.2).
+Pour annoter les noms de lieu, nous utilisons les balises TEI `<rs>` et `<placeName>`.
 
-### limites et bornes
+### Limites et bornes
 
 Ne sont pas inclus dans la balise :
 
 - les articles
 
 ```xml
-l'<rs type="place">Arche de <placeName>Corbueil</placeName></rs>, ̀
+l’<rs type="place">Arche de <placeName>Corbueil</placeName></rs>,
 ```
 
-- les diacritiques : ponctuation et guillemets
+- la ponctuation et les guillemets
 
-exemple :
 ```xml
-prises sur l'<rs type="place">Arche de <placeName>Corbueil</placeName></rs>, ̀
+prises sur l’<rs type="place">Arche de <placeName>Corbueil</placeName></rs>,
 ```
 
 - les pronoms personnels
 
-exemple avec `ego`:
 ```xml
 ego <rs type="person"><persName>Buccardus</persName> comes</rs>
 ```
 
 - les adjectifs
 
-Sauf si ils sont inclus dans l'empan de texte annoté :
-...
+Sauf s’ils sont inclus dans l’empan de texte annoté :
+
+```xml
 TODO trouver un exemple
-
-**!!! A noter :** L'annotation n'est donc pas discontinue.
-
-### quelles corrections apportées ?
-
-Les cartulaires sont déjà annotés. Le travail à effectuer consiste majoritairement à reprendre, homogénéiser et corriger les annotations en place. 
-
-Ainsi :
-
-- il est préconisé de travailler à partir de listes et de requêtes xpath pour plus d'efficacité. En effet, travailler par liste permet de s'appuyer sur les annotations en place et semble correspondre au mieux à l'homogénéisation du traitement des données  ;
-- il est possible d'alterner le travail par lecture cursive d'un texte et le travail par liste, quand ce dernier devient pesant et contre productif ;
-- dans un premier temps, par soucis de gain de temps et d'efficacité, il est préconisé de corriger les entités de type 'lieu', mais toute correction évidente (même sur les entités de type 'pers') est possible.
- 
-#### annotés les exemples à discuter
-
-Il ne faut pas hésiter à repérer dans le texte annoté les doutes de correction. Les correcteurs et correctrices sont invités à utiliser l'argument `cert` pour indiquer une incertitude quand à l'annotation :
-
- ```xml
-<placeName cert="unknown">Sancte Marie in Porticu</placeName>
 ```
 
-La liste de valeurs proposées est :
+**Une annotation ne doit donc pas être discontinue.**
 
-- "unknown" : pour épingler une annotation que l'on souhaite rediscuter en groupe ;
-- "low" : pour épingler une annotation très incertaine, à rediscuter ;
-- "medium" :  pour épingler une annotation sur laquelle le correcteur ou la correctrice souhaite revenir, lors du travail de relecture (annotation d'avantage personnelle, pour lister ses propres doutes de relecture) ;
-- "high" : pour épingler une annotation exemplaire, un exemple significatif qui pourrait être mis dans le manuel d'annotation.
 
-**!!! A noter :** il est plus facile de repérer un exemple 'épinglé' au milieu d'une foule de données. Les arguments de type 'cert' pourront être le moment voulu supprimés en masse. Il ne faut donc pas hésiter à utiliser cette méthode!
+## II. Noms de lieu
 
-## II. Balises et noms de lieu
+- `tei:rs` : nom de lieu avec des mots de la langue.
+- `tei:placeName` : nom propre de lieu.
 
-### 1. Annotation avec la balise `<rs>`
-
-Le nom de lieu avec des mots de la langue.
 
 #### Cas 1 : `<rs type="place">`+`<placeName>`
 
-Nom de lieu contenant un nom propre de lieu. Le lieu annoté est *composite*, c'est-à-dire composé de mots de la langue et d'un nom propre de lieu (balise `<placeName>`).
+Nom de lieu contenant un nom propre de lieu. Le lieu annoté est *composite*, c’est-à-dire composé de mots de la langue et d’un nom propre de lieu (balise `placeName`).
 
 Exemples :
+
 ```xml
 <rs type="place">Prata <placeName>Reculeti</placeName></rs> ad siccandum…
 ```
 
 ```xml
-Omnibus presentes litteras inspecturis, officialis <rs type="place">curie
- <placeName>Carnotensis</placeName></rs>, salutem in Domino.....
+…officialis <rs type="place">curie <placeName>Carnotensis</placeName></rs>, salutem…
 ```
 
-#### Cas 2: `<rs type="place">`+`<persName>`
+#### Cas 2 : `<rs type="place">`+`<persName>`
 
-Nom de lieu contenant un nom propre de personne. Le lieu annoté est *composite*, c'est-à-dire composé de mots de la langue et d'un nom propre de personne (balise `<persName>`).
+Nom de lieu contenant un nom propre de personne. Le lieu annoté est *composite*, c’est-à-dire composé de mots de la langue et d’un nom propre de personne (balise `persName`).
 
 Exemples :
 
@@ -107,87 +83,32 @@ et in <rs type="place">bosco <persName>Buchardi</persName></rs>
 ```
 
 ```xml
-infra pontem tornatilem et 
-<rs type="place">portam molendini <persName>Folet</persName></rs>
+infra pontem tornatilem et <rs type="place">portam molendini <persName>Folet</persName></rs>
 ```
 
-#### cas 3 : utilisation de la seule balise `<rs>`
+#### Cas 3 (rejeté) : utilisation de la seule balise `<rs>`
 
-Il s'agit d'annoter des lieux désignés uniquement par des mots de la langue.
+Lieux désignés uniquement par des mots de la langue.
 
-**!!! Attention :** Ne pas systématiser ce type d'annotation. Il en existe quelques cas dans les textes annotés : il s'agit de laisser ces annotations, mais de ne pas ajouter d'annotation de ce type. Nous rejetterons pour nos travaux ultérieurs ce type d'annotation.  
+**!!! Attention :** Ne pas systématiser ce type d’annotation. Il en existe quelques cas dans les textes annotés : il s’agit de laisser ces annotations, mais de ne pas ajouter d’annotation de ce type. **Nous rejetterons pour nos travaux ultérieurs ce type d’annotation**.  
 
 Exemples :
+
 ```xml
 <rs type="place">Cuvam lapideam</rs>
 ```
+
 ```xml
 <rs type="place">Abruvoir aus chevaus</rs>
 ```
+
 ```xml
 <rs type="place">Silvam</rs>
 ```
 
-#### Ambiguïté
+#### Cas 4 : utilisation de la seule balise `<placeName>`
 
-##### `persName` ou `placeName` ?
-Il peut être difficile de déterminer la nature (`placeName` ou `persName`) du nom propre contenu dans le nom de lieu (`rs`), par ex. :
-
-- "église Saint-Nicolas"
-- "ecclesiam Sanctæ Crucis"
-- "iter S. Jacobi"
-- "maison de Marguerite"
-- "carrière Lambert"
-
-**Règle : on retient la balise `persName` si la personne désignée doit figurer dans l’index des personnes.**  
-En cas d’indécision, et si l'on ne peut déterminer si le nom propre fait encore référence à une personne (propriétaire du lieu, habitant, etc.) ou est figé comme nom de lieu,
- on choisit toujours `persName` dans la mesure ou la nature de l’entité (lieu) est définie par l’élément parent `rs[@type='place']`.
-
-On retiendra donc :
-
-- `<rs type="place">église <placeName>Saint-Nicolas</placeName></rs>`
-- `<rs type="place">ecclesiam <placeName>Sanctæ Crucis</placeName></rs>`
-- `<rs type="place">iter <placeName><abbr>S.</abbr> Jacobi</placeName></rs>`
-- `<rs type="place">bosco <persName>Buchardi</persName></rs>`
-- `<rs type="place">carrière <persName>Lambert</persName></rs>`
-- `<rs type="place">portam molendini <persName>Folet</persName></rs>`
-
-##### Les mots de la langue
-
-Pour les noms de lieux on ne conserve que les mots de la langue qui participent à la désignation du lieu qu’on sache ou non s’ils participent d’une appellation figée. Par ex. :
-
-- `<rs type="place">cheminum de <placeName>Magduno</placeName></rs>`
-- `<rs type="place">granea de <placeName>Crevenz</placeName></rs>`
-- `<rs type="place" >terra de <placeName>Ostentio</placeName></rs>`
-- `<rs type="place">fori <placeName>Balgenciaci</placeName></rs>`
-- `<rs type="place">molendinis <placeName>Firmitatis Nerbe</placeName></rs>`
-
-Certaines désignations peuvent être ambiguës (lieu OU organisation), par ex. : `<rs>capitulo <placeName>Sanctæ Crucis</placeName></rs>`. S’agit-il du lieu (`rs[@type='place']`) ou de l’institution (`orgName`) ? C’est à l’annotateur de choisir selon le contexte, et de signaler le doute dans l’annotation, à l’aide de l’attribut `@cert` :
-
-- `<rs type="place" cert="low">capitulo <placeName>Sanctæ Crucis</placeName></rs>`
-
-
-#### Quantification, xpath et commentaires
-
-**`rs[@type="place"]` : les lieux annotés contiennent au moins un mot de la langue.**
-
-<!--- FMB à Vincent :
-(Attention : l'ensemble des effectifs est de 143.L'addition des effectifs n'a pas pour somme 143, certains décompte ne sont pas exclusif.)
-remarque entre parenthèse à garder ou non, à reformuler... bref : 449+11+2+25 est diff de 483 puisque placeName et persName peuvent être combinés! --->
-
-
-|effectif|xpath|definition|exemple|commentaire|
-|--------|-----|----------|-------|-----------|
-|483|`//rs[@type='place']`|lieu avec des mots de la langue|||
-|25|`//rs[@type='place' and not(placeName or persName)]`|lieu avec **uniquement** des mots de la langue|`<rs type="place">Chambre des Comptes</rs>`||
-|449|`//rs[@type='place' and placeName]`|lieu avec des mots de la langue et un toponyme|`<rs type="place">Rue du <placeName>Roulle</placeName></rs>`||
-|11|`//rs[@type='place' and persName]`|lieu avec des mots de la langue et un patronyme|`<rs type="place">carrière <persName>Lambert</persName></rs>`||
-|2|`//rs[@type='place' and placeName and persName]`|lieu avec des mots de la langue, un toponyme **et** un patronyme|`<rs type="place">granchia ipsius <persName>Petri</persName> apud <placeName>Bellovidere</placeName></rs>`|chartes ou bien ?|
-
-
-### 2. Annotation avec la seule balise `<placeName>`
-
-Le nom de lieu est un nom propre (pas de `<rs>`).
+Le nom de lieu est un nom propre.
 
 * xpath: `//placeName[not(ancestor::rs)]`
 
@@ -198,22 +119,65 @@ Donné à <placeName>Pontoise</placeName>
 ```
 
 ```xml
- refutassem, ipse de prebendis et de ęcclesia abbatem et monachos
- <placeName>Majoris-Monasterii</placeName> investiret, et in usus et 
- potestatem eorum redigendas jure perpetuo confirmaret
+de ęcclesia abbatem et monachos <placeName>Majoris-Monasterii</placeName> investiret…
 ```
 
-##### Quantification, xpath et commentaires
 
-|effectif|xpath|definition|exemple|commentaire|
-|--------|-----|----------|-------|-----------|
-|28151|`//placeName[not(ancestor::rs)]`|Un toponyme non inclus dans un `rs`|`<placeName>Chartres</placeName>`|à inclure souvent dans un `rs`?|
+#### Cas ambigus
+
+##### 1. `placeName` ou `persName` ?
+
+Il peut être difficile de déterminer la nature (`placeName` ou `persName`) du nom propre contenu dans le nom de lieu (`rs`), par ex. :
+
+- "église Saint-Nicolas"
+- "ecclesiam Sanctæ Crucis"
+- "iter S. Jacobi"
+- "maison de Marguerite"
+- "carrière Lambert"
+
+**Règle : on retient la balise `persName` si la personne désignée doit figurer dans l’index des personnes.**  
+En cas d’indécision, et si l’on ne peut pas déterminer si le nom propre fait encore référence à une personne (propriétaire du lieu, habitant, etc.) ou est figé comme nom de lieu,
+ on choisit toujours `persName` dans la mesure ou la nature de l’entité (lieu) est définie par l’élément parent `rs[@type=’place’]`.
+
+On retiendra donc :
+
+- `<rs type="place">église <placeName>Saint-Nicolas</placeName></rs>`
+- `<rs type="place">ecclesiam <placeName>Sanctæ Crucis</placeName></rs>`
+- `<rs type="place">iter <placeName><abbr>S.</abbr> Jacobi</placeName></rs>`
+- `<rs type="place">bosco <persName>Buchardi</persName></rs>`
+- `<rs type="place">carrière <persName>Lambert</persName></rs>`
+- `<rs type="place">portam molendini <persName>Folet</persName></rs>`
+
+##### 2. `placeName` ou `orgName` ?
+
+Certaines désignations peuvent être ambiguës (lieu ou organisation), par ex. : *capitulo Sanctæ Crucis*. S’agit-il du lieu (`rs[@type=’place’]`) ou de l’institution (`orgName`) ? C’est à l’annotateur de choisir selon le contexte, et de signaler le doute dans l’annotation, à l’aide de l’attribut `@cert` :
+
+```xml
+<rs type="place" cert="low">capitulo <placeName>Sanctæ Crucis</placeName></rs>
+```
+
+##### 3. Les mots de la langue
+
+Pour les noms de lieux on ne conserve que les mots de la langue qui participent à la désignation du lieu, qu’on sache ou non s’ils participent d’une appellation figée. Par ex. :
+
+- `<rs type="place">cheminum de <placeName>Magduno</placeName></rs>`
+- `<rs type="place">granea de <placeName>Crevenz</placeName></rs>`
+- `<rs type="place" >terra de <placeName>Ostentio</placeName></rs>`
+- `<rs type="place">fori <placeName>Balgenciaci</placeName></rs>`
+- `<rs type="place">molendinis <placeName>Firmitatis Nerbe</placeName></rs>`
 
 
 
-### 3. balises `person`et `persName` dans l'annotation de lieux
+## III. Imbrications d’entités
 
-####  `placeName` dans `rs[@type="person"]`
+Les entités de type `place` et `person` sont souvent imbriquése. Ce paragraphe définit les règles à cette fin :
+
+- Cas 1 : `rs[@type='person']` > `placeName`
+- Cas 2 : `rs[@type='person']` > `rs[@type='place']
+- Cas 3 : `persName` > `placeName`, annotation rejetée
+
+
+### Cas 1 : `placeName` dans `rs[@type="person"]`
 
 Nom propre de lieu contenu dans une entité personne.
 
@@ -223,48 +187,131 @@ Par exemple :
 <rs type="person">Roy de <placeName>France</placeName></rs>
 ```
 
-#### `placeName` dans `persName`
 
-**`placeName` dans `persName` ne devrait pas exister, en revanche, les deux peuvent faire partie d'un même `rs`**.
+### Cas 2 : `rs[@type="place"]` dans `rs[@type="person"]`
+
+`rs` peut contenir un `rs` d’un type différent uniquement, avec certaines contraintes.
+
+Par exemple :
+
+```xml
+<rs type="person">capellanus
+	<rs type="place">turris <placeName>Balgenciaci</placeName></rs>
+</rs>
+```
+
+```xml
+<rs type="person">
+	<rs type="place"><placeName>Carnotensis</placeName> ecclesie</rs>
+	episcopus
+</rs>
+```
+
+
+**NB. On choisira toujours l’extension maximale**, quel que soit le nombre d’entités imbriquées.
+
+Exemple 1. On décrit "Hugo" (fils de Rainald) et non "Hugo" ET "Rainald", dans un unique `rs` :
+
+```xml
+<rs type="person">
+	<persName>Hugone</persName>
+	filio
+	<persName>Rainaldi</persName>
+</rs>
+```
+
+et non :
+
+```xml
+<rs type="person">
+	<persName>Hugone</persName>
+	filio
+	<rs type="person"><persName>Rainaldi</persName></rs>
+</rs>
+```
+
+Exemple 2. On décrit le "pré du château de Bonneval" et non le "pré" ET le "château de Bonneval", dans un unique `rs` :
+
+```xml
+in <rs type="place">prata 
+	<rs type="person">
+		<persName>Hugonis</persName> de castello <placeName>Bonavallis</placeName>
+	</rs>
+</rs>
+```
+
+et non :
+
+```xml
+in <rs type="place">prata
+	<rs type="person">
+		<persName>Hugonis</persName> de
+		<rs type="place">castello <placeName>Bonavallis</placeName></rs>
+	</rs>
+</rs>
+```
+
+On considère ici, qu’on décrit le lieu le plus spécifique (le "pré du château de Bonneval") et non pas 2 lieux (le "pré" et le "château de Bonneval").
+
+
+Cas limites (à statuer?)
+
+```xml
+<rs type="person">
+	<persName>Garinus</persName>,
+	filius <persName>Achardi</persName> de
+	<rs type="place>castello <placeName>Bonavallis</placeName></rs>
+</rs>
+```
+
+```xml
+<rs type="person">vir venerabilis
+	<persName>Guillermus dictus Boulains</persName>,
+	<rs type="person">canonicus
+		<rs type="place">ecclesie <placeName>Aurelianensis</placeName></rs>
+	</rs>
+</rs>
+```
+
+### Cas 3 : `placeName` dans `persName`
 
 Désignation d’une personne avec uniquement des noms propres de personne et de lieu.
 
-<!--- TODO on en fait quoi ?--->
-**!!! Attention :** 
-Ne pas systématiser ce type d'annotation. Il en existe quelques cas dans les textes annotés (13 occurrences), annotation discutable. Il faut plutôt **la corriger**.
-
 - xpath:`//persName//placeName`
 
+`placeName` et `persName` ne peuvent s’imbriquer (ni l’un l’autre, ni eux-mêmes).
+
+Il convient d’**éviter cette annotation** : `placeName` ne devrait pas être contenu dans `persName`. Ces deux éléments peuvent être associés dans un même `rs`.
+
+
 Exemples :
+
+1) L’annotation fautive :
 
 ```xml
 <persName>Radulphus, de <placeName>Pentin</placeName></persName>
 ```
 
-doit devenir
+doit être corrigée :
 
 ```xml
 <rs type="person"><persName>Radulphus</persName>, de <placeName>Pentin</placeName></rs>
 ```
 
+2) L’annotation fautive :
 
 ```xml
 <persName>Anneti dicti Patoul de <placeName>Sancto Lupo</placeName></persName>
 ```
 
-doit devenir
+doit être corrigée :
 
 ```xml
 <rs type="person"><persName>Anneti dicti Patoul</persName> de <placeName>Sancto Lupo</placeName></rs>
 ```
 
-(ou?
-```xml
-<rs type="person"><persName>Anneti</persName> dicti <persName>Patoul</persName> de <placeName>Sancto Lupo</placeName></rs>
-```
-?
 
-Autres exemples de cas problématiques:
+Subsistent quelques cas problématiques, par ex. :
 
 ```xml
 <persName>Mathurina <placeName>Altebruerie</placeName></persName>
@@ -276,73 +323,44 @@ Autres exemples de cas problématiques:
 <persName>Gautier le Boucher de <placeName>Champaignes</placeName></persName>
 ```
 
-### 4. Imbrication des entités
 
-Dans certains cas, l'on peut être tenté d'imbriquer des entités et des balises (`rs`, `placeName` et `persName`). Ce paragraphe définit ou rappelle les règles à cette fin: 
 
-1. les `rs` peuvent contenir des `placeName` et `persName` (voir _supra_, §. 1-3);
-2. `placeName` et `persName` ne peuvent se contenir (ni l'un l'autre, ni eux-mêmes);
-3. en revanche, les `rs` peuvent contenir un `rs` sous certaines conditions. 
+## IV. Consignes et méthode de travail
 
-Ces conditions sont:
+### Consignes
 
-4. on n'imbriquera jamais deux entités `rs` d'un même type (pas de `rs type="place"` dans un `rs type="place"`);
-5. en conséquent, on choisira l'extension maximale, ex.
+#### Quelles corrections apporter ?
 
-```xml
-<rs type="person"><persName>Hugone</persName> filio <persName>Rainaldi</persName></rs>
-```
+Les cartulaires sont déjà annotés. Le travail consiste majoritairement à reprendre, homogénéiser et corriger les annotations en place. 
 
-et non
+Ainsi :
 
-```xml
-<rs type="person"><persName>Hugone</persName> filio <rs type="person"><persName>Rainaldi</persName></rs></rs>
-```
+- il est préconisé de travailler à partir de listes et de requêtes xpath pour plus d’efficacité. En effet, travailler par liste permet de s’appuyer sur les annotations en place et semble correspondre au mieux à l’homogénéisation du traitement des données  ;
+- il est possible d’alterner le travail par lecture cursive d’un texte et le travail par liste, quand ce dernier devient pesant et contre productif ;
+- dans un premier temps, par soucis de gain de temps et d’efficacité, il est préconisé de corriger les entités de type `lieu`, mais toute correction évidente (même sur les entités de type `pers`) est possible.
+ 
+#### Annoter les exemples à discuter
 
-6. et ce quelque soit la profondeur: autrement dit, on limitera l'imbrication à un seul niveau (`rs type="place"` dans un `rs type="person"` ou `rs type="person"` dans un `rs type="place"`, mais pas 
-`rs type="person"` dans un `rs type="place"` lui-même dans un `rs type="person"`), car cela contreviendrait à la règle précédente.
-
-On n'encodera donc pas le pré de Hugues du château de Bonneval,
-<!-- TODO: exemple fictif -> fix me avec vrai exemple -->
-```xml
-in <rs type="place">prata <rs type="person"><persName>Hugonis</persName> de <rs type="place">castello <placeName>Bonavallis</placeName></rs></rs></rs>
-```
-
-mais
+Il ne faut pas hésiter à repérer dans le texte annoté les doutes de correction. Les correcteurs et correctrices sont invités à utiliser l’attribut `cert` pour indiquer une incertitude quand à l’annotation :
 
 ```xml
-in <rs type="place">prata <rs type="person"><persName>Hugonis</persName> de castello <placeName>Bonavallis</placeName></rs></rs>
+<placeName cert="unknown">Sancte Marie in Porticu</placeName>
 ```
 
-Quelques exemples d'imbrication:
+La liste de valeurs autorisées est :
 
-```xml
-<rs type="person">capellanus <rs type="place">turris <placeName>Balgenciaci</placeName></rs></rs>
+- `unknown` : épingler une annotation que l’on souhaite rediscuter en groupe ;
+- `low` : épingler une annotation très incertaine, à rediscuter ;
+- `medium` :  épingler une annotation sur laquelle le correcteur ou la correctrice souhaite revenir, lors de son propre travail de relecture ;
+- `high` : épingler une annotation exemplaire, un exemple significatif qui pourrait être mis dans le manuel d’annotation.
 
-<rs type="person"><rs type="place"><placeName>Carnotensis</placeName> ecclesie</rs> episcopus</rs>
-```
-
-
-Cas limites (à statuer?)
-
-```xml
-<rs type="person"><persName>Garinus</persName>, filius <persName>Achardi</persName> de <rs type="place>castello <placeName>Bonavallis</placeName></rs></rs>
-```
+**Il est facile de repérer un exemple *épinglé*. Les arguments de type `cert` pourront être le moment voulu supprimés en masse. Il ne faut donc pas hésiter à utiliser cette méthode!**
 
 
-## III. Méthodes de travail proposées
-
-### Principes généraux
-
-Chaque relectrice ou relecteur...
--  travaillera sur un ensemble de fichiers définis. L'ensemble des fichiers à corriger sera réparti entre les correctrices ;
-
-NB: lire la description de l'état du corpus sur le document partagé.
-
-Répartition proposée:
+#### Répartition des fichiers
 
 |ID|placeName|persName|rs place|rs pers|somme cumulée|répartition|
-|--|--|--|--|--|--|--|
+|--|---------|--------|--------|-------|-------------|-----------|
 |Chartres-N-D|2932|3493|2|1624|8051|EG|
 |Corbeil-S-Spire|842|1177|22|552|10644|EG|
 |Epernon|981|876|5|421|12927|EG|
@@ -364,60 +382,217 @@ Répartition proposée:
 |**totaux**|35465|46736|483|18304|||
 
 
--  importera son jeu de données en local et le rapatriera régulièrement sur github (branch ner) **via des pull requests**.
-- éditera les textes et travaillera sous Oxygen.
+-  Importer son jeu de données en local et le rapatrie régulièrement sur Github (branch `ner`) **via des pull requests**.
+- Éditer les textes et travailler sous Oxygen.
+
 
 ### Pistes de travail et requêtes Xpath
 
-Il s'agit ici d'aider à prendre en main les données et le travail de relecture. A chacune et chacun des relecteurs de commenter, augmenter, améliorer les méthodologies proposées.
+Il s’agit ici d’aider à prendre en main les données et le travail de relecture. A chacune et chacun des relecteurs de commenter, augmenter, améliorer les méthodologies proposées.
 
-Les tâches suivantes ne sont ni exhaustives, ni donné dans un ordre à respecté obligatoirement, liberté à chacun et chacune d'adapter la tâche en fonction des besoins et constatations de travail. 
+Les tâches suivantes ne sont ni exhaustives, ni donné dans un ordre à respecté obligatoirement, liberté à chacun et chacune d’adapter la tâche en fonction des besoins et constatations de travail. 
 
-Une requête xpath peut aider à vérifier l'exactitude des données et ne lister aucune erreur.
+Une requête xpath peut aider à vérifier l’exactitude des données et ne lister aucune erreur.
 
 #### Sondages et lecture proche
 
 Pour vérifier la qualité de la préannotation, il est demandé de procéder pour chaque document à un sondage: sélection de trois passages (quelle longueur?) au hasard, et relecture/inspection directe, pour se faire une idée des erreurs, bruit ou surtout silences.
 
-#### contenu de la balise `<rs>`
+#### Contenu de la balise `<rs>`
 
 ##### Une balise `<rs>` doit forcément contenir du texte
 
-Elle ne peut englober et donc annoter le même segment qu'une balise `<placeName>`
+Elle ne peut englober et donc annoter le même segment qu’une balise `<placeName>`
 
-- xpath à appliquer : //rs[@type='place' and not(text())]
-- Ne concerne qu'une seule annotation, annotation fausse à corriger (in Pontoise-Hotel-Dieu.xml) :
+- xpath à appliquer : `//rs[@type='place' and not(text())]`
+- Ne concerne qu’une seule annotation, annotation fausse à corriger (in Pontoise-Hotel-Dieu.xml) :
+
 ```xml
 <rs type="place"><placeName>Grant rue</placeName></rs>
 ```
-##### corriger les contenus mots de la langue des balises `<rs>` 
 
-Le fichier baliseRS_MotsLangue.txt recense l'ensemble des mots de langues des balises <rs> du corpus annoté, et donne leur nombre d'occurrence.
+##### Corriger les contenus mots de la langue des balises `<rs>` 
 
-##### essayer de trouver les oublis d'annotation `<rs>` 
+Le fichier `baliseRS_MotsLangue.txt` recense l’ensemble des mots de langues des balises <rs> du corpus annoté, et donne leur nombre d’occurrence.
 
-Vérifier qu'un balise `<placeName>` (non incluse dans une balise `<rs>`) n'est ni précédée ni suivie d'un mot de la langue désignant un lieu (de type : cité, mont, pont, rue, ...). Cette liste peut donner des idées de correction à apporter, et pourquoi pas de requêtes xpath à développer.
+##### Essayer de trouver les oublis d’annotation `<rs>` 
 
-- xpath à appliquer : //placeName[not(ancestor::rs)] 
+Vérifier qu’un balise `<placeName>` (non incluse dans une balise `<rs>`) n’est ni précédée ni suivie d’un mot de la langue désignant un lieu (de type : cité, mont, pont, rue, ...). Cette liste peut donner des idées de correction à apporter, et pourquoi pas de requêtes xpath à développer.
 
-Il est possible de s'aider de la liste contenu dans le fichier : baliseRS_MotsLangue.txt Cette liste recense l'ensemble des mots de langues des balises <rs> du corpus annoté.
+- xpath à appliquer : `//placeName[not(ancestor::rs)]`
 
-#####  Une balise `<rs>` doit forcément avoir un argument
+Il est possible de s’aider de la liste contenu dans le fichier : baliseRS_MotsLangue.txt Cette liste recense l’ensemble des mots de langues des balises <rs> du corpus annoté.
 
-- xpath à appliquer : //rs[not(@type='person' or @type='place')]
-- pas d'exemples trouvés
 
-De plus, la valeur de cet argument doit être soit 'person' soit 'place' :
+##### Une balise `<rs>` n’est a priori pas inclus dans une balise `<placeName>`
 
-- xpath : distinct-values(//rs/@type)
-- pas d'erreur à corriger
-
-##### Une balise `<rs>` n'est a priori pas inclus dans une balise `<placeName>`
-
-- xpath : //rs[(ancestor::placeName)]
-- pas d'exemples touvés
+- xpath : `//rs[(ancestor::placeName)]`
+- pas d’exemples touvés
 
 
 
+## V. Analyse des annotations
 
+### Tests
+
+#### 1) Des `rs` sans mot de la langue ?
+
+- test : `//rs[@type=’place’ and not(text())]`
+
+6 résultats :
+
+- Orleans-S-Croix.xml : `<rs type="place"><placeName>Sancte Crucis de Bella</placeName></rs>`
+- Paris-S-Merri.xml : `<rs type="place"><placeName>Vico Novo</placeName></rs>`
+- Pontoise-Hotel-Dieu.xml : `<rs type="place"><placeName>Grant rue</placeName></rs>`
+- Pontoise-S-Martin.xml : `<rs type="place"><placeName>Ainval</placeName></rs>`
+- Vaux-de-Cernay.xml : `<rs type="place"><placeName>Portarii</placeName></rs>`
+- Vaux-de-Cernay.xml : `<rs type="place"><placeName>Vallis Sarnaii</placeName></rs>`
+
+
+#### 2) Contenu autorisé, rejet des ponctuations initiales et conclusive ?
+
+ - test : regex search `[,;:!?.]</rs>` : 90 résultats à corriger.
+ - test : regex search `[,;:!?.]</placeName>` : 144 résultats à corriger.
+ - test : xpath `//rs[@type='place' and matches(., '^[,;:.]')]` : 0 résultat.
+ - test : xpath `//rs[@type='place' and matches(., '^l[’e]?s? ')]` : 4 résultats à revoir.
+
+Valider avec JBC les questions de segmentation, par ex. in S-Christophe-en-Halatte.xml :
+
+```xml
+<rs type="place">leglise <placeName>Sainct Christophe</placeName></rs>
+```
+
+TODO : compléter ces tests.
+
+#### 3) Quid des mots autorisés dans `rs` ?
+
+cf consignes de FM :
+
+- `baliseRS_MotsLangue.txt` ?
+- balisage lacunaire des mots précédents `//placeName[not(ancestor::rs)]` ? -> déterminer si des `placeName` doivent être insérés dans un `rs`.
+
+
+#### 4) Des noms de lieu sans nom propre ?
+
+- test : xpath `//rs[@type='place'][not(rs) and not(placeName) and not(persName)]`
+
+86 résultats à revoir, par ex. : 
+
+- Paris-S-Martin-des-Champs.xml : `<rs type="place">stallas Carnificum</rs>`
+- Pontoise-Hotel-Dieu.xml : `<rs type="place">ecclesie </rs>`
+- Pontoise-Hotel-Dieu.xml : `<rs type="place">jardinum</rs>`
+- Port-Royal.xml : `<rs type="place">Officialis Curie Parisiensis</rs>`
+
+#### 5) Des noms de lieu avec plusieurs noms propres ?
+
+- test : xpath : `//rs[@type='place'][count(placeName) >1]`
+
+157 résultats à discuter, par ex. : 
+
+Orleans-S-Croix.xml : 
+
+```xml
+<rs type="place">prebendis
+	<placeName>Sanctorum Petri Cluniacensis</placeName>,
+	<placeName>Benedicti</placeName>,
+	<placeName>Maximini</placeName>,
+	<placeName>Aviti</placeName> et
+	<placeName>Liphardi</placeName>
+</rs>
+```
+
+#### 6) Des imbrications (rejetées) `persName`> `placeName` ?
+
+- test : xpath `//persName/placeName`
+
+10 résultats à revoir, par ex. :
+
+- Pontoise-Hotel-Dieu.xml : `<persName>Mathurina <placeName>Altebruerie</placeName></persName>`
+- Pontoise-Hotel-Dieu.xml : `<persName>Guillaume le Barbier des <placeName>Mesieres</placeName></persName>`
+
+#### 7) Des imbrications (rejetées) `rs[@type='place']`> `rs[@type='place']` ?
+
+- test : xpath `//rs[@type='place'][ancestor::rs[@type='place']]`
+
+3 résultats à revoir :
+
+Orleans-S-Croix.xml :
+
+```xml
+<rs type="place">
+	<placeName>Gilo</placeName>, de 
+	<rs type="place">
+		<placeName>Arebrachio</placeName> et de
+		<placeName>Loriaco</placeName> ecclesias
+	</rs>
+</rs>
+```
+
+Pontoise-Hotel-Dieu.xml : 
+
+```xml
+<rs type="place">terre seans es
+	<rs type="place">monz de <placeName>Champaignes</placeName></rs>
+</rs>
+```
+
+Vaux-de-Cernay.xml : 
+
+```xml
+<rs type="place">prato
+	<rs type="place">domini
+		<persName>Andree</persName>, dicti
+		<persName><foreign xml:lang="fro">Polin</foreign></persName>
+	</rs>
+</rs>
+```
+
+
+#### 8) Profondeur max des imbrications ?
+
+- test : `//rs/rs`, 879 résultats
+- test : `//rs/rs/rs`, 1 résultat
+
+```xml
+<rs type="person">vir venerabilis
+	<persName>Guillermus dictus Boulains</persName>,
+	<rs type="person">canonicus
+		<rs type="place">ecclesie <placeName>Aurelianensis</placeName></rs>
+	</rs>
+</rs>
+```
+- test : `//rs/rs/rs/rs`, 0 résultat
+
+#### 9) Analyse des incertitude
+
+- `//rs[@type='place'][@cert]` : 0 résultat
+- `//placeName[@cert]` : 1 résultat
+
+
+### Décomptes
+
+Corpus des seuls fichiers dont l’annotation a été revue par EG et MV.
+
+#### Effectifs
+
+|xpath| effectif |définition|
+|--------|-----|----------|
+|`//placeName[not(ancestor::rs)]`|15381|Nom propre seul|
+|`//rs[@type='place'][count(placeName) > 1]`|157|Nom de lieu avec plusieurs noms propres de lieu|
+|`//rs[@type='place'][count(placeName) = 1]`|12526|Nom de lieu avec un unique nom propre de lieu|
+|`//rs[@type='place'][count(persName) > 1]`|42|Nom de lieu avec plusieurs noms propres de personne|
+|`//rs[@type='place'][count(persName) = 1]`|945|Nom de lieu avec un unique nom propre de personne|
+|`//rs[@type=’place’ and not(placeName or persName)]`|253|Nom de lieu avec uniquement des mots de la langue|
+|`//rs[@type='place' and placeName and persName]`|18|Nom de lieu avec noms propres de lieu et de personne|
+
+#### Imbrications
+
+|xpath| effectif |définition|
+|--------|-----|----------|
+|`//placeName[ancestor::rs[@type='person']]`|12084|Nom propre de lieu contenu dans un nom de personne|
+|`//placeName[ancestor::persName]`|10|Nom propre de lieu contenu dans un nom propre de personne|
+|`//rs[@type='place'][ancestor::rs[@type='person']]`|587|Nom de lieu contenu dans un nom de personne|
+|`//rs[@type='place'][ancestor::rs[@type='place']]`|3|???|
+|`//rs[@type='place'][ancestor::persName]`|0|OUF!|
+|`//rs[@type='place'][ancestor::placeName]`|0|OUF!|
 
