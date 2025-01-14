@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -67,8 +64,7 @@
       <head>Introduction ?</head>
       <div>
         <p>L’introduction et la table du Recueil des chartes de Saint-Germain-des-Prés paraîtront avec le second volume ; l’introduction devra être reliée en tête du premier. Voici, à titre provisoire, l’indication des sigles sous lesquels les divers recueils utilisés ont été désignés dans la présente édition, la lettre <hi rend="i">A</hi> étant réservée aux originaux ou prétendus originaux.</p>
-        <p><hi rend="i">B.</hi> Cartulaire ††† (fin du <hi rend="sc">xii</hi>
-          <hi rend="sup">e</hi> s.), Arch. Nat. LL. 1024.</p>
+        <p><hi rend="i">B.</hi> Cartulaire ††† (fin du <hi rend="sc">xii</hi><hi rend="sup">e</hi> s.), Arch. Nat. LL. 1024.</p>
         <p><hi rend="i">C.</hi> Cartulaire AB (<hi rend="sc">xiii</hi>
           <hi rend="sup">e</hi> s.), Arch. Nat. LL. 1025.</p>
         <p><hi rend="i">D.</hi> Cartulaire de l’abbé Guillaume (<hi rend="sc">xiii</hi>
@@ -95,10 +91,8 @@
         <p><hi rend="i">N</hi>7. Bibl. nat., ms. lat. 12841.</p>
         <p><hi rend="i">N</hi>8. Bibl. nat., ms. lat. 12842.</p>
         <p>Enfin les lettres <hi rend="i">O</hi> et <hi rend="i">P</hi> désignent les deux obituaires de l’abbaye dans lesquels un certain nombre de chartes ont été transcrites.</p>
-        <p><hi rend="i">O.</hi> Obituaire du <hi rend="sc">xii</hi>
-          <hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 13882.</p>
-        <p><hi rend="i">P.</hi> Obituaire du <hi rend="sc">xiii</hi>
-          <hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 12833.</p>
+        <p><hi rend="i">O.</hi> Obituaire du <hi rend="sc">xii</hi><hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 13882.</p>
+        <p><hi rend="i">P.</hi> Obituaire du <hi rend="sc">xiii</hi><hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 12833.</p>
         <p>Sauf indication contraire, les documents cités d’après une simple cote, sans mention du dépôt dans lequel ils sont conservés, se trouvent aux Archives nationales.</p>
       </div>
     </front>
@@ -293,7 +287,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -326,7 +320,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -357,7 +351,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -389,7 +383,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -422,7 +416,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -797,7 +791,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -830,7 +824,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -1005,7 +999,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -1206,7 +1200,7 @@
               <listWit>
                 <witness n="A">Original, K 7, n° <hi rend="sc">ii</hi>
                   <hi rend="sup">4</hi>.</witness>
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, n° 92, p. 70.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, n° 92, p. 70.</witness>
               </listWit>
             </div>
           </front>
@@ -1291,7 +1285,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original mutilé, K 7, n° 115.</witness>
-                <witness type="édition">Bordier, <hi rend="i">Chartes inédites du</hi> <hi rend="sc">viii</hi>
+                <witness n="a" type="édition">Bordier, <hi rend="i">Chartes inédites du</hi> <hi rend="sc">viii</hi>
                   <hi rend="sup">e</hi> <hi rend="i">siècle</hi>, dans la <hi rend="i">Biblioth. de l’Ecole des chartes</hi>, t. VIII (1846), p. 418.</witness>
                 <witness type="indiqué">Tardif, <hi rend="i">Cartons des rois</hi>, p. 71, n° 94.</witness>
               </listWit>
@@ -1333,7 +1327,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -1554,7 +1548,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -1647,7 +1641,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xiii</hi>
                   <hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 13089, fol. 128.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 56, n° 38, d’après <hi rend="i">AB</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 56, n° 38, d’après <hi rend="i">AB</hi>.</witness>
                 <witness type="indiqué">Tardif, <hi rend="i">Cartons des rois</hi>, p. 97, n° 148.</witness>
               </listWit>
             </div>
@@ -2029,7 +2023,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -2366,7 +2360,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -2549,7 +2543,7 @@
                 <witness n="D">fol. 14 v°.</witness>
                 <witness n="G">fol. 13.</witness>
                 
-                <witness type="édition">Pfister, <hi rend="i">Robert le Pieux</hi>, p. <hi rend="sc">lvi</hi>, n° <hi rend="sc">x</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Pfister, <hi rend="i">Robert le Pieux</hi>, p. <hi rend="sc">lvi</hi>, n° <hi rend="sc">x</hi>, d’après <hi rend="i">B</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -2824,7 +2818,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original, K 19, n° 2<hi rend="sup">4</hi>.</witness>
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">xxvi</hi>, n° <hi rend="sc">xxxii</hi>, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">xxvi</hi>, n° <hi rend="sc">xxxii</hi>, d’après <hi rend="i">A</hi>.</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 27. — Tardif, <hi rend="i">Cartons des rois</hi>, p. 167, n° 267. — Soehnée, <hi rend="i">Catalogue des actes d’Henri I<hi rend="sup">er</hi>
                 </hi>, p. 63, n° 64.</witness>
               </listWit>
@@ -3030,7 +3024,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
           <back>
@@ -3619,7 +3613,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
         </text>
@@ -3741,7 +3735,7 @@
                 
                 <witness n="B">Original, L 754, n° 5.</witness>
                 
-                <witness type="édition">
+                <witness n="a" type="édition">
                   <pb n="120"/>A. Giry, <hi rend="i">Recueil de fac-similé à l’usage de l’Ecole des chartes. Notice des documents</hi>, p. 10, n° 42.</witness>
                 <witness type="fac-similé">
                   <hi rend="i">Recueil de fac-similé à l’usage de l’Ecole des chartes</hi>, série héliogr., n° 42.</witness>
@@ -3786,7 +3780,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xiii</hi>
                   <hi rend="sup">e</hi> siècle, Archives de la Côte-d’Or, <hi rend="i">I<hi rend="sup">er</hi> Cartulaire de Citeaux</hi>, coté 166, fol. 90 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">xxxiv</hi>, n° <hi rend="sc">xliv</hi>, d’après les archives de Citeaux.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">xxxiv</hi>, n° <hi rend="sc">xliv</hi>, d’après les archives de Citeaux.</witness>
                 <witness type="indiqué">
                   <hi rend="i">III<hi rend="sup">e</hi> Cartulaire de Citeaux</hi>, coté 168, fol. 83 (d’après un vidimus de Renaud, archevêque de Lyon).</witness>
               </listWit>
@@ -3825,7 +3819,7 @@
                 <witness n="O">fol. 3.</witness>
                 <witness n="P">fol. 178.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxv</hi>, n° <hi rend="sc">xlv</hi>, d’après <hi rend="i">P</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxv</hi>, n° <hi rend="sc">xlv</hi>, d’après <hi rend="i">P</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -3863,7 +3857,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xiii</hi>
                   <hi rend="sup">e</hi> siècle, Archives de la Côte-d’Or, <hi rend="i">1<hi rend="sup">er</hi> Cartulaire de Citeaux</hi>, coté 166, fol. 76 v° et 80 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxiv</hi>, n° <hi rend="sc">xliii</hi>, « tirée des archives de Citeaux ».</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxiv</hi>, n° <hi rend="sc">xliii</hi>, « tirée des archives de Citeaux ».</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 452.</witness>
               </listWit>
             </div>
@@ -3900,7 +3894,7 @@
                 
                 <witness n="B">fol. 70 r°.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 197, n° 174, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 197, n° 174, d’après <hi rend="i">B</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -4054,7 +4048,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xv</hi>
                   <hi rend="sup">e</hi> s., LL 1064, fol. 34 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxvi</hi>, n° <hi rend="sc">xlvii</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xxxvi</hi>, n° <hi rend="sc">xlvii</hi>, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 541.</witness>
               </listWit>
             </div>
@@ -4137,7 +4131,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p></p>
+              <p/>
             </div>
           </body>
         </text>
@@ -4379,7 +4373,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xviii</hi>
                   <hi rend="sup">e</hi> siècle, LL 1043, fol. 5 v°.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 240, n° 437.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 240, n° 437.</witness>
                 <witness type="indiqué">Censier de Villeneuve-Saint-Georges, LL. 1090, fol. 5.</witness>
               </listWit>
             </div>
@@ -4490,7 +4484,7 @@
                 <witness n="C">fol. 118 v°.</witness>
                 <witness n="D">fol. 238.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 245, n° 446.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 245, n° 446.</witness>
               </listWit>
             </div>
           </front>
@@ -4540,7 +4534,7 @@
                 <witness n="D">fol. 195.</witness>
                 <witness n="D′">fol. 28.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 246, n° 447.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 246, n° 447.</witness>
               </listWit>
             </div>
           </front>
@@ -5022,7 +5016,7 @@
                 
                 <witness n="O">fol. 91.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 478, n° 584.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 478, n° 584.</witness>
               </listWit>
             </div>
           </front>
@@ -5309,7 +5303,7 @@
                 <witness n="D">fol. 34 v°.</witness>
                 <witness n="G">fol. 29.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 297, n° 320, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 297, n° 320, d’après <hi rend="i">A</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -5465,7 +5459,7 @@
                 
                 <witness n="Z">Cartulaire de Sainte-Geneviève, Bibliothèque Sainte-Geneviève, ms. n° 356, p. 176.</witness>
                 
-                <witness type="édition">
+                <witness n="a" type="édition">
                   <hi rend="i">Gallia Christiana</hi>, t. VII, col. 714 (fragm.).</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. III, p. 204.</witness>
               </listWit>
@@ -5781,7 +5775,7 @@
                 <witness n="D">fol. 17 v°.</witness>
                 <witness n="G">fol. 15 v°.</witness>
                 
-                <witness type="édition">A. Luchaire, <hi rend="i">Histoire des institutions monarchiques de la Frane sous les premiers Capétiens</hi>, t. II, p. 342, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">A. Luchaire, <hi rend="i">Histoire des institutions monarchiques de la Frane sous les premiers Capétiens</hi>, t. II, p. 342, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Luchaire, <hi rend="i">Actes de Louis VII</hi>, n° 372.</witness>
               </listWit>
             </div>
@@ -5987,7 +5981,7 @@
                 <witness n="B">fol. 61 v°.</witness>
                 <witness n="D">fol. 95 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xl</hi>, n° <hi rend="sc">liv</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xl</hi>, n° <hi rend="sc">liv</hi>, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. III, p. 291.</witness>
               </listWit>
             </div>
@@ -6249,7 +6243,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 230, n° 11.</witness>
-                <witness type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 133, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 133, d’après <hi rend="i">A</hi>.</witness>
                 <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 10851. — Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 377, n° 437.</witness>
               </listWit>
             </div>
@@ -6598,7 +6592,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xvi</hi>
                   <hi rend="sup">e</hi> siècle, <hi rend="i">Cartulaire C de Saint-Martin-des-Champs</hi>, LL 1353, fol. 112, d’après <hi rend="i">X</hi>.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 391, n° 462.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 391, n° 462.</witness>
               </listWit>
             </div>
           </front>
@@ -6629,7 +6623,7 @@
                 <witness n="D">fol. 85.</witness>
                 <witness n="Z">Vidimus du 3 décembre 1456, sous le sceau de Robert d’Estouteville, prévôt de Paris, K 24, n° 13 bis.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 303, n° 601, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 303, n° 601, d’après <hi rend="i">A</hi>.</witness>
                 <witness type="indiqué">Luchaire, <hi rend="i">Actes de Louis VII</hi>, n° 535.</witness>
               </listWit>
             </div>
@@ -6907,7 +6901,7 @@
                 <witness n="B">fol. 54.</witness>
                 <witness n="D′">fol. 32 v°.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 308, n° 612.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 308, n° 612.</witness>
               </listWit>
             </div>
           </front>
@@ -6984,7 +6978,7 @@
                 
                 <witness n="D">fol. 104 v°.</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 306, n° 608.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 306, n° 608.</witness>
                 <witness type="indiqué">Luchaire, <hi rend="i">Actes de Louis VII</hi>, n° 550.</witness>
               </listWit>
             </div>
@@ -7024,7 +7018,7 @@
                 <witness n="D">fol. 224 v°.</witness>
                 <witness n="G">fol. 68.</witness>
                 
-                <witness type="édition">Duchesne, <hi rend="i">Hist. des rois, ducs et comtes de Bourgogne</hi>, t. II, pr., p. 53.</witness>
+                <witness n="a" type="édition">Duchesne, <hi rend="i">Hist. des rois, ducs et comtes de Bourgogne</hi>, t. II, pr., p. 53.</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. III, p. 58. — E. Petit, <hi rend="i">Hist. des ducs de Bourgogne</hi>, t. II, p. 340, n° 502.</witness>
               </listWit>
             </div>
@@ -7060,7 +7054,7 @@
                 <witness n="D">fol. 36.</witness>
                 <witness n="G">fol. 30.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 419, n° 503.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 419, n° 503.</witness>
               </listWit>
             </div>
           </front>
@@ -7175,7 +7169,7 @@
                 
                 <witness n="D">fol. 237 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlii</hi>, n° <hi rend="sc">lviii</hi>, d’après <hi rend="i">D</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlii</hi>, n° <hi rend="sc">lviii</hi>, d’après <hi rend="i">D</hi>.</witness>
                 <witness type="indiqué">
                   <pb n="223"/>Tardif, <hi rend="i">Cartons des rois</hi>, p. 235, n° 662<ref type="note" n="2" target="#n152_2" xml:id="a152_2"/>.</witness>
               </listWit>
@@ -7445,7 +7439,7 @@
                 <witness n="D">fol. 51 et 55 v°.</witness>
                 <witness n="G">fol. 41.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 409, n° 489, d’après <hi rend="i">BDG</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 409, n° 489, d’après <hi rend="i">BDG</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -8191,7 +8185,7 @@
                 
                 <witness n="D">fol. 251 (analyse).</witness>
                 
-                <witness type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 332, n° 673, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Tardif, <hi rend="i">Cartons des rois</hi>, p. 332, n° 673, d’après <hi rend="i">A</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -8294,7 +8288,7 @@
                 <witness n="B">fol. 97.</witness>
                 <witness n="E">fol. 41 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxvii</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxvii</hi>, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 13501.</witness>
               </listWit>
             </div>
@@ -8323,7 +8317,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xviii</hi>
                   <hi rend="sup">e</hi> s., LL 1050, fol. 1.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 464, n° 508, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 464, n° 508, d’après <hi rend="i">A</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -8437,7 +8431,7 @@
                 <witness n="B">fol. 97.</witness>
                 <witness n="E">fol. 41 v°.</witness>
                 
-                <witness type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 186, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 186, d’après <hi rend="i">A</hi>.</witness>
                 <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 13614.</witness>
               </listWit>
             </div>
@@ -8468,7 +8462,7 @@
                 <witness n="B">fol. 97 v°.</witness>
                 <witness n="E">fol. 42.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlviii</hi>, n° <hi rend="sc">lxix</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlviii</hi>, n° <hi rend="sc">lxix</hi>, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 13615.</witness>
               </listWit>
             </div>
@@ -8538,7 +8532,7 @@
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p><hi rend="sc">Alexander episcopus, servus servorum Dei, dilectis filiis Hugoni, abbati sancti Germani Parisiensis, ejusque fratribus tam presentibus quam futuris regularem vitam professis, inperpetuum.</hi> <lb n="2"/>In eminenti beati Petri cathedra ad hoc sumus licet immeriti, disponente Domino, constituti ut justas petitiones debeamus libenter admittere, et eis studeamus effectum utilem indulgere Eapropter, dilecti in Domino filii, vestris justis postulationibus clementer annuimus, et monasterium beati Germani de Pratis, in quo divino mancipati estis obsequio, quod proprie beati Petri juris existit, ad exemplar predecessorum nostrorum beate memorie <hi rend="sc">Paschalis</hi><ref type="note" n="1" target="#n187_1" xml:id="a187_1"/>, <hi rend="sc">Innocentii</hi><ref type="note" n="2" target="#n187_2" xml:id="a187_2"/>, <hi rend="sc">Lucii</hi><ref type="note" n="3" target="#n187_3" xml:id="a187_3"/>, <hi rend="sc">Eugenii</hi><ref type="note" n="4" target="#n187_4" xml:id="a187_4"/>, <hi rend="sc">Anastasii</hi>ref type="note" n="5" target="#n187_5" xml:id="a187_5"/> et <hi rend="sc">Adriani</hi><ref type="note" n="6" target="#n187_6" xml:id="a187_6"/>, Romanorum pontificum, sub beati Petri et nostra protectione suscipimus et presentis scripti privilegio communimus, statuentes ut quascumque possessiones, quecumque bona idem monasterium in presentiarum juste et canonice possidet, aut in futurum concessione pontificum, largitione regum vel principum, oblatione fidelium seu aliis justis modis prestante Domino poterit adipisci, firma vobis vestrisque successoribus et illibata permaneant. Per presentis itaque privilegii paginam vobis vestrisque successoribus in perpetuum confirmamus ut quecumque libertas, quecumque dignitas privilegio beati Germani, scriptis Childeberti, Clotharii atque aliorum regum Francorum vestro monasterio est collata et subsequentibus temporibus observata illibata permaneant. Precipimus autem ut crisma, oleum sanctum, consecrationes altarium, ordinationes clericorum, et quecumque vobis ex pontificali sunt ministerio necessaria, a nullo catholico episcopo vobis vestrisque successoribus denegentur. Sane missas, ordinationes, stationes, ab omni episcopo vel clero Parisiensis ecclesie in eodem monasterio preter voluntatem abbatis vel congregationis fieri prohibemus, nec habeant potestatem ibi aliquid imperandi, sed nec divina ipsis officia interdicere, nec excommunicare nec ad synodum vocare abbatem aut monachos, presbiteros aut clericos ecclesiarum ipsius loci concedimus facultatem. Adicimus etiam ut in parrochialibus ecclesiis, quas extra burgum beati <pb n="265"/>Germani tenetis, presbiteri per vos eligantur ; quibus si idonei fuerint episcopus animarum curam comittet, ut ei de plebis quidem cura, pro rebus vero temporalibus ad monasterium pertinentibus vobis respondeant. Quod si facere forte noluerint, subtrahendi eis temporalia que a vobis tenent liberam habeatis auctoritate apostolica facultatem. Omnis autem abbas, dilecte in Domino fili Hugo, qui post te a congregatione commissi tibi cenobii secundum regulam beati Benedicti electus fuerit, a Romano pontifice vel a quo maluerit catholico episcopo gratiam et communionem Apostolice Sedis habente benedictionem accipiat. Auctoritate etiam apostolica statuimus, et vobis de consueta clementia et benignitate Sedis Apostolice indulgemus ut nullius legationi, nisi a latere Romani pontificis specialiter fuerit delegatus, subjacere vel subesse amodo debeatis, nec alicui liceat obtentu legationis ab Apostolica sibi Sede indulte vos vel successores vestros, seu monasterium vestrum vel ecclesias que infra burgum beati Germani sunt, ulla interdicti vel excommunicationis sententia pregravare, vel super vos aut super jamdictas ecclesias jurisdictionem aliquam exercere, nisi specialiter hoc fuerit a Romano pontifice illi mandatum. Sane novalium vestrorum, que propriis manibus aut sumptibus colitis sive de nutrimentis animalium vestrorum, nullus a vobis decimas exigere presumat. Sepulturam quoque locorum vestrorum, in quibus tres ad minus ex fratribus vestris habitant, immunem esse decernimus, ut eorum devotioni et extreme voluntati qui se illic sepeliri deliberaverint, nisi forte excommunicati vel interdicti sint, nullus obsistat, salva tamen justicia illarum ecclesiarum a quibus mortuorum corpora assumuntur. Decernimus ergo ut nulli omnino hominum fas sit supradictum monasterium temere perturbare, aut ejus possessiones auferre vel ablatas retinere, minuere seu quibuslibet vexationibus fatigare, sed illibata omnia et integra conserventur eorum, pro quorum gubernatione ac sustentatione concessa sunt, usibus omnimodis profutura, salva Apostolice Sedis auctoritate. Si qua igitur in futurum ecclesiastica secularisve persona hanc nostre constitutionis paginam sciens, contra eam temere venire temptaverit, secundo tertiove commonita, nisi reatum suum digna satisfactione correxerit, potestatis honorisque sui dignitate careat, reamque se divino judicio existere de perpetrata iniquitate cognoscat, et a sacratissimo corpore et sanguine Dei et domini redemptoris nostri Jesu Xpisti aliena fiat atque in extremo examine divine ultioni subjaceat. Cunctis autem eidem loco sua jura servantibus sit pax domini nostri Jesu Xpisti, quatinus et hic fructum bone actionis percipiant, et apud districtum judicem premia eterne pacis inveniant. <hi rend="sc">Amen. Amen. Amen.</hi></p>
+              <p><hi rend="sc">Alexander episcopus, servus servorum Dei, dilectis filiis Hugoni, abbati sancti Germani Parisiensis, ejusque fratribus tam presentibus quam futuris regularem vitam professis, inperpetuum.</hi> <lb n="2"/>In eminenti beati Petri cathedra ad hoc sumus licet immeriti, disponente Domino, constituti ut justas petitiones debeamus libenter admittere, et eis studeamus effectum utilem indulgere Eapropter, dilecti in Domino filii, vestris justis postulationibus clementer annuimus, et monasterium beati Germani de Pratis, in quo divino mancipati estis obsequio, quod proprie beati Petri juris existit, ad exemplar predecessorum nostrorum beate memorie <hi rend="sc">Paschalis</hi><ref type="note" n="1" target="#n187_1" xml:id="a187_1"/>, <hi rend="sc">Innocentii</hi><ref type="note" n="2" target="#n187_2" xml:id="a187_2"/>, <hi rend="sc">Lucii</hi><ref type="note" n="3" target="#n187_3" xml:id="a187_3"/>, <hi rend="sc">Eugenii</hi><ref type="note" n="4" target="#n187_4" xml:id="a187_4"/>, <hi rend="sc">Anastasii</hi>ref type="note" n="5" target="#n187_5" xml:id="a187_5"/&gt; et <hi rend="sc">Adriani</hi><ref type="note" n="6" target="#n187_6" xml:id="a187_6"/>, Romanorum pontificum, sub beati Petri et nostra protectione suscipimus et presentis scripti privilegio communimus, statuentes ut quascumque possessiones, quecumque bona idem monasterium in presentiarum juste et canonice possidet, aut in futurum concessione pontificum, largitione regum vel principum, oblatione fidelium seu aliis justis modis prestante Domino poterit adipisci, firma vobis vestrisque successoribus et illibata permaneant. Per presentis itaque privilegii paginam vobis vestrisque successoribus in perpetuum confirmamus ut quecumque libertas, quecumque dignitas privilegio beati Germani, scriptis Childeberti, Clotharii atque aliorum regum Francorum vestro monasterio est collata et subsequentibus temporibus observata illibata permaneant. Precipimus autem ut crisma, oleum sanctum, consecrationes altarium, ordinationes clericorum, et quecumque vobis ex pontificali sunt ministerio necessaria, a nullo catholico episcopo vobis vestrisque successoribus denegentur. Sane missas, ordinationes, stationes, ab omni episcopo vel clero Parisiensis ecclesie in eodem monasterio preter voluntatem abbatis vel congregationis fieri prohibemus, nec habeant potestatem ibi aliquid imperandi, sed nec divina ipsis officia interdicere, nec excommunicare nec ad synodum vocare abbatem aut monachos, presbiteros aut clericos ecclesiarum ipsius loci concedimus facultatem. Adicimus etiam ut in parrochialibus ecclesiis, quas extra burgum beati <pb n="265"/>Germani tenetis, presbiteri per vos eligantur ; quibus si idonei fuerint episcopus animarum curam comittet, ut ei de plebis quidem cura, pro rebus vero temporalibus ad monasterium pertinentibus vobis respondeant. Quod si facere forte noluerint, subtrahendi eis temporalia que a vobis tenent liberam habeatis auctoritate apostolica facultatem. Omnis autem abbas, dilecte in Domino fili Hugo, qui post te a congregatione commissi tibi cenobii secundum regulam beati Benedicti electus fuerit, a Romano pontifice vel a quo maluerit catholico episcopo gratiam et communionem Apostolice Sedis habente benedictionem accipiat. Auctoritate etiam apostolica statuimus, et vobis de consueta clementia et benignitate Sedis Apostolice indulgemus ut nullius legationi, nisi a latere Romani pontificis specialiter fuerit delegatus, subjacere vel subesse amodo debeatis, nec alicui liceat obtentu legationis ab Apostolica sibi Sede indulte vos vel successores vestros, seu monasterium vestrum vel ecclesias que infra burgum beati Germani sunt, ulla interdicti vel excommunicationis sententia pregravare, vel super vos aut super jamdictas ecclesias jurisdictionem aliquam exercere, nisi specialiter hoc fuerit a Romano pontifice illi mandatum. Sane novalium vestrorum, que propriis manibus aut sumptibus colitis sive de nutrimentis animalium vestrorum, nullus a vobis decimas exigere presumat. Sepulturam quoque locorum vestrorum, in quibus tres ad minus ex fratribus vestris habitant, immunem esse decernimus, ut eorum devotioni et extreme voluntati qui se illic sepeliri deliberaverint, nisi forte excommunicati vel interdicti sint, nullus obsistat, salva tamen justicia illarum ecclesiarum a quibus mortuorum corpora assumuntur. Decernimus ergo ut nulli omnino hominum fas sit supradictum monasterium temere perturbare, aut ejus possessiones auferre vel ablatas retinere, minuere seu quibuslibet vexationibus fatigare, sed illibata omnia et integra conserventur eorum, pro quorum gubernatione ac sustentatione concessa sunt, usibus omnimodis profutura, salva Apostolice Sedis auctoritate. Si qua igitur in futurum ecclesiastica secularisve persona hanc nostre constitutionis paginam sciens, contra eam temere venire temptaverit, secundo tertiove commonita, nisi reatum suum digna satisfactione correxerit, potestatis honorisque sui dignitate careat, reamque se divino judicio existere de perpetrata iniquitate cognoscat, et a sacratissimo corpore et sanguine Dei et domini redemptoris nostri Jesu Xpisti aliena fiat atque in extremo examine divine ultioni subjaceat. Cunctis autem eidem loco sua jura servantibus sit pax domini nostri Jesu Xpisti, quatinus et hic fructum bone actionis percipiant, et apud districtum judicem premia eterne pacis inveniant. <hi rend="sc">Amen. Amen. Amen.</hi></p>
               <p><pb n="266"/>(<hi rend="i">Rota</hi>)<ref type="note" n="a" target="#n187_a" xml:id="a187_a"/>. Ego Alexander catholice ecclesie episcopus <hi rend="i">SS.</hi></p>
               <p>† Ego Hubaldus Hostiensis episcopus <hi rend="i">SS.</hi></p>
               <p>† Ego Thedinus Portuensis et sancte Rufine sedis episcopus <hi rend="i">SS.</hi></p>
@@ -8639,7 +8633,7 @@
                 <witness n="D">fol. 169 (rédaction abrégée).</witness>
                 <witness n="G">fol. 49.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvi</hi>, n° <hi rend="sc">lxiv</hi>, d’après C.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvi</hi>, n° <hi rend="sc">lxiv</hi>, d’après C.</witness>
                 <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. III, p. 543.</witness>
               </listWit>
             </div>
@@ -8678,7 +8672,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 231, n° 37.</witness>
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 419, n° 502, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 419, n° 502, d’après <hi rend="i">A</hi>.</witness>
                 <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 13551.</witness>
               </listWit>
             </div>
@@ -8785,7 +8779,7 @@
                 <witness n="B">fol. 97 v°.</witness>
                 <witness n="E">fol. 41.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxviii</hi>, d’après <hi rend="i">B</hi> ou <hi rend="i">E</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxviii</hi>, d’après <hi rend="i">B</hi> ou <hi rend="i">E</hi>.</witness>
                 <witness type="indiqué">Bréquigny et Pardessus, <hi rend="i">Table chronologique</hi>, t. IV, p. 15. — Jaffé, <hi rend="i">Regesta</hi>, n° 13616.</witness>
               </listWit>
             </div>
@@ -8820,7 +8814,7 @@
                 <witness n="B">fol. 96 v°.</witness>
                 <witness n="E">fol. 41 v°.</witness>
                 
-                <witness type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxvi</hi>, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">xlvii</hi>, n° <hi rend="sc">lxvi</hi>, d’après <hi rend="i">B</hi>.</witness>
                 <witness type="indiqué">Bréquigny et Pardessus, <hi rend="i">Table chronologique</hi>, t. IV, p. 15. — Jaffé, <hi rend="i">Regesta</hi>, n° 13617.</witness>
               </listWit>
             </div>
@@ -9096,14 +9090,14 @@
                 <witness n="D">fol. 36.</witness>
                 <witness n="G">fol. 30 v°.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 441, n° 536.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 441, n° 536.</witness>
               </listWit>
             </div>
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
               <hi rend="sc">De permutatione cujusdam census cum fratribus de sancto Victore.</hi>
-              <p>Ego Guarinus, ecclesie sancti Victoris Parisiensis abbas, et ejusdem loci conventus. Notum facimus omnibus ad quos littere iste pervenerint quod de controversia que erat inter nos et ecclesiam sancti Germani de Pratis pro censu duodecim denariorum, quem eadem ecclesia sancti Germani dicebat se habere in domibus Renaudi filii Mauguini ante Sanctum Xpistophorum sitis, solventibus nobis annuatim censum <hi rend="sc">.lx</hi><hi rend="sup">a</hi>. solidorum, que assensu ecclesie nostre constructe erant in plateis quas habebamus ex dono Obizonis medici, quas etiam Embertus, filius predicti Renaudi, nobis pro centum et quinquaginta libris vendidit, facta est conpositio in hunc modum : pro supradicto censu <hi rend="sc">.xii.</hi><hi rend="sup">cim</hi> denariorum, quem prefata ecclesia sancti Germani nobis imperpetuum remisit, nichil juris in pretaxatis domibus sibi retinens, concessimus ei in recompensationem alios <hi rend="sc">.xii.</hi> denarios de censu, octo scilicet in domo majori Renaudi Philipi in capite Sancti Xpistofori, ita tamen quod camera adherens prefate domui, que sex denarios reddit censuales, remanebit ecclesie nostre, et <hi rend="sc">.iiii</hi><hi rend="sup">or</hi>. denarios de domo Hildealdis, uxoris defuncti Godefridi, in festo sancti Andree<ref type="note" n="a" target="#n200_a" xml:id="a200_a"/> persolvendos, libere et quiete imperpetuum possidendos, penitus nil juris nobis in eadem possessione retinentes, Preterea pro censu <hi rend="sc">.xviii.</hi> denariorum, quem habebat sepedicta ecclesia sancti Germani in domibus magistri Hugonis, quondam episcopi Suessionensis et regii cancellarii<ref type="note" n="b" target="#n200_b" xml:id="a200_b"/>, quas domos abbas sancti Germani et conventus nobis libere et quiete imperpetuum possidendas benigne concesserunt, nichil juris sibi in eisdem retinentes, dedit Tiboldus Dives in recompensationem ecclesie sancti Germani <hi rend="sc">.xx</hi><hi rend="sup">ti</hi>. denarios de censu libere et quiete imperpetuum possidendos, nichil juris in eisdem sibi retinens, <hi rend="sc">.xiiii</hi><hi rend="sup"></hi>. scilicet in domo Aalulfi cambitoris, et sex denarios in domo Petri Fabri Lombardi. Quia vero idem Tiboldus, a quo prenominati episcopi domos habuimus, sigillum ad petitionem domni abbatis et conventus sancti Germani de Pratis<ref type="note" n="c" target="#n200_c" xml:id="a200_c"/>, predictam reconpensationem litteris nostris interseruimus, similiter et condonationem dimidii modii avene factam imperpetuum ecclesie sancti Germani precibus ejusdem Tiboldi a fratribus Vicenie ; quem annuatim habere debebant in granchia Villenove de elemosina Petri de Monterello supradictum dimidium avene modium. Que condonatio facta est <pb n="283"/>in reconpensationem cujusdam feodi, quem tenebat idem Tibouldus ab abbate sancti Germani apud Laorcinas ; et eum vendidit fratribus de Hospitali. Quod ne valeat oblivione deleri, scripto commendavimus et sigilli capituli nostri impressione confirmavimus. <hi rend="i">S.</hi> Roberti prioris. <hi rend="i">S.</hi> Petri prebendarii. <hi rend="i">S.</hi> Henrici hospitalarii. <hi rend="i">S.</hi> Stephani sacerdotis. <hi rend="i">S.</hi> Ancelini sacerdotis. <hi rend="i">S.</hi> Richardi dyaconi. <hi rend="i">S.</hi> Philipi subdyaconi. <hi rend="i">S.</hi> Alelmi subdyaconi. <hi rend="i">S.</hi> Odonis subdiaconi.</p>
+              <p>Ego Guarinus, ecclesie sancti Victoris Parisiensis abbas, et ejusdem loci conventus. Notum facimus omnibus ad quos littere iste pervenerint quod de controversia que erat inter nos et ecclesiam sancti Germani de Pratis pro censu duodecim denariorum, quem eadem ecclesia sancti Germani dicebat se habere in domibus Renaudi filii Mauguini ante Sanctum Xpistophorum sitis, solventibus nobis annuatim censum <hi rend="sc">.lx</hi><hi rend="sup">a</hi>. solidorum, que assensu ecclesie nostre constructe erant in plateis quas habebamus ex dono Obizonis medici, quas etiam Embertus, filius predicti Renaudi, nobis pro centum et quinquaginta libris vendidit, facta est conpositio in hunc modum : pro supradicto censu <hi rend="sc">.xii.</hi><hi rend="sup">cim</hi> denariorum, quem prefata ecclesia sancti Germani nobis imperpetuum remisit, nichil juris in pretaxatis domibus sibi retinens, concessimus ei in recompensationem alios <hi rend="sc">.xii.</hi> denarios de censu, octo scilicet in domo majori Renaudi Philipi in capite Sancti Xpistofori, ita tamen quod camera adherens prefate domui, que sex denarios reddit censuales, remanebit ecclesie nostre, et <hi rend="sc">.iiii</hi><hi rend="sup">or</hi>. denarios de domo Hildealdis, uxoris defuncti Godefridi, in festo sancti Andree<ref type="note" n="a" target="#n200_a" xml:id="a200_a"/> persolvendos, libere et quiete imperpetuum possidendos, penitus nil juris nobis in eadem possessione retinentes, Preterea pro censu <hi rend="sc">.xviii.</hi> denariorum, quem habebat sepedicta ecclesia sancti Germani in domibus magistri Hugonis, quondam episcopi Suessionensis et regii cancellarii<ref type="note" n="b" target="#n200_b" xml:id="a200_b"/>, quas domos abbas sancti Germani et conventus nobis libere et quiete imperpetuum possidendas benigne concesserunt, nichil juris sibi in eisdem retinentes, dedit Tiboldus Dives in recompensationem ecclesie sancti Germani <hi rend="sc">.xx</hi><hi rend="sup">ti</hi>. denarios de censu libere et quiete imperpetuum possidendos, nichil juris in eisdem sibi retinens, <hi rend="sc">.xiiii</hi><hi rend="sup"/>. scilicet in domo Aalulfi cambitoris, et sex denarios in domo Petri Fabri Lombardi. Quia vero idem Tiboldus, a quo prenominati episcopi domos habuimus, sigillum ad petitionem domni abbatis et conventus sancti Germani de Pratis<ref type="note" n="c" target="#n200_c" xml:id="a200_c"/>, predictam reconpensationem litteris nostris interseruimus, similiter et condonationem dimidii modii avene factam imperpetuum ecclesie sancti Germani precibus ejusdem Tiboldi a fratribus Vicenie ; quem annuatim habere debebant in granchia Villenove de elemosina Petri de Monterello supradictum dimidium avene modium. Que condonatio facta est <pb n="283"/>in reconpensationem cujusdam feodi, quem tenebat idem Tibouldus ab abbate sancti Germani apud Laorcinas ; et eum vendidit fratribus de Hospitali. Quod ne valeat oblivione deleri, scripto commendavimus et sigilli capituli nostri impressione confirmavimus. <hi rend="i">S.</hi> Roberti prioris. <hi rend="i">S.</hi> Petri prebendarii. <hi rend="i">S.</hi> Henrici hospitalarii. <hi rend="i">S.</hi> Stephani sacerdotis. <hi rend="i">S.</hi> Ancelini sacerdotis. <hi rend="i">S.</hi> Richardi dyaconi. <hi rend="i">S.</hi> Philipi subdyaconi. <hi rend="i">S.</hi> Alelmi subdyaconi. <hi rend="i">S.</hi> Odonis subdiaconi.</p>
             </div>
           </body>
           <back>
@@ -9295,7 +9289,7 @@
                 <witness n="O">fol. 94.</witness>
                 <witness n="P">fol. 176.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 476, n° 583.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 476, n° 583.</witness>
               </listWit>
             </div>
           </front>
@@ -9598,7 +9592,7 @@
                 <witness n="Z">Copie du <hi rend="sc">xii</hi>
                   <hi rend="sup">e</hi> s., Bibl. nat., ms. lat. 12194, fol. 3 v°.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 463, n° 567, d’après <hi rend="i">Z</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 463, n° 567, d’après <hi rend="i">Z</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -10006,7 +10000,7 @@
                 
                 <witness n="B">fol. 94.</witness>
                 
-                <witness type="édition">Longnon, <hi rend="i">Polyptyque d’Irminon</hi>, t. I, p. 223.</witness>
+                <witness n="a" type="édition">Longnon, <hi rend="i">Polyptyque d’Irminon</hi>, t. I, p. 223.</witness>
               </listWit>
             </div>
           </front>
@@ -10193,7 +10187,7 @@
                 
                 <witness n="B">fol. 101.</witness>
                 
-                <witness type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 479, n° 585, d’après <hi rend="i">B</hi>.</witness>
+                <witness n="a" type="édition">Lasteyrie, <hi rend="i">Cartulaire de Paris</hi>, p. 479, n° 585, d’après <hi rend="i">B</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -10443,7 +10437,7 @@
                   <witness n="C">fol. 38 v°.</witness>
                   <witness n="D">fol. 94.</witness>
                 </listWit>
-                <witness n="a">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, p. 150, note <hi rend="i">a</hi>, d’après un cartulaire.</witness>
+                <witness type="édition" n="a">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, p. 150, note <hi rend="i">a</hi>, d’après un cartulaire.</witness>
               </listWit>
             </div>
           </front>
@@ -10479,7 +10473,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 232, n° 19.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 14977.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 14977.</witness>
               </listWit>
             </div>
           </front>
@@ -10512,7 +10506,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 232, n° 20.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 14985.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 14985.</witness>
               </listWit>
             </div>
           </front>
@@ -10620,7 +10614,7 @@
                 <listWit>
                   <witness n="E">fol. 30 v°.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 15364.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 15364.</witness>
               </listWit>
             </div>
           </front>
@@ -10691,8 +10685,8 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, L 781, n° 55 (d’après <hi rend="i">D</hi>).</witness>
                 </listWit>
-                <witness n="">Toussaint Duplessis, <hi rend="i">Histoire de l’église de Meaux</hi>, t. II, p. 72, n° <hi rend="sc">clix</hi>, d’après <hi rend="i">D</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 73.</witness>
+                <witness n="a" type="édition">Toussaint Duplessis, <hi rend="i">Histoire de l’église de Meaux</hi>, t. II, p. 72, n° <hi rend="sc">clix</hi>, d’après <hi rend="i">D</hi>.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 73.</witness>
               </listWit>
             </div>
           </front>
@@ -10864,8 +10858,8 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 233, n° 2.</witness>
-                <witness n="">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 237, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 15936.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 237, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 15936.</witness>
               </listWit>
             </div>
           </front>
@@ -10894,7 +10888,7 @@
                 <listWit>
                   <witness n="Z">Copie de 1664, L 233, n° 8 <hi rend="i">bis</hi>.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 15939.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 15939.</witness>
               </listWit>
             </div>
           </front>
@@ -11093,7 +11087,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 234, n° 2.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 16286.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 16286.</witness>
               </listWit>
             </div>
           </front>
@@ -11129,7 +11123,7 @@
                   <witness n="Z">Copie incomplète du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, L 234, n° 6 <hi rend="i">bis</hi>.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 16364.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 16364.</witness>
               </listWit>
             </div>
           </front>
@@ -11205,7 +11199,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 234, n° 7.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 16401.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 16401.</witness>
               </listWit>
             </div>
           </front>
@@ -11239,7 +11233,7 @@
               <listWit>
                 <witness n="A">
                   <pb n="29"/>Original jadis bullé, L 234, n° 8.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 16407.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 16407.</witness>
               </listWit>
             </div>
           </front>
@@ -11370,8 +11364,8 @@
                   <witness n="C">fol. 73 v°.</witness>
                   <witness n="D">fol. 239.</witness>
                 </listWit>
-                <witness n="">Toussaint Du Plessis, <hi rend="i">Hist. de l’église de Meaux</hi>, t. II, p. 79, n° <hi rend="sc">clxxvi</hi>, d’après un des cartulaires (fragm.).</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 156.</witness>
+                <witness n="a" type="édition">Toussaint Du Plessis, <hi rend="i">Hist. de l’église de Meaux</hi>, t. II, p. 79, n° <hi rend="sc">clxxvi</hi>, d’après un des cartulaires (fragm.).</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 156.</witness>
               </listWit>
             </div>
           </front>
@@ -11451,7 +11445,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, L 235, n° 1 <hi rend="i">bis</hi>.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 16686.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 16686.</witness>
               </listWit>
             </div>
           </front>
@@ -11542,10 +11536,10 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, LL 1064, fol. 28 v°.</witness>
                 </listWit>
-                <witness n="a">Bouillart, <hi rend="i">Histoire de Saint-Germain-des-Près</hi>, pr. p. <hi rend="sc">l</hi>, n° <hi rend="sc">lxxiii</hi>, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="b">
+                <witness type="édition" n="a">Bouillart, <hi rend="i">Histoire de Saint-Germain-des-Près</hi>, pr. p. <hi rend="sc">l</hi>, n° <hi rend="sc">lxxiii</hi>, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="édition" n="b">
                   <hi rend="i">Stephani Tornacensis epistolae</hi>, ed. du Molinet, p. 264<ref type="note" n="1" target="#n254_1" xml:id="a254_1"/>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 149. — Delisle, <hi rend="i">Catalogue des Actes de Philippe-Auguste</hi>, n° 350 A.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 149. — Delisle, <hi rend="i">Catalogue des Actes de Philippe-Auguste</hi>, n° 350 A.</witness>
               </listWit>
             </div>
           </front>
@@ -11587,9 +11581,9 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, L 1064, fol. 28.</witness>
                 </listWit>
-                <witness n="">
+                <witness n="a" type="édition">
                   <pb n="39"/>Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">li</hi>, n° <hi rend="sc">lxxiv</hi>, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 149.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 149.</witness>
               </listWit>
             </div>
           </front>
@@ -11674,7 +11668,7 @@
                   <witness n="G">fol. 18 et 31 v°.</witness>
                 </listWit>
                 <witness n="">H.-François Delaborde, <hi rend="i">Recueil des actes de Philippe-Auguste, roi de France</hi>, t. 1, p. 513, n° 424.</witness>
-                <witness n="">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 369. Tardif, <hi rend="i">Cartons des rois</hi>, n° 708.</witness>
+                <witness type="indiqué">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 369. Tardif, <hi rend="i">Cartons des rois</hi>, n° 708.</witness>
               </listWit>
             </div>
           </front>
@@ -12156,7 +12150,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvi</hi>
                     <hi rend="sup">e</hi> siècle, LL 1057, fol. 5.</witness>
                 </listWit>
-                <witness n="">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">l</hi>, n° <hi rend="sc">lxxii</hi>.</witness>
+                <witness n="a" type="édition">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">l</hi>, n° <hi rend="sc">lxxii</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -12202,7 +12196,7 @@
                 <listWit>
                   <witness n="C">fol. 15 v°.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 427.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 427.</witness>
               </listWit>
             </div>
           </front>
@@ -12235,7 +12229,7 @@
                 <listWit>
                   <witness n="E">fol. 28 v°.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 17184.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 17184.</witness>
               </listWit>
             </div>
           </front>
@@ -12350,8 +12344,8 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original bullé, L 235, n° 18.</witness>
-                <witness n="">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 259, n° 415, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 17370.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 259, n° 415, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 17370.</witness>
               </listWit>
             </div>
           </front>
@@ -12379,7 +12373,7 @@
                 <listWit>
                   <witness n="E">fol. 28.</witness>
                 </listWit>
-                <witness n="">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 259, n° 416, d’après <hi rend="i">A</hi>.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 259, n° 416, d’après <hi rend="i">A</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -12409,7 +12403,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xviii</hi>
                     <hi rend="sup">e</hi> siècle, L 235, n° 20 <hi rend="i">bis</hi>.</witness>
                 </listWit>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi>, n° 17386.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi>, n° 17386.</witness>
               </listWit>
             </div>
           </front>
@@ -12499,8 +12493,8 @@
               <listWit>
                 <witness n="A">
                   <pb n="65"/>Original jadis bullé, L 235, n° 21.</witness>
-                <witness n="">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 261, n° 418, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="">Jaffé, <hi rend="i">Regesta</hi> n° 17393.</witness>
+                <witness n="a" type="édition">Loewenfeld, <hi rend="i">Epistolae pontificum Romanorum ineditae</hi>, p. 261, n° 418, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="indiqué">Jaffé, <hi rend="i">Regesta</hi> n° 17393.</witness>
               </listWit>
             </div>
           </front>
@@ -12575,7 +12569,7 @@
                   <witness n="D">fol. 29.</witness>
                   <witness n="G">fol. 24 v°.</witness>
                 </listWit>
-                <witness n="">Berty et Tisserand, <hi rend="i">Topographie historique du Vieux Paris. Région du Faubourg Saint-Germain</hi>, p. 282, d’après <hi rend="i">C</hi>.</witness>
+                <witness n="a" type="édition">Berty et Tisserand, <hi rend="i">Topographie historique du Vieux Paris. Région du Faubourg Saint-Germain</hi>, p. 282, d’après <hi rend="i">C</hi>.</witness>
               </listWit>
             </div>
           </front>
@@ -12802,13 +12796,13 @@
                   <witness n="E">fol. 10 (incomplet).</witness>
                   <witness n="Z">Copie authentique de 1664, L 236, n° 5 <hi rend="i">bis</hi>.</witness>
                 </listWit>
-                <witness n="a">
+                <witness type="édition" n="a">
                   <hi rend="i">Innocentii opera</hi>, éd. Baluze, t. I, p. 94, n° 173 (fragm.).</witness>
-                <witness n="b">Du Boulay, <hi rend="i">Historia universitatis Parisiensis</hi>, t. II, p. 536 (fragm.).</witness>
-                <witness n="c">Launoi, <hi rend="i">Opera</hi>, t. III, <hi rend="sc">i</hi>, p. 242 (fragm.).</witness>
-                <witness n="d">Bréquigny et La Porte Du Theil, <hi rend="i">Diplomata, Chartae</hi>, t. II. <hi rend="i">Innocentii epistolae</hi>, p. 1070.</witness>
-                <witness n="e">Migne, <hi rend="i">Patrologie latine</hi>, t. 214, col. 151, n° <hi rend="sc">clxxiii</hi>, et t. 217, col. 26, n° <hi rend="sc">viii</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 231, Potthast, <hi rend="i">Regesta</hi>, n° 173.</witness>
+                <witness type="édition" n="b">Du Boulay, <hi rend="i">Historia universitatis Parisiensis</hi>, t. II, p. 536 (fragm.).</witness>
+                <witness type="édition" n="c">Launoi, <hi rend="i">Opera</hi>, t. III, <hi rend="sc">i</hi>, p. 242 (fragm.).</witness>
+                <witness type="édition" n="d">Bréquigny et La Porte Du Theil, <hi rend="i">Diplomata, Chartae</hi>, t. II. <hi rend="i">Innocentii epistolae</hi>, p. 1070.</witness>
+                <witness type="édition" n="e">Migne, <hi rend="i">Patrologie latine</hi>, t. 214, col. 151, n° <hi rend="sc">clxxiii</hi>, et t. 217, col. 26, n° <hi rend="sc">viii</hi>.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 231, Potthast, <hi rend="i">Regesta</hi>, n° 173.</witness>
               </listWit>
             </div>
           </front>
@@ -13014,8 +13008,8 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 236, n° 18.</witness>
-                <witness n="a">Bréquigny et La Porte du Theil, <hi rend="i">Diplomata, Chartae</hi>. <hi rend="sc">ii.</hi> <hi rend="i">Epistolae Innocentii III</hi>, p. 1079.</witness>
-                <witness n="b">Migne, <hi rend="i">Patr. lat.</hi>, t. 217, col. 51, n° <hi rend="sc">xx</hi>.</witness>
+                <witness type="édition" n="a">Bréquigny et La Porte du Theil, <hi rend="i">Diplomata, Chartae</hi>. <hi rend="sc">ii.</hi> <hi rend="i">Epistolae Innocentii III</hi>, p. 1079.</witness>
+                <witness type="édition" n="b">Migne, <hi rend="i">Patr. lat.</hi>, t. 217, col. 51, n° <hi rend="sc">xx</hi>.</witness>
                 <witness n="">Potthast, <hi rend="i">Regesta</hi>, n° 699.</witness>
               </listWit>
             </div>
@@ -13262,7 +13256,7 @@
                   <witness n="D">fol. 48.</witness>
                   <witness n="G">fol. 35 v°.</witness>
                 </listWit>
-                <witness n="">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 597.</witness>
+                <witness type="indiqué">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 597.</witness>
               </listWit>
             </div>
           </front>
@@ -13299,9 +13293,9 @@
                   <witness n="C">fol. 179 v°.</witness>
                   <witness n="D">fol. 129.</witness>
                 </listWit>
-                <witness n="a">Bouillart, <hi rend="i">H. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">lii</hi>, n° <hi rend="sc">lxxv</hi>, d’après <hi rend="i">C</hi> ou <hi rend="i">D</hi>.</witness>
-                <witness n="b">Bonnin, <hi rend="i">Droits de Saint-Germain-des-Prés en Seine-et-Oise</hi>, p. 246, d’après <hi rend="i">a</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 290. — Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 596. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 722.</witness>
+                <witness type="édition" n="a">Bouillart, <hi rend="i">H. de Saint-Germain-des-Prés</hi>, pr. p. <hi rend="sc">lii</hi>, n° <hi rend="sc">lxxv</hi>, d’après <hi rend="i">C</hi> ou <hi rend="i">D</hi>.</witness>
+                <witness type="édition" n="b">Bonnin, <hi rend="i">Droits de Saint-Germain-des-Prés en Seine-et-Oise</hi>, p. 246, d’après <hi rend="i">a</hi>.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 290. — Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 596. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 722.</witness>
               </listWit>
             </div>
           </front>
@@ -13627,8 +13621,8 @@
                   <witness n="D">fol. 135 v°.</witness>
                   <witness n="G">fol. 44.</witness>
                 </listWit>
-                <witness n="">A. Duchesne, <hi rend="i">Histoire de la maison de Dreux</hi>, pr. p. 252, d’après un cartulaire.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 331.</witness>
+                <witness n="a" type="édition">A. Duchesne, <hi rend="i">Histoire de la maison de Dreux</hi>, pr. p. 252, d’après un cartulaire.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 331.</witness>
               </listWit>
             </div>
           </front>
@@ -13668,8 +13662,8 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, LL 1064, fol. 29 v°.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, p. 505.</witness>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 749.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, p. 505.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 749.</witness>
               </listWit>
             </div>
           </front>
@@ -13711,8 +13705,8 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, LL 1064, fol. 29 v°.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, p. 505.</witness>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 749. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 731.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, p. 505.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 749. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 731.</witness>
               </listWit>
             </div>
           </front>
@@ -13759,7 +13753,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, LL 1131, p. 97.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 738. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 729.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 738. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 729.</witness>
               </listWit>
             </div>
           </front>
@@ -13892,7 +13886,7 @@
                   <witness n="D">fol. 244 v°.</witness>
                   <witness n="Z">Copie de 1488, L 781, n° 55, fol. 10.</witness>
                 </listWit>
-                <witness n="">Toussaint Du Plessis, <hi rend="i">Histoire de l’église de Meaux</hi>, t. II, p. 93, n° <hi rend="sc">ccix</hi>, d’après <hi rend="i">C</hi> (partiel).</witness>
+                <witness n="a" type="édition">Toussaint Du Plessis, <hi rend="i">Histoire de l’église de Meaux</hi>, t. II, p. 93, n° <hi rend="sc">ccix</hi>, d’après <hi rend="i">C</hi> (partiel).</witness>
               </listWit>
             </div>
           </front>
@@ -14619,8 +14613,8 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original jadis bullé, L 237, n° 46.</witness>
-                <witness n="a">Bréquigny et La Porte du Theil, <hi rend="i">Diplomata. Chartae</hi>. <hi rend="sc">ii.</hi> <hi rend="i">Epistolae Innocentii</hi> <hi rend="sc">iii</hi>, t. 1, p. 1065.</witness>
-                <witness n="b">Migne, <hi rend="i">Patr. Lat.</hi>, t. 217, col. 125, n° <hi rend="sc">lxxxvii</hi>.</witness>
+                <witness type="édition" n="a">Bréquigny et La Porte du Theil, <hi rend="i">Diplomata. Chartae</hi>. <hi rend="sc">ii.</hi> <hi rend="i">Epistolae Innocentii</hi> <hi rend="sc">iii</hi>, t. 1, p. 1065.</witness>
+                <witness type="édition" n="b">Migne, <hi rend="i">Patr. Lat.</hi>, t. 217, col. 125, n° <hi rend="sc">lxxxvii</hi>.</witness>
                 <witness n="">Potthast, <hi rend="i">Regesta</hi>, n° 2334.</witness>
               </listWit>
             </div>
@@ -14813,7 +14807,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvi</hi>
                     <hi rend="sup">e</hi> siècle, LL 1057, fol. 4.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 918. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 736.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 918. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 736.</witness>
               </listWit>
             </div>
           </front>
@@ -14857,7 +14851,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvi</hi>
                     <hi rend="sup">e</hi> siècle, LL 1057, fol. 2.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 919.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 919.</witness>
               </listWit>
             </div>
           </front>
@@ -15392,7 +15386,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xv</hi>
                     <hi rend="sup">e</hi> siècle, LL 1064, fol. 30.</witness>
                 </listWit>
-                <witness n="">
+                <witness type="indiqué">
                   <pb n="139"/>L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1033. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 743.</witness>
               </listWit>
             </div>
@@ -15439,7 +15433,7 @@
                     <hi rend="sup">e</hi> siècle, L 237, n° 59 <hi rend="i">ter.</hi>
                   </witness>
                 </listWit>
-                <witness n="">Bréquigny et La Porte du Theil, <hi rend="i">Epistolae Innocentii III</hi>, t. II, p. 1097. — Migne, <hi rend="i">Patr. Lat</hi>, t. 217, col. 169, n° <hi rend="sc">cxjx</hi>.</witness>
+                <witness type="indiqué">Bréquigny et La Porte du Theil, <hi rend="i">Epistolae Innocentii III</hi>, t. II, p. 1097. — Migne, <hi rend="i">Patr. Lat</hi>, t. 217, col. 169, n° <hi rend="sc">cxjx</hi>.</witness>
                 <witness n="">Potthast, <hi rend="i">Regesta</hi>, n° 3215.</witness>
               </listWit>
             </div>
@@ -15648,7 +15642,7 @@
                   <witness n="D">fol. 32.</witness>
                   <witness n="G">fol. 27.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1059. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 745.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1059. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 745.</witness>
               </listWit>
             </div>
           </front>
@@ -16061,7 +16055,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, K. 27, n° 18.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1103. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 756.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1103. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 756.</witness>
               </listWit>
             </div>
           </front>
@@ -16141,7 +16135,7 @@
                 <listWit>
                   <witness n="C">fol. 64.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1138. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 749.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1138. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 749.</witness>
               </listWit>
             </div>
           </front>
@@ -16230,7 +16224,7 @@
                   <witness n="C">fol. 60.</witness>
                   <witness n="D">fol. 83.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1149.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1149.</witness>
               </listWit>
             </div>
           </front>
@@ -16298,7 +16292,7 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, K 27, n° 26.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1117. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 752.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1117. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 752.</witness>
               </listWit>
             </div>
           </front>
@@ -16563,8 +16557,8 @@
                   <witness n="D">fol. 32 v°.</witness>
                   <witness n="G">fol. 27 v°.</witness>
                 </listWit>
-                <witness n="">Malingre, <hi rend="i">Antiquités de Paris</hi>, p. 215.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 469. — L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1173. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 753.</witness>
+                <witness n="a" type="édition">Malingre, <hi rend="i">Antiquités de Paris</hi>, p. 215.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 469. — L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1173. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 753.</witness>
               </listWit>
             </div>
           </front>
@@ -16604,11 +16598,11 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, L 774, n° 39.</witness>
                 </listWit>
-                <witness n="a">Bosquet, <hi rend="i">Epistolae Innocentii III</hi>, p. 85.</witness>
-                <witness n="b">Baluze, <hi rend="i">Epistolae Innocentii III</hi>, t. II, p. 456.</witness>
-                <witness n="c">Launoi, <hi rend="i">Opera</hi>, t. III, <hi rend="sc">ii</hi>, p. 247.</witness>
-                <witness n="d">Migne, <hi rend="i">Patrologie latine</hi>, t. 216, col. 284, n° <hi rend="sc">xc</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 483. — Potthast, <hi rend="i">Regesta</hi>, n° 4028.</witness>
+                <witness type="édition" n="a">Bosquet, <hi rend="i">Epistolae Innocentii III</hi>, p. 85.</witness>
+                <witness type="édition" n="b">Baluze, <hi rend="i">Epistolae Innocentii III</hi>, t. II, p. 456.</witness>
+                <witness type="édition" n="c">Launoi, <hi rend="i">Opera</hi>, t. III, <hi rend="sc">ii</hi>, p. 247.</witness>
+                <witness type="édition" n="d">Migne, <hi rend="i">Patrologie latine</hi>, t. 216, col. 284, n° <hi rend="sc">xc</hi>.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 483. — Potthast, <hi rend="i">Regesta</hi>, n° 4028.</witness>
               </listWit>
             </div>
           </front>
@@ -16759,14 +16753,14 @@
                 </listWit>
                 <witness n="">Traduction française du <hi rend="sc">xvii</hi>
                   <hi rend="sup">e</hi> siècle, L 774, n° 38.</witness>
-                <witness n="a">Bonfons et Du Breul, <hi rend="i">Antiquités de Paris</hi>, fol. 48 v°, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="b">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 261.</witness>
-                <witness n="c">Malingre, <hi rend="i">Antiquités de Paris</hi>, p. 195.</witness>
-                <witness n="d">Dubois, <hi rend="i">Historia ecclesiae Parisiensis</hi>, t. II, p. 282.</witness>
-                <witness n="e">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">lii</hi>, n° <hi rend="sc">lxxvi</hi>, d’après <hi rend="i">A</hi>.</witness>
-                <witness n="f">Félibien, <hi rend="i">Histoire de Paris</hi>, t. III, p. 91, d’après <hi rend="i">b</hi>.</witness>
-                <witness n="g">Launoi, <hi rend="i">Opera</hi>, t. III, I, p. 250.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 493.</witness>
+                <witness type="édition" n="a">Bonfons et Du Breul, <hi rend="i">Antiquités de Paris</hi>, fol. 48 v°, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="édition" n="b">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 261.</witness>
+                <witness type="édition" n="c">Malingre, <hi rend="i">Antiquités de Paris</hi>, p. 195.</witness>
+                <witness type="édition" n="d">Dubois, <hi rend="i">Historia ecclesiae Parisiensis</hi>, t. II, p. 282.</witness>
+                <witness type="édition" n="e">Bouillart, <hi rend="i">Hist. de Saint-Germain-des-Prés</hi>, pr., p. <hi rend="sc">lii</hi>, n° <hi rend="sc">lxxvi</hi>, d’après <hi rend="i">A</hi>.</witness>
+                <witness type="édition" n="f">Félibien, <hi rend="i">Histoire de Paris</hi>, t. III, p. 91, d’après <hi rend="i">b</hi>.</witness>
+                <witness type="édition" n="g">Launoi, <hi rend="i">Opera</hi>, t. III, I, p. 250.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 493.</witness>
               </listWit>
             </div>
           </front>
@@ -16792,7 +16786,7 @@
             <div type="tradition">
               <listWit>
                 <witness n="A">Original scellé, K 27, n° 32.</witness>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1258. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 760.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1258. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 760.</witness>
               </listWit>
             </div>
           </front>
@@ -16833,7 +16827,7 @@
                   <witness n="G">fol. 27 v°.</witness>
                   <witness n="J">fol. 217.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1265. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 762.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1265. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 762.</witness>
               </listWit>
             </div>
           </front>
@@ -16914,9 +16908,9 @@
                   <witness n="Z">Copie du <hi rend="sc">xvii</hi>
                     <hi rend="sup">e</hi> siècle, LL 1131, fol. 111.</witness>
                 </listWit>
-                <witness n="a">Launoi, <hi rend="i">Opera</hi>, t. III, I, p. 259.</witness>
-                <witness n="b">Quatre-maire, <hi rend="i">Sancti Germani jura propugnata</hi>, t. I, p. 5.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 522. — L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1285. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 764.</witness>
+                <witness type="édition" n="a">Launoi, <hi rend="i">Opera</hi>, t. III, I, p. 259.</witness>
+                <witness type="édition" n="b">Quatre-maire, <hi rend="i">Sancti Germani jura propugnata</hi>, t. I, p. 5.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 522. — L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1285. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 764.</witness>
               </listWit>
             </div>
           </front>
@@ -16953,10 +16947,10 @@
               <listWit>
                 <witness n="A">
                   <pb n="182"/>Original jadis bullé, L 238, n° 75.</witness>
-                <witness n="a">Bosquet, <hi rend="i">Innocentii III epistolae</hi>, p. 270.</witness>
-                <witness n="b">Baluze, <hi rend="i">Innocentii III epistolae</hi>, t. II, p. 267.</witness>
-                <witness n="c">Migne, <hi rend="i">Patrologie Latine</hi>, t. 216, col. 488, n° <hi rend="sc">cxxxii</hi>.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 515. — Potthast, <hi rend="i">Regesta</hi>, n° 4346.</witness>
+                <witness type="édition" n="a">Bosquet, <hi rend="i">Innocentii III epistolae</hi>, p. 270.</witness>
+                <witness type="édition" n="b">Baluze, <hi rend="i">Innocentii III epistolae</hi>, t. II, p. 267.</witness>
+                <witness type="édition" n="c">Migne, <hi rend="i">Patrologie Latine</hi>, t. 216, col. 488, n° <hi rend="sc">cxxxii</hi>.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. IV, p. 515. — Potthast, <hi rend="i">Regesta</hi>, n° 4346.</witness>
               </listWit>
             </div>
           </front>
@@ -17374,7 +17368,7 @@
                   <witness n="G">fol. 18.</witness>
                   <witness n="Z">Copie du 20 octobre 1548, J 764, n° 3.</witness>
                 </listWit>
-                <witness n="">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1372. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 767. — H.-F. Delaborde, <hi rend="i">Layettes du Trésor des chartes</hi>, t. V, p. 70, n° 196.</witness>
+                <witness type="indiqué">L. Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1372. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 767. — H.-F. Delaborde, <hi rend="i">Layettes du Trésor des chartes</hi>, t. V, p. 70, n° 196.</witness>
               </listWit>
             </div>
           </front>
@@ -17670,12 +17664,12 @@
                   <witness n="C">fol. 37.</witness>
                   <witness n="D">fol. 56.</witness>
                 </listWit>
-                <witness n="a">Aimoin, <hi rend="i">Gesta Francorum</hi>, éd. Du Breul, p. 397.</witness>
-                <witness n="b">G. Catel, <hi rend="i">Mémoires de l’histoire du Languedoc</hi>, p. 31.</witness>
-                <witness n="c">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 36.</witness>
-                <witness n="d">
+                <witness type="édition" n="a">Aimoin, <hi rend="i">Gesta Francorum</hi>, éd. Du Breul, p. 397.</witness>
+                <witness type="édition" n="b">G. Catel, <hi rend="i">Mémoires de l’histoire du Languedoc</hi>, p. 31.</witness>
+                <witness type="édition" n="c">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 36.</witness>
+                <witness type="édition" n="d">
                   <hi rend="i">Acta Sanctorum Bollandi</hi>, 22 jan., III, p. 13.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. V, p. 28.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. V, p. 28.</witness>
               </listWit>
             </div>
           </front>
@@ -17711,11 +17705,11 @@
                 <listWit>
                   <witness n="C">fol. 27.</witness>
                 </listWit>
-                <witness n="a">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 35.</witness>
-                <witness n="b">Mabillon, <hi rend="i">Acta Sanctorum ord. sancti Benedicti</hi>, saec. IV, t. I, p. 653.</witness>
-                <witness n="c">
+                <witness type="édition" n="a">Du Breul, <hi rend="i">Antiquités de Paris</hi>, p. 35.</witness>
+                <witness type="édition" n="b">Mabillon, <hi rend="i">Acta Sanctorum ord. sancti Benedicti</hi>, saec. IV, t. I, p. 653.</witness>
+                <witness type="édition" n="c">
                   <hi rend="i">Acta sanctorum Bollandi</hi>, 22 janv. III, p. 13.</witness>
-                <witness n="">Bréquigny, <hi rend="i">Table chronologique</hi>, t. V, p. 47. — A. Molinier, <hi rend="i">Catalogue des actes de Simon et Amauri de Montfort</hi>, dans <hi rend="i">Bibl. de l’Ecole des chartes</hi>, t. XXXIV (<hi rend="i">1873</hi>), p. 476, n° 102. — A. Rhein, <hi rend="i">La Seigneurie de Montfort en Iveline</hi>, p. 183, n° 133.</witness>
+                <witness type="indiqué">Bréquigny, <hi rend="i">Table chronologique</hi>, t. V, p. 47. — A. Molinier, <hi rend="i">Catalogue des actes de Simon et Amauri de Montfort</hi>, dans <hi rend="i">Bibl. de l’Ecole des chartes</hi>, t. XXXIV (<hi rend="i">1873</hi>), p. 476, n° 102. — A. Rhein, <hi rend="i">La Seigneurie de Montfort en Iveline</hi>, p. 183, n° 133.</witness>
               </listWit>
             </div>
           </front>
@@ -17825,7 +17819,7 @@
                     <hi rend="sc">ii</hi>
                     <hi rend="sup">e</hi> partie, fol. 38.</witness>
                 </listWit>
-                <witness n="">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1561. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 773.</witness>
+                <witness type="indiqué">Delisle, <hi rend="i">Catalogue des actes de Philippe-Auguste</hi>, n° 1561. — Tardif, <hi rend="i">Cartons des rois</hi>, n° 773.</witness>
               </listWit>
             </div>
           </front>
