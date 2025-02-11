@@ -1,4 +1,5 @@
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -31,7 +32,7 @@
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement et de la recherche. Toute autorisation au-delà du champ de cette licence doit être obtenue auprès de nous.</p>
           <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique, nous nous engageons à conserver et à toujours offrir publiquement la version la plus à jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après validation par un comité scientifique), et à référencer l'origine de ces contributions. Toute modification de la ressource qui ne serait pas reversée à la version de référence sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser les contributions et de permettre les meilleures conditions possibles de collaboration scientifique.</p>
           <p><ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute publication dérivée de ses ressources électroniques comporte : <list>
-              <item>un lien vers l'adresse pérennede la dernière version de la ressource sur notre site ;</item>
+              <item>un lien vers l'adresse pérenne de la dernière version de la ressource sur notre site ;</item>
               <item>la date du fichier source utilisé ;</item>
               <item>nos noms.</item>
             </list>
@@ -201,9 +202,7 @@
                 <hi rend="i">B donne après</hi> temporibus <hi rend="i">les mots</hi> firmior habeatur ; <hi rend="i">qui ont été barrés, et rajoutés après</hi> auxiliante <hi rend="i">d’une main du</hi> <hi rend="sc">xv</hi>
                 <hi rend="sup">e</hi> <hi rend="i">siècle</hi>.</note>
               <note n="i" xml:id="n1_i" target="#a1_i">subscripsi <hi rend="i">omis dans B</hi>.</note>
-              <note n="j" xml:id="n1_j" target="#a1_j">
-                <hi rend="i">La souscription royale est omise dans B et rajoutée en marge d’une main du</hi> <hi rend="sc">xv</hi>
-                <hi rend="sup">e</hi> <hi rend="i">siècle</hi>.</note>
+              <note n="j" xml:id="n1_j" target="#a1_j"><hi rend="i">La souscription royale est omise dans B et rajoutée en marge d’une main du</hi> <hi rend="sc">xv</hi><hi rend="sup">e</hi> <hi rend="i">siècle</hi>.</note>
             </div>
           </back>
         </text>
@@ -16222,7 +16221,7 @@
         <text xml:id="SGDP_0351" n="CCCXLIX" subtype="article">
           <front>
             <docDate>
-              <date when="1206-04 1207-04">Avril 1206 ou 1207<ref type="note" n="1" target="#n349_1" xml:id="a349_1"/>.</date>
+              <date notBefore="1206-04" notAfter="1207-04">Avril 1206 ou 1207<ref type="note" n="1" target="#n349_1" xml:id="a349_1"/>.</date>
             </docDate>
             <index>
               <term type="nature" key="act"/>
@@ -19826,7 +19825,7 @@
           </text>
           <text xml:id="SGDP_0445" n="CCXXVIbis" subtype="article">
             <front>
-              <docDate/>
+              <docDate><date>sans date</date></docDate>
               <index>
                 <term type="nature" key="act"/>
               </index>
@@ -19863,7 +19862,7 @@
                 <hi rend="sc">Thibaut</hi> (1155-1162)</head>
               <text xml:id="SGDP_0446" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19887,7 +19886,7 @@
                 <hi rend="sc">Gilon</hi> (1145-1146)</head>
               <text xml:id="SGDP_0447" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19906,7 +19905,7 @@
               </text>
               <text xml:id="SGDP_0448" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19929,7 +19928,7 @@
                 <hi rend="sc">Geoffroi</hi> (1152-1155)</head>
               <text xml:id="SGDP_0449" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19953,7 +19952,7 @@
                 <hi rend="sc">Hugues</hi> (1162-1182)</head>
               <text xml:id="SGDP_0450" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19972,7 +19971,7 @@
               </text>
               <text xml:id="SGDP_0451" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -19991,7 +19990,7 @@
               </text>
               <text xml:id="SGDP_0452" n="III" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20010,7 +20009,7 @@
               </text>
               <text xml:id="SGDP_0453" n="IV" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20029,7 +20028,7 @@
               </text>
               <text xml:id="SGDP_0454" n="V" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20049,7 +20048,7 @@
               </text>
               <text xml:id="SGDP_0455" n="VI" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20068,7 +20067,7 @@
               </text>
               <text xml:id="SGDP_0456" n="VII" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20093,7 +20092,7 @@
               </text>
               <text xml:id="SGDP_0457" n="VIII" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20132,7 +20131,7 @@
                 <hi rend="sc">Foulques</hi> (1182-1192)</head>
               <text xml:id="SGDP_0458" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20151,7 +20150,7 @@
               </text>
               <text xml:id="SGDP_0459" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20170,7 +20169,7 @@
               </text>
               <text xml:id="SGDP_0460" n="III" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20189,7 +20188,7 @@
               </text>
               <text xml:id="SGDP_0461" n="IV" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20208,7 +20207,7 @@
               </text>
               <text xml:id="SGDP_0462" n="V" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20227,7 +20226,7 @@
               </text>
               <text xml:id="SGDP_0463" n="VI" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20246,7 +20245,7 @@
               </text>
               <text xml:id="SGDP_0464" n="VII" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20265,7 +20264,7 @@
               </text>
               <text xml:id="SGDP_0465" n="VIII" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20289,7 +20288,7 @@
               </text>
               <text xml:id="SGDP_0466" n="IX" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20327,7 +20326,7 @@
                 <hi rend="sc">Robert</hi> (1192-1204)</head>
               <text xml:id="SGDP_0467" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20346,7 +20345,7 @@
               </text>
               <text xml:id="SGDP_0468" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20365,7 +20364,7 @@
               </text>
               <text xml:id="SGDP_0469" n="III" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20384,7 +20383,7 @@
               </text>
               <text xml:id="SGDP_0470" n="IV" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20417,7 +20416,7 @@
                 <hi rend="sc">Jean</hi> (1204-1216)</head>
               <text xml:id="SGDP_0471" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20436,7 +20435,7 @@
               </text>
               <text xml:id="SGDP_0472" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20493,7 +20492,7 @@
               </head>
               <text xml:id="SGDP_0473" n="I" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20512,7 +20511,7 @@
               </text>
               <text xml:id="SGDP_0474" n="II" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20531,7 +20530,7 @@
               </text>
               <text xml:id="SGDP_0475" n="III" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20553,7 +20552,7 @@
               </text>
               <text xml:id="SGDP_0476" n="IV" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
@@ -20574,7 +20573,7 @@
               </text>
               <text xml:id="SGDP_0477" n="V" subtype="article">
                 <front>
-                  <docDate/>
+                  <docDate><date>sans date</date></docDate>
                   <index>
                     <term type="nature" key="act"/>
                   </index>
