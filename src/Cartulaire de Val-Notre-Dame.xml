@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
   <teiHeader>
@@ -7,6 +7,11 @@
       <titleStmt>
         <title>CARTULAIRE DE L’HOPITAL<lb/> DE<lb/> L’ABBAYE DU VAL-NOTRE-DAME<lb/> AU DIOCÈSE DE PARIS<lb/> (XIII<hi rend="sup">e</hi> SIÈCLE)</title>
         <principal xml:id="OC">Olivier Canteaut</principal>
+        <respStmt>
+          <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email>
+          </name>
+          <resp>Suivi technique (2024–…)</resp>
+        </respStmt>
       </titleStmt>
       <extent/>
       <publicationStmt>
@@ -100,34 +105,31 @@
           <pb n="3"/>INTRODUCTION</head>
         <p>Dès la fin du <hi rend="sc">xii</hi>
           <hi rend="sup">e</hi> siècle et surtout au <hi rend="sc">xiii</hi>
-          <hi rend="sup">e</hi> siècle, sous l’influence bienfaisante d’un grand et bel élan de charité chrétienne, on vit de toutes parts les Hôtels-Dieu ou Maisons-Dieu, les Léproseries ou Maladreries se multiplier en France pour adoucir le sort des pauvres et des malades, et les savantes études de notre confrère M. Léon Le Grand témoignent de l’admirable développement pris au moyen âge par ces établissements charitables, en particulier dans l’ancien diocèse de Paris<n>
+          <hi rend="sup">e</hi> siècle, sous l’influence bienfaisante d’un grand et bel élan de charité chrétienne, on vit de toutes parts les Hôtels-Dieu ou Maisons-Dieu, les Léproseries ou Maladreries se multiplier en France pour adoucir le sort des pauvres et des malades, et les savantes études de notre confrère M. Léon Le Grand témoignent de l’admirable développement pris au moyen âge par ces établissements charitables, en particulier dans l’ancien diocèse de Paris<note>
             <p>
-              <hi rend="i">Les Maisons-Dieu et Léproseries du diocèse de Paris au milieu du <hi rend="sc">xiv</hi>
-                <hi rend="sup">e</hi> siècle, d’après le registre de visites du délégué de l’évêque</hi> (<hi rend="i">1351-1369</hi>), dans les <hi rend="i">Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</hi> (1897), t. XXIV, p. 61-365 ; et <hi rend="i">les Maisons-Dieu et Léproseries du diocèse de Paris au milieu du <hi rend="sc">xiv</hi>
-                <hi rend="sup">e</hi> siècle</hi>, dans les mêmes <hi rend="i">Mémoires</hi> (1898), t. XXV, p. 47-178.</p>
-          </n>. Mais, si plusieurs de ces hôpitaux ont survécu de longs siècles et contribué au soulagement d’innombrables infortunes, beaucoup d’autres, au contraire, disparurent de bonne heure, soit que l’insuffisance de leurs revenus ou une gestion malhabile ait amené leur ruine, soit plutôt encore qu’ils aient été totalement anéantis au milieu des terribles ravages de la guerre de Cent ans<n>
-            <p>Voir <hi rend="i">la Désolation des églises, monastères, hôpitaux en France vers le milieu du <hi rend="sc">xv</hi>
-                <hi rend="sup">e</hi> siècle</hi>, par le P. Henri Denifle, O.P. (Paris, 1897-1899, 2 vol. in-8°).</p>
-          </n>.</p>
+              <hi rend="i">Les Maisons-Dieu et Léproseries du diocèse de Paris au milieu du <hi rend="sc">xiv</hi><hi rend="sup">e</hi> siècle, d’après le registre de visites du délégué de l’évêque</hi> (<hi rend="i">1351-1369</hi>), dans les <hi rend="i">Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</hi> (1897), t. XXIV, p. 61-365 ; et <hi rend="i">les Maisons-Dieu et Léproseries du diocèse de Paris au milieu du <hi rend="sc">xiv</hi><hi rend="sup">e</hi> siècle</hi>, dans les mêmes <hi rend="i">Mémoires</hi> (1898), t. XXV, p. 47-178.</p>
+          </note>. Mais, si plusieurs de ces hôpitaux ont survécu de longs siècles et contribué au soulagement d’innombrables infortunes, beaucoup d’autres, au contraire, disparurent de bonne heure, soit que l’insuffisance de leurs revenus ou une gestion malhabile ait amené leur ruine, soit plutôt encore qu’ils aient été totalement anéantis au milieu des terribles ravages de la guerre de Cent ans<note>
+            <p>Voir <hi rend="i">la Désolation des églises, monastères, hôpitaux en France vers le milieu du <hi rend="sc">xv</hi><hi rend="sup">e</hi> siècle</hi>, par le P. Henri Denifle, O.P. (Paris, 1897-1899, 2 vol. in-8°).</p>
+          </note>.</p>
         <p>A côté de ces Maisons-Dieu indépendantes, soumises directement à l’autorité épiscopale, nombre d’abbayes avaient établi, vers le même temps, à leurs portes ou dans leur voisinage, des hôpitaux particuliers, destinés à secourir les pauvres et les malades ou à <pb n="4"/>héberger les pèlerins ; telle est la Maison-Dieu de l’abbaye cistercienne du Val-Notre-Dame, au diocèse de Paris, qui fut fondée, sans doute, au début du <hi rend="sc">xiii</hi>
           <hi rend="sup">e</hi> siècle et dont le cartulaire est entré récemment dans les collections de la Bibliothèque nationale.</p>
-        <p>On ne sait pas exactement la date de la fondation de l’abbaye du Val-Notre-Dame, ou simplement du Val, située à vingt-cinq kilomètres environ au nord-ouest de Paris, entre Mériel et Villiers-Adam. Vers 1125, elle reçut une colonie de religieux tirés de l’abbaye de la Cour-Dieu, au diocèse d’Orléans<n>
+        <p>On ne sait pas exactement la date de la fondation de l’abbaye du Val-Notre-Dame, ou simplement du Val, située à vingt-cinq kilomètres environ au nord-ouest de Paris, entre Mériel et Villiers-Adam. Vers 1125, elle reçut une colonie de religieux tirés de l’abbaye de la Cour-Dieu, au diocèse d’Orléans<note>
             <p>Voir <hi rend="i">Gallia christiana</hi> (1744), t. VII, col. 875-884 ; Lebeuf, <hi rend="i">Histoire de la ville et de tout le diocèse de Paris</hi> (nouv. éd., 1883), t. II, p. 133-138.</p>
-          </n>, et son cartulaire, aujourd’hui conservé aux Archives nationales<n>
+          </note>, et son cartulaire, aujourd’hui conservé aux Archives nationales<note>
             <p>Archives nationales, LL. 1541 ; une copie (1669) du même cartulaire est conservée sous la cote LL. 1542, et il y en a de copieux extraits dans le ms. latin 10999 de la Bibliothèque nationale. Les archives de l’abbaye du Val avaient été examinées et compulsées par Gaignières, dans les collections duquel les copies et extraits qu’il en fit remplissaient tout un gros portefeuille, qui forme aujourd’hui le ms. latin 5462 de la Bibliothèque nationale. Des fragments de l’obituaire, empruntés à ce dernier volume, ont été publiés à la fin du tome I, p. 626-632, des <hi rend="i">Obituaires de la province de Sens</hi>, publiés par M.A. Molinier (Paris, 1902, in-4°).</p>
-          </n>, mentionne de nombreuses donations faites, depuis le <hi rend="sc">xii</hi>
+          </note>, mentionne de nombreuses donations faites, depuis le <hi rend="sc">xii</hi>
           <hi rend="sup">e</hi> siècle, par les seigneurs de l’Isle-Adam, de Villiers-Adam et par plusieurs membres de la grande famille des Montmorency. L’abbaye du Val subsista jusqu’au début du <hi rend="sc">xvii</hi>
-          <hi rend="sup">e</hi> siècle, et son dernier abbé fut Henri de Gondi, fils naturel de François de Gondi, qui résigna sa charge en 1606 et mourut à Paris en 1616. Elle fut alors unie, par lettres patentes de Louis XIII (1611) et par une bulle de Paul V (1614), au couvent de Saint-Bernard des Feuillants de Paris ; mais, les Bénédictins n’ayant pas consenti à se retirer, bien qu’un brevet de suppression eût été obtenu du roi le 14 décembre 1625, les Feuillants ne purent cependant en prendre réellement possession que le 14 avril 1630<n>
+          <hi rend="sup">e</hi> siècle, et son dernier abbé fut Henri de Gondi, fils naturel de François de Gondi, qui résigna sa charge en 1606 et mourut à Paris en 1616. Elle fut alors unie, par lettres patentes de Louis XIII (1611) et par une bulle de Paul V (1614), au couvent de Saint-Bernard des Feuillants de Paris ; mais, les Bénédictins n’ayant pas consenti à se retirer, bien qu’un brevet de suppression eût été obtenu du roi le 14 décembre 1625, les Feuillants ne purent cependant en prendre réellement possession que le 14 avril 1630<note>
             <p>Voir aux fol. 45-50 du ms. français 14450 de la Bibliothèque nationale, « Recueil des antiquitez de l’abbaie du Val Nostre Dame, tant des abbés qui l’ont gouvernée que des bienfaiteurs qui y ont fait du bien et qui y sont enterrés, autant que j’en ai pu recueillir des titres et des archives qui sont à Paris, dont j’ai veu les 4 gros registres que j’ai parcourus. » L’auteur de ce Recueil est Dom Nicolas de Sainte-Marie, feuillant, qui était sous-prieur du Val lorsqu’il le composa en 1643.</p>
-          </n>.</p>
-        <p>Si l’on est imparfaitement renseigné sur les premiers temps de l’abbaye du Val-Notre-Dame, on ne connaît pas non plus la date exacte de l’établissement de la Maison-Dieu qui en dépendait et dont le cartulaire est publié plus loin. L’acte le plus ancien, transcrit dans ce cartulaire, est une donation de Richard de Vernon, qui remonte à l’année 1214, et l’historien de l’abbaye du Val, Dom Nicolas de Sainte-Marie, n’a consacré que quelques lignes à ce petit hôpital, <pb n="5"/>qui n’existait plus, depuis longtemps sans doute, lorsqu’il écrivait, en 1643, mais qui sont précieuses pour l’indication topographique qu’elles donnent : « Le lieu où estoit autrefois l’hospital de ceans, c’est aujourd’hui la grange de la ferme ; et presque dans toutes les abbaïes de l’ordre (à cause de la grande uniformité, qui est merveilleuse dans les bastimens et dans la disposition des choses) les hospitaux, qui estoient proches de la chappelle de la porte, où les seculiers, tant externes que domestiques, faisoient leurs devotions, ont esté convertis en granges de la basse-court<n>
+          </note>.</p>
+        <p>Si l’on est imparfaitement renseigné sur les premiers temps de l’abbaye du Val-Notre-Dame, on ne connaît pas non plus la date exacte de l’établissement de la Maison-Dieu qui en dépendait et dont le cartulaire est publié plus loin. L’acte le plus ancien, transcrit dans ce cartulaire, est une donation de Richard de Vernon, qui remonte à l’année 1214, et l’historien de l’abbaye du Val, Dom Nicolas de Sainte-Marie, n’a consacré que quelques lignes à ce petit hôpital, <pb n="5"/>qui n’existait plus, depuis longtemps sans doute, lorsqu’il écrivait, en 1643, mais qui sont précieuses pour l’indication topographique qu’elles donnent : « Le lieu où estoit autrefois l’hospital de ceans, c’est aujourd’hui la grange de la ferme ; et presque dans toutes les abbaïes de l’ordre (à cause de la grande uniformité, qui est merveilleuse dans les bastimens et dans la disposition des choses) les hospitaux, qui estoient proches de la chappelle de la porte, où les seculiers, tant externes que domestiques, faisoient leurs devotions, ont esté convertis en granges de la basse-court<note>
             <p>Bibl. nat., ms. français 14450, fol. 10 v° ; cf. fol. 64 v°, où se trouve une copie de la première charte du cartulaire de l’hôpital.</p>
-          </n>. »</p>
-        <p>Aucun des autres historiens du Val, si l’on en excepte peut-être Gaignières, ne paraît avoir connu ou utilisé ce petit cartulaire, ni rappelé l’existence de l’hôpital édifié dans le voisinage de l’abbaye<n>
+          </note>. »</p>
+        <p>Aucun des autres historiens du Val, si l’on en excepte peut-être Gaignières, ne paraît avoir connu ou utilisé ce petit cartulaire, ni rappelé l’existence de l’hôpital édifié dans le voisinage de l’abbaye<note>
             <p>Il y a cependant deux mentions de l’hôpital du Val dans l’<hi rend="i">Histoire généalogique de la maison de Montmorency et de Laval</hi> d’André Duchesne (Paris, 1624, in-fol.), preuves, p. 86, donation, en 1222, par Matthieu de Montmorency, d’un muid de blé « ad emendos pannos in hospitio pauperum de Valle ; » et, p. 98, dans le testament de Bouchard de Montmorency (1237) : « Hospitio pauperum Vallis B. Marie, <sm>x</sm> l. »</p>
-          </n>. Il semble bien, en effet, que celui-ci l’ait vu et compulsé au milieu des archives de l’abbaye et lui ait emprunté les analyses, qui se trouvent aux feuillets 370 v°-371 v° du ms. latin 5462, de quinze chartes<n>
+          </note>. Il semble bien, en effet, que celui-ci l’ait vu et compulsé au milieu des archives de l’abbaye et lui ait emprunté les analyses, qui se trouvent aux feuillets 370 v°-371 v° du ms. latin 5462, de quinze chartes<note>
             <p>On remarquera trois différences de dates entre les copies du cartulaire et les extraits de Gaignières. La charte 5 du cartulaire, datée de 1204, porte dans Gaignières la date 1224 qui paraît la bonne ; la charte 7, datée dans le cartulaire de 1214, <hi rend="i">mense junio</hi>, l’est du <hi rend="i">m. julio</hi> dans Gaignières ; enfin la charte 10, datée de 1237 dans le cartulaire, l’a été de 1227 par Gaignières.</p>
-          </n> disposées dans le même ordre chronologique et concernant la Maison-Dieu du Val-Notre-Dame.</p>
+          </note> disposées dans le même ordre chronologique et concernant la Maison-Dieu du Val-Notre-Dame.</p>
         <p>Ce cartulaire, conservé aujourd’hui sous le n° 826 des nouvelles acquisitions du fonds des manuscrits latins de la Bibliothèque nationale, est un tout petit volume de 46 feuillets de parchemin, mesurant 135 millimètres sur 100, protégés par un cartonnage moderne, recouvert d’un parchemin, qui peut dater du <hi rend="sc">xviii</hi>
           <hi rend="sup">e</hi> siècle. Les feuillets 1 à 4 contiennent la table des quarante-trois chartes du cartulaire, dont les sommaires n’ont pas été rubriqués à la place laissée en blanc en tête de chacune d’elles dans le volume. Du fol. 5 v° au fol. 32 se trouvent transcrites quarante et une chartes, dont les dates varient de 1214 à 1265 ; on a omis d’y copier le texte des chartes 22 et 43, dont les sommaires figurent cependant à la table des matières. Les feuillets 32 à 46 v° sont en partie remplis par différentes notes ou listes de revenus et cens de l’abbaye du Val, notamment pour les années 1280, 1336, 1337 et 1368.</p>
         <p>
@@ -1239,58 +1241,58 @@
           <p>apud Joyacum, i. arpentum et dimidium ante portam domus ;</p>
           <p>item, i. arpentum in aioto defuncti Ligerii ;</p>
           <p>item, i. arpentum in cuspide Insule ;</p>
-          <p>item, dimidium arpenti juxta Montengni<n>
+          <p>item, dimidium arpenti juxta Montengni<note>
               <p>Fol. 35.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>II. <hi rend="i">Iste sunt pauperis hospicii terre arabiles :</hi>
           </head>
-          <p>apud Champignol circa x. arpenta<n>
+          <p>apud Champignol circa x. arpenta<note>
               <p>Article biffé.</p>
-            </n> ;</p>
+            </note> ;</p>
           <p>apud Butart, de dono Ivonis Buffé, iij. arpenta ;</p>
           <p>juxta leprosariam de Insula, iij. arpenz ;</p>
           <p>juxta grangiam monachorum de Insula, i. arpentum ;</p>
-          <p>apud Annery, i. arpentum, censum et decimam decem arpentorum terre et i. sextarium bladi annuum<n>
+          <p>apud Annery, i. arpentum, censum et decimam decem arpentorum terre et i. sextarium bladi annuum<note>
               <p>Fol. 35.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>III. <hi rend="i">Redditus de elemosina sororis domini Theobaldi de Lyé :</hi>
           </head>
           <p>apud Herovillam, i. modium bladi annui redditus in festo S. Remigii ;</p>
-          <p>apud Taberneriacum, i. arpentum terre et xviij. denarios census<n>
+          <p>apud Taberneriacum, i. arpentum terre et xviij. denarios census<note>
               <p>Article biffé.</p>
-            </n> ;</p>
+            </note> ;</p>
           <p>apud Joiacum, Ansellus de masura sua, i. sextarium avene ; item, i. panem et i. caponem in Natale Domini ;</p>
           <p>Johannes de Pratis, i. sextarium avene, i. pein, i. chapon ;</p>
-          <p>Simon Buret, i. minam avene, dimidium caponis, et i. denarium census<n>
+          <p>Simon Buret, i. minam avene, dimidium caponis, et i. denarium census<note>
               <p>Article biffé.</p>
-            </n> ;</p>
-          <p>apud eandem villam medietatem campipartis xij. arpentorum terre<n>
+            </note> ;</p>
+          <p>apud eandem villam medietatem campipartis xij. arpentorum terre<note>
               <p>Article biffé.</p>
-            </n> ;</p>
+            </note> ;</p>
           <p>apud Fontenetum, ij. sextarios bladi annuatim in festo sancti Remigii ;</p>
           <p>
-            <pb n="37"/>apud Frumevillam, ij. sextarios bladi annuatim<n>
+            <pb n="37"/>apud Frumevillam, ij. sextarios bladi annuatim<note>
               <p>Article biffé.</p>
-            </n> ;</p>
+            </note> ;</p>
           <p>in molendino de Capite ville, iij. sextarios bladi annuatim in festo S. Martini hiemalis ;</p>
           <p>apud Novam villam juxta Bellum montem, de vinea de Perai Laurentius Barbou, iiij. solidos, vj. denarios in festo S. Martini hiemalis ;</p>
           <p>item, Bertaut de Pressouer frater ejus, iiij. solidos, vj. denarios ;</p>
           <p>in molendino regis apud Valmondois, iiij. sextarios bladi in septimana ante Natale Domini ;</p>
-          <p>Herveus, dictus Petre, de Bellomonte, du Fresche Poquet, iij. solidos in octabis beati Dyonisii<n>
+          <p>Herveus, dictus Petre, de Bellomonte, du Fresche Poquet, iij. solidos in octabis beati Dyonisii<note>
               <p>Fol. 35 v° et 36.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>IV. <hi rend="i">Census Odonis de Nova villa apud Villare Adam :</hi>
           </head>
           <p>In medio marcii : Angonius, pro corneia, iiij. denarios ; — Sedilia nostra hospita, pro corneia, iiij. denarios ; — Agnes la Piccarde, pro corneia, iiij. denarios ;</p>
-          <p>in Natale Domini : Radulphus Loque et Agnes la Piccarde, pro terra Guilberti Harenc, valorem unius mine avene<n>
+          <p>in Natale Domini : Radulphus Loque et Agnes la Piccarde, pro terra Guilberti Harenc, valorem unius mine avene<note>
               <p>Fol. 36.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>V. <hi rend="i">Elemosine sive census quos debemus apud Joy :</hi>
@@ -1320,15 +1322,15 @@
           <p>Item, heredibus de Vaus, pro terra sita in ajoto super aquam, que fuit Johannis de Pratis, ij. denarios ; item pro vinea de Crate, iij. denarios ; item, pro terra Guiart Bedin, ij. denarios ; item, pro prato Johannis de Joy, viij. denarios. — Domino de Vaus.</p>
           <p>Ecclesie Sancti Germani de Percene, pro terra ajoti super rivum de Joy, que fuit Joannis Fou[r]nier, ij. solidos in elemosina.</p>
           <p>Item, pro prato Johannis, nepotis Giroudi, domino de Hariville, xij. denarios.</p>
-          <p>Johanni de Joi, xij denarios, pro domo nostra de Joi<n>
+          <p>Johanni de Joi, xij denarios, pro domo nostra de Joi<note>
               <p>Article ajouté, ainsi que les quatre suivants.</p>
-            </n>.</p>
+            </note>.</p>
           <p>Item, heredibus R. de Monteg[ni], pro ajoto super rivum, ij. denarios.</p>
           <p>Item, heredibus Johannis Fournerii de Praeriis, pro terra juxta leprosariam, xviij. denarios.</p>
           <p>Domine de Nerville, xij. denarios ; hos solvunt portarius et hospitalis simul.</p>
-          <p>Omnes predictos census seu redditus solvere tenemur terris prenotatis<n>
+          <p>Omnes predictos census seu redditus solvere tenemur terris prenotatis<note>
               <p>Fol. 36 v° et 37.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>VI. <hi rend="i">Hii sunt census de Nervilla, qui sunt portarii et hospitalis, in octabis sancti Dyonisii anno Domini M° CC° LXXX° :</hi>
@@ -1368,13 +1370,13 @@
           <p>Raoul Louvin, pour la Blanche voie, i. tornois.</p>
           <p>Johannes Poulenier, pro vinea au Molier, obolum.</p>
           <p>Familia Richeudis Piele, iij. obolos.</p>
-          <p>Apud Villers, in censu Dardel, v. solidos, in Natale<n>
+          <p>Apud Villers, in censu Dardel, v. solidos, in Natale<note>
               <p>Article ajouté postérieurement, ainsi que les deux suivants.</p>
-            </n>.</p>
+            </note>.</p>
           <p>Item, in censu de terris d’Aguilion, ij. solidos, in festo S. Remigii.</p>
-          <p>Apud Nigellam, x. denarios de dimidio arpento vinee<n>
+          <p>Apud Nigellam, x. denarios de dimidio arpento vinee<note>
               <p>Fol. 38 v° et 39.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>
@@ -1406,9 +1408,9 @@
           <p>Mahiu de Cruce, obole tornoise.</p>
           <p>Uxor Alelmi de Cruce et Matheus de Cruce, vij. pictas.</p>
           <p>Agnes de Furno, iij. obolos.</p>
-          <p>Summa census predicti iiij. solidos, ij. tornois<n>
+          <p>Summa census predicti iiij. solidos, ij. tornois<note>
               <p>Fol. 40 v° et 41.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>VIII. <hi rend="i">Hi sunt census de Nervilla, qui debentur portario et hospicio pauperum, in octabis sancti Dyonisii, anno Domini M° CCC° XXXVI° :</hi>
@@ -1438,9 +1440,9 @@
           <p>Johannes le Mere, de domo tenente a Gillete de Brie, ij. denarios.</p>
           <p>Herenbourt la Sauniere et Michael de la Ruele, de terra du Touchet, iiij. solidos.</p>
           <p>Item, pro terra Albe vie, iij. obolos.</p>
-          <p>Gilete de Brie, pro suis hereditatibus, vj. solidos reditus<n>
+          <p>Gilete de Brie, pro suis hereditatibus, vj. solidos reditus<note>
               <p>Fol. 42 v° et 43.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>IX. <hi rend="i">Hec sunt recepta que magister Johannes Eudelin recepit anno Domini M° CCC° XXXVII° ad Nervillam :</hi>
@@ -1465,13 +1467,13 @@
           <p>Colin du Gey, i. denier.</p>
           <p>Teibaut Befe, i. denier.</p>
           <p>Gilete de Brie, v. sols.</p>
-          <p>Petrus le Mere, xxvij. sols<n>
+          <p>Petrus le Mere, xxvij. sols<note>
               <p>Fol. 43 v° et 44.</p>
-            </n>.</p>
+            </note>.</p>
           <p>Jehannin Chennevas a vendu a Jehannin Bazin sa vigne de Laluef.</p>
-          <p>… a Beaumont ala vendre xvj. sols… elle vigne et une petite vigne<n>
+          <p>… a Beaumont ala vendre xvj. sols… elle vigne et une petite vigne<note>
               <p>Fol. 46 v°.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>X. <hi rend="i">Apud Bellum Montem debent hospicio pauperum persone infrascripte :</hi>
@@ -1486,9 +1488,9 @@
           <p>Item, Colin le Normant, iij. sols, pour sa vigne de Biauchamp (<hi rend="i">add.</hi> : et les tient a ij. sols).</p>
           <p>Asselin Merele, pour sa terre du Pery, iiij. sols, vj. deniers (<hi rend="i">biffé et add.</hi> : et la tient maintenant Guillaume Channevas a ij. sols).</p>
           <p>Nota quod procurator nostre ecclesie debet singulis annis magistro <pb n="43"/>hospicii pauperum, in festo beati Remigii, xxxiij. solidos parisiensium, pro torculari nostro de Medunta Castri ; et illos predictos xxxiij. solidos emit prior dictus de Psallarebiva, predecessor meus, ad vj. denarios capitalis census solvendos in festo beati Remigii per dictum magistrum hospicii pauperum. Nota quod procurator solvit me magistrum dicti hospicii, pro annis [M CCC] lxij. et lxiij.</p>
-          <p>Nota quod dictus magister dicti hospicii debet procuratori dicto singulis annis vj. denarios capitalis census, solvendos ipso Farel in die beati Remigii, pro ij. arpentis terre que habet dictus magister ibidem<n>
+          <p>Nota quod dictus magister dicti hospicii debet procuratori dicto singulis annis vj. denarios capitalis census, solvendos ipso Farel in die beati Remigii, pro ij. arpentis terre que habet dictus magister ibidem<note>
               <p>Fol. 32 et v°. — Les deux derniers paragraphes sont d’une écriture postérieure.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
         <div>
           <head>XI. <hi rend="i">Apud Bellum Montem debebant hospitio pauperum persone infrascripte ; actum anno [M CCC] LXVIII° :</hi>
@@ -1505,14 +1507,14 @@
           <p>Lorent Barbou, pour sa vigne ou terre de Perey, iiij. sols, vj. deniers.</p>
           <p>Bertaut du Pressouer et son frere aussi, iiij. sols, vj. deniers.</p>
           <p>
-            <pb n="44"/>Nota, in carta pecunie lxxxvj<hi rend="sup">a</hi> continetur de Jehan de la Noville, pour demi arpent de terre vigne seant en Perey, est tenuz lui et ses hoirs a touz jours mès paier chascun an a la S. Martin d’iver ix. sols<n>
+            <pb n="44"/>Nota, in carta pecunie lxxxvj<hi rend="sup">a</hi> continetur de Jehan de la Noville, pour demi arpent de terre vigne seant en Perey, est tenuz lui et ses hoirs a touz jours mès paier chascun an a la S. Martin d’iver ix. sols<note>
               <p>Fol. 33 et v°.</p>
-            </n>.</p>
+            </note>.</p>
           <p>Nota que la meson qui fu Jehanne la Livande, laquelle est a Grant Moulin, doit, a la Saint Remi, a Pierre Guernier vj. deniers de chef cens paiez a Stors.</p>
           <p>Item, a messire Philippe d’Aunoy, pour la court de ladicte meson, i. obole de chef cens paiée le jour de Nouel.</p>
-          <p>Item, l’en doit a messire Philippe d’Aunoy, pour une meson, qui est cheue, xviij. deniers de chef cens paiez le jour de Nouel<n>
+          <p>Item, l’en doit a messire Philippe d’Aunoy, pour une meson, qui est cheue, xviij. deniers de chef cens paiez le jour de Nouel<note>
               <p>Fol. 34 v°.</p>
-            </n>.</p>
+            </note>.</p>
         </div>
       </div>
     </back>
