@@ -19,7 +19,12 @@
     <p>TODO</p>
   </a:documentation>
   
+  <!-- TODO innclure les patterns citeStructure et citeData dans le schéma teiHeader -->
+  
   <rng:define name="citeStructure">
+    <a:documentation>
+      <p>TODO</p>
+    </a:documentation>
     <rng:element name="citeStructure">
       <rng:attribute name="match"/>
       <rng:attribute name="use"/>
@@ -29,23 +34,24 @@
       <rng:optional>
         <rng:attribute name="delim"/>
       </rng:optional>
-      <rng:interleave>
-        <rng:zeroOrMore>
-          <rng:ref name="citeStructure"/>
-        </rng:zeroOrMore>
-        <rng:zeroOrMore>
-          <rng:ref name="citeData"/>
-        </rng:zeroOrMore>
-      </rng:interleave>
+      <rng:zeroOrMore>
+        <rng:ref name="citeData"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="citeStructure"/>
+      </rng:zeroOrMore>
     </rng:element>
   </rng:define>
   
   <rng:define name="citeData">
+    <a:documentation>
+      <p>TODO</p>
+    </a:documentation>
     <rng:element name="citeData">
       <rng:attribute name="property"/>
       <rng:attribute name="use"/>
     </rng:element>
-  </rng:define>
+  </rng:define>  
   
   <rng:include href="cartulaires.rng">
     
@@ -77,13 +83,16 @@
             </rng:oneOrMore>
           </rng:element>
         </rng:optional>
+        <!-- issue: comment déclarer le type de document => déclarer que tout le document correspond à une lettre ou à une pièce de théâtre ?-->
+        <!-- -->
         <rng:zeroOrMore>
           <rng:element name="refsDecl">
-            <rng:zeroOrMore>
+            <rng:oneOrMore>
               <rng:ref name="citeStructure"/>
-            </rng:zeroOrMore>
+            </rng:oneOrMore>
           </rng:element>
         </rng:zeroOrMore>
+        <!-- -->
       </rng:element>
     </rng:define>
     
