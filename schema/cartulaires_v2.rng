@@ -29,14 +29,12 @@
       <rng:optional>
         <rng:attribute name="delim"/>
       </rng:optional>
-      <rng:interleave>
-        <rng:zeroOrMore>
-          <rng:ref name="citeStructure"/>
-        </rng:zeroOrMore>
-        <rng:zeroOrMore>
-          <rng:ref name="citeData"/>
-        </rng:zeroOrMore>
-      </rng:interleave>
+      <rng:zeroOrMore>
+        <rng:ref name="citeData"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="citeStructure"/>
+      </rng:zeroOrMore>
     </rng:element>
   </rng:define>
   
@@ -78,7 +76,7 @@
           </rng:element>
         </rng:optional>
         <rng:zeroOrMore>
-          <rng:element name="refsDecl">
+          <rng:element name="refsDecl"><!-- PP add refsDecl -->
             <rng:zeroOrMore>
               <rng:ref name="citeStructure"/>
             </rng:zeroOrMore>
@@ -113,7 +111,7 @@
             <rng:choice>
               <rng:ref name="acte.date"/>
               <rng:ref name="acte.placeName"/>
-              <rng:ref name="ref.note"/><!-- PP add ref el -->
+              <rng:ref name="ref.note"/><!-- PP add ref el => cet ajout ne doit pas êtrée nécessaire. L'élément note n'est jamais directement dans le docDate --> 
             </rng:choice>
           </rng:zeroOrMore>
         </rng:mixed>
@@ -257,7 +255,6 @@
             <rng:ref name="sup"/>
             <rng:ref name="ref.note"/>
             <rng:ref name="note"/><!-- PP add note element -->
-            <rng:ref name="gap"/><!-- PP add gap element -->
             <rng:ref name="sc"/><!-- PP add value "sc" to @rend attribute -->
           </rng:choice>
         </rng:zeroOrMore>
@@ -674,12 +671,26 @@
             <a:documentation xmlns="http://www.w3.org/1999/xhtml">Numérotation pour appel de note.</a:documentation>
           </rng:attribute>
         </rng:optional>
-          <rng:optional>
-            <rng:element name="lem">
-              <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lemme.</a:documentation>
-              <rng:optional>
-                <rng:attribute name="wit"/>
-              </rng:optional>
+        <rng:optional>
+          <rng:element name="lem">
+            <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lemme.</a:documentation>
+            <rng:optional>
+              <rng:attribute name="wit"/>
+            </rng:optional>
+            <rng:optional>
+              <rng:attribute name="resp"/>
+            </rng:optional>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="num"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </rng:element>
+          <rng:zeroOrMore>
+            <rng:element name="rdg">
+              <a:documentation xmlns="http://www.w3.org/1999/xhtml">Leçon à l'intérieur d'une variante du texte.</a:documentation>
+              <rng:attribute name="wit"/>
               <rng:optional>
                 <rng:attribute name="resp"/>
               </rng:optional>
@@ -690,31 +701,17 @@
                 </rng:choice>
               </rng:zeroOrMore>
             </rng:element>
-            <rng:zeroOrMore>
-              <rng:element name="rdg">
-                <a:documentation xmlns="http://www.w3.org/1999/xhtml">Leçon à l'intérieur d'une variante du texte.</a:documentation>
-                <rng:attribute name="wit"/>
-                <rng:optional>
-                  <rng:attribute name="resp"/>
-                </rng:optional>
-                <rng:zeroOrMore>
-                  <rng:choice>
-                    <rng:text/>
-                    <rng:ref name="num"/>
-                  </rng:choice>
-                </rng:zeroOrMore>
-              </rng:element>
-            </rng:zeroOrMore>
-          </rng:optional>
-          <rng:zeroOrMore>
-            <rng:ref name="hi"/><!-- PP add optional element hi -->
           </rng:zeroOrMore>
-          <rng:optional>
-            <rng:ref name="note"/>
-          </rng:optional>
+        </rng:optional>
+        <rng:zeroOrMore>
+          <rng:ref name="hi"/><!-- PP add optional element hi -->
+        </rng:zeroOrMore>
+        <rng:optional>
+          <rng:ref name="note"/>
+        </rng:optional>
       </rng:element>
     </rng:define>
-
+    
     <rng:define name="head">
       <rng:element name="head">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Titre générique.</a:documentation>
