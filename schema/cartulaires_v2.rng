@@ -265,9 +265,8 @@
             <rng:ref name="abbr"/>
             <rng:ref name="sup"/>
             <rng:ref name="ref.note"/>
-            <rng:ref name="note"/><!-- PP add note element -->
-            <rng:ref name="gap"/><!-- PP add gap element -->
-            <rng:ref name="sc"/><!-- PP add value "sc" to @rend attribute -->
+            <rng:ref name="note"/><!-- PP add note element (182 cas) -->
+            <rng:ref name="sc"/><!-- PP add value "sc" to @rend attribute (8 cas, à garder ?)-->
           </rng:choice>
         </rng:zeroOrMore>
       </rng:element>
@@ -281,8 +280,7 @@
         <rng:mixed>
           <rng:zeroOrMore>
             <rng:choice>
-              <rng:ref name="hi"/><!-- PP ad hi element -->
-              <rng:ref name="lb"/><!-- PP ad lb element -->
+              <rng:ref name="lb"/><!-- PP ad lb element (1 seul cas: à supprimer ?) -->
             </rng:choice>
           </rng:zeroOrMore>
         </rng:mixed>
@@ -299,7 +297,7 @@
           <blockquote>&lt;<a href="http://dublincore.org/documents/dcmi-terms/#terms-source">dc:source</a>&gt;, composer une ligne bibliographique avec les éléments contenus.
           </blockquote>
         </a:documentation>
-        <rng:choice><!-- PP add optional choice between listBibl or bibl elements -->
+        <rng:choice><!-- PP add optional choice between listBibl or bibl elements (cf. Saint Germain des Près. Peut-être que le cas se posera aussi pour les 2 tomes de Saint-MAgloire et les 4 tomes de Notre Dame. -->
           <rng:element name="listBibl">
             <rng:oneOrMore>
               <rng:ref name="bibl"/>
@@ -362,7 +360,7 @@
             <rng:attribute name="ed">
               <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence au témoin dont est issu le numéro de page ou de folio inséré dans l'attribut n.</a:documentation>
             </rng:attribute>
-            <rng:attribute name="edRef"/><!-- PP add edRef optional attribute -->
+            <rng:attribute name="edRef"/><!-- PP add edRef optional attribute => cf. Saint Germain des Près (conséquence de sourceDesc/listWit -->
           </rng:choice>
         </rng:optional>
         <rng:optional>
@@ -460,10 +458,10 @@
             <rng:ref name="mentioned"/>
             <rng:ref name="sic"/>
             <rng:ref name="q"/>
-            <rng:ref name="hi"/><!-- PP add hi element -->
-            <rng:ref name="pb"/><!-- PP add pb element -->
-            <rng:ref name="app"/><!-- PP add app element -->
-            <rng:ref name="note"/><!-- PP add note element -->
+            <rng:ref name="hi"/><!-- PP add hi element (3000 witness concernés, plus de 6000 cas!) -->
+            <rng:ref name="pb"/><!-- PP add pb element (185 witness concernés -->
+            <rng:ref name="app"/><!-- PP add app element (2 cas) -->
+            <rng:ref name="note"/><!-- PP add note element (84 cas) -->
             <rng:element name="stamp">
               <rng:zeroOrMore>
                 <rng:choice>
@@ -491,7 +489,7 @@
             <rng:ref name="pb"/>
             <rng:ref name="table"/>
             <rng:ref name="note"/>
-            <rng:ref name="head"/><!-- PP add head element -->
+            <rng:ref name="head"/><!-- PP add head element (plus de 4000 cas dans les cartulaires de Notre Dame et de Saint Germain des Près -->
             <rng:element name="p">
               <rng:optional>
                 <rng:ref name="lang"/>
@@ -502,11 +500,11 @@
                     <rng:ref name="pb"/>
                     <rng:ref name="note"/>
                     <rng:ref name="idf.s"/>
-                    <rng:ref name="hi"/><!-- PP add hi element -->
-                    <rng:ref name="lb"/><!-- PP ad lb element -->
-                    <rng:ref name="gap"/><!-- PP add gap element -->
-                    <rng:ref name="ref.note"/><!-- PP add ref element -->
-                    <rng:ref name="app"/><!-- PP add app element -->
+                    <rng:ref name="hi"/><!-- PP add hi element (plus de 8000 div)-->
+                    <rng:ref name="lb"/><!-- PP ad lb element (100 div) -->
+                    <rng:ref name="gap"/><!-- PP add gap element (plus de 100 div) -->
+                    <rng:ref name="ref.note"/><!-- PP add ref element => à revoir pour utiliser le système de note sans ref ? -->
+                    <rng:ref name="app"/><!-- PP add app element =< pour des notes d'apparat critique. Plus de 300 cas. À conserver ? -->
                   </rng:choice>
                 </rng:zeroOrMore>
               </rng:mixed>
@@ -520,7 +518,7 @@
       <rng:element name="lb">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Saut de ligne, ne pas en abuser, htm:br</a:documentation>
         <rng:optional>
-          <rng:attribute name="n"/><!-- PP add n optional attribute -->
+          <rng:attribute name="n"/><!-- PP add n optional attribute (475 cas) -->
         </rng:optional>
         <rng:empty/>
       </rng:element>
@@ -544,7 +542,7 @@
         <rng:attribute name="xml:id"/>
         <rng:attribute name="n"/>
         <rng:optional>
-          <rng:ref name="pb"/><!-- PP pb element is know optional -->
+          <rng:ref name="pb"/><!-- PP pb element is know optional (plus de 5000 actes) -->
         </rng:optional>
         <rng:ref name="acte.front"/>
         <rng:element name="body">
@@ -581,7 +579,7 @@
           <rng:attribute name="extent"/>
         </rng:optional>
         <rng:optional>
-          <rng:attribute name="reason"/><!-- PP each attribute @extent or @reason is optional --> 
+          <rng:attribute name="reason"/><!-- PP each attribute @extent or @reason is optional => NON! Relecture par Olivier pour vérifier s'il s'agit d'un gap[@extent="3"] ou de [...] --> 
         </rng:optional>
         <rng:zeroOrMore>
           <rng:choice>
@@ -641,33 +639,6 @@
       </rng:element>
     </rng:define>
     
-    <rng:define name="listWit">
-      <rng:element name="listWit">
-        <a:documentation>
-          <p>Liste des témoins manuscrits d'une édition critique. Il est préférable de regrouper les témoins selon une typologie définie dans @type (original, copie, édition, indiqué et fac-similé) dans différents éléments &lt;listWit&gt;.</p>
-        </a:documentation>
-        <rng:optional>
-          <rng:attribute name="xml:id"/>
-        </rng:optional>
-        <rng:optional>
-          <rng:attribute name="type">
-            <rng:ref name="listWit.atts"/>
-          </rng:attribute>
-        </rng:optional>
-        <rng:optional>
-          <rng:ref name="head"/>
-        </rng:optional>
-        <rng:interleave>
-          <rng:optional>
-            <rng:ref name="pb"/><!-- PP add optional element pb -->
-          </rng:optional>
-          <rng:oneOrMore>
-            <rng:ref name="witness"/>
-          </rng:oneOrMore>
-        </rng:interleave>
-      </rng:element>
-    </rng:define>  
-    
     <rng:define name="app">
       <rng:element name="app">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Entrée d'apparat critique.</a:documentation>
@@ -716,7 +687,7 @@
             </rng:zeroOrMore>
           </rng:optional>
           <rng:zeroOrMore>
-            <rng:ref name="hi"/><!-- PP add optional element hi -->
+            <rng:ref name="hi"/><!-- PP add optional element hi (800 cas dans Saint-Magloire) -->
           </rng:zeroOrMore>
           <rng:optional>
             <rng:ref name="note"/>
@@ -728,7 +699,7 @@
       <rng:element name="head">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Titre générique.</a:documentation>
         <rng:optional>
-          <rng:attribute name="n"/><!-- PP add optional attribute n -->
+          <rng:attribute name="n"/><!-- PP add optional attribute n (269 cas) -->
         </rng:optional>
         <rng:optional>
           <rng:ref name="lang"/>
@@ -740,7 +711,7 @@
     <rng:define name="ref.note">
       <rng:element name="ref">
         <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence à une note.htm:span class="ref" </a:documentation>
-        <rng:optional><!-- PP attribute type is now optional -->
+        <rng:optional><!-- PP attribute type is now optional (pour tous les ref dans les index) -->
           <rng:attribute name="type">
             <rng:value>note</rng:value>
           </rng:attribute>
@@ -793,7 +764,7 @@
               <rng:choice>
                 <rng:ref name="p.content"/>
                 <rng:ref name="list"/>
-                <rng:ref name="p"/><!-- PP add optional element p -->
+                <rng:ref name="p"/><!-- PP add optional element p (seulement 7 cas dans Micy) -->
               </rng:choice>
             </rng:oneOrMore>
           </rng:element>
@@ -810,7 +781,7 @@
         <rng:optional>
           <rng:attribute name="rend"/>
         </rng:optional>
-        <rng:optional><!-- PP element head is optional -->
+        <rng:optional><!-- PP element head is optional (30 tableaux) -->
           <rng:ref name="head"/>
         </rng:optional>
         <rng:oneOrMore>
