@@ -97,6 +97,23 @@
           dernière vérification et l'ajout des informations du TEIHeader ont été effectués par
           Gautier Poupeau.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2011-07" who="#CD">Encodage des dates de lieu</change>
@@ -112,20 +129,17 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de Sainte-Croix d’Orléans (814-1300), contenant le
-          « Chartularium ecclesiae Aurelianensis vetus », suivi d’un appendice et d’un
-          supplément</hi>, par Joseph Thillier et Eugène Jarry, Paris : Alphonse Picard et fils,
-        1906, CXIX-634 p., 2 pl. h.-t. (<hi rend="i">Mémoires de la Société archéologique et
-          historique de l’Orléanais</hi>, 30).</head>
+      <head>Cartulaire de Sainte-Croix d’Orléans (814-1300)</head>
+      <head type="sub">contenant le « Chartularium ecclesiae Aurelianensis vetus », suivi d’un appendice et d’un supplément, par Joseph Thillier et Eugène Jarry, Paris : Alphonse Picard et fils, 1906, CXIX-634 p., 2 pl. h.-t. (<hi rend="i">Mémoires de la Société archéologique et historique de l’Orléanais</hi>, 30).</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Thibaud Bouard </docAuthor> <docAuthor>Magali Duchesne </docAuthor> <docDate>juillet 2006</docDate>-->
       <argument>
         <p>Établissement : Chapitre cathédral d’Orléans.</p>
         <p>Type d’édition : reconstitution du plus ancien cartulaire, d’après une copie du XVII<hi
-            rend="i">e</hi> siècle, suivie de l’édition dans l’ordre chronologique des autres actes
+            rend="sup">e</hi> siècle, suivie de l’édition dans l’ordre chronologique des autres actes
           connus du chartrier.</p>
-        <p> Total des actes édités : 390 actes (6 du IX<hi rend="i">e</hi> siècle, 12 du X<hi
-            rend="i">e</hi> siècle, 10 du XI<hi rend="i">e</hi> siècle, 108 du XII<hi rend="i"
-            >e</hi> siècle, 253 du XIII<hi rend="i">e</hi> siècle, 1 du XIV<hi rend="i"
+        <p> Total des actes édités : 390 actes (6 du IX<hi rend="sup">e</hi> siècle, 12 du X<hi
+          rend="sup">e</hi> siècle, 10 du XI<hi rend="sup">e</hi> siècle, 108 du XII<hi rend="sup"
+            >e</hi> siècle, 253 du XIII<hi rend="sup">e</hi> siècle, 1 du XIV<hi rend="sup"
           >e</hi> siècle).</p>
       </argument>
       <byline>Notice rédigée par Olivier Guyotjeannin avec l’aide de Thibaud Bouard et Magali

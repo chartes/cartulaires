@@ -113,6 +113,38 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div[@type]" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="tome" match="/TEI/text/group/group[@type='tome']" use="default">
+          <citeData property="dc:title" use="head"/>
+          <citeStructure unit="section" match="group" use="default">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-section" match="group" use="default">
+              <citeData property="dc:title" use="head"/>
+              <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                <citeData property="dc:title" use="concat(@n, ' (', /front/docDate/date, ')' )"/>
+                <citeData property="dc:date" use="front/docDate/date"/>
+                <citeData property="dct:type" use="front/index/term/@key"/>
+                <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+              </citeStructure>
+            </citeStructure>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+              <citeData property="dc:date" use="front/docDate/date"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-07" who="#FG">Mise en écran</change>
@@ -130,8 +162,8 @@
   <text>
     <front>
       <head>Joseph Depoin, <hi rend="i">Recueil des chartes et documents de l’abbaye de Saint-Martin
-          des Champs, monastère parisien</hi>, Ligugé, 1913-1921, 5 vol. (<hi rend="i">Archives de
-          la France monastique</hi>, 13, 16, 18, 20, 21).</head>
+          des Champs, monastère parisien</hi></head>
+      <head type="sub">Ligugé, 1913-1921, 5 vol. (<hi rend="i">Archives de la France monastique</hi>, 13, 16, 18, 20, 21).</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Sébastien Peyrard</docAuthor> <docAuthor>Clotilde Romet</docAuthor> <docAuthor>Romain Wenz</docAuthor> <docDate>mai 2006</docDate>-->
       <argument>
         <p>Établissement : Saint-Martin-des-Champs à Paris. – Collégiale fondée par le roi de France

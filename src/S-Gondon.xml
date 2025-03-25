@@ -95,6 +95,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-10" who="#NR">Encodage de l'introduction</change>
@@ -110,9 +127,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire du prieuré bénédictin de Saint-Gondon-sur-Loire</hi>, éd. Paul
-        Marchegay, Les-Roches-Baritaud, 1877, 64 pages.</head>
-
+      <head>Cartulaire du prieuré bénédictin de Saint-Gondon-sur-Loire</head>
+      <head type="sub">éd. Paul Marchegay, Les-Roches-Baritaud, 1877, 64 pages.</head>
       <argument>
         <p>Établissement : Saint-Gondon (Loiret, cant. Gien ; diocèse ancien de
           Bourges).— Bénédictins, prieuré de Saint-Florent de Saumur.</p>

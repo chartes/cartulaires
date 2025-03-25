@@ -112,6 +112,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-04" who="NR">Indexation diplomatique</change>
@@ -127,9 +144,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire et censier de Saint-Merry de Paris</hi>, par Léon Cadier et
-        Camille Couderc, Nogent-le-Rotrou, 1891, 173 pages, tiré à part de <hi rend="i">Mémoires de
-          la Société de l’histoire de Paris</hi>, t. 18, 1891, p. 101-271.</head>
+      <head>Cartulaire et censier de Saint-Merry de Paris</head>
+      <head type="sub">par Léon Cadier et Camille Couderc, Nogent-le-Rotrou, 1891, 173 pages, tiré à part de <hi rend="i">Mémoires de la Société de l’histoire de Paris</hi>, t. 18, 1891, p. 101-271.</head>
       <argument>
         <p>Établissement : Saint-Merry de Paris (l’église est aujourd’hui au n° 78 de la rue
           Saint-Martin, Paris III<hi rend="sup">e</hi> ; ancien diocèse de Paris). — Collégiale.</p>

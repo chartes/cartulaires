@@ -63,6 +63,20 @@
       <projectDesc>
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head"/>
+          <citeStructure unit="partie" match="div" use="default">
+            <citeData property="dc:title" use="head"/>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date/node()[not(name() = 'note' )], ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2025-02" who="PP">Encodage</change>
