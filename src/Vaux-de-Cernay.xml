@@ -109,6 +109,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-07" who="#FG">Mise en écran</change>
@@ -125,13 +142,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay, de l’ordre de
-          Cîteaux, au diocèse de Paris, composé d’après les chartes originales conservées aux
-          archives de Seine-et-Oise, enrichi de notes, d’index et d’un dictionnaire
-          géographique</hi> par Lucien Merlet et Auguste Moutié, sous les auspices et aux dépens de
-        M. H. d’Albert, duc de Luynes, [par la Société archéologique de Rambouillet], Paris :
-        Imprimerie H. Plon, 1857-1858, 2 t. en 3 vol. (<hi rend="i">Documents pour servir à
-          l’histoire du département de Seine-et-Oise</hi>).</head>
+      <head>Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay</head>
+      <head type="sub">de l’ordre de Cîteaux, au diocèse de Paris, composé d’après les chartes originales conservées aux archives de Seine-et-Oise, enrichi de notes, d’index et d’un dictionnaire géographique par Lucien Merlet et Auguste Moutié, sous les auspices et aux dépens de M. H. d’Albert, duc de Luynes, [par la Société archéologique de Rambouillet], Paris : Imprimerie H. Plon, 1857-1858, 2 t. en 3 vol. (<hi rend="i">Documents pour servir à l’histoire du département de Seine-et-Oise</hi>).</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Clotilde Angleys</docAuthor> <docAuthor>Vanessa Szollosi</docAuthor> <docDate>Juin 2006</docDate>-->
       <argument>
         <p>Établissement : Notre-Dame des Vaux-de-Cernay (Yvelines, cant. Chevreuse, comm.

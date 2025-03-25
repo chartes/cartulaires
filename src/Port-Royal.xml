@@ -111,6 +111,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-07" who="#FG">Mise en écran</change>
@@ -129,8 +146,8 @@
   <text>
     <front>
       <head>Adolphe de Dion, <hi rend="i">Cartulaire de l’abbaye de Porrois au diocèse de Paris,
-          plus connue sous son nom mystique Port-Royal</hi>, premier volume, 1204-1280, Paris :
-        Alphonse Picard et fils, 1903, XVI-339 p.</head>
+          plus connue sous son nom mystique Port-Royal</hi></head>
+      <head type="sub">premier volume, 1204-1280, Paris : Alphonse Picard et fils, 1903, XVI-339 p.</head>
       <argument>
         <p>Établissement : Notre-Dame de Porrois ou Port-Royal, puis Port-Royal-des-Champs
           (Yvelines, cant. Chevreuse, comm. Magny-lès-Hameaux ; diocèse ancien Paris). — Moniales.

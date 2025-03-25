@@ -110,6 +110,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-09" who="#CD">Tableau de la tradition</change>
@@ -127,9 +144,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’abbaye de Saint-Martin de Pontoise</hi>, publié d’après les
-        documents inédits par Joseph Depoin, Pontoise : Société historique du Vexin, 1895-1909,
-        VIII-494 p. (<hi rend="i">Publications de la Société historique du Vexin</hi>).</head>
+      <head>Cartulaire de l’abbaye de Saint-Martin de Pontoise</head>
+      <head type="sub">publié d’après les documents inédits par Joseph Depoin, Pontoise : Société historique du Vexin, 1895-1909, VIII-494 p. (<hi rend="i">Publications de la Société historique du Vexin</hi>).</head>
       <argument>
         <p>Établissement : Saint-Germain puis Saint-Martin-de-Pontoise (Val-d’Oise, ch.-l. dép. ;
           ancien diocèse de Rouen). — Moines bénédictins, fondation du XI<hi rend="i"

@@ -115,6 +115,23 @@
           chartes. Une dernière vérification et l'ajout des informations du TEIHeader ont été
           effectués par Jean-Charles Martin et Gautier Poupeau.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010-04" who="#NR">Indexation diplomatique</change>
@@ -129,9 +146,8 @@
   </teiHeader>
   <text>
     <front>
-      <head>Joseph Depoin, <hi rend="i">Le prieuré de Saint-Germain-en-Laye, origines et
-          cartulaire</hi>, Versailles : Cerf et C<hi rend="sup">ie</hi> impimeurs, 1895,
-        30 p.</head>
+      <head>Joseph Depoin, <hi rend="i">Le prieuré de Saint-Germain-en-Laye, origines et cartulaire</hi></head>
+      <head type="sub">Versailles : Cerf et C<hi rend="sup">ie</hi> impimeurs, 1895, 30 p.</head>
       <argument>
         <p>Établissement : Saint-Vincent et Saint-Germain de Saint-Germain-en-Laye (Yvelines, ch.-l.
           arr. ; diocèse ancien Paris). — Maison fondée par Robert le Pieux, rattachée au milieu du

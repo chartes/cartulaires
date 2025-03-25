@@ -109,6 +109,23 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
+      <refsDecl>
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+          <citeData property="dc:title" use="head[not(@type)]"/>
+          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="head"/>
+            <citeStructure unit="sous-partie" match="div" use="default">
+              <citeData property="dc:title" use="head"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
+          <citeData property="dc:date" use="front/docDate/date"/>
+          <citeData property="dct:type" use="front/index/term/@key"/>
+          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        </citeStructure>
+      </refsDecl>
     </encodingDesc>
     <revisionDesc>
       <change when="2010" who="#FG">(à faire) reprise d'un index, indication des folios
@@ -126,10 +143,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de Saint-Spire de Corbeil</hi>, édité par Émile Coüard-Luys,
-        Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i"
-          >Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
-        1881-1882.</head>
+      <head>Cartulaire de Saint-Spire de Corbeil</head>
+      <head type="sub">édité par Émile Coüard-Luys, Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i">Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6, 1881-1882.</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Anastasia Iline</docAuthor> <docDate>Janvier 2006</docDate>-->
       <argument>
         <p>Établissement : Saint-Spire (<hi rend="i">Sanctus Exuperius</hi>) de Corbeil (auj.
