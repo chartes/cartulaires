@@ -765,6 +765,7 @@
                 <rng:ref name="p.content"/>
                 <rng:ref name="list"/>
                 <rng:ref name="p"/><!-- PP add optional element p (seulement 7 cas dans Micy) -->
+                <rng:ref name="seg"/><!-- PP add optional element seg (de nombreux cas pour gérer les renvois (ancienne balise custom <rv/> internes dans les index (cf. Saint-Antoine) -->
               </rng:choice>
             </rng:oneOrMore>
           </rng:element>
