@@ -727,9 +727,16 @@
         <rng:optional>
           <rng:attribute name="xml:id"/>
         </rng:optional>
-        <rng:optional>
-          <rng:text/>
-        </rng:optional>
+        <rng:interleave><!-- PP permettre du texte et / ou un élément <hi/> dans un <ref/> pour les renvois dans les index. -->
+          <rng:optional>
+            <rng:text/>
+          </rng:optional>
+          <rng:optional>
+            <rng:zeroOrMore>
+              <rng:ref name="hi"/>
+            </rng:zeroOrMore>
+          </rng:optional>
+        </rng:interleave>
       </rng:element>
     </rng:define>
     
@@ -765,7 +772,7 @@
                 <rng:ref name="p.content"/>
                 <rng:ref name="list"/>
                 <rng:ref name="p"/><!-- PP add optional element p (seulement 7 cas dans Micy) -->
-                <rng:ref name="seg"/><!-- PP add optional element seg (de nombreux cas pour gérer les renvois (ancienne balise custom <rv/> internes dans les index (cf. Saint-Antoine) -->
+                <rng:ref name="idf.seg"/><!-- PP add optional element seg (de nombreux cas pour gérer les renvois (ancienne balise custom <rv/> internes dans les index (cf. Saint-Antoine, Saint-Magloire t. 2) -->
               </rng:choice>
             </rng:oneOrMore>
           </rng:element>
@@ -823,6 +830,29 @@
             <rng:ref name="cb"/>
           </rng:choice>
         </rng:oneOrMore>
+      </rng:element>
+    </rng:define>
+    
+    <rng:define name="idf.seg">
+      <rng:element name="seg">
+        <a:documentation>Formule ayant pu être reconnue automatiquement.</a:documentation>
+        <rng:optional><!-- attribut type optionnel pour les cas où seg remplace la balise custom rv -->
+          <rng:attribute name="type">
+            <choice>
+              <value>theo</value>
+            </choice>
+          </rng:attribute>
+        </rng:optional>
+        <rng:zeroOrMore>
+          <rng:choice>
+            <rng:text/>
+            <rng:ref name="ref.note"/>
+            <rng:ref name="abbr"/>
+            <rng:ref name="typo"/>
+            <rng:ref name="pb"/>
+            <rng:ref name="persName"/>
+          </rng:choice>
+        </rng:zeroOrMore>
       </rng:element>
     </rng:define>
     

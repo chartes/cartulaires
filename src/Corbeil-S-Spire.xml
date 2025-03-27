@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Corbeil-S-Spire">
   <teiHeader>
     <fileDesc>
@@ -9798,12 +9798,10 @@
         </text>
       </group>
     </group>
-    <!--
     <back>
       <div type="indexnominum" n="1">
-        <pb n="209"/>
-        <head>index des principaux noms de personnes et de lieux</head>
-        <list>
+        <head><pb n="209"/> index des principaux noms de personnes et de lieux</head>
+        <list type="index">
           <item>Aalesis, mater Reginaldi episcopi Parisiensis<ref n="171">171</ref>.</item>
           <item>Aalix, mater Haimonis canonici<ref n="153">153</ref>.</item>
           <item>Aalix, filia Balduini Belvacensis<ref n="156">156</ref>.</item>
@@ -9825,8 +9823,7 @@
           <item>Albertus de Monte Sancti Petri<ref n="54">54</ref>.</item>
           <item>Alexander <num>III</num>, papa<ref n="31">31</ref>.</item>
           <item>Algrinus, cancellarius regis Ludovici <num>VII</num><ref n="18">18</ref>.</item>
-          <pb n="210"/>
-          <item>Almaricus de Castro Forti, <hi rend="i">Châteaufort (Seine-et-Oise, canton de Palaiseau)</hi><ref n="4">4</ref>.</item>
+          <item><pb n="210"/> Almaricus de Castro Forti, <hi rend="i">Châteaufort (Seine-et-Oise, canton de Palaiseau)</hi><ref n="4">4</ref>.</item>
           <item>Anagni<ref n="32">32</ref>.</item>
           <item>Andreas, subdiaconus Sancti Exuperii<ref n="43">43</ref>.</item>
           <item>Andreas, capellanus Sancti Exuperii<ref n="137">137</ref>.</item>
@@ -9860,8 +9857,7 @@
           <item>Balduinus, clericus<ref n="51">51</ref>.</item>
           <item>Balduinus, filius Hudonis vicecomitis<ref n="18">18</ref>.</item>
           <item>Balduinus, nepos Frederici<ref n="18">18</ref>.</item>
-          <pb n="211"/>
-          <item>Balduinus Molendinarius<ref n="172">172</ref>.</item>
+          <item><pb n="211"/> Balduinus Molendinarius<ref n="172">172</ref>.</item>
           <item>Balduinus Polini<ref n="163">163</ref>.</item>
           <item>Ballencurtis, Balencuria, <hi rend="i">Ballancourt (Seine-et-Oise, canton de Corbeil)</hi><ref n="6">6</ref>,<ref n="16">16</ref>,<ref n="17">17</ref>,<ref n="18">18</ref>,<ref n="61">61</ref>,<ref n="62">62</ref>,<ref n="85">85</ref>,<ref n="88">88</ref>,<ref n="111">111</ref>,<ref n="124">124</ref>,<ref n="125">125</ref>,<ref n="145">145</ref>,<ref n="156">156</ref>,<ref n="161">161</ref>,<ref n="172">172</ref>.</item>
           <item>Barbeello (monachi de), <hi rend="i">Barbeaux (Seine-et-Marne, commune de Fontaine-le-Port)</hi><ref n="115">115</ref>,<ref n="149">149</ref>.</item>
@@ -9895,8 +9891,7 @@
           <item>Boucornu<ref n="94">94</ref>,<ref n="116">116</ref>,<ref n="117">117</ref>,<ref n="148">148</ref>.</item>
           <item>Braitellum, Braatel (territorium apud Corbolium)<ref n="64">64</ref>,<ref n="75">75</ref>,<ref n="120">120</ref>,<ref n="125">125</ref>,<ref n="141">141</ref>,<ref n="170">170</ref>.</item>
           <item>Breia, <hi rend="i">Brie-Comte-Robert (Seine-et-Marne)</hi><ref n="113">113</ref>.</item>
-          <pb n="212"/>
-          <item>Briart Ferricus<ref n="55">55</ref>,<ref n="125">125</ref>.</item>
+          <item><pb n="212"/> Briart Ferricus<ref n="55">55</ref>,<ref n="125">125</ref>.</item>
           <item>— Gaufridus<ref n="55">55</ref>.</item>
           <item>— Theobaldus, miles<ref n="98">98</ref>,<ref n="99">99</ref>.</item>
           <item>— Maria, uxor Theobaldi<ref n="98">98</ref>,<ref n="99">99</ref>.</item>
@@ -9930,8 +9925,7 @@
           <item>Cheneviere (vinea que dicitur)<ref n="146">146</ref>.</item>
           <item>Chevanes, <hi rend="i">Chevannes (Seine-et-Oise, canton de Corbeil)</hi><ref n="6">6</ref>,<ref n="123">123</ref>,<ref n="125">125</ref>.</item>
           <item>Chevrel<ref n="161">161</ref>.</item>
-          <pb n="213"/>
-          <item>Clémence, reine de France<ref n="191">191</ref>.</item>
+          <item><pb n="213"/>Clémence, reine de France<ref n="191">191</ref>.</item>
           <item>Clemens <num>III</num>, papa<ref n="9">9</ref>,<ref n="10">10</ref>,<ref n="11">11</ref>,<ref n="13">13</ref>.</item>
           <item>Clemens, presbiter<ref n="18">18</ref>.</item>
           <item>Clementis (altare et capellani Sancti)<ref n="82">82</ref>,<ref n="115">115</ref>,<ref n="131">131</ref>,<ref n="160">160</ref>,<ref n="165">165</ref>,<ref n="171">171</ref>.</item>
@@ -9963,8 +9957,7 @@
           <item>Drogo, archidiaconus, nepos Goffridi canonici<ref n="17">17</ref>.</item>
           <item>Droco, constabularius regis Philippi <num>II</num><ref n="25">25</ref>,<ref n="49">49</ref>.</item>
           <item>Droco, capellanus Beate Marie Corboliensis<ref n="70">70</ref>.</item>
-          <pb n="214"/>
-          <item>Droco laicus<ref n="51">51</ref>.</item>
+          <item><pb n="214"/> Droco laicus<ref n="51">51</ref>.</item>
           <item>Durandus Briseboc<ref n="76">76</ref>.</item>
           <item>— Eremburgis, ejus uxor<ref n="76">76</ref>.</item>
           <item>Durandus de Castaneto, cantor Sancti Exuperii<ref n="160">160</ref>.</item>
@@ -9996,8 +9989,7 @@
           <item>Eustachius, capellanus<ref n="4">4</ref>.</item>
           <item>Eva<ref n="149">149</ref>.</item>
           <item>Evrardus, sacerdos<ref n="160">160</ref>.</item>
-          <pb n="215"/>
-          <item>Evriacum, Everiacum in Bria, <hi rend="i">Evry-les-Châteaux (Seine-et-Marne, canton de Brie-Comte-Robert) Evry-sur-Seine (Seine-et-Oise, canton de Corbeil)</hi><ref n="6">6</ref>,<ref n="59">59</ref>,<ref n="119">119</ref>,<ref n="120">120</ref>.</item>
+          <item><pb n="215"/> Evriacum, Everiacum in Bria, <hi rend="i">Evry-les-Châteaux (Seine-et-Marne, canton de Brie-Comte-Robert) Evry-sur-Seine (Seine-et-Oise, canton de Corbeil)</hi><ref n="6">6</ref>,<ref n="59">59</ref>,<ref n="119">119</ref>,<ref n="120">120</ref>.</item>
           <item>Exuperii (ecclesia duodecim Apostolorum et Beatorum confessorum Exuperii et Lupi), ancien diocèse de Paris, aujourd'hui diocèse de Versailles<ref n="1">1</ref>,<ref n="5">5</ref>,<ref n="6">6</ref>,<ref n="16">16 et passim</ref>.</item>
           <item>Exuperii (festivitas Sancti)<ref n="10">10</ref>.</item>
           <item>Exuperii (fabrica Sancti)<ref n="49">49</ref>.</item>
@@ -10023,8 +10015,7 @@
           <item>Framboldus (Sanctus Framboldus Silvanectensis)<ref n="34">34</ref>,<ref n="36">36</ref>.</item>
           <item>Fredericus, filius Balduini patris Johannis abbatis<ref n="16">16</ref>,<ref n="17">17</ref>.</item>
           <item>Fredericus, diaconus<ref n="18">18</ref>.</item>
-          <pb n="216"/>
-          <item>Fulbertus<ref n="51">51</ref>.</item>
+          <item><pb n="216"/> Fulbertus<ref n="51">51</ref>.</item>
           <item>Furce, <hi rend="i">Les Fourches (Seine-et-Marne, canton de Brie-Comte-Robert)</hi><ref n="146">146</ref>,<ref n="169">169</ref>.</item>
           <item>Galerannus, Gualerannus, Galeran, camerarius<ref n="3">3</ref>.</item>
           <item>Galerannus de Foucherolles<ref n="140">140</ref>.</item>
@@ -10057,8 +10048,7 @@
           <item>Germani Autissiodorensis (altare Sancti)<ref n="203">203</ref>.</item>
           <item>Germanus (Sanctus Germanus super Scolam), <hi rend="i">Saint-Germain-sur-École (Seine-et-Marne, canton de Melun)</hi><ref n="106">106</ref>.</item>
           <item>Germunt, capicerius<ref n="18">18</ref>.</item>
-          <pb n="217"/>
-          <item>Gervasius, presbiter de Lardiaco<ref n="100">100</ref>.</item>
+          <item><pb n="217"/> Gervasius, presbiter de Lardiaco<ref n="100">100</ref>.</item>
           <item>Geubertus de Campis, magister<ref n="164">164</ref>.</item>
           <item>Gilduinus, diaconus<ref n="18">18</ref>.</item>
           <item>Gilebertus, Gislebertus, Guilbertus, buticularius regis Ludovici <num>VI</num><ref n="5">5</ref>,<ref n="206">206</ref>.</item>
@@ -10102,8 +10092,7 @@
           <item>Guido, Sancte Marie trans Tiberim tituli Calixti presbiter cardinalis<ref n="8">8</ref>.</item>
           <item>Guido, abbas Pruliacensis<ref n="9">9</ref>,<ref n="10">10</ref>,<ref n="11">11</ref>,<ref n="12">12</ref>,<ref n="13">13</ref>.</item>
           <item>Guido, camerarius regis Ludovici <num>VI</num><ref n="5">5</ref>.</item>
-          <pb n="218"/>
-          <item>Guido, buticularius regis Philippi <num>I</num><ref n="3">3</ref>.</item>
+          <item><pb n="218"/> Guido, buticularius regis Philippi <num>I</num><ref n="3">3</ref>.</item>
           <item>Guido, buticularius regis Philippi <num>II</num><ref n="25">25</ref>,<ref n="49">49</ref>.</item>
           <item>Guido, vicecomes<ref n="4">4</ref>.</item>
           <item>Guido Bodet<ref n="58">58</ref>.</item>
@@ -10140,8 +10129,7 @@
           <item>Guillelmus Madelinarius<ref n="67">67</ref>.</item>
           <item>Hamo, Haymo, comes Corbolii, fundator ecclesie Sancti Exuperii<ref n="157">157</ref>.</item>
           <item>Hamo, canonicus<ref n="18">18</ref>.</item>
-          <pb n="219"/>
-          <item>Hamo, canonicus Sancti Exuperii, clericus regis Philippi<ref n="161">161</ref>.</item>
+          <item><pb n="219"/> Hamo, canonicus Sancti Exuperii, clericus regis Philippi<ref n="161">161</ref>.</item>
           <item>Hamo, canonicus Sancti Exuperii<ref n="18">18</ref>,<ref n="70">70</ref>,<ref n="99">99</ref>,<ref n="144">144</ref>,<ref n="163">163</ref>.</item>
           <item>Helyas Anglicus<ref n="77">77</ref>.</item>
           <item>— Hodehardis ejus uxor<ref n="77">77</ref>.</item>
@@ -10184,8 +10172,7 @@
           <item>Hugo Buinelle, canonicus Sancti Exuperii<ref n="59">59</ref>,<ref n="160">160</ref>,<ref n="166">166</ref>.</item>
           <item>Hugo Chabors, presbiter<ref n="57">57</ref>.</item>
           <item>Hugo Clemens, abbas Sancti Exuperii, decanus ecclesie Parisiensis<ref n="6">6</ref>,<ref n="10">10</ref>,<ref n="12">12</ref>,<ref n="19">19</ref>,<ref n="24">24</ref>,<ref n="26">26</ref>,<ref n="41">41</ref>,<ref n="43">43</ref>,<ref n="45">45</ref>,<ref n="46">46</ref>,<ref n="47">47</ref>,<ref n="48">48</ref>,<ref n="50">50</ref>,<ref n="56">56</ref>,<ref n="149">149</ref>.</item>
-          <pb n="220"/>
-          <item>Hugo de Moissiaco<ref n="65">65</ref>.</item>
+          <item><pb n="220"/> Hugo de Moissiaco<ref n="65">65</ref>.</item>
           <item>Hugo de Puteo<ref n="152">152</ref>.</item>
           <item>Hugo Enjorrandus, canonicus Sancti Exuperii<ref n="10">10</ref>,<ref n="11">11</ref>,<ref n="12">12</ref>.</item>
           <item>Hugues de Crusy, garde du scel de la Prévôté de Paris<ref n="183">183</ref>,<ref n="189">189</ref>,<ref n="192">192</ref>,<ref n="197">197</ref>,<ref n="198">198</ref>.</item>
@@ -10208,8 +10195,7 @@
           <item>Johannes, episcopus Carnotensis<ref n="32">32</ref>,<ref n="33">33</ref>,<ref n="34">34</ref>.</item>
           <item>Johannes, archidiaconus Meledunensis<ref n="91">91</ref>.</item>
           <item>Johannes, abbas Sancti Victoris Parisiensis<ref n="9">9</ref>.</item>
-          <pb n="221"/>
-          <item>Johannes, abbas Sancti Exuperii<ref n="2">2</ref>,<ref n="3">3</ref>,<ref n="16">16</ref>,<ref n="18">18</ref>.</item>
+          <item><pb n="221"/> Johannes, abbas Sancti Exuperii<ref n="2">2</ref>,<ref n="3">3</ref>,<ref n="16">16</ref>,<ref n="18">18</ref>.</item>
           <item>Johannes, abbas Sancti Johannis de Valleia<ref n="14">14</ref>.</item>
           <item>Johannes, capicerius Sancti Exuperii<ref n="80">80</ref>.</item>
           <item>Johannes, presbiter de Soisiaco super Scolam<ref n="80">80</ref>,<ref n="83">83</ref>,<ref n="84">84</ref>,<ref n="139">139</ref>.</item>
@@ -10254,8 +10240,7 @@
           <item>Joiaco (Ferricus de), miles et dominus de Vallibus<ref n="79">79</ref>.</item>
           <item>Jordanus, presbiter cardinalis Sancte Pudentiane tituli Pastoris<ref n="8">8</ref>.</item>
           <item>Judearia Corbolii<ref n="93">93</ref>.</item>
-          <pb n="222"/>
-          <item>k(<hi rend="i">Voir la lettre</hi> C).</item>
+          <item><pb n="222"/> k(<hi rend="i">Voir la lettre</hi> C).</item>
           <item>Laborde<ref n="57">57</ref>,<ref n="58">58</ref>.</item>
           <item>Lancelinus, canonicus Sancti Exuperii<ref n="17">17</ref>.</item>
           <item>Landricus, presbiter<ref n="43">43</ref>,<ref n="58">58</ref>.</item>
@@ -10281,8 +10266,7 @@
           <item>Leudeville, Lodevilla, <hi rend="i">Leudeville (Seine-et-Oise, canton d'Arpajon)</hi><ref n="10">10</ref>,<ref n="11">11</ref>,<ref n="12">12</ref>,<ref n="119">119</ref>,<ref n="124">124</ref>.</item>
           <item>Licie, <hi rend="i">Lisses (Seine-et-Oise, canton de Corbeil)</hi><ref n="116">116</ref>,<ref n="124">124</ref>.</item>
           <item>Limeri, <hi rend="i">Limery (Seine-et-Oise, commune de Soisy-sur-École)</hi><ref n="106">106</ref>.</item>
-          <pb n="223"/>
-          <item>Limolium, <hi rend="i">Limeuil-Brevannes (Seine-et-Oise, canton de Boissy-Saint-Léger)</hi><ref n="203">203</ref>.</item>
+          <item><pb n="223"/> Limolium, <hi rend="i">Limeuil-Brevannes (Seine-et-Oise, canton de Boissy-Saint-Léger)</hi><ref n="203">203</ref>.</item>
           <item>Locus Sanctus, Lieursaint, <hi rend="i">Lieusaint (Seine-et-Marne, canton de Brie-Comte-Robert)</hi><ref n="116">116</ref>,<ref n="135">135</ref>.</item>
           <item>Longuo Ponte, monachi de, <hi rend="i">Longpont (Seine-et-Oise, canton de Longjumeau)</hi><ref n="109">109</ref>.</item>
           <item>Lotarius, Sanctorum Sergii et Bacchi diaconus cardinalis<ref n="9">9</ref>.</item>
@@ -10314,8 +10298,7 @@
           <item>Matheus de Stampis, canonicus Sancti Exuperii<ref n="153">153</ref>.</item>
           <item>Mathildis, uxor domini de Torneello<ref n="158">158</ref>.</item>
           <item>— uxor Ferrici de Joiaco<ref n="79">79</ref>.</item>
-          <pb n="224"/>
-          <item>Maugarde (vinea de)<ref n="117">117</ref>,<ref n="118">118</ref>,<ref n="137">137</ref>,<ref n="138">138</ref>.</item>
+          <item><pb n="224"/> Maugarde (vinea de)<ref n="117">117</ref>,<ref n="118">118</ref>,<ref n="137">137</ref>,<ref n="138">138</ref>.</item>
           <item>Maugrinus, capellanus Sancti Exuperii<ref n="57">57</ref>,<ref n="58">58</ref>.</item>
           <item>Maupertuis (vinea de)<ref n="127">127</ref>.</item>
           <item>Mauricius, episcopus Parisiensis<ref n="7">7</ref>,<ref n="9">9</ref> à<ref n="14">14</ref>.</item>
@@ -10344,8 +10327,7 @@
           <item>Nanterius, canonicus Sancti Exuperii<ref n="17">17</ref>.</item>
           <item>Nanziacum, Johannes de Nanziaco<ref n="68">68</ref>.</item>
           <item>— nemus de Nanziaco<ref n="127">127</ref>.</item>
-          <pb n="225"/>
-          <item>Nicholaus, Sancte Marie in Cosmydin diaconus Cardinalis<ref n="9">9</ref>.</item>
+          <item><pb n="225"/> Nicholaus, Sancte Marie in Cosmydin diaconus Cardinalis<ref n="9">9</ref>.</item>
           <item>Nicholaus, episcopus Noviomensis<ref n="34">34</ref>,<ref n="35">35</ref>.</item>
           <item>Nicholaus, canonicus Parisiensis<ref n="10">10</ref><ref n="11">11</ref>,<ref n="12">12</ref>.</item>
           <item>Nicholaus d'Artois, clerc, notaire au Châtelet<ref n="198">198</ref>.</item>
@@ -10375,8 +10357,7 @@
           <item>Paganus, magister<ref n="154">154</ref>.</item>
           <item>Paganus Biselli<ref n="154">154</ref>.</item>
           <item>— Doelina ejus uxor<ref n="154">154</ref>.</item>
-          <pb n="226"/>
-          <item>Paganus de Soisiaco, miles<ref n="55">55</ref>,<ref n="56">56</ref>,<ref n="159">159</ref>,<ref n="164">164</ref>.</item>
+          <item><pb n="226"/> Paganus de Soisiaco, miles<ref n="55">55</ref>,<ref n="56">56</ref>,<ref n="159">159</ref>,<ref n="164">164</ref>.</item>
           <item>Paganns Menois<ref n="162">162</ref>.</item>
           <item>Pauca Curia, <hi rend="i">Paucourt (Loiret, canton de Montargis)</hi>.<ref n="181">181</ref>.</item>
           <item>Peretum, Perretum, Perreium, Pareium, <hi rend="i">Saint-Pierre-du-Perret (Seine-et-Oise, canton de Corbeil)</hi><ref n="60">60</ref>,<ref n="87">87</ref>,<ref n="88">88</ref>,<ref n="116">116</ref>,<ref n="144">144</ref>,<ref n="146">146</ref>,<ref n="149">149</ref>,<ref n="154">154</ref>.</item>
@@ -10418,8 +10399,7 @@
           <item>Petrus Le Courant, bourgeois de Corbeil, receveur de la Reine Clémence, prévôt de Corbeil<ref n="178">178</ref>,<ref n="200">200</ref>.</item>
           <item>Petrus Lemovicensis, canonicus<ref n="57">57</ref>,<ref n="58">58</ref>,<ref n="114">114</ref>.</item>
           <item>Petrus Rufus, canonicus Sancti Exuperii<ref n="24">24</ref>.</item>
-          <pb n="227"/>
-          <item>Philippus <num>I</num>, rex Francorum<ref n="2">2</ref>,<ref n="3">3</ref>,<ref n="5">5</ref>.</item>
+          <item><pb n="227"/> Philippus <num>I</num>, rex Francorum<ref n="2">2</ref>,<ref n="3">3</ref>,<ref n="5">5</ref>.</item>
           <item>Philippus <num>II</num> Augustus, rex Francorum<ref n="24">24</ref>,<ref n="48">48</ref>,<ref n="161">161</ref>,<ref n="165">165</ref>.</item>
           <item>Philippus <num>IV</num>, rex Francorum<ref n="175">175</ref>,<ref n="177">177</ref>,<ref n="181">181</ref>,<ref n="183">183</ref>,<ref n="186">186</ref>,<ref n="202">202</ref>.</item>
           <item>Philippus, abbas Sancti Exuperii<ref n="31">31</ref>,<ref n="49">49</ref>.</item>
@@ -10447,8 +10427,7 @@
           <item>Rabboldus, episcopus Noviomensis<ref n="3">3</ref>.</item>
           <item>Radulphus, comes<ref n="3">3</ref>.</item>
           <item>Radulphus, comes Viromanduorum, dapifer regis Ludovici <num>VII</num><ref n="31">31</ref>.</item>
-          <pb n="228"/>
-          <item>Radulphus, constabularius regis Philippi Augusti<ref n="53">53</ref>.</item>
+          <item><pb n="228"/> Radulphus, constabularius regis Philippi Augusti<ref n="53">53</ref>.</item>
           <item>Radulphus, capicerius Sancti Exuperii<ref n="151">151</ref>.</item>
           <item>Radulphus, presbiter in ecclesia Sancti Exuperii<ref n="43">43</ref>.</item>
           <item>Radulphus, presbiter, canonicus ecclesie Parisiensis<ref n="13">13</ref>.</item>
@@ -10490,8 +10469,7 @@
           <item>Robertus, decanus Senonensis, canonicus Sancti Exuperii<ref n="150">150</ref>,<ref n="161">161</ref>.</item>
           <item>Robertus, capellanus regine Adele<ref n="12">12</ref>,<ref n="46">46</ref>,<ref n="55">55</ref>.</item>
           <item>Robertus, filius Polmi<ref n="51">51</ref>.</item>
-          <pb n="229"/>
-          <item>Robertus, canonicus Beate Marie Corboliensis<ref n="63">63</ref>.</item>
+          <item><pb n="229"/> Robertus, canonicus Beate Marie Corboliensis<ref n="63">63</ref>.</item>
           <item>Robertus, capicerius Beate Marie Corboliensis<ref n="70">70</ref>.</item>
           <item>Robertus, presbiter de Manessiaco<ref n="63">63</ref>.</item>
           <item>Robertus, capellanus in ecclesia Beate Marie Corboliensis<ref n="78">78</ref>.</item>
@@ -10519,8 +10497,7 @@
           <item>Sevinus, canonicus<ref n="3">3</ref>.</item>
           <item>Sevinus, canonicus Sancti Exuperii<ref n="17">17</ref>,<ref n="18">18</ref>.</item>
           <item>Silvanectum, Silvanectensis ecclesia<ref n="34">34</ref>,<ref n="36">36</ref>.</item>
-          <pb n="230"/>
-          <item>Simon, canonicus Beate Marie Corboliensis<ref n="63">63</ref>.</item>
+          <item><pb n="230"/> Simon, canonicus Beate Marie Corboliensis<ref n="63">63</ref>.</item>
           <item>Simon, cantor Beate Marie Corboliensis<ref n="70">70</ref>.</item>
           <item>Simon, magister<ref n="18">18</ref>.</item>
           <item>Simon, puer<ref n="51">51</ref>.</item>
@@ -10551,8 +10528,7 @@
           <item>Theobaldus, presbiter de Pareto<ref n="60">60</ref>.</item>
           <item>Theobaldus Briart, miles<ref n="98">98</ref>.</item>
           <item>Theobaldus de Campo Rosato, custos nundinarum Sancti Egidii<ref n="68">68</ref>,<ref n="69">69</ref>.</item>
-          <pb n="231"/>
-          <item>Theobaldus de Limoges<ref n="137">137</ref>.</item>
+          <item><pb n="231"/> Theobaldus de Limoges<ref n="137">137</ref>.</item>
           <item>Theobaldus de Monte Morenci<ref n="4">4</ref>.</item>
           <item>Theobaldus de Moreto, miles<ref n="88">88</ref>,<ref n="90">90</ref>.</item>
           <item>— Mathildis, ejus uxor<ref n="90">90</ref>.</item>
@@ -10579,8 +10555,7 @@
           <item>Vadum Petrosum, <hi rend="i">Guipéreux (Seine-et-Oise, commune de Longpont)</hi><ref n="109">109</ref>,<ref n="150">150</ref>,<ref n="151">151</ref>,<ref n="153">153</ref>,<ref n="156">156</ref>,<ref n="159">159</ref>,<ref n="171">171</ref>.</item>
           <item>Valenton<ref n="93">93</ref>.</item>
           <item>Valles, Vallis, <hi rend="i">Vaux (Seine-et-Oise, commune d'Essonnes)</hi><ref n="65">65</ref>,<ref n="79">79</ref>,<ref n="116">116</ref>,<ref n="144">144</ref>,<ref n="169">169</ref>,<ref n="170">170</ref>.</item>
-          <pb n="232"/>
-          <item>Valles Sarnaii, <hi rend="i">les Vaux-de-Cernay (Seine-et-Oise, commune d'Auffargis)</hi><ref n="88">88</ref>.</item>
+          <item><pb n="232"/> Valles Sarnaii, <hi rend="i">les Vaux-de-Cernay (Seine-et-Oise, commune d'Auffargis)</hi><ref n="88">88</ref>.</item>
           <item>Varâtre, <hi rend="i">Varâtre (Seine-et-Oise, commune de Lieusaint)</hi>.<ref n="118">118</ref>,<ref n="134">134</ref>.</item>
           <item>Varenniis (Johannes Polins de, armiger)<ref n="110">110</ref>.</item>
           <item>Veranus (Sanctus), <hi rend="i">Saint-Vrain (Seine-et-Oise, canton d'Arpajon)</hi><ref n="92">92</ref>,<ref n="93">93</ref>.</item>
@@ -10604,16 +10579,14 @@
           <item>Wauterius, episcopus Meldensis<ref n="3">3</ref>.</item>
           <item>Wibertus, canonicus Sancti Exuperii<ref n="59">59</ref>.</item>
           <item>Wido Frederici<ref n="18">18</ref>.</item>
-          <pb n="233"/>
-          <item>Willelmus, precentor Sancti Exuperii<ref n="41">41</ref>,<ref n="43">43</ref>.</item>
+          <item><pb n="233"/> Willelmus, precentor Sancti Exuperii<ref n="41">41</ref>,<ref n="43">43</ref>.</item>
           <item>Willelmus de Veteri Corbolio<ref n="58">58</ref>.</item>
           <item>Yenvilla, <hi rend="i">Janville (Seine-et-Oise, commune d'Auvers-Saint-Georges)</hi><ref n="129">129</ref>.</item>
         </list>
       </div>
       <div type="table" n="2">
-        <pb n="234"/>
-        <head>Table générale</head>
-        <list>
+        <head><pb n="234"/> Table générale</head>
+        <list type="1">
           <item>PRÉFACE<ref n="V">V</ref>.</item>
           <item>INTRODUCTION<ref n="VII">VII</ref>.</item>
           <item>§ 1. <hi rend="sc">Le Manuscrit</hi>. — Sa description, — son âge, — sa composition, — sa conservation, — plan de notre édition, — bibliographie<ref n="VII">VII</ref>.</item>
@@ -10623,10 +10596,9 @@
         </list>
       </div>
       <div type="table" n="1">
-        <pb n="235"/>
-        <head>CARTULAIRE</head>
-        <note id="note61" n="*">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>
-        <list>
+        <head><pb n="235"/> CARTULAIRE</head>
+        <note xml:id="note61" n="*">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>
+        <list type="1">
           <item>1<hi rend="sup">o</hi> Privilegium claustri a Bucardo comite concessum (1071)<ref n="VI recto 1">VI recto 1</ref>.</item>
           <item>2<hi rend="sup">o</hi> Privilegium Ludovici regis Francorum (1118)<ref n="VII verso 4">VII verso 4</ref>.</item>
           <item>3<hi rend="sup">o</hi> Confirmatio pape Celestini super possessionibus ecclesie Beati Exuperii (1196)<ref n="XI verso 6">XI verso 6</ref>.</item>
@@ -10649,8 +10621,7 @@
           <item>20<hi rend="sup">o</hi> Privilegium Lucii <num>III</num> de eadem prebenda (antérieur à 1184-1185)<ref n="deest 33">deest 33</ref>.</item>
           <item>21<hi rend="sup">o</hi> De priore de Campis (1233)<ref n="deest 34">deest 34</ref>.</item>
           <item>22<hi rend="sup">o</hi> Item de eodem (1233)<ref n="XIX recto 35">XIX recto 35</ref>.</item>
-          <pb n="236"/>
-          <item>23<hi rend="sup">o</hi> De prebenda Sancti Exuperii (1233)<ref n="deest 38">deest 38</ref>.</item>
+          <item><pb n="236"/> 23<hi rend="sup">o</hi> De prebenda Sancti Exuperii (1233)<ref n="deest 38">deest 38</ref>.</item>
           <item>24<hi rend="sup">o</hi> Juramentum quod prebendatus Beate Marie de Campis in sua nova receptione prestare tenetur<ref n="XXXIX recto 39">XXXIX recto 39</ref>.</item>
           <item>25<hi rend="sup">o</hi> Diploma Henrici, fratris Ludovici regis, pro monasterio Sancti Victoris (1146)<ref n="deest 39">deest 39</ref>.</item>
           <item>26<hi rend="sup">o</hi> Diploma Ludovici regis de eodem (1146)<ref n="deest 40">deest 40</ref>.</item>
@@ -10685,8 +10656,7 @@
           <item>55<hi rend="sup">o</hi> De anniversario <abbr>G.</abbr> de Breia (1219)<ref n="XXX recto 65">XXX recto 65</ref>.</item>
           <item>56<hi rend="sup">o</hi> Littera de presbitero de Gineville (1221)<ref n="XVIII verso 66">XVIII verso 66</ref>.</item>
           <item>57<hi rend="sup">o</hi> Littera de duabus peciis vinearum (1224)<ref n="XXX verso 66">XXX verso 66</ref>.</item>
-          <pb n="237"/>
-          <item>58<hi rend="sup">o</hi> Littera de censu cujusdam domus site juxta poncellum Beati Exuperii (1224)<ref n="XXVI recto 67">XXVI recto 67</ref>.</item>
+          <item><pb n="237"/> 58<hi rend="sup">o</hi> Littera de censu cujusdam domus site juxta poncellum Beati Exuperii (1224)<ref n="XXVI recto 67">XXVI recto 67</ref>.</item>
           <item>59<hi rend="sup">o</hi> Littera de quodam nemore (1226)<ref n="XVIII verso 67">XVIII verso 67</ref>.</item>
           <item>60<hi rend="sup">o</hi> Littera de nundinis Sancti Egidii contra Theobaldum de Campo Rosato (1228)<ref n="deest 68">deest 68</ref>.</item>
           <item>61<hi rend="sup">o</hi> Littera de concessione cujusdam domus in claustro site (1230)<ref n="deest 69">deest 69</ref>.</item>
@@ -10717,8 +10687,7 @@
           <item>86<hi rend="sup">o</hi> Littera de emptione cujusdam domus site in Magno Vico ad opus prebende (1243)<ref n="deest 90">deest 90</ref>.</item>
           <item>87<hi rend="sup">o</hi> Littera de censu de Sacro-Portu, Cesson et Savigniaco (1244)<ref n="XXIV verso 91">XXIV verso 91</ref>.</item>
           <item>88<hi rend="sup">o</hi> Littera de censu de Lardi (1245)<ref n="XXXI verso 92">XXXI verso 92</ref>.</item>
-          <pb n="238"/>
-          <item>89<hi rend="sup">o</hi> Littera de domo quadam sita in Judearia Corbolii, quam legavit Gaufridus de Seintriaco (1248)<ref n="XXXIII recto 93">XXXIII recto 93</ref>.</item>
+          <item><pb n="238"/> 89<hi rend="sup">o</hi> Littera de domo quadam sita in Judearia Corbolii, quam legavit Gaufridus de Seintriaco (1248)<ref n="XXXIII recto 93">XXXIII recto 93</ref>.</item>
           <item>90<hi rend="sup">o</hi> Littera de legato Johannis de Bucornu (1248)<ref n="deest 94">deest 94</ref>.</item>
           <item>91<hi rend="sup">o</hi> Littera de legato Ade de Moreto (1248)<ref n="XXXIII verso 94">XXXIII verso 94</ref>.</item>
           <item>92<hi rend="sup">o</hi> Littera de eodem (1248)<ref n="XXXIV recto 95">XXXIV recto 95</ref>.</item>
@@ -10767,6 +10736,5 @@
         </list>
       </div>
     </back>
-    -->
   </text>
 </TEI>
