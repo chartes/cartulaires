@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Paris-S-Merri">
   <teiHeader>
     <fileDesc>
@@ -5309,11 +5309,10 @@
     <!-- [FG]
       <back>
       <div type="indexnominum" n="1">
-Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
-Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé
-        <pb n="249"/>
-        <head>Index alphabetique</head>
-        <list>
+        <note>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
+          Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé</note>
+        <head><pb n="249"/> Index alphabetique</head>
+        <list type="index">
           <item>Aales. Voy. Alix.</item>
           <item>Ableiges (Jean d'),<ref n="178">178</ref>,<ref n="185">185</ref>,<ref n="229">229</ref>,<ref n="237">237</ref>,<ref n="244">244</ref>.</item>
           <item>Ableiges (Pierre d'),<ref n="212">212</ref>.</item>
@@ -5390,8 +5389,7 @@ Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé
           <item>Ameline de Rosay,<ref n="171">171</ref>,<ref n="220">220</ref>.</item>
           <item>Amicia, abbatissa Sancti Antonii,<ref n="128">128</ref>,<ref n="140">140</ref>,<ref n="144">144</ref>.</item>
           <item>Amiens (Adam d'),<ref n="174">174</ref>,<ref n="198">198</ref>,<ref n="227">227</ref>,<ref n="235">235</ref>,<ref n="242">242</ref>.</item>
-          <pb n="250"/>
-          <item>Ancel Bonnefille,<ref n="204">204</ref>.</item>
+          <item><pb n="250"/> Ancel Bonnefille,<ref n="204">204</ref>.</item>
           <item>Ancel de Bussy,<ref n="167">167</ref>,<ref n="168">168</ref>.</item>
           <item>Ancel de Morgneval,<ref n="179">179</ref>,<ref n="186">186</ref>,<ref n="207">207</ref>,<ref n="229">229</ref>,<ref n="237">237</ref>,<ref n="244">244</ref>.</item>
           <item>Ancelet de la Halle,<ref n="192">192</ref>,<ref n="198">198</ref>,<ref n="225">225</ref>,<ref n="234">234</ref>,<ref n="241">241</ref>.</item>
@@ -7569,6 +7567,6 @@ Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé
         </list>
       </div>
     </back>
-    -->
+     -->
   </text>
 </TEI>

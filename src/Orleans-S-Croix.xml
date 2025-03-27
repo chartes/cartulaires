@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Orleans-S-Croix">
   <teiHeader>
     <fileDesc>
@@ -30008,13 +30008,10 @@
       </group>
     </group>
     <!--
-    <back>
+      <back>
       <div type="table" n="1">
-        <pb n="545"/>
-        <head>
-          <hi rend="b">Table alphabétique</hi>
-        </head>
-        <list>
+        <head><pb n="545"/> <hi rend="b">Table alphabétique</hi></head>
+        <list type="index">
           <item>A. decanus Meldensis, <abbr>pp.</abbr><ref n="265">265</ref>,<ref n="269">269</ref>.</item>
           <item>Aalardus, <abbr>p.</abbr><ref n="35">35</ref>.</item>
           <item>Aalardus Aviardi, <abbr>p.</abbr><ref n="528">528</ref>.</item>
@@ -32824,11 +32821,8 @@
         </list>
       </div>
       <div type="table" n="2">
-        <pb n="610"/>
-        <head>
-          <hi rend="b">Table des matières</hi>
-        </head>
-        <list>
+        <head><pb n="610"/> <hi rend="b">Table des matières</hi></head>
+        <list type="o">
           <item><hi rend="sc">Avant-propos</hi>.<ref n="I">I</ref></item>
           <item><hi rend="sc">Introduction</hi> :</item>
           <item>I. Les chartes et les cartulaires de Sainte-Croix.<ref n="IV">IV</ref></item>
@@ -33082,7 +33076,7 @@
             <cell>LXI</cell>
           </row>
         </table>
-        <list>
+        <list type="o">
           <item>I. — 1129. Orléans. — Exemption de cens accordée par Jean <num>II</num>, évêque d'Orléans, en faveur d'une maison appartenant à Pierre, chapelain du roi.<ref n="1">1</ref></item>
           <item>II. — 1127. Orléans. — Jean <num>II</num>, évêque d'Orléans, donne au chapitre<pb n="611"/> une place située dans sa cour avec licence de percer une porte dans le mur oriental.<ref n="3">3</ref></item>
           <item>III. — 1092, 30 novembre. Beauvais. — Foulques, évêque de Beauvais, obtient de Lancelin le jeune l'abandon de ses prétentions sur les hommes de Sainte-Croix, pour lesquelles son père Lancelin avait déjà fait amende honorable.<ref n="4">4</ref></item>
