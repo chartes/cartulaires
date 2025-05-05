@@ -1,7 +1,9 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
---><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Leu-d-Esserent">
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Leu-d-Esserent">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12781,7 +12783,7 @@
         </text>
       </group>
     </group>
-    <back>
+    <!--<back>
       <div type="notes">
         <note xml:id="note_0001" n="1">Les titres de ce genre ont été ajoutés par les clercs du
           Prieuré. Leur rédaction, souvent vague ou ambiguë, n'est pas sans pièges.</note>
@@ -15861,6 +15863,6 @@
           <item><hi rend="sc">Yvon</hi>, écuyer de Bellefontaine, <ref>197.</ref></item>
         </list>
       </div> 
-    </back>
+    </back>-->
   </text>
 </TEI>
