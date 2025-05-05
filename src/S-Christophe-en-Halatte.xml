@@ -1,13 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
 * Réfléchir à quoi faire avec <titlePart type="title" xml:lang="lat">
--->
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Christophe-en-Halatte">
+--><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Christophe-en-Halatte">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -56,10 +51,7 @@
         <availability status="restricted">
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-              (<ref
-              target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
-              >L341-1</ref>), selon les termes de la licence Creative Commons : « <ref
-              target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+              (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
               d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
             et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
@@ -103,20 +95,20 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
+              <citeData property="dc:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -140,8 +132,7 @@
         <p>Carte de situation (Atlas de Cassini)</p>
         <p>Cartulaire factice, compilé à partir des copies XVIII<hi rend="sup">e</hi> siècle du
           chanoine Afforty.</p>
-        <p>Total des actes édités : 56 (3 du XI<hi rend="sup">e</hi> siècle, 1 du XII<hi rend="sup"
-            >e</hi> siècle, 52 du XIII<hi rend="sup">e</hi> siècle).</p>
+        <p>Total des actes édités : 56 (3 du XI<hi rend="sup">e</hi> siècle, 1 du XII<hi rend="sup">e</hi> siècle, 52 du XIII<hi rend="sup">e</hi> siècle).</p>
       </argument>
       <byline>Notice préparée par Stéphane Reecht (juin 2007).</byline>
 
@@ -153,8 +144,7 @@
             1061, lorsque le roi de France Philippe I<hi rend="sup">er</hi> confirme la dotation
             faite par son chambrier, Waleran, à un groupe de religieux vivant au milieu de la forêt
             de Halatte, au nord de Senlis, transformant ainsi leur « <hi rend="i">abbatiola</hi> »
-            en couvent (éd. critique : Maurice Prou, <hi rend="i">Recueil des actes de Philippe I<hi
-                rend="sup">er</hi>…</hi>, n<hi rend="sup">o</hi> 9). L’acte, qui ne nous est connu
+            en couvent (éd. critique : Maurice Prou, <hi rend="i">Recueil des actes de Philippe I<hi rend="sup">er</hi>…</hi>, n<hi rend="sup">o</hi> 9). L’acte, qui ne nous est connu
             aujourd'hui que par un vidimus de 1326, est le premier à faire mention de ce lieu et
             d’une présence de religieux dans cette forêt. En 1083, Waleran rattache l’établissement
             à l’abbaye de La-Charité-sur-Loire, où l’un de ses fils est peut-être moine ; comme
@@ -174,8 +164,7 @@
             dirigé par des personnes venues d’horizons géographiques et sociologiques divers, sans
             cesser de ne garder qu’un rayon d’activité local.</p>
           <p>L’existence du prieuré est troublée principalement par les difficultés de la fin du
-                <num>xiv<hi rend="sup">e</hi></num> et du début du <num>xv<hi rend="sup"
-              >e</hi></num> siècles, par les guerres de religion et par son endettement pour le
+                <num>xiv<hi rend="sup">e</hi></num> et du début du <num>xv<hi rend="sup">e</hi></num> siècles, par les guerres de religion et par son endettement pour le
             paiement du don gratuit du clergé. En juillet 1791, alors que le prieur est en exil, le
             prieuré est vendu avec ses terres ; il ne sera jamais réaffecté à la vie monastique. Il
             n’en reste aujourd'hui qu’une partie de l’église, située sur une petite butte en pleine
@@ -222,8 +211,7 @@
           départementales de l’Oise conservent enfin un plan d’intendance pour Fleurines et
           Saint-Christophe : 1 C 235.</p>
         <p>L’IRHT quant à lui ne recense rien de plus que cette édition pour ce prieuré (base en
-          ligne CartulR : <ref target="http://www.cn-telma.fr/cartulR/"
-            >http://www.cn-telma.fr/cartulR/</ref>).</p>
+          ligne CartulR : <ref target="http://www.cn-telma.fr/cartulR/">http://www.cn-telma.fr/cartulR/</ref>).</p>
       </div>
       <div xml:id="S-Christophe-en-Halatte_edition" subtype="article">
         <head>L’édition</head>
@@ -361,8 +349,7 @@
               <term type="nature" key="act"/>
             </index>
             <head>Privilegium Philippi I regis pro abbatiola Sancti Christofori in Halata. Ex
-              schedis dom. de Nulli, canonici Bellovacensis<ref type="note" target="#p3_fn1"
-              />.</head>
+              schedis dom. de Nulli, canonici Bellovacensis<ref type="note" target="#p3_fn1"/>.</head>
             <argument>
               <p>Philippe I confirme les donations faites par Waleran à l'abbaye de St-Christophe,
                 et y ajoute lui-même quelques donations et privilèges.</p>
@@ -371,9 +358,7 @@
               <listWit type="copie">
                 <witness n="B">Collationné aux Archives de l'Oise sur le Vidimus de l'an
                   1326.</witness>
-                <witness n="C"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%20100-199/B606126201_afforty_T0001_00087.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome I, p. 155. </ref></witness>
+                <witness n="C"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%20100-199/B606126201_afforty_T0001_00087.jpg">Bibl. mun. de Senlis, coll. Afforty, tome I, p. 155. </ref></witness>
                 <witness n="D">Diocèse d'Auxerre, ordre de Cluny: chroniques de N.-D. de la
                   Charité-sur-Loire, mss. p. 730.</witness>
               </listWit>
@@ -386,8 +371,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>In nomine sancte et individue Trinitatis, ego <rs type="person"
-                      ><persName>Philippus</persName>
+                <s>In nomine sancte et individue Trinitatis, ego <rs type="person"><persName>Philippus</persName>
                     <seg type="theo">gratia Dei</seg>
                     <persName>Francorum</persName> rex</rs>.</s>
                 <s>Cum status sacre religionis maxime fulciatur multimodis bonorum studiis, magis
@@ -410,15 +394,13 @@
                   aliquam exigere, sed perpetualiter absque aliqua inquietudine vel contradictione
                   sub nomine immunitatis permaneat.</s>
                 <s>Dedit autem supradictus miles ipsi ecclesie de rebus sue proprietatis, ipsam
-                  scilicet villam nomine <pb n="4"/><persName>Hermene</persName>,<ref type="note"
-                    target="#p4_fn1"/>, ubi ea ecclesia sita est, et omnes consuetudines que sibi in
+                  scilicet villam nomine <pb n="4"/><persName>Hermene</persName>,<ref type="note" target="#p4_fn1"/>, ubi ea ecclesia sita est, et omnes consuetudines que sibi in
                   eadem villa debebantur, et hospites, et servos et ancillas, et clausos vinearum,
                   et terras arabiles, et prata ; silvam quoque eidem ville adjacentem, et milites de
                   eadem villa beneficia tenentes ; villam similiter nuncupatam
                     <placeName>Florinas</placeName>, cum omnibus ad eam pertinentibus ; in villa
                   quoque <placeName>Pomponensi</placeName> partem altaris <placeName>sancti
-                    Petri</placeName> ecclesie que dicitur <placeName>Cella</placeName><ref
-                    type="note" target="#p4_fn2"/>, cum sua decima et cum censu <num>viginti</num>
+                    Petri</placeName> ecclesie que dicitur <placeName>Cella</placeName><ref type="note" target="#p4_fn2"/>, cum sua decima et cum censu <num>viginti</num>
                   solidorum, et servos et ancillas sui juris, clausos quoque vinearum, et terram
                   arabilem, et prata et adjacentem silvam ; juxta suburbium
                     <placeName>Clarimontis</placeName>, in villa que dicitur
@@ -430,8 +412,7 @@
                   <placeName>Pontis</placeName>, ancillam quamdam nomine
                     <persName>Richildem</persName>, cum infantibus suis.</s>
                 <s>In civitate vero <placeName>Silvanectensi</placeName>, unum clausum vinearum et
-                  unum furnum ; in villa etiam <placeName>Aminiacensi</placeName><ref type="note"
-                    target="#p4_fn5"/>, unum hospitem et terram arabilem.</s>
+                  unum furnum ; in villa etiam <placeName>Aminiacensi</placeName><ref type="note" target="#p4_fn5"/>, unum hospitem et terram arabilem.</s>
                 <s>In territorio <placeName>Meldensi</placeName> villam que vocatur
                     <placeName>Sineverie</placeName><ref type="note" target="#p4_fn6"/>, omne hoc
                   quod <persName>Walterus</persName> pater suus ibi in proprio jure tenuerat.</s>
@@ -442,20 +423,16 @@
                     <persName>Gualerannus</persName> dedit eidem abbatie duas partes de decima
                   ejusdem ecclesie <placeName>sancti Christofori</placeName>, quam sub manu firma
                   tenebat de canonicis <placeName>sancte Marie Silvanect</placeName>.</s>
-                <s>Ecclesie, annuente <rs type="person"><persName>Feodando</persName><ref
-                      type="note" target="#p4_fn7"/> episcopo</rs> cum clericis ad quos ipsa decima
+                <s>Ecclesie, annuente <rs type="person"><persName>Feodando</persName><ref type="note" target="#p4_fn7"/> episcopo</rs> cum clericis ad quos ipsa decima
                   pertinebat.</s>
                 <s>Ut igitur hec omnia inconvulsa et imperpetuum rata permaneant, petentibus
                   supradictis fratribus, <persName>Gualeranno</persName> scilicet et aliis
-                  fratribus, manu nostra subterfirmavimus et principimus<ref type="note"
-                    target="#p4_fn8"/> nostris firmandam tradidimus.</s>
+                  fratribus, manu nostra subterfirmavimus et principimus<ref type="note" target="#p4_fn8"/> nostris firmandam tradidimus.</s>
                 <s>Si quis vero, quod absit, hoc preceptum violare presumpserit, centum libras auri
                   coactus regio fisco reddat.</s>
                 <s>Actum <placeName>Compendio</placeName>
                   <date>anno incarnationis Domini nostri <persName>Jhesu Christi</persName>
-                    millesimo sexagesimo primo indictione <num><hi rend="sc">xiiii</hi><hi
-                        rend="sup">a</hi></num> regnante <rs type="person"
-                        ><persName>Philippo</persName> rege</rs> anno primo</date>.</s>
+                    millesimo sexagesimo primo indictione <num><hi rend="sc">xiiii</hi><hi rend="sup">a</hi></num> regnante <rs type="person"><persName>Philippo</persName> rege</rs> anno primo</date>.</s>
                 <s>Datum <date>pridie calendas Maii</date>...</s>
                 <s><rs type="person"><persName>Balduinus</persName> cancellarius</rs> scripsit.</s>
               </p>
@@ -470,15 +447,12 @@
                 chanoine, absorbé par le travail immense qu'il s'était imposé, lisait quelquefois un
                 peu vite, et laissait ainsi échapper des erreurs que souvent d'ailleurs il corrigea
                 dans la seconde série de ses manuscrits. Peut-être aussi, est-ce M. <hi rend="i">de
-                  Nulli</hi> qui leur transmit cette copie insérée dans les preuves du <hi rend="i"
-                  >Gallia Christiana.</hi></note>
+                  Nulli</hi> qui leur transmit cette copie insérée dans les preuves du <hi rend="i">Gallia Christiana.</hi></note>
               <note xml:id="p4_fn2">Montcel (?).</note>
               <note xml:id="p4_fn3">Rotheleu, écart de Breuil-le-Vert.</note>
               <note xml:id="p4_fn4">Reus, Rieux. (Gall. Christ. : <hi rend="i">Rens</hi>).</note>
-              <note xml:id="p4_fn5">Amigny, village de l'Aisne, près de Chauny. (Gall. Christ. : <hi
-                  rend="i">Amimaten</hi>)</note>
-              <note xml:id="p4_fn6">Sineverie, Sennevières. (Gall. Christ. : <hi rend="i"
-                  >Sincueric</hi>.</note>
+              <note xml:id="p4_fn5">Amigny, village de l'Aisne, près de Chauny. (Gall. Christ. : <hi rend="i">Amimaten</hi>)</note>
+              <note xml:id="p4_fn6">Sineverie, Sennevières. (Gall. Christ. : <hi rend="i">Sincueric</hi>.</note>
               <note xml:id="p4_fn7">Frolland, <num><hi rend="sc">ii</hi><hi rend="sup">e</hi></num>
                 du nom.</note>
               <note xml:id="p4_fn8"><hi rend="i">Principibus</hi> (?)</note>
@@ -502,9 +476,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5289, 1er cahier AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5289, 1er cahier AAAA, p.
                     2.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -536,8 +508,7 @@
                   sancte regule tramite paulatim deviando redactam Deo et <placeName>Sancte Marie de
                     Caritate</placeName> cum cunctis sibi pertinentibus absque retentione deposito
                   abbatie nomine sub Prioratus jure perpetualiter trado quatinus Dominus
-                    <persName>Gerardus</persName> ejusdem loci id est de <rs type="person"
-                      ><placeName>Caritate</placeName> Prior</rs> de suis quosdam illuc transmittens
+                    <persName>Gerardus</persName> ejusdem loci id est de <rs type="person"><placeName>Caritate</placeName> Prior</rs> de suis quosdam illuc transmittens
                   normam regularis vite statumque sacri ordinis et
                   <placeName>Cluniacen</placeName>.</s>
                 <s>religionis vigorem ibidem instaurare satagat.</s>
@@ -548,9 +519,7 @@
                 <s>Cujus rei testes habentur ejus filius <persName>Archebaldus</persName> qui hec
                   laudavit, <rs type="person"><persName>Rainaldus</persName>, dapifer ejus</rs>,
                     <persName>Richardus de Petrafonte</persName>.</s>
-                <s>Ex nostris <persName>Radulphus de Bosco</persName>, <rs type="person"
-                      ><persName>Segaldus</persName> prepositus</rs>, <rs type="person"
-                      ><persName>Warinus</persName>, sartor</rs>, <persName>Ebrardus de
+                <s>Ex nostris <persName>Radulphus de Bosco</persName>, <rs type="person"><persName>Segaldus</persName> prepositus</rs>, <rs type="person"><persName>Warinus</persName>, sartor</rs>, <persName>Ebrardus de
                     Duno</persName>, <rs type="person"><persName>Petrus</persName> frater
                       <persName>Archebaldi</persName></rs>, <persName>Brunno de
                   Sancero</persName>.</s>
@@ -579,9 +548,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5306 (79).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5306 (79).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -601,11 +568,8 @@
                   laboremus.</s>
                 <s>Notum sit igitur tam presentie quam posteritati quod Ego
                     <persName>Walterus</persName> non ex merito sed ex vocante Deo
-                    <placeName>Meldensis</placeName> Episcopus petitione <rs type="person"
-                      ><persName>Waleranni</persName> camerarii</rs> necnon <rs type="person"
-                      ><persName>Walcoti</persName> abbatis</rs> anime sue saluti precaventis in
-                  futurum salvo Jure ecclesiastico, synodo et circada<ref type="note"
-                    target="#p6_fn1"/> ceterisque consuetudinibus Ecclesie exceptis, altare
+                    <placeName>Meldensis</placeName> Episcopus petitione <rs type="person"><persName>Waleranni</persName> camerarii</rs> necnon <rs type="person"><persName>Walcoti</persName> abbatis</rs> anime sue saluti precaventis in
+                  futurum salvo Jure ecclesiastico, synodo et circada<ref type="note" target="#p6_fn1"/> ceterisque consuetudinibus Ecclesie exceptis, altare
                     <placeName>Latiniaci</placeName> scilicet sicci personali more Ecclesie
                     <placeName>Sancti Christofori</placeName> concedo, tali conditione ut persona
                   mortua pretio decem solidorum ipsi Episcopo impenso representetur ex altera,
@@ -691,9 +655,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047_jpg_orig.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5307 [80].</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047_jpg_orig.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5307 [80].</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -705,8 +667,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>In nomine sancte et Individue Trinitatis.</s>
-                <s>Notum sit universis tam futuris quam presentibus quod ego <rs type="person"
-                      ><persName>Radulfus</persName>
+                <s>Notum sit universis tam futuris quam presentibus quod ego <rs type="person"><persName>Radulfus</persName>
                     <seg type="theo">Dei gratia</seg> comes <placeName>Claromontensis</placeName> et
                     Dominus <placeName>Brituliensis</placeName></rs> intuitu Dei et eterne salutis
                   Ecclesiam <placeName>Sancti Christofori de Halatis</placeName> a traverso sive
@@ -757,9 +718,7 @@
           <back>
             <div type="notes">
               <note xml:id="p7_fn1">Ce mot ne se trouve ni dans du Cange, ni dans Maigne d'Arnis.
-                Serait-ce le diminutif altéré d'<hi rend="i">annulus, anel</hi> ou <hi rend="i"
-                  >annel</hi> ? On pourrait aussi remplacer <hi rend="i">Agnellum</hi> par <hi
-                  rend="i">Signetum,</hi> petit sceau, seing, signature.</note>
+                Serait-ce le diminutif altéré d'<hi rend="i">annulus, anel</hi> ou <hi rend="i">annel</hi> ? On pourrait aussi remplacer <hi rend="i">Agnellum</hi> par <hi rend="i">Signetum,</hi> petit sceau, seing, signature.</note>
             </div>
           </back>
         </text>
@@ -779,9 +738,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, p. 5289 (62), I cahier AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038.jpg">Bibl. mun. de Senlis, coll. Afforty, p. 5289 (62), I cahier AAAA, p.
                   10.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -796,8 +753,7 @@
                 <s>Ego <rs type="person"><persName>Garinus</persName>
                     <seg type="theo">Dei gratia</seg>
                     <placeName>Silvanectensis</placeName> Episcopus</rs> notum (facio) universis
-                  presentes litteras inspecturis quod <rs type="person"
-                      ><persName>Regnaldus</persName> Miles de <placeName>Mantegni</placeName></rs>
+                  presentes litteras inspecturis quod <rs type="person"><persName>Regnaldus</persName> Miles de <placeName>Mantegni</placeName></rs>
                   in presentia nostra constitutus dedit in eleemosinam Ecclesie <placeName>Sancti
                     Christofori</placeName>
                   <abbr>ob</abbr> remedium anime sue et Patris et Matris ejusdem quamdam decimam
@@ -828,9 +784,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, 5290 (63). (Ibid. p. 10).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html">Bibl. mun. de Senlis, coll. Afforty, 5290 (63). (Ibid. p. 10).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -855,9 +809,7 @@
               </p>
               <p>
                 <s>Actum apud <placeName>Sanquez</placeName>
-                  <date>anno gratie <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc"
-                        >cc</hi><hi rend="sup">o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi><hi
-                        rend="sc">x</hi><hi rend="sup">o</hi></num> mense Octobri</date>.</s>
+                  <date>anno gratie <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi><hi rend="sc">x</hi><hi rend="sup">o</hi></num> mense Octobri</date>.</s>
                 <s>Datum per manum Terrici Cancellarii mei.</s>
               </p>
             </div>
@@ -879,9 +831,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5290 (63).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5290 (63).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -929,9 +879,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5290 (63).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00038_jpg_orig.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5290 (63).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -945,13 +893,11 @@
                 <s><rs type="person"><persName>Guido</persName> Buticularius
                       <placeName>Silvanectensis</placeName></rs> omnibus ad quos presens scriptum
                   pervenerit salutem in Domino.</s>
-                <s>Noverit universitas vestra, quod nos, donationem quam fecit <rs type="person"
-                      ><persName>Reginaldus</persName> Miles de
+                <s>Noverit universitas vestra, quod nos, donationem quam fecit <rs type="person"><persName>Reginaldus</persName> Miles de
                     <placeName>Monceniaco</placeName></rs>, de decima de
                     <placeName>Balaniaco</placeName>, que de nostro movebat feodo, monachis et
                   Ecclesie <placeName>Sancti Christofori de Halapes</placeName> et concessionem
-                  etiam quam super eadem decima fecit eisdem <rs type="person"
-                      ><persName>Bisendus</persName> miles de <placeName>Forferi</placeName></rs>
+                  etiam quam super eadem decima fecit eisdem <rs type="person"><persName>Bisendus</persName> miles de <placeName>Forferi</placeName></rs>
                   sicut in litteris Domini Episcopi <placeName>Silvanectensis</placeName>, et
                   ejusdem episcopi officialis plenius continetur, gratam habemus atque ratam, et
                   quidquid juris in memorata habemus decima, dictis monachis et Ecclesie
@@ -982,9 +928,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5308 (81).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5308 (81).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1034,9 +978,7 @@
                 <witness n="A">Collationné sur l'original aux archives de l'Oise.</witness>
               </listWit>
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00038.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5290-91 (63 - 64).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00038.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5290-91 (63 - 64).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1049,8 +991,7 @@
               <p>
                 <s>Ego <rs type="person">frater <persName>Stephanus</persName>, humilis prior</rs>,
                   totusque conventus <placeName>beate Marie Caritatensis</placeName>, notum facimus
-                  presentibus pariter et futuris quod cum contencio verteretur inter <rs
-                    type="person">venerabilem fratrem nostrum <persName>Nicolaum</persName>, priorem
+                  presentibus pariter et futuris quod cum contencio verteretur inter <rs type="person">venerabilem fratrem nostrum <persName>Nicolaum</persName>, priorem
                         <placeName><abbr>Sti</abbr> Christofori de Halapes</placeName></rs> et
                   monacos ejusdem loci, ex una parte, et <persName>Fochaudum de Balegni</persName>,
                     <rs type="person"><persName>Hememardem</persName> ejus uxorem</rs> et heredes
@@ -1065,8 +1006,7 @@
                   que tendit ab urbe <placeName>Silvanectensi</placeName> ad
                     <placeName>Montes</placeName><ref type="note" target="#p9_fn1"/>, reddent
                   annuatim de censu, unumquodque arpentum unam minam et dimidium bladi ad mensuram
-                    <placeName>Silvanectensem</placeName>, medietatem ibernagii<ref type="note"
-                    target="#p9_fn2"/> et medietatem avene.</s>
+                    <placeName>Silvanectensem</placeName>, medietatem ibernagii<ref type="note" target="#p9_fn2"/> et medietatem avene.</s>
                 <s>Alie vero terre que sunt inter chiminum de <placeName>Montibus</placeName> et
                   aquam de <placeName>Villemeintrie</placeName>, reddent similiter pro unoquoque
                   arpento unam minam, medietatem ibernagii et aliam avene.</s>
@@ -1097,8 +1037,7 @@
                 <s>Illa vero que debet quartam partem mine reddet solummodo de venditione
                     <num>tres</num> denarios et ita habebitur de omnibus terris censive nominate,
                   considerata quantitate venditionis et emptionis.</s>
-                <s>Venditiones vero per majorem quem dicti <persName>Fochandus</persName>, <rs
-                    type="person"><persName>Hememardis</persName> ejus uxor</rs> et filii
+                <s>Venditiones vero per majorem quem dicti <persName>Fochandus</persName>, <rs type="person"><persName>Hememardis</persName> ejus uxor</rs> et filii
                     <persName>Ebrardi</persName> majoris et eorum heredes instituent apud
                     <placeName>Villemeintrie</placeName> vel infra quam voluerint de parrochiis
                     <placeName>silvanectensibus</placeName> et per ipsorum majorem emtor
@@ -1110,8 +1049,7 @@
                   donec predicta modiacio cum emenda septem solidorum et dimidium parisiensium
                   integraliter fuerit persoluta.</s>
                 <s>Et si aliquis deficeret in solutione censive nominate, dicti
-                    <persName>Fochandus</persName>, <rs type="person"
-                      ><persName>Hememardis</persName> ejus uxor</rs> et filii
+                    <persName>Fochandus</persName>, <rs type="person"><persName>Hememardis</persName> ejus uxor</rs> et filii
                     <persName>Ebrardi</persName> majoris de <placeName>Villemeintrie</placeName> vel
                   eorum heredes post ipsorum obitum partem censive que deficeret in solucione in
                   manu sua detineret et prior et monachi memorati eisdem tenebuntur garantire.</s>
@@ -1158,9 +1096,7 @@
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Collationné aux Arch. dép. Oise sur une copie récente.</witness>
-                <witness n="C"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5291 (64).</ref></witness>
+                <witness n="C"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5291 (64).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1176,9 +1112,7 @@
                   inspecturis, salutem in Domino.</s>
               </p>
               <p>
-                <s>Noveritis quod <persName>foucaldus de Balagny</persName> et <rs type="person"
-                      ><persName>ermengardis</persName> uxor ejus</rs>, et heredes <rs type="person"
-                      ><persName>Ebrardi</persName>, majoris de
+                <s>Noveritis quod <persName>foucaldus de Balagny</persName> et <rs type="person"><persName>ermengardis</persName> uxor ejus</rs>, et heredes <rs type="person"><persName>Ebrardi</persName>, majoris de
                     <placeName>Villametria</placeName></rs>, coram nobis in jure presentia
                   firmaverunt tenendam compositionem illam quam fecerunt cum Priore et monachis
                       <placeName><abbr>Sti</abbr>Christofori de <pb n="11"/> Hallata</placeName>,
@@ -1214,11 +1148,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00043.html"
-                    >tome X, 5300 - 5301</ref>, 73 et <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2015/Pages%20780-936/B606126201_afforty_T0015_00438.jpg"
-                    >XV, 910,</ref>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00043.html">tome X, 5300 - 5301</ref>, 73 et <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2015/Pages%20780-936/B606126201_afforty_T0015_00438.jpg">XV, 910,</ref>
                   <num>2<hi rend="sup">e</hi></num> Cahier AAAA, p. 12, n. 24.</witness>
               </listWit>
               <listWit type="édition">
@@ -1235,11 +1165,9 @@
                   litteras inspecturis, salutem in Domino.</s>
               </p>
               <p>
-                <s>Noverit universitas vestra quod cum controversia esset inter <rs type="person"
-                    >virum religiosum <persName>Guillermum</persName>, priorem de
+                <s>Noverit universitas vestra quod cum controversia esset inter <rs type="person">virum religiosum <persName>Guillermum</persName>, priorem de
                       <placeName>Caritate</placeName></rs>, pro se et monasterio <placeName>Sancti
-                    Christofori</placeName> in halapia sibi pleno jure subjecto ex una parte, et <rs
-                    type="person">Magistrum <persName>Reginaldum <abbr>d</abbr>
+                    Christofori</placeName> in halapia sibi pleno jure subjecto ex una parte, et <rs type="person">Magistrum <persName>Reginaldum <abbr>d</abbr>
                     Luzarches</persName>, presbyterum de <placeName>Riu</placeName></rs> ex altera,
                   super quibusdam domibus cum tota masura, juxta Ecclesiam de
                     <placeName>Riu</placeName> sitis, et vinea de <placeName>Hiannet</placeName> et
@@ -1290,9 +1218,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5301 (74). Ibid. p. 13, n.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5301 (74). Ibid. p. 13, n.
                     25</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1305,8 +1231,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Universis presentes litteras inspecturis, <rs type="person"><persName>Johannes de
-                      Vernolio</persName>, miles</rs>, et <rs type="person"
-                      ><persName>Theobaldus</persName> frater suus</rs> salutem in Domino.</s>
+                      Vernolio</persName>, miles</rs>, et <rs type="person"><persName>Theobaldus</persName> frater suus</rs> salutem in Domino.</s>
               </p>
               <p>
                 <s>Noverit universitas vestra quod cum nos saisissemus in manu nostra domum
@@ -1315,8 +1240,7 @@
                   a nobis post obitum sicundi ? <rs type="person"><persName>Arnulfi</persName>
                     presbyteri <pb n="12"/> de <placeName>Riu</placeName></rs> que omnia Ecclesia
                     <placeName>sancti Christofori in Halapia</placeName> tenebat.</s>
-                <s>Tandem per judicium curie comitisse <placeName>Selenensis</placeName><ref
-                    type="note" target="#p12_fn1"/> compulsi, vestivimus dictos monachos de omnibus
+                <s>Tandem per judicium curie comitisse <placeName>Selenensis</placeName><ref type="note" target="#p12_fn1"/> compulsi, vestivimus dictos monachos de omnibus
                   supradictis.</s>
                 <s>Postea, tempore transacto, nos et dicti fratres iterato res predictas in manu
                   nostra cepimus et saisivimus, ex qua captione et saisitione dicti monachi nobis
@@ -1358,9 +1282,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5301 (74), cahier AAAA, p. 13,
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5301 (74), cahier AAAA, p. 13,
                     n° 26.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1380,8 +1302,7 @@
                       <rs type="person">Domini <persName>Johannis de Vernolio</persName>,
                       militis</rs></rs>, in nostra presentia constitutus recognovit concessisse et
                   in perpetuum quitasse monachis <placeName>sti Christofori in Halatis</placeName>
-                  omnia que continentur in litteris dicti <rs type="person"
-                      ><persName>Johannis</persName> fratris sui</rs>, que omnia fiduciavit dictus
+                  omnia que continentur in litteris dicti <rs type="person"><persName>Johannis</persName> fratris sui</rs>, que omnia fiduciavit dictus
                     <persName>Theobaldus</persName> in manu nostra se firmiter et fideliter
                   servaturum, et contra omnes dictis monachis garandiam portaturum, salvis jure,
                   redditibus, censibus cum justitia dicto <persName>Joanni</persName> et feudatariis
@@ -1417,9 +1338,7 @@
                 <witness n="A">Collationné sur l'original aux arch. dep. de l'Oise.</witness>
               </listWit>
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205444-5545/B606126201_afforty_T0010_00116.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5446 (219), n° 20, liasse
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205444-5545/B606126201_afforty_T0010_00116.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5446 (219), n° 20, liasse
                   N.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1497,8 +1416,7 @@
                 <p>Ce terme amena par la suite des discussions. Le prieur disait que « ce devait
                   être froment de tout le meilleur, ou a <num>douze</num> deniers le sextier près du
                   meilleur, ou au moins blé froment au los des granches, cest a scavoir entre le
-                  meilleur et le pejeur. Et ledit grand prieur disoit le contraire, et que <hi
-                    rend="i">fourment louable</hi> ne devait pas etre entendu si bon comme le Prieur
+                  meilleur et le pejeur. Et ledit grand prieur disoit le contraire, et que <hi rend="i">fourment louable</hi> ne devait pas etre entendu si bon comme le Prieur
                   disoit. »</p>
                 <p>Après une longue et sérieuse enquête, et sur l'avis de deux experts agréés par
                   les parties, et qui consultèrent nombre de personnes sages, Regnault Le Charon,
@@ -1529,9 +1447,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00041.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5295, Reg. I. p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00041.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5295, Reg. I. p.
                   17.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1544,8 +1460,7 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s><rs type="person">Je <persName>Pierre Choisiax</persName>, chevaliers sires du
-                      <placeName>Plessie</placeName></rs> et <rs type="person"
-                      ><persName>Marie</persName> ma femme</rs> fommes <pb n="14"/> scavoir a to
+                      <placeName>Plessie</placeName></rs> et <rs type="person"><persName>Marie</persName> ma femme</rs> fommes <pb n="14"/> scavoir a to
                   ceux qui cest escript verront que nos avons donne en perdurable aumone a lEglise
                   de <placeName><abbr>St</abbr> Christophe en halate</placeName> et aux moines de
                   celi lieu une piece de terre qui siet de lez le cimetierre de
@@ -1578,9 +1493,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5307 80; ibid. n° 40, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5307 80; ibid. n° 40, p.
                   81.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1602,9 +1515,7 @@
                   dictis Priori et monachis dedi in testimonium et munimen.</s>
               </p>
               <p>
-                <s>Actum <date>anno domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">ii</hi><hi rend="sup">o</hi></num>, mense
+                <s>Actum <date>anno domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup">o</hi><hi rend="sc">ii</hi><hi rend="sup">o</hi></num>, mense
                     januario</date>.</s>
               </p>
             </div>
@@ -1626,9 +1537,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5298 (71), cahier AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5298 (71), cahier AAAA, p.
                     9.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1679,8 +1588,7 @@
           <pb n="15"/>
           <front>
             <docDate>
-              <date notBefore="1242-08" notAfter="1243">Août 1242 ou 1243<ref type="note"
-                  target="#p15_fn1"/></date>
+              <date notBefore="1242-08" notAfter="1243">Août 1242 ou 1243<ref type="note" target="#p15_fn1"/></date>
             </docDate>
             <index>
               <term type="nature" key="act"/>
@@ -1691,11 +1599,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, tome I, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%201-99/B606126201_afforty_T0001_00052.jpg"
-                    >p. 84</ref> et <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%20400-499/B606126201_afforty_T0001_00249_jpg_orig.html"
-                    >p. 478.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, tome I, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%201-99/B606126201_afforty_T0001_00052.jpg">p. 84</ref> et <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2001/Pages%20400-499/B606126201_afforty_T0001_00249_jpg_orig.html">p. 478.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1706,8 +1610,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Omnibus presentes litteras inspecturis <rs type="person"
-                        ><persName><abbr>G.</abbr></persName> humilis prior de
+                <s>Omnibus presentes litteras inspecturis <rs type="person"><persName><abbr>G.</abbr></persName> humilis prior de
                       <placeName>Caritate</placeName></rs> et totus ejusdem loci conventus salutem
                   in Domino.</s>
                 <s>Noveritis quod Decanus et capitulum...</s>
@@ -1746,9 +1649,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty. tome X, 5297 (70).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg">Bibl. mun. de Senlis, coll. Afforty. tome X, 5297 (70).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1780,9 +1681,7 @@
                   roborandum.</s>
               </p>
               <p>
-                <s>Actum <date>anno gratie <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">ii</hi><hi rend="sup">o</hi></num> mense
+                <s>Actum <date>anno gratie <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup">o</hi><hi rend="sc">ii</hi><hi rend="sup">o</hi></num> mense
                   Junio</date>.</s>
               </p>
             </div>
@@ -1805,9 +1704,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5302 (75); ibid. p. 13, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5302 (75); ibid. p. 13, n°
                     27.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1821,8 +1718,7 @@
               <p>
                 <s>Universis presentes litteras inspecturis officialis
                     <placeName>Silvanectensis</placeName> salutem in Domino.</s>
-                <s>Noveritis quod <persName>Petrus de Saumur</persName> et <rs type="person"
-                      ><persName>Hellendis</persName> uxor sua</rs> in nostra presentia constituti
+                <s>Noveritis quod <persName>Petrus de Saumur</persName> et <rs type="person"><persName>Hellendis</persName> uxor sua</rs> in nostra presentia constituti
                   recognoverunt se vendidisse Priori et monachis
                     <placeName><abbr>Sti</abbr>Christofori de Halapia</placeName> quamdam domum et
                   quamdam masuram sitam in clauso Domini <persName>Petri Choisel</persName>,
@@ -1870,9 +1766,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5302 (75); ibid. n° 28, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00044.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5302 (75); ibid. n° 28, p.
                     14</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -1884,8 +1778,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Universis presentes litteras inspecturis, Ego <rs type="person"
-                      ><persName>Maria</persName> nobilis mulier, uxor <rs type="person">Domini
+                <s>Universis presentes litteras inspecturis, Ego <rs type="person"><persName>Maria</persName> nobilis mulier, uxor <rs type="person">Domini
                         <persName>Petri Choisel</persName> militis, <placeName>de
                         Plesseio</placeName></rs></rs>, notum facio quod ego et dominus
                     <persName>Petrus</persName> maritus meus et heredes nostri videlicet
@@ -1900,8 +1793,7 @@
                 <s><abbr>paris.</abbr> annui census solvere tenebuntur.</s>
                 <s>Et sciendum est quod predicti monachi anniversarium nostrum et heredum nostrorum
                   facient annuatim.</s>
-                <s>Ego autem <persName>Maria</persName> et <rs type="person"
-                      ><persName>Petrus</persName> maritus meus</rs> et heredes nostri predictam
+                <s>Ego autem <persName>Maria</persName> et <rs type="person"><persName>Petrus</persName> maritus meus</rs> et heredes nostri predictam
                   masuram predictis monachis contra omnes justitia exigente garantire tenemur pro
                   censu superius nominato.</s>
                 <s>Quod ut firmum et stabile permaneat, presentes litteras sigilli mei munimine
@@ -1929,9 +1821,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, tome X, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00040.html"
-                    >p. 5294 (67)</ref>; ibid p. 15.</witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, tome X, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00040.html">p. 5294 (67)</ref>; ibid p. 15.</witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -1957,9 +1847,7 @@
                   litteris apponere dignum duxi.</s>
               </p>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">iii</hi><hi rend="sup">o</hi></num>, mense
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">xxxx</hi><hi rend="sup">o</hi><hi rend="sc">iii</hi><hi rend="sup">o</hi></num>, mense
                     Augusto</date>.</s>
               </p>
             </div>
@@ -1982,9 +1870,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5292 (65).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5292 (65).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -2012,8 +1898,7 @@
                     <persName>Scrannus</persName> recipiet annuatim quamdiu vixerit et post decessum
                   ipsius ad eosdem monachos devenient pro anniversario ipsius
                     <persName>Scranni</persName> annis singulis celebrando.</s>
-                <s>Quod ut ratum et firmum permaneat, presentes litteras sigillo <rs type="place"
-                    >curie <placeName>Silvanectensis</placeName></rs> fecimus communiri.</s>
+                <s>Quod ut ratum et firmum permaneat, presentes litteras sigillo <rs type="place">curie <placeName>Silvanectensis</placeName></rs> fecimus communiri.</s>
               </p>
               <p>
                 <s>Datum <date>anno Domini <num>1243</num>, mense Augusto</date>.</s>
@@ -2038,9 +1923,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5308 (81).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5308 (81).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -2055,8 +1938,7 @@
                       <placeName>Silvanectensis</placeName></rs> salutem in Domino.</s>
               </p>
               <p>
-                <s>Noveritis quod <persName>Renaudus</persName> li archiers et domicella<ref
-                    type="note" target="#p17_fn1"/><rs type="person"><persName>Catherina</persName>
+                <s>Noveritis quod <persName>Renaudus</persName> li archiers et domicella<ref type="note" target="#p17_fn1"/><rs type="person"><persName>Catherina</persName>
                     uxor sua</rs> in <pb n="18"/> nostra presentia constituti recognoverunt se
                   vendidisse et in perpetuum quitasse Priori et monachis <placeName><abbr>Sti</abbr>
                     Christofori de halatis</placeName>
@@ -2113,9 +1995,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00039.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5292 (65).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00039.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5292 (65).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -2129,8 +2009,7 @@
                 <s>Universis presentes litteras visuris, officialis
                     <placeName>Silvanectensis</placeName> salutem in Domino.</s>
                 <s>Notum facimus quod in nostra presentia constituti <persName>Bartholomeus
-                    Furnarius de Villameinte</persName> et <rs type="person"
-                      ><persName>Petronilla</persName> uxor sua</rs> recognoverunt se vendidisse et
+                    Furnarius de Villameinte</persName> et <rs type="person"><persName>Petronilla</persName> uxor sua</rs> recognoverunt se vendidisse et
                   in perpetuum quittasse Priori et monachis <placeName><abbr>Sti</abbr> Christofori
                     Belvacensis</placeName> diecesis <num>tredecim</num> solidos supercensus
                   parisiensis monete reddendos annuatim ad festum <placeName><abbr>Sti</abbr>
@@ -2139,8 +2018,7 @@
                   Priore et monachis plenarie satisfactum in pecunia numerata quos
                     <num>tredecim</num> solidos supercensus recognoverunt coram nobis predicti
                     <persName>Bartholomeus</persName> et <persName>Petronilla</persName> se
-                  assignasse super arpennum vinee contigue vinee <rs type="person"
-                      ><persName>Petri</persName> filii <persName>Liegardis</persName></rs> et super
+                  assignasse super arpennum vinee contigue vinee <rs type="person"><persName>Petri</persName> filii <persName>Liegardis</persName></rs> et super
                     <num>quinque</num> quarteria vinee contigue vinee <persName>Johannis
                     Aucipitis</persName> et super manerium suum sicut se comportat situm apud
                     <placeName>Villammeintriam</placeName> contiguum masure <persName>Radulfi
@@ -2179,9 +2057,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5307 (80), p. 19, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5307 (80), p. 19, n°
                   43.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2237,9 +2113,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5305 (78), p. 17, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5305 (78), p. 17, n°
                   35.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2255,8 +2129,7 @@
                   litteras inspecturis quod ego eleemosynam <num>quinque</num> solidorum et duorum
                   denariorum <abbr>paris.</abbr> censualium portantium rentas sitorum apud
                     <placeName>Brenulium</placeName> quos <persName>Johannes Gruarius de
-                    Plesseyo</persName> tenebat de me apud <placeName>Brenulium</placeName><ref
-                    type="note" target="#p19_fn1"/> quam idem <persName>Johannes</persName> fecit
+                    Plesseyo</persName> tenebat de me apud <placeName>Brenulium</placeName><ref type="note" target="#p19_fn1"/> quam idem <persName>Johannes</persName> fecit
                   pro remedio anime sue Ecclesie et monachis de <placeName><abbr>Sto</abbr>
                     Christoforo</placeName> volui, laudavi et bona fide concessi quod dicta Ecclesia
                   et monachi dictos <num>quinque</num> solidos et duos denarios in perpetuum teneant
@@ -2306,9 +2179,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00046.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5306 (79), p. 18, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00046.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5306 (79), p. 18, n°
                   39.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2329,8 +2200,7 @@
                 <s>et totum dominium dicti feodi situm in villa
                     <placeName><abbr>Sti</abbr>Christofori</placeName> ; videlicet tam partem illam
                   quam dicta Ecclesia de dicto feodo tenebat quam illam partem quam monachi
-                  supradicti emerant a <persName>Petro de villa scabiosa</persName> et <rs
-                    type="person"><persName>Ermingarde</persName> uxore sua</rs>, quam partem dicti
+                  supradicti emerant a <persName>Petro de villa scabiosa</persName> et <rs type="person"><persName>Ermingarde</persName> uxore sua</rs>, quam partem dicti
                     <persName>Petrus</persName> et <persName>Ermingardis</persName> tenebant de me
                   in feodum.</s>
                 <s>Unde sciendum est quod ad dictum feodum pertinent duo solidi censuales, quatuor
@@ -2366,9 +2236,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00044.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5302 (75), 2e cahier AAAA, p. 14,
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00044.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5302 (75), 2e cahier AAAA, p. 14,
                     n° 29.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2392,8 +2260,7 @@
                   ordinis, quidquid juris habebat seu habere poterat quocumque modo, in domo que
                   fuit comiti (?) sita in <pb n="21"/> vico <placeName>Parisie</placeName> inter
                   domum <persName>Hituri (?) Frou</persName> et domum
-                    <persName>Jacqueline,</persName> quam domum, <rs type="person"
-                      ><persName>Guido</persName> frater dicti <persName>Stephani</persName></rs> et
+                    <persName>Jacqueline,</persName> quam domum, <rs type="person"><persName>Guido</persName> frater dicti <persName>Stephani</persName></rs> et
                   confrater dictorum Prioris et monachorum antequam intraret religionem,
                       <placeName><abbr>Sti</abbr> Christofori</placeName> Ecclesie donaverat in
                   perpetuum pacifice et quiete possidendam ; quam vero dictam domum dictus
@@ -2414,9 +2281,7 @@
                   presentibus litteris duximus apponendum.</s>
               </p>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num> mense
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup">o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num> mense
                   Januario</date>.</s>
               </p>
             </div>
@@ -2439,9 +2304,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00042.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5298 (71), cahier AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00042.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5298 (71), cahier AAAA, p.
                     18.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2453,8 +2316,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Nos <rs type="person"><persName>Symon de Feulleuses</persName> miles</rs> et <rs
-                    type="person">Domina <persName>Ada</persName> uxor,</rs> Notum facimus universis
+                <s>Nos <rs type="person"><persName>Symon de Feulleuses</persName> miles</rs> et <rs type="person">Domina <persName>Ada</persName> uxor,</rs> Notum facimus universis
                   presentes litteras inspecturis quod nos pro remedio et salute animarum nostrarum
                   et antecessorum nostrorum quitavimus in perpetuum et etiam quitamus viris
                   religiosis et honestis.....</s>
@@ -2508,9 +2370,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00043.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5299, p. 72, AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00043.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5299, p. 72, AAAA, p.
                   20.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2527,8 +2387,7 @@
               </p>
               <p>
                 <s>Noverit universitas vestra quod coram nobis constitutus <rs type="person">Dominus
-                      <persName>Symon de Fuelleuses</persName>, miles</rs>, et <rs type="person"
-                    >Domina <persName>Ada</persName> ejus uxor</rs>, coram <persName>Odone de
+                      <persName>Symon de Fuelleuses</persName>, miles</rs>, et <rs type="person">Domina <persName>Ada</persName> ejus uxor</rs>, coram <persName>Odone de
                     Fossato</persName>, clerico nostro jurato ad hoc a nobis specialiter deputato
                   constituta recognoverunt se quittasse et etiam in perpetuum quittaverunt videlicet
                   dictus miles coram nobis et dicta Domina coram dicto clerico, Priori et monachis
@@ -2539,9 +2398,7 @@
               </p>
               <note>(Cetera ut in charta precedenti.)</note>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num>, die Jovis post
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup">o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num>, die Jovis post
                     Pascha</date>.</s>
               </p>
             </div>
@@ -2563,9 +2420,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5298 (71), AAAA
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00042.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5298 (71), AAAA
                   18.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2578,8 +2433,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Universis presentes litteras inspecturis Ego <rs type="person"><persName>Petrus
-                      de faiel</persName>, miles</rs>, et <rs type="person"
-                      ><persName>Sanctissima</persName> uxor mea</rs> notum facimus quod Ego
+                      de faiel</persName>, miles</rs>, et <rs type="person"><persName>Sanctissima</persName> uxor mea</rs> notum facimus quod Ego
                     <persName>Petrus</persName> et uxor mea non coacta sed spontanea, laudamus,
                   volumus et concedimus quod Prior et monachi <placeName><abbr>Sti</abbr>Christofori
                     in Halatis</placeName> , <placeName>Belvacensis</placeName> diecesis, domum suam
@@ -2593,8 +2447,7 @@
                   futurum.</s>
               </p>
               <p>
-                <s>In cujus rei testimonium Ego <persName>Petrus</persName> et <rs type="person"
-                      ><persName>Sanctissima</persName> uxor mea</rs> presentes litteras sigillorum
+                <s>In cujus rei testimonium Ego <persName>Petrus</persName> et <rs type="person"><persName>Sanctissima</persName> uxor mea</rs> presentes litteras sigillorum
                   nostrorum munimine fecimus roborari.</s>
               </p>
               <p>
@@ -2621,9 +2474,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5303 (76).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5303 (76).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -2661,9 +2512,7 @@
                   apponendum.</s>
               </p>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup"
-                        >o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num>, mense
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">l</hi><hi rend="sup">o</hi><hi rend="sc">v</hi><hi rend="sup">o</hi></num>, mense
                     Decembri</date>.</s>
               </p>
             </div>
@@ -2686,9 +2535,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00040.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5294 (67), AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00040.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5294 (67), AAAA, p.
                   16.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2705,8 +2552,7 @@
                   <placeName>Silvanectum</placeName>, notum facio universis presentibus et futuris
                   presentes litteras inspecturis quod cum contentio esset inter me ex una parte et
                   religiosum virum Priorem et monachos <placeName><abbr>Sti</abbr> Christofori in
-                    Halata</placeName> ex altera, super justitia latronum et melleye<ref type="note"
-                    target="#p23_fn1"/> que eveniunt et evenire possunt in nemoribus omnibus
+                    Halata</placeName> ex altera, super justitia latronum et melleye<ref type="note" target="#p23_fn1"/> que eveniunt et evenire possunt in nemoribus omnibus
                   dictorum monachorum <placeName><abbr>Sti</abbr>Christofori</placeName> tam in
                   stratis publicis quam in omnibus aliis semitis minoribus et locis omnium
                   predictorum nemorum, de consilio bonorum virorum et de assensu etiam et voluntate
@@ -2769,9 +2615,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00041.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5295 (68), AAAA, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00041.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5295 (68), AAAA, p.
                   17.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2794,9 +2638,7 @@
                   je ne mi oir ne poisent riens prendre on devant dit <rs type="place">Bois de
                       <placeName>Sainct-Christophe</placeName></rs> desorenavant san leur congié,
                   sans ce que je requiere que mi porcel noisent ou p isent ? en iceluy bois et sans
-                  le pegier<ref type="note" target="#p24_fn1"/> et le cendrier<ref type="note"
-                    target="#p24_fn2"/> et ma chose et mon gruache<ref type="note" target="#p24_fn3"
-                  />, et sans ce que se mes sergent viennent au forfait que li sergens
+                  le pegier<ref type="note" target="#p24_fn1"/> et le cendrier<ref type="note" target="#p24_fn2"/> et ma chose et mon gruache<ref type="note" target="#p24_fn3"/>, et sans ce que se mes sergent viennent au forfait que li sergens
                     <placeName>Sainct-Christophe</placeName> et <num>li</num> mien viennent
                   ensemble, lamende est commune à moie et au Prieur de
                     <placeName>Sainct-Christophe</placeName>, et en temoing de ces choses devant
@@ -2832,9 +2674,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5305 (78), AAAA, p 17, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5305 (78), AAAA, p 17, n°
                     36.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2894,9 +2734,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5307, 80; ibid., n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00047.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5307, 80; ibid., n°
                   40.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -2948,9 +2786,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5292 (65).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00039.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5292 (65).</ref></witness>
                 <witness n="C">Collationné aux Archives sur une mauvaise copie récente suivie d'une
                   bonne traduction).</witness>
               </listWit>
@@ -2982,8 +2818,7 @@
                     <num>quinque</num> solidis <abbr>paris.</abbr> supradictis religiosis
                   specialiter obligantes.</s>
                 <s>Has autem conventiones et venditiones prout superius sunt expresse voluerunt
-                  predicti <persName>Petrus</persName> et <rs type="person"
-                      ><persName>Maria</persName> ejus uxor</rs>, et fidem dederunt in manu nostra
+                  predicti <persName>Petrus</persName> et <rs type="person"><persName>Maria</persName> ejus uxor</rs>, et fidem dederunt in manu nostra
                   corporalem quod contra predicta vel aliquid de predictis per se vel per alium non
                   venient in futurum, sed dictis religiosis super dicta venditione legitimam
                   portabunt garandiam contra omnes secundum usus et consuetudines Patrie.</s>
@@ -3012,9 +2847,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00048.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5309 (82).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00048.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5309 (82).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -3082,9 +2915,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5303 (76), p. 15, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5303 (76), p. 15, n°
                   31.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -3098,9 +2929,7 @@
               <p>
                 <s>Universis presentes litteras inspecturis officialis <rs type="place">curie
                       <placeName>silvanectensis</placeName></rs> salutem in Domino.</s>
-                <s>Noverint universi quod in nostra presentia constituti <rs type="person"
-                      ><persName>Guillermus de Pomponio,</persName> armiger, filius quondam <rs
-                      type="person"><persName>Guilonis de Pomponio,</persName> militis</rs></rs>, et
+                <s>Noverint universi quod in nostra presentia constituti <rs type="person"><persName>Guillermus de Pomponio,</persName> armiger, filius quondam <rs type="person"><persName>Guilonis de Pomponio,</persName> militis</rs></rs>, et
                     <rs type="person">domicella <persName>Maria</persName>, uxor ejus</rs> coram
                   nobis recogi overunt se vendidisse ac in perpetuum quittasse Priori et ecclesie
                       <placeName><abbr>Sti</abbr> Christofori in Halata</placeName>, duo arpenta et
@@ -3157,9 +2986,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5304 (77), p. 15, n°
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5304 (77), p. 15, n°
                   32.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -3173,8 +3000,7 @@
               <p>
                 <s>Universis presentes litteras inspecturis officialis curie
                     <placeName>silvanectensis</placeName> salutem in domino.</s>
-                <s>Noverint universi quod in nostra presentia propter hoc constitutus <rs
-                    type="person"><persName>Foubertus dictus le Fuizelier</persName>, civis
+                <s>Noverint universi quod in nostra presentia propter hoc constitutus <rs type="person"><persName>Foubertus dictus le Fuizelier</persName>, civis
                       <placeName>silvanectensis</placeName></rs> coram nobis recognovit se donatione
                     <pb n="28"/> facta inter vivos in puram eleemosynam dedisse et concessisse et in
                   perpetuum quitasse Ecclesie <placeName>beati Christofori de Halate</placeName>,
@@ -3215,9 +3041,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00040.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5293-4 (66 67).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00040.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5293-4 (66 67).</ref></witness>
                 <witness n="C">Arch. de Saint Christophe, <num>1<hi rend="sup">er</hi></num> cahier,
                   cotte 4, A, p. 14, n° 2.</witness>
                 <witness n="">Collationné aux Archives sur une copie récente.</witness>
@@ -3233,8 +3057,7 @@
               <p>
                 <s>Universis presentes litteras inspecturis, officialis <rs type="place">curie
                       <placeName>Silvanectensis</placeName></rs> salutem in Domino sempiternam.</s>
-                <s>Notum facimus quod in nostra presentia personaliter constitutus <rs type="person"
-                      ><persName>Guiardus dictus Baterel</persName>, civis
+                <s>Notum facimus quod in nostra presentia personaliter constitutus <rs type="person"><persName>Guiardus dictus Baterel</persName>, civis
                       <placeName>Silvanectensis</placeName></rs>, recognovit se vendidisse et in
                   perpetuum quitavisse religioso et <rs type="person">honesto viro fratri
                       <persName>Petro</persName>, Priori <placeName><abbr>Sti</abbr>
@@ -3262,8 +3085,7 @@
                   septem denarios paris, censuales <date>in festo natalis <abbr>b.</abbr> Joannis
                     baptiste</date> annuatim persolvendos, et ad <num>tres</num> quarterios avene et
                   ad <num>tres</num> pictas<ref type="note" target="#p28_fn1"/> paris, <date>in
-                    medio Marti</date>i annuatim persolvendos et ad septem pictavinatas<ref
-                    type="note" target="#p28_fn2"/> paris, <date>in festo beati Christofori</date>
+                    medio Marti</date>i annuatim persolvendos et ad septem pictavinatas<ref type="note" target="#p28_fn2"/> paris, <date>in festo beati Christofori</date>
                   annuatim persolvendas.</s>
                 <s>Que venditio facta fuit pro <num>viginti</num> libris et octo solidis paris, de
                   quibus jam dictus <persName>Guiardus</persName> recognovit coram nobis, a memorato
@@ -3324,9 +3146,7 @@
                 <witness n="A">Scel et attaches ôtés.</witness>
               </listWit>
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00041.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5295, tome XVI, p.
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00041.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5295, tome XVI, p.
                   49-50.</ref></witness>
               </listWit>
               <listWit type="édition">
@@ -3342,10 +3162,7 @@
                       <placeName>Silvanectensis</placeName></rs> salutem in Domino.</s>
               </p>
               <p>
-                <s>Noverint universi quod nos <date>anno Domini <num><hi rend="sc">m</hi><hi
-                        rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc"
-                        >lxx</hi><hi rend="sup">o</hi><hi rend="sc">ii</hi><hi rend="sup"
-                      >o</hi></num> die lune ante Nativitatem Domini</date> vidimus litteras
+                <s>Noverint universi quod nos <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxx</hi><hi rend="sup">o</hi><hi rend="sc">ii</hi><hi rend="sup">o</hi></num> die lune ante Nativitatem Domini</date> vidimus litteras
                   illustrissimi <rs type="person"><persName>Philippi</persName>, Regis
                       <persName>Francorum</persName></rs>, sigillatas in hec verba :</s>
               </p>
@@ -3362,14 +3179,12 @@
                 <s>Universis presentes litteras inspecturis <rs type="person">Frater
                       <persName>Milo</persName> umilis prior de <placeName>Caritate</placeName></rs>
                   totusque ejusdem loci conventus, salutem in Domino.</s>
-                <s>Notum facimus quod cum contentio esset inter <rs type="person"
-                      ><persName>Philippum</persName>, <seg type="theo">Dei gratia</seg> Regem
+                <s>Notum facimus quod cum contentio esset inter <rs type="person"><persName>Philippum</persName>, <seg type="theo">Dei gratia</seg> Regem
                       <persName>Francorum</persName> illustrem</rs>, et <persName>Johannem de
                     Plesseyo</persName>, gruarium in foresta de <placeName>Halata</placeName>, ex
                   una parte, et <rs type="person"><persName>Petrum</persName>, Priorem
                         <placeName><abbr>Sti</abbr> Christofori</placeName></rs> et monachos loci
-                  ejusdem, qui nobis, Priori de <placeName>Caritate</placeName> et conventui <pb
-                    n="30"/> subsunt, ex altera, super eo quod <persName>Johannes</persName>
+                  ejusdem, qui nobis, Priori de <placeName>Caritate</placeName> et conventui <pb n="30"/> subsunt, ex altera, super eo quod <persName>Johannes</persName>
                   gruarius foreste de <placeName>Halata</placeName> filius quondam Domini
                     <persName>Petri de Plesseyo</persName>, militis, dicebat pro se et domino Rege
                   predicto dictum Priorem <placeName><abbr>Sti</abbr> Christofori</placeName>
@@ -3395,10 +3210,8 @@
                   quod Rex vel gruarius nichil habere debebant in eisdem.</s>
                 <s>Tandem <rs type="person"><persName>Matheus</persName>
                     <seg type="theo">Dei gratia</seg>
-                    <placeName><abbr>Sti</abbr> Dionysii</placeName> abbas</rs>, et <rs
-                    type="person"><persName>Simon de Nigella</persName>, miles</rs>, locum Domini
-                  Regis tenentes, pro Domino Rege et vice ipsius, et <rs type="person"
-                      ><persName>Johannes</persName> gruarius</rs> pro se ex una parte, Prior vero
+                    <placeName><abbr>Sti</abbr> Dionysii</placeName> abbas</rs>, et <rs type="person"><persName>Simon de Nigella</persName>, miles</rs>, locum Domini
+                  Regis tenentes, pro Domino Rege et vice ipsius, et <rs type="person"><persName>Johannes</persName> gruarius</rs> pro se ex una parte, Prior vero
                       <placeName><abbr>Sti</abbr> Christofori</placeName> pro se et prioratu, de
                   assensu et voluntate nostris expressis, quibus subest, ex altera, videns idem
                   Prior et nos quod illud nemus parum utilitatis Domino regi prestabat, quia vendi
@@ -3424,9 +3237,7 @@
                   emere dictum nemus, Ballivus vel Prepositus poterunt, non obstante venditione
                   Prioris, illud nemus vendere et tradere plus offerenti.</s>
                 <s>Quadraginta vero diebus pendentibus, si Ballivus vel Prepositus non invenerint
-                  qui plus offerat, termino predicto elapso, venditio Prioris firma rema<pb n="31"
-                  />nebit, et in illa venditione ac etiam in guaritatione<ref type="note"
-                    target="#p31_fn1"/>, si facta fuerit, sive in manu Ballivi, sive Prepositi, vel
+                  qui plus offerat, termino predicto elapso, venditio Prioris firma rema<pb n="31"/>nebit, et in illa venditione ac etiam in guaritatione<ref type="note" target="#p31_fn1"/>, si facta fuerit, sive in manu Ballivi, sive Prepositi, vel
                   etiam in manu Prioris, Rex habebit tertiam partem, Prior vero duas partes, et
                   recipient Ballivus vel Prepositus pro Rege, et Gruarius pro Gruagio suo et Prior
                   pro se Plegios de pretio venditionis quilibet pro parte sua.</s>
@@ -3458,9 +3269,7 @@
                   sigillata.</s>
               </p>
               <p>
-                <s>Actum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxx</hi><hi rend="sup"
-                        >o</hi></num>, mense Martio</date>.</s>
+                <s>Actum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxx</hi><hi rend="sup">o</hi></num>, mense Martio</date>.</s>
               </p>
               <p>
                 <s>Nos vero predictam compositionem et omnia premissa prout superius continentur
@@ -3477,8 +3286,7 @@
             <div type="notes">
               <note xml:id="p29_fn1">La transaction et le vidimus sont conservés aux Archives de
                 l'Oise.</note>
-              <note xml:id="p31_fn1">Sans doute <hi rend="i">carricatione</hi> ou <hi rend="i"
-                  >carrigatione,</hi> action de charrier ; je ne vois aucun sens à l'autre forme et
+              <note xml:id="p31_fn1">Sans doute <hi rend="i">carricatione</hi> ou <hi rend="i">carrigatione,</hi> action de charrier ; je ne vois aucun sens à l'autre forme et
                 je ne l'ai trouvée nulle part.</note>
               <note xml:id="p31_fn2">Parnagium seu pasnagium, droit de faire paître les porcs dans
                 les forêts.</note>
@@ -3501,11 +3309,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg"
-                    >tome X, 5304 (77)</ref> et <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/B606126201_afforty_T0016_00077.jpg"
-                    >XVI, 151.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00045.jpg">tome X, 5304 (77)</ref> et <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/B606126201_afforty_T0016_00077.jpg">XVI, 151.</ref></witness>
                 <witness n="C">Arch. de Saint-Christophe, <num>2<hi rend="sup">e</hi></num> cahier,
                   cotte 4.</witness>
               </listWit>
@@ -3542,10 +3346,8 @@
                     de Nogent</persName>, et <rs type="person"><abbr>M<hi rend="sup">e</hi></abbr>
                     <persName>Fremin</persName>, chapellain de
                     <placeName>Belaincourt</placeName></rs>, et <persName>Jehannes de
-                    Nogent</persName> et <persName>Robert Colonbe</persName> et <rs type="person"
-                      ><persName>Pierre Maillard</persName>, chapellain dou
-                      <placeName>Plessier</placeName></rs>, et <rs type="person"><abbr>M<hi
-                        rend="sup">e</hi></abbr>
+                    Nogent</persName> et <persName>Robert Colonbe</persName> et <rs type="person"><persName>Pierre Maillard</persName>, chapellain dou
+                      <placeName>Plessier</placeName></rs>, et <rs type="person"><abbr>M<hi rend="sup">e</hi></abbr>
                     <persName>Jehan</persName>, le clerc au Prévost</rs> ; et por ce que le blé
                   n'est pas payé tel comme il doit payer, le blé doit être sain et moitéen de grain
                   et au tel grain des arréraiges.</s>
@@ -3570,11 +3372,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00047.html"
-                    >tome X, 5308 (81)</ref> et <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/slides/B606126201_afforty_T0016_00091.html"
-                    >XVI, 179-80.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00047.html">tome X, 5308 (81)</ref> et <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/slides/B606126201_afforty_T0016_00091.html">XVI, 179-80.</ref></witness>
                 <witness n="C">Arch. de St Christophe-en-Halatte, <num>2<hi rend="sup">e</hi></num>
                   cahier, cotte 4, A.</witness>
               </listWit>
@@ -3589,8 +3387,7 @@
               <p>
                 <s>Universis presentes litteras inspecturis, officialis <rs type="place">curie
                       <placeName>Belvacensis</placeName></rs>, salutem in Domino.</s>
-                <s>Noverint universi quod coram nobis constituta <rs type="person"
-                      ><persName>Agnes</persName>, relicta <persName>Noviondi de
+                <s>Noverint universi quod coram nobis constituta <rs type="person"><persName>Agnes</persName>, relicta <persName>Noviondi de
                     Rieu</persName></rs>, recognovit se quitasse et concessisse Priori
                     <placeName>Sti-Christofori de halata</placeName> quidquid juris habebat vel
                   habere poterat ratione dotis, dotalitii seu donationis propter nuptias, vel altera
@@ -3612,9 +3409,7 @@
                       <placeName>Belvacensis</placeName></rs> fecimus communiri.</s>
               </p>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxxv</hi><hi rend="sup"
-                        >o</hi></num> die Martis ante Ascensionem Domini</date>.</s>
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxxv</hi><hi rend="sup">o</hi></num> die Martis ante Ascensionem Domini</date>.</s>
               </p>
             </div>
           </body>
@@ -3635,11 +3430,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg"
-                    >tome X, 5306 (79)</ref> et <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/B606126201_afforty_T0016_00091.jpg"
-                    >XVI (179)</ref> (note: on voit qu'alors Clermont était du ressort du Bailliage
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00046.jpg">tome X, 5306 (79)</ref> et <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20112-199/B606126201_afforty_T0016_00091.jpg">XVI (179)</ref> (note: on voit qu'alors Clermont était du ressort du Bailliage
                   de Senlis).</witness>
                 <witness n="C">Arch. de St-Christophe, <num>2<hi rend="sup">e</hi></num> cahier,
                   cotte 4, A.</witness>
@@ -3653,16 +3444,14 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>A tous ceulx qui ces presentes lettres verront et orront, nous <rs type="person"
-                      ><persName>Simons de Feulleuses</persName> chevalier</rs> fais ascavoir que Je
+                <s>A tous ceulx qui ces presentes lettres verront et orront, nous <rs type="person"><persName>Simons de Feulleuses</persName> chevalier</rs> fais ascavoir que Je
                   sui tenus a delivrer au Prieur et aux moines de
                     <placeName>Saint-Christophe</placeName> lor mesure mansura) de
                     <placeName>Riu</placeName> devant le montier dedans les <num>trois</num>
                   semaines de <abbr>la.</abbr>.... prochaine qui vient, en telle manière : Je sui
                   tenus a delivrer la mesure devant ditte audit Prieur et aux moines suivant la
                   promesse et devise qu'ils ont de moy, et de ce fere sont Pleges messires
-                    <persName>Simons de Villers (St-Paul)</persName> et messire <rs type="person"
-                      ><persName>Thibaut de Folleuses</persName>, chevalier</rs>, a tenir prison a
+                    <persName>Simons de Villers (St-Paul)</persName> et messire <rs type="person"><persName>Thibaut de Folleuses</persName>, chevalier</rs>, a tenir prison a
                     <placeName>Creil</placeName> si que defaloye de ce faire, et por ce que soit
                   ferme et estable, nos avons ces presentes lettres scelle de notre scel.</s>
                 <s>Ce fut fet en <date>lan de grace mil deux cent soixante et quinze, le mardy
@@ -3699,9 +3488,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00105.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome XVI (207).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00105.jpg">Bibl. mun. de Senlis, coll. Afforty, tome XVI (207).</ref></witness>
                 <witness n="C">Arch. de Saint-Christophe, <num>2<hi rend="sup">e</hi></num>, cotte
                   4, A, p. 12, n° 23.</witness>
               </listWit>
@@ -3714,13 +3501,10 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Universis presentes litteras inspecturis magister <rs type="person"
-                      ><persName>Simon de Villaribus</persName>, quondam filius <rs type="person"
-                      >defuncti <persName>Guiardi dicti de Bituris</persName>, armigeri</rs></rs>,
+                <s>Universis presentes litteras inspecturis magister <rs type="person"><persName>Simon de Villaribus</persName>, quondam filius <rs type="person">defuncti <persName>Guiardi dicti de Bituris</persName>, armigeri</rs></rs>,
                   salutem in Domino.</s>
                 <s>Noveritis quod nos, voluntate spontanea, non coacta, non <num>vi</num> seu dolo
-                  inducti, immo certa scientia imperpetuum quittavimus coram <rs type="person"
-                    >discreto viro <persName>Egidio, dicto de Courciaux,</persName> Baillivo
+                  inducti, immo certa scientia imperpetuum quittavimus coram <rs type="person">discreto viro <persName>Egidio, dicto de Courciaux,</persName> Baillivo
                       <placeName>Silvanect.</placeName></rs> in plena assisia apud et in presentia
                   militum ibidem assistentium et etiam quitamus Religiosis viris priori
                       <placeName><abbr>Sti</abbr> Christofori de Halata</placeName> et ejusdem
@@ -3768,12 +3552,8 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg"
-                    >tome X, p. 5311 (84),</ref>
-                  <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00109.jpg"
-                    >XVI (215).</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, p. 5311 (84),</ref>
+                  <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00109.jpg">XVI (215).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -3784,8 +3564,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>A tous ceux qui ces presentes lettres verront ou oiront, nous <rs type="person"
-                      ><persName>Jacques,</persName> prieur de
+                <s>A tous ceux qui ces presentes lettres verront ou oiront, nous <rs type="person"><persName>Jacques,</persName> prieur de
                     <placeName>St-Christophe</placeName></rs> faisons ascavoir que nous avons
                   baillés a <persName>Garnier de la Couture</persName> la maison de
                     <placeName>Riu</placeName> et les vignes derrière la maison et en tout
@@ -3797,16 +3576,13 @@
                     <num>quatre cent et cinquante</num> hostées de fumier, et doit li dit
                     <persName>Garnier</persName> monstrer lamendement au Prieur ou a homme estably
                   de par soy, et doibt iceluy <persName>Garnier</persName> rendre a maison en tel
-                  estat comme il la trouvera de couverture et si il y faut penne<ref type="note"
-                    target="#p34_fn1"/> ne souspenne ne chevron ne autre, le Prieur li doit envoyer
+                  estat comme il la trouvera de couverture et si il y faut penne<ref type="note" target="#p34_fn1"/> ne souspenne ne chevron ne autre, le Prieur li doit envoyer
                   et li dis <persName>Garnier</persName> le doit faire mettre en œuvre pour li un
                   merien et des passoirs sil y faut [li Prieur] les li doib trouver et faire amener
                   en sa maison et li dis <persName>Garnier</persName> les doibt faire mettre en
                   euvre a son propre despens et par les devant dittes as chantier ; li Prieur doibt
-                  deux cent et demy de javelles<ref type="note" target="#p34_fn2"/> de charoirs<ref
-                    type="note" target="#p34_fn3"/> chacun an, rendues au <rs type="place">Port de
-                      <placeName>Ryu</placeName></rs>, et la moitoine<ref type="note"
-                    target="#p34_fn4"/> des essues des devant dittes vignes, li dis
+                  deux cent et demy de javelles<ref type="note" target="#p34_fn2"/> de charoirs<ref type="note" target="#p34_fn3"/> chacun an, rendues au <rs type="place">Port de
+                      <placeName>Ryu</placeName></rs>, et la moitoine<ref type="note" target="#p34_fn4"/> des essues des devant dittes vignes, li dis
                     <persName>Garnier</persName> doibt rendre au Prieur ou a son commis, demeurant
                   en <abbr>lad<hi rend="sup">e</hi></abbr> maison, et est ascavoir que nous avons
                   baillé au devant dict <persName>Garnier</persName>
@@ -3818,8 +3594,7 @@
                     Court,</persName> et doit li dis <persName>Garnier</persName> rendre les
                   pressoirs franches et les mettre <persName>Arnoul</persName> s'est plest au
                   Prieur.</s>
-                <s>Et à ceste convenance furent maistre <persName>Arnoul</persName>, <rs
-                    type="person"><persName>Baudouin</persName>, de
+                <s>Et à ceste convenance furent maistre <persName>Arnoul</persName>, <rs type="person"><persName>Baudouin</persName>, de
                     <placeName>Laitre</placeName></rs>, <persName>Droart le Plastrier</persName>,
                     <persName>Arnoul le Petit</persName>.</s>
               </p>
@@ -3859,11 +3634,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00048.jpg"
-                    >tome X, 5309 (82)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00125.html"
-                    >tome XVI (247), p. 8.</ref></witness>
+                <witness n="">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00048.jpg">tome X, 5309 (82)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00125.html">tome XVI (247), p. 8.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -3889,8 +3660,7 @@
                   capitulum et Prior prelibatus habens potestatem et mandatum speciale
                   compromittendi a venerabili Patre suo, Priore de <placeName>Caritate</placeName>
                   cui immediate subjectus est, in arbitros arbitratores seu amicabiles compositores,
-                  scilicet in venerabilem virum et discretum <rs type="person"
-                        ><persName><abbr>Gh.</abbr></persName> archidiaconum</rs> suessionensem a
+                  scilicet in venerabilem virum et discretum <rs type="person"><persName><abbr>Gh.</abbr></persName> archidiaconum</rs> suessionensem a
                   nobis Decano et capitulo electum, et in <rs type="person">religiosum virum
                       <persName>Stephanum</persName>, Priorem <placeName><abbr>Sti</abbr> Lupi
                       d'Esserens</placeName></rs> a dicto <rs type="person">Priore de
@@ -3905,8 +3675,7 @@
                   arbitrio usque ad definitivam sententiam infra terminum suprascriptum vel infra
                   prorogationem si contigerit terminum prorogari, nos predicti decanus et capitulum
                   ac etiam prior predictus de <placeName>Halata</placeName>, de communi consensu
-                  nostro eligimus virum venerabilem et discretum magistrum <rs type="person"
-                      ><persName>Nicolaum de Bestisiaco,</persName> archidiaconum minorem
+                  nostro eligimus virum venerabilem et discretum magistrum <rs type="person"><persName>Nicolaum de Bestisiaco,</persName> archidiaconum minorem
                       <placeName>Caleti</placeName></rs> in Ecclesia
                     <placeName>Rothomagensi</placeName> arbitrum arbitratorem seu amicabilem
                   compositorem, cui dicti duo arbitri totum processum cum discordia, si discordia
@@ -3929,9 +3698,7 @@
                   apponendum.</s>
               </p>
               <p>
-                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi
-                        rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxxvii</hi><hi
-                        rend="sup">o</hi></num> die Jovis post Pascha</date>.</s>
+                <s>Datum <date>anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxxvii</hi><hi rend="sup">o</hi></num> die Jovis post Pascha</date>.</s>
               </p>
             </div>
           </body>
@@ -3951,11 +3718,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg"
-                    >tome X, p. 5311 (84)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00109.jpg"
-                    >tome XVI (215).</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, p. 5311 (84)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00109.jpg">tome XVI (215).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -3966,8 +3729,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>A tous ceux qui ces présentes lettres verront et oiront nous <rs type="person"
-                      ><persName>Jacques</persName> Prieur de
+                <s>A tous ceux qui ces présentes lettres verront et oiront nous <rs type="person"><persName>Jacques</persName> Prieur de
                     <placeName>St-Christophe</placeName></rs> faisons ascavoir que nous avons baillé
                   a <persName>Huilart de Saintquez</persName> notre maison de
                     <placeName>Saintquez</placeName>, a tout <num>quatre</num> arpens de vignes et
@@ -4010,9 +3772,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00134.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome XVI (265).</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00134.jpg">Bibl. mun. de Senlis, coll. Afforty, tome XVI (265).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4024,17 +3784,14 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s>En <date>lan de grace mil deux cent soixante et dix-huit ou mois d'Apvril</date>
-                  acheta <persName>Pierre de la Chapelle</persName> et <rs type="person"
-                      ><persName>hersans</persName> sa femme</rs>, la mesnue dixme de lin et de
+                  acheta <persName>Pierre de la Chapelle</persName> et <rs type="person"><persName>hersans</persName> sa femme</rs>, la mesnue dixme de lin et de
                   chanvre que le Prieur de <placeName>Sain Christophe</placeName> avoit sur
                     <placeName>Pompoing</placeName> pour <num>soixante et quatorze</num> solz cest
                   ascavoir a <num>trois</num> ans, a païer chascun an <num>vingt quatre</num> solz
                     <num>huit</num> deniers, cest ascavoir a <pb n="37"/> la <date>Toussaint</date>,
-                  et de ce sont Pleges <persName>Mahon de Launoy</persName>, <rs type="person"
-                      ><persName>Pierre</persName> son frere</rs>, <persName>Simon
+                  et de ce sont Pleges <persName>Mahon de Launoy</persName>, <rs type="person"><persName>Pierre</persName> son frere</rs>, <persName>Simon
                     Melles,</persName> tesmoing <persName>Raoul d'Auviler</persName>,
-                    <persName>Denise de Ville</persName>, <rs type="person"
-                      ><persName>Simonet</persName> le fils</rs>, <persName>Jean
+                    <persName>Denise de Ville</persName>, <rs type="person"><persName>Simonet</persName> le fils</rs>, <persName>Jean
                   Caignan</persName>.</s>
               </p>
             </div>
@@ -4055,11 +3812,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg"
-                    >tome X, 5312 (85)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00133.jpg"
-                    >tome XVI (262).</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, 5312 (85)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00133.jpg">tome XVI (262).</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4072,16 +3825,14 @@
               <p>
                 <s>En <date>lan de grace mil deux cent soixante dix sept, landemain de
                   Paques</date>, bailla <rs type="person"><persName>Jacques,</persName> Prieur de
-                        <placeName><abbr>St</abbr> Christophe</placeName></rs> a <rs type="person"
-                    >monseignor <persName>Perain</persName> Cure dou <placeName>Plesier le
+                        <placeName><abbr>St</abbr> Christophe</placeName></rs> a <rs type="person">monseignor <persName>Perain</persName> Cure dou <placeName>Plesier le
                       vicomte</placeName></rs> les menues dixmes dou <placeName>Plessier</placeName>
                   et de <placeName>Lagny le Secq</placeName>, cest ascavoir a <num>trois</num> ans
                   pour <num>[dix] huit</num> livres parisis et doit rendre par chascun an six livres
                   cest a scavoir a <date>Paques</date> soixante solz, et a la <date>Toussaint</date>
                   ensuivant soixante solz.</s>
                 <s>Ses Pleges <persName>Jehan de Vilers</persName>, demeurant au
-                    <placeName>Plessier</placeName> et <rs type="person"
-                      ><persName>Gautier,</persName> le doïen de <placeName>Meaux</placeName>, son
+                    <placeName>Plessier</placeName> et <rs type="person"><persName>Gautier,</persName> le doïen de <placeName>Meaux</placeName>, son
                     frère</rs>.</s>
               </p>
             </div>
@@ -4103,11 +3854,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00048.html"
-                    >tome X, 5310 (83)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00138.jpg"
-                    >tome XVI, 272.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00048.html">tome X, 5310 (83)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00138.jpg">tome XVI, 272.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4118,10 +3865,8 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Universis presentes litteras inspecturis <rs type="person"
-                      ><persName>Stephanus</persName> Prior <placeName><abbr>Sti</abbr> Lupi de
-                      Esserento</placeName></rs> et <rs type="person"
-                      ><persName><abbr>Gh.</abbr></persName> archidiaconus
+                <s>Universis presentes litteras inspecturis <rs type="person"><persName>Stephanus</persName> Prior <placeName><abbr>Sti</abbr> Lupi de
+                      Esserento</placeName></rs> et <rs type="person"><persName><abbr>Gh.</abbr></persName> archidiaconus
                       <placeName>suessionensis</placeName></rs> salutem in Domino.</s>
               </p>
               <p>
@@ -4144,11 +3889,9 @@
                 <s>Tandem nos virtute compromissi in nos facti in Christo legitime procedentes
                   auditis hinc inde propositis et examinatis partibus, testibus, exquisitis etiam
                   voluntatibus partium predictarum ad decisionem negotii <date>die ante festum
-                    Apostolorum Simonis et Jude</date>, dicto priore personnaliter, et <rs
-                    type="person"><persName>Mattheo</persName> capellano in Ecclesia
+                    Apostolorum Simonis et Jude</date>, dicto priore personnaliter, et <rs type="person"><persName>Mattheo</persName> capellano in Ecclesia
                       <placeName>Belvacensi</placeName></rs> procuratore dictorum Decani et Capituli
-                  comparentibus coram nobis apud <placeName>Villam novam in Hatrio</placeName><ref
-                    type="note" target="#p37_fn1"/>, pro bono pacis processimus in hunc modum.</s>
+                  comparentibus coram nobis apud <placeName>Villam novam in Hatrio</placeName><ref type="note" target="#p37_fn1"/>, pro bono pacis processimus in hunc modum.</s>
                 <s>Ordinamus siquidem et definiendo pronuntiamus <pb n="38"/> quod Prior
                       <placeName><abbr>Sti</abbr>Christofori</placeName> qui jam circiter
                     <num>quindecim</num> arpenta de dictis terris per permutationem posuit in
@@ -4165,9 +3908,7 @@
                   quoties culte fuerint a colonis.</s>
               </p>
               <p>
-                <s>Actum et dictum <date>die Martis predicto, anno Domini <num><hi rend="sc"
-                        >m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi
-                        rend="sc">lxxviii</hi><hi rend="sup">o</hi></num></date>.</s>
+                <s>Actum et dictum <date>die Martis predicto, anno Domini <num><hi rend="sc">m</hi><hi rend="sup">o</hi><hi rend="sc">cc</hi><hi rend="sup">o</hi><hi rend="sc">lxxviii</hi><hi rend="sup">o</hi></num></date>.</s>
               </p>
             </div>
           </body>
@@ -4193,11 +3934,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg"
-                    >tome X, 5311 (84)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00138.html"
-                    >tome XVI, 273.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, 5311 (84)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00138.html">tome XVI, 273.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4268,11 +4005,7 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg"
-                    >tome X, 5312 (85)</ref>, <ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00155.jpg"
-                    >tome XVI, 307.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, 5312 (85)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/B606126201_afforty_T0016_00155.jpg">tome XVI, 307.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4305,9 +4038,7 @@
             <head>Justice des Bois de Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2017/Pages%20712-832/B606126201_afforty_T0017_00405.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome XVII, p. 829.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2017/Pages%20712-832/B606126201_afforty_T0017_00405.jpg">Bibl. mun. de Senlis, coll. Afforty, tome XVII, p. 829.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4320,15 +4051,13 @@
               <p>
                 <s>L'<date>an <num>1337</num></date>, presens le <rs type="person">sousprieur
                       d'<placeName>Angy</placeName>
-                    <persName>Jehan Bonjour</persName></rs> et plusieurs autres, <rs type="person"
-                        ><abbr>M<hi rend="sup">rs</hi></abbr>
+                    <persName>Jehan Bonjour</persName></rs> et plusieurs autres, <rs type="person"><abbr>M<hi rend="sup">rs</hi></abbr>
                     <persName>Regnault</persName> curé de <placeName>Fleurines</placeName></rs>,
                     <persName>Geoffroy Langlois</persName> et plusieurs autres, <persName>Thomas
                     Freret</persName>, <persName>Symon de la fontaine</persName>, <persName>Jehan
                     Capperon</persName>, <persName>Thomas Paillart</persName> lesquels et chacun
                   d'eux singulierement ont cogneu et confessé souffisament par devant nous en
-                  jugement que ils avoient etez et allé au bois de <abbr>M<hi rend="sup"
-                    >r</hi></abbr>
+                  jugement que ils avoient etez et allé au bois de <abbr>M<hi rend="sup">r</hi></abbr>
                   <placeName>Saint Christophe</placeName> lequel appartient a luy comme son domaine
                   auquel aucun n'est tenu ne peut aller pour coupper prendre ou emporter arbres
                   verds sans son congié ou seing fait par <abbr>M<hi rend="sup">r</hi></abbr> le
@@ -4368,9 +4097,7 @@
               Saint-Christophe-en-Hallatte pour leurs faciliter le payement de leurs dettes.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2019/Pages%20499-648/slides/B606126201_afforty_T0019_00288.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome XIX, p. 609.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2019/Pages%20499-648/slides/B606126201_afforty_T0019_00288.html">Bibl. mun. de Senlis, coll. Afforty, tome XIX, p. 609.</ref></witness>
                 <witness n="C">Archives de Saint-Christophe, liasse LL, n° 64.</witness>
               </listWit>
               <listWit type="édition">
@@ -4450,9 +4177,7 @@
               livres parisis de rente.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00029.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5272-3.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00029.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5272-3.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4463,9 +4188,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>A tous ceulx qui ces presentes lettres verront ou oiront, <rs type="person"
-                      ><persName>Jehan le Charon</persName> lieutenant general de <rs type="person"
-                          ><abbr>M<hi rend="sup">r</hi></abbr> le Bailli de
+                <s>A tous ceulx qui ces presentes lettres verront ou oiront, <rs type="person"><persName>Jehan le Charon</persName> lieutenant general de <rs type="person"><abbr>M<hi rend="sup">r</hi></abbr> le Bailli de
                         <placeName>Senlis</placeName></rs></rs>, commissaire donne en ceste partie
                   par nos tres chiers et redoubtés Seigneurs Nosseigneurs des Comptes et tresoriers
                   du Roy nostre Sire a <placeName>Paris</placeName>, salut.</s>
@@ -4536,8 +4259,7 @@
                   ordonné, luy et le temporel dudit Prioré, oye laquelle requeste apres que lesdits
                   commissaires nous ont rapporté dit et tesmoigné que par inquisition deuement faite
                   par eux de ce que dit est, plus utile et prouffitable chose est au Roy notre Sire
-                  prendre et accepter la ditte rente que ledit disner, en faisant l'obligation <pb
-                    n="50"/> dessusdite en eux consentant que a icelle paier par ledit Prieur, il
+                  prendre et accepter la ditte rente que ledit disner, en faisant l'obligation <pb n="50"/> dessusdite en eux consentant que a icelle paier par ledit Prieur, il
                   fut par nous receu, pourveu que il se obligeroit a paier comme dit est chacun an
                   laditte rente audit receveur au jour et terme de <date>feste de Saint Jehan
                     Baptiste</date> dont le premier terme et payement seroit et commenceroit le
@@ -4569,9 +4291,7 @@
             <head>Provisions du Prieuré de Saint-Christophe</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00032.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5278.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00032.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5278.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4637,9 +4357,7 @@
             <head>Prise de prossession du prieuré de Saint-Christophe, par Zacharie Parent.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00033.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5279.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00033.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5279.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4688,9 +4406,7 @@
               des guerres.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205335-5443/slides/B606126201_afforty_T0010_00062.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5337-40.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205335-5443/slides/B606126201_afforty_T0010_00062.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5337-40.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4799,8 +4515,7 @@
                   par <rs type="person">deffunt <persName>Jehan le Charon</persName> lors lieutenant
                     de <rs type="person">feu <abbr>M.</abbr>
                       <persName>Gilles de Saint-Simon</persName> lors et en son vivant chevalier
-                      bailly de <placeName>Senlis</placeName></rs></rs> et <rs type="person"
-                      ><persName>Adam Berthelemy</persName> aussy procureur du roy</rs>, en la
+                      bailly de <placeName>Senlis</placeName></rs></rs> et <rs type="person"><persName>Adam Berthelemy</persName> aussy procureur du roy</rs>, en la
                   présence de <persName>Jehan Descroisettes</persName>, lors greffier dudit
                   bailliage, sur ce que iceuls impetrans disoient avoir droit de haulte justice
                   moienne et basse en leur terre et seigneurie dudit
@@ -4866,8 +4581,7 @@
                   Bailliage.</s>
                 <s>Ce fut fet en jugement audit <placeName>Senlis</placeName>, en la présence dudit
                   prieur de <placeName>Saint-Christophe</placeName> pour luy et son dit prioré dune
-                  part et desdits Procureur et Receveur dautre part, le <date>mercredy <num>25<hi
-                        rend="sup">e</hi></num> jour davril, lan de grâce <num>1481</num>, après
+                  part et desdits Procureur et Receveur dautre part, le <date>mercredy <num>25<hi rend="sup">e</hi></num> jour davril, lan de grâce <num>1481</num>, après
                     Paques</date>.</s>
               </p>
               <p>
@@ -4894,9 +4608,7 @@
             <head>Relevé des droits du Prieuré de Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205335-5443/slides/B606126201_afforty_T0010_00061.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5335-7.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205335-5443/slides/B606126201_afforty_T0010_00061.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5335-7.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -4910,8 +4622,7 @@
                 <s>Ce sont les fais et articles que entend a prouver par devant vous Monseigneur le
                   Maistre des Eaues et forest du Roy notre Sire au pays de
                     <placeName>France</placeName>, <placeName>Champaigne</placeName> et
-                    <placeName>Brye</placeName>, <pb n="54"/> Religieuse et honneste personne <rs
-                    type="person">frere <persName>Zacharie Parent</persName>, Prieur du
+                    <placeName>Brye</placeName>, <pb n="54"/> Religieuse et honneste personne <rs type="person">frere <persName>Zacharie Parent</persName>, Prieur du
                       <placeName>Couvent de Saint-Christophe en Hallacte</placeName></rs> a
                   lencontre du Procureur du Roy notre Seigneur on bailliage de
                     <placeName>Senlis</placeName>.</s>
@@ -4944,9 +4655,7 @@
               </p>
               <p>
                 <s><num>VI.</num> Pour ce monstrer il dit que des lan <num>1364</num>, procès se
-                  meut entre le Prieur dudit <placeName>Saint-Christophe</placeName> et <rs
-                    type="person">feue dame <persName>Jehanne Choiselle</persName>, veuve de <rs
-                      type="person">feu Messire <persName>Pierre de Pacy</persName>,
+                  meut entre le Prieur dudit <placeName>Saint-Christophe</placeName> et <rs type="person">feue dame <persName>Jehanne Choiselle</persName>, veuve de <rs type="person">feu Messire <persName>Pierre de Pacy</persName>,
                     chevalier</rs></rs>, à laquelle appartenoit la Gruerie de laditte forest
                     d<placeName>hallacte</placeName> pour raison de plusieurs droits quavoit ledit
                   Prieur en laditte forest, quelle avoit voulu ou vouloit empescher.</s>
@@ -5069,9 +4778,7 @@
               </p>
               <p>
                 <s><num>XXV.</num>Item et pour monstrer que ainsy soit, il est vray que des le mois
-                  de mars <num>1270</num>, procès et question se meust entre le <rs type="person"
-                    >roy <persName>Philippe</persName></rs> lors regnant, <rs type="person"
-                      ><persName>Jehan du Plessier</persName> lors gruier de la forest de
+                  de mars <num>1270</num>, procès et question se meust entre le <rs type="person">roy <persName>Philippe</persName></rs> lors regnant, <rs type="person"><persName>Jehan du Plessier</persName> lors gruier de la forest de
                       <placeName>Halatte</placeName></rs> et le Prieur de la <placeName>Charité sur
                     Loire</placeName> au cause dudit Prioré de
                     <placeName>Saint-Christophe</placeName> membre dépendant dicelluy dautre part,
@@ -5146,9 +4853,7 @@
               faveur d'Antoine Parent.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00033.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5279.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00033.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5279.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -5215,9 +4920,7 @@
               Saint-Christophe, faite par Pierre du Coudray, réisdent en cour de Rome.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00033.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X. p. 5280-1.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00033.html">Bibl. mun. de Senlis, coll. Afforty, tome X. p. 5280-1.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -5255,8 +4958,7 @@
                       <persName>Zacharia Parentis</persName>, priore <placeName>Sainte-Martini de
                       Longa aqua</placeName></rs>, <rs type="person">fratre <persName>Guillermo
                       Bauchesy</persName>, priore de vernolio et subsacrista ejusdem prioratus
-                        <placeName><abbr>Sti</abbr> Christophori</placeName></rs>, Magistro <rs
-                    type="person"><persName>Galeranno Cornu</persName>, curato de
+                        <placeName><abbr>Sti</abbr> Christophori</placeName></rs>, Magistro <rs type="person"><persName>Galeranno Cornu</persName>, curato de
                       <placeName>Fleurines</placeName></rs>, <persName>Mathurino Peton</persName> et
                     <pb n="58"/>
                   <persName>Thoma Cornu</persName>, barbitonsore, testibus ad præmissa vocatis,
@@ -5281,9 +4983,7 @@
               Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00034.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5282.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00034.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5282.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -5300,8 +5000,7 @@
                     <placeName>Belvacensis</placeName> diœcesis, ab hac hora in antea fidelis et
                   obediens ero <rs type="person">Beato <persName>Petro</persName></rs> Sanctæque
                   Apostolicæ Romanæ Ecclesiæ ac <abbr>D.</abbr> nostro <abbr>D.</abbr>
-                  <rs type="person"><persName>Gregorio</persName> papæ <num>XIII<hi rend="sup"
-                        >o</hi></num></rs> suisque succes oribus canonice intrantibus, nec ero
+                  <rs type="person"><persName>Gregorio</persName> papæ <num>XIII<hi rend="sup">o</hi></num></rs> suisque succes oribus canonice intrantibus, nec ero
                   inconsilio, consensu, tractatu vel facto ut vitam vel membrum perdant seu quod
                   contra alicujus eorum personam vel in ipsorum aut ecclesiæ ejusdem sive Sedis
                   Apostolicæ autoritatis, honoris, privilegiorum, jurium vel apostolicorum
@@ -5341,9 +5040,7 @@
               Divi Christophori ad Silvanectum Antistiti meritissimo, salutem.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00035.jpg"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, 5283.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00035.jpg">Bibl. mun. de Senlis, coll. Afforty, tome X, 5283.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -5441,9 +5138,7 @@
               1712.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B"><ref
-                    target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00030.html"
-                    >Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5273-6.</ref></witness>
+                <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00030.html">Bibl. mun. de Senlis, coll. Afforty, tome X, p. 5273-6.</ref></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>,
@@ -5494,8 +5189,7 @@
                   et deux cent septiers d'avoine, mesure de <placeName>Dammartin</placeName>, de
                   redevance à prendre par chacun an le <date>lendemain de la Chandeleur</date> sur
                   la Commanderie de <placeName>Lagny-le-Secq</placeName>, suivant et en exécution de
-                  l'arrest de Nosseigneurs du grand Conseil, du <date><num>1<hi rend="sup"
-                      >er</hi></num> juin <num>1619</num></date>. Sur laquelle redevance ledit
+                  l'arrest de Nosseigneurs du grand Conseil, du <date><num>1<hi rend="sup">er</hi></num> juin <num>1619</num></date>. Sur laquelle redevance ledit
                   Prieur de <placeName>Saint-Christophe</placeName> est obligé de payer annuellement
                   ledit jour <date>landemain de la Chandeleur</date> au sieur Curé de
                     <placeName>Lagny-le-Secq</placeName> pour son gros la quantité de <num>vingt et
@@ -5525,8 +5219,7 @@
               </p>
               <p>
                 <s>Item appartient audit Prieuré <num>quatorze</num> arpents de prez en plusieurs
-                  pièces assises en la prairie de <placeName>Verneuil</placeName>, affermés à <rs
-                    type="person"><persName>Elisabeth</persName>, veuve de <persName>Louis
+                  pièces assises en la prairie de <placeName>Verneuil</placeName>, affermés à <rs type="person"><persName>Elisabeth</persName>, veuve de <persName>Louis
                       Perceval</persName></rs>, demeurant audit lieu, qui en rend de loyer par
                   chacun an <num>80</num> livres, suivant le bail à elle fait sous seing privé, le
                       <date><num>10</num> avril <num>1706</num></date>.</s>
@@ -5536,10 +5229,8 @@
                   terre labourable ou environ, en plusieurs pièces, assises sur le terroir de
                     <placeName>Bray</placeName>, <placeName>Brasseuse</placeName> et
                     <placeName>Ognon</placeName>, et soixante sols de surcens à prendre sur une
-                  maison mazure, sise audit <placeName>Bray</placeName>, tenue par la <rs
-                    type="person">veuve <persName>Destrées</persName> dudit
-                      <placeName>Bray</placeName></rs>, le tout affermé par <rs type="person"
-                      ><persName>Alexandre Sébert</persName>, laboureur audit
+                  maison mazure, sise audit <placeName>Bray</placeName>, tenue par la <rs type="person">veuve <persName>Destrées</persName> dudit
+                      <placeName>Bray</placeName></rs>, le tout affermé par <rs type="person"><persName>Alexandre Sébert</persName>, laboureur audit
                       <placeName>Bray</placeName></rs>, moyennant la somme de <num>trois cent</num>
                   livres par chacun an, suivant le bail passé entre les parties devant notaires à
                     <placeName>Senlis</placeName>, pour le temps de neuf années, du
@@ -5554,8 +5245,7 @@
                   audit terroir, consistant en six mines d'avoine et six livres d'argent, tenus à
                   loyer par <rs type="person"><persName>Charles Bombart</persName>, laboureur audit
                       <placeName>Villemétrye</placeName></rs>, moyennant deux cent livres par chacun
-                  an suivant le bail passé entre les parties devant <rs type="person"
-                      ><persName>Bacouel</persName>, notaire à <placeName>Senlis</placeName></rs>,
+                  an suivant le bail passé entre les parties devant <rs type="person"><persName>Bacouel</persName>, notaire à <placeName>Senlis</placeName></rs>,
                   le <date><num>25</num> octobre <num>1705</num></date>, lequel expire <date>au jour
                     Saint-Martin d'hyver prochain, <num>1712</num></date>.</s>
               </p>
@@ -5665,8 +5355,7 @@
               <p>
                 <s>Item, outre lesdittes redevances, loyers et bois, il y a un fief situé au village
                   de <placeName>Pompoint</placeName>, appellé le fief de
-                    <placeName>Moivinet</placeName>, appartenant à des héritiers de <rs
-                    type="person">Monseigneur larchevesque d<placeName>Auch</placeName></rs>, lequel
+                    <placeName>Moivinet</placeName>, appartenant à des héritiers de <rs type="person">Monseigneur larchevesque d<placeName>Auch</placeName></rs>, lequel
                   fief de <placeName>Moivinet</placeName> est mouvant du <placeName>Prieur de
                     Saint-Christophe</placeName>, et pour raison duquel sont dus les droits de
                   Relief audit sieur Prieur de <placeName>Saint-Christophe</placeName> quand le cas
