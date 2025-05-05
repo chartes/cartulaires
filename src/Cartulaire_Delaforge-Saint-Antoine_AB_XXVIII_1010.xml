@@ -85,6 +85,9 @@
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[3]/div">
+          <citeData  property="dc:title" use="head[1]"/>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <revisionDesc>
