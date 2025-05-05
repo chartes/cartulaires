@@ -126,7 +126,7 @@
             <citeStructure unit="sous-section" match="group" use="default">
               <citeData property="dc:title" use="head[1]"/>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-                <citeData property="dc:title" use="concat(@n, ' (', /front[1]/docDate[1]/date[1], ')' )"/>
+                <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
                 <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
                 <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
                 <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -1332,7 +1332,7 @@
             <pb n="25"/>
             <front>
               <docDate>
-                <date notBefore="1060" notAfter="1061"/>
+                <date notBefore="1060" notAfter="1061">1060-1061</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2648,7 +2648,7 @@
             <pb n="39"/>
             <front>
               <docDate>
-                <date notBefore="1079" notAfter="1079"/>
+                <date notBefore="1079" notAfter="1079">1079</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -3125,7 +3125,7 @@
             <pb n="45"/>
             <front>
               <docDate>
-                <date notBefore="1082" notAfter="1083"/>
+                <date notBefore="1082" notAfter="1083">1082-1083</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -3677,7 +3677,7 @@
               <pb n="51"/>
               <front>
                 <docDate>
-                  <date notBefore="1085" notAfter="1086"/>
+                  <date notBefore="1085" notAfter="1086">1085-1086</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -3761,7 +3761,7 @@
               <pb n="51"/>
               <front>
                 <docDate>
-                  <date notBefore="1085" notAfter="1086"/>
+                  <date notBefore="1085" notAfter="1086">1085-1086</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -3837,7 +3837,7 @@
               <pb n="52"/>
               <front>
                 <docDate>
-                  <date notBefore="1085" notAfter="1086"/>
+                  <date notBefore="1085" notAfter="1086">1085-1086</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -3916,7 +3916,7 @@
               <pb n="52"/>
               <front>
                 <docDate>
-                  <date notBefore="1085" notAfter="1086"/>
+                  <date notBefore="1085" notAfter="1086">1085-1086</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -5743,7 +5743,7 @@
             <pb n="72"/>
             <front>
               <docDate>
-                <date notBefore="1089" notAfter="1093"/>
+                <date notBefore="1089" notAfter="1093">1089-1093</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6151,7 +6151,7 @@
             <pb n="77"/>
             <front>
               <docDate>
-                <date notBefore="1093" notAfter="1093"/>
+                <date notBefore="1093" notAfter="1093">1089-1093</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6829,7 +6829,7 @@
             <pb n="85"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1094"/>
+                <date notBefore="1092" notAfter="1094">1092-1094</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6881,7 +6881,7 @@
             <pb n="85"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1094"/>
+                <date notBefore="1092" notAfter="1094">1092-1094</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7066,7 +7066,7 @@
             <pb n="87"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1095"/>
+                <date notBefore="1092" notAfter="1095">1092-1095</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7138,7 +7138,7 @@
             <pb n="87"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1095"/>
+                <date notBefore="1092" notAfter="1095">1092-1095</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7209,7 +7209,7 @@
             <pb n="87"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1095"/>
+                <date notBefore="1092" notAfter="1095">1092-1095</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7297,7 +7297,7 @@
             <pb n="89"/>
             <front>
               <docDate>
-                <date notBefore="1092" notAfter="1095"/>
+                <date notBefore="1092" notAfter="1095">1092-1095</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -8697,7 +8697,7 @@
             <pb n="105"/>
             <front>
               <docDate>
-                <date notBefore="1096-03" notAfter="1096-03-12"/>
+                <date notBefore="1096-03" notAfter="1096-03-12">mars 1096</date>
               </docDate>
               <index>
                 <term type="nature" key="cens"/>
@@ -9365,7 +9365,7 @@
             <pb n="114"/>
             <front>
               <docDate>
-                <date notBefore="1096" notAfter="1096"/>
+                <date notBefore="1096" notAfter="1096">1096</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -9874,7 +9874,7 @@
             <pb n="120"/>
             <front>
               <docDate>
-                <date notBefore="1096-07-14" notAfter="1096-07-14"/>
+                <date notBefore="1096-07-14" notAfter="1096-07-14">14 juillet 1096</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -13500,7 +13500,7 @@
             <pb n="159"/>
             <front>
               <docDate>
-                <date notBefore="1104" notAfter="1108"/>
+                <date notBefore="1104" notAfter="1108">1104-1108</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -15051,7 +15051,7 @@
             <pb n="175"/>
             <front>
               <docDate>
-                <date notBefore="1105" notAfter="1108"/>
+                <date notBefore="1105" notAfter="1108">1105-1108</date>
               </docDate>
               <index>
                 <term type="nature" key="epi"/>
@@ -17049,7 +17049,7 @@
             <pb n="199"/>
             <front>
               <docDate>
-                <date notBefore="1108" notAfter="1109"/>
+                <date notBefore="1108" notAfter="1109">1108-1109</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -17407,7 +17407,7 @@
             <pb n="204"/>
             <front>
               <docDate>
-                <date notBefore="1108" notAfter="1109"/>
+                <date notBefore="1108" notAfter="1109">1108-1109</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -17911,7 +17911,7 @@
             <pb n="210"/>
             <front>
               <docDate>
-                <date notBefore="1109" notAfter="1110"/>
+                <date notBefore="1109" notAfter="1110">1109-1110</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -26687,7 +26687,7 @@
             <pb n="7"/>
             <front>
               <docDate>
-                <date notBefore="1131-09-30" notAfter="1133-01-30"/>
+                <date notBefore="1131-09-30" notAfter="1133-01-30">30 septembre 1131 - 30 janvier 1133</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -38686,7 +38686,7 @@
             <pb n="168"/>
             <front>
               <docDate>
-                <date notBefore="1147-01-01" notAfter="1147-06-02"/>
+                <date notBefore="1147-01-01" notAfter="1147-06-02">1er janvier 1147 - 2 juin 1147</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -38930,7 +38930,7 @@
             <pb n="170"/>
             <front>
               <docDate>
-                <date when="1147-06-02"/>
+                <date when="1147-06-02">2 juin 1147</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -40994,7 +40994,7 @@
             <pb n="193"/>
             <front>
               <docDate>
-                <date when="1148-06-01"/>
+                <date when="1148-06-01">1er juin 1148</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -41318,7 +41318,7 @@
             <pb n="197"/>
             <front>
               <docDate>
-                <date notBefore="1148" notAfter="1148"/>
+                <date notBefore="1148" notAfter="1148">1148</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -41430,7 +41430,7 @@
             <pb n="198"/>
             <front>
               <docDate>
-                <date notBefore="1148" notAfter="1148"/>
+                <date notBefore="1148" notAfter="1148">1148</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -42492,7 +42492,7 @@
             <pb n="212"/>
             <front>
               <docDate>
-                <date notBefore="1150" notAfter="1151"/>
+                <date notBefore="1150" notAfter="1151">1150 - 1151</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -44457,7 +44457,7 @@
             <pb n="234"/>
             <front>
               <docDate>
-                <date notBefore="1147-10-27" notAfter="1154-12-14"/>
+                <date notBefore="1147-10-27" notAfter="1154-12-14">27 octobre 1147 - 14 décembre 1154</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -50580,7 +50580,7 @@
             <pb n="310"/>
             <front>
               <docDate>
-                <date notBefore="1170" notAfter="1170"/>
+                <date notBefore="1170" notAfter="1170">1170</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -50663,7 +50663,7 @@
             <pb n="310"/>
             <front>
               <docDate>
-                <date notBefore="1170" notAfter="1170"/>
+                <date notBefore="1170" notAfter="1170">1170</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -59804,7 +59804,7 @@
             <pb n="73"/>
             <front>
               <docDate>
-                <date notBefore="1182" notAfter="1186"/>
+                <date notBefore="1182" notAfter="1186">1182 - 1186</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -61664,7 +61664,7 @@
             <pb n="94"/>
             <front>
               <docDate>
-                <date notBefore="1187" notAfter="1190"/>
+                <date notBefore="1187" notAfter="1190">1187 - 1190</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -62482,7 +62482,7 @@
             <pb n="103"/>
             <front>
               <docDate>
-                <date notBefore="1190" notAfter="1191"/>
+                <date notBefore="1190" notAfter="1191">1190 - 1191</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -65495,7 +65495,7 @@
               <pb n="139"/>
               <front>
                 <docDate>
-                  <date notBefore="1167" notAfter="1193"/>
+                  <date notBefore="1167" notAfter="1193">1167 - 1193</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -66350,7 +66350,7 @@
             <pb n="151"/>
             <front>
               <docDate>
-                <date notBefore="1196-11-23" notAfter="1197-04-06"/>
+                <date notBefore="1196-11-23" notAfter="1197-04-06">23 novembre 1196 - 6 avril 1197</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -68762,8 +68762,7 @@
               <pb n="175"/>
               <front>
                 <docDate>
-                  <date notBefore="1200-01-01" notAfter="1201-01-07">1er janvier ou 9 avril 1200 - 7
-                    janvier 1201</date>
+                  <date notBefore="1200-01-01" notAfter="1201-01-07">1er janvier ou 9 avril 1200 - 7 janvier 1201</date>
                 </docDate>
                 <index>
                   <term type="nature" key="act"/>
@@ -75295,7 +75294,7 @@
             <pb n="254"/>
             <front>
               <docDate>
-                <date notBefore="1201" notAfter="1207-09-28"/>
+                <date notBefore="1201" notAfter="1207-09-28">1201 - 28 septembre 1207</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -81050,7 +81049,7 @@
             <pb n="324"/>
             <front>
               <docDate>
-                <date notBefore="1215" notAfter="1216"/>
+                <date notBefore="1215" notAfter="1216">1215 - 1216</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -92391,7 +92390,7 @@
             <pb n="4_0066"/>
             <front>
               <docDate>
-                <date notBefore="1230-05" notAfter="1230-06"/>
+                <date notBefore="1230-05" notAfter="1230-06">mai 1230 - juin 1231</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -99545,7 +99544,7 @@
             <pb n="4_0149"/>
             <front>
               <docDate>
-                <date notBefore="1241-03" notAfter="1241-03"/>
+                <date notBefore="1241-03" notAfter="1241-03">mars 1241</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -103941,7 +103940,7 @@
             <pb n="4_0200"/>
             <front>
               <docDate>
-                <date notBefore="1250" notAfter="1251"/>
+                <date notBefore="1250" notAfter="1251">1250 - 1251</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -105089,7 +105088,7 @@
             <pb n="4_0213"/>
             <front>
               <docDate>
-                <date notBefore="1253-12-24" notAfter="1253-05"/>
+                <date notBefore="1253-12-24" notAfter="1253-05">24 décembre 1253 - mai 1253</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -114390,7 +114389,7 @@
             <pb n="102"/>
             <front>
               <docDate>
-                <date when="1274-04"/>
+                <date when="1274-04">avril 1274</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>

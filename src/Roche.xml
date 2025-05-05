@@ -122,9 +122,9 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section">
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group">
           <citeData property="dc:title" use="head[1]"/>
-          <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
             <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
@@ -7429,7 +7429,7 @@
           <!-- oldid:acte101 -->
           <front>
             <docDate>
-              <date when="1191-07"/>
+              <date when="1191-07">juillet 1191</date>
             </docDate>
             <index>
               <term type="nature" key="act"/>
@@ -8144,7 +8144,7 @@
           <!-- oldid:acte114 -->
           <front>
             <docDate>
-              <date notBefore="1215" notAfter="1246"/>
+              <date notBefore="1215" notAfter="1246">1215-1246</date>
             </docDate>
             <index>
               <term type="nature" key="act"/>
@@ -8865,7 +8865,7 @@
           <!-- oldid:acte125 -->
           <front>
             <docDate>
-              <date notBefore="1268" notAfter="1276"/>
+              <date notBefore="1268" notAfter="1276">1268-1276</date>
             </docDate>
             <index>
               <term type="nature" key="rjud"/>
@@ -9157,7 +9157,7 @@
           <!-- oldid:acte127 -->
           <front>
             <docDate>
-              <date notBefore="1276" notAfter="1295"/>
+              <date notBefore="1276" notAfter="1295">1276-1295</date>
             </docDate>
             <index>
               <term type="nature" key="act"/>

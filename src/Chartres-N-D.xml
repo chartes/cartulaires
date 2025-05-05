@@ -99,7 +99,7 @@
         <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dc:title" use="concat(@n, (if (front[1]/docDate[1]/date[1]) then ' (', front[1]/docDate[1]/date[1], ')') )"/>
             <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -901,7 +901,7 @@
           <pb n="1068"/>
           <front>
             <docDate>
-              <date notBefore="0573-09-11" notAfter="0768-09"/>
+              <date notBefore="0573-09-11" notAfter="0768-09">11 septembre 573 - septembre 768</date>
             </docDate>
             <index>
               <term type="nature" key="act"/>
