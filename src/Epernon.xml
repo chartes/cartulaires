@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Epernon">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Epernon">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -47,10 +44,7 @@
         <availability status="restricted">
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-              (<ref
-              target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
-              >L341-1</ref>), selon les termes de la licence Creative Commons : « <ref
-              target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+              (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
               d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
             et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
@@ -92,20 +86,20 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
-          <citeData property="dc:title" use="head[not(@type)]"/>
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+          <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
+            <citeStructure unit="sous-partie" match="div[@type]" use="default">
+              <citeData property="dc:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -130,18 +124,14 @@
         <p>Carte de situation (Atlas de Cassini)</p>
         <p>Édition ou regeste, dans l’ordre chronologique, des originaux et copies modernes.</p>
         <p>Total des actes édités ou mentionnés : 178, dont 136 pour Épernon et 42 pour Maintenon (1
-          du XI<hi rend="sup">e</hi> siècle, 8 du XII<hi rend="sup">e</hi> siècle, 102 du XIII<hi
-            rend="sup">e</hi> siècle, 27 du XIV<hi rend="sup">e</hi> siècle, 17 du XV<hi rend="sup"
-            >e</hi> siècle, 15 du XVI<hi rend="sup">e</hi> siècle, 6 du XVII<hi rend="sup"
-          >e</hi> siècle, 2 du XVIII<hi rend="sup">e</hi> siècle).</p>
+          du XI<hi rend="sup">e</hi> siècle, 8 du XII<hi rend="sup">e</hi> siècle, 102 du XIII<hi rend="sup">e</hi> siècle, 27 du XIV<hi rend="sup">e</hi> siècle, 17 du XV<hi rend="sup">e</hi> siècle, 15 du XVI<hi rend="sup">e</hi> siècle, 6 du XVII<hi rend="sup">e</hi> siècle, 2 du XVIII<hi rend="sup">e</hi> siècle).</p>
       </argument>
       <byline>Notice préparée par Mathilde Koskas (juin 2006).</byline>
       <div xml:id="Epernon_etablissement" subtype="article">
         <head>L’établissement</head>
         <div type="historique">
           <head>Historique</head>
-          <p>Le prieuré de Saint-Thomas d’Épernon est fondé par Amaury de Montfort (acte n<hi
-              rend="sup">o</hi> I de l’édition, 1052 ou 1053), qui fait don du monastère de la
+          <p>Le prieuré de Saint-Thomas d’Épernon est fondé par Amaury de Montfort (acte n<hi rend="sup">o</hi> I de l’édition, 1052 ou 1053), qui fait don du monastère de la
             Trinité de Seincourt à l’abbé Albert de Marmoutier. Cette donation est confirmée par une
             charte royale. Une nouvelle église, extension de l’ancienne, est construite ; elle sert
             de sépulture aux seigneurs de Montfort jusqu’à la fondation du prieuré de Haute-Bruière
@@ -184,8 +174,7 @@
       </div>
       <div xml:id="Epernon_biblio" subtype="article">
         <head>Orientation bibliographique </head>
-        <p>Émile Ledru, « Le prieuré Saint-Thomas d’Épernon, étude historique… », extrait de <hi
-            rend="i">Archives historiques du diocèse de Chartres</hi>, 1898.</p>
+        <p>Émile Ledru, « Le prieuré Saint-Thomas d’Épernon, étude historique… », extrait de <hi rend="i">Archives historiques du diocèse de Chartres</hi>, 1898.</p>
         <p>Odile Gantier, « Recherches sur les possessions et les prieurés de l’abbaye de Marmoutier
           du X<hi rend="sup">e</hi> au XIII<hi rend="sup">e</hi> siècle », dans <hi rend="i">Revue
             Mabillon</hi>, t. 53 (1963) à 55 (1965), pagin. mult.</p>
@@ -240,8 +229,7 @@
             n’a conservé de sceau. Moutié et de Dion ont choisi de les présenter chronologiquement
             dans leur édition, en gardant le titre. Gaignières, qui reproduit parfois les sceaux,
             leur fournit des précisions sur ce sujet.</p>
-          <p>Les actes 1 à 85 de ce chartrier concernent Épernon ; 17 pièces manquent (n<hi
-              rend="sup">o</hi> 1, 2, 4, 12, 14, 16, 19, 20, 29, 36, 43-45, 75-77 et 84), et il y a
+          <p>Les actes 1 à 85 de ce chartrier concernent Épernon ; 17 pièces manquent (n<hi rend="sup">o</hi> 1, 2, 4, 12, 14, 16, 19, 20, 29, 36, 43-45, 75-77 et 84), et il y a
             des numéros multiples : en tout, 107 pièces, correspondant aux cotes H 2320 à 2338 des
             Archives départementales de l'Eure-et-Loir. Pour le prieuré de Maintenon, il s’agit de
             32 numéros, 45 pièces, correspondant aux cotes H 2339 à 2349. </p>
@@ -484,10 +472,8 @@
             abréviations de noms propres sont résolues en notes, et les mots manquants rendus par
             des points, ce qui peut entraîner une confusion avec les mots que les éditeurs ont
             choisi de ne pas éditer. Certains actes, dont le texte est contenu dans un acte suivant,
-            ne sont pas édités (les n<hi rend="sup">o</hi> LXVII-LXIX d’Épernon renvoient au n<hi
-              rend="sup">o</hi> LXX), mais, pour d’autres, les éditeurs créent des actes en les
-            extrayant d’autres (les n<hi rend="sup"/> LXXII-LXXV sont des citations du n<hi
-              rend="sup"/> LXXIX).</p>
+            ne sont pas édités (les n<hi rend="sup">o</hi> LXVII-LXIX d’Épernon renvoient au n<hi rend="sup">o</hi> LXX), mais, pour d’autres, les éditeurs créent des actes en les
+            extrayant d’autres (les n<hi rend="sup"/> LXXII-LXXV sont des citations du n<hi rend="sup"/> LXXIX).</p>
           <p>L’index sigillographique a simplement des entrées aux surnoms et patronymes (et pas aux
             noms personnels), et ne comporte aucun renvoi, mais sa brièveté lui permet de rester
             d’usage commode. La table des noms de personne et de lieu est traitée de même, ce qui vu
@@ -542,10 +528,8 @@
                   necessitatibus communicare studuevit indigentium, ut deficiens ab hujus modi
                   amicis in mansiones excipiatur eternas ; noverit se indubitanter non solum a sui
                   receptione non esse frustrandum, sed etiam ab omnipotenti Deo se esse inter
-                  gloriosiores beatitudinis eterne premia percepturum<ref type="note"
-                    target="#p1_fn1"/>.</s>
-                <s>Hac igitur salubri consideratione ego <rs type="person"
-                      ><persName>AMALRICUS</persName> miles</rs> sollicitatus, necessarium duxi
+                  gloriosiores beatitudinis eterne premia percepturum<ref type="note" target="#p1_fn1"/>.</s>
+                <s>Hac igitur salubri consideratione ego <rs type="person"><persName>AMALRICUS</persName> miles</rs> sollicitatus, necessarium duxi
                   aliquid ex hiis que temporaliter accepi beneficientie munere conferre pauperibus
                   in presenti, quod post tempus in eterna retributione centena merear
                   multiplicatione recipere.</s>
@@ -569,16 +553,14 @@
                 <s>Ut autem quantitatis sive integritatis earumdem rerum quas jam prefato loco
                   contulimus omnis propellatur ambiguitas, earum nomina huic scripto inserere
                   jussimus.</s>
-                <s>Id est : ecclesiam de <placeName>Olmetis</placeName><ref type="note"
-                    target="#p2_fn2"/> cum omni integritate ; et ecclesiam de
+                <s>Id est : ecclesiam de <placeName>Olmetis</placeName><ref type="note" target="#p2_fn2"/> cum omni integritate ; et ecclesiam de
                     <placeName>Proeis</placeName><ref type="note" target="#p2_fn3"/> similiter cum
                   omni integritate ; nec non et casam ecclesie de
                     <placeName>Hilmaretis</placeName><ref type="note" target="#p2_fn4"/>, et casam
                   ecclesie de <placeName>Gaserenco</placeName>, et casam ecclesie de
                     <placeName>Raimboleto</placeName>, et quidquid respicit ad villam cui
                     <placeName>Seincurtis</placeName><ref type="note" target="#p2_fn5"/> nomen est
-                  infra flumen quod vocatur <placeName>Tahu</placeName><ref type="note"
-                    target="#p2_fn6"/>, cum vineis, pratis, molendinis, <pb n="3"/> terris cultis et
+                  infra flumen quod vocatur <placeName>Tahu</placeName><ref type="note" target="#p2_fn6"/>, cum vineis, pratis, molendinis, <pb n="3"/> terris cultis et
                   incultis, servis et ancillis qui inibi commorantur et qui ad eumdem locum
                   pertinent ; preterea unum stagnum et unum alnetum ; nec non et decimam mearum
                   equarum et decimam recte redebitionis cujuscumque rei que de
@@ -609,13 +591,11 @@
                   fidelibus suis quorum nomina subscripta sunt corroborandum tradidit.</s>
                 <s>Si quis autem, quod absit, ex heredibus nostris vel alia quelibet cujuscumque
                   ordinis et potestatis persona, diabolice suggestionis instinctu, huic elemosine
-                  testamento in ferre calumpniam temptaverit, et prave voluntatis effectum, <pb
-                    n="4"/> justicia convictus, obtinere non valeat, et regi qui pro tempore fuerit
+                  testamento in ferre calumpniam temptaverit, et prave voluntatis effectum, <pb n="4"/> justicia convictus, obtinere non valeat, et regi qui pro tempore fuerit
                   auri libras decem coactus exolvat.</s>
               </p>
               <p>
-                <s>SIGNUM <persName><abbr>H.</abbr></persName> GLORIOSISSIMI REGIS<ref type="note"
-                    target="#p4_fn1"/></s>
+                <s>SIGNUM <persName><abbr>H.</abbr></persName> GLORIOSISSIMI REGIS<ref type="note" target="#p4_fn1"/></s>
               </p>
               <p>
                 <s><abbr>S.</abbr>
@@ -627,14 +607,11 @@
                 <s><abbr>S.</abbr>
                   <rs type="person"><persName>Mainerii</persName>, filii ejus</rs>.</s>
                 <s>— <abbr>S.</abbr>
-                  <rs type="person"><persName>Tetbaldi</persName>, comitis<ref type="note"
-                      target="#p4_fn2"/></rs>.</s>
+                  <rs type="person"><persName>Tetbaldi</persName>, comitis<ref type="note" target="#p4_fn2"/></rs>.</s>
                 <s><abbr>S</abbr>.</s>
-                <s><rs type="person"><persName>Odonis</persName>, fratris regis<ref type="note"
-                      target="#p4_fn3"/></rs>.</s>
+                <s><rs type="person"><persName>Odonis</persName>, fratris regis<ref type="note" target="#p4_fn3"/></rs>.</s>
                 <s><abbr>S.</abbr>
-                  <rs type="person"><persName>Galeranni</persName>, comitis<ref type="note"
-                      target="#p4_fn4"/></rs>.</s>
+                  <rs type="person"><persName>Galeranni</persName>, comitis<ref type="note" target="#p4_fn4"/></rs>.</s>
                 <s><abbr>S.</abbr>
                   <rs type="person"><persName>Hescelini</persName>, <placeName>Parisiace</placeName>
                     urbis episcopi<ref type="note" target="#p4_fn5"/></rs>.</s>
@@ -742,8 +719,7 @@
                 l'ancienne dénomination (A. D.)</note>
               <note xml:id="p2_fn6">Une carte du dix-huitième siècle, aux archives d'Eure-et-Loir,
                 donne le nom de Tallu au ruisseau qui passe à Hermeray.</note>
-              <note xml:id="p4_fn1">Cette formule était en lettres grêles de 0<hi rend="sup"
-                >m</hi>05 de hauteur ; la lettre H remplace le monogramme HENRICUS. Deux colonnes,
+              <note xml:id="p4_fn1">Cette formule était en lettres grêles de 0<hi rend="sup">m</hi>05 de hauteur ; la lettre H remplace le monogramme HENRICUS. Deux colonnes,
                 l'une de onze noms, l'autre de quatre, étaient placées sur les côtés ; la seconde,
                 qui doit être mise en tête comme contenant les noms les plus importants, commençait
                 deux lignes plus haut que l'autre. Au bas du monogramme était la signature du
@@ -803,13 +779,11 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Ego <rs type="person"><persName>Ivo</persName>,
-                      <placeName>Carnotensis</placeName> episcopus</rs>, et <rs type="person"
-                      ><persName>Walterius</persName> archidiaconus</rs>, notum fieri volumus tam
+                      <placeName>Carnotensis</placeName> episcopus</rs>, et <rs type="person"><persName>Walterius</persName> archidiaconus</rs>, notum fieri volumus tam
                   posteris quam presentibus quod <persName>Willelmus</persName>, abbas
                     <placeName>Sancti Martini Majoris Monasterii</placeName>, cum quibusdam monachis
                   suis nostram adiit presentiam, humiliter inplorans, quatenus ecclesie
-                    <placeName>beati Martini</placeName> concederemus hoc quod <rs type="person"
-                      ><persName>Paganus</persName>, <placeName>beate Marie Carnotensis</placeName>
+                    <placeName>beati Martini</placeName> concederemus hoc quod <rs type="person"><persName>Paganus</persName>, <placeName>beate Marie Carnotensis</placeName>
                     canonicus</rs>, in ecclesia de <placeName>Hanchis</placeName> tenebat.</s>
                 <s>Predictus vero <persName>Paganus</persName> ibi veniens, in manu nostra quod in
                   prefata tenebat ecclesia absolute dimisit.</s>
@@ -830,10 +804,8 @@
                   concessimus.</s>
                 <s>Hujus vero doni concessio facta est anno ab incarnatione domini nillesimo.</s>
                 <s><num>Cº XIIIIº</num> his adstantibus quorum nomina subterscripsimus.</s>
-                <s>Ex parte episcopi, et archidiaconi fuit, <rs type="person"
-                      ><persName>Raimbaldus</persName>
-                    <placeName>Vindocinensis</placeName> archidiaconus</rs>, et <rs type="person"
-                      ><persName>Ausgerius</persName>, <placeName>Blesensis</placeName>
+                <s>Ex parte episcopi, et archidiaconi fuit, <rs type="person"><persName>Raimbaldus</persName>
+                    <placeName>Vindocinensis</placeName> archidiaconus</rs>, et <rs type="person"><persName>Ausgerius</persName>, <placeName>Blesensis</placeName>
                     archidiaconus</rs> ; <rs type="person"><persName>Galerannus</persName>
                     canonicus</rs>, <rs type="person"><persName>Raginaldus</persName>, ejus
                     clericus</rs> ; <rs type="person"><persName>Bernerius</persName>, regis
@@ -841,8 +813,7 @@
                     canonicus, episcopi camerarius</rs>.</s>
                 <s>Ex parte vero abbatis : <rs type="person"><persName>Willelmus</persName>
                     prior</rs>, <persName>Petrus Laidet</persName>, <persName>Gilo
-                    Ansiglini</persName>, <persName>Helduinus</persName>, <rs type="person"
-                      ><persName>Hugo</persName> hospitalarius</rs>.</s>
+                    Ansiglini</persName>, <persName>Helduinus</persName>, <rs type="person"><persName>Hugo</persName> hospitalarius</rs>.</s>
                 <s>De famulis : <rs type="person"><persName>Arroldus</persName> cubicularius</rs>,
                     <persName>Paganus</persName>, <persName>Landricus</persName>,
                     <persName>Sancelinus</persName>, <persName>Petrus Burdo</persName>,
@@ -864,8 +835,7 @@
           </body>
           <back>
             <div type="notes">
-              <note xml:id="p8_fn1">La croix qui se trouve après le mot <foreign xml:lang="lat"
-                  >discessum</foreign> correspond à une autre croix qui se trouve plus bas, entre
+              <note xml:id="p8_fn1">La croix qui se trouve après le mot <foreign xml:lang="lat">discessum</foreign> correspond à une autre croix qui se trouve plus bas, entre
                 les mots <foreign xml:lang="lat">fuit que</foreign> qui commencent un renvoi ou une
                 addition à la charte de l'évêque de Chartres. Ces croix et ce renvoi ont été ajoutés
                 après coup et d'une encre autre que celle du corps de la pièce. La seconde encre a
@@ -906,14 +876,12 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Ego <rs type="person"><persName>Ivo</persName>,
-                      <placeName>Carnotensis</placeName> episcopus</rs>, et <rs type="person"
-                      ><persName>Walterius</persName>, archidiaconus</rs>, notum fieri volumus tam
+                      <placeName>Carnotensis</placeName> episcopus</rs>, et <rs type="person"><persName>Walterius</persName>, archidiaconus</rs>, notum fieri volumus tam
                   posteris quam presentibus <pb n="9"/> quod <persName>Willelmus</persName> abbas
                     <placeName>Sancti Martini Majoris Monasterii</placeName> cum quibusdam monachis
                   suis nostram adiit presentiam humiliter implorans, quatinus ecclesie
                     <placeName>beati Martini</placeName> concederamus ecclesiam de
-                    <placeName>Hanchis</placeName> quam <rs type="person"
-                      ><persName>Paganus</persName>, <placeName>beate Marie Carnotensis</placeName>
+                    <placeName>Hanchis</placeName> quam <rs type="person"><persName>Paganus</persName>, <placeName>beate Marie Carnotensis</placeName>
                     canonicus</rs>, tenebat.</s>
                 <s>Predictus vero <persName>Paganus</persName> ibi veniens, in manu nostra prefatam
                   ecclesiam absolute dimisit.</s>
@@ -938,20 +906,15 @@
                 <s>Hujus vero doni concessio facta est anno ab incarnatione domini millesimo.</s>
                 <s><num>Cº XIIIIº</num> his presentibus quorum nomina subter scripsimus : Ex parte
                   episcopi et archidiaconi fuit <rs type="person"><persName>Raimbaldus</persName>
-                    <placeName>Vindocinnensis</placeName> archidiaconus</rs>, <rs type="person"
-                      ><persName>Ausgerus</persName>, <placeName>Blesensis</placeName>
+                    <placeName>Vindocinnensis</placeName> archidiaconus</rs>, <rs type="person"><persName>Ausgerus</persName>, <placeName>Blesensis</placeName>
                     archidiaconus</rs> : <rs type="person"><persName>Gualeranus</persName>,
                     canonicus</rs> ; <rs type="person"><persName>Rainaldus</persName>, ejus
                     clericus</rs> ; <rs type="person"><persName>Bernerius</persName> regius
                     canonicus</rs> ; <rs type="person"><persName>Radulphus</persName> regius
-                    cononicus, episcopi camerarius</rs> ; Ex parte vero abbatis : <rs type="person"
-                      ><persName>Willelmus</persName> prior</rs>, <persName>Petrus
+                    cononicus, episcopi camerarius</rs> ; Ex parte vero abbatis : <rs type="person"><persName>Willelmus</persName> prior</rs>, <persName>Petrus
                   Laidet</persName>, <persName>Gilo</persName> et ejus filius.</s>
                 <s><persName>Hilduinus</persName>, <rs type="person"><persName>Hugo</persName>
-                    hospitalarius</rs> : De famulis : <rs type="person"
-                      ><persName>Arroldus</persName>, camerarius</rs> ; <rs type="person"
-                      ><persName>Paganus</persName> camerarius</rs> : <rs type="person"
-                        ><persName>Lande<pb n="10"/>ricus</persName> famulus prioris</rs>.</s>
+                    hospitalarius</rs> : De famulis : <rs type="person"><persName>Arroldus</persName>, camerarius</rs> ; <rs type="person"><persName>Paganus</persName> camerarius</rs> : <rs type="person"><persName>Lande<pb n="10"/>ricus</persName> famulus prioris</rs>.</s>
                 <s><persName>Sancelinus</persName>, <persName>Petrus Burdo</persName>.</s>
                 <s><persName>Hubertus Mainbodus</persName><ref type="note" target="#p10_fn1"/>.
                   »</s>
@@ -980,8 +943,7 @@
                 <s>Hec donatio confirmata est in capitulo <placeName>Sancti Petri</placeName>,
                     <num>IIII</num> idus aprilis, die veneris, anno <num>MºCº VIIIº</num>,
                     <persName>Philippo</persName>
-                  <persName>Francorum</persName> regnum gubernante, <rs type="person"
-                      ><persName>Ivone</persName>
+                  <persName>Francorum</persName> regnum gubernante, <rs type="person"><persName>Ivone</persName>
                     <placeName>Carnotis</placeName> episcopalem</rs> cathedram sedente, qui hoc
                   donum sui assensus gratia auctorisavit.</s>
                 <s>Ad hujus, etc.</s>
@@ -1029,8 +991,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« In nomine Sancte et Individue Trinitatis Ego <rs type="person"
-                      ><persName>Ludovicus</persName>
+                <s>« In nomine Sancte et Individue Trinitatis Ego <rs type="person"><persName>Ludovicus</persName>
                     <seg type="theo">Dei gracia</seg> rex <persName>Francorum</persName> et dux
                       <persName>Aquitanorum</persName></rs> Notum facimus <pb n="11"/> tam futuris
                   quam presentibus quod nos, pro remedio peccatorum nostrorum, monachis
@@ -1248,8 +1209,7 @@
               <p>
                 <s>« Universis presentes litteras inspecturis, Officialis <rs type="place">Curie
                       <placeName>Carnotensis</placeName></rs> ; in domino salutem.</s>
-                <s>Noverint universi quod nos <date>anno domini <num>millesimo <hi rend="sc"
-                      >cc</hi>º <hi rend="sc">xl</hi>º quarto</num> mense septembris</date>, quasdam
+                <s>Noverint universi quod nos <date>anno domini <num>millesimo <hi rend="sc">cc</hi>º <hi rend="sc">xl</hi>º quarto</num> mense septembris</date>, quasdam
                   litteras clare memorie <rs type="person"><persName>Symonis</persName> quondam
                     Comitis <placeName>Montisfortis</placeName></rs> vidimus, inspeximus verbo ad
                   verbum sub hac forma : Ego <persName>Symon de Monte forti</persName> notum fieri
@@ -1258,8 +1218,7 @@
                   elemosinam concessisse monachis <placeName>Sancti Thome Sparnonensis</placeName>
                   feriam unam habendam singulis annis <date>in festo Sancti Ligerii</date> in burgo
                     <placeName>Sancti Thome</placeName> libere et quiete sicut eam habuerant per
-                  aliquos annos in tempore avi mei bone memorie <rs type="person"
-                      ><persName>Symonis</persName> quondam Comitis
+                  aliquos annos in tempore avi mei bone memorie <rs type="person"><persName>Symonis</persName> quondam Comitis
                       <placeName>Ebroicensis</placeName></rs>, excepto quod sanguinem quitavi eis et
                   in perpetuam elemosinam concessi quem avus meus sibi retinuerat cum dictis
                   monachis dictam feriam concessisset.</s>
@@ -1281,27 +1240,21 @@
                   monachis reddere teneantur.</s>
                 <s>Quod ut ratum sit scribi feci et sigilli mei ob custodiam pariter et memoriam
                   communiri.</s>
-                <s>Actum fuit apud <placeName>Sparnonem</placeName> solempniter anno gratie <num><hi
-                      rend="sc">m</hi>º <hi rend="sc">cc</hi>º <hi rend="sc">iij</hi>º</num>.</s>
+                <s>Actum fuit apud <placeName>Sparnonem</placeName> solempniter anno gratie <num><hi rend="sc">m</hi>º <hi rend="sc">cc</hi>º <hi rend="sc">iij</hi>º</num>.</s>
                 <s>Testibus his de monachis : <rs type="person"><persName>Roberto</persName> priore
                     dicte domus</rs>, <rs type="person"><persName>Ulrico</persName> priore
-                      <placeName>Claustri</placeName></rs>, <rs type="person"
-                      ><persName>Hannone</persName> sacrista</rs>, <rs type="person"
-                      ><persName>Hugone</persName> cellarario</rs>, <persName>Johanne
+                      <placeName>Claustri</placeName></rs>, <rs type="person"><persName>Hannone</persName> sacrista</rs>, <rs type="person"><persName>Hugone</persName> cellarario</rs>, <persName>Johanne
                     Lepotier</persName>, <persName>Gaufrido Alcoin</persName> et multis aliis.</s>
                 <s>De militibus : <rs type="person"><persName>Guidone</persName> fratre meo</rs>,
                     <persName>Symone de Gaseran</persName>, <persName>Hermoin</persName>,
-                    <persName>Symone de Hanchis</persName>, <rs type="person"
-                      ><persName>Haimerico</persName> filio ejus</rs>,
+                    <persName>Symone de Hanchis</persName>, <rs type="person"><persName>Haimerico</persName> filio ejus</rs>,
                   <persName>Amaurico</persName>, <persName>Drogone de Hanchis</persName>,
                     <persName>Amaurico de Change</persName>, <persName>Roberto de Amelio</persName>,
                   et multis aliis.</s>
                 <s>De burgensibus : <rs type="person"><persName>Drogone</persName> pellipario</rs>,
-                    <persName>Petro</persName> et <persName>Egidio</persName>, filiis ejus, <rs
-                    type="person"><persName>Thoma</persName>, filio
+                    <persName>Petro</persName> et <persName>Egidio</persName>, filiis ejus, <rs type="person"><persName>Thoma</persName>, filio
                     <persName>Frogerii</persName></rs>, <persName>Roberto Dulvere</persName>,
-                    <persName>Guillelmo Alarii</persName>, <rs type="person"
-                      ><persName>Renoldo</persName> megiscerio</rs>, et multiis aliis.</s>
+                    <persName>Guillelmo Alarii</persName>, <rs type="person"><persName>Renoldo</persName> megiscerio</rs>, et multiis aliis.</s>
                 <s>— Datum anno et mense prenotatis.</s>
                 <s>Quod vidimus testificamur<ref type="note" target="#p15_fn1"/>. »</s>
               </p>
@@ -1349,8 +1302,7 @@
                 <s>« <persName>Symon de Monteforti</persName> prepositis suis
                     <placeName>Sparnonensibus</placeName> et de <placeName>Barzella</placeName>
                   salutem.</s>
-                <s>Dilecto meo <rs type="person"><persName><abbr>R.</abbr></persName><ref
-                      type="note" target="#p15_fn2"/>, priore <placeName>Sancti Thome
+                <s>Dilecto meo <rs type="person"><persName><abbr>R.</abbr></persName><ref type="note" target="#p15_fn2"/>, priore <placeName>Sancti Thome
                       Sparnonensis</placeName></rs> conquerente didici, quod stallarii in mercatis
                     <pb n="16"/>
                   <placeName>Sparnonensibus</placeName> et de <placeName>Elevilla</placeName> que
@@ -1401,8 +1353,7 @@
               <p>
                 <s>« Sciant omnes presentes et futuri quod ego <abbr>S.</abbr>
                   <placeName>Montefortis</placeName> acensivi stallos de
-                    <placeName>Sparnone</placeName> burgensibus ejusdem ville, pro <num><hi
-                      rend="sc">xii</hi></num> denarios reddendos annuatim <date>in die festi Sancti
+                    <placeName>Sparnone</placeName> burgensibus ejusdem ville, pro <num><hi rend="sc">xii</hi></num> denarios reddendos annuatim <date>in die festi Sancti
                     Johannis Baptiste</date>.</s>
                 <s>Et si forte aliquis voluerit facere alios stallos, illud idem servicium et eumdem
                   censum quem alii dederunt predicto <abbr>S.</abbr> redderet.</s>
@@ -1418,16 +1369,13 @@
                 <s>Actum publice apud <placeName>Molendinellos</placeName>, astantibus hiis,
                       <persName><abbr>M.</abbr><ref type="note" target="#p16_fn3"/> de
                     Montmorence</persName>, <persName><abbr>S.</abbr>
-                    <ref type="note" target="#p16_fn4"/> de Gazeren</persName>, <abbr>S.</abbr><ref
-                    type="note" target="#p16_fn5"/>
+                    <ref type="note" target="#p16_fn4"/> de Gazeren</persName>, <abbr>S.</abbr><ref type="note" target="#p16_fn5"/>
                   <persName>Golloheim</persName>, <persName><abbr>H.</abbr> de
                   Bertelcout</persName>, <rs type="person"><persName><abbr>P.</abbr></persName>
                     Cardinali</rs> et <rs type="person"><persName><abbr>D.</abbr></persName>
                     pellipario</rs>, <persName><abbr>R.</abbr> de Stallis</persName>,
-                      <persName><abbr>S.</abbr> Baligan</persName>, <rs type="person"
-                        ><persName><abbr>O.</abbr></persName> Capellano</rs>, et aliis quam
-                  pluribus, <persName><abbr>P.</abbr> Ernout</persName>, et <rs type="person"
-                      ><persName>Willelmo</persName> fratre suo</rs>, <persName><abbr>R.</abbr> de
+                      <persName><abbr>S.</abbr> Baligan</persName>, <rs type="person"><persName><abbr>O.</abbr></persName> Capellano</rs>, et aliis quam
+                  pluribus, <persName><abbr>P.</abbr> Ernout</persName>, et <rs type="person"><persName>Willelmo</persName> fratre suo</rs>, <persName><abbr>R.</abbr> de
                     Carnoto</persName>, <persName><abbr>G.</abbr> de Carnoto</persName>,
                       <persName><abbr>H.</abbr> Billoun</persName>, <persName><abbr>H.</abbr>
                     Paelede</persName>. »</s>
@@ -1483,12 +1431,10 @@
                 <s>Et ut hoc ratum et inconcussum fideliter teneatur, impressione sigilli mei
                   presentem paginam confirmavi, his testibus : <persName>Odone de
                     Hadencuria</persName>...de <placeName>Scroniis</placeName> militibus ;
-                    <persName>Reginaldo de Donopetro</persName>, <rs type="person"
-                      ><persName>Vuillelmo</persName> sacerdote <placeName>Sancti
+                    <persName>Reginaldo de Donopetro</persName>, <rs type="person"><persName>Vuillelmo</persName> sacerdote <placeName>Sancti
                     Petri</placeName></rs> ; <rs type="person"><persName>Galeranno</persName>,
                     clerico ejus</rs> ; <rs type="person"><persName>Vuillelmo</persName>, tunc
-                    temporis priore <placeName>Spernonis</placeName></rs> ; <rs type="person"
-                      ><persName>Hugone</persName>, monacho
+                    temporis priore <placeName>Spernonis</placeName></rs> ; <rs type="person"><persName>Hugone</persName>, monacho
                   <placeName>Spernonis</placeName></rs>.</s>
                 <s>Actum <date>anno ab incarnatione Domini millesimo <num>CCº septimo</num>, mense
                     decembri</date><ref type="note" target="#p17_fn1"/>.</s>
@@ -1535,8 +1481,7 @@
                       <placeName>Carnotensis</placeName></rs> omnibus presentes visuris litteras
                   salutem in domino.</s>
                 <s>Noverint universi quod cum causa <pb n="18"/> verteretur coram nobis inter
-                  priorem <placeName>Sparnonensem</placeName> et <rs type="person"
-                      ><persName>Simonem</persName> clericum de <placeName>Auviler</placeName></rs>
+                  priorem <placeName>Sparnonensem</placeName> et <rs type="person"><persName>Simonem</persName> clericum de <placeName>Auviler</placeName></rs>
                   super minutis decimis parrochie de <placeName>Hermeraio</placeName>, dictus
                     <persName>Simon</persName> produxit pro se litteras domini
                     <placeName>Carnotensis</placeName> de dono earumdem decimarum illarum scriptas
@@ -1546,8 +1491,7 @@
                 <s>Ad universorum noticiam transferatur quod cum nemus quoddam quod nemus de
                     <placeName>Gole</placeName> appellatur in terras arabiles cepisset educi, et in
                   eodem edificium hominum edificari de novo, nos advertentes devotionem et fidele
-                  obsequium quod dilectus et fidelis noster <rs type="person"
-                      ><persName>Bartholomeus</persName> subdecanus
+                  obsequium quod dilectus et fidelis noster <rs type="person"><persName>Bartholomeus</persName> subdecanus
                       <placeName>Carnotensis</placeName></rs> nobis exhibuerat incessanter ; ad
                   ipsius interventum ecclesie de <placeName>Hermeraio</placeName> cujus parrochie
                   adjacet nemus illud, et quam <persName>Simon de Auvilari</persName> dicti
@@ -1557,8 +1501,7 @@
                     <placeName>Hermeraio</placeName> deinceps ministrabunt.</s>
                 <s>In cujus rei memoriam et perpetuam firmitatem presens scriptum fecimus sigilli
                   nostri munimine roborari.</s>
-                <s>Actum <date>anno domini <num><hi rend="sc">m</hi>º <hi rend="sc">cc</hi>º <hi
-                        rend="sc">vij</hi>º</num> mense februario</date>. »</s>
+                <s>Actum <date>anno domini <num><hi rend="sc">m</hi>º <hi rend="sc">cc</hi>º <hi rend="sc">vij</hi>º</num> mense februario</date>. »</s>
               </p>
             </div>
           </body>
@@ -1590,14 +1533,12 @@
                       <placeName>Leicestrie</placeName> et dominus
                       <placeName>Montisfortis</placeName></rs>, omnibus notum facimus quod de
                   omicida quem monachi prioratus <placeName>Sparnonansis</placeName> nobis ad
-                  servandum tradiderunt, captum in villa <placeName>Migomas</placeName><ref
-                    type="note" target="#p18_fn1"/> a supradictis monachis, quia carcerem in qua
+                  servandum tradiderunt, captum in villa <placeName>Migomas</placeName><ref type="note" target="#p18_fn1"/> a supradictis monachis, quia carcerem in qua
                   custodirint non habuerunt ; nullus dubitet quod ecclesia eorumdem monachorum
                   aliquid de jure suo <pb n="19"/> perdiderit, licet dolo suo fraudulenter de
                   carcere nostro, nobis nescientibus, evaserit.</s>
                 <s>Quod ut ratum sit presentem cartam, sigillo nostro fecimus roborari, anno
-                  dominice incarnationis <num>Mº CCº VIIIº</num><ref type="note" target="#p19_fn1"
-                  />.</s>
+                  dominice incarnationis <num>Mº CCº VIIIº</num><ref type="note" target="#p19_fn1"/>.</s>
               </p>
             </div>
           </body>
@@ -1649,8 +1590,7 @@
                 <s>Ut igitur hoc ratum sit, nec possit malo instinctu per successionem heredum
                   revocari, presentem paginam sigilli nostri munimine confirmavi et caritatis
                   intuitu communitati hominum <placeName>Sparnonis</placeName> presentavi.</s>
-                <s>Actum <date>anno gratie <num>Mº CCº IXº</num></date><ref type="note"
-                    target="#p19_fn2"/>. »</s>
+                <s>Actum <date>anno gratie <num>Mº CCº IXº</num></date><ref type="note" target="#p19_fn2"/>. »</s>
               </p>
             </div>
           </body>
@@ -1703,8 +1643,7 @@
                   clausturam castri auxiliati sunt, scilicet de <placeName>Hodenc</placeName>, michi
                   vel meis voluntaria fuisse, non ex debito necessitatis extorta.</s>
                 <s>Quod ut perpetuo ratum sit presentem paginam sigilli mei munimine confirmavi.</s>
-                <s>Actum anno gratie <num>Mº</num><num>CC</num>º nono<ref type="note"
-                    target="#p20_fn1"/>.</s>
+                <s>Actum anno gratie <num>Mº</num><num>CC</num>º nono<ref type="note" target="#p20_fn1"/>.</s>
               </p>
             </div>
           </body>
@@ -1759,20 +1698,15 @@
                     Parnonensis</placeName> in presentia nostra supradictum pratum, assensu
                     <persName>Guillelmi</persName> fratris sui militis et aliorum fratrum suorum,
                   quitavit et dedit in elemosinam, tali conditione quod prenominati monachi possint,
-                  sine aliqua contradictione predicti <persName>Mathei</persName> vel aliorum ad <pb
-                    n="21"/> eum pertinentium, stratam supradicti stagni ad eorum libitum
+                  sine aliqua contradictione predicti <persName>Mathei</persName> vel aliorum ad <pb n="21"/> eum pertinentium, stratam supradicti stagni ad eorum libitum
                   sublimare.</s>
                 <s>Quod ut ratum sit et inconcussum sigillo nostro confirmavimus.</s>
-                <s>Hujus rei isti sunt testes ex parte monachorum : <rs type="person"
-                        ><persName><abbr>G.</abbr></persName> tunc temporis prior ejusdem loci</rs>
+                <s>Hujus rei isti sunt testes ex parte monachorum : <rs type="person"><persName><abbr>G.</abbr></persName> tunc temporis prior ejusdem loci</rs>
                   ; <rs type="person"><persName>Simon</persName>, prior de
-                      <placeName>Mistenon</placeName></rs> ; <rs type="person"
-                      ><persName>Johannes</persName>, cellarius</rs> ; <rs type="person"
-                      ><persName>Nivelo</persName>, puer de <placeName>Gaseran</placeName></rs>.</s>
+                      <placeName>Mistenon</placeName></rs> ; <rs type="person"><persName>Johannes</persName>, cellarius</rs> ; <rs type="person"><persName>Nivelo</persName>, puer de <placeName>Gaseran</placeName></rs>.</s>
                 <s>Ex alia parte : <persName>Garinus d'Escrones</persName>, <persName>Odo de
                     Hadencort</persName>, Magister <persName>Haalardus</persName>.</s>
-                <s>Anno ab incarnatione Domini <num>Mº</num><num>CC</num>º<num>VIIII</num>º<ref
-                    type="note" target="#p21_fn1"/>. »</s>
+                <s>Anno ab incarnatione Domini <num>Mº</num><num>CC</num>º<num>VIIII</num>º<ref type="note" target="#p21_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -1814,8 +1748,7 @@
                       <placeName>Leicestrie</placeName>, dominus
                     <placeName>Montisfortis</placeName></rs>, notum facio presentibus et futuris,
                   quod lis que erat inter, <abbr>S.</abbr> militem de
-                  <placeName>Reisels</placeName>, ex una parte, et <rs type="person"
-                        ><persName><abbr>W.</abbr></persName> tune priorem <placeName>Sancti Thome
+                  <placeName>Reisels</placeName>, ex una parte, et <rs type="person"><persName><abbr>W.</abbr></persName> tune priorem <placeName>Sancti Thome
                       Sparnonensis</placeName></rs> et ejusdem loci monachos ex alia, super ductu
                   aque eorumdem monachorum molendini de <placeName>Seincort</placeName> coram me
                   sedata est in hoc modum.</s>
@@ -1837,8 +1770,7 @@
                       Hilarione</persName>, miles</rs> ; et plures alii.</s>
                 <s>Si autem ab hac conventione et pace prefatus <abbr>S.</abbr> miles vel aliquis
                   successorum ejus aliquando quoquo modo resilire presumpserit, aut in aliquo
-                  prefatos monachos molestari vel gravare, ego <rs type="person"
-                        ><persName><abbr>S.</abbr></persName> comes
+                  prefatos monachos molestari vel gravare, ego <rs type="person"><persName><abbr>S.</abbr></persName> comes
                       <placeName>Leicestrie</placeName> et dominus
                       <placeName>Montisfortis</placeName></rs> et heredes mei super terram sepe
                   dicti <persName><abbr>S.</abbr></persName> militis hujus conventionis tenorem
@@ -1885,8 +1817,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Notum sit omnibus presentibus et futuris quod ego <persName>Simon de Villa
-                    nova</persName> assensu et voluntate <rs type="person"
-                      ><persName>Isabel</persName> uxoris me</rs>e et liberorum meorum, dedi et
+                    nova</persName> assensu et voluntate <rs type="person"><persName>Isabel</persName> uxoris me</rs>e et liberorum meorum, dedi et
                   concessi <persName>Garino Foriart</persName> et heredibus suis sex agripenna terre
                   des <placeName>Broces de Villa Nova</placeName> libere et quiete in perpetuum
                   possidenda, pro sex solidis <placeName>Carnotensis</placeName> monete censualibus
@@ -1895,8 +1826,7 @@
                 <s>Quod ut ratum et stabile sit, <persName>Amauricus de Mistelone</persName>
                   defensor et garandizator fuit et in sigilli sui presentem cartulam fecit munimine
                   roborari.</s>
-                <s>De ista conventione sunt hii testes : <persName>Petrus Ernoldi</persName>, <rs
-                    type="person"><persName>Guillelmus</persName>, frater ejus</rs> ; <persName>Hugo
+                <s>De ista conventione sunt hii testes : <persName>Petrus Ernoldi</persName>, <rs type="person"><persName>Guillelmus</persName>, frater ejus</rs> ; <persName>Hugo
                     Fobert</persName>, <persName>Odo Crassius</persName>, <persName>Guillot
                     Alain</persName>, et plures alii.</s>
                 <s>Datum <date>anno gracie, <num>Mº</num><num>CC</num>º nono mense februarii
@@ -1945,8 +1875,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Notum sit omnibus tam futuris quam presentibus quod fratres capituli
-                    <placeName>Sancti Thome de Sparnone</placeName> et <rs type="person"
-                      ><persName>Robertus</persName>, frater eorum dictus prior</rs>, assensu
+                    <placeName>Sancti Thome de Sparnone</placeName> et <rs type="person"><persName>Robertus</persName>, frater eorum dictus prior</rs>, assensu
                   capituli sui, <rs type="person"><persName>Michaeli</persName> juveni de
                       <placeName>Protheiis</placeName></rs> et uxori ejus et heredibus suis in
                   perpetuum concesserunt unam areolam apud <placeName>Protheias</placeName> quam
@@ -2019,8 +1948,7 @@
                 <s>denarios <placeName>Carnotensis</placeName> monete, et <num>vi</num> sacerdoti de
                     <placeName>Proueiis</placeName>.</s>
                 <s>Quam compositionem coram nobis recitatam, nos concedimus et ratam habemus, et
-                  sigillo capituli nostri ob custodiam pariter et memoriam communivimus<ref
-                    type="note" target="#p24_fn1"/>. »</s>
+                  sigillo capituli nostri ob custodiam pariter et memoriam communivimus<ref type="note" target="#p24_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -2107,11 +2035,9 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <persName><abbr>J.</abbr></persName>
-                  <placeName>Sancti Germani de pratis</placeName>, et <rs type="person"
-                        ><persName><abbr>J.</abbr></persName>
+                  <placeName>Sancti Germani de pratis</placeName>, et <rs type="person"><persName><abbr>J.</abbr></persName>
                     <placeName>Sancte Genovefe</placeName>
-                    <seg type="theo">Dei gracia</seg> abbas</rs>, et <rs type="person"
-                        ><persName><abbr>G.</abbr></persName> decanus <placeName>Sancti Germani
+                    <seg type="theo">Dei gracia</seg> abbas</rs>, et <rs type="person"><persName><abbr>G.</abbr></persName> decanus <placeName>Sancti Germani
                       Autisiodorensis Parisiensis</placeName></rs>, universis presentem paginam
                   inspecturis perpetuam in Domino salutem.</s>
                 <s>Cum ex delegatione domini pape <persName>Innocentii tercii</persName>, de causa
@@ -2121,8 +2047,7 @@
                     <placeName>Gola</placeName> cognoscemus, lite coram nobis super possessione
                   decimarum illorum novalium legitime contestata, cum tam super principali quam
                   super incidentibus questionibus in presentia nostra esset diutius altercatum :
-                  tandem nobis mediantibus et ad hoc modis omnibus partes inducentibus inter <rs
-                    type="person"><persName><abbr>G.</abbr></persName> priorem
+                  tandem nobis mediantibus et ad hoc modis omnibus partes inducentibus inter <rs type="person"><persName><abbr>G.</abbr></persName> priorem
                       <placeName>Sparnonensem</placeName></rs>, in causa illa procuratorem a
                     <persName>Gaufrido</persName> abbate et Conventu <placeName>Majoris
                     Monasterii</placeName> taliter constitutum, quod quicquid idem prior judicio vel
@@ -2189,8 +2114,7 @@
                     <seg type="theo">Dei gratia</seg>
                     <placeName>Carnotensis</placeName> episcopus</rs>, universis presens scriptum
                   inspecturis, perpetuam in domino salutem.</s>
-                <s>Noverit universitas vestra quod ego <rs type="person"
-                      ><persName>Raginaldus</persName>, <seg type="theo">Dei promeritis</seg>
+                <s>Noverit universitas vestra quod ego <rs type="person"><persName>Raginaldus</persName>, <seg type="theo">Dei promeritis</seg>
                     <placeName>Carnotensis</placeName> episcopus</rs>, pro amore Dei et ob remedium
                   anime mee, dedi et concessi, monachis <placeName>Majoris Monasterii</placeName>
                   <placeName>Sparnone</placeName> commorantibus, decimas universas omnium novalium
@@ -2237,8 +2161,7 @@
                     <seg type="theo">Dei Gratia</seg>
                     <placeName>Carnotensis</placeName> episcopus</rs>, universis presentes litteras
                   inspecturis in Domino salutem.</s>
-                <s>Omnibus notum facimus quod nos dilecto nostro <rs type="person"
-                        ><persName><abbr>A.</abbr></persName> presbitero de
+                <s>Omnibus notum facimus quod nos dilecto nostro <rs type="person"><persName><abbr>A.</abbr></persName> presbitero de
                       <placeName>Cureto</placeName></rs> ejusque successoribus damus et concedimus
                   decimas novalium infra fines parrochie sue constitutas : ita tamen quod pro bono
                   pacis inter ipsum et Priorem de <placeName>Sparnone</placeName> patronum ejusdem
@@ -2282,8 +2205,7 @@
               <p>
                 <s>« Ego <rs type="person"><persName>Bartholomeus</persName> decanus
                       <placeName>Sparnonis</placeName></rs>, universis presens scriptum inspecturis
-                  notum facio quod <persName>Galeranus de Stanno</persName> vendidit <rs
-                    type="person"><persName>Philipo</persName>, priori <placeName>Sancti Thome de
+                  notum facio quod <persName>Galeranus de Stanno</persName> vendidit <rs type="person"><persName>Philipo</persName>, priori <placeName>Sancti Thome de
                       Sparnonc</placeName></rs> ; tria quarteria vinee que fuit de censiva dicti
                   prioris, et sita in cultura vinearum <placeName>Sancti Thome</placeName>.</s>
                 <s>Hanc autem vendicionem <rs type="person"><persName>Maria</persName>, uxor dicti
@@ -2388,8 +2310,7 @@
                 <s>Notum facio <pb n="29"/> quod <rs type="person"><persName>Ligerius</persName>,
                     filius defuncti <persName>Gregorii</persName></rs> de loco <placeName>Sancti
                     Thome</placeName>, de assensu et voluntate <rs type="person">uxoris sue
-                      <persName>Ysabel</persName></rs> et omnium puerorum suorum ; et <rs
-                    type="person"><persName>Droco</persName>, frater ejus</rs>, assensu et voluntate
+                      <persName>Ysabel</persName></rs> et omnium puerorum suorum ; et <rs type="person"><persName>Droco</persName>, frater ejus</rs>, assensu et voluntate
                     <rs type="person">uxoris sue <persName>Asceline</persName></rs> et omnium
                   puerorum suorum, vendiderunt absolute domui <placeName>Sancti Thome de
                     Sparnone</placeName> tria sextaria seminature terre, que sita sunt apud
@@ -2488,8 +2409,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentis pagine noticiam habituris, ego <rs type="person"
-                      ><persName>Simon de Villa Nova</persName>, miles</rs>, notum facio quod de
+                <s>« Universis presentis pagine noticiam habituris, ego <rs type="person"><persName>Simon de Villa Nova</persName>, miles</rs>, notum facio quod de
                   assensu et voluntate <rs type="person"><persName>Ysabellis</persName> uxoris
                     mee</rs>, et <rs type="person"><persName>Johannis</persName> filii mei
                     primogeniti</rs>, ac aliorum liberorum meorum, dedi et concessi pro salute
@@ -2498,12 +2418,10 @@
                 <s><num>duodecim</num> denarios censuales quos percipiebam absque aliqua exactionis
                   consuetudine in terra quam <rs type="person"><persName>Philippus</persName>, prior
                     ejusdem loci</rs>, a <persName>Simone dicto Furnerio</persName> comparavit, que
-                  vocatur terra de <placeName>Broscis de Villa Nova</placeName>, que fuit <rs
-                    type="person"><persName>Simonis</persName> defuncti de
+                  vocatur terra de <placeName>Broscis de Villa Nova</placeName>, que fuit <rs type="person"><persName>Simonis</persName> defuncti de
                       <placeName>Stagno</placeName></rs>.</s>
                 <s>Hujus modi autem emptionem et vendicionem aprobo et confirmo, assensu et
-                  voluntate <rs type="person"><persName>Ysabellis</persName> uxoris mee</rs>, et <rs
-                    type="person"><persName>Johannis</persName> filii mei primogeniti</rs>, et
+                  voluntate <rs type="person"><persName>Ysabellis</persName> uxoris mee</rs>, et <rs type="person"><persName>Johannis</persName> filii mei primogeniti</rs>, et
                   aliorum liberorum meorum.</s>
                 <s>Eandem autem terram, idem <persName>Simon</persName> comparaverat a
                     <persName>Galeranno de Stagno</persName>, et <persName>Garino Foriart</persName>
@@ -2559,9 +2477,7 @@
                   terre a <persName>Galerano de Stagno</persName>, et <num>sex</num> a
                     <persName>Garino Foriart</persName> que vocantur de <placeName>Brocis de Villa
                     Nova</placeName> que fuerunt defuncti <persName>Symonis de Stagno</persName>,
-                  tali modo quod de assensu spontaneo et voluntate propria <rs type="person"
-                      ><persName>Ysabellis</persName> uxoris mee</rs> et <rs type="person"
-                      ><persName>Johannis</persName> filii mei primogeniti</rs>, ac aliorum
+                  tali modo quod de assensu spontaneo et voluntate propria <rs type="person"><persName>Ysabellis</persName> uxoris mee</rs> et <rs type="person"><persName>Johannis</persName> filii mei primogeniti</rs>, ac aliorum
                   liberorum meorum, dedi et concessi dicto <persName>Symoni</persName> supradicta
                   arpenta que dicti <persName>Galeranus</persName> et <persName>Garinus</persName> a
                   me, pro quatuor decimo solidis censualibus possidebant, sibi et héredibus suis vel
@@ -2605,8 +2521,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Noverint universi presentes pariter et futuri, quod ego <rs type="person"
-                      ><persName>Amauricus de Cauda</persName>, miles</rs>, concessi et approbavi
+                <s>« Noverint universi presentes pariter et futuri, quod ego <rs type="person"><persName>Amauricus de Cauda</persName>, miles</rs>, concessi et approbavi
                   illam elemosinam quam dilectus <rs type="person">frater meus <persName>Simon de
                       Villa &gt;Nova</persName>, miles</rs>, fecit prioratui <placeName>beati Thome
                     de Sparnone</placeName>, videlicet super duodecim denariis censualibus quos in
@@ -2745,14 +2660,10 @@
             </index>
             <argument>
               <p> Devant <persName>Robert</persName>, official de la cour épiscopale de
-                  <placeName>Chartres</placeName>, <persName>Hugues de Huimes</persName>, <rs
-                  type="person"><persName>Sicilie</persName>, son épouse</rs>, et <rs type="person"
-                    ><persName>Philippe</persName>, leur fils</rs>, cèdent au prieuré
-                  d'<placeName>Epernon</placeName> le râtelage, <foreign xml:lang="lat"
-                  >rastalagium,</foreign> de leurs prés de la <placeName>Pierrefitte</placeName> à
+                  <placeName>Chartres</placeName>, <persName>Hugues de Huimes</persName>, <rs type="person"><persName>Sicilie</persName>, son épouse</rs>, et <rs type="person"><persName>Philippe</persName>, leur fils</rs>, cèdent au prieuré
+                  d'<placeName>Epernon</placeName> le râtelage, <foreign xml:lang="lat">rastalagium,</foreign> de leurs prés de la <placeName>Pierrefitte</placeName> à
                   <placeName>Huimes</placeName>, aujourd'hui
-                  <placeName>Villiers-le-Morhiers</placeName><ref type="note" target="#p33_fn1"
-                />.</p>
+                  <placeName>Villiers-le-Morhiers</placeName><ref type="note" target="#p33_fn1"/>.</p>
             </argument>
           </front>
           <body>
@@ -2795,8 +2706,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Omnibus presentes litteras inspecturis, Magister
-                    <persName><abbr>G.</abbr></persName> offi<pb n="34"/>cialis <rs type="place"
-                    >curie <placeName>Carnotensis</placeName></rs>, salutem in domino.</s>
+                    <persName><abbr>G.</abbr></persName> offi<pb n="34"/>cialis <rs type="place">curie <placeName>Carnotensis</placeName></rs>, salutem in domino.</s>
                 <s>Noverint universi quod <persName>Galterius de Renecort</persName>, in nostra
                   presentia constitutus, recognovit se decimam cujusdam terre site juxta viam que
                   dividit decimariam de <placeName>Cureio</placeName>, prioratui <placeName>Sancti
@@ -3130,8 +3040,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Albericus</persName>, <seg type="theo">permissione divina</seg>
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Albericus</persName>, <seg type="theo">permissione divina</seg>
                     <placeName>Carnotensis</placeName> episcopus</rs>, salutem in Domino.</s>
                 <s>Noverit universitas vestra quod cum <rs type="person">magister
                       <persName>Unfredus</persName>, presbiter et persona ecclesie de
@@ -3274,8 +3183,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>(Extrait.</s>
-                <s>) « Universis presentes litteras, inspecturis, <rs type="person"
-                      ><persName>Albertus</persName>, decanus <placeName>Sparnonis</placeName></rs>,
+                <s>) « Universis presentes litteras, inspecturis, <rs type="person"><persName>Albertus</persName>, decanus <placeName>Sparnonis</placeName></rs>,
                   salutem in Domino.</s>
                 <s>Noveritis quod cum contencio verteretur inter religiosos viros abbatem et
                   conventum <placeName>Majoris Monasterii</placeName> ex una parte, et relictam
@@ -3549,12 +3457,10 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis <rs type="person"
-                      ><persName>Albertus</persName>, decanus
+                <s>« Universis presentes litteras inspecturis <rs type="person"><persName>Albertus</persName>, decanus
                     <placeName>Sparnonensis</placeName></rs>, salutem in domino.</s>
                 <s>Noverint quod <rs type="person"><persName>Raginaldus</persName>, major de
-                      <placeName>Vado Petroso</placeName></rs>, et <rs type="person"
-                      ><persName>Alesia</persName> uxor ejus</rs> in nostra presentia constituti,
+                      <placeName>Vado Petroso</placeName></rs>, et <rs type="person"><persName>Alesia</persName> uxor ejus</rs> in nostra presentia constituti,
                   dederunt et concesserunt et etiam resignaverunt coram nobis, prioratui
                     <placeName>Sancti Thome de Sparnone</placeName> et priori et monachis ejusdem
                   loci in puram et perpetuam elemosinam, totam partem seu portionem et totum jus
@@ -3572,8 +3478,7 @@
                   aliquid in posterum reclamabunt nec per alios facient reclamari, immo ipsis priori
                   et monachis dictas minutas decimas bona fide garantizabunt.</s>
                 <s>In cujus rei testimonium et munimen eidem priori et monachis tradidimus presentes
-                  litteras ad petitionem dictorum <persName>Raginaldi</persName> et <rs
-                    type="person"><persName>Alesie</persName> uxoris sue</rs> sigillo nostro
+                  litteras ad petitionem dictorum <persName>Raginaldi</persName> et <rs type="person"><persName>Alesie</persName> uxoris sue</rs> sigillo nostro
                   sigillatas.</s>
                 <s>Actum et datum <date>anno domini millesimo <num>CCº XLº</num> septimo mense
                     aprilis die veneris post Resurrectionem domini</date>. »</s>
@@ -3609,8 +3514,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Ego <rs type="person"><persName>Hemericus de Gais</persName>, miles</rs>, notum
-                  facio universis presentes litteras inspecturis quod ego et <rs type="person"
-                      ><persName>Amelina</persName>, uxos mea</rs>, spontanea et de assensu et
+                  facio universis presentes litteras inspecturis quod ego et <rs type="person"><persName>Amelina</persName>, uxos mea</rs>, spontanea et de assensu et
                   mandato meo, assensu et voluntate <persName>Raginaldi</persName>, filii nostri
                   primogeniti, et aliorum liberorum nostrorum, pro remedio et salute animarum
                   nostrarum et antecessorum nostrorum, dedimus et concessimus in puram et perpetuam
@@ -3693,8 +3597,7 @@
                     domini de Monteforti</rs> hujusmodi malefactoribus imposita fuisse dignoscitur
                   presentis cartule infractori quicumque fuerit imponatur.</s>
                 <s>Quod ut ratum sit scribi feri et sigilli mei munimine firmavi.</s>
-                <s>Actum <date>anno gracie <num>Mº CCº XLº</num> septimo mense marcio</date><ref
-                    type="note" target="#p50_fn1"/>. »</s>
+                <s>Actum <date>anno gracie <num>Mº CCº XLº</num> septimo mense marcio</date><ref type="note" target="#p50_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -3735,15 +3638,12 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Johannes</persName>, comes <placeName>Montis
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Johannes</persName>, comes <placeName>Montis
                     Fortis</placeName></rs>, salutem in Domino.</s>
                 <s>Noveritis nos <date>anno Domini <pb n="51"/> millesimo ducentesimo quadragesimo
                     octavo mense junii</date>, vidisse et audisse ac plenius intellexisse quasdam
-                  litteras, sigillatas sigillo bone memorie <rs type="person"
-                      ><persName>Simonis</persName> avi mei, quondam comitis <placeName>Montis
-                      Fortis</placeName></rs>, sub hac forma : Ego <rs type="person"
-                      ><persName>Simon</persName>, comes <placeName>Leucestrensis</placeName></rs>,
+                  litteras, sigillatas sigillo bone memorie <rs type="person"><persName>Simonis</persName> avi mei, quondam comitis <placeName>Montis
+                      Fortis</placeName></rs>, sub hac forma : Ego <rs type="person"><persName>Simon</persName>, comes <placeName>Leucestrensis</placeName></rs>,
                   etc.....</s>
                 <s>millesimo <num>CC</num>º nono.</s>
               </p>
@@ -3808,8 +3708,7 @@
                 <s>« Ego <persName>Johannes de Maeroliis</persName>, miles, universis presentes
                   litteras inspecturis salutem in domino.</s>
                 <s>Noverint universi quod cum <rs type="person"><persName>Hugo</persName> dominus de
-                      <placeName>Metenone</placeName>, miles</rs>, <rs type="person"
-                      ><persName>Agnetem</persName> filiam meam primogenitam</rs> duxisset in
+                      <placeName>Metenone</placeName>, miles</rs>, <rs type="person"><persName>Agnetem</persName> filiam meam primogenitam</rs> duxisset in
                   uxorem, ego <rs type="person"><persName>Johannes de Maeroliis</persName>,
                     miles</rs>, eidem <persName>Hugoni</persName> dedi in maritagium cum predicta
                     <rs type="person"><persName>Agnete</persName>, filia mea</rs>, quicquid habebam
@@ -3818,8 +3717,7 @@
                   et <rs type="person"><persName>Agnes</persName> uxor ejus</rs> et eorum heredes
                   sive alius <pb n="52"/> quicunque dictam medietatem dictorum molendinorum
                   possidebunt, presbitero qui pro tempore deserviet in capella de
-                    <placeName>Houderpont</placeName>, unum sextarium bladi quod <rs type="person"
-                      ><persName>Simon</persName>, quondam avus meus</rs>, dicto presbitero de
+                    <placeName>Houderpont</placeName>, unum sextarium bladi quod <rs type="person"><persName>Simon</persName>, quondam avus meus</rs>, dicto presbitero de
                     <placeName>Houderpont</placeName> legaverat in elemosinam, pro anniversario suo
                   annuatim faciendo, de ipso eodemque blado quod lucrabuntur dicta molendina, sine
                   pejoratione aliqua, singulis annis <date>in festo beati Remigii</date> reddere
@@ -3835,12 +3733,10 @@
                   et <rs type="person"><persName>Agnetis</persName>, uxoris sue</rs>, singulis annis
                   facere tenebitur.</s>
                 <s>Hec autem omnia prout superius sunt expressa et narrata voluerunt et concesserunt
-                  predicti <persName>Hugo</persName>, et <rs type="person"
-                      ><persName>Agnes</persName> uxor ejus</rs>.</s>
+                  predicti <persName>Hugo</persName>, et <rs type="person"><persName>Agnes</persName> uxor ejus</rs>.</s>
                 <s>In quorum omnium premissorum et singulorum testimonium et munimen seu
                   confirmationem, ego predictus <rs type="person"><persName>Johannes de
-                      Maeroliis</persName>, miles</rs>, et predictus <rs type="person"
-                      ><persName>Hugo</persName> miles et dominus de
+                      Maeroliis</persName>, miles</rs>, et predictus <rs type="person"><persName>Hugo</persName> miles et dominus de
                     <placeName>Metenone</placeName></rs>, assensu et voluntate predictarum
                     <persName>Alicie</persName> et <persName>Agnetis</persName> uxorum nostrarum,
                   presentes litteras sigillorum nostrorum fecimus munimine roborari.</s>
@@ -3877,8 +3773,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                        ><persName><abbr>M.</abbr></persName>
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName><abbr>M.</abbr></persName>
                     <seg type="theo">Dei gratia</seg>
                     <placeName>Fontis Ebraldi</placeName> humilis abbatissa</rs>, salutem in
                   Domino.</s>
@@ -3932,16 +3827,14 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Universis presentes litteras inspecturis, <persName>Johannes</persName> de
-                  castello <placeName>Sancti Leodegarii in Aquilina</placeName> et <rs type="person"
-                      ><persName>Petrus</persName>
+                  castello <placeName>Sancti Leodegarii in Aquilina</placeName> et <rs type="person"><persName>Petrus</persName>
                     <placeName> SanctiThome de Sparnone</placeName> presbiteri</rs>, salutem in
                   Domino.</s>
                 <s>Noveritis quod nos super contencionibus habitis inter religiosas priorissam et
                   conventum de <placeName>Alta Brueria</placeName> ex una parte, et priorem
                     <placeName>Sancti Thome de Sparnone</placeName> ex altera : de quibus
                   contencionibus compromissum est in nos <persName>Johannem</persName> et
-                    <persName>Petrum</persName> tanquam in arbitrios, et in venerabilem virum <rs
-                    type="person"><persName>Odonem</persName>, decanum
+                    <persName>Petrum</persName> tanquam in arbitrios, et in venerabilem virum <rs type="person"><persName>Odonem</persName>, decanum
                       <placeName>Medontensem</placeName></rs>, si nos duos in unum concordare non
                   possemus pro ut in litteris sigillis nostris sigillatis plenius continetur, de
                   communi tractatu et assensu habito inter nos <persName>Johannem de Sancto
@@ -4004,8 +3897,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Matheus</persName>
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Matheus</persName>
                     <seg type="theo">divina miseratione</seg>
                     <placeName>Carnotensis</placeName> episcopus</rs>, salutem in Domino.</s>
                 <s>Noveritis quod de <num>sexaginta</num> solidis annui redditus, quos percipit et
@@ -4038,8 +3930,7 @@
                   aliis <num>viginti</num> solidiis solvendis dicto priori nomine annui redditus, ad
                   natale domini prout superius dictum est, annuatim solvere tenebuntur.</s>
                 <s>Nos vero ad confirmationem premissorum et ad requisitionem dicti prioris de
-                    <placeName>Sparnone</placeName> et dicti <rs type="person"
-                      ><persName>Dionisii</persName> presbiteri de
+                    <placeName>Sparnone</placeName> et dicti <rs type="person"><persName>Dionisii</persName> presbiteri de
                     <placeName>Hanchiis</placeName></rs> presentes litteras sigillo nostro fecimus
                   sigillari.</s>
                 <s>Datum <date>anno domini <num>Mº CCº XLº</num> nono, mense octobri</date>. »</s>
@@ -4110,8 +4001,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Omnibus ad quos presentes littere pervenerint, <rs type="person"
-                      ><persName>Odo</persName>, decanus de <placeName>Medunta</placeName></rs>, et
+                <s>« Omnibus ad quos presentes littere pervenerint, <rs type="person"><persName>Odo</persName>, decanus de <placeName>Medunta</placeName></rs>, et
                     <rs type="person"><persName>Philippus</persName>, presbiter de
                       <placeName>Hermercio</placeName></rs>, salutem in Domino.</s>
                 <s>Noveritis quod cum contentio verteretur inter religiosum virum priorem de
@@ -4121,8 +4011,7 @@
                     <placeName>Mitanivilla</placeName> juxta <placeName>Marchesium
                     Giroust</placeName> prope cheminum qui dicitur cheminus
                     <placeName>Vacarum</placeName> ; et dicte partes compromisissent in nos de
-                  assensu et voluntate reverendi patris <rs type="person"
-                      ><persName>Mathei</persName>, <seg type="theo">Dei gratia</seg> episcopi
+                  assensu et voluntate reverendi patris <rs type="person"><persName>Mathei</persName>, <seg type="theo">Dei gratia</seg> episcopi
                       <placeName>Carnotensis</placeName></rs>, et assensu et voluntate religiosorum
                   virorum abbatis et conventus <placeName>Majoris Monasterii Turonensis</placeName>,
                   prout in litteris patentibus eorumdem vidimus contineri.</s>
@@ -4180,8 +4069,7 @@
                 <s>Noverint universi quod cum contentio verteretur inter religiosum virum priorem de
                     <placeName>Sparnone</placeName> ex una parte, et <persName>Galterium</persName>
                   presbiterum et personam de <placeName>Mittenivilla</placeName> ex altera, super
-                  explanationem cujusdam arbitrii prolati ab <rs type="person"
-                      ><persName>Odone</persName> decano de <placeName>Medonta</placeName></rs>, et
+                  explanationem cujusdam arbitrii prolati ab <rs type="person"><persName>Odone</persName> decano de <placeName>Medonta</placeName></rs>, et
                     <rs type="person"><persName>Philippo</persName> presbitero de
                       <placeName>Hermercio</placeName> modo thessaurario de
                       <placeName>Pontisara</placeName></rs>, super decimis quarumdam terrarum
@@ -4273,8 +4161,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis <rs type="person"
-                      ><persName>Margarita</persName>, relicta <rs type="person"><persName>Roberti
+                <s>« Universis presentes litteras inspecturis <rs type="person"><persName>Margarita</persName>, relicta <rs type="person"><persName>Roberti
                         Le Rooillée</persName> quondam militis</rs></rs>, salutem in Domino.</s>
                 <s>Noverit universitas vestra quod ego teneo et tenere debeo a priore et prioratu de
                     <placeName>Sparnone</placeName> quamdam aream, sitam apud
@@ -4333,12 +4220,10 @@
                 <s>Noveritis quod in nostra presencia constituti <persName>Aubertus, dictus
                     Chaous</persName>, et <rs type="person"><persName>Agnes</persName> ejus
                     uxor</rs>, commorantes et manentes in quadam domo sita in castro
-                    <placeName>Sparnonensi</placeName> que fuit defuncti <rs type="person"
-                      ><persName>Simonis dicti Ribaldi</persName>, parentis ipsius
+                    <placeName>Sparnonensi</placeName> que fuit defuncti <rs type="person"><persName>Simonis dicti Ribaldi</persName>, parentis ipsius
                       <persName>Agnetis</persName></rs>, confessi fuerunt coram nobis quod predicta
                   domus movet de censiva prioris <placeName>Sancti Thome de Sparnone</placeName>, et
-                  quod dicti <persName>Albertus</persName> et <rs type="person"
-                      ><persName>Agnes</persName>, ejus uxor</rs>, sunt et fuerant ex quo prime
+                  quod dicti <persName>Albertus</persName> et <rs type="person"><persName>Agnes</persName>, ejus uxor</rs>, sunt et fuerant ex quo prime
                   manserunt in dicta domo, hospites ejusdem prioris et esse debent quamdiu ibidem
                   mansionem fecerint : promiserunt etiam coram nobis dicti
                     <persName>Albertus</persName> et <rs type="person"><persName>Agnes</persName>,
@@ -4347,8 +4232,7 @@
                   prioris faciunt seu facere consueverunt, sine advocacione alterius dominii sive
                   fori.</s>
                 <s>In cujus rei testimonium et munimen ad peticionem dictorum
-                    <persName>Alberti</persName> et ejus uxoris presentibus litteris sigillum <rs
-                    type="place">curie <placeName>Carnotensis</placeName></rs> duximus
+                    <persName>Alberti</persName> et ejus uxoris presentibus litteris sigillum <rs type="place">curie <placeName>Carnotensis</placeName></rs> duximus
                   apponendum.</s>
                 <s>Datum <date>anno domini <num>Mº</num><num>CC</num>º LVº sexto, die veneris post
                     exaltationem Sancte Crucis</date>. »</s>
@@ -4385,11 +4269,9 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Ferrandus</persName> illustris regis
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Ferrandus</persName> illustris regis
                       <placeName>Hyspanie</placeName> filius, heres <placeName>Pontivii</placeName>
-                    et dominus <placeName>Sparnonis</placeName> ac miles</rs>, et <rs type="person"
-                    >domina <persName>Laura de Monteforti</persName> ejusdem
+                    et dominus <placeName>Sparnonis</placeName> ac miles</rs>, et <rs type="person">domina <persName>Laura de Monteforti</persName> ejusdem
                       <placeName>Sparnonis</placeName> domina ejus uxor</rs>, salutem et amorem in
                   Domino.</s>
                 <s>Noveritis quod cum inter nos ex una parte, et religiosos viros abbatem et
@@ -4505,8 +4387,7 @@
                   juris habemus et habere possumus in predictis ; exceptis dictis tribus casibus et
                   id quod nobis assignatum est in recompensationem dictorum quinque solidorum
                   parisiensium ; nec non omnes libertates, immunitates, concessiones, possessiones,
-                  collationes, elemosinas et donationes factas a predecessoribus et parentibus <pb
-                    n="64"/> nostris dictis religiosis et prioratui predicto, hominibus, hospitibus,
+                  collationes, elemosinas et donationes factas a predecessoribus et parentibus <pb n="64"/> nostris dictis religiosis et prioratui predicto, hominibus, hospitibus,
                   censuariis, familie, ancillis, ac rebus eorumdem confirmamus, laudamus, ac etiam,
                   approbamus.</s>
                 <s>Volentes quod de omnibus et singulis premissis imperpetuum gaudeant libere
@@ -4576,11 +4457,9 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Ferrandus</persName>, illustris regis
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Ferrandus</persName>, illustris regis
                       <placeName>Hispanie</placeName> filius, heres <placeName>Pontivi</placeName>
-                    et dominus <persName>Sparnonis</persName> ac miles</rs>, et <rs type="person"
-                    >domina <persName>Laura de Monteforti</persName>, ejus uxor</rs>, salutem.</s>
+                    et dominus <persName>Sparnonis</persName> ac miles</rs>, et <rs type="person">domina <persName>Laura de Monteforti</persName>, ejus uxor</rs>, salutem.</s>
                 <s>Cum controversie verterentur inter nos ex una parte, et religiosos viros abbatem
                   et conventum <placeName>Majoris Monasterii Turonensis</placeName>, priorem et
                   conventum <placeName>Sancti Thome Sparnonensis</placeName>, super claiis clausure
@@ -4600,12 +4479,9 @@
                     <num>triginta</num> libras bonorum turonensium receperimus et habuerimus per
                   manus predicti prioris in peccunia numerata.</s>
                 <s>Nos nolentes quod eccecutione hujusmodi super premissis de cetera per aliquid
-                  molestentur, volumus, concedimus, et promittimus quod si <rs type="person"
-                      ><persName>Beatrix</persName> heres <placeName>Montisfortis</placeName>, vel
+                  molestentur, volumus, concedimus, et promittimus quod si <rs type="person"><persName>Beatrix</persName> heres <placeName>Montisfortis</placeName>, vel
                     domina de <placeName>Noele</placeName><ref type="note" target="#p65_fn1"/> sive
-                    uxor domini <persName>Johannis de Sessuns</persName><ref type="note"
-                      target="#p65_fn2"/></rs> revenerint ad proportionem terrarum nobiscum <pb
-                    n="66"/> atque assignaverint ad partem quam tenemus, et eam pacem quam nos cum
+                    uxor domini <persName>Johannis de Sessuns</persName><ref type="note" target="#p65_fn2"/></rs> revenerint ad proportionem terrarum nobiscum <pb n="66"/> atque assignaverint ad partem quam tenemus, et eam pacem quam nos cum
                   dictis religiosis fecimus sicut în predictis litteris nostris et suis custodire
                   noluerint nec tenere, et eam in aliquibus aut aliquo infregerint, quod nos statim
                   et protinus dictis religiosis predictam peccuniam.....</s>
@@ -4620,8 +4496,7 @@
                   eisdem religiosis obligamus nos et heredes et successores nostros et omnia bona
                   nostra, mobilia et immobilia, habita et habenda presentia et futura, ubicunque
                   existentia.</s>
-                <s>Actum et compositum fuit inter nos et predictos religiosos, quod cum dicta <rs
-                    type="person"><persName>Beatrix</persName> heres
+                <s>Actum et compositum fuit inter nos et predictos religiosos, quod cum dicta <rs type="person"><persName>Beatrix</persName> heres
                       <placeName>Montisfortis</placeName></rs> ad legitimam etatem pervenerit et per
                   biennium terram tenuerit, nec predictam compositionem pacis.</s>
                 <s>nec ipsa predicta domina de <placeName>Noele</placeName>, nec predicta uxor
@@ -4683,8 +4558,7 @@
               <p>
                 <s>« Universis... officialis curie archidiaconi in decanatu
                     <placeName>Sparnonensi</placeName>... quod <rs type="person"><persName>Philippus
-                      dictus Pognart</persName>, miles</rs>, et <rs type="person"
-                      ><persName>Agnes</persName>, uxor ejus</rs>.</s>
+                      dictus Pognart</persName>, miles</rs>, et <rs type="person"><persName>Agnes</persName>, uxor ejus</rs>.</s>
                 <s>recognoverunt <rs type="person"><persName>Raginaldum</persName> majorem suum de
                       <placeName>Vado Petroso</placeName></rs> et uxor ejus vendidisse ecclesie
                     <placeName>Sancti Thome de Sparnone</placeName> quidquid habebant in minutis
@@ -4733,13 +4607,10 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, ego <rs type="person"
-                      ><persName>Robertus</persName>, comes de <placeName>Drocis</placeName> et
-                      <placeName>Montisfortis</placeName></rs>, et <rs type="person"
-                      ><persName>Beatrix</persName>, uxor mea</rs>, salutem in Domino.</s>
+                <s>« Universis presentes litteras inspecturis, ego <rs type="person"><persName>Robertus</persName>, comes de <placeName>Drocis</placeName> et
+                      <placeName>Montisfortis</placeName></rs>, et <rs type="person"><persName>Beatrix</persName>, uxor mea</rs>, salutem in Domino.</s>
                 <s>Noverint universi quod ego <persName>Robertus</persName> receptus in homagio et
-                  fide comitatus <placeName>Montisfortis</placeName> et <rs type="person"
-                      ><persName>Beatrix</persName>, uxor mea</rs> heres tocius terre dicti
+                  fide comitatus <placeName>Montisfortis</placeName> et <rs type="person"><persName>Beatrix</persName>, uxor mea</rs> heres tocius terre dicti
                   comitatus, laudamus, approbamus, et etiam intuitu pietatis confirmamus
                   conventiones habitas inter virum nobilem bone memorie dominum <persName>Ferrandum
                     de Pontivo</persName> et <rs type="person">dominam <persName>Lauram
@@ -4757,13 +4628,11 @@
                 <s>Et promitimus dictis religiosis quod nos omnia contenta in dictis litteris
                   tanquam domini contra omnes juri et legi parere volentes bona fide garandizabimus
                   eisdem.</s>
-                <s>Item ego <persName>Robertus</persName> et dicta <rs type="person"
-                      ><persName>Beatrix</persName> uxor mea heres comitatus
+                <s>Item ego <persName>Robertus</persName> et dicta <rs type="person"><persName>Beatrix</persName> uxor mea heres comitatus
                       <placeName>Montisfortis</placeName></rs>, ad perpetuam memoriam presentes
                   litteras sigillorum nostrorum sigillatas dedimus et concessimus predictis
                   religiosis.</s>
-                <s>Et promittimus nos contra non venire et specialiter <rs type="person"
-                      ><persName>Beatrix</persName>, uxor mea</rs> quia heres est comitatus
+                <s>Et promittimus nos contra non venire et specialiter <rs type="person"><persName>Beatrix</persName>, uxor mea</rs> quia heres est comitatus
                     <placeName>Montisfortis</placeName>, de auctoritate et assensu meo, non dolo,
                   non <num>vi</num> ad hoc inducta sed spontanea voluntate sua omnia premissa et
                   singula voluit et concessit de auctoritate mea et laudavit et approbavit et in
@@ -4910,8 +4779,7 @@
                   super hiis quod dicti prior et conventus dicebant et asserebant quod equi sive
                   sommarii dictorum prioris et conventus ibant et poterant ire querere et adducere
                   mousturam ad molendinum de <placeName>Seintcort</placeName> et adducere dictam
-                  mousturam ad dictum molendinum libere et quiete et sine aliqua consuetudine <pb
-                    n="71"/> seu redibencia propter hoc nobis facienda seu heredibus nostris,
+                  mousturam ad dictum molendinum libere et quiete et sine aliqua consuetudine <pb n="71"/> seu redibencia propter hoc nobis facienda seu heredibus nostris,
                   videlicet apud <placeName>Charmaiam</placeName>, et apud
                     <placeName>Spinetum</placeName>.</s>
                 <s>et apud <placeName>Passoir</placeName>, et apud
@@ -5035,8 +4903,7 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s>« A touz ceus qui verront et orront cestes présentes lestres, <persName>Pierre
-                    dou Bouais</persName>, chevalier, et <rs type="person"
-                      ><persName>Guillaume</persName>, frère dicelui <persName>Pierre</persName>
+                    dou Bouais</persName>, chevalier, et <rs type="person"><persName>Guillaume</persName>, frère dicelui <persName>Pierre</persName>
                     escuier</rs>, saluz en nostre Seigneur Sachent tuit que comme contenz fust entre
                   nous dune part et Religieus hommes le prieur et le covent de <placeName>Saint
                     Thomas d'Esparnon</placeName> d'autre part, sur ce que nous disien que le prieur
@@ -5144,8 +5011,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>« A touz ceus qui ces présentes lectres verront et oront <rs type="person"
-                      ><persName>Hue Moisy</persName> garde de la prévosté de <placeName>Nogent
+                <s>« A touz ceus qui ces présentes lectres verront et oront <rs type="person"><persName>Hue Moisy</persName> garde de la prévosté de <placeName>Nogent
                       Lerembert</placeName></rs> salut en nostre Seingneur.</s>
                 <s>Sachent tuit que par devant nous vint mon seingneur <persName>Guy de
                     Saudreville</persName>, chevalier, et recongnt par devant nous qu'il tenoit à
@@ -5269,14 +5135,12 @@
                     <placeName>Mèremoustier</placeName> se douloit et requèroit, que comme il eust
                   esté anciannement, pour lui et pour séglise d<placeName>Espernon</placeName>.</s>
                 <s>en saisine destre gardez par le siège du chastel de <placeName>Nogent</placeName>
-                  et par le préuost de ce lieu, toutes foiz que les cas si estoient eschoiz <pb
-                    n="76"/> et contrinz feust daler à <placeName>Mantes</placeName> et destre gardé
+                  et par le préuost de ce lieu, toutes foiz que les cas si estoient eschoiz <pb n="76"/> et contrinz feust daler à <placeName>Mantes</placeName> et destre gardé
                   par le siège de <placeName>Mantes</placeName>, ou grief et préjudice de lui et
                   séglise et ou grant dommage ; Et le dit prieur nous eust requis par plusieurs foiz
                   que par le siège de <placeName>Nogent</placeName> feust gardé, et tenu en sa
                   saisine destre gardé par le préuost de <placeName>Nogent</placeName>, et le deuant
-                  dit procureur à la dite Duchesse proposast au contraire, que les genz à la <rs
-                    type="person">Contesse d<placeName>Aubemalle</placeName></rs> du chastel
+                  dit procureur à la dite Duchesse proposast au contraire, que les genz à la <rs type="person">Contesse d<placeName>Aubemalle</placeName></rs> du chastel
                     d<placeName>Espernon</placeName> estoient en saisine que toutes foiz que le dit
                   prieur ou non de séglise, se vouloit douloir de la gent à la dite contesse
                     d<placeName>Aubemalle</placeName>, de griès ou dautres choses que illi eussent
@@ -5289,8 +5153,7 @@
                   ressortissoit à <placeName>Mante</placeName>, deuoit demourer la dite Contesse au
                   siège de <placeName>Mante</placeName>, et le dit prieur si disoit que se traitié
                   auoit esté à <placeName>Mante</placeName> ce aououit esté depuis ceu, que une
-                  grâce qui donnée fu du Roy nostre sire à la dite Duchesse que la <rs type="person"
-                    >Contesse d'<placeName>Aubemalle</placeName></rs> qui à ce temps se
+                  grâce qui donnée fu du Roy nostre sire à la dite Duchesse que la <rs type="person">Contesse d'<placeName>Aubemalle</placeName></rs> qui à ce temps se
                   ressortissoit à <placeName>Nogent</placeName>, se ressortissist à
                     <placeName>Montfort</placeName>, et de <placeName>Montfort</placeName> à
                     <placeName>Mante</placeName>, aussint comme le dit chastel de
@@ -5411,8 +5274,7 @@
                 <s>Comme plet feust meu, deuant nostre baillif de <placeName>Mante</placeName>,
                   Entre le prieur de <placeName>Saint Thomas dEspernon</placeName>, d'une part ; et
                   le baillif de nostre amée la Contesse d<placeName>Aubemalle</placeName> en la
-                  juridiction d<placeName>Espernon</placeName> ; Et le baillif de nostre amée la <rs
-                    type="person">Contesse de <placeName>Montfort</placeName></rs>, pour tant comme
+                  juridiction d<placeName>Espernon</placeName> ; Et le baillif de nostre amée la <rs type="person">Contesse de <placeName>Montfort</placeName></rs>, pour tant comme
                   à chascun deus touchoit ou pouet touchier dautre part ; sur ceu que le dit prieur
                   disoit et maintenoit ; que il son prieuré, touz les biens les sougiez et les
                   habitanz de son dit prieuré, estoient et sunt en saisine destre tenuz gardez et
@@ -5429,16 +5291,13 @@
                 <s><rs type="person"><persName><abbr>Ph.</abbr></persName>
                     <seg type="theo">par la grâce de dieu</seg> Roy de
                     <placeName>France</placeName></rs>, A tous ceus qui ces lettres verront salut ;
-                  Sachent tuit que comme à la requeste et instance de notre amée et féal <rs
-                    type="person"><persName>Béatriz</persName>, contesse de
+                  Sachent tuit que comme à la requeste et instance de notre amée et féal <rs type="person"><persName>Béatriz</persName>, contesse de
                       <placeName>Dreus</placeName> et de <placeName>Montfort</placeName></rs>,
-                  complaignant et requérent à notre chière dame et mère, <rs type="person"
-                      ><persName>Marie</persName>
+                  complaignant et requérent à notre chière dame et mère, <rs type="person"><persName>Marie</persName>
                     <seg type="theo">par la grâce de Dieu</seg> Roine de
                       <placeName>France</placeName></rs>, que eile li feist oster lempeschement que
                   ses genz de <placeName>Nogent</placeName>
-                  <num>li</num> metoient en la ville d'<placeName>Espernon</placeName> et ès <pb
-                    n="80"/> appartenances, et en la chastellenie de ce lieu, en justicant et
+                  <num>li</num> metoient en la ville d'<placeName>Espernon</placeName> et ès <pb n="80"/> appartenances, et en la chastellenie de ce lieu, en justicant et
                   voulant justicier ès diz lieus, pour cause de ressort en cas de deffaut de droit
                   et de mauvès jugement, les quieus lieus la dite contesse disoit estre tenuz de
                     <num>li</num> sanz moian, et a <num>li</num> pour réson de son chastel de
@@ -5472,8 +5331,7 @@
                   du Roy au contraire, contenanz la fourme qui ensuit...</s>
                 <s><rs type="person"><persName><abbr>Ph.</abbr></persName>
                     <seg type="theo">dei gratia</seg>
-                    <persName>Francorum</persName> Rex</rs>, carissime amtri et domine nostre <rs
-                    type="person"><persName><abbr>M.</abbr></persName>
+                    <persName>Francorum</persName> Rex</rs>, carissime amtri et domine nostre <rs type="person"><persName><abbr>M.</abbr></persName>
                     <seg type="theo">dei gratia</seg> Regine <placeName>Francie</placeName></rs>,
                   uel eius <pb n="81"/>locum tenenti salutem.</s>
                 <s>Ex conquestione prioris de <persName>Espernone</persName> nuper accepimus, quod
@@ -5483,8 +5341,7 @@
                   possessione sit et fuerit ab antico.</s>
                 <s>Vos que quamdiu dictum castrum tenuistis, fueritis et antea nos et predecessores
                   nostri fuerimus in possessione exercendi ressortum et gardam hujus per dictos
-                  justiciarios et non alios, prout dicit, nichilominus dilecte et fideles mee, <rs
-                    type="person">Duccissa <placeName>Britanie</placeName> Comitissa
+                  justiciarios et non alios, prout dicit, nichilominus dilecte et fideles mee, <rs type="person">Duccissa <placeName>Britanie</placeName> Comitissa
                       <placeName>Montisfortis</placeName>, et Comitissa de <placeName>Alba
                       merula</placeName></rs>, dictos priorem prioratum et subditos ejusdem, in
                   casibus ressorti et gardie, ad sedem et curiam vestram de
@@ -5546,8 +5403,7 @@
                   au dit prieur ; En tesmoing de laquelle chose, nous auons fet seeller ces lettres
                     <pb n="83"/> de notre propre seel.</s>
                 <s>Données <date>ou mois de nouembre, lan de grace mil trois cenz et quinze, le
-                    samedi après la feste Saint Martin dyuer<ref type="note" target="#p83_fn1"
-                    /></date>. »</s>
+                    samedi après la feste Saint Martin dyuer<ref type="note" target="#p83_fn1"/></date>. »</s>
               </p>
             </div>
           </body>
@@ -5637,8 +5493,7 @@
                   predicte, exhibitori presentium, damus potestatem et speciale mandatum super
                   premissis....</s>
                 <s>compromictendis in dictos <persName>Dionisium de Barneval</persName> et
-                    <persName>Johannem Eliot</persName> tanquam in arbitrios seu ami<pb n="84"
-                  />cabiles compositores.....</s>
+                    <persName>Johannem Eliot</persName> tanquam in arbitrios seu ami<pb n="84"/>cabiles compositores.....</s>
                 <s>Datum <date>anno Domini <num>Mº</num><num>CCC</num>º<num>XX</num>º, die mercurii
                     post festum beati Mathei apostoli</date>. »</s>
               </p>
@@ -5678,8 +5533,7 @@
                 <s>de tous les descors meus entre nous et le dit prieur pour reson de la prieuré
                     d'<placeName>Espernon</placeName>, il est ou dit et ou l'ordenance de nos amez
                     <rs type="person"><persName>Denis de Bernaval</persName>, bailli
-                      d'<placeName>Aubemalle</placeName></rs> et de <rs type="person"
-                      ><persName>Jehan Elyot</persName> bourgois de
+                      d'<placeName>Aubemalle</placeName></rs> et de <rs type="person"><persName>Jehan Elyot</persName> bourgois de
                     <placeName>Chartres</placeName></rs>.....</s>
                 <s>En tesmoing de ce nous avons séelées ces lettres de nos propres seaus, qui furent
                   faites <date>l'an de grace mil trois cent vingt et un, le dimanche prochien après
@@ -5717,8 +5571,7 @@
                 <s>« Universis fratres capituli <placeName>Majoris Monasterii</placeName> et frater
                     <rs type="person"><persName>Johannes</persName>, minister humilis
                   eorumdem</rs>.....</s>
-                <s>compromissum in venerabiles et discretos viros <rs type="person"
-                      ><persName>Dyonisium de Barnaval</persName>, baillivum de
+                <s>compromissum in venerabiles et discretos viros <rs type="person"><persName>Dyonisium de Barnaval</persName>, baillivum de
                       <placeName>Albamarle</placeName></rs> et <persName>Johannem Eliot</persName>,
                   tanquam in arbitros...</s>
                 <s>ratum habemus......</s>
@@ -5771,8 +5624,7 @@
                 <s>In cujus rei testimonium nostrum presentibus apponi fecimus supradictum
                   sigillum.</s>
                 <s>Actum <placeName>Turonis</placeName>, <date>die secunda decembris, anno Domini
-                    millesimo trecentesimo vicesimo tertio</date><ref type="note" target="#p85_fn1"
-                  />. »</s>
+                    millesimo trecentesimo vicesimo tertio</date><ref type="note" target="#p85_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -5864,8 +5716,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>« A touz ceus qui ces leictres verront et orront Nous <rs type="person"
-                      ><persName>Estienne Loinctier</persName>, prestre, guarde dou seel de la
+                <s>« A touz ceus qui ces leictres verront et orront Nous <rs type="person"><persName>Estienne Loinctier</persName>, prestre, guarde dou seel de la
                     chastellerie de <placeName>Nogent Lerembert</placeName></rs> salut.</s>
                 <s>Comme contens et descors fussent meeus pieça pour plusieurs cas de justice entre
                   noble dame et haute <rs type="person">madame <persName>Yende de
@@ -5878,11 +5729,9 @@
                   devandiz.......</s>
                 <s>se fussent compromis par certains procureurs......</s>
                 <s>C'est asavoir <persName>Jehan Garnier</persName>, baillif
-                    d'<placeName>Espernon</placeName>, pour les diz madame la contesse, <rs
-                    type="person"><persName>Jehan</persName> son fils</rs>, et ledit prieur
+                    d'<placeName>Espernon</placeName>, pour les diz madame la contesse, <rs type="person"><persName>Jehan</persName> son fils</rs>, et ledit prieur
                     d'<placeName>Espernon</placeName> pour le dit abbé et couvent si comme il est
-                  contenu ès procuracions seellées des seaux de la dite contesse, <rs type="person"
-                      ><persName>Jehan</persName> son fils</rs>, et des diz religieus.</s>
+                  contenu ès procuracions seellées des seaux de la dite contesse, <rs type="person"><persName>Jehan</persName> son fils</rs>, et des diz religieus.</s>
                 <s>Desquelles procuracions les teneurs contiennent la fourme qui ensuit :</s>
                 <note>(Suivent les procurations dont les extraits ont été donnés à leur date,
                   numéros <num>LXXII</num>, <num>LXXIII</num>, <num>LXXIV</num> et
@@ -5902,23 +5751,20 @@
                   pronuncièrent leur dit et leur sentence arbitrale en la fourme et en la menière
                   qui en suit : C'est assavoir que les lettres lesquelles les diz religieus ont par
                   reson de leur prieuré d'<placeName>Espernon</placeName> demuerent en leur force et
-                  en leur vertu, et se il est ainsit que les diz contesse, <rs type="person"
-                      ><persName>Jehan</persName> son fils</rs>, ou leur genz ou autres ou temps
+                  en leur vertu, et se il est ainsit que les diz contesse, <rs type="person"><persName>Jehan</persName> son fils</rs>, ou leur genz ou autres ou temps
                   passé ou non de eus et pour euls ou pour leurs prédécesseurs, aient usé d'aucun
                   cas de joustice en la terre dou prieuré de <placeName>Saint Thomas
                     d'Espernon</placeName> contre lesprinz des lettres dudit prieuré, que ce que il
                   avront usé ne leur puet acqueire saisine pour le temps avenir, ne porter préjudice
                   aus diz religieus par reson dudit prieuré ; et ausit se les diz religieus ont usé
                   d'aucun cas de joustice oultre lesprinz de leurs lettres que il ne leur puisse
-                  acqueire saisine pour le temps avenir ne porter préjudice aus diz contesse et <rs
-                    type="person"><persName>Jehan</persName> son fils</rs> ne a leurs <pb n="87"/>
+                  acqueire saisine pour le temps avenir ne porter préjudice aus diz contesse et <rs type="person"><persName>Jehan</persName> son fils</rs> ne a leurs <pb n="87"/>
                   heirs, De rechief, quant à la déliurance que les genz madame la royne
                     <persName>Marie</persName> comme souueraine fist d'un effant qui chay d'une
                   eschielle en la terre du dit prieuré est tenable sanz porter préjudice aus diz
                   madame la contesse et <persName>Jehan</persName> son fils, ou temps auenir ne au
                   dit prieuré ; Derechief, quant au cas de l'enfant que le baillif
-                    d'<placeName>Espernon</placeName> prist ou non des diz contesse et <rs
-                    type="person"><persName>Jehan</persName> son fils</rs>, lequel estoit mort en
+                    d'<placeName>Espernon</placeName> prist ou non des diz contesse et <rs type="person"><persName>Jehan</persName> son fils</rs>, lequel estoit mort en
                   une fontaine en la terre du dit prieuré que celle prinse ne acquerra point de
                   saisine aus diz contesse et <rs type="person"><persName>Jehan</persName> son
                     fils</rs> pour le temps à venir ne portera préjudice au dit prieuré contre
@@ -5942,11 +5788,9 @@
                   aus prinz de ces lettres ne acquierra saisine pour le temps avenir aus diz madame
                   la contesse et <persName>Jehan</persName> son fils, ne à leurs heirs.</s>
                 <s>Derechief, quant aus corps de lhomme qui fut estaché dou mur à<persName> Guey
-                    Perreur</persName>, en la terre et en la juridicion de la dite contesse et <rs
-                    type="person"><persName>Jehan</persName> son fils</rs>, combien que le mort fust
+                    Perreur</persName>, en la terre et en la juridicion de la dite contesse et <rs type="person"><persName>Jehan</persName> son fils</rs>, combien que le mort fust
                   couchant et levant en la terre du dit prieuré, le dit prieur n'avoit nul droit
-                  d'empescher la cognoissance du cas aus diz contesse et<rs type="person"
-                      ><persName>Jehan</persName> son fils</rs>, ne cause de congnoistre de la mort
+                  d'empescher la cognoissance du cas aus diz contesse et<rs type="person"><persName>Jehan</persName> son fils</rs>, ne cause de congnoistre de la mort
                   dou dit homme ne de feire arester le corps du mort par les genz madame la
                   Roygne.</s>
                 <s>Derechief, quant au disieme marchié que le <pb n="88"/> prieur a par reson de son
@@ -5954,8 +5798,7 @@
                   l'amande qui y appartient pour reson de la contesse coustume non paiée, le dit
                   prieur aura le jour du disième marchié qui a <num>li</num> appartient pour reson
                   de son prieuré toutes les coustumes et les amandes qui en nesteront pour reson des
-                  coustumes tant ausi comme quie madame la contesse et <rs type="person"
-                      ><persName>Jehan</persName> son fils</rs> les ont en touz les autres marchiez
+                  coustumes tant ausi comme quie madame la contesse et <rs type="person"><persName>Jehan</persName> son fils</rs> les ont en touz les autres marchiez
                   ; et pourra celui qui recevra ou non du dit prieur les coustumes pour le jour de
                   son marchié arrester celui qui devra la coustume tant pour la coustume que pour
                   l'amende pour reson de la coustume non paiée sanz autre jurisdicion acquierre au
@@ -5963,8 +5806,7 @@
                 <s>Derechief, quant au cas de la joustice de la meson en laquelle
                     <persName>Guillement</persName> demeure, laquelle est en la censive dou prestre
                     <placeName>Saint Jehan d'Espernon</placeName> pour reson de s'église toute la
-                  justice de la dite meson demeure aus diz madame la contesse et à <rs type="person"
-                      ><persName>Jehan</persName> son fils</rs> et à leurs heirs, sauve le droit dou
+                  justice de la dite meson demeure aus diz madame la contesse et à <rs type="person"><persName>Jehan</persName> son fils</rs> et à leurs heirs, sauve le droit dou
                   presbitoire tel qu'il a <num>li</num> appartient pour la coustume.</s>
                 <s>Auquel dit et pronunciacion les procureurs dessus diz comme procureurs de leurs
                   mestres et le dit prieur pour tant quie à lui appartient obayrent et promistrent
@@ -6015,14 +5857,12 @@
                 <s><persName>Guillaume de Mévoisin</persName> et <rs type="person"><persName>Jehanne
                         <pb n="89"/> La Blanche</persName>, tante <abbr>dud.</abbr>
                     <persName>Guillaume</persName></rs>, demourans à
-                    <placeName>Grougneul</placeName> et <rs type="person"
-                      ><persName>Jehanne</persName> jadis fame feu <persName>Gilot Le
+                    <placeName>Grougneul</placeName> et <rs type="person"><persName>Jehanne</persName> jadis fame feu <persName>Gilot Le
                       Blanc</persName></rs> ; cest assavoir le dit <persName>Guillaume</persName> et
                   sa dicte tante chascun pour le tout, et la dicte <persName>Jehanne</persName>
                   femme jadis de feu <persName>Gilot</persName> pour cause et raison de son doaire,
                   recongnurent et confessèrent avoir vendu....</s>
-                <s>à religieus homme et honeste, honorable et discret maistre <rs type="person"
-                      ><persName>Jehan de Maintenon</persName>, humble prieur du prieuré de
+                <s>à religieus homme et honeste, honorable et discret maistre <rs type="person"><persName>Jehan de Maintenon</persName>, humble prieur du prieuré de
                       <placeName>Saint Thomas d'Espernon</placeName></rs>, de lordre de
                     <placeName>Maire Moustier</placeName> en <placeName>Tourraine</placeName>, pour
                   raison de son dit prieuré, toute cele disme comme euls avoient, si comme euls
@@ -6075,8 +5915,7 @@
                 <s>« <rs type="person"><persName>Philippe</persName>, <seg type="theo">par la grace
                       de Dieu</seg> roi de <placeName>France</placeName></rs>.</s>
                 <s>Comme le prieur d'<placeName>Espernon</placeName> nous a exposé qu'il a acquis de
-                    <persName>Henry de Saint-Yon</persName>, chevalier, ès fiès de la <rs
-                    type="person">dame de <placeName>Galardon</placeName></rs>, mouvans et tenus de
+                    <persName>Henry de Saint-Yon</persName>, chevalier, ès fiès de la <rs type="person">dame de <placeName>Galardon</placeName></rs>, mouvans et tenus de
                   nous, pour fonder en sa prieurté une messe chascun jour pour lui et pour tous ses
                   bienfaiteurs, trente arpens de terre assis ou terrouer de <placeName>Jouy-sur-Eure
                     lès Chartres</placeName> entre <placeName>Soleire</placeName> et
@@ -6231,8 +6070,7 @@
                   tiengnent dèshors en avant à touzjours més sans estre contrains de nous ne de nos
                   successeurs à meistre hors de leur mains, la disme de <placeName>La
                     Blanche</placeName> assise ou terrouer de <placeName>Savonnières</placeName>
-                  jouste <placeName>Espernon</placeName>, laquelle disme est tenue de <rs
-                    type="person">monseigneur <persName>Enjorgier d'Amboize</persName>, chevalier et
+                  jouste <placeName>Espernon</placeName>, laquelle disme est tenue de <rs type="person">monseigneur <persName>Enjorgier d'Amboize</persName>, chevalier et
                     sire de <placeName>Chevreuse</placeName></rs>.</s>
                 <s>Laquelle dismes nous amortissons tant comme à nous touche et puet toucher ;
                   Obligons quant à ce nous, nos hoirs.....</s>
@@ -6281,21 +6119,18 @@
                 <s>« Universis presentes litteras inspecturis, <rs type="person">frater
                       <persName>Johannes de Maintenone</persName> humilis prior <placeName>Sancti
                       Thome de Sparnone</placeName></rs>, salutem in Domino.</s>
-                <s>Notum facio quod ego executor in solidum testamenti <rs type="person"
-                        ><persName><abbr>N.</abbr></persName> domine de
+                <s>Notum facio quod ego executor in solidum testamenti <rs type="person"><persName><abbr>N.</abbr></persName> domine de
                       <placeName>Maroli</placeName> quondam domine de <placeName>Sancto
                       Eudone</placeName></rs> prout apparet in testamento scripto in verbis gallicis
                   sub sigillo prepositure de <placeName>Castroforti</placeName>, et alii executores,
-                  videlicet camberarius de <placeName>Columbis</placeName>, frater meus, <rs
-                    type="person"><persName>Johannes</persName>, presbiter de
+                  videlicet camberarius de <placeName>Columbis</placeName>, frater meus, <rs type="person"><persName>Johannes</persName>, presbiter de
                       <placeName>Rochefort</placeName></rs> et <persName>Petrus</persName> di chef
                   dunnes ? dicta domina legaverit quintam partem rerum suarum pro celebrandas duas
                   missas pro defunctis qualibet die pro anima ipsius ac defunctorum maritorum
                   suorum.</s>
                 <s>In cujus...</s>
                 <s><date>Die lune post festum Beati Johannis ante portam latinam, anno Domini
-                      <num>Mº</num><num>CCC</num>º quadragesimo</date><ref type="note"
-                    target="#p92_fn1"/>. »</s>
+                      <num>Mº</num><num>CCC</num>º quadragesimo</date><ref type="note" target="#p92_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -6337,13 +6172,11 @@
               <p>
                 <s>« In nomine Domini amen.</s>
                 <s>Per hoc presens publicum <pb n="93"/> instrumentum pateat universis, quod
-                    <date>anno a nativitate ejusdem millesimo trecentesimo <num><hi rend="sc"
-                        >xliiij</hi>º</num>, indictione <num><hi rend="sc">xiij</hi>ª</num> die
+                    <date>anno a nativitate ejusdem millesimo trecentesimo <num><hi rend="sc">xliiij</hi>º</num>, indictione <num><hi rend="sc">xiij</hi>ª</num> die
                     quarta mensis februraii</date>, pontificatus sanctissimi in Xristo patris ac
                   domini, <rs type="person">domini <persName>Clementis</persName> divina providencia
                     pape <num>VI<hi rend="sup">i</hi></num></rs>, anno tercio, in mei publici
-                  notarii et testium subscriptorum presencia personaliter constitutus <rs
-                    type="person"><persName>Jacobus dictus Boiliau</persName>, clericus</rs>,
+                  notarii et testium subscriptorum presencia personaliter constitutus <rs type="person"><persName>Jacobus dictus Boiliau</persName>, clericus</rs>,
                     <placeName>parisiensis</placeName> diocesis, qui quidem recognovit se dedisse
                   contulisse et etiam concessisse et adhuc dedit contulit et concessit absque animo
                   revocandi, in bono statu et memoria existente, religioso viro et honesto domino
@@ -6362,8 +6195,7 @@
                 <s>Super quibus et singulis dictus dominus prior peciit mihi notario infra scripto
                   sibi fieri publicum instrumentum.</s>
                 <s>Acta fuerunt hec in quadam camera dicti prioratus circa horam tercie, sub anno,
-                  indictione, die, mense et pontificatu predictis, presentibus ad hoc <rs
-                    type="person"><persName>Johanne de Vico</persName>, clerico</rs>,
+                  indictione, die, mense et pontificatu predictis, presentibus ad hoc <rs type="person"><persName>Johanne de Vico</persName>, clerico</rs>,
                     <persName>Johanne Regis</persName> et pluribus aliis testibus vocatis
                   specialiter et rogatis. »</s>
               </p>
@@ -6422,8 +6254,7 @@
                     haur Galice</placeName>, juxta terram <persName>Henrici Angonille</persName>,
                   tentis domini de <placeName>Creono</placeName>, solvendis pro quolibet arpento
                     <num>duodecim</num> denariis <date>ad festum Beati Remigii</date>, et champart
-                  Galice quem acquiesierat a <persName>Simone Novel</persName> et <rs type="person"
-                      ><persName>Fleivia</persName> ejus uxore</rs> ; Que dedit dictus
+                  Galice quem acquiesierat a <persName>Simone Novel</persName> et <rs type="person"><persName>Fleivia</persName> ejus uxore</rs> ; Que dedit dictus
                     <persName>Johannes</persName> pro salute anime sue etc.....</s>
                 <s>Super quibus vir honestus et religiosus <rs type="person">Magister
                       <persName>Johannes de Maintenone</persName>, prior dicti prioratus</rs> petiit
@@ -6465,8 +6296,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>« A tous ceuls qui cestes presentes lettres verront et orront <rs type="person"
-                      ><persName>Pasquier Le Fèvre</persName>, Prévost
+                <s>« A tous ceuls qui cestes presentes lettres verront et orront <rs type="person"><persName>Pasquier Le Fèvre</persName>, Prévost
                       d'<placeName>Espernon</placeName></rs>, salut.</s>
                 <s>Saichent tuit <pb n="95"/> que en la présence <rs type="person"><persName>Thénot
                       Paris</persName>, clerc juré et tabellion de la chastellenie dudict lieu</rs>,
@@ -6532,8 +6362,7 @@
                     tabellion de la chastellerie du dit lieu</rs>.....</s>
                 <s>vindrent et furent présens.....</s>
                 <s><rs type="person"><persName>Gilette</persName>, jadis fame feu
-                      <persName>Guillaume Geuffreyn</persName></rs>, et <rs type="person"
-                      ><persName>Samcot Geuf<pb n="96"/>freyn</persName>, son fils</rs>, recognurent
+                      <persName>Guillaume Geuffreyn</persName></rs>, et <rs type="person"><persName>Samcot Geuf<pb n="96"/>freyn</persName>, son fils</rs>, recognurent
                   et confessèrent ja pièça avoir vendu et en nom de pure vente perpétuelment avoir
                   octroyé, quicté...</s>
                 <s>à <rs type="person"><persName>Jacques Boyleau</persName> clerc</rs>.....</s>
@@ -6586,8 +6415,7 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>« A tous ceulx qui ces présentes lettres verront et orront, <rs type="person"
-                    >frère <persName>Jehan de Maintenon</persName>, humble prieur du prieuré de
+                <s>« A tous ceulx qui ces présentes lettres verront et orront, <rs type="person">frère <persName>Jehan de Maintenon</persName>, humble prieur du prieuré de
                       <placeName>Sainct Thomas d'Espernon</placeName></rs>, salut.</s>
                 <s>Saichent tuit que comme descort feust meu entre noble homme monseigneur
                     <persName>Philippe de Boullehart</persName> sire de
@@ -6628,8 +6456,7 @@
                     jour décembre l'an de grâce mil <num>CCC</num> quarante et six</date>. »</s>
               </p>
               <p>
-                <s>« Collacion de ceste présente coppie a esté faicte à son original par nous <rs
-                    type="person"><persName>Nicolle Sanguin</persName> conseiller du Roy nostre sire
+                <s>« Collacion de ceste présente coppie a esté faicte à son original par nous <rs type="person"><persName>Nicolle Sanguin</persName> conseiller du Roy nostre sire
                     en sa court de parlement, commissaire de par icelle en ceste partie</rs>, à la
                   requeste de <rs type="person"><abbr>M<hi rend="sup">e</hi></abbr>
                     <persName>Pierre Dumonsoy</persName> procureur de messire <persName>Françoys de
@@ -6751,8 +6578,7 @@
                       Lopileur</persName>, tabellion juré de ladite chastellerie</rs>.....</s>
                 <s>vindrent et furent présens.....</s>
                 <s><rs type="person"><persName>Robert de Hauteterres</persName>, bourgeois de
-                      <placeName>Dreux</placeName></rs>, et <rs type="person"
-                      ><persName>Ameline</persName>, sa femme</rs>...</s>
+                      <placeName>Dreux</placeName></rs>, et <rs type="person"><persName>Ameline</persName>, sa femme</rs>...</s>
                 <s>congnurent....</s>
                 <s>avoir vendu....</s>
                 <s>à <persName>Jehan Cutet</persName> demourant à
@@ -6798,8 +6624,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"
-                      ><persName>Eblo</persName>, <seg type="theo">miseratione divina</seg>,
+                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Eblo</persName>, <seg type="theo">miseratione divina</seg>,
                     episcopus <placeName>Carnotensis</placeName></rs> salutem in Domino.</s>
                 <s>Notum facimus, quod cum die infra scripta per diocesim nostrum transeuntes, ad
                   locum prioratus <placeName>Sancti Thome Sparnonensis</placeName>, nostre diocesis,
@@ -6864,11 +6689,9 @@
               <term type="nature" key="act"/>
             </index>
             <argument>
-              <p>« En la court du Roy à <placeName>Tours</placeName>, <rs type="person"
-                    ><persName>Simonnet Bobusse</persName>, marchand demourant à
+              <p>« En la court du Roy à <placeName>Tours</placeName>, <rs type="person"><persName>Simonnet Bobusse</persName>, marchand demourant à
                     <placeName>Orléans</placeName></rs>, confesse avoir prins detenu et accepté des
-                relligieux abbé et couvent de <placeName>Meremoustier</placeName> de l'ordre de <rs
-                  type="person">Saint <persName>Benoist</persName></rs> une certaine place de maison
+                relligieux abbé et couvent de <placeName>Meremoustier</placeName> de l'ordre de <rs type="person">Saint <persName>Benoist</persName></rs> une certaine place de maison
                 contenant six toises de large et <num>dix</num> toises de long séant en la ville
                   d'<placeName>Espernon</placeName> joingnant d'un costé au chemin par où on va à la
                 porte de la chappelle et d'une part au fief du <rs type="person">conte de
@@ -6922,8 +6745,7 @@
                 <s>en la présence de <rs type="person"><persName>Anthoine Henry</persName>.....
                     tabellion... de la chastellerie dudit lieu</rs>...</s>
                 <s>furent présens...</s>
-                <s><persName>Tybault Brissart</persName> et <rs type="person"
-                      ><persName>Collette</persName> sa fame</rs>, les queux.....</s>
+                <s><persName>Tybault Brissart</persName> et <rs type="person"><persName>Collette</persName> sa fame</rs>, les queux.....</s>
                 <s>confessèrent avoir prins à ferme et perpétuel héritage...</s>
                 <s>de messeigneurs labé et couvent de <placeName>Marmotier</placeName> une maison et
                   verger ou soulloit avoir tannerie et que soulloit tenir <persName>Collin
@@ -7033,8 +6855,7 @@
                     <placeName>Chartres</placeName>...</s>
                 <s>par devant <rs type="person"><persName>Pierre Gilon</persName>... tabellion... à
                       <placeName>Chartres</placeName> et garde des seaulx de la chastellenie
-                    d'icelui lieu</rs>, vindrent et furent présens <persName>Pasquier Ca<pb n="102"
-                    />ligne</persName> et <rs type="person"><persName>Jehanne</persName> sa
+                    d'icelui lieu</rs>, vindrent et furent présens <persName>Pasquier Ca<pb n="102"/>ligne</persName> et <rs type="person"><persName>Jehanne</persName> sa
                     femme</rs>, demourans à <placeName>Chartres</placeName> en la parroisse
                     <placeName>Saint Hillaire</placeName>, lesquels... congnurent... eulx avoir
                   prins à cens annuel et perpétuel portans gans, ventes, admendes et deffaulx.....
@@ -7096,8 +6917,7 @@
               <p>
                 <s> « Lettres de <rs type="person"><persName>Florent</persName>, seigneur
                       d'<placeName>Illiers</placeName>, bailli de
-                    <placeName>Chartres</placeName></rs>, portant reconnaissance devant <rs
-                    type="person"><persName>Godefroy</persName> tabellion à
+                    <placeName>Chartres</placeName></rs>, portant reconnaissance devant <rs type="person"><persName>Godefroy</persName> tabellion à
                       <placeName>Chartres</placeName></rs>, par <persName>Simon
                   Leroussin</persName>, demourant à <placeName>Gazeran</placeName> près
                     <placeName>Ramboillet</placeName>, du bail à cens et rente annuels et perpétuels
@@ -7146,12 +6966,10 @@
                       Godefroy</persName>, clerc tabellion juré du Roy nostre sire à
                       <placeName>Chartres</placeName></rs>, vint et fut présent <persName>Estienne
                     Cochon</persName> demourant à <placeName>Changé</placeName> paroisse de
-                    <placeName>Saint Piat</placeName>, lequel congnut et confessa lui devoir à <rs
-                    type="person">frère <persName>Clément de Saint Lomer</persName>, prieur
+                    <placeName>Saint Piat</placeName>, lequel congnut et confessa lui devoir à <rs type="person">frère <persName>Clément de Saint Lomer</persName>, prieur
                       d'<placeName>Espernon</placeName></rs>, la quantité de trois septiers de blé
                   bon et convenable, par composition faicte entre eulx pour sa part et porcion des
-                  arréraiges du temps passé de demi muy de blé de rente que <rs type="person"
-                      ><persName>Crespin</persName> Le Maire de
+                  arréraiges du temps passé de demi muy de blé de rente que <rs type="person"><persName>Crespin</persName> Le Maire de
                     <placeName>Grougneul</placeName></rs> en son testament et derrenière voulenté
                   donna et laissa à l'église de <placeName>Saint Thomas d'Espernon</placeName>,
                   prins assis et assignez par chascun an <date>au terme de Saint Estienne lendemain
@@ -7208,8 +7026,7 @@
                       d'<placeName>Illiers</placeName>.... chambellan du Roy et <pb n="104"/> son
                     bailli à <placeName>Chartres</placeName></rs>.....</s>
                 <s>par devant <rs type="person"><persName>Macé Godefroy</persName>.....
-                    tabellion..... du Roy</rs>.....vint et fut présent <rs type="person"
-                      ><persName>Girard Rigault</persName>, natif de
+                    tabellion..... du Roy</rs>.....vint et fut présent <rs type="person"><persName>Girard Rigault</persName>, natif de
                     <placeName>Beauvoir</placeName></rs>, naguèeres demourant à
                     <placeName>Dainville</placeName> en la chastellenie de
                     <placeName>Gambès</placeName> et de présent au lieu de Curé près de
@@ -7309,10 +7126,8 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>De l'aveu de la châtellenie de <placeName>Gazeran</placeName> rendu au <rs
-                    type="person">duc de <placeName>Bretagne</placeName></rs> comme comte de
-                    <placeName>Montfort-l'Amaury</placeName> par <rs type="person"
-                      ><persName>Guillaume de Prunelé</persName>, seigneur
+                <s>De l'aveu de la châtellenie de <placeName>Gazeran</placeName> rendu au <rs type="person">duc de <placeName>Bretagne</placeName></rs> comme comte de
+                    <placeName>Montfort-l'Amaury</placeName> par <rs type="person"><persName>Guillaume de Prunelé</persName>, seigneur
                       d'<placeName>Herbaut</placeName> et de <placeName>Gazeran</placeName></rs>,
                   nous extrayons ce qui suit :</s>
               </p>
@@ -7337,8 +7152,7 @@
                   chateau sur son cheval sans lui failloir ne fer ne clou.</s>
                 <s>Le même prieur doit en outre tous les ans sur ladite grange un septier de blé
                   froment et un dîner solemnel en ladite grange au forestier et à sa suite.</s>
-                <s>Le seigneur a la haute justice en cette grange<ref type="note" target="#p105_fn1"
-                  />. »</s>
+                <s>Le seigneur a la haute justice en cette grange<ref type="note" target="#p105_fn1"/>. »</s>
               </p>
             </div>
           </body>
@@ -7360,12 +7174,10 @@
             </index>
             <argument>
               <p>Lettres de <rs type="person"><persName>Jehan de Rochechouart</persName>, bailly de
-                    <placeName>Chartres</placeName></rs>, portant reconnaissance devant <rs
-                  type="person"><persName>Regnault</persName>, tabellion à
+                    <placeName>Chartres</placeName></rs>, portant reconnaissance devant <rs type="person"><persName>Regnault</persName>, tabellion à
                     <placeName>Chartres</placeName></rs>, par <persName>Michelet Morise</persName>,
                 demourant à <placeName>Ormoy</placeName>, du bail à cens annuel et perpétuel par lui
-                prins du couvent de <placeName>Mairemoustiers les Tours</placeName> et de <rs
-                  type="person">frère <persName>Clément de Saint Lomer</persName>, prieur du prieuré
+                prins du couvent de <placeName>Mairemoustiers les Tours</placeName> et de <rs type="person">frère <persName>Clément de Saint Lomer</persName>, prieur du prieuré
                   de <placeName>Saint Thomas d'Espernon</placeName></rs>, d'une masure ou souloit
                 avoir maison avec un courtil assis audit lieu d'<placeName>Ormoy</placeName>, pour
                 le pris et somme de <num>douze</num> sols tournois de cens annuel et perpétuel.</p>
@@ -7441,8 +7253,7 @@
                   messes, prières et oraissons qui sont et seront dittes ou temps advenir ou dit
                   prieuré.....</s>
                 <s>Donné soubz les sceaulx de la chastellenie <pb n="107"/> dudit lieu
-                    d'<placeName>Esparnon</placeName> le <date><num><hi rend="sc">xxv</hi><hi
-                        rend="sup">e</hi></num> jour d'octobre l'an de grâce mil <num>IIIJº</num>
+                    d'<placeName>Esparnon</placeName> le <date><num><hi rend="sc">xxv</hi><hi rend="sup">e</hi></num> jour d'octobre l'an de grâce mil <num>IIIJº</num>
                     soixante trois</date>.</s>
               </p>
               <p>
@@ -7491,8 +7302,7 @@
                   main du Roy nostre sire, et segniffié à <rs type="person">frère <persName>Clément
                       de Saint Lomer</persName>, prieur dudit lieu
                     d'<placeName>Espernon</placeName></rs> ; lequel pour lesdites causes
-                  d'empeschement fust venu par devers et à la personne de noble homme <rs
-                    type="person"><persName>Jehan de la Rivière</persName>, escuier, procureur et
+                  d'empeschement fust venu par devers et à la personne de noble homme <rs type="person"><persName>Jehan de la Rivière</persName>, escuier, procureur et
                     gouverneur de la terre et seigneurie de <placeName>Marly</placeName> à
                       <placeName>Galardon</placeName></rs>, et lui eust dit et démonstré que ledit
                   moulin et appartenances lui compectoit et appartenoit, à cause de son dit prieuré,
@@ -7505,8 +7315,7 @@
                   moulin et appartenances moyennant certaines causes contenues ès lettres des dits
                   amortissements, ainsi que plus à plain il ofroit monstrer et enseigner par lettres
                   suffisantes ; et eust été prins jour entre lesdites parties pour enseigner de ce
-                  que dit est par ledit prieur à aujourduy ; auquel jour duy fust venu icellui <pb
-                    n="108"/> prieur par devers ledit procureur et gouvarneur et autres officiers de
+                  que dit est par ledit prieur à aujourduy ; auquel jour duy fust venu icellui <pb n="108"/> prieur par devers ledit procureur et gouvarneur et autres officiers de
                     <placeName>Marly</placeName> ; et eust monstré et enseigné deuement des lectres
                   des admortissements dudit moulin, requérant audit procureur et autres officiers de
                     <placeName>Marly</placeName> que leur pleust faire lever la main dudit
@@ -7531,8 +7340,7 @@
                   prandra l'adjust et estalon des mesures dudit moulin audit lieu de
                     <placeName>Galardon</placeName>.</s>
                 <s>Donné en tesmoing de ce soubz les sceaux de la dicte chastellenie de
-                    <placeName>Galardon</placeName>, le <date>vendredi <num>xiiii<hi rend="sup"
-                        >me</hi></num> jour de mars l'an de grace mil quatre cens soixante et
+                    <placeName>Galardon</placeName>, le <date>vendredi <num>xiiii<hi rend="sup">me</hi></num> jour de mars l'an de grace mil quatre cens soixante et
                     cinq</date>.</s>
                 <s>Nous approuvons en rasure <persName>Marguerite</persName>, donné comme
                   dessus.</s>
@@ -7571,8 +7379,7 @@
               <p>
                 <s>« .....</s>
                 <s><rs type="person"><persName>Jehan Cadou</persName> licencié en loix, bailly
-                      d'<placeName>Espernon</placeName></rs>..... par devant <rs type="person"
-                      ><persName>Guillaume Moreau</persName>, tabellion en la chastellenie d'icelui
+                      d'<placeName>Espernon</placeName></rs>..... par devant <rs type="person"><persName>Guillaume Moreau</persName>, tabellion en la chastellenie d'icelui
                     lieu</rs>, vint et fut présent <persName>Guillot Le Bouchier</persName>,
                   demourant <pb n="109"/> à la <placeName>Musse</placeName>, lequel congnut.....</s>
                 <s>que il tient et advoue à tenir en fief à une foy et ung hommage, rachat quant le
@@ -7611,8 +7418,7 @@
                   Bourget</persName> et <rs type="person"><persName>Jehanne</persName> sa
                 femme</rs>, demourans au bourg <placeName>Saint Thomas d'Espernon</placeName>, du
                 bail à cens annuel et perpétuel par eux prins du couvent de
-                  <placeName>Mairemoustier</placeName> et de frère <rs type="person"
-                    ><persName>Clément de Saint Lomer</persName>, prieur du prieuré <placeName>Saint
+                  <placeName>Mairemoustier</placeName> et de frère <rs type="person"><persName>Clément de Saint Lomer</persName>, prieur du prieuré <placeName>Saint
                     Thomas d'Espernon</placeName></rs>, d'une masure cave et jardin assis au bourg
                   <placeName>Saint Thomas</placeName> et autres héritages : le tout pour le pris de
                   <num>treze</num> solz <num>neuf</num> deniers tournois de cens annuel et
@@ -7661,13 +7467,11 @@
           <body>
             <div type="transcription" xml:lang="fro">
               <p>
-                <s>« A tous ceulx qui ces présentes lettres verront, <rs type="person"
-                      ><persName>Mathurin Bouffureau</persName>, licencié en loix, bailly de
+                <s>« A tous ceulx qui ces présentes lettres verront, <rs type="person"><persName>Mathurin Bouffureau</persName>, licencié en loix, bailly de
                       <placeName>Galardon</placeName></rs>, salut.</s>
                 <s>Savoir faisons que par devant <rs type="person"><persName>Denys
                     Durant</persName>, clerc tabellion juré de la <pb n="110"/> chastellenie
-                    d'icelui lieu</rs>, vint et fut présent noble homme messire <rs type="person"
-                      ><persName>Jehan d'Angennes</persName>, chevalier, seigneur de
+                    d'icelui lieu</rs>, vint et fut présent noble homme messire <rs type="person"><persName>Jehan d'Angennes</persName>, chevalier, seigneur de
                       <placeName>Ramboillet</placeName></rs> : lequel congnut et confessa lui avoir
                   prins à ferme comme personne estrange, pour ceste présente <date>année mil quatre
                     cens soixante quinze</date>, de religieuse et honneste personne frère
@@ -7710,10 +7514,8 @@
             <argument>
               <p>Déclaration des héritaiges de la métairie de Curé rendue au prieur
                   d'<placeName>Espernon</placeName> par <rs type="person">noble homme de
-                    <placeName>Courcy de Bellême</placeName>, écuyer</rs>, par devant <rs
-                  type="person"><persName>Guillaume Chamareu</persName>, bailly du prieuré
-                    <placeName>Saint Thomas d'Espernon</placeName></rs>, pour <rs type="person"
-                  >monseigneur <persName>Louis de Bourbon</persName>, évesques
+                    <placeName>Courcy de Bellême</placeName>, écuyer</rs>, par devant <rs type="person"><persName>Guillaume Chamareu</persName>, bailly du prieuré
+                    <placeName>Saint Thomas d'Espernon</placeName></rs>, pour <rs type="person">monseigneur <persName>Louis de Bourbon</persName>, évesques
                     d'<placeName>Avranches</placeName>, prieur dudit prieuré</rs>. </p>
 
             </argument>
@@ -7780,8 +7582,7 @@
                     <placeName>Grossay</placeName>, estant au dessus dudit
                     <placeName>Ramboullet</placeName>, tirant à <placeName>Espernon</placeName>, et
                   que de icelle terre eulx et leurs prédécesseurs auroient joy paisiblement de tout
-                  tems et d'ancienneté, comme encore font de présent sans aucun contredict<ref
-                    type="note" target="#p111_fn1"/>.</s>
+                  tems et d'ancienneté, comme encore font de présent sans aucun contredict<ref type="note" target="#p111_fn1"/>.</s>
                 <s>Disoit oultre que par l'augmentacion, dotacion et fondacion dudit prioré
                     <placeName>Saint Thomas d'Espernon</placeName> les prédécesseurs des ditz
                   myneurs, seigneurs dudit lieu de <placeName>Montorgueil</placeName>, anciennement
@@ -7821,8 +7622,7 @@
                     <persName>Mancelet</persName> et autres gens plusieurs ad ce présent.</s>
                 <s>Et à ceste cause fut ledit cheval prins, saisi par justice et mis en la main de
                   la dicte damoiselle, comme estant acquis et confisqué ; pareillement les dismes
-                  d'icelle seigneurie pour icelle année ; et depuis fut ledit cheval mis en <pb
-                    n="113"/> criées et subhastacion, et par la justice dudit
+                  d'icelle seigneurie pour icelle année ; et depuis fut ledit cheval mis en <pb n="113"/> criées et subhastacion, et par la justice dudit
                     <placeName>Remboullet</placeName> vendu et délivré à <persName>Guillaume
                     Maillart</persName>, comme plus offrant et dernier enchérisseur, pour la somme
                   de huit livres <num>dix</num> sols tournois paiée audit procureur, en la présence
@@ -7883,8 +7683,7 @@
                 Regnault d'Angennes, seigneur de Rambouillet, qui leur donna un fief qu'il possédait
                 à Houx, près Gallardon, et de plus 126 livres tournois, comme nous le voyons dans
                 l'acte original de vente conservé aux archives de Rambouillet.</note>
-              <note xml:id="p114_fn1">Tiré des archives du domaine de Rambouillet, 1<hi rend="sup"
-                  >re</hi> liasse du nº 6 de l'inventaire, armoire nº 1.</note>
+              <note xml:id="p114_fn1">Tiré des archives du domaine de Rambouillet, 1<hi rend="sup">re</hi> liasse du nº 6 de l'inventaire, armoire nº 1.</note>
             </div>
           </back>
         </text>
@@ -7933,8 +7732,7 @@
                 consenti par <rs type="person">frère <persName>Michel Moreau</persName>, prieur du
                   prieuré <placeName>Saint Thomas d'Epernon</placeName></rs>, au profit de
                     <abbr>M<hi rend="sup">e</hi></abbr>
-                <persName>Gilles Mullart</persName>, procureur en parlement et <rs type="person"
-                    ><persName>Mathurin Poitremol</persName>, clerc au greffe des requêtes du palais
+                <persName>Gilles Mullart</persName>, procureur en parlement et <rs type="person"><persName>Mathurin Poitremol</persName>, clerc au greffe des requêtes du palais
                   à <placeName>Paris</placeName></rs>, d'une pièce de terre en friches et buissons
                 contenant <num>90</num> arpents ou environ situés au terroir appelé les
                   <placeName>Bois-Dieu</placeName>, moyennant <num>15</num> deniers tournois de cens
@@ -7968,8 +7766,7 @@
             </index>
             <argument>
               <p>Lettres de <rs type="person"><persName>Nicolle de Craffort</persName>, bailly
-                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Etienne Chavanes</persName>, tabellion à
+                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs type="person"><persName>Etienne Chavanes</persName>, tabellion à
                     <placeName>Epernon</placeName></rs>, du bail pour <num>99</num> ans consenti par
                   <rs type="person">frère <persName>Michel Moreau</persName>, prieur du prieuré
                     <placeName>Saint Thomas d'Epernon</placeName></rs> au profit de
@@ -8043,8 +7840,7 @@
                   d'autre au chemin de <placeName>Poignies</placeName> à la <placeName>Croix aux
                     Bouvyers</placeName>, d'un bout aux terres de
                   <placeName>Chausseures</placeName>, appartenans au seigneur de
-                    <placeName>Rambouillet</placeName> et d'autre à Maître <persName>Mathurin Poi<pb
-                      n="116"/>tremot</persName> et <persName>Jehan Duguet</persName>.....</s>
+                    <placeName>Rambouillet</placeName> et d'autre à Maître <persName>Mathurin Poi<pb n="116"/>tremot</persName> et <persName>Jehan Duguet</persName>.....</s>
                 <s>moyennant la somme de quinze deniers tournois par arpent.....</s>
                 <s>et de payer des grains venans desdites terres de <num>douze</num> gerbes l'une
                   pour tout droit de dîme et champart.....</s>
@@ -8071,12 +7867,10 @@
             </index>
             <argument>
               <p>Lettres de <rs type="person"><persName>Nicolle de Craffort</persName>, bailli
-                    d'<persName>Epernon</persName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Etienne Chavanne</persName>, tabellion à
+                    d'<persName>Epernon</persName></rs>, portant reconnaissance par devant <rs type="person"><persName>Etienne Chavanne</persName>, tabellion à
                     <placeName>Epernon</placeName></rs>, du bail pour <num>99</num> ans, consenti
                 par <rs type="person">frère <persName>Michel Moreau</persName>, prieur du prieuré
-                    <placeName>Saint Thomas d'Epernon</placeName></rs>, au profit de <rs
-                  type="person"><persName>Jehan Duguet</persName>, laboureur</rs>, demeurant au
+                    <placeName>Saint Thomas d'Epernon</placeName></rs>, au profit de <rs type="person"><persName>Jehan Duguet</persName>, laboureur</rs>, demeurant au
                   <placeName>Fait</placeName>, paroisse d'<placeName>Hermeray</placeName>, d'une
                 pièce de terre contenant <num>10</num> arpents ou environ situés au terroir du
                   <placeName>Bois-Dieu</placeName>, moyennant <num>15</num> deniers tournois de cens
@@ -8109,12 +7903,10 @@
             </index>
             <argument>
               <p>Lettres de <rs type="person"><persName>Nicolle de Craffort</persName>, bailli
-                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Etienne Chavanne</persName>, tabellion à
+                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs type="person"><persName>Etienne Chavanne</persName>, tabellion à
                     <placeName>Epernon</placeName></rs>, du bail pour <num>99</num> ans consenti par
                   <rs type="person">frère <persName>Michel Moreau</persName>, prieur du prieuré
-                    <placeName>Saint Thomas d'Epernon</placeName></rs>, au profit de <rs
-                  type="person"><persName>Mathurin Lejay</persName>, marchand, demeurant à
+                    <placeName>Saint Thomas d'Epernon</placeName></rs>, au profit de <rs type="person"><persName>Mathurin Lejay</persName>, marchand, demeurant à
                     <placeName>Epernon</placeName></rs>, d'une pièce de terre contenant <num>5</num>
                 arpents environ au terroir du <placeName>Bois-Dieu</placeName>, moyennant
                   <num>15</num> deniers tournois de cens par chaque arpent et de <num>12</num>
@@ -8147,11 +7939,8 @@
             </index>
             <argument>
               <p>Lettres de <rs type="person"><persName>Nicolle de Craffort</persName>, bailli
-                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Etienne Chavanes</persName>, tabellion
-                    d'<placeName>Epernon</placeName></rs>, de la vente faite par messire <rs
-                  type="person"><persName>Mathurin Garnier</persName> prêtre</rs>, et <rs
-                  type="person"><persName>Jehan Garnier</persName> son père</rs>, demeurant au bourg
+                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs type="person"><persName>Etienne Chavanes</persName>, tabellion
+                    d'<placeName>Epernon</placeName></rs>, de la vente faite par messire <rs type="person"><persName>Mathurin Garnier</persName> prêtre</rs>, et <rs type="person"><persName>Jehan Garnier</persName> son père</rs>, demeurant au bourg
                   <placeName>Saint Thomas</placeName>, faubourg d'<placeName>Epernon</placeName>, à
                   <rs type="person">frère <persName>Michel Moreau</persName>, prieur du prieuré
                     <placeName>Saint Thomas d'Epernon</placeName></rs>, d'une somme de <num>25</num>
@@ -8223,15 +8012,12 @@
             </index>
             <argument>
               <p> Lettres de <rs type="person"><persName>Nicolle Bobusse</persName>, bailli
-                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Jehan Reynard</persName>, substitut de <persName>Jacques
+                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs type="person"><persName>Jehan Reynard</persName>, substitut de <persName>Jacques
                     Chavannes</persName>, tabellion à <placeName>Epernon</placeName></rs>, du bail à
-                cens annuel et perpétuel consenti par le receveur de <rs type="person"><abbr>M<hi
-                      rend="sup">e</hi></abbr>
+                cens annuel et perpétuel consenti par le receveur de <rs type="person"><abbr>M<hi rend="sup">e</hi></abbr>
                   <persName><abbr>Ph.</abbr> Hurault</persName>, abbé de
                     <placeName>St-Pierre-le-Vif-les-Sens</placeName></rs>, et prieur du prieuré
-                  <placeName>Saint Thomas d'Epernon</placeName>, au profit de <rs type="person"
-                    ><persName>Jean Neau</persName>, marchand tanneur</rs>, demeurant au bourg dudit
+                  <placeName>Saint Thomas d'Epernon</placeName>, au profit de <rs type="person"><persName>Jean Neau</persName>, marchand tanneur</rs>, demeurant au bourg dudit
                 prieuré, d'une masure contenant <num>4</num> perches de terre assise audit bourg,
                 moyennant <num>2</num> sous <num>6</num> deniers de cens.</p>
 
@@ -8282,8 +8068,7 @@
                   bailliage de <placeName>Rambouillet</placeName> au lieu de
                     <placeName>Montorgueil</placeName>, heure de <num>dix</num> heures du matin,
                   comme il nous a esté certiffié par <persName>Estienne du Tertre</persName> et
-                    <persName>Symon Godard</persName> et aultres y estans, honneste homme <rs
-                    type="person"><abbr>M<hi rend="sup">re</hi></abbr>
+                    <persName>Symon Godard</persName> et aultres y estans, honneste homme <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr>
                     <persName>Hector Pérot</persName>, procureur de <rs type="person">noble homme
                       maistre <persName>Philippe Hurault</persName>, conseiller du Roy nostre sire
                       et maistre des requestes ordinaire de son hostel</rs>, prieur du prieuré
@@ -8338,8 +8123,7 @@
                   seigneur prieur à cause de sondict prieuré, doict par chacun an à tel jour que se
                   jourdhuy à mondict seigneur de <placeName>Montorgueil</placeName>.</s>
                 <s>Et lequel gasteau et pot de vin il a offertz aux lieux dessus dicts.</s>
-                <s>A ce est comparu <rs type="person">honorable homme <abbr>M<hi rend="sup"
-                      >re</hi></abbr>
+                <s>A ce est comparu <rs type="person">honorable homme <abbr>M<hi rend="sup">re</hi></abbr>
                     <persName>André Blanchouyn</persName>, procureur fiscal de monseigneur de
                       <placeName>Montorgueil</placeName></rs>, lequel a esté d'acord du redebvoir
                   que à faulte de se présenter et comparoir à heure deue en ce mesme équipage que
@@ -8465,13 +8249,11 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s>« <date>Lan mil cinq cens soixante cinq après Pasques, le vingt-troisiesme jour
-                    d'apvril</date>, sont comparuz par devant moy <rs type="person"
-                      ><persName>Jacques de Rieux</persName>, greffier du bailliage de
+                    d'apvril</date>, sont comparuz par devant moy <rs type="person"><persName>Jacques de Rieux</persName>, greffier du bailliage de
                       <placeName>Rambouillet</placeName></rs> soubz signé, au lieu seigneurial de
                     <placeName>Montorgueult</placeName>, heures de <num>dix</num> heures du matin,
                   honneste homme <abbr>M<hi rend="sup">e</hi></abbr>
-                  <persName>Hector Pérot</persName>, soy disant procureur de maistre <rs
-                    type="person"><persName>Philippe Hurault</persName>, conseiller du Roy nostre
+                  <persName>Hector Pérot</persName>, soy disant procureur de maistre <rs type="person"><persName>Philippe Hurault</persName>, conseiller du Roy nostre
                     sire, maistre des requestes de son hostel, prieur du prieuré monsieur
                       <placeName>Saint Thomas d'Espernon</placeName></rs>, lequel
                     <persName>Pérot</persName> estant monté sur ung cheval scellé et bridé, ayant
@@ -8508,10 +8290,8 @@
             </index>
             <argument>
               <p> Lettres de <rs type="person"><persName>Jacques de Hébert</persName>, bailli
-                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs
-                  type="person"><persName>Christophe Buisson</persName>, tabellion à
-                    <placeName>Epernon</placeName></rs>, du bail consenti par frères <rs
-                  type="person"><persName>Nicolle David</persName>, prieur claustral</rs>,
+                    d'<placeName>Epernon</placeName></rs>, portant reconnaissance par devant <rs type="person"><persName>Christophe Buisson</persName>, tabellion à
+                    <placeName>Epernon</placeName></rs>, du bail consenti par frères <rs type="person"><persName>Nicolle David</persName>, prieur claustral</rs>,
                   <persName>Charles Letreau</persName> et <persName>Giles Benoist</persName>, profès
                 du prieuré monsieur <placeName>Saint Thomas d'Epernon</placeName>, au profit de
                   <persName>Jehan</persName> et <persName>Jacques Les Ruaulx</persName> demeurant au
@@ -8547,10 +8327,8 @@
             </index>
             <argument>
               <p> Lettres d'<rs type="person"><persName>Antoine Duprat</persName>, prévost de
-                    <placeName>Paris</placeName></rs>, contenant bail pour 6 années par devant <rs
-                  type="person"><persName>Roze</persName> et <persName>Croiset</persName>, notaires
-                  au <placeName>Châtelet de Paris</placeName></rs>, par <rs type="person"
-                    ><persName>Barthelemy Vernhier</persName>, prieur de <placeName>Saint Thomas
+                    <placeName>Paris</placeName></rs>, contenant bail pour 6 années par devant <rs type="person"><persName>Roze</persName> et <persName>Croiset</persName>, notaires
+                  au <placeName>Châtelet de Paris</placeName></rs>, par <rs type="person"><persName>Barthelemy Vernhier</persName>, prieur de <placeName>Saint Thomas
                     d'Epernon</placeName></rs>, à <rs type="person"><persName>Germain
                     Lecamus</persName> et <persName>Jehan Legentilhomme</persName>, marchands
                   demeurant à <placeName>Epernon</placeName></rs>, les deux tiers du revenu du
@@ -8612,8 +8390,7 @@
                     comte dudit <placeName>Nogent</placeName>, bailli des comté, ville et château de
                       <placeName>Dourdan</placeName>, mandataire de <rs type="person">messire
                         <persName>Armand de Bautru</persName>, prieur commandataire du prieuré
-                        <placeName>Saint Thomas</placeName> d'Epernon</rs></rs>, à <rs type="person"
-                      ><persName>Charles Geoffroy</persName>, archer des gardes de la porte de Sa
+                        <placeName>Saint Thomas</placeName> d'Epernon</rs></rs>, à <rs type="person"><persName>Charles Geoffroy</persName>, archer des gardes de la porte de Sa
                     Majesté</rs>, demeurant à <placeName>Saint Laurent de la Gastine</placeName>, du
                   revenu temporel dudit prieuré, sous la réserve de la ferme, métairie et dîme
                     d'<placeName>Ormoy</placeName> et environs louées à <persName>Michel Girard
@@ -8806,8 +8583,7 @@
             <argument>
               <p>Lettres du Roi portant commission pour le premier huissier du grand Conseil de, à
                 la requête de frère <persName>Martin Brunont</persName>, prieur de <placeName>Saint
-                  Thomas d'Epernon</placeName>, assigner devant le grand Conseil <rs type="person"
-                    ><persName>Charles Margas</persName>, prêtre, vicaire de la paroisse de
+                  Thomas d'Epernon</placeName>, assigner devant le grand Conseil <rs type="person"><persName>Charles Margas</persName>, prêtre, vicaire de la paroisse de
                     <placeName>Prouais</placeName></rs>, pour procéder sur la demande formée par
                 ledit <persName>Margas</persName> contre ledit prieur devant le lieutenant général
                 de <placeName>Montfort l'Amaury</placeName> et pour voir maintenir ledit
@@ -8852,16 +8628,14 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s>« Aprés le décès de <rs type="person"><abbr>M<hi rend="sup">r</hi></abbr>
-                    l'Evesque de <placeName>Macon</placeName></rs> qui possédoit ce prieuré, <rs
-                    type="person"><abbr>M<hi rend="sup">re</hi></abbr>
+                    l'Evesque de <placeName>Macon</placeName></rs> qui possédoit ce prieuré, <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr>
                     <persName>Charles Louis de Preyssac d'Esclignac</persName>, chevalier de l'ordre
                         <placeName><abbr>St</abbr> Jean de Jérusalem</placeName></rs>, pourveu
                   d'icelui a fait rendre par son receveur la foy et hommage pour la première fois le
                       <date><num>14</num> avril <num>1732</num></date>. Par l'acte de laquelle, le
                   procureur fiscal a protesté, qu'elle ne pouvoit nuire ni préjudicier à monseigneur
                   pour n'estre pas faittes dans les formes prescrittes, et n'avoir pas esté
-                  accompagnée des offres du droit de relief deub par ledit <abbr>S<hi rend="sup"
-                      >r</hi></abbr> prieur à cause de la mutation dudit prieuré,</s>
+                  accompagnée des offres du droit de relief deub par ledit <abbr>S<hi rend="sup">r</hi></abbr> prieur à cause de la mutation dudit prieuré,</s>
               </p>
               <p>
                 <s>« Toutes celles qui ont suivi jusques à celle rendue en l'année dernière
@@ -8870,8 +8644,7 @@
                   dudit prieur,</s>
               </p>
               <p>
-                <s>« Toutes ces protestestations n'ont point obligé jusqu'à présent le <abbr>S<hi
-                      rend="sup">r</hi></abbr> prieur à satisfaire au payement du droit de relief
+                <s>« Toutes ces protestestations n'ont point obligé jusqu'à présent le <abbr>S<hi rend="sup">r</hi></abbr> prieur à satisfaire au payement du droit de relief
                   qu'il doit à <abbr>S. A. S.</abbr>,</s>
               </p>
               <p>
@@ -8921,8 +8694,7 @@
                     Pâques</date>, en présence du <rs type="person">bailli de
                       <placeName>Rambouillet</placeName></rs>, du procureur fiscal et du greffier,
                   assisté de l'huissier du bailliage, le <rs type="person">procureur fiscal
-                      d'<placeName>Epernon</placeName></rs>, fondé de procuration de <rs
-                    type="person">messire <persName>Louis de Preyssac d'Esclignac</persName>,
+                      d'<placeName>Epernon</placeName></rs>, fondé de procuration de <rs type="person">messire <persName>Louis de Preyssac d'Esclignac</persName>,
                     chevalier de <placeName>St Jean de Jérusalem</placeName> et prieur commendataire
                     du prieuré de <placeName><abbr>St</abbr> Thomas d'Epernon</placeName></rs>,
                   s'est rendu devant le lieu où étoit la principale porte du chateau de

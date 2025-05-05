@@ -1,6 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Micy">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Micy">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -64,20 +62,17 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
-          <citeData property="dc:title" use="head"/>
-          <citeStructure unit="partie" match="div" use="@xml:id">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="chapitre" match="div[@type]" use="default">
             <citeData property="dc:title" use="head"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
-            </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date/node()[not(name() = 'note' )], ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )], ')' )"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>

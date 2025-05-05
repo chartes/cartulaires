@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -71,17 +68,17 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
-          <citeData property="dc:title" use="head"/>
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+          <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/text[@xml:id]" use="@xml:id">
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/text[@xml:id]" use="@xml:id">
           <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -90,7 +87,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front xml:id="r209">
+    <front>
       <head>Cartulaire de l'abbaye du Val-Notre-Dame</head>
       <argument>
         <p>
@@ -132,8 +129,7 @@
           </note> disposées dans le même ordre chronologique et concernant la Maison-Dieu du Val-Notre-Dame.</p>
         <p>Ce cartulaire, conservé aujourd’hui sous le n° 826 des nouvelles acquisitions du fonds des manuscrits latins de la Bibliothèque nationale, est un tout petit volume de 46 feuillets de parchemin, mesurant 135 millimètres sur 100, protégés par un cartonnage moderne, recouvert d’un parchemin, qui peut dater du <hi rend="sc">xviii</hi>
           <hi rend="sup">e</hi> siècle. Les feuillets 1 à 4 contiennent la table des quarante-trois chartes du cartulaire, dont les sommaires n’ont pas été rubriqués à la place laissée en blanc en tête de chacune d’elles dans le volume. Du fol. 5 v° au fol. 32 se trouvent transcrites quarante et une chartes, dont les dates varient de 1214 à 1265 ; on a omis d’y copier le texte des chartes 22 et 43, dont les sommaires figurent cependant à la table des matières. Les feuillets 32 à 46 v° sont en partie remplis par différentes notes ou listes de revenus et cens de l’abbaye du Val, notamment pour les années 1280, 1336, 1337 et 1368.</p>
-        <p>
-          <pb n="6"/>Aucune des chartes de ce petit cartulaire n’appelle de remarques historiques ou diplomatiques particulières ; toutes sont exclusivement des concessions de rentes, des dons ou ventes de terres et de vignes, sises dans le voisinage de l’hôpital et de l’abbaye du Val, à Beaumont-sur-Oise, Ennery, Fontenay-lès-Louvres, Hérouville, Jouy-le-Comte, Labbeville, Nerville, Nogent, près l’Isle-Adam, Presles, Saint-Leu-Taverny, Valmondois, etc. La table alphabétique, imprimée à la suite du cartulaire, donnera la nomenclature complète des noms de personnes et de localités qui y sont mentionnés, avec les quelques identifications nécessaires.</p>
+        <p><pb n="6"/>Aucune des chartes de ce petit cartulaire n’appelle de remarques historiques ou diplomatiques particulières ; toutes sont exclusivement des concessions de rentes, des dons ou ventes de terres et de vignes, sises dans le voisinage de l’hôpital et de l’abbaye du Val, à Beaumont-sur-Oise, Ennery, Fontenay-lès-Louvres, Hérouville, Jouy-le-Comte, Labbeville, Nerville, Nogent, près l’Isle-Adam, Presles, Saint-Leu-Taverny, Valmondois, etc. La table alphabétique, imprimée à la suite du cartulaire, donnera la nomenclature complète des noms de personnes et de localités qui y sont mentionnés, avec les quelques identifications nécessaires.</p>
         <table>
           <head>TABLE CHRONOLOGIQUE<lb/>DES<lb/>CHARTES COPIÉES DANS LE CARTULAIRE.</head>
           <row>

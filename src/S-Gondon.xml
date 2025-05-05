@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Gondon">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Gondon">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -50,10 +47,7 @@
         <availability status="restricted">
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-              (<ref
-              target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
-              >L341-1</ref>), selon les termes de la licence Creative Commons : « <ref
-              target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+              (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
               d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
             et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
@@ -96,20 +90,20 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
+              <citeData property="dc:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -135,9 +129,7 @@
         <p>Carte de situation (Atlas de Cassini)</p>
         <p>Édition partielle des actes (originaux et copies médiévales) du fonds de Saint-Florent
           concernant son prieuré de Saint-Gondon.</p>
-        <p>Total des actes édités : 35 (2 du IX<hi rend="sup">e</hi> siècle, 1 du X<hi rend="sup"
-            >e</hi> siècle, 12 du XI<hi rend="sup">e</hi> siècle, 20 du XII<hi rend="sup"
-          >e</hi> siècle).</p>
+        <p>Total des actes édités : 35 (2 du IX<hi rend="sup">e</hi> siècle, 1 du X<hi rend="sup">e</hi> siècle, 12 du XI<hi rend="sup">e</hi> siècle, 20 du XII<hi rend="sup">e</hi> siècle).</p>
       </argument>
       <byline>Notice préparée par Marion Bernard (juin 2009)</byline>
       <div xml:id="S-Gondon_etablissement" subtype="article">
@@ -149,8 +141,7 @@
             de l’archidiaconé de Sologne et de l’archiprêtré d’Angilon, et dépend depuis le
             Concordat du diocèse d’Orléans et du doyenné de Gien.</p>
           <p>La fondation primitive de l’établissement remonte au VI<hi rend="sup">e</hi> siècle ;
-            c’est à cette époque qu’est édifiée dans le village, qui portait alors le nom de <hi
-              rend="i">Nobiliacus</hi>, une <hi rend="i">cella</hi> destinée à honorer la mémoire et
+            c’est à cette époque qu’est édifiée dans le village, qui portait alors le nom de <hi rend="i">Nobiliacus</hi>, une <hi rend="i">cella</hi> destinée à honorer la mémoire et
             les reliques de Gundulfus (Gondon), évêque lombard fuyant les persécutions menées par
             les ariens. En 866, Charles le Chauve fait don de ce petit monastère à Hecfrid, abbé de
             Saint-Florent du Montglonne (en Anjou ; aujourd’hui Saint-Florent-le-Vieil,
@@ -201,8 +192,7 @@
             eux est Carloman, qui par un diplôme de 881 fait don aux moines de quatre navires et de
             divers autres privilèges (acte II) ; mais c’est là le seul exemple de la générosité
             royale à l’égard de l’établissement. Par la suite, lors du conflit qui oppose les
-            religieux de Saint-Florent de Saumur et de Saint-Pierre de Vierzon à la fin du XI<hi
-              rend="sup">e</hi> siècle, les premiers ont bénéficié de l’appui de Gilon de Sully
+            religieux de Saint-Florent de Saumur et de Saint-Pierre de Vierzon à la fin du XI<hi rend="sup">e</hi> siècle, les premiers ont bénéficié de l’appui de Gilon de Sully
             (acte VI), et grâce à lui, de celui du vicomte de Bourges, son beau-père, et d’Étienne
             de Blois, son seigneur (acte VIII), qui confirment le retour de Saint-Gondon à l’abbaye
             angevine. Si, au cours du XII<hi rend="sup">e</hi> siècle, c’est la famille des
@@ -227,8 +217,7 @@
         <div type="cartulaire">
           <head>Les cartulaires</head>
           <p>Aucun cartulaire n’est conservé pour le prieuré de Saint-Gondon. Cependant on en
-            conserve encore quatre pour le monastère de Saint-Florent de Saumur (Stein n<hi
-              rend="sup">o</hi> 3404-3407), dont certains actes concernent Saint-Gondon :</p>
+            conserve encore quatre pour le monastère de Saint-Florent de Saumur (Stein n<hi rend="sup">o</hi> 3404-3407), dont certains actes concernent Saint-Gondon :</p>
           <list type="o">
             <item>- le Livre blanc, ou « Codex vetustorum donationum albus nuncupatus » (environ 225
               chartes de 717 à 1120, première moitié XIIᵉ siècle),</item>
@@ -295,8 +284,7 @@
           <p>Le texte de l’édition, précédé d’un rapide historique du prieuré de Saint-Gondon, est
             suivi de deux tables, l’une reprenant les noms de lieu, l’autre les noms de personne,
             toutes deux assez détaillées. Si ce travail possède incontestablement des qualités,
-            comme l’a fait remarquer A. Bruel dans la recension qu’il en a donnée (<hi rend="i"
-              >Bibliothèque de l’École des chartes</hi>, t. 41, 1880, p. 418-419), on peut également
+            comme l’a fait remarquer A. Bruel dans la recension qu’il en a donnée (<hi rend="i">Bibliothèque de l’École des chartes</hi>, t. 41, 1880, p. 418-419), on peut également
             en souligner certaines défaillances, à commencer par l’ordre dans lequel sont présentés
             les documents, que l’éditeur annonce comme « à peu près [...] chronologique », et qui
             est en réalité plus ou moins thématique (I-III : débuts du prieuré ; IV-XIII : litige
@@ -420,8 +408,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s><seg type="theo">In nomine sancte et individue Trinitatis</seg>, <rs
-                    type="person"><persName>Karolus</persName>
+                <s><seg type="theo">In nomine sancte et individue Trinitatis</seg>, <rs type="person"><persName>Karolus</persName>
                     <seg type="theo">gratia Dei</seg> rex</rs>.</s>
               </p>
               <p>
@@ -429,8 +416,7 @@
                   nobis et ad eternam beatitudinem facilius obtinendam et presentem vitam felicius
                   transigendam procul dubio confidimus.</s>
                 <s>Itaque noverit omnium sancte Dei ecclesie fidelium nostrorumque, tam presentium
-                  quam et futurorum, sollertia, quia venerabilis vir et religiosus <rs type="person"
-                    >abba <persName>Hecfridus</persName> monasterii <placeName>Beati
+                  quam et futurorum, sollertia, quia venerabilis vir et religiosus <rs type="person">abba <persName>Hecfridus</persName> monasterii <placeName>Beati
                       Florentii</placeName></rs>, una cum monachis ibi Deo militantibus, ad nostram
                   accedens sublimitatem, miserabile auditu, lacrimabili suggestione exposuit
                   mansuetudini nostre calamitatem prefati monasterii ceteramque miseriam ipsius
@@ -445,8 +431,7 @@
                       <persName>Florentii</persName></rs>, concedere sibi dignaremur cellam secus
                     <pb n="11"/> fluvium <placeName>Legerim</placeName>, in pago
                     <placeName>Biturico</placeName> [sitam]<ref type="note" target="#p11_fn1"/>, que
-                  dicitur <persName>Nobiliacus</persName>, quemadmodum predecessori illius <rs
-                    type="person"><persName>Didoni</persName>, quondam abbati</rs>, nos fecisse
+                  dicitur <persName>Nobiliacus</persName>, quemadmodum predecessori illius <rs type="person"><persName>Didoni</persName>, quondam abbati</rs>, nos fecisse
                   cognoscitur, in qua cella <rs type="person">sanctus
                     <persName>Gundulfus</persName></rs> reverenter colitur humatus : quatenus a
                   manibus suprascriptorum inimicorum Dei se evasisse exultantes, requiem ibidem de
@@ -483,8 +468,7 @@
               </p>
               <p>
                 <s>Data <date><num><hi rend="sc">xvii</hi><hi rend="sup">o</hi></num> kalendas
-                    februarii, indictione <num>XIV<hi rend="sup">a</hi></num>, anno <num>XXVI<hi
-                        rend="sup">o</hi></num> regnante <persName>Karolo</persName> rege
+                    februarii, indictione <num>XIV<hi rend="sup">a</hi></num>, anno <num>XXVI<hi rend="sup">o</hi></num> regnante <persName>Karolo</persName> rege
                     gloriosissimo</date>.</s>
               </p>
               <p>
@@ -561,13 +545,11 @@
                   monachis sepius dicti monasterii, ejusdem religiosi viri abbatis cura providendis,
                   in eodem loco [penitus] exclusa est habitatio.</s>
                 <s>Igitur oravit suppliciter idem venerandus abbas <persName>Rodulfus</persName> ut,
-                  ad suorum refugium monachorum et ad receptionem sacratissimi corporis <rs
-                    type="person">beati <persName>Florentii</persName></rs>, concedere sibi
+                  ad suorum refugium monachorum et ad receptionem sacratissimi corporis <rs type="person">beati <persName>Florentii</persName></rs>, concedere sibi
                   dignaremur cellam secus fluvium <placeName>Ligerim</placeName>, in pago
                     <placeName>Biturigo</placeName> sitam, quæ dicitur
                     <persName>Nobiliacus</persName>, quemadmodum predecessori illius
-                    <persName>Didoni</persName>, quondam abbati, nos<ref type="note"
-                    target="#p13_fn1"/> fecisse cognoscitur, in qua cella <rs type="person">sanctus
+                    <persName>Didoni</persName>, quondam abbati, nos<ref type="note" target="#p13_fn1"/> fecisse cognoscitur, in qua cella <rs type="person">sanctus
                       <persName>Gundulfus</persName></rs> reverenter colitur humatus : quatinus, a
                   manibus suprascriptorum inimicorum Dei se evasisse exultantes, requiem ibidem de
                   tanta persecutione tandem mereantur, Christo propicio, invenire, et in laude
@@ -641,8 +623,7 @@
                     <persName>Wlfardi</persName> recognovit.</s>
               </p>
               <p>
-                <s>Datum <date>nonis junii, anno tercio regni <rs type="person"
-                        ><persName>Karlomanni</persName> gloriosissimi regis</rs>, indictione
+                <s>Datum <date>nonis junii, anno tercio regni <rs type="person"><persName>Karlomanni</persName> gloriosissimi regis</rs>, indictione
                         <num>XIII<hi rend="sup">a</hi></num></date>.</s>
               </p>
               <p>
@@ -736,8 +717,7 @@
               </p>
               <p>
                 <s>Data<date> mense aprili, anno <num>VIII<hi rend="sup">o</hi></num> regnante
-                      <persName>Karolo</persName> rege</date><ref type="note" target="#p17_fn2"
-                  />.</s>
+                      <persName>Karolo</persName> rege</date><ref type="note" target="#p17_fn2"/>.</s>
                 <s><persName>Walterius</persName> scripsit.</s>
               </p>
             </div>
@@ -751,8 +731,7 @@
                 <p>Elle ajoute, après Raoul, successeur d'Hecfrid, un nom à la liste des abbés de
                   Saint-Florent antérieurs à la restauration du monastère en Anjou, et constate son
                   existence régulière à Saint-Gondon, entre 881 et 901. La consécration de l'église
-                  du château de Saumur ayant eu lieu en 950, sous l'abbatiat d'Hélie, <hi rend="i"
-                    >Helyas de Lyniaco,</hi> moine de Saint-Benoît-sur-Loire, il est probable qu'il
+                  du château de Saumur ayant eu lieu en 950, sous l'abbatiat d'Hélie, <hi rend="i">Helyas de Lyniaco,</hi> moine de Saint-Benoît-sur-Loire, il est probable qu'il
                   suffirait d'un nom, pour avoir désormais la série complète des abbés de
                   Saint-Florent, en comblant la lacune qui existe entre Hélie et notre Gautier. Il y
                   a lieu de croire que le successeur de celui-ci habita également Saint-Gondon, avec
@@ -815,8 +794,7 @@
                   posterorum litteris mandare concordiam quam, communi assensu, de monasterio
                     <placeName>Sancti Gundulfi</placeName> et rebus ad illud pertinentibus fecerunt
                     <rs type="person"><persName>Guillelmus</persName> abbas <placeName>Sancti
-                      Florentii</placeName></rs> cum suis monachis, <rs type="person"
-                      ><persName>Umbaldus</persName> quoque abbas <placeName>sancti Petri
+                      Florentii</placeName></rs> cum suis monachis, <rs type="person"><persName>Umbaldus</persName> quoque abbas <placeName>sancti Petri
                       Virsionensis</placeName></rs> cum suis michilominus monachis.</s>
               </p>
               <p>
@@ -825,8 +803,7 @@
                   regulariterque disponendum a regibus <placeName>Franciæ</placeName> antiquitus
                   donatum fuisse ; sed ex multis jam temporibus ab eorum potestate subractum, in
                   potestatem et dominium abbatis <placeName>Virsionensis</placeName>, dono et
-                  auctoritate <placeName>Bituricensis</placeName> vicecomitis<ref type="note"
-                    target="#p18_fn1"/> et <persName>Gilonis de Soliaco</persName>, qui ejus tunc
+                  auctoritate <placeName>Bituricensis</placeName> vicecomitis<ref type="note" target="#p18_fn1"/> et <persName>Gilonis de Soliaco</persName>, qui ejus tunc
                   compotes fuerant, modernis temporibus devenisse.</s>
                 <s>Quod cum abbas et monachi <placeName>Sancti Florentii</placeName> reclamassent,
                   et secundum donationes et præcepta veterum regum jus in eo suum ostendissent,
@@ -857,38 +834,14 @@
                         <date><num><hi rend="sc">ii</hi><hi rend="sup">o</hi></num> nonas
                     januarii</date> ; inde autem <placeName>Virsione</placeName>, in plenario
                   capitulo, presidente abbate <persName>Umbaldo</persName> et concedentibus
-                  fratribus, multisquoque laicis presentibus, <date><num><hi rend="sc">viii</hi><hi
-                        rend="sup">o</hi></num> idus januari</date>i ; novissime vero in capitulo
-                    <placeName>Sancti Florentii Salmurensis</placeName>, <date><num><hi rend="sc"
-                        >viii</hi><hi rend="sup">o</hi></num> kalendas martii</date>.</s>
+                  fratribus, multisquoque laicis presentibus, <date><num><hi rend="sc">viii</hi><hi rend="sup">o</hi></num> idus januari</date>i ; novissime vero in capitulo
+                    <placeName>Sancti Florentii Salmurensis</placeName>, <date><num><hi rend="sc">viii</hi><hi rend="sup">o</hi></num> kalendas martii</date>.</s>
               </p>
               <p>
-                <s>Nomina eorum qui hanc concordiam fecerunt sive fieri viderunt et audierunt : <rs
-                    type="person"><persName>Willelmus</persName> abbas</rs>, <rs type="person"
-                      ><persName>Gervasius</persName> abbas</rs>, <rs type="person"
-                      ><persName>Aldebertus</persName> archiepiscopus</rs>, <rs type="person"
-                      ><persName>Umbaldus</persName> abbas</rs>, <rs type="person"
-                      ><persName>Rangerius</persName> monachus</rs>, <rs type="person"
-                      ><persName>Ebrardus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Ebrardus</persName> decanus</rs>, <rs type="person"
-                      ><persName>Girardus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Mauricius</persName> monachus</rs>, <rs type="person"
-                      ><persName>Hugo</persName> monachus</rs>, <rs type="person"
-                      ><persName>Rainaldus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Matheus</persName> pre<pb n="20"/>centor</rs>, <rs type="person"
-                      ><persName>Rotgerius</persName> monachus</rs>, <rs type="person"
-                      ><persName>Drogo</persName> monachus</rs>, <rs type="person"
-                      ><persName>Isembardus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Odo</persName> famulus</rs>, <persName>Giraldus
-                  Burditus</persName>, <persName>Ainardus</persName>, <rs type="person"
-                      ><persName>Tetbaldus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Samuel</persName> famulus</rs>, <rs type="person"
-                      ><persName>Radulfus</persName> archidiaconus</rs>, <rs type="person"
-                      ><persName>Arnulfus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Benedictus</persName> famulus</rs>, <persName>Stephanus Crassa
+                <s>Nomina eorum qui hanc concordiam fecerunt sive fieri viderunt et audierunt : <rs type="person"><persName>Willelmus</persName> abbas</rs>, <rs type="person"><persName>Gervasius</persName> abbas</rs>, <rs type="person"><persName>Aldebertus</persName> archiepiscopus</rs>, <rs type="person"><persName>Umbaldus</persName> abbas</rs>, <rs type="person"><persName>Rangerius</persName> monachus</rs>, <rs type="person"><persName>Ebrardus</persName> monachus</rs>, <rs type="person"><persName>Ebrardus</persName> decanus</rs>, <rs type="person"><persName>Girardus</persName> monachus</rs>, <rs type="person"><persName>Mauricius</persName> monachus</rs>, <rs type="person"><persName>Hugo</persName> monachus</rs>, <rs type="person"><persName>Rainaldus</persName> monachus</rs>, <rs type="person"><persName>Matheus</persName> pre<pb n="20"/>centor</rs>, <rs type="person"><persName>Rotgerius</persName> monachus</rs>, <rs type="person"><persName>Drogo</persName> monachus</rs>, <rs type="person"><persName>Isembardus</persName> monachus</rs>, <rs type="person"><persName>Odo</persName> famulus</rs>, <persName>Giraldus
+                  Burditus</persName>, <persName>Ainardus</persName>, <rs type="person"><persName>Tetbaldus</persName> monachus</rs>, <rs type="person"><persName>Samuel</persName> famulus</rs>, <rs type="person"><persName>Radulfus</persName> archidiaconus</rs>, <rs type="person"><persName>Arnulfus</persName> monachus</rs>, <rs type="person"><persName>Benedictus</persName> famulus</rs>, <persName>Stephanus Crassa
                     Curta</persName>, <persName>Gosfredus de Virsione</persName>,
-                    <persName>Stephanus de Maiduno</persName>, <rs type="person"
-                      ><persName>Arnulfus</persName> filius ejus</rs>, <persName>Hugo de
+                    <persName>Stephanus de Maiduno</persName>, <rs type="person"><persName>Arnulfus</persName> filius ejus</rs>, <persName>Hugo de
                     Mota</persName>, <rs type="person"><persName>Hugo</persName> vicarius</rs>,
                     <persName>Giraldus Musca</persName>, <persName>Rotbertus de Valenaco</persName>,
                     <persName>Fulco de Virsione</persName>, <persName>Arnulfus Mitte
@@ -896,8 +849,7 @@
               </p>
               <p>
                 <s>Data <date>anno <num>MXCV<hi rend="sup">o</hi></num> incarnationis Domini,
-                    indictione <num><hi rend="sc">iii</hi><hi rend="sup">a</hi></num>, <num><hi
-                        rend="sc">viii</hi><hi rend="sup">o</hi></num> kalendas martii ; regnante
+                    indictione <num><hi rend="sc">iii</hi><hi rend="sup">a</hi></num>, <num><hi rend="sc">viii</hi><hi rend="sup">o</hi></num> kalendas martii ; regnante
                       <rs type="person"><persName>Philippo</persName>
                       <persName>Francorum</persName> rege</rs></date>.</s>
               </p>
@@ -982,8 +934,7 @@
         <text subtype="article" xml:id="S-Gondon_0006" n="VI">
           <pb n="21"/>
           <front>
-            <docDate>à <placeName>Sully</placeName>. <date notBefore="1095-06-15" notAfter="1095-07"
-                >Fin de juin 1095 ou juillet 1095</date></docDate>
+            <docDate>à <placeName>Sully</placeName>. <date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></docDate>
             <index>
               <term type="nature" key="act"/>
             </index>
@@ -1045,14 +996,12 @@
               <p>
                 <s>Actum apud <placeName>Oliacum</placeName><ref type="note" target="#p22_fn1"/> ;
                   in domo <persName>Huonis de Turre</persName>.</s>
-                <s><pb n="23"/>Testes qui hanc viderunt convenienciam et audierunt : <rs
-                    type="person"><persName>Ademarus</persName> prior</rs>, de cujus manu ipse
+                <s><pb n="23"/>Testes qui hanc viderunt convenienciam et audierunt : <rs type="person"><persName>Ademarus</persName> prior</rs>, de cujus manu ipse
                     <persName>Gilo</persName> beneficium predictum recepit,
                     <persName>Clarenbaldus</persName>, <rs type="person"><persName>Fulco</persName>
                     monachus</rs>, <rs type="person"><persName>Arnulfus</persName> filius
                       <persName>Guillelmi</persName></rs>, <persName>Huo de Turre</persName>,
-                    <persName>Hugo de Sancto Maxentio</persName>, <rs type="person"
-                      ><persName>Rogerius</persName> frater episcopi</rs>,
+                    <persName>Hugo de Sancto Maxentio</persName>, <rs type="person"><persName>Rogerius</persName> frater episcopi</rs>,
                     <persName>Ainricus</persName>, <persName>Burdinus de Sancto Gundulfo</persName>,
                   et alii plures.</s>
               </p>
@@ -1070,8 +1019,7 @@
         <text subtype="article" xml:id="S-Gondon_0007" n="VII">
           <pb n="23"/>
           <front>
-            <docDate>à <placeName>Sully</placeName>. <date notBefore="1095-06-15" notAfter="1095-07"
-                >Fin de juin 1095 ou juillet 1095</date></docDate>
+            <docDate>à <placeName>Sully</placeName>. <date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></docDate>
             <index>
               <term type="nature" key="act"/>
             </index>
@@ -1195,18 +1143,15 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Notum fieri presentibus et futuris bonum est quod <rs type="person"
-                      ><persName>Gillo de Soliaco</persName> monachis <placeName>Sancti
+                <s>Notum fieri presentibus et futuris bonum est quod <rs type="person"><persName>Gillo de Soliaco</persName> monachis <placeName>Sancti
                       Florentii</placeName></rs> omnem conventionem quam erga eos habuit de
                   monasterio <placeName>Sancti Gundulfi</placeName> executus est.</s>
                 <s>Fecit itaque ipse <persName>Gilo</persName> quod comes
                     <persName>Stephanus</persName>, in cujus dictionem honor ejus, si sine herede
                   obierit, per successionem dicitur evenire, hoc concederet in camera sua, apud
                     <placeName>Blesim</placeName> ; <rs type="person"><persName>Ingenulfo</persName>
-                    monacho</rs>, qui hoc requisivit, et ipso <persName>Gilone</persName> et <rs
-                    type="person"><persName>Gervasio</persName> dapifero</rs> videntibus.</s>
-                <s>Sed et <rs type="person">uxorem suam <persName>Audeburgim</persName>, filiam <rs
-                      type="person"><persName>Goffredi</persName> vicecomitis
+                    monacho</rs>, qui hoc requisivit, et ipso <persName>Gilone</persName> et <rs type="person"><persName>Gervasio</persName> dapifero</rs> videntibus.</s>
+                <s>Sed et <rs type="person">uxorem suam <persName>Audeburgim</persName>, filiam <rs type="person"><persName>Goffredi</persName> vicecomitis
                         <placeName>Bituricensis</placeName></rs></rs>, idem
                     <persName>Gilo</persName> talem habuit ut hoc, ipsa quoque, concederet et sua
                   concessione confirmaret.</s>
@@ -1228,13 +1173,9 @@
                     <persName>Rainaldus Paganus</persName>, <persName>Bernardus Fuldria</persName>,
                     <rs type="person"><persName>Albertus</persName> filius
                       <persName>Tescelini</persName></rs>, <persName>Margotus de Geone</persName>,
-                    <rs type="person"><persName>Rogerius</persName> frater archiepiscopi</rs>, <rs
-                    type="person"><persName>Bernardus</persName> filius
-                    <persName>Walonis</persName></rs>, <rs type="person"
-                      ><persName>Robertus</persName> filius <persName>Berengerii</persName></rs>,
-                    <persName>Galdricus Sanceriacensis</persName>, <persName>Matheus</persName>, <rs
-                    type="person"><persName>Letardus</persName> archidiaconi</rs>, <rs type="person"
-                      ><persName>Rogerius</persName> famulus monachorum</rs>.</s>
+                    <rs type="person"><persName>Rogerius</persName> frater archiepiscopi</rs>, <rs type="person"><persName>Bernardus</persName> filius
+                    <persName>Walonis</persName></rs>, <rs type="person"><persName>Robertus</persName> filius <persName>Berengerii</persName></rs>,
+                    <persName>Galdricus Sanceriacensis</persName>, <persName>Matheus</persName>, <rs type="person"><persName>Letardus</persName> archidiaconi</rs>, <rs type="person"><persName>Rogerius</persName> famulus monachorum</rs>.</s>
               </p>
               <p>
                 <s>Signum <persName>Aldeburgis</persName> †.</s>
@@ -1245,8 +1186,7 @@
         <text subtype="article" xml:id="S-Gondon_0009" n="IX">
           <pb n="26"/>
           <front>
-            <docDate>à <placeName>Bourges</placeName>. <date notBefore="1097" notAfter="1098"
-                >1097-1098 ?</date></docDate>
+            <docDate>à <placeName>Bourges</placeName>. <date notBefore="1097" notAfter="1098">1097-1098 ?</date></docDate>
             <index>
               <term type="nature" key="act"/>
             </index>
@@ -1281,8 +1221,7 @@
                 <s>Quoniam humana memoria plenarie non potest oblivioni obsistere quin temporis
                   diuturnitate vincatur, auxilio scripturæ ei succurrere in rebus necessariis
                   congruum esse non dubitamus.</s>
-                <s>Notum sit igitur presentibus atque futuris <rs type="person"
-                      ><persName>Guillelmum</persName> abbatem <placeName>Sancti
+                <s>Notum sit igitur presentibus atque futuris <rs type="person"><persName>Guillelmum</persName> abbatem <placeName>Sancti
                       Florentii</placeName></rs>, calumniis <placeName>Virsionensium</placeName>
                   monachorum, super <placeName>Sancto Gundulfo</placeName>, quibus jam diu monachos
                     <placeName>Sancti Florentii</placeName> fatigaverant, taliter finem imposuisse
@@ -1290,11 +1229,9 @@
                   possint.</s>
               </p>
               <p>
-                <s>Post multas hinc et inde contentiones et calumnias, <rs type="person"
-                      ><persName>Umbaldus</persName> abbas <placeName>Virsionensis</placeName></rs>
+                <s>Post multas hinc et inde contentiones et calumnias, <rs type="person"><persName>Umbaldus</persName> abbas <placeName>Virsionensis</placeName></rs>
                   et predictus abba <placeName>Sancti Florentii</placeName>, cum suis partibus,
-                    <placeName>Bituricas</placeName>, in presentia <rs type="person"
-                      ><persName>Aldeberti</persName> archiepiscopi</rs>, definitum placitum et
+                    <placeName>Bituricas</placeName>, in presentia <rs type="person"><persName>Aldeberti</persName> archiepiscopi</rs>, definitum placitum et
                   concordiam fecerunt de <placeName>Sancto Gundulfo</placeName> ; de qua concordia
                   plane <placeName>Virsionensis</placeName> abbas cum monachis suis defecerunt.</s>
                 <s>Postea vero, defuncto ipso abbate, <persName>Herbertus</persName> abbas, ejus
@@ -1335,27 +1272,18 @@
               </p>
               <p>
                 <s>Testes : <rs type="person"><persName>Guillelmus</persName> abbas
-                      <placeName>Sancti Florentii</placeName></rs>, <rs type="person"
-                      ><persName>Rainaldus</persName> abbas <placeName>Sancti
+                      <placeName>Sancti Florentii</placeName></rs>, <rs type="person"><persName>Rainaldus</persName> abbas <placeName>Sancti
                     Cypriani</placeName></rs>, <rs type="person"><persName>Briccius</persName> abbas
                       <placeName>Sancti Jovini</placeName></rs> ; <persName>Mauricius</persName>,
                     <persName>Umbaldus</persName>, <persName>Donatus</persName>,
                     <persName>Fulco</persName>, <persName>Galo</persName> monachi <placeName>Sancti
                     Florentii</placeName> ; <persName>Aminus</persName> et
-                    <persName>Gofridus</persName> monachi <placeName>Sancti Jovini</placeName> ; <rs
-                    type="person"><persName>Guillelmus</persName> monachus <placeName>Sancti
+                    <persName>Gofridus</persName> monachi <placeName>Sancti Jovini</placeName> ; <rs type="person"><persName>Guillelmus</persName> monachus <placeName>Sancti
                       Martini</placeName> Majoris Monasterii</rs> ; <persName>Gilo
                     Soliacensis</persName> ; <rs type="person"><persName>Ligerius</persName>
-                    archiepiscopus <placeName>Bituricensis</placeName></rs>, <rs type="person"
-                      ><persName>Zacharias</persName> monachus</rs>, <rs type="person"
-                      ><persName>Guillelmus</persName> clericus archiepiscopi</rs> ; <rs
-                    type="person"><persName>Symon</persName> abbas <placeName>Sancti Benedicti de
-                      super Ligerim</placeName></rs> ; <rs type="person"
-                      ><persName>Herbertus</persName> abbas <placeName>Virsionensis</placeName><ref
-                      type="note" target="#p28_fn1"/></rs>, cum suis ; <rs type="person"
-                      ><persName>Guillelmus</persName> archidiaconus
-                      <placeName>Andecavensis</placeName></rs> ; <rs type="person"
-                      ><persName>Petrus</persName> clericus</rs>.</s>
+                    archiepiscopus <placeName>Bituricensis</placeName></rs>, <rs type="person"><persName>Zacharias</persName> monachus</rs>, <rs type="person"><persName>Guillelmus</persName> clericus archiepiscopi</rs> ; <rs type="person"><persName>Symon</persName> abbas <placeName>Sancti Benedicti de
+                      super Ligerim</placeName></rs> ; <rs type="person"><persName>Herbertus</persName> abbas <placeName>Virsionensis</placeName><ref type="note" target="#p28_fn1"/></rs>, cum suis ; <rs type="person"><persName>Guillelmus</persName> archidiaconus
+                      <placeName>Andecavensis</placeName></rs> ; <rs type="person"><persName>Petrus</persName> clericus</rs>.</s>
               </p>
             </div>
           </body>
@@ -1409,18 +1337,14 @@
                     Gundulfi</placeName> perpetuo habendum, cum rebus omnibus pertinentibus ad idem
                   monasterium, sicut predictus <persName>Gilo</persName> monachis reddiderat et
                   concesserat.</s>
-                <s>Testes qui hoc viderunt et audierunt : <rs type="person"
-                      ><persName>Rainaldus</persName> filius <rs type="person"
-                        ><persName>Goffridi</persName> comitis de
+                <s>Testes qui hoc viderunt et audierunt : <rs type="person"><persName>Rainaldus</persName> filius <rs type="person"><persName>Goffridi</persName> comitis de
                     <placeName>Geone</placeName></rs></rs>, <rs type="person"><persName>Garnerius
                       Maigot</persName>, dapifer comitis <persName>Stephani</persName></rs>,
                     <persName>Margotus Lupellus</persName>, <persName>Girardus Tarieta</persName>,
-                  et alii plures ex parte comitis ; ex parte monachorum : <rs type="person"
-                      ><persName>Fulco de Bel Prael</persName>, monachus <placeName>Sancti
+                  et alii plures ex parte comitis ; ex parte monachorum : <rs type="person"><persName>Fulco de Bel Prael</persName>, monachus <placeName>Sancti
                       Florentii</placeName></rs>, <persName>Radulfus de Sancto Gundulfo</persName>,
                     <persName>Herbertus</persName> miles et filii sui,
-                  <persName>Margotus</persName>, <persName>Landricus</persName>, <rs type="person"
-                      ><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
+                  <persName>Margotus</persName>, <persName>Landricus</persName>, <rs type="person"><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
                     <persName>Hugo</persName>, <rs type="person"><persName>Rainardus</persName>
                     filius <persName>Stephani</persName></rs>, et multi alii quorum non est
                   numerus.</s>
@@ -1435,26 +1359,18 @@
                     comitissa</rs>, post discessum ipsius in <placeName>Jerusalem</placeName>,
                     <date>dominica post Ascensionem</date>, in castro <placeName>Sancti
                     Gundulfi</placeName>, in domo <persName>Narberti</persName> militis, audiente
-                    <rs type="person"><persName>Galone</persName><ref type="note" target="#p29_fn1"
-                    /> priore</rs>, <persName>Gaudrico de Sancerree</persName> et
+                    <rs type="person"><persName>Galone</persName><ref type="note" target="#p29_fn1"/> priore</rs>, <persName>Gaudrico de Sancerree</persName> et
                     <persName>Narberto</persName> milite, presentibus pluribus aliis.</s>
-                <s>Item illud idem stabiliter concesserunt <rs type="person"
-                      ><persName>Willelmus</persName> filius comitis
-                    <persName>Stephani</persName></rs> et <rs type="person"
-                      ><persName>Agnes</persName> filia <persName>Gilonis</persName></rs>.</s>
+                <s>Item illud idem stabiliter concesserunt <rs type="person"><persName>Willelmus</persName> filius comitis
+                    <persName>Stephani</persName></rs> et <rs type="person"><persName>Agnes</persName> filia <persName>Gilonis</persName></rs>.</s>
               </p>
               <p>
                 <s>Actum apud <placeName>Sanctum Gundulfum</placeName>, in turre.</s>
               </p>
               <p>
                 <s>Hoc audierunt qui presentes aderant : <rs type="person"><persName>Galo</persName>
-                    prior</rs>, <persName>Goffridus Giboinus</persName>, <rs type="person"
-                      ><persName>Bernardus</persName> filius <persName>Galonis</persName></rs>,
-                    <persName>Radulfus de Sancto Gundulfo</persName>, <rs type="person"
-                      ><persName>Narbertus</persName> miles</rs>, <rs type="person"
-                      ><persName>Hugo</persName> miles</rs>, <rs type="person"
-                      ><persName>Landricus</persName> preses</rs>, <rs type="person"
-                      ><persName>Landricus</persName> filius <persName>Narberti</persName></rs>,
+                    prior</rs>, <persName>Goffridus Giboinus</persName>, <rs type="person"><persName>Bernardus</persName> filius <persName>Galonis</persName></rs>,
+                    <persName>Radulfus de Sancto Gundulfo</persName>, <rs type="person"><persName>Narbertus</persName> miles</rs>, <rs type="person"><persName>Hugo</persName> miles</rs>, <rs type="person"><persName>Landricus</persName> preses</rs>, <rs type="person"><persName>Landricus</persName> filius <persName>Narberti</persName></rs>,
                     <persName>Baulduinus Hersendis</persName> et alii multi.</s>
               </p>
             </div>
@@ -1518,20 +1434,13 @@
                 <s><placeName>Virsionensis</placeName> abbas <persName>Herbertus</persName>
                   predictam ecclesiam reclamavit, cui rei canonice determinandæ judices canonicos
                   deputavimus : nam archiepiscopi <rs type="person"><persName>Radulfus</persName>
-                    <placeName>Turonensis</placeName></rs>, <rs type="person"
-                      ><persName>Daibertus</persName>
-                    <placeName>Senonensis</placeName></rs> ; episcopi vero <rs type="person"
-                      ><persName>Ivo</persName>
-                    <placeName>Carnotensis</placeName></rs>, <rs type="person"
-                      ><persName>Leodegarius</persName>
-                    <placeName>Vivariensis</placeName></rs>, <rs type="person"
-                      ><persName>Johannes</persName>
-                    <placeName>Aurelianensis</placeName></rs>, <rs type="person"
-                      ><persName>Rainaldus</persName>
-                    <placeName>Andegavensis</placeName></rs>, <rs type="person"
-                      ><persName>Marbodus</persName>
-                    <placeName>Redonensis</placeName></rs>, <rs type="person"
-                      ><persName>Girardus</persName>
+                    <placeName>Turonensis</placeName></rs>, <rs type="person"><persName>Daibertus</persName>
+                    <placeName>Senonensis</placeName></rs> ; episcopi vero <rs type="person"><persName>Ivo</persName>
+                    <placeName>Carnotensis</placeName></rs>, <rs type="person"><persName>Leodegarius</persName>
+                    <placeName>Vivariensis</placeName></rs>, <rs type="person"><persName>Johannes</persName>
+                    <placeName>Aurelianensis</placeName></rs>, <rs type="person"><persName>Rainaldus</persName>
+                    <placeName>Andegavensis</placeName></rs>, <rs type="person"><persName>Marbodus</persName>
+                    <placeName>Redonensis</placeName></rs>, <rs type="person"><persName>Girardus</persName>
                     <placeName>Engolismensis</placeName></rs>, viso utriusque partis cyrographo, rem
                   taliter diffinierunt.</s>
                 <s>Quoniam enim <placeName>Salmurenses</placeName> monachos clarum erat prefatam
@@ -1560,36 +1469,28 @@
                   presumpserit, canonicæ sententiæ, uti contemptor canonum, subigatur.</s>
               </p>
               <p>
-                <s>Hujus consummationis diffinitionem audierunt et collaudaverunt : <rs
-                    type="person"><persName>Hilgodus</persName> abbas <placeName>Majoris
+                <s>Hujus consummationis diffinitionem audierunt et collaudaverunt : <rs type="person"><persName>Hilgodus</persName> abbas <placeName>Majoris
                       Monasterii</placeName></rs>, <rs type="person"><persName>Simon</persName>
-                    abbas <placeName>Sancti Benedicti</placeName></rs>, <rs type="person"
-                      ><persName>Christianus</persName> abbas <placeName>Sancti
+                    abbas <placeName>Sancti Benedicti</placeName></rs>, <rs type="person"><persName>Christianus</persName> abbas <placeName>Sancti
                     Maximini</placeName></rs>, <rs type="person"><persName>Briccius</persName> abbas
-                      <placeName>Sancti Jovini</placeName></rs>, <rs type="person"
-                      ><persName>Rainaldus</persName> abbas <placeName>Lucionensis</placeName></rs>,
+                      <placeName>Sancti Jovini</placeName></rs>, <rs type="person"><persName>Rainaldus</persName> abbas <placeName>Lucionensis</placeName></rs>,
                     <rs type="person"><persName>Anselmus</persName> magister
-                      <placeName>Lugdunensis</placeName></rs>, <rs type="person"
-                      ><persName>Drogo</persName> magister <placeName>Trecensis</placeName></rs>,
+                      <placeName>Lugdunensis</placeName></rs>, <rs type="person"><persName>Drogo</persName> magister <placeName>Trecensis</placeName></rs>,
                     <rs type="person"><persName>Guillelmus</persName> archidiaconus
-                      <placeName>Andegavensis</placeName></rs>, <rs type="person"
-                      ><persName>Guillelmus</persName> archidiaconus
+                      <placeName>Andegavensis</placeName></rs>, <rs type="person"><persName>Guillelmus</persName> archidiaconus
                       <placeName>Pictavensis</placeName></rs> ; de monachis vero :
                     <persName>Fulco</persName>, <persName>Donatus</persName>,
                     <persName>Galo</persName>, presente suo <rs type="person">abbate
                       <persName>Guillelmo</persName>
                     <placeName>Sancti Florentii</placeName></rs> ; <persName>Radulfus</persName>,
                     <persName>Guillelmus</persName>, <rs type="person"><persName>Aiminus</persName>
-                    monachi <placeName>Sancti Jovini</placeName></rs> ; de laicis : <rs
-                    type="person"><persName>Benedictus</persName> camerarius</rs>, <rs type="person"
-                      ><persName>Paganus</persName> marescallus</rs>,
+                    monachi <placeName>Sancti Jovini</placeName></rs> ; de laicis : <rs type="person"><persName>Benedictus</persName> camerarius</rs>, <rs type="person"><persName>Paganus</persName> marescallus</rs>,
                   <persName>Girardus</persName>.</s>
                 <s>Hoc etiam audivit totum concilium.</s>
               </p>
               <p>
                 <s>Actum in concilio <placeName>Trecensi</placeName>, <date>anno Dominicæ
-                    incarnationis <num>MCIV<hi rend="sup">o</hi></num> indictione <num>XII<hi
-                        rend="sup">a</hi></num> ; <persName>Phylippo</persName> rege
+                    incarnationis <num>MCIV<hi rend="sup">o</hi></num> indictione <num>XII<hi rend="sup">a</hi></num> ; <persName>Phylippo</persName> rege
                   regnante</date>.</s>
               </p>
             </div>
@@ -1643,8 +1544,7 @@
                     <placeName>Bituricensem</placeName> et <persName>Gilonem de Soliaco</persName>,
                   multo post tempore, suo dominio subjecisse.</s>
                 <s>Eadem etiam descriptione aliquando contigisse cognovimus quod
-                    <placeName>Virsionenses</placeName> monachi per <rs type="person"
-                      ><persName>Audebertum</persName>, <placeName>Biturigensem</placeName>
+                    <placeName>Virsionenses</placeName> monachi per <rs type="person"><persName>Audebertum</persName>, <placeName>Biturigensem</placeName>
                     archiepiscopum,</rs> concedentibus <placeName>Salmurensibus</placeName>
                   monachis, prefatam <placeName>Sancti Gundulfi</placeName> ecclesiam ea conditione
                   possederint, ut vestro monasterio duas auri uncias annuatim persolverent ; si
@@ -1723,8 +1623,7 @@
               </p>
               <p>
                 <s>Ipse quidem ecclesiam illam monasterio suo anti<pb n="34"/>quitus traditam, et
-                  postmodum cum antecessores tui, quibus a <rs type="person"
-                      ><persName>Carolo</persName> rege</rs> antea data fuerat, calumniam inde
+                  postmodum cum antecessores tui, quibus a <rs type="person"><persName>Carolo</persName> rege</rs> antea data fuerat, calumniam inde
                   antecessoribus suis infigerent, monasterio suo ab eis sub annuo censu concessam
                   asseverebat ; unde quia eam antecessores sui tenuerant, de qua re depositiones
                   quorundam testium, qui tamen in judicio recepti non fuerant, demonstrabat, et sine
@@ -1733,8 +1632,7 @@
                   allegabas, et predecessores tuos eam, post factam monasterio
                     <placeName>Virgionensi</placeName> sub annuo censu concessionem, non contra
                   formam justitiæ, sed ex lege conventionis recepisse monstrabas.</s>
-                <s>Astruebas etiam causam hanc per bone memoriæ <rs type="person"
-                      ><persName>Ricardum</persName> quondam <placeName>Albanensem</placeName>
+                <s>Astruebas etiam causam hanc per bone memoriæ <rs type="person"><persName>Ricardum</persName> quondam <placeName>Albanensem</placeName>
                     episcopum</rs>, tunc apostolicæ sedis legatum, judicio terminatam et a beatæ
                   recordationis papa <persName>Paschali</persName>, predecessore nostro, postmodum
                   confirmatam ; et insuper, tam te quam antecessores tuos, eandem ecclesiam, longis
@@ -1758,8 +1656,7 @@
                   noverit incursurum.</s>
               </p>
               <p>
-                <s>Datum <placeName>Lateranis</placeName>, <date><num>VIII<hi rend="sup"
-                      >o</hi></num> idus februarii</date>.</s>
+                <s>Datum <placeName>Lateranis</placeName>, <date><num>VIII<hi rend="sup">o</hi></num> idus februarii</date>.</s>
               </p>
             </div>
           </body>
@@ -1821,19 +1718,15 @@
                 <s>Hoc donum et relictionem viderunt et audierunt : <persName>Ingenulfus</persName>,
                     <persName>Geraldus</persName>, <persName>Fulco</persName>, monachi ;
                     <persName>Radulfus de Sancto <pb n="36"/> Gundulfo</persName>,
-                    <persName>Landricus</persName>, <persName>Herbertus</persName>, <rs
-                    type="person"><persName>Fulco</persName> filius
+                    <persName>Landricus</persName>, <persName>Herbertus</persName>, <rs type="person"><persName>Fulco</persName> filius
                     <persName>Gandeberti</persName></rs>, <persName>Balduinus</persName>,
-                    <persName>Vaslotus Furet</persName>, <rs type="person"
-                      ><persName>Garinus</persName> famulus</rs>.</s>
+                    <persName>Vaslotus Furet</persName>, <rs type="person"><persName>Garinus</persName> famulus</rs>.</s>
               </p>
               <p>
                 <s>Actum <date>anno ab incarnatione Domini <num>MXCV<hi rend="sup">o</hi></num>,
-                    indictione <num><hi rend="sc">iii</hi><hi rend="sup">a</hi></num>, [<num><hi
-                        rend="sc">ii</hi><hi rend="sup">o</hi></num>] idus octobris, secunda
+                    indictione <num><hi rend="sc">iii</hi><hi rend="sup">a</hi></num>, [<num><hi rend="sc">ii</hi><hi rend="sup">o</hi></num>] idus octobris, secunda
                     feria</date> ; <rs type="person"><persName>Philippo</persName>
-                    <persName>Francorum</persName> rege</rs>, <rs type="person"
-                      ><persName>Aldeberto</persName>
+                    <persName>Francorum</persName> rege</rs>, <rs type="person"><persName>Aldeberto</persName>
                     <placeName>Bituricensium</placeName> archiepiscopo</rs>.</s>
               </p>
             </div>
@@ -1918,8 +1811,7 @@
             <div type="notes">
               <note xml:id="p36_fn1">Si cette dénomination ne s'applique pas à <hi rend="i">Pierre
                   Maru,</hi> ferme de la commune de Saint-Gondon, elle désigne probablement une
-                pierre d'apparence druidique, située près du bourg et nommée aujourd'hui la <hi
-                  rend="i">Pierre Longue.</hi> Ainsi que divers autres renseignements, je dois à
+                pierre d'apparence druidique, située près du bourg et nommée aujourd'hui la <hi rend="i">Pierre Longue.</hi> Ainsi que divers autres renseignements, je dois à
                 l'extrême complaisance de M. Boucher de Molandon les noms modernes de divers lieux
                 cités dans les chartes.</note>
             </div>
@@ -1966,10 +1858,8 @@
                 <s>Quod utrumque concessit <rs type="person"><persName>Robertus</persName> filius
                     ejus</rs>, nondum miles.</s>
                 <s>Hanc concessionem de arpento viderunt et audierunt : monachi
-                    <persName>Fulco</persName>, <persName>Gislebertus</persName> et alii ; <rs
-                    type="person"><persName>Radulfus</persName> avunculus illius
-                      <persName>Roberti</persName></rs>, <rs type="person"
-                      ><persName>Rainardus</persName> filius <persName>Stephani</persName></rs>,
+                    <persName>Fulco</persName>, <persName>Gislebertus</persName> et alii ; <rs type="person"><persName>Radulfus</persName> avunculus illius
+                      <persName>Roberti</persName></rs>, <rs type="person"><persName>Rainardus</persName> filius <persName>Stephani</persName></rs>,
                     <persName>Constantius</persName>, <persName>Radulfus</persName> famulus
                   monachorum ; et monachi concesserunt et matri et filio beneficium orationum.</s>
               </p>
@@ -1982,8 +1872,7 @@
         <text subtype="article" xml:id="S-Gondon_0017" n="XVII">
           <pb n="38"/>
           <front>
-            <docDate>au <placeName>château de Gien</placeName>. <date notBefore="1095" scope="circa"
-                notAfter="1100">Vers 1095-1100</date></docDate>
+            <docDate>au <placeName>château de Gien</placeName>. <date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></docDate>
             <index>
               <term type="nature" key="act"/>
             </index>
@@ -2028,10 +1917,8 @@
                   pertinebat.</s>
               </p>
               <p>
-                <s>Actum in domo illius et ante, vidente <rs type="person"
-                      ><persName>Balduino</persName>
-                    <persName>Hersendis</persName> filio</rs> et <rs type="person"
-                      ><persName>Radulfo</persName> nepote <persName>Fulconis</persName>
+                <s>Actum in domo illius et ante, vidente <rs type="person"><persName>Balduino</persName>
+                    <persName>Hersendis</persName> filio</rs> et <rs type="person"><persName>Radulfo</persName> nepote <persName>Fulconis</persName>
                     monachi</rs> ; ex parte illius <persName>Baronis</persName> vidente
                     <persName>Hugone</persName> cordubanario, qui de
                     <placeName>Aurelianensi</placeName> pago venerat.</s>
@@ -2042,8 +1929,7 @@
         <text subtype="article" xml:id="S-Gondon_0018" n="XVIII">
           <pb n="39"/>
           <front>
-            <docDate>en la <placeName>tour de Saint-Gondon</placeName>. <date when="1100"
-                scope="circa">Vers 1100</date></docDate>
+            <docDate>en la <placeName>tour de Saint-Gondon</placeName>. <date when="1100" scope="circa">Vers 1100</date></docDate>
             <index>
               <term type="nature" key="act"/>
             </index>
@@ -2074,8 +1960,7 @@
                   peccaminum suorum et parentum suorum.</s>
                 <s>Hoc concessit <rs type="person"><persName>Aquileia</persName>, uxor
                   ejus</rs>.</s>
-                <s>Testes qui viderunt et audierunt : <persName>Fulco</persName> monachus, <rs
-                    type="person"><persName>Rainardus</persName> miles, filius
+                <s>Testes qui viderunt et audierunt : <persName>Fulco</persName> monachus, <rs type="person"><persName>Rainardus</persName> miles, filius
                       <persName>Stephani</persName></rs>, <persName>Girardus</persName>,
                     <persName>Golenus</persName>, <persName>Aimericus Greslart</persName>,
                     <persName>Vaslet Frater</persName>
@@ -2108,8 +1993,7 @@
                 Travau, à Pierre Maru, dans la terre que cultivait Robert le Breton, plus une haste
                 de terre à Vigneau ; 2<hi rend="sup">o</hi> le droit de faire pasnager tous leurs
                 porcs dans ses forêts ; 3<hi rend="sup">o</hi> un nommé Thibaut Gomant, avec sa
-                femme, sa sœur et leurs enfants, plus la femme de Thibaut fils de Gerberge ; 4<hi
-                  rend="sup">o</hi> six deniers [de rente] sur Girard fils d'Adelelme. Enfin il
+                femme, sa sœur et leurs enfants, plus la femme de Thibaut fils de Gerberge ; 4<hi rend="sup">o</hi> six deniers [de rente] sur Girard fils d'Adelelme. Enfin il
                 autorise les religieux à recevoir tout ce qui pourra leur être donné dans son fief.
                 Achalée ou Aquilée, femme de Raoul, et leur fils Archambœud, confirment tout ce qui
                 précède.</p>
@@ -2149,11 +2033,9 @@
                   ad <persName>Petram Marol</persName> ; et pasnagium in omnibus silvis suis omnium
                   porcorum suorum dominicorum ; necnon et <persName>Tetbaudum Gomant</persName> et
                   uxorem ejus et omnes qui nascentur ex illis, et sororem
-                    <persName>Tetbaldi</persName> filiumque ejus, et <rs type="person">feminam <rs
-                      type="person"><persName>Tetbaudi</persName> filii
+                    <persName>Tetbaldi</persName> filiumque ejus, et <rs type="person">feminam <rs type="person"><persName>Tetbaudi</persName> filii
                         <persName>Girbergæ</persName></rs>, filiam <persName>Girardi de
-                      Mesola</persName></rs> ; et <num>sex</num> denarios de <rs type="person"
-                      ><persName>Pagano</persName> filio <persName>Adelelmi</persName></rs>.</s>
+                      Mesola</persName></rs> ; et <num>sex</num> denarios de <rs type="person"><persName>Pagano</persName> filio <persName>Adelelmi</persName></rs>.</s>
                 <s>Insuper concessit quod si, inspirante Deo, aliquis de ominibus suis de feodo suo
                   aliquid, pro remedio animæ sue, Deo et monachis dare vellent, libere et absolute
                   hoc agerent.</s>
@@ -2162,15 +2044,10 @@
                     ejus</rs>.</s>
               </p>
               <p>
-                <s><rs type="person"><persName>Herbertus</persName> miles</rs> testis, <rs
-                    type="person"><persName>Landricus</persName> filius ejus</rs>, <rs type="person"
-                      ><persName>Renardus</persName>
-                    <persName>Hugonis</persName> filius</rs>, <rs type="person"
-                      ><persName>Guillelmus</persName>
-                    <persName>Garini</persName> filius</rs>, <rs type="person"
-                      ><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
-                    <rs type="person"><persName>Gilo</persName> clericus</rs>, <rs type="person"
-                      ><persName>Vaslinus</persName> preses</rs>, <persName>Iterius
+                <s><rs type="person"><persName>Herbertus</persName> miles</rs> testis, <rs type="person"><persName>Landricus</persName> filius ejus</rs>, <rs type="person"><persName>Renardus</persName>
+                    <persName>Hugonis</persName> filius</rs>, <rs type="person"><persName>Guillelmus</persName>
+                    <persName>Garini</persName> filius</rs>, <rs type="person"><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
+                    <rs type="person"><persName>Gilo</persName> clericus</rs>, <rs type="person"><persName>Vaslinus</persName> preses</rs>, <persName>Iterius
                     Liquois</persName>, <persName>Girardus Tarieta</persName>, <persName>Hugo de
                     Sancto Maxentio</persName>, <persName>Teoinus de Blanoil</persName>,
                     <persName>Vaslinus Forredus</persName>, <persName>Santholinus</persName>,
@@ -2210,8 +2087,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Commisimus memoriæ quod monachi <placeName>Sancti Gundulfi</placeName>
-                  concesserunt <persName>Johanni Bota Lupum</persName>, ut emeret a <rs
-                    type="person"><persName>Jerberto</persName> filio
+                  concesserunt <persName>Johanni Bota Lupum</persName>, ut emeret a <rs type="person"><persName>Jerberto</persName> filio
                     <persName>Vidali</persName></rs> partem suam, scilicet medietatem <pb n="42"/>
                   terre de <placeName>Vinneaum</placeName> sicut divisa erat, quam ille
                     <persName>Jerbertus</persName> tenebat ab ipsis monachis ; pro quo assensu dedit
@@ -2228,9 +2104,7 @@
               <p>
                 <s>Actum in capite pontis monachorum, juxta castrum <placeName>Sancti
                     Gundulfi</placeName> ; quod audierunt, monachi : <persName>Galo</persName>,
-                    <persName>Girardus</persName>, <persName>Gosfridus Gibuinus</persName> ; <rs
-                    type="person"><persName>Narbertus</persName> miles</rs>, <rs type="person"
-                      ><persName>Landricus</persName> pretor</rs>, <persName>Vahlinus de Villa
+                    <persName>Girardus</persName>, <persName>Gosfridus Gibuinus</persName> ; <rs type="person"><persName>Narbertus</persName> miles</rs>, <rs type="person"><persName>Landricus</persName> pretor</rs>, <persName>Vahlinus de Villa
                     Nova</persName>, <rs type="person"><persName>Goffridus</persName> filius
                       <persName>Marie</persName></rs>.</s>
               </p>
@@ -2272,18 +2146,15 @@
                   die quo sepultus est idem <persName>Fulco</persName>, qui dudum habitum monachi
                   susceperat, dedit monachis de <placeName>Sancto Gundulfo</placeName> unum arpentum
                   prati de <placeName>Meso Martini</placeName> ; [et] ad calefaciendum monachis,
-                  quantum unus asinus vel duo unaquaque <pb n="43"/> die<ref type="note"
-                    target="#p43_fn1"/> semel apportabunt.</s>
+                  quantum unus asinus vel duo unaquaque <pb n="43"/> die<ref type="note" target="#p43_fn1"/> semel apportabunt.</s>
                 <s>Et etiam predicta matrona, si monachi porcos habuerint quos transmittere velint
-                  in nemora in quibus ipsa habet partem, non habebit pasnagium vel trahinagium<ref
-                    type="note" target="#p43_fn2"/> ullo tempore.</s>
+                  in nemora in quibus ipsa habet partem, non habebit pasnagium vel trahinagium<ref type="note" target="#p43_fn2"/> ullo tempore.</s>
                 <s>Hoc concessit <rs type="person"><persName>Isucia</persName>, filia
                       <persName>Aureni</persName></rs> et ejusdem
                   <persName>Tesceline</persName>.</s>
               </p>
               <p>
-                <s>Actum in claustro <placeName>Sancti Gundulfi</placeName> ; vidente <rs
-                    type="person"><persName>Balduino</persName>
+                <s>Actum in claustro <placeName>Sancti Gundulfi</placeName> ; vidente <rs type="person"><persName>Balduino</persName>
                     <persName>Hersendis</persName> filio</rs>, qui venerat cum ea, et filia ejus
                     <persName>Isucia</persName> et <persName>Radulfo</persName> monachorum famulo et
                   aliis pluribus.</s>
@@ -2336,9 +2207,7 @@
               </p>
               <p>
                 <s>Hujus rei testes sunt : <rs type="person"><persName>Galo</persName>
-                  monachus</rs>, <rs type="person"><persName>Girardus</persName> monachus</rs>, <rs
-                    type="person"><persName>Wullelmus</persName> presbiter</rs>, <rs type="person"
-                      ><persName>Narbertus</persName> miles</rs>, <persName>Baulduinus
+                  monachus</rs>, <rs type="person"><persName>Girardus</persName> monachus</rs>, <rs type="person"><persName>Wullelmus</persName> presbiter</rs>, <rs type="person"><persName>Narbertus</persName> miles</rs>, <persName>Baulduinus
                     Cain</persName>.</s>
               </p>
             </div>
@@ -2378,17 +2247,13 @@
                   temporum.</s>
               </p>
               <p>
-                <s>Ideoque presentibus et futuris notificamus quod <rs type="person"
-                      ><persName>Tescelina</persName>, uxor <rs type="person"
-                        ><persName>Fulconis</persName> filii
+                <s>Ideoque presentibus et futuris notificamus quod <rs type="person"><persName>Tescelina</persName>, uxor <rs type="person"><persName>Fulconis</persName> filii
                     <persName>Gandeberti</persName></rs></rs>, post mortem viri sui, qui monachus
                   fuit, voluit ire <placeName>Jerosolimam</placeName>, pro illius amore qui fuerat
                   ibi vivus et mortuus et resuscitatus, pro salute omnium.</s>
                 <s>Antequam autem pergeret, fecit heredem Deum, cui omnia sunt, et sanctam ecclesiam
                   ex hoc quod voluit.</s>
-                <s>Dedit enim Deo et <rs type="person">sanctæ <persName>Mariæ</persName></rs> et <rs
-                    type="person">sancto <persName>Florentio</persName></rs> ac <rs type="person"
-                    >sancto <persName>Gundulfo</persName></rs> et monachis <placeName>Sancti
+                <s>Dedit enim Deo et <rs type="person">sanctæ <persName>Mariæ</persName></rs> et <rs type="person">sancto <persName>Florentio</persName></rs> ac <rs type="person">sancto <persName>Gundulfo</persName></rs> et monachis <placeName>Sancti
                     Florentii</placeName> partem quam tenebat in cumbris monachorum in
                     <placeName>Cogna</placeName> fluvio sitis, accipiens ab eis orationum
                   beneficia.</s>
@@ -2398,9 +2263,7 @@
                     <persName>Girardus</persName> alius, <persName>Rainaldus</persName>,
                     <persName>Guillelmus</persName> presbyter ; ex laicis : <persName>Rodulfus de
                     Sancto Gundulfo</persName>, <rs type="person"><persName>Rainardus</persName>
-                    filius <persName>Stephani</persName></rs>, <rs type="person"
-                      ><persName>Rainardus</persName> filius <persName>Hugonis</persName></rs>, <rs
-                    type="person"><persName>Rotbertus</persName> frater <persName>Johannis
+                    filius <persName>Stephani</persName></rs>, <rs type="person"><persName>Rainardus</persName> filius <persName>Hugonis</persName></rs>, <rs type="person"><persName>Rotbertus</persName> frater <persName>Johannis
                       Meschini</persName></rs>, postea monachus.</s>
               </p>
             </div>
@@ -2496,12 +2359,10 @@
               </p>
               <p>
                 <s>Hoc itaque, ut dictum est, ipsi tres, <persName>Bernardus</persName> videlicet et
-                    <persName>Rainaudus</persName> presbiter atque <rs type="person"
-                      ><persName>Willelmus</persName>
+                    <persName>Rainaudus</persName> presbiter atque <rs type="person"><persName>Willelmus</persName>
                     <persName>Bernadi</persName><pb n="47"/> filius</rs>, concesserunt et istius rei
                   donum, cum breviario monacorum, super autare <placeName>beate Dei genitricis
-                    Marie</placeName> posuerunt, intrante quadragesime tempore, <date><num><hi
-                        rend="sc">iv</hi><hi rend="sup">o</hi></num> nonas marci</date>, in
+                    Marie</placeName> posuerunt, intrante quadragesime tempore, <date><num><hi rend="sc">iv</hi><hi rend="sup">o</hi></num> nonas marci</date>, in
                   presentia <persName>Galonis</persName>, tunc prioris, et aliorum qui cum illo
                   erant monacorum et laicorum, quorum hec sunt nomina : <persName>Gainaudus
                     Caruronus</persName>, <persName>Robertus Braocensis</persName>,
@@ -2514,15 +2375,11 @@
                   unoquoque illorum recipientes.</s>
               </p>
               <p>
-                <s>Hec sunt nomina illorum quos illis monachi dederunt : <rs type="person"
-                      ><persName>Herbertus</persName> miles</rs>, <rs type="person"
-                      ><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
+                <s>Hec sunt nomina illorum quos illis monachi dederunt : <rs type="person"><persName>Herbertus</persName> miles</rs>, <rs type="person"><persName>Balduinus</persName> filius <persName>Hersendis</persName></rs>,
                     <rs type="person"><persName>Rainardus</persName> filius
-                      <persName>Hugonis</persName></rs>, <rs type="person"
-                      ><persName>Vaslinus</persName> preses</rs>, <persName>Landricus
+                      <persName>Hugonis</persName></rs>, <rs type="person"><persName>Vaslinus</persName> preses</rs>, <persName>Landricus
                     Pulcin</persName>, <persName>Rainardus de Arcola</persName>.</s>
-                <s>Hii vero sunt quos <persName>Guillelmus</persName> monachis dedit : <rs
-                    type="person"><persName>Rainardus</persName> filius
+                <s>Hii vero sunt quos <persName>Guillelmus</persName> monachis dedit : <rs type="person"><persName>Rainardus</persName> filius
                       <persName>Stephani</persName></rs>, <persName>Landricus Pulcin</persName>,
                     <persName>Johannes de Blancafot</persName>, <persName>Bernardus de Veteri
                     Vado</persName>, <persName>Forredus de Colon</persName>, <persName>Ernaudus
@@ -2586,8 +2443,7 @@
                     <placeName>sancti Gundulfi</placeName>, cum quadam par-[te bacu]li, die dominica
                   ante processionem, <persName>Hugo</persName> qui tenebat tertiam partem furni,
                   presentibus et annuentibus filiis suis <persName>Rainardo</persName> atque
-                    <persName>Hugone</persName>, [et] <rs type="person"
-                      ><persName>Richildis</persName>, uxor <persName>Balduini</persName></rs>, et
+                    <persName>Hugone</persName>, [et] <rs type="person"><persName>Richildis</persName>, uxor <persName>Balduini</persName></rs>, et
                     <rs type="person">filius suus <persName>Gosfridus</persName></rs>, qui aliam
                   terciam partem habebant.</s>
                 <s><rs type="person"><persName>Rainardus</persName> autem, filius
@@ -2601,8 +2457,7 @@
                   comitis, ad exitum castri quod dicitur Signum <persName>Cesaris</persName>,
                   reiteravit prefatum donum, in manu <rs type="person"><persName>Galonis</persName>,
                     tunc prioris <placeName>Sancti Gundulfi</placeName></rs> ; presentibus :
-                    <persName>Vahledo Forredo</persName>, <persName>Willelmo Garini</persName>, <rs
-                    type="person"><persName>Rainardo</persName> filio
+                    <persName>Vahledo Forredo</persName>, <persName>Willelmo Garini</persName>, <rs type="person"><persName>Rainardo</persName> filio
                     <persName>Hugonis</persName></rs>.</s>
               </p>
             </div>
@@ -2665,10 +2520,8 @@
                       <persName>Auberici</persName></rs>, huic concordie, quam patruus suus fecerat
                   cum monachis, ipso <persName>Hugone</persName> ei persuadente, assensum ex parte
                   sua prebuit, in turre <placeName>Soliacensi</placeName> ; ubi presentes erant :
-                    <rs type="person"><persName>Fulco</persName> monachus</rs>, <rs type="person"
-                      ><persName>Galo</persName> monachus</rs>, <persName>Hugo de Turre</persName>,
-                    <rs type="person"><persName>Agnes</persName> uxor sua</rs>, <rs type="person"
-                      ><persName>Baulduinus</persName> filius <persName>Hersendis</persName></rs>,
+                    <rs type="person"><persName>Fulco</persName> monachus</rs>, <rs type="person"><persName>Galo</persName> monachus</rs>, <persName>Hugo de Turre</persName>,
+                    <rs type="person"><persName>Agnes</persName> uxor sua</rs>, <rs type="person"><persName>Baulduinus</persName> filius <persName>Hersendis</persName></rs>,
                     <rs type="person"><persName>Landricus</persName> filius
                       <persName>Narberti</persName></rs>, <persName>Gosfridus de
                   Carnoto</persName>.</s>
@@ -2718,8 +2571,7 @@
                     <persName>Robertus Braiocensis</persName>, <persName>Robertus Rufus</persName>,
                   monachi ; de laicis : <rs type="person"><persName>Herbertus</persName> miles</rs>,
                     <rs type="person"><persName>Baldoinus</persName> frater ejus</rs>,
-                    <persName>Constantinus Caseus</persName>, <rs type="person"
-                      ><persName>Sancelinus</persName> famulus monachorum</rs>.</s>
+                    <persName>Constantinus Caseus</persName>, <rs type="person"><persName>Sancelinus</persName> famulus monachorum</rs>.</s>
               </p>
             </div>
           </body>
@@ -2772,31 +2624,20 @@
                   sanctarum congregationum desiderans, donavi <placeName>Sancto
                     Florentio</placeName> et ejus monachis ecclesiam <placeName>sancti
                     Stephani</placeName> que vocatur de <placeName>Colom</placeName>, juxta
-                    <placeName>Sanctum Gundulfum</placeName>, cum assensu <rs type="person"
-                      ><persName>Mathei</persName> archidiaconi</rs> et <rs type="person"
-                      ><persName>Jerberti</persName> archipresbiteri</rs> aliorumque clericorum
+                    <placeName>Sanctum Gundulfum</placeName>, cum assensu <rs type="person"><persName>Mathei</persName> archidiaconi</rs> et <rs type="person"><persName>Jerberti</persName> archipresbiteri</rs> aliorumque clericorum
                   meorum qui aderant ; atque in perpetuum quiete possidendam concessi.</s>
-                <s>Et ut firmum ratumque permaneat hoc donum, in manu <rs type="person"
-                      ><persName>Gisleberti</persName>, prioris <placeName>Sancti
+                <s>Et ut firmum ratumque permaneat hoc donum, in manu <rs type="person"><persName>Gisleberti</persName>, prioris <placeName>Sancti
                       Florentii</placeName></rs>, cum quadam cirotheca sollempniter posui ; et
                   sigillo meo hanc cartam muniri precepi et manu propria subscripsi.</s>
-                <s>Hujus rei testes sunt qui interfuerunt : <rs type="person"
-                      ><persName>Girardus</persName>
-                    <placeName>Engolismensis</placeName> episcopus</rs>, <rs type="person"
-                      ><persName>Galo</persName>
+                <s>Hujus rei testes sunt qui interfuerunt : <rs type="person"><persName>Girardus</persName>
+                    <placeName>Engolismensis</placeName> episcopus</rs>, <rs type="person"><persName>Galo</persName>
                     <placeName>Leonensis</placeName> episcopus et <placeName>Sancti
-                      Florentii</placeName> monachus</rs>, <rs type="person"
-                      ><persName>Matheus</persName> archidiaconus</rs>, <rs type="person"
-                      ><persName>Jerbertus</persName> archipresbiter</rs>, <rs type="person"
-                      ><persName>Robertus</persName> presbiter</rs>, <rs type="person"
-                      ><persName>Gislebertus</persName> prior <placeName>Sancti
+                      Florentii</placeName> monachus</rs>, <rs type="person"><persName>Matheus</persName> archidiaconus</rs>, <rs type="person"><persName>Jerbertus</persName> archipresbiter</rs>, <rs type="person"><persName>Robertus</persName> presbiter</rs>, <rs type="person"><persName>Gislebertus</persName> prior <placeName>Sancti
                     Gundulfi</placeName></rs>, <persName>Robertus</persName> monachus.</s>
               </p>
               <p>
                 <s>Facta est autem ista donatio <placeName>Bituricas</placeName>, in refectorio
-                    <placeName>sancti Stephani</placeName>, <date>anno <num>MCVIII<hi rend="sup"
-                        >o</hi></num> ab incarnatione Domini, indictione prima ; regnante <rs
-                      type="person"><persName>Francorum</persName> rege
+                    <placeName>sancti Stephani</placeName>, <date>anno <num>MCVIII<hi rend="sup">o</hi></num> ab incarnatione Domini, indictione prima ; regnante <rs type="person"><persName>Francorum</persName> rege
                       <persName>Philipo</persName></rs></date>.</s>
               </p>
               <p>
@@ -2814,8 +2655,7 @@
             <div type="notes">
               <note xml:id="p51_fn1">La signature de l'évêque d'Angoulême se compose d'un double S,
                 traversé obliquement par un trait ; c'est-à-dire ce qu'on a appelé des S barrés à la
-                fin du XVI<hi rend="sup">e</hi> siècle et au commencement du XVII<hi rend="sup"
-                  >e</hi>.</note>
+                fin du XVI<hi rend="sup">e</hi> siècle et au commencement du XVII<hi rend="sup">e</hi>.</note>
             </div>
           </back>
         </text>
@@ -2878,11 +2718,8 @@
                   ecclesiis ullam omnino infestationem vel calumpniam inferat.</s>
               </p>
               <p>
-                <s>Datum <placeName>Gargovii</placeName>, per manum <rs type="person"
-                      ><persName>Galoni</persName> episcopi</rs>, monachi <placeName>Sancti
-                    Florentii</placeName>, <date><num><hi rend="sc">vii</hi><hi rend="sup"
-                      >o</hi></num> idus decembris, anno incarnationis Dominice <num>MCXI<hi
-                        rend="sup">o</hi></num></date> ; regnante <persName>Ludovico</persName> rege
+                <s>Datum <placeName>Gargovii</placeName>, per manum <rs type="person"><persName>Galoni</persName> episcopi</rs>, monachi <placeName>Sancti
+                    Florentii</placeName>, <date><num><hi rend="sc">vii</hi><hi rend="sup">o</hi></num> idus decembris, anno incarnationis Dominice <num>MCXI<hi rend="sup">o</hi></num></date> ; regnante <persName>Ludovico</persName> rege
                   anno <num>IV<hi rend="sup">o</hi></num>.</s>
               </p>
               <p>
@@ -2931,8 +2768,7 @@
                   sui <persName>Timerii</persName> atque pro animabus aliorum parentum.</s>
                 <s>Hujus rei sunt testes : <rs type="person"><persName>Girardus</persName>
                     prior</rs>, <persName>Bernerius</persName>, <persName>Rainaldus</persName>,
-                    <persName>Goslenus</persName>, <persName>Rainaldus</persName> sacerdos, <rs
-                    type="person"><persName>Giraudus</persName> faber</rs>, <persName>Hugenus de
+                    <persName>Goslenus</persName>, <persName>Rainaldus</persName> sacerdos, <rs type="person"><persName>Giraudus</persName> faber</rs>, <persName>Hugenus de
                     Porta</persName>, <persName>Gunbertus</persName>.</s>
               </p>
             </div>
@@ -2989,8 +2825,7 @@
                     <placeName>Colons</placeName>, et de <persName>Noa Ernardi</persName> omnibus
                   calupniis, ut jam diximus, postpositis.</s>
                 <s>Et ut hec concessio sive donatio firma et stabilis permaneret, ipse
-                    <persName>Erchembaldus</persName> hanc cartam signo suo presignavit ; et <rs
-                    type="person">uxor sua <persName>Guiburgis</persName></rs> et filii ejus, qui
+                    <persName>Erchembaldus</persName> hanc cartam signo suo presignavit ; et <rs type="person">uxor sua <persName>Guiburgis</persName></rs> et filii ejus, qui
                   volenti animo et cartam signis signaverunt et concesserunt.</s>
                 <s>Domnus quoque <persName>Erchembaldus de Soliaco</persName>, per cujus manum hec
                   acta sunt, laudavit et voluit, et hanc cartam signo suo et sigillo confirmavit ;
@@ -3002,8 +2837,7 @@
                 <s>Testes sunt : <rs type="person"><persName>Rogerius</persName> prior</rs>,
                     <persName>Goridanus</persName>, <persName>Gauterius</persName>,
                     <persName>Filipus</persName>, et isti sunt monachi ;
-                  <persName>Margot</persName>, <rs type="person"><persName>Rainaudus</persName><pb
-                      n="55"/> presbiter</rs>, <persName>Rainaudus de Petra Marol</persName>,
+                  <persName>Margot</persName>, <rs type="person"><persName>Rainaudus</persName><pb n="55"/> presbiter</rs>, <persName>Rainaudus de Petra Marol</persName>,
                     <persName>Daniel Geschipi</persName>, <persName>Gima</persName>,
                     <persName>Mazet</persName><ref type="note" target="#p55_fn1"/>.</s>
               </p>
@@ -3120,8 +2954,7 @@
                     Soliaco</persName>, anime sue ac parentum suorum perpetue utilitati providens,
                   concessit Deo et <rs type="person">Sancto <persName>Gundulfo</persName></rs>
                   monachisque <placeName>Beati Florentii</placeName> ibi Deo famulantibus, feriam
-                    <date>ad festum Sancti Gundulfi</date> celebratam, qui est <date><num><hi
-                        rend="sc">xv</hi><hi rend="sup">o</hi></num> kalendas novembris</date> ;
+                    <date>ad festum Sancti Gundulfi</date> celebratam, qui est <date><num><hi rend="sc">xv</hi><hi rend="sup">o</hi></num> kalendas novembris</date> ;
                   secundum consuetudinem alterius ferie que est in estate, hereditario jure
                   possidendam.</s>
                 <s>Hoc concessit in castro sepedicti <placeName>Sancti</placeName>, ante fores
@@ -3131,9 +2964,7 @@
               <p>
                 <s>Hujus autem rei quamplurimi testes affuerunt.</s>
                 <s>Ex parte monachorum : ipse <rs type="person"><persName>Bartholomeus</persName>
-                    tunc prior</rs>, <persName>Ige<pb n="57"/>rius Robed</persName>, <rs
-                    type="person"><persName>Benedictus</persName> condonatus noster</rs>, et <rs
-                    type="person"><persName>Gofredus</persName> capellanus noster</rs> ; et famuli
+                    tunc prior</rs>, <persName>Ige<pb n="57"/>rius Robed</persName>, <rs type="person"><persName>Benedictus</persName> condonatus noster</rs>, et <rs type="person"><persName>Gofredus</persName> capellanus noster</rs> ; et famuli
                   nostri : <persName>Johannes Burlot</persName>, <persName>Robertus de
                     Villa</persName>
                   <persName>Nova</persName>, et <persName>Saaciers</persName> et
@@ -3144,8 +2975,7 @@
                     <persName>Robertus Sarafles</persName>, <persName>Bernardus de
                   Insula</persName>, <persName>Bernardus de Scannis</persName>, <persName>Gilo
                     Mala</persName>
-                  <persName>Brueire</persName> ; de clientibus : <rs type="person"
-                      ><persName>Andreas</persName> prefetus</rs>, <persName>Herbertus
+                  <persName>Brueire</persName> ; de clientibus : <rs type="person"><persName>Andreas</persName> prefetus</rs>, <persName>Herbertus
                     Passet</persName>, <persName>Henricus Mauferas</persName>, <persName>Hugo
                     Saul</persName> ; de burgenssibus : <persName>Andreas Mathet</persName>,
                     <persName>Johannes Boler</persName>, <persName>Hemericus de Porta</persName>,
@@ -3186,8 +3016,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Sciant tam moderni quam posteri quod <rs type="person"><persName>Gilo</persName>,
-                    dominus <placeName>Soliaci</placeName></rs>, habens guerram cum <rs
-                    type="person"><persName>Johanne</persName> fratre suo</rs>, portallum
+                    dominus <placeName>Soliaci</placeName></rs>, habens guerram cum <rs type="person"><persName>Johanne</persName> fratre suo</rs>, portallum
                   monachorum, quod erat in murum castri apud pontem suum, obturari precepit.</s>
                 <s>Monachi vero ibidem commorantes, de tanta injuria contristati, ad dominum
                     <persName>Gilonem</persName> cum <rs type="person"><persName>Radulpho</persName>
@@ -3207,12 +3036,7 @@
                 <s>Ex utraque parte testes fuerunt.</s>
                 <s>Ex parte monachorum : <rs type="person"><persName>Radulphus</persName> prior
                       <placeName>Caritatis</placeName></rs>, <rs type="person"><persName>Goffredus
-                      de Sancto Gundulfo</persName> tunc temporis prior</rs>, <rs type="person"
-                      ><persName>Raginaldus de Salmuro</persName> monachus</rs>, <rs type="person"
-                      ><persName>Arnaudus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Goscelinus</persName> monachus</rs>, <rs type="person"
-                      ><persName>Goffredus</persName> capellanus</rs>, <rs type="person"
-                      ><persName>Johannes</persName> clericus</rs>, <persName>Nariodus</persName>,
+                      de Sancto Gundulfo</persName> tunc temporis prior</rs>, <rs type="person"><persName>Raginaldus de Salmuro</persName> monachus</rs>, <rs type="person"><persName>Arnaudus</persName> monachus</rs>, <rs type="person"><persName>Goscelinus</persName> monachus</rs>, <rs type="person"><persName>Goffredus</persName> capellanus</rs>, <rs type="person"><persName>Johannes</persName> clericus</rs>, <persName>Nariodus</persName>,
                     <persName>Rainaudus de Leone</persName>.</s>
                 <s>Ex parte domini <persName>Gilonis</persName> : <persName>Hugo de
                     Lievrio</persName>, <persName>Bernaldus de Insula</persName>, <persName>Robertus
@@ -3298,12 +3122,10 @@
                 <s>Signum <persName>Lisoii</persName> †, qui hanc kartam fieri precepit.</s>
               </p>
               <p>
-                <s>Signum <rs type="person"><persName>Hersendis</persName> uxoris ejus<ref
-                      type="note" target="#p60_fn1"/></rs>.</s>
+                <s>Signum <rs type="person"><persName>Hersendis</persName> uxoris ejus<ref type="note" target="#p60_fn1"/></rs>.</s>
               </p>
               <p>
-                <s>Signum <rs type="person"><persName>Sulpicii</persName> filii ejus</rs>, atque <rs
-                    type="person"><persName>Hugonis</persName> fratris ejus</rs> †.</s>
+                <s>Signum <rs type="person"><persName>Sulpicii</persName> filii ejus</rs>, atque <rs type="person"><persName>Hugonis</persName> fratris ejus</rs> †.</s>
               </p>
               <p>
                 <s>Signum <persName>Girardi</persName> prepositi.</s>
@@ -3326,8 +3148,7 @@
                 l'histoire de France, pages 116, 169 et suivantes.</note>
               <note xml:id="p60_fn1">Après ce nom, celui de Hugue et chacun des suivants, il y a une
                 M accompagnée d'un trait. Les derniers mots du texte prouvent que cette abréviation
-                signifie <hi rend="i">quœ</hi> ou <hi rend="i">qui manu tetigit,</hi> ou <hi
-                  rend="i">manu firmavit.</hi></note>
+                signifie <hi rend="i">quœ</hi> ou <hi rend="i">qui manu tetigit,</hi> ou <hi rend="i">manu firmavit.</hi></note>
             </div>
           </back>
         </text>
@@ -3338,55 +3159,34 @@
       <div>
         <list type="index" xml:id="listPlace">
           <head>Table par noms de lieux</head>
-          <item><placeName>Albanensis</placeName> episc. Richardus legatus apostolicæ sedis <ref
-              target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref>, <ref
-              target="#S-Gondon_0013">13</ref>.</item>
+          <item><placeName>Albanensis</placeName> episc. Richardus legatus apostolicæ sedis <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0013">13</ref>.</item>
           <item><placeName>Andegavensis</placeName> pagus <ref target="#S-Gondon_0003">3</ref> ;
-            episc. Rainaldus <ref target="#S-Gondon_0011">11</ref> ; archid. Guillelmus <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
+            episc. Rainaldus <ref target="#S-Gondon_0011">11</ref> ; archid. Guillelmus <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
           <item><placeName>Aurelianensis</placeName> pagus <ref target="#S-Gondon_0017">17</ref> ;
-            rivus <ref target="#S-Gondon_0010">10</ref> ; episc. Johannes, <ref
-              target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0029">29</ref>.</item>
-          <item><placeName>Bituricas</placeName><ref target="#S-Gondon_0004">4</ref>, <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0028">28</ref>.</item>
-          <item><placeName>Bituricensis</placeName> archiep. Aldebertus, Hildebertus, <ref
-              target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref
-              target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0014">14</ref> ; Leodegarius,
+            rivus <ref target="#S-Gondon_0010">10</ref> ; episc. Johannes, <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0029">29</ref>.</item>
+          <item><placeName>Bituricas</placeName><ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0028">28</ref>.</item>
+          <item><placeName>Bituricensis</placeName> archiep. Aldebertus, Hildebertus, <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0014">14</ref> ; Leodegarius,
             Ligerius <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0028">28</ref> ;
-            archid. Letardus, Matheus <ref target="#S-Gondon_0008">8</ref>, <ref
-              target="#S-Gondon_0028">28</ref> ; archip. Jerbertus <ref target="#S-Gondon_0028"
-              >28</ref> ; vicecomes <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0008"
-              >8</ref>, <ref target="#S-Gondon_0012">12</ref>. Guillelmus <ref target="#S-Gondon_0024"
-              >24</ref>.</item>
+            archid. Letardus, Matheus <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0028">28</ref> ; archip. Jerbertus <ref target="#S-Gondon_0028">28</ref> ; vicecomes <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0012">12</ref>. Guillelmus <ref target="#S-Gondon_0024">24</ref>.</item>
           <item><placeName>Blesensis</placeName> moneta <ref target="#S-Gondon_0007">7</ref> ; comes
-            Stephanus, Agnes ux. ejus, Willelmus fil. ejus, Garnerius et Gervasius dapifieri <ref
-              target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0010">10</ref>.</item>
+            Stephanus, Agnes ux. ejus, Willelmus fil. ejus, Garnerius et Gervasius dapifieri <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0010">10</ref>.</item>
           <item><placeName>Blesis</placeName><ref target="#S-Gondon_0008">8</ref>.</item>
           <item><placeName>Brieria</placeName><ref target="#S-Gondon_0017">17</ref>.</item>
           <item><placeName>Calvus Mons</placeName><ref target="#S-Gondon_0035">35</ref>.</item>
-          <item><placeName>Caritas,</placeName> prior Radulfus, fr. Gilonis de Soliaco <ref
-              target="#S-Gondon_0034">34</ref>.</item>
-          <item><placeName>Carnotensis</placeName> episc. Ivo <ref target="#S-Gondon_0011"
-            >11</ref>.</item>
-          <item><placeName>Castellana</placeName> civitas <ref target="#S-Gondon_0013"
-            >13</ref>.</item>
+          <item><placeName>Caritas,</placeName> prior Radulfus, fr. Gilonis de Soliaco <ref target="#S-Gondon_0034">34</ref>.</item>
+          <item><placeName>Carnotensis</placeName> episc. Ivo <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Castellana</placeName> civitas <ref target="#S-Gondon_0013">13</ref>.</item>
           <item><placeName>Cognia, Conia</placeName> fluvius <ref target="#S-Gondon_0018">18</ref>,
               <ref target="#S-Gondon_0023">23</ref>, <ref target="#S-Gondon_0030">30</ref>.</item>
           <item><placeName>Colom</placeName> terra <ref target="#S-Gondon_0031">31</ref> ; eccl. S.
             Stephani <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0028">28</ref> ;
-            Bernardus, fil. et nepos ejus <ref target="#S-Gondon_0024">24</ref> ; Forredus <ref
-              target="#S-Gondon_0024">24</ref>.</item>
-          <item><placeName>Curthualdo</placeName> decima <ref target="#S-Gondon_0014"
-            >14</ref>.</item>
+            Bernardus, fil. et nepos ejus <ref target="#S-Gondon_0024">24</ref> ; Forredus <ref target="#S-Gondon_0024">24</ref>.</item>
+          <item><placeName>Curthualdo</placeName> decima <ref target="#S-Gondon_0014">14</ref>.</item>
           <item><placeName>Daniciacus</placeName> villa <ref target="#S-Gondon_0003">3</ref>.</item>
           <item><placeName>Doadensis</placeName> vicaria <ref target="#S-Gondon_0003">3</ref>.</item>
-          <item><placeName>Engolismensis</placeName> episc. Girardus <ref target="#S-Gondon_0011"
-              >11</ref>, <ref target="#S-Gondon_0028">28</ref>.</item>
-          <item><placeName>Franciæ</placeName> reges <ref target="#S-Gondon_0011">11</ref>, <ref
-              target="#S-Gondon_0012">12</ref> ; Carlomannus <ref target="#S-Gondon_0002">2</ref> ;
-            Carolus <ref target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0003">3</ref>, <ref
-              target="#S-Gondon_0013">13</ref> ; Ludovicus <ref target="#S-Gondon_0029">29</ref> ;
+          <item><placeName>Engolismensis</placeName> episc. Girardus <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0028">28</ref>.</item>
+          <item><placeName>Franciæ</placeName> reges <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref> ; Carlomannus <ref target="#S-Gondon_0002">2</ref> ;
+            Carolus <ref target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0003">3</ref>, <ref target="#S-Gondon_0013">13</ref> ; Ludovicus <ref target="#S-Gondon_0029">29</ref> ;
             Philippus <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0011">11</ref>,
               <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0028">28</ref>.</item>
           <item><placeName>Franconis</placeName> terra <ref target="#S-Gondon_0026">26</ref>.</item>
@@ -3394,283 +3194,158 @@
           <item><placeName>Geon, Giomum</placeName> castrum <ref target="#S-Gondon_0010">10</ref>,
               <ref target="#S-Gondon_0017">17</ref>, <ref target="#S-Gondon_0025">25</ref> ; comes
             Goffredus <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0010">10</ref>,
-              <ref target="#S-Gondon_0019">19</ref> ; Baronet sutor, et familia ejus <ref
-              target="#S-Gondon_0017">17</ref> ; Margotus <ref target="#S-Gondon_0008">8</ref>.</item>
+              <ref target="#S-Gondon_0019">19</ref> ; Baronet sutor, et familia ejus <ref target="#S-Gondon_0017">17</ref> ; Margotus <ref target="#S-Gondon_0008">8</ref>.</item>
           <pb n="page 62"/>
           <item><placeName>Haiœ,</placeName> dangio, <ref target="#S-Gondon_0008">8</ref>.</item>
-          <item><placeName>Jerusalem</placeName><ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0023">23</ref>.</item>
+          <item><placeName>Jerusalem</placeName><ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0023">23</ref>.</item>
           <item><placeName>Lateranis</placeName><ref target="#S-Gondon_0013">13</ref>.</item>
           <item><placeName>Leon,</placeName> ecclesiæ <ref target="#S-Gondon_0029">29</ref>.</item>
-          <item><placeName>Leonensis</placeName> episc. Galo, mon. S. Florentii <ref
-              target="#S-Gondon_0027">27</ref>, <ref target="#S-Gondon_0028">28</ref>, <ref
-              target="#S-Gondon_0029">29</ref>.</item>
-          <item><placeName>Ligeris</placeName><ref target="#S-Gondon_0001">1</ref>, <ref
-              target="#S-Gondon_0002">2</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref
-              target="#S-Gondon_0017">17</ref>.</item>
-          <item><placeName>Lucionensis</placeName> abbas Rainaldus <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
-          <item><placeName>Lugdunensis</placeName> mag. Anselmus <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
-          <item><placeName>Majus Monasterium [Turonense]</placeName>, abbas Hilgodus <ref
-              target="#S-Gondon_0011">11</ref> ; mon. Guillelmus <ref target="#S-Gondon_0009"
-            >9</ref>.</item>
+          <item><placeName>Leonensis</placeName> episc. Galo, mon. S. Florentii <ref target="#S-Gondon_0027">27</ref>, <ref target="#S-Gondon_0028">28</ref>, <ref target="#S-Gondon_0029">29</ref>.</item>
+          <item><placeName>Ligeris</placeName><ref target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0002">2</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0017">17</ref>.</item>
+          <item><placeName>Lucionensis</placeName> abbas Rainaldus <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Lugdunensis</placeName> mag. Anselmus <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Majus Monasterium [Turonense]</placeName>, abbas Hilgodus <ref target="#S-Gondon_0011">11</ref> ; mon. Guillelmus <ref target="#S-Gondon_0009">9</ref>.</item>
           <item><placeName>Massolen,</placeName> decima <ref target="#S-Gondon_0024">24</ref> ;
             Girardus <ref target="#S-Gondon_0024">24</ref>.</item>
           <item><placeName>Mesum Martini</placeName><ref target="#S-Gondon_0021">21</ref>.</item>
           <item><placeName>Monesterol</placeName><ref target="#S-Gondon_0027">27</ref>.</item>
           <item><placeName>Monesto,</placeName><ref target="#S-Gondon_0034">34</ref>.</item>
           <item><placeName>Noa Ernardi</placeName><ref target="#S-Gondon_0031">31</ref>.</item>
-          <item><placeName>Nobiliacus,</placeName> cella S. Gundulfi <ref target="#S-Gondon_0001"
-              >1</ref>, <ref target="#S-Gondon_0002">2</ref>.</item>
+          <item><placeName>Nobiliacus,</placeName> cella S. Gundulfi <ref target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0002">2</ref>.</item>
           <item><placeName>Pauliacus,</placeName> vicus <ref target="#S-Gondon_0002">2</ref>.</item>
           <item><placeName>Petra Marol</placeName><ref target="#S-Gondon_0019">19</ref> ; Rainaudus
               <ref target="#S-Gondon_0031">31</ref>.</item>
           <item><placeName>Petra Miracli</placeName><ref target="#S-Gondon_0015">15</ref>.</item>
-          <item><placeName>Pictavensis</placeName> archid. <ref target="#S-Gondon_0011"
-            >11</ref>.</item>
+          <item><placeName>Pictavensis</placeName> archid. <ref target="#S-Gondon_0011">11</ref>.</item>
           <item><placeName>Podium Bosonis</placeName><ref target="#S-Gondon_0015">15</ref>.</item>
-          <item><placeName>Redonensis</placeName> episc. Marbodus <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
+          <item><placeName>Redonensis</placeName> episc. Marbodus <ref target="#S-Gondon_0011">11</ref>.</item>
           <item><placeName>Runzaan</placeName><ref target="#S-Gondon_0015">15</ref> ; rustici Dodo et
             Tetbaldus <ref target="#S-Gondon_0015">15</ref>.</item>
           <item><placeName>Salmurensis</placeName> abbatia S. Florentii,
             <foreign>passim.</foreign></item>
           <item><placeName>Sancerrensis</placeName> moneta <ref target="#S-Gondon_0026">26</ref> ;
             Galdricus <ref target="#S-Gondon_0008">8</ref>.</item>
-          <item><placeName>Sanctus Benedictus de super Ligerim,</placeName> abbas Symon <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
-          <item><placeName>Cyprianus Pictavensis,</placeName> abbas Rainaldus <ref
-              target="#S-Gondon_0009">9</ref>.</item>
+          <item><placeName>Sanctus Benedictus de super Ligerim,</placeName> abbas Symon <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Cyprianus Pictavensis,</placeName> abbas Rainaldus <ref target="#S-Gondon_0009">9</ref>.</item>
           <item><placeName>Florentius</placeName> abbas : Dido <ref target="#S-Gondon_0001">1</ref>,
               <ref target="#S-Gondon_0002">2</ref> ; Guillelmus <ref target="#S-Gondon_0004">4</ref>,
-              <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref
-              target="#S-Gondon_0012">12</ref> ; Hecfridus <ref target="#S-Gondon_0001">1</ref> ;
-            Philippus <ref target="#S-Gondon_0013">13</ref> ; Rodulfus <ref target="#S-Gondon_0002"
-              >2</ref> ; Walterius <ref target="#S-Gondon_0003">3</ref>. Mon. <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
-          <item><placeName>Florentius,</placeName> ecclesia diocesis Aurelianensis <ref
-              target="#S-Gondon_0029">29</ref>.</item>
-          <item><placeName>Sanctus Gundulfus,</placeName> cella in villa Nobiliacus <ref
-              target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0002">2</ref> ; claustrum, <ref
-              target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref
-              target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0032">32</ref>, <ref
-              target="#S-Gondon_0034">34</ref> ; eccl. <ref target="#S-Gondon_0007">7</ref>, <ref
-              target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref>, <ref
-              target="#S-Gondon_0013">13</ref>, <ref target="#S-Gondon_0024">24</ref> ; monasterium
-              <ref target="#S-Gondon_0003">3</ref>, <ref target="#S-Gondon_0004">4</ref>, <ref
-              target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0019">19</ref> ; castrum <ref
-              target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0020">20</ref>, <ref
-              target="#S-Gondon_0029">29</ref>, <ref target="#S-Gondon_0033">33</ref>, <ref
-              target="#S-Gondon_0034">34</ref> ; feria <ref target="#S-Gondon_0033">33</ref> ; furnus
+              <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref> ; Hecfridus <ref target="#S-Gondon_0001">1</ref> ;
+            Philippus <ref target="#S-Gondon_0013">13</ref> ; Rodulfus <ref target="#S-Gondon_0002">2</ref> ; Walterius <ref target="#S-Gondon_0003">3</ref>. Mon. <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Florentius,</placeName> ecclesia diocesis Aurelianensis <ref target="#S-Gondon_0029">29</ref>.</item>
+          <item><placeName>Sanctus Gundulfus,</placeName> cella in villa Nobiliacus <ref target="#S-Gondon_0001">1</ref>, <ref target="#S-Gondon_0002">2</ref> ; claustrum, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0032">32</ref>, <ref target="#S-Gondon_0034">34</ref> ; eccl. <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0013">13</ref>, <ref target="#S-Gondon_0024">24</ref> ; monasterium
+              <ref target="#S-Gondon_0003">3</ref>, <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0019">19</ref> ; castrum <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0029">29</ref>, <ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034">34</ref> ; feria <ref target="#S-Gondon_0033">33</ref> ; furnus
               <ref target="#S-Gondon_0025">25</ref> ; turris <ref target="#S-Gondon_0010">10</ref>,
               <ref target="#S-Gondon_0018">18</ref>.</item>
-          <item>Priores : Ademarus <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007"
-              >7</ref> ; Bartholomeus <ref target="#S-Gondon_0033">33</ref> ; Galo <ref
-              target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref
-              target="#S-Gondon_0025">25</ref>, <ref target="#S-Gondon_0026">26</ref> ; Girardus <ref
-              target="#S-Gondon_0030">30</ref> ; Giraudus <ref target="#S-Gondon_0019">19</ref> ;
-            Gislebertus <ref target="#S-Gondon_0028">28</ref> ; Goffredus <ref target="#S-Gondon_0034"
-              >34</ref> ; Rogerius <ref target="#S-Gondon_0031">31</ref>.</item>
-          <item>Monachi : Arnaudus <ref target="#S-Gondon_0034">34</ref> ; Fulco <ref
-              target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0006">6</ref>, <ref
-              target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref
-              target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0017">17</ref>, <ref
-              target="#S-Gondon_0018">18</ref> ; Fulco de Bel Prael <ref target="#S-Gondon_0007"
-              >7</ref>, <ref target="#S-Gondon_0010">10</ref> ; Gainaudus Caruronus <ref
-              target="#S-Gondon_0024">24</ref> ; Galo <ref target="#S-Gondon_0020">20</ref>, <ref
-              target="#S-Gondon_0022">22</ref>, <ref target="#S-Gondon_0025">25</ref>, <ref
-              target="#S-Gondon_0026">26</ref>, <ref target="#S-Gondon_0027">27</ref> ; Gauterius <ref
-              target="#S-Gondon_0031">31</ref> ; Geraldus <ref target="#S-Gondon_0014">14</ref> ;
-            Giraldus <ref target="#S-Gondon_0015">15</ref> ; Girardus <ref target="#S-Gondon_0019"
-              >19</ref>, <ref target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0022">22</ref>,
-              <ref target="#S-Gondon_0025">25</ref> ; Girardus Nutritus <ref target="#S-Gondon_0019"
-              >19</ref>, <ref target="#S-Gondon_0023">23</ref> ; Gislebertus <ref
-              target="#S-Gondon_0016">16</ref> ; Goscelinus <ref target="#S-Gondon_0034">34</ref> ;
-            Goridanus <ref target="#S-Gondon_0031">31</ref> ; Gosfridus <ref target="#S-Gondon_0025"
-              >25</ref> ; Gradulfus <ref target="#S-Gondon_0025">25</ref> ; Ingenulfus <ref
-              target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0008">8</ref>, <ref
-              target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref> ; Philippus <ref
-              target="#S-Gondon_0031">31</ref> ; Raginaldus <ref target="#S-Gondon_0019">19</ref> ;
-            Raginaldus de Salmuro <ref target="#S-Gondon_0034">34</ref> ; Robertus <ref
-              target="#S-Gondon_0019">19</ref> ; Robertus Braiocensis, Robertus Rufus <ref
-              target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0027">27</ref> ; Zacharias <ref
-              target="#S-Gondon_0009">9</ref>. Capellanus Gofredus <ref target="#S-Gondon_0033"
-              >33</ref>, <ref target="#S-Gondon_0034">34</ref>. Condonatus mon. Benedictus <ref
-              target="#S-Gondon_0033">33</ref> ; famuli <ref target="#S-Gondon_0016">16</ref>, <ref
-              target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0021">21</ref>, <ref
-              target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref>, <ref
-              target="#S-Gondon_0026">26</ref>, <ref target="#S-Gondon_0027">27</ref>, <ref
-              target="#S-Gondon_0033">33</ref> ; præpositus Walterius <ref target="#S-Gondon_0003"
-              >3</ref>.</item>
+          <item>Priores : Ademarus <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007">7</ref> ; Bartholomeus <ref target="#S-Gondon_0033">33</ref> ; Galo <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref>, <ref target="#S-Gondon_0026">26</ref> ; Girardus <ref target="#S-Gondon_0030">30</ref> ; Giraudus <ref target="#S-Gondon_0019">19</ref> ;
+            Gislebertus <ref target="#S-Gondon_0028">28</ref> ; Goffredus <ref target="#S-Gondon_0034">34</ref> ; Rogerius <ref target="#S-Gondon_0031">31</ref>.</item>
+          <item>Monachi : Arnaudus <ref target="#S-Gondon_0034">34</ref> ; Fulco <ref target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0017">17</ref>, <ref target="#S-Gondon_0018">18</ref> ; Fulco de Bel Prael <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0010">10</ref> ; Gainaudus Caruronus <ref target="#S-Gondon_0024">24</ref> ; Galo <ref target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0022">22</ref>, <ref target="#S-Gondon_0025">25</ref>, <ref target="#S-Gondon_0026">26</ref>, <ref target="#S-Gondon_0027">27</ref> ; Gauterius <ref target="#S-Gondon_0031">31</ref> ; Geraldus <ref target="#S-Gondon_0014">14</ref> ;
+            Giraldus <ref target="#S-Gondon_0015">15</ref> ; Girardus <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0022">22</ref>,
+              <ref target="#S-Gondon_0025">25</ref> ; Girardus Nutritus <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0023">23</ref> ; Gislebertus <ref target="#S-Gondon_0016">16</ref> ; Goscelinus <ref target="#S-Gondon_0034">34</ref> ;
+            Goridanus <ref target="#S-Gondon_0031">31</ref> ; Gosfridus <ref target="#S-Gondon_0025">25</ref> ; Gradulfus <ref target="#S-Gondon_0025">25</ref> ; Ingenulfus <ref target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref> ; Philippus <ref target="#S-Gondon_0031">31</ref> ; Raginaldus <ref target="#S-Gondon_0019">19</ref> ;
+            Raginaldus de Salmuro <ref target="#S-Gondon_0034">34</ref> ; Robertus <ref target="#S-Gondon_0019">19</ref> ; Robertus Braiocensis, Robertus Rufus <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0027">27</ref> ; Zacharias <ref target="#S-Gondon_0009">9</ref>. Capellanus Gofredus <ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034">34</ref>. Condonatus mon. Benedictus <ref target="#S-Gondon_0033">33</ref> ; famuli <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref>, <ref target="#S-Gondon_0026">26</ref>, <ref target="#S-Gondon_0027">27</ref>, <ref target="#S-Gondon_0033">33</ref> ; præpositus Walterius <ref target="#S-Gondon_0003">3</ref>.</item>
           <item><placeName>S. Gundulfo [de] Burdinus</placeName><ref target="#S-Gondon_0006">6</ref>
-            ; Erchembaldus, ux. ejus et filii <ref target="#S-Gondon_0031">31</ref>, <ref
-              target="#S-Gondon_0032">32</ref>, <ref target="#S-Gondon_0033">33</ref> ; Hugo, ux. ejus
+            ; Erchembaldus, ux. ejus et filii <ref target="#S-Gondon_0031">31</ref>, <ref target="#S-Gondon_0032">32</ref>, <ref target="#S-Gondon_0033">33</ref> ; Hugo, ux. ejus
             et filii <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0026">26</ref> ;
-            Radulfus, ux. ejus, filii, soror, <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref
-              target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0018">18</ref>, <ref
-              target="#S-Gondon_0019">19</ref> ; Renardus et filii <ref target="#S-Gondon_0032"
-              >32</ref> ; Robertus <ref target="#S-Gondon_0023">23</ref>.</item>
+            Radulfus, ux. ejus, filii, soror, <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0018">18</ref>, <ref target="#S-Gondon_0019">19</ref> ; Renardus et filii <ref target="#S-Gondon_0032">32</ref> ; Robertus <ref target="#S-Gondon_0023">23</ref>.</item>
           <item><placeName>Sanctus Jovinus [de Marnis]</placeName>, abbas Briccius et monachi ejus
               <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref>.</item>
           <item/>
-          <item><placeName>Maximinus [Miciacensis]</placeName>, abbas Christianus <ref
-              target="#S-Gondon_0011">11</ref>.</item>
-          <item><placeName>Senonensis</placeName> archiep. Daibertus <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
+          <item><placeName>Maximinus [Miciacensis]</placeName>, abbas Christianus <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Senonensis</placeName> archiep. Daibertus <ref target="#S-Gondon_0011">11</ref>.</item>
           <item><placeName>Signum Cesaris</placeName><ref target="#S-Gondon_0018">18</ref>.</item>
-          <item><placeName>Silvanectis civitas</placeName><ref target="#S-Gondon_0001"
-            >1</ref>.</item>
-          <item><placeName>Soliacum</placeName><ref target="#S-Gondon_0006">6</ref>, <ref
-              target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0026">26</ref> ; turris <ref target="#S-Gondon_0026">26</ref> ; comes
+          <item><placeName>Silvanectis civitas</placeName><ref target="#S-Gondon_0001">1</ref>.</item>
+          <item><placeName>Soliacum</placeName><ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0026">26</ref> ; turris <ref target="#S-Gondon_0026">26</ref> ; comes
             Erchembaldus <ref target="#S-Gondon_0031">31</ref>, <ref target="#S-Gondon_0032">32</ref>
-            ; Gilo, Aldeburgis ux. ejus, Agnes filia <ref target="#S-Gondon_0004">4</ref>, <ref
-              target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0006">6</ref>, <ref
-              target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0008">8</ref>, <ref
-              target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref> ; Gilo et
-            fratres ejus <ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034"
-            >34</ref>.</item>
+            ; Gilo, Aldeburgis ux. ejus, Agnes filia <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0005">5</ref>, <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0011">11</ref>, <ref target="#S-Gondon_0012">12</ref> ; Gilo et
+            fratres ejus <ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034">34</ref>.</item>
           <pb n="page 63"/>
           <item><placeName>Travul</placeName> terra <ref target="#S-Gondon_0019">19</ref>.</item>
-          <item><placeName>Tresense</placeName> concilium <ref target="#S-Gondon_0011"
-            >11</ref>.</item>
-          <item><placeName>Trecensis</placeName> mag. Drogo <ref target="#S-Gondon_0011"
-            >11</ref>.</item>
-          <item><placeName>Turonensis</placeName> archiep. Radulfus <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
-          <item><placeName>Vallis Ligeris,</placeName> terra, <ref target="#S-Gondon_0019"
-            >19</ref>.</item>
+          <item><placeName>Tresense</placeName> concilium <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Trecensis</placeName> mag. Drogo <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Turonensis</placeName> archiep. Radulfus <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><placeName>Vallis Ligeris,</placeName> terra, <ref target="#S-Gondon_0019">19</ref>.</item>
           <item><placeName>Villa Maconis</placeName><ref target="#S-Gondon_0015">15</ref>.</item>
-          <item><placeName>Vinnalium, Vinneaun, Vinio</placeName><ref target="#S-Gondon_0015"
-              >15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0020"
-            >20</ref>.</item>
+          <item><placeName>Vinnalium, Vinneaun, Vinio</placeName><ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0020">20</ref>.</item>
           <item><placeName>Virsio</placeName><ref target="#S-Gondon_0004">4</ref> ; Fulco, Gosfredus,
               <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0005">5</ref>.</item>
-          <item><placeName>Virsionensis</placeName> abbas : Herbertus <ref target="#S-Gondon_0009"
-              >9</ref>, <ref target="#S-Gondon_0011">11</ref> ; P. <ref target="#S-Gondon_0013"
-              >13</ref> ; Umbaldus <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0009"
-              >9</ref> ; monachi <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0013"
-              >13</ref>.</item>
-          <item><placeName>Vivariensis</placeName> episc. Leodegarius <ref target="#S-Gondon_0011"
-              >11</ref>.</item>
+          <item><placeName>Virsionensis</placeName> abbas : Herbertus <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0011">11</ref> ; P. <ref target="#S-Gondon_0013">13</ref> ; Umbaldus <ref target="#S-Gondon_0004">4</ref>, <ref target="#S-Gondon_0009">9</ref> ; monachi <ref target="#S-Gondon_0009">9</ref>, <ref target="#S-Gondon_0013">13</ref>.</item>
+          <item><placeName>Vivariensis</placeName> episc. Leodegarius <ref target="#S-Gondon_0011">11</ref>.</item>
         </list>
         <list type="index" xml:id="listPerson">
           <head>Table par noms de personnes</head>
-          <item><persName>Abbas</persName> Gervasius <ref target="#S-Gondon_0004">4</ref>. Hugo <ref
-              target="#S-Gondon_0002">2</ref>.</item>
-          <item><persName>Adelelmas</persName> fr. Odonis <ref target="#S-Gondon_0018"
-            >18</ref>.</item>
+          <item><persName>Abbas</persName> Gervasius <ref target="#S-Gondon_0004">4</ref>. Hugo <ref target="#S-Gondon_0002">2</ref>.</item>
+          <item><persName>Adelelmas</persName> fr. Odonis <ref target="#S-Gondon_0018">18</ref>.</item>
           <item><persName>Aimericus</persName> Greslart <ref target="#S-Gondon_0018">18</ref>.</item>
-          <item><persName>Albertus</persName> fil. Tescelini <ref target="#S-Gondon_0008"
-            >8</ref>.</item>
-          <item><persName>Amedeus</persName> et Mulisenda ux. ejus <ref target="#S-Gondon_0003"
-              >3</ref>.</item>
+          <item><persName>Albertus</persName> fil. Tescelini <ref target="#S-Gondon_0008">8</ref>.</item>
+          <item><persName>Amedeus</persName> et Mulisenda ux. ejus <ref target="#S-Gondon_0003">3</ref>.</item>
           <item><persName>Andreas</persName> Matet <ref target="#S-Gondon_0032">32</ref> ; præfectus
               <ref target="#S-Gondon_0033">33</ref>.</item>
           <item><persName>Arnulfus</persName> fil. Guillelmi <ref target="#S-Gondon_0006">6</ref> ;
             Mitte Focum <ref target="#S-Gondon_0004">4</ref>.</item>
           <item><persName>Balduinus</persName> Cain <ref target="#S-Gondon_0022">22</ref> ; fil.
             Hersendis <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0017">17</ref>,
-              <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0021">21</ref>, <ref
-              target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0026">26</ref> ; fr. Herberti
-              <ref target="#S-Gondon_0027">27</ref> ; sororius Rainardi <ref target="#S-Gondon_0018"
-              >18</ref>.</item>
+              <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0026">26</ref> ; fr. Herberti
+              <ref target="#S-Gondon_0027">27</ref> ; sororius Rainardi <ref target="#S-Gondon_0018">18</ref>.</item>
           <item><persName>Bechespicus</persName> v. <persName>Daniel</persName>.</item>
-          <item><persName>Benedictus</persName> camerarius <ref target="#S-Gondon_0011"
-            >11</ref>.</item>
-          <item><persName>Bernardus</persName> de Insula, <ref target="#S-Gondon_0033">33</ref>, <ref
-              target="#S-Gondon_0034">34</ref> ; de Scannis <ref target="#S-Gondon_0033">33</ref> ; de
-            Veteri Vado <ref target="#S-Gondon_0024">24</ref> ; fil. Walonis <ref
-              target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0010">10</ref> ; Fuldria <ref
-              target="#S-Gondon_0008">8</ref>.</item>
+          <item><persName>Benedictus</persName> camerarius <ref target="#S-Gondon_0011">11</ref>.</item>
+          <item><persName>Bernardus</persName> de Insula, <ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034">34</ref> ; de Scannis <ref target="#S-Gondon_0033">33</ref> ; de
+            Veteri Vado <ref target="#S-Gondon_0024">24</ref> ; fil. Walonis <ref target="#S-Gondon_0008">8</ref>, <ref target="#S-Gondon_0010">10</ref> ; Fuldria <ref target="#S-Gondon_0008">8</ref>.</item>
           <item><persName>Briencius</persName> d’Austri <ref target="#S-Gondon_0032">32</ref>.</item>
           <item><persName>Bruno</persName> Chamor <ref target="#S-Gondon_0032">32</ref>.</item>
           <item><persName>Burgenses</persName><ref target="#S-Gondon_0033">33</ref>.</item>
           <item><persName>Clientes</persName><ref target="#S-Gondon_0033">33</ref>.
-              <persName>Constantia</persName> fil. Auberici <ref target="#S-Gondon_0026"
-            >26</ref>.</item>
+              <persName>Constantia</persName> fil. Auberici <ref target="#S-Gondon_0026">26</ref>.</item>
           <item><persName>Constantius</persName> Caseus <ref target="#S-Gondon_0027">27</ref>.
-              <persName>Daniel</persName> Bechespi <ref target="#S-Gondon_0031">31</ref>, <ref
-              target="#S-Gondon_0032">32</ref>.</item>
-          <item><persName>Dodo</persName> fil. Franconis <ref target="#S-Gondon_0026"
-            >26</ref>.</item>
+              <persName>Daniel</persName> Bechespi <ref target="#S-Gondon_0031">31</ref>, <ref target="#S-Gondon_0032">32</ref>.</item>
+          <item><persName>Dodo</persName> fil. Franconis <ref target="#S-Gondon_0026">26</ref>.</item>
           <item><persName>Ernaudus</persName> Ravi <ref target="#S-Gondon_0024">24</ref>.</item>
           <item><persName>Fulco</persName> Bufauldi <ref target="#S-Gondon_0026">26</ref> ; fil.
-            Gandeberti <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0016"
-            >16</ref>.</item>
-          <item><persName>Gauzfridus</persName> Infernus <ref target="#S-Gondon_0035"
-            >35</ref>.</item>
-          <item>Gilo clericus <ref target="#S-Gondon_0019">19</ref> ; Mala Brueire <ref
-              target="#S-Gondon_0033">33</ref>.</item>
+            Gandeberti <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0016">16</ref>.</item>
+          <item><persName>Gauzfridus</persName> Infernus <ref target="#S-Gondon_0035">35</ref>.</item>
+          <item>Gilo clericus <ref target="#S-Gondon_0019">19</ref> ; Mala Brueire <ref target="#S-Gondon_0033">33</ref>.</item>
           <item><persName>Gima</persName> Mazet <ref target="#S-Gondon_0031">31</ref>.</item>
           <item><persName>Giraldus</persName> Burditus <ref target="#S-Gondon_0004">4</ref> ; Musca
               <ref target="#S-Gondon_0004">4</ref>.</item>
           <item><persName>Girardus</persName> de Podio <ref target="#S-Gondon_0026">26</ref> ;
-            prepositus <ref target="#S-Gondon_0035">35</ref> ; Tarieta <ref target="#S-Gondon_0010"
-              >10</ref>, <ref target="#S-Gondon_0019">19</ref>.</item>
+            prepositus <ref target="#S-Gondon_0035">35</ref> ; Tarieta <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0019">19</ref>.</item>
           <item><persName>Giraudus</persName> faber <ref target="#S-Gondon_0030">30</ref>.
-              <persName>Girbertus</persName> fil. Vitalis <ref target="#S-Gondon_0015"
-            >15</ref>.</item>
+              <persName>Girbertus</persName> fil. Vitalis <ref target="#S-Gondon_0015">15</ref>.</item>
           <item><persName>Goffridus</persName> de Carnoto <ref target="#S-Gondon_0026">26</ref> ;
-            fil. Marie <ref target="#S-Gondon_0020">20</ref> ; fil. Richildis <ref
-              target="#S-Gondon_0025">25</ref> ; Giboinus <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0020">20</ref>.</item>
+            fil. Marie <ref target="#S-Gondon_0020">20</ref> ; fil. Richildis <ref target="#S-Gondon_0025">25</ref> ; Giboinus <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0020">20</ref>.</item>
           <item><persName>Gosbertus</persName> Garner <ref target="#S-Gondon_0024">24</ref>.</item>
-          <item><persName>Gozcelmus</persName> camerarius <ref target="#S-Gondon_0035"
-            >35</ref>.</item>
+          <item><persName>Gozcelmus</persName> camerarius <ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Guillelmus</persName> fil. Garini <ref target="#S-Gondon_0019">19</ref>,
               <ref target="#S-Gondon_0025">25</ref>, <ref target="#S-Gondon_0027">27</ref> ; presbiter
               <ref target="#S-Gondon_0022">22</ref>, <ref target="#S-Gondon_0023">23</ref> ; Triveel
               <ref target="#S-Gondon_0032">32</ref>.</item>
           <item><persName>Hato</persName><ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Henricus</persName> Mauferas <ref target="#S-Gondon_0033">33</ref>.</item>
-          <item><persName>Herbertus</persName> miles <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref
-              target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0027">27</ref> ; Passet <ref
-              target="#S-Gondon_0033">33</ref>.</item>
-          <item><persName>Hersendis</persName> ux. Lisoii oppidani de Calvo Monte <ref
-              target="#S-Gondon_0035">35</ref>.</item>
-          <item><persName>Herveus</persName> Ambaciacensis <ref target="#S-Gondon_0035"
-            >35</ref>.</item>
+          <item><persName>Herbertus</persName> miles <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0015">15</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0027">27</ref> ; Passet <ref target="#S-Gondon_0033">33</ref>.</item>
+          <item><persName>Hersendis</persName> ux. Lisoii oppidani de Calvo Monte <ref target="#S-Gondon_0035">35</ref>.</item>
+          <item><persName>Herveus</persName> Ambaciacensis <ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Hugenus</persName> de Porta <ref target="#S-Gondon_0030">30</ref>.</item>
           <item><persName>Hugo</persName> Claretis <ref target="#S-Gondon_0030">30</ref> ;
-            cordubanarius <ref target="#S-Gondon_0017">17</ref> ; de Lievrio <ref
-              target="#S-Gondon_0034">34</ref> ; de Mota <ref target="#S-Gondon_0004">4</ref> ; de S.
+            cordubanarius <ref target="#S-Gondon_0017">17</ref> ; de Lievrio <ref target="#S-Gondon_0034">34</ref> ; de Mota <ref target="#S-Gondon_0004">4</ref> ; de S.
             Maxentio <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0019">19</ref> ; de
-            Turre <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref
-              target="#S-Gondon_0026">26</ref> ; fr. Lisoii <ref target="#S-Gondon_0035">35</ref>.
-            Landricus <ref target="#S-Gondon_0015">15</ref> ; miles <ref target="#S-Gondon_0010"
-              >10</ref> ; Saul <ref target="#S-Gondon_0033">33</ref> ; vicarius <ref
-              target="#S-Gondon_0004">4</ref>.</item>
+            Turre <ref target="#S-Gondon_0006">6</ref>, <ref target="#S-Gondon_0007">7</ref>, <ref target="#S-Gondon_0026">26</ref> ; fr. Lisoii <ref target="#S-Gondon_0035">35</ref>.
+            Landricus <ref target="#S-Gondon_0015">15</ref> ; miles <ref target="#S-Gondon_0010">10</ref> ; Saul <ref target="#S-Gondon_0033">33</ref> ; vicarius <ref target="#S-Gondon_0004">4</ref>.</item>
           <pb n="64"/>
           <item><persName>Isembardus</persName> Bardo <ref target="#S-Gondon_0007">7</ref>.</item>
-          <item><persName>Issucia</persName> fil. Auteni et Tescelinæ <ref target="#S-Gondon_0021"
-              >21</ref>, <ref target="#S-Gondon_0022">22</ref>.</item>
+          <item><persName>Issucia</persName> fil. Auteni et Tescelinæ <ref target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0022">22</ref>.</item>
           <item><persName>Iterius</persName> Liquois <ref target="#S-Gondon_0019">19</ref>.</item>
-          <item><persName>Jerbertus</persName> fil. Vidali <ref target="#S-Gondon_0020"
-            >20</ref>.</item>
+          <item><persName>Jerbertus</persName> fil. Vidali <ref target="#S-Gondon_0020">20</ref>.</item>
           <item><persName>Johannes</persName> Bota Lupum <ref target="#S-Gondon_0020">20</ref> ;
-            clericus <ref target="#S-Gondon_0034">34</ref> ; de Blancafot <ref target="#S-Gondon_0024"
-              >24</ref> ; diaconus <ref target="#S-Gondon_0012">12</ref> ; Meschinus <ref
-              target="#S-Gondon_0023">23</ref>.</item>
+            clericus <ref target="#S-Gondon_0034">34</ref> ; de Blancafot <ref target="#S-Gondon_0024">24</ref> ; diaconus <ref target="#S-Gondon_0012">12</ref> ; Meschinus <ref target="#S-Gondon_0023">23</ref>.</item>
           <item><persName>Landricus</persName> fil. Narberti <ref target="#S-Gondon_0010">10</ref>,
               <ref target="#S-Gondon_0026">26</ref> ; præses <ref target="#S-Gondon_0010">10</ref> ;
-            prætor <ref target="#S-Gondon_0030">30</ref> ; Pulcin <ref target="#S-Gondon_0024"
-              >24</ref>.</item>
-          <item><persName>Lisoyus</persName> oppidanus Calvi Montis <ref target="#S-Gondon_0035"
-              >35</ref>.</item>
+            prætor <ref target="#S-Gondon_0030">30</ref> ; Pulcin <ref target="#S-Gondon_0024">24</ref>.</item>
+          <item><persName>Lisoyus</persName> oppidanus Calvi Montis <ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Margotus</persName> Landricus <ref target="#S-Gondon_0010">10</ref> ;
             Lupellus <ref target="#S-Gondon_0010">10</ref>.</item>
           <item><persName>Maria</persName> soror Balduini <ref target="#S-Gondon_0018">18</ref>.
               <persName>Morinus</persName> homo Dodonis <ref target="#S-Gondon_0026">26</ref>.</item>
-          <item><persName>Narbertus</persName> miles <ref target="#S-Gondon_0010">10</ref>, <ref
-              target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0022">22</ref>.</item>
-          <item><persName>Nariodus</persName><ref target="#S-Gondon_0033">33</ref>, <ref
-              target="#S-Gondon_0034">34</ref> ; <persName>Notarii</persName> : Hildebodus <ref
-              target="#S-Gondon_0001">1</ref>, Nerbertus <ref target="#S-Gondon_0002">2</ref>.</item>
+          <item><persName>Narbertus</persName> miles <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0020">20</ref>, <ref target="#S-Gondon_0022">22</ref>.</item>
+          <item><persName>Nariodus</persName><ref target="#S-Gondon_0033">33</ref>, <ref target="#S-Gondon_0034">34</ref> ; <persName>Notarii</persName> : Hildebodus <ref target="#S-Gondon_0001">1</ref>, Nerbertus <ref target="#S-Gondon_0002">2</ref>.</item>
           <item><persName>Odo</persName> Brise Haste <ref target="#S-Gondon_0035">35</ref> ; clericus
               <ref target="#S-Gondon_0018">18</ref>.</item>
           <item><persName>Paganus</persName> fil. Adelelmi <ref target="#S-Gondon_0019">19</ref> ;
@@ -3679,52 +3354,31 @@
               <ref target="#S-Gondon_0012">12</ref>.</item>
           <item><persName>Petrus</persName> clericus <ref target="#S-Gondon_0009">9</ref>.</item>
           <item><persName>Radulfus</persName> archid. <ref target="#S-Gondon_0004">4</ref> ;
-            avunculus Roberti <ref target="#S-Gondon_0016">16</ref> ; miles <ref
-              target="#S-Gondon_0026">26</ref> ; nepos Fulconis <ref target="#S-Gondon_0017"
-            >17</ref>.</item>
+            avunculus Roberti <ref target="#S-Gondon_0016">16</ref> ; miles <ref target="#S-Gondon_0026">26</ref> ; nepos Fulconis <ref target="#S-Gondon_0017">17</ref>.</item>
           <item><persName>Raginaldus</persName> sacerdos <ref target="#S-Gondon_0035">35</ref> ;
             vicarius <ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Rainaldus</persName> Bertois <ref target="#S-Gondon_0017">17</ref> ; de
             Leone <ref target="#S-Gondon_0034">34</ref> ; Paganus <ref target="#S-Gondon_0008">8</ref>
-            ; sacerdos <ref target="#S-Gondon_0030">30</ref>, <ref target="#S-Gondon_0031"
-            >31</ref>.</item>
+            ; sacerdos <ref target="#S-Gondon_0030">30</ref>, <ref target="#S-Gondon_0031">31</ref>.</item>
           <item><persName>Rainardus</persName> de Arcola <ref target="#S-Gondon_0024">24</ref> ; fil.
-            Hugonis <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref
-              target="#S-Gondon_0023">23</ref>, <ref target="#S-Gondon_0025">25</ref> ; fil. Stephani
-              <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref
-              target="#S-Gondon_0018">18</ref>, <ref target="#S-Gondon_0023">23</ref>, <ref
-              target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref>.</item>
-          <item><persName>Richildis</persName> ux. Balduini <ref target="#S-Gondon_0025"
-            >25</ref>.</item>
+            Hugonis <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0023">23</ref>, <ref target="#S-Gondon_0025">25</ref> ; fil. Stephani
+              <ref target="#S-Gondon_0010">10</ref>, <ref target="#S-Gondon_0016">16</ref>, <ref target="#S-Gondon_0018">18</ref>, <ref target="#S-Gondon_0023">23</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref>.</item>
+          <item><persName>Richildis</persName> ux. Balduini <ref target="#S-Gondon_0025">25</ref>.</item>
           <item><persName>Robertus</persName> Aglet <ref target="#S-Gondon_0019">19</ref> ; Brito
               <ref target="#S-Gondon_0019">19</ref> ; de Monesto <ref target="#S-Gondon_0034">34</ref>
-            ; de Valenaco <ref target="#S-Gondon_0004">4</ref> ; fil. Berengerii <ref
-              target="#S-Gondon_0008">8</ref> ; fr. Johannis Meschini <ref target="#S-Gondon_0023"
-              >23</ref> ; major <ref target="#S-Gondon_0034">34</ref> ; presbiter <ref
-              target="#S-Gondon_0028">28</ref> ; Sarrafles <ref target="#S-Gondon_0033"
-            >33</ref>.</item>
+            ; de Valenaco <ref target="#S-Gondon_0004">4</ref> ; fil. Berengerii <ref target="#S-Gondon_0008">8</ref> ; fr. Johannis Meschini <ref target="#S-Gondon_0023">23</ref> ; major <ref target="#S-Gondon_0034">34</ref> ; presbiter <ref target="#S-Gondon_0028">28</ref> ; Sarrafles <ref target="#S-Gondon_0033">33</ref>.</item>
           <item><persName>Rogerius</persName> fr. archiepiscopi <ref target="#S-Gondon_0008">8</ref>
             ; Episcopi <ref target="#S-Gondon_0006">6</ref>.</item>
-          <item><persName>Sanctæ sedis,</persName> legatus, bibliothecarius <ref
-              target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0013">13</ref>, <ref
-              target="#S-Gondon_0014">14</ref>.</item>
+          <item><persName>Sanctæ sedis,</persName> legatus, bibliothecarius <ref target="#S-Gondon_0012">12</ref>, <ref target="#S-Gondon_0013">13</ref>, <ref target="#S-Gondon_0014">14</ref>.</item>
           <item><persName>Servi</persName><ref target="#S-Gondon_0019">19</ref>.</item>
           <item><persName>Stephanus</persName> Crassa Curta <ref target="#S-Gondon_0004">4</ref> ; de
             Maiduno <ref target="#S-Gondon_0004">4</ref>.</item>
-          <item><persName>Sulpicius</persName> fil. Lisoii <ref target="#S-Gondon_0035"
-            >35</ref>.</item>
+          <item><persName>Sulpicius</persName> fil. Lisoii <ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Teoinus</persName> de Blanoil <ref target="#S-Gondon_0019">19</ref>.</item>
-          <item><persName>Tescelina</persName> ux. Fulconis fil. Gandeberti <ref
-              target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0022">22</ref>, <ref
-              target="#S-Gondon_0023">23</ref>.</item>
-          <item><persName>Timerius</persName> fil. Hugonis Claretis <ref target="#S-Gondon_0030"
-              >30</ref>.</item>
-          <item><persName>Vahlinus, Vaslet,</persName> de Villa Nova <ref target="#S-Gondon_0020"
-              >20</ref> ; Forredus, Furet, <ref target="#S-Gondon_0014">14</ref>, <ref
-              target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref
-              target="#S-Gondon_0025">25</ref> ; Frater Parvus <ref target="#S-Gondon_0018">18</ref> ;
-            præses <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0024"
-            >24</ref>.</item>
+          <item><persName>Tescelina</persName> ux. Fulconis fil. Gandeberti <ref target="#S-Gondon_0021">21</ref>, <ref target="#S-Gondon_0022">22</ref>, <ref target="#S-Gondon_0023">23</ref>.</item>
+          <item><persName>Timerius</persName> fil. Hugonis Claretis <ref target="#S-Gondon_0030">30</ref>.</item>
+          <item><persName>Vahlinus, Vaslet,</persName> de Villa Nova <ref target="#S-Gondon_0020">20</ref> ; Forredus, Furet, <ref target="#S-Gondon_0014">14</ref>, <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0024">24</ref>, <ref target="#S-Gondon_0025">25</ref> ; Frater Parvus <ref target="#S-Gondon_0018">18</ref> ;
+            præses <ref target="#S-Gondon_0019">19</ref>, <ref target="#S-Gondon_0024">24</ref>.</item>
           <item><persName>Wandebertus</persName><ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Watho</persName><ref target="#S-Gondon_0035">35</ref>.</item>
           <item><persName>Willelmus</persName> ; v. Guillelmus.</item>

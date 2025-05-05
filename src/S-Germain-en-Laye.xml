@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Germain-en-Laye">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Germain-en-Laye">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -64,10 +61,7 @@
         <availability status="restricted">
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-              (<ref
-              target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414"
-              >L341-1</ref>), selon les termes de la licence Creative Commons : « <ref
-              target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+              (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
               d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
             et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
@@ -116,20 +110,20 @@
           effectués par Jean-Charles Martin et Gautier Poupeau.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
+              <citeData property="dc:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
+          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -157,9 +151,7 @@
         <p>Type d’édition : édition partielle (abrégée ou sous forme de regestes pour certains des
           actes tardifs) du cartulaire du prieuré (Arch. nat., T* 671<hi rend="sup">6</hi>).</p>
         <p>Total des actes édités ou analysés : 27 (1 du XI<hi rend="sup">e</hi> siècle, 14 du
-            XII<hi rend="sup">e</hi> siècle, 4 du XIII<hi rend="sup">e</hi> siècle, 1 du XIV<hi
-            rend="sup">e</hi> siècle, 6 du XV<hi rend="sup">e</hi> siècle, 1 du XVI<hi rend="sup"
-            >e</hi> siècle).</p>
+            XII<hi rend="sup">e</hi> siècle, 4 du XIII<hi rend="sup">e</hi> siècle, 1 du XIV<hi rend="sup">e</hi> siècle, 6 du XV<hi rend="sup">e</hi> siècle, 1 du XVI<hi rend="sup">e</hi> siècle).</p>
       </argument>
       <byline>Notice rédigée par Olivier Guyotjeannin en octobre 2007.</byline>
       <div xml:id="S-Germain-en-Laye_etablissement" subtype="article">
@@ -174,8 +166,7 @@
             maintenant dédiée à saint Germain à l’église cathédrale de Paris
                 (<bibl><abbr>ind.</abbr> Soehnée <abbr>n°</abbr> 29 ; <abbr>éd.</abbr> Tardif,
                 <title>Monuments historiques</title>
-              <abbr>n°</abbr> 279</bibl>) ; la cession de l’établissement à l’abbé de Coulombs <hi
-              rend="i">Gozfredus</hi> par l’évêque de Paris Imbert, donc avant le décès de ce
+              <abbr>n°</abbr> 279</bibl>) ; la cession de l’établissement à l’abbé de Coulombs <hi rend="i">Gozfredus</hi> par l’évêque de Paris Imbert, donc avant le décès de ce
             dernier en 1060/1061 au plus tard (<bibl>éd. Martène, <title>Amplissima
                 collectio</title>, <abbr>t.</abbr> I, <abbr>col.</abbr> 413-414</bibl>) ; la
             dotation faite en 1073 par le roi Philippe I<hi rend="sup">er</hi>, qui détaille ses
@@ -189,8 +180,7 @@
         </div>
         <div>
           <head>Localisation du patrimoine à grands traits</head>
-          <p> La confirmation de Louis VI atteste que le prieuré avait la justice de la <hi rend="i"
-              >villa</hi> adjacente, les dîmes données par le roi à Trie-sur-Seine, Charlevanne
+          <p> La confirmation de Louis VI atteste que le prieuré avait la justice de la <hi rend="i">villa</hi> adjacente, les dîmes données par le roi à Trie-sur-Seine, Charlevanne
             [auj. La Chaussée, comm. Bougival], Poissy, Auvers et en forêt d’Yveline, des usages en
             forêt de Laye, des biens aux alentours et à Rucourt (comm. Poissy). D’autres actes
             mentionnent particulièrement des droits sur la Seine, des possessions à Orgeval et
@@ -218,8 +208,7 @@
             sur Saint-Germain, 1606-1747.</p>
           <p>Pour les sources complémentaires conservées aux Archives départementales des Yvelines,
             voir le guide en ligne de cette institution :</p>
-          <p><ref target="http://www.yvelines.fr/archives/serieh/guideh"
-              >http://www.yvelines.fr/archives/serieh/guideh</ref></p>
+          <p><ref target="http://www.yvelines.fr/archives/serieh/guideh">http://www.yvelines.fr/archives/serieh/guideh</ref></p>
         </div>
         <div type="cartulaires">
           <head>Le cartulaire</head>
@@ -251,8 +240,7 @@
             l’Hôtel-Dieu (1886) de Pontoise, l’abbaye Notre-Dame la Royale de Maubuisson
             (1882-1884), le prieuré clunisien de Saint-Martin-des-Champs à Paris (1913-1921)… Parmi
             une riche production, se remarquent aussi de nombreuses études toponymiques et
-            généalogiques centrées sur la période du IX<hi rend="sup">e</hi> au XII<hi rend="sup"
-              >e</hi> siècle (comtes de Paris, vicomtes de Corbeil, comtes de Beaumont…).</p>
+            généalogiques centrées sur la période du IX<hi rend="sup">e</hi> au XII<hi rend="sup">e</hi> siècle (comtes de Paris, vicomtes de Corbeil, comtes de Beaumont…).</p>
           <p>Bibliographie : notices dans <bibl><title>Dictionnaire de biographie française</title>,
                 <abbr>t.</abbr> X (1965), <abbr>col.</abbr> 1102</bibl>, et dans
                 <bibl><title>Mémoires de la société historique et archéologique de Pontoise, du Val
@@ -486,8 +474,7 @@
                 <s>Considerans vero quod de die in diem, in pluribus hominum refrigessit karitas et
                   habundat iniquitas, hec omnia in sigilli mei presidio et tucione subscribi feci,
                   ut qui post nos venerint sciant quod pro anime mee et antecessorum meorum
-                  redemptione, monachis <placeName>Columbensibus</placeName>, Deo et <rs
-                    type="person">Sancto <persName>Germano</persName></rs> servientibus concessi vel
+                  redemptione, monachis <placeName>Columbensibus</placeName>, Deo et <rs type="person">Sancto <persName>Germano</persName></rs> servientibus concessi vel
                   dedi.</s>
               </p>
               <p>
@@ -581,8 +568,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s><date>Anno ab Incarnatione <abbr>Dni</abbr>
-                    <num>millº centº xxii</num></date>, <rs type="person"
-                      ><persName>Ludovicus</persName> gloriosus Rex</rs>, superatis undique hostibus
+                    <num>millº centº xxii</num></date>, <rs type="person"><persName>Ludovicus</persName> gloriosus Rex</rs>, superatis undique hostibus
                   et oblata pace, Deo se adjuvante et prospera sibi tribuente, apud
                     <placeName>Parisius</placeName> cum principibus disponens jura regni et
                   previdens in futurum, consilium accepit Castrum edificandi in loco qui vocatur
@@ -607,12 +593,9 @@
                 <s>Quod monachus accipiens procidit ad pedes ejus, osculans ejus manum.</s>
               </p>
               <p>
-                <s>Testes qui hoc viderunt sunt isti : <rs type="person"
-                      ><persName>Stephanus</persName> archidiaconus</rs>, <rs type="person"
-                      ><persName>Gislibertus</persName> frater ejus</rs>, <persName>Milo de
+                <s>Testes qui hoc viderunt sunt isti : <rs type="person"><persName>Stephanus</persName> archidiaconus</rs>, <rs type="person"><persName>Gislibertus</persName> frater ejus</rs>, <persName>Milo de
                     Malerepast</persName>, <persName>Frogerius de Chaalons</persName>,
-                    <persName>Bartholomeus de Fulcris</persName>, <rs type="person"
-                      ><persName>Hugo</persName> filius <persName>Garnerie</persName></rs>.</s>
+                    <persName>Bartholomeus de Fulcris</persName>, <rs type="person"><persName>Hugo</persName> filius <persName>Garnerie</persName></rs>.</s>
               </p>
               <p>
                 <s>Ex parte monachorum <persName>Robertus de Castello</persName>, <persName>Girelmus
@@ -646,16 +629,13 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>, <rs
-                    type="person">Ego <persName>Ludovicus</persName> Dei gratia
+                <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>, <rs type="person">Ego <persName>Ludovicus</persName> Dei gratia
                       <persName>Francorum</persName> Rex</rs>.</s>
                 <s><seg type="theo">Universis Dei et Eclesie</seg> cultoribus tam posteris quam
                   instantibus et precipue successoribus nostris <persName>Francorum</persName>
-                  regibus certum haberi, firmum teneri volumus, quod universa beneficia que <rs
-                    type="person">antecessores nostri <persName>Francorum</persName> Reges</rs>
+                  regibus certum haberi, firmum teneri volumus, quod universa beneficia que <rs type="person">antecessores nostri <persName>Francorum</persName> Reges</rs>
                   ecclesie <placeName><abbr>B.</abbr> Vincencii</placeName> et
-                      <placeName><abbr>S.</abbr> Germani de Leya</placeName>, videlicet <rs
-                    type="person"><persName>Robertus</persName> Rex</rs> qui ecclesiam ipsam a
+                      <placeName><abbr>S.</abbr> Germani de Leya</placeName>, videlicet <rs type="person"><persName>Robertus</persName> Rex</rs> qui ecclesiam ipsam a
                   fundamentis fundavit, et <rs type="person"><persName>Henricus</persName> rex
                     filius ipsius</rs>, et <rs type="person"><persName>Philippus</persName> pater
                     noster</rs>, contulerunt, vel in posterum quilibet concessuri vel donaturi sunt,
@@ -709,12 +689,10 @@
               <p>
                 <s>Actum publice apud <placeName>Sanctum Germanum</placeName>, presentibus episcopis
                   nostris, <rs type="person"><placeName>Carnotensi</placeName> videlicet
-                      <persName>Gaufredo</persName></rs> et <rs type="person"
-                      ><persName>Manasserio</persName>
+                      <persName>Gaufredo</persName></rs> et <rs type="person"><persName>Manasserio</persName>
                     <placeName>Meldensi</placeName></rs> cum clericis suis, abbate
                       <placeName><abbr>Sti</abbr> Stephani de Vallera</placeName> et
-                    <persName>Hugone de Bugis</persName> preposito, et <rs type="person"
-                      ><persName>Galterio de Bona valle</persName> archidiacono</rs>, et aliis
+                    <persName>Hugone de Bugis</persName> preposito, et <rs type="person"><persName>Galterio de Bona valle</persName> archidiacono</rs>, et aliis
                   multis.</s>
                 <s>Data per manum <rs type="person"><persName>Stephani</persName> Cancellarii</rs> 
                     <date>anno Incarnationis Verbi <num>millº centº vicesimo quarto</num> regni vero
@@ -763,12 +741,9 @@
                     <num>XXX</num> solidos accepit.</s>
                 <s>Fecit vero hoc donum concedere uxori sue que vocatur
                     <persName>Guiburgis</persName>, filiisque suis <persName>Gauterio</persName> et
-                    <persName>Odoni</persName>, videntibus et audientibus ejus parte <rs
-                    type="person"><persName>Richerio</persName> presbitero</rs> et <rs type="person"
-                      ><persName>Theobaldo</persName> gordario</rs>, <persName>Gauterio</persName>
+                    <persName>Odoni</persName>, videntibus et audientibus ejus parte <rs type="person"><persName>Richerio</persName> presbitero</rs> et <rs type="person"><persName>Theobaldo</persName> gordario</rs>, <persName>Gauterio</persName>
                   que majore domini <persName>Bucardi</persName>.</s>
-                <s>Ex nostra vero parte fuerunt dompnus abbas <persName>Rogerius</persName>, <rs
-                    type="person"><persName>Petrus</persName> ejus bajulus de
+                <s>Ex nostra vero parte fuerunt dompnus abbas <persName>Rogerius</persName>, <rs type="person"><persName>Petrus</persName> ejus bajulus de
                       <placeName>Ulmeto</placeName></rs>, idem <rs type="person">prior
                       <persName>Robertus de Gallone</persName></rs>, <persName>Rainaldus de
                     Reculato</persName>, <persName>Garinus de Maroil</persName>,
@@ -807,13 +782,11 @@
                   est, notum volumus... quod quidam miles, <persName>Joscelinus</persName> nomine,
                   multociens rogando petebat ut monachus fieret.</s>
                 <s>Sed quia, ut beatus jubet <persName>Benedictus</persName>, talibus non est levis
-                  concedendus ingressus, nam sepe videatur penitere, a <rs type="person"
-                      ><persName>Petro</persName> tunc priore <placeName><abbr>S.</abbr>
+                  concedendus ingressus, nam sepe videatur penitere, a <rs type="person"><persName>Petro</persName> tunc priore <placeName><abbr>S.</abbr>
                       Germani</placeName></rs> ejus peticio anno integro et ejus susceptio dilata et
                   prolongata est.</s>
                 <s>Ad ultimum vero idem miles coram rege <persName>Ludovico</persName> veniens,
-                  peticionem iteravit, et petente Rege et <persName>Bartholomeo</persName>, et <rs
-                    type="person">archidiacono <persName>Theobaldo</persName></rs>, multisque aliis,
+                  peticionem iteravit, et petente Rege et <persName>Bartholomeo</persName>, et <rs type="person">archidiacono <persName>Theobaldo</persName></rs>, multisque aliis,
                   concessum est et a fratribus.</s>
                 <s>Ipse vero pro anima sua Deo et <rs type="person"><abbr>B.</abbr>
                     <persName>Marie</persName></rs>
@@ -836,23 +809,18 @@
                     filius <persName>Grugerii</persName>, gener <persName>Joscelini</persName></rs>,
                   cum <rs type="person">filia ipsius<pb n="18"/>
                     <persName>Aeles</persName></rs>.</s>
-                <s>Inter monachos autem et <persName>Willelmum</persName> et filiam, <rs
-                    type="person">rex <persName>Ludovicus</persName></rs> et <rs type="person"
-                      ><persName>Stephanus</persName> dapifer</rs>, fidejussores existunt.</s>
-                <s>Testes vero <persName>Minardus<ref type="note" n="1" target="#n01a "
-                      xml:id="a01a"/></persName> ex parte <persName>Willelmi</persName>.</s>
+                <s>Inter monachos autem et <persName>Willelmum</persName> et filiam, <rs type="person">rex <persName>Ludovicus</persName></rs> et <rs type="person"><persName>Stephanus</persName> dapifer</rs>, fidejussores existunt.</s>
+                <s>Testes vero <persName>Minardus<ref type="note" n="1" target="#n01a " xml:id="a01a"/></persName> ex parte <persName>Willelmi</persName>.</s>
                 <s>Ex parte monachorum, <rs type="person"><persName>Thieobaldus</persName>
                     archidiaconus</rs>, <persName>Bartholomeus</persName>, <persName>Willelmus
-                    Rufinus</persName>, <persName>Hugo Brito</persName>, <rs type="person"
-                      ><persName>Abertus</persName> major et filius ejus</rs>.</s>
+                    Rufinus</persName>, <persName>Hugo Brito</persName>, <rs type="person"><persName>Abertus</persName> major et filius ejus</rs>.</s>
                 <s>Actum est hoc <date><num>M. C. XXVI</num>. Indictione <num>V.</num></date></s>
               </p>
             </div>
           </body>
           <back>
             <div type="notes">
-              <note n="1" xml:id="n01a" target="#a01a ">Il faut apparemment lire <hi rend="i"
-                  >Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
+              <note n="1" xml:id="n01a" target="#a01a ">Il faut apparemment lire <hi rend="i">Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
                 autres transcrits dans le Cartulaire, a été l'objet de quelques erreurs de
                 lecture.</note>
             </div>
@@ -894,8 +862,7 @@
                     <placeName>Ordevallis</placeName> composuit, multociens quasi humili ac devota
                   intencione nos supplicavit prout et quod exoptaverat ex nobis tandem jocundius
                   impetrasset.</s>
-                <s>Consilio quidem nostro, et precum suarum assiduitate, <rs type="person"
-                      ><persName>Rogerius</persName> abbas <placeName>Columbensis</placeName></rs>
+                <s>Consilio quidem nostro, et precum suarum assiduitate, <rs type="person"><persName>Rogerius</persName> abbas <placeName>Columbensis</placeName></rs>
                   et <rs type="person">frater <persName>Petrus</persName>, prior de
                         <placeName><abbr>Sto</abbr> Germano</placeName></rs>, ceterique fratres
                     <placeName>Columbensis</placeName>, in supradicta capella <seg type="theo">Dei
@@ -932,9 +899,7 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Noverint instantes et futuri quod <persName>Adam<ref type="note" n="2"
-                      target="#n02a " xml:id="a02a"/> de Mareolo</persName> dedit Deo et <rs
-                    type="person"><abbr>S.</abbr>
+                <s>Noverint instantes et futuri quod <persName>Adam<ref type="note" n="2" target="#n02a " xml:id="a02a"/> de Mareolo</persName> dedit Deo et <rs type="person"><abbr>S.</abbr>
                     <persName>Germano</persName></rs> omnes minutas decimas quas habebat apud
                     <placeName>Ordevallem</placeName>, scilicet decimam pecorum, agnorum, vitulorum,
                   lane, straminum, canvri, lini.</s>
@@ -946,8 +911,7 @@
                     <persName>Galterius</persName>, <rs type="person"><persName>Albertus</persName>
                     clericus</rs>, <rs type="person"><persName>Godefredis</persName> cementarius de
                       <placeName>Villa poror</placeName></rs>.</s>
-                <s>Hoc etiam do<pb n="19"/> num misit ipse <persName>Adam</persName> in manu <rs
-                    type="person"><persName>Radulphi</persName> decani</rs> apud
+                <s>Hoc etiam do<pb n="19"/> num misit ipse <persName>Adam</persName> in manu <rs type="person"><persName>Radulphi</persName> decani</rs> apud
                     <placeName>Pissiacum</placeName> ante ecclesiam <placeName><abbr>S.</abbr>
                     Marie</placeName>, de quo idem decanus, assensu episcopi, nos eadem hora
                   revestivit.</s>
@@ -969,8 +933,7 @@
               <p>
                 <s>Firmaverunt siquidem pactionem monachi et <persName>Adam</persName> de tractore
                   decime <placeName>Ordevallis</placeName>, quod deincepts non habebit decimam
-                  garbarum sed decimam minarum et straminum in area<ref type="note" n="1"
-                    target="#n01b " xml:id="a01b"/>, et ideo reddiderunt <rs type="person">uxori
+                  garbarum sed decimam minarum et straminum in area<ref type="note" n="1" target="#n01b " xml:id="a01b"/>, et ideo reddiderunt <rs type="person">uxori
                     G(er)uigerii</rs> tria sextaria formenti, monachi tres minas et
                     <persName>Adam</persName> totidem, que ipse acciperat ab ea pro tractu illius
                   anni.</s>
@@ -1026,12 +989,8 @@
                   rege <persName>L.</persName> et <persName>L.</persName> regis filio et Regina, qui
                   tune temporis hoc in loco morabuntur et multis astantibus.</s>
                 <s>Ex parte monachorum testibus <persName>Symone Ternel</persName>, <persName>Hugone
-                    de Manlia</persName>, <persName>Willelmo de Roslio</persName>, <rs type="person"
-                      ><persName>Sulpicio</persName> famulo</rs>, <rs type="person"
-                      ><persName>Goisleno</persName> ipsius filio</rs>, <rs type="person"
-                      ><persName>Gauterio</persName> filio <persName>Haemeri</persName></rs>.</s>
-                <s>Monachi qui tunc ibidem deservebant hi fuerunt : <rs type="person"
-                      ><persName>Raherius</persName> prior</rs>, <persName>Osbertus</persName>,
+                    de Manlia</persName>, <persName>Willelmo de Roslio</persName>, <rs type="person"><persName>Sulpicio</persName> famulo</rs>, <rs type="person"><persName>Goisleno</persName> ipsius filio</rs>, <rs type="person"><persName>Gauterio</persName> filio <persName>Haemeri</persName></rs>.</s>
+                <s>Monachi qui tunc ibidem deservebant hi fuerunt : <rs type="person"><persName>Raherius</persName> prior</rs>, <persName>Osbertus</persName>,
                     <persName>Johannes</persName>, <persName>Goscelinus</persName>.</s>
                 <s><persName>Radulphus</persName> Ex parte vero <persName>Asthonis</persName>,
                     <persName>Hugo Malnutritus</persName>.</s>
@@ -1073,10 +1032,8 @@
               <p>
                 <s>Nec presentes igitur lateat nec futuros quod <rs type="person">ego
                       <persName>Rogerius</persName> abbas <placeName>Columbensis</placeName></rs> in
-                  communi Capitulo coram poscitis fratribus, <rs type="person"
-                      ><persName>Racherio</persName> filio <persName>Alberici</persName></rs>,
-                  majoratum <placeName><abbr>S.</abbr> Germani de Leya</placeName>, sicut <rs
-                    type="person">pater suus <persName>Albericus</persName></rs> vivens ante
+                  communi Capitulo coram poscitis fratribus, <rs type="person"><persName>Racherio</persName> filio <persName>Alberici</persName></rs>,
+                  majoratum <placeName><abbr>S.</abbr> Germani de Leya</placeName>, sicut <rs type="person">pater suus <persName>Albericus</persName></rs> vivens ante
                   tenuerat, tenen dum concessi eo tenore quod alios majoratus aliis nostris
                   majoribus concedimus.</s>
               </p>
@@ -1086,8 +1043,7 @@
                   ambitu suo possidere in feodo.</s>
               </p>
               <p>
-                <s>Quandam tenet terram que est inter nemus et culturam <placeName>Camberiaci<ref
-                      type="note" n="1" target="#n01c" xml:id="a01c"/></placeName>, et aliam que est
+                <s>Quandam tenet terram que est inter nemus et culturam <placeName>Camberiaci<ref type="note" n="1" target="#n01c" xml:id="a01c"/></placeName>, et aliam que est
                   juxta domum <persName>Honorati Filiolicurtis</persName>, quam ab hoc die omnibus
                   diebus vite sue ad censum unius denarii et in feudo tenebit.</s>
               </p>
@@ -1118,8 +1074,7 @@
                 <s>Predictus siquidem <persName>Racherius</persName> in eodem capitulo quando de
                   majoratu isto eum Abbas rivestivit, suus homo ligius devenit et omnia que sunt
                       <placeName><abbr>S.</abbr> Germani</placeName>, terras, prata, vineas, census,
-                  redditus, molendinos, et si qua sunt alia fideliter custodienda<ref type="note"
-                    n="1" target="#n01d " xml:id="a01d"/> super sacrosanctum Evangelium juravit, si
+                  redditus, molendinos, et si qua sunt alia fideliter custodienda<ref type="note" n="1" target="#n01d " xml:id="a01d"/> super sacrosanctum Evangelium juravit, si
                   vero in aliquo per se vel per alium forifecisset, quod <num>XII</num> nummos per
                   annum excedat, cognovit ultros <sic>(sic)</sic> ad priorem accedens et in quo
                   foriffecerit et suggererit, ad voluntatem <abbr>ejusd.</abbr> prioris, prout ratio
@@ -1130,8 +1085,7 @@
               </p>
               <p>
                 <s><persName>Hugo de Bubiniaco</persName>, <persName>Robertus Bochet</persName>,
-                    <persName>Robertus major</persName>, <persName>Richardus Brisart</persName>, <rs
-                    type="person"><persName>Simon</persName> filius ejus, portarius,
+                    <persName>Robertus major</persName>, <persName>Richardus Brisart</persName>, <rs type="person"><persName>Simon</persName> filius ejus, portarius,
                       <persName>Berengerius</persName></rs>, <persName>Giroldus de
                     Loucenis</persName>, <persName>Radulphus</persName>,
                     <persName>Renoldus</persName>, <persName>Goslenus</persName>,
@@ -1142,8 +1096,7 @@
           <back>
             <div type="notes">
               <note n="1" xml:id="n01c" target="#a01c">Chambourcy.</note>
-              <note n="1" xml:id="n01d" target="#a01d ">Le texte porte <hi rend="i"
-                  >constituenda</hi>.</note>
+              <note n="1" xml:id="n01d" target="#a01d ">Le texte porte <hi rend="i">constituenda</hi>.</note>
             </div>
           </back>
         </text>
@@ -1248,8 +1201,7 @@
                 <s>In regia administratione summa extitit providentia intendere paci ecclesiarum et
                   illud precavere, ne aliqua negligencia sive alia occasione, illi qui Deo serviunt
                   in ecclesiis, ex suscepta professione turbebentur, et avulsi a quiete mentis, de
-                    forensibus<ref type="note" n="1" target="#n01e " xml:id="a01e"/> litigando, <seg
-                    type="theo">a servitio Dei</seg> retrahi er carpere cogantur.</s>
+                    forensibus<ref type="note" n="1" target="#n01e " xml:id="a01e"/> litigando, <seg type="theo">a servitio Dei</seg> retrahi er carpere cogantur.</s>
               </p>
               <p>
                 <s>Extat autem quoddam stagnum in valle <placeName>Filiolicurtis</placeName> subtus
@@ -1305,8 +1257,7 @@
           </body>
           <back>
             <div type="notes">
-              <note n="1" xml:id="n01e" target="#a01e ">Le texte porte <hi rend="i"
-                >forvicesis</hi>.</note>
+              <note n="1" xml:id="n01e" target="#a01e ">Le texte porte <hi rend="i">forvicesis</hi>.</note>
             </div>
           </back>
         </text>
@@ -1355,16 +1306,13 @@
                     <placeName>Columbensis</placeName></rs>, <rs type="person">abbas de
                       <placeName>Marchesraoul</placeName></rs>, <rs type="person">abbas de
                       <placeName>Ressuns</placeName></rs>, <rs type="person"><persName>Robertus de
-                      Montpincon</persName>, prior <placeName>Columbensis</placeName></rs>, <rs
-                    type="person"><persName>Philippus</persName> prior <placeName><abbr>S.</abbr>
+                      Montpincon</persName>, prior <placeName>Columbensis</placeName></rs>, <rs type="person"><persName>Philippus</persName> prior <placeName><abbr>S.</abbr>
                       Germani de Leia</placeName></rs>, <persName>Robertus de Ibreio</persName>,
                   monachi ; <persName>Gascho de Pissiaco</persName> et filii ejus
                     <persName>Gascho</persName> et <persName>Robertus</persName> qui hoc
                   concesserunt, <persName>Gaufredus de Chaneveres</persName> et duo filii ejus
                     <persName>Simon</persName> et <persName>Matheus</persName>, <persName>Ansellus
-                    de Orgevalle</persName>, <persName>Gascho de Toroto</persName> et <rs
-                    type="person"><persName>Robertus</persName> frater ejus</rs>, et <rs
-                    type="person"><persName>Petrus</persName> presbiter de
+                    de Orgevalle</persName>, <persName>Gascho de Toroto</persName> et <rs type="person"><persName>Robertus</persName> frater ejus</rs>, et <rs type="person"><persName>Petrus</persName> presbiter de
                       <placeName>Orgevalle</placeName></rs>.</s>
               </p>
               <p>
@@ -1379,22 +1327,16 @@
               <p>
                 <s>Hujus rei testes sunt : <rs type="person">abbas
                       <placeName>Columbensis</placeName></rs>, <rs type="person">abbas de
-                      <placeName>Ressons</placeName></rs>, <rs type="person"
-                      ><persName>Haimo</persName> loci illius prior</rs>, <rs type="person"
-                      ><persName>Robertus de Montpincon</persName> prior
-                      <placeName>Columbensis</placeName></rs>, <rs type="person"
-                      ><persName>Philippus</persName> prior <placeName><abbr>S.</abbr> Germani de
-                      Leya</placeName></rs>, <persName>Robertus de Breio</persName>, <rs
-                    type="person"><persName>Renaldus</persName> prior <placeName>Sancti
+                      <placeName>Ressons</placeName></rs>, <rs type="person"><persName>Haimo</persName> loci illius prior</rs>, <rs type="person"><persName>Robertus de Montpincon</persName> prior
+                      <placeName>Columbensis</placeName></rs>, <rs type="person"><persName>Philippus</persName> prior <placeName><abbr>S.</abbr> Germani de
+                      Leya</placeName></rs>, <persName>Robertus de Breio</persName>, <rs type="person"><persName>Renaldus</persName> prior <placeName>Sancti
                       Cosme</placeName></rs>, <rs type="person"><persName>Petrus</persName>
-                    presbiter <placeName>Orgivallis</placeName></rs>, <rs type="person"
-                      ><abbr>Dnus</abbr>
+                    presbiter <placeName>Orgivallis</placeName></rs>, <rs type="person"><abbr>Dnus</abbr>
                     <persName><abbr>G.</abbr> de Pissiaco</persName></rs> et filii ejus
                     <persName>Gascho</persName> et <persName>Robertus</persName>, qui hoc
                   concesserunt, <persName>Gaufredus de Canevieris</persName> et duo filii ejus
                     <persName>Simon</persName> et <persName>Mateus</persName>, <persName>Ansellus de
-                    Orgivalle</persName>, <persName>Gascho de Torroto</persName> et <rs
-                    type="person"><persName>Robertus</persName> frater ejus</rs>, et
+                    Orgivalle</persName>, <persName>Gascho de Torroto</persName> et <rs type="person"><persName>Robertus</persName> frater ejus</rs>, et
                     <persName>Petrus d'Issy</persName>.</s>
               </p>
             </div>
@@ -1437,8 +1379,7 @@
                 <s>Decima <placeName>campi Degnelis</placeName> tota <placeName><abbr>S.</abbr>
                     Germani</placeName>.</s>
                 <s>Medietas decime terre quam lucratur <persName>Guibertus de Ordevalle</persName>,
-                  que est de feodo <persName>Hugonis Sanzaver<ref type="note" n="1" target="#n01f "
-                      xml:id="a01f"/></persName>
+                  que est de feodo <persName>Hugonis Sanzaver<ref type="note" n="1" target="#n01f " xml:id="a01f"/></persName>
                   <placeName>Sancti Germani</placeName> ; et altera medietas presbyteri.</s>
                 <s><pb n="24"/><rs type="place">Pomarium</rs> quod est in atrio
                     <placeName>Ordevallis</placeName> et movet de feodo <persName>Letherici de
@@ -1519,19 +1460,13 @@
                   aliqua terrena potestate fulcite, resiliemus ab hac compositione.</s>
               </p>
               <p>
-                <s>Hujus rei testes sunt : <persName>Gatho de Pissiaco</persName>, <rs type="person"
-                      ><persName>Giralmus</persName> socerus ejus<ref type="note" n="2"
-                      target="#n02b " xml:id="a02b"/></rs>, <persName>Albericus de
+                <s>Hujus rei testes sunt : <persName>Gatho de Pissiaco</persName>, <rs type="person"><persName>Giralmus</persName> socerus ejus<ref type="note" n="2" target="#n02b " xml:id="a02b"/></rs>, <persName>Albericus de
                     Haubercurt</persName>, <persName>Gauterus de Basemonte</persName> ; hii sunt
                   milites.</s>
                 <s><rs type="person"><persName>Garinus</persName>,
                       <placeName>Latiniacensis</placeName> ecclesie quondam<pb n="25"/> abbas</rs> ;
                     <rs type="person"><persName>Geruagerius</persName>
-                    <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"
-                      ><persName>Gaufredus</persName> prior <placeName>Altebruerie<ref type="note"
-                        n="1" target="#n01h " xml:id="a01h"/></placeName></rs>; <rs type="person"
-                      ><persName>Paganus de Fulcosa</persName> clericus</rs> ; <rs type="person"
-                      ><persName>Stephanus de Crisperiis</persName>, burgensis</rs>.</s>
+                    <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"><persName>Gaufredus</persName> prior <placeName>Altebruerie<ref type="note" n="1" target="#n01h " xml:id="a01h"/></placeName></rs>; <rs type="person"><persName>Paganus de Fulcosa</persName> clericus</rs> ; <rs type="person"><persName>Stephanus de Crisperiis</persName>, burgensis</rs>.</s>
               </p>
               <p>
                 <s>Actum est hoc <date>anno Incarnati Verbi <num>mº centº
@@ -1545,8 +1480,7 @@
           </body>
           <back>
             <div type="notes">
-              <note n="2" xml:id="n02b" target="#a02b ">Le texte porte <hi rend="i"
-                >Socius</hi>.</note>
+              <note n="2" xml:id="n02b" target="#a02b ">Le texte porte <hi rend="i">Socius</hi>.</note>
               <note n="1" xml:id="n01h" target="#a01h ">Haute-Bruyère, comme toutes les fondations
                 relevant de Fontevrault, comprenait une double communauté d'hommes et de femmes
                 ayant chacune un supérieur ; mais la direction du couvent appartenait aux
@@ -1704,15 +1638,13 @@
                 <s>Collation faicte est.</s>
               </p>
               <p xml:lang="fro">
-                <s>Ainsi signé : <persName>Petavius<ref type="note" n="1" target="#n01i "
-                      xml:id="a01i"/></persName></s>
+                <s>Ainsi signé : <persName>Petavius<ref type="note" n="1" target="#n01i " xml:id="a01i"/></persName></s>
               </p>
             </div>
           </body>
           <back>
             <div type="notes">
-              <note n="1" xml:id="n01i" target="#a01i ">Cet arrêt est cité dans Boutaric, <hi
-                  rend="i">Actes du Parlement de Paris</hi>, <abbr>t.</abbr>
+              <note n="1" xml:id="n01i" target="#a01i ">Cet arrêt est cité dans Boutaric, <hi rend="i">Actes du Parlement de Paris</hi>, <abbr>t.</abbr>
                 <num>I</num>, nº 588, d'après les <hi rend="i">Olim</hi>, <num>I</num>, fol. 116,
                 vº.</note>
             </div>
@@ -1883,8 +1815,7 @@
                   dit oncle...</s>
               </p>
               <p>
-                <s>Donné à <placeName>Paris</placeName> le <date><num>xxiiii<hi rend="sup"
-                      >e</hi></num> jour de may l'an de grace mil <num>ccccxxviii</num> et de nostre
+                <s>Donné à <placeName>Paris</placeName> le <date><num>xxiiii<hi rend="sup">e</hi></num> jour de may l'an de grace mil <num>ccccxxviii</num> et de nostre
                     regne le sixiesme</date>.</s>
               </p>
             </div>
@@ -1928,8 +1859,7 @@
               <term type="nature" key="rjud"/>
             </index>
             <argument>
-              <p>Arrêt du <placeName>Parlement</placeName> déclarant que l'évêque de <hi rend="i"
-                  >Chartres</hi> n'a aucun droit de visite ni de juridiction sur le prieuré de
+              <p>Arrêt du <placeName>Parlement</placeName> déclarant que l'évêque de <hi rend="i">Chartres</hi> n'a aucun droit de visite ni de juridiction sur le prieuré de
                     <placeName><abbr>St.</abbr> Germain</placeName></p>
             </argument>
             <div type="tradition">
@@ -1969,8 +1899,7 @@
             </index>
             <argument>
               <p>Sentence de <rs type="person"><persName>Jehan de l'Espine</persName>, prévôt de
-                    <placeName>Poissy</placeName></rs>, a la requête de <rs type="person"
-                    ><persName>Jehan Levesque</persName>, official du prieur de
+                    <placeName>Poissy</placeName></rs>, a la requête de <rs type="person"><persName>Jehan Levesque</persName>, official du prieur de
                       <placeName><abbr>S.</abbr> Germain</placeName></rs>, renvoyant devant sa
                 juridiction <rs type="person"><persName>Jehan le Sieur</persName>, le jeune, clerc,
                   prisonnier à <placeName>Poissy</placeName></rs>.</p>
@@ -2033,8 +1962,7 @@
                       <abbr>N.</abbr>
                     <num>D.</num></date> derrenièrement passée <abbr>led.</abbr>
                   <persName>Guillot</persName> qui s'en aloit de <placeName>Paris</placeName> à
-                    <placeName>Poissy</placeName> où il est demourant en passant par les <rs
-                    type="place">bois de <placeName>Laye</placeName></rs> avoit esté rencontré par
+                    <placeName>Poissy</placeName> où il est demourant en passant par les <rs type="place">bois de <placeName>Laye</placeName></rs> avoit esté rencontré par
                     <abbr>lesd.</abbr>
                   <persName>Jehan Luillier</persName> et <persName>Jehan Sauvaige</persName> qui luy
                   avoient demandé qui il estoit, auqueux il avoit respondu qu'il estoit ung des plus
@@ -2048,8 +1976,7 @@
                   par devers luy les dessus dits <persName>Jehan</persName> et
                     <persName>Jehan</persName>, les eust avisé <abbr>dud.</abbr> cas, afin d'en
                   savoir la vérité ; lesquels en déclinant la court et jurisdiction, se fussent
-                  advoués clercs, et à ce estoit present religieuse perssonne et honneste le <rs
-                    type="person">prieur de <placeName>Saint-Germain</placeName></rs><pb n="30"/>
+                  advoués clercs, et à ce estoit present religieuse perssonne et honneste le <rs type="person">prieur de <placeName>Saint-Germain</placeName></rs><pb n="30"/>
                   qui d'iceulx requist avoir remission et qu'ils luy fussent remis comme ses
                   subgectz et justiciables en juridiction espirituelle, disant que aud. lieu de
                     <placeName>Saint-Germain</placeName> il y avoit telle juridiction espirituelle
@@ -2084,8 +2011,7 @@
             </index>
             <argument>
               <p>Lettres du Roi, à la requête de « nostre amé et féal conseiller et maistre des
-                requestes ordinaires de nostre hostel <rs type="person"><abbr>M<hi rend="sup"
-                      >re</hi></abbr>
+                requestes ordinaires de nostre hostel <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr>
                   <persName>Jehan de Pierrepont</persName>, prieur de
                     <placeName>Saint-Germain-en-Laye</placeName></rs>, » confirmant les droits et
                 usages du couvent dans la forêt de <placeName>Saint-Germain</placeName>, reconnus
@@ -2118,8 +2044,7 @@
             <argument>
               <p>Lettres de « <rs type="person"><persName>Jehan Raoulx</persName>, licencié en lois,
                   conseiller du Roy et lieutenant en la prévosté de son hostel</rs>, » renvoyant sur
-                sa requête devant l'Official de <placeName>Saint-Germain-en-Laye</placeName> « <rs
-                  type="person">maistre <persName>Anthoine Eschaume</persName>, prestre, clerc de
+                sa requête devant l'Official de <placeName>Saint-Germain-en-Laye</placeName> « <rs type="person">maistre <persName>Anthoine Eschaume</persName>, prestre, clerc de
                   chapelle de <rs type="person">Monseigneur le Dauphin</rs>, prisonnier es prisons
                   de <placeName>Poissy</placeName></rs> », pour y être jugé.</p>
             </argument>

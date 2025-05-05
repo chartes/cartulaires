@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pontoise-Hotel-Dieu">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pontoise-Hotel-Dieu">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -109,20 +106,23 @@
           effectués par Gautier Poupeau.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head"/>
+              <citeData property="dc:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text/group/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date, ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+            <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -149,8 +149,7 @@
         <p>Type d’édition : édition des actes (1190 à 1328) transcrits au seul cartulaire conservé
           (Bibl. nat. de Fr., lat. 5657), reclassés dans l’ordre chronologique, collationnés aux
           originaux et copies anciennes du fonds, complétés d’autres actes en appendice.</p>
-        <p>Total des actes édités : 184 (7 du XII<hi rend="sup">e</hi> siècle, 142 du XIII<hi
-            rend="sup">e</hi> siècle, 35 du XIV<hi rend="sup">e</hi> siècle)</p>
+        <p>Total des actes édités : 184 (7 du XII<hi rend="sup">e</hi> siècle, 142 du XIII<hi rend="sup">e</hi> siècle, 35 du XIV<hi rend="sup">e</hi> siècle)</p>
       </argument>
       <byline>Notice rédigée par Jean-François Moufflet (juin 2006).</byline>
       <div xml:id="Pontoise-Hotel-Dieu_etablissement" subtype="article">
@@ -209,61 +208,34 @@
             que davantage que des rentes, l’Hôtel-Dieu a fait beaucoup d’acquisitions immobilières.
             Ces possessions étaient à la fois urbaines, à Pontoise et Paris, et rurales.</p>
           <p>Très vite l’Hôtel-Dieu a fait de nombreuses acquisitions à Pontoise, principalement des
-            maisons sur lesquelles il percevait un cens (éd. Depoin, n° <ref
-              target="#hotelpontoise_0041">XLI</ref>, <ref target="#hotelpontoise_0044">XLIV</ref>,
-              <ref target="#hotelpontoise_0088">LXXXVIII</ref>, <ref target="#hotelpontoise_0111"
-              >CXI</ref>, <ref target="#hotelpontoise_0115">CXV</ref>, <ref
-              target="#hotelpontoise_0130">CXXX</ref>, <ref target="#hotelpontoise_0144"
-            >CXLIV</ref>, <abbr>A.</abbr>
-            <ref target="#hotelpontoise_0011">XI</ref>), mais aussi des masures (n° <ref
-              target="#hotelpontoise_0054">LIV</ref>, <ref target="#hotelpontoise_0131"
-            >CXXXI</ref>), une saulaie et une oseraie près du fossé (n° <ref
-              target="#hotelpontoise_0091">XCI</ref>) et même un moulin et un étal de marché
+            maisons sur lesquelles il percevait un cens (éd. Depoin, n° <ref target="#hotelpontoise_0041">XLI</ref>, <ref target="#hotelpontoise_0044">XLIV</ref>,
+              <ref target="#hotelpontoise_0088">LXXXVIII</ref>, <ref target="#hotelpontoise_0111">CXI</ref>, <ref target="#hotelpontoise_0115">CXV</ref>, <ref target="#hotelpontoise_0130">CXXX</ref>, <ref target="#hotelpontoise_0144">CXLIV</ref>, <abbr>A.</abbr>
+            <ref target="#hotelpontoise_0011">XI</ref>), mais aussi des masures (n° <ref target="#hotelpontoise_0054">LIV</ref>, <ref target="#hotelpontoise_0131">CXXXI</ref>), une saulaie et une oseraie près du fossé (n° <ref target="#hotelpontoise_0091">XCI</ref>) et même un moulin et un étal de marché
               (n° <ref target="#hotelpontoise_0157">CLVII</ref>), dont il tirait des revenus. Cette
             implantation assez forte au cœur de la ville explique par ailleurs les conflits de
             juridiction qui ont pu par la suite émailler les relations entre l’établissement et la
-            commune, mais aussi avec les autres établissements religieux (n° <ref
-              target="#hotelpontoise_0144">CXLIV</ref> : arbitrage entre l’Hôtel-Dieu et le prieuré
+            commune, mais aussi avec les autres établissements religieux (n° <ref target="#hotelpontoise_0144">CXLIV</ref> : arbitrage entre l’Hôtel-Dieu et le prieuré
             de Conflans-Sainte-Honorine en 1306).</p>
           <p>L’établissement percevait également des cens ou l’usufruit sur quelques maisons à Paris
-              (n° <ref target="#hotelpontoise_0108">CVIII</ref>, <ref target="#hotelpontoise_0116"
-              >CXVI</ref>, <ref target="#hotelpontoise_0135">CXXXV</ref> et <ref
-              target="#hotelpontoise_0138">CXXXVIII</ref>), dont certaines dans le quartier juif
-              (n° <ref target="#hotelpontoise_0113">CXIII</ref>, <ref target="#hotelpontoise_0118"
-              >CXVIII</ref> et <ref target="#hotelpontoise_0119">CXIX</ref>), acquises entre 1289 et
+              (n° <ref target="#hotelpontoise_0108">CVIII</ref>, <ref target="#hotelpontoise_0116">CXVI</ref>, <ref target="#hotelpontoise_0135">CXXXV</ref> et <ref target="#hotelpontoise_0138">CXXXVIII</ref>), dont certaines dans le quartier juif
+              (n° <ref target="#hotelpontoise_0113">CXIII</ref>, <ref target="#hotelpontoise_0118">CXVIII</ref> et <ref target="#hotelpontoise_0119">CXIX</ref>), acquises entre 1289 et
             1303.</p>
           <p>L’Hôtel-Dieu avait de nombreux droits et possessions en dehors du monde urbain.
             L’essentiel des propriétés rurales se trouvait concentré autour de Pontoise, dans un
             rayon d’une quinzaine de kilomètres (carte de localisation). Les revenus étaient assurés
-            par la possession de vignes à Bessancourt, Conflans, Champagne et près d’Auvers (n° <ref
-              target="#hotelpontoise_0001">I</ref>, <ref target="#hotelpontoise_0015">XV</ref>, <ref
-              target="#hotelpontoise_0024">XXIV</ref>, <ref target="#hotelpontoise_0079"
-            >LXXIX</ref>, <ref target="#hotelpontoise_0149">CXLIX</ref>), des champarts (n° <ref
-              target="#hotelpontoise_0029">XXIX</ref>, <ref target="#hotelpontoise_0055">LV</ref>,
+            par la possession de vignes à Bessancourt, Conflans, Champagne et près d’Auvers (n° <ref target="#hotelpontoise_0001">I</ref>, <ref target="#hotelpontoise_0015">XV</ref>, <ref target="#hotelpontoise_0024">XXIV</ref>, <ref target="#hotelpontoise_0079">LXXIX</ref>, <ref target="#hotelpontoise_0149">CXLIX</ref>), des champarts (n° <ref target="#hotelpontoise_0029">XXIX</ref>, <ref target="#hotelpontoise_0055">LV</ref>,
             etc.), des dîmes et des rentes en grain à Génicourt, Gérocourt, Us et surtout Ennery
-              (n° <ref target="#hotelpontoise_0005">V</ref>, <ref target="#hotelpontoise_0007"
-              >VII</ref>, <ref target="#hotelpontoise_0009">IX</ref>, <ref
-              target="#hotelpontoise_0083">LXXXIII</ref>, <ref target="#hotelpontoise_0137"
-              >CXXXVII</ref>, <ref target="#hotelpontoise_0143">CXLIII</ref>). Les principales
+              (n° <ref target="#hotelpontoise_0005">V</ref>, <ref target="#hotelpontoise_0007">VII</ref>, <ref target="#hotelpontoise_0009">IX</ref>, <ref target="#hotelpontoise_0083">LXXXIII</ref>, <ref target="#hotelpontoise_0137">CXXXVII</ref>, <ref target="#hotelpontoise_0143">CXLIII</ref>). Les principales
             possessions immobilières se trouvaient à Champagne près de Beaumont-sur-Oise, domaine
             donné par Louis IX (n° <ref target="#hotelpontoise_0005">V</ref>), et sans doute lieu de
             concentration le plus important des droits et biens de l’Hôtel-Dieu, qui y exerçait même
-            la basse justice (n° <ref target="#hotelpontoise_0008">VIII</ref>, <ref
-              target="#hotelpontoise_0016">XVI</ref>, <ref target="#hotelpontoise_0062">LXII</ref>,
-              <ref target="#hotelpontoise_0093">XCIII</ref>, <ref target="#hotelpontoise_0099"
-              >XCIX</ref>, <ref target="#hotelpontoise_0100">C-CIV</ref>, <ref
-              target="#hotelpontoise_0145">CXLV</ref>, <ref target="#hotelpontoise_0154">CLIV</ref>,
+            la basse justice (n° <ref target="#hotelpontoise_0008">VIII</ref>, <ref target="#hotelpontoise_0016">XVI</ref>, <ref target="#hotelpontoise_0062">LXII</ref>,
+              <ref target="#hotelpontoise_0093">XCIII</ref>, <ref target="#hotelpontoise_0099">XCIX</ref>, <ref target="#hotelpontoise_0100">C-CIV</ref>, <ref target="#hotelpontoise_0145">CXLV</ref>, <ref target="#hotelpontoise_0154">CLIV</ref>,
               <ref target="#hotelpontoise_0164">CLXIV</ref>), à Mézières, fief vendu par Geoffroy de
-            La Chapelle, un proche du roi (n° <ref target="#hotelpontoise_0029">XXIX</ref>, <ref
-              target="#hotelpontoise_0055">LV</ref>, <ref target="#hotelpontoise_0060">LX</ref>,
-              <ref target="#hotelpontoise_0072">LXXII</ref>, <ref target="#hotelpontoise_0084"
-              >LXXXIV</ref>, <ref target="#hotelpontoise_0090">XC</ref>, <ref
-              target="#hotelpontoise_0151">CLI</ref>, <ref target="#hotelpontoise_0159">CLIX</ref>),
-            et dans une moindre mesure à Saint-Leu et Taverny (terres, cens et maisons : n° <ref
-              target="#hotelpontoise_0002">II</ref>, <ref target="#hotelpontoise_0067">LXVII</ref>,
-              <ref target="#hotelpontoise_0071">LXXI</ref>, <ref target="#hotelpontoise_0074"
-              >LXXIV</ref>, <ref target="#hotelpontoise_0140">CXL</ref>), et à Épiais (n° <ref
-              target="#hotelpontoise_0150">CL</ref>).</p>
+            La Chapelle, un proche du roi (n° <ref target="#hotelpontoise_0029">XXIX</ref>, <ref target="#hotelpontoise_0055">LV</ref>, <ref target="#hotelpontoise_0060">LX</ref>,
+              <ref target="#hotelpontoise_0072">LXXII</ref>, <ref target="#hotelpontoise_0084">LXXXIV</ref>, <ref target="#hotelpontoise_0090">XC</ref>, <ref target="#hotelpontoise_0151">CLI</ref>, <ref target="#hotelpontoise_0159">CLIX</ref>),
+            et dans une moindre mesure à Saint-Leu et Taverny (terres, cens et maisons : n° <ref target="#hotelpontoise_0002">II</ref>, <ref target="#hotelpontoise_0067">LXVII</ref>,
+              <ref target="#hotelpontoise_0071">LXXI</ref>, <ref target="#hotelpontoise_0074">LXXIV</ref>, <ref target="#hotelpontoise_0140">CXL</ref>), et à Épiais (n° <ref target="#hotelpontoise_0150">CL</ref>).</p>
         </div>
         <div>
           <head>Réseaux de bienfaiteurs</head>
@@ -306,8 +278,7 @@
             centaine scellées, beaucoup plus en papier, des plans de la ville et des maisons de 1600
             à 1680. Il dressa un inventaire en quatre volumes, dont le premier était consacré à
             l’Hôtel-Dieu (imprimé en 1924). On peut aussi se faire une idée de l’aspect et du
-            contenu des archives dans la thèse d’École des chartes de François Dousset (1936), <hi
-              rend="i">La commune de Pontoise au Moyen Âge</hi>, éditée en 1988 à l’occasion du
+            contenu des archives dans la thèse d’École des chartes de François Dousset (1936), <hi rend="i">La commune de Pontoise au Moyen Âge</hi>, éditée en 1988 à l’occasion du
             huitième centenaire de la commune. Dans les cartons était classé tout ce qui concernait
             les dîmes, les maisons possédées par l’Hôtel-Dieu à Pontoise, les rentes sur les maisons
             et les terres, le havage et les péages.</p>
@@ -338,8 +309,7 @@
           <listBibl>
             <bibl><author>Le Grand (Léon)</author>, <title>Statuts de l’Hôtel-Dieu de Pontoise,
                   <num>v.</num> 1265</title>, dans Id., <title>Statuts d’Hôtels-Dieu et de
-                léproseries, recueil de textes du <num>XII<hi rend="sup">e</hi></num> au <num>XIV<hi
-                    rend="sup">e</hi></num> siècle</title>, Paris, 1901, <abbr>p.</abbr> 128-151
+                léproseries, recueil de textes du <num>XII<hi rend="sup">e</hi></num> au <num>XIV<hi rend="sup">e</hi></num> siècle</title>, Paris, 1901, <abbr>p.</abbr> 128-151
               (d’abord publié dans <title>Mémoires de la Société de l'histoire de Paris et de
                 l’Ile-de-France</title>, <abbr>t.</abbr> 17, 1890, d’après une copie dans la coll.
               Desnoyers).</bibl>
@@ -361,8 +331,7 @@
                 l’arrondissement de Pontoise et du Vexin</title>, <abbr>t.</abbr> 2, 1880,
                 <abbr>p.</abbr> 25-42.</bibl>
             <bibl><author>Dousset (François)</author>, <title>La commune de Pontoise au Moyen Âge :
-                étude administrative et économique, de 1188 au début du <num>XVI<hi rend="sup"
-                    >e</hi></num> siècle</title>, Pontoise, 1989.</bibl>
+                étude administrative et économique, de 1188 au début du <num>XVI<hi rend="sup">e</hi></num> siècle</title>, Pontoise, 1989.</bibl>
             <bibl><author>Gressier (James) et al.</author>, <title>Pontoise : 2000 ans
                 d'histoire</title>, Pontoise, nouv. éd., 1987.</bibl>
           </listBibl>
@@ -625,8 +594,7 @@
                 <s><persName>Radulfo de Conflens</persName>.</s>
                 <s><persName>Ivone</persName> fratre ejus.</s>
                 <s><persName>Odone de Dumnei</persName>.</s>
-                <s><persName>Hug[on]e de Boiles<ref type="note" n="1" target="#na010 "
-                      xml:id="aa010"/></persName>.</s>
+                <s><persName>Hug[on]e de Boiles<ref type="note" n="1" target="#na010 " xml:id="aa010"/></persName>.</s>
                 <s><persName>Anselmo</persName> clerico de <placeName>Champainne</placeName>.
                     <persName>Johanne de Corvesne</persName>.</s>
                 <s><persName>Odone<pb n="3"/>le Draper</persName>
@@ -748,8 +716,7 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Notum sit omnibus tam futuris quam presentibus quod <rs type="person"
-                      ><persName>Matheus</persName> comes <placeName>Bellimontis</placeName></rs>
+                <s>Notum sit omnibus tam futuris quam presentibus quod <rs type="person"><persName>Matheus</persName> comes <placeName>Bellimontis</placeName></rs>
                   dedi et concessi <persName>Garino de Campaniis</persName> preposito meo et
                   heredibus suis, domum suam in quam manet et aream granchie mee, cum ipsa granchia,
                   liberam et immunem ab omni servicio et corveia et ab omni exactione, per
@@ -824,15 +791,13 @@
                 <s><persName>Odone</persName> fratre ejus.</s>
                 <s><persName>Roberto Camerario</persName>.</s>
                 <s><persName>Radulpho Doliatore</persName>.</s>
-                <s><persName>Alberico de Godengres<ref type="note" n="1" target="#na011 "
-                      xml:id="aa011"/></persName>.</s>
+                <s><persName>Alberico de Godengres<ref type="note" n="1" target="#na011 " xml:id="aa011"/></persName>.</s>
                 <s><persName>Gerardo de Petralata</persName>.</s>
               </p>
               <p>
                 <s>Actum <date>anno Incarnati verbi <num>m. ccº primo</num></date> magistris
                   &amp;procuratoribus predicte Domus <persName>Thomas Textore</persName>
-                    &amp;<persName>Guillelmo de Muncie</persName>. <ref type="note" n="2"
-                    target="#na012 " xml:id="aa012"/></s>
+                    &amp;<persName>Guillelmo de Muncie</persName>. <ref type="note" n="2" target="#na012 " xml:id="aa012"/></s>
               </p>
             </div>
           </body>
@@ -844,8 +809,7 @@
                 Chastelerie de Pontoise, salut. Sachés nous l'an de grace mil deus cens quatre vins
                 et quinze, le lundi devant la feste Saint Vincent, avoir veu unes lettres scellées
                 du scel de noble homme Godefroy de Herengni ne mie chancelées ne corchiées ne en
-                aucune partie de icelles corrumpues, contenanz la forme que ensuit : <hi rend="i"
-                  >Notum sit omnibus ecclesie filiis fidelibus quod</hi>
+                aucune partie de icelles corrumpues, contenanz la forme que ensuit : <hi rend="i">Notum sit omnibus ecclesie filiis fidelibus quod</hi>
                 <persName>Godefridus de Herengni</persName>.. <persName>Guillelmo de
                   Munci</persName>. Ou temoing delaquele chose nous avons ces lettres scelées du
                 scel desusdit, l'an et le jour de lundi desusdiz, sauz (saufs) touz droiz.</p>
@@ -939,8 +903,7 @@
               <p>
                 <s>Notum sit presentibus et futuris quod domina <persName>Aelais de
                     Sanctolio</persName> dedit et concessit pro salute anime sue, in remedio
-                  animarum antecessorum suorum, Deo et <rs type="person"><abbr>S<hi rend="sup"
-                        >te</hi></abbr>
+                  animarum antecessorum suorum, Deo et <rs type="person"><abbr>S<hi rend="sup">te</hi></abbr>
                     <persName>Marie</persName></rs>, et <placeName>Domui Hospitalis pauperum
                     Pontisare</placeName>, novem sextarios bladi in granchia sua apud
                     <placeName>Gerincort</placeName>, reddendos <date>infra mensem Augusti</date> ,
@@ -948,11 +911,9 @@
                     <placeName>Domui</placeName> predicte et pauperibus et aliis ibi clericis et
                   laicis cohabitantibus.</s>
                 <s>Hoc autem donum concessit <rs type="person"><persName>Galterus de
-                      Sanctolio</persName> filius ejus</rs> et <rs type="person"
-                      ><persName>Beatrix</persName> filia ejus</rs> et maritus suus domnus
+                      Sanctolio</persName> filius ejus</rs> et <rs type="person"><persName>Beatrix</persName> filia ejus</rs> et maritus suus domnus
                     <persName>Ricardus de Bacelmont</persName>.</s>
-                <s>Domnus etiam <persName>Hugo de Bouconviller</persName> frater et <rs
-                    type="person"><persName>Eremburga</persName> soror predicte
+                <s>Domnus etiam <persName>Hugo de Bouconviller</persName> frater et <rs type="person"><persName>Eremburga</persName> soror predicte
                       <persName>Aelays</persName></rs> hoc concesserunt, fidejussoribus autem istis
                   de garantizando : <rs type="person">domino <persName>Ricardo de
                       Bacealmont</persName></rs>, et <rs type="person"><persName>Beatrice</persName>
@@ -1067,16 +1028,14 @@
                     Meri</persName> de assensu uxorum nostrarum (vendidimus) <placeName>Domui Dei
                     Pontisara</placeName> totum id quod habebamus in decima magna
                     <placeName>Aneriaci</placeName>, perpetuo tenendum pro ducen.......
-                  paris(iensibus) Hanc autem venditionem concessit <rs type="person"
-                      ><persName>Robertus</persName> miles de <placeName>Grande
+                  paris(iensibus) Hanc autem venditionem concessit <rs type="person"><persName>Robertus</persName> miles de <placeName>Grande
                       Molendino</placeName></rs> et <persName>Guido... (de Villaignes)</persName>
                   frater ejus, de quorum feodo tenebamus jamdictam decimam.</s>
                 <s>Huic etiam venditioni prebuit assensum <persName>Er(mentrudis de
                     Villers)</persName> hujus feodi domina capitalis, de qua jamdicti
                     <abbr>R.</abbr> et <abbr>G.</abbr> tenebant illam predictam decimam.</s>
                 <s>Hanc....... resignavimus et nos et uxores nostre fide data in manu domini
-                    <persName>Luce</persName> presbiteri <placeName><abbr>S<hi rend="sup"
-                      >ti</hi></abbr> Macuti</placeName> tunc temporis officialis
+                    <persName>Luce</persName> presbiteri <placeName><abbr>S<hi rend="sup">ti</hi></abbr> Macuti</placeName> tunc temporis officialis
                     <placeName>Pontisarensis</placeName> archidiaconi.</s>
                 <s>In cujus rei confirmatione presentem cartam sigilli nostri communivimus.</s>
                 <s>Actum puplice <date>anno Verbi Incarnati <num>Mº CCº</num> tercio decimo</date>
@@ -1122,8 +1081,7 @@
                     <persName>Guillelmus</persName> miles de <persName>Meri</persName> et
                     <persName>Rad(ulphus)</persName> frater ejus, de assensu
                     <persName>Guidonis</persName> fratris mei de <persName>Villaignes</persName>,
-                  vendiderunt <placeName>Domui Dei de Pontesia</placeName>, scilicet totum quod<pb
-                    n="8"/> habebant in decima <placeName>Ancriaci</placeName>, que movet de feodo
+                  vendiderunt <placeName>Domui Dei de Pontesia</placeName>, scilicet totum quod<pb n="8"/> habebant in decima <placeName>Ancriaci</placeName>, que movet de feodo
                   meo.</s>
                 <s>Quod ut ratum permaneat, ad peticionem dictorum <persName>Will</persName>.</s>
                 <s>Militis et <persName>Rad.</persName> fratris sui <persName>de Meri</persName>
@@ -1213,8 +1171,7 @@
                 <s>NOTUM sit universis quod Ego <persName>Ermentru de Villers</persName> concedo
                   vendicionem illiam quam <persName>Guillelmus</persName> miles <persName>de
                     Meri</persName> et <persName>Rad(ulphus)</persName> frater ejus vendiderunt
-                    <placeName>Domui Dei de Pontisara</placeName> de assensu et concessu <rs
-                    type="person"><persName>Roberti</persName> militis de <placeName>Magno
+                    <placeName>Domui Dei de Pontisara</placeName> de assensu et concessu <rs type="person"><persName>Roberti</persName> militis de <placeName>Magno
                       molendino</placeName></rs> et <persName>Guidonis</persName> fratris sui de
                     <persName>Villaines</persName> scilicet totum id quod habebant in decima.......
                   quam decimam predicti fratres <persName>Robertus</persName> et
@@ -1226,8 +1183,7 @@
                   officialis <persName>Amavrici</persName> archidiaconi
                     <placeName>Pontisarensis</placeName>.</s>
                 <s>Quod ut ratum permaneat, presenti carte sigillum meum appo(sui) his testibus.</s>
-                <s>Domno <persName>Stephano</persName> priore <placeName><abbr>S<hi rend="sup"
-                        >ti</hi></abbr> Petri</placeName>.</s>
+                <s>Domno <persName>Stephano</persName> priore <placeName><abbr>S<hi rend="sup">ti</hi></abbr> Petri</placeName>.</s>
                 <s>Magistro <persName>Radulpho Capellano</persName>.</s>
                 <s><persName>Garino de Cergio</persName> maiore tunc temporis
                     <placeName>Pontesie</placeName>.</s>
@@ -1241,8 +1197,7 @@
                 <s><persName>Roberto Minario</persName>.</s>
                 <s><persName>Drocone de Chambliaco</persName>.</s>
                 <s>Actum <date>anno gracie <num>Mº CCº XIII<hi rend="sup">mo</hi></num> in crastino
-                    festi <abbr>S<hi rend="sup">ti</hi></abbr> Gregorii.<ref type="note" n="*"
-                      target="#nid117066 " xml:id="aid117066"/></date></s>
+                    festi <abbr>S<hi rend="sup">ti</hi></abbr> Gregorii.<ref type="note" n="*" target="#nid117066 " xml:id="aid117066"/></date></s>
               </p>
             </div>
           </body>
@@ -1282,8 +1237,7 @@
                 <s>Noverint universi quod ego <persName>Radulfus de Labevilla</persName> miles et
                     <persName>Hemardus</persName> awunculus meus assensu uxorum nostrarum et heredum
                   nostrorum, dedimus et eleemosynavimus <placeName>Domui Dei de Pontesia</placeName>
-                  quicquid habebamus in domo <persName>Simonis</persName> presbyteri, confris<ref
-                    type="note" n="1" target="#na014 " xml:id="aa014"/> ejusdem
+                  quicquid habebamus in domo <persName>Simonis</persName> presbyteri, confris<ref type="note" n="1" target="#na014 " xml:id="aa014"/> ejusdem
                     <placeName>Domus</placeName>, tenendum in puram et perpetuam eleemosynam.</s>
                 <s>Nos autem redditus domus et omnia jura pertinentia renunciavimus, Ego et
                     <persName>Hemardus</persName> scilicet, coram <persName>Garnerio de
@@ -1302,8 +1256,7 @@
           </body>
           <back>
             <div type="notes">
-              <note n="1" xml:id="na014" target="#aa014 ">Nous croyons devoir lire <hi rend="i"
-                  >confratris</hi> et non <hi rend="i">confessoris</hi>, comme semble l'avoir fait
+              <note n="1" xml:id="na014" target="#aa014 ">Nous croyons devoir lire <hi rend="i">confratris</hi> et non <hi rend="i">confessoris</hi>, comme semble l'avoir fait
                   <num>M.</num>
                 <abbr>F.</abbr> Rocquain.</note>
             </div>
@@ -1440,8 +1393,7 @@
             <note>Cette charte est datée de l'année même de la mort du comte Jehan, qui ne laissa
               point d'héritiers. Cette concession de la mairie de Champagne est donc une véritable
               disposition testamentaire. Pas plus que la charte de Mathieu <num>III</num> en faveur
-              de Garin de Champagne, reproduite plus haut, cette pièce n'est mentionnée dans les <hi
-                rend="i">Recherches</hi> de Douët d'Arcq sur les <hi rend="i">Anciens Comtes de
+              de Garin de Champagne, reproduite plus haut, cette pièce n'est mentionnée dans les <hi rend="i">Recherches</hi> de Douët d'Arcq sur les <hi rend="i">Anciens Comtes de
                 Beaumont-sur-Oise</hi> ; mais dans cet ouvrage, à la page 86, on trouve un autre don
               de quinze arpents de terre, fait par le comte Jehan à Pierre de Champagne, en
               récompense de ses services.</note>
@@ -1717,8 +1669,7 @@
                   futuris quod magister <persName>Stephanus de Bouconviler</persName> dedit et
                   concessit <persName>Ricardo Potin</persName> et aliis et heredibus eorum quandam
                   semitam sex pedum de lato, a medio fosse que est inter eum et <persName>Girardum
-                    Marescallum</persName> usque ad suam terram et a duabus tessiis<ref type="note"
-                    n="1" target="#na015 " xml:id="aa015"/> in longum ultra ortum <persName>Girardi
+                    Marescallum</persName> usque ad suam terram et a duabus tessiis<ref type="note" n="1" target="#na015 " xml:id="aa015"/> in longum ultra ortum <persName>Girardi
                     Marescalli</persName>, ad eundum usque ad primam vinearum suarum, et reddent
                   predicto magistro <persName>Stephano</persName> et heredibus suis duos denarios
                   censuales de unoquoque arpento singulis annis <date>ad festum <abbr>S.</abbr>
@@ -1769,14 +1720,11 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Officialis Archidiaconi omnibus presentes litteras inspecturis <seg type="theo"
-                    >salutem in Domino</seg>.</s>
+                <s>Officialis Archidiaconi omnibus presentes litteras inspecturis <seg type="theo">salutem in Domino</seg>.</s>
                 <s>Notum facimus quod <persName>Hemericus ad Dentem</persName> et
                     <persName>Messendis</persName> uxor sua in nostra presentia constituti
                   contulerunt in puram et perpetuam elemosinam <placeName>Domui Dei
-                    Pontisarensis</placeName> quamdam peciam terre que est sita ultra <rs
-                    type="place">pontem</rs> inter <placeName>Calciatam</placeName> et <rs
-                    type="place">jardinum</rs> dicte <placeName>Domus Dei</placeName>.</s>
+                    Pontisarensis</placeName> quamdam peciam terre que est sita ultra <rs type="place">pontem</rs> inter <placeName>Calciatam</placeName> et <rs type="place">jardinum</rs> dicte <placeName>Domus Dei</placeName>.</s>
                 <s>Isti elemosine assensum prebuerunt <persName>Andreas de Ponte</persName> et
                     <persName>Euroissa</persName> uxor sua, et <persName>Hodoinus de
                     Elemosina</persName>, et filii eorumdem, ita quod in dicta terra nichil de
@@ -1882,8 +1830,7 @@
                     <persName>Emeline</persName> scilicet et <persName>Agneti</persName>,
                     <num>XII</num>
                   <abbr>lib.</abbr> parisienses tali conditione quod de cetero dicte sorores et
-                  heredes sui de ista re dictam <placeName>Domum</placeName> in posterum trahere<pb
-                    n="16"/> in causam <sic>(sic)</sic>.</s>
+                  heredes sui de ista re dictam <placeName>Domum</placeName> in posterum trahere<pb n="16"/> in causam <sic>(sic)</sic>.</s>
                 <s>Ego vero <rs type="person"><persName>Buchardus</persName> dominus
                       <placeName>Montemorenc(iaci)</placeName></rs> ad peticionem utriusque partis
                   ut hoc ratum et inconcussum permaneat presentes litteras sigilli mei munimine
@@ -1972,8 +1919,7 @@
                   <seg type="theo">salutem in Domino</seg>.</s>
                 <s>Notum facio quod ego assensu et voluntate <persName>Ameline</persName> uxoris mee
                   et heredum meorum volo et concedo quod <placeName>Domus Dei de
-                    Pontisara</placeName> terram que dicitur <placeName>Valagullon<ref type="note"
-                      n="1" target="#na016 " xml:id="aa016"/></placeName> libere et quiete jure
+                    Pontisara</placeName> terram que dicitur <placeName>Valagullon<ref type="note" n="1" target="#na016 " xml:id="aa016"/></placeName> libere et quiete jure
                   hereditario imperpetuum teneat et possideat pro duos solidos parisienses michi vel
                   heredibus meis censuales annuatim <date>in festo <abbr>B.</abbr> Remigii</date>
                   reddendos pro omnibus costumis que michi in dicta terra competere possent, de
@@ -2045,8 +1991,7 @@
             </div>
           </body>
           <back>
-            <note>Cette pièce n'est pas citée par Douët d'Arcq. On trouve page 131 des <hi rend="i"
-                >Recherches sur les comtes de Beaumont-sur-Oise</hi>, une charte de 1277 rappelant
+            <note>Cette pièce n'est pas citée par Douët d'Arcq. On trouve page 131 des <hi rend="i">Recherches sur les comtes de Beaumont-sur-Oise</hi>, une charte de 1277 rappelant
               une vente faite antérieurement à Pierre de Chambly de 60 <abbr>s.</abbr> tourn. de
               rente sur la prévôté de Beaumont, par Jehan de Champagne, chevalier, Henri dit de
               Belléglise et Robert de Champagne, écuyers, frères et héritiers de feu Thibaut de
@@ -2084,8 +2029,7 @@
               <p>
                 <s>Universis <seg type="theo">Christi fidelibus</seg> presentes litteras inspecturis
                   frater <num>D.</num> permissione divina abbas <placeName>Sti Martini
-                    Pontisarensis</placeName> licet indignus et ejusdem loci conventus, <seg
-                    type="theo">salutem in Domino</seg>.</s>
+                    Pontisarensis</placeName> licet indignus et ejusdem loci conventus, <seg type="theo">salutem in Domino</seg>.</s>
                 <s>Notum facimus quod nos volumus et concessimus quod <placeName>Domus Dei
                     Pontisarensis</placeName> de cetero habeat et percipiat quindecim solidos
                   parisienses annui census cotagii quos consuevimus percipere singulis annis, hiis
@@ -2232,8 +2176,7 @@
                   consuetudines patrie promiserunt bene et fideliter garandire.</s>
                 <s><persName>Johannes vero dictus Salnarius</persName>, <persName>Guillelmus
                     Minerius</persName> et <persName>Johannes dictus Donic</persName> (?) burgenses
-                    <placeName>Pontisare</placeName> de omnibus promissis et singulis fideliter<pb
-                    n="20"/> observendis et ut dictum est, garantizandis, ad instanciam dictorum
+                    <placeName>Pontisare</placeName> de omnibus promissis et singulis fideliter<pb n="20"/> observendis et ut dictum est, garantizandis, ad instanciam dictorum
                     <persName>Juliani</persName> et <persName>Petronille</persName> uxoris sue
                   constituerunt se fidejussores unusquisque in solidum coram nobis.</s>
                 <s>In cujus rei testimonium et munimen, apud peticionem dictorum
@@ -2278,11 +2221,9 @@
                     <placeName>Rothomagensis</placeName> archiepiscopi</rs> in <placeName>Vulcasino
                     Francie</placeName>
                   <seg type="theo">salutem in Domino</seg>.</s>
-                <s>Noveritis quod in nostra presencia constituti <rs type="person"
-                      ><persName>Julianus</persName> de <placeName>Ponte</placeName></rs> et
+                <s>Noveritis quod in nostra presencia constituti <rs type="person"><persName>Julianus</persName> de <placeName>Ponte</placeName></rs> et
                     <persName>Petronilla</persName> uxor ejus, tunc de parochia <placeName>Beate
-                    Marie Pontisarensis</placeName>, recognoverunt se vendidisse <rs type="person"
-                    >Domino Regi Francie</rs> illustri..... duas partes tocius prati et etiam totius
+                    Marie Pontisarensis</placeName>, recognoverunt se vendidisse <rs type="person">Domino Regi Francie</rs> illustri..... duas partes tocius prati et etiam totius
                   manerii siti in eodem prato, quod pratum dicitur <placeName>Pratum
                     Regis</placeName> et situm est infra metas parochie <placeName>Beate Marie de
                     Pontisara</placeName>, justa <rs type="place">fossatum <persName>Domini
@@ -2335,9 +2276,7 @@
                 <s>Notum facio universis <abbr>pres.</abbr>
                   <abbr>litt.</abbr>
                   <abbr>insp.</abbr></s>
-                <s>Quod ego excambium quod <persName>Johannes dictus de Chambliaco</persName> et <rs
-                    type="person"><persName>Marta</persName> uxor ejus</rs> fecerunt <rs
-                    type="person">Excellentissimo Domino <persName>Ludovico</persName> Regi
+                <s>Quod ego excambium quod <persName>Johannes dictus de Chambliaco</persName> et <rs type="person"><persName>Marta</persName> uxor ejus</rs> fecerunt <rs type="person">Excellentissimo Domino <persName>Ludovico</persName> Regi
                       <persName>Francorum</persName></rs> videlicet de medietate cujusdam domus site
                   in vico <placeName> Pontis Pontisare</placeName> inter Domum <persName>Richardi
                     dicti de Locis</persName> ex una parte et domum <persName>Symonis dicti
@@ -2710,8 +2649,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Omnibus hec visuris frater <persName>Odo</persName> permissione divina
-                    <placeName>Rothomagensis</placeName> ecclesie minister indignus, <seg
-                    type="theo">salutem eternam in Domino</seg>.</s>
+                    <placeName>Rothomagensis</placeName> ecclesie minister indignus, <seg type="theo">salutem eternam in Domino</seg>.</s>
                 <s>Noveritis quod <persName>Reginaldus</persName> presbiter, rector ecclesie
                     <placeName>Beati Andree de Pontisara</placeName>, dicebat obventiones
                     <placeName>hospitalis Beati Nicholai</placeName> juxta <rs type="place">pontem
@@ -2722,8 +2660,7 @@
                 <s>Tandem dictus rector in nostra presencia constitutus, occasionem discordie
                   cupiens evitare, redditus et obventiones prefatas hospitali predicto quitavit in
                   perpetuum et remisit pro sexaginta et decem solidis parisiensibus percipiendis
-                  annuatim a predicto rectore et successoribus ejus, a prepositura <rs type="person"
-                    >Excellentissimi viri <persName>Ludovici</persName>
+                  annuatim a predicto rectore et successoribus ejus, a prepositura <rs type="person">Excellentissimi viri <persName>Ludovici</persName>
                     <seg type="theo">Dei gratia</seg> Regis <persName>Francorum</persName></rs> apud
                     <placeName>Pontisaram</placeName>, prout in litteris ejusdem Domini Regis super
                   hoc confectis dicitur plenius contineri.</s>
@@ -2880,8 +2817,7 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Notum sit omnibus presentibus et futuris quod ego <rs type="person"
-                      ><persName>Adam de Guallonnel</persName> miles filius domini
+                <s>Notum sit omnibus presentibus et futuris quod ego <rs type="person"><persName>Adam de Guallonnel</persName> miles filius domini
                       <persName>Johannis de Guallonnel</persName> militis</rs>, vendidi et concessi
                   et penitus quitavi priori fratribus et sororibus <placeName>Domus Dei de
                     Pontysara</placeName> juxta pontem et eorum successoribus, quod habebam et
@@ -3077,8 +3013,7 @@
                     <persName>Odelina</persName> ejus uxor, recognoverunt se vendidisse et in
                   perpetuum quittavisse <placeName>Domui Dei Pontisarensi</placeName>, manerium quod
                   dicti <persName>Johannes</persName> et <persName>Odelina</persName> habebant et
-                  emebant a domino <persName>Roberto dicti Latruie</persName> milite,<ref
-                    type="note" n="1" target="#na017 " xml:id="aa017"/> sitam<pb n="29"/> in
+                  emebant a domino <persName>Roberto dicti Latruie</persName> milite,<ref type="note" n="1" target="#na017 " xml:id="aa017"/> sitam<pb n="29"/> in
                     vico<placeName>Pontis</placeName> inter <rs type="place">portam dicti
                       <placeName>Pontis</placeName></rs> ex una parte et domum <persName>Johannis
                     Lullier</persName> ex altera.</s>
@@ -3304,8 +3239,7 @@
                   honorem qui pro nobis in terris pauper fieri voluit, ut ejus inopia ditaremur,
                     <placeName>Domum Dei</placeName> et <placeName>pauperum hospitalis Beati
                     Nicholai</placeName> juxta <rs type="place">pontem
-                      <placeName>Pontisare</placeName></rs> sitam, tenuem in redditibus et<pb n="31"
-                  /> in edificiis pauperem et exilem, novis ac commodis edificiis dilatantes,
+                      <placeName>Pontisare</placeName></rs> sitam, tenuem in redditibus et<pb n="31"/> in edificiis pauperem et exilem, novis ac commodis edificiis dilatantes,
                   ampliorem numerum personarum regulariter viventium ad divini cultus et pauperum
                   infirmorum obsequium institui disposuerimus in eadem, ut <seg type="theo">in ipsa
                     Christus Dominus</seg> in membris suis honorabilius ac competentius
@@ -3413,8 +3347,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Ego <persName>Philippus de Tria</persName> miles Notum facio omnibus presentes
-                  litteras inspecturis quod ego laudo et approbo venditiones quas fecerunt <rs
-                    type="person">Excellentissimo Dno <persName>Ludovico</persName>
+                  litteras inspecturis quod ego laudo et approbo venditiones quas fecerunt <rs type="person">Excellentissimo Dno <persName>Ludovico</persName>
                     <seg type="theo">Dei gratia</seg> regi <persName>Francorum</persName></rs>
                   <persName>Paganus Draparius</persName> et <persName>Juliana</persName> ejus uxor,
                     <persName>Symon dictus Juvenis</persName> et <persName>Agnes</persName> ejus
@@ -3480,8 +3413,7 @@
                     <persName>Aalipdis</persName>, uxor viri nobilis domini <persName>Philippi de
                     Tria</persName> militis, asseruit quod dictus dominus
                     <persName>Philippus</persName> maritus ejus, per suas patentes litteras
-                  laudaverat et approbaverat vendiciones quas fecerunt <rs type="person"
-                    >Excellentissimo Domino <persName>Ludovico</persName>
+                  laudaverat et approbaverat vendiciones quas fecerunt <rs type="person">Excellentissimo Domino <persName>Ludovico</persName>
                     <seg type="theo">Dei gracia</seg> Regi <persName>Francorum</persName></rs>
                   <persName>Paganus Draparius</persName> et <persName>Juliana</persName> ejus uxor,
                     <persName>Symon dictus Juvenis</persName> et <persName>Agnes</persName> ejus
@@ -3651,8 +3583,7 @@
                     <num>vij</num> ensemble la seignorie &amp;le tresfons de <num>ij.</num> masures,
                   que <persName>Richars de Liex</persName> et <persName>Symons li Josnes</persName>
                   vendirent a noble homme <rs type="person"><persName>Loeys</persName> par la grace
-                    de Dieu roi de <placeName>France</placeName></rs>, por la <placeName>Meson<pb
-                      n="35"/> Dieu de Pontoise</placeName>, lesqueles masures sont assises entre la
+                    de Dieu roi de <placeName>France</placeName></rs>, por la <placeName>Meson<pb n="35"/> Dieu de Pontoise</placeName>, lesqueles masures sont assises entre la
                   devant dite <placeName>Meson Dieu</placeName> d'une part et la meson qui fu
                     <persName>Pierre le Josne</persName> d'autre ; Nous <num>IIII</num> devant
                   nommés avons vendu nos <num>iiij</num> parties et quittiées a la devant dite
@@ -4208,8 +4139,7 @@
                   <placeName>Mello</placeName>.</s>
                 <s>Item circiter dimidium arpentum prati subtus ipsam vineam.</s>
                 <s>Item terciam partem et sextam partem cujusdam pressorii siti in loco qui dicitur
-                      <placeName>Deres<ref type="note" n="1" target="#na018 " xml:id="aa018"
-                    /></placeName>.</s>
+                      <placeName>Deres<ref type="note" n="1" target="#na018 " xml:id="aa018"/></placeName>.</s>
                 <s>Item campipartem cum jornalium et dimidium terre sitam in
                     <placeName>Addiotis</placeName>.</s>
                 <s>Item vu. homagia.</s>
@@ -4254,23 +4184,20 @@
                   <abbr>den.</abbr> de <placeName>Montrignio</placeName>.</s>
                 <s>Item de <persName>Johanneto</persName> fratre suo <num>i.</num>
                   <abbr>den.</abbr> de <placeName>Montrinio</placeName>.</s>
-                <s>Item a <persName>Herberto Bouche<ref type="note" n="1" target="#na018 "
-                      xml:id="aa019"/></persName>
+                <s>Item a <persName>Herberto Bouche<ref type="note" n="1" target="#na018 " xml:id="aa019"/></persName>
                   <num>vi</num>
                   <abbr>den.</abbr> de vinea sua de <placeName>Sallite</placeName>.</s>
                 <s>Item a <rs type="person"><persName>Marguareta</persName> filia <persName>Johannis
                       Fourner</persName></rs>
                   <num>vi</num>
-                  <abbr>den.</abbr> de vinea sua de <placeName>Sallite<ref type="note" n="2"
-                      target="#na020 " xml:id="aa020"/></placeName>.</s>
+                  <abbr>den.</abbr> de vinea sua de <placeName>Sallite<ref type="note" n="2" target="#na020 " xml:id="aa020"/></placeName>.</s>
                 <s>Item a familia <persName>Petri Lebuef</persName>
                   <num>iv</num>
                   <abbr>den.</abbr> de domo eorum.</s>
                 <s>Item a <persName>Guarnero de Pratis</persName>
                   <num>iiii</num>
                   <abbr>den.</abbr> de plantis suis et un. <abbr>denar.</abbr> des
-                    <placeName>Crotieres</placeName>, et unum obolum de <placeName>Gonees<ref
-                      type="note" n="3" target="#na021 " xml:id="aa021"/></placeName> a
+                    <placeName>Crotieres</placeName>, et unum obolum de <placeName>Gonees<ref type="note" n="3" target="#na021 " xml:id="aa021"/></placeName> a
                     <persName>Johanne dou Caillou</persName>, duos <abbr>den.</abbr> de noa sui
                   larricii.</s>
                 <s>Item ab <persName>Ysambardo de Vallibus</persName> unum tur. de vinea sua de
@@ -4315,8 +4242,7 @@
                     <abbr>librar.</abbr> paris, jam mihi soluto et tradito in pecunia
                   numerata...</s>
                 <s>Quam venditionem garantizabo deffendem et liberabo meis sumptibus in judicio et
-                  contra quemcumque opus fuit, ad usus et consuetudines patrie, usque ad <rs
-                    type="person">Dominum Regem <placeName>Francie</placeName></rs> erga omnes.</s>
+                  contra quemcumque opus fuit, ad usus et consuetudines patrie, usque ad <rs type="person">Dominum Regem <placeName>Francie</placeName></rs> erga omnes.</s>
                 <s>Nec non et quam cito fuero factus miles, consimilem litteram dabo dictis
                   religiosis sub sigillo meo de predictis...</s>
                 <s>In quorum omnium cuidanciam pleniorem presentes litteras reddidi prefatis
@@ -4569,13 +4495,11 @@
                 <s>Universis <abbr>p. l. i.</abbr> Officialis <rs type="place">curie
                       <placeName>Parisiensis</placeName></rs>
                   <abbr>s. in. D.</abbr></s>
-                <s>Notum facimus quod coram nobis constituti <persName>Annetus<ref type="note" n="1"
-                      target="#na022 " xml:id="aa022"/> dictus Patou de <placeName>Sancto
+                <s>Notum facimus quod coram nobis constituti <persName>Annetus<ref type="note" n="1" target="#na022 " xml:id="aa022"/> dictus Patou de <placeName>Sancto
                       Lupo</placeName></persName> et <persName>Petronilla</persName> ejus uxor
                   asseruerunt quod ipsi habebant de conquestu suo apud <placeName>Sanctum
                     Lupum</placeName> quandam domum cum jardinio in vico qui dicitur
-                    <placeName>Vicus subtus Furnum</placeName>, contiguos ex una parte domui <rs
-                    type="person"><persName>Foucaudi</persName> filii quondam defuncti
+                    <placeName>Vicus subtus Furnum</placeName>, contiguos ex una parte domui <rs type="person"><persName>Foucaudi</persName> filii quondam defuncti
                       <persName>Huberti dicti Poncet</persName></rs> et ex altera domui
                     <persName>Agnetis</persName> uxoris <persName>Luce Coci</persName>, in censiva
                   domini <persName>Johannis de Noento</persName> militis, oneratos in decem et octo
@@ -4648,8 +4572,7 @@
                   lettres verront et orront que, comme nos fussient <num>vii.</num> enfant, et
                   eusiemes entre nous <num>vii.</num> ensemble la signorie et le tresfons
                     de<num>ii</num>. masures que <persName>Richars de Liex</persName> et
-                    <persName>Symons li Juesnes</persName> vendirent à noble homme <rs type="person"
-                      ><persName>Loys</persName> par la grace de Dieu roi de
+                    <persName>Symons li Juesnes</persName> vendirent à noble homme <rs type="person"><persName>Loys</persName> par la grace de Dieu roi de
                       <placeName>France</placeName></rs>, mort, por la <placeName>Maison Dieu de
                     Pontoise</placeName>, lesqueles masures sont assises entre la devant dite
                     <placeName>Maison Dieu</placeName> dune part, et la maison qui fu
@@ -4726,8 +4649,7 @@
                   parisiensibus... totalem portionem quam ipsa asserebat se habere in recto dominio
                   et trefondo duarum masurarum quas ipsa <persName>Margareta</persName> mulier
                   asseruit coram nobis <persName>Richardum dictum de Locis</persName> et
-                    <persName>Symonem dictum Juvenem</persName> vendidisse <rs type="person"
-                      ><persName>Ludovico</persName>
+                    <persName>Symonem dictum Juvenem</persName> vendidisse <rs type="person"><persName>Ludovico</persName>
                     <seg type="theo">Dei gracia</seg> quondam illustri Regi
                       <placeName>Francie</placeName></rs>...</s>
                 <s>Preterea <rs type="person"><persName>Balduinus</persName> filius quondam predicti
@@ -4866,8 +4788,7 @@
                   dedisse magistro... et sororibus <placeName>Domus Dei de Pontisara</placeName>
                   quandam peciam terre continentem medietatem dimidii quarterii terre, sitam apud
                     <placeName>Macerias</placeName> in territorio quod vocatur
-                    <placeName>Maillet</placeName> (?) juxta terram <rs type="person"
-                      ><persName>Galteri</persName> filii <persName>Gile</persName></rs> ex una
+                    <placeName>Maillet</placeName> (?) juxta terram <rs type="person"><persName>Galteri</persName> filii <persName>Gile</persName></rs> ex una
                   parte et cortillum predictorum religiosorum ex altera...</s>
                 <s><date>Datum anno Domini <num>Mº CCº</num> septuagesimo primo, mense februarii,
                     die sabbati post octabas Purificationis Beate Marie Virginis</date> .</s>
@@ -5119,8 +5040,7 @@
                     Dame</placeName> ou a leur commandement diz souz de <placeName>Paris</placeName>
                   de rente renduz chascun an en leur meson quil ont a
                     <placeName>Pontoise</placeName>
-                  <date>aus witaves de la Saint-Denis<ref type="note" n="1" target="#na023 "
-                      xml:id="aa023"/></date>.</s>
+                  <date>aus witaves de la Saint-Denis<ref type="note" n="1" target="#na023 " xml:id="aa023"/></date>.</s>
                 <s>Et sil avenoit que il ne fuissent renduz a<pb n="52"/> ce jour, leur en rendroit
                   de toutes les journees que leur defaudroit de paiement, de chascune journee
                     <num>xii</num> deniers parisis jusques a tant que les diz souz diz seroient
@@ -5139,8 +5059,7 @@
           <back>
             <div type="notes">
               <note n="1" xml:id="na023" target="#aa023 ">Il s'agit du cellier que les religieux
-                avaient à Pontoise, dans la rue qui porte encore aujourd'hui le nom de <hi rend="i"
-                  >rue Notre Dame du Val</hi>.</note>
+                avaient à Pontoise, dans la rue qui porte encore aujourd'hui le nom de <hi rend="i">rue Notre Dame du Val</hi>.</note>
             </div>
           </back>
         </text>
@@ -5293,8 +5212,7 @@
                     <persName>Bartholomeus de Ponte</persName> clerici, <seg type="theo">salutem in
                     Domino</seg>.</s>
                 <s>Cum inter viros religiosos Abbatem et conventum de <placeName>Marchesio
-                    Raduphi</placeName> ordinis Premonstratensis, <placeName>Rothoma<pb n="54"
-                    />gensis</placeName> dyocesis, ex una parte, et magistrum, priorissam, fratres
+                    Raduphi</placeName> ordinis Premonstratensis, <placeName>Rothoma<pb n="54"/>gensis</placeName> dyocesis, ex una parte, et magistrum, priorissam, fratres
                   et sorores <placeName>Domus Dei de Pontisara</placeName> ex altera, esset
                   controversia super jure possessionis et proprietatis pressorandi vindemiam
                   cujusdam vinee site apud <placeName>Campanias</placeName> que vocatur
@@ -5345,8 +5263,7 @@
               grande maison du Bourg de Beaumont.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 28.<ref type="note" n="1"
-                    target="#na037 " xml:id="aa037"/></witness>
+                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 28.<ref type="note" n="1" target="#na037 " xml:id="aa037"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -5451,8 +5368,7 @@
                   recongnurent quil devoient a <persName>Guillaume Daniel</persName> et a
                     <persName>Maheut</persName> sa fame trente et trais sous de Parisis de cens
                   cotage chacun an par la reson dune meson quil ont prise audit cens, assise... en
-                  la <rs type="place">rue de <placeName>Bicherel</placeName></rs> devant la <rs
-                    type="place">Platriere</rs> surs lyaue dune part, et tenant a la meson
+                  la <rs type="place">rue de <placeName>Bicherel</placeName></rs> devant la <rs type="place">Platriere</rs> surs lyaue dune part, et tenant a la meson
                     <persName>Raoul Coignet</persName> surs lyaue de lautre part, et tenant a la
                   meson audit <persName>Guillaume</persName> de lautre part, en la censive de la
                   ville...</s>
@@ -5557,8 +5473,7 @@
                     <placeName>Rothomagensi</placeName>, <seg type="theo">salutem in
                   Domino</seg>.</s>
                 <s>Notum facimus quod in nostra presentia constituti <persName>Radulphus dictus de
-                    Petralata</persName> bargensis <placeName>Pontisare</placeName> et <rs
-                    type="person"><persName>Emelina</persName> ejus uxor</rs> asseruerunt quod
+                    Petralata</persName> bargensis <placeName>Pontisare</placeName> et <rs type="person"><persName>Emelina</persName> ejus uxor</rs> asseruerunt quod
                   habebant quamdam domum et quasdam pecias terre circiter arpentum et dimidium, et
                   quasdam decimas<pb n="57"/> apud <placeName>Geraudicuriam</placeName>... quas
                   recognoverunt se vendidisse rectori... et sororibus <placeName>Domus Dei de
@@ -5574,8 +5489,7 @@
           <back>
             <note>
               <p>Un acte semblable est passé devant « <persName>Thomas Hulin</persName> sous ballis
-                de <hi rend="i">Poissi</hi> en ce tans, garde de la chatelerie de <hi rend="i"
-                  >Pontoise</hi> de par madame la Roine de France, « en date de " lan de grace mil
+                de <hi rend="i">Poissi</hi> en ce tans, garde de la chatelerie de <hi rend="i">Pontoise</hi> de par madame la Roine de France, « en date de " lan de grace mil
                 deux cens et sessante seisse au mois de janvier. »</p>
               <p>(Orig. Arch. hosp. <abbr>B.</abbr> 45. Sceau de la Châtellenie de Pontoise).</p>
               <p>Le mardi après l'Epiphanie 1291 (janvier 1292 <abbr>n. st.</abbr>) Guillaume,
@@ -5604,8 +5518,7 @@
                 <witness n="A">Original. Arch. hosp. Pontoise, B 61. Sceau ovale, représentant deux
                   paons affrontés becquetant une fleur de lis portée par une haute tige.
                     <abbr>S.</abbr>
-                  <persName>Damoisele Eustace de Puiseus</persName>. Autre sceau absent.<ref
-                    type="note" n="1" xml:id="aa036" target="#na036"/> Détruit en 1944.</witness>
+                  <persName>Damoisele Eustace de Puiseus</persName>. Autre sceau absent.<ref type="note" n="1" xml:id="aa036" target="#na036"/> Détruit en 1944.</witness>
               </listWit>
               <listWit type="copie">
                 <witness n="B">Bibl. nat. de France, lat. 5657, fol. 60.</witness>
@@ -5689,8 +5602,7 @@
           <body>
             <div xml:lang="fro" type="transcription">
               <p>
-                <s>A tous ceus qui ces presentes lettres verront et orront, <rs type="person"
-                      ><persName>Guillaume dit Tirel</persName>, sires de
+                <s>A tous ceus qui ces presentes lettres verront et orront, <rs type="person"><persName>Guillaume dit Tirel</persName>, sires de
                       <placeName>Poiz</placeName></rs>, salut en Nostre Segneur.</s>
               </p>
               <p>
@@ -5699,13 +5611,11 @@
                   freres et as sereurs de la <placeName>Meson Dieu de Ponthoise</placeName>, et à
                   leurs successeurs ou ceuz qui auront cause deus, a avoir et a tenir du tout au
                   tout, a touz jours, heritablement, en main morte, franchement et quictement, sanz
-                  rien reclamer ne segneurie ne joutise<ref type="note" n="1" target="#na024 "
-                    xml:id="aa024"/> ne redevance ne nulle autre chose, ne par nos, ne par nos hoirs
+                  rien reclamer ne segneurie ne joutise<ref type="note" n="1" target="#na024 " xml:id="aa024"/> ne redevance ne nulle autre chose, ne par nos, ne par nos hoirs
                   ne par autres quiex queils soient.</s>
                 <s>C'est a savoir les deus parz de toute la grosse disme de
                     <placeName>Giroucourt</placeName> lesqueles deus parz <persName>Rioul de
-                    Pierrelée</persName> tenoit de nous en fie<ref type="note" n="2"
-                    target="#na025 " xml:id="aa025"/> et en arriere fie et lesqueles deus parz de la
+                    Pierrelée</persName> tenoit de nous en fie<ref type="note" n="2" target="#na025 " xml:id="aa025"/> et en arriere fie et lesqueles deus parz de la
                   devandite disme ledit de <persName>Pierrelée</persName> requenut par devant nous
                   soi avoir vendu au mestre à la prieuse as freres et as sereurs de la
                     <placeName>Meson</placeName> devandite et quictié sanz riens reclamer jamès par
@@ -5745,8 +5655,7 @@
               Guiart de Chauvry et Guiart d'Hérouville</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 30.<ref type="note" n="1"
-                    xml:id="na039" target="#aa039"/></witness>
+                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 30.<ref type="note" n="1" xml:id="na039" target="#aa039"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -5764,8 +5673,7 @@
                       <placeName>France</placeName></rs>
                   <seg type="theo">saluz en Nostre Segneur <abbr>Jhu</abbr> Crist</seg>.</s>
                 <s>Nous feson a savoir a touz que par devant nous establiz en droit <persName>Guiart
-                    de Chauvri</persName> escuier et damoisele <rs type="person"
-                      ><persName>Jehane</persName> sa femme de
+                    de Chauvri</persName> escuier et damoisele <rs type="person"><persName>Jehane</persName> sa femme de
                     <placeName>Herouville</placeName></rs>, <persName>Guiart de
                     Herouville</persName> escuier et damosele <persName>Marie</persName> sa feme
                   jadis filles mesire <persName>Henri de Herouville</persName> chevalier,
@@ -5879,8 +5787,7 @@
                 <s>Omnibus presentes litteras inspecturis <rs type="person"><persName>Philippus
                       dictus Viarius<ref type="note" n="1" target="#na026 " xml:id="aa026"/> de
                       Marolio Sou-Maudre</persName>, armiger, filius quondam et heres defuncti
-                      <persName>Dyonisii dicti Viarii</persName> militis</rs>, <seg type="theo"
-                    >salutem in Domino</seg>.</s>
+                      <persName>Dyonisii dicti Viarii</persName> militis</rs>, <seg type="theo">salutem in Domino</seg>.</s>
               </p>
               <p>
                 <s>Noveritis quod ego <persName>Philippus</persName> prior dominus feodalis trium
@@ -6065,8 +5972,7 @@
               <p>
                 <s>Universis <abbr>p. l. i.</abbr>
                   <rs type="person"><persName>Egidius</persName>
-                    <seg type="theo">Dei gracia</seg> Abbas Premonstratensium</rs>, <seg type="theo"
-                    >salutem in Domino</seg> sempiternam.</s>
+                    <seg type="theo">Dei gracia</seg> Abbas Premonstratensium</rs>, <seg type="theo">salutem in Domino</seg> sempiternam.</s>
                 <s>Noveritis nos litteras que sequuntur vidisse et legisse in hec verba.</s>
                 <s>— Universis <abbr>p. l. i.</abbr>
                   <rs type="person">Frater <persName>Bartholomeus</persName>
@@ -6146,8 +6052,7 @@
                     <placeName>Pontisarensis</placeName> sitis <date>ultima die dominica maii</date>
                   .</s>
                 <s>Item et sex denarios super domo <persName>Mathildis dicte Ad aves</persName> in
-                  vico de <placeName>Malassis</placeName> inter domum <rs type="person"
-                      ><persName>Petri</persName> de <placeName>Conflancio</placeName></rs> ex una
+                  vico de <placeName>Malassis</placeName> inter domum <rs type="person"><persName>Petri</persName> de <placeName>Conflancio</placeName></rs> ex una
                   parte et domum <persName>Asceline dicte la Levriere</persName> ex altera sita
                     <date>ultima die dominica maii</date> .</s>
                 <s>Item et tres denarios super quadam domo quondam <persName>Vincencie de
@@ -6663,8 +6568,7 @@
                   de plus outre juste pris, a toutes autres exceptions, fraudes, decevances de mal
                   et de barat qui contre ces presentes letres porroient estre alleguiés.</s>
                 <s>U tesmoing de ceste chose nous avons seelé ces presentes letres du seel de la
-                  baillie de <placeName>Senlis</placeName>, a la relation des auditeurs desuz<pb
-                    n="69"/> noumez, sauf le droit le Roi et lautrui en lan de grace mil
+                  baillie de <placeName>Senlis</placeName>, a la relation des auditeurs desuz<pb n="69"/> noumez, sauf le droit le Roi et lautrui en lan de grace mil
                     <num>CC</num> quatre vinz et cinc, u mois de may.</s>
               </p>
             </div>
@@ -6705,8 +6609,7 @@
                       <placeName>Francie</placeName></rs>.</s>
                 <s>Notum facimus universis tam presentibus quam futuris quod tunc magister et
                   fratres <placeName>Domus Dei Pontisarensis</placeName> dice est, Domino Regi
-                  supplicessent ut ipse eis concederet et in perpetuum dimitteret <rs type="place"
-                    >prisoniam seu carcerem de <placeName>Campaniis</placeName></rs> quam inclite
+                  supplicessent ut ipse eis concederet et in perpetuum dimitteret <rs type="place">prisoniam seu carcerem de <placeName>Campaniis</placeName></rs> quam inclite
                   recordationis <persName>Ludovicus</persName> Rex genitor Domini Regis qui nunc
                   est, retinuerat pro suis prisionariis incarcerandis, quando manerium et villam de
                     <placeName>Campanis</placeName> cum pertinenciis contulit <placeName>Domui
@@ -7019,8 +6922,7 @@
           </body>
           <back>
             <div type="notes">
-              <note n="1" xml:id="na027" target="#aa027">Voir pour l'explication de ce mot l'<hi
-                  rend="i">Abbaye de Maubuisson. Histoire et Cartulaire</hi>, <abbr>t.</abbr>
+              <note n="1" xml:id="na027" target="#aa027">Voir pour l'explication de ce mot l'<hi rend="i">Abbaye de Maubuisson. Histoire et Cartulaire</hi>, <abbr>t.</abbr>
                 <num>I</num>, <abbr>p.</abbr> 25.</note>
               <note n="1" xml:id="na028" target="#aa028 ">Sarcophago.</note>
             </div>
@@ -7193,8 +7095,7 @@
                   fiuz <persName>Jehan Bouenne File</persName> reconnut que il avoit vendu... a
                     <persName>Nicholas</persName> dit <persName>Chevalier</persName> et
                     <persName>Agnes</persName> sa fame... pour wyt <abbr>lb.</abbr> de parisis, la
-                  moitie de toute une meson seant a <placeName>Pontoise</placeName>... en la <rs
-                    type="place">rue du <placeName>Pont</placeName></rs>, tenant a la meson
+                  moitie de toute une meson seant a <placeName>Pontoise</placeName>... en la <rs type="place">rue du <placeName>Pont</placeName></rs>, tenant a la meson
                     <persName>Gerart de Labeville</persName> dune part et a la meson qui fu
                     <persName>Richart Hurtaut</persName> de lautre part en la censeve des hoirs de
                     <placeName>Poiz</placeName>... carchiee de dis set souz et demi
@@ -7231,8 +7132,7 @@
                     Saint Denys</persName>». Détruit en 1944.</witness>
               </listWit>
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 106.<ref type="note" n="1"
-                    xml:id="aa040" target="#na040"/></witness>
+                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 106.<ref type="note" n="1" xml:id="aa040" target="#na040"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -7248,11 +7148,9 @@
                     <placeName>Iherusalem</placeName> et de <placeName>Sezile</placeName> et
                   contesse de <placeName>Tournuerre</placeName> salut.</s>
                 <s>Nous faisiens a savoir a touz que en nostre presence establie
-                    <persName>Marguerite de Jimay</persName> femme feu <rs type="person"
-                      ><persName>Gui du Mex</persName> jadis prevost de
+                    <persName>Marguerite de Jimay</persName> femme feu <rs type="person"><persName>Gui du Mex</persName> jadis prevost de
                     <placeName>Paris</placeName></rs>, veuve, fist ordena et establit ses procureurs
-                  et messages especiaus, home hennourable nostre amé maistre <rs type="person"
-                      ><persName>Henri de Saint Meeinge</persName> chanoine de
+                  et messages especiaus, home hennourable nostre amé maistre <rs type="person"><persName>Henri de Saint Meeinge</persName> chanoine de
                       <placeName>Tourz</placeName> et de <placeName>Chaalons</placeName></rs> et
                     <persName>Hunbert d'Ausone</persName> clerc, ambedeus ensemble<pb n="76"/> et
                   chascun par soi, en tele meniere que la condicion du premierement occupant ne soit
@@ -7264,8 +7162,7 @@
                   mes pour le pris de quatre cenz livres de parisis au mestre a la prieuse aus
                   freres et aus sereurs de la <placeName>Maison Deu de Pontoise</placeName> de la
                   dyoceise de <placeName>Roan</placeName>... une maison si comme ele se comporte et
-                  toutes ses appartenances assise à <placeName>Paris</placeName> vers la <rs
-                    type="place">rue <placeName>Saint Merri</placeName></rs> en une rue qui est
+                  toutes ses appartenances assise à <placeName>Paris</placeName> vers la <rs type="place">rue <placeName>Saint Merri</placeName></rs> en une rue qui est
                   appelée la <rs type="place">rue <placeName>Andri Mallet</placeName></rs>, dont
                   plusieurs estages appartenent à cele maison, sestendent par darriere jusques a la
                     <rs type="place">rue de la <placeName>Juyerie aus deus portes</placeName></rs> ,
@@ -7807,8 +7704,7 @@
                 <s><persName>Guillaume de Hangest</persName>... par devant nous <persName>Cheron la
                     Juive</persName> demourant a <placeName>Paris</placeName> en la court
                     <persName>Robert de Paris</persName>, et afferma que elle avoit tenoit et
-                  poursuivoit une meson seant a <placeName>Paris</placeName> en la <rs type="place"
-                    >rue des <placeName>Juics aus deus portes</placeName></rs>, tenant dune part a
+                  poursuivoit une meson seant a <placeName>Paris</placeName> en la <rs type="place">rue des <placeName>Juics aus deus portes</placeName></rs>, tenant dune part a
                   la meson de ceus de l'<placeName>Otel Dieu de Pontoise</placeName> et dautre part
                   à <persName>Haquin de Montmorenci</persName> en la censive Nostre Segneur le Roy,
                   charchiee par an en un tournois de cens et en vint et deus sous parisis de creis
@@ -8021,13 +7917,11 @@
                 <s>Universis <abbr>p. l. i.</abbr></s>
                 <s>Frater <persName>Rogerus</persName> dictus Abbas <placeName>Vallis Beate
                     Marie</placeName>, <placeName>Cisterciensis</placeName> ordinis,
-                    <placeName>Parisiensis</placeName> dyocesis, et ejusdem loci conventus, <seg
-                    type="theo">salutem in Domino</seg>.</s>
+                    <placeName>Parisiensis</placeName> dyocesis, et ejusdem loci conventus, <seg type="theo">salutem in Domino</seg>.</s>
                 <s>Notum facimus quid nos communi assensu et pro utilitate monasterii nostri,
                   concessimus <persName>Guillelmo dicto Bruier</persName> de
                     <placeName>Pontisara</placeName>, et heredibus suis quandam domum quam habebamus
-                  apud <placeName>Pontisaram</placeName> sitam<pb n="84"/> super <rs type="place"
-                    >viam de la <placeName>fausse poterne</placeName></rs>, contiguam domibus
+                  apud <placeName>Pontisaram</placeName> sitam<pb n="84"/> super <rs type="place">viam de la <placeName>fausse poterne</placeName></rs>, contiguam domibus
                     <persName>Stephani dicti Gidore</persName> ex utraque parte pro octo solidis
                   parisiensibus... videlicet <date>in festo Beati Remigii</date>
                   <num>ii</num>
@@ -8190,8 +8084,7 @@
                     in Domino</seg>.</s>
                 <s>Notum facio quod quadam pars cujusdam curtilli sive orti sita apud
                     <placeName>Macerias</placeName> inter domum <placeName>Domus Dei
-                    Pontisare</placeName> ex una parte et terra <rs type="person"
-                      ><persName>Joceti</persName> filii <persName>Rocie de Maceriis</persName></rs>
+                    Pontisare</placeName> ex una parte et terra <rs type="person"><persName>Joceti</persName> filii <persName>Rocie de Maceriis</persName></rs>
                   ex altera, que pars dicitur esse <rs type="person"><persName>Ysabellis</persName>
                     filie <rs type="person"><persName>Galteri</persName> filii defuncti
                         <persName>Gile d'Andeleincourt</persName></rs></rs> est in censiva mea
@@ -8261,8 +8154,7 @@
                   a nous en requerant que nous les fassions paier de ciex biens muebles que ledit
                     <persName>Jehan</persName> avoit ou devoit avoir...</s>
                 <note>(Suit l'adjudication moyennant <num>41</num> livres, à maistre
-                    <persName>Estienne le Charpentier</persName>, d'une maison «<rs type="place"
-                    > rue <placeName>Bicherel</placeName></rs>, tenant dune part au degrez de
+                    <persName>Estienne le Charpentier</persName>, d'une maison «<rs type="place"> rue <placeName>Bicherel</placeName></rs>, tenant dune part au degrez de
                     <placeName>Saint Andriu</placeName> et dautre a la <rs type="place">meson du
                       <placeName>Midy</placeName></rs>, en la censive de la merie de
                     <placeName>Pontoyse</placeName>. »)</note>
@@ -8316,8 +8208,7 @@
                     Pontoise</placeName> vint <abbr>libr.</abbr> de parisis de rente annuel a
                   prendre et a lever... chascun an le jour de la Purificacion Nostre Dame sus toute
                   me partie que je ai et puis avoir ou port et ou travers<pb n="87"/> de
-                    <placeName>Maisons sus Sainne</placeName> que je tien en fié et hommage de <rs
-                    type="person">Nostre Seigneur le Roy de <placeName>France</placeName></rs>, pour
+                    <placeName>Maisons sus Sainne</placeName> que je tien en fié et hommage de <rs type="person">Nostre Seigneur le Roy de <placeName>France</placeName></rs>, pour
                   le pris de douze vinz <abbr>libr.</abbr> de parisis, miens quités..... et soupli a
                   nostre tres cher Seigneur le Roy devant dit, de qui je tenoie en fié les vinz
                     <abbr>libr.</abbr> de rente devant dites que il toutes les choses devant dites
@@ -8420,9 +8311,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Universis <abbr>p. l. i.</abbr> Vicarius...</s>
-                <s><persName>Guillelmus de Elemosina</persName> et <rs type="person"
-                      ><persName>Ysabellis</persName> filia <rs type="person"
-                        ><persName>Galteri</persName> filii defuncte <persName>Gile
+                <s><persName>Guillelmus de Elemosina</persName> et <rs type="person"><persName>Ysabellis</persName> filia <rs type="person"><persName>Galteri</persName> filii defuncte <persName>Gile
                         d'Andelincourt</persName></rs> uxor ipsi
                   <persName>Guillelmi</persName></rs>, asserentes quod ipsa
                     <persName>Ysabellis</persName> ante contractum inter ipsos matrimonium moram
@@ -8482,8 +8371,7 @@
                       <placeName>Charronerie</placeName></rs> tenant a la masure qui fu
                     <persName>Guillaume le Fevre</persName> dune part et a la meson desdiz
                     <persName>Gautier</persName> et <persName>Marie</persName> de lautre si comme
-                  elle se comporte en lonc et en lé de la dite rue jusques el <rs type="place"
-                    >marché as pourciaus</rs>, a vint et cinc souls <abbr>par.</abbr> de cens
+                  elle se comporte en lonc et en lé de la dite rue jusques el <rs type="place">marché as pourciaus</rs>, a vint et cinc souls <abbr>par.</abbr> de cens
                   cotage... en tele maniere que se il estoit trouvé que ladite masure deust douze
                   deniers de cens a liglise de <placeName>Saint Maclou de Pontoyse</placeName> ou as
                     persones<ref type="note" n="1" target="#na029 " xml:id="aa029"/> de ladite
@@ -8598,8 +8486,7 @@
                   capellano Capelle <placeName>Vallis Regis</placeName> juxta
                     <placeName>Pontisaram</placeName> pro quadraginta solidis <abbr>par.</abbr> sex
                   solidos <abbr>par.</abbr> annui census... super quadam domo sita in parochia
-                    <placeName>Beate Marie Pontisare</placeName> in vico de <placeName>Cavetaria<ref
-                      type="note" n="1" target="#na030 " xml:id="aa030"/> de Pontisara</placeName>
+                    <placeName>Beate Marie Pontisare</placeName> in vico de <placeName>Cavetaria<ref type="note" n="1" target="#na030 " xml:id="aa030"/> de Pontisara</placeName>
                   inter domum <persName>Johannis Anglici</persName><pb n="90"/> ex una parte et
                   domum <persName>Johannis de Velliaco</persName> ex altera, pro anniversario
                     <persName>Johanne de Bria</persName> et <persName>Guillermi</persName> quondam
@@ -8671,8 +8558,7 @@
                   que lesdiz mestre <persName>Hue</persName> et <persName>Guillaume</persName>
                   feront ou feront fere entour ledit cimetire et ordeneront.</s>
                 <s>Et nous tere<ref type="note" n="1" target="#na031 " xml:id="aa031"/> du tout en
-                  tout (quant a ce en marge) puis yceleure<ref type="note" n="2" target="#na032 "
-                    xml:id="aa032"/> quil auront commencié a ordener dicele cloture su lobligacion
+                  tout (quant a ce en marge) puis yceleure<ref type="note" n="2" target="#na032 " xml:id="aa032"/> quil auront commencié a ordener dicele cloture su lobligacion
                   de tous noz biens appendans a nous et a <abbr>lad.</abbr> quemune.</s>
                 <s>En tesmoing de la quele chose nous avons scellé ces pres. lettres du scel de la
                   quemune de <placeName>Pontoise</placeName> au causes.</s>
@@ -8766,8 +8652,7 @@
                 <s><persName>Guillaume Thibout</persName> garde de la prevosté de
                     <placeName>Paris</placeName>... par devant nous vindrent en jugement Monseigneur
                     <persName>Ernoul</persName> chanoeine de l'iglise de <placeName>Saint-Quantin en
-                    Vermandois</placeName> et chapelain de noble home Monseigneur <rs type="person"
-                      ><persName>Robert</persName> conte de <placeName>Clermont</placeName></rs>, et
+                    Vermandois</placeName> et chapelain de noble home Monseigneur <rs type="person"><persName>Robert</persName> conte de <placeName>Clermont</placeName></rs>, et
                     <persName>Laurence</persName> suer du devant dit Monseigneur
                     <persName>Ernoul</persName>... affermerent... que come ils eussent et tinssent
                   dou mestre... et des sereurs de l'<placeName>Ostel-Dieu de Pontoise</placeName>, a
@@ -8828,8 +8713,7 @@
                   ladite <persName>Emmelinne</persName> et dudit clerc son freire, chacun an mes,
                   des ore en avant, a deus termes cest assavoir <date>a la Saint Jehan
                     Bauptistre</date> dis souz <abbr>par.</abbr> et <date>a Nouel</date> dis sous
-                    <abbr>par.</abbr> c'est assavoir sur leur meson seant en la <rs type="place"
-                    >Charonnerye de <placeName>Pontoise</placeName></rs> tenant a <persName>Berchier
+                    <abbr>par.</abbr> c'est assavoir sur leur meson seant en la <rs type="place">Charonnerye de <placeName>Pontoise</placeName></rs> tenant a <persName>Berchier
                     le Feronn</persName> d'une part et aus hers feu <persName>Robert
                     Trotin</persName> de lautre part.</s>
                 <s>Laquele mesonn fu feu <persName>Eudelinne la Potinne</persName> jadis leur meire
@@ -9093,8 +8977,7 @@
                     <abbr>par.</abbr> capitalis census debitis annuatim priori dicti loci <date>in
                     octabis Beati Dionysii</date>... et de solutione duodecim <abbr>denar.</abbr>
                   <abbr>par.</abbr> ex dimidii modii vini annui redditu percipendor. a dicto priore
-                  tempore vindemiarum super quadam domo seu masura predictorum religiosorum<pb
-                    n="96"/> sita apud <placeName>Sanctum Lupum</placeName> que quondam fuit
+                  tempore vindemiarum super quadam domo seu masura predictorum religiosorum<pb n="96"/> sita apud <placeName>Sanctum Lupum</placeName> que quondam fuit
                   defuncti <persName>Bertandi Patou</persName>...</s>
                 <s>Nos pensata utilitate evidenti dicti prioratus... in renunciationem tresdecim
                   solidorum deductorum de sexdecim <abbr>sol.</abbr>
@@ -9327,8 +9210,7 @@
                   renomée.</s>
               </p>
               <p>
-                <s>Sus ce de l'une partie et de l'autre ices tesmoins jurés diligamment examinés,<pb
-                    n="99"/> les depositions de iceus mises en en escript, veues et diligamment
+                <s>Sus ce de l'une partie et de l'autre ices tesmoins jurés diligamment examinés,<pb n="99"/> les depositions de iceus mises en en escript, veues et diligamment
                   regardees, leues et ois deus peres de lettres que ceus dudit <placeName>Ostel
                     Dieu</placeName> aporterent en jugement a conforter leur entencion et la
                   deposicion de leurs tesmoins, oi et entendu diligamment tout ce que les dites
@@ -9550,8 +9432,7 @@
                   la <placeName>Meson Dieu de Pontoise</placeName> une terre, a tout les sauz
                   dedenz, si comme tout se comporte en lonc et en lé, séant à
                     <placeName>Pontoise</placeName>, derrier la meson dudit
-                    <persName>Jehan</persName> joignant dune part a iceli, et dautre part au <rs
-                    type="place">fossé au <placeName>Mire</placeName></rs> qui est ausdis relegieus,
+                    <persName>Jehan</persName> joignant dune part a iceli, et dautre part au <rs type="place">fossé au <placeName>Mire</placeName></rs> qui est ausdis relegieus,
                   movant diceus relegieus a <num>i</num>. <abbr>den.</abbr> de chefcens que il leur
                   rendra au terme de la <date>Saint Remi</date> avecques <num>iiij.</num> souls
                     <abbr>par.</abbr> d'annuel et perpetuel cens quotage que il leur rendra ensement
@@ -9602,8 +9483,7 @@
                   perpetuel... de gens religieus le mestre... et les sereurs de la <placeName>Meson
                     Dieu de Pontoise</placeName> trois pieces de vigne contenans environ
                     <num>ij.</num> quartier et demi assise les <num>ij.</num> pieces entre
-                    <placeName>Confflans</placeName> et <placeName>Aneville</placeName>,<pb n="102"
-                  /> lun quartier souz la meson qui fu <persName>Henri Poon</persName> joignant dune
+                    <placeName>Confflans</placeName> et <placeName>Aneville</placeName>,<pb n="102"/> lun quartier souz la meson qui fu <persName>Henri Poon</persName> joignant dune
                   part à la vigne qui fu <persName>Jehen du Pont</persName> et dautre part a la
                   vigne qui fu <persName>Jehan de Meru</persName>, et lautre demi quartier tenant a
                   la vigne qui fu <persName>Agnes la Faviere</persName>, mouvans du segneur de
@@ -9681,8 +9561,7 @@
             <head>Vente à l'Hôtel Dieu, par Guillaume le Barbier, d'une terre à Mézières</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 127.<ref type="note" n="1"
-                    xml:id="aa041" target="#na041"/></witness>
+                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 127.<ref type="note" n="1" xml:id="aa041" target="#na041"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -9813,8 +9692,7 @@
                   placebat voluntati centum quadrigatas bosci ad ardendum,<pb n="104"/> qualibet
                   quadrigata quatuor modulos tantummodo continente, nos eisdem volentes graciam
                   facere pleniorem, ob nostre progenitorumque nostrorum ac inclite recordationis
-                  carissime consortis nostre <persName>Johanne</persName> quondam <rs type="person"
-                      ><placeName>Francie</placeName> &amp; <placeName>Navarre</placeName>
+                  carissime consortis nostre <persName>Johanne</persName> quondam <rs type="person"><placeName>Francie</placeName> &amp; <placeName>Navarre</placeName>
                     Regine</rs> animarum remedium et salutem, volumus ac eisdem de speciali gracia
                   perpetuo tenore presentium concedimus et donamus quod ipsi ac eorum successores ac
                     <placeName>Domus Dei</placeName> predicta predictas centum quadrigatas bosci de
@@ -9997,8 +9875,7 @@
                 <s><rs type="person"><persName>Philippus</persName>
                     <seg type="theo">Dei gracia</seg>
                     <persName>Francorum</persName> Rex</rs>.</s>
-                <s>Notum facimus universis tam presentibus quam futuris quod cum dilecti nobis <seg
-                    type="theo">in Christo Magister</seg>, priorissa, fratres et sorores
+                <s>Notum facimus universis tam presentibus quam futuris quod cum dilecti nobis <seg type="theo">in Christo Magister</seg>, priorissa, fratres et sorores
                     <placeName>Domus Dei de Pontisara</placeName> a <persName>Gacone de
                     Pissiaco</persName> milite centum solidos et a <persName>Symone de
                     Pissiaco</persName> centum et quatuordecim solidos parisienses annui et perpetui
@@ -10038,8 +9915,7 @@
               Poissy.</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, fol. 10.<ref type="note" n="1" xml:id="aa042"
-                    target="#na042"/></witness>
+                <witness n="B">Bibl. nat. de France, fol. 10.<ref type="note" n="1" xml:id="aa042" target="#na042"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -10187,8 +10063,7 @@
                   huitaves de <placeName>Saint Denis</placeName>, deux septiers de fourment de rente
                     <date>a Noel</date>, dis huit deniers <abbr>par.</abbr> pour un aignel et douze
                   eus <date>a Pasques</date> sus la masure <persName>Raoul Maillart <placeName>aus
-                      Mesieres</placeName></persName>... lesquels confessa avoir eschangié<pb
-                    n="109"/> aus religieus de la <placeName>Meson Dieu de Pontoise</placeName>,...
+                      Mesieres</placeName></persName>... lesquels confessa avoir eschangié<pb n="109"/> aus religieus de la <placeName>Meson Dieu de Pontoise</placeName>,...
                   et les dis religieus lui ont baillé... leur fossé qui est assis à
                     <placeName>Pontoise</placeName> entre le courtilg dudit
                     <persName>Jehan</persName> dune part et le <rs type="place">Friesche aus
@@ -10281,15 +10156,13 @@
                 <s><rs type="person"><persName>Philippus</persName>
                     <seg type="theo">Dei gratia</seg>
                     <persName>Francorum</persName> rex</rs>.</s>
-                <s>Notum facimus universis presentibus et futuris, quod cum <rs type="person"
-                    >beatissimus <persName>Ludovicus</persName>, avus noster, quondam
+                <s>Notum facimus universis presentibus et futuris, quod cum <rs type="person">beatissimus <persName>Ludovicus</persName>, avus noster, quondam
                       <persName>Francorum</persName> rex</rs>, <placeName>Domui Dei</placeName> seu
                   hospitali <placeName>Sancti Nicolai</placeName> juxta
                     <placeName>Pontisaram</placeName> certas possessiones et redditus contulerit
                   intuitu pietatis, inter que predictus rex ducentas libras parisienses percipiendas
                   et habendas annis singulis in et super emolumentis prepositura de
-                    <placeName>Pontisara</placeName> certis terminis, videlicet centum libras<pb
-                    n="110"/>
+                    <placeName>Pontisara</placeName> certis terminis, videlicet centum libras<pb n="110"/>
                   <date>in crastino purificationis Beate Marie Virginis</date> et centum libras
                     <date>in crastino Ascensionis</date> dominice contulit, prout in ipsius
                   beatissimi <persName>Ludovici</persName> super hoc confectis litteris plenius
@@ -10419,8 +10292,7 @@
                   negociis nostris movendis... et specialiter conponendi sen transigendi cum
                   religiosis viris priore et priorissa, fratibus et sororibus <placeName>Domus Dei
                     Pontisarensis</placeName>, super lite mota inter nos et ipsos, super bufetagio,
-                  seu liagio et criagio vinorum venditorum ad brochiam, gallice <foreign
-                    xml:lang="fro">à broche</foreign>, in celario nostro
+                  seu liagio et criagio vinorum venditorum ad brochiam, gallice <foreign xml:lang="fro">à broche</foreign>, in celario nostro
                     <placeName>Pontisare</placeName>, et alibi...</s>
                 <s><date>Datum anno Domini <num>mº cccº quartodecimo</num> die veneris ante
                     nativitatem beati Johannis Baptiste</date> .</s>
@@ -10535,8 +10407,7 @@
                 <s>Item que ledit baillif de <placeName>Senliz</placeName> regardant la requeste des
                   freres et des suers dudit hostel estre de reson enclina et obei et envoia par
                   commission en la ville de <placeName>Chambli</placeName> prendre lesdiz freres et
-                  suers et les bois en la main le Roy et deffendre que nul de <abbr>lad<hi
-                      rend="sup">e</hi></abbr> ville nalassent couper ne dommagier lidiz bois</s>
+                  suers et les bois en la main le Roy et deffendre que nul de <abbr>lad<hi rend="sup">e</hi></abbr> ville nalassent couper ne dommagier lidiz bois</s>
               </p>
               <p>
                 <s>Item que par la coustume du pais toute notoire en ce cas et en semblable toutes
@@ -10788,10 +10659,8 @@
                   nobis se habere tenere et possidere de suo proprio conquestu quadraginta solidos
                   paris, annui et perpetui census cotagii situatos super domum
                     <persName>Johanne</persName> relicte defuncti <persName>Joh</persName>.</s>
-                <s><persName>Alaude<ref type="note" n="1" target="#na033 " xml:id="aa033"
-                    /></persName> et liberorum ejusdem, situatam in villa
-                    <placeName>Pontisare</placeName> in vico <placeName>Doliariorum<ref type="note"
-                      n="2" target="#na034 " xml:id="aa034"/></placeName> juxta domum
+                <s><persName>Alaude<ref type="note" n="1" target="#na033 " xml:id="aa033"/></persName> et liberorum ejusdem, situatam in villa
+                    <placeName>Pontisare</placeName> in vico <placeName>Doliariorum<ref type="note" n="2" target="#na034 " xml:id="aa034"/></placeName> juxta domum
                     <persName>Normanni</persName> ex una pte et juxta masuras domorum que fuerunt
                     <persName>Adine de Benignicuria</persName> prope manerium domini
                     <placeName>Rothomagensis</placeName> archiepiscopi, ad quatuor anni terminos in
@@ -10801,8 +10670,7 @@
                   dedisse et concessisse, dedit contulit et concessit ex nunc et in perpetuum
                     <persName>Johanni dicto Bodier</persName> clerico et <persName>Agneti</persName>
                   ejus uxori et ab ipsis causam habituris tenendum...</s>
-                <s><date>Anno millesimo tricentesimo vicesimo die martis post Brandones<ref
-                      type="note" n="3" target="#na035 " xml:id="aa035"/></date> .</s>
+                <s><date>Anno millesimo tricentesimo vicesimo die martis post Brandones<ref type="note" n="3" target="#na035 " xml:id="aa035"/></date> .</s>
               </p>
             </div>
           </body>
@@ -11017,8 +10885,7 @@
                     <persName>Gasce de Poissi</persName> jadis chevalier, et damoisele
                     <persName>Aaliz de Braye</persName> fame dudit <persName>Nicolas</persName>,
                   recognurent... avoir vendu... aus chappellains et clers de la chappelle
-                    <placeName>Sainte Elisabeth deles le pont de Pontoyse</placeName>... vint<pb
-                    n="120"/> livres parisis de rente... <date>le jour de la mi caresme</date> sus
+                    <placeName>Sainte Elisabeth deles le pont de Pontoyse</placeName>... vint<pb n="120"/> livres parisis de rente... <date>le jour de la mi caresme</date> sus
                   tout le port travers et paiage de <placeName>Mesons sus Saine</placeName>... pour
                   le pris de treize vinz et quinze livres parisis... a peine de cinc souls d'amende
                   pour chascun jour que il seroient deffaillanz... <date>lan de grace mil trois cenz
@@ -11060,8 +10927,7 @@
                       Luce</persName> vierge</date> fu fete relacion à nous soubailli de
                     <placeName>Poissi</placeName> de par <persName>Jehans Hur</persName> (?) nostre
                   sergent jure en la chastellerie de <placeName>Poissi</placeName> par son serment,
-                  que par la vertu d'un jugié ou sentence ou arrest de <rs type="place"
-                    >Parlement</rs> pour la <placeName>Meson Dieu de Pontoise</placeName> contre
+                  que par la vertu d'un jugié ou sentence ou arrest de <rs type="place">Parlement</rs> pour la <placeName>Meson Dieu de Pontoise</placeName> contre
                   monsieur <persName>Symon de Poissy</persName> chevalier, contenant cent et
                   quatorze solz <abbr>par.</abbr> de rente annuel et perpetuel, et dont icelle rente
                   estoit deue du terme de la <date>Toussaint</date> darrenier passé, il avoit
@@ -11119,8 +10985,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Notum sit omnibus tam futuris quam presentibus quod Ego
-                    <persName>Philippus</persName> frater <rs type="person"
-                      ><persName>Mathei</persName> comitis <placeName>Bellimontis</placeName></rs>
+                    <persName>Philippus</persName> frater <rs type="person"><persName>Mathei</persName> comitis <placeName>Bellimontis</placeName></rs>
                   dedi et in perpetuam eleemosinam concessi ecclesiæ <placeName>Sanctœ Mariæ de
                     Valle</placeName> omnem justiciam domus quam <persName>Adam</persName> Clericus
                   de <placeName>Campaniis</placeName> eidem ecclesiæ contulerat cum masura eidem
@@ -11138,8 +11003,7 @@
                   singulis annis quamdiu vixero mihi nihil hominus persolvet.</s>
                 <s>Qui quidem census et mina avenæ post obitum meum eidem ecclesiæ pro salute animæ
                   meæ remanebit.</s>
-                <s>Hujus rei testes fuerunt <persName>Theobaldus de Ronkerolis</persName>,<pb
-                    n="122"/>
+                <s>Hujus rei testes fuerunt <persName>Theobaldus de Ronkerolis</persName>,<pb n="122"/>
                   <persName>Theobaldus de Campanis</persName>, <persName>Balduinus</persName>
                   decanus de <placeName>Joiaco</placeName>, <persName>Adam</persName> presbiter de
                     <placeName>Campaniis</placeName>, et <persName>Garinus Maior</persName>.</s>
@@ -11183,8 +11047,7 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Ego <persName>Philippus</persName> frater <rs type="person"
-                      ><persName>Matthei</persName> comitis
+                <s>Ego <persName>Philippus</persName> frater <rs type="person"><persName>Matthei</persName> comitis
                   <placeName>Bellimontis</placeName></rs>.</s>
                 <s>Universis notum fieri volo tam futuris quam præsentibus quod abbas et conventus
                     <placeName>Vallis beatæ Mariæ</placeName> concesserunt
@@ -11579,8 +11442,7 @@
                   quam recognoverunt se vendidisse...</s>
                 <s>Domui <placeName>Dei</placeName> pro triginta libris paris, de quibus tenuerunt
                   se pro pagatis...</s>
-                <s>Item <persName>Johannes dictus Olearius</persName> et <rs type="person"
-                      ><persName>Thomas</persName> filius dicti <persName>Johannis</persName></rs>
+                <s>Item <persName>Johannes dictus Olearius</persName> et <rs type="person"><persName>Thomas</persName> filius dicti <persName>Johannis</persName></rs>
                   de parochia <placeName>Sancti Petri</placeName> asseruerunt se hec prenotata
                   habere rata et firma obliganis dictus <persName>Johannes</persName> quod ad hoc
                   domum suam in vico de <placeName>Ponte</placeName> ante <placeName>Domum
@@ -11773,8 +11635,7 @@
                   sempiternam.</s>
               </p>
               <p>
-                <s>Noverit universitas vestra quod nos... accepimus in perpetuum emphiteosum<ref
-                    type="note" n="1" target="#na036 " xml:id="aa036"/> a viris religiosis et
+                <s>Noverit universitas vestra quod nos... accepimus in perpetuum emphiteosum<ref type="note" n="1" target="#na036 " xml:id="aa036"/> a viris religiosis et
                   honestis magistro... et sororibus <placeName>Domus Dei de Pontisara</placeName>,
                   quandam peciam vinee cum quadam platea vacua adjacenti que fuit quondam
                     <persName>Ade de Buteriaco</persName> et uxoris ejus, sitam apud

@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -63,17 +60,41 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
-          <citeData property="dc:title" use="head"/>
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+          <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="partie" match="div" use="default">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dc:title" use="head[1]"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date/node()[not(name() = 'note' )], ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]" use="default">
+          <citeData property="dc:title" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+            <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          </citeStructure>
+          <citeStructure unit="sous-section" match="group" use="default">
+            <citeData property="dc:title" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+              <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+              <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+            </citeStructure>
+            <citeStructure unit="sous-section" match="group" use="default">
+              <citeData property="dc:title" use="head[1]"/>
+              <citeStructure unit="sous-section" match="group" use="default">
+                <citeData property="dc:title" use="head[1]"/>
+                <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                  <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+                  <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+                  <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+                  <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+                </citeStructure>
+              </citeStructure>
+            </citeStructure>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -85,7 +106,7 @@
     <front>
       <head>Introduction ?</head>
       <argument>
-        <p></p>
+        <p/>
       </argument>
       <div>
         <p>L’introduction et la table du Recueil des chartes de Saint-Germain-des-Prés paraîtront avec le second volume ; l’introduction devra être reliée en tête du premier. Voici, à titre provisoire, l’indication des sigles sous lesquels les divers recueils utilisés ont été désignés dans la présente édition, la lettre <hi rend="i">A</hi> étant réservée aux originaux ou prétendus originaux.</p>
@@ -19677,8 +19698,7 @@
           </text>
         </group>
         <group>
-          <head>
-            <pb edRef="#poupardin1932" n="237"/>APPENDICE</head>
+          <head><pb edRef="#poupardin1932" n="237"/>APPENDICE</head>
           <group>
             <head>ACTES D’ASSOCIATIONS</head>
             <argument>
