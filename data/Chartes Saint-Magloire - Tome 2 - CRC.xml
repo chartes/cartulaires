@@ -1,4 +1,6 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t2">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t2">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -54,7 +56,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl>TODO</bibl>
+        <bibl><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, 1966-1998 (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12).</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -82,7 +84,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><!-- TODO --></head>
+      <head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t.,</head>
+      <head type="sub">Paris / Turnhout : Centre national de la recherche scientifique / Brepols, 1966-1998 (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12).</head>
       <argument>
         <p><!-- TODO --></p>
       </argument>
@@ -285,7 +288,10 @@
               <listWit type="original">
                 <witness n="A">Original parchemin, 245 × 145 mm., jadis scellé sur double queue, Arch. nat., S 1069<hi rend="sc">b</hi>, n° 7.</witness>
               </listWit>
-            <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. II, Paris, 1966, p. 8</witness></listWit></div>
+            <listWit type="édition">
+              <witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. II, Paris, 1966, p. 8</witness>
+            </listWit>
+            </div>
           </front>
           <body>
             <div type="transcription" xml:lang="fro">
