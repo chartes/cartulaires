@@ -1,10 +1,8 @@
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>CARTULAIRE DE L’HOPITAL<lb/> DE<lb/> L’ABBAYE DU VAL-NOTRE-DAME<lb/> AU DIOCÈSE DE PARIS<lb/> (XIIIe SIÈCLE)</title>
+        <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame</title>
         <principal xml:id="OC">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email>
@@ -25,32 +23,15 @@
         </address>
         <availability status="restricted">
           <p>L'École nationale des chartes met à disposition cette ressource électronique structurée, protégée par le code de la propriété intellectuelle sur les bases de données (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
-          <p>
-            <ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
-            et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
-            et de la recherche. Toute autorisation au-delà du champ de cette licence doit être
-            obtenue auprès de nous.</p>
-          <p>
-            <ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique,
-            nous nous engageons à conserver et à toujours offrir publiquement la version la plus à
-            jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les
-            corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après
-            validation par un comité scientifique), et à référencer l'origine de ces contributions.
-            Toute modification de la ressource qui ne serait pas reversée à la version de référence
-            sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser
-            les contributions et de permettre les meilleures conditions possibles de collaboration
-            scientifique.</p>
-          <p>
-            <ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute
-            publication dérivée de ses ressources électroniques comporte : <list>
-              <item>un lien vers l'adresse pérennede la dernière version de la ressource sur notre
-                site ;</item>
+          <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement et de la recherche. Toute autorisation au-delà du champ de cette licence doit être obtenue auprès de nous.</p>
+          <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique, nous nous engageons à conserver et à toujours offrir publiquement la version la plus à jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après validation par un comité scientifique), et à référencer l'origine de ces contributions. Toute modification de la ressource qui ne serait pas reversée à la version de référence sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser les contributions et de permettre les meilleures conditions possibles de collaboration scientifique.</p>
+          <p><ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute publication dérivée de ses ressources électroniques comporte : <list>
+              <item>un lien vers l'adresse pérennede la dernière version de la ressource sur notre site ;</item>
               <item>la date du fichier source utilisé ;</item>
               <item>nos noms.</item>
             </list>
           </p>
-          <p>Tout litige soulevé par le non respect des termes de cette licence sera soumis à la
-            juridiction des tribunaux de Paris.</p>
+          <p>Tout litige soulevé par le non respect des termes de cette licence sera soumis à la juridiction des tribunaux de Paris.</p>
         </availability>
       </publicationStmt>
       <seriesStmt>
@@ -59,15 +40,12 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl>
-          <title>CARTULAIRE DE L’HOPITAL<lb/>DE<lb/>L’ABBAYE DU VAL-NOTRE-DAME<lb/>AU DIOCÈSE DE PARIS<lb/>(XIIIe SIÈCLE)</title>
-        </bibl>
+        <bibl><author>Henri Omont</author>, « Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle) », dans <title>Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</title>, t. 30, 1903, p. 127-174 ; tiré à part Paris, 1904.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
-          cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
+        <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
@@ -101,7 +79,7 @@
       </byline>
       <div xml:id="VNDP_introduction">
         <head>
-          <pb n="3"/>INTRODUCTION</head>
+          <pb n="3"/> INTRODUCTION</head>
         <p>Dès la fin du <hi rend="sc">xii</hi>
           <hi rend="sup">e</hi> siècle et surtout au <hi rend="sc">xiii</hi>
           <hi rend="sup">e</hi> siècle, sous l’influence bienfaisante d’un grand et bel élan de charité chrétienne, on vit de toutes parts les Hôtels-Dieu ou Maisons-Dieu, les Léproseries ou Maladreries se multiplier en France pour adoucir le sort des pauvres et des malades, et les savantes études de notre confrère M. Léon Le Grand témoignent de l’admirable développement pris au moyen âge par ces établissements charitables, en particulier dans l’ancien diocèse de Paris<note>
@@ -297,7 +275,7 @@
     <pb n="7"/>
     <front>
       <docDate>
-        <date>Septembre 1222.</date>
+        <date when="1222-09">Septembre 1222.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -305,7 +283,7 @@
       <head>I.</head>
       <argument>
         <p>Carta domini Mathei de Montimor[entiaco] de uno modio bladi in granchia sua de Herovilla, et uno sestario castanearum ad usus pauperum de hospicio ecclesie nostre.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 7.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -318,7 +296,7 @@
   <text xml:id="VNDP_0002" n="2" subtype="article">
     <front>
       <docDate>
-        <date>1216.</date>
+        <date when="1216">1216.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -326,7 +304,7 @@
       <head>II.</head>
       <argument>
         <p>Carta Anselli de Insula de elemosina quam Johannes de Labevilla fecit hospicio pauperum ecclesie nostre, scilicet de censu quem habebat apud Aneriacum et de decima quam habebat in territorio de Tilleel, et quicquid habebat dominii in decima et censu predicto.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 7.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -339,7 +317,7 @@
   <text xml:id="VNDP_0003" n="3" subtype="article">
     <front>
       <docDate>
-        <date>1221.</date>
+        <date when="1221">1221.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -347,7 +325,7 @@
       <head>III.</head>
       <argument>
         <p>Carta Johannis, comitis Bellimontis, de vinea de Prato apud Joacum et de duobus arpentis prati subtus eandem vineam ad usus pauperum hospicii nostri, et de uno hospite, Garnerio videlicet del Ru, cum redditibus quos michi reddere solebat.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 8.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -361,7 +339,7 @@
     <pb n="9"/>
     <front>
       <docDate>
-        <date>Octobre 1220.</date>
+        <date when="1220-10">Octobre 1220.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -369,7 +347,7 @@
       <head>IV.</head>
       <argument>
         <p>Carta domini Stephani de Sacrocesaris et Elienor, quondam comitisse Bellimontis, de elemosinis quas fecerunt hospitio pauperum ecclesie nostre, scilicet de duobus arpentis prati juxta Joi et pluribus aliis.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 9.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -382,7 +360,7 @@
   <text xml:id="VNDP_0005" n="5" subtype="article">
     <front>
       <docDate>
-        <date>Janvier 1224 [1225].</date>
+        <date when="1225-01">Janvier 1224 [1225].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -390,7 +368,7 @@
       <head>V.</head>
       <argument>
         <p>Carta domini Radulphi de Labevile de elemosinis quas fecerunt ecclesie nostre, scilicet hospicio pauperum, Johannes, comes Bellimontis, et Stephanus de Sacrocesaris.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 9.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -403,7 +381,7 @@
   <text xml:id="VNDP_0006" n="6" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1223 [1224].</date>
+        <date when="1224-01">Mars 1223 [1224].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -411,7 +389,7 @@
       <head>VI.</head>
       <argument>
         <p>Carta Gaufridi, decani de Nogent, de predicta elemosina.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 10.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -424,7 +402,7 @@
   <text xml:id="VNDP_0007" n="7" subtype="article">
     <front>
       <docDate>
-        <date>Juin 1214.</date>
+        <date when="1214-06">Juin 1214.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -432,7 +410,7 @@
       <head>VII.</head>
       <argument>
         <p>Carta domini Ricardi de Vernon de iiij<hi rend="sup">or</hi> sestariis annone hyemalis in molendino suo apud Vaumondois hospicio pauperum, terminus ebdomada ante Natale Domini.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 10.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -445,7 +423,7 @@
   <text xml:id="VNDP_0008" n="8" subtype="article">
     <front>
       <docDate>
-        <date>Novembre 1222.</date>
+        <date when="1222-11">Novembre 1222.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -453,7 +431,7 @@
       <head>VIII.</head>
       <argument>
         <p>Carta domini Johannis de Borriz de quadam pecia terre sita juxta Haias mare Tiboudi ad hospicium pauperum ecclesie nostre.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 11.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -466,7 +444,7 @@
   <text xml:id="VNDP_0009" n="9" subtype="article">
     <front>
       <docDate>
-        <date>1218.</date>
+        <date when="1218">1218.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -474,7 +452,7 @@
       <head>IX.</head>
       <argument>
         <p>Carta Anselli de Torote, canonici Remensis, de duobus sestariis annone in granchia de Fontaneto ad opus pauperum hospicii nostri.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 11.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -487,7 +465,7 @@
   <text xml:id="VNDP_0010" n="10" subtype="article">
     <front>
       <docDate>
-        <date>Octobre 1237.</date>
+        <date when="1237-10">Octobre 1237.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -495,7 +473,7 @@
       <head>X.</head>
       <argument>
         <p>Carta Theobaldi de Lié et Radulfi fratris ejus, militum, de uno arpento terre apud Aneri, quod domina Aales, soror ipsorum, dedit hospicio pauperum nostrorum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 12.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -509,7 +487,7 @@
     <pb n="13"/>
     <front>
       <docDate>
-        <date>Mars 1232 [1233].</date>
+        <date when="1233-03">Mars 1232 [1233].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -517,7 +495,7 @@
       <head>XI.</head>
       <argument>
         <p>Carta Johannis de Bosco, militis, de vinea de Closellis in territorio Bellimontis, quam Baldoinus de Bolonvile contulit hospicio pauperum ecclesie nostre liberam omnino.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 13.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -530,7 +508,7 @@
   <text xml:id="VNDP_0012" n="12" subtype="article">
     <front>
       <docDate>
-        <date>Juillet 1223.</date>
+        <date when="1223-07">Juillet 1223.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -538,7 +516,7 @@
       <head>XII.</head>
       <argument>
         <p>Carta Radulphi de Confluentio de duobus solidis annuis, quos Meinerius Bataille et heredes ejus tenentur reddere singulis annis hospitio pauperum nostrorum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 13.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -551,7 +529,7 @@
   <text xml:id="VNDP_0013" n="13" subtype="article">
     <front>
       <docDate>
-        <date>1220.</date>
+        <date when="1220">1220.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -559,7 +537,7 @@
       <head>XIII.</head>
       <argument>
         <p>Carta Pagani de Praheriis, militis, de uno sestario bladi in molendino suo de Praheriis ad usus pauperum ecclesie nostre.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 14.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -572,7 +550,7 @@
   <text xml:id="VNDP_0014" n="14" subtype="article">
     <front>
       <docDate>
-        <date>Février 1237 [1238].</date>
+        <date when="1238-02">Février 1237 [1238].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -580,7 +558,7 @@
       <head>XIV.</head>
       <argument>
         <p>Carta Anselli de Gengnourii de vinea quam Galterus de Joi et uxor ejus vendiderunt hospicio pauperum ecclesie nostre, liberam ab omni consuetudine, pro duodecim denariis annuis.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 14.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -593,7 +571,7 @@
   <text xml:id="VNDP_0015" n="15" subtype="article">
     <front>
       <docDate>
-        <date>Février 1239 [1240].</date>
+        <date when="1240-02">Février 1239 [1240].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -601,7 +579,7 @@
       <head>XV.</head>
       <argument>
         <p>Carta Odonis Mellet de Insula de dimidio arpento vinee site apud Meeinevile pro duobus denariis annuis redditus Petro de Henovile, que est de hospicio pauperum nostrorum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 15.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -614,7 +592,7 @@
   <text xml:id="VNDP_0016" n="16" subtype="article">
     <front>
       <docDate>
-        <date>Février 1239 [1240].</date>
+        <date when="1240-02">Février 1239 [1240].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -622,7 +600,7 @@
       <head>XVI.</head>
       <argument>
         <p>Carta Petri de Henovile de predicta vinea.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 16.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -635,7 +613,7 @@
   <text xml:id="VNDP_0017" n="17" subtype="article">
     <front>
       <docDate>
-        <date>Février 1239 [1240].</date>
+        <date when="1240-02">Février 1239 [1240].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -643,7 +621,7 @@
       <head>XVII.</head>
       <argument>
         <p>Carta Odonis, decani de Praheriis, de predicta vinea.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 16.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -656,7 +634,7 @@
   <text xml:id="VNDP_0018" n="18" subtype="article">
     <front>
       <docDate>
-        <date>Octobre 1234.</date>
+        <date when="1234-10">Octobre 1234.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -664,7 +642,7 @@
       <head>XVIII.</head>
       <argument>
         <p>Carta Petri de Ernencuria, de Nogent, de terra quam ipse vendidit hospicio pauperum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 17.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -678,7 +656,7 @@
     <pb n="18"/>
     <front>
       <docDate>
-        <date>Septembre 1234.</date>
+        <date when="1234-09">Septembre 1234.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -686,7 +664,7 @@
       <head>XIX.</head>
       <argument>
         <p>Carta Johannis de Ernencuria, fratris predicti Petri, de predicta terra.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 18.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -699,7 +677,7 @@
   <text xml:id="VNDP_0020" n="20" subtype="article">
     <front>
       <docDate>
-        <date>Octobre 1234.</date>
+        <date when="1234-10">Octobre 1234.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -707,7 +685,7 @@
       <head>XX.</head>
       <argument>
         <p>Carta Guidonis, decani de Praheriis, de predicta terra.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 18.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -720,7 +698,7 @@
   <text xml:id="VNDP_0021" n="21" subtype="article">
     <front>
       <docDate>
-        <date>1217.</date>
+        <date when="1217">1217.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -728,7 +706,7 @@
       <head>XXI.</head>
       <argument>
         <p>Carta abbatis Curie Dei de censu et decima quam Johannes predictus de Labevile dedit hospicio pauperum nostrorum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 19.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -749,7 +727,7 @@
       <head>XXII.</head>
       <argument>
         <p>Carta Haimonis, archidiaconi Pontisare, de uno sestario bladi quem Richeldis, relicta Guillelmi de Haucia, dedit hospicio pauperum nostrorum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 19.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -770,7 +748,7 @@
     <pb n="20"/>
     <front>
       <docDate>
-        <date>Août 1237.</date>
+        <date when="1237-08">Août 1237.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -778,7 +756,7 @@
       <head>XXIII.</head>
       <argument>
         <p>Carta Guillermi de Vivario, clerici, de quadam pecia terre quam ipse vendidit nobis, sitam inter leprosiam de Insula et Vivarium.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 20.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -791,7 +769,7 @@
   <text xml:id="VNDP_0024" n="24" subtype="article">
     <front>
       <docDate>
-        <date>Août 1229.</date>
+        <date when="1229-08">Août 1229.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -799,7 +777,7 @@
       <head>XXIV.</head>
       <argument>
         <p>Carta Johannis de Aci, militis, de vinea quam ipse dedit Baldouino de Bolonvile pro duodecim denariis annuis.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 20.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -813,7 +791,7 @@
     <pb n="21"/>
     <front>
       <docDate>
-        <date>Février 1236 [1237].</date>
+        <date when="1237-02">Février 1236 [1237].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -821,7 +799,7 @@
       <head>XXV.</head>
       <argument>
         <p>Carta Petri de Ernencuria de terris quas vendiderunt hospicio pauperum nostrorum Guillelmus de Vivario, clericus, et Gaufridus de Insula, figulus.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 21.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -834,7 +812,7 @@
   <text xml:id="VNDP_0026" n="26" subtype="article">
     <front>
       <docDate>
-        <date>Novembre 1240.</date>
+        <date when="1240-11">Novembre 1240.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -842,7 +820,7 @@
       <head>XXVI.</head>
       <argument>
         <p>Carta officialis Belvacensis de vinea quam Reinerius de Joi contulit hospicio pauperum ecclesie nostre.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 21.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -855,7 +833,7 @@
   <text xml:id="VNDP_0027" n="27" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1248 [1249].</date>
+        <date when="1249-03">Mars 1248 [1249].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -863,7 +841,7 @@
       <head>XXVII.</head>
       <argument>
         <p>Carta officialis Parisiensis de capella Mathei de Sancto Lupo.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 22.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -876,7 +854,7 @@
   <text xml:id="VNDP_0028" n="28" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1246 [1247].</date>
+        <date when="1247-03">Mars 1246 [1247].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -884,7 +862,7 @@
       <head>XXVIII.</head>
       <argument>
         <p>Carta Parisiensis episcopi de quinquaginta solidis redditus pro domino Guidone de Grandi Molendino.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 22.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -897,7 +875,7 @@
   <text xml:id="VNDP_0029" n="29" subtype="article">
     <front>
       <docDate>
-        <date>Octobre 1242.</date>
+        <date when="1242-10">Octobre 1242.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -905,7 +883,7 @@
       <head>XXIX.</head>
       <argument>
         <p>Carta Johannis de Turre et uxoris ejus de concessione vinee Reneri de Joi.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 23.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -918,7 +896,7 @@
   <text xml:id="VNDP_0030" n="30" subtype="article">
     <front>
       <docDate>
-        <date>Mai 1248.</date>
+        <date when="1248-05">Mai 1248.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -926,7 +904,7 @@
       <head>XXX.</head>
       <argument>
         <p>Carta Guillermi, Parisiensis episcopi, de capella Mathei de Sancto Lupo.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 24.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -939,7 +917,7 @@
   <text xml:id="VNDP_0031" n="31" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1244 [1245].</date>
+        <date when="1245-03">Mars 1244 [1245].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -947,7 +925,7 @@
       <head>XXXI.</head>
       <argument>
         <p>Carta domini Petri de Labevilla de quadam vinea, quam domina Agnes de Breecourt dedit nobis.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 25.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -961,7 +939,7 @@
     <pb n="26"/>
     <front>
       <docDate>
-        <date>Octobre 1262.</date>
+        <date when="1262-10">Octobre 1262.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -969,7 +947,7 @@
       <head>XXXII.</head>
       <argument>
         <p>Carta domini Petri de Labevilla et domine Marie uxoris sue de quadam vinea, quam dedit nobis Robertus Heraut.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 26.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -983,7 +961,7 @@
     <pb n="27"/>
     <front>
       <docDate>
-        <date>Novembre 1265.</date>
+        <date when="1265-11">Novembre 1265.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -991,7 +969,7 @@
       <head>XXXIII.</head>
       <argument>
         <p>Carta Johannis Heraut, quam dedit nobis Robertus Heraut, frater ejus.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 27.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1004,7 +982,7 @@
   <text xml:id="VNDP_0034" n="34" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1255 [1256].</date>
+        <date when="1256-03">Mars 1255 [1256].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1012,7 +990,7 @@
       <head>XXXIV.</head>
       <argument>
         <p>Carta Theobaldi de Henovilla, militis, qui confirmat nobis duo arpenta vinee et circa tria arpenta terre et prati, sita apud Joiacum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 27.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1025,7 +1003,7 @@
   <text xml:id="VNDP_0035" n="35" subtype="article">
     <front>
       <docDate>
-        <date>Mars 1255 [1256].</date>
+        <date when="1256-03">Mars 1255 [1256].</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1033,7 +1011,7 @@
       <head>XXXV.</head>
       <argument>
         <p>Carta Theobaldi de Henovilla militis, de nemore supra Vaus.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 28.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1046,7 +1024,7 @@
   <text xml:id="VNDP_0036" n="36" subtype="article">
     <front>
       <docDate>
-        <date>Décembre 1252.</date>
+        <date when="1252-12">Décembre 1252.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1054,7 +1032,7 @@
       <head>XXXVI.</head>
       <argument>
         <p>Carta Geroudi de Joiaco et Eremburgis uxoris ejus de vinea domine Agnetis de Breencourt.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 29.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1068,7 +1046,7 @@
     <pb n="30"/>
     <front>
       <docDate>
-        <date>Mai 1257.</date>
+        <date when="1257-05">Mai 1257.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1076,7 +1054,7 @@
       <head>XXXVII.</head>
       <argument>
         <p>Carta Laurencii de Cugi de conquestibus suis et de Joiaco.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 30.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1089,7 +1067,7 @@
   <text xml:id="VNDP_0038" n="38" subtype="article">
     <front>
       <docDate>
-        <date>22 mai 1257.</date>
+        <date when="1257-05-22">22 mai 1257.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1097,7 +1075,7 @@
       <head>XXXVIII.</head>
       <argument>
         <p>Carta officialis Belvacensis quod Laurencius de Cugi et uxor ejus dederunt nobis quicquid habebant de acquisito in territorio Joiaci.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 30.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1110,7 +1088,7 @@
   <text xml:id="VNDP_0039" n="39" subtype="article">
     <front>
       <docDate>
-        <date>Juin 1257.</date>
+        <date when="1257-06">Juin 1257.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1118,7 +1096,7 @@
       <head>XXXIX.</head>
       <argument>
         <p>Carta vicarii de Pontisara de quadam vinea, et quadam pecia terre, et duabus peciis prati, quas Johannes Fou[r]nier excambiavit nobis.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 31.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1131,7 +1109,7 @@
   <text xml:id="VNDP_0040" n="40" subtype="article">
     <front>
       <docDate>
-        <date>Août 1262.</date>
+        <date when="1262-08">Août 1262.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1139,7 +1117,7 @@
       <head>XL.</head>
       <argument>
         <p>Carta abbatis et conventus Becci Helloini de vinea de Joy, que fuit Philippi du Ru.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 32.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1153,7 +1131,7 @@
     <pb n="34"/>
     <front>
       <docDate>
-        <date>7 juillet 1261.</date>
+        <date when="1261-07-07">7 juillet 1261.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1161,7 +1139,7 @@
       <head>XLI.</head>
       <argument>
         <p>Carta officialis Belvacensis de eodem.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 34.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1174,7 +1152,7 @@
   <text xml:id="VNDP_0042" n="42" subtype="article">
     <front>
       <docDate>
-        <date>Août 1240.</date>
+        <date when="1240-08">Août 1240.</date>
       </docDate>
       <index>
         <term type="nature" key="act"/>
@@ -1182,7 +1160,7 @@
       <head>XLII.</head>
       <argument>
         <p>Carta officialis Belvacensis de novem solidis annuis in festo beati Martini hyemalis, quos Matheus de Torculari et Johannes frater ejus debent nobis de quadam vinea in territorio de <pb n="35"/>Noitel, videlicet de Parai. — Ista carta est cum cartis de Praeriis<ref type="note" n="1" target="#n1" xml:id="a1"/>.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 34.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
@@ -1210,7 +1188,7 @@
       <head>XLIII.</head>
       <argument>
         <p>Carta quod Odo de Novavilla dat nobis ad usus pauperum quoddam feodum situm apud Villare, in octabis sancti Dyonisii colligendum.</p>
-      </argument>
+      </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 35.</witness></listWit></div>
     </front>
     <body>
       <div type="transcription" xml:lang="lat">
