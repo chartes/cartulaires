@@ -2,21 +2,21 @@
 <metadataMap xmlns="https://github.com/chartes/dots/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:html="http://www.w3.org/1999/xhtml">
   <mapping>
     <!-- Métadonnées de collection -->
-    <dc:title scope="collection" format="tsv" source="./collections_metadata.csv" resourceId="collectionId" value="title"/>
-    <dc:creator scope="collection" format="tsv" source="./collections_metadata.csv" resourceId="collectionId" value="author"/>
-    <dc:identifier scope="collection" format="tsv" source="./collections_metadata.csv" resourceId="collectionId" value="identifier" type="number"/>
-    <description scope="collection" format="tsv" source="./collections_metadata.csv" resourceId="collectionId" value="description"/>
+    <dc:title scope="collection" format="tsv" source="./collections_metadata.csv" value="title"/>
+    <dc:creator scope="collection" format="tsv" source="./collections_metadata.csv" value="author"/>
+    <dc:identifier scope="collection" format="tsv" source="./collections_metadata.csv" value="identifier" type="number"/>
+    <description scope="collection" format="tsv" source="./collections_metadata.csv" value="description"/>
     <dct:publisher scope="collection" resourceId="all">École nationale des chartes</dct:publisher>
     <dct:license scope="collection" resourceId="all">https://creativecommons.org/licenses/by-nc-nd/3.0/fr/</dct:license>
     <!-- Métadonnées de document -->
     <dc:title scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title"/>
     <dct:publisher scope="document" resourceId="all">École nationale des chartes</dct:publisher>
     <dct:license scope="document" resourceId="all">https://creativecommons.org/licenses/by-nc-nd/3.0/fr/</dct:license>
-    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" resourceId="resourceId" value="biblissima_lieux"/>
-    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" resourceId="resourceId" value="biblissima1_collectivités"/>
-    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" resourceId="resourceId" value="Dico-topo"/>
-    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" resourceId="resourceId" value="thenca"/>
-    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" resourceId="resourceId" value="koha"/>
+    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="biblissima_lieux"/>
+    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="biblissima1_collectivités"/>
+    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="Dico-topo"/>
+    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="thenca"/>
+    <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="koha"/>
     <download scope="document" xpath="let $id := /TEI/@xml:id return concat('https://dev.chartes.psl.eu/dots/api/dts/document?resource=', $id)" key="XML"/>
   </mapping>
 </metadataMap>
