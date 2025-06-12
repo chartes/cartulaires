@@ -1,4 +1,6 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t3">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t3">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -54,7 +56,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl>TODO</bibl>
+        <bibl><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, 1966-1998 (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12)</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -82,8 +84,8 @@
   </teiHeader>
   <text>
     <front>
-      <head>Chartes et documents de l’abbaye de Saint-Magloire</head>
-      <head type="sub">tome III, 1330 – début du XVe siècle</head>
+      <head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>,</head>
+      <head type="sub">éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976.</head>
       <argument>
         <p><!-- TODO --></p>
       </argument>
@@ -358,7 +360,7 @@
       <text subtype="article" xml:id="magloire_t3_1" n="1">
         <front>
           <docDate>
-            <date>1330, [20]<note n="1_1"><p>Cette date est celle de l’arrêt ; l’expédition, selon l’usage, ne porte aucun quantième.</p></note> avril.</date>
+            <date when="1330-04-20">1330, [20]<note n="1_1"><p>Cette date est celle de l’arrêt ; l’expédition, selon l’usage, ne porte aucun quantième.</p></note> avril.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -411,7 +413,7 @@
       <text subtype="article" xml:id="magloire_t3_2" n="2">
         <front>
           <docDate>
-            <date>1330, 21 avril.</date>
+            <date when="1330-04-21">1330, 21 avril.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -434,7 +436,7 @@
       <text subtype="article" xml:id="magloire_t3_3" n="3">
         <front>
           <docDate>
-            <date>1330, 26 avril.</date>
+            <date when="1330-04-26">1330, 26 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -450,7 +452,7 @@
       <text subtype="article" xml:id="magloire_t3_4" n="4">
         <front>
           <docDate>
-            <date>1330, 28 avril.</date>
+            <date when="1330-04-28">1330, 28 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -466,7 +468,7 @@
       <text subtype="article" xml:id="magloire_t3_5" n="5">
         <front>
           <docDate>
-            <date>1330, 1<hi rend="sup">er</hi> mai.</date>
+            <date when="1330-05-01">1330, 1<hi rend="sup">er</hi> mai.</date>
             <placeName>Vincennes.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -488,7 +490,7 @@
       <text subtype="article" xml:id="magloire_t3_6" n="6">
         <front>
           <docDate>
-            <date>1330, 12 mai.</date>
+            <date when="1330-05-12">1330, 12 mai.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -528,7 +530,7 @@
       <text subtype="article" xml:id="magloire_t3_7" n="7">
         <front>
           <docDate>
-            <date>1330, 1<hi rend="sup">er</hi> juin.</date>
+            <date when="1330-06-01">1330, 1<hi rend="sup">er</hi> juin.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -550,7 +552,7 @@
       <text subtype="article" xml:id="magloire_t3_8" n="8">
         <front>
           <docDate>
-            <date>1330, 3 juin.</date>
+            <date when="1330-06-03">1330, 3 juin.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -572,7 +574,7 @@
       <text subtype="article" xml:id="magloire_t3_9" n="9">
         <front>
           <docDate>
-            <date>1330, 7 juin<note n="9_1"><p>Il reste un doute quant à la date, car en 1330 le jeudi tombe le sept et non le six comme l’a écrit Jean de Rozay.</p></note>.</date>
+            <date when="1330-06-07">1330, 7 juin<note n="9_1"><p>Il reste un doute quant à la date, car en 1330 le jeudi tombe le sept et non le six comme l’a écrit Jean de Rozay.</p></note>.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -597,7 +599,7 @@
       <text subtype="article" xml:id="magloire_t3_10" n="10">
         <front>
           <docDate>
-            <date>1330, 8 juin.</date>
+            <date when="1330-06-08">1330, 8 juin.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -622,7 +624,7 @@
       <text subtype="article" xml:id="magloire_t3_11" n="11">
         <front>
           <docDate>
-            <date>1330, 8 juin.</date>
+            <date when="1330-06-08">1330, 8 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -643,7 +645,7 @@
       <text subtype="article" xml:id="magloire_t3_12" n="12">
         <front>
           <docDate>
-            <date>S. d. [1330, 8 juin.]</date>
+            <date when="1330-06-08">S. d. [1330, 8 juin.]</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -664,7 +666,7 @@
       <text subtype="article" xml:id="magloire_t3_13" n="13">
         <front>
           <docDate>
-            <date>1330, 11 juin.</date>
+            <date when="1330-06-11">1330, 11 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -702,7 +704,7 @@
       <text subtype="article" xml:id="magloire_t3_14" n="14">
         <front>
           <docDate>
-            <date>1330, 11 juin.</date>
+            <date when="1330-06-11">1330, 11 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -726,7 +728,7 @@
       <text subtype="article" xml:id="magloire_t3_15" n="15">
         <front>
           <docDate>
-            <date>1330, 5 décembre.</date>
+            <date when="1330-12-05">1330, 5 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -766,7 +768,7 @@
       <text subtype="article" xml:id="magloire_t3_16" n="16">
         <front>
           <docDate>
-            <date>1330, 21 décembre.</date>
+            <date when="1330-12-21">1330, 21 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -799,7 +801,7 @@
       <text subtype="article" xml:id="magloire_t3_17" n="17">
         <front>
           <docDate>
-            <date>1331 (n. st.), 14 janvier.</date>
+            <date when="1331-01-14">1331 (n. st.), 14 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -820,7 +822,7 @@
       <text subtype="article" xml:id="magloire_t3_18" n="18">
         <front>
           <docDate>
-            <date>1331 (n. st.), 18 janvier.</date>
+            <date when="1331-01-18">1331 (n. st.), 18 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -841,7 +843,7 @@
       <text subtype="article" xml:id="magloire_t3_19" n="19">
         <front>
           <docDate>
-            <date>1331 (n. st.), 26 janvier.</date>
+            <date when="1331-01-26">1331 (n. st.), 26 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -864,7 +866,7 @@
       <text subtype="article" xml:id="magloire_t3_20" n="20">
         <front>
           <docDate>
-            <date>1331 (n. st.), 11 février.</date>
+            <date when="1331-02-11">1331 (n. st.), 11 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -887,7 +889,7 @@
         <pb n="40"/>
         <front>
           <docDate>
-            <date>1331 (n. st.), 21 mars.</date>
+            <date when="1331-03-21">1331 (n. st.), 21 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -903,7 +905,7 @@
       <text subtype="article" xml:id="magloire_t3_22" n="22">
         <front>
           <docDate>
-            <date>1331 (n. st.), 21 mars.</date>
+            <date when="1331-03-21">1331 (n. st.), 21 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -920,7 +922,7 @@
         <pb n="41"/>
         <front>
           <docDate>
-            <date>1331, 8 juin.</date>
+            <date when="1331-06-08">1331, 8 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -942,7 +944,7 @@
       <text subtype="article" xml:id="magloire_t3_24" n="24">
         <front>
           <docDate>
-            <date>1331, 6 août.</date>
+            <date when="1331-08-06">1331, 6 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -969,7 +971,7 @@
         <pb n="44"/>
         <front>
           <docDate>
-            <date>S. d. [<hi rend="sc">xiv</hi><hi rend="sup">e</hi> siècle, antérieur à 1331, 1<hi rend="sup">er</hi> octobre.]<note n="25_1"><p>Gobert de Fraillicourt ayant porté de 3 à 10 sous la somme versée aux moines le jour de l’an, cet État ne peut être postérieur à son décès survenu probablement le 1<hi rend="sup">er</hi> octobre 1331, mais nous ignorons s’il date du début ou de la fin de l’abbatiat. Peut-être même remonte-t-il à celui de Gautier de Boulay, soit aux alentours de 1307. Mais c’est peu vraisemblable, car il semble bien avoir été transcrit par le scribe à qui l’on doit la copie des aveux de Machault qui s’échelonnent de 1325 à 1337.</p></note></date>
+            <date notAfter="1331-10-01">S. d. [<hi rend="sc">xiv</hi><hi rend="sup">e</hi> siècle, antérieur à 1331, 1<hi rend="sup">er</hi> octobre.]<note n="25_1"><p>Gobert de Fraillicourt ayant porté de 3 à 10 sous la somme versée aux moines le jour de l’an, cet État ne peut être postérieur à son décès survenu probablement le 1<hi rend="sup">er</hi> octobre 1331, mais nous ignorons s’il date du début ou de la fin de l’abbatiat. Peut-être même remonte-t-il à celui de Gautier de Boulay, soit aux alentours de 1307. Mais c’est peu vraisemblable, car il semble bien avoir été transcrit par le scribe à qui l’on doit la copie des aveux de Machault qui s’échelonnent de 1325 à 1337.</p></note></date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1057,7 +1059,7 @@
       <text subtype="article" xml:id="magloire_t3_26" n="26">
         <front>
           <docDate>
-            <date>1331, 1<hi rend="sup">er</hi> octobre.</date>
+            <date when="1331-10-01">1331, 1<hi rend="sup">er</hi> octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1082,7 +1084,7 @@
       <text subtype="article" xml:id="magloire_t3_27" n="27">
         <front>
           <docDate>
-            <date>1331, 14 octobre.</date>
+            <date when="1331-10-14">1331, 14 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1105,7 +1107,7 @@
       <text subtype="article" xml:id="magloire_t3_28" n="28">
         <front>
           <docDate>
-            <date>1332, 7 mai.</date>
+            <date when="1332-05-07">1332, 7 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1135,7 +1137,7 @@
         <pb n="53"/>
         <front>
           <docDate>
-            <date>1333, 3 novembre.</date>
+            <date when="1333-11-03">1333, 3 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1160,7 +1162,7 @@
       <text subtype="article" xml:id="magloire_t3_30" n="30">
         <front>
           <docDate>
-            <date>1334 (n. st.), 20 janvier.</date>
+            <date when="1334-01-20">1334 (n. st.), 20 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1187,7 +1189,7 @@
       <text subtype="article" xml:id="magloire_t3_31" n="31">
         <front>
           <docDate>
-            <date>1334, 28 juin.</date>
+            <date when="1334-06-28">1334, 28 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1256,7 +1258,7 @@
       <text subtype="article" xml:id="magloire_t3_32" n="32">
         <front>
           <docDate>
-            <date>1334, 24 septembre.</date>
+            <date when="1334-09-24">1334, 24 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1278,7 +1280,7 @@
       <text subtype="article" xml:id="magloire_t3_33" n="33">
         <front>
           <docDate>
-            <date>1335, 17 juin<note n="33_1"><p>Ce vidimus fut probablement établi à l’intention d’Aubert de Marly, abbé de Saint-Victor, et de maître Guillaume le Breton, chanoine de Saint-Marcel, exécuteurs testamentaires de Baudouin Alain, qui étaient encore à l’œuvre neuf ans après le décès du testateur. Le 13 juin 1335, en effet, ils vendent au moine maglorien, Henri de Paris <hi rend="i">alias</hi> d’Arras, une rente de 4 l. 17 s. p. provenant de la succession sur la maison du boursier Jean de Paris, rue Mondétour (Archives de l’Assistance Publique. Fonds de l’Hôpital Saint-Jacques, Reg. 14, n° 125). Les fragments du testament du doyen de Gournay, insérés dans l’acte, complètent heureusement ceux que nous avons publiés dans le t. 2 de nos <hi rend="i">Chartes et Documents</hi>, n° 313, p. 456.</p></note>.</date>
+            <date when="1335-06-17">1335, 17 juin<note n="33_1"><p>Ce vidimus fut probablement établi à l’intention d’Aubert de Marly, abbé de Saint-Victor, et de maître Guillaume le Breton, chanoine de Saint-Marcel, exécuteurs testamentaires de Baudouin Alain, qui étaient encore à l’œuvre neuf ans après le décès du testateur. Le 13 juin 1335, en effet, ils vendent au moine maglorien, Henri de Paris <hi rend="i">alias</hi> d’Arras, une rente de 4 l. 17 s. p. provenant de la succession sur la maison du boursier Jean de Paris, rue Mondétour (Archives de l’Assistance Publique. Fonds de l’Hôpital Saint-Jacques, Reg. 14, n° 125). Les fragments du testament du doyen de Gournay, insérés dans l’acte, complètent heureusement ceux que nous avons publiés dans le t. 2 de nos <hi rend="i">Chartes et Documents</hi>, n° 313, p. 456.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1295,7 +1297,7 @@
         <pb n="68"/>
         <front>
           <docDate>
-            <date>1335, 1<hi rend="sup">er</hi> juillet.</date>
+            <date when="1335-07-01">1335, 1<hi rend="sup">er</hi> juillet.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -1317,7 +1319,7 @@
       <text subtype="article" xml:id="magloire_t3_35" n="35">
         <front>
           <docDate>
-            <date>1335, 2 octobre.</date>
+            <date when="1335-10-02">1335, 2 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1346,7 +1348,7 @@
       <text subtype="article" xml:id="magloire_t3_36" n="36">
         <front>
           <docDate>
-            <date>1336, 16 octobre.</date>
+            <date when="1336-10-16">1336, 16 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1375,7 +1377,7 @@
       <text subtype="article" xml:id="magloire_t3_37" n="37">
         <front>
           <docDate>
-            <date>1337 (n. st.), 4 janvier.</date>
+            <date when="1337-01-04">1337 (n. st.), 4 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1401,7 +1403,7 @@
       <text subtype="article" xml:id="magloire_t3_38" n="38">
         <front>
           <docDate>
-            <date>1338, 14 novembre.</date>
+            <date when="1338-11-14">1338, 14 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1435,7 +1437,7 @@
         <pb n="80"/>
         <front>
           <docDate>
-            <date>1339 (n. st.), 16 février.</date>
+            <date when="1339-02-16">1339 (n. st.), 16 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1457,7 +1459,7 @@
       <text subtype="article" xml:id="magloire_t3_40" n="40">
         <front>
           <docDate>
-            <date>1339, 6 juillet.</date>
+            <date when="1339-07-06">1339, 6 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1487,7 +1489,7 @@
       <text subtype="article" xml:id="magloire_t3_41" n="41">
         <front>
           <docDate>
-            <date>1339, 16 septembre.</date>
+            <date when="1339-09-16">1339, 16 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1510,7 +1512,7 @@
       <text subtype="article" xml:id="magloire_t3_42" n="42">
         <front>
           <docDate>
-            <date>1339, 16 septembre.</date>
+            <date when="1339-09-16">1339, 16 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1538,7 +1540,7 @@
         <pb n="86"/>
         <front>
           <docDate>
-            <date>1340 (n. st.), 24 janvier.</date>
+            <date when="1340-01-24">1340 (n. st.), 24 janvier.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -1564,7 +1566,7 @@
         <pb n="87"/>
         <front>
           <docDate>
-            <date>1340 (n. st.), 21 février.</date>
+            <date when="1340-02-21">1340 (n. st.), 21 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1624,7 +1626,7 @@
       <text subtype="article" xml:id="magloire_t3_45" n="45">
         <front>
           <docDate>
-            <date>1340 (n. st.), 29 mars.</date>
+            <date when="1340-03-29">1340 (n. st.), 29 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1646,7 +1648,7 @@
       <text subtype="article" xml:id="magloire_t3_46" n="46">
         <front>
           <docDate>
-            <date>1340, 28 juin.</date>
+            <date when="1340-06-28">1340, 28 juin.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -1668,7 +1670,7 @@
       <text subtype="article" xml:id="magloire_t3_47" n="47">
         <front>
           <docDate>
-            <date>1340, 7 octobre.</date>
+            <date when="1340-10-07">1340, 7 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1692,7 +1694,7 @@
         <pb n="99"/>
         <front>
           <docDate>
-            <date>1340, 12 octobre.</date>
+            <date when="1340-10-12">1340, 12 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1714,7 +1716,7 @@
       <text subtype="article" xml:id="magloire_t3_49" n="49">
         <front>
           <docDate>
-            <date>1340, 4 novembre.</date>
+            <date when="1340-11-04">1340, 4 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1758,7 +1760,7 @@
       <text subtype="article" xml:id="magloire_t3_50" n="50">
         <front>
           <docDate>
-            <date>1341 (n. st.), 4 janvier.</date>
+            <date when="1341-01-04">1341 (n. st.), 4 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1780,7 +1782,7 @@
       <text subtype="article" xml:id="magloire_t3_51" n="51">
         <front>
           <docDate>
-            <date>S. d. [1335, 1<hi rend="sup">er</hi> juillet – 1341 (n. st.), 20 janvier.]<note n="51_1"><p>Chargé dès le 1<hi rend="sup">er</hi> juillet 1335 (voir plus haut, n° 34, p. 68) de maintenir la saisine de Saint-Magloire contre les prétentions de Haute Bruyère, le prévôt de Paris, en l’occurrence Guillaume Gormont, ne rendit sa sentence que le 20 janvier 1341 (voir l’acte publié ci-après).</p></note></date>
+            <date notBefore="1335-07-01" notAfter="1341-01-20">S. d. [1335, 1<hi rend="sup">er</hi> juillet – 1341 (n. st.), 20 janvier.]<note n="51_1"><p>Chargé dès le 1<hi rend="sup">er</hi> juillet 1335 (voir plus haut, n° 34, p. 68) de maintenir la saisine de Saint-Magloire contre les prétentions de Haute Bruyère, le prévôt de Paris, en l’occurrence Guillaume Gormont, ne rendit sa sentence que le 20 janvier 1341 (voir l’acte publié ci-après).</p></note></date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1809,7 +1811,7 @@
       <text subtype="article" xml:id="magloire_t3_52" n="52">
         <front>
           <docDate>
-            <date>1341 (n. st.), 20 janvier.</date>
+            <date when="1341-01-20">1341 (n. st.), 20 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1851,7 +1853,7 @@
       <text subtype="article" xml:id="magloire_t3_53" n="53">
         <front>
           <docDate>
-            <date>1341, 12 mai.</date>
+            <date when="1341-05-12">1341, 12 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1868,7 +1870,7 @@
         <pb n="113"/>
         <front>
           <docDate>
-            <date>1341, 20 juin.</date>
+            <date when="1341-06-20">1341, 20 juin.</date>
             <placeName>Corbeil.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -1895,7 +1897,7 @@
       <text subtype="article" xml:id="magloire_t3_55" n="55">
         <front>
           <docDate>
-            <date>1341, 11 juillet.</date>
+            <date when="1341-07-11">1341, 11 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1929,7 +1931,7 @@
         <pb n="119"/>
         <front>
           <docDate>
-            <date>1342 (n. st.), mars.</date>
+            <date when="1342-03">1342 (n. st.), mars.</date>
             <placeName>Le Moncel.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -1964,7 +1966,7 @@
       <text subtype="article" xml:id="magloire_t3_57" n="57">
         <front>
           <docDate>
-            <date>1343 (n. st.), 20 février.</date>
+            <date when="1343-02-20">1343 (n. st.), 20 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -1988,7 +1990,7 @@
       <text subtype="article" xml:id="magloire_t3_58" n="58">
         <front>
           <docDate>
-            <date>1344, 6 juin.</date>
+            <date when="1344-06-06">1344, 6 juin.</date>
             <placeName>Jouy-l’Abbaye.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -2012,7 +2014,7 @@
       <text subtype="article" xml:id="magloire_t3_59" n="59">
         <front>
           <docDate>
-            <date>1344, 28 juin.</date>
+            <date when="1344-06-28">1344, 28 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2034,7 +2036,7 @@
       <text subtype="article" xml:id="magloire_t3_60" n="60">
         <front>
           <docDate>
-            <date>1344, 3 août.</date>
+            <date when="1344-08-03">1344, 3 août.</date>
             <placeName>Château-Thierry.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -2061,7 +2063,7 @@
       <text subtype="article" xml:id="magloire_t3_61" n="61">
         <front>
           <docDate>
-            <date>1344, 1<hi rend="sup">er</hi> septembre.</date>
+            <date when="1344-09-01">1344, 1<hi rend="sup">er</hi> septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2081,7 +2083,7 @@
       <text subtype="article" xml:id="magloire_t3_62" n="62">
         <front>
           <docDate>
-            <date>1345 (n. st.), janvier.</date>
+            <date when="1345-01">1345 (n. st.), janvier.</date>
             <placeName>Fromont.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -2109,7 +2111,7 @@
       <text subtype="article" xml:id="magloire_t3_63" n="63">
         <front>
           <docDate>
-            <date>1345, 28 mars.</date>
+            <date when="1345-03-28">1345, 28 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2132,7 +2134,7 @@
         <pb n="134"/>
         <front>
           <docDate>
-            <date>1345, 9 avril.</date>
+            <date when="1345-04-09">1345, 9 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2213,7 +2215,7 @@
       <text subtype="article" xml:id="magloire_t3_65" n="65">
         <front>
           <docDate>
-            <date>1346, 19 juin.</date>
+            <date when="1346-06-19">1346, 19 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2240,7 +2242,7 @@
       <text subtype="article" xml:id="magloire_t3_66" n="66">
         <front>
           <docDate>
-            <date>1346, 28 septembre.</date>
+            <date when="1346-09-28">1346, 28 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2261,7 +2263,7 @@
       <text subtype="article" xml:id="magloire_t3_67" n="67">
         <front>
           <docDate>
-            <date>1346, octobre.</date>
+            <date when="1346-10">1346, octobre.</date>
             <placeName>Le Moncel.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -2294,7 +2296,7 @@
       <text subtype="article" xml:id="magloire_t3_68" n="68">
         <front>
           <docDate>
-            <date>1347, 8 juillet.</date>
+            <date when="1347-07-08">1347, 8 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2310,7 +2312,7 @@
       <text subtype="article" xml:id="magloire_t3_69" n="69">
         <front>
           <docDate>
-            <date>1347, 8 juillet.</date>
+            <date when="1347-07-08">1347, 8 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2326,7 +2328,7 @@
       <text subtype="article" xml:id="magloire_t3_70" n="70">
         <front>
           <docDate>
-            <date>1347, 8 juillet.</date>
+            <date when="1347-07-08">1347, 8 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2342,7 +2344,7 @@
       <text subtype="article" xml:id="magloire_t3_71" n="71">
         <front>
           <docDate>
-            <date>1347, 7 décembre.</date>
+            <date when="1347-12-07">1347, 7 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2368,7 +2370,7 @@
       <text subtype="article" xml:id="magloire_t3_72" n="72">
         <front>
           <docDate>
-            <date>1348 (n. st.), 4 janvier.</date>
+            <date when="1348-01-04">1348 (n. st.), 4 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2397,7 +2399,7 @@
         <pb n="156"/>
         <front>
           <docDate>
-            <date>1348 (n. st.), 29 janvier.</date>
+            <date when="1348-01-29">1348 (n. st.), 29 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2418,7 +2420,7 @@
       <text subtype="article" xml:id="magloire_t3_74" n="74">
         <front>
           <docDate>
-            <date>1348 (n. st.), 13 février.</date>
+            <date when="1348-02-13">1348 (n. st.), 13 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2440,7 +2442,7 @@
         <pb n="159"/>
         <front>
           <docDate>
-            <date>1348 (n. st.), 10 mars.</date>
+            <date when="1348-03-10">1348 (n. st.), 10 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2479,7 +2481,7 @@
       <text subtype="article" xml:id="magloire_t3_76" n="76">
         <front>
           <docDate>
-            <date>1348, 9 août.</date>
+            <date when="1348-08-09">1348, 9 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2505,7 +2507,7 @@
       <text subtype="article" xml:id="magloire_t3_77" n="77">
         <front>
           <docDate>
-            <date>1350, 29 mars<note n="77_1"><p>La fête de Pâques tombe le 28 mars en 1350.</p></note>.</date>
+            <date when="1350-03-29">1350, 29 mars<note n="77_1"><p>La fête de Pâques tombe le 28 mars en 1350.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2531,7 +2533,7 @@
         <pb n="167"/>
         <front>
           <docDate>
-            <date>1350, 24 mai.</date>
+            <date when="1350-05-24">1350, 24 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2555,7 +2557,7 @@
       <text subtype="article" xml:id="magloire_t3_79" n="79">
         <front>
           <docDate>
-            <date>1351, 30 juillet.</date>
+            <date when="1351-07-30">1351, 30 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2578,7 +2580,7 @@
       <text subtype="article" xml:id="magloire_t3_80" n="80">
         <front>
           <docDate>
-            <date>1351, 5 novembre<note n="80_1"><p>Pour le formulaire utilisé dans les décrets d’adjudication, on voudra bien se reporter à l’acte du 14 novembre 1338 publié plus haut, n° 38, p. 76.</p></note>.</date>
+            <date when="1351-11-05">1351, 5 novembre<note n="80_1"><p>Pour le formulaire utilisé dans les décrets d’adjudication, on voudra bien se reporter à l’acte du 14 novembre 1338 publié plus haut, n° 38, p. 76.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2626,7 +2628,7 @@
       <text subtype="article" xml:id="magloire_t3_81" n="81">
         <front>
           <docDate>
-            <date>1351, 12 novembre.</date>
+            <date when="1351-11-12">1351, 12 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2647,7 +2649,7 @@
       <text subtype="article" xml:id="magloire_t3_82" n="82">
         <front>
           <docDate>
-            <date>1352, 5 mai.</date>
+            <date when="1352-05-05">1352, 5 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2668,7 +2670,7 @@
       <text subtype="article" xml:id="magloire_t3_83" n="83">
         <front>
           <docDate>
-            <date>1352, 9 juin.</date>
+            <date when="1352-06-09">1352, 9 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2705,7 +2707,7 @@
       <text subtype="article" xml:id="magloire_t3_84" n="84">
         <front>
           <docDate>
-            <date>1352, … juin<note n="84_1"><p>Le quantième est resté en blanc.</p></note>.</date>
+            <date when="1352-06">1352, … juin<note n="84_1"><p>Le quantième est resté en blanc.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2727,7 +2729,7 @@
         <pb n="180"/>
         <front>
           <docDate>
-            <date>1352, 2 août.</date>
+            <date when="1352-08-02">1352, 2 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2752,7 +2754,7 @@
         <pb n="182"/>
         <front>
           <docDate>
-            <date>1352, 16 septembre.</date>
+            <date when="1352-09-16">1352, 16 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2778,7 +2780,7 @@
         <pb n="183"/>
         <front>
           <docDate>
-            <date>1353, 29 avril.</date>
+            <date when="1353-04-29">1353, 29 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2803,7 +2805,7 @@
         <pb n="185"/>
         <front>
           <docDate>
-            <date>1353, 30 septembre.</date>
+            <date when="1353-09-30">1353, 30 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2825,7 +2827,7 @@
       <text subtype="article" xml:id="magloire_t3_89" n="89">
         <front>
           <docDate>
-            <date>1354 (n. st.), 11 février.</date>
+            <date when="1354-02-11">1354 (n. st.), 11 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2849,7 +2851,7 @@
       <text subtype="article" xml:id="magloire_t3_90" n="90">
         <front>
           <docDate>
-            <date>S. d. [1354, avant le 20 mai.]<note n="90_1"><p>Nous supposons que le litige a éclaté avant le premier terme de paiement fixé au 20 mai 1354.</p></note></date>
+            <date when="1354-05-20">S. d. [1354, avant le 20 mai.]<note n="90_1"><p>Nous supposons que le litige a éclaté avant le premier terme de paiement fixé au 20 mai 1354.</p></note></date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2889,7 +2891,7 @@
       <text subtype="article" xml:id="magloire_t3_91" n="91">
         <front>
           <docDate>
-            <date>1354, 28 mai.</date>
+            <date when="1354-05-28">1354, 28 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2926,7 +2928,7 @@
       <text subtype="article" xml:id="magloire_t3_92" n="92">
         <front>
           <docDate>
-            <date>1354, 7 juillet.</date>
+            <date when="1354-07-07">1354, 7 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2954,7 +2956,7 @@
       <text subtype="article" xml:id="magloire_t3_93" n="93">
         <front>
           <docDate>
-            <date>1354, 17 juillet.</date>
+            <date when="1354-07-17">1354, 17 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -2975,7 +2977,7 @@
       <text subtype="article" xml:id="magloire_t3_94" n="94">
         <front>
           <docDate>
-            <date>1354, 14 décembre.</date>
+            <date when="1354-12-14">1354, 14 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3006,7 +3008,7 @@
         <pb n="200"/>
         <front>
           <docDate>
-            <date>1355 (n. st.), 9 février.</date>
+            <date when="1355-02-09">1355 (n. st.), 9 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3030,7 +3032,7 @@
         <pb n="202"/>
         <front>
           <docDate>
-            <date>1355 (n. st.), 25 février.</date>
+            <date when="1355-02-25">1355 (n. st.), 25 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3052,7 +3054,7 @@
       <text subtype="article" xml:id="magloire_t3_97" n="97">
         <front>
           <docDate>
-            <date>1355, 4 mai.</date>
+            <date when="1355-05-04">1355, 4 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3075,7 +3077,7 @@
         <pb n="205"/>
         <front>
           <docDate>
-            <date>1355, 23 juin.</date>
+            <date when="1355-06-23">1355, 23 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3102,7 +3104,7 @@
         <pb n="209"/>
         <front>
           <docDate>
-            <date>1355, 15 juillet.</date>
+            <date when="1355-07-15">1355, 15 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3126,7 +3128,7 @@
       <text subtype="article" xml:id="magloire_t3_100" n="100">
         <front>
           <docDate>
-            <date>1356, 27 avril.</date>
+            <date when="1356-04-27">1356, 27 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3153,7 +3155,7 @@
       <text subtype="article" xml:id="magloire_t3_101" n="101">
         <front>
           <docDate>
-            <date>1356, 22 mai.</date>
+            <date when="1356-05-22">1356, 22 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3179,7 +3181,7 @@
       <text subtype="article" xml:id="magloire_t3_102" n="102">
         <front>
           <docDate>
-            <date>1356, 23 septembre.</date>
+            <date when="1356-09-23">1356, 23 septembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3207,7 +3209,7 @@
       <text subtype="article" xml:id="magloire_t3_103" n="103">
         <front>
           <docDate>
-            <date>1356, 12 décembre.</date>
+            <date when="1356-12-12">1356, 12 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3230,7 +3232,7 @@
       <text subtype="article" xml:id="magloire_t3_104" n="104">
         <front>
           <docDate>
-            <date>1357, 19 mai.</date>
+            <date when="1357-05-19">1357, 19 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3253,7 +3255,7 @@
         <pb n="220"/>
         <front>
           <docDate>
-            <date>1357, 28 décembre.</date>
+            <date when="1357-12-28">1357, 28 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3277,7 +3279,7 @@
       <text subtype="article" xml:id="magloire_t3_106" n="106">
         <front>
           <docDate>
-            <date>1358, 23 avril.</date>
+            <date when="1358-04-23">1358, 23 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3298,7 +3300,7 @@
       <text subtype="article" xml:id="magloire_t3_107" n="107">
         <front>
           <docDate>
-            <date>1358, 24 avril.</date>
+            <date when="1358-04-24">1358, 24 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3328,7 +3330,7 @@
       <text subtype="article" xml:id="magloire_t3_108" n="108">
         <front>
           <docDate>
-            <date>1358, 18 mai.</date>
+            <date when="1358-05-18">1358, 18 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3351,7 +3353,7 @@
         <pb n="227"/>
         <front>
           <docDate>
-            <date>1358, 19 mai.</date>
+            <date when="1358-05-19">1358, 19 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3377,7 +3379,7 @@
       <text subtype="article" xml:id="magloire_t3_110" n="110">
         <front>
           <docDate>
-            <date>1358, 30 juin.</date>
+            <date when="1358-06-30">1358, 30 juin.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3399,7 +3401,7 @@
       <text subtype="article" xml:id="magloire_t3_111" n="111">
         <front>
           <docDate>
-            <date>1359, 24 mai.</date>
+            <date when="1359-05-24">1359, 24 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3424,7 +3426,7 @@
       <text subtype="article" xml:id="magloire_t3_112" n="112">
         <front>
           <docDate>
-            <date>1359, 6 juillet.</date>
+            <date when="1359-07-06">1359, 6 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3445,7 +3447,7 @@
       <text subtype="article" xml:id="magloire_t3_113" n="113">
         <front>
           <docDate>
-            <date>1360 (n. st.), 28 février.</date>
+            <date when="1360-02-28">1360 (n. st.), 28 février.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3472,7 +3474,7 @@
       <text subtype="article" xml:id="magloire_t3_114" n="114">
         <front>
           <docDate>
-            <date>1360 (n. st.), 16 mars.</date>
+            <date when="1360-03-16">1360 (n. st.), 16 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3496,7 +3498,7 @@
       <text subtype="article" xml:id="magloire_t3_115" n="115">
         <front>
           <docDate>
-            <date>1360, 29 mai.</date>
+            <date when="1360-05-29">1360, 29 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3521,7 +3523,7 @@
       <text subtype="article" xml:id="magloire_t3_116" n="116">
         <front>
           <docDate>
-            <date>1360, 31 juillet.</date>
+            <date when="1360-07-31">1360, 31 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3547,7 +3549,7 @@
       <text subtype="article" xml:id="magloire_t3_117" n="117">
         <front>
           <docDate>
-            <date>1360, 7 novembre.</date>
+            <date when="1360-11-07">1360, 7 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3570,7 +3572,7 @@
       <text subtype="article" xml:id="magloire_t3_118" n="118">
         <front>
           <docDate>
-            <date>1361 (n. st.), 16 janvier.</date>
+            <date when="1361-01-16">1361 (n. st.), 16 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3594,7 +3596,7 @@
         <pb n="248"/>
         <front>
           <docDate>
-            <date>1361 (n. st.), 2 mars.</date>
+            <date when="1361-03-02">1361 (n. st.), 2 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3617,7 +3619,7 @@
       <text subtype="article" xml:id="magloire_t3_120" n="120">
         <front>
           <docDate>
-            <date>1361, 5 juin. (Acte inachevé.)</date>
+            <date when="1361-06-05">1361, 5 juin. (Acte inachevé.)</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3658,7 +3660,7 @@
       <text subtype="article" xml:id="magloire_t3_121" n="121">
         <front>
           <docDate>
-            <date>1362, 6 mai.</date>
+            <date when="1362-05-06">1362, 6 mai.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3683,7 +3685,7 @@
       <text subtype="article" xml:id="magloire_t3_122" n="122">
         <front>
           <docDate>
-            <date>1363 (n. st.), 26 janvier.</date>
+            <date when="1363-01-26">1363 (n. st.), 26 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3704,7 +3706,7 @@
       <text subtype="article" xml:id="magloire_t3_123" n="123">
         <front>
           <docDate>
-            <date>1363, 17 avril.</date>
+            <date when="1363-04-17">1363, 17 avril.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3738,7 +3740,7 @@
       <text subtype="article" xml:id="magloire_t3_124" n="124">
         <front>
           <docDate>
-            <date>1364, 18 mai.</date>
+            <date when="1364-05-18">1364, 18 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3763,7 +3765,7 @@
       <text subtype="article" xml:id="magloire_t3_125" n="125">
         <front>
           <docDate>
-            <date>1364, 25 mai.</date>
+            <date when="1364-05-25">1364, 25 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3786,7 +3788,7 @@
       <text subtype="article" xml:id="magloire_t3_126" n="126">
         <front>
           <docDate>
-            <date>1364, 14 juillet.</date>
+            <date when="1364-07-14">1364, 14 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3814,7 +3816,7 @@
         <pb n="277"/>
         <front>
           <docDate>
-            <date>1364, 24 juillet.</date>
+            <date when="1364-07-24">1364, 24 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3838,7 +3840,7 @@
         <pb n="278"/>
         <front>
           <docDate>
-            <date>1364. août.</date>
+            <date when="1364-08">1364. août.</date>
             <placeName>Crécy-en-Brie.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3860,7 +3862,7 @@
       <text subtype="article" xml:id="magloire_t3_129" n="129">
         <front>
           <docDate>
-            <date>1364, 24 octobre.</date>
+            <date when="1364-10-24">1364, 24 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3882,7 +3884,7 @@
         <pb n="279"/>
         <front>
           <docDate>
-            <date>1364, octobre.</date>
+            <date when="1364-10">1364, octobre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -3911,7 +3913,7 @@
       <text subtype="article" xml:id="magloire_t3_131" n="131">
         <front>
           <docDate>
-            <date>1364, 30 décembre.</date>
+            <date when="1364-12-30">1364, 30 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3938,7 +3940,7 @@
         <pb n="284"/>
         <front>
           <docDate>
-            <date>1365 (n. st.), 3 mars.</date>
+            <date when="1365-03-03">1365 (n. st.), 3 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3962,7 +3964,7 @@
       <text subtype="article" xml:id="magloire_t3_133" n="133">
         <front>
           <docDate>
-            <date>1365 (n. st.), 12 mars.</date>
+            <date when="1365-03-12">1365 (n. st.), 12 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -3990,7 +3992,7 @@
       <text subtype="article" xml:id="magloire_t3_134" n="134">
         <front>
           <docDate>
-            <date>1365, 21 avril.</date>
+            <date when="1365-04-21">1365, 21 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4015,7 +4017,7 @@
       <text subtype="article" xml:id="magloire_t3_135" n="135">
         <front>
           <docDate>
-            <date>1365, 19 mai.</date>
+            <date when="1365-05-19">1365, 19 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4039,7 +4041,7 @@
       <text subtype="article" xml:id="magloire_t3_136" n="136">
         <front>
           <docDate>
-            <date>1365, 21 mai.</date>
+            <date when="1365-05-21">1365, 21 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4062,7 +4064,7 @@
       <text subtype="article" xml:id="magloire_t3_137" n="137">
         <front>
           <docDate>
-            <date>1365, 14 juin.</date>
+            <date when="1365-06-14">1365, 14 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4113,7 +4115,7 @@
         <pb n="298"/>
         <front>
           <docDate>
-            <date>1365, 14 juin.</date>
+            <date when="1365-06-14">1365, 14 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4160,7 +4162,7 @@
         <pb n="301"/>
         <front>
           <docDate>
-            <date>1365, 16 juin.</date>
+            <date when="1365-06-16">1365, 16 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4180,7 +4182,7 @@
       <text subtype="article" xml:id="magloire_t3_140" n="140">
         <front>
           <docDate>
-            <date>1365, 1<hi rend="sup">er</hi> juillet.</date>
+            <date when="1365-07-01">1365, 1<hi rend="sup">er</hi> juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4212,7 +4214,7 @@
       <text subtype="article" xml:id="magloire_t3_141" n="141">
         <front>
           <docDate>
-            <date>1365, 17 juillet.</date>
+            <date when="1365-07-17">1365, 17 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4237,7 +4239,7 @@
       <text subtype="article" xml:id="magloire_t3_142" n="142">
         <front>
           <docDate>
-            <date>1365, 18 juillet.</date>
+            <date when="1365-07-18">1365, 18 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4263,7 +4265,7 @@
       <text subtype="article" xml:id="magloire_t3_143" n="143">
         <front>
           <docDate>
-            <date>1365, 19 juillet.</date>
+            <date when="1365-07-19">1365, 19 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4280,7 +4282,7 @@
         <pb n="311"/>
         <front>
           <docDate>
-            <date>1365, 6 octobre.</date>
+            <date when="1365-10-06">1365, 6 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4304,7 +4306,7 @@
       <text subtype="article" xml:id="magloire_t3_145" n="145">
         <front>
           <docDate>
-            <date>1365, 12 décembre.</date>
+            <date when="1365-12-12">1365, 12 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4327,7 +4329,7 @@
       <text subtype="article" xml:id="magloire_t3_146" n="146">
         <front>
           <docDate>
-            <date>1366 (n. st.), 4 janvier.</date>
+            <date when="1366-01-04">1366 (n. st.), 4 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4349,7 +4351,7 @@
       <text subtype="article" xml:id="magloire_t3_147" n="147">
         <front>
           <docDate>
-            <date>1366 (n. st.), 17 janvier.</date>
+            <date when="1366-01-17">1366 (n. st.), 17 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4371,7 +4373,7 @@
       <text subtype="article" xml:id="magloire_t3_148" n="148">
         <front>
           <docDate>
-            <date>1366 (n. st.), 9 février.</date>
+            <date when="1366-02-09">1366 (n. st.), 9 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4398,7 +4400,7 @@
         <pb n="322"/>
         <front>
           <docDate>
-            <date>1366, 4 mai.</date>
+            <date when="1366-05-04">1366, 4 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4429,7 +4431,7 @@
       <text subtype="article" xml:id="magloire_t3_150" n="150">
         <front>
           <docDate>
-            <date>1366, 15 mai.</date>
+            <date when="1366-05-15">1366, 15 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4443,7 +4445,7 @@
       <text subtype="article" xml:id="magloire_t3_151" n="151">
         <front>
           <docDate>
-            <date>1366, 11 juin.</date>
+            <date when="1366-06-11">1366, 11 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4467,7 +4469,7 @@
       <text subtype="article" xml:id="magloire_t3_152" n="152">
         <front>
           <docDate>
-            <date>1366, 19 juin.</date>
+            <date when="1366-06-19">1366, 19 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4542,7 +4544,7 @@
       <text subtype="article" xml:id="magloire_t3_153" n="153">
         <front>
           <docDate>
-            <date>1366, 7 septembre.</date>
+            <date when="1366-09-07">1366, 7 septembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -4587,7 +4589,7 @@
       <text subtype="article" xml:id="magloire_t3_154" n="154">
         <front>
           <docDate>
-            <date>1366, 21 septembre.</date>
+            <date when="1366-09-21">1366, 21 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4615,7 +4617,7 @@
         <pb n="355"/>
         <front>
           <docDate>
-            <date>1366, 24 novembre.</date>
+            <date when="1366-11-24">1366, 24 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4637,7 +4639,7 @@
       <text subtype="article" xml:id="magloire_t3_156" n="156">
         <front>
           <docDate>
-            <date>1367 (n. st.), 24 mars.</date>
+            <date when="1367-03-24">1367 (n. st.), 24 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4663,7 +4665,7 @@
       <text subtype="article" xml:id="magloire_t3_157" n="157">
         <front>
           <docDate>
-            <date>1367 (n. st.), 29 mars.</date>
+            <date when="1367-03-29">1367 (n. st.), 29 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4687,7 +4689,7 @@
         <pb n="359"/>
         <front>
           <docDate>
-            <date>1367 (n. st.), 4 avril.</date>
+            <date when="1367-04-04">1367 (n. st.), 4 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4712,7 +4714,7 @@
       <text subtype="article" xml:id="magloire_t3_159" n="159">
         <front>
           <docDate>
-            <date>1367, 14 août.</date>
+            <date when="1367-08-14">1367, 14 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4737,7 +4739,7 @@
       <text subtype="article" xml:id="magloire_t3_160" n="160">
         <front>
           <docDate>
-            <date>1368 (n. st.), 3 mars.</date>
+            <date when="1368-03-03">1368 (n. st.), 3 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4758,7 +4760,7 @@
       <text subtype="article" xml:id="magloire_t3_161" n="161">
         <front>
           <docDate>
-            <date>1368 (n. st.), 31 mars.</date>
+            <date when="1368-03-31">1368 (n. st.), 31 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4790,7 +4792,7 @@
       <text subtype="article" xml:id="magloire_t3_162" n="162">
         <front>
           <docDate>
-            <date>1368 (n. st.), 3 avril.</date>
+            <date when="1368-04-03">1368 (n. st.), 3 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4818,7 +4820,7 @@
       <text subtype="article" xml:id="magloire_t3_163" n="163">
         <front>
           <docDate>
-            <date>1368 (n. st.), 5 avril.</date>
+            <date when="1368-04-05">1368 (n. st.), 5 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4843,7 +4845,7 @@
       <text subtype="article" xml:id="magloire_t3_164" n="164">
         <front>
           <docDate>
-            <date>1368, 28 juin.</date>
+            <date when="1368-06-28">1368, 28 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4866,7 +4868,7 @@
         <pb n="376"/>
         <front>
           <docDate>
-            <date>1368, 18 août.</date>
+            <date when="1368-08-18">1368, 18 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4891,7 +4893,7 @@
       <text subtype="article" xml:id="magloire_t3_166" n="166">
         <front>
           <docDate>
-            <date>1368, 8 octobre.</date>
+            <date when="1368-10-08">1368, 8 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4920,7 +4922,7 @@
       <text subtype="article" xml:id="magloire_t3_167" n="167">
         <front>
           <docDate>
-            <date>1368, 21 octobre.</date>
+            <date when="1368-10-21">1368, 21 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4943,7 +4945,7 @@
         <pb n="383"/>
         <front>
           <docDate>
-            <date>1368, 21 octobre.</date>
+            <date when="1368-10-21">1368, 21 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4965,7 +4967,7 @@
       <text subtype="article" xml:id="magloire_t3_169" n="169">
         <front>
           <docDate>
-            <date>1368, 19 décembre.</date>
+            <date when="1368-12-19">1368, 19 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -4987,7 +4989,7 @@
       <text subtype="article" xml:id="magloire_t3_170" n="170">
         <front>
           <docDate>
-            <date>1368, 29 décembre.</date>
+            <date when="1368-12-29">1368, 29 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5016,7 +5018,7 @@
       <text subtype="article" xml:id="magloire_t3_171" n="171">
         <front>
           <docDate>
-            <date>1369 (n. st.), 5 janvier.</date>
+            <date when="1369-01-05">1369 (n. st.), 5 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5041,7 +5043,7 @@
       <text subtype="article" xml:id="magloire_t3_172" n="172">
         <front>
           <docDate>
-            <date>1369 (n. st.), 7 mars.</date>
+            <date when="1369-03-07">1369 (n. st.), 7 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5062,7 +5064,7 @@
       <text subtype="article" xml:id="magloire_t3_173" n="173">
         <front>
           <docDate>
-            <date>1369 (n. st.), 13 mars.</date>
+            <date when="1369-03-13">1369 (n. st.), 13 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5084,7 +5086,7 @@
       <text subtype="article" xml:id="magloire_t3_174" n="174">
         <front>
           <docDate>
-            <date>1369, 22 avril.</date>
+            <date when="1369-04-22">1369, 22 avril.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -5106,7 +5108,7 @@
       <text subtype="article" xml:id="magloire_t3_175" n="175">
         <front>
           <docDate>
-            <date>1369, 28 mai.</date>
+            <date when="1369-05-28">1369, 28 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5129,7 +5131,7 @@
       <text subtype="article" xml:id="magloire_t3_176" n="176">
         <front>
           <docDate>
-            <date>1369, 2 juin.</date>
+            <date when="1369-06-02">1369, 2 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5185,7 +5187,7 @@
         <pb n="398"/>
         <front>
           <docDate>
-            <date>1369, 20 juin.</date>
+            <date when="1369-06-20">1369, 20 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5210,7 +5212,7 @@
         <pb n="400"/>
         <front>
           <docDate>
-            <date>1369, 5 juillet.</date>
+            <date when="1369-07-05">1369, 5 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5243,7 +5245,7 @@
       <text subtype="article" xml:id="magloire_t3_179" n="179">
         <front>
           <docDate>
-            <date>1369, 6 septembre.</date>
+            <date when="1369-09-06">1369, 6 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5272,7 +5274,7 @@
       <text subtype="article" xml:id="magloire_t3_180" n="180">
         <front>
           <docDate>
-            <date>1370 (n. st.), 23 janvier.</date>
+            <date when="1370-01-23">1370 (n. st.), 23 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5301,7 +5303,7 @@
       <text subtype="article" xml:id="magloire_t3_181" n="181">
         <front>
           <docDate>
-            <date>1370 (n. st.), 2 avril.</date>
+            <date when="1370-04-02">1370 (n. st.), 2 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5330,7 +5332,7 @@
         <pb n="416"/>
         <front>
           <docDate>
-            <date>1370, 29 juillet.</date>
+            <date when="1370-07-29">1370, 29 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5359,7 +5361,7 @@
       <text subtype="article" xml:id="magloire_t3_183" n="183">
         <front>
           <docDate>
-            <date>1370, 9 décembre.</date>
+            <date when="1370-12-09">1370, 9 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5381,7 +5383,7 @@
       <text subtype="article" xml:id="magloire_t3_184" n="184">
         <front>
           <docDate>
-            <date>1370, 16 décembre.</date>
+            <date when="1370-12-16">1370, 16 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5411,7 +5413,7 @@
       <text subtype="article" xml:id="magloire_t3_185" n="185">
         <front>
           <docDate>
-            <date>1371, 29 novembre.</date>
+            <date when="1371-11-29">1371, 29 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5440,7 +5442,7 @@
       <text subtype="article" xml:id="magloire_t3_186" n="186">
         <front>
           <docDate>
-            <date>1372 (n. st.), 11 février.</date>
+            <date when="1372-02-11">1372 (n. st.), 11 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5463,7 +5465,7 @@
       <text subtype="article" xml:id="magloire_t3_187" n="187">
         <front>
           <docDate>
-            <date>1372 (n. st.), 24 février.</date>
+            <date when="1372-02-24">1372 (n. st.), 24 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5486,7 +5488,7 @@
       <text subtype="article" xml:id="magloire_t3_188" n="188">
         <front>
           <docDate>
-            <date>1372 (n. st.), 26 février<note n="188_1"><p>Plusieurs passages de cet acte ne différant que par de menus détails du délai du 23 janvier 1370 (n. st.), auquel on voudra bien se reporter, nous avons jugé inutile de le publier <hi rend="i">in extenso</hi> (voir plus haut, n° 180, p. 409).</p></note>.</date>
+            <date when="1372-02-26">1372 (n. st.), 26 février<note n="188_1"><p>Plusieurs passages de cet acte ne différant que par de menus détails du délai du 23 janvier 1370 (n. st.), auquel on voudra bien se reporter, nous avons jugé inutile de le publier <hi rend="i">in extenso</hi> (voir plus haut, n° 180, p. 409).</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5511,7 +5513,7 @@
       <text subtype="article" xml:id="magloire_t3_189" n="189">
         <front>
           <docDate>
-            <date>1372, 5 mai.</date>
+            <date when="1372-05-05">1372, 5 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5533,7 +5535,7 @@
       <text subtype="article" xml:id="magloire_t3_190" n="190">
         <front>
           <docDate>
-            <date>1372, 5 juin.</date>
+            <date when="1372-06-05">1372, 5 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5557,7 +5559,7 @@
         <pb n="432"/>
         <front>
           <docDate>
-            <date>1372, 8 juin.</date>
+            <date when="1372-06-08">1372, 8 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5580,7 +5582,7 @@
         <pb n="433"/>
         <front>
           <docDate>
-            <date>1372, 16 juin.</date>
+            <date when="1372-06-16">1372, 16 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5604,7 +5606,7 @@
       <text subtype="article" xml:id="magloire_t3_193" n="193">
         <front>
           <docDate>
-            <date>1372, 9 août.</date>
+            <date when="1372-08-09">1372, 9 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5626,7 +5628,7 @@
       <text subtype="article" xml:id="magloire_t3_194" n="194">
         <front>
           <docDate>
-            <date>1372, 5 octobre.</date>
+            <date when="1372-10-05">1372, 5 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5648,7 +5650,7 @@
       <text subtype="article" xml:id="magloire_t3_195" n="195">
         <front>
           <docDate>
-            <date>1372, 10 décembre.</date>
+            <date when="1372-12-10">1372, 10 décembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -5671,7 +5673,7 @@
       <text subtype="article" xml:id="magloire_t3_196" n="196">
         <front>
           <docDate>
-            <date>1373, 14 juin.</date>
+            <date when="1373-06-14">1373, 14 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5701,7 +5703,7 @@
       <text subtype="article" xml:id="magloire_t3_197" n="197">
         <front>
           <docDate>
-            <date>1373, 31 août.</date>
+            <date when="1373-08-31">1373, 31 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5718,7 +5720,7 @@
         <pb n="441"/>
         <front>
           <docDate>
-            <date>1374 (n. st.), 6 février.</date>
+            <date when="1374-02-06">1374 (n. st.), 6 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5743,7 +5745,7 @@
       <text subtype="article" xml:id="magloire_t3_199" n="199">
         <front>
           <docDate>
-            <date>1374, 27 mai.</date>
+            <date when="1374-05-27">1374, 27 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5767,7 +5769,7 @@
         <pb n="445"/>
         <front>
           <docDate>
-            <date>1374, 11 juin.</date>
+            <date when="1374-06-11">1374, 11 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5791,7 +5793,7 @@
       <text subtype="article" xml:id="magloire_t3_201" n="201">
         <front>
           <docDate>
-            <date>1374, 17 août.</date>
+            <date when="1374-08-17">1374, 17 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5815,7 +5817,7 @@
       <text subtype="article" xml:id="magloire_t3_202" n="202">
         <front>
           <docDate>
-            <date>1375 (n. st.), 6 janvier.</date>
+            <date when="1375-01-06">1375 (n. st.), 6 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5857,7 +5859,7 @@
       <text subtype="article" xml:id="magloire_t3_203" n="203">
         <front>
           <docDate>
-            <date>1375, 26 avril.</date>
+            <date when="1375-04-26">1375, 26 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5879,7 +5881,7 @@
       <text subtype="article" xml:id="magloire_t3_204" n="204">
         <front>
           <docDate>
-            <date>1375, 16 juillet.</date>
+            <date when="1375-07-16">1375, 16 juillet.</date>
             <placeName>Villeneuve-lès-Avignon.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -5902,7 +5904,7 @@
         <pb n="455"/>
         <front>
           <docDate>
-            <date>1375, 28 décembre. (Acte tronqué.)</date>
+            <date when="1375-12-28">1375, 28 décembre. (Acte tronqué.)</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5918,7 +5920,7 @@
       <text subtype="article" xml:id="magloire_t3_206" n="206">
         <front>
           <docDate>
-            <date>1375, décembre.</date>
+            <date when="1375-12">1375, décembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -5949,7 +5951,7 @@
       <text subtype="article" xml:id="magloire_t3_207" n="207">
         <front>
           <docDate>
-            <date>1376 (n. st.), 18 janvier.</date>
+            <date when="1376-01-18">1376 (n. st.), 18 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5975,7 +5977,7 @@
       <text subtype="article" xml:id="magloire_t3_208" n="208">
         <front>
           <docDate>
-            <date>1376 (n. st.), 22 janvier.</date>
+            <date when="1376-01-22">1376 (n. st.), 22 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -5991,7 +5993,7 @@
       <text subtype="article" xml:id="magloire_t3_209" n="209">
         <front>
           <docDate>
-            <date>1376 (n. st.), 25 janvier.</date>
+            <date when="1376-01-25">1376 (n. st.), 25 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6013,7 +6015,7 @@
       <text subtype="article" xml:id="magloire_t3_210" n="210">
         <front>
           <docDate>
-            <date>1376 (n. st.), 15 février.</date>
+            <date when="1376-02-15">1376 (n. st.), 15 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6035,7 +6037,7 @@
         <pb n="464"/>
         <front>
           <docDate>
-            <date>1376 (n. st.), 30 mars.</date>
+            <date when="1376-03-30">1376 (n. st.), 30 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6057,7 +6059,7 @@
       <text subtype="article" xml:id="magloire_t3_212" n="212">
         <front>
           <docDate>
-            <date>1376, 17 mai.</date>
+            <date when="1376-05-17">1376, 17 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6080,7 +6082,7 @@
       <text subtype="article" xml:id="magloire_t3_213" n="213">
         <front>
           <docDate>
-            <date>1377, 4 mai.</date>
+            <date when="1377-05-04">1377, 4 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6120,7 +6122,7 @@
       <text subtype="article" xml:id="magloire_t3_214" n="214">
         <front>
           <docDate>
-            <date>1377, 4 mai.</date>
+            <date when="1377-05-04">1377, 4 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6137,7 +6139,7 @@
         <pb n="477"/>
         <front>
           <docDate>
-            <date>1377, 10 mai.</date>
+            <date when="1377-05-10">1377, 10 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6159,7 +6161,7 @@
       <text subtype="article" xml:id="magloire_t3_216" n="216">
         <front>
           <docDate>
-            <date>1377, 12 mai.</date>
+            <date when="1377-05-12">1377, 12 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6183,7 +6185,7 @@
       <text subtype="article" xml:id="magloire_t3_217" n="217">
         <front>
           <docDate>
-            <date>1377, 29 mai.</date>
+            <date when="1377-05-29">1377, 29 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6205,7 +6207,7 @@
       <text subtype="article" xml:id="magloire_t3_218" n="218">
         <front>
           <docDate>
-            <date>1377, 5 août.</date>
+            <date when="1377-08-05">1377, 5 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6230,7 +6232,7 @@
         <pb n="483"/>
         <front>
           <docDate>
-            <date>1378, 11 mai.</date>
+            <date when="1378-05-11">1378, 11 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6254,7 +6256,7 @@
       <text subtype="article" xml:id="magloire_t3_220" n="220">
         <front>
           <docDate>
-            <date>1378, 22 septembre.</date>
+            <date when="1378-09-22">1378, 22 septembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -6283,7 +6285,7 @@
       <text subtype="article" xml:id="magloire_t3_221" n="221">
         <front>
           <docDate>
-            <date>1379 (n. st.), 4 février.</date>
+            <date when="1379-02-04">1379 (n. st.), 4 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6308,7 +6310,7 @@
       <text subtype="article" xml:id="magloire_t3_222" n="222">
         <front>
           <docDate>
-            <date>S. d. [1379, n. st., avant le 7 mars (?)]<note n="222_1"><p>Sur cette date, voir plus bas, p. 488, n. 3.</p></note>.</date>
+            <date notAfter="1379-03-07">S. d. [1379, n. st., avant le 7 mars (?)]<note n="222_1"><p>Sur cette date, voir plus bas, p. 488, n. 3.</p></note>.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -6332,7 +6334,7 @@
       <text subtype="article" xml:id="magloire_t3_223" n="223">
         <front>
           <docDate>
-            <date>1379, 5 mai.</date>
+            <date when="1379-05-05">1379, 5 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6356,7 +6358,7 @@
       <text subtype="article" xml:id="magloire_t3_224" n="224">
         <front>
           <docDate>
-            <date>1379, 21 mai.</date>
+            <date when="1379-05-21">1379, 21 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6378,7 +6380,7 @@
       <text subtype="article" xml:id="magloire_t3_225" n="225">
         <front>
           <docDate>
-            <date>1379, 2 octobre.</date>
+            <date when="1379-10-02">1379, 2 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6400,7 +6402,7 @@
       <text subtype="article" xml:id="magloire_t3_226" n="226">
         <front>
           <docDate>
-            <date>1379, 16 décembre<note n="226_1"><p>Ce texte, au demeurant très connu, ayant été déjà publié dans les <hi rend="i">Ordonnances des rois de France</hi> (voir plus loin, n° 230, p. 509), il nous a paru tout à fait inutile d’en donner ici une nouvelle édition.</p></note>.</date>
+            <date when="1379-12-16">1379, 16 décembre<note n="226_1"><p>Ce texte, au demeurant très connu, ayant été déjà publié dans les <hi rend="i">Ordonnances des rois de France</hi> (voir plus loin, n° 230, p. 509), il nous a paru tout à fait inutile d’en donner ici une nouvelle édition.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6416,7 +6418,7 @@
       <text subtype="article" xml:id="magloire_t3_227" n="227">
         <front>
           <docDate>
-            <date>1380 (n. st.), 10 janvier.</date>
+            <date when="1380-01-10">1380 (n. st.), 10 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6446,7 +6448,7 @@
       <text subtype="article" xml:id="magloire_t3_228" n="228">
         <front>
           <docDate>
-            <date>1380 (n. st.), 20 février.</date>
+            <date when="1380-02-20">1380 (n. st.), 20 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6476,7 +6478,7 @@
       <text subtype="article" xml:id="magloire_t3_229" n="229">
         <front>
           <docDate>
-            <date>1381, 28 août.</date>
+            <date when="1381-08-28">1381, 28 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6520,7 +6522,7 @@
         <pb n="509"/>
         <front>
           <docDate>
-            <date>1381, août.<note n="230_1"><p>Comme nous l’avons déjà dit plus haut (voir n° 226, p. 495, n. 1) il nous a paru superflu de donner ici une nouvelle édition de cet acte.</p></note></date>
+            <date when="1381-08">1381, août.<note n="230_1"><p>Comme nous l’avons déjà dit plus haut (voir n° 226, p. 495, n. 1) il nous a paru superflu de donner ici une nouvelle édition de cet acte.</p></note></date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -6559,7 +6561,7 @@
         <pb n="510"/>
         <front>
           <docDate>
-            <date>1381, 16 septembre. (Acte validé par Pierre le Mere<note n="231_5"><p>Pierre Le Mere, qui succède à Pierre de Fontenelles entre 1381 et 1383, était encore garde du scel en 1391 (voir plus loin, n° 286, p. 640). Il était probablement parent du maglorien Jean le Mere, prieur de Saint-Martin de Chaumont, qui s’engage le 20 avril 1415 à Montfort-l’Amaury à respecter la paix d’Arras (Arch. nat., J 948, n° 174, et A. de Dion, <hi rend="i">Publication de la paix d’Arras…</hi>, dans les <hi rend="i">Mémoires et Documents de la Société archéologique de Rambouillet</hi>, t. 5, 1879-1880, p. 47, n° 174). On ignore à quelle date ce dernier prit l’habit, mais dès 1422 le prieuré de Chaumont était occupé par Jean Gautier (Arch. nat., S 1150, n. c., anc. Chap. 19, 1<hi rend="sup">re</hi> liasse, n° 16, 1422, n. st., 14 mars).</p></note>, garde du sceau des contrats du comté de Montfort, le 8 décembre 1383.)</date>
+            <date when="1381-09-16">1381, 16 septembre. (Acte validé par Pierre le Mere<note n="231_5"><p>Pierre Le Mere, qui succède à Pierre de Fontenelles entre 1381 et 1383, était encore garde du scel en 1391 (voir plus loin, n° 286, p. 640). Il était probablement parent du maglorien Jean le Mere, prieur de Saint-Martin de Chaumont, qui s’engage le 20 avril 1415 à Montfort-l’Amaury à respecter la paix d’Arras (Arch. nat., J 948, n° 174, et A. de Dion, <hi rend="i">Publication de la paix d’Arras…</hi>, dans les <hi rend="i">Mémoires et Documents de la Société archéologique de Rambouillet</hi>, t. 5, 1879-1880, p. 47, n° 174). On ignore à quelle date ce dernier prit l’habit, mais dès 1422 le prieuré de Chaumont était occupé par Jean Gautier (Arch. nat., S 1150, n. c., anc. Chap. 19, 1<hi rend="sup">re</hi> liasse, n° 16, 1422, n. st., 14 mars).</p></note>, garde du sceau des contrats du comté de Montfort, le 8 décembre 1383.)</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6587,7 +6589,7 @@
       <text subtype="article" xml:id="magloire_t3_232" n="232">
         <front>
           <docDate>
-            <date>1381, 27 novembre.</date>
+            <date when="1381-11-27">1381, 27 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6610,7 +6612,7 @@
       <text subtype="article" xml:id="magloire_t3_233" n="233">
         <front>
           <docDate>
-            <date>1382 (n. st.), 22 février.</date>
+            <date when="1382-02-22">1382 (n. st.), 22 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6632,7 +6634,7 @@
         <pb n="516"/>
         <front>
           <docDate>
-            <date>1382 (n. st.), 8 et 12 février, 22 mars.</date>
+            <date notBefore="1382-02-08" notAfter="1382-02-22">1382 (n. st.), 8 et 12 février, 22 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6656,7 +6658,7 @@
         <pb n="519"/>
         <front>
           <docDate>
-            <date>1382, 22 mai.</date>
+            <date when="1382-03-22">1382, 22 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6677,7 +6679,7 @@
       <text subtype="article" xml:id="magloire_t3_236" n="236">
         <front>
           <docDate>
-            <date>1382, 22 mai.</date>
+            <date when="1382-05-22">1382, 22 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6692,7 +6694,7 @@
         <pb n="520"/>
         <front>
           <docDate>
-            <date>1382, 26 juin.</date>
+            <date when="1382-06-26">1382, 26 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6728,7 +6730,7 @@
       <text subtype="article" xml:id="magloire_t3_238" n="238">
         <front>
           <docDate>
-            <date>1382, 6 septembre.</date>
+            <date when="1382-09-06">1382, 6 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6751,7 +6753,7 @@
       <text subtype="article" xml:id="magloire_t3_239" n="239">
         <front>
           <docDate>
-            <date>1382, 2 décembre.</date>
+            <date when="1382-12-02">1382, 2 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6773,7 +6775,7 @@
       <text subtype="article" xml:id="magloire_t3_240" n="240">
         <front>
           <docDate>
-            <date>1382, 10 décembre.</date>
+            <date when="1382-12-10">1382, 10 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6799,7 +6801,7 @@
       <text subtype="article" xml:id="magloire_t3_241" n="241">
         <front>
           <docDate>
-            <date>1383, 22 avril.</date>
+            <date when="1383-04-22">1383, 22 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6820,7 +6822,7 @@
       <text subtype="article" xml:id="magloire_t3_242" n="242">
         <front>
           <docDate>
-            <date>1383, 21 août.</date>
+            <date when="1383-08-21">1383, 21 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6843,7 +6845,7 @@
       <text subtype="article" xml:id="magloire_t3_243" n="243">
         <front>
           <docDate>
-            <date>1383, 8 décembre.</date>
+            <date when="1383-12-08">1383, 8 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6854,7 +6856,7 @@
       <text subtype="article" xml:id="magloire_t3_244" n="244">
         <front>
           <docDate>
-            <date>1384 (n. st.), 23 mars.</date>
+            <date when="1384-03-23">1384 (n. st.), 23 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6890,7 +6892,7 @@
       <text subtype="article" xml:id="magloire_t3_245" n="245">
         <front>
           <docDate>
-            <date>1384 (n. st.), 29 mars.</date>
+            <date when="1384-03-29">1384 (n. st.), 29 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6917,7 +6919,7 @@
       <text subtype="article" xml:id="magloire_t3_246" n="246">
         <front>
           <docDate>
-            <date>1384 (n. st.), 4 avril.</date>
+            <date when="1384-04-04">1384 (n. st.), 4 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6953,7 +6955,7 @@
         <pb n="542"/>
         <front>
           <docDate>
-            <date>S. d. [1351, après le 20 juin – 1384, avant le 12 mai.]<note n="247_1"><p>Les dates extrêmes sont celles de l’abbatiat de Brice de Ployart, dont nous avons retracé la carrière plus haut, p. <hi rend="sc">xii</hi> et suiv.</p></note></date>
+            <date notBefore="1351-06-20" notAfter="1384-05-12">S. d. [1351, après le 20 juin – 1384, avant le 12 mai.]<note n="247_1"><p>Les dates extrêmes sont celles de l’abbatiat de Brice de Ployart, dont nous avons retracé la carrière plus haut, p. <hi rend="sc">xii</hi> et suiv.</p></note></date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -6974,7 +6976,7 @@
       <text subtype="article" xml:id="magloire_t3_248" n="248">
         <front>
           <docDate>
-            <date>1385, 20 juin.</date>
+            <date when="1385-06-20">1385, 20 juin.</date>
             <placeName>Saint-Léger-en-Yvelines.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -7020,7 +7022,7 @@
       <text subtype="article" xml:id="magloire_t3_249" n="249">
         <front>
           <docDate>
-            <date>1385, 8 novembre.</date>
+            <date when="1385-11-08">1385, 8 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7044,7 +7046,7 @@
       <text subtype="article" xml:id="magloire_t3_250" n="250">
         <front>
           <docDate>
-            <date>1385, 15 novembre.</date>
+            <date when="1385-11-15">1385, 15 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7066,7 +7068,7 @@
       <text subtype="article" xml:id="magloire_t3_251" n="251">
         <front>
           <docDate>
-            <date>1386 (n. st.), 5 février.</date>
+            <date when="1386-02-05">1386 (n. st.), 5 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7091,7 +7093,7 @@
       <text subtype="article" xml:id="magloire_t3_252" n="252">
         <front>
           <docDate>
-            <date>1386, 7 mai. (Acte tronqué.)</date>
+            <date when="1386-05-07">1386, 7 mai. (Acte tronqué.)</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7113,7 +7115,7 @@
         <pb n="555"/>
         <front>
           <docDate>
-            <date>1386, 27 juin.</date>
+            <date when="1386-06-27">1386, 27 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7134,7 +7136,7 @@
       <text subtype="article" xml:id="magloire_t3_254" n="254">
         <front>
           <docDate>
-            <date>1386, 16 septembre.</date>
+            <date when="1386-09-16">1386, 16 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7161,7 +7163,7 @@
       <text subtype="article" xml:id="magloire_t3_255" n="255">
         <front>
           <docDate>
-            <date>1386, 3 décembre.</date>
+            <date when="1386-12-03">1386, 3 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7208,7 +7210,7 @@
       <text subtype="article" xml:id="magloire_t3_256" n="256">
         <front>
           <docDate>
-            <date>1387, 20 avril.</date>
+            <date when="1387-04-20">1387, 20 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7230,7 +7232,7 @@
       <text subtype="article" xml:id="magloire_t3_257" n="257">
         <front>
           <docDate>
-            <date>1387, 12 août.</date>
+            <date when="1387-08-12">1387, 12 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7252,7 +7254,7 @@
       <text subtype="article" xml:id="magloire_t3_258" n="258">
         <front>
           <docDate>
-            <date>1387, 16 octobre.</date>
+            <date when="1387-10-16">1387, 16 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7274,7 +7276,7 @@
         <pb n="573"/>
         <front>
           <docDate>
-            <date>1388 (n. st.), 12 mars.</date>
+            <date when="1388-03-12">1388 (n. st.), 12 mars.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -7296,7 +7298,7 @@
       <text subtype="article" xml:id="magloire_t3_260" n="260">
         <front>
           <docDate>
-            <date>1388, 20 avril.</date>
+            <date when="1388-04-20">1388, 20 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7318,7 +7320,7 @@
       <text subtype="article" xml:id="magloire_t3_261" n="261">
         <front>
           <docDate>
-            <date>1388, 21 avril.</date>
+            <date when="1388-04-21">1388, 21 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7347,7 +7349,7 @@
       <text subtype="article" xml:id="magloire_t3_262" n="262">
         <front>
           <docDate>
-            <date>1388, 30 mai.</date>
+            <date when="1388-05-30">1388, 30 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7392,7 +7394,7 @@
       <text subtype="article" xml:id="magloire_t3_263" n="263">
         <front>
           <docDate>
-            <date>1388, 12 septembre.</date>
+            <date when="1388-09-12">1388, 12 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7436,7 +7438,7 @@
       <text subtype="article" xml:id="magloire_t3_264" n="264">
         <front>
           <docDate>
-            <date>1389 (n. st.), 1<hi rend="sup">er</hi> janvier.</date>
+            <date when="1389-01-01">1389 (n. st.), 1<hi rend="sup">er</hi> janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7464,7 +7466,7 @@
       <text subtype="article" xml:id="magloire_t3_265" n="265">
         <front>
           <docDate>
-            <date>1389 (n. st.), 9 janvier.</date>
+            <date when="1389-01-09">1389 (n. st.), 9 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7488,7 +7490,7 @@
         <pb n="592"/>
         <front>
           <docDate>
-            <date>1389, 25 mai.</date>
+            <date when="1389-05-25">1389, 25 mai.</date>
             <placeName>Saint-Léger-en-Yvelines.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -7517,7 +7519,7 @@
         <pb n="597"/>
         <front>
           <docDate>
-            <date>1389, 25 juin.</date>
+            <date when="1389-06-25">1389, 25 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7541,7 +7543,7 @@
         <pb n="599"/>
         <front>
           <docDate>
-            <date>1389, 25 juin.</date>
+            <date when="1389-06-25">1389, 25 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7562,7 +7564,7 @@
       <text subtype="article" xml:id="magloire_t3_269" n="269">
         <front>
           <docDate>
-            <date>1389, 2 septembre.</date>
+            <date when="1389-09-02">1389, 2 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7603,7 +7605,7 @@
       <text subtype="article" xml:id="magloire_t3_270" n="270">
         <front>
           <docDate>
-            <date>1389, 14 décembre.</date>
+            <date when="1389-12-14">1389, 14 décembre.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -7638,7 +7640,7 @@
         <pb n="608"/>
         <front>
           <docDate>
-            <date>1388, 9 novembre – 1390 (n. st.), 2 janvier.</date>
+            <date when="1388-11-09">1388, 9 novembre – 1390 (n. st.), 2 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7668,7 +7670,7 @@
       <text subtype="article" xml:id="magloire_t3_272" n="272">
         <front>
           <docDate>
-            <date>1389 (n. st.), 2 janvier – 1390 (n. st.), 2 janvier.</date>
+            <date notBefore="1389-01-02" notAfter="1390-01-02">1389 (n. st.), 2 janvier – 1390 (n. st.), 2 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7706,7 +7708,7 @@
         <pb n="615"/>
         <front>
           <docDate>
-            <date>1390 (n. st.), 21 février.</date>
+            <date when="1390-02-21">1390 (n. st.), 21 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7733,7 +7735,7 @@
       <text subtype="article" xml:id="magloire_t3_274" n="274">
         <front>
           <docDate>
-            <date>1390, 12 avril.</date>
+            <date when="1390-04-12">1390, 12 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7769,7 +7771,7 @@
       <text subtype="article" xml:id="magloire_t3_275" n="275">
         <front>
           <docDate>
-            <date>1390, 12 avril.</date>
+            <date when="1390-04-12">1390, 12 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7807,7 +7809,7 @@
       <text subtype="article" xml:id="magloire_t3_276" n="276">
         <front>
           <docDate>
-            <date>1390, 20 avril.</date>
+            <date when="1390-04-20">1390, 20 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7823,7 +7825,7 @@
       <text subtype="article" xml:id="magloire_t3_277" n="277">
         <front>
           <docDate>
-            <date>1390, 11 août.</date>
+            <date when="1390-08-11">1390, 11 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7846,7 +7848,7 @@
       <text subtype="article" xml:id="magloire_t3_278" n="278">
         <front>
           <docDate>
-            <date>1390, 4 novembre.</date>
+            <date when="1390-11-04">1390, 4 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7904,7 +7906,7 @@
         <pb n="628"/>
         <front>
           <docDate>
-            <date>1390, 7 novembre.</date>
+            <date when="1390-11-07">1390, 7 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7925,7 +7927,7 @@
       <text subtype="article" xml:id="magloire_t3_280" n="280">
         <front>
           <docDate>
-            <date>1390, 7 novembre.</date>
+            <date when="1390-11-07">1390, 7 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7948,7 +7950,7 @@
       <text subtype="article" xml:id="magloire_t3_281" n="281">
         <front>
           <docDate>
-            <date>1390, 15 novembre.</date>
+            <date when="1390-11-15">1390, 15 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -7964,7 +7966,7 @@
       <text subtype="article" xml:id="magloire_t3_282" n="282">
         <front>
           <docDate>
-            <date>1390, 21 novembre.</date>
+            <date when="1390-11-21">1390, 21 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8000,7 +8002,7 @@
       <text subtype="article" xml:id="magloire_t3_283" n="283">
         <front>
           <docDate>
-            <date>1391 (n. st.), 7 janvier.</date>
+            <date when="1391-01-07">1391 (n. st.), 7 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8023,7 +8025,7 @@
       <text subtype="article" xml:id="magloire_t3_284" n="284">
         <front>
           <docDate>
-            <date>1391, 17 avril.</date>
+            <date when="1391-04-17">1391, 17 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8047,7 +8049,7 @@
       <text subtype="article" xml:id="magloire_t3_285" n="285">
         <front>
           <docDate>
-            <date>1391, 12 octobre.</date>
+            <date when="1391-10-12">1391, 12 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8085,7 +8087,7 @@
         <pb n="640"/>
         <front>
           <docDate>
-            <date>1391, 9 décembre.</date>
+            <date when="1391-12-09">1391, 9 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8106,7 +8108,7 @@
         <pb n="641"/>
         <front>
           <docDate>
-            <date>1392 (n. st.), 13 janvier.</date>
+            <date when="1392-01-13">1392 (n. st.), 13 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8149,7 +8151,7 @@
         <pb n="644"/>
         <front>
           <docDate>
-            <date>1392 (n. st.), 14 janvier.</date>
+            <date when="1392-01-14">1392 (n. st.), 14 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8174,7 +8176,7 @@
         <pb n="645"/>
         <front>
           <docDate>
-            <date>1392 (n. st.), 1<hi rend="sup">er</hi> février.</date>
+            <date when="1392-02-01">1392 (n. st.), 1<hi rend="sup">er</hi> février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8198,7 +8200,7 @@
       <text subtype="article" xml:id="magloire_t3_290" n="290">
         <front>
           <docDate>
-            <date>1392 (n. st.), 16 février.</date>
+            <date when="1392-02-16">1392 (n. st.), 16 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8222,7 +8224,7 @@
         <pb n="648"/>
         <front>
           <docDate>
-            <date>1392 (n. st.), 7 mars.</date>
+            <date when="1392-03-07">1392 (n. st.), 7 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8246,7 +8248,7 @@
       <text subtype="article" xml:id="magloire_t3_292" n="292">
         <front>
           <docDate>
-            <date>1392, mai.</date>
+            <date when="1392-05">1392, mai.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -8279,7 +8281,7 @@
       <text subtype="article" xml:id="magloire_t3_293" n="293">
         <front>
           <docDate>
-            <date>1392, 10 août.</date>
+            <date when="1392-08-10">1392, 10 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8302,7 +8304,7 @@
       <text subtype="article" xml:id="magloire_t3_294" n="294">
         <front>
           <docDate>
-            <date>1392, 12 août.</date>
+            <date when="1392-08-12">1392, 12 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8327,7 +8329,7 @@
       <text subtype="article" xml:id="magloire_t3_295" n="295">
         <front>
           <docDate>
-            <date>1392, 20 novembre.</date>
+            <date when="1392-11-20">1392, 20 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8343,7 +8345,7 @@
       <text subtype="article" xml:id="magloire_t3_296" n="296">
         <front>
           <docDate>
-            <date>1392, 21 novembre.</date>
+            <date when="1392-11-21">1392, 21 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8360,7 +8362,7 @@
       <text subtype="article" xml:id="magloire_t3_297" n="297">
         <front>
           <docDate>
-            <date>1392, 23 novembre.</date>
+            <date when="1392-11-23">1392, 23 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8386,7 +8388,7 @@
       <text subtype="article" xml:id="magloire_t3_298" n="298">
         <front>
           <docDate>
-            <date>1393 (n. st.), 20 février.</date>
+            <date when="1393-02-20">1393 (n. st.), 20 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8412,7 +8414,7 @@
       <text subtype="article" xml:id="magloire_t3_299" n="299">
         <front>
           <docDate>
-            <date>1393 (n. st.), 1<hi rend="sup">er</hi> mars.</date>
+            <date when="1393-03-01">1393 (n. st.), 1<hi rend="sup">er</hi> mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8438,7 +8440,7 @@
       <text subtype="article" xml:id="magloire_t3_300" n="300">
         <front>
           <docDate>
-            <date>1393 (n. st.), 4 mars.</date>
+            <date when="1393-03-04">1393 (n. st.), 4 mars.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -8474,7 +8476,7 @@
       <text subtype="article" xml:id="magloire_t3_301" n="301">
         <front>
           <docDate>
-            <date>1393 (n. st.), 6 mars.</date>
+            <date when="1393-03-06">1393 (n. st.), 6 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8496,7 +8498,7 @@
       <text subtype="article" xml:id="magloire_t3_302" n="302">
         <front>
           <docDate>
-            <date>1393 (n. st.), 20 mars.</date>
+            <date when="1393-03-20">1393 (n. st.), 20 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8518,7 +8520,7 @@
       <text subtype="article" xml:id="magloire_t3_303" n="303">
         <front>
           <docDate>
-            <date>1393, 26 septembre.</date>
+            <date when="1393-09-26">1393, 26 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8551,7 +8553,7 @@
       <text subtype="article" xml:id="magloire_t3_304" n="304">
         <front>
           <docDate>
-            <date>1393, 14 octobre.</date>
+            <date when="1393-10-14">1393, 14 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8575,7 +8577,7 @@
         <pb n="674"/>
         <front>
           <docDate>
-            <date>1393, 15 octobre.</date>
+            <date when="1393-10-15">1393, 15 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8599,7 +8601,7 @@
       <text subtype="article" xml:id="magloire_t3_306" n="306">
         <front>
           <docDate>
-            <date>1394 (n. st.), 31 mars.</date>
+            <date when="1394-03-31">1394 (n. st.), 31 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8629,7 +8631,7 @@
         <pb n="678"/>
         <front>
           <docDate>
-            <date>1394, 23 décembre.</date>
+            <date when="1394-12-23">1394, 23 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8666,7 +8668,7 @@
         <pb n="683"/>
         <front>
           <docDate>
-            <date>1395 (n. st.), 22 février.</date>
+            <date when="1395-02-22">1395 (n. st.), 22 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8690,7 +8692,7 @@
         <pb n="685"/>
         <front>
           <docDate>
-            <date>1395 (n. st.), 28 février.</date>
+            <date when="1395-02-28">1395 (n. st.), 28 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8713,7 +8715,7 @@
         <pb n="686"/>
         <front>
           <docDate>
-            <date>1395 (n. st.), 3 avril.</date>
+            <date when="1395-04-03">1395 (n. st.), 3 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8729,7 +8731,7 @@
       <text subtype="article" xml:id="magloire_t3_311" n="311">
         <front>
           <docDate>
-            <date>1395, 3 mai.</date>
+            <date when="1395-05-03">1395, 3 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8752,7 +8754,7 @@
       <text subtype="article" xml:id="magloire_t3_312" n="312">
         <front>
           <docDate>
-            <date>1395, 17 juillet.</date>
+            <date when="1395-07-17">1395, 17 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8780,7 +8782,7 @@
       <text subtype="article" xml:id="magloire_t3_313" n="313">
         <front>
           <docDate>
-            <date>1395, 17 août.</date>
+            <date when="1395-08-17">1395, 17 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8801,7 +8803,7 @@
       <text subtype="article" xml:id="magloire_t3_314" n="314">
         <front>
           <docDate>
-            <date>1396 (n. st.), 13 mars.</date>
+            <date when="1396-03-13">1396 (n. st.), 13 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8821,7 +8823,7 @@
       <text subtype="article" xml:id="magloire_t3_315" n="315">
         <front>
           <docDate>
-            <date>1396, 12 mai.</date>
+            <date when="1396-05-12">1396, 12 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8845,7 +8847,7 @@
       <text subtype="article" xml:id="magloire_t3_316" n="316">
         <front>
           <docDate>
-            <date>1396, 15 mai.</date>
+            <date when="1396-05-15">1396, 15 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8867,7 +8869,7 @@
       <text subtype="article" xml:id="magloire_t3_317" n="317">
         <front>
           <docDate>
-            <date>1396, 15 mai.</date>
+            <date when="1396-05-15">1396, 15 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8890,7 +8892,7 @@
       <text subtype="article" xml:id="magloire_t3_318" n="318">
         <front>
           <docDate>
-            <date>1396, 18 mai.</date>
+            <date when="1396-05-18">1396, 18 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8912,7 +8914,7 @@
       <text subtype="article" xml:id="magloire_t3_319" n="319">
         <front>
           <docDate>
-            <date>1396, 12 juin.</date>
+            <date when="1396-06-12">1396, 12 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8937,7 +8939,7 @@
         <pb n="698"/>
         <front>
           <docDate>
-            <date>1396, 16 juin.</date>
+            <date when="1396-06-16">1396, 16 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8953,7 +8955,7 @@
       <text subtype="article" xml:id="magloire_t3_321" n="321">
         <front>
           <docDate>
-            <date>1396, 4 juillet.</date>
+            <date when="1396-07-04">1396, 4 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8975,7 +8977,7 @@
       <text subtype="article" xml:id="magloire_t3_322" n="322">
         <front>
           <docDate>
-            <date>1396, 3 septembre.</date>
+            <date when="1396-09-03">1396, 3 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -8999,7 +9001,7 @@
         <pb n="700"/>
         <front>
           <docDate>
-            <date>1396, 8 septembre.</date>
+            <date when="1396-09-08">1396, 8 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9023,7 +9025,7 @@
         <pb n="701"/>
         <front>
           <docDate>
-            <date>1396, 14 septembre<note n="324_1"><p>Sur les sept baux concernant des terrains sis dans la Couture Saint-Magloire et passés par l’abbaye en 1396 et en 1397, six ont été rédigés par R. du Jardin. Bien que leurs stipulations soient rigoureusement identiques, ils diffèrent néanmoins les uns des autres et ces divergences s’étendent même aux clauses finales. Pour ces dernières toutefois, il nous a paru possible de ne publier <hi rend="i">in extenso</hi> que le texte du premier acte en indiquant en note les variantes éventuelles.</p></note>.</date>
+            <date when="1396-09-14">1396, 14 septembre<note n="324_1"><p>Sur les sept baux concernant des terrains sis dans la Couture Saint-Magloire et passés par l’abbaye en 1396 et en 1397, six ont été rédigés par R. du Jardin. Bien que leurs stipulations soient rigoureusement identiques, ils diffèrent néanmoins les uns des autres et ces divergences s’étendent même aux clauses finales. Pour ces dernières toutefois, il nous a paru possible de ne publier <hi rend="i">in extenso</hi> que le texte du premier acte en indiquant en note les variantes éventuelles.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9048,7 +9050,7 @@
       <text subtype="article" xml:id="magloire_t3_325" n="325">
         <front>
           <docDate>
-            <date>1396, 14 septembre.</date>
+            <date when="1396-09-14">1396, 14 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9074,7 +9076,7 @@
         <pb n="705"/>
         <front>
           <docDate>
-            <date>1396, 21 octobre.</date>
+            <date when="1396-10-21">1396, 21 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9103,7 +9105,7 @@
       <text subtype="article" xml:id="magloire_t3_327" n="327">
         <front>
           <docDate>
-            <date>1397 (n. st.), 2 février.</date>
+            <date when="1397-02-02">1397 (n. st.), 2 février.</date>
             <placeName>Saint-Léger-en-Yvelines.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -9132,7 +9134,7 @@
       <text subtype="article" xml:id="magloire_t3_328" n="328">
         <front>
           <docDate>
-            <date>1397 (n. st.), 12 février.</date>
+            <date when="1397-02-12">1397 (n. st.), 12 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9156,7 +9158,7 @@
         <pb n="717"/>
         <front>
           <docDate>
-            <date>1397, 14 mai.</date>
+            <date when="1397-05-14">1397, 14 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9179,7 +9181,7 @@
       <text subtype="article" xml:id="magloire_t3_330" n="330">
         <front>
           <docDate>
-            <date>1397, 14 mai.</date>
+            <date when="1397-05-14">1397, 14 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9202,7 +9204,7 @@
       <text subtype="article" xml:id="magloire_t3_331" n="331">
         <front>
           <docDate>
-            <date>1397, 16 juillet.</date>
+            <date when="1397-07-16">1397, 16 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9225,7 +9227,7 @@
       <text subtype="article" xml:id="magloire_t3_332" n="332">
         <front>
           <docDate>
-            <date>1398 (n. st.), 22 février.</date>
+            <date when="1398-02-22">1398 (n. st.), 22 février.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9246,7 +9248,7 @@
       <text subtype="article" xml:id="magloire_t3_333" n="333">
         <front>
           <docDate>
-            <date>1398 (n. st.), 11 mars.</date>
+            <date when="1398-03-11">1398 (n. st.), 11 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9272,7 +9274,7 @@
       <text subtype="article" xml:id="magloire_t3_334" n="334">
         <front>
           <docDate>
-            <date>1398, 25 juillet.</date>
+            <date when="1398-07-25">1398, 25 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9308,7 +9310,7 @@
       <text subtype="article" xml:id="magloire_t3_335" n="335">
         <front>
           <docDate>
-            <date>1398, 22 septembre.</date>
+            <date when="1398-09-22">1398, 22 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9332,7 +9334,7 @@
         <pb n="726"/>
         <front>
           <docDate>
-            <date>1398, 23 septembre.</date>
+            <date when="1398-09-23">1398, 23 septembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9357,7 +9359,7 @@
         <pb n="728"/>
         <front>
           <docDate>
-            <date>1398, 24 octobre.</date>
+            <date when="1398-10-24">1398, 24 octobre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9379,7 +9381,7 @@
       <text subtype="article" xml:id="magloire_t3_338" n="338">
         <front>
           <docDate>
-            <date>1398, 16 novembre.</date>
+            <date when="1398-11-16">1398, 16 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9474,7 +9476,7 @@
       <text subtype="article" xml:id="magloire_t3_339" n="339">
         <front>
           <docDate>
-            <date>1399 (n. st.), 9 mars.</date>
+            <date when="1399-03-09">1399 (n. st.), 9 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9495,7 +9497,7 @@
       <text subtype="article" xml:id="magloire_t3_340" n="340">
         <front>
           <docDate>
-            <date>1399 (n. st.), 11 mars.</date>
+            <date when="1399-03-11">1399 (n. st.), 11 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9520,7 +9522,7 @@
         <pb n="740"/>
         <front>
           <docDate>
-            <date>1399, 4 avril.</date>
+            <date when="1399-04-04">1399, 4 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9544,7 +9546,7 @@
       <text subtype="article" xml:id="magloire_t3_342" n="342">
         <front>
           <docDate>
-            <date>1399, 21 (?) avril<note n="342_1"><p>L’ensaisinement consécutif à la vente étant du 24, celle-ci ne peut avoir eu lieu le 28, comme le veut le scribe. L’erreur porte probablement sur la seconde de ces dates plutôt que sur la première, Jean le Grand s’étant visiblement fait mettre en possession le même jour de deux rentes de provenance différente. Nous datons donc cette vente du 21 et non du 28 avril.</p></note>.</date>
+            <date when="1399-04-21">1399, 21 (?) avril<note n="342_1"><p>L’ensaisinement consécutif à la vente étant du 24, celle-ci ne peut avoir eu lieu le 28, comme le veut le scribe. L’erreur porte probablement sur la seconde de ces dates plutôt que sur la première, Jean le Grand s’étant visiblement fait mettre en possession le même jour de deux rentes de provenance différente. Nous datons donc cette vente du 21 et non du 28 avril.</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9569,7 +9571,7 @@
       <text subtype="article" xml:id="magloire_t3_343" n="343">
         <front>
           <docDate>
-            <date>1399, 24 avril.</date>
+            <date when="1399-04-24">1399, 24 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9593,7 +9595,7 @@
       <text subtype="article" xml:id="magloire_t3_344" n="344">
         <front>
           <docDate>
-            <date>1399, 24 avril.</date>
+            <date when="1399-04-24">1399, 24 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9616,7 +9618,7 @@
       <text subtype="article" xml:id="magloire_t3_345" n="345">
         <front>
           <docDate>
-            <date>1399, 24 avril.</date>
+            <date when="1399-04-24">1399, 24 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9639,7 +9641,7 @@
         <pb n="748"/>
         <front>
           <docDate>
-            <date>1399, 31 mai.</date>
+            <date when="1399-05-31">1399, 31 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9684,7 +9686,7 @@
       <text subtype="article" xml:id="magloire_t3_347" n="347">
         <front>
           <docDate>
-            <date>1399, 14 juillet.</date>
+            <date when="1399-07-14">1399, 14 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9711,7 +9713,7 @@
       <text subtype="article" xml:id="magloire_t3_348" n="348">
         <front>
           <docDate>
-            <date>1399, 12 novembre.</date>
+            <date when="1399-11-12">1399, 12 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9737,7 +9739,7 @@
       <text subtype="article" xml:id="magloire_t3_349" n="349">
         <front>
           <docDate>
-            <date>1399, 18 novembre.</date>
+            <date when="1399-11-18">1399, 18 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9764,7 +9766,7 @@
       <text subtype="article" xml:id="magloire_t3_350" n="350">
         <front>
           <docDate>
-            <date>1399, 20 décembre.</date>
+            <date when="1399-12-20">1399, 20 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9790,7 +9792,7 @@
         <pb n="761"/>
         <front>
           <docDate>
-            <date>1399, 20 décembre.</date>
+            <date when="1399-12-20">1399, 20 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9813,7 +9815,7 @@
       <text subtype="article" xml:id="magloire_t3_352" n="352">
         <front>
           <docDate>
-            <date>1400 (n. st.), 8 janvier.</date>
+            <date when="1400-01-08">1400 (n. st.), 8 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9834,7 +9836,7 @@
       <text subtype="article" xml:id="magloire_t3_353" n="353">
         <front>
           <docDate>
-            <date>1400 (n. st.), 1<hi rend="sup">er</hi> avril.</date>
+            <date when="1400-04-01">1400 (n. st.), 1<hi rend="sup">er</hi> avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9862,7 +9864,7 @@
         <pb n="766"/>
         <front>
           <docDate>
-            <date>1400, 9 mai.</date>
+            <date when="1400-05-09">1400, 9 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9889,7 +9891,7 @@
       <text subtype="article" xml:id="magloire_t3_355" n="355">
         <front>
           <docDate>
-            <date>1400, 9 mai.</date>
+            <date when="1400-05-09">1400, 9 mai.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9913,7 +9915,7 @@
       <text subtype="article" xml:id="magloire_t3_356" n="356">
         <front>
           <docDate>
-            <date>1400, 6 juin.</date>
+            <date when="1400-06-06">1400, 6 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9939,7 +9941,7 @@
       <text subtype="article" xml:id="magloire_t3_357" n="357">
         <front>
           <docDate>
-            <date>1400, 5 juillet.</date>
+            <date when="1400-07-05">1400, 5 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9962,7 +9964,7 @@
       <text subtype="article" xml:id="magloire_t3_358" n="358">
         <front>
           <docDate>
-            <date>1400, 6 juillet.</date>
+            <date when="1400-07-06">1400, 6 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -9984,7 +9986,7 @@
       <text subtype="article" xml:id="magloire_t3_359" n="359">
         <front>
           <docDate>
-            <date>1400, 6 juillet.</date>
+            <date when="1400-07-06">1400, 6 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10010,7 +10012,7 @@
         <pb n="776"/>
         <front>
           <docDate>
-            <date>1400, 24 juillet.</date>
+            <date when="1400-07-24">1400, 24 juillet.</date>
             <placeName>Paris.</placeName>
           </docDate>
           <index><term type="nature" key="act"/></index>
@@ -10042,7 +10044,7 @@
       <text subtype="article" xml:id="magloire_t3_361" n="361">
         <front>
           <docDate>
-            <date>1400, 2 août.</date>
+            <date when="1400-08-02">1400, 2 août.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10064,7 +10066,7 @@
       <text subtype="article" xml:id="magloire_t3_362" n="362">
         <front>
           <docDate>
-            <date>1401 (n. st.), 3 mars.</date>
+            <date when="1401-03-03">1401 (n. st.), 3 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10086,7 +10088,7 @@
         <pb n="780"/>
         <front>
           <docDate>
-            <date>1401 (n. st.), 23 mars.</date>
+            <date when="1401-03-23">1401 (n. st.), 23 mars.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10121,7 +10123,7 @@
       <text subtype="article" xml:id="magloire_t3_364" n="364">
         <front>
           <docDate>
-            <date>S. d. [1398 (n. st.), après le 4 mars – 1402, avant le 30] juin<note n="364_1"><p>La datation de cet acte est impossible à établir avec précision, les débuts de la carrière de Richard du Croc restant encore entourés d’ombre. Receveur de Melun entre le 8 janvier 1400 et le 9 septembre 1402, il exerce les mêmes fonctions à Sens dès le 1<hi rend="sup">er</hi> mars 1403 (voir plus haut, n° 352, p. 762, et G. Dupont-Ferrier, <hi rend="i">Gallia Regia</hi>, t. 4, n° 15465).</p></note>.</date>
+            <date notBefore="1398-03-04" notAfter="1402-06-30">S. d. [1398 (n. st.), après le 4 mars – 1402, avant le 30] juin<note n="364_1"><p>La datation de cet acte est impossible à établir avec précision, les débuts de la carrière de Richard du Croc restant encore entourés d’ombre. Receveur de Melun entre le 8 janvier 1400 et le 9 septembre 1402, il exerce les mêmes fonctions à Sens dès le 1<hi rend="sup">er</hi> mars 1403 (voir plus haut, n° 352, p. 762, et G. Dupont-Ferrier, <hi rend="i">Gallia Regia</hi>, t. 4, n° 15465).</p></note>.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10142,7 +10144,7 @@
       <text subtype="article" xml:id="magloire_t3_365" n="365">
         <front>
           <docDate>
-            <date>1403, 30 juin.</date>
+            <date when="1403-06-30">1403, 30 juin.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10169,7 +10171,7 @@
       <text subtype="article" xml:id="magloire_t3_366" n="366">
         <front>
           <docDate>
-            <date>1403, 9 juillet.</date>
+            <date when="1403-07-09">1403, 9 juillet.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10198,7 +10200,7 @@
       <text subtype="article" xml:id="magloire_t3_367" n="367">
         <front>
           <docDate>
-            <date>1404, 2 avril.</date>
+            <date when="1404-04-02">1404, 2 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10221,7 +10223,7 @@
       <text subtype="article" xml:id="magloire_t3_368" n="368">
         <front>
           <docDate>
-            <date>1405 (n. st.), 12 janvier.</date>
+            <date when="1405-01-12">1405 (n. st.), 12 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10252,7 +10254,7 @@
       <text subtype="article" xml:id="magloire_t3_369" n="369">
         <front>
           <docDate>
-            <date>1405, 24 décembre.</date>
+            <date when="1405-12-24">1405, 24 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10276,7 +10278,7 @@
       <text subtype="article" xml:id="magloire_t3_370" n="370">
         <front>
           <docDate>
-            <date>1406 (n. st.), 30 janvier.</date>
+            <date when="1406-01-30">1406 (n. st.), 30 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10308,7 +10310,7 @@
         <pb n="800"/>
         <front>
           <docDate>
-            <date>1406, 13 novembre.</date>
+            <date when="1406-11-13">1406, 13 novembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10334,7 +10336,7 @@
       <text subtype="article" xml:id="magloire_t3_372" n="372">
         <front>
           <docDate>
-            <date>1407, 3 décembre.</date>
+            <date when="1407-12-03">1407, 3 décembre.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10369,7 +10371,7 @@
       <text subtype="article" xml:id="magloire_t3_373" n="373">
         <front>
           <docDate>
-            <date>1409 (n. st.), 27 janvier.</date>
+            <date when="1409-01-27">1409 (n. st.), 27 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10399,7 +10401,7 @@
         <pb n="807"/>
         <front>
           <docDate>
-            <date>1413 (n. st.), 24 janvier.</date>
+            <date when="1413-01-24">1413 (n. st.), 24 janvier.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
@@ -10422,7 +10424,7 @@
       <text subtype="article" xml:id="magloire_t3_375" n="375">
         <front>
           <docDate>
-            <date>1436, 30 avril.</date>
+            <date when="1436-04-30">1436, 30 avril.</date>
           </docDate>
           <index><term type="nature" key="act"/></index>
           <argument>
