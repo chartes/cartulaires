@@ -6,6 +6,8 @@
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
   ns="http://www.tei-c.org/ns/1.0"
 >
+  
+  <include href="refDef.rng"/>
   <a:documentation xmlns="http://www.w3.org/1999/xhtml">
     <h1 id="teiHeader">ENC TEI, schéma d'entête &lt;teiHeader&gt;</h1>
     <ul class="auteurs">
@@ -372,6 +374,12 @@ Cet élément (msDesc) mérite une réflexion attentive dans un schéma distinct
           </oneOrMore>
         </element>
       </optional>
+      
+
+      <optional>
+        <ref name="refsDecl"/>
+      </optional>
+      
     </element>
   </define>
   <define name="profileDesc">

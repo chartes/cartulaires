@@ -27,9 +27,7 @@
     </a:documentation>
     <rng:element name="citeStructure">
       <rng:attribute name="match"/>
-      <rng:optional>
-        <rng:attribute name="use"/>
-      </rng:optional>
+      <rng:attribute name="use"/>
       <rng:optional>
         <rng:attribute name="unit"/>
       </rng:optional>
