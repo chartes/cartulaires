@@ -21,41 +21,7 @@
   
   <!-- TODO innclure les patterns citeStructure et citeData dans le schéma teiHeader -->
   
-  <rng:define name="citeStructure">
-    <a:documentation>
-      <p>TODO</p>
-    </a:documentation>
-    <rng:element name="citeStructure">
-      <rng:attribute name="match"/>
-      <rng:optional>
-        <rng:attribute name="use"/>
-      </rng:optional>
-      <rng:optional>
-        <rng:attribute name="unit"/>
-      </rng:optional>
-      <rng:optional>
-        <rng:attribute name="delim"/>
-      </rng:optional>
-      <rng:zeroOrMore>
-        <rng:ref name="citeData"/>
-      </rng:zeroOrMore>
-      <rng:zeroOrMore>
-        <rng:ref name="citeStructure"/>
-      </rng:zeroOrMore>
-    </rng:element>
-  </rng:define>
-  
-  <rng:define name="citeData">
-    <a:documentation>
-      <p>TODO</p>
-    </a:documentation>
-    <rng:element name="citeData">
-      <rng:attribute name="property"/>
-      <rng:attribute name="use"/>
-    </rng:element>
-  </rng:define>  
-  
-  <rng:include href="cartulaires.rng">
+ <rng:include href="cartulaires.rng">
     
     <rng:define name="encodingDesc">
       <rng:element name="encodingDesc">
