@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0">
+  
+  <!-- ===== 1) Blocs de citation (hérités cartulaire V2) ===== -->
+  
+  <define name="citeData" combine="choice">
+    <element name="citeData">
+      <attribute name="property"/>
+      <attribute name="use"/>
+    </element>
+  </define>
+  
+  <define name="citeStructure" combine="choice">
+    <element name="citeStructure">
+      <!-- comme dans cartulaires_v2 : match obligatoire -->
+      <attribute name="match"/>
+      <optional>
+        <attribute name="use"/>
+      </optional>
+      <optional>
+        <attribute name="unit"/>
+      </optional>
+      <optional>
+        <attribute name="delim"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="citeData"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="citeStructure"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- ===== 2) Patterns TEI courants utilisés dans refsDecl ===== -->
+  
+  <define name="cRefPattern" combine="choice">
+    <element name="cRefPattern">
+      <optional>
+        <attribute name="match"/>
+      </optional>
+      <optional>
+        <attribute name="unit"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <element name="ptr">
+            <optional>
+              <attribute name="target"/>
+            </optional>
+            <empty/>
+          </element>
+          <element name="ref">
+            <optional>
+              <attribute name="target"/>
+            </optional>
+            <zeroOrMore>
+              <text/>
+            </zeroOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="refState" combine="choice">
+    <element name="refState">
+      <optional>
+        <attribute name="unit"/>
+      </optional>
+      <optional>
+        <attribute name="delim"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <element name="ptr">
+            <optional>
+              <attribute name="target"/>
+            </optional>
+            <empty/>
+          </element>
+          <element name="ref">
+            <optional>
+              <attribute name="target"/>
+            </optional>
+            <zeroOrMore>
+              <text/>
+            </zeroOrMore>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- ===== 3) Extension sûre de refsDecl ===== -->
+  <!-- combine="choice" pour coexister avec une définition existante -->
+  
+  <define name="refsDecl" combine="choice">
+    <element name="refsDecl">
+      <zeroOrMore>
+        <choice>
+          <ref name="cRefPattern"/>
+          <ref name="refState"/>
+          <element name="p">
+            <text/>
+          </element>
+          <!-- extension cartulaire -->
+          <ref name="citeStructure"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- ===== 4) Side structure : inline + block ===== -->
+  
+  <define name="side.inline" combine="choice">
+    <choice>
+      <element name="sideRef">
+        <optional>
+          <attribute name="type"/>
+        </optional>
+        <optional>
+          <attribute name="target"/>
+        </optional>
+        <optional>
+          <attribute name="n"/>
+        </optional>
+        <zeroOrMore>
+          <text/>
+        </zeroOrMore>
+      </element>
+      <element name="sideNote">
+        <optional>
+          <attribute name="type"/>
+        </optional>
+        <optional>
+          <attribute name="resp"/>
+        </optional>
+        <optional>
+          <attribute name="target"/>
+        </optional>
+        <zeroOrMore>
+          <text/>
+        </zeroOrMore>
+      </element>
+    </choice>
+  </define>
+  
+  <define name="side.block" combine="choice">
+    <element name="side">
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="side.inline"/>
+          <element name="list">
+            <zeroOrMore>
+              <element name="item">
+                <zeroOrMore>
+                  <text/>
+                </zeroOrMore>
+              </element>
+            </zeroOrMore>
+          </element>
+          <element name="table">
+            <zeroOrMore>
+              <text/>
+            </zeroOrMore>
+          </element>
+          <element name="p">
+            <text/>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- alias pratique si tu veux juste <ref name="sideStructure"/> -->
+  <define name="sideStructure" combine="choice">
+    <choice>
+      <ref name="side.inline"/>
+      <ref name="side.block"/>
+    </choice>
+  </define>
+  
+</grammar>
