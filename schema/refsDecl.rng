@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rng:grammar
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr">
+  
+  
+  
+  <rng:define name="refsDecl">
+    <rng:element name="refsDecl">
+      <a:documentation>
+        <p>TODO</p>
+      </a:documentation>
+      <rng:zeroOrMore>
+        <rng:ref name="citeStructure"/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="citeStructure">
+    <a:documentation>
+      <p>TODO</p>
+    </a:documentation>
+    <rng:element name="citeStructure">
+      <rng:attribute name="match"/>
+      <rng:attribute name="use"/>
+      <rng:optional>
+        <rng:attribute name="unit"/>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="delim"/>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:ref name="citeData"/>
+      </rng:zeroOrMore>
+      <rng:zeroOrMore>
+        <rng:ref name="citeStructure"/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="citeData">
+    <a:documentation>
+      <p>TODO</p>
+    </a:documentation>
+    <rng:element name="citeData">
+      <rng:attribute name="property"/>
+      <rng:attribute name="use"/>
+    </rng:element>
+  </rng:define>
+  
+  
+  <!-- insérer documentation sur <choice> dès que cela aura été validé. De même choice pourra être utilisé pour combiner add et del. -->
+  
+  <rng:start combine="choice">
+    <a:documentation xmlns="http://www.w3.org/1999/xhtml">Nécessaire à la validation du schéma</a:documentation>
+    <rng:ref name="refsDecl"/>
+  </rng:start>  
+  
+</rng:grammar>

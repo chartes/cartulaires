@@ -1,5 +1,5 @@
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires_V2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pontoise-S-Martin">
   <teiHeader>
     <fileDesc>
@@ -116,7 +116,7 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]">
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]" use="default">
           <citeData property="dc:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
@@ -124,7 +124,7 @@
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           </citeStructure>
-          <citeStructure unit="sous-section" match="group">
+          <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
