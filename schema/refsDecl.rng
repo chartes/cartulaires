@@ -8,15 +8,10 @@
   ns="http://www.tei-c.org/ns/1.0"
   xml:lang="fr">
   
-  
-  
   <rng:define name="refsDecl">
     <rng:element name="refsDecl">
       <a:documentation>
-        <p> L'élément <code>refsDecl</code> précise la manière dont les références ont été construites pour ce texte.
-          Il fait partie du module "TEI Header" et se place dans <code>encodingDesc</code>.
-        </p>
-        <p> Dans le projet Cartulaire, il peut contenir des éléments TEI standard comme <code>cRefPattern</code>, <code>refState</code>, ainsi que les extensions éditoriales comme <code>sideStructure</code> </p>
+        <p>L'élément <code>refsDecl</code> précise la manière dont les références ont été construites pour ce texte.</p>
       </a:documentation>
       <rng:zeroOrMore>
         <rng:ref name="citeStructure"/>
@@ -26,8 +21,8 @@
   
   <rng:define name="citeStructure">
     <a:documentation>
-      <p>L'élement <code>citeStructure</code> déclare la structure et la méthode pour citer le document</p>
-      <p>Dans le cadre du projet Cartulaire, cet élément permet que l'API DTS puisse reconstruire automatiquement la structure et les citations</p>
+      <p>L'élement <code>citeStructure</code> déclare la structure et la méthode pour citer le document.</p>
+      <p>Cet élément permet ensuite à l'API DTS de reconstruire automatiquement la structure éditoriale et les passages dans le document.</p>
     </a:documentation>
     <rng:element name="citeStructure">
       <rng:attribute name="match"/>
@@ -49,15 +44,14 @@
   
   <rng:define name="citeData">
     <a:documentation>
-      <p>L'élement <code>citeData</code> permet,uniquement dans citeStructure, d'attacher des métadonnées calculées pour chacune des unités de citation.</p>
-      <p>Dans le projet des Cartulaires, citeData permet de faire une entrée de catalogue qui est utilisée dans l'API DTS, l'interface de navigation, les métadonnées DublinCore ainsi que les collections. Sans citedata, DTS ne reconnaît rien du titre d'un acte, de sa date, de son type diplomatique ni de la langue de sa transcription.</p>
+      <p>L'élement <code>citeData</code> permet de déclarer des métadonnées pour décrire des passages, et d’indiquer le XPath pour retrouver les valeurs associées à ces métadonnées.</p>
+      <p>Cet élément permet ensuite à l'API DTS d'indiquer les métadonnées pour décrire les passages.</p>
     </a:documentation>
     <rng:element name="citeData">
       <rng:attribute name="property"/>
       <rng:attribute name="use"/>
     </rng:element>
   </rng:define>
-  
   
   <!-- insérer documentation sur <choice> dès que cela aura été validé. De même choice pourra être utilisé pour combiner add et del. -->
   
