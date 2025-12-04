@@ -115,9 +115,9 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group">
+        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="default">
           <citeData property="dc:title" use="head[1]"/>
-          <citeStructure unit="section" match="group">
+          <citeStructure unit="section" match="group" use="default">
             <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
