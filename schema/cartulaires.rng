@@ -85,7 +85,9 @@
       <rng:ref name="split.atts"/>
       <rng:attribute name="xml:id"/>
       <rng:attribute name="n"/>
-      <rng:ref name="pb"/>
+      <rng:optional>
+        <rng:ref name="pb"/>
+      </rng:optional>
       <rng:ref name="acte.front"/>
       <rng:element name="body">
         <rng:zeroOrMore>
@@ -225,6 +227,7 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
             <rng:optional>
               <rng:ref name="lang"/>
             </rng:optional>
+            <rng:mixed>
             <rng:zeroOrMore>
               <rng:choice>
                 <rng:ref name="pb"/>
@@ -232,6 +235,7 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
                 <rng:ref name="idf.s"/>
               </rng:choice>
             </rng:zeroOrMore>
+            </rng:mixed>
           </rng:element>
         </rng:choice>
       </rng:oneOrMore>
