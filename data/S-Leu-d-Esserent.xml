@@ -1,9 +1,8 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Leu-d-Esserent">
+--><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Leu-d-Esserent">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -2669,7 +2668,7 @@
             </argument>
             <div type="tradition">
               <listWit>
-                <witness>Voir charte 44.</witness>
+                <witness n="RENVOI_0044">Voir charte <ref target="#S-Leu-d-Esserent_0044">44</ref>.</witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire du prieuré de Saint-Leu d'Esserent
@@ -2881,7 +2880,7 @@
             </argument>
             <div type="tradition">
               <listWit>
-                <witness>Voir charte 22.</witness>
+                <witness n="RENVOI_0022">Voir charte <ref target="#S-Leu-d-Esserent_0022">22</ref>.</witness>
               </listWit>
               <listWit type="original">
                 <witness n="A">Original. Arch. dép. Oise, H 2544.</witness>

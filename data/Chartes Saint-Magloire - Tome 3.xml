@@ -1,6 +1,5 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t3">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="magloire_t3">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -387,11 +386,11 @@
               <witness n="b" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 2.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">Dom J. Bouillart, <hi rend="i">Histoire de l’abbaye royale de Saint-Germain des Prez</hi>, p. 150, d’après <hi rend="i">I</hi>.</witness>
-              <witness n="b">Lebeuf, éd. Féchoz, t. 3, p. 7, d’après <hi rend="i"><x>A</x></hi>.</witness>
-              <witness n="c">Analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, Bibl. nat., lat. 12838, fol. 147, Dom J. du Breul, <hi rend="i">Chronicon regalis monasterii Sancti Germani a Pratis</hi>, 2<hi rend="sup">e</hi> rédaction, 1587, d’après <hi rend="i">D′</hi>.</witness>
-              <witness n="d">Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy</hi>, Arch. nat., LL 1074, fol. 80 v°, d’après <hi rend="i">D′</hi>.</witness>
-              <witness n="e">Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy et de Vaugirard</hi>, Arch. nat., LL 1070, fol. 13, probablement d’après <hi rend="i">D′</hi>.</witness>
+              <witness>Dom J. Bouillart, <hi rend="i">Histoire de l’abbaye royale de Saint-Germain des Prez</hi>, p. 150, d’après <hi rend="i">I</hi>.</witness>
+              <witness>Lebeuf, éd. Féchoz, t. 3, p. 7, d’après <hi rend="i"><x>A</x></hi>.</witness>
+              <witness>Analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, Bibl. nat., lat. 12838, fol. 147, Dom J. du Breul, <hi rend="i">Chronicon regalis monasterii Sancti Germani a Pratis</hi>, 2<hi rend="sup">e</hi> rédaction, 1587, d’après <hi rend="i">D′</hi>.</witness>
+              <witness>Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy</hi>, Arch. nat., LL 1074, fol. 80 v°, d’après <hi rend="i">D′</hi>.</witness>
+              <witness>Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy et de Vaugirard</hi>, Arch. nat., LL 1070, fol. 13, probablement d’après <hi rend="i">D′</hi>.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 2</witness></listWit></div>
         </front>
@@ -505,12 +504,12 @@
               <witness n="E">Copie de 1753, dans le <hi rend="i">Cartulaire d’Issy et de Vaugirard</hi> rédigé par Dom Ph. Duroussin, Arch. nat., LL 1049, fol. 162 v°, d’après <hi rend="i">C′</hi>.</witness>
               </listWit>
             <listWit type="indiqué">
-              <witness n="a">Dom J. Bouillart, <hi rend="i">Histoire de l’abbaye royale de Saint-Germain des Prez…</hi>, p. 150, d’après <hi rend="i">F</hi>.</witness>
-              <witness n="b">Lebeuf, éd. Féchoz, t. 3, p. 7, d’après <hi rend="i">C</hi>.</witness>
-              <witness n="c">H. Furgeot, <hi rend="i">Actes du Parlement de Paris… Jugés</hi>, t. 1, n° 287, p. 30, d’après <hi rend="i">B</hi>.</witness>
-              <witness n="d">Analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, Bibl. nat., lat. 12838, fol. 147, Dom J. du Breul, <hi rend="i">Chronicon regalis monasterii Sancti Germani a Pratis</hi>, 2<hi rend="sup">e</hi> rédaction, 1587, d’après <hi rend="i">C′</hi>.</witness>
-              <witness n="e">Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy</hi>, Arch. nat., LL 1074, fol. 80 v°, d’après <hi rend="i">C′</hi>.</witness>
-              <witness n="f">Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy et de Vaugirard</hi>, Arch. nat., LL 1070, fol. 13, probablement d’après <hi rend="i">C′</hi>.</witness>
+              <witness>Dom J. Bouillart, <hi rend="i">Histoire de l’abbaye royale de Saint-Germain des Prez…</hi>, p. 150, d’après <hi rend="i">F</hi>.</witness>
+              <witness>Lebeuf, éd. Féchoz, t. 3, p. 7, d’après <hi rend="i">C</hi>.</witness>
+              <witness>H. Furgeot, <hi rend="i">Actes du Parlement de Paris… Jugés</hi>, t. 1, n° 287, p. 30, d’après <hi rend="i">B</hi>.</witness>
+              <witness>Analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, Bibl. nat., lat. 12838, fol. 147, Dom J. du Breul, <hi rend="i">Chronicon regalis monasterii Sancti Germani a Pratis</hi>, 2<hi rend="sup">e</hi> rédaction, 1587, d’après <hi rend="i">C′</hi>.</witness>
+              <witness>Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy</hi>, Arch. nat., LL 1074, fol. 80 v°, d’après <hi rend="i">C′</hi>.</witness>
+              <witness>Autre analyse du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle, dans le <hi rend="i">Cartulaire d’Issy et de Vaugirard</hi>, Arch. nat., LL 1070, fol. 13, probablement d’après <hi rend="i">C′</hi>.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 9</witness></listWit></div>
         </front>
@@ -738,7 +737,7 @@
               <witness n="A">Original parchemin, 539 × 644 mm., jadis scellé sur double queue, Arch. nat., L 450, n° 14 (anc<hi rend="sup">t</hi> L 605, n° 50).</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">A. Maquet et A. de Dion, <hi rend="i">Nobiliaire et Armorial de Montfort-l’Amaury…</hi>, p. 302.</witness>
+              <witness>A. Maquet et A. de Dion, <hi rend="i">Nobiliaire et Armorial de Montfort-l’Amaury…</hi>, p. 302.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 22</witness></listWit></div>
         </front>
@@ -4565,12 +4564,12 @@
               <witness n="b" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 348.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">N. de La Mare…, <hi rend="i">Traité de la Police</hi>, t. 3, Paris, 1722, p. 617, d’après <hi rend="i">C</hi> et <hi rend="i">E</hi>.</witness>
-              <witness n="b">H. Sauval, <hi rend="i">Histoire et Recherches des Antiquités de la ville de Paris</hi>, t. 3, p. 93, d’après une analyse contenue dans des extraits faits au <hi rend="sc">xv</hi><hi rend="sup">e</hi> siècle des <hi rend="i">Livres de Couleur</hi> du Châtelet, Bibl. nat., ms. fr. 24090, fol. 323.</witness>
-              <witness n="c">M. Félibien et G. Lobineau, <hi rend="i">Histoire de la ville de Paris…</hi>, t. 1, Paris, 1725, in-fol., p. 650, et t. 3 (Preuves, t. I), p. 483, d’après <hi rend="i"><x>B</x></hi>.</witness>
-              <witness n="d">G. Fagniez, <hi rend="i">Études sur l’industrie et la classe industrielle à Paris au XIII<hi rend="sup">e</hi> et au XIV<hi rend="sup">e</hi> siècles</hi>, p. 23, d’après <hi rend="i">C</hi>.</witness>
-              <witness n="e"><x><hi rend="sc">An.</hi></x> du <hi rend="sc">xv</hi><hi rend="sup">e</hi> siècle dans le <hi rend="i">Livre de Justice</hi> de Sainte-Geneviève, Bibl. Sainte-Geneviève, ms. 640, fol. 110, probablement d’après <hi rend="i">B</hi>.</witness>
-              <witness n="f">A. Tuetey, <hi rend="i">Inventaire analytique des Livres de Couleur et Bannières du Châtelet de Paris</hi>, fasc. 1, <hi rend="i">Livres de Couleur</hi>, Paris, 1899-1909, in-4°, n° 516, p. 31, d’après <hi rend="i">C</hi>, et n° 1026, p. 60, d’après <hi rend="i">E</hi>.</witness>
+              <witness>N. de La Mare…, <hi rend="i">Traité de la Police</hi>, t. 3, Paris, 1722, p. 617, d’après <hi rend="i">C</hi> et <hi rend="i">E</hi>.</witness>
+              <witness>H. Sauval, <hi rend="i">Histoire et Recherches des Antiquités de la ville de Paris</hi>, t. 3, p. 93, d’après une analyse contenue dans des extraits faits au <hi rend="sc">xv</hi><hi rend="sup">e</hi> siècle des <hi rend="i">Livres de Couleur</hi> du Châtelet, Bibl. nat., ms. fr. 24090, fol. 323.</witness>
+              <witness>M. Félibien et G. Lobineau, <hi rend="i">Histoire de la ville de Paris…</hi>, t. 1, Paris, 1725, in-fol., p. 650, et t. 3 (Preuves, t. I), p. 483, d’après <hi rend="i"><x>B</x></hi>.</witness>
+              <witness>G. Fagniez, <hi rend="i">Études sur l’industrie et la classe industrielle à Paris au XIII<hi rend="sup">e</hi> et au XIV<hi rend="sup">e</hi> siècles</hi>, p. 23, d’après <hi rend="i">C</hi>.</witness>
+              <witness><x><hi rend="sc">An.</hi></x> du <hi rend="sc">xv</hi><hi rend="sup">e</hi> siècle dans le <hi rend="i">Livre de Justice</hi> de Sainte-Geneviève, Bibl. Sainte-Geneviève, ms. 640, fol. 110, probablement d’après <hi rend="i">B</hi>.</witness>
+              <witness>A. Tuetey, <hi rend="i">Inventaire analytique des Livres de Couleur et Bannières du Châtelet de Paris</hi>, fasc. 1, <hi rend="i">Livres de Couleur</hi>, Paris, 1899-1909, in-4°, n° 516, p. 31, d’après <hi rend="i">C</hi>, et n° 1026, p. 60, d’après <hi rend="i">E</hi>.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 350</witness></listWit></div>
         </front>
@@ -4649,8 +4648,8 @@
               <witness n="A">Original parchemin, 398 × 152 mm., jadis scellé sur double queue, Arch. nat., S 1153, n° 4.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">A. Maquet et A. de Dion, <hi rend="i">Nobiliaire et armorial du comté de Montfort-l’Amaury</hi>, p. 353.</witness>
-              <witness n="b">A. de Dion, <hi rend="i">Le Prieuré Saint-Laurent de Montfort-l’Amaury</hi>, n° 20, p. 56.</witness>
+              <witness>A. Maquet et A. de Dion, <hi rend="i">Nobiliaire et armorial du comté de Montfort-l’Amaury</hi>, p. 353.</witness>
+              <witness>A. de Dion, <hi rend="i">Le Prieuré Saint-Laurent de Montfort-l’Amaury</hi>, n° 20, p. 56.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 356</witness></listWit></div>
         </front>
@@ -6543,8 +6542,8 @@
               <witness n="b" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 509.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">R. de Lespinasse, <hi rend="i">Les Métiers et Corporations de la ville de Paris</hi>, t. 1, p. 264, n. 2, d’après <hi rend="i">B</hi> et <hi rend="i"><x>A</x></hi> ;</witness>
-              <witness n="b">G. Fagniez, <hi rend="i">Études sur l’industrie et la classe industrielle à Paris…</hi>, p. 148, n. 4, et 186, en n. et n. 1, d’après <hi rend="i"><x>A</x></hi>.</witness>
+              <witness>R. de Lespinasse, <hi rend="i">Les Métiers et Corporations de la ville de Paris</hi>, t. 1, p. 264, n. 2, d’après <hi rend="i">B</hi> et <hi rend="i"><x>A</x></hi> ;</witness>
+              <witness>G. Fagniez, <hi rend="i">Études sur l’industrie et la classe industrielle à Paris…</hi>, p. 148, n. 4, et 186, en n. et n. 1, d’après <hi rend="i"><x>A</x></hi>.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 509</witness></listWit></div>
         </front>
@@ -7450,7 +7449,7 @@
               <witness n="A">Original parchemin, 311 × 139-131 mm., jadis scellé sur simple queue, Arch. nat., S 1152, n° 1.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">U. Robert, <hi rend="i">Notice historique sur Saint-Mandé</hi>, p. 42.</witness>
+              <witness>U. Robert, <hi rend="i">Notice historique sur Saint-Mandé</hi>, p. 42.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 588</witness></listWit></div>
         </front>
@@ -7623,7 +7622,7 @@
               <witness n="b" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 605.</witness>
             </listWit>
             <listWit type="indiqué">
-              <witness n="a">A. Tuetey, <hi rend="i">Inventaire analytique des Livres de couleur et Bannières du Châtelet de Paris</hi>, n° 90, p. 6, d’après <hi rend="i">B</hi>.</witness>
+              <witness>A. Tuetey, <hi rend="i">Inventaire analytique des Livres de couleur et Bannières du Châtelet de Paris</hi>, n° 90, p. 6, d’après <hi rend="i">B</hi>.</witness>
             </listWit>
           <listWit type="édition"><witness n="a" ana="edited"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976, p. 605</witness></listWit></div>
         </front>
