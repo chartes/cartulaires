@@ -1,6 +1,5 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Vaux-de-Cernay">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Vaux-de-Cernay">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -73171,7 +73170,7 @@
               </argument>
               <div type="tradition">
                 <listWit type="original">
-                  <witness xml:id="A"> Original en parchemin. — Inv., p. 137, l. 3, nº 1.</witness>
+                  <witness xml:id="A" n="A"> Original en parchemin. — Inv., p. 137, l. 3, nº 1.</witness>
                 </listWit>
                 <listWit type="édition">
                   <witness n="a" ana="edited"><title>Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay, de
