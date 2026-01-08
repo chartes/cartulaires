@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Pontoise-Hotel-Dieu">
@@ -5522,7 +5521,7 @@
                 <witness n="A">Original. Arch. hosp. Pontoise, B 61. Sceau ovale, représentant deux
                   paons affrontés becquetant une fleur de lis portée par une haute tige.
                     <abbr>S.</abbr>
-                  <persName>Damoisele Eustace de Puiseus</persName>. Autre sceau absent.<ref type="note" n="1" xml:id="aa036" target="#na036"/> Détruit en 1944.</witness>
+                  <persName>Damoisele Eustace de Puiseus</persName>. Autre sceau absent. <ref type="note" n="1" xml:id="aa036_w1" target="#na036"/> Détruit en 1944.</witness>
               </listWit>
               <listWit type="copie">
                 <witness n="B">Bibl. nat. de France, lat. 5657, fol. 60.</witness>
@@ -5659,7 +5658,7 @@
               Guiart de Chauvry et Guiart d'Hérouville</head>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 30.<ref type="note" n="1" xml:id="na039" target="#aa039"/></witness>
+                <witness n="B">Bibl. nat. de France, lat. 5657, fol. 30.<ref type="note" n="1" xml:id="aa039" target="#na039"/></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Cartulaire de l'Hotel-Dieu de Pontoise</title>, éd. Joseph
@@ -5700,8 +5699,9 @@
             </div>
           </body>
           <back>
-            <note n="1" xml:id="na039_2" target="#aa039">Suit la transcription d'un acte semblable
-              passé devant le vicaire de Pontoise, le vendredi après la fête de St Luc 1278.</note>
+            <note n="1" xml:id="na039" target="#aa039">
+              Suit la transcription d'un acte semblable passé devant le vicaire de Pontoise,
+              le vendredi après la fête de St Luc 1278. </note>
           </back>
         </text>
         <text xml:id="Pontoise-Hotel-Dieu_0087" n="LXXXVII" subtype="article">
@@ -11639,7 +11639,7 @@
                   sempiternam.</s>
               </p>
               <p>
-                <s>Noverit universitas vestra quod nos... accepimus in perpetuum emphiteosum<ref type="note" n="1" target="#na036 " xml:id="aa036_2"/> a viris religiosis et
+                <s>Noverit universitas vestra quod nos... accepimus in perpetuum emphiteosum<ref type="note" n="1" xml:id="aa036" target="#na036"/>a viris religiosis et
                   honestis magistro... et sororibus <placeName>Domus Dei de Pontisara</placeName>,
                   quandam peciam vinee cum quadam platea vacua adjacenti que fuit quondam
                     <persName>Ade de Buteriaco</persName> et uxoris ejus, sitam apud
