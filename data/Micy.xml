@@ -76,7 +76,7 @@
           <citeData property="dc:date" use="front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        </citeStructure>
+        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
     <revisionDesc>

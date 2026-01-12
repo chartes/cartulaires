@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Corbeil-S-Spire">
@@ -121,7 +122,7 @@
             <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          </citeStructure>
+          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -142,8 +143,7 @@
   <text>
     <front>
       <head><hi rend="i">Cartulaire de Saint-Spire de Corbeil</hi>, édité par Émile Coüard-Luys,
-        Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i"
-          >Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
+        Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i">Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
         1881-1882.</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Anastasia Iline</docAuthor> <docDate>Janvier 2006</docDate>-->
       <argument>
