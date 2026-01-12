@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Corbeil-S-Spire">
@@ -142,8 +143,7 @@
   <text>
     <front>
       <head><hi rend="i">Cartulaire de Saint-Spire de Corbeil</hi>, édité par Émile Coüard-Luys,
-        Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i"
-          >Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
+        Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i">Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
         1881-1882.</head>
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Anastasia Iline</docAuthor> <docDate>Janvier 2006</docDate>-->
       <argument>
@@ -440,7 +440,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Privilegium claustri a Bucardo comite concessum.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -730,7 +730,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Privilegium Ludovici regis Francorum.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -821,7 +821,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Confirmacio pape Celestini super possessionibus Ecclesie Beati
               Exuperii Corboliensis<ref type="note" n="1" target="#na004" xml:id="aa003"/>.</head>
             <div type="tradition">
@@ -1038,7 +1038,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de procuracione episcopi Parisiensis et archidiaconi sub
               sigillo Adele regine et aliorum<ref type="note" n="1" target="#na005 " xml:id="aa005"/>.</head>
             <div type="tradition">
@@ -1128,7 +1128,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de codera sub sigillo episcopi et archidiaconi.</head>
             <div type="tradition">
               <listWit type="original">
@@ -1204,7 +1204,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem sub sigillo regine Adele.</head>
             <div type="tradition">
               <listWit type="original">
@@ -1285,7 +1285,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem sub sigillo decani Parisiensis.</head>
             <div type="tradition">
               <listWit type="original">
@@ -1369,7 +1369,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera Gregorii pape de procuracione quam petebat a nobis
               Mauricius episcopus Parisiensis.</head>
             <div type="tradition">
@@ -1418,7 +1418,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem sub sigillo archidiaconi Parisiensis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -1488,7 +1488,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de jure Abbatis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -1648,7 +1648,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de Cantoria.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -1737,7 +1737,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De Capiceria.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -1874,7 +1874,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de stagio canonicorum sub sigillo regis Philippi.</head>
             <div type="tradition">
               <listWit type="original">
@@ -1969,7 +1969,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de stagio sub sigillo Abhatis.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2047,7 +2047,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de Ordinacione episcopi Parisiensis.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2173,7 +2173,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Juramentum quod Canonici in sua nova receptione prestare tenentur,
               ut mos est.</head>
             <div type="tradition">
@@ -2237,7 +2237,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Confirmatio Ludovici Junioris de prebenda Sancti Exuperii.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2315,7 +2315,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Privilegium Alexandri pape tercii de prebenda Sancti
               Exuperii.</head>
             <div type="tradition">
@@ -2375,7 +2375,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De priore de Campis<ref type="note" n="2" target="#na020 " xml:id="aa020"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2440,7 +2440,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera pape Lucii <num>III</num> de prebenda Sancti Exuperii<ref type="note" n="1" target="#na021" xml:id="aa021"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2507,7 +2507,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De Priore de Campis<ref type="note" n="2" target="#na023 " xml:id="aa023"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2575,7 +2575,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2711,7 +2711,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De prebenda Sancti Exuperii<ref type="note" n="1" target="#na025 " xml:id="aa025"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -2758,7 +2758,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Jurameutum quod prebendatus Beate Marie de Campis in sua nova
               receptione prestare tenetur.</head>
             <div type="tradition">
@@ -2786,7 +2786,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Diploma Henrici, fratris Ludovici regis, pro monasterio Sancti
               Victoris.</head>
             <div type="tradition">
@@ -2840,7 +2840,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Diploma Ludovici regis de prebenda quam Henricus frater ejus dedit
               canonicis Sancti Victoris in ecclesia Sancti Exuperii apud Corboilum.</head>
             <div type="tradition">
@@ -2915,7 +2915,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de Capellano.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3037,7 +3037,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de Capellano Altaris Sancti Martini<ref type="note" n="1" target="#na029 " xml:id="aa029"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3105,7 +3105,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Juramentum capellanorum in receptione sua.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3191,7 +3191,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de prebenda Sancti Exuperii</head>
             <div type="tradition">
               <listWit type="original">
@@ -3245,7 +3245,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem sub sigillo Adele regine<ref type="note" n="1" target="#na031 " xml:id="aa031"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3310,7 +3310,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem sub sigillo abbatis<ref type="note" n="1" target="#na032 " xml:id="aa032"/>.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3374,7 +3374,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de prebenda ad fabricam ecclesie Beati Exuperii sub sigillo
               regis Philippi.</head>
             <div type="tradition">
@@ -3455,7 +3455,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de annualibus.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3506,7 +3506,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta ne Judeus sit in claustro.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3557,7 +3557,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Privilegium Gileberti decani Sancti Marcelli Parisiensis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3641,7 +3641,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de asino, sub sigillo Adele regine.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3702,7 +3702,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Diploma Philippi regis de eodem.</head>
             <div type="tradition">
               <listWit type="original">
@@ -3787,7 +3787,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de novi mercati libertate sub sigillo Adele regine.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3832,7 +3832,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera Adele regine de terra de Montechoue.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3884,7 +3884,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera Adele regine de modio bladi de Soisiaco.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3937,7 +3937,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera Guidonis archiepiscopi Senonensis de eodem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -3989,7 +3989,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera Hugonis Abbatis de nemore de Villa Dodonis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4080,7 +4080,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu de Laborde.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4140,7 +4140,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de excambio census de Everiaco.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4192,7 +4192,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de venditione cujusdam decime hospitalariis.</head>
             <div type="tradition">
               <listWit type="original">
@@ -4247,7 +4247,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de vinea de Seinteri.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4287,7 +4287,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu de Feritate.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4334,7 +4334,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Du domo juxta refectorium.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4384,7 +4384,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de codem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4415,7 +4415,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de presbitero Balencurie.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4483,7 +4483,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de domo sita in magno vico in claustro.</head>
             <div type="tradition">
               <listWit type="original">
@@ -4551,7 +4551,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De excambio cum hospitalariis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4596,7 +4596,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu ad Priorem Beate Marie de Campis
               pertinente.</head>
             <div type="tradition">
@@ -4654,7 +4654,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De anniversario. <abbr>G.</abbr> de Breia.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4701,7 +4701,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De presbitero de Gineville.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4741,7 +4741,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de duabus peciis vinearum.</head>
             <div type="tradition">
               <listWit type="original">
@@ -4789,7 +4789,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu cujusdam domus site juxta poncellum Beati
               Exuperii.</head>
             <div type="tradition">
@@ -4841,7 +4841,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de quodam nemore.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4895,7 +4895,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de nundinis Sancti Egidii contra Theobaldum de Campo
               Rosato</head>
             <div type="tradition">
@@ -4960,7 +4960,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de concessione cujusdam domus in claustro site.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5014,7 +5014,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de quinta parte hereditatis <abbr>R.</abbr> de
               Cramoello.</head>
             <div type="tradition">
@@ -5074,7 +5074,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5121,7 +5121,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu de Vielleruche pro anniversario Petri de
               Dunjungno.</head>
             <div type="tradition">
@@ -5174,7 +5174,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de terra de Bondofle.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5234,7 +5234,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De censu de Sacro Portu.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5279,7 +5279,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu de Castellaria Feritatis.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5335,7 +5335,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de quinto hereditatis <abbr>R.</abbr> de Cramoello.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5400,7 +5400,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De vineis de Braatel.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5451,7 +5451,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De domo Terrici Galeran sita in claustro.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5513,7 +5513,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de domo Helye sita in magno vico.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5566,7 +5566,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De terra de Villa Dudone.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5613,7 +5613,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De quadam vinea que tenetur in villenagium apud Vignon.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5657,7 +5657,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de terra de Bondoufle.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5715,7 +5715,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5774,7 +5774,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de presbitero de Soisiaco.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -5822,7 +5822,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de vinea que fuit Radulfi Anglici apud Roissiacum.</head>
             <div type="tradition">
               <listWit type="original">
@@ -5880,7 +5880,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de pactione inter Stephanum Lemovicensem capellanum et
               Radulphum de Castris.</head>
             <div type="tradition">
@@ -5963,7 +5963,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de presbitero de Soisiaco super Scolam.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6021,7 +6021,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de decem solidis annui redditus quos legaverat Hunoudus
               dictus Bos..</head>
             <div type="tradition">
@@ -6094,7 +6094,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de presbitero de Balencuria.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6149,7 +6149,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de eodem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6200,7 +6200,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de quinto Guillelmi de Chancolia.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6269,7 +6269,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de excambio cum Monachis Vallium Sarnaii.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6340,7 +6340,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de decem solidis annui redditus quos legaverat Hunoudus
               dictus Bos.</head>
             <div type="tradition">
@@ -6403,7 +6403,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de empcione cujusdam dormis site in Magno Vico ad opus
               prebende.</head>
             <div type="tradition">
@@ -6455,7 +6455,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de censu de Sacro-Portu, Cesson et Savigniaco.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6522,7 +6522,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De Censu de Lardi.</head>
             <div type="tradition">
               <listWit type="original">
@@ -6595,7 +6595,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de domo quadam sita in Judearia Corbolii quam legavit
               Gaufridus de Seintriaco.</head>
             <div type="tradition">
@@ -6644,7 +6644,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de legato Johannis de Bucornu..</head>
             <div type="tradition">
               <listWit type="original">
@@ -6697,7 +6697,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De Legato Ade de Moreto.</head>
             <div type="tradition">
               <listWit type="original">
@@ -6766,7 +6766,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="original">
@@ -6851,7 +6851,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De terra de Escharcon.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6925,7 +6925,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De vinea de Buinart.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -6994,7 +6994,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De domo Hamonis canonici.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7050,7 +7050,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De vinea de Tartaret pro anniversario Guillelmi capicerii.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7109,7 +7109,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De domo altaris Trinitatis et de quadam vinea sita in territorio
               qui dicitur Vicus Furcarum.</head>
             <div type="tradition">
@@ -7165,7 +7165,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta de Monte Escouue.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7233,7 +7233,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de quitacione griagii in bosco de Forges.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7302,7 +7302,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de prato Perolii..</head>
             <div type="tradition">
               <listWit type="original">
@@ -7361,7 +7361,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de prato Perolii pro anniversario Philippi de Lices.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7418,7 +7418,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De mortificacione terre de Monte Escoue.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7487,7 +7487,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de vinea de Postibus..</head>
             <div type="tradition">
               <listWit type="original">
@@ -7563,7 +7563,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de terra de Vado Petroso.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7639,7 +7639,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7687,7 +7687,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Item de eodem.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7730,7 +7730,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de redditibus Balancurie.</head>
             <div type="tradition">
               <listWit type="original">
@@ -7801,7 +7801,7 @@
             </docDate>
             <index>
               <term type="nature" key="rjud"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">De la justice de Soisy-sur-Ecole.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -7909,7 +7909,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de lucrando fructus prebendarum et capellaniarum.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8004,7 +8004,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera restitucionis cujusdam <hi rend="i">doloere</hi> per
               baillivum Robertum de Villeneuve.</head>
             <div type="tradition">
@@ -8080,7 +8080,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Statutum capituli super servicio ecclesie et capellaniarum.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8178,7 +8178,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera doni facti per Regem domino <abbr>P.</abbr> Bateste de
               viginti libris redditus apud Moretum.</head>
             <div type="tradition">
@@ -8228,7 +8228,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de possessionibus pertinentibus ad Johannem Quoquatrix et
               specialiter de <num>lxx</num> libris et <num>vi</num> solidis redditus super archa et
               prepositura Corbolii.</head>
@@ -8300,7 +8300,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de eadem vendicione.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8418,7 +8418,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera vendicionis dicti redditus.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8539,7 +8539,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera venditionis <num>lxx</num> librarum et <num>vi</num>
               solidorum redditus super archa et prepositura Corbolii facte per dominam de
               Biaumarchés.</head>
@@ -8659,7 +8659,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Confirmatio per dominum Eustacium de Chambli vendicionis facte per
               dominam Mariam de Biaumarchés.</head>
             <div type="tradition">
@@ -8780,7 +8780,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera domini Guillelmi le Viconte de Vicecomitatu.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8862,7 +8862,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de eodem concessa per dominum Johannem Billoart.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -8939,7 +8939,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera de eodem concessa per dominum Johannem Quoquatrix.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -9022,7 +9022,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera foragii cavec Petri le Courant.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -9090,7 +9090,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Littera admortizationis terre de l'Orfèvre.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -9177,7 +9177,7 @@
             </docDate>
             <index>
               <term type="nature" key="del"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Deliberatio Capituli.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -9278,7 +9278,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Carta ecclesie Beati Melloni Pontisare.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -9352,7 +9352,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            </index>
+            <term type="auth_type" key="tbd">TBD</term></index>
             <head xml:lang="lat">Privilegium ecclesie Beati Melloni de Pontysara de ordinacione
               vicariorum.</head>
             <div type="tradition">
