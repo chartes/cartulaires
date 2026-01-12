@@ -1,12 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
 * Réfléchir à quoi faire avec <titlePart type="title" xml:lang="lat">
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Christophe-en-Halatte">
+--><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="S-Christophe-en-Halatte">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -352,7 +349,7 @@
             <docDate><date notBefore="1060" notAfter="1108">1060-1108</date></docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Privilegium Philippi I regis pro abbatiola Sancti Christofori in Halata. Ex
               schedis dom. de Nulli, canonici Bellovacensis<ref type="note" target="#p3_fn1"/>.</head>
             <argument>
@@ -472,7 +469,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Donation de la petite Abbaye de Saint-Christophe-en-Hallate au Prieuré de la
               Charité-sur-Loire. </head>
             <argument>
@@ -546,7 +543,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Donation de la Cure de Lagny-le-Secq à Saint-Christophe. </head>
             <argument>
               <p>Gautier, évêque de Meaux, concède à St-Christophe l'autel de Lagny-le-Sec.</p>
@@ -653,7 +650,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Travers de Creil. </head>
             <argument>
               <p>Raoul, comte de Clermont, échange avec le prieuré son droit de travers à Creil.</p>
@@ -735,7 +732,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Dixme de Balagny donnée à Saint-Christophe. </head>
             <argument>
               <p>Regnault de <hi rend="i">Montigny</hi> ou <hi rend="i">Montagny</hi> donne au
@@ -782,7 +779,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison à Cinqueux. </head>
             <argument>
               <p>Thibault, comte de Blois, donne au prieuré une maison sise à Cinqueux.</p>
@@ -828,7 +825,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Dixme de Balagny.</head>
             <argument>
               <p>Bisendus de Forfery renonce à ses prétentions sur la dîme de Balagny, délaissée en
@@ -877,7 +874,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> De eadem. Approbation de Gui le Bouteiller. </head>
             <argument>
               <p>Gui le Bouteiller ratifie ces actes.</p>
@@ -925,7 +922,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Menues dîmes de Lagny-le-Sec, Belleville et le Plessis.</head>
             <argument>
               <p>Les doyens de Notre-Dame et de St-Frambourg mettent en demeure l'official de Meaux
@@ -971,7 +968,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Rente à Villemétrie.</head>
             <argument>
               <p>Etienne, prieur de la Charité approuve l'arrangement intervenu entre le prieur et
@@ -1093,7 +1090,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Confirmation de la rente de Villemétrie, par l'Official de Senlis.</head>
             <argument>
               <p>L'official de Senlis confirme l'acte précédent.</p>
@@ -1144,7 +1141,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Rieux, Maison et Vigne près l'Eglise.</head>
             <argument>
               <p>Robert, évêque de Beauvais, approuve l'arrangement survenu entre le prieur et le
@@ -1215,7 +1212,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Rieux. Maison près l'Eglise.</head>
             <argument>
               <p>Jean de Verneuil, et Thibault, son frère, renoncent enfin a leurs droits sur la
@@ -1280,7 +1277,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Confirmation de l'acte précédent par l'official de Senlis.</head>
             <argument>
               <p>L'official de Senlis confirme la renonciation de Jean de Verneuil.</p>
@@ -1331,7 +1328,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Vidimus de la charte du Maître du Temple, en France, au sujet de la redevance de
               50 muids de grain, à Lagny-le-Sec, etc.</head>
             <argument>
@@ -1444,7 +1441,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Balagny. Pièce de terre près le Cimetière. </head>
             <argument>
               <p>Pierre de Choisel donne aux moines de St-Christophe une pièce de terre à Balagny,
@@ -1490,7 +1487,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Donation d'un arpent de terre à Saint-Christophe.</head>
             <argument>
               <p>Pierre le Coq renonce à ses droits sur un arpent de terre sis à St-Christophe, près
@@ -1534,7 +1531,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Dixme à St-Christophe, concédée par le doyen et le Chapitre de Senlis. </head>
             <argument>
               <p>Le doyen et le chapitre de Senlis cèdent au prieuré leur dîmage de St-Christophe,
@@ -1597,7 +1594,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Charte confirmative de G., Prieur de la Charité.</head>
             <argument>
               <p>Le prieur de la Charité confirme cette convention.</p>
@@ -1646,7 +1643,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Cinquante muids de grain dûs par le commandeur de Lagny-le-Sec. Vidimus de
               Robert, évêque de Nevers. </head>
             <argument>
@@ -1700,7 +1697,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Droits sur une maison sise à Senlis, hors la porte Saint-Sanctin. </head>
             <argument>
               <p>Pierre de Saumur et Hellende, son épouse, vendent au prieuré une maison et une
@@ -1763,7 +1760,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Réserve d'un cens de 20 sols parisis sur la susdite maison. </head>
             <argument>
               <p>Marie, épouse de Pierre Choisel, consent à cette vente en réservant son droit à une
@@ -1819,7 +1816,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Approbation de Pierre Choisel. </head>
             <argument>
               <p>Pierre Choisel approuve l'acte de sa femme.</p>
@@ -1866,7 +1863,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Villemétrie. Cens et surcens de 18 s. parisis. </head>
             <argument>
               <p>Scrannus, clerc de Senlis, donne au prieuré une rente de 18 sous parisis sur la ma
@@ -1920,7 +1917,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Deux pièces de terre à Saint-Christophe. </head>
             <argument>
               <p>Pierre l'Archer, et damoiselle Catherine, son épouse, vendent au prieuré deux
@@ -1992,7 +1989,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Villemétrie. Cens et surcens de 13 s. parisis. </head>
             <argument>
               <p>Barthélemi Fournier et Pétronille, sa femme, vendent au prieuré un droit de surcens
@@ -2055,7 +2052,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Une pièce de terre à Saint-Christophe. </head>
             <argument>
               <p>Marie, veuve d'Adam Grancher, vend une piece de terre au prieure.</p>
@@ -2110,7 +2107,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Cens à Brenouille. </head>
             <argument>
               <p>Pierre le Coq laisse à St-Christophe 5 sous 2 deniers par. de cens qu'il touchait a
@@ -2176,7 +2173,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Fief de..... scis à Saint-Christophe. </head>
             <argument>
               <p>Gaultier d'Aulnoy, seigneur du Mesnil, concède à l'église de St - Christophe son
@@ -2232,7 +2229,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison à Senlis, rue de Paris, ditte le Chapeau Rouge. </head>
             <argument>
               <p>Etienne Bibereirenonce en faveur du prieuré a ses droits sur la maison du
@@ -2301,7 +2298,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Rieux. Maison près l'Eglise. </head>
             <argument>
               <p>Simon de Fouilleuse et Ada, sa femme, cèdent leurs droits sur une maison sise à
@@ -2368,7 +2365,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Rieux. Même Maison. </head>
             <argument>
               <p>Confirmation par l'official de Beauvais.</p>
@@ -2417,7 +2414,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Rieux. Même Maison. Saisine. </head>
             <argument>
               <p>Pierre du Faiel et Sanctissima, son épouse, donnent au prieuré une garantie
@@ -2471,7 +2468,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison à Senlis, rue de Paris, dite le Chapeau rouge. </head>
             <argument>
               <p>Adam, évêque de Senlis, accorde à Raoul I, prieur de St-Christophe, la main-morte
@@ -2532,7 +2529,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Justice des bois de Saint-Christophe. </head>
             <argument>
               <p>Accord entre le prieur et Pierre Choisel, relativement à la Justice des Bois ed
@@ -2612,7 +2609,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Bois de Saint-Christophe. </head>
             <argument>
               <p>Pierre Choisel renonce à voler le bois de St-Christophe et maintient ses droits de
@@ -2672,7 +2669,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Un past dû par Saint-Christophe. </head>
             <argument>
               <p>Oudart Gouen renonce à un repas qu'il prenait au prieuré de St-Christophe.</p>
@@ -2731,7 +2728,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Un past dû par Saint-Christophe. </head>
             <argument>
               <p>Jean de la Croix renonce à un repas qu'il prenait au prieuré le jour de
@@ -2783,7 +2780,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Villemétrie. Cens et surcens de 5 sous parisis.</head>
             <argument>
               <p>Pierre, dit Sarrazin, et Marie, sa sœur, enfants de Durand Loiseleur, vendent au
@@ -2844,7 +2841,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison et Jardin pris à cens à Saint-Christophe. </head>
             <argument>
               <p>Simon Florea et Emeline, sa femme, prennent à cens une maison sise à St-Christophe,
@@ -2912,7 +2909,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Deux arpents et demi de terre au Corneiller. </head>
             <argument>
               <p>Guillaume de Pompoint, vend au prieuré deux arpents et demi de terre à
@@ -2983,7 +2980,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison à Saint-Christophe. </head>
             <argument>
               <p>Foubert, dit le Fulzelier, et Hellende, sa femme, donnent une maison au
@@ -3038,7 +3035,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Villemétrie. Cens de 7 d. parisis et surcens de 31 sous 7 den. parisis.</head>
             <argument>
               <p>Guiard, dit Baterel, vend à Pierre, prieur de St-Christophe, 31 sols et 7 deniers
@@ -3138,7 +3135,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Vidimus de la confirmation faite par le roi Philippe le Hardi de la transaction
               passée entre le Gruier de la forêt d'Halatte et les Prieurs et Couvents de la
               Charité-sur-Loire et de Saint-Christophe au sujet de l'usage et du droit de gruerie
@@ -3306,7 +3303,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Titre nouvel de trois mines de blé de rente au jour Saint-Remy, dues à
               Saint-Christophe par Guillaume de Blaincourt, écuyer. </head>
             <argument>
@@ -3368,7 +3365,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Lettres de l'official de Beauvais au sujet de terres et héritages vendus à
               Saint-Christophe par Novion de Rieux et sa femme Agnès. </head>
             <argument>
@@ -3427,7 +3424,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Lettre de Simon de Fouilleuse, chevalier, au sujet d'une maison scise à Rieux.
               appartenante à St-Christophe en Halatte. </head>
             <argument>
@@ -3485,7 +3482,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison à Rieux. </head>
             <argument>
               <p>Simon de Villers renonce à tous ses droits sur la maison de Rieux, réserve faute
@@ -3549,7 +3546,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maison et vignes à Rieux. </head>
             <argument>
               <p>Le prieur Jacques loue à Garnier de la Couture la maison de Rieux et 4 arpents de
@@ -3631,7 +3628,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Dixme de Saint-Pierre de Pompoing. </head>
             <argument>
               <p>Le chapitre de St-Pierre de Beauvais et le Prieur de St-Christophe nomment des
@@ -3716,7 +3713,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Maisons et vignes à Cinqueux. </head>
             <argument>
               <p>Location de la maison et des vignes de Cinqueux à Huilart.</p>
@@ -3770,7 +3767,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Menues dixmes de St-Pierre Pontpoing. </head>
             <argument>
               <p>Location des menues dîmes de Pontpoint.</p>
@@ -3810,7 +3807,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Menues dixmes du Plessier et de Lagny le Secq. </head>
             <argument>
               <p>Location des menues dîmes de Plessier et de Lagny.</p>
@@ -3851,7 +3848,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Dixmes de Saint-Pierre Pompoing.</head>
             <argument>
               <p>Sentence arbitrale du prieur de St-Leu et de l'archidiacre de Soissons, au sujet
@@ -3931,7 +3928,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Droits du prieur et du curé de St Pierre Pompoing. </head>
             <argument>
               <p>Droits particuliers du Prieur et du Curé de Pontpoint sur les menues dîmes de
@@ -4003,7 +4000,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head> Dixme de Sailleville et Laigneville. </head>
             <argument>
               <p>Perrons de Nogent prend à bail les menues dîmes de Sailleville et Laigneville.</p>
@@ -4039,7 +4036,7 @@
             </docDate>
             <index>
               <term type="nature" key="rjud"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Justice des Bois de Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4097,7 +4094,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Lettres Royaulx en faveur du Prieur et des Religieux de
               Saint-Christophe-en-Hallatte pour leurs faciliter le payement de leurs dettes.</head>
             <div type="tradition">
@@ -4177,7 +4174,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Conversion d'un denier dû au Roy par le Prieur de Saint-Christophe en quatre
               livres parisis de rente.</head>
             <div type="tradition">
@@ -4292,7 +4289,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Provisions du Prieuré de Saint-Christophe</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4358,7 +4355,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Prise de prossession du prieuré de Saint-Christophe, par Zacharie Parent.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4406,7 +4403,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Réédiffication des fourches patibulaires de Saint-Christophe, abattues du temps
               des guerres.</head>
             <div type="tradition">
@@ -4609,7 +4606,7 @@
             </docDate>
             <index>
               <term type="nature" key="rjud"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Relevé des droits du Prieuré de Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
@@ -4853,7 +4850,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Bulle du pape Alexandre VI autorisant Zacharie Parent à résigner son prieuré en
               faveur d'Antoine Parent.</head>
             <div type="tradition">
@@ -4920,7 +4917,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Fulmination des bulles du pape Alexandre VI, en faveur d'Antoine Parent, prieur de
               Saint-Christophe, faite par Pierre du Coudray, réisdent en cour de Rome.</head>
             <div type="tradition">
@@ -4983,7 +4980,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Formule du serment prêté au pape Grégoire XIII par Louis le Clerc prieur de
               Saint-Christophe.</head>
             <div type="tradition">
@@ -5040,7 +5037,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head xml:lang="lat">Ornatissimo viro D. Clerico<ref target="#p58_fn1" type="note"/>
               Divi Christophori ad Silvanectum Antistiti meritissimo, salutem.</head>
             <div type="tradition">
@@ -5133,7 +5130,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Déclaration de tous les biens et revenus appartenant au Prieuré de
               Saint-Christophe-en-Halatte et des charges diceluy que fournit M. Louis de Menou,
               prieur, seigneur, sprituel et temporel dudit Prieuré de Saint-Christophe et Fleurines,
@@ -5316,7 +5313,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Etat des revenus qui ne sont point affermés et se peràoivent par les gens
               d'affaires dudit Prieur.</head>
             <div type="tradition">
@@ -5377,7 +5374,7 @@
             </docDate>
             <index>
               <term type="nature" key="act"/>
-            <term type="auth_type" key="tbd">TBD</term></index>
+            </index>
             <head>Ensuivent les charges du Prieuré de Saint-Christophe.</head>
             <div type="tradition">
               <listWit type="copie">
