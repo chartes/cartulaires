@@ -76,7 +76,7 @@
             <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          </citeStructure>
+          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
           <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dc:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -84,7 +84,7 @@
               <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            </citeStructure>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
             <citeStructure unit="sous-section" match="group" use="default">
               <citeData property="dc:title" use="head[1]"/>
               <citeStructure unit="sous-section" match="group" use="default">
@@ -94,7 +94,7 @@
                   <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
                   <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
                   <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-                </citeStructure>
+                <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
               </citeStructure>
             </citeStructure>
           </citeStructure>
