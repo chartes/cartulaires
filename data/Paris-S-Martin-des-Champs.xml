@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Paris-S-Martin-des-Champs">
@@ -130,14 +131,14 @@
                 <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
                 <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
                 <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-              </citeStructure>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
             </citeStructure>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
               <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            </citeStructure>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -87058,7 +87059,7 @@
                 <p>Pierre <num>III</num>, évêque de Meaux, décide le partage égal des offrandes aux
                   enterrages ou convois faits à Saint-Martin de Crécy,<pb n="4_0002"/> entre le
                   Prieur du lieu et les chanoines de La Chapelle-sur-Crécy, à l'exception du drap
-                  funèbre placé sur les corps inhumés dans le ch&#x9C;ur des moines ; le Prieur assistera
+                  funèbre placé sur les corps inhumés dans le chur des moines ; le Prieur assistera
                   à la reddition des comptes au Chapitre, et votera comme l'un des chanoines pour la
                   désignation du gardien des troncs.</p>
               </argument>
@@ -88081,7 +88082,7 @@
               </index>
               <argument>
                 <p>Marguerite de Persan, fille du vicomte Hugues de Beaumont, avec l'assentiment de
-                  sa s&#x9C;ur Béatrice et de leurs époux Gaucher et Guillaume de Thourotte, donne cinq
+                  sa sur Béatrice et de leurs époux Gaucher et Guillaume de Thourotte, donne cinq
                   sols par an sur le cens de Persan aux moines de Saint-Léonor de
                   Beaumont-sur-Oise.</p>
               </argument>
@@ -89026,7 +89027,7 @@
                 <p>Baudoin, prieur de Saint-Martin-des-Champs et de Longpont, et les moines de
                   Longpont, notifient que leur frère Gui, fils de sire Jean de Massy, chevalier, et
                   de dame Marguerite, a été mis en possession par ses parents de biens consacrés à
-                  des &#x9C;uvres pies, suivant la teneur de lettres de feu Guillemin [Guillaume II],
+                  des uvres pies, suivant la teneur de lettres de feu Guillemin [Guillaume II],
                   évêque de Paris.</p>
               </argument>
               <div type="tradition">
