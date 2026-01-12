@@ -1,4 +1,7 @@
-<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -59,7 +62,7 @@
           <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        </citeStructure>
+        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
     <revisionDesc>
