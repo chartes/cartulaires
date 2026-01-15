@@ -221,6 +221,9 @@
           <rng:ref name="mentioned"/>
           <rng:ref name="sic"/>
           <rng:ref name="q"/>
+          <rng:ref name="i"/>
+          <rng:ref name="sc"/>
+          <rng:ref name="sup"/>
           <rng:element name="stamp">
             <rng:zeroOrMore>
               <rng:choice>
