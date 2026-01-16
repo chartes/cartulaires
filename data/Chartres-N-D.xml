@@ -104,6 +104,14 @@
             <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
         </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]" use="default" unit="Index">
+          <citeStructure match="div[@type = 'index' or @type = 'table']" use="default">
+            <citeData use="head" property="dc:title"/>
+            <citeStructure match="list" use="default">
+              <citeData use="head" property="dc:title"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <revisionDesc>
