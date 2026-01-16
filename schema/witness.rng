@@ -95,6 +95,20 @@
     </rng:element>
   </rng:define>
   
+  <rng:define name="dissertation">
+    <rng:element name="div">
+      <a:documentation>
+        <p>Dissertation critique.</p>
+      </a:documentation>
+      <rng:attribute name="type">
+        <rng:value>dissertation</rng:value>
+      </rng:attribute>
+      <rng:zeroOrMore>
+        <rng:ref name="p"/>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
   <rng:define name="listWit">
     <rng:element name="listWit">
       <a:documentation>
