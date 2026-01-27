@@ -9,7 +9,7 @@
     <dct:publisher scope="collection" resourceId="all">École nationale des chartes</dct:publisher>
     <dct:license scope="collection" resourceId="all">https://creativecommons.org/licenses/by-nc-nd/3.0/fr/</dct:license>
     <!-- Métadonnées de document -->
-    <dc:title scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title"/>
+    <dc:title scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
     <dct:publisher scope="document" resourceId="all">École nationale des chartes</dct:publisher>
     <dct:license scope="document" resourceId="all">https://creativecommons.org/licenses/by-nc-nd/3.0/fr/</dct:license>
     <dct:isVersionOf key="@id" scope="document" format="tsv" source="./documents_metadata.csv" value="biblissima_lieux"/>
