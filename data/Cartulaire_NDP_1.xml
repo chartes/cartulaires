@@ -8,15 +8,11 @@
         <title>ECCLESIÆ PARISIENSIS CHARTULARIUM</title>
         <principal xml:id="OC">Olivier Canteaut</principal>
         <respStmt>
-          <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email>
-          </name>
+          <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email></name>
           <resp>Suivi technique (2024–…)</resp>
         </respStmt>
       </titleStmt>
-      <extent/>
       <publicationStmt>
-        <date>2024</date>
-        <idno/>
         <publisher>Ecole nationale des chartes</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -24,37 +20,19 @@
           <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
+        <date when="2024">2024</date>
         <availability status="restricted">
-          <p>L'École nationale des chartes met à disposition cette ressource électronique
-            structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-            (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
-              d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
-          <p>
-            <ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
-            et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
-            et de la recherche. Toute autorisation au-delà du champ de cette licence doit être
-            obtenue auprès de nous.</p>
-          <p>
-            <ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique,
-            nous nous engageons à conserver et à toujours offrir publiquement la version la plus à
-            jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les
-            corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après
-            validation par un comité scientifique), et à référencer l'origine de ces contributions.
-            Toute modification de la ressource qui ne serait pas reversée à la version de référence
-            sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser
-            les contributions et de permettre les meilleures conditions possibles de collaboration
-            scientifique.</p>
-          <p>
-            <ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute
-            publication dérivée de ses ressources électroniques comporte : <list>
-              <item>un lien vers l'adresse pérennede la dernière version de la ressource sur notre
-                site ;</item>
-              <item>la date du fichier source utilisé ;</item>
+          <p>L'École nationale des chartes met à disposition cette ressource électronique...</p>
+          <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation...</p>
+          <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique...</p>
+          <p><ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute publication dérivée comporte : 
+            <list>
+              <item>un lien vers l'adresse pérenne de la dernière version de la ressource sur notre site ;</item>
+              <item>la date du fichier source utilisé ;</item>
               <item>nos noms.</item>
             </list>
           </p>
-          <p>Tout litige soulevé par le non respect des termes de cette licence sera soumis à la
-            juridiction des tribunaux de Paris.</p>
+          <p>Tout litige soulevé par le non respect des termes de cette licence sera soumis à la juridiction des tribunaux de Paris.</p>
         </availability>
       </publicationStmt>
       <seriesStmt>
@@ -63,17 +41,15 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <listBibl>
-          <bibl xml:id="guerard1">
-            <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 1, Paris, 1850 (Collection de documents inédits sur l’histoire de France. 1<hi rend="sup">re</hi> série, Histoire politique. Collection des cartulaires de France, 4-7).
-          </bibl>
-        </listBibl>
+        <bibl xml:id="guerard1">
+          <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 1, Paris, 1850.
+        </bibl>
       </sourceDesc>
     </fileDesc>
+    
     <encodingDesc>
       <projectDesc>
-        <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des
-          cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
+        <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
         <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
@@ -86,7 +62,7 @@
       </refsDecl>
     </encodingDesc>
     <revisionDesc>
-      <change when="2025-02" who="PP">Encodage</change>
+      <change when="2025-02" who="#PP">Encodage</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -105,7 +81,7 @@
           <lb/>CHARTULARIUM EPISCOPI</head>
         <group n="1">
           <head>
-            <pb edRef="#guerard1" n="3"/>PRÆVIA.</head>
+            <pb ="#guerard1" n="3"/>PRÆVIA.</head>
           <text xml:id="NDP1_0001" subtype="article" n="I">
             <front><index><term type="nature" key="tbd"/></index><head>I</head></front>
             <body>
