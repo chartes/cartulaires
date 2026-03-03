@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<!--
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
 * Réfléchir à quoi faire avec <titlePart type="title" xml:lang="lat">
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
+--><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -6081,6 +6078,591 @@
         </list>
       </div>
       -->
-    </back>
+    <div type="index">
+        <pb n="65"/>
+        <head>TABLE ALPHABÉTIQUE ET ANALYTIQUE</head>
+        <list>
+          <item>A</item>
+          <item><rs>Abbatiola</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref>1</ref>, <ref>3</ref>, <ref>5</ref>.</item>
+          <item><rs>Adam, évêque de Senlis</rs>, <ref>22</ref>.</item>
+          <item><rs>Adam, archidiacre</rs>, <ref>6</ref>.</item>
+          <item><rs>Afforty</rs>, <ref><hi rend="sc">i</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">lxxxvi</hi></ref>, <ref><hi rend="sc">lxxxvii</hi></ref>, <ref>4</ref>.</item>
+          <item><rs>Alby (archevêché d')</rs>, <ref>44</ref>.</item>
+          <item><rs>Aleigre (Christophe d')</rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>
+          <item><rs>Alexandre VI, pape</rs>, <ref><hi rend="sc">xlii</hi></ref>, <ref>55</ref>.</item>
+          <item><rs>Amimate, Amigny</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>, <ref>4</ref>.</item>
+          <item><rs>Angy</rs>, <ref>47</ref>.</item>
+          <item><rs>Anthonis</rs>, <ref>52</ref>.</item>
+          <item><rs>Apport-au-Pain (rue de l')</rs>, <ref><hi rend="sc">xxxii</hi></ref>.</item>
+          <item><rs>Apremont (Jacques d')</rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>, <ref><hi rend="sc">xlviii</hi></ref>.</item>
+          <item><rs>Apremont (Balthasar d')</rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Archebaldus, Archambault</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Arnault, officier municipal</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>
+          <item><rs>Arnoult, prêtre</rs>, <ref>11</ref>.</item>
+          <item><rs>Arnulfus, decanus</rs>, <ref>6</ref>.</item>
+          <item><rs>Arondel, Maixent</rs>, <ref><hi rend="sc">xlviii</hi></ref>.</item>
+          <item><rs>Ascelin, moine</rs>, <ref>6</ref>.</item>
+          <item><rs>Aubermont</rs>, <ref>19</ref>.</item>
+          <item><rs>Aulnay (Gautier d')</rs>, <ref>20</ref>.</item>
+          <item><rs>Aumailles</rs>, <ref><hi rend="sc">xx</hi></ref>.</item>
+          <item><rs>Aussart, Jean</rs>, <ref><hi rend="sc">xxxi</hi></ref>.</item>
+          <item><rs>Austin, Jean</rs>, <ref><hi rend="sc">xxxix</hi></ref>, <ref>45</ref>.</item>
+          <item><rs>Auviler (Raoul d')</rs>, <ref>37</ref>.</item>
+          <item>B</item>
+          <item><rs>Bacouel</rs>, <ref>61</ref>, <ref>62</ref>.</item>
+          <item><rs>Bailli de Senlis</rs>, <ref><hi rend="sc">xviii</hi></ref>, <ref>30</ref>, <ref>31</ref>, <ref>33</ref>, <ref>48</ref>.</item>
+          <item><rs>Balagny</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref><hi rend="sc">lvii</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref><hi rend="sc">lxxx</hi></ref>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref><hi rend="sc">lxxxvii</hi></ref>, <ref>7</ref>, <ref>8</ref>, <ref>13</ref>, <ref>61</ref>, <ref>62</ref>.</item>
+          <item><rs>Balagny (Guillaume de)</rs>, <ref>32</ref>.</item>
+          <item><rs>Balduinus, Baudouin, fils de Waleran</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>, <ref>3</ref>.</item>
+          <item><rs>Balduinus, cancellarius</rs>, <ref><hi rend="sc">i</hi></ref>, <ref>4</ref>.</item>
+          <item><rs>Barbelat, Victor</rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>
+          <item><rs>Barbery</rs>, <ref><hi rend="sc">lix</hi></ref>, <ref>9</ref>.</item>
+          <item><rs>Bastonneau, notaire</rs>, <ref><hi rend="sc">lv</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Bataille, Jacques</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>
+          <item><rs>Baterel, Guiard</rs>, <ref><hi rend="sc">xii</hi></ref>, <ref>28</ref>.</item>
+          <item><rs>Bauchesy, Guillaume</rs>, <ref><hi rend="sc">xliii</hi></ref>, <ref>45</ref>, <ref>59</ref>.</item>
+          <item><rs>Baudouin</rs>, <ref>34</ref>.</item>
+          <item><rs>Bay (Jean de)</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Bazin, François, prieur</rs>, <ref><hi rend="sc">xvi</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Beauvais</rs>, <ref><hi rend="sc">i</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Becconne</rs>, <ref>56</ref>.</item>
+          <item><rs>Begers, Gautier, maire de Pontpoint</rs>, <ref><hi rend="sc">xv</hi></ref>.</item>
+          <item><rs>Begiers, Pierre</rs>, <ref>24</ref>, <ref>25</ref>.</item>
+          <item><rs>Bellart, Collart</rs>, <ref>34</ref>.</item>
+          <item><rs>Bellart, Guillaume</rs>, <ref>34</ref>.</item>
+          <item><rs>Bellenger, Guillaume</rs>, <ref><hi rend="sc">xxv</hi></ref>.</item>
+          <item><rs>Bermond d'Anduze</rs>, <ref>45</ref>.</item>
+          <pb n="66"/>
+          <item><rs>Bermond de Sommières</rs>, <ref>45</ref>.</item>
+          <item><rs>Bernard, Jean</rs>, <ref><hi rend="sc">xxv</hi></ref>.</item>
+          <item><rs>Bernard, Etienne</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Bernis (le cardinal de)</rs>, <ref><hi rend="sc">lxxxvi</hi></ref>.</item>
+          <item><rs>Bernis (Françoise de)</rs>, <ref>44</ref>.</item>
+          <item><rs>Bernis (François de Pierres de)</rs>, <ref><hi rend="sc">lxxxvi</hi></ref>, <ref><hi rend="sc">lxxxvii</hi></ref>, <ref>44</ref>, <ref>45</ref>,.</item>
+          <item><rs>Bertault, Boitart</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>
+          <item><rs>Berthe, Thomas</rs>, <ref>45</ref>.</item>
+          <item><rs>Berthélemy, Adam</rs>, <ref>51</ref>, <ref>52</ref>, <ref>53</ref>.</item>
+          <item><rs>Berthélemy, Denis</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Béthisy (Nicolas de)</rs>, <ref>35</ref>.</item>
+          <item><rs>Beu, Jean</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>
+          <item><rs>Biberei, Etienne</rs>, <ref>20</ref>, <ref>21</ref>, <ref>23</ref>.</item>
+          <item><rs>Biberei, Jean</rs>, <ref>21</ref>.</item>
+          <item><rs>Bidet, Jacques</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>
+          <item><rs>Bisendus de Forfery</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>8</ref>,.</item>
+          <item><rs>Blaincourt</rs>, <ref>32</ref>.</item>
+          <item><rs>Bobusse, notaire</rs>, <ref>58</ref>.</item>
+          <item><rs>Bombart, Charles</rs>, <ref>60</ref>.</item>
+          <item><rs>Bone (Jean de)</rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>
+          <item><rs>Bonjour, Jean</rs>, <ref>47</ref>.</item>
+          <item><rs>Bonnaure, Jacques, prieur</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>
+          <item><rs>Bonrepos (abbé de)</rs>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Bony (prieuré de)</rs>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Bouchel, Florent</rs>, <ref><hi rend="sc">lxvi</hi></ref>, <ref><hi rend="sc">lxvii</hi></ref>.</item>
+          <item><rs>Bouillon (Antoine de), prieur</rs>, <ref><hi rend="sc">lxix</hi></ref>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxxiv</hi></ref>, <ref><hi rend="sc">lxxxix</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Bouillon (Jean de)</rs>, <ref><hi rend="sc">lxxi</hi></ref>.</item>
+          <item><rs>Boulengnies (Hugues de), prieur</rs>, <ref><hi rend="sc">xxii</hi></ref>, <ref>41</ref>.</item>
+          <item><rs>Boulogne, Jean</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Bourbon (Antoine de)</rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>
+          <item><rs>Bourdeaux (Françoise de)</rs>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Bourgoing (Guillaume le)</rs>, <ref><hi rend="sc">xxvii</hi></ref>, <ref><hi rend="sc">xxviii</hi></ref>, <ref>45</ref>.</item>
+          <item><rs>Boyleau, Hugues</rs>, <ref><hi rend="sc">xxxviii</hi></ref>, <ref>51</ref>, <ref>52</ref>, <ref>53</ref>.</item>
+          <item><rs>Bouteiller (Guy le)</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>8</ref>.</item>
+          <item><rs>Boutinval</rs>, <ref>18</ref>.</item>
+          <item><rs>Brandons (feu des)</rs>, <ref><hi rend="sc">xxxvi</hi></ref>.</item>
+          <item><rs>Brasseuse</rs>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref>60</ref>.</item>
+          <item><rs>Bray</rs>, <ref><hi rend="sc">lxxvi</hi></ref>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref>60</ref>.</item>
+          <item><rs>Brenouille</rs>, <ref><hi rend="sc">ix</hi></ref>, <ref><hi rend="sc">lx</hi></ref>, <ref>19</ref>, <ref>34</ref>.</item>
+          <item><rs>Breteuil</rs>, <ref>6</ref>.</item>
+          <item><rs>Bretignolles</rs>, <ref>44</ref>.</item>
+          <item><rs>Brosse (Pierre de la), prieur</rs>, <ref><hi rend="sc">xix</hi></ref>, <ref><hi rend="sc">xx</hi></ref>, <ref><hi rend="sc">xxi</hi></ref>.</item>
+          <item><rs>Brunnus, Le Brun de Sancerre</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Bue, Laurent</rs>, <ref>45</ref>.</item>
+          <item><rs>Buffet, Guillaume</rs>, <ref>49</ref>.</item>
+          <item><rs>Buisson (Jacqueline le)</rs>, <ref><hi rend="sc">lxx</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>
+          <item><rs>Buisson de Paris (le)</rs>, <ref><hi rend="sc">lxx</hi></ref>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>
+          <item><rs>Buzenot, Albert, prieur</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>, <ref>44</ref>.</item>
+          <item>C</item>
+          <item><rs>Cagniard</rs>, offic. munic. de Fleurines, <ref><hi rend="sc">lxxxix</hi></ref>.</item>
+          <item><rs>Cain, Claude</rs>, <ref><hi rend="sc">lxi</hi></ref>.</item>
+          <item><rs>Caignan, Jean</rs>, <ref>37</ref>.</item>
+          <item><rs>Cambellan, Jean</rs>, <ref><hi rend="sc">xxvii</hi></ref>, <ref>50</ref>.</item>
+          <item><rs>Capperon, Jean</rs>, <ref>47</ref>.</item>
+          <item><rs>Carrier (Barthélemy le)</rs>, <ref><hi rend="sc">viii</hi></ref>.</item>
+          <item><rs>Cella, Le Montcel, près Pont-Sainte-Maxence</rs>, <ref>4</ref>, <ref><hi rend="sc">xxx</hi></ref>.</item>
+          <item><rs>Cens sur une maison à Senlis</rs>, <ref>16</ref>.</item>
+          <item><rs>Cens à Villemétrie</rs>, <ref>17</ref>.</item>
+          <item><rs>Chaalis</rs>, <ref>10</ref>.</item>
+          <item><rs>Château-Rouge (maison du)</rs>, <ref><hi rend="sc">ix</hi></ref>, <ref>20</ref>, <ref>22</ref>.</item>
+          <item><rs>Chapelle-en-Serval (la)</rs>, <ref><hi rend="sc">xli</hi></ref>, <ref><hi rend="sc">liii</hi></ref>, <ref>61</ref>.</item>
+          <item><rs>Chapelle-Galon (la)</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>13</ref>.</item>
+          <item><rs>Chapelle (Pierre de la)</rs>, <ref>36</ref>.</item>
+          <item><rs>Chapelle (Hersans de la)</rs>, <ref>36</ref>.</item>
+          <item><rs>Charetier (Jehan le)</rs>, <ref>26</ref>.</item>
+          <item><rs>Charité-sur-Loire (la)</rs>, <ref><hi rend="sc">v</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>, <ref>5</ref>, <ref>9</ref>, <ref>13</ref>, <ref>23</ref>, <ref>37</ref>.</item>
+          <item><rs>Charles-le-Bel</rs>, <ref><hi rend="sc">iv</hi></ref>.</item>
+          <item><rs>Charton, Jean</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>
+          <item><rs>Chatel (Jean du)</rs>, <ref><hi rend="sc">xlviii</hi></ref>, <ref>57</ref>.</item>
+          <item><rs>Chaumont</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Chefecier</rs>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>
+          <item><rs>Chelles (Sainte-Bathilde de)</rs>, <ref><hi rend="sc">lxxxii</hi></ref>.</item>
+          <item><rs>Cheron, Jacques-Pierre</rs>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>
+          <item><rs>Cherrier, Jacques</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>
+          <item><rs>Chesneau, Robert, prieur</rs>, <ref><hi rend="sc">lv</hi></ref>, <ref><hi rend="sc">lviii</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Choiselle (Jeanne la)</rs>, <ref><hi rend="sc">xix</hi></ref>, <ref><hi rend="sc">xxi</hi></ref>, <ref><hi rend="sc">xxii</hi></ref>, <ref>54</ref>.</item>
+          <item><rs>Choisel, Pierre</rs>, <ref><hi rend="sc">ix</hi></ref>, <ref><hi rend="sc">x</hi></ref>, <ref><hi rend="sc">xix</hi></ref>, <ref>13</ref>, <ref>16</ref>, <ref>17</ref>, <ref>23</ref>, <ref>24</ref>.</item>
+          <item><rs>Cinqueux (maison à)</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref><hi rend="sc">xiv</hi></ref>, <ref><hi rend="sc">xxiv</hi></ref>, <ref><hi rend="sc">lx</hi></ref>, <ref>7</ref>, <ref>36</ref>.</item>
+          <item><rs>Cinqueux (Henri de)</rs>, <ref>7</ref>.</item>
+          <item><rs>Clermont (Thibault, comte de)</rs>, <ref><hi rend="sc">vi</hi></ref>, <ref>6</ref>, <ref>7</ref>.</item>
+          <item><rs>Cluny (Ordre de)</rs>, <ref><hi rend="sc">iv</hi></ref>, <ref><hi rend="sc">v</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">xlv</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>, <ref><hi rend="sc">lxxxi</hi></ref>, <ref>1</ref>, <ref>42</ref>, <ref>43</ref>, <ref>44</ref>, <ref>48</ref>.</item>
+          <item><rs>Cohen (prieuré de)</rs>, <ref><hi rend="sc">xlvi</hi></ref>, ]<ref><hi rend="sc">l</hi></ref>, <ref><hi rend="sc">li</hi></ref>, [42.</item>
+          <pb n="67"/>
+          <item><rs>Coleurs (André de)</rs>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>, <ref>12</ref>, <ref>13</ref>, <ref>15</ref>.</item>
+          <item><rs>Communauté des habitants de Fleurines</rs>, <ref><hi rend="sc">lxxiv</hi></ref>.</item>
+          <item><rs>Commanderie de Lagny</rs>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">vii</hi></ref>.</item>
+          <item><rs>Compiègne</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">xviii</hi></ref>, <ref>1</ref>, <ref>4</ref>, <ref>25</ref>.</item>
+          <item><rs>Concques (église de)</rs>, <ref><hi rend="sc">lxxx</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Conon, Robert</rs>, <ref>45</ref>.</item>
+          <item><rs>Contesse, Etienne</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>
+          <item><rs>Corbilly (Claude de), prieur</rs>, <ref><hi rend="sc">lxii</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Cordonnier (Pierre le)</rs>, <ref>26</ref>.</item>
+          <item><rs>Corne de l'Ouye (la)</rs>, <ref><hi rend="sc">xxxvi</hi></ref>, <ref>53</ref>.</item>
+          <item><rs>Cornillier (le)</rs>, <ref>27</ref>.</item>
+          <item><rs>Cornu, Galeran</rs>, <ref><hi rend="sc">xliii</hi></ref>, <ref>57</ref>.</item>
+          <item><rs>Cornu, Thomas</rs>, <ref><hi rend="sc">xliii</hi></ref>, <ref>58</ref>.</item>
+          <item><rs>Coudray (Pierre du)</rs>, <ref><hi rend="sc">xlii</hi></ref>, <ref>57</ref>.</item>
+          <item><rs>Coulon, Jean</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>
+          <item><rs>Courcelles (Gilles de)</rs>, <ref><hi rend="sc">xiv</hi></ref>, <ref>33</ref>.</item>
+          <item><rs>Court (Arnault de la)</rs>, <ref>34</ref>.</item>
+          <item><rs>Court (Renier de la)</rs>, <ref>34</ref>.</item>
+          <item><rs>Cousture (Garnier de la)</rs>, <ref><hi rend="sc">xiv</hi></ref>, <ref>34</ref>.</item>
+          <item><rs>Cousturier, prieur</rs>, <ref><hi rend="sc">xv</hi></ref>, <ref><hi rend="sc">xvii</hi></ref>, <ref>41</ref>.</item>
+          <item><rs>Crespy (chemin de)</rs>, <ref>19</ref>.</item>
+          <item><rs>Crestel, Louis</rs>, <ref><hi rend="sc">lxxxvii</hi></ref>.</item>
+          <item><rs>Cretté, Jean, prieur</rs>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Curé de Balagny</rs>, <ref><hi rend="sc">lvii</hi></ref>, <ref><hi rend="sc">lxxx</hi></ref>.</item>
+          <item><rs>Curé de Saint-Christophe</rs>, <ref>14</ref>.</item>
+          <item><rs>Curé de Saint-Pierre-Pontpoint</rs>, <ref><hi rend="sc">xvii</hi></ref>.</item>
+          <item><rs>Curé de Fleurines</rs>, <ref><hi rend="sc">xx</hi></ref>, <ref><hi rend="sc">xliii</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxix</hi></ref>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Curé du Plessis-le-Vicomte</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>
+          <item><rs>Curé de La Chapelle-en-Serval</rs>, <ref><hi rend="sc">liii</hi></ref>.</item>
+          <item><rs>Curé de Lagny-le-Sec</rs>, <ref><hi rend="sc">xxix</hi></ref>, <ref><hi rend="sc">lxxxi</hi></ref>.</item>
+          <item>D</item>
+          <item><rs>Dambin, Jean</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Dammartin</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref><hi rend="sc">lxvi</hi></ref>, <ref><hi rend="sc">lxvii</hi></ref>.</item>
+          <item><rs>Damoiselle Catherine Larcher</rs>, <ref>17</ref>, <ref>18</ref>.</item>
+          <item><rs>Danse Claude</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Debonnaire, Jean</rs>, <ref><hi rend="sc">lix</hi></ref>.</item>
+          <item><rs>Deffois (bois du)</rs>, <ref><hi rend="sc">x</hi></ref>, <ref>29</ref>, <ref>30</ref>.</item>
+          <item><rs>De Jean, Antoine-Simon</rs>, <ref><hi rend="sc">lxxxii</hi></ref>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>
+          <item><rs>De Laitre</rs>, <ref>34</ref>.</item>
+          <item><rs>De Lastre, Pierre</rs>, <ref><hi rend="sc">l</hi></ref>.</item>
+          <item><rs>De Lorme, Jean</rs>, <ref><hi rend="sc">xlii</hi></ref>, <ref>57</ref>, <ref>58</ref>.</item>
+          <item><rs>Descroisette</rs>, <ref>52</ref>.</item>
+          <item><rs>Deslandes, Charles</rs>, <ref><hi rend="sc">lxxi</hi></ref>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref>45</ref>.</item>
+          <item><rs>Deslyons, Jean</rs>, <ref><hi rend="sc">lxxvi</hi></ref>.</item>
+          <item><rs>Desprez, Pierre</rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>
+          <item><rs>Devaus, Jean</rs>, <ref>14</ref>.</item>
+          <item><rs>Dîme à Saint-Christophe</rs>, <ref>14</ref>.</item>
+          <item><rs>Dîme de Lagny, le Plessis-Belleville</rs>, <ref><hi rend="sc">xxix</hi></ref>.</item>
+          <item><rs>Doyen de Saint-Frambauld</rs>, <ref>9</ref>.</item>
+          <item><rs>Doyen de Notre-Dame</rs>, <ref>9</ref>, <ref>14</ref>.</item>
+          <item><rs>Doyen de Saint-Pierre de Beauvais</rs>, <ref>35</ref>.</item>
+          <item><rs>Droit de brelan</rs>, <ref><hi rend="sc">xxxvii</hi></ref>.</item>
+          <item><rs>Droit de cendrier</rs>, <ref>24</ref>.</item>
+          <item><rs>Droit d'échelle</rs>, <ref><hi rend="sc">xxxvi</hi></ref>, <ref><hi rend="sc">xxxvii</hi></ref>, <ref>51</ref>, <ref>52</ref>, <ref>53</ref>.</item>
+          <item><rs>Droit de gruerie et grairie</rs>, <ref><hi rend="sc">xxii</hi></ref>, <ref><hi rend="sc">lxix</hi></ref>.</item>
+          <item><rs>Droit de mainmorte</rs>, <ref><hi rend="sc">vi</hi></ref>.</item>
+          <item><rs>Droit de pégier</rs>, <ref>24</ref>.</item>
+          <item><rs>Droit de plaids</rs>, <ref><hi rend="sc">xiv</hi></ref>, <ref><hi rend="sc">xv</hi></ref>.</item>
+          <item><rs>Droit de relief</rs>, <ref>61</ref>.</item>
+          <item><rs>Droit de retrait lignager</rs>, <ref><hi rend="sc">xi</hi></ref>.</item>
+          <item><rs>Droit de synode et de visite</rs>, <ref><hi rend="sc">vi</hi></ref>.</item>
+          <item><rs>Droit de travers</rs>, <ref><hi rend="sc">vii</hi></ref>.</item>
+          <item><rs>Droit de vent</rs>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>
+          <item><rs>Droit du roi sur la forêt d'Halatte</rs>, <ref>30</ref>.</item>
+          <item><rs>Dubuat, Michel</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>
+          <item><rs>Dubuef, Yvonnet</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Du Drac, Adrien</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Dufresne, Daniel</rs>, <ref><hi rend="sc">liv</hi></ref>.</item>
+          <item><rs>Dugest</rs>, <ref>61</ref>.</item>
+          <item><rs>Duguet, François</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>
+          <item><rs>Du Mont, Jean</rs>, <ref>7</ref>.</item>
+          <item><rs>Dun</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>13</ref>.</item>
+          <item><rs>Durand, Pierre</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>
+          <item><rs>Duruel, Louis</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>.</item>
+          <item>E</item>
+          <item><rs>Ebrardus de Duno</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Echelle</rs>, <ref><hi rend="sc">xxxvi</hi></ref>.</item>
+          <item><rs>Ecrevisse (fief de l')</rs>, <ref><hi rend="sc">xxxii</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Ermengarde</rs>, <ref>20</ref>.</item>
+          <item><rs>Epine Servelot (lieu dit l')</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>
+          <item><rs>Etienne, prieur</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>9</ref>.</item>
+          <item><rs>Etienne, prieur de Saint-Leu-d'Esserent</rs>, <ref><hi rend="sc">xv</hi></ref>, <ref>35</ref>, <ref>37</ref>.</item>
+          <item><rs>Evrard, maire de Villemétrie</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>9</ref>, <ref>10</ref>.</item>
+          <pb n="68"/>
+          <item>F</item>
+          <item><rs>Faiel (Pierre du), chevalier</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>22</ref>.</item>
+          <item><rs>Favergies, Jacques (de)</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Feodandus, Frolland, évêque de Senlis</rs>, <ref>4</ref>.</item>
+          <item><rs>Feyssier, Antoine, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Flan, Flamiche</rs>, <ref>25</ref>.</item>
+          <item><rs>Flay (abbé de)</rs>, <ref><hi rend="sc">vii</hi></ref>.</item>
+          <item><rs>Florea, Simon</rs>, <ref>26</ref>.</item>
+          <item><rs>Florine, Fleurines</rs>, <ref><hi rend="sc">xx</hi></ref>, <ref><hi rend="sc">xxi</hi></ref>, <ref><hi rend="sc">xxx</hi></ref>, <ref><hi rend="sc">xxxiv</hi></ref>, <ref><hi rend="sc">xli</hi></ref>, <ref><hi rend="sc">lv</hi></ref>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref><hi rend="sc">lxxiv</hi></ref>, <ref><hi rend="sc">lxxxi</hi></ref>, <ref><hi rend="sc">lxxxviii</hi></ref>, <ref><hi rend="sc">lxxxix</hi></ref>, <ref>1</ref>, <ref>4</ref>, <ref>47</ref>, <ref>60</ref>, <ref>61</ref>, <ref>62</ref>.</item>
+          <item><rs>Fortier, François</rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>
+          <item><rs>Fossé (Eudes du), clerc</rs>, <ref>22</ref>.</item>
+          <item><rs>Foucauld de Balagny</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>9</ref>, <ref>10</ref>, <ref>11</ref>.</item>
+          <item><rs>Fouilleuse (Ada de)</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>21</ref>, <ref>22</ref>.</item>
+          <item><rs>Fouilleuse (Simon de)</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>21</ref>, <ref>22</ref>, <ref>23</ref>.</item>
+          <item><rs>Fouilleuse (Thibault de)</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>22</ref>, <ref>23</ref>.</item>
+          <item><rs>Four banal</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>
+          <item><rs>Fournier, Barthélemy</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>18</ref>.</item>
+          <item><rs>Fournier Eudes</rs>, <ref>28</ref>.</item>
+          <item><rs>Fournier Pétronille</rs>, <ref>18</ref>.</item>
+          <item><rs>François</rs>, <hi rend="sup">er</hi>, roi, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Frémin, chapelain</rs>, <ref>32</ref>.</item>
+          <item><rs>Fréret, Thomas</rs>, <ref>47</ref>.</item>
+          <item><rs>Fresnoy, sa mesure</rs>, <ref>32</ref>.</item>
+          <item><rs>Froment, louable</rs>, <ref>13</ref>.</item>
+          <item><rs>Fromont, notaire</rs>, <ref><hi rend="sc">lxxx</hi></ref>, <ref>59</ref>.</item>
+          <item><rs>Fuizelier (Foubert le)</rs>, <ref>27</ref>, <ref>28</ref>.</item>
+          <item><rs>Fuizelier (Hellende le)</rs>, <ref>27</ref>, <ref>28</ref>.</item>
+          <item>G</item>
+          <item><rs>Gandelus</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>, <ref>13</ref>.</item>
+          <item><rs>Garingue, maison</rs>, <ref>34</ref>.</item>
+          <item><rs>Gausbertus, Goisbert, évêque de Beauvais</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref>1</ref>.</item>
+          <item><rs>Gautier, évêque de Meaux</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">iii</hi></ref>, <ref>5</ref>, <ref>6</ref>.</item>
+          <item><rs>Geoffroy, chanoine et official de Senlis</rs>, <ref>8</ref>, <ref>10</ref>.</item>
+          <item><rs>Gérard, prieur de la Charité-sur-Loire</rs>, <ref>5</ref>.</item>
+          <item><rs>Gilbert, prévôt</rs>, <ref>6</ref>.</item>
+          <item><rs>Gouin, Oudart</rs>, <ref>24</ref>, <ref>25</ref>.</item>
+          <item><rs>Gondy (Paul de)</rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>
+          <item><rs>Goullerat</rs>, <ref>49</ref>.</item>
+          <item><rs>Gradués</rs>, <ref><hi rend="sc">lxxxii-iv</hi></ref>.</item>
+          <item><rs>Grand Conseil</rs>, <ref><hi rend="sc">lxxxi</hi></ref>.</item>
+          <item><rs>Grégoire</rs>, <ref><hi rend="sc">xiii</hi></ref>, pape, <ref><hi rend="sc">lviii</hi></ref>, <ref>58</ref>.</item>
+          <item><rs>Gruerie</rs>, <ref><hi rend="sc">ix</hi></ref>, <ref>24</ref>.</item>
+          <item><rs>Gruyer</rs>, <ref><hi rend="sc">xix</hi></ref>, <ref>19</ref>, <ref>23</ref>, <ref>29</ref>, <ref>30</ref>.</item>
+          <item><rs>Guérin, évêque de Senlis</rs>, <ref>7</ref>.</item>
+          <item><rs>Guérin Jean</rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>
+          <item><rs>Guiard</rs>, <ref>27</ref>, <ref>33</ref>.</item>
+          <item><rs>Guibert, prieur de Saint-Christophe</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>7</ref>, <ref>41</ref>.</item>
+          <item><rs>Gui de Morry, prieur</rs>, <ref>41</ref>.</item>
+          <item><rs>Gui de Vieuxcamp, prieur</rs>, <ref>41</ref>.</item>
+          <item><rs>Guillanche (Charles de la), prieur</rs>, <ref>42</ref>.</item>
+          <item><rs>Guillanche (Jean de la)</rs>, <ref><hi rend="sc">xxxi</hi></ref>, <ref><hi rend="sc">li</hi></ref>.</item>
+          <item><rs>Guillaume, prieur de la Charité-sur-Loire</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>11</ref>.</item>
+          <item><rs>Guillaume, chapelain</rs>, <ref>7</ref>.</item>
+          <item>H</item>
+          <item><rs>Halatte (forêt de)</rs>, <ref><hi rend="sc">i</hi></ref>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">xix</hi></ref>.</item>
+          <item><rs>Harcourt (chevalier d')</rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>
+          <item><rs>Hardy (Nicolas le)</rs>, <ref><hi rend="sc">lxi</hi></ref>.</item>
+          <item><rs>Harlaut, Françoise</rs>, <ref>61</ref>.</item>
+          <item><rs>Harlet, Jean</rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>
+          <item><rs>Havy, Jacques, maire de Fleurines</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>
+          <item><rs>Havy Nicolas, notable</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>
+          <item><rs>Hellende, de Saumur</rs>, <ref>16</ref>.</item>
+          <item><rs>Hénault, Pierre</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Hennique, Jean</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Henri</rs>, <hi rend="sup">er</hi>, roi, <ref>I. 4</ref>.</item>
+          <item><rs>Herambourt, Jean</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>
+          <item><rs>Hermenc, Hermene</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">iii</hi></ref>, <ref>14</ref>.</item>
+          <item><rs>Hermengarde, de Balagny</rs>, <ref>9</ref>.</item>
+          <item><rs>Hervé, prieur</rs>, <ref>41</ref>.</item>
+          <item><rs>Hiannet</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>11</ref>.</item>
+          <item><rs>Hivernage</rs>, <ref>9</ref>.</item>
+          <item><rs>Hugues, abbé de Flay</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>7</ref>.</item>
+          <item><rs>Hugues de Balagny</rs>, <ref>6</ref>.</item>
+          <item><rs>Hugues fils de Waleran</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>, <ref>3</ref>.</item>
+          <item><rs>Hugues des Prés</rs>, <ref>7</ref>.</item>
+          <item><rs>Hulin, Jacques</rs>, <ref>61</ref>.</item>
+          <item><rs>Humières</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>13</ref>.</item>
+          <item>I</item>
+          <item><rs>Ingerand, moine</rs>, <ref>7</ref>.</item>
+          <item><rs>Isabelle Choisel</rs>, <ref>16</ref>, <ref>17</ref>.</item>
+          <pb n="69"/>
+          <item>J</item>
+          <item><rs>Jacqueline</rs>, <ref>21</ref>, <ref>23</ref>.</item>
+          <item><rs>Jacques, prieur</rs>, <ref><hi rend="sc">xii</hi></ref>, <ref><hi rend="sc">xv</hi></ref>, <ref>34</ref>, <ref>36</ref>, <ref>37</ref>, <ref>41</ref>.</item>
+          <item><rs>Jean, abbé de Saint-Corneille</rs>, <ref>25</ref>.</item>
+          <item><rs>Jean-le-Bon, roi</rs>, <ref><hi rend="sc">xxi</hi></ref>.</item>
+          <item><rs>Jean, clerc du prévôt</rs>, <ref>32</ref>.</item>
+          <item><rs>Jean, prévôt de Saint-Lucien</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>7</ref>.</item>
+          <item><rs>Jean, prieur de la Charité-sur-Loire</rs>, <ref>2</ref>, <ref>3</ref>.</item>
+          <item><rs>Jolis, Oudart</rs>, <ref><hi rend="sc">xv</hi></ref>.</item>
+          <item><rs>Jonenques (Jean de)</rs>. </item>
+          <item>L</item>
+          <item><rs>La Fontaine (Simon de)</rs>, <ref>47</ref>.</item>
+          <item><rs>La Fosse (l'abbé de)</rs>, <ref><hi rend="sc">liv</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Lagny-le-Sec</rs>, <ref><hi rend="sc">v</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">xxxvi</hi></ref>, <ref><hi rend="sc">xlii</hi></ref>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>, <ref><hi rend="sc">xlix</hi></ref>, <ref><hi rend="sc">lviii</hi></ref>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxiv</hi></ref>, <ref><hi rend="sc">lxv</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>, <ref><hi rend="sc">lxxx</hi></ref>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref>5</ref>, <ref>6</ref>, <ref>9</ref>, <ref>12</ref>, <ref>13</ref>, <ref>37</ref>, <ref>57</ref>, <ref>60</ref>, <ref>61</ref>, <ref>62</ref>.</item>
+          <item><rs>La Grange (Gabriel de)</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>
+          <item><rs>La Grevache</rs>, <ref><hi rend="sc">lxvi</hi></ref>.</item>
+          <item><rs>Laigneville</rs>, <ref><hi rend="sc">xxxii</hi></ref>, <ref><hi rend="sc">lx</hi></ref>, <ref>39</ref>, <ref>61</ref>.</item>
+          <item><rs>La Londe (Simon de)</rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlv</hi></ref>.</item>
+          <item><rs>La Mire, Olivier</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>
+          <item><rs>La Mothe Houdancourt (Henri de)</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Langlois, Geoffroy</rs>, <ref>47</ref>.</item>
+          <item><rs>Lanier, Jean</rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>
+          <item><rs>La Rocque (Michel de)</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>
+          <item><rs>La Rue (Antoine de)</rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>
+          <item><rs>Latabonde, Ascelin</rs>, <ref>28</ref>.</item>
+          <item><rs>Lathome, Barthélemy</rs>, <ref>17</ref>.</item>
+          <item><rs>Launoy (Mahon de)</rs>, <ref>37</ref>.</item>
+          <item><rs>Launoy (Pierre de)</rs>, <ref>37</ref>.</item>
+          <item><rs>Laval, Jean-Baptiste</rs>, <ref>60</ref>.</item>
+          <item><rs>Laval (Louise de)</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Lavaur</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>
+          <item><rs>Le Barbier, Etienne</rs>, <ref><hi rend="sc">xxix</hi></ref>.</item>
+          <item><rs>Le Bel, Baltazard</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Le Bel Philippe</rs>, <ref><hi rend="sc">lxviii</hi></ref>, <ref><hi rend="sc">lxxi</hi></ref>.</item>
+          <item><rs>Le Bon, Gabriel</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>
+          <item><rs>Le Camus, Pierre</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Le Clerc, Jean</rs>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxviii</hi></ref>, <ref>43</ref>, <ref>58</ref>.</item>
+          <item><rs>Le Clerc Louis, prieur</rs>, <ref><hi rend="sc">liv</hi></ref>, <ref><hi rend="sc">lviii</hi></ref>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxiv</hi></ref>, <ref><hi rend="sc">lxviii</hi></ref>, <ref>43</ref>, <ref>58</ref>.</item>
+          <item><rs>Le Clerc, Nicolas</rs>, <ref><hi rend="sc">lxi</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Le Coq, Pierre</rs>, <ref>14</ref>, <ref>19</ref>.</item>
+          <item><rs>Le Couturier, Godefroy</rs>, <ref><hi rend="sc">xxxvii</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Le Grancher, Adam</rs>, <ref>18</ref>.</item>
+          <item><rs>Le Grancher Marie</rs>, <ref>18</ref>.</item>
+          <item><rs>Le Gras, Louis, prieur</rs>, <ref><hi rend="sc">lxxvi</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Le Large, Thomas, prieur</rs>, <ref><hi rend="sc">lxviii</hi></ref>, <ref>43</ref>.</item>
+          <item><rs>Lenoncourt (Robert de), cardinal</rs>, <ref><hi rend="sc">l</hi></ref>, <ref><hi rend="sc">li</hi></ref>.</item>
+          <item><rs>Léon X, pape</rs>, <ref><hi rend="sc">xliii</hi></ref>, <ref><hi rend="sc">xliv</hi></ref>.</item>
+          <item><rs>Lepage, Pierre</rs>, <ref><hi rend="sc">xxiv</hi></ref>, <ref>59</ref>, <ref>60</ref>.</item>
+          <item><rs>Le Riche, Claude</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>
+          <item><rs>Le Roy, François</rs>, <ref><hi rend="sc">lxv</hi></ref>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Le Roy Jean</rs>, <ref><hi rend="sc">xxxvii</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Le Tannois, François</rs>, <ref><hi rend="sc">lxxix</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Lin et chanvre (dîme sur le)</rs>, <ref>36</ref>.</item>
+          <item><rs>Loisel, Claude</rs>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>.</item>
+          <item><rs>Lorfelin, Durand</rs>, <ref>26</ref>.</item>
+          <item><rs>Louis XI, roi</rs>, <ref><hi rend="sc">xxxviii</hi></ref>.</item>
+          <item><rs>Luillier, Philibert</rs>, <ref><hi rend="sc">lxiv</hi></ref>.</item>
+          <item><rs>Lys (Jeanne du)</rs>, <ref><hi rend="sc">xli</hi></ref>.</item>
+          <item>M</item>
+          <item><rs>Maillac de Sacquenville (Louis de)</rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>
+          <item><rs>Maillard, Pierre, chapelain du Plessier</rs>, <ref>32</ref>.</item>
+          <item><rs>Marcellot, Jean</rs>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxiii</hi></ref>.</item>
+          <item><rs>Maison à Cinqueux</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>6</ref>.</item>
+          <item><rs>Maison à Rieux</rs>, <ref>11</ref>, <ref>12</ref>, <ref>21</ref>, <ref>22</ref>.</item>
+          <item><rs>Maison à Senlis, hors la porte Saint-Sanctin</rs>, <ref>16</ref>, <ref>17</ref>.</item>
+          <item><rs>Maison à Saint-Christophe</rs>, <ref>26</ref>, <ref>27</ref>.</item>
+          <item><rs>Marie Choisel</rs>, <ref>16</ref>.</item>
+          <item><rs>Martineau, Guillaume, prieur</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref>43</ref>, <ref>44</ref>.</item>
+          <item><rs>Mathieu, abbé de Saint-Denys</rs>, <ref><hi rend="sc">x</hi></ref>, <ref>30</ref>.</item>
+          <item><rs>Mathieu chapelain</rs>, <ref><hi rend="sc">xvi</hi></ref>, <ref>37</ref>.</item>
+          <item><rs>Mauny (Jean de), potier d'étain</rs>, <ref><hi rend="sc">xxix</hi></ref>, <ref><hi rend="sc">xxx</hi></ref>, <ref><hi rend="sc">xxxii</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>
+          <item><rs>Maupeou, notaire</rs>, <ref>43</ref>.</item>
+          <item><rs>Meaux (doyen de)</rs>, <ref>37</ref>.</item>
+          <item><rs>Médicis (Jules de), cardinal</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>
+          <item><rs>Meldensis pagus</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">v</hi></ref>, <ref>1</ref>, <ref>4</ref>, <ref>9</ref>.</item>
+          <item><rs>Mêlée, rixe</rs>, <ref>23</ref>.</item>
+          <item><rs>Mello, baronnie</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Melun (Philippe de)</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>
+          <item><rs>Menou (Daniel de)</rs>, <ref><hi rend="sc">lxxxv</hi></ref>.</item>
+          <pb n="70"/>
+          <item><rs>Menou (Louis de), prieur</rs>, <ref><hi rend="sc">lxxix</hi></ref>, <ref><hi rend="sc">lxxxii</hi></ref>, <ref>44</ref>, <ref>59</ref>, <ref>62</ref>.</item>
+          <item><rs>Merrain</rs>, <ref><hi rend="sc">xx</hi></ref>.</item>
+          <item><rs>Mesnil (Gautier du)</rs>, <ref>19</ref>.</item>
+          <item><rs>Michy (Gérard de)</rs>, <ref><hi rend="sc">xlv</hi></ref>.</item>
+          <item><rs>Minos, Claudius</rs>, <ref><hi rend="sc">lx</hi></ref>, <ref>59</ref>.</item>
+          <item><rs>Milon, prieur de la Charité</rs>, <ref>29</ref>.</item>
+          <item><rs>Mogneville</rs>, <ref><hi rend="sc">xxxii</hi></ref>.</item>
+          <item><rs>Moivinet (fief de)</rs>, <ref><hi rend="sc">lxviii</hi></ref>, <ref>61</ref>.</item>
+          <item><rs>Moncel (Dames du)</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>
+          <item><rs>Moncornet (Gérard de)</rs>, <ref><hi rend="sc">xv</hi></ref>.</item>
+          <item><rs>Montaigne (Saincturion de la)</rs>, <ref><hi rend="sc">lxvi</hi></ref>.</item>
+          <item><rs>Montaigny (Jean de)</rs>, <ref><hi rend="sc">xl</hi></ref>.</item>
+          <item><rs>Montataire</rs>, <ref>6</ref>.</item>
+          <item><rs>Montaulnay (Etienne de)</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Moreau, François</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>
+          <item><rs>Mory (Gui de), prieur</rs>, <ref><hi rend="sc">xxiv</hi></ref>, <ref><hi rend="sc">xxv</hi></ref>.</item>
+          <item><rs>Mouchy-le-Châtel, baronnie</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Moulin de l'Evêché</rs>, <ref>26</ref>.</item>
+          <item><rs>Mouton (Jean du)</rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>
+          <item>N</item>
+          <item><rs>Narbonne Pelet (Claude de)</rs>, <ref><hi rend="sc">lxxxvi</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Narbonne Pelet</rs>. </item><item><rs><ref><hi rend="sc">lxxxv</hi></ref>, (Joachim de)</rs>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref>44</ref>.</item>
+          <item><rs>Neuville-en-Hez (la)</rs>, <ref><hi rend="sc">xvi</hi></ref>, <ref>37</ref>.</item>
+          <item><rs>Nicolas, prieur</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>9</ref>, <ref>41</ref>.</item>
+          <item><rs>Nielle (Simon de)</rs>, <ref><hi rend="sc">xi</hi></ref>, <ref>30</ref>.</item>
+          <item><rs>Noë Saint-Remy</rs>, <ref>25</ref>.</item>
+          <item><rs>Nogent (Hémard de)</rs>, <ref>31</ref>.</item>
+          <item><rs>Notre-Dame de Senlis</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref>4</ref>.</item>
+          <item><rs>Noyal, Magdelaine</rs>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>
+          <item>O</item>
+          <item><rs>Official de Beauvais</rs>, <ref>32</ref>.</item>
+          <item><rs>Official de Meaux</rs>, <ref><hi rend="sc">vi</hi></ref>, <ref>9</ref>.</item>
+          <item><rs>Official de Senlis</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref>9</ref>, <ref>12</ref>, <ref>26</ref>, <ref>27</ref>, <ref>28</ref>, <ref>29</ref>.</item>
+          <item><rs>Ognon</rs>, <ref>60</ref>.</item>
+          <item><rs>Olland, chantre</rs>, <ref>6</ref>.</item>
+          <item><rs>Olland prévôt</rs>, <ref>6</ref>.</item>
+          <item>P</item>
+          <item><rs>Pacy (Pierre de)</rs>, <ref><hi rend="sc">xix</hi></ref>, <ref><hi rend="sc">xxii</hi></ref>, <ref>54</ref>.</item>
+          <item><rs>Pairs</rs>, <ref>24</ref>, <ref>25</ref>.</item>
+          <item><rs>Parent, Christophe</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Parent Claude</rs>, <ref><hi rend="sc">xxviii</hi></ref>.</item>
+          <item><rs>Parent Antoine</rs>, <ref><hi rend="sc">xxix</hi></ref>, <ref><hi rend="sc">xlii</hi></ref>, <ref><hi rend="sc">liii</hi></ref>, <ref>41</ref>, <ref>57</ref>.</item>
+          <item><rs>Parent Zacharie</rs>, <ref><hi rend="sc">xxviii</hi></ref>, <ref><hi rend="sc">xxix</hi></ref>, <ref><hi rend="sc">xlii</hi></ref>, <ref><hi rend="sc">xlviii</hi></ref>, <ref><hi rend="sc">xlix</hi></ref>, <ref><hi rend="sc">l</hi></ref>, <ref>40</ref>, <ref>50</ref>, <ref>57</ref>.</item>
+          <item><rs>Parvi, Guillaume, évêque</rs>, <ref><hi rend="sc">xlv</hi></ref>.</item>
+          <item><rs>Pasnage (droit de)</rs>, <ref>31</ref>.</item>
+          <item><rs>Past</rs>, <ref>24</ref>, <ref>25</ref>.</item>
+          <item><rs>Pâturage</rs>, <ref>31</ref>.</item>
+          <item><rs>Paul II, pape</rs>, <ref><hi rend="sc">xxxi</hi></ref>.</item>
+          <item><rs>Pennet, Philippe, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref><hi rend="sc">liii</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Périn, curé du Plessier-le-Vicomte</rs>, <ref>38</ref>.</item>
+          <item><rs>Peton, Mathieu, curé</rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>
+          <item><rs>Peton Mathurin</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>
+          <item><rs>Philippe</rs>, <hi rend="sup">er</hi>, roi, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">iv</hi></ref>, <ref><hi rend="sc">v</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref>I. 1</ref>, <ref>I. 3</ref>, <ref>I. 4</ref>, <ref>I. 5</ref>.</item>
+          <item><rs>Philippe III, le Hardi</rs>, <ref><hi rend="sc">x</hi></ref>, <ref><hi rend="sc">xi</hi></ref>, <ref>29</ref>, <ref>56</ref>.</item>
+          <item><rs>Picquet, Nicolas, sergent</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Pierre, prieur</rs>, <ref><hi rend="sc">x</hi></ref>, <ref>28</ref>, <ref>29</ref>, <ref>31</ref>, <ref>41</ref>.</item>
+          <item><rs>Pierre qui corne (la)</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>
+          <item><rs>Pierre de la Brosse, prieur</rs>, <ref><hi rend="sc">xxvii</hi></ref>, <ref>41</ref>.</item>
+          <item><rs>Pierre, fils de Waleran</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Pierre de prés</rs>, <ref>7</ref>.</item>
+          <item><rs>Piétrequin, Pierre</rs>, <ref><hi rend="sc">lxxvii</hi></ref>.</item>
+          <item><rs>Pilori</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Pirlot, Jacques</rs>, <ref><hi rend="sc">lxxx</hi></ref>.</item>
+          <item><rs>Plége</rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>
+          <item><rs>Plessis-Belleville (le)</rs>, <ref>8</ref>, <ref>12</ref>, <ref>60</ref>, <ref>61</ref>.</item>
+          <item><rs>Plessis-Choisel (le)</rs>, <ref>17</ref>.</item>
+          <item><rs>Plessis (Jean du), Gruyer</rs>, <ref><hi rend="sc">x</hi></ref>, <ref>19</ref>, <ref>29</ref>, <ref>30</ref>, <ref>31</ref>, <ref>56</ref>.</item>
+          <item><rs>Poitevine ou picte</rs>, <ref>28</ref>.</item>
+          <item><rs>Pompoint</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">xv</hi></ref>, <ref><hi rend="sc">xxii</hi></ref>, <ref><hi rend="sc">xxiv</hi></ref>, <ref><hi rend="sc">xlix</hi></ref>, <ref>1</ref>, <ref>4</ref>, <ref>24</ref>, <ref>25</ref>, <ref>35</ref>, <ref>36</ref>, <ref>37</ref>, <ref>38</ref>.</item>
+          <item><rs>Pompoint, Guillaume (de), écuyer</rs>, <ref>27</ref>.</item>
+          <item><rs>Pompoint Pierre (de)</rs>, <ref>38</ref>.</item>
+          <item><rs>Ponce d'Ambon, grand-maître des Templiers</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>12</ref>.</item>
+          <item><rs>Pont-Sainte-Maxence</rs>, <ref>1</ref>, <ref>4</ref>, <ref>49</ref>, <ref>50</ref>.</item>
+          <item><rs>Pontoise</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Porte-l'Eguillère, à Senlis</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>
+          <item><rs>Potier, Nicolas, sieur de la Mairie</rs>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>
+          <item><rs>Prédeseigle, René, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref><hi rend="sc">lii</hi></ref>, <ref><hi rend="sc">liii</hi></ref>.</item>
+          <item><rs>Pressoir, à Rieux</rs>, <ref>11</ref>.</item>
+          <item><rs>Prévost, Etienne, prieur</rs>, <ref>41</ref>.</item>
+          <item><rs>Prévôt de Clermont</rs>, <ref><hi rend="sc">xiv</hi></ref>, <ref>37</ref>.</item>
+          <item><rs>Prévôt de Clermont de Senlis</rs>, <ref><hi rend="sc">xxvi</hi></ref>, <ref>30</ref>, <ref>31</ref>.</item>
+          <pb n="71"/>
+          <item><rs>Prévôt de Pont</rs>, <ref><hi rend="sc">xxiv</hi></ref>, <ref>24</ref>.</item>
+          <item><rs>Prieurs de Saint-Christophe</rs>, <ref>41</ref>, <ref>45</ref>.</item>
+          <item><rs>Prise de possession</rs>, <ref>50</ref>.</item>
+          <item><rs>Privilége royal, en faveur de l'abbaye</rs>, <ref>3</ref>.</item>
+          <item><rs>Provisions du prieuré</rs>, <ref>50</ref>.</item>
+          <item>R</item>
+          <item><rs>Rainaldus, Renaud, fils de Wateran</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">v</hi></ref>, <ref>1</ref>, <ref>3</ref>.</item>
+          <item><rs>Rainaldus</rs>, <ref>5</ref>.</item>
+          <item><rs>Raoul, comte de Clermont</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>6</ref>.</item>
+          <item><rs>Raoul, prieur de Saint-Christophe</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>6</ref>, <ref>41</ref>.</item>
+          <item><rs>Raoul II, prieur</rs>, <ref><hi rend="sc">ix</hi></ref>.</item>
+          <item><rs>Raoul du Bosc</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Redevance en grains à Lagny-le-Sec</rs>, <ref>15</ref>.</item>
+          <item><rs>Regnault, curé de Fleurines</rs>, <ref>47</ref>.</item>
+          <item><rs>Regnault de Luzarches, curé de Rieux</rs>, <ref><hi rend="sc">xii</hi></ref>, <ref>11</ref>.</item>
+          <item><rs>Renauld, de Montigny</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>7</ref>, <ref>8</ref>.</item>
+          <item><rs>Rente à Villemétrie</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref>9</ref>, <ref>10</ref>.</item>
+          <item><rs>Reuil</rs>, <ref>13</ref>.</item>
+          <item><rs>Ribergau, Antoine (de)</rs>, <ref>61</ref>.</item>
+          <item><rs>Richilde, serve, à Pont</rs>, <ref><hi rend="sc">iii</hi></ref>.</item>
+          <item><rs>Rieux</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">iv</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref><hi rend="sc">xii</hi></ref>, <ref><hi rend="sc">xiv</hi></ref>, <ref>1</ref>, <ref>4</ref>, <ref>11</ref>, <ref>21</ref>, <ref>22</ref>, <ref>23</ref>.</item>
+          <item><rs>Rieux Agnès (de)</rs>, <ref>32</ref>.</item>
+          <item><rs>Rieux Nouvion (de)</rs>, <ref>32</ref>.</item>
+          <item><rs>Robert, évêque de Beauvais</rs>, <ref><hi rend="sc">xii</hi></ref>.</item>
+          <item><rs>Robert</rs>. </item><item><rs><ref><hi rend="sc">vii</hi></ref>, de Nevers</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>15</ref>.</item>
+          <item><rs>Rogerie, Jean</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Rostolum, Rotheleu</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref>4</ref>.</item>
+          <item><rs>Rouen, église (de)</rs>, <ref>35</ref>.</item>
+          <item><rs>Royaumont, abbé (de)</rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>
+          <item>S</item>
+          <item><rs>Sailleville, Sageville</rs>, <ref>39</ref>, <ref>60</ref>.</item>
+          <item><rs>Saingue ou Samgas, Antoine</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>
+          <item><rs>Saint-Adrien de Béthisy</rs>, <ref><hi rend="sc">ii</hi></ref>.</item>
+          <item><rs>Saint-Christophe, prieuré</rs>, <ref>1</ref>, <ref>3</ref>, <ref>4</ref>, <ref>5</ref>, <ref>6</ref>.</item>
+          <item><rs>Saint-Corneille de Compiègne</rs>, <ref>25</ref>.</item>
+          <item><rs>Saint-Frambauld</rs>, <ref><hi rend="sc">vi</hi></ref>.</item>
+          <item><rs>Saint-Leu (François de)</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+          <item><rs>Saint-Leu-d'Esserent</rs>, <ref><hi rend="sc">lvii</hi></ref>, <ref>35</ref>, <ref>37</ref>.</item>
+          <item><rs>Saint-Martin-des-Champs</rs>, <ref><hi rend="sc">xlii</hi></ref>.</item>
+          <item><rs>Saint-Martin-de-Mitry</rs>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>
+          <item><rs>Saint-Martin-Longuau</rs>, <ref><hi rend="sc">xxviii</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Saint-Maurice de Senlis</rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Saint-Médard de Soissons</rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>
+          <item><rs>Saint-Pierre de Beauvais</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref>1</ref>, <ref>3</ref>.</item>
+          <item><rs>Saint-Pierre-Pontpoint</rs>, <ref><hi rend="sc">xlviii</hi></ref>, <ref><hi rend="sc">lvi</hi></ref>, <ref><hi rend="sc">lxxvi</hi></ref>, <ref>4</ref>.</item>
+          <item><rs>Saint-Quentin de Beauvais</rs>, <ref><hi rend="sc">ii</hi></ref>.</item>
+          <item><rs>Saint-Rieule de Senlis</rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>
+          <item><rs>Saint-Sanctin (porte)</rs>, <ref>16</ref>.</item>
+          <item><rs>Saint-Simon (Guillaume de)</rs>, <ref><hi rend="sc">xl</hi></ref>, <ref><hi rend="sc">xlii</hi></ref>.</item>
+          <item><rs>Saint-Vincent de Senlis</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">xliv</hi></ref>.</item>
+          <item><rs>Sainte-Marie-sur-Loire</rs>, <ref><hi rend="sc">i</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Salviati, Antoine-Marie</rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>
+          <item><rs>Sanctissima</rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>
+          <item><rs>Sarrasin, Pierre</rs>, <ref>26</ref>.</item>
+          <item><rs>Saumur (Pierre de)</rs>, <ref>16</ref>.</item>
+          <item><rs>Sébert, Alexandre</rs>, <ref>60</ref>.</item>
+          <item><rs>Scrannus, clerc</rs>, <ref>25</ref>.</item>
+          <item><rs>Ségaud, prévôt</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Séguin, François</rs>, <ref><hi rend="sc">lxxvii</hi></ref>.</item>
+          <item><rs>Selenensis curia</rs>, <ref>12</ref>.</item>
+          <item><rs>Sempigny (Thibault de)</rs>, <ref><hi rend="sc">xxviii</hi></ref>.</item>
+          <item><rs>Sénéchal (Jean le)</rs>, <ref>6</ref>.</item>
+          <item><rs>Senlis</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>.</item>
+          <item><rs>Senlis (maison à)</rs>, <ref>16</ref>.</item>
+          <item><rs>Sévin, Hugues, chantre en dignité</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>
+          <item><rs>Serment d'Antoine Parent</rs>, <ref>58</ref>.</item>
+          <item><rs>Sincueric, Sineverie, Sennevières</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>, <ref>4</ref>.</item>
+          <item><rs>Sponville, Ignace-Jannez</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>
+          <item>T</item>
+          <item><rs>Table de marbre</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>
+          <item><rs>Tancarville (comte de)</rs>, <ref><hi rend="sc">xxv</hi></ref>.</item>
+          <item><rs>Templiers à Lagny-le-Sec</rs>, <ref>12</ref>, <ref>15</ref>.</item>
+          <item><rs>Terric, chancelier</rs>, <ref>8</ref>.</item>
+          <item><rs>Tescelin, moine</rs>, <ref>6</ref>.</item>
+          <item><rs>Testelin, procureur de Fleurines</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>
+          <item><rs>Thévenin, Claude</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>
+          <item><rs>Thibault, Louis (chanoine)</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>
+          <item><rs>Thibault (comte de Blois)</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>7</ref>.</item>
+          <item><rs>Thibault (de Verneuil)</rs>, <ref>11</ref>, <ref>12</ref>.</item>
+          <item><rs>Thiers</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref>10</ref>.</item>
+          <item><rs>Thoré (M. de)</rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>
+          <pb n="72"/>
+          <item><rs>Tiraqueau, André</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Travers (droit de)</rs>, <ref><hi rend="sc">vii</hi></ref>, <ref>6</ref>.</item>
+          <item><rs>Troan (mesure de)</rs>, <ref>13</ref>.</item>
+          <item><rs>Troussebois, Etienne, prieur</rs>, <ref><hi rend="sc">xxii</hi></ref>, <ref><hi rend="sc">xxiii</hi></ref>, <ref><hi rend="sc">xxiv</hi></ref>, <ref>49</ref>.</item>
+          <item><rs>Tuilerie de Fleurines</rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>
+          <item><rs>Tumeny</rs>, <ref>48</ref>.</item>
+          <item>U</item>
+          <item><rs>Usages de Fleurines</rs>, <ref><hi rend="sc">lxxiv</hi></ref>.</item>
+          <item>V</item>
+          <item><rs>Vallery, Adam</rs>, <ref><hi rend="sc">lxix</hi></ref>.</item>
+          <item><rs>Valois</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Vély (Richard de)</rs>, <ref><hi rend="sc">xxi</hi></ref>.</item>
+          <item><rs>Vente Godard (La)</rs>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>
+          <item><rs>Verberie</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>
+          <item><rs>Verneuil (Thibault de)</rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>
+          <item><rs>Verneuil</rs>, <ref>60</ref>.</item>
+          <item><rs>Vérines (le sieur de)</rs>, <ref><hi rend="sc">lxvi</hi></ref>, <ref><hi rend="sc">lxvii</hi></ref>.</item>
+          <item><rs>Vest (Pierre de)</rs>, <ref>56</ref>.</item>
+          <item><rs>Viefville de Vignacourt (Adrien de la)</rs>, <ref><hi rend="sc">lxxx</hi></ref>.</item>
+          <item><rs>Vieuxcamp (Gui de), prieur</rs>, <ref><hi rend="sc">xxvi</hi></ref>, <ref><hi rend="sc">xxviii</hi></ref>, <ref>50</ref>.</item>
+          <item><rs>Villa Scabiosa (Pierre de)</rs>, <ref>20</ref>.</item>
+          <item><rs>Villemétrie (rente à)</rs>, <ref><hi rend="sc">viii</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref><hi rend="sc">x</hi></ref>, <ref><hi rend="sc">liii</hi></ref>, <ref><hi rend="sc">lix</hi></ref>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref><hi rend="sc">lxxxvii</hi></ref>, <ref>9</ref>, <ref>10</ref>, <ref>17</ref>, <ref>18</ref>, <ref>25</ref>, <ref>26</ref>, <ref>28</ref>, <ref>60</ref>.</item>
+          <item><rs>Villemétrie (Guiard de)</rs>, <ref><hi rend="sc">xii</hi></ref>.</item>
+          <item><rs>Villers (Simon de)</rs>, <ref><hi rend="sc">xiii</hi></ref>, <ref><hi rend="sc">xiv</hi></ref>, <ref>33</ref>.</item>
+          <item><rs>Villers (Gautier de)</rs>, <ref>17</ref>.</item>
+          <item><rs>Villers Safnt-Frambauld</rs>, <ref><hi rend="sc">xxxiii</hi></ref>.</item>
+          <item><rs>Villiers</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>
+          <item><rs>Villers-sous-Gaudelus</rs>, <ref>13</ref>.</item>
+          <item><rs>Vinnet (Louis de)</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>
+          <item><rs>Visite (droit de)</rs>, <ref>6</ref>.</item>
+          <item>W</item>
+          <item><rs>Waleran, fondateur du prieuré</rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">iv</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref>1</ref>, <ref>3</ref>, <ref>4</ref>, <ref>5</ref>.</item>
+          <item><rs>Walcot, abbé</rs>, <ref>6</ref>.</item>
+          <item><rs>Wautier, archidiacre</rs>, <ref>1</ref>, <ref>3</ref>.</item>
+          <item><rs>Waru (Jean de)</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>
+          <item><rs>Warin, Guérin</rs>, <ref><hi rend="sc">v</hi></ref>, <ref>5</ref>.</item>
+          <item><rs>Watrin, Jean</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>
+        </list>
+      </div></back>
   </text>
 </TEI>
