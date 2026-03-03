@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Orleans-S-Croix">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCOR-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -140,7 +140,7 @@
       </argument>
       <byline>Notice rédigée par Olivier Guyotjeannin avec l’aide de Thibaud Bouard et Magali
         Duchesne (juillet 2006).</byline>
-      <div xml:id="Orleans-S-Croix_etablissement" subtype="article">
+      <div xml:id="SCOR-EG_etablissement" subtype="article">
         <head>L’établissement</head>
         <div type="historique">
           <head>Historique</head>
@@ -191,7 +191,7 @@
         </div>
       </div>
 
-      <div xml:id="Orleans-S-Croix_archives" subtype="article">
+      <div xml:id="SCOR-EG_archives" subtype="article">
         <head>Orientation archivistique</head>
         <div type="chartrier">
           <head>Le chartrier</head>
@@ -235,7 +235,7 @@
         </div>
 
       </div>
-      <div xml:id="Orleans-S-Croix_biblio" subtype="article">
+      <div xml:id="SCOR-EG_biblio" subtype="article">
         <head>Orientation bibliographique</head>
         <p>Le chapitre a fait l’objet d’une étude minutieuse mais non publiée de
               <bibl><author>Georges CHENESSEAU</author>, <title>La cathédrale Sainte-Croix d’Orléans
@@ -248,7 +248,7 @@
             58-63.</bibl>
         </p>
       </div>
-      <div xml:id="Orleans-S-Croix_edition" subtype="article">
+      <div xml:id="SCOR-EG_edition" subtype="article">
         <head>L’édition</head>
         <div>
           <head>Les éditeurs : éléments biographiques</head>
@@ -578,7 +578,7 @@
       <head>Sainte-Croix d'Orléans</head>
       <group>
         <head>Cartulaire</head>
-        <text xml:id="Orleans-S-Croix_0001" n="I" subtype="article">
+        <text xml:id="SCOR-EG_0001" n="I" subtype="article">
           <pb n=""/>
           <front>
             <docDate>
@@ -667,7 +667,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0002" n="II" subtype="article">
+        <text xml:id="SCOR-EG_0002" n="II" subtype="article">
           <pb n="2"/>
           <front>
             <docDate>
@@ -736,7 +736,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0003" n="III" subtype="article">
+        <text xml:id="SCOR-EG_0003" n="III" subtype="article">
           <pb n="4"/>
           <front>
             <docDate>
@@ -820,7 +820,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0004" n="IV" subtype="article">
+        <text xml:id="SCOR-EG_0004" n="IV" subtype="article">
           <pb n="5"/>
           <front>
             <docDate>
@@ -892,7 +892,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0005" n="V" subtype="article">
+        <text xml:id="SCOR-EG_0005" n="V" subtype="article">
           <pb n="6"/>
           <front>
             <docDate>
@@ -1309,7 +1309,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0006" n="VI" subtype="article">
+        <text xml:id="SCOR-EG_0006" n="VI" subtype="article">
           <pb n="15"/>
           <front>
             <docDate>
@@ -1393,7 +1393,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0007" n="VII" subtype="article">
+        <text xml:id="SCOR-EG_0007" n="VII" subtype="article">
           <pb n="17"/>
           <front>
             <docDate>
@@ -1436,7 +1436,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0008" n="VIII" subtype="article">
+        <text xml:id="SCOR-EG_0008" n="VIII" subtype="article">
           <pb n="18"/>
           <front>
             <docDate>
@@ -1504,7 +1504,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0009" n="IX" subtype="article">
+        <text xml:id="SCOR-EG_0009" n="IX" subtype="article">
           <pb n="19"/>
           <front>
             <docDate>
@@ -1600,7 +1600,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0010" n="X" subtype="article">
+        <text xml:id="SCOR-EG_0010" n="X" subtype="article">
           <pb n="20"/>
           <front>
             <docDate>
@@ -1664,7 +1664,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0011" n="XI" subtype="article">
+        <text xml:id="SCOR-EG_0011" n="XI" subtype="article">
           <pb n="21"/>
           <front>
             <docDate>
@@ -1796,7 +1796,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0012" n="XII" subtype="article">
+        <text xml:id="SCOR-EG_0012" n="XII" subtype="article">
           <pb n="24"/>
           <front>
             <docDate>
@@ -1891,7 +1891,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0013" n="XIII" subtype="article">
+        <text xml:id="SCOR-EG_0013" n="XIII" subtype="article">
           <pb n="25"/>
           <front>
             <docDate>
@@ -1942,7 +1942,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0014" n="XIV" subtype="article">
+        <text xml:id="SCOR-EG_0014" n="XIV" subtype="article">
           <pb n="25"/>
           <front>
             <docDate>
@@ -2066,7 +2066,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0015" n="XV" subtype="article">
+        <text xml:id="SCOR-EG_0015" n="XV" subtype="article">
           <pb n="29"/>
           <front>
             <docDate>
@@ -2181,7 +2181,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0016" n="XVI" subtype="article">
+        <text xml:id="SCOR-EG_0016" n="XVI" subtype="article">
           <pb n="32"/>
           <front>
             <docDate>
@@ -2255,7 +2255,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0017" n="XVII" subtype="article">
+        <text xml:id="SCOR-EG_0017" n="XVII" subtype="article">
           <pb n="33"/>
           <front>
             <docDate>
@@ -2383,7 +2383,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0018" n="XVIII" subtype="article">
+        <text xml:id="SCOR-EG_0018" n="XVIII" subtype="article">
           <pb n="35"/>
           <front>
             <docDate>
@@ -2453,7 +2453,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0019" n="XIX" subtype="article">
+        <text xml:id="SCOR-EG_0019" n="XIX" subtype="article">
           <pb n="37"/>
           <front>
             <docDate>
@@ -2763,7 +2763,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0020" n="XX" subtype="article">
+        <text xml:id="SCOR-EG_0020" n="XX" subtype="article">
           <pb n="43"/>
           <front>
             <docDate>
@@ -2832,7 +2832,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0021" n="XXI" subtype="article">
+        <text xml:id="SCOR-EG_0021" n="XXI" subtype="article">
           <pb n="45"/>
           <front>
             <docDate>
@@ -2924,7 +2924,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0022" n="XXII" subtype="article">
+        <text xml:id="SCOR-EG_0022" n="XXII" subtype="article">
           <pb n="47"/>
           <front>
             <docDate>
@@ -3106,7 +3106,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0023" n="XXIII" subtype="article">
+        <text xml:id="SCOR-EG_0023" n="XXIII" subtype="article">
           <pb n="49"/>
           <front>
             <docDate>
@@ -3283,7 +3283,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0024" n="XXIV" subtype="article">
+        <text xml:id="SCOR-EG_0024" n="XXIV" subtype="article">
           <pb n="52"/>
           <front>
             <docDate>
@@ -3365,7 +3365,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0025" n="XXV" subtype="article">
+        <text xml:id="SCOR-EG_0025" n="XXV" subtype="article">
           <pb n="53"/>
           <front>
             <docDate>
@@ -3428,7 +3428,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0026" n="XXVI" subtype="article">
+        <text xml:id="SCOR-EG_0026" n="XXVI" subtype="article">
           <pb n="53"/>
           <front>
             <docDate>
@@ -3484,7 +3484,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0027" n="XXVII" subtype="article">
+        <text xml:id="SCOR-EG_0027" n="XXVII" subtype="article">
           <pb n="56"/>
           <front>
             <docDate>
@@ -3537,7 +3537,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0028" n="XXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0028" n="XXVIII" subtype="article">
           <pb n="57"/>
           <front>
             <docDate>
@@ -3590,7 +3590,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0029" n="XXIX" subtype="article">
+        <text xml:id="SCOR-EG_0029" n="XXIX" subtype="article">
           <pb n="57"/>
           <front>
             <docDate>
@@ -3692,7 +3692,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0030" n="XXX" subtype="article">
+        <text xml:id="SCOR-EG_0030" n="XXX" subtype="article">
           <pb n="59"/>
           <front>
             <docDate>
@@ -3751,7 +3751,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0031" n="XXXI" subtype="article">
+        <text xml:id="SCOR-EG_0031" n="XXXI" subtype="article">
           <pb n="59"/>
           <front>
             <docDate>
@@ -3804,7 +3804,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0032" n="XXXII" subtype="article">
+        <text xml:id="SCOR-EG_0032" n="XXXII" subtype="article">
           <pb n="59"/>
           <front>
             <docDate>
@@ -3855,7 +3855,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0033" n="XXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0033" n="XXXIII" subtype="article">
           <pb n="63"/>
           <front>
             <docDate>
@@ -3977,7 +3977,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0034" n="XXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0034" n="XXXIV" subtype="article">
           <pb n="66"/>
           <front>
             <docDate>
@@ -4097,7 +4097,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0035" n="XXXV" subtype="article">
+        <text xml:id="SCOR-EG_0035" n="XXXV" subtype="article">
           <pb n="68"/>
           <front>
             <docDate>
@@ -4186,7 +4186,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0036" n="XXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0036" n="XXXVI" subtype="article">
           <pb n="70"/>
           <front>
             <docDate>
@@ -4289,7 +4289,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0037" n="XXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0037" n="XXXVII" subtype="article">
           <pb n="72"/>
           <front>
             <docDate>
@@ -4398,7 +4398,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0038" n="XXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0038" n="XXXVIII" subtype="article">
           <pb n="74"/>
           <front>
             <docDate>
@@ -4531,7 +4531,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0039" n="XXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0039" n="XXXIX" subtype="article">
           <pb n="78"/>
           <front>
             <docDate>
@@ -4897,7 +4897,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0040" n="XL" subtype="article">
+        <text xml:id="SCOR-EG_0040" n="XL" subtype="article">
           <pb n="85"/>
           <front>
             <docDate>
@@ -4961,7 +4961,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0041" n="XLI" subtype="article">
+        <text xml:id="SCOR-EG_0041" n="XLI" subtype="article">
           <pb n="85"/>
           <front>
             <docDate>
@@ -5033,7 +5033,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0042" n="XLII" subtype="article">
+        <text xml:id="SCOR-EG_0042" n="XLII" subtype="article">
           <pb n="88"/>
           <front>
             <docDate>
@@ -5105,7 +5105,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0043" n="XLIII" subtype="article">
+        <text xml:id="SCOR-EG_0043" n="XLIII" subtype="article">
           <pb n="89"/>
           <front>
             <docDate>
@@ -5192,7 +5192,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0044" n="XLIIII" subtype="article">
+        <text xml:id="SCOR-EG_0044" n="XLIIII" subtype="article">
           <pb n="90"/>
           <front>
             <docDate>
@@ -5302,7 +5302,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0045" n="XLV" subtype="article">
+        <text xml:id="SCOR-EG_0045" n="XLV" subtype="article">
           <pb n="92"/>
           <front>
             <docDate>
@@ -5392,7 +5392,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0046" n="XLVI" subtype="article">
+        <text xml:id="SCOR-EG_0046" n="XLVI" subtype="article">
           <pb n="93"/>
           <front>
             <docDate>
@@ -5479,7 +5479,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0047" n="XLVII" subtype="article">
+        <text xml:id="SCOR-EG_0047" n="XLVII" subtype="article">
           <pb n="95"/>
           <front>
             <docDate>
@@ -5539,7 +5539,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0048" n="XLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0048" n="XLVIII" subtype="article">
           <pb n="96"/>
           <front>
             <docDate>
@@ -5633,7 +5633,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0049" n="XLIX" subtype="article">
+        <text xml:id="SCOR-EG_0049" n="XLIX" subtype="article">
           <pb n="97"/>
           <front>
             <docDate>
@@ -5719,7 +5719,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0050" n="L" subtype="article">
+        <text xml:id="SCOR-EG_0050" n="L" subtype="article">
           <pb n="99"/>
           <front>
             <docDate>
@@ -5817,7 +5817,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0051" n="LI" subtype="article">
+        <text xml:id="SCOR-EG_0051" n="LI" subtype="article">
           <pb n="101"/>
           <front>
             <docDate>
@@ -5917,7 +5917,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0052" n="LII" subtype="article">
+        <text xml:id="SCOR-EG_0052" n="LII" subtype="article">
           <pb n="103"/>
           <front>
             <docDate>
@@ -6012,7 +6012,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0053" n="LIII" subtype="article">
+        <text xml:id="SCOR-EG_0053" n="LIII" subtype="article">
           <pb n="104"/>
           <front>
             <docDate>
@@ -6107,7 +6107,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0054" n="LIV" subtype="article">
+        <text xml:id="SCOR-EG_0054" n="LIV" subtype="article">
           <pb n="106"/>
           <front>
             <docDate>
@@ -6177,7 +6177,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0055" n="LV" subtype="article">
+        <text xml:id="SCOR-EG_0055" n="LV" subtype="article">
           <pb n="107"/>
           <front>
             <docDate>
@@ -6249,7 +6249,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0056" n="LVI" subtype="article">
+        <text xml:id="SCOR-EG_0056" n="LVI" subtype="article">
           <pb n="108"/>
           <front>
             <docDate>
@@ -6331,7 +6331,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0057" n="LVII" subtype="article">
+        <text xml:id="SCOR-EG_0057" n="LVII" subtype="article">
           <pb n="109"/>
           <front>
             <docDate>
@@ -6399,7 +6399,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0058" n="LVIII" subtype="article">
+        <text xml:id="SCOR-EG_0058" n="LVIII" subtype="article">
           <pb n="109"/>
           <front>
             <docDate>
@@ -6471,7 +6471,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0059" n="LIX" subtype="article">
+        <text xml:id="SCOR-EG_0059" n="LIX" subtype="article">
           <pb n="112"/>
           <front>
             <docDate>
@@ -6554,7 +6554,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0060" n="LX" subtype="article">
+        <text xml:id="SCOR-EG_0060" n="LX" subtype="article">
           <pb n="113"/>
           <front>
             <docDate>
@@ -6614,7 +6614,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0061" n="LXI" subtype="article">
+        <text xml:id="SCOR-EG_0061" n="LXI" subtype="article">
           <pb n="115"/>
           <front>
             <docDate>
@@ -6813,7 +6813,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0062" n="LXII" subtype="article">
+        <text xml:id="SCOR-EG_0062" n="LXII" subtype="article">
           <pb n="120"/>
           <front>
             <docDate>
@@ -6943,7 +6943,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0063" n="LXIII" subtype="article">
+        <text xml:id="SCOR-EG_0063" n="LXIII" subtype="article">
           <pb n="122"/>
           <front>
             <docDate>
@@ -7033,7 +7033,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0064" n="LXIV" subtype="article">
+        <text xml:id="SCOR-EG_0064" n="LXIV" subtype="article">
           <pb n="124"/>
           <front>
             <docDate>
@@ -7237,7 +7237,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0065" n="LXV" subtype="article">
+        <text xml:id="SCOR-EG_0065" n="LXV" subtype="article">
           <pb n="129"/>
           <front>
             <docDate>
@@ -7329,7 +7329,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0066" n="LXVI" subtype="article">
+        <text xml:id="SCOR-EG_0066" n="LXVI" subtype="article">
           <pb n="131"/>
           <front>
             <docDate>
@@ -7474,7 +7474,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0067" n="LXVII" subtype="article">
+        <text xml:id="SCOR-EG_0067" n="LXVII" subtype="article">
           <pb n="133"/>
           <front>
             <docDate>
@@ -7606,7 +7606,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0068" n="LXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0068" n="LXVIII" subtype="article">
           <pb n="135"/>
           <front>
             <docDate>
@@ -7682,7 +7682,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0069" n="LXIX" subtype="article">
+        <text xml:id="SCOR-EG_0069" n="LXIX" subtype="article">
           <pb n="136"/>
           <front>
             <docDate>
@@ -7753,7 +7753,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0070" n="LXX" subtype="article">
+        <text xml:id="SCOR-EG_0070" n="LXX" subtype="article">
           <pb n="138"/>
           <front>
             <docDate>
@@ -7798,7 +7798,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0071" n="LXXI" subtype="article">
+        <text xml:id="SCOR-EG_0071" n="LXXI" subtype="article">
           <pb n="139"/>
           <front>
             <docDate>
@@ -7848,7 +7848,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0072" n="LXXII" subtype="article">
+        <text xml:id="SCOR-EG_0072" n="LXXII" subtype="article">
           <pb n="140"/>
           <front>
             <docDate>
@@ -7987,7 +7987,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0073" n="LXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0073" n="LXXIII" subtype="article">
           <pb n="143"/>
           <front>
             <docDate>
@@ -8042,7 +8042,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0074" n="LXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0074" n="LXXIV" subtype="article">
           <pb n="144"/>
           <front>
             <docDate>
@@ -8117,7 +8117,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0075" n="LXXV" subtype="article">
+        <text xml:id="SCOR-EG_0075" n="LXXV" subtype="article">
           <pb n="145"/>
           <front>
             <docDate>
@@ -8208,7 +8208,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0076" n="LXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0076" n="LXXVI" subtype="article">
           <pb n="147"/>
           <front>
             <docDate>
@@ -8294,7 +8294,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0077" n="LXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0077" n="LXXVII" subtype="article">
           <pb n="149"/>
           <front>
             <docDate>
@@ -8351,7 +8351,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0078" n="LXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0078" n="LXXVIII" subtype="article">
           <pb n="150"/>
           <front>
             <docDate>
@@ -8411,7 +8411,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0079" n="LXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0079" n="LXXIX" subtype="article">
           <pb n="151"/>
           <front>
             <docDate>
@@ -8533,7 +8533,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0080" n="LXXX" subtype="article">
+        <text xml:id="SCOR-EG_0080" n="LXXX" subtype="article">
           <pb n="154"/>
           <front>
             <docDate>
@@ -8595,7 +8595,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0081" n="LXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0081" n="LXXXI" subtype="article">
           <pb n="154"/>
           <front>
             <docDate>
@@ -8641,7 +8641,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0082" n="LXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0082" n="LXXXII" subtype="article">
           <pb n="154"/>
           <front>
             <docDate>
@@ -8715,7 +8715,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0083" n="LXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0083" n="LXXXIII" subtype="article">
           <pb n="158"/>
           <front>
             <docDate>
@@ -8839,7 +8839,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0084" n="LXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0084" n="LXXXIV" subtype="article">
           <pb n="160"/>
           <front>
             <docDate>
@@ -8890,7 +8890,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0085" n="LXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0085" n="LXXXV" subtype="article">
           <pb n="160"/>
           <front>
             <docDate>
@@ -8958,7 +8958,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0086" n="LXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0086" n="LXXXVI" subtype="article">
           <pb n="163"/>
           <front>
             <docDate>
@@ -9104,7 +9104,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0087" n="LXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0087" n="LXXXVII" subtype="article">
           <pb n="166"/>
           <front>
             <docDate>
@@ -9197,7 +9197,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0088" n="LXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0088" n="LXXXVIII" subtype="article">
           <pb n="169"/>
           <front>
             <docDate>
@@ -9286,7 +9286,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0089" n="LXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0089" n="LXXXIX" subtype="article">
           <pb n="170"/>
           <front>
             <docDate>
@@ -9334,7 +9334,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0090" n="XC" subtype="article">
+        <text xml:id="SCOR-EG_0090" n="XC" subtype="article">
           <pb n="170"/>
           <front>
             <docDate>
@@ -9415,7 +9415,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0091" n="XCI" subtype="article">
+        <text xml:id="SCOR-EG_0091" n="XCI" subtype="article">
           <pb n="173"/>
           <front>
             <docDate>
@@ -9467,7 +9467,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0092" n="XCII" subtype="article">
+        <text xml:id="SCOR-EG_0092" n="XCII" subtype="article">
           <pb n="174"/>
           <front>
             <docDate>
@@ -9542,7 +9542,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0093" n="XCIII" subtype="article">
+        <text xml:id="SCOR-EG_0093" n="XCIII" subtype="article">
           <pb n="176"/>
           <front>
             <docDate>
@@ -9585,7 +9585,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0094" n="XCIV" subtype="article">
+        <text xml:id="SCOR-EG_0094" n="XCIV" subtype="article">
           <pb n="176"/>
           <front>
             <docDate>
@@ -9637,7 +9637,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0095" n="XCV" subtype="article">
+        <text xml:id="SCOR-EG_0095" n="XCV" subtype="article">
           <pb n="177"/>
           <front>
             <docDate>
@@ -9682,7 +9682,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0096" n="XCVI" subtype="article">
+        <text xml:id="SCOR-EG_0096" n="XCVI" subtype="article">
           <pb n="178"/>
           <front>
             <docDate>
@@ -9725,7 +9725,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0097" n="XCVII" subtype="article">
+        <text xml:id="SCOR-EG_0097" n="XCVII" subtype="article">
           <pb n="178"/>
           <front>
             <docDate>
@@ -9771,7 +9771,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0098" n="XCVIII" subtype="article">
+        <text xml:id="SCOR-EG_0098" n="XCVIII" subtype="article">
           <pb n="178"/>
           <front>
             <docDate>
@@ -9837,7 +9837,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0099" n="XCIX" subtype="article">
+        <text xml:id="SCOR-EG_0099" n="XCIX" subtype="article">
           <pb n="180"/>
           <front>
             <docDate>
@@ -9887,7 +9887,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0100" n="C" subtype="article">
+        <text xml:id="SCOR-EG_0100" n="C" subtype="article">
           <pb n="180"/>
           <front>
             <docDate>
@@ -9946,7 +9946,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0101" n="CI" subtype="article">
+        <text xml:id="SCOR-EG_0101" n="CI" subtype="article">
           <pb n="183"/>
           <front>
             <docDate>
@@ -10014,7 +10014,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0102" n="CII" subtype="article">
+        <text xml:id="SCOR-EG_0102" n="CII" subtype="article">
           <pb n="184"/>
           <front>
             <docDate>
@@ -10065,7 +10065,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0103" n="CIII" subtype="article">
+        <text xml:id="SCOR-EG_0103" n="CIII" subtype="article">
           <pb n="185"/>
           <front>
             <docDate>
@@ -10160,7 +10160,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0104" n="CIV" subtype="article">
+        <text xml:id="SCOR-EG_0104" n="CIV" subtype="article">
           <pb n="186"/>
           <front>
             <docDate>
@@ -10221,7 +10221,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0105" n="CV" subtype="article">
+        <text xml:id="SCOR-EG_0105" n="CV" subtype="article">
           <pb n="187"/>
           <front>
             <docDate>
@@ -10275,7 +10275,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0106" n="CVI" subtype="article">
+        <text xml:id="SCOR-EG_0106" n="CVI" subtype="article">
           <pb n="188"/>
           <front>
             <docDate>
@@ -10325,7 +10325,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0107" n="CVII" subtype="article">
+        <text xml:id="SCOR-EG_0107" n="CVII" subtype="article">
           <pb n="189"/>
           <front>
             <docDate>
@@ -10371,7 +10371,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0108" n="CVIII" subtype="article">
+        <text xml:id="SCOR-EG_0108" n="CVIII" subtype="article">
           <pb n="190"/>
           <front>
             <docDate>
@@ -10426,7 +10426,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0109" n="CIX" subtype="article">
+        <text xml:id="SCOR-EG_0109" n="CIX" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10484,7 +10484,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0110" n="CX" subtype="article">
+        <text xml:id="SCOR-EG_0110" n="CX" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10536,7 +10536,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0111" n="CXI" subtype="article">
+        <text xml:id="SCOR-EG_0111" n="CXI" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10593,7 +10593,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0112" n="CXII" subtype="article">
+        <text xml:id="SCOR-EG_0112" n="CXII" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10636,7 +10636,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0113" n="CXIII" subtype="article">
+        <text xml:id="SCOR-EG_0113" n="CXIII" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10680,7 +10680,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0114" n="CXIV" subtype="article">
+        <text xml:id="SCOR-EG_0114" n="CXIV" subtype="article">
           <pb n="191"/>
           <front>
             <docDate>
@@ -10727,7 +10727,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0115" n="CXV" subtype="article">
+        <text xml:id="SCOR-EG_0115" n="CXV" subtype="article">
           <pb n="196"/>
           <front>
             <docDate>
@@ -10806,7 +10806,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0116" n="CXVI" subtype="article">
+        <text xml:id="SCOR-EG_0116" n="CXVI" subtype="article">
           <pb n="197"/>
           <front>
             <docDate>
@@ -10900,7 +10900,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0117" n="CXVII" subtype="article">
+        <text xml:id="SCOR-EG_0117" n="CXVII" subtype="article">
           <pb n="199"/>
           <front>
             <docDate>
@@ -10959,7 +10959,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0118" n="CXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0118" n="CXVIII" subtype="article">
           <pb n="200"/>
           <front>
             <docDate>
@@ -11002,7 +11002,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0119" n="CXIX" subtype="article">
+        <text xml:id="SCOR-EG_0119" n="CXIX" subtype="article">
           <pb n="200"/>
           <front>
             <docDate>
@@ -11102,7 +11102,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0120" n="CXX" subtype="article">
+        <text xml:id="SCOR-EG_0120" n="CXX" subtype="article">
           <pb n="202"/>
           <front>
             <docDate>
@@ -11160,7 +11160,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0121" n="CXXI" subtype="article">
+        <text xml:id="SCOR-EG_0121" n="CXXI" subtype="article">
           <pb n="202"/>
           <front>
             <docDate>
@@ -11199,7 +11199,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0122" n="CXXII" subtype="article">
+        <text xml:id="SCOR-EG_0122" n="CXXII" subtype="article">
           <pb n="202"/>
           <front>
             <docDate>
@@ -11240,7 +11240,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0123" n="CXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0123" n="CXXIII" subtype="article">
           <pb n="205"/>
           <front>
             <docDate>
@@ -11281,7 +11281,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0124" n="CXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0124" n="CXXIV" subtype="article">
           <pb n="205"/>
           <front>
             <docDate>
@@ -11336,7 +11336,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0125" n="CXXV" subtype="article">
+        <text xml:id="SCOR-EG_0125" n="CXXV" subtype="article">
           <pb n="205"/>
           <front>
             <docDate>
@@ -11405,7 +11405,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0126" n="CXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0126" n="CXXVI" subtype="article">
           <pb n="208"/>
           <front>
             <docDate>
@@ -11452,7 +11452,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0127" n="CXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0127" n="CXXVII" subtype="article">
           <pb n="208"/>
           <front>
             <docDate>
@@ -11521,7 +11521,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0128" n="CXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0128" n="CXXVIII" subtype="article">
           <pb n="210"/>
           <front>
             <docDate>
@@ -11568,7 +11568,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0129" n="CXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0129" n="CXXIX" subtype="article">
           <pb n="210"/>
           <front>
             <docDate>
@@ -11629,7 +11629,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0130" n="CXXX" subtype="article">
+        <text xml:id="SCOR-EG_0130" n="CXXX" subtype="article">
           <pb n="210"/>
           <front>
             <docDate>
@@ -11677,7 +11677,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0131" n="CXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0131" n="CXXXI" subtype="article">
           <pb n="210"/>
           <front>
             <docDate>
@@ -11732,7 +11732,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0132" n="CXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0132" n="CXXXII" subtype="article">
           <pb n="210"/>
           <front>
             <docDate>
@@ -11787,7 +11787,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0133" n="CXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0133" n="CXXXIII" subtype="article">
           <pb n="215"/>
           <front>
             <docDate>
@@ -11855,7 +11855,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0134" n="CXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0134" n="CXXXIV" subtype="article">
           <pb n="216"/>
           <front>
             <docDate>
@@ -11908,7 +11908,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0135" n="CXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0135" n="CXXXV" subtype="article">
           <pb n="217"/>
           <front>
             <docDate>
@@ -11979,7 +11979,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0136" n="CXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0136" n="CXXXVI" subtype="article">
           <pb n="218"/>
           <front>
             <docDate>
@@ -12017,7 +12017,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0137" n="CXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0137" n="CXXXVII" subtype="article">
           <pb n="218"/>
           <front>
             <docDate>
@@ -12071,7 +12071,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0138" n="CXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0138" n="CXXXVIII" subtype="article">
           <pb n="220"/>
           <front>
             <docDate>
@@ -12128,7 +12128,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0139" n="CXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0139" n="CXXXIX" subtype="article">
           <pb n="221"/>
           <front>
             <docDate>
@@ -12194,7 +12194,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0140" n="CXL" subtype="article">
+        <text xml:id="SCOR-EG_0140" n="CXL" subtype="article">
           <pb n="222"/>
           <front>
             <docDate>
@@ -12258,7 +12258,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0141" n="CXLI" subtype="article">
+        <text xml:id="SCOR-EG_0141" n="CXLI" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12310,7 +12310,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0142" n="CXLII" subtype="article">
+        <text xml:id="SCOR-EG_0142" n="CXLII" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12357,7 +12357,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0143" n="CXLIII" subtype="article">
+        <text xml:id="SCOR-EG_0143" n="CXLIII" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12404,7 +12404,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0144" n="CXLIV" subtype="article">
+        <text xml:id="SCOR-EG_0144" n="CXLIV" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12460,7 +12460,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0145" n="CXLV" subtype="article">
+        <text xml:id="SCOR-EG_0145" n="CXLV" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12516,7 +12516,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0146" n="CXLVI" subtype="article">
+        <text xml:id="SCOR-EG_0146" n="CXLVI" subtype="article">
           <pb n="223"/>
           <front>
             <docDate>
@@ -12576,7 +12576,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0147" n="CXLVII" subtype="article">
+        <text xml:id="SCOR-EG_0147" n="CXLVII" subtype="article">
           <pb n="230"/>
           <front>
             <docDate>
@@ -12625,7 +12625,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0148" n="CXLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0148" n="CXLVIII" subtype="article">
           <pb n="230"/>
           <front>
             <docDate>
@@ -12671,7 +12671,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0149" n="CXLIX" subtype="article">
+        <text xml:id="SCOR-EG_0149" n="CXLIX" subtype="article">
           <pb n="230"/>
           <front>
             <docDate>
@@ -12717,7 +12717,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0150" n="CL" subtype="article">
+        <text xml:id="SCOR-EG_0150" n="CL" subtype="article">
           <pb n="230"/>
           <front>
             <docDate>
@@ -12757,7 +12757,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0151" n="CLI" subtype="article">
+        <text xml:id="SCOR-EG_0151" n="CLI" subtype="article">
           <pb n="230"/>
           <front>
             <docDate>
@@ -12820,7 +12820,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0152" n="CLII" subtype="article">
+        <text xml:id="SCOR-EG_0152" n="CLII" subtype="article">
           <pb n="234"/>
           <front>
             <docDate>
@@ -12891,7 +12891,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0153" n="CLIII" subtype="article">
+        <text xml:id="SCOR-EG_0153" n="CLIII" subtype="article">
           <pb n="236"/>
           <front>
             <docDate>
@@ -12986,7 +12986,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0154" n="CLIV" subtype="article">
+        <text xml:id="SCOR-EG_0154" n="CLIV" subtype="article">
           <pb n="238"/>
           <front>
             <docDate>
@@ -13050,7 +13050,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0155" n="CLV" subtype="article">
+        <text xml:id="SCOR-EG_0155" n="CLV" subtype="article">
           <pb n="239"/>
           <front>
             <docDate>
@@ -13107,7 +13107,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0156" n="CLVI" subtype="article">
+        <text xml:id="SCOR-EG_0156" n="CLVI" subtype="article">
           <pb n="240"/>
           <front>
             <docDate>
@@ -13153,7 +13153,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0157" n="CLVII" subtype="article">
+        <text xml:id="SCOR-EG_0157" n="CLVII" subtype="article">
           <pb n="240"/>
           <front>
             <docDate>
@@ -13218,7 +13218,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0158" n="CLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0158" n="CLVIII" subtype="article">
           <pb n="240"/>
           <front>
             <docDate>
@@ -13313,7 +13313,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0159" n="CLIX" subtype="article">
+        <text xml:id="SCOR-EG_0159" n="CLIX" subtype="article">
           <pb n="244"/>
           <front>
             <docDate>
@@ -13379,7 +13379,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0160" n="CLX" subtype="article">
+        <text xml:id="SCOR-EG_0160" n="CLX" subtype="article">
           <pb n="245"/>
           <front>
             <docDate>
@@ -13431,7 +13431,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0161" n="CLXI" subtype="article">
+        <text xml:id="SCOR-EG_0161" n="CLXI" subtype="article">
           <pb n="246"/>
           <front>
             <docDate>
@@ -13484,7 +13484,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0162" n="CLXII" subtype="article">
+        <text xml:id="SCOR-EG_0162" n="CLXII" subtype="article">
           <pb n="246"/>
           <front>
             <docDate>
@@ -13549,7 +13549,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0163" n="CLXIII" subtype="article">
+        <text xml:id="SCOR-EG_0163" n="CLXIII" subtype="article">
           <pb n="248"/>
           <front>
             <docDate>
@@ -13607,7 +13607,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0164" n="CLXIV" subtype="article">
+        <text xml:id="SCOR-EG_0164" n="CLXIV" subtype="article">
           <pb n="249"/>
           <front>
             <docDate>
@@ -13690,7 +13690,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0165" n="CLXV" subtype="article">
+        <text xml:id="SCOR-EG_0165" n="CLXV" subtype="article">
           <pb n="250"/>
           <front>
             <docDate>
@@ -13741,7 +13741,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0166" n="CLXVI" subtype="article">
+        <text xml:id="SCOR-EG_0166" n="CLXVI" subtype="article">
           <pb n="250"/>
           <front>
             <docDate>
@@ -13791,7 +13791,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0167" n="CLXVII" subtype="article">
+        <text xml:id="SCOR-EG_0167" n="CLXVII" subtype="article">
           <pb n="250"/>
           <front>
             <docDate>
@@ -13879,7 +13879,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0168" n="CLXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0168" n="CLXVIII" subtype="article">
           <pb n="254"/>
           <front>
             <docDate>
@@ -13956,7 +13956,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0169" n="CLXIX" subtype="article">
+        <text xml:id="SCOR-EG_0169" n="CLXIX" subtype="article">
           <pb n="256"/>
           <front>
             <docDate>
@@ -14011,7 +14011,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0170" n="CLXX" subtype="article">
+        <text xml:id="SCOR-EG_0170" n="CLXX" subtype="article">
           <pb n="257"/>
           <front>
             <docDate>
@@ -14055,7 +14055,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0171" n="CLXXI" subtype="article">
+        <text xml:id="SCOR-EG_0171" n="CLXXI" subtype="article">
           <pb n="257"/>
           <front>
             <docDate>
@@ -14128,7 +14128,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0172" n="CLXXII" subtype="article">
+        <text xml:id="SCOR-EG_0172" n="CLXXII" subtype="article">
           <pb n="259"/>
           <front>
             <docDate>
@@ -14189,7 +14189,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0173" n="CLXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0173" n="CLXXIII" subtype="article">
           <pb n="260"/>
           <front>
             <docDate>
@@ -14260,7 +14260,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0174" n="CLXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0174" n="CLXXIV" subtype="article">
           <pb n="262"/>
           <front>
             <docDate>
@@ -14314,7 +14314,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0175" n="CLXXV" subtype="article">
+        <text xml:id="SCOR-EG_0175" n="CLXXV" subtype="article">
           <pb n="262"/>
           <front>
             <docDate>
@@ -14382,7 +14382,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0176" n="CLXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0176" n="CLXXVI" subtype="article">
           <pb n="264"/>
           <front>
             <docDate>
@@ -14434,7 +14434,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0177" n="CLXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0177" n="CLXXVII" subtype="article">
           <pb n="265"/>
           <front>
             <docDate>
@@ -14499,7 +14499,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0178" n="CLXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0178" n="CLXXVIII" subtype="article">
           <pb n="266"/>
           <front>
             <docDate>
@@ -14598,7 +14598,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0179" n="CLXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0179" n="CLXXIX" subtype="article">
           <pb n="268"/>
           <front>
             <docDate>
@@ -14663,7 +14663,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0180" n="CLXXX" subtype="article">
+        <text xml:id="SCOR-EG_0180" n="CLXXX" subtype="article">
           <pb n="270"/>
           <front>
             <docDate>
@@ -14708,7 +14708,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0181" n="CLXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0181" n="CLXXXI" subtype="article">
           <pb n="270"/>
           <front>
             <docDate>
@@ -14762,7 +14762,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0182" n="CLXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0182" n="CLXXXII" subtype="article">
           <pb n="270"/>
           <front>
             <docDate>
@@ -14815,7 +14815,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0183" n="CLXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0183" n="CLXXXIII" subtype="article">
           <pb n="270"/>
           <front>
             <docDate>
@@ -14875,7 +14875,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0184" n="CLXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0184" n="CLXXXIV" subtype="article">
           <pb n="274"/>
           <front>
             <docDate>
@@ -14919,7 +14919,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0185" n="CLXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0185" n="CLXXXV" subtype="article">
           <pb n="274"/>
           <front>
             <docDate>
@@ -14977,7 +14977,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0186" n="CLXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0186" n="CLXXXVI" subtype="article">
           <pb n="274"/>
           <front>
             <docDate>
@@ -15031,7 +15031,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0187" n="CLXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0187" n="CLXXXVII" subtype="article">
           <pb n="274"/>
           <front>
             <docDate>
@@ -15079,7 +15079,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0188" n="CLXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0188" n="CLXXXVIII" subtype="article">
           <pb n="274"/>
           <front>
             <docDate>
@@ -15143,7 +15143,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0189" n="CLXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0189" n="CLXXXIX" subtype="article">
           <pb n="279"/>
           <front>
             <docDate>
@@ -15187,7 +15187,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0190" n="CXC" subtype="article">
+        <text xml:id="SCOR-EG_0190" n="CXC" subtype="article">
           <pb n="279"/>
           <front>
             <docDate>
@@ -15293,7 +15293,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0191" n="CXCI" subtype="article">
+        <text xml:id="SCOR-EG_0191" n="CXCI" subtype="article">
           <pb n="282"/>
           <front>
             <docDate>
@@ -15343,7 +15343,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0192" n="CXCII" subtype="article">
+        <text xml:id="SCOR-EG_0192" n="CXCII" subtype="article">
           <pb n="282"/>
           <front>
             <docDate>
@@ -15406,7 +15406,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0193" n="CXCIII" subtype="article">
+        <text xml:id="SCOR-EG_0193" n="CXCIII" subtype="article">
           <pb n="284"/>
           <front>
             <docDate>
@@ -15455,7 +15455,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0194" n="CXCIV" subtype="article">
+        <text xml:id="SCOR-EG_0194" n="CXCIV" subtype="article">
           <pb n="284"/>
           <front>
             <docDate>
@@ -15508,7 +15508,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0195" n="CXCV" subtype="article">
+        <text xml:id="SCOR-EG_0195" n="CXCV" subtype="article">
           <pb n="284"/>
           <front>
             <docDate>
@@ -15560,7 +15560,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0196" n="CXCVI" subtype="article">
+        <text xml:id="SCOR-EG_0196" n="CXCVI" subtype="article">
           <pb n="284"/>
           <front>
             <docDate>
@@ -15592,7 +15592,7 @@
             <p/>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0197" n="CXCVII" subtype="article">
+        <text xml:id="SCOR-EG_0197" n="CXCVII" subtype="article">
           <pb n="284"/>
           <front>
             <docDate>
@@ -15649,7 +15649,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0198" n="CXCVIII" subtype="article">
+        <text xml:id="SCOR-EG_0198" n="CXCVIII" subtype="article">
           <pb n="288"/>
           <front>
             <docDate>
@@ -15711,7 +15711,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0199" n="CXCIX" subtype="article">
+        <text xml:id="SCOR-EG_0199" n="CXCIX" subtype="article">
           <pb n="289"/>
           <front>
             <docDate>
@@ -15757,7 +15757,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0200" n="CC" subtype="article">
+        <text xml:id="SCOR-EG_0200" n="CC" subtype="article">
           <pb n="290"/>
           <front>
             <docDate>
@@ -15814,7 +15814,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0201" n="CCI" subtype="article">
+        <text xml:id="SCOR-EG_0201" n="CCI" subtype="article">
           <pb n="290"/>
           <front>
             <docDate>
@@ -15880,7 +15880,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0202" n="CCII" subtype="article">
+        <text xml:id="SCOR-EG_0202" n="CCII" subtype="article">
           <pb n="292"/>
           <front>
             <docDate>
@@ -15940,7 +15940,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0203" n="CCIII" subtype="article">
+        <text xml:id="SCOR-EG_0203" n="CCIII" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -15989,7 +15989,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0204" n="CCIV" subtype="article">
+        <text xml:id="SCOR-EG_0204" n="CCIV" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -16038,7 +16038,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0205" n="CCV" subtype="article">
+        <text xml:id="SCOR-EG_0205" n="CCV" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -16088,7 +16088,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0206" n="CCVI" subtype="article">
+        <text xml:id="SCOR-EG_0206" n="CCVI" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -16141,7 +16141,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0207" n="CCVII" subtype="article">
+        <text xml:id="SCOR-EG_0207" n="CCVII" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -16182,7 +16182,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0208" n="CCVIII" subtype="article">
+        <text xml:id="SCOR-EG_0208" n="CCVIII" subtype="article">
           <pb n="293"/>
           <front>
             <docDate>
@@ -16226,7 +16226,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0209" n="CCIX" subtype="article">
+        <text xml:id="SCOR-EG_0209" n="CCIX" subtype="article">
           <pb n="298"/>
           <front>
             <docDate>
@@ -16280,7 +16280,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0210" n="CCX" subtype="article">
+        <text xml:id="SCOR-EG_0210" n="CCX" subtype="article">
           <pb n="299"/>
           <front>
             <docDate>
@@ -16407,7 +16407,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0211" n="CCXI" subtype="article">
+        <text xml:id="SCOR-EG_0211" n="CCXI" subtype="article">
           <pb n="301"/>
           <front>
             <docDate>
@@ -16473,7 +16473,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0212" n="CCXII" subtype="article">
+        <text xml:id="SCOR-EG_0212" n="CCXII" subtype="article">
           <pb n="303"/>
           <front>
             <docDate>
@@ -16511,7 +16511,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0213" n="CCXIII" subtype="article">
+        <text xml:id="SCOR-EG_0213" n="CCXIII" subtype="article">
           <pb n="303"/>
           <front>
             <docDate>
@@ -16562,7 +16562,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0214" n="CCXIV" subtype="article">
+        <text xml:id="SCOR-EG_0214" n="CCXIV" subtype="article">
           <pb n="303"/>
           <front>
             <docDate>
@@ -16641,7 +16641,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0215" n="CCXV" subtype="article">
+        <text xml:id="SCOR-EG_0215" n="CCXV" subtype="article">
           <pb n="306"/>
           <front>
             <docDate>
@@ -16689,7 +16689,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0216" n="CCXVI" subtype="article">
+        <text xml:id="SCOR-EG_0216" n="CCXVI" subtype="article">
           <pb n="307"/>
           <front>
             <docDate>
@@ -16730,7 +16730,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0217" n="CCXVII" subtype="article">
+        <text xml:id="SCOR-EG_0217" n="CCXVII" subtype="article">
           <pb n="307"/>
           <front>
             <docDate>
@@ -16819,7 +16819,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0218" n="CCXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0218" n="CCXVIII" subtype="article">
           <pb n="309"/>
           <front>
             <docDate>
@@ -16871,7 +16871,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0219" n="CCXIX" subtype="article">
+        <text xml:id="SCOR-EG_0219" n="CCXIX" subtype="article">
           <pb n="309"/>
           <front>
             <docDate>
@@ -16916,7 +16916,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0220" n="CCXX" subtype="article">
+        <text xml:id="SCOR-EG_0220" n="CCXX" subtype="article">
           <pb n="309"/>
           <front>
             <docDate>
@@ -16959,7 +16959,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0221" n="CCXXI" subtype="article">
+        <text xml:id="SCOR-EG_0221" n="CCXXI" subtype="article">
           <pb n="312"/>
           <front>
             <docDate>
@@ -17000,7 +17000,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0222" n="CCXXII" subtype="article">
+        <text xml:id="SCOR-EG_0222" n="CCXXII" subtype="article">
           <pb n="312"/>
           <front>
             <docDate>
@@ -17057,7 +17057,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0223" n="CCXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0223" n="CCXXIII" subtype="article">
           <pb n="312"/>
           <front>
             <docDate>
@@ -17110,7 +17110,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0224" n="CCXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0224" n="CCXXIV" subtype="article">
           <pb n="312"/>
           <front>
             <docDate>
@@ -17188,7 +17188,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0225" n="CCXXV" subtype="article">
+        <text xml:id="SCOR-EG_0225" n="CCXXV" subtype="article">
           <pb n="316"/>
           <front>
             <docDate>
@@ -17235,7 +17235,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0226" n="CCXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0226" n="CCXXVI" subtype="article">
           <pb n="317"/>
           <front>
             <docDate>
@@ -17305,7 +17305,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0227" n="CCXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0227" n="CCXXVII" subtype="article">
           <pb n="318"/>
           <front>
             <docDate>
@@ -17362,7 +17362,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0228" n="CCXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0228" n="CCXXVIII" subtype="article">
           <pb n="318"/>
           <front>
             <docDate>
@@ -17421,7 +17421,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0229" n="CCXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0229" n="CCXXIX" subtype="article">
           <pb n="318"/>
           <front>
             <docDate>
@@ -17465,7 +17465,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0230" n="CCXXX" subtype="article">
+        <text xml:id="SCOR-EG_0230" n="CCXXX" subtype="article">
           <pb n="318"/>
           <front>
             <docDate>
@@ -17537,7 +17537,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0231" n="CCXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0231" n="CCXXXI" subtype="article">
           <pb n="322"/>
           <front>
             <docDate>
@@ -17595,7 +17595,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0232" n="CCXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0232" n="CCXXXII" subtype="article">
           <pb n="322"/>
           <front>
             <docDate>
@@ -17657,7 +17657,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0233" n="CCXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0233" n="CCXXXIII" subtype="article">
           <pb n="325"/>
           <front>
             <docDate>
@@ -17716,7 +17716,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0234" n="CCXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0234" n="CCXXXIV" subtype="article">
           <pb n="326"/>
           <front>
             <docDate>
@@ -17788,7 +17788,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0235" n="CCXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0235" n="CCXXXV" subtype="article">
           <pb n="327"/>
           <front>
             <docDate>
@@ -17861,7 +17861,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0236" n="CCXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0236" n="CCXXXVI" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -17906,7 +17906,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0237" n="CCXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0237" n="CCXXXVII" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -17959,7 +17959,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0238" n="CCXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0238" n="CCXXXVIII" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -18011,7 +18011,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0239" n="CCXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0239" n="CCXXXIX" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -18064,7 +18064,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0240" n="CCXL" subtype="article">
+        <text xml:id="SCOR-EG_0240" n="CCXL" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -18109,7 +18109,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0241" n="CCXLI" subtype="article">
+        <text xml:id="SCOR-EG_0241" n="CCXLI" subtype="article">
           <pb n="328"/>
           <front>
             <docDate>
@@ -18169,7 +18169,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0242" n="CCXLII" subtype="article">
+        <text xml:id="SCOR-EG_0242" n="CCXLII" subtype="article">
           <pb n="335"/>
           <front>
             <docDate>
@@ -18219,7 +18219,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0243" n="CCXLIII" subtype="article">
+        <text xml:id="SCOR-EG_0243" n="CCXLIII" subtype="article">
           <pb n="335"/>
           <front>
             <docDate>
@@ -18275,7 +18275,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0244" n="CCXLIV" subtype="article">
+        <text xml:id="SCOR-EG_0244" n="CCXLIV" subtype="article">
           <pb n="335"/>
           <front>
             <docDate>
@@ -18332,7 +18332,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0245" n="CCXLV" subtype="article">
+        <text xml:id="SCOR-EG_0245" n="CCXLV" subtype="article">
           <pb n="335"/>
           <front>
             <docDate>
@@ -18407,7 +18407,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0246" n="CCXLVI" subtype="article">
+        <text xml:id="SCOR-EG_0246" n="CCXLVI" subtype="article">
           <pb n="339"/>
           <front>
             <docDate>
@@ -18467,7 +18467,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0247" n="CCXLVII" subtype="article">
+        <text xml:id="SCOR-EG_0247" n="CCXLVII" subtype="article">
           <pb n="340"/>
           <front>
             <docDate>
@@ -18530,7 +18530,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0248" n="CCXLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0248" n="CCXLVIII" subtype="article">
           <pb n="341"/>
           <front>
             <docDate>
@@ -18581,7 +18581,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0249" n="CCXLIX" subtype="article">
+        <text xml:id="SCOR-EG_0249" n="CCXLIX" subtype="article">
           <pb n="342"/>
           <front>
             <docDate>
@@ -18631,7 +18631,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0250" n="CCL" subtype="article">
+        <text xml:id="SCOR-EG_0250" n="CCL" subtype="article">
           <pb n="342"/>
           <front>
             <docDate>
@@ -18678,7 +18678,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0251" n="CCLI" subtype="article">
+        <text xml:id="SCOR-EG_0251" n="CCLI" subtype="article">
           <pb n="342"/>
           <front>
             <docDate>
@@ -18730,7 +18730,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0252" n="CCLII" subtype="article">
+        <text xml:id="SCOR-EG_0252" n="CCLII" subtype="article">
           <pb n="342"/>
           <front>
             <docDate>
@@ -18776,7 +18776,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0253" n="CCLIII" subtype="article">
+        <text xml:id="SCOR-EG_0253" n="CCLIII" subtype="article">
           <pb n="342"/>
           <front>
             <docDate>
@@ -18867,7 +18867,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0254" n="CCLIV" subtype="article">
+        <text xml:id="SCOR-EG_0254" n="CCLIV" subtype="article">
           <pb n="348"/>
           <front>
             <docDate>
@@ -18921,7 +18921,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0255" n="CCLV" subtype="article">
+        <text xml:id="SCOR-EG_0255" n="CCLV" subtype="article">
           <pb n="349"/>
           <front>
             <docDate>
@@ -18965,7 +18965,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0256" n="CCLVI" subtype="article">
+        <text xml:id="SCOR-EG_0256" n="CCLVI" subtype="article">
           <pb n="349"/>
           <front>
             <docDate>
@@ -19011,7 +19011,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0257" n="CCLVII" subtype="article">
+        <text xml:id="SCOR-EG_0257" n="CCLVII" subtype="article">
           <pb n="349"/>
           <front>
             <docDate>
@@ -19077,7 +19077,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0258" n="CCLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0258" n="CCLVIII" subtype="article">
           <pb n="352"/>
           <front>
             <docDate>
@@ -19122,7 +19122,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0259" n="CCLIX" subtype="article">
+        <text xml:id="SCOR-EG_0259" n="CCLIX" subtype="article">
           <pb n="352"/>
           <front>
             <docDate>
@@ -19168,7 +19168,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0260" n="CCLX" subtype="article">
+        <text xml:id="SCOR-EG_0260" n="CCLX" subtype="article">
           <pb n="352"/>
           <front>
             <docDate>
@@ -19225,7 +19225,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0261" n="CCLXI" subtype="article">
+        <text xml:id="SCOR-EG_0261" n="CCLXI" subtype="article">
           <pb n="352"/>
           <front>
             <docDate>
@@ -19266,7 +19266,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0262" n="CCLXII" subtype="article">
+        <text xml:id="SCOR-EG_0262" n="CCLXII" subtype="article">
           <pb n="352"/>
           <front>
             <docDate>
@@ -19340,7 +19340,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0263" n="CCLXIII" subtype="article">
+        <text xml:id="SCOR-EG_0263" n="CCLXIII" subtype="article">
           <pb n="357"/>
           <front>
             <docDate>
@@ -19387,7 +19387,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0264" n="CCLXIV" subtype="article">
+        <text xml:id="SCOR-EG_0264" n="CCLXIV" subtype="article">
           <pb n="358"/>
           <front>
             <docDate>
@@ -19459,7 +19459,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0265" n="CCLXV" subtype="article">
+        <text xml:id="SCOR-EG_0265" n="CCLXV" subtype="article">
           <pb n="359"/>
           <front>
             <docDate>
@@ -19508,7 +19508,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0266" n="CCLXVI" subtype="article">
+        <text xml:id="SCOR-EG_0266" n="CCLXVI" subtype="article">
           <pb n="360"/>
           <front>
             <docDate>
@@ -19560,7 +19560,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0267" n="CCLXVII" subtype="article">
+        <text xml:id="SCOR-EG_0267" n="CCLXVII" subtype="article">
           <pb n="361"/>
           <front>
             <docDate>
@@ -19618,7 +19618,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0268" n="CCLXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0268" n="CCLXVIII" subtype="article">
           <pb n="362"/>
           <front>
             <docDate>
@@ -19668,7 +19668,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0269" n="CCLXIX" subtype="article">
+        <text xml:id="SCOR-EG_0269" n="CCLXIX" subtype="article">
           <pb n="362"/>
           <front>
             <docDate>
@@ -19717,7 +19717,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0270" n="CCLXX" subtype="article">
+        <text xml:id="SCOR-EG_0270" n="CCLXX" subtype="article">
           <pb n="362"/>
           <front>
             <docDate>
@@ -19783,7 +19783,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0271" n="CCLXXI" subtype="article">
+        <text xml:id="SCOR-EG_0271" n="CCLXXI" subtype="article">
           <pb n="365"/>
           <front>
             <docDate>
@@ -19836,7 +19836,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0272" n="CCLXXII" subtype="article">
+        <text xml:id="SCOR-EG_0272" n="CCLXXII" subtype="article">
           <pb n="365"/>
           <front>
             <docDate>
@@ -19882,7 +19882,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0273" n="CCLXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0273" n="CCLXXIII" subtype="article">
           <pb n="365"/>
           <front>
             <docDate>
@@ -19926,7 +19926,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0274" n="CCLXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0274" n="CCLXXIV" subtype="article">
           <pb n="365"/>
           <front>
             <docDate>
@@ -19988,7 +19988,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0275" n="CCLXXV" subtype="article">
+        <text xml:id="SCOR-EG_0275" n="CCLXXV" subtype="article">
           <pb n="369"/>
           <front>
             <docDate>
@@ -20048,7 +20048,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0276" n="CCLXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0276" n="CCLXXVI" subtype="article">
           <pb n="370"/>
           <front>
             <docDate>
@@ -20106,7 +20106,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0277" n="CCLXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0277" n="CCLXXVII" subtype="article">
           <pb n="371"/>
           <front>
             <docDate>
@@ -20143,7 +20143,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0278" n="CCLXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0278" n="CCLXXVIII" subtype="article">
           <pb n="371"/>
           <front>
             <docDate>
@@ -20182,7 +20182,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0279" n="CCLXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0279" n="CCLXXIX" subtype="article">
           <pb n="371"/>
           <front>
             <docDate>
@@ -20268,7 +20268,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0280" n="CCLXXX" subtype="article">
+        <text xml:id="SCOR-EG_0280" n="CCLXXX" subtype="article">
           <pb n="374"/>
           <front>
             <docDate>
@@ -20318,7 +20318,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0281" n="CCLXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0281" n="CCLXXXI" subtype="article">
           <pb n="374"/>
           <front>
             <docDate>
@@ -20373,7 +20373,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0282" n="CCLXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0282" n="CCLXXXII" subtype="article">
           <pb n="374"/>
           <front>
             <docDate>
@@ -20469,7 +20469,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0283" n="CCLXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0283" n="CCLXXXIII" subtype="article">
           <pb n="377"/>
           <front>
             <docDate>
@@ -20536,7 +20536,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0284" n="CCLXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0284" n="CCLXXXIV" subtype="article">
           <pb n="379"/>
           <front>
             <docDate>
@@ -20600,7 +20600,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0285" n="CCLXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0285" n="CCLXXXV" subtype="article">
           <pb n="380"/>
           <front>
             <docDate>
@@ -20656,7 +20656,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0286" n="CCLXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0286" n="CCLXXXVI" subtype="article">
           <pb n="381"/>
           <front>
             <docDate>
@@ -20720,7 +20720,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0287" n="CCLXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0287" n="CCLXXXVII" subtype="article">
           <pb n="382"/>
           <front>
             <docDate>
@@ -20772,7 +20772,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0288" n="CCLXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0288" n="CCLXXXVIII" subtype="article">
           <pb n="383"/>
           <front>
             <docDate>
@@ -20822,7 +20822,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0289" n="CCLXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0289" n="CCLXXXIX" subtype="article">
           <pb n="384"/>
           <front>
             <docDate>
@@ -20885,7 +20885,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0290" n="CCXC" subtype="article">
+        <text xml:id="SCOR-EG_0290" n="CCXC" subtype="article">
           <pb n="385"/>
           <front>
             <docDate>
@@ -20973,7 +20973,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0291" n="CCXCI" subtype="article">
+        <text xml:id="SCOR-EG_0291" n="CCXCI" subtype="article">
           <pb n="387"/>
           <front>
             <docDate>
@@ -21036,7 +21036,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0292" n="CCXCII" subtype="article">
+        <text xml:id="SCOR-EG_0292" n="CCXCII" subtype="article">
           <pb n="388"/>
           <front>
             <docDate>
@@ -21095,7 +21095,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0293" n="CCXCIII" subtype="article">
+        <text xml:id="SCOR-EG_0293" n="CCXCIII" subtype="article">
           <pb n="388"/>
           <front>
             <docDate>
@@ -21182,7 +21182,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0294" n="CCXCIV" subtype="article">
+        <text xml:id="SCOR-EG_0294" n="CCXCIV" subtype="article">
           <pb n="391"/>
           <front>
             <docDate>
@@ -21233,7 +21233,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0295" n="CCXCV" subtype="article">
+        <text xml:id="SCOR-EG_0295" n="CCXCV" subtype="article">
           <pb n="391"/>
           <front>
             <docDate>
@@ -21290,7 +21290,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0296" n="CCXCVI" subtype="article">
+        <text xml:id="SCOR-EG_0296" n="CCXCVI" subtype="article">
           <pb n="391"/>
           <front>
             <docDate>
@@ -21353,7 +21353,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0297" n="CCXCVII" subtype="article">
+        <text xml:id="SCOR-EG_0297" n="CCXCVII" subtype="article">
           <pb n="395"/>
           <front>
             <docDate>
@@ -21463,7 +21463,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0298" n="CCXCVIII" subtype="article">
+        <text xml:id="SCOR-EG_0298" n="CCXCVIII" subtype="article">
           <pb n="397"/>
           <front>
             <docDate>
@@ -21524,7 +21524,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0299" n="CCXCIX" subtype="article">
+        <text xml:id="SCOR-EG_0299" n="CCXCIX" subtype="article">
           <pb n="397"/>
           <front>
             <docDate>
@@ -21582,7 +21582,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0300" n="CCC" subtype="article">
+        <text xml:id="SCOR-EG_0300" n="CCC" subtype="article">
           <pb n="397"/>
           <front>
             <docDate>
@@ -21630,7 +21630,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0301" n="CCCI" subtype="article">
+        <text xml:id="SCOR-EG_0301" n="CCCI" subtype="article">
           <pb n="397"/>
           <front>
             <docDate>
@@ -21689,7 +21689,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0302" n="CCCII" subtype="article">
+        <text xml:id="SCOR-EG_0302" n="CCCII" subtype="article">
           <pb n="397"/>
           <front>
             <docDate>
@@ -21800,7 +21800,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0303" n="CCCIII" subtype="article">
+        <text xml:id="SCOR-EG_0303" n="CCCIII" subtype="article">
           <pb n="404"/>
           <front>
             <docDate>
@@ -21854,7 +21854,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0304" n="CCCIV" subtype="article">
+        <text xml:id="SCOR-EG_0304" n="CCCIV" subtype="article">
           <pb n="405"/>
           <front>
             <docDate>
@@ -21900,7 +21900,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0305" n="CCCV" subtype="article">
+        <text xml:id="SCOR-EG_0305" n="CCCV" subtype="article">
           <pb n="406"/>
           <front>
             <docDate>
@@ -22049,7 +22049,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0306" n="CCCVI" subtype="article">
+        <text xml:id="SCOR-EG_0306" n="CCCVI" subtype="article">
           <pb n="409"/>
           <front>
             <docDate>
@@ -22106,7 +22106,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0307" n="CCCVII" subtype="article">
+        <text xml:id="SCOR-EG_0307" n="CCCVII" subtype="article">
           <pb n="410"/>
           <front>
             <docDate>
@@ -22155,7 +22155,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0308" n="CCCVIII" subtype="article">
+        <text xml:id="SCOR-EG_0308" n="CCCVIII" subtype="article">
           <pb n="410"/>
           <front>
             <docDate>
@@ -22227,7 +22227,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0309" n="CCCIX" subtype="article">
+        <text xml:id="SCOR-EG_0309" n="CCCIX" subtype="article">
           <pb n="412"/>
           <front>
             <docDate>
@@ -22269,7 +22269,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0310" n="CCCX" subtype="article">
+        <text xml:id="SCOR-EG_0310" n="CCCX" subtype="article">
           <pb n="413"/>
           <front>
             <docDate>
@@ -22334,7 +22334,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0311" n="CCCXI" subtype="article">
+        <text xml:id="SCOR-EG_0311" n="CCCXI" subtype="article">
           <pb n="414"/>
           <front>
             <docDate>
@@ -22450,7 +22450,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0312" n="CCCXII" subtype="article">
+        <text xml:id="SCOR-EG_0312" n="CCCXII" subtype="article">
           <pb n="416"/>
           <front>
             <docDate>
@@ -22640,7 +22640,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0313" n="CCCXIII" subtype="article">
+        <text xml:id="SCOR-EG_0313" n="CCCXIII" subtype="article">
           <pb n="420"/>
           <front>
             <docDate>
@@ -22686,7 +22686,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0314" n="CCCXIV" subtype="article">
+        <text xml:id="SCOR-EG_0314" n="CCCXIV" subtype="article">
           <pb n="420"/>
           <front>
             <docDate>
@@ -22738,7 +22738,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0315" n="CCCXV" subtype="article">
+        <text xml:id="SCOR-EG_0315" n="CCCXV" subtype="article">
           <pb n="420"/>
           <front>
             <docDate>
@@ -22839,7 +22839,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0316" n="CCCXVI" subtype="article">
+        <text xml:id="SCOR-EG_0316" n="CCCXVI" subtype="article">
           <pb n="425"/>
           <front>
             <docDate>
@@ -22873,7 +22873,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0317" n="CCCXVII" subtype="article">
+        <text xml:id="SCOR-EG_0317" n="CCCXVII" subtype="article">
           <pb n="425"/>
           <front>
             <docDate>
@@ -22910,7 +22910,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0318" n="CCCXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0318" n="CCCXVIII" subtype="article">
           <pb n="425"/>
           <front>
             <docDate>
@@ -22968,7 +22968,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0319" n="CCCXIX" subtype="article">
+        <text xml:id="SCOR-EG_0319" n="CCCXIX" subtype="article">
           <pb n="427"/>
           <front>
             <docDate>
@@ -23034,7 +23034,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0320" n="CCCXX" subtype="article">
+        <text xml:id="SCOR-EG_0320" n="CCCXX" subtype="article">
           <pb n="428"/>
           <front>
             <docDate>
@@ -23111,7 +23111,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0321" n="CCCXXI" subtype="article">
+        <text xml:id="SCOR-EG_0321" n="CCCXXI" subtype="article">
           <pb n="429"/>
           <front>
             <docDate>
@@ -23202,7 +23202,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0322" n="CCCXXII" subtype="article">
+        <text xml:id="SCOR-EG_0322" n="CCCXXII" subtype="article">
           <pb n="431"/>
           <front>
             <docDate>
@@ -23322,7 +23322,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0323" n="CCCXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0323" n="CCCXXIII" subtype="article">
           <pb n="434"/>
           <front>
             <docDate>
@@ -23417,7 +23417,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0324" n="CCCXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0324" n="CCCXXIV" subtype="article">
           <pb n="436"/>
           <front>
             <docDate>
@@ -23459,7 +23459,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0325" n="CCCXXV" subtype="article">
+        <text xml:id="SCOR-EG_0325" n="CCCXXV" subtype="article">
           <pb n="436"/>
           <front>
             <docDate>
@@ -23528,7 +23528,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0326" n="CCCXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0326" n="CCCXXVI" subtype="article">
           <pb n="438"/>
           <front>
             <docDate>
@@ -23599,7 +23599,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0327" n="CCCXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0327" n="CCCXXVII" subtype="article">
           <pb n="440"/>
           <front>
             <docDate>
@@ -23665,7 +23665,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0328" n="CCCXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0328" n="CCCXXVIII" subtype="article">
           <pb n="441"/>
           <front>
             <docDate>
@@ -23720,7 +23720,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0329" n="CCCXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0329" n="CCCXXIX" subtype="article">
           <pb n="442"/>
           <front>
             <docDate>
@@ -23777,7 +23777,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0330" n="CCCXXX" subtype="article">
+        <text xml:id="SCOR-EG_0330" n="CCCXXX" subtype="article">
           <pb n="443"/>
           <front>
             <docDate>
@@ -23839,7 +23839,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0331" n="CCCXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0331" n="CCCXXXI" subtype="article">
           <pb n="444"/>
           <front>
             <docDate>
@@ -23919,7 +23919,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0332" n="CCCXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0332" n="CCCXXXII" subtype="article">
           <pb n="445"/>
           <front>
             <docDate>
@@ -23971,7 +23971,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0333" n="CCCXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0333" n="CCCXXXIII" subtype="article">
           <pb n="445"/>
           <front>
             <docDate>
@@ -24045,7 +24045,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0334" n="CCCXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0334" n="CCCXXXIV" subtype="article">
           <pb n="448"/>
           <front>
             <docDate>
@@ -24124,7 +24124,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0335" n="CCCXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0335" n="CCCXXXV" subtype="article">
           <pb n="450"/>
           <front>
             <docDate>
@@ -24174,7 +24174,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0336" n="CCCXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0336" n="CCCXXXVI" subtype="article">
           <pb n="450"/>
           <front>
             <docDate>
@@ -24233,7 +24233,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0337" n="CCCXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0337" n="CCCXXXVII" subtype="article">
           <pb n="452"/>
           <front>
             <docDate>
@@ -24306,7 +24306,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0338" n="CCCXXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0338" n="CCCXXXVIII" subtype="article">
           <pb n="453"/>
           <front>
             <docDate>
@@ -24359,7 +24359,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0339" n="CCCXXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0339" n="CCCXXXIX" subtype="article">
           <pb n="453"/>
           <front>
             <docDate>
@@ -24425,7 +24425,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0340" n="CCCXL" subtype="article">
+        <text xml:id="SCOR-EG_0340" n="CCCXL" subtype="article">
           <pb n="456"/>
           <front>
             <docDate>
@@ -24504,7 +24504,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0341" n="CCCXLI" subtype="article">
+        <text xml:id="SCOR-EG_0341" n="CCCXLI" subtype="article">
           <pb n="457"/>
           <front>
             <docDate>
@@ -24580,7 +24580,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0342" n="CCCXLII" subtype="article">
+        <text xml:id="SCOR-EG_0342" n="CCCXLII" subtype="article">
           <pb n="459"/>
           <front>
             <docDate>
@@ -24637,7 +24637,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0343" n="CCCXLIII" subtype="article">
+        <text xml:id="SCOR-EG_0343" n="CCCXLIII" subtype="article">
           <pb n="460"/>
           <front>
             <docDate>
@@ -24723,7 +24723,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0344" n="CCCXLIV" subtype="article">
+        <text xml:id="SCOR-EG_0344" n="CCCXLIV" subtype="article">
           <pb n="461"/>
           <front>
             <docDate>
@@ -24788,7 +24788,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0345" n="CCCXLV" subtype="article">
+        <text xml:id="SCOR-EG_0345" n="CCCXLV" subtype="article">
           <pb n="463"/>
           <front>
             <docDate>
@@ -24847,7 +24847,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0346" n="CCCXLVI" subtype="article">
+        <text xml:id="SCOR-EG_0346" n="CCCXLVI" subtype="article">
           <pb n="463"/>
           <front>
             <docDate>
@@ -24918,7 +24918,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0347" n="CCCXLVII" subtype="article">
+        <text xml:id="SCOR-EG_0347" n="CCCXLVII" subtype="article">
           <pb n="465"/>
           <front>
             <docDate>
@@ -24975,7 +24975,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0348" n="CCCXLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0348" n="CCCXLVIII" subtype="article">
           <pb n="466"/>
           <front>
             <docDate>
@@ -25024,7 +25024,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0349" n="CCCXLIX" subtype="article">
+        <text xml:id="SCOR-EG_0349" n="CCCXLIX" subtype="article">
           <pb n="466"/>
           <front>
             <docDate>
@@ -25082,7 +25082,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0350" n="CCCL" subtype="article">
+        <text xml:id="SCOR-EG_0350" n="CCCL" subtype="article">
           <pb n="466"/>
           <front>
             <docDate>
@@ -25134,7 +25134,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0351" n="CCCLI" subtype="article">
+        <text xml:id="SCOR-EG_0351" n="CCCLI" subtype="article">
           <pb n="466"/>
           <front>
             <docDate>
@@ -25192,7 +25192,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0352" n="CCCLII" subtype="article">
+        <text xml:id="SCOR-EG_0352" n="CCCLII" subtype="article">
           <pb n="466"/>
           <front>
             <docDate>
@@ -25264,7 +25264,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0353" n="CCCLIII" subtype="article">
+        <text xml:id="SCOR-EG_0353" n="CCCLIII" subtype="article">
           <pb n="471"/>
           <front>
             <docDate>
@@ -25312,7 +25312,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0354" n="CCCLIV" subtype="article">
+        <text xml:id="SCOR-EG_0354" n="CCCLIV" subtype="article">
           <pb n="471"/>
           <front>
             <docDate>
@@ -25377,7 +25377,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0355" n="CCCLV" subtype="article">
+        <text xml:id="SCOR-EG_0355" n="CCCLV" subtype="article">
           <pb n="473"/>
           <front>
             <docDate>
@@ -25443,7 +25443,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0356" n="CCCLVI" subtype="article">
+        <text xml:id="SCOR-EG_0356" n="CCCLVI" subtype="article">
           <pb n="474"/>
           <front>
             <docDate>
@@ -25524,7 +25524,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0357" n="CCCLVII" subtype="article">
+        <text xml:id="SCOR-EG_0357" n="CCCLVII" subtype="article">
           <pb n="475"/>
           <front>
             <docDate>
@@ -25703,7 +25703,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0358" n="CCCLVIII" subtype="article">
+        <text xml:id="SCOR-EG_0358" n="CCCLVIII" subtype="article">
           <pb n="480"/>
           <front>
             <docDate>
@@ -25766,7 +25766,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0359" n="CCCLIX" subtype="article">
+        <text xml:id="SCOR-EG_0359" n="CCCLIX" subtype="article">
           <pb n="480"/>
           <front>
             <docDate>
@@ -25833,7 +25833,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0360" n="CCCLX" subtype="article">
+        <text xml:id="SCOR-EG_0360" n="CCCLX" subtype="article">
           <pb n="480"/>
           <front>
             <docDate>
@@ -25904,7 +25904,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0361" n="CCCLXI" subtype="article">
+        <text xml:id="SCOR-EG_0361" n="CCCLXI" subtype="article">
           <pb n="483"/>
           <front>
             <docDate>
@@ -26001,7 +26001,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0362" n="CCCLXII" subtype="article">
+        <text xml:id="SCOR-EG_0362" n="CCCLXII" subtype="article">
           <pb n="485"/>
           <front>
             <docDate>
@@ -26279,7 +26279,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0363" n="CCCLXIII" subtype="article">
+        <text xml:id="SCOR-EG_0363" n="CCCLXIII" subtype="article">
           <pb n="491"/>
           <front>
             <docDate>
@@ -26345,7 +26345,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0364" n="CCCLXIV" subtype="article">
+        <text xml:id="SCOR-EG_0364" n="CCCLXIV" subtype="article">
           <pb n="493"/>
           <front>
             <docDate>
@@ -26388,7 +26388,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0365" n="CCCLXV" subtype="article">
+        <text xml:id="SCOR-EG_0365" n="CCCLXV" subtype="article">
           <pb n="493"/>
           <front>
             <docDate>
@@ -26478,7 +26478,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0366" n="CCCLXVI" subtype="article">
+        <text xml:id="SCOR-EG_0366" n="CCCLXVI" subtype="article">
           <pb n="495"/>
           <front>
             <docDate>
@@ -26626,7 +26626,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0367" n="CCCLXVII" subtype="article">
+        <text xml:id="SCOR-EG_0367" n="CCCLXVII" subtype="article">
           <pb n="499"/>
           <front>
             <docDate>
@@ -26704,7 +26704,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0368" n="CCCLXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0368" n="CCCLXVIII" subtype="article">
           <pb n="501"/>
           <front>
             <docDate>
@@ -26760,7 +26760,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0369" n="CCCLXIX" subtype="article">
+        <text xml:id="SCOR-EG_0369" n="CCCLXIX" subtype="article">
           <pb n="501"/>
           <front>
             <docDate>
@@ -26834,7 +26834,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0370" n="CCCLXX" subtype="article">
+        <text xml:id="SCOR-EG_0370" n="CCCLXX" subtype="article">
           <pb n="504"/>
           <front>
             <docDate>
@@ -27018,7 +27018,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0371" n="CCCLXXI" subtype="article">
+        <text xml:id="SCOR-EG_0371" n="CCCLXXI" subtype="article">
           <pb n="508"/>
           <front>
             <docDate>
@@ -27104,7 +27104,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0372" n="CCCLXXII" subtype="article">
+        <text xml:id="SCOR-EG_0372" n="CCCLXXII" subtype="article">
           <pb n="510"/>
           <front>
             <docDate>
@@ -27223,7 +27223,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0373" n="CCCLXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0373" n="CCCLXXIII" subtype="article">
           <pb n="513"/>
           <front>
             <docDate>
@@ -27300,7 +27300,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0374" n="CCCLXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0374" n="CCCLXXIV" subtype="article">
           <pb n="515"/>
           <front>
             <docDate>
@@ -27353,7 +27353,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0375" n="CCCLXXV" subtype="article">
+        <text xml:id="SCOR-EG_0375" n="CCCLXXV" subtype="article">
           <pb n="515"/>
           <front>
             <docDate>
@@ -27448,7 +27448,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0376" n="CCCLXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0376" n="CCCLXXVI" subtype="article">
           <pb n="518"/>
           <front>
             <docDate>
@@ -27599,7 +27599,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0377" n="CCCLXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0377" n="CCCLXXVII" subtype="article">
           <pb n="521"/>
           <front>
             <docDate>
@@ -27653,7 +27653,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0378" n="CCCLXXVIII" subtype="article">
+        <text xml:id="SCOR-EG_0378" n="CCCLXXVIII" subtype="article">
           <pb n="521"/>
           <front>
             <docDate>
@@ -27720,7 +27720,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0379" n="CCCLXXIX" subtype="article">
+        <text xml:id="SCOR-EG_0379" n="CCCLXXIX" subtype="article">
           <pb n="524"/>
           <front>
             <docDate>
@@ -27835,7 +27835,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0380" n="CCCLXXX" subtype="article">
+        <text xml:id="SCOR-EG_0380" n="CCCLXXX" subtype="article">
           <pb n="526"/>
           <front>
             <docDate>
@@ -27913,7 +27913,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0381" n="CCCLXXXI" subtype="article">
+        <text xml:id="SCOR-EG_0381" n="CCCLXXXI" subtype="article">
           <pb n="528"/>
           <front>
             <docDate>
@@ -27977,7 +27977,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0382" n="CCCLXXXII" subtype="article">
+        <text xml:id="SCOR-EG_0382" n="CCCLXXXII" subtype="article">
           <pb n="529"/>
           <front>
             <docDate>
@@ -28016,7 +28016,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0383" n="CCCLXXXIII" subtype="article">
+        <text xml:id="SCOR-EG_0383" n="CCCLXXXIII" subtype="article">
           <pb n="529"/>
           <front>
             <docDate>
@@ -28070,7 +28070,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="Orleans-S-Croix_0384" n="CCCLXXXIV" subtype="article">
+        <text xml:id="SCOR-EG_0384" n="CCCLXXXIV" subtype="article">
           <pb n="531"/>
           <front>
             <docDate>
@@ -28125,7 +28125,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0385" n="CCCLXXXV" subtype="article">
+        <text xml:id="SCOR-EG_0385" n="CCCLXXXV" subtype="article">
           <pb n="532"/>
           <front>
             <docDate>
@@ -28174,7 +28174,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0386" n="CCCLXXXVI" subtype="article">
+        <text xml:id="SCOR-EG_0386" n="CCCLXXXVI" subtype="article">
           <pb n="533"/>
           <front>
             <docDate>
@@ -28223,7 +28223,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="Orleans-S-Croix_0387" n="CCCLXXXVII" subtype="article">
+        <text xml:id="SCOR-EG_0387" n="CCCLXXXVII" subtype="article">
           <pb n="534"/>
           <front>
             <docDate>

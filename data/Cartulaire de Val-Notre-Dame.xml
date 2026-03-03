@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -80,7 +80,7 @@
       <byline>
         <!-- TODO -->
       </byline>
-      <div xml:id="VNDP_introduction">
+      <div xml:id="VNDP-AB_introduction">
         <head>
           <pb n="3"/> INTRODUCTION</head>
         <p>Dès la fin du <hi rend="sc">xii</hi>
@@ -274,7 +274,7 @@
     </front>
     <group>
   <head>Cartulaire de l'Hôpital de l'abbaye du Val-Notre-Dame au diocèse de Paris</head>
-  <text xml:id="VNDP_0001" n="1" subtype="article">
+  <text xml:id="VNDP-AB_0001" n="1" subtype="article">
     <pb n="7"/>
     <front>
       <docDate>
@@ -301,7 +301,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0002" n="2" subtype="article">
+  <text xml:id="VNDP-AB_0002" n="2" subtype="article">
     <front>
       <docDate>
         <date when="1216">1216.</date>
@@ -322,7 +322,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0003" n="3" subtype="article">
+  <text xml:id="VNDP-AB_0003" n="3" subtype="article">
     <front>
       <docDate>
         <date when="1221">1221.</date>
@@ -343,7 +343,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0004" n="4" subtype="article">
+  <text xml:id="VNDP-AB_0004" n="4" subtype="article">
     <pb n="9"/>
     <front>
       <docDate>
@@ -365,7 +365,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0005" n="5" subtype="article">
+  <text xml:id="VNDP-AB_0005" n="5" subtype="article">
     <front>
       <docDate>
         <date when="1225-01">Janvier 1224 [1225].</date>
@@ -386,7 +386,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0006" n="6" subtype="article">
+  <text xml:id="VNDP-AB_0006" n="6" subtype="article">
     <front>
       <docDate>
         <date when="1224-01">Mars 1223 [1224].</date>
@@ -407,7 +407,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0007" n="7" subtype="article">
+  <text xml:id="VNDP-AB_0007" n="7" subtype="article">
     <front>
       <docDate>
         <date when="1214-06">Juin 1214.</date>
@@ -428,7 +428,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0008" n="8" subtype="article">
+  <text xml:id="VNDP-AB_0008" n="8" subtype="article">
     <front>
       <docDate>
         <date when="1222-11">Novembre 1222.</date>
@@ -449,7 +449,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0009" n="9" subtype="article">
+  <text xml:id="VNDP-AB_0009" n="9" subtype="article">
     <front>
       <docDate>
         <date when="1218">1218.</date>
@@ -470,7 +470,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0010" n="10" subtype="article">
+  <text xml:id="VNDP-AB_0010" n="10" subtype="article">
     <front>
       <docDate>
         <date when="1237-10">Octobre 1237.</date>
@@ -491,7 +491,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0011" n="11" subtype="article">
+  <text xml:id="VNDP-AB_0011" n="11" subtype="article">
     <pb n="13"/>
     <front>
       <docDate>
@@ -513,7 +513,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0012" n="12" subtype="article">
+  <text xml:id="VNDP-AB_0012" n="12" subtype="article">
     <front>
       <docDate>
         <date when="1223-07">Juillet 1223.</date>
@@ -534,7 +534,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0013" n="13" subtype="article">
+  <text xml:id="VNDP-AB_0013" n="13" subtype="article">
     <front>
       <docDate>
         <date when="1220">1220.</date>
@@ -555,7 +555,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0014" n="14" subtype="article">
+  <text xml:id="VNDP-AB_0014" n="14" subtype="article">
     <front>
       <docDate>
         <date when="1238-02">Février 1237 [1238].</date>
@@ -576,7 +576,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0015" n="15" subtype="article">
+  <text xml:id="VNDP-AB_0015" n="15" subtype="article">
     <front>
       <docDate>
         <date when="1240-02">Février 1239 [1240].</date>
@@ -597,7 +597,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0016" n="16" subtype="article">
+  <text xml:id="VNDP-AB_0016" n="16" subtype="article">
     <front>
       <docDate>
         <date when="1240-02">Février 1239 [1240].</date>
@@ -618,7 +618,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0017" n="17" subtype="article">
+  <text xml:id="VNDP-AB_0017" n="17" subtype="article">
     <front>
       <docDate>
         <date when="1240-02">Février 1239 [1240].</date>
@@ -639,7 +639,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0018" n="18" subtype="article">
+  <text xml:id="VNDP-AB_0018" n="18" subtype="article">
     <front>
       <docDate>
         <date when="1234-10">Octobre 1234.</date>
@@ -660,7 +660,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0019" n="19" subtype="article">
+  <text xml:id="VNDP-AB_0019" n="19" subtype="article">
     <pb n="18"/>
     <front>
       <docDate>
@@ -682,7 +682,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0020" n="20" subtype="article">
+  <text xml:id="VNDP-AB_0020" n="20" subtype="article">
     <front>
       <docDate>
         <date when="1234-10">Octobre 1234.</date>
@@ -703,7 +703,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0021" n="21" subtype="article">
+  <text xml:id="VNDP-AB_0021" n="21" subtype="article">
     <front>
       <docDate>
         <date when="1217">1217.</date>
@@ -724,7 +724,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0022" n="22" subtype="article">
+  <text xml:id="VNDP-AB_0022" n="22" subtype="article">
     <front>
       <docDate>
         <date>Sans date<ref type="note" n="1" target="#n1" xml:id="a1"/>.</date>
@@ -752,7 +752,7 @@
       </div>
     </back>
   </text>
-  <text xml:id="VNDP_0023" n="23" subtype="article">
+  <text xml:id="VNDP-AB_0023" n="23" subtype="article">
     <pb n="20"/>
     <front>
       <docDate>
@@ -774,7 +774,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0024" n="24" subtype="article">
+  <text xml:id="VNDP-AB_0024" n="24" subtype="article">
     <front>
       <docDate>
         <date when="1229-08">Août 1229.</date>
@@ -795,7 +795,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0025" n="25" subtype="article">
+  <text xml:id="VNDP-AB_0025" n="25" subtype="article">
     <pb n="21"/>
     <front>
       <docDate>
@@ -817,7 +817,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0026" n="26" subtype="article">
+  <text xml:id="VNDP-AB_0026" n="26" subtype="article">
     <front>
       <docDate>
         <date when="1240-11">Novembre 1240.</date>
@@ -838,7 +838,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0027" n="27" subtype="article">
+  <text xml:id="VNDP-AB_0027" n="27" subtype="article">
     <front>
       <docDate>
         <date when="1249-03">Mars 1248 [1249].</date>
@@ -859,7 +859,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0028" n="28" subtype="article">
+  <text xml:id="VNDP-AB_0028" n="28" subtype="article">
     <front>
       <docDate>
         <date when="1247-03">Mars 1246 [1247].</date>
@@ -880,7 +880,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0029" n="29" subtype="article">
+  <text xml:id="VNDP-AB_0029" n="29" subtype="article">
     <front>
       <docDate>
         <date when="1242-10">Octobre 1242.</date>
@@ -901,7 +901,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0030" n="30" subtype="article">
+  <text xml:id="VNDP-AB_0030" n="30" subtype="article">
     <front>
       <docDate>
         <date when="1248-05">Mai 1248.</date>
@@ -922,7 +922,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0031" n="31" subtype="article">
+  <text xml:id="VNDP-AB_0031" n="31" subtype="article">
     <front>
       <docDate>
         <date when="1245-03">Mars 1244 [1245].</date>
@@ -943,7 +943,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0032" n="32" subtype="article">
+  <text xml:id="VNDP-AB_0032" n="32" subtype="article">
     <pb n="26"/>
     <front>
       <docDate>
@@ -965,7 +965,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0033" n="33" subtype="article">
+  <text xml:id="VNDP-AB_0033" n="33" subtype="article">
     <pb n="27"/>
     <front>
       <docDate>
@@ -987,7 +987,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0034" n="34" subtype="article">
+  <text xml:id="VNDP-AB_0034" n="34" subtype="article">
     <front>
       <docDate>
         <date when="1256-03">Mars 1255 [1256].</date>
@@ -1008,7 +1008,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0035" n="35" subtype="article">
+  <text xml:id="VNDP-AB_0035" n="35" subtype="article">
     <front>
       <docDate>
         <date when="1256-03">Mars 1255 [1256].</date>
@@ -1029,7 +1029,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0036" n="36" subtype="article">
+  <text xml:id="VNDP-AB_0036" n="36" subtype="article">
     <front>
       <docDate>
         <date when="1252-12">Décembre 1252.</date>
@@ -1050,7 +1050,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0037" n="37" subtype="article">
+  <text xml:id="VNDP-AB_0037" n="37" subtype="article">
     <pb n="30"/>
     <front>
       <docDate>
@@ -1072,7 +1072,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0038" n="38" subtype="article">
+  <text xml:id="VNDP-AB_0038" n="38" subtype="article">
     <front>
       <docDate>
         <date when="1257-05-22">22 mai 1257.</date>
@@ -1093,7 +1093,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0039" n="39" subtype="article">
+  <text xml:id="VNDP-AB_0039" n="39" subtype="article">
     <front>
       <docDate>
         <date when="1257-06">Juin 1257.</date>
@@ -1114,7 +1114,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0040" n="40" subtype="article">
+  <text xml:id="VNDP-AB_0040" n="40" subtype="article">
     <front>
       <docDate>
         <date when="1262-08">Août 1262.</date>
@@ -1135,7 +1135,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0041" n="41" subtype="article">
+  <text xml:id="VNDP-AB_0041" n="41" subtype="article">
     <pb n="34"/>
     <front>
       <docDate>
@@ -1157,7 +1157,7 @@
       </div>
     </body>
   </text>
-  <text xml:id="VNDP_0042" n="42" subtype="article">
+  <text xml:id="VNDP-AB_0042" n="42" subtype="article">
     <front>
       <docDate>
         <date when="1240-08">Août 1240.</date>
@@ -1185,7 +1185,7 @@
       </div>
     </back>
   </text>
-  <text xml:id="VNDP_0043" n="43" subtype="article">
+  <text xml:id="VNDP-AB_0043" n="43" subtype="article">
     <front>
       <docDate>
         <date>Sans date<ref type="note" n="1" target="#n1_3" xml:id="a1_3"/>.</date>
