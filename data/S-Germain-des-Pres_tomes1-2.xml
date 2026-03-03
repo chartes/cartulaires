@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -147,7 +147,7 @@
     </front>
     <group>
       <head>Cartulaire de l’abbaye de Saint-Germain-des-Prés</head>
-        <text subtype="article" xml:id="SGDP_0001" n="I">
+        <text subtype="article" xml:id="SGDP-AB_0001" n="I">
           <pb edRef="#poupardin1909" n="1"/>
           <front>
             <docDate><date when="0558-12-06">6 décembre 558</date>, (Acte faux)<ref type="note" n="1" target="#n1_1" xml:id="a1_1"/>.</docDate>
@@ -246,7 +246,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0002" n="II">
+        <text subtype="article" xml:id="SGDP-AB_0002" n="II">
           <front>
             <docDate>
               <date when="0556-08-28">21 août 566.</date>, (Acte refait).
@@ -325,7 +325,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0003" n="III">
+        <text subtype="article" xml:id="SGDP-AB_0003" n="III">
           <front>
             <docDate>
               <date notAfter="0576">S. d. [...576].</date>, (Acte perdu).
@@ -361,7 +361,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0004" n="IV">
+        <text subtype="article" xml:id="SGDP-AB_0004" n="IV">
           <pb edRef="#poupardin1909" n="8"/>
           <front>
             <docDate>
@@ -395,7 +395,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0005" n="V">
+        <text subtype="article" xml:id="SGDP-AB_0005" n="V">
           <front>
             <docDate>
               <date notBefore="0567" notAfter="0584">S. d. [567-584].</date>, (Acte perdu).
@@ -427,7 +427,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0006" n="VI">
+        <text subtype="article" xml:id="SGDP-AB_0006" n="VI">
           <pb edRef="#poupardin1909" n="9"/>
           <front>
             <docDate>
@@ -460,7 +460,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0007" n="VII">
+        <text subtype="article" xml:id="SGDP-AB_0007" n="VII">
           <front>
             <docDate>
               <date notBefore="0613" notAfter="0629">S. d. [613-629]<note n="7_1">
@@ -497,7 +497,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0008" n="VIII">
+        <text subtype="article" xml:id="SGDP-AB_0008" n="VIII">
           <front>
             <docDate>
               <date notBefore="0629" notAfter="0639">S. d. [629-639].</date>, (Acte faux)<ref type="note" n="1" target="#n8_1" xml:id="a8_1"/>.
@@ -567,7 +567,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0009" n="IX">
+        <text subtype="article" xml:id="SGDP-AB_0009" n="IX">
           <pb edRef="#poupardin1909" n="13"/>
           <front>
             <docDate>
@@ -617,7 +617,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0010" n="X">
+        <text subtype="article" xml:id="SGDP-AB_0010" n="X">
           <pb edRef="#poupardin1909" n="15"/>
           <front>
             <docDate>
@@ -666,7 +666,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0011" n="XI">
+        <text subtype="article" xml:id="SGDP-AB_0011" n="XI">
           <pb edRef="#poupardin1909" n="18"/>
           <front>
             <docDate>
@@ -714,7 +714,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0012" n="XII">
+        <text subtype="article" xml:id="SGDP-AB_0012" n="XII">
           <front>
             <docDate>
               <date when="0703-02-25">25 février 703.</date>
@@ -775,7 +775,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0013" n="XIII">
+        <text subtype="article" xml:id="SGDP-AB_0013" n="XIII">
           <pb edRef="#poupardin1909" n="21"/>
           <front>
             <docDate>
@@ -808,7 +808,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0014" n="XIV">
+        <text subtype="article" xml:id="SGDP-AB_0014" n="XIV">
           <front>
             <docDate>
               <date notBefore="0721" notAfter="0737">S. d. [721-737]<note n="14_1">
@@ -862,7 +862,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0015" n="XV">
+        <text subtype="article" xml:id="SGDP-AB_0015" n="XV">
           <front>
             <docDate>
               <date when="0755-07-25">25 juillet 755.</date>, (Acte perdu).
@@ -894,7 +894,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0016" n="XVI">
+        <text subtype="article" xml:id="SGDP-AB_0016" n="XVI">
           <front>
             <docDate>
               <date notBefore="0752-03-05" notAfter="0768-09-24">S. d. [5 mars 752-24 septembre 768]<note n="16_1">
@@ -928,7 +928,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0017" n="XVII">
+        <text subtype="article" xml:id="SGDP-AB_0017" n="XVII">
           <pb edRef="#poupardin1909" n="25"/>
           <front>
             <docDate>
@@ -1075,7 +1075,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0018" n="XVIII">
+        <text subtype="article" xml:id="SGDP-AB_0018" n="XVIII">
           <pb edRef="#poupardin1909" n="29"/>
           <front>
             <docDate>
@@ -1111,7 +1111,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0019" n="XIX">
+        <text subtype="article" xml:id="SGDP-AB_0019" n="XIX">
           <front>
             <docDate>
               <date when="0779-03-27">27 mars 779.</date>
@@ -1180,7 +1180,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0020" n="XX">
+        <text subtype="article" xml:id="SGDP-AB_0020" n="XX">
           <front>
             <docDate>
               <date when="0786-11-05">5 novembre 786.</date>, (Acte refait)<ref type="note" n="1" target="#n20_1" xml:id="a20_1"/>.
@@ -1254,7 +1254,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0021" n="XXI">
+        <text subtype="article" xml:id="SGDP-AB_0021" n="XXI">
           <front>
             <docDate>
               <date when="0790-09-03">3 septembre 790.</date>
@@ -1297,7 +1297,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0022" n="XXII">
+        <text subtype="article" xml:id="SGDP-AB_0022" n="XXII">
           <front>
             <docDate>
               <date when="0791-08-14">14 août 791.</date>
@@ -1334,7 +1334,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0023" n="XXIII">
+        <text subtype="article" xml:id="SGDP-AB_0023" n="XXIII">
           <front>
             <docDate>
               <date when="0794-05-05">5 mai 794.</date>
@@ -1388,7 +1388,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0024" n="XXIV">
+        <text subtype="article" xml:id="SGDP-AB_0024" n="XXIV">
           <pb edRef="#poupardin1909" n="38"/>
           <front>
             <docDate>
@@ -1429,7 +1429,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0025" n="XXV">
+        <text subtype="article" xml:id="SGDP-AB_0025" n="XXV">
           <front>
             <docDate>
               <date notBefore="0778" notAfter="0814">S. d. [778-814]<note n="25_1">
@@ -1464,7 +1464,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0026" n="XXVI">
+        <text subtype="article" xml:id="SGDP-AB_0026" n="XXVI">
           <front>
             <docDate>
               <date when="0816-08-30">30 août 816.</date>
@@ -1515,7 +1515,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0027" n="XXVII">
+        <text subtype="article" xml:id="SGDP-AB_0027" n="XXVII">
           <front>
             <docDate>
               <date when="0819-02-25">25 février 819.</date>, (Acte faux)<ref type="note" n="1" target="#n27_1" xml:id="a27_1"/>.
@@ -1578,7 +1578,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0028" n="XXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0028" n="XXVIII">
           <front>
             <docDate>
               <date when="0829-01-13">13 janvier 829.</date>
@@ -1664,7 +1664,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0029" n="XXIX">
+        <text subtype="article" xml:id="SGDP-AB_0029" n="XXIX">
           <front>
             <docDate>
               <date notBefore="0814-01-28" notAfter="0829-08-20">S. d. [28 janvier 814-20 août 829]<note n="29_1">
@@ -1698,7 +1698,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0030" n="XXX">
+        <text subtype="article" xml:id="SGDP-AB_0030" n="XXX">
           <front>
             <docDate>
               <date when="0829-08-10">10 août 829.</date>
@@ -1760,7 +1760,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0031" n="XXXI">
+        <text subtype="article" xml:id="SGDP-AB_0031" n="XXXI">
           <front>
             <docDate>
               <date when="0845-06-26">26 juin 845.</date>, (Acte faux)<ref type="note" n="1" target="#n31_1" xml:id="a31_1"/>.
@@ -1818,7 +1818,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0032" n="XXXII">
+        <text subtype="article" xml:id="SGDP-AB_0032" n="XXXII">
           <front>
             <docDate>
               <date when="0846-08-07">7 août 846.</date>
@@ -1888,7 +1888,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0033" n="XXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0033" n="XXXIII">
           <front>
             <docDate>
               <date notBefore="0842" notAfter="0857">S. d. [842-857]<note n="33_1">
@@ -1959,7 +1959,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0034" n="XXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0034" n="XXXIV">
           <front>
             <docDate>
               <date when="0847-08-04">4 août 847.</date>, (Acte faux)<ref type="note" n="1" target="#n34_1" xml:id="a34_1"/>.
@@ -2000,7 +2000,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0035" n="XXXV">
+        <text subtype="article" xml:id="SGDP-AB_0035" n="XXXV">
           <front>
             <docDate>
               <date when="0867-09-05">5 septembre 867.</date>
@@ -2037,7 +2037,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0036" n="XXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0036" n="XXXVI">
           <front>
             <docDate>
               <date when="0872-04-22">22 avril 872.</date>
@@ -2111,7 +2111,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0037" n="XXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0037" n="XXXVII">
           <front>
             <docDate>
               <date notBefore="0872-04-01" notAfter="0875-04-01" scope="circa">1<hi rend="sup">er</hi> avril [872-875 (?)]<note n="37_1">
@@ -2163,7 +2163,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0038" n="XXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0038" n="XXXVIII">
           <front>
             <docDate>
               <date notBefore="0886-10" notAfter="0886-11">S. d. [octobre-novembre 886].</date>, (Acte perdu)<ref type="note" n="1" target="#n38_1" xml:id="a38_1"/>.
@@ -2195,7 +2195,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0039" n="XXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0039" n="XXXIX">
           <pb edRef="#poupardin1909" n="65"/>
           <front>
             <docDate>
@@ -2268,7 +2268,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0040" n="XL">
+        <text subtype="article" xml:id="SGDP-AB_0040" n="XL">
           <front>
             <docDate>
               <date when="0914-02-25">25 février 914.</date>
@@ -2312,7 +2312,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0041" n="XLI">
+        <text subtype="article" xml:id="SGDP-AB_0041" n="XLI">
           <front>
             <docDate>
               <date when="0918-03-14">14 mars 918.</date>
@@ -2373,7 +2373,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0042" n="XLII">
+        <text subtype="article" xml:id="SGDP-AB_0042" n="XLII">
           <front>
             <docDate>
               <date when="0918-05-14">14 mai 918.</date>
@@ -2435,7 +2435,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0043" n="XLIII">
+        <text subtype="article" xml:id="SGDP-AB_0043" n="XLIII">
           <front>
             <docDate>
               <date when="0943-01-06">6 janvier 943.</date>
@@ -2461,7 +2461,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0044" n="XLIV">
+        <text subtype="article" xml:id="SGDP-AB_0044" n="XLIV">
           <pb edRef="#poupardin1909" n="73"/>
           <front>
             <docDate>
@@ -2517,7 +2517,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0045" n="XLV">
+        <text subtype="article" xml:id="SGDP-AB_0045" n="XLV">
           <pb edRef="#poupardin1909" n="75"/>
           <front>
             <docDate>
@@ -2551,7 +2551,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0046" n="XLVI">
+        <text subtype="article" xml:id="SGDP-AB_0046" n="XLVI">
           <front>
             <docDate>
               <date notBefore="0994" notAfter="0995">994-995.</date>
@@ -2592,7 +2592,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0047" n="XLVII">
+        <text subtype="article" xml:id="SGDP-AB_0047" n="XLVII">
           <front>
             <docDate>
               <date notBefore="0954" notAfter="0995">S. d. [954-995]<note n="47_1">
@@ -2638,7 +2638,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0048" n="XLVIII">
+        <text subtype="article" xml:id="SGDP-AB_0048" n="XLVIII">
           <front>
             <docDate>
               <date notBefore="0901" notAfter="1000">S. d. (<hi rend="sc">x</hi><hi rend="sup">e</hi> siècle).</date>
@@ -2667,7 +2667,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0049" n="XLIX">
+        <text subtype="article" xml:id="SGDP-AB_0049" n="XLIX">
           <pb edRef="#poupardin1909" n="78"/>
           <front>
             <docDate>
@@ -2718,7 +2718,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0050" n="L">
+        <text subtype="article" xml:id="SGDP-AB_0050" n="L">
           <front>
             <docDate>
               <date when="1031">S. d. [début de 1031]<note n="50_1">
@@ -2759,7 +2759,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0051" n="LI">
+        <text subtype="article" xml:id="SGDP-AB_0051" n="LI">
           <front>
             <docDate>
               <date notBefore="1031-01-01" notAfter="1031-03-01">1<hi rend="sup">er</hi> janvier-1<hi rend="sup">er</hi> mars 1031<note n="51_1">
@@ -2816,7 +2816,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0052" n="LII">
+        <text subtype="article" xml:id="SGDP-AB_0052" n="LII">
           <front>
             <docDate>
               <date notBefore="1031-01-01" notAfter="1031-03-01">1<hi rend="sup">er</hi> janvier-1<hi rend="sup">er</hi> mars 1131<note n="52_1">
@@ -2872,7 +2872,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0053" n="LIII">
+        <text subtype="article" xml:id="SGDP-AB_0053" n="LIII">
           <front>
             <docDate>
               <date notBefore="1012" notAfter="1031">S. d. [1012-1031]<note n="53_1">
@@ -2910,7 +2910,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0054" n="LIV">
+        <text subtype="article" xml:id="SGDP-AB_0054" n="LIV">
           <front>
             <docDate>
               <date notBefore="1016" notAfter="1037-11-15">S. d. [1016-15 novembre 1037]<note n="54_1">
@@ -2949,7 +2949,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0055" n="LV">
+        <text subtype="article" xml:id="SGDP-AB_0055" n="LV">
           <front>
             <docDate>
               <date when="1040-09-22">22 septembre 1040.</date>
@@ -3006,7 +3006,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0056" n="LVI">
+        <text subtype="article" xml:id="SGDP-AB_0056" n="LVI">
           <front>
             <docDate>
               <date notBefore="1042" notAfter="1043">1042-1043<note n="56_1">
@@ -3064,7 +3064,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0057" n="LVII">
+        <text subtype="article" xml:id="SGDP-AB_0057" n="LVII">
           <front>
             <docDate>
               <date notBefore="1043" notAfter="1044">1043-1044.</date>
@@ -3126,7 +3126,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0058" n="LVIII">
+        <text subtype="article" xml:id="SGDP-AB_0058" n="LVIII">
           <front>
             <docDate>
               <date when="1045-10">octobre 1045.</date>
@@ -3172,7 +3172,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0059" n="LIX">
+        <text subtype="article" xml:id="SGDP-AB_0059" n="LIX">
           <front>
             <docDate>
               <date when="1053-02-02">2 février 1053.</date>
@@ -3221,7 +3221,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0060" n="LX">
+        <text subtype="article" xml:id="SGDP-AB_0060" n="LX">
           <front>
             <docDate>
               <date notBefore="1028" notAfter="1058">S. d. [1028-1058].</date>, (Acte perdu)<ref type="note" n="1" target="#n60_1" xml:id="a60_1"/>.
@@ -3253,7 +3253,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0061" n="LXI">
+        <text subtype="article" xml:id="SGDP-AB_0061" n="LXI">
           <pb edRef="#poupardin1909" n="98"/>
           <front>
             <docDate>
@@ -3323,7 +3323,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0062" n="LXII">
+        <text subtype="article" xml:id="SGDP-AB_0062" n="LXII">
           <front>
             <docDate>
               <date notBefore="1058-01-01" notAfter="1058-08-15">1058 avant le 15 août<note n="62_1">
@@ -3377,7 +3377,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0063" n="LXIII">
+        <text subtype="article" xml:id="SGDP-AB_0063" n="LXIII">
           <front>
             <docDate>
               <date notBefore="1058-08-15" notAfter="1058-12-31">1058 après le 15 août<note n="63_1">
@@ -3432,7 +3432,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0064" n="LXIV">
+        <text subtype="article" xml:id="SGDP-AB_0064" n="LXIV">
           <front>
             <docDate>
               <date notBefore="1061-01-01" notAfter="1061-08-04">1061, avant le 4 août.</date>
@@ -3508,7 +3508,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0065" n="LXV">
+        <text subtype="article" xml:id="SGDP-AB_0065" n="LXV">
           <front>
             <docDate>
               <date notBefore="1070-01-01" notAfter="1070-05-22">1070, avant le 23 mai<note n="65_1">
@@ -3573,7 +3573,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0066" n="LXVI">
+        <text subtype="article" xml:id="SGDP-AB_0066" n="LXVI">
           <front>
             <docDate>
               <date notBefore="1070-01-01" notAfter="1070-05-22">1070, avant le 23 mai<note n="66_1">
@@ -3635,7 +3635,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0067" n="LXVII">
+        <text subtype="article" xml:id="SGDP-AB_0067" n="LXVII">
           <front>
             <docDate>
               <date when="1073">1073.</date>
@@ -3696,7 +3696,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0068" n="LXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0068" n="LXVIII">
           <front>
             <docDate>
               <date when="1077">1077.</date>
@@ -3728,7 +3728,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0069" n="LXIX">
+        <text subtype="article" xml:id="SGDP-AB_0069" n="LXIX">
           <front>
             <docDate>
               <date when="1082-01-06">6 janvier 1082.</date>
@@ -3794,7 +3794,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0070" n="LXX">
+        <text subtype="article" xml:id="SGDP-AB_0070" n="LXX">
           <front>
             <docDate>
               <date when="1096">1096.</date>
@@ -3848,7 +3848,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0071" n="LXXI">
+        <text subtype="article" xml:id="SGDP-AB_0071" n="LXXI">
           <pb edRef="#poupardin1909" n="116"/>
           <front>
             <docDate>
@@ -3875,7 +3875,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0072" n="LXXII">
+        <text subtype="article" xml:id="SGDP-AB_0072" n="LXXII">
           <front>
             <docDate>
               <date notBefore="1077" notAfter="1103-07-18">1077-18 juillet 1103<note n="72_1">
@@ -3919,7 +3919,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0073" n="LXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0073" n="LXXIII">
           <front>
             <docDate>
               <date when="1107-04-01">1<hi rend="sup">er</hi> avril 1107<note n="73_1">
@@ -3981,7 +3981,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0074" n="LXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0074" n="LXXIV">
           <front>
             <docDate>
               <date when="1109-09">septembre 1109.</date>
@@ -4027,7 +4027,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0075" n="LXXV">
+        <text subtype="article" xml:id="SGDP-AB_0075" n="LXXV">
           <front>
             <docDate>
               <date notBefore="1103" notAfter="1116">S. d. [1103-1108] ou [1110-1116]<note n="75_1">
@@ -4069,7 +4069,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0076" n="LXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0076" n="LXXVI">
           <front>
             <docDate>
               <date notBefore="1107" notAfter="1116">S. d. [1107-1108]-[1110-1116]<note n="76_1">
@@ -4107,7 +4107,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0077" n="LXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0077" n="LXXVII">
           <pb edRef="#poupardin1909" n="123"/>
           <front>
             <docDate>
@@ -4149,7 +4149,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0078" n="LXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0078" n="LXXVIII">
           <front>
             <docDate>
               <date notBefore="1117-02" notAfter="1117-08-03">Fin février-3 août 1117<note n="78_1">
@@ -4187,7 +4187,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0079" n="LXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0079" n="LXXIX">
           <front>
             <docDate>
               <date notBefore="1117-02" notAfter="1117-02-03">Fin février-3 août 1117<note n="79_1">
@@ -4226,7 +4226,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0080" n="LXXX">
+        <text subtype="article" xml:id="SGDP-AB_0080" n="LXXX">
           <pb edRef="#poupardin1909" n="126"/>
           <front>
             <docDate>
@@ -4272,7 +4272,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0081" n="LXXXI">
+        <text subtype="article" xml:id="SGDP-AB_0081" n="LXXXI">
           <front>
             <docDate>
               <date notBefore="1120-01-13" notAfter="1123-06-17">S. d. [13 janvier 1120-17 juin 1123]<note n="81_1">
@@ -4306,7 +4306,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0082" n="LXXXII">
+        <text subtype="article" xml:id="SGDP-AB_0082" n="LXXXII">
           <front>
             <docDate>
               <date notBefore="1125-03" notAfter="1126-03">mars 1125 ou 1126<note n="82_1">
@@ -4350,7 +4350,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0083" n="LXXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0083" n="LXXXIII">
           <pb edRef="#poupardin1909" n="130"/>
           <front>
             <docDate>
@@ -4393,7 +4393,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0084" n="LXXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0084" n="LXXXIV">
           <front>
             <docDate>
               <date notBefore="1116" notAfter="1127">S. d. [1116-1127].</date>, (Acte perdu).
@@ -4418,7 +4418,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0085" n="LXXXV">
+        <text subtype="article" xml:id="SGDP-AB_0085" n="LXXXV">
           <front>
             <docDate>
               <date when="1130-11-03">3 novembre 1130.</date>
@@ -4475,7 +4475,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0086" n="LXXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0086" n="LXXXVI">
           <pb edRef="#poupardin1909" n="133"/>
           <front>
             <docDate>
@@ -4525,7 +4525,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0087" n="LXXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0087" n="LXXXVII">
           <front>
             <docDate>
               <date notBefore="1133" notAfter="1134">S. d. [1133-1134]<note n="87_1">
@@ -4585,7 +4585,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0088" n="LXXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0088" n="LXXXVIII">
           <pb edRef="#poupardin1909" n="136"/>
           <front>
             <docDate>
@@ -4645,7 +4645,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0089" n="LXXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0089" n="LXXXIX">
           <front>
             <docDate>
               <date when="1138">1138.</date>
@@ -4767,7 +4767,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0090" n="XC">
+        <text subtype="article" xml:id="SGDP-AB_0090" n="XC">
           <front>
             <docDate>
               <date when="1140">1140.</date>
@@ -4817,7 +4817,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0091" n="XCI">
+        <text subtype="article" xml:id="SGDP-AB_0091" n="XCI">
           <pb edRef="#poupardin1909" n="144"/>
           <front>
             <docDate>
@@ -4863,7 +4863,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0092" n="XCII">
+        <text subtype="article" xml:id="SGDP-AB_0092" n="XCII">
           <front>
             <docDate>
               <date when="1140">1140.</date>
@@ -4897,7 +4897,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0093" n="XCIII">
+        <text subtype="article" xml:id="SGDP-AB_0093" n="XCIII">
           <front>
             <docDate>
               <date notBefore="1137" notAfter="1142">S. d. [1137-1142]<note n="93_1">
@@ -4932,7 +4932,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0094" n="XCIV">
+        <text subtype="article" xml:id="SGDP-AB_0094" n="XCIV">
           <pb edRef="#poupardin1909" n="147"/>
           <front>
             <docDate>
@@ -4967,7 +4967,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0095" n="XCV">
+        <text subtype="article" xml:id="SGDP-AB_0095" n="XCV">
           <front>
             <docDate>
               <date when="1144-03-28">28 mars 1144.</date>
@@ -5037,7 +5037,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0096" n="XCVI">
+        <text subtype="article" xml:id="SGDP-AB_0096" n="XCVI">
           <front>
             <docDate>
               <date when="1144-03-28">28 mars [1144].</date>
@@ -5074,7 +5074,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0097" n="XCVII">
+        <text subtype="article" xml:id="SGDP-AB_0097" n="XCVII">
           <front>
             <docDate>
               <date when="1144-12-10">10 décembre [1144].</date>
@@ -5103,7 +5103,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0098" n="XCVIII">
+        <text subtype="article" xml:id="SGDP-AB_0098" n="XCVIII">
           <pb edRef="#poupardin1909" n="151"/>
           <front>
             <docDate>
@@ -5134,7 +5134,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0099" n="XCIX">
+        <text subtype="article" xml:id="SGDP-AB_0099" n="XCIX">
           <front>
             <docDate>
               <date when="1145" scope="circa">1145 (?)<note n="99_1">
@@ -5178,7 +5178,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0100" n="C">
+        <text subtype="article" xml:id="SGDP-AB_0100" n="C">
           <front>
             <docDate>
               <date notBefore="1116" notAfter="1145">S. d. [1116-1145]<note n="100_1">
@@ -5223,7 +5223,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0101" n="CI">
+        <text subtype="article" xml:id="SGDP-AB_0101" n="CI">
           <front>
             <docDate>
               <date notBefore="1116" notAfter="1145">S. d. [1116-1145]<note n="101_1">
@@ -5265,7 +5265,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0102" n="CII">
+        <text subtype="article" xml:id="SGDP-AB_0102" n="CII">
           <front>
             <docDate>
               <date notBefore="1116" notAfter="1145">S. d. [1116-1145]<note n="102_1">
@@ -5307,7 +5307,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0103" n="CIII">
+        <text subtype="article" xml:id="SGDP-AB_0103" n="CIII">
           <front>
             <docDate>
               <date notBefore="1116" notAfter="1145">S. d. [1116-1145]<note n="103_1">
@@ -5346,7 +5346,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0104" n="CIV">
+        <text subtype="article" xml:id="SGDP-AB_0104" n="CIV">
           <front>
             <docDate>
               <date when="1146-01-08">8 janvier 1146.</date>
@@ -5421,7 +5421,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0105" n="CV">
+        <text subtype="article" xml:id="SGDP-AB_0105" n="CV">
           <pb edRef="#poupardin1909" n="161"/>
           <front>
             <docDate>
@@ -5467,7 +5467,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0106" n="CVI">
+        <text subtype="article" xml:id="SGDP-AB_0106" n="CVI">
           <front>
             <docDate>
               <date notBefore="1149-01-24" notAfter="1150-04-16">S. d. [24 janvier 1149-16 avril 1150]<note n="106_1">
@@ -5514,7 +5514,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0107" n="CVII">
+        <text subtype="article" xml:id="SGDP-AB_0107" n="CVII">
           <front>
             <docDate>
               <date when="1150-04-16">16 avril [1150].</date>
@@ -5561,7 +5561,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0108" n="CVIII">
+        <text subtype="article" xml:id="SGDP-AB_0108" n="CVIII">
           <front>
             <docDate>
               <date when="1150">1150.</date>
@@ -5598,7 +5598,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0109" n="CIX">
+        <text subtype="article" xml:id="SGDP-AB_0109" n="CIX">
           <front>
             <docDate>
               <date notBefore="1143" notAfter="1150">S. d. [1143-1150]<note n="109_1">
@@ -5648,7 +5648,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0110" n="CX">
+        <text subtype="article" xml:id="SGDP-AB_0110" n="CX">
           <front>
             <docDate>
               <date when="1150" scope="circa">S. d. [vers 1150]<note n="110_1">
@@ -5683,7 +5683,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0111" n="CXI">
+        <text subtype="article" xml:id="SGDP-AB_0111" n="CXI">
           <front>
             <docDate>
               <date notBefore="1146" notAfter="1152">S. d. [1146-1152]<note n="111_1">
@@ -5717,7 +5717,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0112" n="CXII">
+        <text subtype="article" xml:id="SGDP-AB_0112" n="CXII">
           <front>
             <docDate>
               <date notBefore="1148" notAfter="1152">S. d. [1148-1152]<note n="112_1">
@@ -5763,7 +5763,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0113" n="CXIII">
+        <text subtype="article" xml:id="SGDP-AB_0113" n="CXIII">
           <front>
             <docDate>
               <date notBefore="1148" notAfter="1152">S. d. [1148-1152]<note n="113_1">
@@ -5804,7 +5804,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0114" n="CXIV">
+        <text subtype="article" xml:id="SGDP-AB_0114" n="CXIV">
           <pb edRef="#poupardin1909" n="171"/>
           <front>
             <docDate>
@@ -5837,7 +5837,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0115" n="CXV">
+        <text subtype="article" xml:id="SGDP-AB_0115" n="CXV">
           <front>
             <docDate>
               <date when="1154-01-31">31 janvier 1154.</date>
@@ -5896,7 +5896,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0116" n="CXVI">
+        <text subtype="article" xml:id="SGDP-AB_0116" n="CXVI">
           <pb edRef="#poupardin1909" n="174"/>
           <front>
             <docDate>
@@ -5942,7 +5942,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0117" n="CXVII">
+        <text subtype="article" xml:id="SGDP-AB_0117" n="CXVII">
           <pb edRef="#poupardin1909" n="175"/>
           <front>
             <docDate>
@@ -6008,7 +6008,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0118" n="CXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0118" n="CXVIII">
           <pb edRef="#poupardin1909" n="177"/>
           <front>
             <docDate>
@@ -6050,7 +6050,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0119" n="CXIX">
+        <text subtype="article" xml:id="SGDP-AB_0119" n="CXIX">
           <pb edRef="#poupardin1909" n="179"/>
           <front>
             <docDate>
@@ -6087,7 +6087,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0120" n="CXX">
+        <text subtype="article" xml:id="SGDP-AB_0120" n="CXX">
           <front>
             <docDate>
               <date notBefore="1156-04-15" notAfter="1157-03-30">15 avril 1156-30 mars 1157.</date>
@@ -6126,7 +6126,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0121" n="CXXI">
+        <text subtype="article" xml:id="SGDP-AB_0121" n="CXXI">
           <front>
             <docDate>
               <date when="1159-03-07">7 mars 1159.</date>
@@ -6185,7 +6185,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0122" n="CXXII">
+        <text subtype="article" xml:id="SGDP-AB_0122" n="CXXII">
           <front>
             <docDate>
               <date when="1162-07-07">7 juillet 1162.</date>
@@ -6261,7 +6261,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0123" n="CXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0123" n="CXXIII">
           <front>
             <docDate>
               <date notBefore="1154" notAfter="1162-07-24">S. d. [1154-24 juillet 1162]<note n="123_1">
@@ -6308,7 +6308,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0124" n="CXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0124" n="CXXIV">
           <front>
             <docDate>
               <date notBefore="1154" notAfter="1162-07-24">s. d. [1154-24 juillet 1162]<note n="124_1">
@@ -6351,7 +6351,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0125" n="CXXV">
+        <text subtype="article" xml:id="SGDP-AB_0125" n="CXXV">
           <front>
             <docDate>
               <date notBefore="1155" notAfter="1162">S. d. [1155-1162]<note n="125_1">
@@ -6385,7 +6385,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0126" n="CXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0126" n="CXXVI">
           <front>
             <docDate>
               <date notBefore="1155" notAfter="1162">S. d. [1155-1162]<note n="126_1">
@@ -6424,7 +6424,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0127" n="CXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0127" n="CXXVII">
           <front>
             <docDate>
               <date notBefore="1162-08-01" notAfter="1163-02-20">1<hi rend="sup">er</hi> août 1162-20 février 1163.</date>
@@ -6472,7 +6472,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0128" n="CXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0128" n="CXXVIII">
           <front>
             <docDate>
               <date when="1163-02-20">20 février 1163.</date>
@@ -6527,7 +6527,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0129" n="CXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0129" n="CXXIX">
           <front>
             <docDate>
               <date when="1163-04-21">21 avril 1163.</date>
@@ -6594,7 +6594,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0130" n="CXXX">
+        <text subtype="article" xml:id="SGDP-AB_0130" n="CXXX">
           <front>
             <docDate>
               <date when="1163-04-22">22 avril [1163].</date>
@@ -6635,7 +6635,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0131" n="CXXXI">
+        <text subtype="article" xml:id="SGDP-AB_0131" n="CXXXI">
           <front>
             <docDate>
               <date when="1163-06-01">1<hi rend="sup">er</hi> juin 1163.</date>
@@ -6680,7 +6680,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0132" n="CXXXII">
+        <text subtype="article" xml:id="SGDP-AB_0132" n="CXXXII">
           <front>
             <docDate>
               <date when="1164-01-09">9 janvier 1164.</date>
@@ -6755,7 +6755,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0133" n="CXXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0133" n="CXXXIII">
           <front>
             <docDate>
               <date when="1164-08-18">18 août 1164.</date>
@@ -6797,7 +6797,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0134" n="CXXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0134" n="CXXXIV">
           <front>
             <docDate>
               <date when="1164-08-18">18 août [1164].</date>
@@ -6841,7 +6841,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0135" n="CXXXV">
+        <text subtype="article" xml:id="SGDP-AB_0135" n="CXXXV">
           <front>
             <docDate>
               <date notBefore="1156" notAfter="1164-09-23">S. d. [1156-23 septembre 1164]<note n="135_1">
@@ -6881,7 +6881,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0136" n="CXXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0136" n="CXXXVI">
           <front>
             <docDate>
               <date notBefore="1163-11-26" notAfter="1164-11-26">26 novembre [1163 ou 1164]<note n="136_1">
@@ -6920,7 +6920,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0137" n="CXXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0137" n="CXXXVII">
           <front>
             <docDate>
               <date notBefore="1164-04-12" notAfter="1165-04-03">12 avril 1164-3 avril 1165.</date>
@@ -6958,7 +6958,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0138" n="CXXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0138" n="CXXXVIII">
           <pb edRef="#poupardin1909" n="204"/>
           <front>
             <docDate>
@@ -6991,7 +6991,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0139" n="CXXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0139" n="CXXXIX">
           <pb edRef="#poupardin1909" n="205"/>
           <front>
             <docDate>
@@ -7042,7 +7042,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0140" n="CXL">
+        <text subtype="article" xml:id="SGDP-AB_0140" n="CXL">
           <pb edRef="#poupardin1909" n="207"/>
           <front>
             <docDate>
@@ -7093,7 +7093,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0141" n="CXLI">
+        <text subtype="article" xml:id="SGDP-AB_0141" n="CXLI">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1168-02-01">S. d. [1162-1<hi rend="sup">er</hi> février 1168]<note n="141_1">
@@ -7136,7 +7136,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0142" n="CXLII">
+        <text subtype="article" xml:id="SGDP-AB_0142" n="CXLII">
           <front>
             <docDate>
               <date notBefore="1142" notAfter="1168-02-01">S. d. [1142-1<hi rend="sup">er</hi> février 1168]<note n="142_1">
@@ -7185,7 +7185,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0143" n="CXLIII">
+        <text subtype="article" xml:id="SGDP-AB_0143" n="CXLIII">
           <front>
             <docDate>
               <date when="1168-06-05">5 juin 1168.</date>
@@ -7241,7 +7241,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0144" n="CXLIV">
+        <text subtype="article" xml:id="SGDP-AB_0144" n="CXLIV">
           <front>
             <docDate>
               <date when="1168">1168.</date>
@@ -7282,7 +7282,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0145" n="CXLV">
+        <text subtype="article" xml:id="SGDP-AB_0145" n="CXLV">
           <front>
             <docDate>
               <date when="1168">1168.</date>
@@ -7323,7 +7323,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0146" n="CXLVI">
+        <text subtype="article" xml:id="SGDP-AB_0146" n="CXLVI">
           <pb edRef="#poupardin1909" n="216"/>
           <front>
             <docDate>
@@ -7363,7 +7363,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0147" n="CXLVII">
+        <text subtype="article" xml:id="SGDP-AB_0147" n="CXLVII">
           <pb edRef="#poupardin1909" n="217"/>
           <front>
             <docDate>
@@ -7407,7 +7407,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0148" n="CXLVIII">
+        <text subtype="article" xml:id="SGDP-AB_0148" n="CXLVIII">
           <pb edRef="#poupardin1909" n="218"/>
           <front>
             <docDate>
@@ -7447,7 +7447,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0149" n="CXLIX">
+        <text subtype="article" xml:id="SGDP-AB_0149" n="CXLIX">
           <front>
             <docDate>
               <date when="1171">1171.</date>
@@ -7483,7 +7483,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0150" n="CL">
+        <text subtype="article" xml:id="SGDP-AB_0150" n="CL">
           <front>
             <docDate>
               <date when="1172">1172.</date>
@@ -7524,7 +7524,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0151" n="CLI">
+        <text subtype="article" xml:id="SGDP-AB_0151" n="CLI">
           <front>
             <docDate>
               <date notBefore="1169" notAfter="1172">S. d. [1169-1172]<note n="151_1">
@@ -7562,7 +7562,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0152" n="CLII">
+        <text subtype="article" xml:id="SGDP-AB_0152" n="CLII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1173">S. d. [1162-1173]<note n="152_1">
@@ -7606,7 +7606,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0153" n="CLIII">
+        <text subtype="article" xml:id="SGDP-AB_0153" n="CLIII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1173">S. d. [1162-1173]<note n="153_1">
@@ -7646,7 +7646,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0154" n="CLIV">
+        <text subtype="article" xml:id="SGDP-AB_0154" n="CLIV">
           <front>
             <docDate>
               <date notBefore="1173-04-08" notAfter="1174-03-23">8 avril 1173-23 mars 1174.</date>
@@ -7689,7 +7689,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0155" n="CLV">
+        <text subtype="article" xml:id="SGDP-AB_0155" n="CLV">
           <pb edRef="#poupardin1909" n="226"/>
           <front>
             <docDate>
@@ -7715,7 +7715,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0156" n="CLVI">
+        <text subtype="article" xml:id="SGDP-AB_0156" n="CLVI">
           <front>
             <docDate>
               <date when="1175">1175.</date>
@@ -7764,7 +7764,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0157" n="CLVII">
+        <text subtype="article" xml:id="SGDP-AB_0157" n="CLVII">
           <front>
             <docDate>
               <date when="1175">1175.</date>
@@ -7806,7 +7806,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0158" n="CLVIII">
+        <text subtype="article" xml:id="SGDP-AB_0158" n="CLVIII">
           <pb edRef="#poupardin1909" n="230"/>
           <front>
             <docDate>
@@ -7842,7 +7842,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0159" n="CLIX">
+        <text subtype="article" xml:id="SGDP-AB_0159" n="CLIX">
           <pb edRef="#poupardin1909" n="231"/>
           <front>
             <docDate>
@@ -7887,7 +7887,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0160" n="CLX">
+        <text subtype="article" xml:id="SGDP-AB_0160" n="CLX">
           <front>
             <docDate>
               <date notBefore="1168" notAfter="1176">S. d. [1168-printemps 1176]<note n="160_1">
@@ -7924,7 +7924,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0161" n="CLXI">
+        <text subtype="article" xml:id="SGDP-AB_0161" n="CLXI">
           <front>
             <docDate>
               <date notBefore="1168" notAfter="1176">S. d. [1168-1176]<note n="161_1">
@@ -7958,7 +7958,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0162" n="CLXII">
+        <text subtype="article" xml:id="SGDP-AB_0162" n="CLXII">
           <front>
             <docDate>
               <date notBefore="1174-01-12" notAfter="1176-01-12">12 janvier [1174-1176]<note n="162_1">
@@ -8002,7 +8002,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0163" n="CLXIII">
+        <text subtype="article" xml:id="SGDP-AB_0163" n="CLXIII">
           <front>
             <docDate>
               <date when="1176-07-19">19 juillet 1176.</date>
@@ -8078,7 +8078,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0164" n="CLXIV">
+        <text subtype="article" xml:id="SGDP-AB_0164" n="CLXIV">
           <pb edRef="#poupardin1909" n="237"/>
           <front>
             <docDate>
@@ -8130,7 +8130,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0165" n="CLXV">
+        <text subtype="article" xml:id="SGDP-AB_0165" n="CLXV">
           <front>
             <docDate>
               <date when="1176-11-15">15 novembre 1176.</date>
@@ -8194,7 +8194,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0166" n="CLXVI">
+        <text subtype="article" xml:id="SGDP-AB_0166" n="CLXVI">
           <pb edRef="#poupardin1909" n="241"/>
           <front>
             <docDate>
@@ -8230,7 +8230,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0167" n="CLXVII">
+        <text subtype="article" xml:id="SGDP-AB_0167" n="CLXVII">
           <front>
             <docDate>
               <date when="1176">1176.</date>
@@ -8270,7 +8270,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0168" n="CLXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0168" n="CLXVIII">
           <front>
             <docDate>
               <date when="1176">1176.</date>
@@ -8310,7 +8310,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0169" n="CLXIX">
+        <text subtype="article" xml:id="SGDP-AB_0169" n="CLXIX">
           <front>
             <docDate>
               <date when="1176" scope="circa">S. d. [vers 1176]<note n="169_1">
@@ -8347,7 +8347,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0170" n="CLXX">
+        <text subtype="article" xml:id="SGDP-AB_0170" n="CLXX">
           <front>
             <docDate>
               <date when="1176" scope="circa">S. d. [vers 1176]<note n="170_1">
@@ -8391,7 +8391,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0171" n="CLXXI">
+        <text subtype="article" xml:id="SGDP-AB_0171" n="CLXXI">
           <front>
             <docDate>
               <date when="1177-02-16">16 février 1177.</date>
@@ -8436,7 +8436,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0172" n="CLXXII">
+        <text subtype="article" xml:id="SGDP-AB_0172" n="CLXXII">
           <front>
             <docDate>
               <date notBefore="1176-04-04" notAfter="1177-04-23">4 avril 1176-23 avril 1177.</date>
@@ -8484,7 +8484,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0173" n="CLXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0173" n="CLXXIII">
           <front>
             <docDate>
               <date notBefore="1176-04-04" notAfter="1177-04-23">4 avril 1176-23 avril 1177.</date>
@@ -8530,7 +8530,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0174" n="CLXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0174" n="CLXXIV">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1177">S. d. [1176-1177]<note n="174_1">
@@ -8564,7 +8564,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0175" n="CLXXV">
+        <text subtype="article" xml:id="SGDP-AB_0175" n="CLXXV">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1177">S. d. [1176-1177]<note n="175_1">
@@ -8598,7 +8598,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0176" n="CLXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0176" n="CLXXVI">
           <pb edRef="#poupardin1909" n="253"/>
           <front>
             <docDate>
@@ -8637,7 +8637,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0177" n="CLXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0177" n="CLXXVII">
           <front>
             <docDate>
               <date when="1178">1178.</date>
@@ -8677,7 +8677,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0178" n="CLXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0178" n="CLXXVIII">
           <front>
             <docDate>
               <date when="1178">1178.</date>
@@ -8714,7 +8714,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0179" n="CLXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0179" n="CLXXIX">
           <front>
             <docDate>
               <date when="1179-02-02">2 février 1179.</date>
@@ -8746,7 +8746,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0180" n="CLXXX">
+        <text subtype="article" xml:id="SGDP-AB_0180" n="CLXXX">
           <front>
             <docDate>
               <date when="1179-12-18">18 décembre [1179].</date>
@@ -8781,7 +8781,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0181" n="CLXXXI">
+        <text subtype="article" xml:id="SGDP-AB_0181" n="CLXXXI">
           <front>
             <docDate>
               <date when="1179">1179.</date>
@@ -8826,7 +8826,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0182" n="CLXXXII">
+        <text subtype="article" xml:id="SGDP-AB_0182" n="CLXXXII">
           <front>
             <docDate>
               <date notBefore="1166-04-10" notAfter="1179-04-10">10 avril [1166-1179]<note n="182_1">
@@ -8867,7 +8867,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0183" n="CLXXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0183" n="CLXXXIII">
           <front>
             <docDate>
               <date notBefore="1171-01-23" notAfter="1180-01-23">23 janvier [1171-1172] ou [1179-1180]<note n="183_1">
@@ -8908,7 +8908,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0184" n="CLXXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0184" n="CLXXXIV">
           <front>
             <docDate>
               <date when="1180-02-15">15 février [1180].</date>
@@ -8943,7 +8943,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0185" n="CLXXXV">
+        <text subtype="article" xml:id="SGDP-AB_0185" n="CLXXXV">
           <pb edRef="#poupardin1909" n="262"/>
           <front>
             <docDate>
@@ -8985,7 +8985,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0186" n="CLXXXVI">
+        <text subtype="article" xml:id="SGDP-AB_0186" n="CLXXXVI">
           <pb edRef="#poupardin1909" n="263"/>
           <front>
             <docDate>
@@ -9016,7 +9016,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0187" n="CLXXXVII">
+        <text subtype="article" xml:id="SGDP-AB_0187" n="CLXXXVII">
           <front>
             <docDate>
               <date when="1180-03-28">28 mars 1180.</date>
@@ -9088,7 +9088,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0188" n="CLXXXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0188" n="CLXXXVIII">
           <front>
             <docDate>
               <date notBefore="1179-04-01" notAfter="1180-04-19">1<hi rend="sup">er</hi> avril 1179-19 avril 1180.</date>
@@ -9130,7 +9130,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0189" n="CLXXXIX">
+        <text subtype="article" xml:id="SGDP-AB_0189" n="CLXXXIX">
           <pb edRef="#poupardin1909" n="268"/>
           <front>
             <docDate>
@@ -9179,7 +9179,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0190" n="CXC">
+        <text subtype="article" xml:id="SGDP-AB_0190" n="CXC">
           <pb edRef="#poupardin1909" n="270"/>
           <front>
             <docDate>
@@ -9220,7 +9220,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0191" n="CXCI">
+        <text subtype="article" xml:id="SGDP-AB_0191" n="CXCI">
           <front>
             <docDate>
               <date notBefore="1171-02-25" notAfter="1181-02-25">25 février [1171-1181]<note n="191_1">
@@ -9261,7 +9261,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0192" n="CXCII">
+        <text subtype="article" xml:id="SGDP-AB_0192" n="CXCII">
           <front>
             <docDate>
               <date notBefore="1181-04-05" notAfter="1181-10-31">5 avril-31 octobre 1181.</date>
@@ -9300,7 +9300,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0193" n="CXCIII">
+        <text subtype="article" xml:id="SGDP-AB_0193" n="CXCIII">
           <front>
             <docDate>
               <date notBefore="1159" notAfter="1181-08-30">S. d. [1159-30 août 1181]<note n="193_1">
@@ -9341,7 +9341,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0194" n="CXCIV">
+        <text subtype="article" xml:id="SGDP-AB_0194" n="CXCIV">
           <front>
             <docDate>
               <date notBefore="1159" notAfter="1181-08-30">S. d. [1159-30 août 1181].</date>
@@ -9373,7 +9373,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0195" n="CXCV">
+        <text subtype="article" xml:id="SGDP-AB_0195" n="CXCV">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1181">S. d. [1162-1181]<note n="195_1">
@@ -9417,7 +9417,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0196" n="CXCVI">
+        <text subtype="article" xml:id="SGDP-AB_0196" n="CXCVI">
           <pb edRef="#poupardin1909" n="275"/>
           <front>
             <docDate>
@@ -9516,7 +9516,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0197" n="CXCVII">
+        <text subtype="article" xml:id="SGDP-AB_0197" n="CXCVII">
           <pb edRef="#poupardin1909" n="278"/>
           <front>
             <docDate>
@@ -9554,7 +9554,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0198" n="CXCVIII">
+        <text subtype="article" xml:id="SGDP-AB_0198" n="CXCVIII">
           <front>
             <docDate>
               <date when="1182">1182.</date>
@@ -9582,7 +9582,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0199" n="CXCIX">
+        <text subtype="article" xml:id="SGDP-AB_0199" n="CXCIX">
           <front>
             <docDate>
               <date when="1182">1182.</date>
@@ -9626,7 +9626,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0200" n="CC">
+        <text subtype="article" xml:id="SGDP-AB_0200" n="CC">
           <front>
             <docDate>
               <date when="1182" scope="circa">S. d. [vers 1182]<note n="200_1">
@@ -9669,7 +9669,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0201" n="CCI">
+        <text subtype="article" xml:id="SGDP-AB_0201" n="CCI">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="201_1">
@@ -9711,7 +9711,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0202" n="CCII">
+        <text subtype="article" xml:id="SGDP-AB_0202" n="CCII">
           <pb edRef="#poupardin1909" n="284"/>
           <front>
             <docDate>
@@ -9746,7 +9746,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0203" n="CCIII">
+        <text subtype="article" xml:id="SGDP-AB_0203" n="CCIII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="203_1">
@@ -9780,7 +9780,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0204" n="CCIV">
+        <text subtype="article" xml:id="SGDP-AB_0204" n="CCIV">
           <pb edRef="#poupardin1909" n="287"/>
           <front>
             <docDate>
@@ -9826,7 +9826,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0205" n="CCV">
+        <text subtype="article" xml:id="SGDP-AB_0205" n="CCV">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="205_1">
@@ -9863,7 +9863,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0206" n="CCVI">
+        <text subtype="article" xml:id="SGDP-AB_0206" n="CCVI">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="206_1">
@@ -9900,7 +9900,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0207" n="CCVII">
+        <text subtype="article" xml:id="SGDP-AB_0207" n="CCVII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="207_1">
@@ -9943,7 +9943,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0208" n="CCVIII">
+        <text subtype="article" xml:id="SGDP-AB_0208" n="CCVIII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="208_1">
@@ -9983,7 +9983,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0209" n="CCIX">
+        <text subtype="article" xml:id="SGDP-AB_0209" n="CCIX">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="209_1">
@@ -10020,7 +10020,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0210" n="CCX">
+        <text subtype="article" xml:id="SGDP-AB_0210" n="CCX">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="210_1">
@@ -10060,7 +10060,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0211" n="CCXI">
+        <text subtype="article" xml:id="SGDP-AB_0211" n="CCXI">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="211_1">
@@ -10094,7 +10094,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0212" n="CCXII">
+        <text subtype="article" xml:id="SGDP-AB_0212" n="CCXII">
           <pb edRef="#poupardin1909" n="297"/>
           <front>
             <docDate>
@@ -10129,7 +10129,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0213" n="CCXIII">
+        <text subtype="article" xml:id="SGDP-AB_0213" n="CCXIII">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="213_1">
@@ -10166,7 +10166,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0214" n="CCXIV">
+        <text subtype="article" xml:id="SGDP-AB_0214" n="CCXIV">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162-1182]<note n="214_1">
@@ -10201,7 +10201,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0215" n="CCXV">
+        <text subtype="article" xml:id="SGDP-AB_0215" n="CCXV">
           <front>
             <docDate>
               <date notBefore="1175" notAfter="1182">S. d. [1175-1182]<note n="215_1">
@@ -10239,7 +10239,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0216" n="CCXVI">
+        <text subtype="article" xml:id="SGDP-AB_0216" n="CCXVI">
           <front>
             <docDate>
               <date notBefore="1178" notAfter="1182">S. d. [1178-1182]<note n="216_1">
@@ -10281,7 +10281,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0217" n="CCXVII">
+        <text subtype="article" xml:id="SGDP-AB_0217" n="CCXVII">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1182">S. d. [1176-1182]<note n="217_1">
@@ -10323,7 +10323,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0218" n="CCXVIII">
+        <text subtype="article" xml:id="SGDP-AB_0218" n="CCXVIII">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1182">S. d. [1176-1182]<note n="218_1">
@@ -10365,7 +10365,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0219" n="CCXIX">
+        <text subtype="article" xml:id="SGDP-AB_0219" n="CCXIX">
           <pb edRef="#poupardin1909" n="304"/>
           <front>
             <docDate>
@@ -10400,7 +10400,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0220" n="CCXX">
+        <text subtype="article" xml:id="SGDP-AB_0220" n="CCXX">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1182">S. d. [1176-1182]<note n="220_1">
@@ -10442,7 +10442,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0221" n="CCXXI">
+        <text subtype="article" xml:id="SGDP-AB_0221" n="CCXXI">
           <pb edRef="#poupardin1909" n="306"/>
           <front>
             <docDate>
@@ -10535,7 +10535,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0222" n="CCXXII">
+        <text subtype="article" xml:id="SGDP-AB_0222" n="CCXXII">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1182">S. d. [vers 1176-1182]<note n="222_1">
@@ -10669,7 +10669,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0223" n="CCXXIII">
+        <text subtype="article" xml:id="SGDP-AB_0223" n="CCXXIII">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1182">S. d. [vers 1176-1182]<note n="223_1">
@@ -10719,7 +10719,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0224" n="CCXXIV">
+        <text subtype="article" xml:id="SGDP-AB_0224" n="CCXXIV">
           <pb edRef="#poupardin1909" n="315"/>
           <front>
             <docDate>
@@ -10764,7 +10764,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0225" n="CCXXV">
+        <text subtype="article" xml:id="SGDP-AB_0225" n="CCXXV">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182" scope="circa">S. d. [1162-1182] (?)<note n="225_1">
@@ -10798,7 +10798,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0226" n="CCXXVI-1">
+        <text subtype="article" xml:id="SGDP-AB_0226" n="CCXXVI-1">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162 ?-1182 ?]<note n="226-1_1">
@@ -10837,7 +10837,7 @@
             </div>
           </back>
         </text>
-        <text subtype="article" xml:id="SGDP_0227" n="CCXXVI-2">
+        <text subtype="article" xml:id="SGDP-AB_0227" n="CCXXVI-2">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162 ?-1182 ?].</date>
@@ -10862,7 +10862,7 @@
             </div>
           </body>
         </text>
-        <text subtype="article" xml:id="SGDP_0228" n="CCXXVI-3">
+        <text subtype="article" xml:id="SGDP-AB_0228" n="CCXXVI-3">
           <front>
             <docDate>
               <date notBefore="1162" notAfter="1182">S. d. [1162 ?-1182 ?].</date>
@@ -10890,7 +10890,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0229" n="CCXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0229" n="CCXXVII" subtype="article">
           <pb edRef="#poupardin1932" n="1"/>
           <front>
             <docDate>
@@ -10935,7 +10935,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0230" n="CCXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0230" n="CCXXVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1165" notAfter="1183">S. d. [1165-1183]<ref type="note" n="1" target="#n228_1" xml:id="a228_1"/>.</date>
@@ -10973,7 +10973,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0231" n="CCXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0231" n="CCXXIX" subtype="article">
           <front>
             <docDate>
               <date scope="circa" notBefore="1165" notAfter="1183">S. d. [v. 1165-1183]<ref type="note" n="1" target="#n229_1" xml:id="a229_1"/>.</date>
@@ -11015,7 +11015,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0232" n="CCXXX" subtype="article">
+        <text xml:id="SGDP-AB_0232" n="CCXXX" subtype="article">
           <front>
             <docDate>
               <placeName>Anagni</placeName>
@@ -11053,7 +11053,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0233" n="CCXXXI" subtype="article">
+        <text xml:id="SGDP-AB_0233" n="CCXXXI" subtype="article">
           <front>
             <docDate>
               <placeName>Anagni</placeName>
@@ -11084,7 +11084,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0234" n="CCXXXII" subtype="article">
+        <text xml:id="SGDP-AB_0234" n="CCXXXII" subtype="article">
           <front>
             <docDate>
               <date when="1184">1184.</date>
@@ -11128,7 +11128,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0235" n="CCXXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0235" n="CCXXXIII" subtype="article">
           <front>
             <docDate>
               <date when="1184">1184.</date>
@@ -11164,7 +11164,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0236" n="CCXXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0236" n="CCXXXIV" subtype="article">
           <front>
             <docDate>
               <placeName>Vérone</placeName>
@@ -11198,7 +11198,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0237" n="CCXXXV" subtype="article">
+        <text xml:id="SGDP-AB_0237" n="CCXXXV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1185-02-21">S. d. [1182-21 février 1185]<ref type="note" n="1" target="#n235_1" xml:id="a235_1"/>.</date>
@@ -11242,7 +11242,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0238" n="CCXXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0238" n="CCXXXVI" subtype="article">
           <front>
             <docDate>
               <date when="1185">1185.</date>
@@ -11283,7 +11283,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0239" n="CCXXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0239" n="CCXXXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Germain-des-Prés</placeName>
@@ -11337,7 +11337,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0240" n="CCXXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0240" n="CCXXXVIII" subtype="article">
           <front>
             <docDate>
               <date when="1186">1186.</date>
@@ -11383,7 +11383,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0241" n="CCXXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0241" n="CCXXXIX" subtype="article">
           <front>
             <docDate>
               <date when="1186">1186.</date>
@@ -11430,7 +11430,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0242" n="CCXL" subtype="article">
+        <text xml:id="SGDP-AB_0242" n="CCXL" subtype="article">
           <front>
             <docDate>
               <placeName>Vérone</placeName>
@@ -11463,7 +11463,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0243" n="CCXLI" subtype="article">
+        <text xml:id="SGDP-AB_0243" n="CCXLI" subtype="article">
           <front>
             <docDate>
               <placeName>Vérone</placeName>
@@ -11544,7 +11544,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0244" n="CCXLII" subtype="article">
+        <text xml:id="SGDP-AB_0244" n="CCXLII" subtype="article">
           <front>
             <docDate>
               <date when="1187">1187.</date>
@@ -11572,7 +11572,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0245" n="CCXLIII" subtype="article">
+        <text xml:id="SGDP-AB_0245" n="CCXLIII" subtype="article">
           <front>
             <docDate>
               <date when="1187">1187.</date>
@@ -11608,7 +11608,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0246" n="CCXLIV" subtype="article">
+        <text xml:id="SGDP-AB_0246" n="CCXLIV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1178" notAfter="1187">S. d. [1178-1187]<ref type="note" n="1" target="#n244_1" xml:id="a244_1"/>.</date>
@@ -11670,7 +11670,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0247" n="CCXLV" subtype="article">
+        <text xml:id="SGDP-AB_0247" n="CCXLV" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -11707,7 +11707,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0248" n="CCXLVI" subtype="article">
+        <text xml:id="SGDP-AB_0248" n="CCXLVI" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -11792,7 +11792,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0249" n="CCXLVII" subtype="article">
+        <text xml:id="SGDP-AB_0249" n="CCXLVII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -11830,7 +11830,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0250" n="CCXLVIII" subtype="article">
+        <text xml:id="SGDP-AB_0250" n="CCXLVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -11885,7 +11885,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0251" n="CCXLIX" subtype="article">
+        <text xml:id="SGDP-AB_0251" n="CCXLIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1189-07-06">S. d. [1182-6 juillet 1189]<ref type="note" n="1" target="#n249_1" xml:id="a249_1"/>.</date>
@@ -11922,7 +11922,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0252" n="CCL" subtype="article">
+        <text xml:id="SGDP-AB_0252" n="CCL" subtype="article">
           <front>
             <docDate>
               <date when="1189">1189.</date>
@@ -11968,7 +11968,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0253" n="CCLI" subtype="article">
+        <text xml:id="SGDP-AB_0253" n="CCLI" subtype="article">
           <front>
             <docDate>
               <date when="1190">1190.</date>
@@ -12015,7 +12015,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0254" n="CCLII" subtype="article">
+        <text xml:id="SGDP-AB_0254" n="CCLII" subtype="article">
           <front>
             <docDate>
               <date when="1190">1190.</date>
@@ -12056,7 +12056,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0255" n="CCLIII" subtype="article">
+        <text xml:id="SGDP-AB_0255" n="CCLIII" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -12150,7 +12150,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0256" n="CCLIV" subtype="article">
+        <text xml:id="SGDP-AB_0256" n="CCLIV" subtype="article">
           <front>
             <docDate>
               <placeName>Fontainebleau</placeName>
@@ -12201,7 +12201,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0257" n="CCLV" subtype="article">
+        <text xml:id="SGDP-AB_0257" n="CCLV" subtype="article">
           <front>
             <docDate>
               <placeName>Sens</placeName>
@@ -12253,7 +12253,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0258" n="CCLVI" subtype="article">
+        <text xml:id="SGDP-AB_0258" n="CCLVI" subtype="article">
           <front>
             <docDate>
               <placeName>Meaux</placeName>
@@ -12296,7 +12296,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0259" n="CCLVII" subtype="article">
+        <text xml:id="SGDP-AB_0259" n="CCLVII" subtype="article">
           <front>
             <docDate>
               <placeName>Châteauneuf-sur-Loire</placeName>
@@ -12343,7 +12343,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0260" n="CCLVIII" subtype="article">
+        <text xml:id="SGDP-AB_0260" n="CCLVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Chartres</placeName>
@@ -12382,7 +12382,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0261" n="CCLIX" subtype="article">
+        <text xml:id="SGDP-AB_0261" n="CCLIX" subtype="article">
           <front>
             <docDate>
               <date when="1192">1192.</date>
@@ -12427,7 +12427,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0262" n="CCLX" subtype="article">
+        <text xml:id="SGDP-AB_0262" n="CCLX" subtype="article">
           <front>
             <docDate>
               <date when="1192">1192.</date>
@@ -12457,7 +12457,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0263" n="CCLXI" subtype="article">
+        <text xml:id="SGDP-AB_0263" n="CCLXI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192]<ref type="note" n="1" target="#n261_1" xml:id="a261_1"/>.</date>
@@ -12499,7 +12499,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0264" n="CCLXII" subtype="article">
+        <text xml:id="SGDP-AB_0264" n="CCLXII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192].</date>
@@ -12528,7 +12528,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0265" n="CCLXIII" subtype="article">
+        <text xml:id="SGDP-AB_0265" n="CCLXIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192].</date>
@@ -12569,7 +12569,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0266" n="CCLXIV" subtype="article">
+        <text xml:id="SGDP-AB_0266" n="CCLXIV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192].</date>
@@ -12608,7 +12608,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0267" n="CCLXV" subtype="article">
+        <text xml:id="SGDP-AB_0267" n="CCLXV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192].</date>
@@ -12633,7 +12633,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0268" n="CCLXVI" subtype="article">
+        <text xml:id="SGDP-AB_0268" n="CCLXVI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192]<ref type="note" n="1" target="#n266_1" xml:id="a266_1"/>.</date>
@@ -12669,7 +12669,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0269" n="CCLXVII" subtype="article">
+        <text xml:id="SGDP-AB_0269" n="CCLXVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192].</date>
@@ -12704,7 +12704,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0270" n="CCLXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0270" n="CCLXVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192]<ref type="note" n="1" target="#n268_1" xml:id="a268_1"/>.</date>
@@ -12753,7 +12753,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0271" n="CCLXIX" subtype="article">
+        <text xml:id="SGDP-AB_0271" n="CCLXIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1182" notAfter="1192">S. d. [1182-1192]<ref type="note" n="1" target="#n269_1" xml:id="a269_1"/>.</date>
@@ -12799,7 +12799,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0272" n="CCLXX" subtype="article">
+        <text xml:id="SGDP-AB_0272" n="CCLXX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1176" notAfter="1193-12-21">S. d. [1176-21 décembre 1193]<ref type="note" n="1" target="#n270_1" xml:id="a270_1"/>.</date>
@@ -12854,7 +12854,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0273" n="CCLXXI" subtype="article">
+        <text xml:id="SGDP-AB_0273" n="CCLXXI" subtype="article">
           <front>
             <docDate>
               <placeName>Étampes</placeName>
@@ -12889,7 +12889,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0274" n="CCLXXII" subtype="article">
+        <text xml:id="SGDP-AB_0274" n="CCLXXII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -12934,7 +12934,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0275" n="CCLXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0275" n="CCLXXIII" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Germain</placeName>
@@ -12971,7 +12971,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0276" n="CCLXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0276" n="CCLXXIV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1177" notAfter="1195">S. d. [1177-1195]<ref type="note" n="1" target="#n274_1" xml:id="a274_1"/>.</date>
@@ -13012,7 +13012,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0277" n="CCLXXV" subtype="article">
+        <text xml:id="SGDP-AB_0277" n="CCLXXV" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -13044,7 +13044,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0278" n="CCLXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0278" n="CCLXXVI" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13076,7 +13076,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0279" n="CCLXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0279" n="CCLXXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13174,7 +13174,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0280" n="CCLXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0280" n="CCLXXVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13218,7 +13218,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0281" n="CCLXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0281" n="CCLXXIX" subtype="article">
           <front>
             <docDate>
               <placeName>Sainte-Geneviève</placeName>
@@ -13253,7 +13253,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0282" n="CCLXXX" subtype="article">
+        <text xml:id="SGDP-AB_0282" n="CCLXXX" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -13293,7 +13293,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0283" n="CCLXXXI" subtype="article">
+        <text xml:id="SGDP-AB_0283" n="CCLXXXI" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -13336,7 +13336,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0284" n="CCLXXXII" subtype="article">
+        <text xml:id="SGDP-AB_0284" n="CCLXXXII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1160" notAfter="1196">S. d. [1160-1196]<ref type="note" n="1" target="#n282_1" xml:id="a282_1"/>.</date>
@@ -13373,7 +13373,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0285" n="CCLXXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0285" n="CCLXXXIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1160" notAfter="1196">S. d. [1160-1196]<ref type="note" n="1" target="#n283_1" xml:id="a283_1"/>.</date>
@@ -13419,7 +13419,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0286" n="CCLXXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0286" n="CCLXXXIV" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Maur-des-Fossés</placeName>
@@ -13459,7 +13459,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0287" n="CCLXXXV" subtype="article">
+        <text xml:id="SGDP-AB_0287" n="CCLXXXV" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -13485,7 +13485,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0288" n="CCLXXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0288" n="CCLXXXVI" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -13594,7 +13594,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0289" n="CCLXXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0289" n="CCLXXXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13634,7 +13634,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0290" n="CCLXXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0290" n="CCLXXXVIII" subtype="article">
           <front>
             <docDate>
               <date when="1199-02">Février 1199 (n. st.).</date>
@@ -13676,7 +13676,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0291" n="CCLXXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0291" n="CCLXXXIX" subtype="article">
           <front>
             <docDate>
               <date when="1199-02">Février 1199 (n. st.).</date>
@@ -13713,7 +13713,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0292" n="CCXC" subtype="article">
+        <text xml:id="SGDP-AB_0292" n="CCXC" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13746,7 +13746,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0293" n="CCXCI" subtype="article">
+        <text xml:id="SGDP-AB_0293" n="CCXCI" subtype="article">
           <front>
             <docDate>
               <placeName>Meaux</placeName>
@@ -13792,7 +13792,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0294" n="CCXCII" subtype="article">
+        <text xml:id="SGDP-AB_0294" n="CCXCII" subtype="article">
           <front>
             <docDate>
               <date when="1199">1199.</date>
@@ -13822,7 +13822,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0295" n="CCXCIII" subtype="article">
+        <text xml:id="SGDP-AB_0295" n="CCXCIII" subtype="article">
           <front>
             <docDate>
               <date when="1199">1199.</date>
@@ -13848,7 +13848,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0296" n="CCXCIV" subtype="article">
+        <text xml:id="SGDP-AB_0296" n="CCXCIV" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -13885,7 +13885,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0297" n="CCXCV" subtype="article">
+        <text xml:id="SGDP-AB_0297" n="CCXCV" subtype="article">
           <front>
             <docDate>
               <date when="1200-06">Juin 1200.</date>
@@ -13915,7 +13915,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0298" n="CCXCVI" subtype="article">
+        <text xml:id="SGDP-AB_0298" n="CCXCVI" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Germain-des-Prés</placeName>
@@ -13968,7 +13968,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0299" n="CCXCVII" subtype="article">
+        <text xml:id="SGDP-AB_0299" n="CCXCVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1200-04-09" notAfter="1200-10-31">9 avril au 31 octobre 1200.</date>
@@ -14007,7 +14007,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0300" n="CCXCVIII" subtype="article">
+        <text xml:id="SGDP-AB_0300" n="CCXCVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14056,7 +14056,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0301" n="CCXCIX" subtype="article">
+        <text xml:id="SGDP-AB_0301" n="CCXCIX" subtype="article">
           <front>
             <docDate>
               <date when="1200">1200.</date>
@@ -14096,7 +14096,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0302" n="CCC" subtype="article">
+        <text xml:id="SGDP-AB_0302" n="CCC" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14143,7 +14143,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0303" n="CCCI" subtype="article">
+        <text xml:id="SGDP-AB_0303" n="CCCI" subtype="article">
           <front>
             <docDate>
               <placeName>Le Jard</placeName>
@@ -14186,7 +14186,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0304" n="CCCII" subtype="article">
+        <text xml:id="SGDP-AB_0304" n="CCCII" subtype="article">
           <front>
             <docDate>
               <date when="1202-06">Juin 1202.</date>
@@ -14219,7 +14219,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0305" n="CCCIII" subtype="article">
+        <text xml:id="SGDP-AB_0305" n="CCCIII" subtype="article">
           <front>
             <docDate>
               <placeName>Senlis</placeName>
@@ -14264,7 +14264,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0306" n="CCCIV" subtype="article">
+        <text xml:id="SGDP-AB_0306" n="CCCIV" subtype="article">
           <front>
             <docDate>
               <placeName>Senlis</placeName>
@@ -14314,7 +14314,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0307" n="CCCV" subtype="article">
+        <text xml:id="SGDP-AB_0307" n="CCCV" subtype="article">
           <front>
             <docDate>
               <date when="1202">1202.</date>
@@ -14352,7 +14352,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0308" n="CCCVI" subtype="article">
+        <text xml:id="SGDP-AB_0308" n="CCCVI" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14398,7 +14398,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0309" n="CCCVII" subtype="article">
+        <text xml:id="SGDP-AB_0309" n="CCCVII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14445,7 +14445,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0310" n="CCCVIII" subtype="article">
+        <text xml:id="SGDP-AB_0310" n="CCCVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14497,7 +14497,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0311" n="CCCIX" subtype="article">
+        <text xml:id="SGDP-AB_0311" n="CCCIX" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -14564,7 +14564,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0312" n="CCCX" subtype="article">
+        <text xml:id="SGDP-AB_0312" n="CCCX" subtype="article">
           <front>
             <docDate>
               <date when="1203">1203.</date>
@@ -14607,7 +14607,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0313" n="CCCXI" subtype="article">
+        <text xml:id="SGDP-AB_0313" n="CCCXI" subtype="article">
           <front>
             <docDate>
               <date when="1203">1203.</date>
@@ -14643,7 +14643,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0314" n="CCCXII" subtype="article">
+        <text xml:id="SGDP-AB_0314" n="CCCXII" subtype="article">
           <front>
             <docDate>
               <date when="1203">1203.</date>
@@ -14686,7 +14686,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0315" n="CCCXIII" subtype="article">
+        <text xml:id="SGDP-AB_0315" n="CCCXIII" subtype="article">
           <front>
             <docDate>
               <date when="1204-03">Mars 1204 (n. st.).</date>
@@ -14723,7 +14723,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0316" n="CCCXIV" subtype="article">
+        <text xml:id="SGDP-AB_0316" n="CCCXIV" subtype="article">
           <front>
             <docDate>
               <date when="1204">1204.</date>
@@ -14760,7 +14760,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0317" n="CCCXV" subtype="article">
+        <text xml:id="SGDP-AB_0317" n="CCCXV" subtype="article">
           <front>
             <docDate>
               <date when="1204">1204.</date>
@@ -14785,7 +14785,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0318" n="CCCXVI" subtype="article">
+        <text xml:id="SGDP-AB_0318" n="CCCXVI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204]<ref type="note" n="1" target="#n316_1" xml:id="a316_1"/>.</date>
@@ -14824,7 +14824,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0319" n="CCCXVII" subtype="article">
+        <text xml:id="SGDP-AB_0319" n="CCCXVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -14870,7 +14870,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0320" n="CCCXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0320" n="CCCXVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -14907,7 +14907,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0321" n="CCCXIX" subtype="article">
+        <text xml:id="SGDP-AB_0321" n="CCCXIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -14937,7 +14937,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0322" n="CCCXX" subtype="article">
+        <text xml:id="SGDP-AB_0322" n="CCCXX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -14969,7 +14969,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0323" n="CCCXXI" subtype="article">
+        <text xml:id="SGDP-AB_0323" n="CCCXXI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -15002,7 +15002,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0324" n="CCCXXII" subtype="article">
+        <text xml:id="SGDP-AB_0324" n="CCCXXII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -15035,7 +15035,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0325" n="CCCXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0325" n="CCCXXIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -15061,7 +15061,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0326" n="CCCXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0326" n="CCCXXIV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -15113,7 +15113,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0327" n="CCCXXV" subtype="article">
+        <text xml:id="SGDP-AB_0327" n="CCCXXV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204]<ref type="note" n="1" target="#n325_1" xml:id="a325_1"/>.</date>
@@ -15165,7 +15165,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0328" n="CCCXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0328" n="CCCXXVI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204].</date>
@@ -15206,7 +15206,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0329" n="CCCXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0329" n="CCCXXVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1201" notAfter="1204">S. d. [vers 1201-1204]<ref type="note" n="1" target="#n327_1" xml:id="a327_1"/>.</date>
@@ -15243,7 +15243,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0330" n="CCCXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0330" n="CCCXXVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1192" notAfter="1204">S. d. [1192-1204]<ref type="note" n="1" target="#n328_1" xml:id="a328_1"/>.</date>
@@ -15275,7 +15275,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0331" n="CCCXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0331" n="CCCXXIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1150" notAfter="1250">S. d. [fin du <hi rend="sc">xii</hi><hi rend="sup">e</hi> siècle ou début du <hi rend="sc">xiii</hi><hi rend="sup">e</hi>]<ref type="note" n="1" target="#n329_1" xml:id="a329_1"/>.</date>
@@ -15318,7 +15318,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0332" n="CCCXXX" subtype="article">
+        <text xml:id="SGDP-AB_0332" n="CCCXXX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1198" notAfter="1203">S. d. [fin du <hi rend="sc">xii</hi><hi rend="sup">e</hi> siècle ou début du <hi rend="sc">xiii</hi><hi rend="sup">e</hi>]<ref type="note" n="1" target="#n330_1" xml:id="a330_1"/>.</date>
@@ -15355,7 +15355,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0333" n="CCCXXXI" subtype="article">
+        <text xml:id="SGDP-AB_0333" n="CCCXXXI" subtype="article">
           <front>
             <docDate>
               <date when="1203">S. d. [fin du <hi rend="sc">xii</hi><hi rend="sup">e</hi> siècle ou début du <hi rend="sc">xiii</hi><hi rend="sup">e</hi>]<ref type="note" n="1" target="#n331_1" xml:id="a331_1"/>.</date>
@@ -15394,7 +15394,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0334" n="CCCXXXII" subtype="article">
+        <text xml:id="SGDP-AB_0334" n="CCCXXXII" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -15440,7 +15440,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0335" n="CCCXXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0335" n="CCCXXXIII" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Pierre de Rome</placeName>
@@ -15479,7 +15479,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0336" n="CCCXXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0336" n="CCCXXXIV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204-10-05" notAfter="1204-12-31">1204, après le 4 octobre<ref type="note" n="1" target="#n334_1" xml:id="a334_1"/>.</date>
@@ -15526,7 +15526,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0337" n="CCCXXXV" subtype="article">
+        <text xml:id="SGDP-AB_0337" n="CCCXXXV" subtype="article">
           <front>
             <docDate>
               <placeName>Constantinople</placeName>
@@ -15555,7 +15555,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0338" n="CCCXXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0338" n="CCCXXXVI" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Germain-des-Prés</placeName>
@@ -15592,7 +15592,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0339" n="CCCXXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0339" n="CCCXXXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Anet</placeName>
@@ -15640,7 +15640,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0340" n="CCCXXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0340" n="CCCXXXVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -15692,7 +15692,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0341" n="CCCXXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0341" n="CCCXXXIX" subtype="article">
           <front>
             <docDate>
               <date when="1205">1205</date>
@@ -15736,7 +15736,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0342" n="CCCXL" subtype="article">
+        <text xml:id="SGDP-AB_0342" n="CCCXL" subtype="article">
           <front>
             <docDate>
               <date when="1206-10">Octobre 1206.</date>
@@ -15761,7 +15761,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0343" n="CCCXLI" subtype="article">
+        <text xml:id="SGDP-AB_0343" n="CCCXLI" subtype="article">
           <front>
             <docDate>
               <date when="1206-10">Octobre 1206.</date>
@@ -15797,7 +15797,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0344" n="CCCXLII" subtype="article">
+        <text xml:id="SGDP-AB_0344" n="CCCXLII" subtype="article">
           <front>
             <docDate>
               <date when="1206-11">Novembre 1206.</date>
@@ -15840,7 +15840,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0345" n="CCCXLIII" subtype="article">
+        <text xml:id="SGDP-AB_0345" n="CCCXLIII" subtype="article">
           <front>
             <docDate>
               <date when="1206">1206.</date>
@@ -15875,7 +15875,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0346" n="CCCXLIV" subtype="article">
+        <text xml:id="SGDP-AB_0346" n="CCCXLIV" subtype="article">
           <front>
             <docDate>
               <date when="1206">1206.</date>
@@ -15912,7 +15912,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0347" n="CCCXLV" subtype="article">
+        <text xml:id="SGDP-AB_0347" n="CCCXLV" subtype="article">
           <front>
             <docDate>
               <date when="1206">1206.</date>
@@ -15961,7 +15961,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0348" n="CCCXLVI" subtype="article">
+        <text xml:id="SGDP-AB_0348" n="CCCXLVI" subtype="article">
           <front>
             <docDate>
               <date when="1206">1206.</date>
@@ -16008,7 +16008,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0349" n="CCCXLVII" subtype="article">
+        <text xml:id="SGDP-AB_0349" n="CCCXLVII" subtype="article">
           <front>
             <docDate>
               <date when="1206">1206.</date>
@@ -16038,7 +16038,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0350" n="CCCXLVIII" subtype="article">
+        <text xml:id="SGDP-AB_0350" n="CCCXLVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1193" notAfter="1206">S. d. [1193-1206]<ref type="note" n="1" target="#n348_1" xml:id="a348_1"/>.</date>
@@ -16075,7 +16075,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0351" n="CCCXLIX" subtype="article">
+        <text xml:id="SGDP-AB_0351" n="CCCXLIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1206-04" notAfter="1207-04">Avril 1206 ou 1207<ref type="note" n="1" target="#n349_1" xml:id="a349_1"/>.</date>
@@ -16113,7 +16113,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0352" n="CCCL" subtype="article">
+        <text xml:id="SGDP-AB_0352" n="CCCL" subtype="article">
           <front>
             <docDate>
               <date when="1207-08">Août 1207.</date>
@@ -16147,7 +16147,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0353" n="CCCLI" subtype="article">
+        <text xml:id="SGDP-AB_0353" n="CCCLI" subtype="article">
           <front>
             <docDate>
               <date when="1207-08">Août 1207.</date>
@@ -16188,7 +16188,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0354" n="CCCLII" subtype="article">
+        <text xml:id="SGDP-AB_0354" n="CCCLII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -16235,7 +16235,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0355" n="CCCLIII" subtype="article">
+        <text xml:id="SGDP-AB_0355" n="CCCLIII" subtype="article">
           <front>
             <docDate>
               <placeName>Corneto</placeName>
@@ -16301,7 +16301,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0356" n="CCCLIV" subtype="article">
+        <text xml:id="SGDP-AB_0356" n="CCCLIV" subtype="article">
           <front>
             <docDate>
               <date when="1207-11">Novembre 1207.</date>
@@ -16334,7 +16334,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0357" n="CCCLV" subtype="article">
+        <text xml:id="SGDP-AB_0357" n="CCCLV" subtype="article">
           <front>
             <docDate>
               <date when="1207-11">Novembre 1207.</date>
@@ -16363,7 +16363,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0358" n="CCCLVI" subtype="article">
+        <text xml:id="SGDP-AB_0358" n="CCCLVI" subtype="article">
           <front>
             <docDate>
               <date when="1207-12">Décembre 1207.</date>
@@ -16388,7 +16388,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0359" n="CCCLVII" subtype="article">
+        <text xml:id="SGDP-AB_0359" n="CCCLVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1207">S. d. [1204-1207]<ref type="note" n="1" target="#n357_1" xml:id="a357_1"/>.</date>
@@ -16426,7 +16426,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0360" n="CCCLVIII" subtype="article">
+        <text xml:id="SGDP-AB_0360" n="CCCLVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1207">S. d. [1204-1207]<ref type="note" n="1" target="#n358_1" xml:id="a358_1"/>.</date>
@@ -16459,7 +16459,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0361" n="CCCLIX" subtype="article">
+        <text xml:id="SGDP-AB_0361" n="CCCLIX" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -16505,7 +16505,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0362" n="CCCLX" subtype="article">
+        <text xml:id="SGDP-AB_0362" n="CCCLX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1208-05">S. d. [1204-mai 1208]<ref type="note" n="1" target="#n360_1" xml:id="a360_1"/>.</date>
@@ -16545,7 +16545,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0363" n="CCCLXI" subtype="article">
+        <text xml:id="SGDP-AB_0363" n="CCCLXI" subtype="article">
           <front>
             <docDate>
               <placeName>Chartres</placeName>
@@ -16584,7 +16584,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0364" n="CCCLXII" subtype="article">
+        <text xml:id="SGDP-AB_0364" n="CCCLXII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -16625,7 +16625,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0365" n="CCCLXIII" subtype="article">
+        <text xml:id="SGDP-AB_0365" n="CCCLXIII" subtype="article">
           <front>
             <docDate>
               <date when="1208">1208.</date>
@@ -16667,7 +16667,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0366" n="CCCLXIV" subtype="article">
+        <text xml:id="SGDP-AB_0366" n="CCCLXIV" subtype="article">
           <front>
             <docDate>
               <date when="1208">1208.</date>
@@ -16709,7 +16709,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0367" n="CCCLXV" subtype="article">
+        <text xml:id="SGDP-AB_0367" n="CCCLXV" subtype="article">
           <front>
             <docDate>
               <date when="1208">1208.</date>
@@ -16750,7 +16750,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0368" n="CCCLXVI" subtype="article">
+        <text xml:id="SGDP-AB_0368" n="CCCLXVI" subtype="article">
           <front>
             <docDate>
               <date when="1208">1208.</date>
@@ -16791,7 +16791,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0369" n="CCCLXVII" subtype="article">
+        <text xml:id="SGDP-AB_0369" n="CCCLXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -16818,7 +16818,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0370" n="CCCLXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0370" n="CCCLXVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -16855,7 +16855,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0371" n="CCCLXIX" subtype="article">
+        <text xml:id="SGDP-AB_0371" n="CCCLXIX" subtype="article">
           <front>
             <docDate>
               <placeName>Nangis</placeName>
@@ -16887,7 +16887,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0372" n="CCCLXX" subtype="article">
+        <text xml:id="SGDP-AB_0372" n="CCCLXX" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -16937,7 +16937,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0373" n="CCCLXXI" subtype="article">
+        <text xml:id="SGDP-AB_0373" n="CCCLXXI" subtype="article">
           <front>
             <docDate>
               <date when="1209-04">Avril 1209.</date>
@@ -16976,7 +16976,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0374" n="CCCLXXII" subtype="article">
+        <text xml:id="SGDP-AB_0374" n="CCCLXXII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17011,7 +17011,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0375" n="CCCLXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0375" n="CCCLXXIII" subtype="article">
           <front>
             <docDate>
               <date when="1209-07">Juillet 1209.</date>
@@ -17040,7 +17040,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0376" n="CCCLXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0376" n="CCCLXXIV" subtype="article">
           <front>
             <docDate>
               <date when="1209-07">Juillet 1209.</date>
@@ -17073,7 +17073,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0377" n="CCCLXXV" subtype="article">
+        <text xml:id="SGDP-AB_0377" n="CCCLXXV" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17108,7 +17108,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0378" n="CCCLXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0378" n="CCCLXXVI" subtype="article">
           <front>
             <docDate>
               <date when="1209-08-16">16 août 1209.</date>
@@ -17140,7 +17140,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0379" n="CCCLXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0379" n="CCCLXXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17188,7 +17188,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0380" n="CCCLXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0380" n="CCCLXXVIII" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -17215,7 +17215,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0381" n="CCCLXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0381" n="CCCLXXIX" subtype="article">
           <front>
             <docDate>
               <date when="1209-12">Décembre 1209.</date>
@@ -17258,7 +17258,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0382" n="CCCLXXX" subtype="article">
+        <text xml:id="SGDP-AB_0382" n="CCCLXXX" subtype="article">
           <front>
             <docDate>
               <date when="1209">1209.</date>
@@ -17301,7 +17301,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0383" n="CCCLXXXI" subtype="article">
+        <text xml:id="SGDP-AB_0383" n="CCCLXXXI" subtype="article">
           <front>
             <docDate>
               <date when="1209">1209.</date>
@@ -17340,7 +17340,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0384" n="CCCLXXXII" subtype="article">
+        <text xml:id="SGDP-AB_0384" n="CCCLXXXII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1209-03" notAfter="1210-03">Mars 1209 ou 1210 (n. st.)<ref type="note" n="1" target="#n382_1" xml:id="a382_1"/>.</date>
@@ -17378,7 +17378,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0385" n="CCCLXXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0385" n="CCCLXXXIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1209-03" notAfter="1210-03">Mars 1209 ou 1210 (n. st.).<ref type="note" n="1" target="#n383_1" xml:id="a383_1"/>.</date>
@@ -17420,7 +17420,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0386" n="CCCLXXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0386" n="CCCLXXXIV" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17468,7 +17468,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0387" n="CCCLXXXV" subtype="article">
+        <text xml:id="SGDP-AB_0387" n="CCCLXXXV" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -17508,7 +17508,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0388" n="CCCLXXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0388" n="CCCLXXXVI" subtype="article">
           <front>
             <docDate>
               <placeName>Chartres</placeName>
@@ -17552,7 +17552,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0389" n="CCCLXXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0389" n="CCCLXXXVII" subtype="article">
           <front>
             <docDate>
               <date when="1210-08">Août 1210.</date>
@@ -17595,7 +17595,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0390" n="CCCLXXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0390" n="CCCLXXXVIII" subtype="article">
           <front>
             <docDate>
               <date when="1210">1210.</date>
@@ -17632,7 +17632,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0391" n="CCCLXXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0391" n="CCCLXXXIX" subtype="article">
           <front>
             <docDate>
               <date when="1211-01">Janvier 1211 (n. st.).</date>
@@ -17678,7 +17678,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0392" n="CCCXC" subtype="article">
+        <text xml:id="SGDP-AB_0392" n="CCCXC" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17718,7 +17718,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0393" n="CCCXCI" subtype="article">
+        <text xml:id="SGDP-AB_0393" n="CCCXCI" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -17764,7 +17764,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0394" n="CCCXCII" subtype="article">
+        <text xml:id="SGDP-AB_0394" n="CCCXCII" subtype="article">
           <front>
             <docDate>
               <date when="1211-06">Juin 1211.</date>
@@ -17807,7 +17807,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0395" n="CCCXCIII" subtype="article">
+        <text xml:id="SGDP-AB_0395" n="CCCXCIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1211-04-03" notAfter="1211-10-31">3 avril-31 octobre 1211.</date>
@@ -17856,7 +17856,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0396" n="CCCXCIV" subtype="article">
+        <text xml:id="SGDP-AB_0396" n="CCCXCIV" subtype="article">
           <front>
             <docDate>
               <placeName>Le Latran</placeName>
@@ -17900,7 +17900,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0397" n="CCCXCV" subtype="article">
+        <text xml:id="SGDP-AB_0397" n="CCCXCV" subtype="article">
           <front>
             <docDate>
               <date when="1211">1211.</date>
@@ -17941,7 +17941,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0398" n="CCCXCVI" subtype="article">
+        <text xml:id="SGDP-AB_0398" n="CCCXCVI" subtype="article">
           <front>
             <docDate>
               <date when="1211">1211.</date>
@@ -17984,7 +17984,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0399" n="CCCXCVII" subtype="article">
+        <text xml:id="SGDP-AB_0399" n="CCCXCVII" subtype="article">
           <front>
             <docDate>
               <date when="1212-05">Mai 1212.</date>
@@ -18013,7 +18013,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0400" n="CCCXCVIII" subtype="article">
+        <text xml:id="SGDP-AB_0400" n="CCCXCVIII" subtype="article">
           <front>
             <docDate>
               <date when="1212-05">Mai 1212.</date>
@@ -18049,7 +18049,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0401" n="CCCXCIX" subtype="article">
+        <text xml:id="SGDP-AB_0401" n="CCCXCIX" subtype="article">
           <front>
             <docDate>
               <date when="1212-06">Juin 1212.</date>
@@ -18089,7 +18089,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0402" n="CCCC" subtype="article">
+        <text xml:id="SGDP-AB_0402" n="CCCC" subtype="article">
           <front>
             <docDate>
               <date when="1212-06">Juin 1212.</date>
@@ -18129,7 +18129,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0403" n="CCCCI" subtype="article">
+        <text xml:id="SGDP-AB_0403" n="CCCCI" subtype="article">
           <front>
             <docDate>
               <date when="1212-06">Juin 1212.</date>
@@ -18175,7 +18175,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0404" n="CCCCII" subtype="article">
+        <text xml:id="SGDP-AB_0404" n="CCCCII" subtype="article">
           <front>
             <docDate>
               <date when="1212-07">Juillet 1212.</date>
@@ -18217,7 +18217,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0405" n="CCCCIII" subtype="article">
+        <text xml:id="SGDP-AB_0405" n="CCCCIII" subtype="article">
           <front>
             <docDate>
               <date when="1212-09">Septembre 1212.</date>
@@ -18250,7 +18250,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0406" n="CCCCIV" subtype="article">
+        <text xml:id="SGDP-AB_0406" n="CCCCIV" subtype="article">
           <front>
             <docDate>
               <date when="1212-09">Septembre 1212.</date>
@@ -18287,7 +18287,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0407" n="CCCCV" subtype="article">
+        <text xml:id="SGDP-AB_0407" n="CCCCV" subtype="article">
           <front>
             <docDate>
               <placeName>Saint-Germain-en-Laye</placeName>
@@ -18335,7 +18335,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0408" n="CCCCVI" subtype="article">
+        <text xml:id="SGDP-AB_0408" n="CCCCVI" subtype="article">
           <front>
             <docDate>
               <date when="1212">1212.</date>
@@ -18377,7 +18377,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0409" n="CCCCVII" subtype="article">
+        <text xml:id="SGDP-AB_0409" n="CCCCVII" subtype="article">
           <front>
             <docDate>
               <date when="1212">1212.</date>
@@ -18414,7 +18414,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0410" n="CCCCVIII" subtype="article">
+        <text xml:id="SGDP-AB_0410" n="CCCCVIII" subtype="article">
           <front>
             <docDate>
               <date when="1212">1212.</date>
@@ -18446,7 +18446,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0411" n="CCCCIX" subtype="article">
+        <text xml:id="SGDP-AB_0411" n="CCCCIX" subtype="article">
           <front>
             <docDate>
               <date when="1213">1213.</date>
@@ -18479,7 +18479,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0412" n="CCCCX" subtype="article">
+        <text xml:id="SGDP-AB_0412" n="CCCCX" subtype="article">
           <front>
             <docDate>
               <date when="1213">1213.</date>
@@ -18518,7 +18518,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0413" n="CCCCXI" subtype="article">
+        <text xml:id="SGDP-AB_0413" n="CCCCXI" subtype="article">
           <front>
             <docDate>
               <date when="1214">1214.</date>
@@ -18559,7 +18559,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0414" n="CCCCXII" subtype="article">
+        <text xml:id="SGDP-AB_0414" n="CCCCXII" subtype="article">
           <front>
             <docDate>
               <date when="1214">1214.</date>
@@ -18594,7 +18594,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0415" n="CCCCXIII" subtype="article">
+        <text xml:id="SGDP-AB_0415" n="CCCCXIII" subtype="article">
           <front>
             <docDate>
               <placeName>Castres</placeName>
@@ -18641,7 +18641,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0416" n="CCCCXIV" subtype="article">
+        <text xml:id="SGDP-AB_0416" n="CCCCXIV" subtype="article">
           <front>
             <docDate>
               <date scope="circa" notBefore="1215-05" notAfter="1215-06">S. d. [vers mai ou juin 1215]<ref type="note" n="1" target="#n414_1" xml:id="a414_1"/>.</date>
@@ -18688,7 +18688,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0417" n="CCCCXV" subtype="article">
+        <text xml:id="SGDP-AB_0417" n="CCCCXV" subtype="article">
           <front>
             <docDate>
               <date when="1215-09">Septembre 1215.</date>
@@ -18724,7 +18724,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0418" n="CCCCXVI" subtype="article">
+        <text xml:id="SGDP-AB_0418" n="CCCCXVI" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -18756,7 +18756,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0419" n="CCCCXVII" subtype="article">
+        <text xml:id="SGDP-AB_0419" n="CCCCXVII" subtype="article">
           <front>
             <docDate>
               <placeName>Paris</placeName>
@@ -18792,7 +18792,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0420" n="CCCCXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0420" n="CCCCXVIII" subtype="article">
           <front>
             <docDate>
               <date when="1215-11">Novembre 1215.</date>
@@ -18832,7 +18832,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0421" n="CCCCXIX" subtype="article">
+        <text xml:id="SGDP-AB_0421" n="CCCCXIX" subtype="article">
           <front>
             <docDate>
               <date when="1215">1215.</date>
@@ -18857,7 +18857,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0422" n="CCCCXX" subtype="article">
+        <text xml:id="SGDP-AB_0422" n="CCCCXX" subtype="article">
           <front>
             <docDate>
               <date when="1216-03">Mars 1216 (n. st.).</date>
@@ -18902,7 +18902,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0423" n="CCCCXXI" subtype="article">
+        <text xml:id="SGDP-AB_0423" n="CCCCXXI" subtype="article">
           <front>
             <docDate>
               <date when="1216-03">Mars 1216 (n. st.).</date>
@@ -18947,7 +18947,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0424" n="CCCCXXII" subtype="article">
+        <text xml:id="SGDP-AB_0424" n="CCCCXXII" subtype="article">
           <front>
             <docDate>
               <date when="1216-03">Mars 1216 (n. st.).</date>
@@ -18994,7 +18994,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0425" n="CCCCXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0425" n="CCCCXXIV" subtype="article">
           <front>
             <docDate>
               <placeName>Pérouse</placeName>
@@ -19021,7 +19021,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0426" n="CCCCXXV" subtype="article">
+        <text xml:id="SGDP-AB_0426" n="CCCCXXV" subtype="article">
           <front>
             <docDate>
               <date when="1216-06">Juin 1216.</date>
@@ -19055,7 +19055,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0427" n="CCCCXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0427" n="CCCCXXVI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216]<ref type="note" n="1" target="#n426_1" xml:id="a426_1"/>.</date>
@@ -19091,7 +19091,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0428" n="CCCCXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0428" n="CCCCXXVII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19117,7 +19117,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0429" n="CCCCXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0429" n="CCCCXXVIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19144,7 +19144,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0430" n="CCCCXXIX" subtype="article">
+        <text xml:id="SGDP-AB_0430" n="CCCCXXIX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19181,7 +19181,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0431" n="CCCCXXX" subtype="article">
+        <text xml:id="SGDP-AB_0431" n="CCCCXXX" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19209,7 +19209,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0432" n="CCCCXXXI" subtype="article">
+        <text xml:id="SGDP-AB_0432" n="CCCCXXXI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19243,7 +19243,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0433" n="CCCCXXXII" subtype="article">
+        <text xml:id="SGDP-AB_0433" n="CCCCXXXII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19281,7 +19281,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0434" n="CCCCXXXIII" subtype="article">
+        <text xml:id="SGDP-AB_0434" n="CCCCXXXIII" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19316,7 +19316,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0435" n="CCCCXXXIV" subtype="article">
+        <text xml:id="SGDP-AB_0435" n="CCCCXXXIV" subtype="article">
           <front>
             <docDate>
               <date when="1216-05">mai 1216.</date>
@@ -19350,7 +19350,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0436" n="CCCCXXXV" subtype="article">
+        <text xml:id="SGDP-AB_0436" n="CCCCXXXV" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19388,7 +19388,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0437" n="CCCCXXXVI" subtype="article">
+        <text xml:id="SGDP-AB_0437" n="CCCCXXXVI" subtype="article">
           <front>
             <docDate>
               <date notBefore="1204" notAfter="1216">S. d. [1204-1216].</date>
@@ -19414,7 +19414,7 @@
             </div>
           </body>
         </text>
-        <text xml:id="SGDP_0438" n="CCCCXXXVII" subtype="article">
+        <text xml:id="SGDP-AB_0438" n="CCCCXXXVII" subtype="article">
           <front>
             <docDate>
               <date when="1216">1216<ref type="note" n="1" target="#n437_1" xml:id="a437_1"/>.</date>
@@ -19451,7 +19451,7 @@
             </div>
           </back>
         </text>
-        <text xml:id="SGDP_0439" n="CCCCXXXVIII" subtype="article">
+        <text xml:id="SGDP-AB_0439" n="CCCCXXXVIII" subtype="article">
           <front>
             <docDate>
               <date when="1216">1216<ref type="note" n="1" target="#n438_1" xml:id="a438_1"/>.</date>
@@ -19487,7 +19487,7 @@
         <group>
           <head>
             <pb edRef="#poupardin1932" n="229"/>ACTES OMIS</head>
-          <text xml:id="SGDP_0440" n="XXXVIIIbis" subtype="article">
+          <text xml:id="SGDP-AB_0440" n="XXXVIIIbis" subtype="article">
             <front>
               <docDate>
                 <date notBefore="0800" notAfter="0887">S. d. [800-814, 875-877 ou 881-887]<ref type="note" n="1" target="#n38b_1" xml:id="a38b_1"/>.</date>
@@ -19523,7 +19523,7 @@
               </div>
             </back>
           </text>
-          <text xml:id="SGDP_0441" n="XLIIbis" subtype="article">
+          <text xml:id="SGDP-AB_0441" n="XLIIbis" subtype="article">
             <front>
               <docDate>
                 <date notBefore="0897" notAfter="0923">S. d. [897-923]<ref type="note" n="1" target="#n42b_1" xml:id="a42b_1"/>.</date>
@@ -19559,7 +19559,7 @@
               </div>
             </back>
           </text>
-          <text xml:id="SGDP_0442" n="LXIXbis" subtype="article">
+          <text xml:id="SGDP-AB_0442" n="LXIXbis" subtype="article">
             <front>
               <docDate>
                 <date notBefore="1063" notAfter="1082">S. d. [1063-1082]<ref type="note" n="1" target="#n69b_1" xml:id="a69b_1"/>.</date>
@@ -19599,7 +19599,7 @@
               </div>
             </back>
           </text>
-          <text xml:id="SGDP_0443" n="LXIXter" subtype="article">
+          <text xml:id="SGDP-AB_0443" n="LXIXter" subtype="article">
             <front>
               <docDate>
                 <date notBefore="1063" notAfter="1082">S. d. [1063-1082]<ref type="note" n="1" target="#n69c_1" xml:id="a69c_1"/>.</date>
@@ -19638,7 +19638,7 @@
               </div>
             </back>
           </text>
-          <text xml:id="SGDP_0444" n="LXXIIbis" subtype="article">
+          <text xml:id="SGDP-AB_0444" n="LXXIIbis" subtype="article">
             <front>
               <docDate>
                 <date notBefore="1082" notAfter="1103">S. d. [1082-1103]<ref type="note" n="1" target="#n72b_1" xml:id="a72b_1"/>.</date>
@@ -19680,7 +19680,7 @@
               </div>
             </back>
           </text>
-          <text xml:id="SGDP_0445" n="CCXXVIbis" subtype="article">
+          <text xml:id="SGDP-AB_0445" n="CCXXVIbis" subtype="article">
             <front>
               <docDate><date>sans date</date></docDate>
               <index>
@@ -19716,7 +19716,7 @@
             <group>
               <head>
                 <hi rend="sc">Thibaut</hi> (1155-1162)</head>
-              <text xml:id="SGDP_0446" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0446" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19740,7 +19740,7 @@
             <group>
               <head>
                 <hi rend="sc">Gilon</hi> (1145-1146)</head>
-              <text xml:id="SGDP_0447" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0447" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19759,7 +19759,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0448" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0448" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19782,7 +19782,7 @@
             <group>
               <head>
                 <hi rend="sc">Geoffroi</hi> (1152-1155)</head>
-              <text xml:id="SGDP_0449" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0449" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19806,7 +19806,7 @@
             <group>
               <head>
                 <hi rend="sc">Hugues</hi> (1162-1182)</head>
-              <text xml:id="SGDP_0450" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0450" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19825,7 +19825,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0451" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0451" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19844,7 +19844,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0452" n="III" subtype="article">
+              <text xml:id="SGDP-AB_0452" n="III" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19863,7 +19863,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0453" n="IV" subtype="article">
+              <text xml:id="SGDP-AB_0453" n="IV" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19882,7 +19882,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0454" n="V" subtype="article">
+              <text xml:id="SGDP-AB_0454" n="V" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19902,7 +19902,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0455" n="VI" subtype="article">
+              <text xml:id="SGDP-AB_0455" n="VI" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19921,7 +19921,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0456" n="VII" subtype="article">
+              <text xml:id="SGDP-AB_0456" n="VII" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19946,7 +19946,7 @@
                   </div>
                 </back>
               </text>
-              <text xml:id="SGDP_0457" n="VIII" subtype="article">
+              <text xml:id="SGDP-AB_0457" n="VIII" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -19985,7 +19985,7 @@
             <group>
               <head>
                 <hi rend="sc">Foulques</hi> (1182-1192)</head>
-              <text xml:id="SGDP_0458" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0458" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20004,7 +20004,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0459" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0459" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20023,7 +20023,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0460" n="III" subtype="article">
+              <text xml:id="SGDP-AB_0460" n="III" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20042,7 +20042,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0461" n="IV" subtype="article">
+              <text xml:id="SGDP-AB_0461" n="IV" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20061,7 +20061,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0462" n="V" subtype="article">
+              <text xml:id="SGDP-AB_0462" n="V" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20080,7 +20080,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0463" n="VI" subtype="article">
+              <text xml:id="SGDP-AB_0463" n="VI" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20099,7 +20099,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0464" n="VII" subtype="article">
+              <text xml:id="SGDP-AB_0464" n="VII" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20118,7 +20118,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0465" n="VIII" subtype="article">
+              <text xml:id="SGDP-AB_0465" n="VIII" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20142,7 +20142,7 @@
                   </div>
                 </back>
               </text>
-              <text xml:id="SGDP_0466" n="IX" subtype="article">
+              <text xml:id="SGDP-AB_0466" n="IX" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20180,7 +20180,7 @@
             <group>
               <head>
                 <hi rend="sc">Robert</hi> (1192-1204)</head>
-              <text xml:id="SGDP_0467" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0467" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20199,7 +20199,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0468" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0468" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20218,7 +20218,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0469" n="III" subtype="article">
+              <text xml:id="SGDP-AB_0469" n="III" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20237,7 +20237,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0470" n="IV" subtype="article">
+              <text xml:id="SGDP-AB_0470" n="IV" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20270,7 +20270,7 @@
               <head>
                 <pb edRef="#poupardin1932" n="251"/>
                 <hi rend="sc">Jean</hi> (1204-1216)</head>
-              <text xml:id="SGDP_0471" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0471" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20289,7 +20289,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0472" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0472" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20346,7 +20346,7 @@
               <head>
                 <hi rend="sc">Abbatiats indéterminés</hi>
               </head>
-              <text xml:id="SGDP_0473" n="I" subtype="article">
+              <text xml:id="SGDP-AB_0473" n="I" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20365,7 +20365,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0474" n="II" subtype="article">
+              <text xml:id="SGDP-AB_0474" n="II" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20384,7 +20384,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0475" n="III" subtype="article">
+              <text xml:id="SGDP-AB_0475" n="III" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20406,7 +20406,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0476" n="IV" subtype="article">
+              <text xml:id="SGDP-AB_0476" n="IV" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
@@ -20427,7 +20427,7 @@
                   </div>
                 </body>
               </text>
-              <text xml:id="SGDP_0477" n="V" subtype="article">
+              <text xml:id="SGDP-AB_0477" n="V" subtype="article">
                 <front>
                   <docDate><date>sans date</date></docDate>
                   <index>
