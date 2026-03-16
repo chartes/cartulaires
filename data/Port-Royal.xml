@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17466,7 +17464,7 @@
           <item><rs><hi rend="sc">Chevreuse</hi>, Deux religieuses à Hautebruyères et à Hienes</rs>, <ref>278</ref>.</item>
           <item><rs><hi rend="sc">Cierge perpétuel</hi></rs>, <ref>172</ref>.</item>
           <item><rs><hi rend="sc">Cîteaux (Privilèges de)</hi></rs>, <ref>85</ref></item>
-          <item><rs>l'Abbé de Cîteaux</rs>,<ref>299</ref>.</item>
+          <item><rs><hi rend="sc">Cîteaux</hi>, l'Abbé de</rs>,<ref>299</ref>.</item>
           <item><rs><hi rend="sc">Clacy (Guill. de)</hi></rs>, <ref>63</ref>,<ref>72</ref></item>
           <item><rs><hi rend="sc">Clacy</hi>, Thibault</rs>,<ref>17</ref>,<ref>42</ref>,<ref>72</ref>.</item>
           <item><rs><hi rend="sc">Claencourt</hi>, Galet, Renaud et Robert</rs>, <ref>140</ref>,<ref>141</ref>.</item>
@@ -17623,7 +17621,7 @@
           <item><rs><hi rend="sc">Guillaume l'Anglais</hi>, de Sèvres</rs>,<ref>266</ref>.</item>
           <item><rs><hi rend="sc">Gif (Simon de)</hi></rs>,<ref>15</ref>.</item>
           <item><rs><hi rend="sc">Giry (Pétronille de)</hi></rs>,<ref>21</ref>.</item>
-          <item><rs><abbr>G.</abbr> de Monceaux</rs>,<ref>133</ref>.</item>
+          <item><rs><hi rend="sc">G.</hi> de Monceaux</rs>,<ref>133</ref>.</item>
           </list>
         <list>
           <head>H</head>
@@ -17643,8 +17641,8 @@
           <item><rs><hi rend="sc">Hubert (Vigne de)</hi></rs>, <ref>21</ref>.</item>
           <item><rs><hi rend="sc">Hunière (Amaury de la)</hi></rs>, <ref>188</ref>.</item>
           <item><rs><hi rend="sc">Hure</hi>, Guillaume</rs>, <ref>16</ref>,<ref>19</ref>.</item>
-          <item><rs>lmbert, bouteiller</rs>, <ref>239</ref>.</item>
-          <item><rs>grange de l'Iveline</rs>,<ref>256</ref>,<ref>326</ref>.</item>
+          <item><rs><hi rend="sc">lmbert</hi>, bouteiller</rs>, <ref>239</ref>.</item>
+          <item><rs><hi rend="sc">Iveline</hi>, (grange de l')</rs>,<ref>256</ref>,<ref>326</ref>.</item>
           <item><rs><hi rend="sc">Hanches</hi></rs>, <ref>117</ref></item>
           <item><rs><hi rend="sc">Hanches (Dreux de)</hi></rs>,<ref>116</ref>,<ref>249</ref>.</item>
         </list>
@@ -17898,19 +17896,19 @@
           <item><rs><hi rend="sc">Paale</hi>, Jean</rs>,<ref>22</ref>,<ref>194</ref>,<ref>216</ref>.</item>
           <item><rs><hi rend="sc">Paîeniere (la)</hi></rs>, <ref>22</ref>,<ref>23</ref>.</item>
           <item><rs><hi rend="sc">Paris</hi></rs>. </item>
-          <item><rs>le Temple, dépôt des actes</rs>, <ref>801</ref> ;</item>
-          <item><rs>le Temple, Jacobins</rs>, <ref>246</ref> ;</item>
-          <item><rs>le Temple, Frères mineurs</rs>, <ref>246</ref> ;</item>
-          <item><rs>le Temple, Cathédrale</rs>, <ref>246</ref>,<ref>273</ref> ;</item>
-          <item><rs>le Temple, Filles-Dieu</rs>, <ref>247</ref> ;</item>
-          <item><rs>le Temple, Saint-Victor</rs>, <ref>251</ref> ;</item>
-          <item><rs>le Temple, Collège Saint-Honoré</rs>, <ref>247</ref> ;</item>
-          <item><rs>le Temple, Collège Saint-Thomas du Louvre</rs>, <ref>247</ref> ;</item>
-          <item><rs>le Temple, Abbaye Saint-Antoine</rs>, <ref>247</ref> ;</item>
-          <item><rs>le Temple, Hôtel-Dieu</rs>, <ref>273</ref> ;</item>
-          <item><rs>le Temple, Saint-Merry</rs>, <ref>280</ref> ;</item>
-          <item><rs>le Temple, Champeaux</rs>, <ref>274</ref> ;</item>
-          <item><rs>le Temple, Boutique du Grand-Pont</rs>, <ref>18</ref>,<ref>71</ref>,<ref>146</ref>.</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, dépôt des actes</rs>, <ref>801</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Jacobins</rs>, <ref>246</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Frères mineurs</rs>, <ref>246</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Cathédrale</rs>, <ref>246</ref>,<ref>273</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Filles-Dieu</rs>, <ref>247</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Saint-Victor</rs>, <ref>251</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Collège Saint-Honoré</rs>, <ref>247</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Collège Saint-Thomas du Louvre</rs>, <ref>247</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Abbaye Saint-Antoine</rs>, <ref>247</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Hôtel-Dieu</rs>, <ref>273</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Saint-Merry</rs>, <ref>280</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Champeaux</rs>, <ref>274</ref> ;</item>
+          <item><rs><hi rend="sc">Paris</hi>, le Temple, Boutique du Grand-Pont</rs>, <ref>18</ref>,<ref>71</ref>,<ref>146</ref>.</item>
           <item><rs><hi rend="sc"><hi rend="i">Parou, Guillotus et Dionisius</hi></hi></rs>, <ref>288</ref>.</item>
           <item><rs><hi rend="sc">Pastis (Cermond des)</hi></rs>, <ref>16</ref>,<ref>62</ref>,<ref>73</ref>,<ref>117</ref>,<ref>122</ref></item>
           <item><rs><hi rend="sc">Pastis</hi>, Jean et Guillaume</rs>,<ref>127</ref>.</item>
