@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -9446,7 +9446,7 @@
         <head>
           <pb n="209"/>
         </head>
-        <list>
+        <list type="index">
           <head>A</head>
           <item><rs><hi rend="sc">Aalesis</hi>, mater Reginaldi episcopi Parisiensis</rs>, <ref>171</ref>.</item>
           <item><rs><hi rend="sc">Aalix</hi>, mater Haimonis canonici</rs>, <ref>153</ref>.</item>
@@ -9497,7 +9497,7 @@
           <item><rs><hi rend="sc">Avelina</hi>, uxor Guillelmi de Plesseio</rs>, <ref target="#SSCO-AB_0080">80</ref>, <ref target="#SSCO-AB_0085">85</ref>.</item>
           <item><rs><hi rend="sc">Avelina</hi>, uxor Reginaldi, majoris de Balencuria</rs>, <ref>155</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>B</head>
           <item><rs><hi rend="sc">Balduinus Corboliensis</hi></rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           <item><rs><hi rend="sc">Balduinus de Corbolio</hi>, pater Johannis abbatis</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
@@ -9553,7 +9553,7 @@
           <item><rs><hi rend="sc">Burgensis Brichardi</hi></rs>, <ref target="#SSCO-AB_0035">35</ref>.</item>
           <item><rs><hi rend="sc">Burgensis Ferrarii</hi></rs>, <ref>152</ref>, <ref>158</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>C</head>
           <item><rs><hi rend="sc">Cadurcus</hi>, cancellarius regis Ludovici <num>VII</num></rs>, <ref target="#SSCO-AB_0017">31</ref>, <ref target="#SSCO-AB_0026">41</ref>.</item>
           <item><rs><hi rend="sc">Calciata</hi></rs>, <ref>152</ref>.</item>
@@ -9597,7 +9597,7 @@
           <item><rs><hi rend="sc">Crux Montis Gilonis</hi></rs>, <ref>151</ref>.</item>
           <item><rs><hi rend="sc">Cunradus</hi>, Mogunciacensis archiepiscopus</rs>, <ref target="#SSCO-AB_0003">3</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>D</head>
           <item><rs><hi rend="sc">Danemarie</hi>, <hi rend="i">Dammarie (Seine-et-Marne, canton de Melun)</hi></rs>, <ref>126</ref>.</item>
           <item><rs><hi rend="sc">Daniel</hi>, frater</rs>, <ref target="#SSCO-AB_0004">4</ref>.</item>
@@ -9620,7 +9620,7 @@
           <item><rs><hi rend="sc">Durandus</hi>, levita</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
           <item><rs><hi rend="sc">Durandus</hi>, subdiaconus</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>E</head>
           <item><rs><hi rend="sc">Ebrardus</hi>, capellanus Beate Marie</rs>, <ref target="#SSCO-AB_0052">52</ref>.</item>
           <item><rs><hi rend="sc">Ebrardus Divinus</hi></rs>, <ref target="#SSCO-AB_0041">41</ref>.</item>
@@ -9654,7 +9654,7 @@
           <item><rs><hi rend="sc">Exuperii (brachium Sancti)</hi></rs>, <ref target="#SSCO-AB_0012">12</ref>.</item>
           <item><rs><hi rend="sc">Exuperii (nundine Sancti Exuperii et Sancti Egidii)</hi></rs>, <ref target="#SSCO-AB_0003">3</ref>, <ref target="#SSCO-AB_0007">7</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>F</head>
           <item><rs><hi rend="sc">Feritas</hi>, castellaria Feritatis, Feritas Aales, <hi rend="i">La Ferté-Alais (Seine-et-Oise)</hi></rs>, <ref target="#SSCO-AB_0048">60</ref>, <ref target="#SSCO-AB_0067">73</ref>, <ref target="#SSCO-AB_0067">74</ref>, <ref>114</ref>, <ref>125</ref>, <ref>141</ref>, <ref>157</ref>, <ref>170</ref>.</item>
           <item><rs><hi rend="sc">Ferreolus (Sanctus)</hi></rs>, <ref>156</ref>.</item>
@@ -9679,7 +9679,7 @@
           <item><pb n="216"/><rs><hi rend="sc"> Fulbertus</hi></rs>, <ref>51</ref>.</item>
           <item><rs><hi rend="sc">Furce</hi>, <hi rend="i">Les Fourches (Seine-et-Marne, canton de Brie-Comte-Robert)</hi></rs>, <ref>146</ref>, <ref>169</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>G</head>
           <item><rs><hi rend="sc">Galerannus</hi>, Gualerannus, Galeran, camerarius</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           <item><rs><hi rend="sc">Galerannus de Foucherolles</hi></rs>, <ref>140</ref>.</item>
@@ -9792,7 +9792,7 @@
           <item><rs><hi rend="sc">Guillelmus Hellodi</hi></rs>, <ref>161</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus Madelinarius</hi></rs>, <ref target="#SSCO-AB_0058">58</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>H</head>
           <item><rs><hi rend="sc">Hamo</hi>, Haymo, comes Corbolii, fundator ecclesie Sancti Exuperii</rs>, <ref>157</ref>.</item>
           <item><rs><hi rend="sc">Hamo</hi>, canonicus</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
@@ -9847,7 +9847,7 @@
           <item><rs><hi rend="sc">Hunoudus Bos</hi></rs>, <ref target="#SSCO-AB_0080">80</ref>, <ref target="#SSCO-AB_0085">85</ref>.</item>
           <item><rs><hi rend="sc">Hylduinus</hi>, cancellarius</rs>, <ref target="#SSCO-AB_0007">7</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>I</head>
           <item><rs><hi rend="sc">Ingenulphus</hi></rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
           <item><rs><hi rend="sc">Ingerbertus</hi></rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
@@ -9857,7 +9857,7 @@
           <item><rs><hi rend="sc">Ivo</hi>, comes Belli Montis</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           <item><rs><hi rend="sc">Ivo</hi>, archidiaconus</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>J</head>
           <item><rs><hi rend="sc">Jado</hi>, miles</rs>, <ref target="#SSCO-AB_0045">45</ref>.</item>
           <item><rs><hi rend="sc">Jaquelina la Bricharde</hi></rs>, <ref target="#SSCO-AB_0084">84</ref>.</item>
@@ -9914,10 +9914,10 @@
           <item><rs><hi rend="sc">Jordanus</hi>, presbiter cardinalis Sancte Pudentiane tituli Pastoris</rs>, <ref target="#SSCO-AB_0003">3</ref>.</item>
           <item><rs><hi rend="sc">Judearia Corbolii</hi></rs>, <ref target="#SSCO-AB_0089">89</ref>.</item>
           </list>
-        <list>
+        <list type="index">
           <head>K</head>
         </list>
-        <list>
+        <list type="index">
           <head>L</head>
           <item><rs><hi rend="sc">Laborde</hi></rs>, <ref target="#SSCO-AB_0044">44</ref>.</item>
           <item><rs><hi rend="sc">Lancelinus</hi>, canonicus Sancti Exuperii</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
@@ -9956,7 +9956,7 @@
           <item><rs><hi rend="sc">Lumbardus Albertus</hi>, magister</rs>, <ref target="#SSCO-AB_0004">4</ref>.</item>
           <item><rs><hi rend="sc">Luto</hi>, Terricus de</rs>, <ref>161</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>M</head>
           <item><rs><hi rend="sc">Mainardus</hi>, abbas Pontiniacensis</rs>, <ref target="#SSCO-AB_0004">9</ref> à <ref target="#SSCO-AB_0007">14</ref>.</item>
           <item><rs><hi rend="sc">Manasses</hi>, archiepiscopus Remensis</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
@@ -10005,7 +10005,7 @@
           <item><rs><hi rend="sc">Moretum</hi>, <hi rend="i">Moret (Seine-et-Marne)</hi></rs>, <ref target="#SSCO-AB_0084">88</ref>, <ref target="#SSCO-AB_0091">94</ref>, <ref target="#SSCO-AB_0092">96</ref>, <ref>113</ref>, <ref>117</ref>, <ref target="#SSCO-AB_a05">181</ref>, <ref target="#SSCO-AB_a07">183</ref>, <ref target="#SSCO-AB_a08">187</ref>, <ref target="#SSCO-AB_a16">203</ref>.</item>
           <item><rs><hi rend="sc">Murcent</hi>, <hi rend="i">Morsang-sur-Seine (Seine-et-Oise, canton de Corbeil)</hi></rs>, <ref target="#SSCO-AB_0059">68</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>N</head>
           <item><rs><hi rend="sc">Nagiacum</hi>, <hi rend="i">Nagy (Seine-et-Oise, commune de Corbeil)</hi></rs>, <ref>113</ref>, <ref>123</ref>, <ref>149</ref>.</item>
           <item><rs><hi rend="sc">Nanterius</hi>, canonicus Sancti Exuperii</rs>, <ref target="#SSCO-AB_0010">10</ref>.</item>
@@ -10022,7 +10022,7 @@
           <item><rs><hi rend="sc">Noisimentum Isabellis</hi>, domicella de</rs>, <ref target="#SSCO-AB_0099">99</ref>.<list><item><rs><hi rend="sc">Guillelmus</hi>, ejus filius</rs>, <ref target="#SSCO-AB_0099">99</ref>.</item>
         </list></item>
           </list>
-        <list>
+        <list type="index">
           <head>O</head>
           <item><rs><hi rend="sc">Octovianus Hostiensis et Velletrensis episcopus</hi></rs>, <ref target="#SSCO-AB_0003">3</ref>.</item>
           <item><rs><hi rend="sc">Odo</hi>, episcopus Parisiensis</rs>, <ref target="#SSCO-AB_0047">47</ref>.</item>
@@ -10042,7 +10042,7 @@
           <item><rs><hi rend="sc">Orengiacum</hi>, <hi rend="i">Orangis (Seine-et-Oise, canton de Corbeil)</hi></rs>, <ref target="#SSCO-AB_0068">74</ref>, <ref>165</ref>.</item>
           <item><rs><hi rend="sc">Osmundus</hi>, archidiaconus ecclesie Parisiensis</rs>, <ref target="#SSCO-AB_0005">5</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>P</head>
           <item><rs><hi rend="sc">Paganus</hi>, magister</rs>, <ref>154</ref>.</item>
           <item><rs><hi rend="sc">Paganus Biselli</hi></rs>, <ref>154</ref>.</item>
@@ -10110,7 +10110,7 @@
           <item><rs><hi rend="sc">Prunaium</hi>, Prunoi, Guillelmus de</rs>, <ref>113</ref>, <ref>123</ref>, <ref>124</ref>.</item>
           <item><rs><hi rend="sc">Pulli</hi></rs>, <ref>122</ref>, <ref>136</ref>.</item>
           </list>
-        <list>
+        <list type="index">
           <head>Q</head>
         <item><rs><hi rend="sc">Quoquatrix</hi>, Geffroy</rs>, <ref target="#SSCO-AB_a06">6</ref>.</item>
           <item><rs><hi rend="sc">Quoquatrix Jean</hi>, son fils, bourgeois de Paris</rs>, <ref target="#SSCO-AB_a06">6</ref>, <ref target="#SSCO-AB_a13">13</ref>.</item>
@@ -10118,7 +10118,7 @@
           <item><rs><hi rend="sc">Quoquatrix Marie</hi>, veuve de Geffroy, femme de Jean Billoart, trésorier du Roi</rs>, <ref target="#SSCO-AB_a12">12</ref>.</item>
           <item><rs><hi rend="sc">Quoquatrix Bernard et Jeanne</hi>, enfants de Geffroy et de Marie</rs>, <ref target="#SSCO-AB_a12">12</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>R</head>
           <item><rs><hi rend="sc">Rabboldus</hi>, episcopus Noviomensis</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           <item><rs><hi rend="sc">Radulphus</hi>, comes</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
@@ -10182,7 +10182,7 @@
           <item><rs><hi rend="sc">Rogerius</hi>, sacerdos</rs>, <ref>162</ref>.</item>
           <item><rs><hi rend="sc">Roissiacum</hi>, <hi rend="i">Roissy (Seine-et-Oise, commune d'Ormoy)</hi></rs>, <ref target="#SSCO-AB_0054">65</ref>, <ref target="#SSCO-AB_0077">81</ref>, <ref target="#SSCO-AB_0084">88</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>S</head>
           <item><rs><hi rend="sc">Sachepel</hi></rs>, <ref>160</ref>.</item>
           <item><rs><hi rend="sc">Sacer-Portus </hi><hi rend="i">Seine-Port</hi> ou <hi rend="i">Saint-Port (Seine-et-Marne, canton de Melun)</hi></rs>, <ref target="#SSCO-AB_0066">73</ref>, <ref target="#SSCO-AB_0087">91</ref>, <ref>126</ref>, <ref>145</ref>.</item>
@@ -10220,7 +10220,7 @@
           <item><rs><hi rend="sc">Stephanus Niquerel</hi>, presbiter</rs>, <ref>153</ref>.</item>
           <item><rs><hi rend="sc">Suggerius</hi>, subdiaconus</rs>, <ref target="#SSCO-AB_0007">7</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>T</head>
           <item><rs><hi rend="sc">Tartareium</hi>, Tartaret</rs>, <ref target="#SSCO-AB_0096">96</ref>.</item>
           <item><rs><hi rend="sc">Theobaldus</hi>, Thibaudus, dapifer regis Philippi <num>II</num></rs>, <ref target="#SSCO-AB_0038">53</ref>.</item>
@@ -10252,13 +10252,13 @@
           <item><rs><hi rend="sc">Trinitatis (altare Sancte)</hi></rs>, <ref target="#SSCO-AB_0054">54</ref>, <ref target="#SSCO-AB_0097">97</ref>.</item>
           <item><rs><hi rend="sc">Trossolio (Johannes de</hi>, clericus)</rs>, <ref target="#SSCO-AB_0080">80</ref>, <ref target="#SSCO-AB_0085">85</ref>.</item>
           </list>
-        <list>
+        <list type="index">
           <head>U</head>
         <item><rs><hi rend="sc">Ulmeium</hi>, <hi rend="i">Ormoy (Seine-et-Oise, canton de Corbeil)</hi></rs>, <ref>126</ref>, <ref>144</ref>.</item>
           <item><rs><hi rend="sc">Ulmeium</hi>, Andreas de Ulmeio</rs>, <ref>115</ref>.</item>
           <item><rs><hi rend="sc">Ulmos Reimberti (vinea apud)</hi></rs>, <ref>156</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>V</head>
           <item><rs><hi rend="sc">Vadum Petrosum</hi>, <hi rend="i">Guipéreux (Seine-et-Oise, commune de Longpont)</hi></rs>, <ref target="#SSCO-AB_0104">109</ref>, <ref>150</ref>, <ref>151</ref>, <ref>153</ref>, <ref>156</ref>, <ref>159</ref>, <ref>171</ref>.</item>
           <item><rs><hi rend="sc">Valenton</hi></rs>, <ref target="#SSCO-AB_0088">88</ref>.</item>
@@ -10285,7 +10285,7 @@
           <item><rs><hi rend="sc">Viriacum</hi>, <hi rend="i">Viry (Seine-et-Oise, canton de Longjumeau)</hi></rs>, <ref target="#SSCO-AB_0068">75</ref>, <ref>132</ref>, <ref>142</ref>, <ref>158</ref>, <ref>165</ref>.</item>
           <item><rs><hi rend="sc">Vulgrinus</hi>, frater Johannis abbatis</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           </list>
-        <list>
+        <list type="index">
           <head>W</head>
         <item><rs><hi rend="sc">Wauterius</hi>, episcopus Meldensis</rs>, <ref target="#SSCO-AB_0001">1</ref>.</item>
           <item><rs><hi rend="sc">Wibertus</hi>, canonicus Sancti Exuperii</rs>, <ref target="#SSCO-AB_0046">46</ref>.</item>
@@ -10293,14 +10293,14 @@
           <item><pb n="233"/><rs><hi rend="sc"> Willelmus</hi>, precentor Sancti Exuperii</rs>, <ref>41</ref>, <ref>43</ref>.</item>
           <item><rs><hi rend="sc">Willelmus de Veteri Corbolio</hi></rs>, <ref target="#SSCO-AB_0044">44</ref>.</item>
           </list>
-        <list>
+        <list type="index">
           <head>X</head>
         </list>
-        <list>
+        <list type="index">
           <head>Y</head>
         <item><rs><hi rend="sc">Yenvilla</hi>, <hi rend="i">Janville (Seine-et-Oise, commune d'Auvers-Saint-Georges)</hi></rs>, <ref>129</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>Z</head>
         </list>
       </div>

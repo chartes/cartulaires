@@ -746,15 +746,16 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <ref name="u"/>
       <ref name="sub"/>
       <ref name="sup"/>
-      <ref name="hi"/>
     </choice>
   </define>
 
   <define name="typo.content">
     <a:documentation xmlns="http://www.w3.org/1999/xhtml">Contenu d'une balise typographique</a:documentation>
+    <!-- Pas d\'imbrication de balises typographiques dans typo.content -->
     <zeroOrMore>
       <choice>
         <text/>
+        <ref name="num"/>
         <ref name="sup"/>
         <ref name="sub"/>
         <ref name="pb"/>

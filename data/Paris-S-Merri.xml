@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -5078,7 +5080,7 @@
         <head>
           <pb n="249"/>
         </head>
-        <list>
+        <list type="index">
           <head>A</head>
           <item><rs><hi rend="sc">Aales</hi></rs>, Voy. Alix.</item>
           <item><rs><hi rend="sc">Ableiges (Jean d')</hi></rs>, <ref>178</ref>, <ref>185</ref>, <ref>229</ref>, <ref>237</ref>, <ref>244</ref>.</item>
@@ -5242,7 +5244,7 @@
           <item><rs><hi rend="sc">Aveugles (Maison-Dieu des)</hi></rs>, <ref>177</ref>.</item>
           <item><rs><hi rend="sc">Aymar le Riche</hi></rs>, <ref>215</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>B</head>
           <item><rs><hi rend="sc">Babus</hi>, serviens Gerardi archidiaconi</rs>, <ref>137</ref>.</item>
           <item><rs><hi rend="sc">Bagneux (Adam de)</hi></rs>, <ref>127</ref>, <ref>155</ref>.</item>
@@ -5263,8 +5265,8 @@
           <item><rs><hi rend="sc">Barate (Lancelot)</hi></rs>, <ref>198</ref>.</item>
           <item><rs><hi rend="sc">Barbe (Elisabeth)</hi></rs>, <ref>135</ref>, <ref>136</ref>.</item>
           <item><rs><hi rend="sc">Barbe (Hugo)</hi></rs>, <ref>135</ref>.</item>
-          <pb n="251"/>
-          <item><rs><hi rend="sc">Barbe (Richardus)</hi></rs>, <ref>136</ref>.</item>
+          <item><pb n="251"/>
+          <rs><hi rend="sc">Barbe (Richardus)</hi></rs>, <ref>136</ref>.</item>
           <item><rs><hi rend="sc">Barbette (Denise)</hi></rs>, <ref>193</ref>, <ref>195</ref>.</item>
           <item><rs><hi rend="sc">Barbette (Johannes)</hi></rs>, <ref>166</ref>.</item>
           <item><rs><hi rend="sc">Barbette (Nicholaus)</hi></rs>, <ref>162</ref>.</item>
@@ -5374,8 +5376,8 @@
           <item><rs><hi rend="sc">Boucel (Jacquet)</hi></rs>, <ref>214</ref>.</item>
           <item><rs><hi rend="sc">Boucel (Marguerite)</hi></rs>, <ref>212</ref>.</item>
           <item><rs><hi rend="sc">Boucel (Thomas)</hi></rs>, <ref>106</ref>.</item>
-          <pb n="252"/>
-          <item><rs><hi rend="sc">Boucelli (Guarinus)</hi></rs>, <ref>107</ref>, <ref>120</ref>, <ref>192</ref>.</item>
+          <item><pb n="252"/>
+          <rs><hi rend="sc">Boucelli (Guarinus)</hi></rs>, <ref>107</ref>, <ref>120</ref>, <ref>192</ref>.</item>
           <item><rs><hi rend="sc">Boucelli (Robertus)</hi></rs>, <ref>107</ref>.</item>
           <item><rs><hi rend="sc">Boucelli (Stephanus)</hi></rs>, <ref>120</ref>, <ref>165</ref>.</item>
           <item><rs><hi rend="sc">Boucelli (Theobaldus)</hi></rs>, <ref>120</ref>.</item>
@@ -5427,7 +5429,7 @@
           <item><rs><hi rend="sc">Bussy (Ancel de)</hi></rs>, <ref>167</ref>, <ref>168</ref>.</item>
           <item><rs><hi rend="sc">Butereu (terroir du)</hi></rs>, <ref>217</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>C</head>
           <item><rs><hi rend="sc">Caballi (vinea)</hi></rs>, <ref>128</ref>, <ref>216</ref>.</item>
           <item><rs><hi rend="sc">Cacabo (domus de)</hi></rs>, <ref>201</ref>.</item>
@@ -5489,8 +5491,8 @@
           <item><rs><hi rend="sc">Cleville (G. de)</hi></rs>, <ref>194</ref>, <ref>207</ref>.</item>
           <item><rs><hi rend="sc">Clichy (chemin de)</hi></rs>, <ref>221</ref>.</item>
           <item><rs><hi rend="sc">Cloistre (Etienne du)</hi></rs>, <ref>248</ref>.</item>
-          <pb n="253"/>
-          <item><rs><hi rend="sc">Cloître Saint-Merry</hi></rs>, <ref>171</ref>, <ref>172</ref>, <ref>183</ref>, <ref>191</ref>, <ref>192</ref>, <ref>193</ref>, <ref>194</ref>, <ref>209</ref>, <ref>211</ref>, <ref>215</ref>, <ref>223</ref>, <ref>225</ref>, <ref>231</ref>, <ref>234</ref>, <ref>239</ref>, <ref>241</ref>, <ref>242</ref>, <ref>248</ref>.</item>
+          <item><pb n="253"/>
+          <rs><hi rend="sc">Cloître Saint-Merry</hi></rs>, <ref>171</ref>, <ref>172</ref>, <ref>183</ref>, <ref>191</ref>, <ref>192</ref>, <ref>193</ref>, <ref>194</ref>, <ref>209</ref>, <ref>211</ref>, <ref>215</ref>, <ref>223</ref>, <ref>225</ref>, <ref>231</ref>, <ref>234</ref>, <ref>239</ref>, <ref>241</ref>, <ref>242</ref>, <ref>248</ref>.</item>
           <item><rs><hi rend="sc">Colin Daube</hi></rs>, <ref>215</ref>.</item>
           <item><rs><hi rend="sc">Colin le Bègue</hi></rs>, <ref>243</ref>.</item>
           <item><rs><hi rend="sc">Columbiers (Jacques de)</hi></rs>, <ref>171</ref>, <ref>183</ref>, <ref>192</ref>, <ref>223</ref>, <ref>225</ref>, <ref>231</ref>, <ref>240</ref>, <ref>241</ref>, <ref>248</ref>.</item>
@@ -5531,7 +5533,7 @@
           <item><rs><hi rend="sc">Cussac (Jean)</hi></rs>, <ref>181</ref>, <ref>230</ref>, <ref>232</ref>, <ref>233</ref>, <ref>246</ref>.</item>
           <item><rs><hi rend="sc">Cutin (Pierre)</hi></rs>, <ref>220</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>D</head>
           <item><rs><hi rend="sc">Dammartin (Geoffroy de)</hi></rs>, <ref>197</ref>, <ref>215</ref>.</item>
           <item><rs><hi rend="sc">Dammartin (Guy de)</hi></rs>, <ref>172</ref>, <ref>194</ref>.</item>
@@ -5590,15 +5592,15 @@
           <item><rs><hi rend="sc">Dupin (Jean)</hi></rs>, <ref>214</ref>.</item>
           <item><rs><hi rend="sc">Du Presseur</hi>, ou Pressoeur (Henri)</rs>, <ref>174</ref>, <ref>182</ref>, <ref>187</ref>, <ref>231</ref>, <ref>239</ref>, <ref>246</ref>.</item>
           <item><rs><hi rend="sc">Durandus</hi>, canonicus Sancti Mederici</rs>, <ref>116</ref>.</item>
-          <pb n="254"/>
-          <item><rs><hi rend="sc">Durandus</hi>, presbyter</rs>, <ref>117</ref>, <ref>164</ref>.</item>
+          <item><pb n="254"/>
+          <rs><hi rend="sc">Durandus</hi>, presbyter</rs>, <ref>117</ref>, <ref>164</ref>.</item>
           <item><rs><hi rend="sc">Durandus Poncherus</hi></rs>, <ref>154</ref>.</item>
           <item><rs><hi rend="sc">Du Tertre (J.)</hi></rs>, <ref>225</ref>.</item>
           <item><rs><hi rend="sc">Du Val (Pierre)</hi></rs>, <ref>195</ref>.</item>
           <item><rs><hi rend="sc">Du Wer (Evrart)</hi></rs>, <ref>214</ref>.</item>
           <item><rs><hi rend="sc">Dyonisius Britonis</hi></rs>, <ref>157</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>E</head>
           <item><rs><hi rend="sc">Eadem (Herveus de)</hi></rs>, <ref>162</ref>.</item>
           <item><rs><hi rend="sc">Edeline le Fauconnier</hi></rs>, <ref>237</ref>, <ref>244</ref>.</item>
@@ -5681,7 +5683,7 @@
           <item><rs><hi rend="sc">Evrard le Nerou</hi></rs>, <ref>212</ref>.</item>
           <item><rs><hi rend="sc">Evrardus Clamatoris</hi></rs>, <ref>153</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>F</head>
           <item><rs><hi rend="sc">Fausse-Poterne (rue de la)</hi></rs>, <ref>161</ref>.</item>
           <item><rs><hi rend="sc">Ferperius (Injorannus)</hi></rs>, <ref>160</ref>.</item>
@@ -5698,8 +5700,8 @@
           <item><rs><hi rend="sc">Forges (Jean de)</hi></rs>, <ref>206</ref>, <ref>227</ref>.</item>
           <item><rs><hi rend="sc">Fossez (Jean de)</hi></rs>, <ref>193</ref>, <ref>196</ref>, <ref>200</ref>, <ref>205</ref>, <ref>206</ref>.</item>
           <item><rs><hi rend="sc">Four des Arsis</hi></rs>, <ref>180</ref>, <ref>186</ref>, <ref>212</ref>, <ref>230</ref>, <ref>238</ref>, <ref>245</ref>.</item>
-          <pb n="255"/>
-          <item><rs><hi rend="sc">Four des Horges</hi></rs>, <ref>195</ref>, <ref>196</ref>.</item>
+          <item><pb n="255"/>
+          <rs><hi rend="sc">Four des Horges</hi></rs>, <ref>195</ref>, <ref>196</ref>.</item>
           <item><rs><hi rend="sc">Four de Livry</hi></rs>, <ref>131</ref>, <ref>132</ref>, <ref>133</ref>.</item>
           <item><rs><hi rend="sc">Four du Temple</hi></rs>, <ref>115</ref>, <ref>165</ref>.</item>
           <item><rs><hi rend="sc">Fournier (Jean)</hi></rs>, <ref>212</ref>.</item>
@@ -5708,7 +5710,7 @@
           <item><rs><hi rend="sc">Freines (Guillaume de)</hi></rs>, <ref>226</ref>.</item>
           <item><rs><hi rend="sc">Frogerii (Gilduinus)</hi></rs>, <ref>107</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>G</head>
           <item><rs><hi rend="sc">G.</hi>, archipresbiter Sancti Jacobi Parisiensis</rs>, <ref>122</ref>.</item>
           <item><rs><hi rend="sc">G. de Adenvilla</hi></rs>, <ref>201</ref>.</item>
@@ -5809,8 +5811,8 @@
           <item><rs><hi rend="sc">Grand-Pont</hi></rs>, <ref>167</ref>, <ref>214</ref>, <ref>216</ref>.</item>
           <item><rs><hi rend="sc">Grand-Pont (changeur sur)</hi></rs>, <ref>177</ref>.</item>
           <item><rs><hi rend="sc">Grand-Pont (moulin sous)</hi></rs>, <ref>182</ref>, <ref>187</ref>, <ref>223</ref>, <ref>231</ref>, <ref>239</ref>, <ref>240</ref>, <ref>247</ref>.</item>
-          <pb n="256"/>
-          <item><rs><hi rend="sc">Grand-Pont (ouvroir sur)</hi></rs>, <ref>187</ref>, <ref>231</ref>, <ref>239</ref>, <ref>246</ref>.</item>
+          <item><pb n="256"/>
+          <rs><hi rend="sc">Grand-Pont (ouvroir sur)</hi></rs>, <ref>187</ref>, <ref>231</ref>, <ref>239</ref>, <ref>246</ref>.</item>
           <item><rs><hi rend="sc">Grande Rue Saint-Denis</hi></rs>, <ref>214</ref>, <ref>230</ref>, <ref>232</ref>, <ref>239</ref>, <ref>246</ref>.</item>
           <item><rs><hi rend="sc">Grande Rue Saint-Merry</hi></rs>, <ref>209</ref>, <ref>212</ref>.</item>
           <item><rs><hi rend="sc">Gregorius</hi>, canonicus Parisiensis</rs>, <ref>139</ref>.</item>
@@ -5913,8 +5915,8 @@
           <item><rs><hi rend="sc">Guillelmus Cementarii</hi></rs>, <ref>130</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus Drocaus</hi></rs>, <ref>231</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus Esaiacos</hi></rs>, <ref>137</ref>.</item>
-          <pb n="257"/>
-          <item><rs><hi rend="sc">Guillelmus de Grisiaco</hi></rs>, <ref>111</ref>.</item>
+          <item><pb n="257"/>
+          <rs><hi rend="sc">Guillelmus de Grisiaco</hi></rs>, <ref>111</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus de Meldis</hi></rs>, <ref>114</ref>, <ref>115</ref>, <ref>116</ref>, <ref>119</ref>, <ref>164</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus Rotondi</hi></rs>, <ref>160</ref>.</item>
           <item><rs><hi rend="sc">Guillelmus de Seignelay</hi></rs>, <ref>122</ref>.</item>
@@ -5934,7 +5936,7 @@
           <item><rs><hi rend="sc">Guy de Dammartin</hi></rs>, <ref>172</ref>, <ref>194</ref>.</item>
           <item><rs><hi rend="sc">Guy Loubert</hi></rs>, <ref>179</ref>, <ref>186</ref>, <ref>244</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>H</head>
           <item><rs><hi rend="sc">H. d'Artois</hi></rs>, <ref>207</ref>.</item>
           <item><rs><hi rend="sc">Halles (Jean des)</hi></rs>, <ref>216</ref>.</item>
@@ -6013,11 +6015,11 @@
           <item><rs><hi rend="sc">Huttaut (Guarinus)</hi></rs>, <ref>140</ref>, <ref>141</ref>.</item>
           <item><rs><hi rend="sc">Hydelon (poterne Nicolas)</hi></rs>, Voy. Huideron.</item>
         </list>
-        <list>
+        <list type="index">
           <head>I</head>
           <item><rs><hi rend="sc">Injorannus Ferperius</hi></rs>, <ref>160</ref>.</item>
-          <pb n="258"/>
-          <item><rs><hi rend="sc">Innocents (fontaine des)</hi></rs>, <ref>181</ref>, <ref>186</ref>, <ref>214</ref>, <ref>230</ref>, <ref>232</ref>.</item>
+          <item><pb n="258"/>
+          <rs><hi rend="sc">Innocents (fontaine des)</hi></rs>, <ref>181</ref>, <ref>186</ref>, <ref>214</ref>, <ref>230</ref>, <ref>232</ref>.</item>
           <item><rs><hi rend="sc">Isabeau du Corneit</hi></rs>, <ref>220</ref>.</item>
           <item><rs><hi rend="sc">Isabeau de Glatigny</hi></rs>, <ref>205</ref>.</item>
           <item><rs><hi rend="sc">Isabeau la Béguine</hi></rs>, <ref>175</ref>, <ref>203</ref>.</item>
@@ -6030,7 +6032,7 @@
           <item><rs><hi rend="sc">Ivry</hi></rs>, <ref>182</ref>, <ref>223</ref>.</item>
           <item><rs><hi rend="sc">Ivry (dîme d')</hi></rs>, <ref>231</ref>, <ref>239</ref>, <ref>241</ref>, <ref>247</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>J</head>
           <item><rs><hi rend="sc">J. Bignon</hi></rs>, <ref>195</ref>, <ref>196</ref>.</item>
           <item><rs><hi rend="sc">J. Lupi</hi></rs>, <ref>207</ref>.</item>
@@ -6129,8 +6131,8 @@
           <item><rs><hi rend="sc">Jean le Coc</hi></rs>, <ref>186</ref>, <ref>230</ref>.</item>
           <item><rs><hi rend="sc">Jean Lecomte</hi></rs>, <ref>215</ref>, <ref>218</ref>.</item>
           <item><rs><hi rend="sc">Jean le Convers</hi></rs>, <ref>216</ref>, <ref>217</ref>, <ref>218</ref>, <ref>240</ref>, <ref>241</ref>.</item>
-          <pb n="259"/>
-          <item><rs><hi rend="sc">Jean le Cordier</hi></rs>, <ref>217</ref>.</item>
+          <item><pb n="259"/>
+          <rs><hi rend="sc">Jean le Cordier</hi></rs>, <ref>217</ref>.</item>
           <item><rs><hi rend="sc">Jean le Douz</hi></rs>, <ref>219</ref>.</item>
           <item><rs><hi rend="sc">Jean le Gales</hi></rs>, <ref>232</ref>, <ref>233</ref>.</item>
           <item><rs><hi rend="sc">Jean le Gros</hi></rs>, <ref>173</ref>, <ref>179</ref>, <ref>195</ref>, <ref>235</ref>.</item>
@@ -6240,13 +6242,13 @@
           <item><rs><hi rend="sc">Jumelle (Pierre)</hi></rs>, <ref>217</ref>, <ref>240</ref>.</item>
           <item><rs><hi rend="sc">Juvenis (Petrus)</hi>, canonicus Parisiensis</rs>, <ref>134</ref>, <ref>135</ref>.</item>
           <item><rs><hi rend="sc">Juvisy (léproserie de)</hi></rs>, <ref>112</ref>, <ref>152</ref>.</item>
-          <pb n="260"/>
-        </list>
-        <list>
+          </list>
+        <list type="index">
           <head>K</head>
-          <item><rs><hi rend="sc">Kala</hi></rs>, Voy. Chelles.</item>
+          <item><pb n="260"/>
+        <rs><hi rend="sc">Kala</hi></rs>, Voy. Chelles.</item>
         </list>
-        <list>
+        <list type="index">
           <head>L</head>
           <item><rs><hi rend="sc">La Banlieue (léproserie de)</hi></rs>, <ref>112</ref>, <ref>152</ref>.</item>
           <item><rs><hi rend="sc">La Bardelle (Agnès)</hi></rs>, <ref>214</ref>.</item>
@@ -6347,8 +6349,8 @@
           <item><rs><hi rend="sc">Le Bègue (Guibert)</hi></rs>, <ref>175</ref>, <ref>184</ref>, <ref>228</ref>, <ref>236</ref>.</item>
           <item><rs><hi rend="sc">Le Bègue (Jean)</hi></rs>, <ref>210</ref>.</item>
           <item><rs><hi rend="sc">Lebel (Charles)</hi></rs>, <ref>201</ref>.</item>
-          <pb n="261"/>
-          <item><rs><hi rend="sc">Leber (Agnès)</hi></rs>, <ref>107</ref>, <ref>108</ref>, <ref>126</ref>, <ref>141</ref>, <ref>164</ref>.</item>
+          <item><pb n="261"/>
+          <rs><hi rend="sc">Leber (Agnès)</hi></rs>, <ref>107</ref>, <ref>108</ref>, <ref>126</ref>, <ref>141</ref>, <ref>164</ref>.</item>
           <item><rs><hi rend="sc">Leber (Pierre)</hi></rs>, <ref>107</ref>, <ref>108</ref>, <ref>120</ref>, <ref>126</ref>, <ref>141</ref>, <ref>144</ref>, <ref>145</ref>, <ref>164</ref>, <ref>180</ref>, <ref>210</ref>, <ref>230</ref>, <ref>245</ref>.</item>
           <item><rs><hi rend="sc">Le Blont (Jean)</hi></rs>, <ref>195</ref>, <ref>197</ref>.</item>
           <item><rs><hi rend="sc">Le Blont (Michel)</hi></rs>, <ref>175</ref>.</item>
@@ -6451,8 +6453,8 @@
           <item><rs><hi rend="sc">Le Lombart (Jeannot)</hi></rs>, <ref>219</ref>.</item>
           <item><rs><hi rend="sc">Le Lombart (Maruche)</hi></rs>, <ref>197</ref>.</item>
           <item><rs><hi rend="sc">Le Long (Jeanne)</hi></rs>, <ref>190</ref>.</item>
-          <pb n="262"/>
-          <item><rs><hi rend="sc">Le Long (Rolin)</hi></rs>, <ref>189</ref>.</item>
+          <item><pb n="262"/>
+          <rs><hi rend="sc">Le Long (Rolin)</hi></rs>, <ref>189</ref>.</item>
           <item><rs><hi rend="sc">Le Long (Thomas)</hi></rs>, <ref>188</ref>, <ref>190</ref>.</item>
           <item><rs><hi rend="sc">Le Macon (Jean)</hi></rs>, <ref>219</ref>.</item>
           <item><rs><hi rend="sc">Le Madelinier (Geoffroy)</hi></rs>, <ref>183</ref>, <ref>225</ref>, <ref>235</ref>, <ref>242</ref>.</item>
@@ -6566,8 +6568,8 @@
           <item><rs><hi rend="sc">L'Orfèvre (Richard)</hi></rs>, <ref>172</ref>, <ref>173</ref>, <ref>176</ref>, <ref>183</ref>, <ref>193</ref>, <ref>194</ref>, <ref>205</ref>, <ref>225</ref>, <ref>235</ref>, <ref>242</ref>.</item>
           <item><rs><hi rend="sc">Lorier (Jehannot)</hi></rs>, <ref>188</ref>.</item>
           <item><rs><hi rend="sc">Lorier (Macé)</hi></rs>, <ref>188</ref>, <ref>190</ref>, <ref>191</ref>.</item>
-          <pb n="263"/>
-          <item><rs><hi rend="sc">Lot(J. de)</hi></rs>, <ref>231</ref>.</item>
+          <item><pb n="263"/>
+          <rs><hi rend="sc">Lot(J. de)</hi></rs>, <ref>231</ref>.</item>
           <item><rs><hi rend="sc">Loubert</hi></rs>, Voy. Fleurance.</item>
           <item><rs><hi rend="sc">Loubert (Guy)</hi></rs>, <ref>179</ref>, <ref>186</ref>, <ref>244</ref>.</item>
           <item><rs><hi rend="sc">Louis <num>VII</num></hi></rs>, <ref>104</ref>, <ref>123</ref>, <ref>124</ref>.</item>
@@ -6591,7 +6593,7 @@
           <item><rs><hi rend="sc">Lyon (Jean de)</hi></rs>, <ref>211</ref>, <ref>233</ref>.</item>
           <item><rs><hi rend="sc">Louvre (Saint-Thomas du)</hi></rs>, Voy. Saint-Thomas du Louvre.</item>
         </list>
-        <list>
+        <list type="index">
           <head>M</head>
           <item><rs><hi rend="sc">Macé (Thibaut)</hi></rs>, <ref>220</ref>.</item>
           <item><rs><hi rend="sc">Macé Bordo</hi></rs>, <ref>197</ref>.</item>
@@ -6616,8 +6618,8 @@
           <item><rs><hi rend="sc">Malcoart</hi>, seu Maucart (clausum de)</rs>, <ref>104</ref>, <ref>105</ref>, <ref>120</ref>, <ref>163</ref>, <ref>165</ref>, <ref>217</ref>.</item>
           <item><rs><hi rend="sc">Mallert (Nicolas)</hi></rs>, <ref>201</ref>.</item>
           <item><rs><hi rend="sc">Malpas (Etienne)</hi></rs>, <ref>191</ref>, <ref>210</ref>, <ref>211</ref>.</item>
-          <pb n="264"/>
-          <item><rs><hi rend="sc">Malpas</hi>, ou Maupas (Gilles)</rs>, <ref>192</ref>, <ref>208</ref>, <ref>211</ref>.</item>
+          <item><pb n="264"/>
+          <rs><hi rend="sc">Malpas</hi>, ou Maupas (Gilles)</rs>, <ref>192</ref>, <ref>208</ref>, <ref>211</ref>.</item>
           <item><rs><hi rend="sc">Malpas (Gilot)</hi></rs>, <ref>191</ref>, <ref>211</ref>.</item>
           <item><rs><hi rend="sc">Malpas (Jacqueline)</hi></rs>, <ref>208</ref>.</item>
           <item><rs><hi rend="sc">Manessier des Fossés</hi></rs>, <ref>207</ref>.</item>
@@ -6758,7 +6760,7 @@
           <item><rs><hi rend="sc">Murié (Jean)</hi></rs>, <ref>215</ref>, <ref>216</ref>.</item>
           <item><rs><hi rend="sc">Murllent</hi></rs>, Voy. Meulan.</item>
         </list>
-        <list>
+        <list type="index">
           <head>N</head>
           <item><rs><hi rend="sc">Natalis</hi>, officialis Parisiensis</rs>, <ref>161</ref>, <ref>163</ref>.</item>
           <item><rs><hi rend="sc">Navibus (Petronilla de)</hi></rs>, <ref>159</ref>.</item>
@@ -6781,8 +6783,8 @@
           <item><rs><hi rend="sc">Nicolas Mallert</hi></rs>, <ref>201</ref>.</item>
           <item><rs><hi rend="sc">Nicolas de Meuns</hi></rs>, <ref>200</ref>.</item>
           <item><rs><hi rend="sc">Nicolas de Pontoise</hi></rs>, <ref>196</ref>.</item>
-          <pb n="265"/>
-          <item><rs><hi rend="sc">Nicolas de Rosay</hi></rs>, <ref>171</ref>, <ref>183</ref>, <ref>192</ref>, <ref>198</ref>, <ref>220</ref>, <ref>223</ref>, <ref>225</ref>, <ref>234</ref>, <ref>241</ref>, <ref>248</ref>.</item>
+          <item><pb n="265"/>
+          <rs><hi rend="sc">Nicolas de Rosay</hi></rs>, <ref>171</ref>, <ref>183</ref>, <ref>192</ref>, <ref>198</ref>, <ref>220</ref>, <ref>223</ref>, <ref>225</ref>, <ref>234</ref>, <ref>241</ref>, <ref>248</ref>.</item>
           <item><rs><hi rend="sc">Nicolas Sance</hi></rs>, <ref>214</ref>, <ref>215</ref>.</item>
           <item><rs><hi rend="sc">Nicolas de Veires</hi></rs>, <ref>177</ref>, <ref>178</ref>.</item>
           <item><rs><hi rend="sc">Nicolaus</hi></rs>, <ref>107</ref>.</item>
@@ -6805,7 +6807,7 @@
           <item><rs><hi rend="sc">Nouart (terroir de)</hi></rs>, <ref>188</ref>, <ref>190</ref>.</item>
           <item><rs><hi rend="sc">Novo (Guisiel de)</hi></rs>, <ref>228</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>O</head>
           <item><rs><hi rend="sc">Odart de la Barre</hi></rs>, <ref>220</ref>.</item>
           <item><rs><hi rend="sc">Odart la Rousse</hi></rs>, <ref>220</ref>.</item>
@@ -6828,7 +6830,7 @@
           <item><rs><hi rend="sc">Oudin le Cordier</hi></rs>, <ref>217</ref>.</item>
           <item><rs><hi rend="sc">Oues (rue aux)</hi></rs>, <ref>217</ref>, <ref>244</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>P</head>
           <item><rs><hi rend="sc">Paalee (Johannes)</hi></rs>, <ref>137</ref>, <ref>138</ref>, <ref>209</ref>.</item>
           <item><rs><hi rend="sc">Paci (Gencien de)</hi></rs>, <ref>213</ref>.</item>
@@ -6897,8 +6899,8 @@
           <item><rs><hi rend="sc">Petrus de Latigniaco</hi></rs>, <ref>160</ref>, <ref>161</ref>.</item>
           <item><rs><hi rend="sc">Petrus de Montevreno</hi></rs>, <ref>213</ref>, <ref>247</ref>.</item>
           <item><rs><hi rend="sc">Petrus de Nemosio</hi></rs>, <ref>120</ref>, <ref>121</ref>.</item>
-          <pb n="266"/>
-          <item><rs><hi rend="sc">Petrus de Tria</hi></rs>, <ref>135</ref>.</item>
+          <item><pb n="266"/>
+          <rs><hi rend="sc">Petrus de Tria</hi></rs>, <ref>135</ref>.</item>
           <item><rs><hi rend="sc">Petrus de Villa Cerorum</hi></rs>, <ref>206</ref>.</item>
           <item><rs><hi rend="sc">Philippe Anquetin</hi></rs>, <ref>208</ref>.</item>
           <item><rs><hi rend="sc">Philippe-Auguste</hi></rs>, <ref>124</ref>, <ref>125</ref>.</item>
@@ -7005,12 +7007,12 @@
           <item><rs><hi rend="sc">Presbyter (Alexander)</hi></rs>, <ref>150</ref>.</item>
           <item><rs><hi rend="sc">Presbyter (Guido)</hi></rs>, <ref>155</ref>, <ref>156</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>Q</head>
           <item><rs><hi rend="sc">Quarie</hi></rs>, <ref>215</ref>.</item>
           <item><rs><hi rend="sc">Quavelier (Mauger)</hi></rs>, <ref>177</ref>.</item>
-          <pb n="267"/>
-          <item><rs><hi rend="sc">Quenel (André)</hi></rs>, <ref>173</ref>, <ref>184</ref>, <ref>195</ref>, <ref>226</ref>, <ref>235</ref>, <ref>242</ref>.</item>
+          <item><pb n="267"/>
+          <rs><hi rend="sc">Quenel (André)</hi></rs>, <ref>173</ref>, <ref>184</ref>, <ref>195</ref>, <ref>226</ref>, <ref>235</ref>, <ref>242</ref>.</item>
           <item><rs><hi rend="sc">Quidonpnaie (Laurent)</hi></rs>, <ref>213</ref>.</item>
           <item><rs><hi rend="sc">Quidonpnaie (Simon)</hi></rs>, <ref>212</ref>, <ref>213</ref>.</item>
           <item><rs><hi rend="sc">Quinenier</hi>, Quinevint, ou Quivenint (Guillaume)</rs>, <ref>177</ref>, <ref>185</ref>, <ref>228</ref>.</item>
@@ -7018,7 +7020,7 @@
           <item><rs><hi rend="sc">Quinze-Vingts</hi></rs>, <ref>177</ref>.</item>
           <item><rs><hi rend="sc">Quoquere (Guillaume)</hi></rs>, <ref>176</ref>, <ref>185</ref>, <ref>228</ref>, <ref>237</ref>, <ref>243</ref>, <ref>244</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>R</head>
           <item><rs><hi rend="sc">R. Baradan</hi></rs>, <ref>207</ref>.</item>
           <item><rs><hi rend="sc">Rabier du Charriot</hi></rs>, <ref>206</ref>.</item>
@@ -7119,8 +7121,8 @@
           <item><rs><hi rend="sc">Robertus Leber</hi></rs>, <ref>164</ref>.</item>
           <item><rs><hi rend="sc">Robertus Matricularius</hi></rs>, <ref>117</ref>.</item>
           <item><rs><hi rend="sc">Robertus de Paris</hi></rs>, <ref>106</ref>, <ref>163</ref>.</item>
-          <pb n="268"/>
-          <item><rs><hi rend="sc">Robertus de Silvanectis</hi></rs>, <ref>158</ref>.</item>
+          <item><pb n="268"/>
+          <rs><hi rend="sc">Robertus de Silvanectis</hi></rs>, <ref>158</ref>.</item>
           <item><rs><hi rend="sc">Roger du Fruit-le-Roi</hi></rs>, <ref>173</ref>, <ref>196</ref>, <ref>226</ref>.</item>
           <item><rs><hi rend="sc">Roger de la Vasti</hi></rs>, <ref>194</ref>.</item>
           <item><rs><hi rend="sc">Roger le Mareschal</hi></rs>, <ref>232</ref>.</item>
@@ -7153,7 +7155,7 @@
           <item><rs><hi rend="sc">Rufi (Odo)</hi></rs>, <ref>161</ref>.</item>
           <item><rs><hi rend="sc">Russel (Jean)</hi></rs>, <ref>223</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>S</head>
           <item><rs><hi rend="sc">Sacci (vicus)</hi></rs>, <ref>135</ref>.</item>
           <item><rs><hi rend="sc">Saceit (Benart)</hi></rs>, <ref>212</ref>.</item>
@@ -7312,7 +7314,7 @@
           <item><rs><hi rend="sc">Suef-Dieu (maison du)</hi></rs>, <ref>196</ref>. - (messe du), <ref>204</ref>.</item>
           <item><rs><hi rend="sc">Sully (Maurice de)</hi>, évêque de Paris</rs>, <ref>104</ref>, <ref>106</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>T</head>
           <item><rs><hi rend="sc">Tadoul (Michel)</hi></rs>, <ref>198</ref>.</item>
           <item><rs><hi rend="sc">Tannerie (rue de la)</hi></rs>, <ref>212</ref>, <ref>213</ref>, <ref>214</ref>.</item>
@@ -7401,10 +7403,10 @@
           <item><rs><hi rend="sc">Troussevache (rue de)</hi></rs>, <ref>217</ref>.</item>
           <item><rs><hi rend="sc">Turost (Robert)</hi></rs>, <ref>220</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>U</head>
         </list>
-        <list>
+        <list type="index">
           <head>V</head>
           <item><rs><hi rend="sc">Val de Panoel</hi></rs>, <ref>214</ref>.</item>
           <item><rs><hi rend="sc">Val Saint-Martin</hi></rs>, <ref>217</ref>.</item>
@@ -7438,20 +7440,20 @@
           <item><rs><hi rend="sc">Vincent le Cordier</hi></rs>, <ref>148</ref>.</item>
           <item><rs><hi rend="sc">Viri (Gace de)</hi></rs>, <ref>231</ref>, <ref>240</ref>.</item>
           <item><rs><hi rend="sc">Vitrearii (Guido)</hi></rs>, <ref>106</ref>, <ref>163</ref>.</item>
-          <pb n="271"/>
-          <item><rs><hi rend="sc">Vitriaco (Landricus, presbyter de)</hi></rs>, <ref>139</ref>.</item>
+          <item><pb n="271"/>
+          <rs><hi rend="sc">Vitriaco (Landricus, presbyter de)</hi></rs>, <ref>139</ref>.</item>
           <item><rs><hi rend="sc">Vitry (terroir de)</hi></rs>, <ref>182</ref>.</item>
           <item><rs><hi rend="sc">Vitry (Geoffroy de)</hi></rs>, <ref>210</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>W</head>
           <item><rs><hi rend="sc">Warroquier (Pierre)</hi></rs>, <ref>184</ref>, <ref>186</ref>, <ref>193</ref>, <ref>235</ref>, <ref>242</ref>.</item>
           <item><rs><hi rend="sc">Wascelin (G.)</hi></rs>, <ref>203</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>X</head>
         </list>
-        <list>
+        <list type="index">
           <head>Y</head>
           <item><rs><hi rend="sc">Yerres (Hervé d')</hi></rs>, <ref>162</ref>.</item>
           <item><rs><hi rend="sc">Yerres (Jeanne d')</hi></rs>, <ref>200</ref>, <ref>204</ref>.</item>
@@ -7459,7 +7461,7 @@
           <item><rs><hi rend="sc">Yves des Pavellons</hi></rs>, <ref>175</ref>, <ref>184</ref>, <ref>204</ref>, <ref>219</ref>, <ref>228</ref>, <ref>236</ref>, <ref>243</ref>.</item>
           <item><rs><hi rend="sc">Yves le Breton</hi></rs>, <ref>214</ref>.</item>
         </list>
-        <list>
+        <list type="index">
           <head>Z</head>
         </list>
       </div>
