@@ -226,16 +226,18 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     <element name="rs">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence à une entité nommée complexe, pouvant désigner une personne ou un lieu. &lt;rs> permet de réunir des noms et des mots de la langue devant être identifiés comme une seule entité nommée et devant apparaître comme tel dans l'index. De ce fait il peut contenir plusieurs noms de lieux ou de personnes. L'unité sémantique prévaut sur l'insertion de conjonctions ("autem") ou d'expressions ("Dei gratia") qui ne doivent pas faire oublier qu'il s'agit d'une seule et même personne; ces conjonctions doivent donc être insérées, s'il est impossible de faire autrement, à l'intérieur de l'élément &lt;rs>.</a:documentation>
       <ref name="normid"/>
-      <attribute name="type">
-        <choice>
-          <value h:title="Personne">person</value>
-          <value h:title="Lieu">place</value>
-        </choice>
-      </attribute>
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value h:title="Personne">person</value>
+            <value h:title="Lieu">place</value>
+          </choice>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
-          <ref name="persName" />
+          <ref name="persName"/>
           <ref name="placeName"/>
           <ref name="seg"/>
           <ref name="pb"/>
@@ -244,12 +246,10 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <ref name="abbr"/>
           <ref name="rs"/>
           <ref name="foreign"/>
-          <!-- Pour personne -->
           <ref name="num"/>
-          <!-- Pour conserver certains italiques dans l'original -->
           <ref name="mentioned"/>
           <ref name="sup"/>
-          <!-- garder la possibilité d'avoir des exposants, ex: des abbréviations à l'intérieur de noms -->
+          <ref name="typo"/>
           <choice>
             <ref name="note"/>
             <ref name="ref.note"/>
@@ -629,32 +629,43 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     </attribute>
   </define>
 
+
   <define name="date">
     <element name="date">
-      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date balisée, par défaut, obliger à sa résolution selon la norme ISO. Une date peut contenir une note explicative.</a:documentation>
-      <choice>
-        <group>
-          <attribute name="when">
-            <ref name="date.type"/>
-          </attribute>
-        </group>
-        <group>
-          <attribute name="notBefore">
-            <ref name="date.type"/>
-          </attribute>
-          <attribute name="notAfter">
-            <ref name="date.type"/>
-          </attribute>
-        </group>
-        <group>
-          <attribute name="from">
-            <ref name="date.type"/>
-          </attribute>
-          <attribute name="to">
-            <ref name="date.type"/>
-          </attribute>
-        </group>
-      </choice>
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        Date balisée. Les attributs de normalisation sont facultatifs.
+      </a:documentation>
+      
+      <optional>
+        <attribute name="when">
+          <ref name="date.type"/>
+        </attribute>
+      </optional>
+      
+      <optional>
+        <attribute name="notBefore">
+          <ref name="date.type"/>
+        </attribute>
+      </optional>
+      
+      <optional>
+        <attribute name="notAfter">
+          <ref name="date.type"/>
+        </attribute>
+      </optional>
+      
+      <optional>
+        <attribute name="from">
+          <ref name="date.type"/>
+        </attribute>
+      </optional>
+      
+      <optional>
+        <attribute name="to">
+          <ref name="date.type"/>
+        </attribute>
+      </optional>
+      
       <zeroOrMore>
         <choice>
           <text/>
@@ -862,9 +873,11 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     <element name="ref">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lien simple. &lt;htm:a href="ref">texte&lt;/a></a:documentation>
       <ref name="rend.mot"/>
-      <attribute name="target">
-        <text/>
-      </attribute>
+      <optional>
+        <attribute name="target">
+          <text/>
+        </attribute>
+      </optional>
       <text/>
     </element>
   </define>
@@ -1052,7 +1065,6 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
   
   <define name="desc">
     <element name="desc">
-      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Description.</a:documentation>
       <optional>
         <attribute name="rend">
           <choice>
@@ -1062,17 +1074,20 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
         </attribute>
       </optional>
       <optional>
-          <attribute name="n"/>
+        <attribute name="n"/>
       </optional>
       <zeroOrMore>
         <choice>
           <text/>
           <ref name="fonctions"/>
+          <ref name="typo"/>
+          <ref name="bornes"/>
+          <ref name="date"/>
         </choice>
       </zeroOrMore>
     </element>
   </define>
-
+  
   <define name="label">
     <element name="label">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Étiquette.</a:documentation>
@@ -1155,37 +1170,43 @@ Sauts de pages ou colonnes ne coupant pas les lignes.
   <define name="list">
     <element name="list">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Des listes simples.</a:documentation>
-      <attribute name="type">
-        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de liste, indiqué par un caractère. Le nombre de valeurs est susceptible de s'étendre. 
+      <optional>
+        <attribute name="type">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de liste, indiqué par un caractère. Le nombre de valeurs est susceptible de s'étendre. 
 En cas d'encodage de texte existant, il peut être plus commode de reporter les numérotations difficiles à générer
 en attribut de l'item (@n).</a:documentation>
-        <choice>
-          <value h:title="Rien"></value>
-          <value h:title="Tiret">-</value>
-          <value h:title="Décimale">1</value>
-          <value h:title="Chiffres romains">I</value>
-          <value h:title="Puce">o</value>
-          <value h:title="Index avec navigation alphabétique">index</value>
-        </choice>
-      </attribute>
+          <choice>
+            <value h:title="Rien"></value>
+            <value h:title="Tiret">-</value>
+            <value h:title="Décimale">1</value>
+            <value h:title="Chiffres romains">I</value>
+            <value h:title="Puce">o</value>
+            <value h:title="Index avec navigation alphabétique">index</value>
+          </choice>
+        </attribute>
+      </optional>
       <optional>
         <ref name="head"/>
       </optional>
       <oneOrMore>
-        <element name="item">
-          <optional>
-            <attribute name="xml:id"/>
-          </optional>
-          <optional>
-            <attribute name="n"/>
-          </optional>
-          <oneOrMore>
-            <choice>
-              <ref name="p.content"/>
-              <ref name="list"/>
-            </choice>
-          </oneOrMore>
-        </element>
+        <choice>
+          <ref name="pb"/>
+          <element name="item">
+            <optional>
+              <attribute name="xml:id"/>
+            </optional>
+            <optional>
+              <attribute name="n"/>
+            </optional>
+            <oneOrMore>
+              <choice>
+                <ref name="p.content"/>
+                <ref name="desc"/>
+                <ref name="list"/>
+              </choice>
+            </oneOrMore>
+          </element>
+        </choice>
       </oneOrMore>
     </element>
   </define>
@@ -1228,6 +1249,7 @@ en attribut de l'item (@n).</a:documentation>
       </oneOrMore>
     </element>
   </define>
+
   <define name="index.item">
     <element name="item">
       <optional>
@@ -1243,6 +1265,7 @@ en attribut de l'item (@n).</a:documentation>
           <ref name="emph"/>
           <ref name="foreign"/>
           <ref name="title"/>
+          <ref name="desc"/>
           <element name="list">
             <oneOrMore>
               <choice>
@@ -1412,19 +1435,22 @@ Afin de pouvoir factoriser un code de fractionnement, les divisions seront marqu
           <ref name="prologue"/>
           <ref name="opener"/>
           <ref name="dateline"/>
+          <ref name="pb"/>
         </choice>
       </zeroOrMore>
       <zeroOrMore>
-        <ref name="bloc"/>
-      </zeroOrMore>
-      <zeroOrMore>
-        <ref name="div"/>
+        <choice>
+          <ref name="bloc"/>
+          <ref name="div"/>
+          <ref name="pb"/>
+        </choice>
       </zeroOrMore>
       <zeroOrMore>
         <choice>
           <ref name="closer"/>
           <ref name="epilogue"/>
           <ref name="dateline"/>
+          <ref name="pb"/>
         </choice>
       </zeroOrMore>
       <zeroOrMore>
