@@ -879,7 +879,12 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <text/>
         </attribute>
       </optional>
-      <text/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="typo"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
