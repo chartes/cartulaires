@@ -121,6 +121,52 @@
         <choice>
           <ref name="acte"/>
           <ref name="acte.group"/>
+          <ref name="group.text.section"/>
+          <ref name="pb"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="group.text.section">
+    <element name="text">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
+        <p>Section textuelle non diplomatique à l'intérieur d'un group, pour les parties éditoriales, listes, tableaux et notices qui ne sont pas des actes.</p>
+      </a:documentation>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="subtype"/>
+      </optional>
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <optional>
+        <attribute name="xml:id"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="head"/>
+          <ref name="argument"/>
+          <ref name="prologue"/>
+          <ref name="opener"/>
+          <ref name="dateline"/>
+          <ref name="pb"/>
+        </choice>
+      </zeroOrMore>
+      <oneOrMore>
+        <choice>
+          <ref name="bloc"/>
+          <ref name="div"/>
+          <ref name="pb"/>
+          <ref name="head"/>
+        </choice>
+      </oneOrMore>
+      <zeroOrMore>
+        <choice>
+          <ref name="closer"/>
+          <ref name="epilogue"/>
           <ref name="pb"/>
         </choice>
       </zeroOrMore>

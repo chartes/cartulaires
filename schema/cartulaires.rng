@@ -151,6 +151,7 @@
               <rng:value h:title="Documents narratifs — chroniques">chr</rng:value>
               <rng:value h:title="Documents narratifs — textes hagiographiques">hag</rng:value>
               <rng:value h:title="Documents épigraphiques">epi</rng:value>
+              <rng:value h:title="Nature à déterminer">tbd</rng:value>
             </rng:choice>
           </rng:attribute>
           <rng:empty/>
@@ -224,8 +225,11 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
       <rng:oneOrMore>
         <rng:choice>
           <rng:ref name="pb"/>
+          <rng:ref name="head"/>
           <rng:ref name="table"/>
           <rng:ref name="note"/>
+          <rng:ref name="list"/>
+          <rng:ref name="acte.docDate"/><!-- PP allow docDate inside transcription for obituary entries with multiple dated notices -->
           <rng:element name="p">
             <rng:optional>
               <rng:ref name="lang"/>
@@ -236,6 +240,11 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
                 <rng:ref name="pb"/>
                 <rng:ref name="note"/>
                 <rng:ref name="idf.s"/>
+                <rng:ref name="typo"/>
+                <rng:ref name="abbr"/>
+                <rng:ref name="num"/>
+                <rng:ref name="lb"/>
+                <rng:ref name="ref.note"/>
               </rng:choice>
             </rng:zeroOrMore>
             </rng:mixed>
