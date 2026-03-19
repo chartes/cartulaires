@@ -541,7 +541,18 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <optional>
         <attribute name="type"/>
       </optional>
-      <text/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="typo"/>
+          <ref name="abbr"/>
+          <ref name="ref"/>
+          <ref name="persName"/>
+          <ref name="placeName"/>
+          <ref name="rs"/>
+          <ref name="num"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -879,9 +890,16 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <text/>
         </attribute>
       </optional>
+      <optional>
+        <attribute name="n">
+          <text/>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
+          <ref name="i"/>
+          <ref name="b"/>
           <ref name="typo"/>
         </choice>
       </zeroOrMore>
@@ -995,6 +1013,11 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence au témoin dont est issu le numéro de page ou de folio inséré dans l'attribut n.</a:documentation>
         </attribute>
       </optional>
+      <optional>
+        <attribute name="xml:id">
+          <text/>
+        </attribute>
+      </optional>
       <empty/>
     </element>
   </define>
@@ -1014,7 +1037,11 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
   <define name="lb">
     <element name="lb">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Saut de ligne, ne pas en abuser, htm:br</a:documentation>
-      <empty/>
+      <optional>
+        <attribute name="n">
+          <text/>
+        </attribute>
+      </optional>
     </element>
   </define>
 
@@ -1127,7 +1154,9 @@ Sauts de pages ou colonnes ne coupant pas les lignes.
       <optional>
         <attribute name="rend"/>
       </optional>
-      <ref name="head"/>
+      <optional>
+        <ref name="head"/>
+      </optional>
       <oneOrMore>
         <choice>
           <element name="row">
@@ -1209,6 +1238,11 @@ en attribut de l'item (@n).</a:documentation>
                 <ref name="p.content"/>
                 <ref name="desc"/>
                 <ref name="list"/>
+                <ref name="typo"/>
+                <ref name="seg"/>
+                <ref name="ref"/>
+                <ref name="abbr"/>
+                <ref name="num"/>
               </choice>
             </oneOrMore>
           </element>
@@ -1237,16 +1271,20 @@ en attribut de l'item (@n).</a:documentation>
       <attribute name="type">
         <value>index</value>
       </attribute>
-      <attribute name="xml:id">
-        <choice>
-          <value>listName</value>
-          <value>listPlace</value>
-          <value>listPerson</value>
-          <value>listTerm</value>
-          <data type="Name"/>
-        </choice>
-      </attribute>
-      <ref name="head"/>
+      <optional>
+        <attribute name="xml:id">
+          <choice>
+            <value>listName</value>
+            <value>listPlace</value>
+            <value>listPerson</value>
+            <value>listTerm</value>
+            <data type="Name"/>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="head"/>
+      </optional>
       <oneOrMore>
         <choice>
           <ref name="pb"/>
@@ -1272,6 +1310,8 @@ en attribut de l'item (@n).</a:documentation>
           <ref name="foreign"/>
           <ref name="title"/>
           <ref name="desc"/>
+          <ref name="typo"/>
+          <ref name="seg"/>
           <element name="list">
             <oneOrMore>
               <choice>
