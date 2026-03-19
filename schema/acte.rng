@@ -121,13 +121,13 @@
         <choice>
           <ref name="acte"/>
           <ref name="acte.group"/>
-          <ref name="group.text.section"/>
           <ref name="pb"/>
         </choice>
       </zeroOrMore>
     </element>
   </define>
 
+  <!-- Proposition MP :
   <define name="group.text.section">
     <element name="text">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">
@@ -172,6 +172,7 @@
       </zeroOrMore>
     </element>
   </define>
+  -->
 
   <a:documentation xmlns="http://www.w3.org/1999/xhtml">
     <h2>Notice d'acte</h2>

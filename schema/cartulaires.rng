@@ -225,7 +225,6 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
       <rng:oneOrMore>
         <rng:choice>
           <rng:ref name="pb"/>
-          <rng:ref name="head"/>
           <rng:ref name="table"/>
           <rng:ref name="note"/>
           <rng:ref name="list"/>
@@ -244,7 +243,7 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
                 <rng:ref name="abbr"/>
                 <rng:ref name="num"/>
                 <rng:ref name="lb"/>
-                <rng:ref name="ref.note"/>
+                <rng:ref name="ref.note"/><!-- ajout MP et PP -->
               </rng:choice>
             </rng:zeroOrMore>
             </rng:mixed>
