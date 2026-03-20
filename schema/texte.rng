@@ -226,7 +226,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     <element name="rs">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence à une entité nommée complexe, pouvant désigner une personne ou un lieu. &lt;rs> permet de réunir des noms et des mots de la langue devant être identifiés comme une seule entité nommée et devant apparaître comme tel dans l'index. De ce fait il peut contenir plusieurs noms de lieux ou de personnes. L'unité sémantique prévaut sur l'insertion de conjonctions ("autem") ou d'expressions ("Dei gratia") qui ne doivent pas faire oublier qu'il s'agit d'une seule et même personne; ces conjonctions doivent donc être insérées, s'il est impossible de faire autrement, à l'intérieur de l'élément &lt;rs>.</a:documentation>
       <ref name="normid"/>
-      <optional>
+      <optional> <!-- MP: attribut optionnel -->
         <attribute name="type">
           <choice>
             <value h:title="Personne">person</value>
@@ -246,10 +246,12 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <ref name="abbr"/>
           <ref name="rs"/>
           <ref name="foreign"/>
+          <!-- Pour personne -->
           <ref name="num"/>
+          <!-- Pour conserver certains italiques dans l'original -->
           <ref name="mentioned"/>
           <ref name="sup"/>
-          <ref name="typo"/>
+          <ref name="typo"/><!-- MP: ajout de typo -->
           <choice>
             <ref name="note"/>
             <ref name="ref.note"/>
@@ -541,7 +543,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <optional>
         <attribute name="type"/>
       </optional>
-      <zeroOrMore>
+      <zeroOrMore><!-- MP: ajout des ref suivants -->
         <choice>
           <text/>
           <ref name="typo"/>
@@ -640,43 +642,32 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     </attribute>
   </define>
 
-
   <define name="date">
     <element name="date">
-      <a:documentation xmlns="http://www.w3.org/1999/xhtml">
-        Date balisée. Les attributs de normalisation sont facultatifs.
-      </a:documentation>
-      
-      <optional>
-        <attribute name="when">
-          <ref name="date.type"/>
-        </attribute>
-      </optional>
-      
-      <optional>
-        <attribute name="notBefore">
-          <ref name="date.type"/>
-        </attribute>
-      </optional>
-      
-      <optional>
-        <attribute name="notAfter">
-          <ref name="date.type"/>
-        </attribute>
-      </optional>
-      
-      <optional>
-        <attribute name="from">
-          <ref name="date.type"/>
-        </attribute>
-      </optional>
-      
-      <optional>
-        <attribute name="to">
-          <ref name="date.type"/>
-        </attribute>
-      </optional>
-      
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Date balisée, par défaut, obliger à sa résolution selon la norme ISO. Une date peut contenir une note explicative.</a:documentation>
+      <choice>
+        <group>
+          <attribute name="when">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+        <group>
+          <attribute name="notBefore">
+            <ref name="date.type"/>
+          </attribute>
+          <attribute name="notAfter">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+        <group>
+          <attribute name="from">
+            <ref name="date.type"/>
+          </attribute>
+          <attribute name="to">
+            <ref name="date.type"/>
+          </attribute>
+        </group>
+      </choice>
       <zeroOrMore>
         <choice>
           <text/>
@@ -757,6 +748,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       <ref name="u"/>
       <ref name="sub"/>
       <ref name="sup"/>
+      <ref name="hi"/>
     </choice>
   </define>
 
@@ -885,7 +877,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
     <element name="ref">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lien simple. &lt;htm:a href="ref">texte&lt;/a></a:documentation>
       <ref name="rend.mot"/>
-      <optional>
+      <optional><!-- MP: nouveaux besoins pour les index -->
         <attribute name="target">
           <text/>
         </attribute>
@@ -1013,11 +1005,6 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
           <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence au témoin dont est issu le numéro de page ou de folio inséré dans l'attribut n.</a:documentation>
         </attribute>
       </optional>
-      <optional>
-        <attribute name="xml:id">
-          <text/>
-        </attribute>
-      </optional>
       <empty/>
     </element>
   </define>
@@ -1037,7 +1024,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
   <define name="lb">
     <element name="lb">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Saut de ligne, ne pas en abuser, htm:br</a:documentation>
-      <optional>
+      <optional><!-- PP: ajout d'un attribut optionnel @n -->
         <attribute name="n">
           <text/>
         </attribute>
@@ -1098,6 +1085,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
   
   <define name="desc">
     <element name="desc">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Description.</a:documentation>
       <optional>
         <attribute name="rend">
           <choice>
@@ -1107,11 +1095,11 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
         </attribute>
       </optional>
       <optional>
-        <attribute name="n"/>
+          <attribute name="n"/>
       </optional>
       <zeroOrMore>
         <choice>
-          <text/>
+          <text/><!-- MP : nouveaux  -->
           <ref name="fonctions"/>
           <ref name="typo"/>
           <ref name="bornes"/>
@@ -1120,7 +1108,7 @@ Ce document veille aussi à détailler les pratiques d'édition électronique po
       </zeroOrMore>
     </element>
   </define>
-  
+
   <define name="label">
     <element name="label">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Étiquette.</a:documentation>
@@ -1154,9 +1142,7 @@ Sauts de pages ou colonnes ne coupant pas les lignes.
       <optional>
         <attribute name="rend"/>
       </optional>
-      <optional>
-        <ref name="head"/>
-      </optional>
+      <ref name="head"/>
       <oneOrMore>
         <choice>
           <element name="row">
@@ -1205,48 +1191,37 @@ Sauts de pages ou colonnes ne coupant pas les lignes.
   <define name="list">
     <element name="list">
       <a:documentation xmlns="http://www.w3.org/1999/xhtml">Des listes simples.</a:documentation>
-      <optional>
-        <attribute name="type">
-          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de liste, indiqué par un caractère. Le nombre de valeurs est susceptible de s'étendre. 
+      <attribute name="type">
+        <a:documentation xmlns="http://www.w3.org/1999/xhtml">Type de liste, indiqué par un caractère. Le nombre de valeurs est susceptible de s'étendre. 
 En cas d'encodage de texte existant, il peut être plus commode de reporter les numérotations difficiles à générer
 en attribut de l'item (@n).</a:documentation>
-          <choice>
-            <value h:title="Rien"></value>
-            <value h:title="Tiret">-</value>
-            <value h:title="Décimale">1</value>
-            <value h:title="Chiffres romains">I</value>
-            <value h:title="Puce">o</value>
-            <value h:title="Index avec navigation alphabétique">index</value>
-          </choice>
-        </attribute>
-      </optional>
+        <choice>
+          <value h:title="Rien"></value>
+          <value h:title="Tiret">-</value>
+          <value h:title="Décimale">1</value>
+          <value h:title="Chiffres romains">I</value>
+          <value h:title="Puce">o</value>
+          <value h:title="Index avec navigation alphabétique">index</value>
+        </choice>
+      </attribute>
       <optional>
         <ref name="head"/>
       </optional>
       <oneOrMore>
-        <choice>
-          <ref name="pb"/>
-          <element name="item">
-            <optional>
-              <attribute name="xml:id"/>
-            </optional>
-            <optional>
-              <attribute name="n"/>
-            </optional>
-            <oneOrMore>
-              <choice>
-                <ref name="p.content"/>
-                <ref name="desc"/>
-                <ref name="list"/>
-                <ref name="typo"/>
-                <ref name="seg"/>
-                <ref name="ref"/>
-                <ref name="abbr"/>
-                <ref name="num"/>
-              </choice>
-            </oneOrMore>
-          </element>
-        </choice>
+        <element name="item">
+          <optional>
+            <attribute name="xml:id"/>
+          </optional>
+          <optional>
+            <attribute name="n"/>
+          </optional>
+          <oneOrMore>
+            <choice>
+              <ref name="p.content"/>
+              <ref name="list"/>
+            </choice>
+          </oneOrMore>
+        </element>
       </oneOrMore>
     </element>
   </define>
@@ -1271,20 +1246,16 @@ en attribut de l'item (@n).</a:documentation>
       <attribute name="type">
         <value>index</value>
       </attribute>
-      <optional>
-        <attribute name="xml:id">
-          <choice>
-            <value>listName</value>
-            <value>listPlace</value>
-            <value>listPerson</value>
-            <value>listTerm</value>
-            <data type="Name"/>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <ref name="head"/>
-      </optional>
+      <attribute name="xml:id">
+        <choice>
+          <value>listName</value>
+          <value>listPlace</value>
+          <value>listPerson</value>
+          <value>listTerm</value>
+          <data type="Name"/>
+        </choice>
+      </attribute>
+      <ref name="head"/>
       <oneOrMore>
         <choice>
           <ref name="pb"/>
@@ -1481,22 +1452,20 @@ Afin de pouvoir factoriser un code de fractionnement, les divisions seront marqu
           <ref name="prologue"/>
           <ref name="opener"/>
           <ref name="dateline"/>
-          <ref name="pb"/>
+          <ref name="pb"/><!-- ajout MP -->
         </choice>
       </zeroOrMore>
       <zeroOrMore>
-        <choice>
-          <ref name="bloc"/>
-          <ref name="div"/>
-          <ref name="pb"/>
-        </choice>
+        <ref name="bloc"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="div"/>
       </zeroOrMore>
       <zeroOrMore>
         <choice>
           <ref name="closer"/>
           <ref name="epilogue"/>
           <ref name="dateline"/>
-          <ref name="pb"/>
         </choice>
       </zeroOrMore>
       <zeroOrMore>
