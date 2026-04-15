@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGGO-PR">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGGO-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -415,7 +413,8 @@
                   et ad receptionem sacratissimi corporis <rs type="person">beati
                       <persName>Florentii</persName></rs>, concedere sibi dignaremur cellam secus
                     <pb n="11"/> fluvium <placeName>Legerim</placeName>, in pago
-                    <placeName>Biturico</placeName> [sitam]<ref type="note" target="#p11_fn1"/>, que
+                    <placeName>Biturico</placeName> [sitam]<note xml:id="p11_fn1">Les mots placés entre crochets sont ajoutés pour compléter le
+                sens.</note>, que
                   dicitur <persName>Nobiliacus</persName>, quemadmodum predecessori illius <rs type="person"><persName>Didoni</persName>, quondam abbati</rs>, nos fecisse
                   cognoscitur, in qua cella <rs type="person">sanctus
                     <persName>Gundulfus</persName></rs> reverenter colitur humatus : quatenus a
@@ -442,7 +441,9 @@
                   assignari jussimus.</s>
               </p>
               <p>
-                <s>Signum<ref type="note" target="#p11_fn2"/>
+                <s>Signum<note xml:id="p11_fn2">Pour le monogramme qui forme la signature de Charles le Chauve
+                et de son petit-fils Carloman, voir les traités de Diplomatique et le Glossaire de
+                Ducange.</note>
                   <rs type="person">serenissimi <persName>Karoli</persName> regis</rs>.</s>
               </p>
               <pb n="12"/>
@@ -456,22 +457,13 @@
                     gloriosissimo</date>.</s>
               </p>
               <p>
-                <s>Actum <placeName>Silvanectis</placeName> civitate, in Dei nomini feliciter, amen<ref type="note" target="#p12_fn1"/>.</s>
+                <s>Actum <placeName>Silvanectis</placeName> civitate, in Dei nomini feliciter, amen<note xml:id="p12_fn1">Imprimé par Mabillon, <hi rend="i">Annales ordinis S.
+                  Benedicti,</hi> vol. 2, p. 752 ; et par dom Bouquet, <hi rend="i">Scriptores rerum
+                  francicarum,</hi> vol. 8, p. 597.</note>.</s>
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p11_fn1">Les mots placés entre crochets sont ajoutés pour compléter le
-                sens.</note>
-              <note xml:id="p11_fn2">Pour le monogramme qui forme la signature de Charles le Chauve
-                et de son petit-fils Carloman, voir les traités de Diplomatique et le Glossaire de
-                Ducange.</note>
-              <note xml:id="p12_fn1">Imprimé par Mabillon, <hi rend="i">Annales ordinis S.
-                  Benedicti,</hi> vol. 2, p. 752 ; et par dom Bouquet, <hi rend="i">Scriptores rerum
-                  francicarum,</hi> vol. 8, p. 597.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0002" n="II">
           <pb n="12"/>
@@ -529,7 +521,9 @@
                   dignaremur cellam secus fluvium <placeName>Ligerim</placeName>, in pago
                     <placeName>Biturigo</placeName> sitam, quæ dicitur
                     <persName>Nobiliacus</persName>, quemadmodum predecessori illius
-                    <persName>Didoni</persName>, quondam abbati, nos<ref type="note" target="#p13_fn1"/> fecisse cognoscitur, in qua cella <rs type="person">sanctus
+                    <persName>Didoni</persName>, quondam abbati, nos<note xml:id="p13_fn1">En reproduisant le texte de la pièce précédente, le notaire a
+                oublié qu'il fallait mettre ici <hi rend="i">avus noster rex Karolus,</hi> au lieu
+                de <hi rend="i">nos.</hi></note> fecisse cognoscitur, in qua cella <rs type="person">sanctus
                       <persName>Gundulfus</persName></rs> reverenter colitur humatus : quatinus, a
                   manibus suprascriptorum inimicorum Dei se evasisse exultantes, requiem ibidem de
                   tanta persecutione tandem mereantur, Christo propicio, invenire, et in laude
@@ -539,7 +533,7 @@
                 <s>Nos autem, supplicibus ejusdem <persName>Rodulfi</persName> abbatis monachorumque
                   ejus precibus benignum assensum prebentes, altitudinis nostræ preceptum hoc fieri
                   jussimus, per quod memorata <rs type="person">sancti
-                    <persName>Gundulfi</persName></rs> cella<ref type="note" target="#p13_fn2"/>, cum <pb n="14"/> familia utriusque sexus et rerum omnium aliarum plenitudine, sepedicto venerando abbati <persName>Rodulfo</persName> suisque habendam
+                    <persName>Gundulfi</persName></rs> cella<note xml:id="p13_fn2">Sic pour <hi rend="i">memoratam.... cellam.</hi></note>, cum <pb n="14"/> familia utriusque sexus et rerum omnium aliarum plenitudine, sepedicto venerando abbati <persName>Rodulfo</persName> suisque habendam
                   concedimus atque largimur : videlicet ut, pro nomine Domini et peccatorum
                   nostrorum ablutione, monasterium illud cum omnibus sibi pertinentibus rebus ab
                   eodem <persName>Rodulfo</persName> reverendo abbate [et] successoribus ejus, secundum regularis institutionis ordinem omnimodis agatur, et sine cujuspiam
@@ -606,21 +600,13 @@
               </p>
               <p>
                 <s><rs type="person"><persName>Hugo</persName> venerabilis abba</rs> hoc
-                    ambassiavit<ref type="note" target="#p15_fn1"/>.</s>
+                    ambassiavit<note xml:id="p15_fn1">Imprimé par dom Bouquet (<hi rend="i">Scriptores rerum
+                  francicarum,</hi> vol. 9, p. 422), qui a regularisé l'indiction en lui donnant
+                pour chiffre XIV au lieu de XIII.</note>.</s>
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p13_fn1">En reproduisant le texte de la pièce précédente, le notaire a
-                oublié qu'il fallait mettre ici <hi rend="i">avus noster rex Karolus,</hi> au lieu
-                de <hi rend="i">nos.</hi></note>
-              <note xml:id="p13_fn2">Sic pour <hi rend="i">memoratam.... cellam.</hi></note>
-              <note xml:id="p15_fn1">Imprimé par dom Bouquet (<hi rend="i">Scriptores rerum
-                  francicarum,</hi> vol. 9, p. 422), qui a regularisé l'indiction en lui donnant
-                pour chiffre XIV au lieu de XIII.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0003" n="III">
           <pb n="16"/>
@@ -653,7 +639,24 @@
               </p>
               <p>
                 <s>In Dei nomine, <rs type="person"><persName>Walterus</persName> abbas</rs> ex
-                  monasterio <placeName>Beatorum Johannis, Florentii necne Gundulfi</placeName>, omnisque grex monachorum<ref type="note" target="#p16_fn1"/>.</s>
+                  monasterio <placeName>Beatorum Johannis, Florentii necne Gundulfi</placeName>, omnisque grex monachorum<note xml:id="p16_fn1">
+                <p>D'une importance capitale pour l'histoire de Saint-Florent, et inconnue jusqu'à
+                  présent, cette charte m'avait échappé, lorsque j'ai annoté le texte des Chroniques
+                  des églises d'Anjou. Voir pages 198 et 240.</p>
+                <p>Elle ajoute, après Raoul, successeur d'Hecfrid, un nom à la liste des abbés de
+                  Saint-Florent antérieurs à la restauration du monastère en Anjou, et constate son
+                  existence régulière à Saint-Gondon, entre 881 et 901. La consécration de l'église
+                  du château de Saumur ayant eu lieu en 950, sous l'abbatiat d'Hélie, <hi rend="i">Helyas de Lyniaco,</hi> moine de Saint-Benoît-sur-Loire, il est probable qu'il
+                  suffirait d'un nom, pour avoir désormais la série complète des abbés de
+                  Saint-Florent, en comblant la lacune qui existe entre Hélie et notre Gautier. Il y
+                  a lieu de croire que le successeur de celui-ci habita également Saint-Gondon, avec
+                  la majeure partie de ses religieux, les autres ayant séjourné près des reliques de
+                  leur saint patron jusqu'au jour où la ruse du moine Absalon parvint à enlever
+                  celles-ci de l'abbaye de Tournus, qui refusait de les restituer. L'incertitude des
+                  événements écoulés depuis le départ du Mont-Glonne jusqu'au retour en Anjou, 860-950, est du reste constatée par l'histoire de Saint-Florent, page 284 des
+                  Chroniques des églises d'Anjou, publiées en 1869 par la Société de l'Histoire de
+                  France.</p>
+              </note>.</s>
               </p>
               <p>
                 <s>Notum sit omnibus, [tam] presentibus quamque futuris, quia postulavit nobis
@@ -663,7 +666,8 @@
                   ad censum aliquid eis concederemus ; quod non denegavimus facere.</s>
                 <s>Est enim ipsa terra <placeName>Andegavensis</placeName> in vicaria
                     <placeName>Doadensis</placeName>, in villa que appellatur
-                    <placeName>Daiciacus</placeName><ref type="note" target="#p17_fn1"/>, habens
+                    <placeName>Daiciacus</placeName><note xml:id="p17_fn1">Sic pour <hi rend="i">Daniciacus,</hi> aujourd'hui
+                Denezé.</note>, habens
                   quartas duas de terra arabile, cum casuale ; et ipsum casuale est caput duarum
                   quartarum, que sunt per campos divise.</s>
                 <s>Idcirco non designavimus terminationes ejus quia quaternarium numerum
@@ -689,37 +693,13 @@
               </p>
               <p>
                 <s>Data<date> mense aprili, anno <num>VIII<hi rend="sup">o</hi></num> regnante
-                      <persName>Karolo</persName> rege</date><ref type="note" target="#p17_fn2"/>.</s>
+                      <persName>Karolo</persName> rege</date><note xml:id="p17_fn2">Charles le Simple, dont on faisait commencer le règne, en
+                Anjou, le 28 janvier 893.</note>.</s>
                 <s><persName>Walterius</persName> scripsit.</s>
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p16_fn1">
-                <p>D'une importance capitale pour l'histoire de Saint-Florent, et inconnue jusqu'à
-                  présent, cette charte m'avait échappé, lorsque j'ai annoté le texte des Chroniques
-                  des églises d'Anjou. Voir pages 198 et 240.</p>
-                <p>Elle ajoute, après Raoul, successeur d'Hecfrid, un nom à la liste des abbés de
-                  Saint-Florent antérieurs à la restauration du monastère en Anjou, et constate son
-                  existence régulière à Saint-Gondon, entre 881 et 901. La consécration de l'église
-                  du château de Saumur ayant eu lieu en 950, sous l'abbatiat d'Hélie, <hi rend="i">Helyas de Lyniaco,</hi> moine de Saint-Benoît-sur-Loire, il est probable qu'il
-                  suffirait d'un nom, pour avoir désormais la série complète des abbés de
-                  Saint-Florent, en comblant la lacune qui existe entre Hélie et notre Gautier. Il y
-                  a lieu de croire que le successeur de celui-ci habita également Saint-Gondon, avec
-                  la majeure partie de ses religieux, les autres ayant séjourné près des reliques de
-                  leur saint patron jusqu'au jour où la ruse du moine Absalon parvint à enlever
-                  celles-ci de l'abbaye de Tournus, qui refusait de les restituer. L'incertitude des
-                  événements écoulés depuis le départ du Mont-Glonne jusqu'au retour en Anjou, 860-950, est du reste constatée par l'histoire de Saint-Florent, page 284 des
-                  Chroniques des églises d'Anjou, publiées en 1869 par la Société de l'Histoire de
-                  France.</p>
-              </note>
-              <note xml:id="p17_fn1">Sic pour <hi rend="i">Daniciacus,</hi> aujourd'hui
-                Denezé.</note>
-              <note xml:id="p17_fn2">Charles le Simple, dont on faisait commencer le règne, en
-                Anjou, le 28 janvier 893.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0004" n="IV">
           <pb n="17"/>
@@ -772,7 +752,8 @@
                   regulariterque disponendum a regibus <placeName>Franciæ</placeName> antiquitus
                   donatum fuisse ; sed ex multis jam temporibus ab eorum potestate subractum, in
                   potestatem et dominium abbatis <placeName>Virsionensis</placeName>, dono et
-                  auctoritate <placeName>Bituricensis</placeName> vicecomitis<ref type="note" target="#p18_fn1"/> et <persName>Gilonis de Soliaco</persName>, qui ejus tunc
+                  auctoritate <placeName>Bituricensis</placeName> vicecomitis<note xml:id="p18_fn1">Voir <hi rend="i">Gallia christiana nova,</hi> vol. 2, p.
+                138.</note> et <persName>Gilonis de Soliaco</persName>, qui ejus tunc
                   compotes fuerant, modernis temporibus devenisse.</s>
                 <s>Quod cum abbas et monachi <placeName>Sancti Florentii</placeName> reclamassent, et secundum donationes et præcepta veterum regum jus in eo suum ostendissent, tandem benignitatis et caritatis intuitu, ne confratres suos
                     <placeName>Virsionenses</placeName>
@@ -814,12 +795,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p18_fn1">Voir <hi rend="i">Gallia christiana nova,</hi> vol. 2, p.
-                138.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0005" n="V">
           <pb n="20"/>
@@ -947,7 +923,7 @@
                   permansurum.</s>
               </p>
               <p>
-                <s>Actum apud <placeName>Oliacum</placeName><ref type="note" target="#p22_fn1"/> ;
+                <s>Actum apud <placeName>Oliacum</placeName><note xml:id="p22_fn1">Sic pour <hi rend="i">Soliacum.</hi></note> ;
                   in domo <persName>Huonis de Turre</persName>.</s>
                 <s><pb n="23"/>Testes qui hanc viderunt convenienciam et audierunt : <rs type="person"><persName>Ademarus</persName> prior</rs>, de cujus manu ipse
                     <persName>Gilo</persName> beneficium predictum recepit, <persName>Clarenbaldus</persName>, <rs type="person"><persName>Fulco</persName>
@@ -959,11 +935,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p22_fn1">Sic pour <hi rend="i">Soliacum.</hi></note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0007" n="VII">
           <pb n="23"/>
@@ -1015,7 +987,7 @@
                     <persName>Hildebertum</persName>, qui tunc <placeName>Bituricensem</placeName>
                   regebat ecclesiam, talem haberet qui hanc redditionem et ingressum monachorum in
                   predictam ecclesiam <placeName>Sancti Gundulfi</placeName> sponte concederet, et
-                  uxor <persName>Gilolis</persName><ref type="note" target="#p24_fn1"/> ejusdem, <persName>Aldeburgis</persName>, similiter faceret ; et quod promisit postmodum
+                  uxor <persName>Gilolis</persName><note xml:id="p24_fn1">Sic pour <hi rend="i">Gilonis.</hi></note> ejusdem, <persName>Aldeburgis</persName>, similiter faceret ; et quod promisit postmodum
                   complevit.</s>
               </p>
               <p>
@@ -1050,11 +1022,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p24_fn1">Sic pour <hi rend="i">Gilonis.</hi></note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0008" n="VIII">
           <pb n="25"/>
@@ -1210,18 +1178,14 @@
                       Martini</placeName> Majoris Monasterii</rs> ; <persName>Gilo
                     Soliacensis</persName> ; <rs type="person"><persName>Ligerius</persName>
                     archiepiscopus <placeName>Bituricensis</placeName></rs>, <rs type="person"><persName>Zacharias</persName> monachus</rs>, <rs type="person"><persName>Guillelmus</persName> clericus archiepiscopi</rs> ; <rs type="person"><persName>Symon</persName> abbas <placeName>Sancti Benedicti de
-                      super Ligerim</placeName></rs> ; <rs type="person"><persName>Herbertus</persName> abbas <placeName>Virsionensis</placeName><ref type="note" target="#p28_fn1"/></rs>, cum suis ; <rs type="person"><persName>Guillelmus</persName> archidiaconus
+                      super Ligerim</placeName></rs> ; <rs type="person"><persName>Herbertus</persName> abbas <placeName>Virsionensis</placeName><note xml:id="p28_fn1">Le nom de celui-ci et celui de l'archidiacre d'Angers sont
+                précédés d'un chrisme, c'est-à-dire d'une croix accompagnée des deux lettres
+                grecques X et P, qui désignent le Christ.</note></rs>, cum suis ; <rs type="person"><persName>Guillelmus</persName> archidiaconus
                       <placeName>Andecavensis</placeName></rs> ; <rs type="person"><persName>Petrus</persName> clericus</rs>.</s>
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p28_fn1">Le nom de celui-ci et celui de l'archidiacre d'Angers sont
-                précédés d'un chrisme, c'est-à-dire d'une croix accompagnée des deux lettres
-                grecques X et P, qui désignent le Christ.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0010" n="X">
           <pb n="28"/>
@@ -1279,7 +1243,9 @@
                   affirmavit <rs type="person">conjux ejusdem, <persName>Adela</persName>
                     comitissa</rs>, post discessum ipsius in <placeName>Jerusalem</placeName>, <date>dominica post Ascensionem</date>, in castro <placeName>Sancti
                     Gundulfi</placeName>, in domo <persName>Narberti</persName> militis, audiente
-                    <rs type="person"><persName>Galone</persName><ref type="note" target="#p29_fn1"/> priore</rs>, <persName>Gaudrico de Sancerree</persName> et
+                    <rs type="person"><persName>Galone</persName><note xml:id="p29_fn1">Elu évêque de Saint-Paul de Léon (1105-1130 environ), il ne
+                renonça pas à ses fonctions de prieur et séjourna fréquemment à Saint-Gondon. (Voir
+                  N<hi rend="sup">os</hi> XX à XXIX).</note> priore</rs>, <persName>Gaudrico de Sancerree</persName> et
                     <persName>Narberto</persName> milite, presentibus pluribus aliis.</s>
                 <s>Item illud idem stabiliter concesserunt <rs type="person"><persName>Willelmus</persName> filius comitis
                     <persName>Stephani</persName></rs> et <rs type="person"><persName>Agnes</persName> filia <persName>Gilonis</persName></rs>.</s>
@@ -1293,13 +1259,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p29_fn1">Elu évêque de Saint-Paul de Léon (1105-1130 environ), il ne
-                renonça pas à ses fonctions de prieur et séjourna fréquemment à Saint-Gondon. (Voir
-                  N<hi rend="sup">os</hi> XX à XXIX).</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0011" n="XI">
           <pb n="30"/>
@@ -1515,7 +1475,10 @@
                   oriatur.</s>
                 <s>Venisti autem tu, dilecte in Domino fili, cum aliquantis fratrum tuorum, ad
                   apellatus nostri præsentiam ; venit et <rs type="person">dilectus filius noster
-                      <persName>R</persName><ref type="note" target="#p33_fn1"/>, <placeName>Virgionensis</placeName> abbas</rs>, et controversiam illam que
+                      <persName>R</persName><note xml:id="p33_fn1">Cet abbé de Vierzon manque à la liste de la <hi rend="i">Gallia
+                  christiana nova,</hi> vol. 2, p. 138, Il doit être placé entre Foulque, mort avant
+                1157, et Pierre I<hi rend="sup">er</hi>, dont les plus anciens actes connus sont
+                datés de 1163.</note>, <placeName>Virgionensis</placeName> abbas</rs>, et controversiam illam que
                   super ecclesia <placeName>Sancti Gundulfi</placeName> inter vos agebatur in nostro
                   auditorio tractavistis.</s>
               </p>
@@ -1558,14 +1521,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p33_fn1">Cet abbé de Vierzon manque à la liste de la <hi rend="i">Gallia
-                  christiana nova,</hi> vol. 2, p. 138, Il doit être placé entre Foulque, mort avant
-                1157, et Pierre I<hi rend="sup">er</hi>, dont les plus anciens actes connus sont
-                datés de 1163.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0014" n="XIV">
           <pb n="35"/>
@@ -1631,7 +1587,11 @@
             <argument>
               <p>Geoffroi Gibouin, gravement malade et reçu moine à Saint-Gondon, donne aux
                 religieux de Saint-Florent qui y demeurent trois masures de terre à Puy-Boson, à
-                Petra Miracli<ref type="note" target="#p36_fn1"/>, à Vigneau, etc., etc. Pour les
+                Petra Miracli<note xml:id="p36_fn1">Si cette dénomination ne s'applique pas à <hi rend="i">Pierre
+                  Maru,</hi> ferme de la commune de Saint-Gondon, elle désigne probablement une
+                pierre d'apparence druidique, située près du bourg et nommée aujourd'hui la <hi rend="i">Pierre Longue.</hi> Ainsi que divers autres renseignements, je dois à
+                l'extrême complaisance de M. Boucher de Molandon les noms modernes de divers lieux
+                cités dans les chartes.</note>, à Vigneau, etc., etc. Pour les
                 deux dernières, ceux-ci traitent avec deux individus qui en réclamaient une
                 partie.</p>
               <p>A Ville-Macon, Geoffroi avait aussi donné une grande partie de la terre, et à
@@ -1690,15 +1650,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p36_fn1">Si cette dénomination ne s'applique pas à <hi rend="i">Pierre
-                  Maru,</hi> ferme de la commune de Saint-Gondon, elle désigne probablement une
-                pierre d'apparence druidique, située près du bourg et nommée aujourd'hui la <hi rend="i">Pierre Longue.</hi> Ainsi que divers autres renseignements, je dois à
-                l'extrême complaisance de M. Boucher de Molandon les noms modernes de divers lieux
-                cités dans les chartes.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0016" n="XVI">
           <pb n="37"/>
@@ -2009,9 +1961,11 @@
                       <persName>Fulconis</persName> filii <persName>Gandeberti</persName></rs>, illo
                   die quo sepultus est idem <persName>Fulco</persName>, qui dudum habitum monachi
                   susceperat, dedit monachis de <placeName>Sancto Gundulfo</placeName> unum arpentum
-                  prati de <placeName>Meso Martini</placeName> ; [et] ad calefaciendum monachis, quantum unus asinus vel duo unaquaque <pb n="43"/> die<ref type="note" target="#p43_fn1"/> semel apportabunt.</s>
+                  prati de <placeName>Meso Martini</placeName> ; [et] ad calefaciendum monachis, quantum unus asinus vel duo unaquaque <pb n="43"/> die<note xml:id="p43_fn1">D'après la charte suivante, <hi rend="i">vel duo</hi> serait
+                une interpolation.</note> semel apportabunt.</s>
                 <s>Et etiam predicta matrona, si monachi porcos habuerint quos transmittere velint
-                  in nemora in quibus ipsa habet partem, non habebit pasnagium vel trahinagium<ref type="note" target="#p43_fn2"/> ullo tempore.</s>
+                  in nemora in quibus ipsa habet partem, non habebit pasnagium vel trahinagium<note xml:id="p43_fn2">Ce synonyme de <hi rend="i">pasnagium</hi> n'est pas porté au
+                Glossaire de Ducange.</note> ullo tempore.</s>
                 <s>Hoc concessit <rs type="person"><persName>Isucia</persName>, filia
                       <persName>Aureni</persName></rs> et ejusdem
                   <persName>Tesceline</persName>.</s>
@@ -2024,14 +1978,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p43_fn1">D'après la charte suivante, <hi rend="i">vel duo</hi> serait
-                une interpolation.</note>
-              <note xml:id="p43_fn2">Ce synonyme de <hi rend="i">pasnagium</hi> n'est pas porté au
-                Glossaire de Ducange.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0022" n="XXII">
           <pb n="43"/>
@@ -2466,7 +2413,8 @@
               </p>
               <p>
                 <s><rs type="person">Ego <persName>Geraldus</persName>, <placeName>Engolismensis</placeName> episcopus</rs>, huic donationi interfui
-                  et subscripxi<ref type="note" target="#p51_fn1"/>.</s>
+                  et subscripxi<note xml:id="p51_fn1">La signature de l'évêque d'Angoulême se compose d'un double S, traversé obliquement par un trait ; c'est-à-dire ce qu'on a appelé des S barrés à la
+                fin du XVI<hi rend="sup">e</hi> siècle et au commencement du XVII<hi rend="sup">e</hi>.</note>.</s>
               </p>
               <p>
                 <s>Signum <rs type="person"><persName>Leodegarii</persName> archiepiscopi</rs>.</s>
@@ -2474,12 +2422,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p51_fn1">La signature de l'évêque d'Angoulême se compose d'un double S, traversé obliquement par un trait ; c'est-à-dire ce qu'on a appelé des S barrés à la
-                fin du XVI<hi rend="sup">e</hi> siècle et au commencement du XVII<hi rend="sup">e</hi>.</note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0029" n="XXIX">
           <pb n="52"/>
@@ -2650,7 +2593,8 @@
               </p>
               <p>
                 <s>Testes sunt : <rs type="person"><persName>Rogerius</persName> prior</rs>, <persName>Goridanus</persName>, <persName>Gauterius</persName>, <persName>Filipus</persName>, et isti sunt monachi ;
-                  <persName>Margot</persName>, <rs type="person"><persName>Rainaudus</persName><pb n="55"/> presbiter</rs>, <persName>Rainaudus de Petra Marol</persName>, <persName>Daniel Geschipi</persName>, <persName>Gima</persName>, <persName>Mazet</persName><ref type="note" target="#p55_fn1"/>.</s>
+                  <persName>Margot</persName>, <rs type="person"><persName>Rainaudus</persName><pb n="55"/> presbiter</rs>, <persName>Rainaudus de Petra Marol</persName>, <persName>Daniel Geschipi</persName>, <persName>Gima</persName>, <persName>Mazet</persName><note xml:id="p55_fn1">Variantes du Arch. dép. Maine-et-Loire: Livre d'Argent, H
+                3714 : <hi rend="i">Bechespi, Guimerus Musart, Matet.</hi></note>.</s>
               </p>
               <p>
                 <s>Signum comitis †.</s>
@@ -2658,12 +2602,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p55_fn1">Variantes du Arch. dép. Maine-et-Loire: Livre d'Argent, H
-                3714 : <hi rend="i">Bechespi, Guimerus Musart, Matet.</hi></note>
-            </div>
-          </back>
+          
         </text>
         <text subtype="article" xml:id="SGGO-PR_0032" n="XXXII">
           <pb n="55"/>
@@ -2877,7 +2816,8 @@
               </p>
               <p>
                 <s>Hujus rei gratia ego <persName>Lisoyus</persName>, castri quod vocatur
-                    <persName>Calvus Mons</persName> oppidanus<ref type="note" target="#p59_fn1"/>, memor evangelici præcepti quo Dominus dixit : <q>facite vobis amicos de mamona
+                    <persName>Calvus Mons</persName> oppidanus<note xml:id="p59_fn1">V. Chroniques des comtes d'Anjou, publiées par la Société de
+                l'histoire de France, pages 116, 169 et suivantes.</note>, memor evangelici præcepti quo Dominus dixit : <q>facite vobis amicos de mamona
                     iniquitatis, ut, cum defeceritis, recipiant vos in œterna tabernacula,</q>
                   cupiensque recipi in ipsis tabernaculis, cum a præsenti vita, morte interveniente, defecero, <placeName>Sancto Florentio</placeName> et monachis in ejus monasterio
                   Deo militantibus, faventibus conjuge ac filiis meis, omne theloneum sive pedagium
@@ -2906,7 +2846,9 @@
                 <s>Signum <persName>Lisoii</persName> †, qui hanc kartam fieri precepit.</s>
               </p>
               <p>
-                <s>Signum <rs type="person"><persName>Hersendis</persName> uxoris ejus<ref type="note" target="#p60_fn1"/></rs>.</s>
+                <s>Signum <rs type="person"><persName>Hersendis</persName> uxoris ejus<note xml:id="p60_fn1">Après ce nom, celui de Hugue et chacun des suivants, il y a une
+                M accompagnée d'un trait. Les derniers mots du texte prouvent que cette abréviation
+                signifie <hi rend="i">quœ</hi> ou <hi rend="i">qui manu tetigit,</hi> ou <hi rend="i">manu firmavit.</hi></note></rs>.</s>
               </p>
               <p>
                 <s>Signum <rs type="person"><persName>Sulpicii</persName> filii ejus</rs>, atque <rs type="person"><persName>Hugonis</persName> fratris ejus</rs> †.</s>
@@ -2926,15 +2868,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p59_fn1">V. Chroniques des comtes d'Anjou, publiées par la Société de
-                l'histoire de France, pages 116, 169 et suivantes.</note>
-              <note xml:id="p60_fn1">Après ce nom, celui de Hugue et chacun des suivants, il y a une
-                M accompagnée d'un trait. Les derniers mots du texte prouvent que cette abréviation
-                signifie <hi rend="i">quœ</hi> ou <hi rend="i">qui manu tetigit,</hi> ou <hi rend="i">manu firmavit.</hi></note>
-            </div>
-          </back>
+          
         </text>
       </group>
     </group>
@@ -2945,255 +2879,256 @@
           <head>Table par noms de lieux</head>
           <list type="index">
           <head>A</head>
-            <item><rs><hi rend="sc">Albanensis</hi>, episc. Richardus legatus apostolicæ sedis</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>.</item>
-            <item><rs><hi rend="sc">Andegavensis</hi>, pagus</rs> <ref target="#SGGO-PR_0003">3</ref> ; episc. Rainaldus <ref target="#SGGO-PR_0011">11</ref> ; archid. Guillelmus <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Aurelianensis</hi>, pagus</rs> <ref target="#SGGO-PR_0017">17</ref> ; rivus <ref target="#SGGO-PR_0010">10</ref> ; episc. Johannes, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0029">29</ref>.</item>
+            <item xml:id="SGGO-PR_rs_001"><rs><hi rend="sc">Albanensis</hi>, episc. Richardus legatus apostolicæ sedis</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>.</item>
+            <item xml:id="SGGO-PR_rs_002"><rs><hi rend="sc">Andegavensis</hi>, pagus</rs> <ref target="#SGGO-PR_0003">3</ref> ; episc. Rainaldus <ref target="#SGGO-PR_0011">11</ref> ; archid. Guillelmus <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_003"><rs><hi rend="sc">Aurelianensis</hi>, pagus</rs> <ref target="#SGGO-PR_0017">17</ref> ; rivus <ref target="#SGGO-PR_0010">10</ref> ; episc. Johannes, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0029">29</ref>.</item>
           </list>
           <list type="index">
           <head>B</head>
-            <item><rs><hi rend="sc">Bituricas</hi></rs> <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
-            <item><rs><hi rend="sc">Bituricensis</hi>, archiep. Aldebertus, Hildebertus</rs> <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0014">14</ref> ; Leodegarius, Ligerius <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0028">28</ref> ; archid. Letardus, Matheus <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0028">28</ref> ; archip. Jerbertus <ref target="#SGGO-PR_0028">28</ref> ; vicecomes <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0012">12</ref>. Guillelmus <ref target="#SGGO-PR_0024">24</ref>.</item>
-            <item><rs><hi rend="sc">Blesensis</hi>, moneta</rs> <ref target="#SGGO-PR_0007">7</ref> ; comes Stephanus, Agnes ux. ejus, Willelmus fil. ejus, Garnerius et Gervasius dapifieri <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref>.</item>
-            <item><rs><hi rend="sc">Blesis</hi></rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
-            <item><rs><hi rend="sc">Brieria</hi></rs> <ref target="#SGGO-PR_0017">17</ref>.</item>
+            <item xml:id="SGGO-PR_rs_004"><rs><hi rend="sc">Bituricas</hi></rs> <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
+            <item xml:id="SGGO-PR_rs_005"><rs><hi rend="sc">Bituricensis</hi>, archiep. Aldebertus, Hildebertus</rs> <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0014">14</ref> ; Leodegarius, Ligerius <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0028">28</ref> ; archid. Letardus, Matheus <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0028">28</ref> ; archip. Jerbertus <ref target="#SGGO-PR_0028">28</ref> ; vicecomes <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0012">12</ref>. Guillelmus <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_006"><rs><hi rend="sc">Blesensis</hi>, moneta</rs> <ref target="#SGGO-PR_0007">7</ref> ; comes Stephanus, Agnes ux. ejus, Willelmus fil. ejus, Garnerius et Gervasius dapifieri <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref>.</item>
+            <item xml:id="SGGO-PR_rs_007"><rs><hi rend="sc">Blesis</hi></rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
+            <item xml:id="SGGO-PR_rs_008"><rs><hi rend="sc">Brieria</hi></rs> <ref target="#SGGO-PR_0017">17</ref>.</item>
           </list>
           <list type="index">
           <head>C</head>
-            <item><rs><hi rend="sc">Calvus Mons</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Caritas,</hi>, prior Radulfus, fr. Gilonis de Soliaco</rs> <ref target="#SGGO-PR_0034">34</ref>.</item>
-            <item><rs><hi rend="sc">Carnotensis</hi>, episc. Ivo</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Castellana</hi>, civitas</rs> <ref target="#SGGO-PR_0013">13</ref>.</item>
-            <item><rs><hi rend="sc">Cognia</hi></rs> ; <rs><hi rend="sc">Conia</hi></rs>, fluvius <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0030">30</ref>.</item>
-            <item><rs><hi rend="sc">Colom</hi>, terra</rs> <ref target="#SGGO-PR_0031">31</ref> ; eccl. S. Stephani <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0028">28</ref> ; Bernardus, fil. et nepos ejus <ref target="#SGGO-PR_0024">24</ref> ; Forredus <ref target="#SGGO-PR_0024">24</ref>.</item>
-            <item><rs><hi rend="sc">Curthualdo</hi>, decima</rs> <ref target="#SGGO-PR_0014">14</ref>.</item>
-            <item><rs><hi rend="sc">Cyprianus Pictavensis,</hi>, abbas Rainaldus</rs> <ref target="#SGGO-PR_0009">9</ref>.</item>
+            <item xml:id="SGGO-PR_rs_009"><rs><hi rend="sc">Calvus Mons</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_010"><rs><hi rend="sc">Caritas,</hi>, prior Radulfus, fr. Gilonis de Soliaco</rs> <ref target="#SGGO-PR_0034">34</ref>.</item>
+            <item xml:id="SGGO-PR_rs_011"><rs><hi rend="sc">Carnotensis</hi>, episc. Ivo</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_012"><rs><hi rend="sc">Castellana</hi>, civitas</rs> <ref target="#SGGO-PR_0013">13</ref>.</item>
+            <item xml:id="SGGO-PR_rs_013"><rs><hi rend="sc">Cognia</hi></rs> ; <rs><hi rend="sc">Conia</hi></rs>, fluvius <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0030">30</ref>.</item>
+            <item xml:id="SGGO-PR_rs_014"><rs><hi rend="sc">Colom</hi>, terra</rs> <ref target="#SGGO-PR_0031">31</ref> ; eccl. S. Stephani <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0028">28</ref> ; Bernardus, fil. et nepos ejus <ref target="#SGGO-PR_0024">24</ref> ; Forredus <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_015"><rs><hi rend="sc">Curthualdo</hi>, decima</rs> <ref target="#SGGO-PR_0014">14</ref>.</item>
+            <item xml:id="SGGO-PR_rs_016"><rs><hi rend="sc">Cyprianus Pictavensis,</hi>, abbas Rainaldus</rs> <ref target="#SGGO-PR_0009">9</ref>.</item>
           </list>
           <list type="index">
           <head>D</head>
-            <item><rs><hi rend="sc">Daniciacus</hi>, villa</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
-            <item><rs><hi rend="sc">Doadensis</hi>, vicaria</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
+            <item xml:id="SGGO-PR_rs_017"><rs><hi rend="sc">Daniciacus</hi>, villa</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
+            <item xml:id="SGGO-PR_rs_018"><rs><hi rend="sc">Doadensis</hi>, vicaria</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
           </list>
           <list type="index">
           <head>E</head>
-            <item><rs><hi rend="sc">Engolismensis</hi>, episc. Girardus</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
+            <item xml:id="SGGO-PR_rs_019"><rs><hi rend="sc">Engolismensis</hi>, episc. Girardus</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
           </list>
           <list type="index">
           <head>F</head>
-            <item><rs><hi rend="sc">Franciæ</hi>, reges</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Carlomannus <ref target="#SGGO-PR_0002">2</ref> ; Carolus <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0003">3</ref>, <ref target="#SGGO-PR_0013">13</ref> ; Ludovicus <ref target="#SGGO-PR_0029">29</ref> ; Philippus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
-            <item><rs><hi rend="sc">Franconis</hi>, terra</rs> <ref target="#SGGO-PR_0026">26</ref>.</item>
-            <item><rs><hi rend="sc">Florentius</hi>, abbas : Dido</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref> ; Guillelmus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Hecfridus <ref target="#SGGO-PR_0001">1</ref> ; Philippus <ref target="#SGGO-PR_0013">13</ref> ; Rodulfus <ref target="#SGGO-PR_0002">2</ref> ; Walterius <ref target="#SGGO-PR_0003">3</ref>. Mon. <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Florentius,</hi>, ecclesia diocesis Aurelianensis</rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
+            <item xml:id="SGGO-PR_rs_020"><rs><hi rend="sc">Franciæ</hi>, reges</rs> <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Carlomannus <ref target="#SGGO-PR_0002">2</ref> ; Carolus <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0003">3</ref>, <ref target="#SGGO-PR_0013">13</ref> ; Ludovicus <ref target="#SGGO-PR_0029">29</ref> ; Philippus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0028">28</ref>.</item>
+            <item xml:id="SGGO-PR_rs_021"><rs><hi rend="sc">Franconis</hi>, terra</rs> <ref target="#SGGO-PR_0026">26</ref>.</item>
+            <item xml:id="SGGO-PR_rs_022"><rs><hi rend="sc">Florentius</hi>, abbas : Dido</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref> ; Guillelmus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Hecfridus <ref target="#SGGO-PR_0001">1</ref> ; Philippus <ref target="#SGGO-PR_0013">13</ref> ; Rodulfus <ref target="#SGGO-PR_0002">2</ref> ; Walterius <ref target="#SGGO-PR_0003">3</ref>. Mon. <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_023"><rs><hi rend="sc">Florentius,</hi>, ecclesia diocesis Aurelianensis</rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
           </list>
           <list type="index">
           <head>G</head>
-            <item><rs><hi rend="sc">Gargovium</hi></rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
-            <item><rs><hi rend="sc">Geon</hi></rs> ; <rs><hi rend="sc">Giomum</hi></rs>, castrum <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0025">25</ref> ; comes Goffredus <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref> ; Baronet sutor, et familia ejus <ref target="#SGGO-PR_0017">17</ref> ; Margotus <ref target="#SGGO-PR_0008">8</ref>.</item>
+            <item xml:id="SGGO-PR_rs_024"><rs><hi rend="sc">Gargovium</hi></rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
+            <item xml:id="SGGO-PR_rs_025"><rs><hi rend="sc">Geon</hi></rs> ; <rs><hi rend="sc">Giomum</hi></rs>, castrum <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0025">25</ref> ; comes Goffredus <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref> ; Baronet sutor, et familia ejus <ref target="#SGGO-PR_0017">17</ref> ; Margotus <ref target="#SGGO-PR_0008">8</ref>.</item>
           </list>
           <list type="index">
           <head>H</head>
-            <item><rs><hi rend="sc">Haiœ,</hi>, dangio</rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
+            <item xml:id="SGGO-PR_rs_026"><rs><hi rend="sc">Haiœ,</hi>, dangio</rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
           </list>
           <list type="index">
           <head>J</head>
-            <item><rs><hi rend="sc">Jerusalem</hi></rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0023">23</ref>.</item>
+            <item xml:id="SGGO-PR_rs_027"><rs><hi rend="sc">Jerusalem</hi></rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0023">23</ref>.</item>
           </list>
           <list type="index">
           <head>L</head>
-            <item><rs><hi rend="sc">Lateranis</hi></rs> <ref target="#SGGO-PR_0013">13</ref>.</item>
-            <item><rs><hi rend="sc">Leon,</hi>, ecclesiæ</rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
-            <item><rs><hi rend="sc">Leonensis</hi>, episc. Galo, mon. S. Florentii</rs> <ref target="#SGGO-PR_0027">27</ref>, <ref target="#SGGO-PR_0028">28</ref>, <ref target="#SGGO-PR_0029">29</ref>.</item>
-            <item><rs><hi rend="sc">Ligeris</hi></rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0017">17</ref>.</item>
-            <item><rs><hi rend="sc">Lucionensis</hi>, abbas Rainaldus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Lugdunensis</hi>, mag. Anselmus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_028"><rs><hi rend="sc">Lateranis</hi></rs> <ref target="#SGGO-PR_0013">13</ref>.</item>
+            <item xml:id="SGGO-PR_rs_029"><rs><hi rend="sc">Leon,</hi>, ecclesiæ</rs> <ref target="#SGGO-PR_0029">29</ref>.</item>
+            <item xml:id="SGGO-PR_rs_030"><rs><hi rend="sc">Leonensis</hi>, episc. Galo, mon. S. Florentii</rs> <ref target="#SGGO-PR_0027">27</ref>, <ref target="#SGGO-PR_0028">28</ref>, <ref target="#SGGO-PR_0029">29</ref>.</item>
+            <item xml:id="SGGO-PR_rs_031"><rs><hi rend="sc">Ligeris</hi></rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0017">17</ref>.</item>
+            <item xml:id="SGGO-PR_rs_032"><rs><hi rend="sc">Lucionensis</hi>, abbas Rainaldus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_033"><rs><hi rend="sc">Lugdunensis</hi>, mag. Anselmus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
           </list>
           <list type="index">
           <head>M</head>
-            <item><rs><hi rend="sc">Majus Monasterium [Turonense]</hi>, abbas Hilgodus</rs> <ref target="#SGGO-PR_0011">11</ref> ; mon. Guillelmus <ref target="#SGGO-PR_0009">9</ref>.</item>
-            <item><rs><hi rend="sc">Massolen,</hi>, decima</rs> <ref target="#SGGO-PR_0024">24</ref> ; Girardus <ref target="#SGGO-PR_0024">24</ref>.</item>
-            <item><rs><hi rend="sc">Mesum Martini</hi></rs> <ref target="#SGGO-PR_0021">21</ref>.</item>
-            <item><rs><hi rend="sc">Monesterol</hi></rs> <ref target="#SGGO-PR_0027">27</ref>.</item>
-            <item><rs><hi rend="sc">Monesto,</hi></rs> <ref target="#SGGO-PR_0034">34</ref>.</item>
-            <item><rs><hi rend="sc">Monachi : Arnaudus</hi></rs> <ref target="#SGGO-PR_0034">34</ref> ; Fulco <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0018">18</ref> ; Fulco de Bel Prael <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0010">10</ref> ; Gainaudus Caruronus <ref target="#SGGO-PR_0024">24</ref> ; Galo <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Gauterius <ref target="#SGGO-PR_0031">31</ref> ; Geraldus <ref target="#SGGO-PR_0014">14</ref> ; Giraldus <ref target="#SGGO-PR_0015">15</ref> ; Girardus <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0025">25</ref> ; Girardus Nutritus <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0023">23</ref> ; Gislebertus <ref target="#SGGO-PR_0016">16</ref> ; Goscelinus <ref target="#SGGO-PR_0034">34</ref> ; Goridanus <ref target="#SGGO-PR_0031">31</ref> ; Gosfridus <ref target="#SGGO-PR_0025">25</ref> ; Gradulfus <ref target="#SGGO-PR_0025">25</ref> ; Ingenulfus <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref> ; Philippus <ref target="#SGGO-PR_0031">31</ref> ; Raginaldus <ref target="#SGGO-PR_0019">19</ref> ; Raginaldus de Salmuro <ref target="#SGGO-PR_0034">34</ref> ; Robertus <ref target="#SGGO-PR_0019">19</ref> ; Robertus Braiocensis, Robertus Rufus <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Zacharias <ref target="#SGGO-PR_0009">9</ref>. Capellanus Gofredus <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref>. Condonatus mon. Benedictus <ref target="#SGGO-PR_0033">33</ref> ; famuli <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref>, <ref target="#SGGO-PR_0027">27</ref>, <ref target="#SGGO-PR_0033">33</ref> ; præpositus Walterius <ref target="#SGGO-PR_0003">3</ref>.</item>
-            <item><rs><hi rend="sc">Maximinus [Miciacensis]</hi>, abbas Christianus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_034"><rs><hi rend="sc">Majus Monasterium [Turonense]</hi>, abbas Hilgodus</rs> <ref target="#SGGO-PR_0011">11</ref> ; mon. Guillelmus <ref target="#SGGO-PR_0009">9</ref>.</item>
+            <item xml:id="SGGO-PR_rs_035"><rs><hi rend="sc">Massolen,</hi>, decima</rs> <ref target="#SGGO-PR_0024">24</ref> ; Girardus <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_036"><rs><hi rend="sc">Mesum Martini</hi></rs> <ref target="#SGGO-PR_0021">21</ref>.</item>
+            <item xml:id="SGGO-PR_rs_037"><rs><hi rend="sc">Monesterol</hi></rs> <ref target="#SGGO-PR_0027">27</ref>.</item>
+            <item xml:id="SGGO-PR_rs_038"><rs><hi rend="sc">Monesto,</hi></rs> <ref target="#SGGO-PR_0034">34</ref>.</item>
+            <item xml:id="SGGO-PR_rs_039"><rs><hi rend="sc">Monachi : Arnaudus</hi></rs> <ref target="#SGGO-PR_0034">34</ref> ; Fulco <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0018">18</ref> ; Fulco de Bel Prael <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0010">10</ref> ; Gainaudus Caruronus <ref target="#SGGO-PR_0024">24</ref> ; Galo <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Gauterius <ref target="#SGGO-PR_0031">31</ref> ; Geraldus <ref target="#SGGO-PR_0014">14</ref> ; Giraldus <ref target="#SGGO-PR_0015">15</ref> ; Girardus <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0025">25</ref> ; Girardus Nutritus <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0023">23</ref> ; Gislebertus <ref target="#SGGO-PR_0016">16</ref> ; Goscelinus <ref target="#SGGO-PR_0034">34</ref> ; Goridanus <ref target="#SGGO-PR_0031">31</ref> ; Gosfridus <ref target="#SGGO-PR_0025">25</ref> ; Gradulfus <ref target="#SGGO-PR_0025">25</ref> ; Ingenulfus <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref> ; Philippus <ref target="#SGGO-PR_0031">31</ref> ; Raginaldus <ref target="#SGGO-PR_0019">19</ref> ; Raginaldus de Salmuro <ref target="#SGGO-PR_0034">34</ref> ; Robertus <ref target="#SGGO-PR_0019">19</ref> ; Robertus Braiocensis, Robertus Rufus <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Zacharias <ref target="#SGGO-PR_0009">9</ref>. Capellanus Gofredus <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref>. Condonatus mon. Benedictus <ref target="#SGGO-PR_0033">33</ref> ; famuli <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref>, <ref target="#SGGO-PR_0027">27</ref>, <ref target="#SGGO-PR_0033">33</ref> ; præpositus Walterius <ref target="#SGGO-PR_0003">3</ref>.</item>
+            <item xml:id="SGGO-PR_rs_040"><rs><hi rend="sc">Maximinus [Miciacensis]</hi>, abbas Christianus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
           </list>
           <list type="index">
           <head>N</head>
-            <item><rs><hi rend="sc">Noa Ernardi</hi></rs> <ref target="#SGGO-PR_0031">31</ref>.</item>
-            <item><rs><hi rend="sc">Nobiliacus,</hi>, cella S. Gundulfi</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref>.</item>
+            <item xml:id="SGGO-PR_rs_041"><rs><hi rend="sc">Noa Ernardi</hi></rs> <ref target="#SGGO-PR_0031">31</ref>.</item>
+            <item xml:id="SGGO-PR_rs_042"><rs><hi rend="sc">Nobiliacus,</hi>, cella S. Gundulfi</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref>.</item>
           </list>
           <list type="index">
           <head>P</head>
-            <item><rs><hi rend="sc">Pauliacus,</hi>, vicus</rs> <ref target="#SGGO-PR_0002">2</ref>.</item>
-            <item><rs><hi rend="sc">Petra Marol</hi></rs> <ref target="#SGGO-PR_0019">19</ref> ; Rainaudus <ref target="#SGGO-PR_0031">31</ref>.</item>
-            <item><rs><hi rend="sc">Petra Miracli</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
-            <item><rs><hi rend="sc">Pictavensis</hi>, archid</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Podium Bosonis</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
-            <item><rs><hi rend="sc">Priores : Ademarus</hi></rs> <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref> ; Bartholomeus <ref target="#SGGO-PR_0033">33</ref> ; Galo <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref> ; Girardus <ref target="#SGGO-PR_0030">30</ref> ; Giraudus <ref target="#SGGO-PR_0019">19</ref> ; Gislebertus <ref target="#SGGO-PR_0028">28</ref> ; Goffredus <ref target="#SGGO-PR_0034">34</ref> ; Rogerius <ref target="#SGGO-PR_0031">31</ref>.</item>
+            <item xml:id="SGGO-PR_rs_043"><rs><hi rend="sc">Pauliacus,</hi>, vicus</rs> <ref target="#SGGO-PR_0002">2</ref>.</item>
+            <item xml:id="SGGO-PR_rs_044"><rs><hi rend="sc">Petra Marol</hi></rs> <ref target="#SGGO-PR_0019">19</ref> ; Rainaudus <ref target="#SGGO-PR_0031">31</ref>.</item>
+            <item xml:id="SGGO-PR_rs_045"><rs><hi rend="sc">Petra Miracli</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
+            <item xml:id="SGGO-PR_rs_046"><rs><hi rend="sc">Pictavensis</hi>, archid</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_047"><rs><hi rend="sc">Podium Bosonis</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
+            <item xml:id="SGGO-PR_rs_048"><rs><hi rend="sc">Priores : Ademarus</hi></rs> <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref> ; Bartholomeus <ref target="#SGGO-PR_0033">33</ref> ; Galo <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0026">26</ref> ; Girardus <ref target="#SGGO-PR_0030">30</ref> ; Giraudus <ref target="#SGGO-PR_0019">19</ref> ; Gislebertus <ref target="#SGGO-PR_0028">28</ref> ; Goffredus <ref target="#SGGO-PR_0034">34</ref> ; Rogerius <ref target="#SGGO-PR_0031">31</ref>.</item>
           </list>
           <list type="index">
           <head>R</head>
-            <item><rs><hi rend="sc">Redonensis</hi>, episc. Marbodus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Runzaan</hi></rs> <ref target="#SGGO-PR_0015">15</ref> ; rustici Dodo et Tetbaldus <ref target="#SGGO-PR_0015">15</ref>.</item>
+            <item xml:id="SGGO-PR_rs_049"><rs><hi rend="sc">Redonensis</hi>, episc. Marbodus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_050"><rs><hi rend="sc">Runzaan</hi></rs> <ref target="#SGGO-PR_0015">15</ref> ; rustici Dodo et Tetbaldus <ref target="#SGGO-PR_0015">15</ref>.</item>
           </list>
           <list type="index">
           <head>S</head>
-            <item><rs><hi rend="sc">Salmurensis</hi>, abbatia S. Florentii, <foreign>passim.</foreign></rs></item>
-            <item><rs><hi rend="sc">Sancerrensis</hi>, moneta</rs> <ref target="#SGGO-PR_0026">26</ref> ; Galdricus <ref target="#SGGO-PR_0008">8</ref>.</item>
-            <item><rs><hi rend="sc">Sanctus Benedictus de super Ligerim,</hi>, abbas Symon</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Sanctus Gundulfus,</hi>, cella in villa Nobiliacus</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref> ; claustrum, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0032">32</ref>, <ref target="#SGGO-PR_0034">34</ref> ; eccl. <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>, <ref target="#SGGO-PR_0024">24</ref> ; monasterium <ref target="#SGGO-PR_0003">3</ref>, <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0019">19</ref> ; castrum <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0029">29</ref>, <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; feria <ref target="#SGGO-PR_0033">33</ref> ; furnus <ref target="#SGGO-PR_0025">25</ref> ; turris <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0018">18</ref>.</item>
-            <item><rs><hi rend="sc">S. Gundulfo [de] Burdinus</hi></rs> <ref target="#SGGO-PR_0006">6</ref> ; Erchembaldus, ux. ejus et filii <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref>, <ref target="#SGGO-PR_0033">33</ref> ; Hugo, ux. ejus et filii <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0026">26</ref> ; Radulfus, ux. ejus, filii, soror, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0019">19</ref> ; Renardus et filii <ref target="#SGGO-PR_0032">32</ref> ; Robertus <ref target="#SGGO-PR_0023">23</ref>.</item>
-            <item><rs><hi rend="sc">Sanctus Jovinus [de Marnis]</hi>, abbas Briccius et monachi ejus</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item> <item><rs><hi rend="sc">Senonensis</hi>, archiep. Daibertus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Signum Cesaris</hi></rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
-            <item><rs><hi rend="sc">Silvanectis civitas</hi></rs> <ref target="#SGGO-PR_0001">1</ref>.</item>
-            <item><rs><hi rend="sc">Soliacum</hi></rs> <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0026">26</ref> ; turris <ref target="#SGGO-PR_0026">26</ref> ; comes Erchembaldus <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref> ; Gilo, Aldeburgis ux. ejus, Agnes filia <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Gilo et fratres ejus <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref>.</item>
+            <item xml:id="SGGO-PR_rs_051"><rs><hi rend="sc">Salmurensis</hi>, abbatia S. Florentii, <foreign>passim.</foreign></rs></item>
+            <item xml:id="SGGO-PR_rs_052"><rs><hi rend="sc">Sancerrensis</hi>, moneta</rs> <ref target="#SGGO-PR_0026">26</ref> ; Galdricus <ref target="#SGGO-PR_0008">8</ref>.</item>
+            <item xml:id="SGGO-PR_rs_053"><rs><hi rend="sc">Sanctus Benedictus de super Ligerim,</hi>, abbas Symon</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_054"><rs><hi rend="sc">Sanctus Gundulfus,</hi>, cella in villa Nobiliacus</rs> <ref target="#SGGO-PR_0001">1</ref>, <ref target="#SGGO-PR_0002">2</ref> ; claustrum, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0032">32</ref>, <ref target="#SGGO-PR_0034">34</ref> ; eccl. <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>, <ref target="#SGGO-PR_0024">24</ref> ; monasterium <ref target="#SGGO-PR_0003">3</ref>, <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0019">19</ref> ; castrum <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0029">29</ref>, <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; feria <ref target="#SGGO-PR_0033">33</ref> ; furnus <ref target="#SGGO-PR_0025">25</ref> ; turris <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_055"><rs><hi rend="sc">S. Gundulfo [de] Burdinus</hi></rs> <ref target="#SGGO-PR_0006">6</ref> ; Erchembaldus, ux. ejus et filii <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref>, <ref target="#SGGO-PR_0033">33</ref> ; Hugo, ux. ejus et filii <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0026">26</ref> ; Radulfus, ux. ejus, filii, soror, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0019">19</ref> ; Renardus et filii <ref target="#SGGO-PR_0032">32</ref> ; Robertus <ref target="#SGGO-PR_0023">23</ref>.</item>
+            <item xml:id="SGGO-PR_rs_056"><rs><hi rend="sc">Sanctus Jovinus [de Marnis]</hi>, abbas Briccius et monachi ejus</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref>.</item> <item xml:id="SGGO-PR_rs_057"><rs><hi rend="sc">Senonensis</hi>, archiep. Daibertus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_058"><rs><hi rend="sc">Signum Cesaris</hi></rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_059"><rs><hi rend="sc">Silvanectis civitas</hi></rs> <ref target="#SGGO-PR_0001">1</ref>.</item>
+            <item xml:id="SGGO-PR_rs_060"><rs><hi rend="sc">Soliacum</hi></rs> <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0026">26</ref> ; turris <ref target="#SGGO-PR_0026">26</ref> ; comes Erchembaldus <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref> ; Gilo, Aldeburgis ux. ejus, Agnes filia <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0005">5</ref>, <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0011">11</ref>, <ref target="#SGGO-PR_0012">12</ref> ; Gilo et fratres ejus <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref>.</item>
           </list>
           <list type="index">
           <head>T</head>
-            <item><rs><hi rend="sc">Travul</hi>, terra</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
-            <item><rs><hi rend="sc">Tresense</hi>, concilium</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Trecensis</hi>, mag. Drogo</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Turonensis</hi>, archiep. Radulfus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_061"><rs><hi rend="sc">Travul</hi>, terra</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_062"><rs><hi rend="sc">Tresense</hi>, concilium</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_063"><rs><hi rend="sc">Trecensis</hi>, mag. Drogo</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_064"><rs><hi rend="sc">Turonensis</hi>, archiep. Radulfus</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
           </list>
           <list type="index">
           <head>V</head>
-            <item><rs><hi rend="sc">Vallis Ligeris,</hi>, terra</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
-            <item><rs><hi rend="sc">Villa Maconis</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
-            <item><rs><hi rend="sc">Vinnalium</hi></rs> ; <rs><hi rend="sc">Vinneaun</hi></rs> ; <rs><hi rend="sc">Vinio</hi></rs> <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0020">20</ref>.</item>
-            <item><rs><hi rend="sc">Virsio</hi></rs> <ref target="#SGGO-PR_0004">4</ref> ; Fulco, Gosfredus, <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0005">5</ref>.</item>
-            <item><rs><hi rend="sc">Virsionensis</hi>, abbas : Herbertus</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref> ; P. <ref target="#SGGO-PR_0013">13</ref> ; Umbaldus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref> ; monachi <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0013">13</ref>.</item>
-            <item><rs><hi rend="sc">Vivariensis</hi>, episc. Leodegarius</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_065"><rs><hi rend="sc">Vallis Ligeris,</hi>, terra</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_066"><rs><hi rend="sc">Villa Maconis</hi></rs> <ref target="#SGGO-PR_0015">15</ref>.</item>
+            <item xml:id="SGGO-PR_rs_067"><rs><hi rend="sc">Vinnalium</hi></rs> ; <rs><hi rend="sc">Vinneaun</hi></rs> ; <rs><hi rend="sc">Vinio</hi></rs> <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0020">20</ref>.</item>
+            <item xml:id="SGGO-PR_rs_068"><rs><hi rend="sc">Virsio</hi></rs> <ref target="#SGGO-PR_0004">4</ref> ; Fulco, Gosfredus, <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0005">5</ref>.</item>
+            <item xml:id="SGGO-PR_rs_069"><rs><hi rend="sc">Virsionensis</hi>, abbas : Herbertus</rs> <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0011">11</ref> ; P. <ref target="#SGGO-PR_0013">13</ref> ; Umbaldus <ref target="#SGGO-PR_0004">4</ref>, <ref target="#SGGO-PR_0009">9</ref> ; monachi <ref target="#SGGO-PR_0009">9</ref>, <ref target="#SGGO-PR_0013">13</ref>.</item>
+            <item xml:id="SGGO-PR_rs_070"><rs><hi rend="sc">Vivariensis</hi>, episc. Leodegarius</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
           </list>
         </div>
         <div>
           <head>Table par noms de personnes</head>
           <list type="index">
           <head>A</head>
-            <item><rs><hi rend="sc">Abbas</hi>, Gervasius</rs> <ref target="#SGGO-PR_0004">4</ref>. Hugo <ref target="#SGGO-PR_0002">2</ref>.</item>
-            <item><rs><hi rend="sc">Adelelmas</hi>, fr. Odonis</rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
-            <item><rs><hi rend="sc">Aimericus</hi>, Greslart</rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
-            <item><rs><hi rend="sc">Albertus</hi>, fil. Tescelini</rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
-            <item><rs><hi rend="sc">Amedeus</hi>, et Mulisenda ux. ejus</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
-            <item><rs><hi rend="sc">Andreas</hi>, Matet</rs> <ref target="#SGGO-PR_0032">32</ref> ; præfectus <ref target="#SGGO-PR_0033">33</ref>.</item>
-            <item><rs><hi rend="sc">Arnulfus</hi>, fil. Guillelmi</rs> <ref target="#SGGO-PR_0006">6</ref> ; Mitte Focum <ref target="#SGGO-PR_0004">4</ref>.</item>
+            <item xml:id="SGGO-PR_rs_071"><rs><hi rend="sc">Abbas</hi>, Gervasius</rs> <ref target="#SGGO-PR_0004">4</ref>. Hugo <ref target="#SGGO-PR_0002">2</ref>.</item>
+            <item xml:id="SGGO-PR_rs_072"><rs><hi rend="sc">Adelelmas</hi>, fr. Odonis</rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_073"><rs><hi rend="sc">Aimericus</hi>, Greslart</rs> <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_074"><rs><hi rend="sc">Albertus</hi>, fil. Tescelini</rs> <ref target="#SGGO-PR_0008">8</ref>.</item>
+                      <item xml:id="SGGO-PR_rs_075"><rs><hi rend="sc">Amedeus</hi></rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
+          <item xml:id="SGGO-PR_rs_076"><rs><hi rend="sc">Mulisenda</hi>, ux. Amedei</rs> <ref target="#SGGO-PR_0003">3</ref>.</item>
+            <item xml:id="SGGO-PR_rs_077"><rs><hi rend="sc">Andreas</hi>, Matet</rs> <ref target="#SGGO-PR_0032">32</ref> ; præfectus <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_078"><rs><hi rend="sc">Arnulfus</hi>, fil. Guillelmi</rs> <ref target="#SGGO-PR_0006">6</ref> ; Mitte Focum <ref target="#SGGO-PR_0004">4</ref>.</item>
           </list>
           <list type="index">
           <head>B</head>
-            <item><rs><hi rend="sc">Balduinus</hi>, Cain</rs> <ref target="#SGGO-PR_0022">22</ref> ; fil. Hersendis <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0026">26</ref> ; fr. Herberti <ref target="#SGGO-PR_0027">27</ref> ; sororius Rainardi <ref target="#SGGO-PR_0018">18</ref>.</item>
-            <item><rs><hi rend="sc">Bechespicus</hi>, v. Daniel</rs></item>
-            <item><rs><hi rend="sc">Benedictus</hi>, camerarius</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Bernardus</hi>, de Insula</rs> <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; de Scannis <ref target="#SGGO-PR_0033">33</ref> ; de Veteri Vado <ref target="#SGGO-PR_0024">24</ref> ; fil. Walonis <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref> ; Fuldria <ref target="#SGGO-PR_0008">8</ref>.</item>
-            <item><rs><hi rend="sc">Briencius</hi>, d’Austri</rs> <ref target="#SGGO-PR_0032">32</ref>.</item>
-            <item><rs><hi rend="sc">Bruno</hi>, Chamor</rs> <ref target="#SGGO-PR_0032">32</ref>.</item>
-            <item><rs><hi rend="sc">Burgenses</hi></rs> <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_079"><rs><hi rend="sc">Balduinus</hi>, Cain</rs> <ref target="#SGGO-PR_0022">22</ref> ; fil. Hersendis <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0017">17</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0026">26</ref> ; fr. Herberti <ref target="#SGGO-PR_0027">27</ref> ; sororius Rainardi <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_080"><rs><hi rend="sc">Bechespicus</hi>, v. Daniel</rs></item>
+            <item xml:id="SGGO-PR_rs_081"><rs><hi rend="sc">Benedictus</hi>, camerarius</rs> <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_082"><rs><hi rend="sc">Bernardus</hi>, de Insula</rs> <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; de Scannis <ref target="#SGGO-PR_0033">33</ref> ; de Veteri Vado <ref target="#SGGO-PR_0024">24</ref> ; fil. Walonis <ref target="#SGGO-PR_0008">8</ref>, <ref target="#SGGO-PR_0010">10</ref> ; Fuldria <ref target="#SGGO-PR_0008">8</ref>.</item>
+            <item xml:id="SGGO-PR_rs_083"><rs><hi rend="sc">Briencius</hi>, d’Austri</rs> <ref target="#SGGO-PR_0032">32</ref>.</item>
+            <item xml:id="SGGO-PR_rs_084"><rs><hi rend="sc">Bruno</hi>, Chamor</rs> <ref target="#SGGO-PR_0032">32</ref>.</item>
+            <item xml:id="SGGO-PR_rs_085"><rs><hi rend="sc">Burgenses</hi></rs> <ref target="#SGGO-PR_0033">33</ref>.</item>
           </list>
           <list type="index">
           <head>C</head>
-            <item><rs><hi rend="sc">Clientes</hi></rs> <ref target="#SGGO-PR_0033">33</ref>. <persName>Constantia</persName> fil. Auberici <ref target="#SGGO-PR_0026">26</ref>.</item>
-            <item><rs><hi rend="sc">Constantius</hi>, Caseus</rs> <ref target="#SGGO-PR_0027">27</ref>. <persName>Daniel</persName> Bechespi <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref>.</item>
+            <item xml:id="SGGO-PR_rs_086"><rs><hi rend="sc">Clientes</hi></rs> <ref target="#SGGO-PR_0033">33</ref>. <persName>Constantia</persName> fil. Auberici <ref target="#SGGO-PR_0026">26</ref>.</item>
+            <item xml:id="SGGO-PR_rs_087"><rs><hi rend="sc">Constantius</hi>, Caseus</rs> <ref target="#SGGO-PR_0027">27</ref>. <persName>Daniel</persName> Bechespi <ref target="#SGGO-PR_0031">31</ref>, <ref target="#SGGO-PR_0032">32</ref>.</item>
           </list>
           <list type="index">
           <head>D</head>
-            <item><rs><hi rend="sc">Dodo</hi>, fil. Franconis</rs> <ref target="#SGGO-PR_0026">26</ref>.</item>
+            <item xml:id="SGGO-PR_rs_088"><rs><hi rend="sc">Dodo</hi>, fil. Franconis</rs> <ref target="#SGGO-PR_0026">26</ref>.</item>
           </list>
           <list type="index">
           <head>E</head>
-            <item><rs><hi rend="sc">Ernaudus</hi>, Ravi</rs> <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_089"><rs><hi rend="sc">Ernaudus</hi>, Ravi</rs> <ref target="#SGGO-PR_0024">24</ref>.</item>
           </list>
           <list type="index">
           <head>F</head>
-            <item><rs><hi rend="sc">Fulco</hi>, Bufauldi</rs> <ref target="#SGGO-PR_0026">26</ref> ; fil. Gandeberti <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0016">16</ref>.</item>
+            <item xml:id="SGGO-PR_rs_090"><rs><hi rend="sc">Fulco</hi>, Bufauldi</rs> <ref target="#SGGO-PR_0026">26</ref> ; fil. Gandeberti <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0016">16</ref>.</item>
           </list>
           <list type="index">
           <head>G</head>
-            <item><rs><hi rend="sc">Gauzfridus</hi>, Infernus</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Gilo clericus</hi></rs> <ref target="#SGGO-PR_0019">19</ref> ; Mala Brueire <ref target="#SGGO-PR_0033">33</ref>.</item>
-            <item><rs><hi rend="sc">Gima</hi>, Mazet</rs> <ref target="#SGGO-PR_0031">31</ref>.</item>
-            <item><rs><hi rend="sc">Giraldus</hi>, Burditus</rs> <ref target="#SGGO-PR_0004">4</ref> ; Musca <ref target="#SGGO-PR_0004">4</ref>.</item>
-            <item><rs><hi rend="sc">Girardus</hi>, de Podio</rs> <ref target="#SGGO-PR_0026">26</ref> ; prepositus <ref target="#SGGO-PR_0035">35</ref> ; Tarieta <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref>.</item>
-            <item><rs><hi rend="sc">Giraudus</hi>, faber</rs> <ref target="#SGGO-PR_0030">30</ref>. <persName>Girbertus</persName> fil. Vitalis <ref target="#SGGO-PR_0015">15</ref>.</item>
-            <item><rs><hi rend="sc">Goffridus</hi>, de Carnoto</rs> <ref target="#SGGO-PR_0026">26</ref> ; fil. Marie <ref target="#SGGO-PR_0020">20</ref> ; fil. Richildis <ref target="#SGGO-PR_0025">25</ref> ; Giboinus <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0020">20</ref>.</item>
-            <item><rs><hi rend="sc">Gosbertus</hi>, Garner</rs> <ref target="#SGGO-PR_0024">24</ref>.</item>
-            <item><rs><hi rend="sc">Gozcelmus</hi>, camerarius</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Guillelmus</hi>, fil. Garini</rs> <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0027">27</ref> ; presbiter <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0023">23</ref> ; Triveel <ref target="#SGGO-PR_0032">32</ref>.</item>
+            <item xml:id="SGGO-PR_rs_091"><rs><hi rend="sc">Gauzfridus</hi>, Infernus</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_092"><rs><hi rend="sc">Gilo clericus</hi></rs> <ref target="#SGGO-PR_0019">19</ref> ; Mala Brueire <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_093"><rs><hi rend="sc">Gima</hi>, Mazet</rs> <ref target="#SGGO-PR_0031">31</ref>.</item>
+            <item xml:id="SGGO-PR_rs_094"><rs><hi rend="sc">Giraldus</hi>, Burditus</rs> <ref target="#SGGO-PR_0004">4</ref> ; Musca <ref target="#SGGO-PR_0004">4</ref>.</item>
+            <item xml:id="SGGO-PR_rs_095"><rs><hi rend="sc">Girardus</hi>, de Podio</rs> <ref target="#SGGO-PR_0026">26</ref> ; prepositus <ref target="#SGGO-PR_0035">35</ref> ; Tarieta <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_096"><rs><hi rend="sc">Giraudus</hi>, faber</rs> <ref target="#SGGO-PR_0030">30</ref>. <persName>Girbertus</persName> fil. Vitalis <ref target="#SGGO-PR_0015">15</ref>.</item>
+            <item xml:id="SGGO-PR_rs_097"><rs><hi rend="sc">Goffridus</hi>, de Carnoto</rs> <ref target="#SGGO-PR_0026">26</ref> ; fil. Marie <ref target="#SGGO-PR_0020">20</ref> ; fil. Richildis <ref target="#SGGO-PR_0025">25</ref> ; Giboinus <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0020">20</ref>.</item>
+            <item xml:id="SGGO-PR_rs_098"><rs><hi rend="sc">Gosbertus</hi>, Garner</rs> <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_099"><rs><hi rend="sc">Gozcelmus</hi>, camerarius</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_100"><rs><hi rend="sc">Guillelmus</hi>, fil. Garini</rs> <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0025">25</ref>, <ref target="#SGGO-PR_0027">27</ref> ; presbiter <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0023">23</ref> ; Triveel <ref target="#SGGO-PR_0032">32</ref>.</item>
           </list>
           <list type="index">
           <head>H</head>
-            <item><rs><hi rend="sc">Hato</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Henricus</hi>, Mauferas</rs> <ref target="#SGGO-PR_0033">33</ref>.</item>
-            <item><rs><hi rend="sc">Herbertus</hi>, miles</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Passet <ref target="#SGGO-PR_0033">33</ref>.</item>
-            <item><rs><hi rend="sc">Hersendis</hi>, ux. Lisoii oppidani de Calvo Monte</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Herveus</hi>, Ambaciacensis</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Hugenus</hi>, de Porta</rs> <ref target="#SGGO-PR_0030">30</ref>.</item>
-            <item><rs><hi rend="sc">Hugo</hi>, Claretis</rs> <ref target="#SGGO-PR_0030">30</ref> ; cordubanarius <ref target="#SGGO-PR_0017">17</ref> ; de Lievrio <ref target="#SGGO-PR_0034">34</ref> ; de Mota <ref target="#SGGO-PR_0004">4</ref> ; de S. Maxentio <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0019">19</ref> ; de Turre <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0026">26</ref> ; fr. Lisoii <ref target="#SGGO-PR_0035">35</ref>. Landricus <ref target="#SGGO-PR_0015">15</ref> ; miles <ref target="#SGGO-PR_0010">10</ref> ; Saul <ref target="#SGGO-PR_0033">33</ref> ; vicarius <ref target="#SGGO-PR_0004">4</ref>.</item>
+            <item xml:id="SGGO-PR_rs_101"><rs><hi rend="sc">Hato</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_102"><rs><hi rend="sc">Henricus</hi>, Mauferas</rs> <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_103"><rs><hi rend="sc">Herbertus</hi>, miles</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0015">15</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0027">27</ref> ; Passet <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_104"><rs><hi rend="sc">Hersendis</hi>, ux. Lisoii oppidani de Calvo Monte</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_105"><rs><hi rend="sc">Herveus</hi>, Ambaciacensis</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_106"><rs><hi rend="sc">Hugenus</hi>, de Porta</rs> <ref target="#SGGO-PR_0030">30</ref>.</item>
+            <item xml:id="SGGO-PR_rs_107"><rs><hi rend="sc">Hugo</hi>, Claretis</rs> <ref target="#SGGO-PR_0030">30</ref> ; cordubanarius <ref target="#SGGO-PR_0017">17</ref> ; de Lievrio <ref target="#SGGO-PR_0034">34</ref> ; de Mota <ref target="#SGGO-PR_0004">4</ref> ; de S. Maxentio <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0019">19</ref> ; de Turre <ref target="#SGGO-PR_0006">6</ref>, <ref target="#SGGO-PR_0007">7</ref>, <ref target="#SGGO-PR_0026">26</ref> ; fr. Lisoii <ref target="#SGGO-PR_0035">35</ref>. Landricus <ref target="#SGGO-PR_0015">15</ref> ; miles <ref target="#SGGO-PR_0010">10</ref> ; Saul <ref target="#SGGO-PR_0033">33</ref> ; vicarius <ref target="#SGGO-PR_0004">4</ref>.</item>
           </list>
           <list type="index">
           <head>I</head>
-            <item><rs><hi rend="sc">Isembardus</hi>, Bardo</rs> <ref target="#SGGO-PR_0007">7</ref>.</item>
-            <item><rs><hi rend="sc">Issucia</hi>, fil. Auteni et Tescelinæ</rs> <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0022">22</ref>.</item>
-            <item><rs><hi rend="sc">Iterius</hi>, Liquois</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_108"><rs><hi rend="sc">Isembardus</hi>, Bardo</rs> <ref target="#SGGO-PR_0007">7</ref>.</item>
+            <item xml:id="SGGO-PR_rs_109"><rs><hi rend="sc">Issucia</hi>, fil. Auteni et Tescelinæ</rs> <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0022">22</ref>.</item>
+            <item xml:id="SGGO-PR_rs_110"><rs><hi rend="sc">Iterius</hi>, Liquois</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
           </list>
           <list type="index">
           <head>J</head>
-            <item><rs><hi rend="sc">Jerbertus</hi>, fil. Vidali</rs> <ref target="#SGGO-PR_0020">20</ref>.</item>
-            <item><rs><hi rend="sc">Johannes</hi>, Bota Lupum</rs> <ref target="#SGGO-PR_0020">20</ref> ; clericus <ref target="#SGGO-PR_0034">34</ref> ; de Blancafot <ref target="#SGGO-PR_0024">24</ref> ; diaconus <ref target="#SGGO-PR_0012">12</ref> ; Meschinus <ref target="#SGGO-PR_0023">23</ref>.</item>
+            <item xml:id="SGGO-PR_rs_111"><rs><hi rend="sc">Jerbertus</hi>, fil. Vidali</rs> <ref target="#SGGO-PR_0020">20</ref>.</item>
+            <item xml:id="SGGO-PR_rs_112"><rs><hi rend="sc">Johannes</hi>, Bota Lupum</rs> <ref target="#SGGO-PR_0020">20</ref> ; clericus <ref target="#SGGO-PR_0034">34</ref> ; de Blancafot <ref target="#SGGO-PR_0024">24</ref> ; diaconus <ref target="#SGGO-PR_0012">12</ref> ; Meschinus <ref target="#SGGO-PR_0023">23</ref>.</item>
           </list>
           <list type="index">
           <head>L</head>
-            <item><rs><hi rend="sc">Landricus</hi>, fil. Narberti</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0026">26</ref> ; præses <ref target="#SGGO-PR_0010">10</ref> ; prætor <ref target="#SGGO-PR_0030">30</ref> ; Pulcin <ref target="#SGGO-PR_0024">24</ref>.</item>
-            <item><rs><hi rend="sc">Lisoyus</hi>, oppidanus Calvi Montis</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_113"><rs><hi rend="sc">Landricus</hi>, fil. Narberti</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0026">26</ref> ; præses <ref target="#SGGO-PR_0010">10</ref> ; prætor <ref target="#SGGO-PR_0030">30</ref> ; Pulcin <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_114"><rs><hi rend="sc">Lisoyus</hi>, oppidanus Calvi Montis</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
           </list>
           <list type="index">
           <head>M</head>
-            <item><rs><hi rend="sc">Margotus</hi>, Landricus</rs> <ref target="#SGGO-PR_0010">10</ref> ; Lupellus <ref target="#SGGO-PR_0010">10</ref>.</item>
-            <item><rs><hi rend="sc">Maria</hi>, soror Balduini</rs> <ref target="#SGGO-PR_0018">18</ref>. <persName>Morinus</persName> homo Dodonis <ref target="#SGGO-PR_0026">26</ref>.</item>
+            <item xml:id="SGGO-PR_rs_115"><rs><hi rend="sc">Margotus</hi>, Landricus</rs> <ref target="#SGGO-PR_0010">10</ref> ; Lupellus <ref target="#SGGO-PR_0010">10</ref>.</item>
+            <item xml:id="SGGO-PR_rs_116"><rs><hi rend="sc">Maria</hi>, soror Balduini</rs> <ref target="#SGGO-PR_0018">18</ref>. <persName>Morinus</persName> homo Dodonis <ref target="#SGGO-PR_0026">26</ref>.</item>
           </list>
           <list type="index">
           <head>N</head>
-            <item><rs><hi rend="sc">Narbertus</hi>, miles</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>.</item>
-            <item><rs><hi rend="sc">Nariodus</hi></rs> <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; <persName>Notarii</persName> : Hildebodus <ref target="#SGGO-PR_0001">1</ref>, Nerbertus <ref target="#SGGO-PR_0002">2</ref>.</item>
+            <item xml:id="SGGO-PR_rs_117"><rs><hi rend="sc">Narbertus</hi>, miles</rs> <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0020">20</ref>, <ref target="#SGGO-PR_0022">22</ref>.</item>
+            <item xml:id="SGGO-PR_rs_118"><rs><hi rend="sc">Nariodus</hi></rs> <ref target="#SGGO-PR_0033">33</ref>, <ref target="#SGGO-PR_0034">34</ref> ; <persName>Notarii</persName> : Hildebodus <ref target="#SGGO-PR_0001">1</ref>, Nerbertus <ref target="#SGGO-PR_0002">2</ref>.</item>
           </list>
           <list type="index">
           <head>O</head>
-            <item><rs><hi rend="sc">Odo</hi>, Brise Haste</rs> <ref target="#SGGO-PR_0035">35</ref> ; clericus <ref target="#SGGO-PR_0018">18</ref>.</item>
+            <item xml:id="SGGO-PR_rs_119"><rs><hi rend="sc">Odo</hi>, Brise Haste</rs> <ref target="#SGGO-PR_0035">35</ref> ; clericus <ref target="#SGGO-PR_0018">18</ref>.</item>
           </list>
           <list type="index">
           <head>P</head>
-            <item><rs><hi rend="sc">Paganus</hi>, fil. Adelelmi</rs> <ref target="#SGGO-PR_0019">19</ref> ; marescallus <ref target="#SGGO-PR_0011">11</ref>.</item>
-            <item><rs><hi rend="sc">Papa</hi>, Adrianus</rs> <ref target="#SGGO-PR_0013">13</ref> ; Paschalis <ref target="#SGGO-PR_0012">12</ref>.</item>
-            <item><rs><hi rend="sc">Petrus</hi>, clericus</rs> <ref target="#SGGO-PR_0009">9</ref>.</item>
+            <item xml:id="SGGO-PR_rs_120"><rs><hi rend="sc">Paganus</hi>, fil. Adelelmi</rs> <ref target="#SGGO-PR_0019">19</ref> ; marescallus <ref target="#SGGO-PR_0011">11</ref>.</item>
+            <item xml:id="SGGO-PR_rs_121"><rs><hi rend="sc">Papa</hi>, Adrianus</rs> <ref target="#SGGO-PR_0013">13</ref> ; Paschalis <ref target="#SGGO-PR_0012">12</ref>.</item>
+            <item xml:id="SGGO-PR_rs_122"><rs><hi rend="sc">Petrus</hi>, clericus</rs> <ref target="#SGGO-PR_0009">9</ref>.</item>
           </list>
           <list type="index">
           <head>R</head>
-            <item><rs><hi rend="sc">Radulfus</hi>, archid</rs> <ref target="#SGGO-PR_0004">4</ref> ; avunculus Roberti <ref target="#SGGO-PR_0016">16</ref> ; miles <ref target="#SGGO-PR_0026">26</ref> ; nepos Fulconis <ref target="#SGGO-PR_0017">17</ref>.</item>
-            <item><rs><hi rend="sc">Raginaldus</hi>, sacerdos</rs> <ref target="#SGGO-PR_0035">35</ref> ; vicarius <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Rainaldus</hi>, Bertois</rs> <ref target="#SGGO-PR_0017">17</ref> ; de Leone <ref target="#SGGO-PR_0034">34</ref> ; Paganus <ref target="#SGGO-PR_0008">8</ref> ; sacerdos <ref target="#SGGO-PR_0030">30</ref>, <ref target="#SGGO-PR_0031">31</ref>.</item>
-            <item><rs><hi rend="sc">Rainardus</hi>, de Arcola</rs> <ref target="#SGGO-PR_0024">24</ref> ; fil. Hugonis <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0025">25</ref> ; fil. Stephani <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>.</item>
-            <item><rs><hi rend="sc">Richildis</hi>, ux. Balduini</rs> <ref target="#SGGO-PR_0025">25</ref>.</item>
-            <item><rs><hi rend="sc">Robertus</hi>, Aglet</rs> <ref target="#SGGO-PR_0019">19</ref> ; Brito <ref target="#SGGO-PR_0019">19</ref> ; de Monesto <ref target="#SGGO-PR_0034">34</ref> ; de Valenaco <ref target="#SGGO-PR_0004">4</ref> ; fil. Berengerii <ref target="#SGGO-PR_0008">8</ref> ; fr. Johannis Meschini <ref target="#SGGO-PR_0023">23</ref> ; major <ref target="#SGGO-PR_0034">34</ref> ; presbiter <ref target="#SGGO-PR_0028">28</ref> ; Sarrafles <ref target="#SGGO-PR_0033">33</ref>.</item>
-            <item><rs><hi rend="sc">Rogerius</hi>, fr. archiepiscopi</rs> <ref target="#SGGO-PR_0008">8</ref> ; Episcopi <ref target="#SGGO-PR_0006">6</ref>.</item>
+            <item xml:id="SGGO-PR_rs_123"><rs><hi rend="sc">Radulfus</hi>, archid</rs> <ref target="#SGGO-PR_0004">4</ref> ; avunculus Roberti <ref target="#SGGO-PR_0016">16</ref> ; miles <ref target="#SGGO-PR_0026">26</ref> ; nepos Fulconis <ref target="#SGGO-PR_0017">17</ref>.</item>
+            <item xml:id="SGGO-PR_rs_124"><rs><hi rend="sc">Raginaldus</hi>, sacerdos</rs> <ref target="#SGGO-PR_0035">35</ref> ; vicarius <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_125"><rs><hi rend="sc">Rainaldus</hi>, Bertois</rs> <ref target="#SGGO-PR_0017">17</ref> ; de Leone <ref target="#SGGO-PR_0034">34</ref> ; Paganus <ref target="#SGGO-PR_0008">8</ref> ; sacerdos <ref target="#SGGO-PR_0030">30</ref>, <ref target="#SGGO-PR_0031">31</ref>.</item>
+            <item xml:id="SGGO-PR_rs_126"><rs><hi rend="sc">Rainardus</hi>, de Arcola</rs> <ref target="#SGGO-PR_0024">24</ref> ; fil. Hugonis <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0025">25</ref> ; fil. Stephani <ref target="#SGGO-PR_0010">10</ref>, <ref target="#SGGO-PR_0016">16</ref>, <ref target="#SGGO-PR_0018">18</ref>, <ref target="#SGGO-PR_0023">23</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref>.</item>
+            <item xml:id="SGGO-PR_rs_127"><rs><hi rend="sc">Richildis</hi>, ux. Balduini</rs> <ref target="#SGGO-PR_0025">25</ref>.</item>
+            <item xml:id="SGGO-PR_rs_128"><rs><hi rend="sc">Robertus</hi>, Aglet</rs> <ref target="#SGGO-PR_0019">19</ref> ; Brito <ref target="#SGGO-PR_0019">19</ref> ; de Monesto <ref target="#SGGO-PR_0034">34</ref> ; de Valenaco <ref target="#SGGO-PR_0004">4</ref> ; fil. Berengerii <ref target="#SGGO-PR_0008">8</ref> ; fr. Johannis Meschini <ref target="#SGGO-PR_0023">23</ref> ; major <ref target="#SGGO-PR_0034">34</ref> ; presbiter <ref target="#SGGO-PR_0028">28</ref> ; Sarrafles <ref target="#SGGO-PR_0033">33</ref>.</item>
+            <item xml:id="SGGO-PR_rs_129"><rs><hi rend="sc">Rogerius</hi>, fr. archiepiscopi</rs> <ref target="#SGGO-PR_0008">8</ref> ; Episcopi <ref target="#SGGO-PR_0006">6</ref>.</item>
           </list>
           <list type="index">
           <head>S</head>
-            <item><rs><hi rend="sc">Sanctæ sedis,</hi>, legatus, bibliothecarius</rs> <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>, <ref target="#SGGO-PR_0014">14</ref>.</item>
-            <item><rs><hi rend="sc">Servi</hi></rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
-            <item><rs><hi rend="sc">Stephanus</hi>, Crassa Curta</rs> <ref target="#SGGO-PR_0004">4</ref> ; de Maiduno <ref target="#SGGO-PR_0004">4</ref>.</item>
-            <item><rs><hi rend="sc">Sulpicius</hi>, fil. Lisoii</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_130"><rs><hi rend="sc">Sanctæ sedis,</hi>, legatus, bibliothecarius</rs> <ref target="#SGGO-PR_0012">12</ref>, <ref target="#SGGO-PR_0013">13</ref>, <ref target="#SGGO-PR_0014">14</ref>.</item>
+            <item xml:id="SGGO-PR_rs_131"><rs><hi rend="sc">Servi</hi></rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_132"><rs><hi rend="sc">Stephanus</hi>, Crassa Curta</rs> <ref target="#SGGO-PR_0004">4</ref> ; de Maiduno <ref target="#SGGO-PR_0004">4</ref>.</item>
+            <item xml:id="SGGO-PR_rs_133"><rs><hi rend="sc">Sulpicius</hi>, fil. Lisoii</rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
           </list>
           <list type="index">
           <head>T</head>
-            <item><rs><hi rend="sc">Teoinus</hi>, de Blanoil</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
-            <item><rs><hi rend="sc">Tescelina</hi>, ux. Fulconis fil. Gandeberti</rs> <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0023">23</ref>.</item>
-            <item><rs><hi rend="sc">Timerius</hi>, fil. Hugonis Claretis</rs> <ref target="#SGGO-PR_0030">30</ref>.</item>
+            <item xml:id="SGGO-PR_rs_134"><rs><hi rend="sc">Teoinus</hi>, de Blanoil</rs> <ref target="#SGGO-PR_0019">19</ref>.</item>
+            <item xml:id="SGGO-PR_rs_135"><rs><hi rend="sc">Tescelina</hi>, ux. Fulconis fil. Gandeberti</rs> <ref target="#SGGO-PR_0021">21</ref>, <ref target="#SGGO-PR_0022">22</ref>, <ref target="#SGGO-PR_0023">23</ref>.</item>
+            <item xml:id="SGGO-PR_rs_136"><rs><hi rend="sc">Timerius</hi>, fil. Hugonis Claretis</rs> <ref target="#SGGO-PR_0030">30</ref>.</item>
           </list>
           <list type="index">
           <head>V</head>
-            <item><rs><hi rend="sc">Vahlinus</hi></rs> ; <rs><hi rend="sc">Vaslet</hi></rs>, de Villa Nova <ref target="#SGGO-PR_0020">20</ref> ; Forredus, Furet, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref> ; Frater Parvus <ref target="#SGGO-PR_0018">18</ref> ; præses <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>.</item>
+            <item xml:id="SGGO-PR_rs_137"><rs><hi rend="sc">Vahlinus</hi></rs> ; <rs><hi rend="sc">Vaslet</hi></rs>, de Villa Nova <ref target="#SGGO-PR_0020">20</ref> ; Forredus, Furet, <ref target="#SGGO-PR_0014">14</ref>, <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>, <ref target="#SGGO-PR_0025">25</ref> ; Frater Parvus <ref target="#SGGO-PR_0018">18</ref> ; præses <ref target="#SGGO-PR_0019">19</ref>, <ref target="#SGGO-PR_0024">24</ref>.</item>
           </list>
           <list type="index">
           <head>W</head>
-            <item><rs><hi rend="sc">Wandebertus</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Watho</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
-            <item><rs><hi rend="sc">Willelmus</hi>, ; v. Guillelmus</rs></item>
+            <item xml:id="SGGO-PR_rs_138"><rs><hi rend="sc">Wandebertus</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_139"><rs><hi rend="sc">Watho</hi></rs> <ref target="#SGGO-PR_0035">35</ref>.</item>
+            <item xml:id="SGGO-PR_rs_140"><rs><hi rend="sc">Willelmus</hi>, ; v. Guillelmus</rs></item>
           </list>
         </div>
         <!-- (de fait à l'électronique)
