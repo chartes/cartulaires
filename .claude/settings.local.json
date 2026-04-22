@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const d=require\\('./src/data.json'\\); console.log\\('achats:', d.achats?.length, 'ventes:', d.ventes?.length, 'priceHistory keys:', Object.keys\\(d.priceHistory||{}\\).length\\); const ph=d.priceHistory||{}; const k=Object.keys\\(ph\\)[0]; console.log\\('sample history:', JSON.stringify\\(ph[k]?.slice\\(0,3\\)\\)\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5174)"
+    ]
+  }
+}
