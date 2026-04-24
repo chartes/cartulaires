@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP-AB">
+
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -727,7 +726,7 @@
   <text xml:id="VNDP-AB_0022" n="22" subtype="article">
     <front>
       <docDate>
-        <date>Sans date<note type="note" n="1" target="#n1" xml:id="a1">
+        <date>Sans date<note n="1" target="#n1" xml:id="a1">
           <p>Une page blanche a été laissée au fol. 17 et v° pour la copie de cette charte, qui n’a pas été transcrite dans le cartulaire.</p>
         </note>.</date>
       </docDate>
@@ -1169,7 +1168,7 @@
       </index>
       <head>XLII.</head>
       <argument>
-        <p>Carta officialis Belvacensis de novem solidis annuis in festo beati Martini hyemalis, quos Matheus de Torculari et Johannes frater ejus debent nobis de quadam vinea in territorio de <pb n="35"/>Noitel, videlicet de Parai. — Ista carta est cum cartis de Praeriis<note type="note" n="1" target="#n1_2" xml:id="a1_2">
+        <p>Carta officialis Belvacensis de novem solidis annuis in festo beati Martini hyemalis, quos Matheus de Torculari et Johannes frater ejus debent nobis de quadam vinea in territorio de <pb n="35"/>Noitel, videlicet de Parai. — Ista carta est cum cartis de Praeriis<note n="1" target="#n1_2" xml:id="a1_2">
           <p>Ce sommaire est d’une autre main que les précédents et la charte qui suit a été aussi transcrite par une main postérieure.</p>
         </note>.</p>
       </argument><div type="tradition"><listWit type="édition"><witness n="a">Henri <hi rend="sc">Omont</hi>, <title>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle)</title>, Paris, 1904, p. 34.</witness></listWit></div>
@@ -1192,7 +1191,7 @@
   <text xml:id="VNDP-AB_0043" n="43" subtype="article">
     <front>
       <docDate>
-        <date>Sans date<note type="note" n="1" target="#n1_3" xml:id="a1_3">
+        <date>Sans date<note n="1" target="#n1_3" xml:id="a1_3">
           <p>Cette charte n’a pas été transcrite dans le cartulaire, et le sommaire est aussi d’une autre main que les précédents.</p>
         </note>.</date>
       </docDate>
