@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMV-AB">
+
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMV-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -609,13 +608,13 @@
                   profuturum esse credimus.</s>
                 <s>Notum ergo esse volumus cunctis fidelibus sancte Dei Ecclesie et nostris tam
                   presentibus quam et futuris.</s>
-                <s>Quia comes venerabilis pariter que markio<note type="note" target="#p1_fn1">Marcæ vel marchæ, seu Provinciæ limitaneæ præfectus. <hi rend="sc">Du Cange</hi>, v<hi rend="sup">e</hi> Marchio.</note> et
+                <s>Quia comes venerabilis pariter que markio<note target="#p1_fn1">Marcæ vel marchæ, seu Provinciæ limitaneæ præfectus. <hi rend="sc">Du Cange</hi>, v<hi rend="sup">e</hi> Marchio.</note> et
                     <rs type="person">abbas monasterii <placeName>sancte Marie
                       Maurinianevallis</placeName>, <persName>Robertus</persName></rs>, nostram
                   adiens serenitatem, expetiit quoddam renovare preceptum supra res fratrum atque
                   sanctimonalium supra dicti cenobii.</s>
                 <s>Contigit enim illud cenobium igne cremari, in quo exusta sunt precepta que,
-                  virorum optimorum (consilio<note type="note" target="#p1_fn2">Ce mot a probablement été omis.</note>), <rs type="person">avus noster <persName>Karolus</persName></rs> de rebus eorumdem fratrum ac
+                  virorum optimorum (consilio<note target="#p1_fn2">Ce mot a probablement été omis.</note>), <rs type="person">avus noster <persName>Karolus</persName></rs> de rebus eorumdem fratrum ac
                   sanctimonialium fecerat per deprecationem bone memorie avie nostre
                     <persName>Irmentrudis</persName> imperatricis.</s>
                 <s>Deputavit itaque imperator <persName>Karolus</persName> ob suam salutem et sue
@@ -627,12 +626,12 @@
                 <s>Que res subter sunt notate.</s>
                 <s>In pago <placeName>Silvanettense</placeName>, villam eis largitus est dictam
                     <placeName>Bettoncortem</placeName> in qua <pb n="2"/> mansus est dominicatus ad
-                  quem respiciunt <num>viginti septem</num> mansi et ecclesia, farinarius<note type="note" target="#p2_fn1">Vel farinarium — <hi rend="i">moulin</hi> — molendinum ubi ex
-                frumento molito farina conficitur (<hi rend="i">Gloss.,</hi> D. C.).</note> camba<note type="note" target="#p2_fn2">Camba vel brasseria (<hi rend="i">Cambe à Chervoise</hi>) (D.
+                  quem respiciunt <num>viginti septem</num> mansi et ecclesia, farinarius<note target="#p2_fn1">Vel farinarium — <hi rend="i">moulin</hi> — molendinum ubi ex
+                frumento molito farina conficitur (<hi rend="i">Gloss.,</hi> D. C.).</note> camba<note target="#p2_fn2">Camba vel brasseria (<hi rend="i">Cambe à Chervoise</hi>) (D.
                 C.).</note> silva
-                    minuta<note type="note" target="#p2_fn3">Sive cædua, <hi rend="i">bois taillis</hi> (D. C.).</note>.</s>
+                    minuta<note target="#p2_fn3">Sive cædua, <hi rend="i">bois taillis</hi> (D. C.).</note>.</s>
                 <s>In eodem item pago, in villa <placeName>Roures</placeName> mansum unum ad
-                    vacariam<note type="note" target="#p2_fn4">Vacaria, prædium vaccarum numero alendo idoneum (D. C.).</note> habendam.</s>
+                    vacariam<note target="#p2_fn4">Vacaria, prædium vaccarum numero alendo idoneum (D. C.).</note> habendam.</s>
                 <s>Item concessit omnem tertiam partem silvarum que pertinent ad villam
                     <placeName>Plaieleyum</placeName> cum usibus earum.</s>
                 <s>In pago denique <placeName>Meldensi</placeName> supra Matronam flumen in villa,
@@ -642,12 +641,12 @@
                   viginti duobus cum camba, et ecclesiam cum capella, silve due.</s>
                 <s>In pago etiam <placeName>Vermandorum</placeName>, delegavit villam eis vocabulo
                     <placeName>Fonces</placeName> sitam super flumen
-                    <placeName>Engon</placeName><note type="note" target="#p2_fn5">L'Ingon, petite rivière qui se jette dans la Somme à
+                    <placeName>Engon</placeName><note target="#p2_fn5">L'Ingon, petite rivière qui se jette dans la Somme à
                 Rouy-le-Grand.</note> ; et est ibi
                   mansus indominicatus cum mansis<num> viginti quatuor</num> et dimidio, Ecclesia,
                   camba, silve.</s>
                 <s>In pago <placeName>Attrebatensi</placeName> prebuit supra flumen
-                    <placeName>Sensadam</placeName><note type="note" target="#p2_fn6">La Sensée. <hi rend="i">Ducenlis</hi> paraît être Douchy (Nord),
+                    <placeName>Sensadam</placeName><note target="#p2_fn6">La Sensée. <hi rend="i">Ducenlis</hi> paraît être Douchy (Nord),
                 nommé dans le Dictionnaire manuscrit de Guilmot : <hi rend="i">Dulcedum.</hi></note> villam
                     <placeName>Ducentis</placeName> dictam in quo habentur mansi vigenti novem et
                   dimidius, Ecclesia, farinarii duo, cambe due, silva Preterea
@@ -656,7 +655,7 @@
                       <persName>Karlomanus</persName></rs>, qui noster fuit frater, sepe dicte
                   congregationi in pago <placeName>Silvanectensi</placeName> dedit de jure sue
                   proprietatis fiscum qui vocatur <placeName>Frasnedus</placeName> et est situs
-                  supra flumen <placeName>Altona</placeName><note type="note" target="#p2_fn7">L'Autonne.</note>, in
+                  supra flumen <placeName>Altona</placeName><note target="#p2_fn7">L'Autonne.</note>, in
                   quo habentur mansi septuaginta, in hiis locis conjacentes, in villa
                     <placeName>Fenili</placeName>, in villa <placeName>Rodomo</placeName>, in villa
                     <placeName>Vastensense</placeName> vicino in <placeName>Fallercas</placeName>,
@@ -666,7 +665,7 @@
                 <s>Sunt ibi silve tres, ecclesia cum capella, farinarii tres.</s>
                 <s>De hiis igitur rebus superius comprehensis, ut nullus hominum presentium seu
                   futurorum inquietudinem refragationem, prejudicium, violentiam, subreptionem,
-                  subtractionem, diminutationem<note type="note" target="#p2_fn8">Ce mot n'a pas été relevé par <hi rend="sc">Du Cange</hi> mais
+                  subtractionem, diminutationem<note target="#p2_fn8">Ce mot n'a pas été relevé par <hi rend="sc">Du Cange</hi> mais
                 provient évidemment de <hi rend="i">diminuere.</hi></note>, divisionem
                   temptet facere prefate congregationi, hoc nostre auctoritatis preceptum fieri
                   eidemque dari jussimus per quod res que imperator <rs type="person">avus noster
@@ -678,7 +677,7 @@
                     <placeName>Silvanectensi</placeName>.</s>
                 <s>Confirmamus eis in villa <placeName>Almanorum</placeName> septem mansos et
                   dimidium cum camba et molendino, quas res quidam homo nomine
-                    <persName>Abba</persName><note type="note" target="#p2_fn9">Origine du nom d'Abbécourt ?</note> dedit memorate
+                    <persName>Abba</persName><note target="#p2_fn9">Origine du nom d'Abbécourt ?</note> dedit memorate
                   congregationi ; et postmodum rex <persName>Odo</persName> eidem confirmando
                   consensit.</s>
                 <s>Ut igitur hujus precepti auctoritas per futura annorum tempora firmiter
@@ -687,12 +686,12 @@
               <p>
                 <s>Datum <date><num>XIII</num> Kalendas februarii indictione octava, anno vigesimo
                     octavo regnante <rs type="person"><persName>Karolo</persName> rege</rs>
-                    glorioso</date>, redintegrante<note type="note" target="#p2_fn10">Ce mot qui se rencontre fréquemment dans les chartes du roi
+                    glorioso</date>, redintegrante<note target="#p2_fn10">Ce mot qui se rencontre fréquemment dans les chartes du roi
                 Charles le Simple, signifie l'année de son retour sur le trône après la mort du roi
                 Eudes, ce qui, à partir de cette époque (an 898), donne l'année 920. Si au
                 contraire, il s'agit du couronnement de Charles en 893 : il y eut vingt-huit ans,
                 soit encore 920 (voir l'<hi rend="i">Art de vérifier les dates).</hi></note>.</s>
-                <s><num>XXIII</num> largiore vero hereditate indepta <num>VIIII</num><note type="note" target="#p2_fn11">Ces neuf ans représentent le laps de temps depuis que Charles
+                <s><num>XXIII</num> largiore vero hereditate indepta <num>VIIII</num><note target="#p2_fn11">Ces neuf ans représentent le laps de temps depuis que Charles
                 avait repris son héritage en Lorraine.</note> Actum castro <placeName>Suessionis</placeName>
                   feliciter et congrue.</s>
                 <s>Amen.</s>
@@ -736,7 +735,7 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head>Lettres de l'evesque de Amiens pour l'autologe<note type="note" target="#p3_fn1">Attalagium.</note>
+            <head>Lettres de l'evesque de Amiens pour l'autologe<note target="#p3_fn1">Attalagium.</note>
               de Parviller</head>
             <argument>
               <p>Enguerrand, évêque d'Amiens, confirme au couvent de Morienval la possession de
@@ -780,7 +779,7 @@
                   progeniem et ultra, in testimonium ecclesie quasi vox viva littera loqueretur ad
                   eorum igitur immutationem, Ego <rs type="person"><persName>Ingeranus</persName>
                     <seg type="theo">dei gratia</seg>
-                    <placeName>Ambianensis</placeName> ecclesie humilis Episcopus<note type="note" target="#p3_fn2">Sous le nom d'Ingelram, la <hi rend="i">Statistique
+                    <placeName>Ambianensis</placeName> ecclesie humilis Episcopus<note target="#p3_fn2">Sous le nom d'Ingelram, la <hi rend="i">Statistique
                   religieuse</hi> (Migne) porte son avénement à 1115 seulement (1115-9 nov.
                 1127)</note></rs> consimilem quorum libet avaritiam supra hujus rei
                   negocio in quo possum preveniens, altare de <placeName>Parvillari</placeName> cum
@@ -794,9 +793,9 @@
                   sigilli mei annotatione confirmo.</s>
                 <s>Actum est hoc <date>anno ab incarnatione domini nostri <persName>Jesu
                       Christi</persName> millesimo centesimo undecimo Episcopatus autem domini
-                      <persName>Ingeranni</persName> secundo</date>, regnante <rs type="person"><persName>Francorum</persName> rege <persName>Lugdovico</persName><note type="note" target="#p3_fn3">Louis XI.</note></rs>
+                      <persName>Ingeranni</persName> secundo</date>, regnante <rs type="person"><persName>Francorum</persName> rege <persName>Lugdovico</persName><note target="#p3_fn3">Louis XI.</note></rs>
                   <rs type="person">consule <placeName>Ambianensi</placeName>
-                    <persName>Karolo</persName><note type="note" target="#p3_fn4">Charles, comte d'Amiens.</note></rs>
+                    <persName>Karolo</persName><note target="#p3_fn4">Charles, comte d'Amiens.</note></rs>
                   feliciter.</s>
                 <s>Amen.</s>
               </p>
@@ -905,7 +904,7 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head>Augmentation victus<note type="note" target="#p4_fn1">Cette page a été écrite avec une encre qui s'est écaillée, et
+            <head>Augmentation victus<note target="#p4_fn1">Cette page a été écrite avec une encre qui s'est écaillée, et
                 laisse inconnu un grand nombre de noms. — P. O.</note>.</head>
             <argument>
               <p>Écrit sur une feuille de parchemin restée en blanc, dans le manuscrit de
@@ -1164,7 +1163,7 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head>Lettres de l'évesque de Noion sur la confirmation de la cure de Oysin.<note type="note" target="#p6_fn1">Le mot a été certainement transformé par le copiste ; c'est
+            <head>Lettres de l'évesque de Noion sur la confirmation de la cure de Oysin.<note target="#p6_fn1">Le mot a été certainement transformé par le copiste ; c'est
                 oisni qui figure dans l'acte précédent.</note>.</head>
             <argument>
               <p>Simon de Vermandois, évêque de Noyon, confirme la donation de l'autel d'Oisni aux
@@ -1644,7 +1643,7 @@
                   comitis <persName>Radulfi</persName> rationabili assensu in manu nostra retinuinus
                   quod de nemore ad usus nostros ad grangias nostras faciendas et reficiendas
                   capiemus in vivario quidem bis in anno in <date>Assumptione</date> et
-                    <date>Nativitate ejusdem Virginis Marie</date> piscari ad generale faciendum<note type="note" target="#p10_fn1"><hi rend="i">Ad generale faciendum</hi>, désigne la
+                    <date>Nativitate ejusdem Virginis Marie</date> piscari ad generale faciendum<note target="#p10_fn1"><hi rend="i">Ad generale faciendum</hi>, désigne la
                 distribution d'une portion de poisson à chaque moine ou autre mets supplémentaire :
                 un extra.</note> in festo piscis faciemus ut firmius mentibus
                   succedentium infigatur subscribimus.</s>
@@ -1807,7 +1806,7 @@
                 <s>Hujus prenominati dotalitii pactione manu propria per fidem suam confirmavit
                   atque inde fidejussor extitit <rs type="person"><persName>Claro</persName> frater
                     meus</rs> ; ex parte quoque mea fidejussores et testes hujus dotalitii sunt isti
-                  : <persName>Johannes</persName> et <persName>Thomas</persName> avunculi mei, <rs type="person"><persName>Guido</persName> forestarius</rs>, <rs type="person"><persName>Bartholomeus</persName> pocionarius<note type="note" target="#p11_fn1">
+                  : <persName>Johannes</persName> et <persName>Thomas</persName> avunculi mei, <rs type="person"><persName>Guido</persName> forestarius</rs>, <rs type="person"><persName>Bartholomeus</persName> pocionarius<note target="#p11_fn1">
                 <hi rend="i">Id est Tabernarius.</hi>
               </note></rs>, <persName>Petrus Carta</persName>,
                     <persName>Johannes Bigotus</persName>, <rs type="person"><persName>Richardus</persName> decanus
@@ -2407,8 +2406,8 @@
                     <placeName>Jauzy</placeName> ad serendum tres modios
                     <placeName>Suessionensis</placeName> mensure capacem et preterea
                     <persName>Odonem le Charon</persName> et <rs type="person"><persName>Helizabeth</persName> uxorem <persName>Galteri</persName></rs> et
-                    dicam<note type="note" target="#p16_fn1"><hi rend="i">Dieu</hi>, taille. (<hi rend="sc">Du
-                Cange</hi>)</note> ipsis et domui prius indicam<note type="note" target="#p16_fn2">Lisez <hi rend="i">indictam</hi>.</note> absolute et libere eidem ecclesie concessi.</s>
+                    dicam<note target="#p16_fn1"><hi rend="i">Dieu</hi>, taille. (<hi rend="sc">Du
+                Cange</hi>)</note> ipsis et domui prius indicam<note target="#p16_fn2">Lisez <hi rend="i">indictam</hi>.</note> absolute et libere eidem ecclesie concessi.</s>
                 <s>Quod ut ratum sit sigilli mei munimine confirmavi.</s>
                 <s>Actum est hoc <date>millesimo centesimo nonagesimo secundo</date> in ecclesia
                     <placeName>beati Johannis de Silva</placeName>.</s>
@@ -2601,7 +2600,7 @@
                     <placeName>beate Marie Mornievallis</placeName> diu fecerant penitentes eidem
                   ecclesie duos modios et <num>sex</num> minas frumenti et avene quos in horreo de
                     <placeName>Bettencourt</placeName> annuatim recipiebant <num>36</num> soulz
-                    despotez<note type="note" target="#p18_fn1">De potestate ?</note>, quos apud
+                    despotez<note target="#p18_fn1">De potestate ?</note>, quos apud
                     <placeName>Bethencourt</placeName> habebant, uxoribus eorum, presentibus et
                   pueris et heredibus et hoc benigne concedentibus, in elemosinam imperpetuum
                   concesserunt.</s>
@@ -2771,12 +2770,12 @@
                     <placeName>Ambianensis</placeName> episcopus</rs> salutem in domino.</s>
                 <s>Cum nuper ecclesia parrochiali de <placeName>Parviller</placeName> nostre
                   diocesis, per mortem domini <persName>Johannis dicti de Ponte
-                    Episcopi</persName><note type="note" target="#p20_fn1">Jean, dit de Pont-l'Évêque, curé de Parvillers.</note> quondam ejusdem
+                    Episcopi</persName><note target="#p20_fn1">Jean, dit de Pont-l'Évêque, curé de Parvillers.</note> quondam ejusdem
                   parrochialis ecclesie curati, vacante, religiosa mulier abbatissa monasterii
                     <placeName>beate Marie de Morgnevalle</placeName>
                   <placeName>Suessionensis</placeName> diocesis ad dictam parrochialem ecclesiam ad
                   ejusdem abbatisse presentationem notorie spectantem, nobis <persName>Joannem
-                    Marlart de Franseriis</persName><note type="note" target="#p20_fn2">Francières, nom actuel.</note> clericum
+                    Marlart de Franseriis</persName><note target="#p20_fn2">Francières, nom actuel.</note> clericum
                   presentasset, Et nos, non obstante presentatione predicta ex parte dicte abbatisse
                   nobis pro dicto <persName>Johanne</persName> facta dilecto <rs type="person">capellano nostro <persName>Symoni de Roboreto</persName> presbitero</rs> dictam
                   parrochialem ecclesiam contulissemus et ipsum in eadem de facto instituissemus
@@ -2935,11 +2934,11 @@
                   perpetuo possidendam.</s>
                 <s>Et <rs type="person"><persName>Berta</persName> abbatissa</rs> totusque ejusdem
                   ecclesie conventus quidquid in parochiali territorio de
-                    <placeName>Feniex</placeName><note type="note" target="#p21_fn1">Feigneux, nom actuel.</note> seu aliis
+                    <placeName>Feniex</placeName><note target="#p21_fn1">Feigneux, nom actuel.</note> seu aliis
                   ibidem adjacentibus territoriis habebant usque ad
-                    <placeName>Holdrival</placeName><note type="note" target="#p21_fn2">Haudrival, ferme dépendant de Feigneux.</note> ecclesie
+                    <placeName>Holdrival</placeName><note target="#p21_fn2">Haudrival, ferme dépendant de Feigneux.</note> ecclesie
                   nostre ad censum perpetuo possidendam concesserunt eo scilicet tenore quod nobis
-                  duos modios id est duodecim sestarios<note type="note" target="#p21_fn3">Le muid était, on le voit, de six setiers.</note>
+                  duos modios id est duodecim sestarios<note target="#p21_fn3">Le muid était, on le voit, de six setiers.</note>
                   mediocris annone et unum modium id est <num>sex</num> sestarios avene <date>ad
                     festum sancti Martini</date> in horreo de <placeName>Holdrival</placeName> et ad
                     mensu<pb n="22"/>ram granarii sui de <placeName>Morneval</placeName> annuatim
@@ -2948,7 +2947,7 @@
                 <s>Sunt autem hec mete quibus decimationes nostre a decimationibus prefate ecclesie
                   separantur.</s>
                 <s>Prima meta est fixa supra viam prope aquam <placeName>Autone</placeName> retro
-                  Pontem rotondum<note type="note" target="#p22_fn1">Pondron.</note>.</s>
+                  Pontem rotondum<note target="#p22_fn1">Pondron.</note>.</s>
                 <s>Secunda est ad caput de <placeName>Braella</placeName> que dividit terras
                     <placeName>beate Marie de Morgneval</placeName>, et <placeName>sancti
                     Arnulfi</placeName>.</s>
@@ -2967,7 +2966,7 @@
                   sicut terra domini <persName>Frecheri</persName> vadit usque ad metam que est
                   deforis rubum <placeName>sancte Genovefe</placeName> et ab ista meta tota cresta
                   montis usque ad monasterium de <placeName>Bourgini</placeName> et a monasterio per
-                  deforis unicam<note type="note" target="#p22_fn2">(?)</note>
+                  deforis unicam<note target="#p22_fn2">(?)</note>
                   <persName>Baldivini</persName> nigri sicut recte itur ad fontem
                     <persName>Wigeri</persName> et a fonte toto rivulo usque ad aquam
                     <placeName>Autonne</placeName> et ab ipsa aqua usque ad pontem de
@@ -2980,7 +2979,7 @@
                   ecclesia quicquid ut dictum est infra metas usque ad
                     <placeName>Holdrival</placeName> decimationis habebat nobis concessit
                   possidendum acceptis <num>viginti</num> arpentis in monte jacentibus.</s>
-                <s>Inter Pontem de <placeName>Roont</placeName> et pedem juratum<note type="note" target="#p22_fn3">Le pié juré, probablement la limite convenue.</note> infra metas terminatas in quibus abbatissa decimam retinet
+                <s>Inter Pontem de <placeName>Roont</placeName> et pedem juratum<note target="#p22_fn3">Le pié juré, probablement la limite convenue.</note> infra metas terminatas in quibus abbatissa decimam retinet
                   cum suo terragio eorumdem arpentorum tenuit <persName>Petrus Romandus</persName>
                   tres arpentos.</s>
                 <s><persName>Petrus de Mortuofonte</persName> tres.</s>
@@ -3156,9 +3155,9 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Sciant omnes quod ego <persName>Richardus de Vernon</persName><note type="note" target="#p24_fn1">? (Eure).</note> donavi deo et <placeName>sancte Marie de
+                <s>Sciant omnes quod ego <persName>Richardus de Vernon</persName><note target="#p24_fn1">? (Eure).</note> donavi deo et <placeName>sancte Marie de
                     Morgnevale</placeName>
-                  <num>viginti</num> denarios quos ego habebam in Plaituris<note type="note" target="#p24_fn2">Plaidura (<hi rend="sc">Du Cange</hi>). Locus idoneus ad
+                  <num>viginti</num> denarios quos ego habebam in Plaituris<note target="#p24_fn2">Plaidura (<hi rend="sc">Du Cange</hi>). Locus idoneus ad
                 ædificandum.</note> de <placeName>Plaileyo</placeName> assensu et consilio <rs type="person"><persName>Luxie</persName> uxoris mee</rs>, et quoniam hoc volo
                   esse ratum et firmum, munimine sigilli mei confirmavi.</s>
                 <s>Anno gratie millesimo ducentesimo decimo.</s>
@@ -3514,11 +3513,11 @@
                 <s>Ego <rs type="person"><persName>Johannes Li bogres</persName> Miles</rs>, <rs type="person"><persName>Ermengardes</persName> uxor ejus</rs> et <rs type="person"><persName>Nevelo</persName> eorumdem filius primogenitus</rs>.</s>
                 <s>Notum facimus universis presentes litteras inspecturis quod <persName>Theobaldus
                     Rosel de Morgneval</persName> et <rs type="person"><persName>Berta</persName>
-                    uxor ejus</rs> et eorumdem filii, videlicet <rs type="person"><persName>Theobaldus Rosel</persName> primo genitus</rs> et <rs type="person">dominus <persName>Hugo</persName> Presbiter</rs> et alii Liberi<note type="note" target="#p26_fn1">Liberi, Rustici, manentes non Nobiles.</note> dederunt et concesserunt in puram et perpetuam elemosinam
+                    uxor ejus</rs> et eorumdem filii, videlicet <rs type="person"><persName>Theobaldus Rosel</persName> primo genitus</rs> et <rs type="person">dominus <persName>Hugo</persName> Presbiter</rs> et alii Liberi<note target="#p26_fn1">Liberi, Rustici, manentes non Nobiles.</note> dederunt et concesserunt in puram et perpetuam elemosinam
                     <placeName>beate Marie de Morgneval</placeName> et sanctimonialibus ibidem deo
                   servientibus totius decime medietatem quam dictus <persName>Theobaldus</persName>
                   et <rs type="person"><persName>Ricardus</persName> quondam frater suus</rs>
-                  habebant apud <placeName>Roissi</placeName><note type="note" target="#p26_fn2">Russy-Montigny, canton de Crépy (Oise).</note>
+                  habebant apud <placeName>Roissi</placeName><note target="#p26_fn2">Russy-Montigny, canton de Crépy (Oise).</note>
                   quam a nobis in feo<pb n="27"/>dum possidebant.</s>
                 <s>Nos vero eandem donationem gratam habentes et ratam, dictam decimam nominate
                   ecclesie de <placeName>Morgneval</placeName> imperpetuam pro anniversario nostro
@@ -3627,7 +3626,7 @@
                 <s>Noverint universi quod <rs type="person"><persName>Odo Vasletus</persName> miles
                     de <placeName>Petrafonte</placeName></rs> et <rs type="person"><persName>Eremburgis</persName> uxor sua</rs> coram nobis recognoverunt quod
                   vendiderant abbatisse <placeName>Morgnevallis</placeName> totum mensum de
-                    <placeName>Cabaret</placeName><note type="note" target="#p27_fn1">Lieu dit, section de la Vache-à-l'Aise, commune de
+                    <placeName>Cabaret</placeName><note target="#p27_fn1">Lieu dit, section de la Vache-à-l'Aise, commune de
                 Morienval.</note> et
                     <num>quatuordecim</num> essinos terre arabilis.</s>
                 <s>Hanc venditionem coram nobis recognoverunt et fidem dederunt corporalem dictus
@@ -3755,7 +3754,7 @@
                     <rs type="person">magistro <persName><abbr>G.</abbr></persName> Canonico et
                     officiali <placeName>Suessionensi</placeName></rs> et per modum in viros
                   venerabiles, <rs type="person"><persName>Nicolaum</persName> priorem
-                      <placeName>sancti Lupi de Esserento</placeName><note type="note" target="#p28_fn1">Esserent, à Saint-Leu (Oise).</note></rs> et <rs type="person"><persName>Hugonem</persName>
+                      <placeName>sancti Lupi de Esserento</placeName><note target="#p28_fn1">Esserent, à Saint-Leu (Oise).</note></rs> et <rs type="person"><persName>Hugonem</persName>
                     Superpositum <placeName>Suessionem</placeName></rs> fuisset compromissum.</s>
                 <s>Tandem de bonorum virorum consilio inter me et dictam abbatissam et conventum
                     <placeName>Morgnevallis</placeName> pax interesset amicabilis in hunc modum.</s>
@@ -3789,7 +3788,7 @@
                   quocumque modo potuerint et voluerint, absque mea et heredum meorum
                   perturbatione.</s>
                 <s>Si autem Dominus Rex eidem sanctimonialibus usagium in nemore quod
-                    <placeName>Forestella</placeName><note type="note" target="#p29_fn1">L'acception la plus ordinaire est celle de <hi rend="i">Petite-Forêt,</hi> qui est aussi fréquemment désignée sous le nom de Garenne,
+                    <placeName>Forestella</placeName><note target="#p29_fn1">L'acception la plus ordinaire est celle de <hi rend="i">Petite-Forêt,</hi> qui est aussi fréquemment désignée sous le nom de Garenne,
                 surtout quand une partie du bois était destinée à y conserver le gibier.</note> appellatur
                   quod nemus esse dicitur de feodo nominato aliquod concesserit, ego et heredes mei
                   nichil penitus in usagio assequemur.</s>
@@ -3913,7 +3912,7 @@
                     <placeName>Monianalium</placeName> valle teneamus et possideamus <num>viginti et
                     duos</num> solidos parisienses de supercensu supra domum <persName>Haymardi
                     Pellipari</persName> et super domum <persName>Luce de Curia</persName> sitas
-                  juxta <placeName>Cousturan de Crespeyo</placeName><note type="note" target="#p30_fn1">Cousturam ? La Couture, lieu dit de Crépy, nommé
+                  juxta <placeName>Cousturan de Crespeyo</placeName><note target="#p30_fn1">Cousturam ? La Couture, lieu dit de Crépy, nommé
                 l'Ortille.</note> que sunt de censiva dictarum abbatisse et conventus nos
                   eidem promisimus predictos <num>viginti et duos</num> solidos parisienses extra
                   manum ecclesie nostre ponere bona fide post submonitionem earumdem, ita quod in
@@ -4078,7 +4077,7 @@
                   <num>viginti</num> libris parisiensibus ex una parte et quadraginta libris
                   parisiensibus, ex altera parte et quadam masura <persName>Hugonis Ment</persName>
                   et menagio sito apud <placeName>Morgneval</placeName> que vocatur
-                    <placeName>Vouta</placeName><note type="note" target="#p31_fn1">Ce mot se trouve dans le glossaire de Du Cange indiqué comme
+                    <placeName>Vouta</placeName><note target="#p31_fn1">Ce mot se trouve dans le glossaire de Du Cange indiqué comme
                 répondant, soit à <hi rend="i">Volta</hi> fournil, four, objet presque constant de
                 redevance féodale pour les usagers. L'usage du four banal était obligatoire. — Volta
                 peut aussi s'entendre d'une salle voûtée (Concameratio) reste peut-être de
@@ -4095,10 +4094,10 @@
                   absolute et conventui.</s>
                 <s>Predicta vero abbatissa et conventus intuitu pietatis et nomine elemosine ad
                   instanciam bonorum virorum voluerunt et concesserunt de communi suo assensu quod
-                  dictus <persName>Johannes de Bonis</persName><note type="note" target="#p32_fn1">Lieu dit Buy, à Morienval.</note>
+                  dictus <persName>Johannes de Bonis</persName><note target="#p32_fn1">Lieu dit Buy, à Morienval.</note>
                   ecclesie sue percipiet annuatim quamdiu vixerit unum modium bladi ad mensuram de
                     <placeName>Morgneval</placeName> in grangua sua supter capellam
-                    <placeName>sancti Annoberti</placeName><note type="note" target="#p32_fn2">Chapelle de Saint-Annobert, près Morienval.</note> et
+                    <placeName>sancti Annoberti</placeName><note target="#p32_fn2">Chapelle de Saint-Annobert, près Morienval.</note> et
                   tros modios vini albi in vinea que dicitur les <placeName>Boffins</placeName> et
                   si vinum dicte vinee ad solutionem trium modiorum vini non sufficeret, equivalenti
                   vino persolvere tenerentur.</s>
@@ -4583,7 +4582,7 @@
                       <placeName>Nele</placeName></rs> faisons sçavoir à tous ceux qui ces lettrez
                   verront que de quatorze setiers et un quarteron de blé la mesure de
                     <placeName>Neele</placeName> que messires <persName>Nevelons de
-                    Chaule</persName> avoit de <placeName>Caulle</placeName><note type="note" target="#p37_fn1">Caule, sorte d'impôt.</note> à <placeName>Fonches</placeName> seur la terre l'abbéesse et
+                    Chaule</persName> avoit de <placeName>Caulle</placeName><note target="#p37_fn1">Caule, sorte d'impôt.</note> à <placeName>Fonches</placeName> seur la terre l'abbéesse et
                   le couvent de <placeName>Morgneval</placeName>.</s>
                 <s>Les quiex, ils tenoit de moi en fief.</s>
                 <s>C'est assavoir que il leur a quittée perpétuellement et il et ses hoirs et cette
@@ -4874,7 +4873,7 @@
                   gardinum dicte domine abbatisse et conventus <placeName>Morgnevallis</placeName>,
                   furnum de <placeName>Parviller</placeName>, <num>quinque</num> bonaria et dimidium
                   terre site inter <placeName>Parviler</placeName> et
-                    <placeName>Daumeri</placeName><note type="note" target="#p39_fn1">Damery (Somme), canton de Roye.</note> retro
+                    <placeName>Daumeri</placeName><note target="#p39_fn1">Damery (Somme), canton de Roye.</note> retro
                   managium meum de <placeName>Parviler</placeName> cum toto predicto managio sicut
                   se comportat et investituras terrarum masnalium et managiorum de
                     <placeName>Parviler</placeName>.</s>
@@ -4898,7 +4897,7 @@
                     <persName>Robertus de Fonches</persName>, <persName>Martinus de Roya</persName>,
                     <rs type="person"><persName>Hubertus</persName> faber de
                       <placeName>Parviler</placeName></rs> et <persName>Bartholomeus de
-                    Bolonia</persName><note type="note" target="#p39_fn2">Boulogne-la-Grasse, canton de Bessons (Oise).</note>.</s>
+                    Bolonia</persName><note target="#p39_fn2">Boulogne-la-Grasse, canton de Bessons (Oise).</note>.</s>
                 <s>In cujus rei testimonium presentes litteras sigilli mei munimine roboravi.</s>
               </p>
               <p>
@@ -4947,9 +4946,9 @@
                       <persName>Johannes</persName> canonicus et officialis
                       <placeName>Suessionensis</placeName></rs> eternam in Domino salutem.</s>
                 <s>Noverint universi quod domina <persName>Aanor</persName> vidua relicta domini
-                    <persName>Petri de Viaco</persName><note type="note" target="#p40_fn1">Vic-sur-Aisne.</note> militis,
+                    <persName>Petri de Viaco</persName><note target="#p40_fn1">Vic-sur-Aisne.</note> militis,
                   constituta propter hoc, coram dilecto et fideli nostro clerico <persName>Roberto
-                    scilicet de Novavilla</persName><note type="note" target="#p40_fn2">La Neuville.</note> tabellione
+                    scilicet de Novavilla</persName><note target="#p40_fn2">La Neuville.</note> tabellione
                     <rs type="place">curie <placeName>Suessionensis</placeName></rs> ad audiendum et
                   recipiendum, vice nostra, conventiones contentas inferius in hac carta,
                   specialiter deputato a nobis, recognovit et asseruit coram eo quod dictus <rs type="person"><persName>Petrus</persName> miles</rs> quondam maritus suus, olim,
@@ -4959,7 +4958,7 @@
                     <placeName>Morgnevallis</placeName> et <rs type="person"><persName>Gilete</persName> sorori sue</rs>.</s>
                 <s>Ut unaqueque ipsarum sororum unum modium ex dictis duobus modiis, annis
                     singulis<date> infra Nativitatem Domini</date> in grangia quondam ipsius
-                    <persName>Petri</persName> apud <placeName>Bestiziacum</placeName><note type="note" target="#p40_fn3">Béthisy-Saint-Martin, canton de Crépy (Oise).</note>, quamdiu vixerit, percipiat, et habeat et post
+                    <persName>Petri</persName> apud <placeName>Bestiziacum</placeName><note target="#p40_fn3">Béthisy-Saint-Martin, canton de Crépy (Oise).</note>, quamdiu vixerit, percipiat, et habeat et post
                   ejusdem <persName>Mathildis</persName> decessum, modius ille bladi cedat perpetuo
                   in jus et proprietatem dicte Ecclesie <placeName>Morgnevallis</placeName>.
                     <persName>Alius</persName> quoque modius dicte <persName>Gilete</persName> post
@@ -4980,7 +4979,7 @@
                   decesserint dicte Ecclesie annuatim imperpetuam faciendam dicta
                     <persName>Aanor</persName> dictam grangiam cum appendentibus cujus situm
                   exprimendo dicit eam sitam juxta <placeName>Bestiziacum</placeName> ad locum ubi
-                  dicitur ad <placeName>Plaisseium Castellani</placeName><note type="note" target="#p40_fn4">Le Plessis-Châtelain, écarte de Béthisy-Saint-Martin.</note> tanquam ipsius <persName>Aanor</persName> hereditatem
+                  dicitur ad <placeName>Plaisseium Castellani</placeName><note target="#p40_fn4">Le Plessis-Châtelain, écarte de Béthisy-Saint-Martin.</note> tanquam ipsius <persName>Aanor</persName> hereditatem
                   propriam perpetuo obligavit.</s>
                 <s>Necnon et se ipsam presentem futurosque possessores quoscumque ipsius grangie
                   appendentiumque terrarum et hanc elemosinam scilicet dictos duos modios bladi
@@ -4999,7 +4998,7 @@
                     <persName>Aanor</persName> tradi fecimus sigillatam, sigillo <rs type="place">curie <placeName>Suessionensis</placeName></rs> in testimonium premissorum.</s>
                 <s>Acta in presentia horum testium scilicet <rs type="person">magistri
                       <persName>Johannis dicti Cerarii Suessionensis</persName> prioris de
-                      <placeName>Morienval</placeName><note type="note" target="#p41_fn1">Jean le Cicier, de Soissons, prieur de Morienval.</note>
+                      <placeName>Morienval</placeName><note target="#p41_fn1">Jean le Cicier, de Soissons, prieur de Morienval.</note>
                   </rs>clerici et aliorum.</s>
               </p>
               <p>
@@ -5051,7 +5050,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Universis presentes litteras inspecturis <rs type="person"><persName>Radulphus de
-                      Castro</persName> archidiaconus in <placeName>Ripparia</placeName><note type="note" target="#p41_fn2">Archidiaconé de Rivière, près Vic-sur-Aisne.</note>
+                      Castro</persName> archidiaconus in <placeName>Ripparia</placeName><note target="#p41_fn2">Archidiaconé de Rivière, près Vic-sur-Aisne.</note>
                     <placeName>Suessionensi</placeName></rs>, salutem in Domino.</s>
                 <s>Noverint universi quod cum peteremus bona mobilia decedentium leprosorum, hominum
                   de corpore <placeName>Morgnevallis</placeName> Ecclesie et etiam fructus
@@ -5061,7 +5060,7 @@
                   auctoritate propria saisiremus eo quod dicebamus premissa ad nos de jure pertinere
                   debere.</s>
                 <s>Preterea cum abbatissa et conventus dicte Ecclesie
-                    <placeName>Morgnevallis</placeName> peterent foris maritagia<note type="note" target="#p41_fn2">Archidiaconé de Rivière, près Vic-sur-Aisne.</note> et mortuas manus<note type="note" target="#p41_fn3">Prestatio quæ a servis seu adscriptis glebæ exsolvebatur seu
+                    <placeName>Morgnevallis</placeName> peterent foris maritagia<note target="#p41_fn2">Archidiaconé de Rivière, près Vic-sur-Aisne.</note> et mortuas manus<note target="#p41_fn3">Prestatio quæ a servis seu adscriptis glebæ exsolvebatur seu
                 licentia matrimonii.</note> a
                   clericis uxoratis et ancillis dicte Ecclesie procreatis et nos inhiberemus eisdem
                   ne dicte abbatissa et conventus premissa ab eisdem clericis venditarent, nos,
@@ -5186,8 +5185,8 @@
                     <placeName>Fransart</placeName> ratione Ecclesie nostre tertiam partem omnium
                   fructuum integraliter vel proventuum magnarum decimarum omnium terrarum de
                     <placeName>Fransart</placeName> et de <placeName>Poenciaco</placeName> videlicet
-                  frumenti, ordei, succordei<note type="note" target="#p42_fn1">Escourgeon.</note>, siliginis,
-                  pisorum, fabarum, avene, viciarum, et aliorum leguminum nec non sandici<note type="note" target="#p42_fn2">Garance.</note>.</s>
+                  frumenti, ordei, succordei<note target="#p42_fn1">Escourgeon.</note>, siliginis,
+                  pisorum, fabarum, avene, viciarum, et aliorum leguminum nec non sandici<note target="#p42_fn2">Garance.</note>.</s>
                 <s>Ipse, per septennium ante dictam causam motam elapsum nos indebite spoliaverant
                   possessione nostra vel quasi ante dicta in parte videlicet in hoc que nos per
                   totum dictum septennium spoliaverant possessione nostra vel quasi percipiendi
@@ -5251,7 +5250,7 @@
                   reparationem illius aliquid posueramus in quadraginta annis vel amplius jam
                   elapsis, quamvis in tanto tempore aliquociens fuisset reparata, cum sepe dicte
                   cause aliquotiens fuissent agitati apud <placeName>Laudunium</placeName> coram
-                  decano <placeName>beati Petri</placeName> in foro, aliquociens coram <rs type="person">magistro <persName>Hugone de Estrepeilliaco</persName><note type="note" target="#p43_fn1">Étrépilly (Aisne), canton de Château-Thierry</note> canonico <placeName>sancti Sanccini
+                  decano <placeName>beati Petri</placeName> in foro, aliquociens coram <rs type="person">magistro <persName>Hugone de Estrepeilliaco</persName><note target="#p43_fn1">Étrépilly (Aisne), canton de Château-Thierry</note> canonico <placeName>sancti Sanccini
                       Meldensis</placeName></rs> aliquociens coram decano <placeName>beate Marie in
                     Vineis Suessionensibus</placeName> et quandoquidem coram abbate
                     <placeName>sancti Leodegarii Suessionensis</placeName>, a dicto decano
@@ -5345,11 +5344,11 @@
                   que succedent ipsis in illa, nomine Ecclesie illius, constituerunt se debitores
                   erga nos, nomine Ecclesie nostre <placeName>Longipontis,</placeName> in centum
                   libris parisiensibus.</s>
-                <s><rs type="person"><persName>Johannis de Novis casis</persName><note type="note" target="#p45_fn1">Maisons neuves.</note> miles frater abbatisse
+                <s><rs type="person"><persName>Johannis de Novis casis</persName><note target="#p45_fn1">Maisons neuves.</note> miles frater abbatisse
                     <placeName>Morgnevallis</placeName></rs> et <persName>Renaudus de
-                    Matrismonte</persName><note type="note" target="#p45_fn2">Mérémont, écart de Crépy (Oise).</note> miles qui pro nobis
+                    Matrismonte</persName><note target="#p45_fn2">Mérémont, écart de Crépy (Oise).</note> miles qui pro nobis
                   similiter se constituerunt debitores in centum libris parisiensibus erga dictas
-                  abbatissam et conventum nomine Ecclesie <placeName>Morgnevallis</placeName>, <rs type="person"><persName>Gerardus de Margival</persName><note type="note" target="#p45_fn3">Margival (Aisne), canton de Vailly.</note> miles</rs> et <rs type="person"><persName>Radulphus</persName> ejus filius armiger</rs>, dicti
+                  abbatissam et conventum nomine Ecclesie <placeName>Morgnevallis</placeName>, <rs type="person"><persName>Gerardus de Margival</persName><note target="#p45_fn3">Margival (Aisne), canton de Vailly.</note> miles</rs> et <rs type="person"><persName>Radulphus</persName> ejus filius armiger</rs>, dicti
                     <persName>Johannes</persName> et <persName>Renaudus</persName> erga nos nomine
                   Ecclesie nostre <placeName>Longipontis</placeName> quilibet eorum insolidum et
                   dicti <persName>Gerardus</persName> et ejus filius erga dictas abbatissam et
@@ -5443,7 +5442,7 @@
                   futuri quod cum Moniales <placeName>Morgnevallis</placeName> nobis tenerentur,
                   singulis annis, in <num>triginta</num> solidis parisiensibus ratione cujusdam
                   prati qui vocatur <placeName>Brolius</placeName> et in tribus partibus unius modii
-                  vini ratione cujusdam clausi qui vocatur <placeName>Platea</placeName><note type="note" target="#p46_fn1">Canton de la forêt de Compiègne.</note>, nos divini amoris intuitu pro salute anime
+                  vini ratione cujusdam clausi qui vocatur <placeName>Platea</placeName><note target="#p46_fn1">Canton de la forêt de Compiègne.</note>, nos divini amoris intuitu pro salute anime
                   nostre ac pro remedio animarum inclite recordationis regis
                     <persName>Ludovici</persName> genitoris nostri ac aliorum antecessorum
                   nostrorum, nicholominus etiam ad hoc considerationem habentes quod eedem moniales
@@ -5553,7 +5552,7 @@
                     <placeName>Suessionensis</placeName> in domino salutem.</s>
                 <s>Noverit universitas vestra quod cum <rs type="person">Domicella
                       <persName>Agnes</persName> relicta <persName>Symonis Valleti de
-                      Thiemer</persName><note type="note" target="#p47_fn1">Thiemer ?</note></rs> sibi jus dotis seu
+                      Thiemer</persName><note target="#p47_fn1">Thiemer ?</note></rs> sibi jus dotis seu
                   dotalitii contra Ecclesiam <placeName>beate Marie Morgnevallis</placeName>
                   <placeName>Suessionensis</placeName> diocesis venditaret in <num>viginti et
                     septem</num> essinis terre arabilis sitis juxta <placeName>Hayam de
@@ -5589,7 +5588,7 @@
                   juris et facti per que premissa, vel aliquod premissorum infringi valeant vel
                   aliquatenus impediri.</s>
                 <s>Ad hec autem presentes fuerunt dominus <persName>Johannes</persName> presbiter
-                    <placeName>sancti Dyonisii Morgnevallis</placeName>, <rs type="person"><persName>Droco</persName> capellanus</rs>, dominus <rs type="person"><persName>Johannes de Duvi</persName><note type="note" target="#p47_fn2">Duvy, canton de Crépy (Oise).</note>
+                    <placeName>sancti Dyonisii Morgnevallis</placeName>, <rs type="person"><persName>Droco</persName> capellanus</rs>, dominus <rs type="person"><persName>Johannes de Duvi</persName><note target="#p47_fn2">Duvy, canton de Crépy (Oise).</note>
                     miles</rs>.</s>
                 <s><rs type="person"><persName>Johannes de Betencourt</persName> canonicus</rs>, <rs type="person"><persName>Bertandus</persName> prior et magister</rs>,
                     <persName>Petrus</persName>, clerici <placeName>Morgnevallis</placeName> et alii
@@ -5641,12 +5640,12 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>Universis presentes litteras inspecturis <rs type="person">frater
-                      <persName>Hugo</persName> prior de <placeName>Lehuno</placeName><note type="note" target="#p48_fn1">Lihons (Somme).</note>
+                      <persName>Hugo</persName> prior de <placeName>Lehuno</placeName><note target="#p48_fn1">Lihons (Somme).</note>
                     <placeName>Ambianensis</placeName></rs> diocesis
                     <placeName>Clugniacensis</placeName> ordinis totus que conventus ejusdem loci
                   salutem in Domino.</s>
                 <s>Noverit universitas vestra quod in presentia nostra constitutus <rs type="person">frater <persName>Matheus</persName> prior de
-                      <placeName>Breteigniaco</placeName><note type="note" target="#p48_fn2">Bretigny, canton de Noyon (Oise).</note></rs>
+                      <placeName>Breteigniaco</placeName><note target="#p48_fn2">Bretigny, canton de Noyon (Oise).</note></rs>
                   emit a <rs type="person">domino <persName>Hugone</persName> decano de
                       <placeName>Parviler</placeName></rs>
                   <placeName>Ambianensis</placeName> diocesis pro ducentis libris parisiensibus
@@ -6166,7 +6165,7 @@
                 <s>Au lonc fou, <num>2</num> arpents et <num>22</num> perches.</s>
               </p>
               <p>
-                <s>Dont li ans<note type="note" target="#p53_fn1">Terme d'un an.</note> que cele terre fu achetée n'est
+                <s>Dont li ans<note target="#p53_fn1">Terme d'un an.</note> que cele terre fu achetée n'est
                   mie encore passez et la puent li ami retraire per la bourse.</s>
               </p>
               <p>
@@ -6192,7 +6191,7 @@
                 <s>Item. <num>1/2</num> quartier de <placeName>Courtil</placeName>.</s>
               </p>
               <p>
-                <s>Item. Mares pour semer un boicel de linuise<note type="note" target="#p53_fn2">Graine de lin.</note>.</s>
+                <s>Item. Mares pour semer un boicel de linuise<note target="#p53_fn2">Graine de lin.</note>.</s>
               </p>
               <p>
                 <s>Item. à <placeName>Betencourt</placeName>, le <num>1/3</num> d'un arpent de vigne
@@ -6209,8 +6208,8 @@
               </p>
               <pb n="54"/>
               <p>
-                <s>Item maisières cheves<note type="note" target="#p54_fn1">Cloisons avec chevets.</note> tenans à ladite
-                    église<note type="note" target="#p54_fn2"><hi rend="i">Item</hi>, une mazure en les batémens de
+                <s>Item maisières cheves<note target="#p54_fn1">Cloisons avec chevets.</note> tenans à ladite
+                    église<note target="#p54_fn2"><hi rend="i">Item</hi>, une mazure en les batémens de
                 l'église.</note>.</s>
               </p>
               <p>
@@ -6232,7 +6231,7 @@
               <p>
                 <s>Item de <rs type="person"><persName>Elin de Gilocourt</persName>, clere</rs>, wit
                   soulz parisis sur la maison <rs type="person"><persName>Jehan Petit</persName>
-                    mari ou cleuz<note type="note" target="#p54_fn3">Clos.</note> de
+                    mari ou cleuz<note target="#p54_fn3">Clos.</note> de
                       <placeName>Gilocourt</placeName></rs>.</s>
                 <s>De monseigneur <persName>Jehan Elin</persName> vint soulz parisis seur la mazure
                     <persName>Ermengart</persName> la souparde de <placeName>Betencourt</placeName>
@@ -6343,7 +6342,7 @@
                   de par notre seigneur de <rs type="person">Comte de
                     <placeName>Valoys</placeName></rs>, salut en notre Seigneur.</s>
                 <s>Sachent tuit que pardevant nous pour y ce faire et accorder vindrent en leurs
-                  propres personnes, <persName>Philipes de Bonnuel</persName><note type="note" target="#p54_fn4">Bonneuil-sur-Oise, canton de Crépy (Oise).</note> clers, fil jadis diffunet <rs type="person"><persName>Oudart
+                  propres personnes, <persName>Philipes de Bonnuel</persName><note target="#p54_fn4">Bonneuil-sur-Oise, canton de Crépy (Oise).</note> clers, fil jadis diffunet <rs type="person"><persName>Oudart
                       de Watervoisin</persName> clerc</rs> et <rs type="person"><persName>Marguerite</persName> femme dudit
                   <persName>Philipe</persName></rs>, de l'auctorité et du congié ledit
                     <persName>Philipe</persName> son mary qui povoir congié et auctorité li donna
@@ -6353,7 +6352,7 @@
                   sans rapel quittié et choié, du tout en tout et delaissié a religieuses dames,
                   l'abéesse et le couvent de l'église <placeName>notre dame de Morgneval</placeName>
                   toutes les maisons qu'ils avaient séans a <placeName>Watervoisin</placeName> ou
-                  lieu que l'en dit <placeName>Engoindainval</placeName><note type="note" target="#p55_fn1">Postis, <hi rend="i">posticium</hi>, poterue, petite
+                  lieu que l'en dit <placeName>Engoindainval</placeName><note target="#p55_fn1">Postis, <hi rend="i">posticium</hi>, poterue, petite
                 porte.</note> avecques un courtilet un prael tenans et appendans az dites
                   maisons de lonc et du le, si comme les maisons devant dites et li courtiex et li
                   praiaus dessus dis se comportent et tiennent, les maisons devant dites et li
@@ -6374,7 +6373,7 @@
                   pardevers la court devant dite cherront a touz jours sans debat et sans
                   empeschement en celle meesme court et averont les dites religieuses et leurs
                   commandemens des ore en droit a touz jours leur voie paisiblement et sans debat
-                  par la porte ou par le potis<note type="note" target="#p55_fn1">Postis, <hi rend="i">posticium</hi>, poterue, petite
+                  par la porte ou par le potis<note target="#p55_fn1">Postis, <hi rend="i">posticium</hi>, poterue, petite
                 porte.</note> et pour la cour
                   des dits vendeurs pour porter eschieles et toutes autres choses qui sont et
                   seroient nécessaires à couvrir et a rapareller les maisons devant dites et pour
@@ -6389,19 +6388,19 @@
                   degous et pour porter et raporter eschieles et les choses necessaires a recouvrir
                   et a rapareller les maisons devant dites.</s>
                 <s>Si comme il est dessus dit et lairoient ou mur ou en la closure devant dites lieu
-                    wit<note type="note" target="#p55_fn2">Vide, <hi rend="i">vacuus.</hi></note> ou non clos pour aler et pour venir en
+                    wit<note target="#p55_fn2">Vide, <hi rend="i">vacuus.</hi></note> ou non clos pour aler et pour venir en
                   l'espace des <num>quatre</num> pieds dessus diz et pour porter et pour raporter
                   eschielez et tout ce que mestiers seroit à la couverture à la reparation des
                   choses dessus dites, salve la voie az dites religieuses a aler et venir par la
-                  porte et pour<note type="note" target="#p55_fn3">Par.</note> le potis dessus dit pour les
+                  porte et pour<note target="#p55_fn3">Par.</note> le potis dessus dit pour les
                   choses devant dites frire si comme il est devant devisié, et est assavoir que li
-                    wis<note type="note" target="#p55_fn4">Iluis, <hi rend="i">ostium</hi>.</note> et les fenêtres qui sont ez maisons
+                    wis<note target="#p55_fn4">Iluis, <hi rend="i">ostium</hi>.</note> et les fenêtres qui sont ez maisons
                   devant dites ou costé pardevers la court devant dites seront estoupées et
-                  maissonnées exceptez deux fenestres a un moien<note type="note" target="#p55_fn5">Medio.</note>
+                  maissonnées exceptez deux fenestres a un moien<note target="#p55_fn5">Medio.</note>
                   qui sont au pignon qui tient a l'estable desdits vendeurs a la fin de dessous les
                   maisons devant dites, laquele vente et est faite si comme li dit vendeur disoient
                   pour le prix de douze <pb n="page 56"/> vins et dis livres de
-                    <placeName>Paris</placeName> de forte monnoie leur<note type="note" target="#p56_fn1">Alors.</note> quittez jà paiez et livrez a eulz si comme il cognurent les
+                    <placeName>Paris</placeName> de forte monnoie leur<note target="#p56_fn1">Alors.</note> quittez jà paiez et livrez a eulz si comme il cognurent les
                   dites religieuses en bonne monnoie sans nul deffaut, et dont ils se tiennent pour
                   paié tout aplain et pardevant nous et en quittèrent les dites religieuses et ceulz
                   qui aront cause de icelez bonnement et a touz jours sans rapel et recognurent
@@ -6454,7 +6453,7 @@
                   presentes <pb n="page 57"/> lettres a détruire le fait qui y est contenus.</s>
                 <s>En tesmoing de ce, nous, a la requeste des dis vendeurs avons selleez ces
                   presentes lettres dudit grand seel et nous <persName>Jehans diz Gales de
-                    Venderes</persName><note type="note" target="#p57_fn1">Venderre (Aisne), arrondissement de Château-Thierry, canton de
+                    Venderes</persName><note target="#p57_fn1">Venderre (Aisne), arrondissement de Château-Thierry, canton de
                 Charly ou Vaudières (Marne), arrondissement de Reims.</note>, à ce temps prevos
                   portans le seel petit de la dite Prevosté a nous de notre office, a la relation
                   dudit <persName>Philippe</persName> en tesmoing de ce mès en ces presentes lettres
@@ -6463,7 +6462,7 @@
               </p>
               <p>
                 <s>Ce fu fait en <date>l'an de grâce mil trois cent et wit au mois de mars le
-                    mercredy devant Pasques flories</date><note type="note" target="#p57_fn2">Le dimanche des Rameaux.</note>.</s>
+                    mercredy devant Pasques flories</date><note target="#p57_fn2">Le dimanche des Rameaux.</note>.</s>
               </p>
             </div>
           </body>
@@ -6574,7 +6573,7 @@
                 <s>Sachent tuit que pardevant nous comme pardevant justice pour yce faire et
                   accorder vindrent en leurs propres personnes.</s>
                 <s><rs type="person"><persName>Henris diz du Moion de Roissi lez
-                      Waumoise</persName><note type="note" target="#p57_fn3">Russy-Le-Mont, près Vaumoise (Oise). canton de Crépy.</note> escuiers</rs> et <rs type="person">damoisselle <persName>Jehanne</persName> sa femme</rs> de
+                      Waumoise</persName><note target="#p57_fn3">Russy-Le-Mont, près Vaumoise (Oise). canton de Crépy.</note> escuiers</rs> et <rs type="person">damoisselle <persName>Jehanne</persName> sa femme</rs> de
                   l'auctorité et du congié le dit <rs type="person"><persName>Henri</persName> son
                     mari</rs> qui povoir congié et auctorité li donna pardevant nous de ce faire et
                   recognurent et affermerent en droit pardevant nous conjointement ensemble et
@@ -6586,7 +6585,7 @@
                     <placeName>Soissons</placeName> et a leur ditte eglise, en <num>nuef</num> mines
                   de blé chacun an de annuel et perpetuel rente a la mesure dou jardin de
                         <placeName><abbr>S<hi rend="sup">t</hi></abbr> Pierre</placeName> à
-                    <placeName>Aile</placeName><note type="note" target="#p58_fn1">Saint-Pierre-Aigle (Aisne), canton de Vic-sur-Aisne.</note> laquele annuele
+                    <placeName>Aile</placeName><note target="#p58_fn1">Saint-Pierre-Aigle (Aisne), canton de Vic-sur-Aisne.</note> laquele annuele
                   et perpetuele rente est assise seur les terrages que li dit detteur ont acheté à
                   tous jours si comme ils disoient à <persName>Robert le Baulier</persName> dudit
                   jardin et à <rs type="person"><persName>Guillaume</persName> son frere</rs> seans
@@ -6626,7 +6625,7 @@
                   en y ce fait expressement a toute ayde de droit de fait de canon et cytoien, a
                   exception de fraude de mal circonvention et de deception a ce que il ne autres
                   pour eulz ne puissent pas dire que il y ait esté autrement fait que ci est
-                  escript, a touz privileges de crois<note type="note" target="#p58_fn2">De Croisade.</note>, a toutes
+                  escript, a touz privileges de crois<note target="#p58_fn2">De Croisade.</note>, a toutes
                   graces et indulgences donneez ou à donner de quelque personne, au bénéfice de
                   restitution de velleyan de division a tout droit escript et non escript et
                   coustume de terre et de pais et a toutes autres raisons exceptions et actions de
@@ -6730,7 +6729,7 @@
             <div type="transcription" xml:lang="fro">
               <p>
                 <s>A tous ceux qui ces presentes lettres verront et orront.</s>
-                <s><rs type="person"><persName>Symons de Sarmoise</persName><note type="note" target="#p59_fn1">Sarmoise, canton de Braine (Aisne).</note> à ce temps prevos de <placeName>Crespi en
+                <s><rs type="person"><persName>Symons de Sarmoise</persName><note target="#p59_fn1">Sarmoise, canton de Braine (Aisne).</note> à ce temps prevos de <placeName>Crespi en
                       Valois</placeName></rs> et <rs type="person"><persName>Guillaumes diz
                       Yaue</persName> crasse bourgeois de <placeName>Crespi</placeName>, a temps
                     garde dou grant seel de ladite prevosté de par notre Seigneur le <rs type="person">Conte de <placeName>Valois</placeName></rs></rs>, salut en notre
@@ -6739,7 +6738,7 @@
                   accorder vindrent en leurs propres personnes, <rs type="person"><persName>Pierre
                       diz de Fayel</persName> escuyers</rs> et <rs type="person">damoiselle
                       <persName>Agathe</persName> sa femme</rs> demourans a ce temps a
-                    <placeName>Glangne</placeName><note type="note" target="#p59_fn1">Sarmoise, canton de Braine (Aisne).</note> et li quex
+                    <placeName>Glangne</placeName><note target="#p59_fn1">Sarmoise, canton de Braine (Aisne).</note> et li quex
                     <persName>Pierre</persName> donna congié povoir et authorité devant nous de ce
                   faire, et recognurent et affermerent en droit pardevant nous de leurs bonne
                   volenté non contraint que il, pour leur commun pour fit, avoient et ont vendu par
@@ -6750,7 +6749,7 @@
                 <s>C'est a scavoir tout le droit, l'action, seignourie et propriété que il avoient
                   et povoient avoir en une dixme laquele siet a <placeName>Glaigne</placeName> si
                   comme ils disoient et laquele disme partit a ladite abbeesse et au couvent et muet
-                  de ladite abbeesse et couvent a trois deniers neres<note type="note" target="#p59_fn2">Glainnes, canton de Braisne (Aisne).</note> de cens, paians chascun an : laquele vente fu et est faite
+                  de ladite abbeesse et couvent a trois deniers neres<note target="#p59_fn2">Glainnes, canton de Braisne (Aisne).</note> de cens, paians chascun an : laquele vente fu et est faite
                   pour le prix de vint livres parisis fors lars quittez ja, payez et livrés az diz
                   vendeurs en bonne monoie sans nul deffaut et dont ils se tindrent pour bien payez
                   tout a plein pardevant nous et en quitterent ladite acheteresse et <pb n="60"/> le
@@ -6865,7 +6864,7 @@
                   l'église <placeName>Notre Dame de Morgneval</placeName> de l'ordre de <rs type="person">saint <persName>Benoist</persName></rs> en la dioceze de
                     <placeName>Soissons</placeName> et a leur dite église en <num>nuef</num> essins
                   de blé chascun an de annuele et perpetuele rente à la mesure du jardin de
-                    <placeName>Saint-Pierre a Aille</placeName><note type="note" target="#p61_fn1">Saint-Pierre-Aigle.</note>
+                    <placeName>Saint-Pierre a Aille</placeName><note target="#p61_fn1">Saint-Pierre-Aigle.</note>
                   laquele annuele et perpetuele rente est assise seur les territages que li dit
                   detteur a achaté a touz jours, si comme il disoit, a <persName>Jehan</persName> du
                   jardin de <placeName>Saint-Pierre</placeName> à <placeName>Aille</placeName> et a
@@ -7248,7 +7247,7 @@
                     ipsius monasterii abbatisse</rs> ne quod absit nostrum monasterium diutius sue
                   viduitatis incommodo deploret.</s>
                 <s>Hinc est quod vestre celsitudini regie notum facimus quod nos dilectos nostros
-                    <rs type="person">dominum <persName>Petrum de Tailliofonte</persName><note type="note" target="#p65_fn1">Taillefontaine.</note> curatum</rs> et <rs type="person"><persName>Petrum dictum dou Martroy de Freneto</persName> clericum</rs>,
+                    <rs type="person">dominum <persName>Petrum de Tailliofonte</persName><note target="#p65_fn1">Taillefontaine.</note> curatum</rs> et <rs type="person"><persName>Petrum dictum dou Martroy de Freneto</persName> clericum</rs>,
                   facimus constituimus et ordinamus procuratores nostros veros et legitimos ac
                   nuntios speciales et quemlibet eorum in solidum exhibitorem presentium ita quod
                   non fiat conditio melior occupantis et non occupantis deterior ad comparendum pro
@@ -7478,10 +7477,10 @@
                   temps que lidit premier ou li aucun d'eulz ou cils qui aueront cause d'eulz
                   vendissent ladite terre soit le dites religieuses y aueront leurs ventes selon la
                   coustume dou païs mes li achaterres ne paieroit fors que petit
-                    <persName>Roves</persName><note type="note" target="#p67_fn1">Rova, prestatio sub nomine precationis (D. C.).</note> au majeur de
+                    <persName>Roves</persName><note target="#p67_fn1">Rova, prestatio sub nomine precationis (D. C.).</note> au majeur de
                   ladite Église et est assavoir, que les dismes, usuffruiz des dictes terres seront
                   payées chascun an à ladite Église soient vins ou autres dépueilles et doivent li
-                  dit preneur ou ceulz qui aueront cause d'eulz pressourier leurs aisiers<note type="note" target="#p67_fn2">Aisier, vinaigre. Suppl. à Du Cange, le marc dont on se servait
+                  dit preneur ou ceulz qui aueront cause d'eulz pressourier leurs aisiers<note target="#p67_fn2">Aisier, vinaigre. Suppl. à Du Cange, le marc dont on se servait
                 pour fabriquer le vinaigre.</note> des vins qui croistront ez dites terres au
                   pressouirs de ladite Église pour au tel pris comme li autres et quant à ce tenir
                   payer et accomplir fermement et enthierement en obligerent li dit preneur chascuns

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGLY-PR">
+
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGLY-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -814,7 +813,7 @@
                   cum <rs type="person">filia ipsius<pb n="18"/>
                     <persName>Aeles</persName></rs>.</s>
                 <s>Inter monachos autem et <persName>Willelmum</persName> et filiam, <rs type="person">rex <persName>Ludovicus</persName></rs> et <rs type="person"><persName>Stephanus</persName> dapifer</rs>, fidejussores existunt.</s>
-                <s>Testes vero <persName>Minardus<note type="note" n="1" target="#n01a" xml:id="a01a">Il faut apparemment lire <hi rend="i">Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
+                <s>Testes vero <persName>Minardus<note n="1" target="#n01a" xml:id="a01a">Il faut apparemment lire <hi rend="i">Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
                 autres transcrits dans le Cartulaire, a été l'objet de quelques erreurs de
                 lecture.</note></persName> ex parte <persName>Willelmi</persName>.</s>
                 <s>Ex parte monachorum, <rs type="person"><persName>Thieobaldus</persName>
@@ -905,7 +904,7 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Noverint instantes et futuri quod <persName>Adam<note type="note" n="2" target="#n02a" xml:id="a02a">Le texte porte, par une corruption évidente,
+                <s>Noverint instantes et futuri quod <persName>Adam<note n="2" target="#n02a" xml:id="a02a">Le texte porte, par une corruption évidente,
                   <hi rend="i">quidam</hi>.</note> de Mareolo</persName> dedit Deo et <rs type="person"><abbr>S.</abbr>
                     <persName>Germano</persName></rs> omnes minutas decimas quas habebat apud
                     <placeName>Ordevallem</placeName>, scilicet decimam pecorum, agnorum, vitulorum,
@@ -940,7 +939,7 @@
               <p>
                 <s>Firmaverunt siquidem pactionem monachi et <persName>Adam</persName> de tractore
                   decime <placeName>Ordevallis</placeName>, quod deincepts non habebit decimam
-                  garbarum sed decimam minarum et straminum in area<note type="note" n="1" target="#n01b" xml:id="a01b">Le texte porte <hi rend="i">in
+                  garbarum sed decimam minarum et straminum in area<note n="1" target="#n01b" xml:id="a01b">Le texte porte <hi rend="i">in
                 arta</hi>.</note>, et ideo reddiderunt <rs type="person">uxori
                     G(er)uigerii</rs> tria sextaria formenti, monachi tres minas et
                     <persName>Adam</persName> totidem, que ipse acciperat ab ea pro tractu illius
@@ -1051,7 +1050,7 @@
                   ambitu suo possidere in feodo.</s>
               </p>
               <p>
-                <s>Quandam tenet terram que est inter nemus et culturam <placeName>Camberiaci<note type="note" n="1" target="#n01c" xml:id="a01c">Chambourcy.</note></placeName>, et aliam que est
+                <s>Quandam tenet terram que est inter nemus et culturam <placeName>Camberiaci<note n="1" target="#n01c" xml:id="a01c">Chambourcy.</note></placeName>, et aliam que est
                   juxta domum <persName>Honorati Filiolicurtis</persName>, quam ab hoc die omnibus
                   diebus vite sue ad censum unius denarii et in feudo tenebit.</s>
               </p>
@@ -1082,7 +1081,7 @@
                 <s>Predictus siquidem <persName>Racherius</persName> in eodem capitulo quando de
                   majoratu isto eum Abbas rivestivit, suus homo ligius devenit et omnia que sunt
                       <placeName><abbr>S.</abbr> Germani</placeName>, terras, prata, vineas, census,
-                  redditus, molendinos, et si qua sunt alia fideliter custodienda<note type="note" n="1" target="#n01d" xml:id="a01d">Le texte porte <hi rend="i">constituenda</hi>.</note> super sacrosanctum Evangelium juravit, si
+                  redditus, molendinos, et si qua sunt alia fideliter custodienda<note n="1" target="#n01d" xml:id="a01d">Le texte porte <hi rend="i">constituenda</hi>.</note> super sacrosanctum Evangelium juravit, si
                   vero in aliquo per se vel per alium forifecisset, quod <num>XII</num> nummos per
                   annum excedat, cognovit ultros <sic>(sic)</sic> ad priorem accedens et in quo
                   foriffecerit et suggererit, ad voluntatem <abbr>ejusd.</abbr> prioris, prout ratio
@@ -1209,7 +1208,7 @@
                 <s>In regia administratione summa extitit providentia intendere paci ecclesiarum et
                   illud precavere, ne aliqua negligencia sive alia occasione, illi qui Deo serviunt
                   in ecclesiis, ex suscepta professione turbebentur, et avulsi a quiete mentis, de
-                    forensibus<note type="note" n="1" target="#n01e" xml:id="a01e">Le texte porte <hi rend="i">forvicesis</hi>.</note> litigando, <seg type="theo">a servitio Dei</seg> retrahi er carpere cogantur.</s>
+                    forensibus<note n="1" target="#n01e" xml:id="a01e">Le texte porte <hi rend="i">forvicesis</hi>.</note> litigando, <seg type="theo">a servitio Dei</seg> retrahi er carpere cogantur.</s>
               </p>
               <p>
                 <s>Extat autem quoddam stagnum in valle <placeName>Filiolicurtis</placeName> subtus
@@ -1387,13 +1386,12 @@
                 <s>Decima <placeName>campi Degnelis</placeName> tota <placeName><abbr>S.</abbr>
                     Germani</placeName>.</s>
                 <s>Medietas decime terre quam lucratur <persName>Guibertus de Ordevalle</persName>,
-                  que est de feodo <persName>Hugonis Sanzaver<note type="note" n="1" target="#n01f" xml:id="a01f"><hi rend="i">Hugues Sans-Avoir</hi>, de la
+                  que est de feodo <persName>Hugonis Sanzaver<note n="1" target="#n01f" xml:id="a01f"><hi rend="i">Hugues Sans-Avoir</hi>, de la
                 famille de <hi rend="i">Gautier Sans-Avoir</hi>.</note></persName>
                   <placeName>Sancti Germani</placeName> ; et altera medietas presbyteri.</s>
                 <s><pb n="24"/><rs type="place">Pomarium</rs> quod est in atrio
                     <placeName>Ordevallis</placeName> et movet de feodo <persName>Letherici de
-                      Trinsencurt<note type="note" n="1" target="#n01f" xml:id="a01g"><hi rend="i">Hugues Sans-Avoir</hi>, de la
-                famille de <hi rend="i">Gautier Sans-Avoir</hi>.</note></persName>,
+                      Trinsencurt<note n="1" target="#n01g" xml:id="a01g">Tessancourt.</note></persName>,
                   in dominio <placeName><abbr>S.</abbr> Germani</placeName>.</s>
               </p>
             </div>
@@ -1470,13 +1468,13 @@
                   aliqua terrena potestate fulcite, resiliemus ab hac compositione.</s>
               </p>
               <p>
-                <s>Hujus rei testes sunt : <persName>Gatho de Pissiaco</persName>, <rs type="person"><persName>Giralmus</persName> socerus ejus<note type="note" n="2" target="#n02b" xml:id="a02b">Le texte porte <hi rend="i">Socius</hi>.</note></rs>, <persName>Albericus de
+                <s>Hujus rei testes sunt : <persName>Gatho de Pissiaco</persName>, <rs type="person"><persName>Giralmus</persName> socerus ejus<note n="2" target="#n02b" xml:id="a02b">Le texte porte <hi rend="i">Socius</hi>.</note></rs>, <persName>Albericus de
                     Haubercurt</persName>, <persName>Gauterus de Basemonte</persName> ; hii sunt
                   milites.</s>
                 <s><rs type="person"><persName>Garinus</persName>,
                       <placeName>Latiniacensis</placeName> ecclesie quondam<pb n="25"/> abbas</rs> ;
                     <rs type="person"><persName>Geruagerius</persName>
-                    <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"><persName>Gaufredus</persName> prior <placeName>Altebruerie<note type="note" n="1" target="#n01h" xml:id="a01h">Haute-Bruyère, comme toutes les fondations
+                    <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"><persName>Gaufredus</persName> prior <placeName>Altebruerie<note n="1" target="#n01h" xml:id="a01h">Haute-Bruyère, comme toutes les fondations
                 relevant de Fontevrault, comprenait une double communauté d'hommes et de femmes
                 ayant chacune un supérieur ; mais la direction du couvent appartenait aux
                 femmes.</note></placeName></rs>; <rs type="person"><persName>Paganus de Fulcosa</persName> clericus</rs> ; <rs type="person"><persName>Stephanus de Crisperiis</persName>, burgensis</rs>.</s>
@@ -1651,7 +1649,7 @@
                 <s>Collation faicte est.</s>
               </p>
               <p xml:lang="fro">
-                <s>Ainsi signé : <persName>Petavius<note type="note" n="1" target="#n01i" xml:id="a01i">Cet arrêt est cité dans Boutaric, <hi rend="i">Actes du Parlement de Paris</hi>, <abbr>t.</abbr>
+                <s>Ainsi signé : <persName>Petavius<note n="1" target="#n01i" xml:id="a01i">Cet arrêt est cité dans Boutaric, <hi rend="i">Actes du Parlement de Paris</hi>, <abbr>t.</abbr>
                 <num>I</num>, nº 588, d'après les <hi rend="i">Olim</hi>, <num>I</num>, fol. 116,
                 vº.</note></persName></s>
               </p>
