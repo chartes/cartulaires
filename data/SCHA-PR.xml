@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
 À faire
 * Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
@@ -431,7 +432,7 @@
                     <persName>Gualerannus</persName> dedit eidem abbatie duas partes de decima
                   ejusdem ecclesie <placeName>sancti Christofori</placeName>, quam sub manu firma
                   tenebat de canonicis <placeName>sancte Marie Silvanect</placeName>.</s>
-                <s>Ecclesie, annuente <rs type="person"><persName>Feodando</persName><note xml:id="p4_fn7">Frolland</rs>, <num><hi rend="sc">ii</hi><hi rend="sup">e</hi></num>
+                <s>Ecclesie, annuente <persName>Feodando</persName><note xml:id="p4_fn7">Frolland, <num><hi rend="sc">ii</hi><hi rend="sup">e</hi></num>
                 du nom.</note> episcopo cum clericis ad quos ipsa decima
                   pertinebat.</s>
                 <s>Ut igitur hec omnia inconvulsa et imperpetuum rata permaneant, petentibus
@@ -681,7 +682,7 @@
                       <placeName>Sancti Christofori</placeName></rs>.</s>
               </p>
               <p>
-                <s>† Signum <rs type="person"><persName>Ingerani</rs></persName> monachi.</s>
+                <s>† Signum <persName>Ingerani</persName> monachi.</s>
               </p>
               <p>
                 <s>† Signum <persName>Renaldi</persName>.</s>
@@ -3394,7 +3395,7 @@
                     devant la St-Lorens</date>.</s>
               </p>
               <p>
-                <s><rs type="person"><persName>Egidius de Courcellis</rs></persName>, Baillivus
+                <s><persName>Egidius de Courcellis</persName>, Baillivus
                       <placeName>silvanectensis</placeName>, <rs type="person">Preposito
                       <placeName>Clarimontis</placeName></rs> salutem.</s>
                 <s>Mandamus vobis quatenus ea que in litteris presentibus hiis annexis continentur,
@@ -4576,7 +4577,7 @@
               </p>
               <p>
                 <s><num>VI.</num> Pour ce monstrer il dit que des lan <num>1364</num>, procès se
-                  meut entre le Prieur dudit <placeName>Saint-Christophe</placeName> et feue dame <persName>Jehanne Choiselle</persName>, veuve de <rs type="person">feu Messire <persName>Pierre</rs> de Pacy</persName>,
+                  meut entre le Prieur dudit <placeName>Saint-Christophe</placeName> et feue dame <persName>Jehanne Choiselle</persName>, veuve de feu Messire <persName>Pierre de Pacy</persName>,
                     chevalier, à laquelle appartenoit la Gruerie de laditte forest
                     d<placeName>hallacte</placeName> pour raison de plusieurs droits quavoit ledit
                   Prieur en laditte forest, quelle avoit voulu ou vouloit empescher.</s>

@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGGO-PR">
   <teiHeader>
     <fileDesc>
@@ -1054,7 +1055,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>Notum fieri presentibus et futuris bonum est quod <rs type="person"><persName>Gillo de Soliaco</rs></persName> monachis <placeName>Sancti
+                <s>Notum fieri presentibus et futuris bonum est quod <persName>Gillo de Soliaco</persName> monachis <placeName>Sancti
                       Florentii</placeName> omnem conventionem quam erga eos habuit de
                   monasterio <placeName>Sancti Gundulfi</placeName> executus est.</s>
                 <s>Fecit itaque ipse <persName>Gilo</persName> quod comes
@@ -1346,8 +1347,8 @@
               <p>
                 <s>Hujus consummationis diffinitionem audierunt et collaudaverunt : <rs type="person"><persName>Hilgodus</persName> abbas <placeName>Majoris
                       Monasterii</placeName></rs>, <rs type="person"><persName>Simon</persName>
-                    abbas <placeName>Sancti Benedicti</placeName></rs>, <rs type="person"><persName>Christianus</persName> abbas <placeName>Sancti
-                    Maximini</rs></placeName>, <persName>Briccius</persName> abbas
+                    abbas <placeName>Sancti Benedicti</placeName></rs>, <persName>Christianus</persName> abbas <placeName>Sancti
+                    Maximini</placeName>, <persName>Briccius</persName> abbas
                       <placeName>Sancti Jovini</placeName>, <persName>Rainaldus</persName> abbas <placeName>Lucionensis</placeName>, <persName>Anselmus</persName> magister
                       <placeName>Lugdunensis</placeName>, <persName>Drogo</persName> magister <placeName>Trecensis</placeName>, <persName>Guillelmus</persName> archidiaconus
                       <placeName>Andegavensis</placeName>, <persName>Guillelmus</persName> archidiaconus
@@ -1397,7 +1398,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s><persName>Paschalis</persName> episcopus, servus servorum
-                  Dei, <rs type="person">venerabili fratri <persName>Guillelmo</rs></persName> abbati
+                  Dei, venerabili fratri <persName>Guillelmo</persName> abbati
                       <placeName>Sancti Florentii</placeName> et ejus congregationi, salutem et
                   apostolicam benedictionem.</s>
               </p>
@@ -1568,8 +1569,8 @@
               </p>
               <p>
                 <s>Actum <date>anno ab incarnatione Domini <num>MXCV<hi rend="sup">o</hi></num>, indictione <num><hi rend="sc">iii</hi><hi rend="sup">a</hi></num>, [<num><hi rend="sc">ii</hi><hi rend="sup">o</hi></num>] idus octobris, secunda
-                    feria</date> ; <rs type="person"><persName>Philippo</rs></persName>
-                    <persName>Francorum</persName> rege, <rs type="person"><persName>Aldeberto</rs></persName>
+                    feria</date> ; <persName>Philippo</persName>
+                    <persName>Francorum</persName> rege, <persName>Aldeberto</persName>
                     <placeName>Bituricensium</placeName> archiepiscopo.</s>
               </p>
             </div>
@@ -1747,7 +1748,7 @@
               </p>
               <p>
                 <s>Actum in domo illius et ante, vidente <persName>Balduino</persName>
-                    <persName>Hersendis</persName> filio et <rs type="person"><persName>Radulfo</rs></persName> nepote <persName>Fulconis</persName>
+                    <persName>Hersendis</persName> filio et <persName>Radulfo</persName> nepote <persName>Fulconis</persName>
                     monachi ; ex parte illius <persName>Baronis</persName> vidente
                     <persName>Hugone</persName> cordubanario, qui de
                     <placeName>Aurelianensi</placeName> pago venerat.</s>
@@ -1790,7 +1791,7 @@
                 <s>Testes qui viderunt et audierunt : <persName>Fulco</persName> monachus, <persName>Rainardus</persName> miles, filius
                       <persName>Stephani</persName>, <persName>Girardus</persName>, <persName>Golenus</persName>, <persName>Aimericus Greslart</persName>, <persName>Vaslet Frater</persName>
                   <persName>Parvus</persName>, <rs type="person"><persName>Odo</persName>
-                    clericus</rs>, <rs type="person"><persName>Adelelmus</rs></persName> frater
+                    clericus</rs>, <persName>Adelelmus</persName> frater
                       <persName>Odonis</persName> clerici et alii plures.</s>
               </p>
               <pb n="40"/>
@@ -1971,7 +1972,7 @@
                   <persName>Tesceline</persName>.</s>
               </p>
               <p>
-                <s>Actum in claustro <placeName>Sancti Gundulfi</placeName> ; vidente <rs type="person"><persName>Balduino</rs></persName>
+                <s>Actum in claustro <placeName>Sancti Gundulfi</placeName> ; vidente <persName>Balduino</persName>
                     <persName>Hersendis</persName> filio, qui venerat cum ea, et filia ejus
                     <persName>Isucia</persName> et <persName>Radulfo</persName> monachorum famulo et
                   aliis pluribus.</s>
@@ -2343,7 +2344,7 @@
                   infirmus jacebat, in manu <rs type="person"><persName>Galonis</persName>
                     episcopi</rs> et monachi <placeName>Sancti Florentii</placeName>, cum baculo
                   episcopali ; videntibus et audientibus qui aderant, quorum hec sunt nomina :
-                    <persName>Robertus Braiocensis</persName>, <persName>Robertus Rufus</persName>, monachi ; de laicis : <rs type="person"><persName>Herbertus</rs></persName> miles, <rs type="person"><persName>Baldoinus</persName> frater ejus</rs>, <persName>Constantinus Caseus</persName>, <rs type="person"><persName>Sancelinus</persName> famulus monachorum</rs>.</s>
+                    <persName>Robertus Braiocensis</persName>, <persName>Robertus Rufus</persName>, monachi ; de laicis : <persName>Herbertus</persName> miles, <rs type="person"><persName>Baldoinus</persName> frater ejus</rs>, <persName>Constantinus Caseus</persName>, <rs type="person"><persName>Sancelinus</persName> famulus monachorum</rs>.</s>
               </p>
             </div>
           </body>
@@ -2408,8 +2409,8 @@
               </p>
               <p>
                 <s>Facta est autem ista donatio <placeName>Bituricas</placeName>, in refectorio
-                    <placeName>sancti Stephani</placeName>, <date>anno <num>MCVIII<hi rend="sup">o</hi></num> ab incarnatione Domini, indictione prima ; regnante <rs type="person"><persName>Francorum</persName> rege
-                      <persName>Philipo</rs></persName></date>.</s>
+                    <placeName>sancti Stephani</placeName>, <date>anno <num>MCVIII<hi rend="sup">o</hi></num> ab incarnatione Domini, indictione prima ; regnante <persName>Francorum</persName> rege
+                      <persName>Philipo</persName></date>.</s>
               </p>
               <p>
                 <s><rs type="person">Ego <persName>Geraldus</persName>, <placeName>Engolismensis</placeName> episcopus</rs>, huic donationi interfui
@@ -2754,8 +2755,8 @@
                 <s>Sciant tam moderni quam posteri quod <rs type="person"><persName>Gilo</persName>, dominus <placeName>Soliaci</placeName></rs>, habens guerram cum <rs type="person"><persName>Johanne</persName> fratre</rs> suo, portallum
                   monachorum, quod erat in murum castri apud pontem suum, obturari precepit.</s>
                 <s>Monachi vero ibidem commorantes, de tanta injuria contristati, ad dominum
-                    <persName>Gilonem</persName> cum <rs type="person"><persName>Radulpho</persName>
-                    priore <placeName>Caritatis</rs></placeName>, fratre suo, qui divino nutu ipsa
+                    <persName>Gilonem</persName> cum <persName>Radulpho</persName>
+                    priore <placeName>Caritatis</placeName>, fratre suo, qui divino nutu ipsa
                   die in castrum venerat, ambulaverunt ; multis intercessionibus ipsum deprecantes
                   ne eis inju<pb n="58"/>riam faceret, quia illum introitum ab initio castri
                   habuerant, et qui defensor eorum debebat existere eos non presumeret exercere.</s>
@@ -2851,7 +2852,7 @@
                 signifie <hi rend="i">quœ</hi> ou <hi rend="i">qui manu tetigit,</hi> ou <hi rend="i">manu firmavit.</hi></note></rs>.</s>
               </p>
               <p>
-                <s>Signum <rs type="person"><persName>Sulpicii</rs></persName> filii ejus, atque <rs type="person"><persName>Hugonis</persName> fratris ejus</rs> †.</s>
+                <s>Signum <persName>Sulpicii</persName> filii ejus, atque <rs type="person"><persName>Hugonis</persName> fratris ejus</rs> †.</s>
               </p>
               <p>
                 <s>Signum <persName>Girardi</persName> prepositi.</s>

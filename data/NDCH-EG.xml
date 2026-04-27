@@ -1451,7 +1451,7 @@
           <pb n="t1_p077"/>
           <front>
             <docDate>
-              <date when="0949" scope="circa">vers 949 <note type="note" target="#p1077_fn1">Les auteurs du <hi rend="i">Gallia christiana,</hi> suivis en
+              <date when="0949" scope="circa">vers 949 <note xml:id="p1077_fn1">Les auteurs du <hi rend="i">Gallia christiana,</hi> suivis en
                 cela par M. Guérard, ont daté cette pièce vers 954. Nous croyons devoir reculer
                 cette date de quelques années. Cette charte nous paraît en effet antérieure à la
                 pièce suivante, datée de 950, par laquelle Ragenfroy donne à l'abbaye de Saint-Père,
@@ -1498,7 +1498,7 @@
               <p>
                 <s>« In nomine sanctæ et individuę Trinitatis, <persName>Ragenfredus</persName>,
                   nullis extantibus meritis, sanctę sedi <placeName>Carnotinę</placeName> sublimatus
-                    antistes<note type="note" target="#p1077_fn1">Les auteurs du <hi rend="i">Gallia christiana,</hi> suivis en
+                    antistes<note xml:id="p1077_fn1_2">Les auteurs du <hi rend="i">Gallia christiana,</hi> suivis en
                 cela par M. Guérard, ont daté cette pièce vers 954. Nous croyons devoir reculer
                 cette date de quelques années. Cette charte nous paraît en effet antérieure à la
                 pièce suivante, datée de 950, par laquelle Ragenfroy donne à l'abbaye de Saint-Père,
@@ -1715,10 +1715,10 @@
                       <placeName>Pariseorum</placeName> episcopus<note xml:id="p1082_fn2">Constant, évêque de Paris (954). Le <hi rend="i">Gallia
                   christ.</hi> ne donne que cette date pour l'épiscopat de ce prélat. Au reste, il
                 est probable que cette confirmation, ajoutée à la charte originale de Ragenfroy, ne
-                fut faite que quelques années après.</note></rs> ; <rs type="person"><persName>Gunhardus</persName>,
-                      <placeName>Ebroice</rs></placeName> episcopus<note xml:id="p1082_fn3">Guichard, évêque d'Evreux (vers 950-970).</note> ; <rs type="person"><persName>Mainardus</persName>,
-                      <placeName>Cinomannice</rs></placeName> episcopus<note xml:id="p1082_fn4">Mainard, évêque du Mans (940-960).</note> ; <persName>Mabbo</persName>,
-                      <placeName>Paulinani Britannie</placeName> episcopus<note xml:id="p1082_fn5">Mabbon, évêque de Saint-Pol-de-Léon (vers 950).</note> ; <rs type="person"><persName>Nordoardus</persName>, <placeName>Redonensium</rs></placeName>
+                fut faite que quelques années après.</note></rs> ; <persName>Gunhardus</persName>,
+                      <placeName>Ebroice</placeName> episcopus<note xml:id="p1082_fn3">Guichard, évêque d'Evreux (vers 950-970).</note> ; <persName>Mainardus</persName>,
+                      <placeName>Cinomannice</placeName> episcopus<note xml:id="p1082_fn4">Mainard, évêque du Mans (940-960).</note> ; <persName>Mabbo</persName>,
+                      <placeName>Paulinani Britannie</placeName> episcopus<note xml:id="p1082_fn5">Mabbon, évêque de Saint-Pol-de-Léon (vers 950).</note> ; <persName>Nordoardus</persName>, <placeName>Redonensium</placeName>
                       episcopus<note xml:id="p1082_fn6">Nodoard, évêque de Rennes (950-956).</note> ; <rs type="person"><persName>Tedbaldus</persName>, comes<note xml:id="p1082_fn7">Thibault-le-Tricheur, premier comte de Chartres, mort vers
                 977.</note></rs> ; <persName>Hugo</persName> archiepiscopus, filius
                       <persName>Tedbaldi</persName> comitis<note xml:id="p1082_fn8">Suivant le <hi rend="i">Gallia christiana,</hi> Hugues ne
@@ -1736,12 +1736,6 @@
           </body>
           <back>
             <div type="notes">
-              <note xml:id="p1077_fn1">Les auteurs du <hi rend="i">Gallia christiana,</hi> suivis en
-                cela par M. Guérard, ont daté cette pièce vers 954. Nous croyons devoir reculer
-                cette date de quelques années. Cette charte nous paraît en effet antérieure à la
-                pièce suivante, datée de 950, par laquelle Ragenfroy donne à l'abbaye de Saint-Père,
-                douze prébendes dans l'église Notre-Dame, don qui n'est pas mentionné dans ce
-                premier document.</note>
               <note xml:id="p1077_fn3">Ragenfroy occupa le siége de Chartres de 942 à 955,
                 environ.</note>
               
@@ -1845,20 +1839,20 @@
                   comitis</rs></rs>.</s>
                 <s>Signum <persName>Joseph</persName>, archiepiscopi
                       <placeName>Turonum</placeName>.</s>
-                <s>Signum <rs type="person"><persName>Gunhardi</persName>, episcopi
-                      <placeName>Ebroicensis</rs></placeName>.</s>
-                <s>Signum <rs type="person"><persName>Nordoardi</persName>, episcopi
-                      <placeName>Redonensis</rs></placeName>.</s>
+                <s>Signum <persName>Gunhardi</persName>, episcopi
+                      <placeName>Ebroicensis</placeName>.</s>
+                <s>Signum <persName>Nordoardi</persName>, episcopi
+                      <placeName>Redonensis</placeName>.</s>
                 <s>Signum <rs type="person"><persName>Suggerii</persName>, decani</rs>.</s>
                 <s>Signum <persName>Gradulfi</persName>, abbatis.</s>
-                <s>Signum <rs type="person"><persName>Ardradi</rs></persName>, subdecani.</s>
+                <s>Signum <persName>Ardradi</persName>, subdecani.</s>
                 <s>Signum <persName>Humberti</persName>, precentoris.</s>
                 <s>Signum <persName>Hugonis</persName>, ducis.</s>
                 <s>Signum <rs type="person"><persName>Hugonis</persName>, filii ejus</rs>.</s>
                 <s>Signum <rs type="person"><persName>Theobaldi</persName>, nobilissimi
                   comitis</rs>.</s>
                 <s>Signum <rs type="person"><persName>Odonis</persName>, comitis, filii <rs type="person"><persName>Theobaldi</persName> comitis</rs></rs>.</s>
-                <s>Signum <rs type="person"><persName>Ledgardis</rs></persName>, comitisse.</s>
+                <s>Signum <persName>Ledgardis</persName>, comitisse.</s>
                 <s>Signum <persName>Buchardi</persName>.</s>
                 <s>Signum <persName>Galeranni</persName>.</s>
               </p>
@@ -2012,7 +2006,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« Regnante domino <persName>Jhesu-Christo</persName> in perpetuum, anno
-                  incarnationis ejus post mille <num>XIIII</num>, indictione <num><hi rend="sc">xv</hi></num>, et <rs type="person"><persName>Roberti</rs></persName> regis
+                  incarnationis ejus post mille <num>XIIII</num>, indictione <num><hi rend="sc">xv</hi></num>, et <persName>Roberti</persName> regis
                       <persName>Francorum</persName> anno <num>xxvi</num><note xml:id="p1085_fn2">La vingt-sixième année du règne de Robert, à partir du 1<hi rend="sup">er</hi> janvier 988, jour présumé de son couronnement à Orléans,
                 correspond bien avec 1014 ; mais le chiffre de l'indication de cette année est XII
                 et non XV, suivant les computistes. Peut-être faut-il lire <hi rend="i">post mille
@@ -2120,7 +2114,7 @@
                 10 décembre 1383. (<hi rend="i">Original en parchemin.</hi> C. LXXXV bis, C, 2 et
                 XXXIII bis, 5.)</note>.</s>
                 <s>Hunc ergo, cum omnibus appendiciis suis, quorum hęc sunt nomina :
-                    <placeName>Campus, <placeName>Briessartus</placeName>,
+                    <placeName>Campus</placeName>, <placeName>Briessartus</placeName>,
                     <placeName>Roserorus</placeName>, <placeName>Firmaticortis</placeName>, et totum
                   hoc quod de dominici villa pertinet ad illum alodum, <persName>Manasses</persName> comes supramemoratus condonat
                     <placeName>Sanctę Mariae Carnotensis</placeName> ęcclesię, canonicorum
@@ -2178,13 +2172,13 @@
                     <persName>Hilduini</persName>.</s>
                 <s>Signum <persName>Burcardi de Montemorenciaco</persName><note xml:id="p1088_fn5">Bouchard III, seigneur de Montmorency, mentionné dans les
                 chartes jusqu'en 1032.</note>.</s>
-                <s>Signum <rs type="person"><persName>Evrardi</persName>, filii <persName>Hilduini
-                      de Britogilo</persName><note xml:id="p1088_fn6">Hilduin</rs>, comte de Breteuil et de Clermont-en-Beauvoisis, dont
+                <s>Signum <persName>Evrardi</persName>, filii <persName>Hilduini
+                      de Britogilo</persName><note xml:id="p1088_fn6">Hilduin, comte de Breteuil et de Clermont-en-Beauvoisis, dont
                 la fille épousa Raoul, seigneur de Nanteuil, a laissé son nom à cette dernière
                 seigneurie, qui s'appela depuis, Nanteuil-le-Hilduin, et par corruption, le
                 Haudouin.</note>.</s>
                 <s>Signum <persName>Amalrici de Monteforti</persName>.</s>
-                <s>Signum <persName>Milonis de Caprosa</persName><note xml:id="p1088_fn7">Miles</note>, premier seigneur de Chevreuse, n'est connu que par
+                <s>Signum <persName>Milonis de Caprosa</persName><note xml:id="p1088_fn7">Miles, premier seigneur de Chevreuse, n'est connu que par
                 cette charte, à laquelle le P. Anselme (<hi rend="i">Hist. généal.,</hi> t. VIII, p.
                 536) donne à tort la date de 1029.</note>.</s>
                 <s>Signum <persName>Maingonis</persName>.</s>
@@ -2285,8 +2279,8 @@
                       <placeName>Carnotensis</placeName> episcopi<note xml:id="p1090_fn2">Suivant le <hi rend="i">Gallia christiana,</hi> Thierry,
                 évêque de Chartres, serait mort le 16 avril 1048. On voit qu'il y a erreur de la
                 part des savants Bénédictins, au moins quant à la date du mois.</note>.</s>
-                <s>Signum <rs type="person"><persName>Isenbardi</persName>,
-                      <placeName>Aurelianensis</rs></placeName> episcopi<note xml:id="p1090_fn3">Isembard de Broyes, évêque d'Orléans, de 1033 à 1063. D'après
+                <s>Signum <persName>Isenbardi</persName>,
+                      <placeName>Aurelianensis</placeName> episcopi<note xml:id="p1090_fn3">Isembard de Broyes, évêque d'Orléans, de 1033 à 1063. D'après
                 Doyen (<hi rend="i">Histoire de Chartres,</hi> t. II, p. 284), c'est à ce prélat que
                 la ville de Nogent-le-Roi aurait dû son surnom d'<hi rend="i">Erambert</hi> ou <hi rend="i">le Rambert</hi> par corruption. Nous croyons plutôt que ce surnom lui
                 vint d'une famille Erembert qui l'habitait au XII<hi rend="sup">e</hi> siècle. (Voir
@@ -2295,14 +2289,14 @@
                 <s>Signum <persName>Vualterii</persName>,
                       <placeName>Meldensis</placeName> episcopi<note xml:id="p1090_fn4">Gautier Savoir, évêque de Meaux, de 1045 environ à
                 1082.</note>.</s>
-                <s>Signum <rs type="person"><persName>Frotlandi</persName>,
-                      <placeName>Silvanectensis</rs></placeName> episcopi<note xml:id="p1090_fn5">Frolland I, évêque de Senlis, de 1043 à 1053 environ.</note>.</s>
+                <s>Signum <persName>Frotlandi</persName>,
+                      <placeName>Silvanectensis</placeName> episcopi<note xml:id="p1090_fn5">Frolland I, évêque de Senlis, de 1043 à 1053 environ.</note>.</s>
                 <s>Signum <rs type="person"><persName>Vuiscelini</persName>, capellani</rs>.</s>
                 <s>Signum <rs type="person"><persName>Richardi</persName>, diaconi et
                   capellani</rs>.</s>
-                <s>Signum <rs type="person"><persName>Gausfridi</persName>,
-                      <placeName>Sancti</rs>-Aniani</placeName> subdecani.</s>
-                <s>Signum <rs type="person"><persName>Adelardi</rs></persName>
+                <s>Signum <persName>Gausfridi</persName>,
+                      <placeName>Sancti-Aniani</placeName> subdecani.</s>
+                <s>Signum <persName>Adelardi</persName>
                     <placeName>Laudunensis</placeName>.</s>
                 <s>Signum <rs type="person"><persName>Burchardi</persName>, clerici</rs>.</s>
                 <s>Signum <persName>Tetboldi</persName>, palacii comitis<note xml:id="p1090_fn6">Thibault III, comte de Chartres-Blois et de Champagne, second
@@ -2319,10 +2313,10 @@
                 épousé Thibault III, comte de Chartres.</note>.</s>
                 <s>Signum <rs type="person"><persName>Ragenaldi</persName>, camerarii<note xml:id="p1090_fn9">La séance du chambrier Renaud, que Mabillon et du Cange
                 fixent à 1052 ou même à 1060, remonte, comme on le voit, à 1048.</note></rs>.</s>
-                <s>Signum <rs type="person"><persName>Gilduini</persName>, viceco<pb n="t1_p091"/>mitis<note xml:id="p1091_fn1">Gilduin, vicomte de Chartres (vers 1020-1050), figure dans la
+                <s>Signum <persName>Gilduini</persName>, viceco<pb n="t1_p091"/>mitis<note xml:id="p1091_fn1">Gilduin, vicomte de Chartres (vers 1020-1050), figure dans la
                 donation du bourg Muret faite à l'abbaye de Saint-Jean par le comte Eudes, vers 1036
                 (Arch. dep. d'Eure-et-Loir, <hi rend="i">fonds de l'abb. de Saint-Jean</hi>). Il
-                comparaît comme donateur, avec sa femme Emeline</rs>, son fils aîné Hardouin, et
+                comparaît comme donateur, avec sa femme Emeline, son fils aîné Hardouin, et
                 Elisabeth, femme de ce dernier, dans un titre de Saint-Père, du 26 avril 1046 (<hi rend="i">Cart. de Saint-Père,</hi> p. 161). S'étant fait moine sur ses vieux
                 jours, il donna à Notre-Dame la terre de Sigogne, <hi rend="i">Ciconiolas,</hi> et
                 son obit est inscrit au <hi rend="i">Nécrologe</hi> sous la date du 15 des calendes
@@ -2336,10 +2330,10 @@
                 grâce, en même temps que son beau-père, Thibault, en 1048. Il mourut vers la fin de
                 1059. (<hi rend="i">Hist. mss. des seigneurs de Nogent-le-Roi,</hi> par l'abbé
                 d'Espagnac.)</note>.</s>
-                <s>Signum <rs type="person"><persName>Evrardi</rs></persName>, filii
+                <s>Signum <persName>Evrardi</persName>, filii
                       <persName>Gelduini</persName><note xml:id="p1091_fn3">Evrard I, fils de Gilduin, et son successeur dans la vicomté
                 de Chartres (1050-1060).</note>.</s>
-                <s>Signum <rs type="person"><persName>Bernardi</rs></persName>, sinescalci<note xml:id="p1091_fn4">Bernard ne figure pas dans la liste des sénéchaux donnée par
+                <s>Signum <persName>Bernardi</persName>, sinescalci<note xml:id="p1091_fn4">Bernard ne figure pas dans la liste des sénéchaux donnée par
                 le P. Anselme, Moréri, Mabillon, Du Cange et M. de Wailly. D'après ces auteurs, le
                 plus ancien des successeurs des comtes d'Anjou dans cette dignité, serait Guillaume
                 de la Ferté, sénéchal en 1060.</note>.</s>
@@ -2356,7 +2350,7 @@
                   Saint-Père,</hi> p. 25 et 96).</note>.</s>
                 <s>Signum <persName>Gauslini Casati Carnotensis</persName>.</s>
                 <s>Signum <persName>Rotberti de Sancto-Leodegario</persName>.</s>
-                <s>Signum <persName>Vualterii de Friasia</persName><note xml:id="p1091_fn7">Gauthier</note> de Friaize est le chef d'une famille illustre du
+                <s>Signum <persName>Vualterii de Friasia</persName><note xml:id="p1091_fn7">Gauthier de Friaize est le chef d'une famille illustre du
                 pays chartrain, dont plusieurs membres figurèrent dans les croisades, et qui s'allia
                 au XIII<hi rend="sup">e</hi> siècle avec la maison des vidames de Chartres.</note>.</s>
                 <s>Signum <rs type="person"><persName>Vuarini</persName>, militis
@@ -2438,10 +2432,10 @@
                 <s>Ut autem hoc pactum stabile fieret et indissolubile, regis
                       <persName>francorum</persName>
                     <persName>Henrici</persName> nomine confirmatum est.</s>
-                <s>Signum <rs type="person"><persName>Henrici</persName> regis</rs> ; <rs type="person"><persName>Gaufridi</rs></persName> comitis, filii comitis
+                <s>Signum <rs type="person"><persName>Henrici</persName> regis</rs> ; <persName>Gaufridi</persName> comitis, filii comitis
                       <persName>Britannorum</persName><note xml:id="p1092_fn2">Geoffroy, fils naturel d'Alain III, duc de Bretagne,
                 dépossédé du comté de Rennes en 1048.</note> ;
-                    <rs type="person"><persName>Rainaldi</persName>, camerarii</rs> regis<note xml:id="p1092_fn3">Voir p. 90, note 9.</note> ; <persName>Ebraldi de Putheolo</persName><note xml:id="p1092_fn4">Voir</note> p. 91, note 3.</note> ; <persName>Yvonis</persName>, filii <persName>Yvonis</persName> comitis<note xml:id="p1092_fn5">Yves II, second fils d'Yves I<hi rend="sup">er</hi>, qui
+                    <rs type="person"><persName>Rainaldi</persName>, camerarii</rs> regis<note xml:id="p1092_fn3">Voir p. 90, note 9.</note> ; <persName>Ebraldi de Putheolo</persName><note xml:id="p1092_fn4">Voir p. 91, note 3.</note> ; <persName>Yvonis</persName>, filii <persName>Yvonis</persName> comitis<note xml:id="p1092_fn5">Yves II, second fils d'Yves I<hi rend="sup">er</hi>, qui
                 devint comte de Beaumont-sur-Oise vers 1067-1070 et mourut vers 1091.</note> ; <persName>Guillelmi de
                     Calniaco</persName> ; <rs type="person"><persName>Ricardi</persName>, regis
                     capellani</rs> ; <persName>Guillelmi</persName>,
@@ -2452,7 +2446,7 @@
                       <persName>Guillelmi</persName> ; <rs type="person"><persName>Fulberti</persName>, nepotis episcopi</rs> ; <persName>Alberti
                     Marvillerii</persName> ; <persName>Roberti de Vindocino</persName> ; <rs type="person"><persName>Bernardi</persName>, nepotis episcopi</rs> ; <persName>Agoberti</persName>, episcopi ; <rs type="person"><persName>Hugonis</persName>, decani</rs><note xml:id="p1092_fn6">Hugues, doyen du Chapitre de Chartres (1038-1060).</note> ; <rs type="person"><persName>Arnulphi</persName>, cantoris</rs> ; <pb n="t1_p093"/>
                   <rs type="person"><persName>Fulcherii</persName>, archidiaconi</rs> ;
-                    <persName>Yvonis de Curbavilla</persName><note xml:id="p1093_fn1">Yves</note> I, seigneur de Courville, l'un des chefs de cette
+                    <persName>Yvonis de Curbavilla</persName><note xml:id="p1093_fn1">Yves I, seigneur de Courville, l'un des chefs de cette
                 puissante maison, vivait vers la seconde moitié du XI<hi rend="sup">e</hi> siècle.
                 Il était probablement frère de Girois de Courville, <hi rend="i">Gerogius,</hi> dont
                 il est question dans deux titres de Saint-Père, de mars 1094 et de 1101, insérés au
@@ -2461,7 +2455,7 @@
                 construire un des portails de l'église de Chartres.</note> ;
                     <rs type="person"><persName>Hugonis</persName>, filii vicedomini<note xml:id="p1093_fn3">Hugues II, fils de Guerry et d'Hélissende, vidame de Chartres
                 (v. 1089-1100).</note></rs> ; <rs type="person"><persName>Herberti</persName>,
-                    nepotis <persName>Alberti</persName> abbatis</rs> ;<rs type="person"><persName>Hugonis</persName>, filii <persName>Huberti</rs> de
+                    nepotis <persName>Alberti</persName> abbatis</rs> ;<persName>Hugonis</persName>, filii <persName>Huberti de
                     Firmitate</persName>. »</s>
               </p>
             </div>
@@ -2690,7 +2684,7 @@
                 <s>Signum <persName>Gradulfi</persName>, canonici.</s>
                 <s>Signum <persName>Ilberti de Gurzeis</persName>.</s>
                 <s>Signum <rs type="person"><persName>Hilduini</persName>, precentoris</rs>.</s>
-                <s>Signum <rs type="person"><persName>Girardi</rs></persName>, majoris.</s>
+                <s>Signum <persName>Girardi</persName>, majoris.</s>
                 <s>Signum <rs type="person"><persName>Ugonis</persName>, cubicularii</rs>.</s>
                 <s>Signum <persName>Guidardi de Vana</persName>.</s>
                 <s>Signum <rs type="person"><persName>Guillelmi</persName>, servientis</rs>.</s>
@@ -2952,14 +2946,14 @@
               </p>
               <p>
                 <s>+ Signum <rs type="person"><persName>Ivonis</persName>, episcopi</rs>.</s>
-                <s>+ Signum <rs type="person"><persName>Ernaldi</persName>, decani<note xml:id="p1100_fn1">Arnauld, doyen (1092-1120), est connu par ses luttes
+                <s>+ Signum <persName>Ernaldi</persName>, decani<note xml:id="p1100_fn1">Arnauld, doyen (1092-1120), est connu par ses luttes
                 violentes avec son évêque, au sujet de la réforme qu'Yves, voulait introduire dans
                 la collation des dignités et des prébendes du Chapitre. A la suite de ces disputes,
                 il se démit du décanat, pour se retirer d'abord à Cluny, puis à l'abbaye de la
                 Trinité de Vendôme, qu'il quitta ensuite pour reprendre le décanat, au grand
                 scandale de l'abbé Geoffroy. <hi rend="i">(Lettres d'Yves de Chartres,</hi> publiées
                 par M. Luc. Merlet dans la Bibl. de l'Ec. des Chartes, 4<hi rend="sup">e</hi> série,
-                t. I, p. 459. — <hi rend="i">Gaufridi abb. Vindoc</rs>. Epist.,</hi> lib. II. C.
+                t. I, p. 459. — <hi rend="i">Gaufridi abb. Vindoc. Epist.,</hi> lib. II. C.
                 7).</note>.</s>
                 <s>+ Signum <rs type="person"><persName>Ilduini</persName>, cantoris</rs>.</s>
                 <s>+ Signum <rs type="person"><persName>Gauslini</persName>, subdecani</rs>.</s>
@@ -3130,7 +3124,7 @@
                 <s>Signum <rs type="person"><persName>Arnaldi</persName>, decani</rs>.</s>
                 <s>Signum <rs type="person"><persName>Guillelmi</persName>, archidiaconi</rs>.</s>
                 <s>Signum <rs type="person"><persName>Guarini</persName>, succentoris</rs>.</s>
-                <s>Signum <rs type="person"><persName>Radulphi</rs></persName>, canonici.</s>
+                <s>Signum <persName>Radulphi</persName>, canonici.</s>
                 <s>Signum <rs type="person"><persName>Huberti</persName>, canonici</rs>.</s>
                 <s>Signum <rs type="person"><persName>Georgii</persName>, camerarii</rs>.</s>
                 <s>Signum <rs type="person"><persName>Symonis</persName>, archidiacon</rs>i.</s>
@@ -3143,7 +3137,7 @@
                 <s>Signum <rs type="person"><persName>Theodori</persName>, diaconi</rs>.</s>
                 <s>Signum <rs type="person"><persName>Hilduini</persName>, cantoris</rs>.</s>
                 <s>Signum <rs type="person"><persName>Seranni</persName>, subdecani</rs>.</s>
-                <s>Signum <rs type="person"><persName>Raginaldi</rs></persName>, canonici.</s>
+                <s>Signum <persName>Raginaldi</persName>, canonici.</s>
                 <s>Signum <rs type="person"><persName>Herberti</persName>, canonici</rs>.</s>
                 <s>Signum <persName>Ulgrini</persName>, cancellarii<note xml:id="p1103_fn2">Vulgrin fut élu archevêque de Dol en 1107. (Voir, au sujet de
                 son élection, les lettres de saint Yves, nº 200 et 262.) Il se démit avant d'avoir
@@ -3165,7 +3159,7 @@
                 <s>Signum <rs type="person"><persName>Andree</persName>, diaconi</rs>.</s>
                 <s>Signum <rs type="person"><persName>Guarini</persName>, diaconi</rs>.</s>
                 <s>Signum <rs type="person"><persName>Durandi</persName>, diaconi</rs>.</s>
-                <s>Signum <rs type="person"><persName>Gisleberti</rs></persName>, subdiaconi.</s>
+                <s>Signum <persName>Gisleberti</persName>, subdiaconi.</s>
                 <s>Signum <rs type="person"><persName>Alberti</persName>, canonici</rs>.</s>
                 <s>Signum <rs type="person"><persName>Stephani</persName> ; subdiacon</rs>i.</s>
                 <s>Signum <rs type="person"><persName>Hugonis</persName>, subdiaconi</rs>.</s>
@@ -3317,12 +3311,12 @@
               </p>
               <p>
                 <s>[Concessioni <persName>Theobaldi</persName> pueri interfuerunt :
-                    <persName>Robertus Aculeus</persName> ; <rs type="person"><persName>Girardus</persName>, filius vicedomine<note xml:id="p1106_fn10">Girard Boël, fils de la vidamesse Hélissende et de
+                    <persName>Robertus Aculeus</persName> ; <persName>Girardus</persName>, filius vicedomine<note xml:id="p1106_fn10">Girard Boël, fils de la vidamesse Hélissende et de
                 Barthélemy Boël, son second mari, fut un des personnages les plus importants de la
                 cour de Thibault IV. On rencontre son nom au bas d'une donation faite à l'abbaye de
                 Saint-Jean par Louis-le-Gros en 1111 (Arch. dep. d'Eure-et-Loir, <hi rend="i">Fonds
                   de Saint-Jean</hi>, Inv., nº 82), et dans plusieurs autres titres de ce couvent et
-                de celui de Saint-Père. Sa fille Ledgarde</rs> épousa Yves d'Illiers, l'un des plus
+                de celui de Saint-Père. Sa fille Ledgarde épousa Yves d'Illiers, l'un des plus
                 puissants feudataires du comté de Chartres, qui se croisa vers 1165. Girard Boël
                 mourut vers 1160 (<hi rend="i">Fonds de Saint-Jean,</hi> Inv. nº 749).</note> ; <persName>Guillelmus</persName>, filius <persName>Hugonis
                     Albi</persName> ; <rs type="person"><persName>Guillelmus</persName>, filius
@@ -3384,7 +3378,7 @@
                       Romanus</persName>, legatus pape ; <persName>Rogerius de
                     Juvisiaco</persName> ; <persName>Gauslinus de Leugis</persName> ; <persName>Ansoldus</persName> puer ; <persName>Galeranus de
                     Puteolo</persName> ; <persName>Albertus Rufus</persName><note xml:id="p1108_fn3">Albert-le-Roux figure, comme donateur, dans un acte de
-                l'abbaye de Saint-Père (<hi rend="i">Cart.,</hi> p. 434).</note> ; <persName>Robertus de Deserto</persName><note xml:id="p1108_fn4">On</note> trouve le nom de ce personnage dans la donation faite par
+                l'abbaye de Saint-Père (<hi rend="i">Cart.,</hi> p. 434).</note> ; <persName>Robertus de Deserto</persName><note xml:id="p1108_fn4">On trouve le nom de ce personnage dans la donation faite par
                 la comtesse Adèle à l'abbaye de Saint-Père, en 1104 (<hi rend="i">Cart.,</hi> p.
                 409).</note> ; <rs type="person"><persName>Johannes</persName>, filius
                       <persName>Falconis</persName></rs>, <persName>Robertus</persName>, filius <persName>Guillelmi Gon</persName>
@@ -3477,8 +3471,8 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <rs type="person"><persName>Paschalis</persName> episcopus</rs>, servus
-                  servorum Dei, venerabili <rs type="person">fratri <persName>Ivoni</persName>,
-                      <placeName>Carnotensi</rs></placeName> episcopo, salutem et apostolicam
+                  servorum Dei, venerabili fratri <persName>Ivoni</persName>,
+                      <placeName>Carnotensi</placeName> episcopo, salutem et apostolicam
                   benedictionem.</s>
                 <s>Religiosis desideriis dignum est facilem prebere consensum, ut fidelis devocio
                   celerem sorciatur effectum.</s>
@@ -3568,8 +3562,8 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <persName>Paschalis</persName> episcopus, servus
-                  servorum Dei, <rs type="person">venerabili fratri <persName>I[voni]</persName>,
-                      <placeName>Carnotensi</rs></placeName> episcopo, et tocius capituli fratribus,
+                  servorum Dei, venerabili fratri <persName>I[voni]</persName>,
+                      <placeName>Carnotensi</placeName> episcopo, et tocius capituli fratribus,
                   salutem et apostolicam benedictionem.</s>
                 <s>Audivimus in regionum vestrarum ecclesiis quasdam pravas consuetudines emersisse
                   et in ecclesia vestra precipue vigere ; super hec etiam quedam contra canonum
@@ -4039,7 +4033,7 @@
                     <persName>Galterii</persName>, <persName>Garini</persName>,
                     <persName>Rainodi</persName>.</s>
                 <s>+ Signum <persName>Hugonis de Sancto</persName>.</s>
-                <s>Data <placeName>Carnoti</placeName>, per manum <rs type="person"><persName>Vulgrini</rs></persName>, cancellarii, <date>tercio nonas
+                <s>Data <placeName>Carnoti</placeName>, per manum <persName>Vulgrini</persName>, cancellarii, <date>tercio nonas
                     februarii, anno ab incarnacione Domini millesimo centesimo tercio decimo,
                     regnante <persName>Ludovico Philippi</persName></date><note xml:id="p1118_fn4">C'est bien là l'acte de fondation de l'abbaye de Thiron. Plus
                 tard, au XV<hi rend="sup">e</hi> siècle, les religieux de cette abbaye, dans le but
@@ -4364,8 +4358,8 @@
                       <persName>Ivonis</persName>, <placeName>Carnotensis</placeName> episcopi</rs>
                   <num>xxºvº</num><note xml:id="p1124_fn1">Cette date fixerait à l'année 1089 la prise de possession
                 d'Yves, mais nous avons vu par les lettres d'Urbain II, du 25 novembre 1090 (n<hi rend="sup">os</hi> XIX et XX), qu'à cette dernière époque le prélat n'était pas
-                encore admis par les chanoines et par l'archevêque de Sens.</note>, regnante <rs type="person">rege <placeName>Gallie</placeName>
-                    <persName>Ludovico</rs></persName>, regis <persName>Philippi</persName> filio.
+                encore admis par les chanoines et par l'archevêque de Sens.</note>, regnante rege <placeName>Gallie</placeName>
+                    <persName>Ludovico</persName>, regis <persName>Philippi</persName> filio.
                   »</s>
               </p>
             </div>
@@ -4578,7 +4572,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <persName>Calixtus</persName> episcopus, servus servorum
-                  Dei, venerabili <rs type="person">fratri <persName>Gaufrido</rs></persName>,
+                  Dei, venerabili fratri <persName>Gaufrido</persName>,
                       <placeName>Carnotensi</placeName> episcopo, salutem et apostolicam
                   benedictionem.</s>
                 <s>Quę religionis et honestatis prospectu in Dei ecclesia statuuntur, inconcussa
@@ -4775,7 +4769,7 @@
               <p>
                 <s>« <rs type="person"><persName>Guillelmus</persName>, abbas
                       <placeName>Sancti-Petri</placeName></rs>, suique monachi privilegium quoddam,
-                  pro tuitione rerum suarum, a bone memorie <rs type="person"><persName>Paschali</rs></persName> papa impetraverant ; sed quedam in illo
+                  pro tuitione rerum suarum, a bone memorie <persName>Paschali</persName> papa impetraverant ; sed quedam in illo
                   privilegio continebantur unde canonici <placeName>Beate-Marie</placeName>
                   molestabantur, que utrorumque assensu sic modificata sunt.</s>
                 <s>Ecclesiam <placeName>Beati-Petri</placeName>
@@ -4978,7 +4972,7 @@
                 celui qui nous occupe en ce moment. C'est un sceau rond, en cire verte, portant au
                 centre un écu <hi rend="i">de..... à trois mains de..... 2 et 1,</hi> avec ces
                 fragments de légende : ( <hi rend="sc">sig</hi> [<hi rend="sc">illvm</hi>] <hi rend="sc">goh</hi> [<hi rend="sc">erii</hi>] <hi rend="sc">de a</hi>[<hi rend="sc">lnet</hi>]<hi rend="sc">o</hi>.</note> ;
-                    <persName>Gunherius de Morvilla</persName><note xml:id="p1133_fn3">Nous</note> voyons par un titre de Saint-Père de 1101-1129 <hi rend="i">(Cart.,</hi> p. 478) que Gohier de Morville était fils de Payenne et
+                    <persName>Gunherius de Morvilla</persName><note xml:id="p1133_fn3">Nous voyons par un titre de Saint-Père de 1101-1129 <hi rend="i">(Cart.,</hi> p. 478) que Gohier de Morville était fils de Payenne et
                 qu'il avait pour frère Guillaume, dont le nom se trouve parmi ceux des témoins d'un
                 accord fait entre le Chapitre et Ursion de Meslay en 1139. Voir ci-après, n°
                 XLI.</note>
@@ -5009,7 +5003,7 @@
               </p>
               <p>
                 <s>Porro, in crastinum ipsius diei, nobis positis in <placeName>Turre</placeName>
-                  mea, <placeName>Carnoti</placeName>, concessit id ipsum <rs type="person">comitissa uxor mea, <persName>Mathildis</rs></persName> nomine<note xml:id="p1134_fn4">Mathilde, fille d'Engilbert II, duc de Carinthie, comtesse de
+                  mea, <placeName>Carnoti</placeName>, concessit id ipsum comitissa uxor mea, <persName>Mathildis</persName> nomine<note xml:id="p1134_fn4">Mathilde, fille d'Engilbert II, duc de Carinthie, comtesse de
                 Chartres-Blois et de Champagne. L'obit de cette princesse est inscrit au <hi rend="i">Nécrologe</hi> sous la date du jour des ides de décembre.</note>, me rogante, audientibus et videntibus <persName>Hugone</persName>, vice-comite de
                     <placeName>Pusiato</placeName>, et multis militibus sive servientibus et
                   meis et suis, et jamdicto <rs type="person"><placeName>Majoris-Monasterii</placeName> abbate
@@ -5513,7 +5507,7 @@
                   subscripsi.</s>
                 <s>Ex parte nostra interfuerunt : <persName>Ansgerius</persName>,
                     archidiaconus ; <rs type="person"><persName>Droco</persName>,
-                    archidiaconus</rs> ; <rs type="person"><persName>Galterus</rs></persName>,
+                    archidiaconus</rs> ; <persName>Galterus</persName>,
                     presbiter ; <rs type="person"><persName>Petrus</persName>, presbiter</rs> ;
                     <persName>Guido</persName>, diaconus ;
                     <persName>Guillemus Muniarii</persName> ; <persName>Gervasius</persName>, major, <persName>Alcherius</persName>, filius <persName>Aloni</persName>.</s>
@@ -5814,7 +5808,7 @@
                   capitulo, et filius ejus primogenitus <persName>Nivelo</persName>, et frater ejus
                   junior <persName>Hamelinus</persName> ; et apud
                     <placeName>Fractamvallem</placeName> hoc idem concesserunt
-                    <persName>Philippus</persName> et <persName>Raginaldus</persName><note xml:id="p1147_fn2">L</note>'un des chevaliers qui prirent part, en 1170, au meurtre de
+                    <persName>Philippus</persName> et <persName>Raginaldus</persName><note xml:id="p1147_fn2">L'un des chevaliers qui prirent part, en 1170, au meurtre de
                 Thomas Becket, archevêque de Cantorbéry, s'appelait Renaud <hi rend="i">Fitz-Urse,</hi> c'est-à-dire fils d'ours. Ce nom se rapporterait assez à celui de
                 Renaud, fils d'Ursion de Freteval, qui, d'après l'historien dunois Bordas, avait
                 épousé les intérêts de Henri Plantagenet.</note>, filii ejusdem <persName>Ursionis</persName>
@@ -5835,7 +5829,7 @@
                       <persName>Gaufridi</persName>, <placeName>Carnotensis</placeName>
                     episcopi, <date>vigesimo quarto, nono kalendas februarii, luna vigesima,
                     feria quarta, hora diei tercia</date>.</s>
-                <s>Huic concessioni interfuerunt, ex parte Capituli : <rs type="person"><persName>Zacharias</persName>, decanus</rs> ; <rs type="person"><persName>Salomon</persName>, precentor</rs> ; <persName>Hugo</persName>, subdecanus ; <rs type="person"><persName>Hugo</persName>, succentor</rs> ; <rs type="person"><persName>Gauslinus</persName>, prepositus</rs> ; <rs type="person"><persName>Heinricus</persName>, prepositus</rs> ; <rs type="person"><persName>Milo</persName>, prepositus</rs> ; <rs type="person"><persName>Richerius</rs></persName>, archidiaconus ; <rs type="person"><persName>Droco</persName>, archidiaconus</rs> ; <rs type="person"><persName>Ansgerius</persName>, archidiaconus</rs> ; <persName>Willelmus</persName>, presbiter ; <rs type="person"><persName>Fredericus</persName>, presbiter</rs> ; <persName>Gosbertus</persName>, diaconus ; <persName>Radulfus</persName>, diaconus ; <persName>Herbertus Belotinus</persName>, diaconus ; <rs type="person"><persName>Matheus</persName>, diaconus</rs> ; <rs type="person"><persName>Hugo</persName>, diaconus</rs> ; <rs type="person"><persName>Guido
+                <s>Huic concessioni interfuerunt, ex parte Capituli : <rs type="person"><persName>Zacharias</persName>, decanus</rs> ; <rs type="person"><persName>Salomon</persName>, precentor</rs> ; <persName>Hugo</persName>, subdecanus ; <rs type="person"><persName>Hugo</persName>, succentor</rs> ; <rs type="person"><persName>Gauslinus</persName>, prepositus</rs> ; <rs type="person"><persName>Heinricus</persName>, prepositus</rs> ; <rs type="person"><persName>Milo</persName>, prepositus</rs> ; <persName>Richerius</persName>, archidiaconus ; <rs type="person"><persName>Droco</persName>, archidiaconus</rs> ; <rs type="person"><persName>Ansgerius</persName>, archidiaconus</rs> ; <persName>Willelmus</persName>, presbiter ; <rs type="person"><persName>Fredericus</persName>, presbiter</rs> ; <persName>Gosbertus</persName>, diaconus ; <persName>Radulfus</persName>, diaconus ; <persName>Herbertus Belotinus</persName>, diaconus ; <rs type="person"><persName>Matheus</persName>, diaconus</rs> ; <rs type="person"><persName>Hugo</persName>, diaconus</rs> ; <rs type="person"><persName>Guido
                       de Sancto-Martino</persName>, diaconus</rs> ; <persName>Herbertus
                     Arnulfi</persName>, <persName>Guido</persName>, cancellarii ;
                     <persName>Guillelmus de Bello-Videre</persName>, <persName>Radulfus de
@@ -6256,8 +6250,8 @@
                   habituros, necnon et jura parrochialia, panes videlicet et candelas.</s>
                 <s>Actum publice, residentibus in capitulo nostro : <rs type="person"><persName>Roberto</persName>, decano</rs> ; <rs type="person"><persName>Hugone</persName>, precentore</rs> ; <rs type="person"><persName>Hugone</persName>, subdecano</rs> ; <persName>Roberto</persName>, succentore ; <rs type="person"><persName>Milone</persName>, archidiacono</rs> ; <rs type="person"><persName>Gaufrido</persName>, preposito de
                       <placeName>Nogento-super-Auduram</placeName></rs> ; <persName>Raherio</persName>, preposito de
-                    <placeName>Belsica</placeName> ; <rs type="person"><persName>Odone</persName>, preposito de
-                    <placeName>Fontaneto</rs></placeName> ; <rs type="person"><persName>Gosleno</persName>, capicerio</rs>.</s>
+                    <placeName>Belsica</placeName> ; <persName>Odone</persName>, preposito de
+                    <placeName>Fontaneto</placeName> ; <rs type="person"><persName>Gosleno</persName>, capicerio</rs>.</s>
                 <s>Si quis autem huic nostre pagine obviare presumpserit, a communione dominici
                   corporis et sanguinis alienus, noverit se anathemati subjacere.</s>
                 <s>Ad majorem nempe auctoritatem presenti cartule conferendam eam nostri impressione
@@ -6606,7 +6600,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« <persName>Joscelinus de Alneolo</persName><note xml:id="p1160_fn3">Josselin</note>, seigneur d'Auneau, paraît comme témoin dans une
+                <s>« <persName>Joscelinus de Alneolo</persName><note xml:id="p1160_fn3">Josselin, seigneur d'Auneau, paraît comme témoin dans une
                 charte de 1139 (voir nº L). Il figure dans une charte de Beaulieu de 1146 (Arch.
                 dep. d'Eure-et-Loir ; <hi rend="i">fonds de Beaulieu</hi>), dans un titre de
                 l'abbaye de Saint-Père de l'année 1155 (<hi rend="i">Cart.</hi> cité, p. 648), et
@@ -6753,7 +6747,7 @@
                 <s>« In nomine sancte et individue Trinitatis, amen.</s>
                 <s>Quoniam omnes Dei fideles a pervasione rei alterius christiane cohibet regula
                   discipline, et summa iniquitas est preripere bona venerabilibus personis et locis
-                  deputata, iccirco ego <rs type="person"><persName>Theobaldus</persName><note xml:id="p1163_fn1">Thibault V, comte de Chartres-Blois (1152-1191). Le titre de
+                  deputata, iccirco ego <persName>Theobaldus</persName><note xml:id="p1163_fn1">Thibault V, comte de Chartres-Blois (1152-1191). Le titre de
                   <hi rend="i">procurator</hi> qui lui est donné ici équivaut, d'après du Cange, à
                 celui de <hi rend="i">dapifer</hi> ou de <hi rend="i">senescallus (qui convivio
                   excipit vel convivium apparat). Procurator</hi> pourrait plutôt avoir la
@@ -6762,7 +6756,7 @@
                 royaume. Thibault posséda la dignité de sénéchal de 1152 à 1191. L'obit de ce prince
                 est inscrit au <hi rend="i">Nécrologe</hi> sous la date du 17 des calendes de
                 février.</note>, <placeName>Blesensis</placeName> comes,
-                    regni <placeName>Francie</rs></placeName> procurator, ad noticiam tam futurorum
+                    regni <placeName>Francie</placeName> procurator, ad noticiam tam futurorum
                   quam presentium scripto mandare curavi quod dictum erat mihi terram de
                     <placeName>Bussiaco</placeName> esse de feodo meo.</s>
                 <s>Perinde causam movens in curia regis <persName>Ludovici</persName> de eadem terra
@@ -6838,8 +6832,8 @@
                   soror mea virque ejus et <persName>Guarinus, cognomine Burdum</persName>, cognatus
                   meus, his coram positis : <persName>Ivone</persName>,
                     decano ; <rs type="person"><persName>Amalrico</persName>, precentore</rs> ;
-                    <rs type="person"><persName>Gisleberto</rs></persName>, subdecano ; <persName>Roberto de Moneta</persName>, succentore ; <rs type="person"><persName>Gaufrido</persName>, preposito</rs> ; <rs type="person"><persName>Raherio</persName>, preposito</rs> ; <rs type="person"><persName>Ernaldo</persName>, archidiacono</rs> ; <rs type="person"><persName>Roberto</persName>, cancellario</rs> ; <persName>Odone</persName>, presbitero ; <rs type="person"><persName>Henrico</persName>, presbitero</rs> ; <persName>Gisleberto de Ver
-                  </persName>; <rs type="person"><persName>Willelmo</rs> de Juriaco</persName>,
+                    <persName>Gisleberto</persName>, subdecano ; <persName>Roberto de Moneta</persName>, succentore ; <rs type="person"><persName>Gaufrido</persName>, preposito</rs> ; <rs type="person"><persName>Raherio</persName>, preposito</rs> ; <rs type="person"><persName>Ernaldo</persName>, archidiacono</rs> ; <rs type="person"><persName>Roberto</persName>, cancellario</rs> ; <persName>Odone</persName>, presbitero ; <rs type="person"><persName>Henrico</persName>, presbitero</rs> ; <persName>Gisleberto de Ver
+                  </persName>; <persName>Willelmo de Juriaco</persName>,
                     sacerdote ; <persName>Fulcherio</persName>, presbitero de
                       <placeName>Orerio</placeName> ; <rs type="person"><persName>Gisleberto</persName>, subdecani nepote</rs>, hanc venditionem et
                   concessionem super altare <placeName>beate Marie</placeName> posui. »</s>
@@ -7298,8 +7292,8 @@
                 <s>« <rs type="person"><persName>Alexander</persName> episcopus</rs>, servus
                   servorum Dei, carissimo in Christo filio <rs type="person"><persName>Ludovico</persName>, illustri <persName>Francorum</persName>
                     regi</rs>, salutem et apostolicam benedictionem.</s>
-                <s>Dilectum filium nostrum <rs type="person"><persName>Willelmum</persName>,
-                      <placeName>Carnotensem</rs></placeName> electum<note xml:id="p1171_fn12">Guillaume de Champagne, dit <hi rend="i">aux
+                <s>Dilectum filium nostrum <persName>Willelmum</persName>,
+                      <placeName>Carnotensem</placeName> electum<note xml:id="p1171_fn12">Guillaume de Champagne, dit <hi rend="i">aux
                   Blanches-Mains</hi> (1165-1176). Ce prélat ne fut sacré qu'en décembre 1168, et
                 porta jusque-là le titre d'<hi rend="i">élu de Chartres.</hi> Archevêque de Sens de
                 1168 à 1176, tout en conservant l'évêché de Chartres, il passa à l'archevêché de
@@ -7504,7 +7498,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <rs type="person"><persName>Alexander</persName> episcopus</rs>, servus
-                  servorum Dei, dilectis filiis <rs type="person"><persName>Gaufrido</rs></persName>
+                  servorum Dei, dilectis filiis <persName>Gaufrido</persName>
                     decano<note xml:id="p1174_fn4">Geoffroy, doyen (1165-1201).</note> ceterisque canonicis
                     <placeName>Carnotensis</placeName> ecclesie, tam presentibus quam futuris,
                   canonice substituendis in perpetuum.</s>
@@ -8016,8 +8010,8 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Ego <rs type="person"><persName>Wuillelmus</persName>, <seg type="theo">Dei
-                      gracia</seg>, <placeName>Senonensis</rs></placeName> archiepiscopus et apostolice
+                <s>« Ego <persName>Wuillelmus</persName>, <seg type="theo">Dei
+                      gracia</seg>, <placeName>Senonensis</placeName> archiepiscopus et apostolice
                     sedis legatus, notum fieri volo presentibus et futuris contencionem
                   quandam, que inter canonicos <placeName>Beate-Marie Carnotensis</placeName> matris
                   ecclesie et <persName>Raherium de Montiniaco</persName> diu duraverat, coram nobis
@@ -8090,9 +8084,9 @@
                 <s>Actum <placeName>Carnoti</placeName>, in palatio episcopali, anno ab incarnatione
                   Domini <num>MºCºLXºIXº</num>, astantibus personis
                     <placeName>Carnotensis</placeName> ecclesie et aliis quampluribus quorum nomina
-                  notare duximus, videlicet : <rs type="person"><persName>Gaufrido</rs></persName>,
+                  notare duximus, videlicet : <persName>Gaufrido</persName>,
                     decano ; <rs type="person"><persName>Amalrico</persName>, cantore</rs> ;
-                    <rs type="person"><persName>Gisleberto</rs></persName>, subdecano ; <rs type="person"><persName>Richerio</rs></persName>, succentore ; <rs type="person"><persName>Milone</persName>, archidiacono</rs> ; <persName>Roberto</persName>, cancellario ; <rs type="person"><persName>Ernaldo</persName>, archidiacono</rs> ; <rs type="person"><persName>Roberto</persName>, archidiacono</rs> ; <rs type="person"><persName>Gaufrido</persName>, preposito</rs> ; <rs type="person"><persName>Raherio</persName>, preposito</rs> ; <rs type="person"><persName>Fulcherio</rs></persName>, sacerdote ; <rs type="person"><persName>Herberto</persName>, sacerdote</rs> ; <persName>Willelmo de
+                    <persName>Gisleberto</persName>, subdecano ; <persName>Richerio</persName>, succentore ; <rs type="person"><persName>Milone</persName>, archidiacono</rs> ; <persName>Roberto</persName>, cancellario ; <rs type="person"><persName>Ernaldo</persName>, archidiacono</rs> ; <rs type="person"><persName>Roberto</persName>, archidiacono</rs> ; <rs type="person"><persName>Gaufrido</persName>, preposito</rs> ; <rs type="person"><persName>Raherio</persName>, preposito</rs> ; <persName>Fulcherio</persName>, sacerdote ; <rs type="person"><persName>Herberto</persName>, sacerdote</rs> ; <persName>Willelmo de
                     Novigento</persName> ; <persName>Gaufrido Bonello</persName> ;
                     <persName>Gisleberto de Fontanis</persName> ; <persName>Roberto Pajot</persName>
                   ; <persName>Bal<pb n="t1_p184"/>duino de Charisi</persName> ; <persName>Nicolao
@@ -8181,7 +8175,7 @@
                     <num>vi</num> nummi singulis annis distribuentur, qui <date>a die
                     Jovis-Absoluti, usque ad completas ferias Pasche</date><note xml:id="p1185_fn1">C'est-à-dire depuis le Jeudi-Saint jusqu'au dimanche de la
                 Quasimodo.</note>, in perpetuum persolventur.</s>
-                <s>Ex parte Capituli hii testes extiterunt : <rs type="person"><persName>G[aufridus]</persName>, decanus</rs> ; <rs type="person"><persName>G[islebertus]</persName>, subdecanus</rs> ; <persName>Willelmus</persName>, succentor ; <persName>Gislebertus</persName>, camerarius ; <rs type="person"><persName>Vincentius</persName>, comitis prepositus<note xml:id="p1185_fn2">Vincent</rs>, prévôt du comte, vivait dans la seconde moitié du
+                <s>Ex parte Capituli hii testes extiterunt : <rs type="person"><persName>G[aufridus]</persName>, decanus</rs> ; <rs type="person"><persName>G[islebertus]</persName>, subdecanus</rs> ; <persName>Willelmus</persName>, succentor ; <persName>Gislebertus</persName>, camerarius ; <persName>Vincentius</persName>, comitis prepositus<note xml:id="p1185_fn2">Vincent, prévôt du comte, vivait dans la seconde moitié du
                   XII<hi rend="sup">e</hi> siècle. Son nom est rappelé, comme ancien prévôt du comte
                 Thibault V, mort en 1191, dans l'enquête faite en 1193 par Michel, archevêque de
                 Sens, au sujet des <hi rend="i">avoués</hi> du Chapitre.</note> ; <persName>Robertus de Campis</persName> ;
@@ -8325,8 +8319,8 @@
                   <placeName>Ebrardiville</placeName> orta erat, inter venerabilem fratrem nostrum
                     <persName>Almauricum</persName>, precentorem ecclesie nostre, tunc temporis
                   predicte precarie procuratorem, et <rs type="person"><persName>Ansoldum</persName>, ejusdem ville prepositum</rs>.</s>
-                <s>In curia siquidem incliti <rs type="person">regis <persName>Anglorum</persName>
-                    <persName>Henrici</rs></persName>, apud <placeName>Montem-Fortem</placeName><note xml:id="p1187_fn2">Simon-le-Chauve, comte d'Evreux et seigneur de Montfort,
+                <s>In curia siquidem incliti regis <persName>Anglorum</persName>
+                    <persName>Henrici</persName>, apud <placeName>Montem-Fortem</placeName><note xml:id="p1187_fn2">Simon-le-Chauve, comte d'Evreux et seigneur de Montfort,
                 avait livré à Henri II, roi d'Angleterre, ses forteresses de Montfort, de Rochefort
                 et d'Epernon.</note>, a ministris ejusdem curie firmiter definitum
                   est, et a prefato <persName>Ansoldo</persName> et filiis ejus, fide interposita,
@@ -8556,7 +8550,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <rs type="person"><persName>Alexander</persName> episcopus</rs>, servus
-                  servorum Dei, dilectis filiis <rs type="person"><persName>Gaufrido</rs></persName>,
+                  servorum Dei, dilectis filiis <persName>Gaufrido</persName>,
                     decano, et canonicis <placeName>Carnotensis</placeName> ecclesie, tam
                   presentibus quam futuris, canonice substituendis, in perpetuum.</s>
                 <s>Ideo sumus, quamquam immeriti, ad universalis ecclesie regimen superna
@@ -8693,9 +8687,9 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« In nomine sancte et individue Trinitatis.</s>
-                <s>Ego <persName>Odo Borrelli de Curtalano</persName><ref type="note" target="#p1193_fn2"/> omnibus tam presentibus quam futuris notum fieri volo et
+                <s>Ego <persName>Odo Borrelli de Curtalano</persName><note target="#p1193_fn2"/> omnibus tam presentibus quam futuris notum fieri volo et
                   scripti presentis attestatione confirmo quod dono Deo et canonicis
-                    <placeName>Beate-Marie Carnotensis</placeName> matris ecclesie et <rs type="person"><persName>Richerio</rs></persName>, archidiacono, <rs type="person">fratre meo <persName>Hugone</persName></rs> donante et concedente,
+                    <placeName>Beate-Marie Carnotensis</placeName> matris ecclesie et <persName>Richerio</persName>, archidiacono, <rs type="person">fratre meo <persName>Hugone</persName></rs> donante et concedente,
                   et <persName>Berta</persName> uxore mea et filio meo
                     <persName>Hugone</persName> concedente, duodecim carrucatas terre, unamquamque
                   novem modietarum, in silva que vocatur
@@ -8864,7 +8858,7 @@
                     <persName>Willelmi</persName>, <placeName>Senonensis</placeName> archiepiscopi
                     et apostolice sedis legati</rs>, <date>anno Dominice incarnationis
                       <num>MºCºLXXºVIº</num></date> ; astante <rs type="person"><persName>Roberto</persName>, majore priore monasterii nostri</rs>, id ipsum
-                  pro toto monasterio nostro approbante et laudante ; <rs type="person"><persName>Gaufredo</persName>, decano</rs> ; <rs type="person"><persName>Richerio</rs></persName>, cantore ; <rs type="person"><persName>Gisleberto</persName>, subdecano</rs> ; <rs type="person"><persName>Roberto</persName>, succentore</rs>, et Capitulo
+                  pro toto monasterio nostro approbante et laudante ; <rs type="person"><persName>Gaufredo</persName>, decano</rs> ; <persName>Richerio</persName>, cantore ; <rs type="person"><persName>Gisleberto</persName>, subdecano</rs> ; <rs type="person"><persName>Roberto</persName>, succentore</rs>, et Capitulo
                     <placeName>Beate-Marie</placeName> similiter assistente et volente.</s>
                 <s>Quod ut ratum et inconcussum permaneat in perpetuum, presentis scripti
                   attestatione et sigilli Capituli nostri auctoritate confirmavimus. »</s>
@@ -8903,9 +8897,9 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« <rs type="person"><persName>Henricus</persName>, <seg type="theo">Dei
+                <s>« <persName>Henricus</persName>, <seg type="theo">Dei
                       gratia</seg>, rex <placeName>Anglie</placeName> et dux
-                      <placeName>Normannie</rs></placeName> et <placeName>Aquitanie</placeName> et comes
+                      <placeName>Normannie</placeName> et <placeName>Aquitanie</placeName> et comes
                       <placeName>Andegavensis</placeName>, archiepiscopo
                       <placeName>Rothomagensi</placeName><note xml:id="p1197_fn2">Rotrou de Beaumont-le-Roger ou de Warwich, archevêque de
                 Rouen (1164-1183).</note>, episcopis, abbatibus, comitibus, baronibus, justiciariis, vicecomitibus,
@@ -8928,13 +8922,13 @@
                   ecclesiis et terris et decimis, in bosco et plano, in pratis et pascuis, in aquis
                   et molendinis, in viis et semitis, et in omnibus aliis locis et aliis rebus ad ea
                   pertinentibus, cum omnibus libertatibus, et liberis consuetudinibus suis.</s>
-                <s>Testibus ; <rs type="person"><persName>Willelmo</rs></persName>,
-                      <placeName>Remensi</placeName>, <rs type="person"><persName>Bartholomeo</persName>, <placeName>Turonensi</placeName><note xml:id="p1197_fn4">Barth</rs>élemy II de Vendôme, archevêque de Tours
-                (1174-1206).</note>, archiepiscopis ; <rs type="person"><persName>Hugone</persName>, comite <placeName>Cestriensi</placeName><note xml:id="p1197_fn5">Hugues</rs>, comte de Chester, marié vers 1170 à Bertrade, fille
+                <s>Testibus ; <persName>Willelmo</persName>,
+                      <placeName>Remensi</placeName>, <persName>Bartholomeo</persName>, <placeName>Turonensi</placeName><note xml:id="p1197_fn4">Barthélemy II de Vendôme, archevêque de Tours
+                (1174-1206).</note>, archiepiscopis ; <persName>Hugone</persName>, comite <placeName>Cestriensi</placeName><note xml:id="p1197_fn5">Hugues, comte de Chester, marié vers 1170 à Bertrade, fille
                 de Simon-le-Chauve, seigneur de Montfort-l'Amaury et comte d'Evreux, puis à
                 Constance, fille de Raoul II, baron de Fougères.</note> ; <rs type="person"><persName>Symone</persName>, comite de <placeName>Clara</placeName></rs> ;
                     <persName>Waltero</persName>, filio <persName>Roberti Rannerii
-                      de Glanvilla</persName> ; <rs type="person"><persName>Stephano</rs> de
+                      de Glanvilla</persName> ; <persName>Stephano de
                       Turono</persName>, senescalco ; <persName>Andrea</persName> ;
                     <persName>Fulcone Paganello</persName> ; <persName>Gervasio Paganello</persName>
                   ; <rs type="person"><persName>Aldefonso</persName>, <pb n="t1_p198"/> fratre comitis
@@ -9437,7 +9431,7 @@
               <p>
                 <s>« <persName>Petrus</persName>, <seg type="theo">Dei
                       gracia</seg>, <placeName>Carnotensis</placeName> ecclesie minister
-                    humilis, dilecto filio <rs type="person"><persName>Galterio</rs></persName>,
+                    humilis, dilecto filio <persName>Galterio</persName>,
                       <placeName>Carnotensis</placeName> ecclesie capicerio, salutem in
                   Domino.</s>
                 <s>Ex multorum relatione veraciter didicimus quod presentatio presbyterorum extra
@@ -9528,7 +9522,7 @@
                 <s>Quod ut ratum maneret semper <pb n="t1_p207"/> et firmum, litteris commendavi et
                   sigilli mei impressione confirmavi.</s>
                 <s>Testes inde fuerunt : <persName>Gaufridus</persName>, decanus
-                      <placeName>Beate-Marie</placeName> ; <persName>Gillebertus</persName>, subdecanus ; <rs type="person"><persName>Richerus</rs></persName>, cantor ; <rs type="person"><persName>Willelmus</persName>, succentor</rs> ; <persName>Milo</persName>, archidiaconus ; <persName>Bartholomeus</persName>, <placeName>Dunensis</placeName>
+                      <placeName>Beate-Marie</placeName> ; <persName>Gillebertus</persName>, subdecanus ; <persName>Richerus</persName>, cantor ; <rs type="person"><persName>Willelmus</persName>, succentor</rs> ; <persName>Milo</persName>, archidiaconus ; <persName>Bartholomeus</persName>, <placeName>Dunensis</placeName>
                     archidiaconus ; <persName>Ernaudus</persName>,
                       <placeName>Drocensis</placeName> archidiaconus ; <rs type="person"><persName>Gauterus</persName>, <placeName>Pissiacensis</placeName>
                     archidiaconus</rs> ; <rs type="person"><persName>Goslenus</persName>,
@@ -9551,7 +9545,7 @@
                     <persName>Radulfus de Brul</persName> ; <persName>Herbertus</persName>, marescallus ; <persName>Raginaldus
                     Crispini</persName><note xml:id="p1207_fn4">Renaud Crespin se croisa en 1189. Il devint en 1194 maréchal
                 du palais de Louis, comte de Chartres.</note> ; <rs type="person"><persName>Fulco</persName>, camerarius</rs> ; <persName>Herveus de
-                    Curva-Villa</persName><note xml:id="p1207_fn5">Herv</note>é de Courville, de la famille de Vieux-Pont
+                    Curva-Villa</persName><note xml:id="p1207_fn5">Hervé de Courville, de la famille de Vieux-Pont
                 (1181-1183).</note> ;
                     <persName>Teobaldus Decani</persName> ; <persName>Clemens de Carnoto</persName>
                   ; <persName>Vincentius de Poncellis</persName> ; <persName>Nicolaus</persName>, monetarius ; <persName>Isembardus de
@@ -10162,7 +10156,7 @@
                 <s>Ceterum post cetera duximus adnotare quod altera pars decimarum predictarum cedet
                   ad sanctissime recordationis <rs type="person"><persName>Petri</persName>,
                     predecessoris nostri, quondam <placeName>Carnotensis</placeName> episcopi</rs>,
-                  altera vero ad <rs type="person"><persName>Roberti</rs> de Blavia</persName>,
+                  altera vero ad <persName>Roberti de Blavia</persName>,
                       <placeName>Carnotensis</placeName> canonici, anniversaria facienda.</s>
                 <s>Quod ut ratum et inconcussum permaneat scripto fecimus adnotari et sigilli
                     nostri<note xml:id="p1216_fn1">Le sceau de Renaud de Mouçon a été décrit dans le <hi rend="i">Cartulaire des Vaux-de-Cernay,</hi> t. I, p. 184, et gravé dans l'atlas
@@ -10236,7 +10230,7 @@
                   fideliter observandis nobis fidelitatem faciet.</s>
                 <s>Actum est hoc <placeName>Carnoti</placeName>, in capitulo ęcclesię
                     <placeName>Carnotensis</placeName>, <date>anno gratie <num>MºCºLXXXºVIIº</num>,
-                    pridie nonas februarii</date> ; astantibus istis : <rs type="person"><persName>G[aufrido]</persName>, decano</rs> ; <rs type="person"><persName>Richerio</rs></persName>, cantore ; <persName>Willelmo</persName>, succentore ; <rs type="person"><persName>G[isleberto]</persName>, camerario</rs>, vices etiam
+                    pridie nonas februarii</date> ; astantibus istis : <rs type="person"><persName>G[aufrido]</persName>, decano</rs> ; <persName>Richerio</persName>, cantore ; <persName>Willelmo</persName>, succentore ; <rs type="person"><persName>G[isleberto]</persName>, camerario</rs>, vices etiam
                     <persName>G[isleberti]</persName> subdecani supplente ; <rs type="person"><persName>Raherio</persName>, preposito</rs> ; magistro
                     <persName>Lamberto</persName> ; <persName>Gaufrido de Hibreio</persName> ;
                     <persName>Milo de Garne</persName> ; <persName>G[auterio] de Booleto</persName>
@@ -10559,8 +10553,8 @@
                       <placeName>Carnotensis</placeName>, <persName>Gisleberti</persName></rs>, in
                   ecclesia <placeName>Carnotensi</placeName>, annuatim, celebretur.</s>
                 <s>Quod ut ratum et firmum permaneat, tam scripto quam sigillo nostro fecimus
-                  communiri, sub testimonio <rs type="person"><persName>Hugonis</persName>, abbatis
-                      <placeName>Sancti-Andree</rs></placeName> ; <persName>Crispini
+                  communiri, sub testimonio <persName>Hugonis</persName>, abbatis
+                      <placeName>Sancti-Andree</placeName> ; <persName>Crispini
                     Drocensis</persName> ; <persName>Radulfi de Bellovidere</persName> ;
                     <persName>Avesgoti de Sancto-Prisco</persName> ; <rs type="person"><persName>Willelmi</persName>, militis de
                     <placeName>Fontanis</placeName></rs>.</s>
@@ -10978,13 +10972,13 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <rs type="person"><persName>Celestinus</persName> episcopus</rs>, servus
-                  servorum Dei, venerabili <rs type="person">fratri
-                      <persName>M[ichaeli]</persName><note xml:id="p1227_fn2">Michel</rs> de Corbeil, archevêque de Sens (avr. 1194-nov.
+                  servorum Dei, venerabili fratri
+                      <persName>M[ichaeli]</persName><note xml:id="p1227_fn2">Michel de Corbeil, archevêque de Sens (avr. 1194-nov.
                 1199).</note>
-                    archiepiscopo, et <rs type="person"><persName>M[anasse]</persName>,
-                    archidiacono <placeName>Senonensi</rs></placeName>, salutem et apostolicam
+                    archiepiscopo, et <persName>M[anasse]</persName>,
+                    archidiacono <placeName>Senonensi</placeName>, salutem et apostolicam
                   benedictionem.</s>
-                <s>Sicut <persName>Henricus</persName>, archidiaconus, <rs type="person"><persName>Raginaldus</rs></persName>, de
+                <s>Sicut <persName>Henricus</persName>, archidiaconus, <persName>Raginaldus</persName>, de
                       <placeName>Massengeio</placeName> prepositus, <persName>Symon de
                     Berou</persName>, <persName>Radulfus de Bellovidere</persName>, et
                     <persName>Germundus de Levesvilla</persName> et Capitulum
@@ -11122,7 +11116,7 @@
                     <persName>Gaufridus de Linis</persName>.</s>
               </p>
               <p>
-                <s><persName>Renaldus de Orrevilla</persName><note xml:id="p1230_fn1">Ce</note> Renaud d'Ouarville était fils d'un autre Renaud qui, étant
+                <s><persName>Renaldus de Orrevilla</persName><note xml:id="p1230_fn1">Ce Renaud d'Ouarville était fils d'un autre Renaud qui, étant
                 parti pour la Terre-Sainte en 1147, rapporta de Constantinople des reliques de saint
                 Philippe qu'il donna au prieuré Saint-Martin d'Ouarville. Renaud-le-Jeune partit
                 lui-même pour la Croisade en 1199, et, avant son départ, donna à l'abbaye de
@@ -11473,7 +11467,7 @@
                   consuetudine ecclesie.</s>
               </p>
               <p>
-                <s><rs type="person"><persName>Henricus de Corbolio</rs></persName>, canonicus et
+                <s><persName>Henricus de Corbolio</persName>, canonicus et
                     subdiaconus, juratus, dixit idem de <persName>Gilone</persName> quod
                   succentor ; de forma compromissi, idem quod <persName>Henricus</persName>
                   archidiaconus.</s>
@@ -11547,8 +11541,8 @@
                   debent recipi in servitio clericorum spe precii.</s>
               </p>
               <p>
-                <s><rs type="person"><persName>Stephanus</persName>, major de
-                      <placeName>Nogento</rs></placeName>, juratus, dixit : « Vidi et audivi
+                <s><persName>Stephanus</persName>, major de
+                      <placeName>Nogento</placeName>, juratus, dixit : « Vidi et audivi
                     <persName>Morellum <pb n="t1_p238"/>Toneler</persName>, hominem obnoxium talliis et
                   consuetudinibus comitis <persName>Theobaldi</persName>, qui, transiens ad
                   servicium <persName>Josleni</persName>, tunc archidiaconi, postea
@@ -11600,8 +11594,8 @@
                       <persName>Huberti Chotardi</persName>, camerarii</rs>
                       <placeName>Carnotensis</placeName>, in simili libertate in diebus
                   servicii sui fuisse.</s>
-                <s>Severicus etiam in eadem exactionum immunitate servivit <rs type="person"><persName>Josleno</persName>, preposito de
-                  <placeName>Auvers</rs></placeName>, cum prius sedisset ad
+                <s>Severicus etiam in eadem exactionum immunitate servivit <persName>Josleno</persName>, preposito de
+                  <placeName>Auvers</placeName>, cum prius sedisset ad
                     <placeName>Cambitum</placeName> et talliabilis esset comitis, ut ab ipso
                   audivi.</s>
                 <s><persName>Silvinus</persName> etiam servivit eidem <persName>Josleno</persName>
@@ -11687,8 +11681,8 @@
                   servicio <placeName>Carnotensis</placeName> ecclesie talliatum et captum cum suis,
                   sed ad exigentiam ejusdem ecclesie redditum et liberatum.</s>
                 <s>Vidi etiam <persName>Aalardum</persName>, prius subjacentem manui comitis, sed
-                  postea in servicio <rs type="person"><persName>Hugonis de Moneta</persName>,
-                    prepositi <placeName>Novigenti</rs></placeName>, fuisse liberum, et adhuc est in
+                  postea in servicio <persName>Hugonis de Moneta</persName>,
+                    prepositi <placeName>Novigenti</placeName>, fuisse liberum, et adhuc est in
                   eadem libertate. »</s>
                 <s>Et addidit idem testimonium de <placeName>Morello</placeName> tonellario, de <rs type="person"><persName>Girardo</persName> marescallo, de
                       <placeName>Saverico</placeName> filio ejus</rs>, <persName>Ansoldo de
@@ -11713,7 +11707,7 @@
                   supradictum est.</s>
                 <s>Etiam addidit de <rs type="person"><persName>Morello</persName> tonellario</rs>,
                   preter idem quod supradictum est de eo, quod uxor ejus, pannificans, tracta fuit
-                  in causam, violentia <rs type="person"><persName>Clementis</rs></persName>, tunc
+                  in causam, violentia <persName>Clementis</persName>, tunc
                     prepositi <placeName>Carnotensis</placeName><note xml:id="p1240_fn1">Clément, prévôt du comte de Chartres, apparaît, dès 1146,
                 comme témoin d'une donation de Thibault IV à la léproserie du Grand-Beaulieu. On le
                 retrouve encore dans des actes de 1158, 1160, 1168 et 1170, relatifs au
@@ -11847,7 +11841,7 @@
               <p>
                 <s><persName>Henricus</persName>, juratus, dixit idem de <persName>Garino
                     Giroldi</persName> quod alii.</s>
-                <s>De <rs type="person"><persName>Hilduino</rs> de Muret</persName>, patre suo, quod
+                <s>De <persName>Hilduino de Muret</persName>, patre suo, quod
                   fuit talliabilis comitis, postea servicio <persName>Henrici</persName>, prepositi,
                   liber vixit ab exactione.</s>
                 <s>De <persName>Fulcherio Philippi</persName> idem quod alii.</s>
@@ -11912,7 +11906,7 @@
                 <s>Huic dono et memorate quitationi a predicto <persName>Auberto</persName> in
                   capitulo facte interfuerunt isti : <rs type="person"><persName>Willelmus</persName>, subdecanus</rs> ; <persName>Philippus</persName>, <placeName>Pissiacensis</placeName>, <persName>Robertus</persName>,
                     <placeName>Drocensis</placeName> archidiaconi ; <rs type="person"><persName>Hugo</persName>, <placeName>Amiliaci</placeName></rs>, <pb n="t1_p244"/>
-                  <rs type="person"><persName>Willelmus</persName>, <placeName>Normannie</rs></placeName>
+                  <persName>Willelmus</persName>, <placeName>Normannie</placeName>
                     prepositi ; <persName>Adam de Monte-Mirabili</persName>, magister
                     <persName>Guido</persName>, <persName>Aubertus de Galardone</persName>,
                     <persName>Radulfus de Bello-Videre</persName>, <persName>Raginaldus
@@ -12526,8 +12520,8 @@
                       octobris</date><note xml:id="p1252_fn2">Le <hi rend="i">Livre des Priviléges</hi> date cette pièce du
                 2 des nones d'octobre.</note>, astantibus ibidem
                   multis, videlicet <rs type="person"><persName>Raginaldo</persName>, venerabili
-                    episcopo <placeName>Carnotensi</placeName></rs> ; <rs type="person"><persName>Gaufrido</rs></persName>, decano ; <rs type="person"><persName>Crispino</rs></persName>, cantore ; <rs type="person"><persName>Willelmo</rs></persName>, subdecano ; <rs type="person"><persName>Gosleno</persName>, prepo<pb n="t1_p253"/>sito de
-                      <placeName>Auvers</rs></placeName> ; <persName>Symone</persName> et
+                    episcopo <placeName>Carnotensi</placeName></rs> ; <persName>Gaufrido</persName>, decano ; <persName>Crispino</persName>, cantore ; <persName>Willelmo</persName>, subdecano ; <persName>Gosleno</persName>, prepo<pb n="t1_p253"/>sito de
+                      <placeName>Auvers</placeName> ; <persName>Symone</persName> et
                     <persName>Roberto de Berou</persName> ; <persName>Petro de
                       Richeborch</persName>, nepote meo ; <persName>Willelmo de
                     Provemont</persName> ; <persName>Nivardo de Corgent</persName> et aliis
@@ -12776,7 +12770,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Ego <persName>Nevelo de Mellaio</persName><note xml:id="p1256_fn1">Voir</note> ci-dessus nº LI. Nous donnerons, dans l'<hi rend="i">Introduction</hi> de cet ouvrage, un tableau généalogique des Vidames de
+                <s>« Ego <persName>Nevelo de Mellaio</persName><note xml:id="p1256_fn1">Voir ci-dessus nº LI. Nous donnerons, dans l'<hi rend="i">Introduction</hi> de cet ouvrage, un tableau généalogique des Vidames de
                 Chartres, parmi lesquels figurent les membres de la famille de Meslay.</note> notum facio universis me cum Capitulo <placeName>Carnotensi</placeName>, super
                   dampnis et injuriis hominibus de <placeName>Disconfectura</placeName> illatis,
                   transegisse in hunc modum.</s>
@@ -13060,7 +13054,7 @@
                     <rs type="person"><persName>Radulfus</persName>, major
                       <placeName>Manunville</placeName></rs>, ecclesie
                     <placeName>Carnotensi</placeName> grangiam <placeName>Manunville</placeName>,
-                  cum tribus terre agripennis adjacentibus, <persName>Alaria</persName> uxore ejus, et <rs type="person"><persName>Hugolina</persName>, <persName>Alarie</rs></persName> filia,
+                  cum tribus terre agripennis adjacentibus, <persName>Alaria</persName> uxore ejus, et <persName>Hugolina</persName>, <persName>Alarie</persName> filia,
                   presentibus et assentientibus, atque eandem quitationem in perpetuum facientibus,
                   super altare, inquam, <placeName>sancti Laurentii</placeName>, quoniam ea die ad
                   altare <placeName>beate Marie</placeName> non potuit ad hoc faciendum haberi
@@ -13115,7 +13109,7 @@
                       gracia</seg>, <placeName>Carnotensis</placeName> episcopus, omnibus ad
                   quos littere iste pervenerint, in Domino salutem.</s>
                 <s>Notum fieri volumus universis, tam presentibus quam futuris, quod
-                    <placeName>Carnotense</placeName> Capitulum a <rs type="person"><persName>Roberto</rs></persName>, milite de
+                    <placeName>Carnotense</placeName> Capitulum a <persName>Roberto</persName>, milite de
                   <placeName>Novigento</placeName>, dimidiam partem decime quam habet apud
                     <placeName>Novigentum</placeName>, sub hac pignoris conventione, accepit, quod
                   per <num>tres</num> annos inde fructus annone, avene et leguminum integre
@@ -13336,8 +13330,8 @@
                     mareschallus</rs> ; <persName>Robertus</persName>, frater <rs type="person"><persName>Teobaldi</persName>, cancellarii mei</rs> ; <persName>Teobaldus de Hervevilla</persName>, clericus meus ;
                     <persName>Philippus Savagius</persName>, clericus ; <persName>Johannes</persName>,
                       <placeName>Vindocinensis</placeName> archidiaconus ; <persName>Odo</persName>, diaconus ; <persName>Matheus de
-                    Parisio</persName> ; <rs type="person"><persName>Odo</persName>, filius
-                      <persName>Henrici de Bonevalle</rs></persName> ; <persName>Hardoinus</persName>, carnifex ; <persName>Petrus</persName>, armiger ; <persName>Petrus de
+                    Parisio</persName> ; <persName>Odo</persName>, filius
+                      <persName>Henrici de Bonevalle</persName> ; <persName>Hardoinus</persName>, carnifex ; <persName>Petrus</persName>, armiger ; <persName>Petrus de
                     Viller</persName> ; <persName>Mauricius de Mamberoliis</persName>.</s>
                 <s>Actum <placeName>Carnotum</placeName>, <date>anno ab incarnatione Domini
                       <num>MºCº</num> nonagesimo nono</date>.</s>
@@ -13736,8 +13730,8 @@
                   ; <persName>Herveus</persName>, major de
                       <placeName>Kaelennes</placeName> ; <persName>Johannes
                     Lardelerius</persName> ; <persName>Stephanus</persName>,
-                    clericus magistri <persName>Guidonis</persName>, et <rs type="person"><persName>Milo</persName>, clericus decani de
-                    <persName>Alneolo</rs></persName>.</s>
+                    clericus magistri <persName>Guidonis</persName>, et <persName>Milo</persName>, clericus decani de
+                    <persName>Alneolo</persName>.</s>
                 <s>Nos autem, ad petitionem ipsorum predictorum, litteras istas fecimus annotari et
                   sigilli nostri impressione muniri.</s>
                 <s>Actum <placeName>Carnoti</placeName>, in domo <rs type="person"><persName>Henrici</persName> archidiaconi</rs>, anno Domini <num>MºCCº</num>
@@ -14420,7 +14414,7 @@
               <p>
                 <s>« <persName>Guillelmus de Folieto</persName>, miles<note xml:id="p2020_fn1">Voir tome I, p. 250, note 1.</note>.</s>
               </p>
-              <note> Il approuve et confirme, en qualité de seigneur du fief, du chef de <rs type="person">sa femme <persName>Isabelle</rs></persName>, la donation faite à
+              <note> Il approuve et confirme, en qualité de seigneur du fief, du chef de sa femme <persName>Isabelle</persName>, la donation faite à
                 l'église de <placeName>Chartres</placeName> par <persName>Geoffroy de
                   Bullou</persName><ref target="#p2020_fn2"/>, chevalier, avec
                 l'assentiment de ses frères <persName>Bernard</persName> et
@@ -14488,7 +14482,7 @@
                     filio nostro<note xml:id="p2021_fn3">Thomas, comte du Perche, tué à la bataille de Lincoln en
                 1217.</note> hoc concedente et <rs type="person"><persName>Stephano de Pertico</persName><note xml:id="p2021_fn4">Voir t. I, p. 255.</note>, fratre predicti mariti mei</rs>, assensum prebente.</s>
                 <s>Quod ut ratum permaneat, presens scriptum sigilli mei feci munimine roborari.</s>
-                <s>Actum in capitulo <placeName>Carnotensi</placeName>, residente <rs type="person"><persName>Raginaldo</rs></persName>, <placeName>Carnotensi</placeName>
+                <s>Actum in capitulo <placeName>Carnotensi</placeName>, residente <persName>Raginaldo</persName>, <placeName>Carnotensi</placeName>
                     episcopo, et multis aliis astantibus, anno gratie <num>MºCCºIIº</num>,
                   mense junio<note xml:id="p2021_fn5">
                 <p>Au mois de juillet 1236, Etienne de Sancerre, <hi rend="i">de Sacro-Cesaris,</hi>
@@ -14679,7 +14673,7 @@
                     <persName>Robertus de Berou</persName>, canonici
                     <placeName>Carnotenses</placeName>, omnibus ad quos littere iste pervenerint, in
                   Domino salutem.</s>
-                <s>Cum inter dilectum fratrem nostrum <rs type="person"><persName>Hugonem</persName>, prepositum <placeName>Amiliaci</rs></placeName>,
+                <s>Cum inter dilectum fratrem nostrum <persName>Hugonem</persName>, prepositum <placeName>Amiliaci</placeName>,
                   et <rs type="person"><persName>Guidonem</persName>, de
                       <placeName>Fontanis</placeName> majorem</rs>, super quibusdam possessionibus
                   quas idem <persName>G[uido]</persName>, major, diu possederat controversia
@@ -14941,14 +14935,14 @@
                 Alix, fille de Robert de Saint-Germain, est cité comme seigneur féodal à
                 Saint-Germain-le-Gaillard, dans un titre de l'Hôtel-Dieu de février 1196.
                 (Ibid.)</note>,
-                  auxquels <rs type="person">maître <persName>Bertrand</rs></persName>, prévôt
+                  auxquels maître <persName>Bertrand</persName>, prévôt
                       d'<placeName>Ingré</placeName>, donne <num>40</num> livres de
                   chartrains.</s>
               </p>
               <p>
                 <s>Huic facto testes sunt quorum nomina subscripta sunt : <persName>H[ugo]</persName>, succentor ; <rs type="person"><persName>G[islebertus]</persName>, presbyter</rs> ; <rs type="person"><persName>N[icolaus]</persName>, presbyter</rs> ; <persName>P[etrus] de
-                    Sancto-Maximino</persName>, canonici <placeName>Carnotenses</placeName> ; <rs type="person"><persName>Willelmus</persName>, prior domus
-                      <placeName>Elemosinarie</rs></placeName> ; <persName>M[anasserius]</persName>
+                    Sancto-Maximino</persName>, canonici <placeName>Carnotenses</placeName> ; <persName>Willelmus</persName>, prior domus
+                      <placeName>Elemosinarie</placeName> ; <persName>M[anasserius]</persName>
                   et alii fratres ejusdem domus.</s>
                 <s>Quod ut firmum et stabile perseveret, sigilli nostri munimine confirmamus.</s>
                 <s>Actum <placeName>Carnoti</placeName>, <date>anno gracie <num>MºCCºIIIº</num>,
@@ -14995,7 +14989,7 @@
                 <s>« <rs type="person"><persName>Hugo</persName><note xml:id="p2027_fn3">Hugues, doyen (1203-1206). L'obit de ce doyen, inscrit au <hi rend="i">Nécrologe</hi> sous la date du 4 des nones de mai, fait mention de cette
                 donation.</note>, decanus</rs>, et universitas Capituli <placeName>Carnotensis</placeName>,
                   omnibus ad quos littere iste pervenerint, in Domino salutem.</s>
-                <s>Notum fieri volumus universis, tam presentibus quam futuris, quod <persName>Amarricus de Levesvilla</persName><note xml:id="p2027_fn4">Les</note> seigneurs de la maison de Levéville sont souvent cités
+                <s>Notum fieri volumus universis, tam presentibus quam futuris, quod <persName>Amarricus de Levesvilla</persName><note xml:id="p2027_fn4">Les seigneurs de la maison de Levéville sont souvent cités
                 dans les chartes du pays chartrain. Le plus ancien connu est Evrard I<hi rend="sup">er</hi>, qui vivait à la fin du XI<hi rend="sup">e</hi> siècle (<hi rend="i">Cart. de Saint-Père</hi>) et qui eut pour fils Amaury I<hi rend="sup">er</hi>,
                 témoin d'une donation faite en 1128 par le vicomte Hugues du Puiset à l'abbaye de
                 Thiron (<hi rend="i">Invent. de Thiron,</hi> nº 59). Le fils de cet Amaury fut
@@ -15075,7 +15069,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Ego <persName>Robertus de Carnoto</persName><note xml:id="p2029_fn2">Robert</note> de Chartres, seigneur de Ver, était un des principaux
+                <s>« Ego <persName>Robertus de Carnoto</persName><note xml:id="p2029_fn2">Robert de Chartres, seigneur de Ver, était un des principaux
                 vassaux beaucerons du comte Thibault V. Il figure comme témoin dans trois chartes de
                 ce prince ; l'une concernant l'abbaye des Vaux-de-Cernay, en 1187 (<hi rend="i">Cart.</hi> de ce couvent, p. 98), l'autre l'affranchissement des hommes de
                 Saint-Martin-du-Péan, en 1185, et la troisième l'affranchissement d'Etienne Roussel,
@@ -15223,7 +15217,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <persName>Raginaldus</persName>, <seg type="theo">Dei
-                      gracia</seg>, <placeName>Carnotensis</placeName> episcopus, et <rs type="person"><persName>Robertus</persName><note xml:id="p2031_fn1">Robert, abbé (1192-1214).</note>, abbas <placeName>Sancti</rs>-Carauni</placeName>, universis Christi
+                      gracia</seg>, <placeName>Carnotensis</placeName> episcopus, et <persName>Robertus</persName><note xml:id="p2031_fn1">Robert, abbé (1192-1214).</note>, abbas <placeName>Sancti-Carauni</placeName>, universis Christi
                   fidelibus, tam futuris quam presentibus, ad quos presens scriptum pervenerit,
                   salutem in eo qui est salus omnium.</s>
                 <s>Universitati vestre notum fieri volumus quod <persName>Willelmus de Jupaello</persName>, miles,
@@ -16493,7 +16487,7 @@
                 <s>« Ego <persName>Goherius de Laneriaco</persName> notum facio universis,
                   presentibus pariter et futuris, quod venditionem tensamenti de
                     <placeName>Gaiavilla</placeName>, quam <persName>Gaufridus de
-                    Dionviler</persName><note xml:id="p2048_fn1">Au</note> mois de février 1212, le même Geoffroy de Dillonvilliers,
+                    Dionviler</persName><note xml:id="p2048_fn1">Au mois de février 1212, le même Geoffroy de Dillonvilliers,
                 appelé cette fois Geoffroy de Gallardon, Eremburge, sa femme, et Raoul, leur fils
                 aîné, vendirent au Chapitre, pour 140 livres chartraines, tout ce qu'ils possédaient
                 de cens et de surcens dans la Banlieue de Chartres. A la même date, cette vente fut
@@ -16685,11 +16679,11 @@
                 <s>Juravit etiam idem major quod de cetero ipse fidelis erit tam Capitulo quam
                   preposito <placeName>Masengei,</placeName> tam de illa servitute quam de omni alia
                   redevantia eis Capitulo et preposito ab illo debita.</s>
-                <s>Testibus : <rs type="person"><persName>Galcherio</rs></persName>, filio meo<note xml:id="p2051_fn2">Gaucher de Bar-sur-Seine, fils de Miles III et d'Hélissende
+                <s>Testibus : <persName>Galcherio</persName>, filio meo<note xml:id="p2051_fn2">Gaucher de Bar-sur-Seine, fils de Miles III et d'Hélissende
                 de Joigny, mourut le même jour que son père.</note>, <persName>Garino de
                     Guillonivilla</persName>, <persName>Hugone de Essea</persName>, <persName>Gilone
                     de Barjovilla</persName>, et pluribus aliis.</s>
-                <s>Actum <date>anno gracie <num>MºCCºXº</num>, mense maio</date>, regnante <rs type="person"><persName>Philippo</rs></persName>
+                <s>Actum <date>anno gracie <num>MºCCºXº</num>, mense maio</date>, regnante <persName>Philippo</persName>
                     <placeName>Francorum</placeName> rege. »</s>
               </p>
             </div>
@@ -17336,8 +17330,8 @@
                 par addition de l'éditeur. L'obit de ce personnage est inséré au <hi rend="i">Nécrologe de Notre-Dame</hi> (voir vol. III), à la date du 4 des ides d'août ; il
                 y est appelé <hi rend="i">Galterius Junior, Philippi regis Francorum camerarius,
                   Galterii Senioris filius.</hi> Peut-être le Gautier de 1190 était-il le <hi rend="i">senior,</hi> c'est-à-dire le père de celui de 1212 ; c'est ce que l'on
-                pourrait supposer d'après la distance qui sépare les dates des deux titres.</note>, <rs type="person">regis <pb n="t2_p063"/>
-                      <placeName>Francie</rs></placeName></rs> chamerarii, et predecessorum suorum,
+                pourrait supposer d'après la distance qui sépare les dates des deux titres.</note>, regis <pb n="t2_p063"/>
+                      <placeName>Francie</placeName></rs> chamerarii, et predecessorum suorum,
                   qui ducentas libras parisienses propter hoc in elemosinam ecclesie
                     <placeName>Carnotensi</placeName> contulit ad presentes sacristarum redditus
                     ampliandos<note xml:id="p2063_fn1">Les marguilliers de l'église de Chartres continuèrent à être
@@ -17404,7 +17398,7 @@
                 en 1628 ; <hi rend="i">Invent. du Chap.,</hi> C. LXXXVI bis, D, 2.)</note>, savoir :
                   jus mittendi in granicis messium excussores, viciacum, fabiacum, ordeacum,
                   investitiones, submonitiones hominum, bonagia et districta....</s>
-                <s>Cette vente est consentie par <rs type="person"><persName>Eremburge</rs></persName>,
+                <s>Cette vente est consentie par <persName>Eremburge</persName>,
                     femme d'<persName>Etienne</persName>, <rs type="person"><persName>Mathieu</persName>, son fils</rs>, <persName>Guillaume de
                     Poresac</persName>
                   <persName>Nicolas</persName> et <persName>Etienne de <pb n="t2_p064"/>Brac</persName>, <persName>Hubert de Noa</persName>, ses neveux.</s>
@@ -17455,7 +17449,7 @@
                     <placeName>Senonensis</placeName> officialis, omnibus presentes litteras
                   inspecturis, in Domino salutem.</s>
                 <s>Noverint universi quod cum controversia que vertebatur inter nobilem virum
-                  comitem <placeName>Drocensem</placeName><note xml:id="p2064_fn2">Voir</note> vol. I<hi rend="sup">er</hi>, p. 216, note 1.</note>, ex
+                  comitem <placeName>Drocensem</placeName><note xml:id="p2064_fn2">Voir vol. I<hi rend="sup">er</hi>, p. 216, note 1.</note>, ex
                   una parte, et canonicos <placeName>Carnotenses</placeName>, ex altera, fuisset ad
                   curiam <placeName>Senonensem</placeName> per appellationem delata, partibus in
                   nostra presentia constitutis, ex parte comitis fuit propositum quod animalia
@@ -17530,8 +17524,8 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Nos duo fratres, videlicet <rs type="person"><persName>Burchardus</persName>,
-                    dominus <placeName>Malliaci</placeName><note xml:id="p2065_fn1">Bouchard</rs> de Montmorency-Marly, l'un des principaux
+                <s>« Nos duo fratres, videlicet <persName>Burchardus</persName>,
+                    dominus <placeName>Malliaci</placeName><note xml:id="p2065_fn1">Bouchard de Montmorency-Marly, l'un des principaux
                 lieutenants de Simon de Montfort, s'était distingué au combat de
                 Saint-Martin-lès-Bordes, contre les troupes du comte Raymond de Toulouse
                 (1211).</note>, et <persName>Maheus de Malliaco</persName>, et uxores nostre
@@ -17732,7 +17726,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Ego <persName>Willelmus Aguillon</persName><note xml:id="p2068_fn1">La</note> famille Aiguillon, Aguilin (<hi rend="i">Aculeus</hi>) est
+                <s>« Ego <persName>Willelmus Aguillon</persName><note xml:id="p2068_fn1">La famille Aiguillon, Aguilin (<hi rend="i">Aculeus</hi>) est
                 très-souvent citée dans les titres des établissements religieux du diocèse de
                 Chartres. Le plus ancien de ses membres connus paraît être Robert, qui vivait à la
                 fin du XI<hi rend="sup">e</hi> siècle et dont le nom se rencontre plusieurs fois
@@ -18221,7 +18215,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <rs type="person"><persName>Odo</persName>, <placeName>Beate-Marie</rs>-Magdalene</placeName> dictus
+                <s>« Universis presentes litteras inspecturis, <persName>Odo</persName>, <placeName>Beate-Marie-Magdalene</placeName> dictus
                     abbas<note xml:id="p2075_fn3">Cet acte est passé devant l'abbé et dans le chapitre de
                 l'abbaye de la Madeleine de Châteaudun, parce que Nicolas de Bourg-Guérin était un
                 des censitaires de cette abbaye. Le monastère de la Madeleine, un des plus anciens
@@ -18846,7 +18840,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« <rs type="person"><persName>Symon Montis-Fortis</persName><note xml:id="p2086_fn1">Voir ci-dessus, p. 61, note 2.</note>, Dei providentia, dux <placeName>Narbone</rs></placeName>,
+                <s>« <persName>Symon Montis-Fortis</persName><note xml:id="p2086_fn1">Voir ci-dessus, p. 61, note 2.</note>, Dei providentia, dux <placeName>Narbone</placeName>,
                     comes <placeName>Tholosensis</placeName> et
                     <placeName>Leycestrensis</placeName>, <placeName>Biterrensis</placeName>,
                       <placeName>Carcasonensis</placeName> vicecomes, universis presentes
@@ -19010,8 +19004,8 @@
                   noticiam habituris, salutem in Domino.......</s>
               </p>
               <p xml:lang="fro">
-                <s><rs type="person"><persName>Etienne</persName>, maire de
-                      <placeName>Nogent</rs>-le-Phaye</placeName>, déclare avoir vendu au chanoine
+                <s><persName>Etienne</persName>, maire de
+                      <placeName>Nogent-le-Phaye</placeName>, déclare avoir vendu au chanoine
                     <persName>Henri de Corbeil</persName><note xml:id="p2088_fn1">Le 1<hi rend="sup">er</hi> janvier 1226, Thierry de Corbeil
                 reconnaît tenir du Chapitre les vignes de Nogent et le pressoir que tenait jadis
                 Germond de Levéville, moyennant une pension annuelle de neuf muids de vin. (Bibl.
@@ -19140,8 +19134,8 @@
                 <s>Noverit universitas vestra quod nos viro venerabili <rs type="person"><persName>J[ohanni]</persName>, cantori <pb n="t2_p090"/><placeName>Aurelianensi</placeName></rs>, precariam de
                     <placeName>Bertonvillare</placeName> a nobis tenenti, concessimus, quoad
                   vixerit, approbantibus et assensum prebentibus venerabilibus patribus et
-                  concanonicis nostris <rs type="person"><persName>Gosleno</rs></persName> cantore,
-                    <rs type="person"><persName>Bartholomeo</rs></persName> subdecano, et
+                  concanonicis nostris <persName>Gosleno</persName> cantore,
+                    <persName>Bartholomeo</persName> subdecano, et
                     <persName>Willelmo de Capella</persName>, illius loci tunc prebendariis, omnem
                   campipartem quam debebat nobis ex terra predicte precarie<note xml:id="p2090_fn1">Au mois de novembre 1223, le même Jean, chantre d'Orléans,
                 donna au Chapitre, pour son anniversaire, <hi rend="i">quicquid acquireret in terra
@@ -19235,7 +19229,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Ego <rs type="person"><persName>Theobaldus</rs></persName>,
+                <s>« Ego <persName>Theobaldus</persName>,
                       <placeName>Blesensis</placeName> et <placeName>Clarimontis</placeName>
                     comes, omnibus notum facio quod ego dedi ecclesie <placeName>Beate-Marie de
                     Carnoto</placeName> septem libras et decem solidos annui redditus capiendos,
@@ -19742,7 +19736,7 @@
                       <placeName>Carnotensis</placeName>, omnibus ad quos presentes littere
                   pervenerint, salutem in Domino.</s>
                 <s>Noverit universitas vestra quod cum inter Capitulum
-                    <placeName>Carnotense</placeName>, ex una parte, et <rs type="person"><persName>Matheum</persName>, majorem de <placeName>Perroto</rs></placeName>,
+                    <placeName>Carnotense</placeName>, ex una parte, et <persName>Matheum</persName>, majorem de <placeName>Perroto</placeName>,
                     <persName>Radulfum</persName> et <persName>Robertum</persName> fratres, et
                     <persName>Milesendim</persName> et <persName>Richoldim</persName> et
                     <persName>Mariam</persName>, sorores ipsius <persName>Mathei</persName> majoris,
@@ -20031,11 +20025,11 @@
                 <s>Noverit universitas vestra quod cum contentio esset inter venerabilem
                     <placeName>Carnotensem</placeName> episcopum ex una parte et viros venerabiles
                     <rs type="person"><persName>Ste<pb n="t2_p102"/>phanum</persName>, archidiaconum
-                      <placeName>Carnotensem</placeName></rs>, <rs type="person"><persName>G[uillelmum]</persName>
-                    <placeName>Dunensem</rs></placeName>, <rs type="person"><persName>Thomam</persName>
+                      <placeName>Carnotensem</placeName></rs>, <persName>G[uillelmum]</persName>
+                    <placeName>Dunensem</placeName>, <rs type="person"><persName>Thomam</persName>
                     <placeName>Pissiacensem</placeName></rs>, <rs type="person"><persName>Johannem</persName>
-                    <placeName>Blesensem</placeName></rs>, <rs type="person"><persName>Jacobum</persName>
-                    <placeName>Drocensem</rs></placeName> et <rs type="person"><persName>Hugonem</persName>
+                    <placeName>Blesensem</placeName></rs>, <persName>Jacobum</persName>
+                    <placeName>Drocensem</placeName> et <rs type="person"><persName>Hugonem</persName>
                     <placeName>Vindocinensem</placeName></rs> archidiaconos ex altera, super eo quod
                   dictus episcopus dicebat causas matrimonii et sacrilegii ad se pertinere, et super
                   eo quod idem episcopus dicebat duas partes honorum eorum qui decedunt intestati ad
@@ -20876,7 +20870,7 @@
               </p>
               <p xml:lang="fro">
                 <s><persName>Thècle</persName>, épouse de <persName>Guillaume de
-                      Chartres</persName>, seigneur de <placeName>Ver</placeName>, et sœur de <persName>Garnier Morhier</persName>, chevalier, et de <rs type="person"><persName>Philippe</rs> Morhier</persName>, chanoine,
+                      Chartres</persName>, seigneur de <placeName>Ver</placeName>, et sœur de <persName>Garnier Morhier</persName>, chevalier, et de <persName>Philippe Morhier</persName>, chanoine,
                   engage au Chapitre, pour <num>80</num> livres parisis, toute sa dîme de
                     <placeName>Jouy</placeName>, sauf celle de deux muids appartenant aux
                   religieuses de <placeName>Port-Royal</placeName>.</s>
@@ -21150,7 +21144,7 @@
                     <placeName>Carnotensis</placeName>....</s>
               </p>
               <p xml:lang="fro">
-                <s><rs type="person"><persName>Simon de Huxo</persName>, chevalier</rs>, et <rs type="person"><persName>Mathilde</rs></persName>, sa femme, engagent au
+                <s><rs type="person"><persName>Simon de Huxo</persName>, chevalier</rs>, et <persName>Mathilde</persName>, sa femme, engagent au
                   Chapitre, pour soixante livres parisis, toute la dîme qu'ils possèdent dans la
                   paroisse de <placeName>Bleury</placeName>, de <placeName>Blure</placeName><note xml:id="p2116_fn1">En 1240, Pierre de Bordeaux, chanoine, acquit, sur Guillaume
                 de Sainville et sa femme, toute la dîme qu'ils possédaient à Bleury, en la mouvance
@@ -21446,7 +21440,7 @@
               </p>
               <p xml:lang="fro">
                 <s><persName>Geoffroy de Drouy</persName>, de
-                      <placeName>Droy</placeName>, chevalier, et <rs type="person"><persName>Nicolas de Frescot</rs></persName>, chanoine de
+                      <placeName>Droy</placeName>, chevalier, et <persName>Nicolas de Frescot</persName>, chanoine de
                       <placeName>Chartres</placeName>, étant en contestation pour les dîmes de
                   la paroisse de la <placeName>Nouvelle-Fontenelle, <foreign xml:lang="lat">Juvenis-Fontinelle</foreign></placeName>, un accord est intervenu entre eux,
                   par lequel il a été réglé que la dîme et le terrage de cette paroisse seront à
@@ -21540,8 +21534,8 @@
                   per me aut heredes et successores meos, in aliquo minui aut perverti, in
                   testimonium hujus declarationis seu recognitionis a me, multa et magna
                   deliberatione prehabita, facte, presentem cartam conscribi feci, et sigillo meo
-                  manu propria consignavi, rogans karissimum dominum meum, Dei gratia, illustrem <rs type="person"><persName>Francorum</persName> regem,
-                      <persName>Ludovicum</rs></persName>, de cujus regalibus sunt omnia supradicta,
+                  manu propria consignavi, rogans karissimum dominum meum, Dei gratia, illustrem <persName>Francorum</persName> regem,
+                      <persName>Ludovicum</persName>, de cujus regalibus sunt omnia supradicta,
                   quatinus, ad majorem hujus declarationis seu recognitionis firmitatem, robur et
                   munimen, litteras suas patentes hujus <pb n="t2_p122"/> rei seriem continentes domino
                     <placeName>Carnotensi</placeName> episcopo conferre dignetur, regie majestatis
@@ -21858,7 +21852,7 @@
                 champart, de <hi rend="i">numerator,</hi> qui signifie champarteur, parce que celui
                 qui exerçait cet emploi comptait les gerbes qu'il avait à prendre sur les terres
                 d'autrui.</note> vel alio jure, se
-                  habere dicebat si aliquid habebat, vendidit coram nobis <rs type="person"><persName>Radulpho</rs></persName>, decano de
+                  habere dicebat si aliquid habebat, vendidit coram nobis <persName>Radulpho</persName>, decano de
                     <placeName>Braioto</placeName><note xml:id="p2126_fn2">Au mois d'avril 1236, le même Raoul, doyen de Brou, au nom du
                 chapitre de Saint-André de Châteaudun, fit un accord avec Pierre, maire de Gardais,
                   <hi rend="i">major de Guardees,</hi> Ledgarde, sa femme, Guérin, Robin, Guillot et
@@ -21901,7 +21895,7 @@
             <div type="transcription" xml:lang="lat">
               <p>
                 <s>« <persName>Gregorius</persName> episcopus, servus
-                  servorum Dei, dilecto filio magistro <rs type="person"><persName>Willelmo</rs></persName>, archidiacono
+                  servorum Dei, dilecto filio magistro <persName>Willelmo</persName>, archidiacono
                     <placeName>Verzenensi</placeName>, <placeName>Bituricensis</placeName>
                   diocesis, salutem et apostolicam benedictionem.</s>
                 <s>Dilectorum filiorum decani et Capituli ecclesie
@@ -22045,7 +22039,7 @@
                 des calendes de mars.</note>,
                     archidiaconum</rs>, vel <rs type="person"><persName>Henricum</persName><note xml:id="p2129_fn2">Henri de Grez, d'abord archidiacre de Blois, puis évêque de
                 Chartres (1244-1247).</note>, fratrem ejus, archidiaconum
-                      <placeName>Blesensem</placeName></rs>, et <rs type="person"><persName>Matheum</rs></persName>, subdecanum
+                      <placeName>Blesensem</placeName></rs>, et <persName>Matheum</persName>, subdecanum
                     <placeName>Carnotensem</placeName>, et fratrem
                       <persName>Hugonem</persName>, conversum
                     <placeName>Vallium-Sarnaii</placeName>, procuratorem domus et
@@ -22491,8 +22485,8 @@
                     <placeName>Guillonvillam</placeName>, salutem in Domino.</s>
                 <s>Noverint universi quod <persName>Herbertus de Belsia</persName> et <persName>Ysabella</persName>, ejus uxor, <persName>Clemens
                     de Loche</persName> et <rs type="person"><persName>Agnes</persName>, ejus
-                    uxor</rs>, <rs type="person"><persName>Girardus</persName>, major
-                      <placeName>Barjoville</rs></placeName>, et <persName>Christiana</persName>, ejus uxor, <persName>Andreas de
+                    uxor</rs>, <persName>Girardus</persName>, major
+                      <placeName>Barjoville</placeName>, et <persName>Christiana</persName>, ejus uxor, <persName>Andreas de
                     Belsia</persName>, et <persName>Laurencius</persName> et
                     <persName>Bartholomeus</persName>, ipsius filii et
                     <persName>Petronille</persName>, quasdam terras <pb n="t2_p135"/> sitas apud
@@ -22866,7 +22860,7 @@
                 <s>« In nomine Patris et Filii et Spiritus-Sancti, amen.</s>
                 <s>Nos <persName>Robertus</persName><note xml:id="p2140_fn1">Robert de Courtenay, doyen (1248-1258).</note>, decanus <placeName>Carnotensis</placeName>, in
                   quem compromissum est alte et basse a Capitulo <placeName>Carnotensi</placeName>,
-                  ex una parte, et nobili muliere <rs type="person"><persName>Mathildi</persName><note xml:id="p2140_fn2">Mathilde</rs>, fille unique d'Isabelle, veuve de Sulpice
+                  ex una parte, et nobili muliere <persName>Mathildi</persName><note xml:id="p2140_fn2">Mathilde, fille unique d'Isabelle, veuve de Sulpice
                 d'Amboise, qui fut comtesse de Chartres après son neveu Thibault VI, entra en
                 possession du comté de Chartres en 1248, après la mort de sa mère ; elle était alors
                 veuve de Richard, vicomte de Beaumont. Cette princesse mourut sans postérité en
@@ -23006,7 +23000,7 @@
                 <s>« In nomine Patris et Filii et Spiritus-Sancti, amen.</s>
                 <s>Nos <rs type="person"><persName>Robertus de Curtiniaco</persName>, decanus
                       <placeName>Carnotensis</placeName></rs>, per arbitrium sive per dictum
-                  nostrum, arbitrando dicimus quod vos, <rs type="person"><persName>Stephane</rs></persName>, magister carnificum<note xml:id="p2143_fn1">Les bouchers formaient, à Chartres, comme dans la plupart des
+                  nostrum, arbitrando dicimus quod vos, <persName>Stephane</persName>, magister carnificum<note xml:id="p2143_fn1">Les bouchers formaient, à Chartres, comme dans la plupart des
                 villes de France, une des plus anciennes et des plus puissantes corporations. Le
                 Chapitre avait sa boucherie spéciale, indépendante de celle du Comte, et appelée la
                   <hi rend="i">Boucherie de Porte-Neuve.</hi></note>, <persName>Johannes Pelliparie</persName> et
@@ -23563,7 +23557,7 @@
                 <s>De quibus omnibus et singulis a me tenendis et observandis <persName>Adam</persName>, dominus de <placeName>Galardone</placeName><note xml:id="p2150_fn1">Adam de Gallardon, fils d'Hervé IV et d'Alix de Châteaudun.
                 Consulter, sur ce seigneur, l'étude de M. L. Merlet insérée dans le t. II des <hi rend="i">Mémoires de la Société Archéologique d'Eure-et-Loir,</hi> p. 297 et
                 suiv.</note>, <persName>Johannes de
-                    Leugis</persName><note xml:id="p2150_fn2">Jean</note> de Lèves, fils aîné de Thomas de Bruyères, seigneur de
+                    Leugis</persName><note xml:id="p2150_fn2">Jean de Lèves, fils aîné de Thomas de Bruyères, seigneur de
                 Lèves. (Arch. dep. d'Eure-et-Loir, <hi rend="i">Titre de Josaphat de</hi>
                 1248).</note>, <persName>Guillelmus de
                     Foilleto</persName><note xml:id="p2150_fn3">Guillaume de Feuillet, chevalier, figure dans un titre de
@@ -24226,16 +24220,16 @@
               <p>
                 <s>« In nomine Patris et Filii et Spiritus Sancti, amen.</s>
                 <s><date>Anno Domini <num>MºCCº</num> quinquagesimo quinto, die martis in festo
-                    beati Arnulphi</date> continuata a die lune precedenti, nos <rs type="person"><persName>Henricus</persName>, <seg type="theo">Dei gratia</seg>,
-                      <placeName>Senonensis</rs></placeName> archiepiscopus, <rs type="person"><persName>Renaudus</persName>, <placeName>Parisiensis</rs></placeName>, <rs type="person"><persName>Guillelmus</persName>,
-                      <placeName>Aurelianensis</rs></placeName>, <persName>Guido</persName>, <placeName>Altisiodorensis</placeName>, <persName>Nicholaus</persName>,
+                    beati Arnulphi</date> continuata a die lune precedenti, nos <persName>Henricus</persName>, <seg type="theo">Dei gratia</seg>,
+                      <placeName>Senonensis</placeName> archiepiscopus, <persName>Renaudus</persName>, <placeName>Parisiensis</placeName>, <persName>Guillelmus</persName>,
+                      <placeName>Aurelianensis</placeName>, <persName>Guido</persName>, <placeName>Altisiodorensis</placeName>, <persName>Nicholaus</persName>,
                     <placeName>Trecensis</placeName>, Dei gratia, episcopi, et <rs type="person"><persName>Alermus</persName>, <seg type="theo">miseracione
                       ejusdem</seg>, electus <placeName>Meldensis</placeName></rs> confirmatus, in
                   negocio inquisitionis, facte auctoritate concilii provincialis, super
                   interfectione bone memorie <persName>R[aginaldi]</persName>,
                     quondam cantoris <placeName>Carnotensis</placeName>, auditis probacionibus
-                  et presumpcionibus habitis contra <rs type="person"><persName>Hugonem de
-                      Chavergneio</rs></persName>, canonicum <placeName>Carnotensem</placeName>, et
+                  et presumpcionibus habitis contra <persName>Hugonem de
+                      Chavergneio</persName>, canonicum <placeName>Carnotensem</placeName>, et
                     <rs type="person"><persName>Colinum</persName>, fratrem ejus</rs>, qui se
                   voluntati et ordinacioni concili submiserunt, prestito super hoc juramento et
                   apposita pena, de bonorum consilio, dictum nostrum et ordinacionem nostram
@@ -24772,8 +24766,8 @@
                 <s>« Universis presentes litteras inspecturis, <persName>Matheus</persName>, Vice-dominus
                     <placeName>Carnotensis</placeName>, miles, salutem in Domino.</s>
                 <s>Cum venerabiles viri decanus et Capitulum <placeName>Carnotense</placeName>, de
-                  voluntate et assensu excellentissimi <rs type="person">domini
-                      <persName>Ludovici</rs></persName>, regis <persName>Francorum</persName>
+                  voluntate et assensu excellentissimi domini
+                      <persName>Ludovici</persName>, regis <persName>Francorum</persName>
                   illustris, clauderent claustrum, muros cum quernellis, portas et posternas in
                   eisdem muris faciendo, nos quia impedimentum et calumpniam poneremus in curia
                   domini regis,...</s>
@@ -24826,7 +24820,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« Universis presentes litteras inspecturis, <persName>Almarricus de Levesvilla</persName><note xml:id="p2168_fn1">Amaury</note> de Levesville, fils d'Evrard II de Levesville, tenait
+                <s>« Universis presentes litteras inspecturis, <persName>Almarricus de Levesvilla</persName><note xml:id="p2168_fn1">Amaury de Levesville, fils d'Evrard II de Levesville, tenait
                 en fief, du doyen Hugues de la Ferté, des terres situées à Prasville, dont ce doyen
                 fit présent à l'église de Chartres (<hi rend="i">Nécrologe,</hi> à la date du 4 des
                 nones de mai).</note>, miles, salutem in Domino.</s>
@@ -25001,7 +24995,7 @@
                   <num>quatuor</num> libras turonenses ; in anniversario pie recordationis
                   genitricis nostre <persName>Blanche</persName>
                   <num>quatuor</num> libras turonenses ; in anniversario recolende memorie fratris
-                  nostri <rs type="person"><persName>R[oberti]</persName><note xml:id="p2171_fn1">L'obit de Robert</rs> d'Artois est inséré au <hi rend="i">Nécrologe,</hi> sous la date du 6 des ides de février.</note>, quondam comitis
+                  nostri <persName>R[oberti]</persName><note xml:id="p2171_fn1">L'obit de Robert d'Artois est inséré au <hi rend="i">Nécrologe,</hi> sous la date du 6 des ides de février.</note>, quondam comitis
                     <placeName>Attrebatensis</placeName>, et eorum omnium qui in
                     <placeName>Egypto</placeName> et alias in transmarinis partibus nobis ibidem
                   existentibus decesserunt, <num>quatuor</num> libras turonenses ; in nostro eciam,
@@ -25663,8 +25657,8 @@
                     <placeName>Carnotensi</placeName> episcopo exhibeant annuatim ; gravibus autem
                   super predictis inter nos contentionibus subortis, tandem, de bonorum consilio,
                   inter nos compromissum extitit de omnibus premissis, et ad ipsa pertinentibus,
-                  alte et basse, in Reverendum Patrem <rs type="person"><persName>S[imonem]</persName>, Dei gracia, episcopum
-                      <placeName>Macloviensem</placeName><note xml:id="p2180_fn2">Simon</rs> de Clisson, évêque de Saint-Malo (1263-1285).</note>, ratum et gratum habituri quicquid predictus episcopus super predictis
+                  alte et basse, in Reverendum Patrem <persName>S[imonem]</persName>, Dei gracia, episcopum
+                      <placeName>Macloviensem</placeName><note xml:id="p2180_fn2">Simon de Clisson, évêque de Saint-Malo (1263-1285).</note>, ratum et gratum habituri quicquid predictus episcopus super predictis
                   contentionibus, alte et basse, pro bono pacis, duxerit ordinandum<note xml:id="p2180_fn3">Le vendredi après la saint Nicolas (12 décembre) 1264, Simon
                 de Clisson rendit son jugement, par lequel les religieux de Saint-Martin-au-Val
                 étaient tenus de fournir aux dépenses de l'évêque et des personnes de sa suite
@@ -26774,7 +26768,7 @@
                   salutem in Domino.....</s>
               </p>
               <p xml:lang="fro">
-                <s><rs type="person"><persName>Jean Lambert</rs></persName>, chanoine de
+                <s><persName>Jean Lambert</persName>, chanoine de
                       <placeName>Chartres</placeName>, avait fondé dans l'église de Notre-Dame
                   un autel en l'honneur de <rs type="person">sainte
                     <persName>Anne</persName></rs><note xml:id="p2197_fn2">La chapelle Sainte-Anne, dite aussi chapelle des
@@ -26858,8 +26852,8 @@
                 bonne bourgeoisie de la ville de Chartres. Un de ses membres, Nicolas Chaillou,
                 avait été choisi, en 1252, par la comtesse de Chartres, pour lui servir de caution
                 dans son compromis avec le Chapitre.</note> ; <persName>Radulphus Perier</persName> ;
-                    <persName>Petrus de Drocis</persName> ; <persName>Symon Dagon</persName> ; <rs type="person"><persName>Stephanus</persName>, filius
-                      <persName>Martini</rs></persName> Perier ; <persName>Dyonisius de
+                    <persName>Petrus de Drocis</persName> ; <persName>Symon Dagon</persName> ; <persName>Stephanus</persName>, filius
+                      <persName>Martini</persName> Perier ; <persName>Dyonisius de
                     Galloto</persName> ; <persName>Philippus de
                       Montibus</persName>, miles, <persName>Garinus</persName>,
                     <persName>Gaufridus</persName>, armigeri magistri
@@ -26870,7 +26864,7 @@
                     Monte-Duplici</persName> ; <persName>Gaufridus Pié-de-Lièvre</persName> ; item
                     <persName>Guillelmus de Gresseio</persName>, decanus
                       <placeName>Carnotensis</placeName> ; <persName>Symon de
-                      Bello-Loco</persName><note xml:id="p2198_fn4">Simon</note> de Beaulieu, archidiacre de Chartres, devint archevêque
+                      Bello-Loco</persName><note xml:id="p2198_fn4">Simon de Beaulieu, archidiacre de Chartres, devint archevêque
                 de Bourges en 1281 et cardinal en 1294. Son obit est inscrit au <hi rend="i">Nécrologe</hi> sous la date du 4 des calendes de novembre.</note>, archidiaconus
                         <placeName>Car<pb n="t2_p199"/>notensis</placeName> ; <persName>Guillelmus de Novavilla</persName>, archidiaconus
                       <placeName>Blesensis</placeName> ; magister
@@ -27201,7 +27195,7 @@
                     contents de leur juridiction, empiètent sur celle de l'église, et il permet au
                     Chapitre de se servir contre eux des armes spirituelles</foreign>,
                   nonobstantibus quibuscumque privilegiis, litteris et indulgentiis carissimo in
-                  Christo filio nostro <rs type="person"><persName>Philippo</rs></persName>, regi
+                  Christo filio nostro <persName>Philippo</persName>, regi
                       <persName>Francorum</persName> illustri, vel predecessoribus suis
                   regibus, seu comitibus, baronibus, aut nobilibus, ac laicis aliis quibuscumque
                   concessis...</s>
@@ -29632,7 +29626,7 @@
               <p>
                 <s>Clausum vinearum <num>xxxvi</num> arpenta valent <num><hi rend="sc">xl</hi></num><abbr>lib.</abbr> ; — Magna prata inter villam et
                     <placeName>Josaphat</placeName> valent <num>xl</num>
-                  <abbr>lib.</abbr> ; — <rs type="place">Prata <placeName>Reculeti</rs></placeName>
+                  <abbr>lib.</abbr> ; — Prata <placeName>Reculeti</placeName>
                   ad siccandum telas valent <num>viii</num><abbr>lib.</abbr> ; — Piscatorie a
                   Magno-Ponte usque ad molendinum de <placeName>Bretigni,</placeName> cum sabulo
                   tocius riparie, valent <num><hi rend="sc">xv</hi></num><abbr>lib.</abbr> ; —
@@ -30301,7 +30295,7 @@
           <body>
             <div type="transcription" xml:lang="lat">
               <p>
-                <s>« <rs type="person"><persName>Philippus</rs></persName>, <seg type="theo">Dei
+                <s>« <persName>Philippus</persName>, <seg type="theo">Dei
                       gracia</seg>, <persName>Francorum</persName> rex, ad perpetuam rei geste
                   memoriam.</s>
                 <s>Si regnum <persName>Francorum</persName>, quod a priscis temporibus divina
@@ -30343,8 +30337,8 @@
                   auxilio, honoretur, Nos, ad laudem et gloriam ejusdem domini nostri et <rs type="person">beate <persName>Marie</persName></rs> virginis genitricis ejus
                   ecclesie <placeName>Carnotensi</placeName> in ipsius virginis honore fundate,
                     <num>centum</num> libras parisienses annui et perpetui redditus, ob nostram et
-                  carissime consortis nostre <rs type="person"><persName>Johanne</persName>,
-                      <placeName>Francie</rs></placeName> regine, et liberorum nostrorum salutem,
+                  carissime consortis nostre <persName>Johanne</persName>,
+                      <placeName>Francie</placeName> regine, et liberorum nostrorum salutem,
                   pacem et tranquillitatem regni nostri nostrorumque fidelium subjectorum,
                   concedimus ab ipsius ecclesie decano et Capitulo, nomine dicte ecclesie, habendas,
                   tenendas et possidendas, libere et pacifice, in perpetuum, absque coactione
@@ -30419,8 +30413,8 @@
                   ledit dean et Chapitre requièrent que nous leur gardisseins et foisseins garder
                   par nos genz tout enterinemant, sanz faire mutation ou addition de <num>ci</num>
                   en avant : Nous, maintenanz que à ladite composition devoient estre adjoutez
-                  aucuns articles ordenez par <rs type="person">Révérend Père <persName>Jehan de
-                      Chivri</persName>, jadis Evesques de <placeName>Carcassone</rs></placeName> :
+                  aucuns articles ordenez par Révérend Père <persName>Jehan de
+                      Chivri</persName>, jadis Evesques de <placeName>Carcassone</placeName> :
                   A la parfin, du conseil de bonnes genz, pour bien de pez, des contenz et des
                   descorz devant diz fu accordé et appaisié en la fourme qui s'ensuit :</s>
               </p>
@@ -31888,7 +31882,7 @@
                   excipio missale, breviaria et pontificalia que sunt ad usus
                     <placeName>Carnotenses</placeName>, quos libros volo fore successoris mei
                   episcopi <placeName>Carnotensis</placeName>.</s>
-                <s>Mitram gemmatam, per <rs type="person">Regem <persName>Ludovicum</rs></persName>, tunc
+                <s>Mitram gemmatam, per Regem <persName>Ludovicum</persName>, tunc
                     ducem <placeName>Andegavensem</placeName>, michi donatam ; mitram brodatam,
                   titulo reparacionum per <persName>Johannem de Podio</persName>, michi traditam ;
                   baculum pastoralem, gallice dictum croce, per me emptum, do et lego episcopatui
@@ -31969,7 +31963,7 @@
         <head><pb n="229"/> Dictionnaire topographique et index géographique.</head>
         <list type="index">
           <head>A</head>
-          <item xml:id="NDCH-EG_rs_0001"><rs><hi rend="sc">Abbés (Étang des)</hi></rs>, <ref target="#NDCH-EG_0333">II. 174</ref>, commune du Thieulin, canton de la Loupe, arrondissement de Nogent-le-Rotrou<note type="note" target="#p3229_fn1">La plus grande partie des localités mentionnées dans ce <hi rend="i">Dictionnaire topographique</hi> étant situées dans le département d'Eure-et-Loir, nous avons jugé inutile de répéter entre parenthèses le nom du département, chaque fois que la localité citée appartient à Eure-et-Loir.</note>, <desc>tirait son nom de l'ancienne abbaye du Loir. C'était autrefois dans cet étang que la rivière du Loir prenait sa source ; mais il fut desséché au XVII<hi rend="sup">e</hi> siècle.</desc></item>
+          <item xml:id="NDCH-EG_rs_0001"><rs><hi rend="sc">Abbés (Étang des)</hi></rs>, <ref target="#NDCH-EG_0333">II. 174</ref>, commune du Thieulin, canton de la Loupe, arrondissement de Nogent-le-Rotrou<note target="#p3229_fn1">La plus grande partie des localités mentionnées dans ce <hi rend="i">Dictionnaire topographique</hi> étant situées dans le département d'Eure-et-Loir, nous avons jugé inutile de répéter entre parenthèses le nom du département, chaque fois que la localité citée appartient à Eure-et-Loir.</note>, <desc>tirait son nom de l'ancienne abbaye du Loir. C'était autrefois dans cet étang que la rivière du Loir prenait sa source ; mais il fut desséché au XVII<hi rend="sup">e</hi> siècle.</desc></item>
           <item xml:id="NDCH-EG_rs_0002"><rs><hi rend="sc">Abonvilla</hi></rs>, <ref target="#NDCH-EG_0071">I. 173</ref>; <ref>II. 322</ref>. <desc><hi rend="i">Abonville</hi>, village, commune de Levesville-la-Chenard, canton de Janville, arrondissement de Chartres.</desc></item>
           <item xml:id="NDCH-EG_rs_0003"><rs><hi rend="sc">Abrincæ</hi></rs>, <ref>III. 110</ref>. <desc><hi rend="i">Avranches</hi>, chef-lieu d'arrondissement du département de la Manche.</desc></item>
           <item xml:id="NDCH-EG_rs_0004"><rs><hi rend="sc">Acheriæ</hi></rs>, <ref target="#NDCH-EG_0179">II. 38</ref>; <ref>III. 14</ref>. <desc><hi rend="i">Achères</hi>, village, commune de Theuvy, canton de Châteauneuf, arrondissement de Dreux ; chef-lieu d'une des mairies du Chapitre de Chartres.</desc></item>
