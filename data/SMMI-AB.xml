@@ -1,5 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMMI-AB">
   <teiHeader>
     <fileDesc>
@@ -16,7 +15,7 @@
       <publicationStmt>
         <date>2018</date>
         <idno>http://elec.enc.sorbonne.fr/cartulaires/micy/</idno>
-        <publisher>Ã‰cole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
@@ -24,6 +23,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'Ã‰cole nationale des chartes met Ã  disposition cette ressource Ã©lectronique structurÃ©e, protÃ©gÃ©e par le code de la propriÃ©tÃ© intellectuelle sur les bases de donnÃ©es (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative CommonsÂ : Â«Â <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">PaternitÃ© - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref>Â Â».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident>Â â€” Nous souhaitons encourager l'utilisation
             et l'amÃ©lioration de nos ressources Ã©lectroniques, pour les intÃ©rÃªts de l'enseignement
@@ -65,19 +65,25 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
-          <citeData property="dc:title" use="head[1]"/>
+          <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="chapitre" match="div[@type]" use="default">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dct:title" use="head"/>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, (if (front[1]/docDate[1]/date[1]) then ' (', front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )], ')') )"/>
-          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )]"/>
+          <citeData property="dct:title" use="concat(@n, (if (front[1]/docDate[1]/date[1]) then ' (', front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )], ')') )"/>
+          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]/node()[not(name() = 'note' )]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='Ã©dition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="PP">Encodage</change>
     </revisionDesc>

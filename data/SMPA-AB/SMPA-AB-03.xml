@@ -4,6 +4,7 @@
     <fileDesc>
       <titleStmt>
         <title>Chartes et documents de l’abbaye de Saint-Magloire, tome III, 1330 – début du XVe siècle</title>
+        <author>Anne Terroine et Lucie Fossier, 3 t</author>
         <principal xml:id="OGJ">Olivier Canteaut (École des chartes)</principal>
         <respStmt>
           <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email>
@@ -15,7 +16,7 @@
       <publicationStmt>
         <date>2024</date>
         <idno>TODO</idno>
-        <publisher>École nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
@@ -23,6 +24,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique structurée, protégée par le code de la propriété intellectuelle sur les bases de données (<ref target="#http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="#http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
             et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
@@ -64,19 +66,29 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
-          <citeData property="dc:title" use="head"/>
+          <citeData property="dct:title" use="head"/>
           <citeStructure unit="partie" match="div" use="default">
-            <citeData property="dc:title" use="head"/>
+            <citeData property="dct:title" use="head"/>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI/text/group/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front/docDate/date/node()[not(name() = 'note' )], ')' )"/>
-          <citeData property="dc:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
+          <citeData property="dct:title" use="concat(@n, ' (', front/docDate/date/node()[not(name() = 'note' )], ')' )"/>
+          <citeData property="dct:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
           <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notBefore="1966" notAfter="1998">1966-1998</date>
+      </creation>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        <language ident="fro">Ancien français</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change when="2024-12" who="PP">Encodage</change>
     </revisionDesc>

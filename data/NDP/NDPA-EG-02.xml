@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-02">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-02">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,7 +15,7 @@
       <publicationStmt>
         <date>2024</date>
         <idno/>
-        <publisher>Ecole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
@@ -25,6 +23,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
                 structurée, protégée par le code de la propriété intellectuelle sur les bases de données
                   (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -75,14 +74,20 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dc:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return concat(@n, ' (', $att, ')' )"/>
-          <citeData property="dc:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+          <citeData property="dct:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return concat(@n, ' (', $att, ')' )"/>
+          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
           <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="PP">Encodage</change>
     </revisionDesc>

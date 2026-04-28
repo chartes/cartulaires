@@ -5,6 +5,7 @@
       <titleStmt>
         <title>Recueil des chartes de l'abbaye royale de Montmartre</title>
         <funder>Ecole des chartes</funder>
+        <author>Edouard de Barthélémy</author>
         <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
         <editor>Alix Bréban</editor>
         
@@ -52,7 +53,7 @@
       <publicationStmt>
         <date>2009</date>
         <idno>http://elec.enc.sorbonne.fr/cartulaires/mtmartre/</idno>
-        <publisher>Ecole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>19, rue de la Sorbonne</addrLine>
           <addrLine>75005 Paris</addrLine>
@@ -61,6 +62,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
               (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -108,22 +110,33 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
-          <citeData property="dc:title" use="head[1]"/>
+          <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head[1]"/>
+            <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div" use="default">
-              <citeData property="dc:title" use="head[1]"/>
+              <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
-          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>1893</date>
+      </creation>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        <language ident="fra">fra</language>
+        <language ident="fro">Ancien français</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change when="2010-09" who="#CD">Tableau de la tradition</change>
       <change when="2010-04" who="#MBC">Indexation diplomatique</change>
