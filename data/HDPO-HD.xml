@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPO-HD">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPO-HD">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -137,7 +135,7 @@
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
-        <language ident="fro">Ancien Français</language>
+        <language ident="fro">Ancien français</language>
       </langUsage>
     </profileDesc>
     <revisionDesc>

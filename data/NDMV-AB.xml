@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMV-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Cartulaire et censier de l'abbaye Notre-Dame de Morienval</title>
+        <author>Achill
+            Peigné-Delacourt</author>
         <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
 
         <respStmt>
@@ -34,7 +35,7 @@
       <publicationStmt>
         <date>2009</date>
         <idno>http://elec.enc.sorbonne.fr/cartulaires/Morienval/</idno>
-        <publisher>Ecole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>19, rue de la Sorbonne</addrLine>
           <addrLine>75005 Paris</addrLine>
@@ -43,6 +44,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
             (L341-1), selon les termes de la licence Creative Commons : « Paternité - Pas
@@ -94,22 +96,32 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
-          <citeData property="dc:title" use="head[1]"/>
+          <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head[1]"/>
+            <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div[@type]" use="default">
-              <citeData property="dc:title" use="head[1]"/>
+              <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
-          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>1876</date>
+      </creation>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        <language ident="fro">Ancien français</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change when="2010-10" who="NR">Encodage de l'introduction</change>
       <change when="2010-09" who="CD">Tableau de la tradition</change>

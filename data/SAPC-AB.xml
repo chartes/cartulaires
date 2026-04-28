@@ -4,6 +4,7 @@
     <fileDesc>
       <titleStmt>
         <title>Cartulaire de l’abbaye de Saint-Antoine-des-Champs</title>
+        <author>Sandrine Delaforge-Marchand</author>
         <principal xml:id="OC">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="VJ">Vincent Jolivet (École des chartes) <email>vincent.jolivet@chartes.psl.eu</email>
@@ -20,7 +21,7 @@
       <publicationStmt>
         <date>2024</date>
         <idno/>
-        <publisher>Ecole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
@@ -28,6 +29,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique structurée, protégée par le code de la propriété intellectuelle sur les bases de données (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement et de la recherche. Toute autorisation au-delà du champ de cette licence doit être obtenue auprès de nous.</p>
           <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique, nous nous engageons à conserver et à toujours offrir publiquement la version la plus à jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après validation par un comité scientifique), et à référencer l'origine de ces contributions. Toute modification de la ressource qui ne serait pas reversée à la version de référence sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser les contributions et de permettre les meilleures conditions possibles de collaboration scientifique.</p>
@@ -55,25 +57,34 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="introduction" match="/TEI[1]/text[1]/front[1]" use="default">
-          <citeData property="dc:title" use="head[1]"/>
+          <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
-            <citeData property="dc:title" use="head[1]"/>
+            <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="sous-partie" match="div[@type]" use="default">
-              <citeData property="dc:title" use="head[1]"/>
+              <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dc:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
-          <citeData property="dc:date" use="front[1]/docDate[1]/date[1]"/>
+          <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dc:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
         <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[3]/div" use="default">
-          <citeData property="dc:title" use="head[1]"/>
+          <citeData property="dct:title" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date when="1994">1994</date>
+      </creation>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+        </langUsage>
+      </profileDesc>
     <revisionDesc>
       <change who="#PP" when="2024-12">Conversion en TEI</change>
     </revisionDesc>

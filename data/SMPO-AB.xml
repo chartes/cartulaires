@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Cartulaire de l'abbaye de Saint-Martin de Pontoise</title>
         <author ref="https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
+        <author>J. Depoin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://data.bnf.fr/fr/ark:/12148/cb11906612z">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
         <editor ref="https://www.idref.fr/131043935 https://data.bnf.fr/fr/ark:/12148/cb16169151r">Hélène Becquet</editor>
         <respStmt>
@@ -53,7 +52,7 @@
       <publicationStmt>
         <date>2009</date>
         <idno>http://elec.enc.sorbonne.fr/cartulaires/pontoise/</idno>
-        <publisher>Ecole nationale des chartes - PSL</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>19, rue de la Sorbonne</addrLine>
           <addrLine>75005 Paris</addrLine>
@@ -141,12 +140,14 @@
     <profileDesc>
       <creation>
         <date>1895</date>
-        <date type="coverage" notBefore="1000" notAfter="1200">1000/1200</date>
+      <date type="coverage" notBefore="1000" notAfter="1200">1000/1200</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
-      </langUsage>
+      <language ident="fra">fra</language>
+        <language ident="fro">Ancien français</language>
+        </langUsage>
     </profileDesc>
     <revisionDesc>
       <change when="2010-09" who="#CD">Tableau de la tradition</change>
