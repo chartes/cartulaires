@@ -124,7 +124,13 @@
           <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
+          <citeStructure match="list[@type='index']" use="dots">
+            <citeData use="head" property="dct:title"/>
+          </citeStructure>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -4812,10 +4818,8 @@
 
   <back>
     <div type="indexnominum" n="1">
-        <note>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
-          Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé</note>
-        <head>
-          <pb n="249"/>
+      <head>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
+        Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé <pb n="249"/>
         </head>
         <list type="index">
           <head>A</head>
