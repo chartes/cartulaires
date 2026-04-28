@@ -111,7 +111,13 @@
           <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="dots" unit="Index">
+          <citeStructure match="list[@type='index']" use="dots">
+            <citeData use="head" property="dct:title"/>
+          </citeStructure>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>

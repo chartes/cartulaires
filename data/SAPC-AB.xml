@@ -73,6 +73,9 @@
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
         <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[3]/div" use="default">
           <citeData property="dct:title" use="head[1]"/>
+          <citeStructure match="list[@type='index']" use="dots">
+            <citeData use="head" property="dct:title"/>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>

@@ -68,15 +68,21 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return concat(@n, ' (', $att, ')' )"/>
+          <citeData property="dct:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return if ($att) then concat(@n, ' (', $att, ')' ) else @n"/>
           <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
           <citeData property="dct:type" use="front/index/term/@key"/>
           <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
-        <citeStructure match="/TEI/text/group/group[3]/text/list" use="default">
-          <citeData use="./ancestor::group/head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/back[1]/div" use="dots" unit="Index">
+          <citeData use="head" property="dct:title"/>
+          <citeStructure match="list" use="dots">
+            <citeData use="head" property="dct:title"/>
+          </citeStructure>
         </citeStructure>
+        <!--<citeStructure match="/TEI/text/group/group[3]/text/list" use="default">
+          <citeData use="./ancestor::group/head" property="dct:title"/>
+        </citeStructure>-->
       </refsDecl>
     </encodingDesc>
     <profileDesc>
