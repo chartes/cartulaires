@@ -5,7 +5,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>ECCLESIÆ PARISIENSIS CHARTULARIUM</title>
+        <title>Cartulaire de l’église Notre-Dame de Paris, t. 1</title>
+        <author>Benjamin Guérard</author>
         <principal xml:id="OC">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email></name>
@@ -13,7 +14,7 @@
         </respStmt>
       </titleStmt>
       <publicationStmt>
-        <publisher>Ecole nationale des chartes</publisher>
+        <publisher>École nationale des chartes - PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
           <addrLine>75002 Paris</addrLine>
@@ -22,6 +23,7 @@
         </address>
         <date when="2024">2024</date>
         <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
           <p>L'École nationale des chartes met à disposition cette ressource électronique...</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation...</p>
           <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique...</p>
@@ -53,14 +55,23 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dc:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return concat(@n, ' (', $att, ')' )"/>
-          <citeData property="dc:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+          <citeData property="dct:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return concat(@n, ' (', $att, ')' )"/>
+          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
           <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dc:language" use="body/div[@type='transcription']/@xml:lang"/>
+          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>1850</date>
+      </creation>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+      </langUsage>
+    </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="#PP">Encodage</change>
     </revisionDesc>
@@ -81,7 +92,7 @@
           <lb/>CHARTULARIUM EPISCOPI</head>
         <group n="1">
           <head>
-            <pb xml:id="#guerard1" n="3"/>PRÆVIA.</head>
+            <pb edRef="guerard1" n="3"/>PRÆVIA.</head>
           <text xml:id="NDPA-EG-01_0001" subtype="article" n="I">
             <front><index><term type="nature" key="tbd"/></index><head>I</head></front>
             <body>
