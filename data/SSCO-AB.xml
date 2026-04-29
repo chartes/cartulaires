@@ -124,10 +124,10 @@
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
-          <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="dots" unit="Index">
-            <citeStructure match="list[@type='index']" use="dots">
-              <citeData use="head" property="dct:title"/>
-            </citeStructure>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="dots" unit="Index">
+          <citeStructure match="list[@type='index']" use="dots">
+            <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
