@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP-AB">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -48,14 +49,9 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <listBibl>
-          <bibl xml:id="poupardin1909">
-            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I, Paris, 1909.
+          <bibl>
+            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, 1909-1932.
           </bibl>
-          <bibl xml:id="poupardin1932">
-            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, revu par Alexandre Vidier et Léon Levillain, t. II, Paris, 1932.
-          </bibl>
-        </listBibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
