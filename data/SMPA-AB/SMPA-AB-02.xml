@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-AB-02">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-AB-02">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -20036,7 +20036,7 @@
               <p>Pour le quel achet, touz les hostes de la terre du Chapuis et des appartenances
                 paierent chacum douze d. [<hi rend="i">un blanc</hi>], si comme il s’ensivent.</p>
               <p>Prumierement : [fol. 84 <hi rend="i">bis</hi>]</p>
-              <list>
+              <list type="o">
                 <head><hi rend="sc">La ville de Villers</hi></head>
                 <item><hi rend="sc">Prumierement</hi>, Guillaume le Roux Congnier, XII d</item>
                 <item><hi rend="i">Item</hi>, Guillaumin Congnier, clerc, XII d.</item>
@@ -20063,7 +20063,7 @@
                 <item><hi rend="i">Item</hi>, Jeham le Roy, XII d.</item>
                 <item><hi rend="i">Item</hi>, Aupés la Coigniere, XII d.</item>
               </list>
-              <list>
+              <list type="o">
                 <head><hi rend="sc">La ville de Panfol</hi></head>
                 <item><rs><hi rend="sc">Prumierement</hi>, Millart Judas, XII d</rs></item>
                 <item><hi rend="i">Item</hi>, Millart Daurree, XII d.</item>
@@ -20096,7 +20096,7 @@
                 <item><hi rend="i">Item</hi>, Symon Judas, XII d.</item>
                 <item><hi rend="i">Item</hi>, Jeham Blanchart, XII d.</item>
               </list>
-              <list>
+              <list type="o">
                 <head>[fol. 84 <hi rend="i">bis</hi> v°] <hi rend="sc">Panfol</hi></head>
                 <item><hi rend="i">Item</hi>, la Denisarde, XII d.</item>
                 <item><hi rend="i">Item</hi>, Guillaume Mitrart, XII d.</item>
@@ -20107,7 +20107,7 @@
                 <item><hi rend="i">Item</hi>, Richart Bataille, XII d.</item>
                 <item><hi rend="i">Item</hi>, Denisot Hautbois, XII d.</item>
               </list>
-              <list>
+              <list type="o">
                 <head><hi rend="sc">La ville de Chatpandu</hi></head>
                 <item><rs><hi rend="sc">Prumierement</hi>, Colin de Chatpandu, XII d</rs></item>
                 <item><hi rend="i">Item</hi>, Gillon la Blondelle, XII d.</item>
@@ -20122,7 +20122,7 @@
                 <item><hi rend="i">Item</hi>, Hebert l’Anglois, XII d.</item>
                 <item><hi rend="i">Item</hi>, Goubert, XII d.</item>
               </list>
-              <list>
+              <list type="o">
                 <head><hi rend="sc">La ville de Ville Abbé</hi></head>
                 <item><rs><hi rend="sc">Prumierement</hi>, Regnaut l’Anglois, XII d</rs></item>
                 <item><hi rend="i">Item</hi>, Gilon, fame feu Michiau l’Anglois, XII d.</item>

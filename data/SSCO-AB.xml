@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -10010,7 +10011,7 @@
           <!--<item xml:id="SSCO-AB_rs_671"><rs><hi rend="sc">Nicholaus</hi>, (Sancti Nicholai capellania)</rs>, <ref>160</ref>, <ref>163</ref>.</item>-->
           <item xml:id="SSCO-AB_rs_672"><rs><hi rend="sc">Noisimentum</hi>, Noisement, <hi rend="i">Noisemant (Seine-et-Marne, commune de Nandy)</hi></rs>, <ref target="#SSCO-AB_0059" n="68">59</ref>, <ref target="#SSCO-AB_0099" n="103">99</ref>.</item>
           <item xml:id="SSCO-AB_rs_673"><rs><hi rend="sc">Noisimentum Isabellis</hi>, domicella de</rs>, <ref target="#SSCO-AB_0099" n="99">99</ref>.</item>
-          <item xml:id="SSCO-AB_rs_674" ana="missplaced"><rs><hi rend="sc">Guillelmus</hi>, ejus filius</rs>, <ref target="#SSCO-AB_0099" n="99">99</ref>.</item>
+          <item xml:id="SSCO-AB_rs_674"><rs><hi rend="sc">Noisimentum Guillelmus</hi>, ejus filius</rs>, <ref target="#SSCO-AB_0099" n="99">99</ref>.</item>
           </list>
         <list type="index">
           <head>O</head>
@@ -10233,12 +10234,12 @@
           <item xml:id="SSCO-AB_rs_885"><rs><hi rend="sc">Trinitatis (altare Sancte)</hi></rs>, <ref target="#SSCO-AB_0054" n="54">54</ref>, <ref target="#SSCO-AB_0097" n="97">97</ref>.</item>
 <item xml:id="SSCO-AB_rs_886"><rs><hi rend="sc">Trossolio (Johannes de)</hi>, clericus</rs>, <ref target="#SSCO-AB_0080" n="80">80</ref>, <ref target="#SSCO-AB_0085" n="85">85</ref>.</item>
           </list>
-        <list type="index">
+        <!--<list type="index">
           <head>U</head>
-        <!--<item xml:id="SSCO-AB_rs_887"><rs><hi rend="sc">Ulmeium</hi>, <hi rend="i">Ormoy (Seine-et-Oise, canton de Corbeil)</hi></rs>, <ref>126</ref>, <ref>144</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_888"><rs><hi rend="sc">Ulmeium</hi>, Andreas de Ulmeio</rs>, <ref>115</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_889"><rs><hi rend="sc">Ulmos Reimberti (vinea apud)</hi></rs>, <ref>156</ref>.</item>-->
-        </list>
+        <!-\-<item xml:id="SSCO-AB_rs_887"><rs><hi rend="sc">Ulmeium</hi>, <hi rend="i">Ormoy (Seine-et-Oise, canton de Corbeil)</hi></rs>, <ref>126</ref>, <ref>144</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_888"><rs><hi rend="sc">Ulmeium</hi>, Andreas de Ulmeio</rs>, <ref>115</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_889"><rs><hi rend="sc">Ulmos Reimberti (vinea apud)</hi></rs>, <ref>156</ref>.</item>-\->
+        </list>-->
         <list type="index">
           <head>V</head>
           <item xml:id="SSCO-AB_rs_890"><rs><hi rend="sc">Vadum Petrosum</hi>, <hi rend="i">Guipéreux (Seine-et-Oise, commune de Longpont)</hi></rs>, <ref target="#SSCO-AB_0104" n="109">104</ref><!--, <ref>150</ref>--><!--, <ref>151</ref>--><!--, <ref>153</ref>--><!--, <ref>156</ref>--><!--, <ref>159</ref>--><!--, <ref>171</ref>-->.</item>
@@ -10274,162 +10275,162 @@
           <item xml:id="SSCO-AB_rs_917"><pb n="233"/><rs><hi rend="sc"> Willelmus</hi>, precentor Sancti Exuperii</rs>, <ref target="#SSCO-AB_0027" n="41">27</ref>, <!-- <ref>43</ref> -->.</item>
           <item xml:id="SSCO-AB_rs_918"><rs><hi rend="sc">Willelmus de Veteri Corbolio</hi></rs>, <ref target="#SSCO-AB_0044" n="44">44</ref>.</item>
           </list>
-        <list type="index">
+        <!--<list type="index">
           <head>Y</head>
-        <!--<item xml:id="SSCO-AB_rs_919"><rs><hi rend="sc">Yenvilla</hi>, <hi rend="i">Janville (Seine-et-Oise, commune d'Auvers-Saint-Georges)</hi></rs>, <ref>129</ref>.</item>-->
-        </list>
+        <!-\-<item xml:id="SSCO-AB_rs_919"><rs><hi rend="sc">Yenvilla</hi>, <hi rend="i">Janville (Seine-et-Oise, commune d'Auvers-Saint-Georges)</hi></rs>, <ref>129</ref>.</item>-\->
+        </list>-->
       </div>
-      <div type="table" n="2">
+      <!--<div type="table" n="2">
         <pb n="234"/>
         <head>Table générale</head>
         <list>
-          <!--<item xml:id="SSCO-AB_rs_001">PRÉFACE<ref n="V">V</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_002">INTRODUCTION<ref n="VII">VII</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_003">§ 1. <hi rend="sc">Le Manuscrit</hi>. — Sa description, — son âge, — sa composition, — sa conservation, — plan de notre édition, — bibliographie<ref n="VII">VII</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_004">§ 2. <hi rend="sc">Saint-Spire</hi>, <hi rend="sc">sa fondation</hi>, <hi rend="sc">ses privilèges</hi>. — Les anciennes abbayes de Corbeil, — Saint-Spire, — ses privilèges, — son extension à la fin du XII<hi rend="sup">e</hi>siècle, — Procuration de l'éveque de Paris<ref n="XV">XV</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_005">§ 3. <hi rend="sc">Personnel</hi>. — L'abbé, sa nomination, ses droits et ses devoirs, — le chantre, — le chevecier, — le prévôt, le chambrier et les distributeurs, — les chanoines, — les prébendiers étrangers à Saint-Spire, — le prieur de Notre-Dame-des-Champs, — l'abbaye de Saint-Victor de Paris, — les chapelains, — les vicaires<ref n="XIX">XIX</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_006">§ 4. <hi rend="sc">Temporel</hi>. — La fabrique, — les annates, — le cloître, — les distributions, — les obits, — les foires, — les mesures, — prix des bois, des prés et des vignes<ref n="XLIV">XLIV</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_001">PRÉFACE<ref n="V">V</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_002">INTRODUCTION<ref n="VII">VII</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_003">§ 1. <hi rend="sc">Le Manuscrit</hi>. — Sa description, — son âge, — sa composition, — sa conservation, — plan de notre édition, — bibliographie<ref n="VII">VII</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_004">§ 2. <hi rend="sc">Saint-Spire</hi>, <hi rend="sc">sa fondation</hi>, <hi rend="sc">ses privilèges</hi>. — Les anciennes abbayes de Corbeil, — Saint-Spire, — ses privilèges, — son extension à la fin du XII<hi rend="sup">e</hi>siècle, — Procuration de l'éveque de Paris<ref n="XV">XV</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_005">§ 3. <hi rend="sc">Personnel</hi>. — L'abbé, sa nomination, ses droits et ses devoirs, — le chantre, — le chevecier, — le prévôt, le chambrier et les distributeurs, — les chanoines, — les prébendiers étrangers à Saint-Spire, — le prieur de Notre-Dame-des-Champs, — l'abbaye de Saint-Victor de Paris, — les chapelains, — les vicaires<ref n="XIX">XIX</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_006">§ 4. <hi rend="sc">Temporel</hi>. — La fabrique, — les annates, — le cloître, — les distributions, — les obits, — les foires, — les mesures, — prix des bois, des prés et des vignes<ref n="XLIV">XLIV</ref>.</item>-\->
         </list>
-      </div><div type="table" n="1">
+      </div>--><!--<div type="table" n="1">
         <pb n="235"/>
         <head>CARTULAIRE</head>
         <note xml:id="note61" n="*">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>
-        <list>
-          <!--<item xml:id="SSCO-AB_rs_007">1<hi rend="sup">o</hi> Privilegium claustri a Bucardo comite concessum (1071)<ref n="VI recto 1">VI recto 1</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_008">2<hi rend="sup">o</hi> Privilegium Ludovici regis Francorum (1118)<ref n="VII verso 4">VII verso 4</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_009">3<hi rend="sup">o</hi> Confirmatio pape Celestini super possessionibus ecclesie Beati Exuperii (1196)<ref n="XI verso 6">XI verso 6</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_010">4<hi rend="sup">o</hi> Carta de procuracione episcopi Parisiensis et archidiaconi sub sigillo Adele regine et aliorum (1191)<ref n="XIV recto 9">XIV recto 9</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_011">5<hi rend="sup">o</hi> Item de eodem sub sigillo episcopi et archidiaconi (1191)<ref n="XIV verso 10">XIV verso 10</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_012">6<hi rend="sup">o</hi> Item de eodem sub sigillo regine Adele (1199)<ref n="XV recto 11">XV recto 11</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_013">7<hi rend="sup">o</hi> Item de eodem sub sigillo decani Parisiensis (1191)<ref n="XV recto 12">XV recto 12</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_014">8<hi rend="sup">o</hi> Littera Gregorii pape de procuracione (1230)<ref n="deest 14">deest 14</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_015">9<hi rend="sup">o</hi> Item de eodem sub sigillo archidiaconi Parisiensis (1229)<ref n="XV verso 14">XV verso 14</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_016">10<hi rend="sup">o</hi> Carta de jure abbatis (1137-1152)<ref n="VII verso 15">VII verso 15</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_017">11<hi rend="sup">o</hi> Carta de Cantoria (1208)<ref n="XVII verso 19">XVII verso 19</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_018">12<hi rend="sup">o</hi> Carta de Capiceria (1252)<ref n="XXI recto 21">XXI recto 21</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_019">13<hi rend="sup">o</hi> Carta de stagio canonicorum sub sigillo regis Philippi (1203)<ref n="XIV recto 24">XIV recto 24</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_020">14<hi rend="sup">o</hi> Item de eodem sub sigillo abbatis (1203)<ref n="XVII recto 26">XVII recto 26</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_021">15<hi rend="sup">o</hi> Littera de ordinacione episcopi Parisiensis (1260)<ref n="XLII verso 27">XLII verso 27</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_022">16<hi rend="sup">o</hi> Juramentum quod canonici in sua nova receptione prestare tenentur<ref n="XXXIX verso 29">XXXIX verso 29</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_023">17<hi rend="sup">o</hi> De prebenda pertinente ad ecclesiam Beate Marie de Campis (1145)<ref n="deest 30">deest 30</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_024">18<hi rend="sup">o</hi> Privilegium Alexandri pape tercii de prebenda Sancti Exuperii (1160-1176)<ref n="deest 31">deest 31</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_025">19<hi rend="sup">o</hi> De priore de Campis (1180)<ref n="XIX recto 32">XIX recto 32</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_026">20<hi rend="sup">o</hi> Privilegium Lucii <num>III</num> de eadem prebenda (avant 1184-1185)<ref n="deest 33">deest 33</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_027">21<hi rend="sup">o</hi> De priore de Campis (1233)<ref n="deest 34">deest 34</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_028">22<hi rend="sup">o</hi> Item de eodem (1233)<ref n="XIX recto 35">XIX recto 35</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_029"><pb n="236"/>23<hi rend="sup">o</hi> De prebenda Sancti Exuperii (1233)<ref n="deest 38">deest 38</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_030">24<hi rend="sup">o</hi> Juramentum quod prebendatus Beate Marie de Campis in sua nova receptione prestare tenetur<ref n="XXXIX recto 39">XXXIX recto 39</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_031">25<hi rend="sup">o</hi> Diploma Henrici, fratris Ludovici regis, pro monasterio Sancti Victoris (1146)<ref n="deest 39">deest 39</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_032">26<hi rend="sup">o</hi> Diploma Ludovici regis de eodem (1146)<ref n="deest 40">deest 40</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_033">27<hi rend="sup">o</hi> Littera de Capellano (1191)<ref n="XX verso 41">XX verso 41</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_034">28<hi rend="sup">o</hi> De Capellano altaris Sancti Martini (1209)<ref n="XX verso 43">XX verso 43</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_035">29<hi rend="sup">o</hi> Juramentum Capellanorum in receptione sua<ref n="XLII recto 44">XLII recto 44</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_036">30<hi rend="sup">o</hi> Carta de prebenda ad fabricam ecclesie pertinente (1196)<ref n="XVI recto 45">XVI recto 45</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_037">31<hi rend="sup">o</hi> Item de eodem sub sigillo Adele regine (1196)<ref n="XVI verso 46">XVI verso 46</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_038">32<hi rend="sup">o</hi> Item de eodem sub sigillo abbatis (1196)<ref n="XVI verso 47">XVI verso 47</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_039">33<hi rend="sup">o</hi> Item de eodem sub sigillo regis Philippi (1198)<ref n="XIII verso 48">XIII verso 48</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_040">34<hi rend="sup">o</hi> Carta de annualibus (1155)<ref n="XVI recto 49">XVI recto 49</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_041">35<hi rend="sup">o</hi> Carta ne Judeus sit in claustro sub sigillo Adele (1203)<ref n="XIII verso 50">XIII verso 50</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_042">36<hi rend="sup">o</hi> Privilegium Gileberti decani Sancti Marcelli Parisiensis (1112)<ref n="X verso 51">X verso 51</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_043">37<hi rend="sup">o</hi> Carta de asino, sub sigillo Adele regine (1183)<ref n="X verso 51">X verso 51</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_044">38<hi rend="sup">o</hi> Diploma Philippi regis de eodem (1184)<ref n="XI recto 52">XI recto 52</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_045">39<hi rend="sup">o</hi> Carto de novi mercati libertate sub sigillo Adele regine (1184)<ref n="VIII recto 53">VIII recto 53</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_046">40<hi rend="sup">o</hi> Littera Adele regine de terra de Montechoue (1185)<ref n="XVIII recto 54">XVIII recto 54</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_047">41<hi rend="sup">o</hi> Littera Adele regine de modio bladi de Soisiaco (1190)<ref n="XXII recto 55">XXII recto 55</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_048">42<hi rend="sup">o</hi> Littera Guidonis archiepiscopi Senonensis de eodem (1192)<ref n="XXII verso 55">XXII verso 55</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_049">43<hi rend="sup">o</hi> Littera Hugonis abbatis de nemore de Villa Dodonis (1198)<ref n="XVIII recto 56">XVIII recto 56</ref>.</item>-->
+        <list type="gloss">
+          <!-\-<item xml:id="SSCO-AB_rs_007">1<hi rend="sup">o</hi> Privilegium claustri a Bucardo comite concessum (1071)<ref n="VI recto 1">VI recto 1</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_008">2<hi rend="sup">o</hi> Privilegium Ludovici regis Francorum (1118)<ref n="VII verso 4">VII verso 4</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_009">3<hi rend="sup">o</hi> Confirmatio pape Celestini super possessionibus ecclesie Beati Exuperii (1196)<ref n="XI verso 6">XI verso 6</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_010">4<hi rend="sup">o</hi> Carta de procuracione episcopi Parisiensis et archidiaconi sub sigillo Adele regine et aliorum (1191)<ref n="XIV recto 9">XIV recto 9</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_011">5<hi rend="sup">o</hi> Item de eodem sub sigillo episcopi et archidiaconi (1191)<ref n="XIV verso 10">XIV verso 10</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_012">6<hi rend="sup">o</hi> Item de eodem sub sigillo regine Adele (1199)<ref n="XV recto 11">XV recto 11</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_013">7<hi rend="sup">o</hi> Item de eodem sub sigillo decani Parisiensis (1191)<ref n="XV recto 12">XV recto 12</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_014">8<hi rend="sup">o</hi> Littera Gregorii pape de procuracione (1230)<ref n="deest 14">deest 14</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_015">9<hi rend="sup">o</hi> Item de eodem sub sigillo archidiaconi Parisiensis (1229)<ref n="XV verso 14">XV verso 14</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_016">10<hi rend="sup">o</hi> Carta de jure abbatis (1137-1152)<ref n="VII verso 15">VII verso 15</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_017">11<hi rend="sup">o</hi> Carta de Cantoria (1208)<ref n="XVII verso 19">XVII verso 19</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_018">12<hi rend="sup">o</hi> Carta de Capiceria (1252)<ref n="XXI recto 21">XXI recto 21</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_019">13<hi rend="sup">o</hi> Carta de stagio canonicorum sub sigillo regis Philippi (1203)<ref n="XIV recto 24">XIV recto 24</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_020">14<hi rend="sup">o</hi> Item de eodem sub sigillo abbatis (1203)<ref n="XVII recto 26">XVII recto 26</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_021">15<hi rend="sup">o</hi> Littera de ordinacione episcopi Parisiensis (1260)<ref n="XLII verso 27">XLII verso 27</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_022">16<hi rend="sup">o</hi> Juramentum quod canonici in sua nova receptione prestare tenentur<ref n="XXXIX verso 29">XXXIX verso 29</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_023">17<hi rend="sup">o</hi> De prebenda pertinente ad ecclesiam Beate Marie de Campis (1145)<ref n="deest 30">deest 30</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_024">18<hi rend="sup">o</hi> Privilegium Alexandri pape tercii de prebenda Sancti Exuperii (1160-1176)<ref n="deest 31">deest 31</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_025">19<hi rend="sup">o</hi> De priore de Campis (1180)<ref n="XIX recto 32">XIX recto 32</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_026">20<hi rend="sup">o</hi> Privilegium Lucii <num>III</num> de eadem prebenda (avant 1184-1185)<ref n="deest 33">deest 33</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_027">21<hi rend="sup">o</hi> De priore de Campis (1233)<ref n="deest 34">deest 34</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_028">22<hi rend="sup">o</hi> Item de eodem (1233)<ref n="XIX recto 35">XIX recto 35</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_029"><pb n="236"/>23<hi rend="sup">o</hi> De prebenda Sancti Exuperii (1233)<ref n="deest 38">deest 38</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_030">24<hi rend="sup">o</hi> Juramentum quod prebendatus Beate Marie de Campis in sua nova receptione prestare tenetur<ref n="XXXIX recto 39">XXXIX recto 39</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_031">25<hi rend="sup">o</hi> Diploma Henrici, fratris Ludovici regis, pro monasterio Sancti Victoris (1146)<ref n="deest 39">deest 39</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_032">26<hi rend="sup">o</hi> Diploma Ludovici regis de eodem (1146)<ref n="deest 40">deest 40</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_033">27<hi rend="sup">o</hi> Littera de Capellano (1191)<ref n="XX verso 41">XX verso 41</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_034">28<hi rend="sup">o</hi> De Capellano altaris Sancti Martini (1209)<ref n="XX verso 43">XX verso 43</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_035">29<hi rend="sup">o</hi> Juramentum Capellanorum in receptione sua<ref n="XLII recto 44">XLII recto 44</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_036">30<hi rend="sup">o</hi> Carta de prebenda ad fabricam ecclesie pertinente (1196)<ref n="XVI recto 45">XVI recto 45</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_037">31<hi rend="sup">o</hi> Item de eodem sub sigillo Adele regine (1196)<ref n="XVI verso 46">XVI verso 46</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_038">32<hi rend="sup">o</hi> Item de eodem sub sigillo abbatis (1196)<ref n="XVI verso 47">XVI verso 47</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_039">33<hi rend="sup">o</hi> Item de eodem sub sigillo regis Philippi (1198)<ref n="XIII verso 48">XIII verso 48</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_040">34<hi rend="sup">o</hi> Carta de annualibus (1155)<ref n="XVI recto 49">XVI recto 49</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_041">35<hi rend="sup">o</hi> Carta ne Judeus sit in claustro sub sigillo Adele (1203)<ref n="XIII verso 50">XIII verso 50</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_042">36<hi rend="sup">o</hi> Privilegium Gileberti decani Sancti Marcelli Parisiensis (1112)<ref n="X verso 51">X verso 51</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_043">37<hi rend="sup">o</hi> Carta de asino, sub sigillo Adele regine (1183)<ref n="X verso 51">X verso 51</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_044">38<hi rend="sup">o</hi> Diploma Philippi regis de eodem (1184)<ref n="XI recto 52">XI recto 52</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_045">39<hi rend="sup">o</hi> Carto de novi mercati libertate sub sigillo Adele regine (1184)<ref n="VIII recto 53">VIII recto 53</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_046">40<hi rend="sup">o</hi> Littera Adele regine de terra de Montechoue (1185)<ref n="XVIII recto 54">XVIII recto 54</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_047">41<hi rend="sup">o</hi> Littera Adele regine de modio bladi de Soisiaco (1190)<ref n="XXII recto 55">XXII recto 55</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_048">42<hi rend="sup">o</hi> Littera Guidonis archiepiscopi Senonensis de eodem (1192)<ref n="XXII verso 55">XXII verso 55</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_049">43<hi rend="sup">o</hi> Littera Hugonis abbatis de nemore de Villa Dodonis (1198)<ref n="XVIII recto 56">XVIII recto 56</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_050">44<hi rend="sup">o</hi> Littera de censu de Laborde (1198)<ref n="XXXI verso 57" target="#SSCO-AB_0044">44</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_051">45<hi rend="sup">o</hi> Littera de excambio census de Everiaco (1199)<ref n="XXV recto 58">XXV recto 58</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_052">46<hi rend="sup">o</hi> Littera de venditione cujusdam decime hospitalariis (1180-1206)<ref n="deest 59">deest 59</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_053">47<hi rend="sup">o</hi> Littera de vinea de Seinteri (1205)<ref n="XXX recto 60">XXX recto 60</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_054">48<hi rend="sup">o</hi> Littera de censu de Feritate (1207)<ref n="XXXII recto 60">XXXII recto 60</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_055">49<hi rend="sup">o</hi> De domo juxta refectorium (1211)<ref n="XXXIII verso 61">XXXIII verso 61</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_056">50<hi rend="sup">o</hi> Item de eodem<ref n="XXXIII verso 61">XXXIII verso 61</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_057">51<hi rend="sup">o</hi> Littera de presbitero Balencurie (1212)<ref n="XXIII verso 61">XXIII verso 61</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_058">52<hi rend="sup">o</hi> Littera de domo sita in magno vico in claustro (1213)<ref n="XXX verso 63">XXX verso 63</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_059">53<hi rend="sup">o</hi> Littera de excambio cum hospitalariis (1216)<ref n="XXV recto 64">XXV recto 64</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_051">45<hi rend="sup">o</hi> Littera de excambio census de Everiaco (1199)<ref n="XXV recto 58">XXV recto 58</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_052">46<hi rend="sup">o</hi> Littera de venditione cujusdam decime hospitalariis (1180-1206)<ref n="deest 59">deest 59</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_053">47<hi rend="sup">o</hi> Littera de vinea de Seinteri (1205)<ref n="XXX recto 60">XXX recto 60</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_054">48<hi rend="sup">o</hi> Littera de censu de Feritate (1207)<ref n="XXXII recto 60">XXXII recto 60</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_055">49<hi rend="sup">o</hi> De domo juxta refectorium (1211)<ref n="XXXIII verso 61">XXXIII verso 61</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_056">50<hi rend="sup">o</hi> Item de eodem<ref n="XXXIII verso 61">XXXIII verso 61</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_057">51<hi rend="sup">o</hi> Littera de presbitero Balencurie (1212)<ref n="XXIII verso 61">XXIII verso 61</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_058">52<hi rend="sup">o</hi> Littera de domo sita in magno vico in claustro (1213)<ref n="XXX verso 63">XXX verso 63</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_059">53<hi rend="sup">o</hi> Littera de excambio cum hospitalariis (1216)<ref n="XXV recto 64">XXV recto 64</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_060">54<hi rend="sup">o</hi> Littera de censu ad priorem Beate Marie de Campis pertinente (1217)<ref n="deest 64" target="#SSCO-AB_0054">54</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_061">55<hi rend="sup">o</hi> De anniversario G. de Breia (1219)<ref n="XXX recto 65">XXX recto 65</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_062">56<hi rend="sup">o</hi> Littera de presbitero de Gineville (1221)<ref n="XVIII verso 66">XVIII verso 66</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_063">57<hi rend="sup">o</hi> Littera de duabus peciis vinearum (1224)<ref n="XXX verso 66">XXX verso 66</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_064"><pb n="237"/>58<hi rend="sup">o</hi> Littera de censu cujusdam domus site juxta poncellum Beati Exuperii (1224)<ref n="XXVI recto 67">XXVI recto 67</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_065">59<hi rend="sup">o</hi> Littera de quodam nemore (1226)<ref n="XVIII verso 67">XVIII verso 67</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_066">60<hi rend="sup">o</hi> Littera de nundinis Sancti Egidii contra Theobaldum de Campo Rosato (1228)<ref n="deest 68">deest 68</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_067">61<hi rend="sup">o</hi> Littera de concessione cujusdam domus in claustro site (1230)<ref n="deest 69">deest 69</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_068">62<hi rend="sup">o</hi> Littera de quinta parte hereditatis R. de Cramoello (1232)<ref n="XXXV recto 70">XXXV recto 70</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_069">63<hi rend="sup">o</hi> Item de eodem (1232)<ref n="XXXV verso 71">XXXV verso 71</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_070">64<hi rend="sup">o</hi> Littera de censu de Vielleruche pro anniversario Petri de Dunjungno (1232)<ref n="XXX recto 71">XXX recto 71</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_071">65<hi rend="sup">o</hi> Littera de terra de Bondofle (1233)<ref n="XXXI recto 72">XXXI recto 72</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_072">66<hi rend="sup">o</hi> De censu de Sacro Portu (1233)<ref n="XXXIV verso 73">XXXIV verso 73</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_073">67<hi rend="sup">o</hi> Littera de censu de Castellaria Feritatis (1234)<ref n="XXXII recto 73">XXXII recto 73</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_074">68<hi rend="sup">o</hi> Littera de quinto hereditatis R. de Cramoello (1234)<ref n="XXXIV verso 74">XXXIV verso 74</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_075">69<hi rend="sup">o</hi> Littera de vineis de Braatel (1234)<ref n="XXX verso 75">XXX verso 75</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_076">70<hi rend="sup">o</hi> Littera de domo Terrici Galeran sita in claustro (1234)<ref n="XXXIII recto 76">XXXIII recto 76</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_077">71<hi rend="sup">o</hi> Littera de domo Helye sita in magno vico (1234)<ref n="XXXVI verso 77">XXXVI verso 77</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_078">72<hi rend="sup">o</hi> Littera de terra de Villa Dudone (1236)<ref n="XXXV verso 77">XXXV verso 77</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_079">73<hi rend="sup">o</hi> Littera de quadam vinea que tenetur in villenagium apud Vignon (1236)<ref n="XXXIV verso 78">XXXIV verso 78</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_080">74<hi rend="sup">o</hi> Littera de terra de Bondoufle (1237)<ref n="XXXVI recto 78">XXXVI recto 78</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_081">75<hi rend="sup">o</hi> Littera de eodem (1237)<ref n="XXXVII verso 79">XXXVII verso 79</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_082">76<hi rend="sup">o</hi> Littera de presbitero de Soisiaco (1237)<ref n="XXII verso 80">XXII verso 80</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_083">77<hi rend="sup">o</hi> Littera de vinea que fuit Radulfl Anglici apud Roissiacum (1239)<ref n="XXX recto 81">XXX recto 81</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_084">78<hi rend="sup">o</hi> Littera de pactione inter Stephanum Lemovicensem capellanum et Radulphum de Castris (1239)<ref n="deest 82">deest 82</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_085">79<hi rend="sup">o</hi> Littera de presbitero de Soisiaco super Scolam (1239)<ref n="XX verso 83">XX verso 83</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_086">80<hi rend="sup">o</hi> Littera de decem solidis annui redditus quos legaverat Hunoudus dictus Bos (1239)<ref n="deest 84">deest 84</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_087">81<hi rend="sup">o</hi> Littera de presbitero de Balencuria (1239)<ref n="XXIII recto 85">XXIII recto 85</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_088">82<hi rend="sup">o</hi> Littera de eodem (1239)<ref n="XXIII verso 86">XXIII verso 86</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_089">83<hi rend="sup">o</hi> Littera de quinto Guillelmi de Chancolia (1241)<ref n="XXXVIII verso 86">XXXVIII verso 86</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_090">84<hi rend="sup">o</hi> Littera de excambio cum monachis Vallium Sarnaii (1241)<ref n="XXIV recto 88">XXIV recto 88</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_091">85<hi rend="sup">o</hi> Littera de decem solidis annui redditus quos legaverat Hunoudus dictus Bos (1242)<ref n="deest 89">deest 89</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_092">86<hi rend="sup">o</hi> Littera de emptione cujusdam domus site in Magno Vico ad opus prebende (1243)<ref n="deest 90">deest 90</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_093">87<hi rend="sup">o</hi> Littera de censu de Sacro-Portu, Cesson et Savigniaco (1244)<ref n="XXIV verso 91">XXIV verso 91</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_094">88<hi rend="sup">o</hi> Littera de censu de Lardi (1245)<ref n="XXXI verso 92">XXXI verso 92</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_061">55<hi rend="sup">o</hi> De anniversario G. de Breia (1219)<ref n="XXX recto 65">XXX recto 65</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_062">56<hi rend="sup">o</hi> Littera de presbitero de Gineville (1221)<ref n="XVIII verso 66">XVIII verso 66</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_063">57<hi rend="sup">o</hi> Littera de duabus peciis vinearum (1224)<ref n="XXX verso 66">XXX verso 66</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_064"><pb n="237"/>58<hi rend="sup">o</hi> Littera de censu cujusdam domus site juxta poncellum Beati Exuperii (1224)<ref n="XXVI recto 67">XXVI recto 67</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_065">59<hi rend="sup">o</hi> Littera de quodam nemore (1226)<ref n="XVIII verso 67">XVIII verso 67</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_066">60<hi rend="sup">o</hi> Littera de nundinis Sancti Egidii contra Theobaldum de Campo Rosato (1228)<ref n="deest 68">deest 68</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_067">61<hi rend="sup">o</hi> Littera de concessione cujusdam domus in claustro site (1230)<ref n="deest 69">deest 69</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_068">62<hi rend="sup">o</hi> Littera de quinta parte hereditatis R. de Cramoello (1232)<ref n="XXXV recto 70">XXXV recto 70</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_069">63<hi rend="sup">o</hi> Item de eodem (1232)<ref n="XXXV verso 71">XXXV verso 71</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_070">64<hi rend="sup">o</hi> Littera de censu de Vielleruche pro anniversario Petri de Dunjungno (1232)<ref n="XXX recto 71">XXX recto 71</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_071">65<hi rend="sup">o</hi> Littera de terra de Bondofle (1233)<ref n="XXXI recto 72">XXXI recto 72</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_072">66<hi rend="sup">o</hi> De censu de Sacro Portu (1233)<ref n="XXXIV verso 73">XXXIV verso 73</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_073">67<hi rend="sup">o</hi> Littera de censu de Castellaria Feritatis (1234)<ref n="XXXII recto 73">XXXII recto 73</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_074">68<hi rend="sup">o</hi> Littera de quinto hereditatis R. de Cramoello (1234)<ref n="XXXIV verso 74">XXXIV verso 74</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_075">69<hi rend="sup">o</hi> Littera de vineis de Braatel (1234)<ref n="XXX verso 75">XXX verso 75</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_076">70<hi rend="sup">o</hi> Littera de domo Terrici Galeran sita in claustro (1234)<ref n="XXXIII recto 76">XXXIII recto 76</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_077">71<hi rend="sup">o</hi> Littera de domo Helye sita in magno vico (1234)<ref n="XXXVI verso 77">XXXVI verso 77</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_078">72<hi rend="sup">o</hi> Littera de terra de Villa Dudone (1236)<ref n="XXXV verso 77">XXXV verso 77</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_079">73<hi rend="sup">o</hi> Littera de quadam vinea que tenetur in villenagium apud Vignon (1236)<ref n="XXXIV verso 78">XXXIV verso 78</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_080">74<hi rend="sup">o</hi> Littera de terra de Bondoufle (1237)<ref n="XXXVI recto 78">XXXVI recto 78</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_081">75<hi rend="sup">o</hi> Littera de eodem (1237)<ref n="XXXVII verso 79">XXXVII verso 79</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_082">76<hi rend="sup">o</hi> Littera de presbitero de Soisiaco (1237)<ref n="XXII verso 80">XXII verso 80</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_083">77<hi rend="sup">o</hi> Littera de vinea que fuit Radulfl Anglici apud Roissiacum (1239)<ref n="XXX recto 81">XXX recto 81</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_084">78<hi rend="sup">o</hi> Littera de pactione inter Stephanum Lemovicensem capellanum et Radulphum de Castris (1239)<ref n="deest 82">deest 82</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_085">79<hi rend="sup">o</hi> Littera de presbitero de Soisiaco super Scolam (1239)<ref n="XX verso 83">XX verso 83</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_086">80<hi rend="sup">o</hi> Littera de decem solidis annui redditus quos legaverat Hunoudus dictus Bos (1239)<ref n="deest 84">deest 84</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_087">81<hi rend="sup">o</hi> Littera de presbitero de Balencuria (1239)<ref n="XXIII recto 85">XXIII recto 85</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_088">82<hi rend="sup">o</hi> Littera de eodem (1239)<ref n="XXIII verso 86">XXIII verso 86</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_089">83<hi rend="sup">o</hi> Littera de quinto Guillelmi de Chancolia (1241)<ref n="XXXVIII verso 86">XXXVIII verso 86</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_090">84<hi rend="sup">o</hi> Littera de excambio cum monachis Vallium Sarnaii (1241)<ref n="XXIV recto 88">XXIV recto 88</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_091">85<hi rend="sup">o</hi> Littera de decem solidis annui redditus quos legaverat Hunoudus dictus Bos (1242)<ref n="deest 89">deest 89</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_092">86<hi rend="sup">o</hi> Littera de emptione cujusdam domus site in Magno Vico ad opus prebende (1243)<ref n="deest 90">deest 90</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_093">87<hi rend="sup">o</hi> Littera de censu de Sacro-Portu, Cesson et Savigniaco (1244)<ref n="XXIV verso 91">XXIV verso 91</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_094">88<hi rend="sup">o</hi> Littera de censu de Lardi (1245)<ref n="XXXI verso 92">XXXI verso 92</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_095"><pb n="238"/>89<hi rend="sup">o</hi> Littera de domo quadam sita in Judearia Corbolii, quam legavit Gaufridus de Seintriaco (1248)<ref n="XXXIII recto 93" target="#SSCO-AB_0089">89</ref>.</item>
           <item xml:id="SSCO-AB_rs_096">90<hi rend="sup">o</hi> Littera de legato Johannis de Bucornu (1248)<ref n="deest 94" target="#SSCO-AB_0090">90</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_097">91<hi rend="sup">o</hi> Littera de legato Ade de Moreto (1248)<ref n="XXXIII verso 94">XXXIII verso 94</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_098">92<hi rend="sup">o</hi> Littera de eodem (1248)<ref n="XXXIV recto 95">XXXIV recto 95</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_099">93<hi rend="sup">o</hi> Littera de terra de Escharcon (1249)<ref n="XXXVI verso 97">XXXVI verso 97</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_100">94<hi rend="sup">o</hi> Littera de vinea de Buinart (1250)<ref n="XXXII verso 98">XXXII verso 98</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_101">95<hi rend="sup">o</hi> Littera de domo Hamonis canonici (1250)<ref n="XXXV recto 99">XXXV recto 99</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_102">96<hi rend="sup">o</hi> Littera de vinea de Tartaret pro anniversario Guillelmi capicerii (1251)<ref n="XXXIV recto 100">XXXIV recto 100</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_103">97<hi rend="sup">o</hi> Littera de domo altaris Trinitatis et de quadam vinea sita in territorio qui dicitur Vicus Furcarum (1252)<ref n="XXXII verso 101">XXXII verso 101</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_104">98<hi rend="sup">o</hi> Carta de Monte Escouve (1257)<ref n="XXVI recto 102">XXVI recto 102</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_105">99<hi rend="sup">o</hi> Littera de quitacione griagii in bosco de Forges (1257)<ref n="XXXVII recto 103">XXXVII recto 103</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_106">100<hi rend="sup">o</hi> Littera de prato Perolii (1258)<ref n="XXXVI verso 104">XXXVI verso 104</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_107">101<hi rend="sup">o</hi> Littera de prato Perolii pro anniversario Philippi de Lices (1258)<ref n="XXVII recto 105">XXVII recto 105</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_108">102<hi rend="sup">o</hi> Littera de mortificatione terre de Monte Escoue, (1258)<ref n="XXVII recto 106">XXVII recto 106</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_109">103<hi rend="sup">o</hi> Littera de vinea de Postibus (1258)<ref n="XXXVII recto 107">XXXVII recto 107</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_110">104<hi rend="sup">o</hi> Littera de terra de Vado Petroso (1259)<ref n="XXXVII verso 109">XXXVII verso 109</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_097">91<hi rend="sup">o</hi> Littera de legato Ade de Moreto (1248)<ref n="XXXIII verso 94">XXXIII verso 94</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_098">92<hi rend="sup">o</hi> Littera de eodem (1248)<ref n="XXXIV recto 95">XXXIV recto 95</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_099">93<hi rend="sup">o</hi> Littera de terra de Escharcon (1249)<ref n="XXXVI verso 97">XXXVI verso 97</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_100">94<hi rend="sup">o</hi> Littera de vinea de Buinart (1250)<ref n="XXXII verso 98">XXXII verso 98</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_101">95<hi rend="sup">o</hi> Littera de domo Hamonis canonici (1250)<ref n="XXXV recto 99">XXXV recto 99</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_102">96<hi rend="sup">o</hi> Littera de vinea de Tartaret pro anniversario Guillelmi capicerii (1251)<ref n="XXXIV recto 100">XXXIV recto 100</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_103">97<hi rend="sup">o</hi> Littera de domo altaris Trinitatis et de quadam vinea sita in territorio qui dicitur Vicus Furcarum (1252)<ref n="XXXII verso 101">XXXII verso 101</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_104">98<hi rend="sup">o</hi> Carta de Monte Escouve (1257)<ref n="XXVI recto 102">XXVI recto 102</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_105">99<hi rend="sup">o</hi> Littera de quitacione griagii in bosco de Forges (1257)<ref n="XXXVII recto 103">XXXVII recto 103</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_106">100<hi rend="sup">o</hi> Littera de prato Perolii (1258)<ref n="XXXVI verso 104">XXXVI verso 104</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_107">101<hi rend="sup">o</hi> Littera de prato Perolii pro anniversario Philippi de Lices (1258)<ref n="XXVII recto 105">XXVII recto 105</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_108">102<hi rend="sup">o</hi> Littera de mortificatione terre de Monte Escoue, (1258)<ref n="XXVII recto 106">XXVII recto 106</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_109">103<hi rend="sup">o</hi> Littera de vinea de Postibus (1258)<ref n="XXXVII recto 107">XXXVII recto 107</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_110">104<hi rend="sup">o</hi> Littera de terra de Vado Petroso (1259)<ref n="XXXVII verso 109">XXXVII verso 109</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_111">105<hi rend="sup">o</hi> Littera de eodem (1259)<ref n="XXXVIII recto 110" target="#SSCO-AB_0105">105</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_112">106<hi rend="sup">o</hi> Littera de eodem (1259)<ref n="XXXVIII recto 111">XXXVIII recto 111</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_113">107<hi rend="sup">o</hi> Littera de redditibus Balencurie (1259)<ref n="deest 111">deest 111</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_114">Census qui debentur capitulo Beati Exuperii anno 1252<ref n="XLVI recto 113">XLVI recto 113</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_115">Census receptus anno 1256<ref n="LI recto 130">LI recto 130</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_116">Alii census LI et <num>LII</num> verso 133, <ref n="136">136</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_117">Pessessiones altaris Sancti Blasii<ref n="LXXXVI verso 137">LXXXVI verso 137</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_118">Possessiones que pertinent ad matutinas<ref n="CIII recto 141">CIII recto 141</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_119">Possessiones que pertinent ad distributionem panis<ref n="CIV recto 143">CIV recto 143</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_120">Possessiones que pertinent ad distributionem piscium<ref n="CV recto 145">CV recto 145</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_121">Possessiones que pertinent ad refectorium<ref n="CV verso 145">CV verso 145</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_122">Anniversaria que debent fieri per totum annum<ref n="CXI recto 148">CXI recto 148</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_123">Appendix <num>I</num> De la justice de Soisy-sur-École (1287)<ref n="CXXV verso 174">CXXV verso 174</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_124">II Littera de lucrando fructus prebendarum et capellaniarum (1307)<ref n="LVI recto 175">LVI recto 175</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_125">III Littera de jurisdictione trium dierum (1323)<ref n="LVI verso 177">LVI verso 177</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_126">IV Statutum capituli super servicio (1324)<ref n="LVII verso 179">LVII verso 179</ref>.</item>-->
-          <!--<item xml:id="SSCO-AB_rs_127">V Littera de viginti libris redditus apud Moretum (1305)<ref n="LVIII recto 181">LVIII recto 181</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_112">106<hi rend="sup">o</hi> Littera de eodem (1259)<ref n="XXXVIII recto 111">XXXVIII recto 111</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_113">107<hi rend="sup">o</hi> Littera de redditibus Balencurie (1259)<ref n="deest 111">deest 111</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_114">Census qui debentur capitulo Beati Exuperii anno 1252<ref n="XLVI recto 113">XLVI recto 113</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_115">Census receptus anno 1256<ref n="LI recto 130">LI recto 130</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_116">Alii census LI et <num>LII</num> verso 133, <ref n="136">136</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_117">Pessessiones altaris Sancti Blasii<ref n="LXXXVI verso 137">LXXXVI verso 137</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_118">Possessiones que pertinent ad matutinas<ref n="CIII recto 141">CIII recto 141</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_119">Possessiones que pertinent ad distributionem panis<ref n="CIV recto 143">CIV recto 143</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_120">Possessiones que pertinent ad distributionem piscium<ref n="CV recto 145">CV recto 145</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_121">Possessiones que pertinent ad refectorium<ref n="CV verso 145">CV verso 145</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_122">Anniversaria que debent fieri per totum annum<ref n="CXI recto 148">CXI recto 148</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_123">Appendix <num>I</num> De la justice de Soisy-sur-École (1287)<ref n="CXXV verso 174">CXXV verso 174</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_124">II Littera de lucrando fructus prebendarum et capellaniarum (1307)<ref n="LVI recto 175">LVI recto 175</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_125">III Littera de jurisdictione trium dierum (1323)<ref n="LVI verso 177">LVI verso 177</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_126">IV Statutum capituli super servicio (1324)<ref n="LVII verso 179">LVII verso 179</ref>.</item>-\->
+          <!-\-<item xml:id="SSCO-AB_rs_127">V Littera de viginti libris redditus apud Moretum (1305)<ref n="LVIII recto 181">LVIII recto 181</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_128">VI Littera de possessionibus pertinentibus ad J. Quoquatrix (1324)<ref n="LXX verso 182" target="#SSCO-AB_a06">6</ref>.<pb n="239"/></item>
-          <!--<item xml:id="SSCO-AB_rs_129">VII Littera de eadem venditione (1326)<ref n="LX recto 183">LX recto 183</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_129">VII Littera de eadem venditione (1326)<ref n="LX recto 183">LX recto 183</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_130">VIII Littera de eodem (1326)<ref n="LVIII verso 186" target="#SSCO-AB_a07">7</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_131">IX Littera venditionis facte per dominam M. de Biaumarches (1326)<ref n="LXVII verso 189">LXVII verso 189</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_131">IX Littera venditionis facte per dominam M. de Biaumarches (1326)<ref n="LXVII verso 189">LXVII verso 189</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_132">X Confirmatio ejusdem venditionis (1327)<ref n="LXIX recto 192" target="#SSCO-AB_a10">10</ref>.</item>
           <item xml:id="SSCO-AB_rs_133">XI Littera Guillelmi vicecomitis de vicecomitatu (1325)<ref n="LXIII verso 195" target="#SSCO-AB_a11">11</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_134">XII Littera de eodem (1326)<ref n="LXIV verso 197">LXIV verso 197</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_134">XII Littera de eodem (1326)<ref n="LXIV verso 197">LXIV verso 197</ref>.</item>-\->
           <item xml:id="SSCO-AB_rs_135">XIII Littera de eodem (1326)<ref n="LXV verso 198" target="#SSCO-AB_a13">13</ref>.</item>
           <item xml:id="SSCO-AB_rs_136">XIV Littera foragii Petri le Courant (1326)<ref n="LXXI recto 200" target="#SSCO-AB_a14">14</ref>.</item>
           <item xml:id="SSCO-AB_rs_137">XV Littera admortizationis terre de l'Orfèvre (1326)<ref n="LXVI verso 201" target="#SSCO-AB_a15">15</ref>.</item>
           <item xml:id="SSCO-AB_rs_138">XVI Deliberatio capituli (1327)<ref n="LXXII recto 203" target="#SSCO-AB_a16">16</ref>.</item>
           <item xml:id="SSCO-AB_rs_139">Carta Beati Mellonis Pontisare (1122)<ref n="CX verso 205" target="#SSCO-AB_a17">17</ref>.</item>
-          <!--<item xml:id="SSCO-AB_rs_140">Privilegium ejusdem de ordinatione vicariorum (1209)<ref n="CIX verso 206">CIX verso 206</ref>.</item>-->
+          <!-\-<item xml:id="SSCO-AB_rs_140">Privilegium ejusdem de ordinatione vicariorum (1209)<ref n="CIX verso 206">CIX verso 206</ref>.</item>-\->
         </list>
-      </div></back>
+      </div>--></back>
   </text>
 </TEI>
