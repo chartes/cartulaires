@@ -105,10 +105,16 @@
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
+        <citeStructure match="/TEI[1]/text[1]/back[1]" use="dots" unit="Index">
           <citeData use="head" property="dct:title"/>
-          <citeStructure match="list[@type='index']" use="dots">
+          <citeStructure match="div[1]" use="dots">
             <citeData use="head" property="dct:title"/>
+          </citeStructure>
+          <citeStructure match="div[2]" use="dots">
+            <citeData use="head" property="dct:title"/>
+            <citeStructure match="list[@type='index']" use="dots">
+              <citeData use="head" property="dct:title"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -2890,6 +2896,7 @@
       </group>
     </group>
 <back>
+  <head>Index</head>
       <div type="index">
       <pb n="181"/>
       <head>Index sigillographique</head>
