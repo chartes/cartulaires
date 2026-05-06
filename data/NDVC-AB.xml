@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
   <teiHeader>
     <fileDesc>
@@ -76629,12 +76630,12 @@
             <item xml:id="NDVC-AB_rs_4648"><rs><hi rend="sc">Willelmus</hi>, <hi rend="i">vid.</hi> <hi rend="sc">Guillelmus</hi></rs>. </item>
             <item xml:id="NDVC-AB_rs_4649"><rs><hi rend="sc">Wilmis</hi> (Philippus de), <abbr>p.</abbr></rs>, <ref n="312" target="#NDVC-AB_0340">340</ref>.</item>
             </list>
-   <list type="index">
+   <!--<list type="index">
             <head>Y</head>
-          <!--<item xml:id="NDVC-AB_rs_4650"><rs><hi rend="sc">Ymonvilla</hi> (Robertus de), <abbr>p.</abbr></rs>, <ref n="524">524</ref>, <ref n="525">525</ref>, <ref n="555">555</ref>.</item>-->
-            <!--<item xml:id="NDVC-AB_rs_4651"><rs><hi rend="sc">Yvetot</hi> (Jeanne d'), <abbr>p.</abbr></rs>, <ref n="900">900</ref>, <ref n="901">901</ref>.</item>-->
-            <!--<item xml:id="NDVC-AB_rs_4652"><rs><hi rend="sc">Yvetot</hi>, (Richard d'), <abbr>p.</abbr></rs>, <ref n="899">899</ref>, <ref n="900">900</ref>, <ref n="901">901</ref>.</item>-->
-          </list>
+          <!-\-<item xml:id="NDVC-AB_rs_4650"><rs><hi rend="sc">Ymonvilla</hi> (Robertus de), <abbr>p.</abbr></rs>, <ref n="524">524</ref>, <ref n="525">525</ref>, <ref n="555">555</ref>.</item>-\->
+            <!-\-<item xml:id="NDVC-AB_rs_4651"><rs><hi rend="sc">Yvetot</hi> (Jeanne d'), <abbr>p.</abbr></rs>, <ref n="900">900</ref>, <ref n="901">901</ref>.</item>-\->
+            <!-\-<item xml:id="NDVC-AB_rs_4652"><rs><hi rend="sc">Yvetot</hi>, (Richard d'), <abbr>p.</abbr></rs>, <ref n="899">899</ref>, <ref n="900">900</ref>, <ref n="901">901</ref>.</item>-\->
+          </list>-->
         </div>
       </back>
   </text>
