@@ -4,12 +4,15 @@
   xmlns:dct="http://purl.org/dc/terms/">
   <mapping>
     <!-- Métadonnées de collection -->
+    <dct:identifier scope="collection" format="tsv" source="./collections_metadata.csv" value="id" prefix="https://dev.chartes.psl.eu/dots/api/dts/collection?id="/>
     <dct:title scope="collection" format="tsv" source="./collections_metadata.csv" value="title"/>
     <dct:creator scope="collection" format="tsv" source="./collections_metadata.csv" value="author"/>
-    <dct:identifier scope="collection" format="tsv" source="./collections_metadata.csv" value="identifier" type="number"/>
+    <dct:language scope="collection" resourceId="all">fr</dct:language>
     <description scope="collection" format="tsv" source="./collections_metadata.csv" value="description"/>
-    <dct:publisher scope="collection" resourceId="all">École nationale des chartes</dct:publisher>
-    <dct:license scope="collection" resourceId="all">https://creativecommons.org/licenses/by-nc-nd/3.0/fr/</dct:license>
+    <dct:publisher scope="collection" resourceId="all">École nationale des chartes - PSL</dct:publisher>
+    <dct:issued>2026</dct:issued>
+    <dct:license scope="collection" resourceId="all">https://creativecommons.org/licenses/by-nc-sa/4.0/</dct:license>
+    <dct:rights scope="collection" resourceId="all">© École nationale des chartes - PSL</dct:rights>
     <!-- Métadonnées de document -->
     <dct:identifier scope="document" xpath="/TEI/@xml:id" prefix="https://dev.chartes.psl.eu/dots/api/dts/collection?id="/>
     <dct:title scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
