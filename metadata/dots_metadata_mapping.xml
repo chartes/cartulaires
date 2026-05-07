@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metadataMap 
-  xmlns="https://github.com/chartes/dots/" 
-  xmlns:dct="http://purl.org/dc/terms/">
-  <mapping>
+<dots:metadataMap 
+  xmlns="https://dtsapi.org/context/v1.0.json"
+  xmlns:dots="https://github.com/chartes/dots/" 
+  xmlns:dct="http://purl.org/dc/terms/" 
+  xmlns:schema="https://schema.org/"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <dots:mapping>
     <!-- Métadonnées de collection -->
     <dct:identifier scope="collection" format="tsv" source="./collections_metadata.csv" value="id" prefix="https://dev.chartes.psl.eu/dots/api/dts/collection?id="/>
     <dct:title scope="collection" format="tsv" source="./collections_metadata.csv" value="title"/>
@@ -45,8 +48,9 @@
       ']'
       )"/>
     <download scope="document" xpath="let $id := /TEI/@xml:id return concat('https://dev.chartes.psl.eu/dots/api/dts/document?resource=', $id)"/>
-  </mapping>
-</metadataMap>
+    <dots:shortTitle scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[@type='short']"/>
+  </dots:mapping>
+</dots:metadataMap>
 
 
 
