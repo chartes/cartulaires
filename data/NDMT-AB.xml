@@ -1,14 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMT-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Recueil des chartes de l'abbaye royale de Montmartre</title>
+        <title type="short">Montmartre</title>
         <funder>Ecole des chartes</funder>
-        <author>Edouard de Barthélémy</author>
-        <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
-        <editor>Alix Bréban</editor>
-        
+        <author ref="https://www.idref.fr/034344764 https://data.bnf.fr/fr/ark:/12148/cb125109349">Edouard de Barthélémy</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
+        <editor ref="https://www.idref.fr/082115028">Alix Bréban</editor>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -62,7 +61,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
               (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -98,7 +97,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Recueil des chartes de l'abbaye royale de Montmartre</title> publié et annoté
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k6375736f"><title>Recueil des chartes de l'abbaye royale de Montmartre</title> publié et annoté
           par <author>Edouard de Barthélémy</author>, Paris, éd. <publisher>Honoré Chamion
             libraire</publisher>, <date>1893</date>.</bibl>
       </sourceDesc>
@@ -161,8 +160,9 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Recueil des chartes de l’abbaye royale de Montmartre</hi>, publié et annoté
-        par Édouard de Barthélemy. Paris : H. Champion, 1888. In-8°, 347 pages.</head>
+      <head>Recueil des chartes de l'abbaye royale de Montmartre</head>
+      <!--<head><hi rend="i">Recueil des chartes de l’abbaye royale de Montmartre</hi>, publié et annoté
+        par Édouard de Barthélemy. Paris : H. Champion, 1888. In-8°, 347 pages.</head>-->
       <argument>
         <p>Établissement : Abbaye de Montmartre, auj. sur le territoire de Paris (XVIII<hi rend="sup">e</hi> arrondissement), anc. dioc. de Paris. — Abbaye de moniales
           bénédictines fondée par le roi de France en 1133-1134 à la place d’un prieuré clunisien
