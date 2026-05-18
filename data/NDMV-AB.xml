@@ -1,12 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMV-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire et censier de l'abbaye Notre-Dame de Morienval</title>
-        <author>Achill Peigné-Delacourt</author>
-        <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
-
+        <title>Cartulaire de l'abbaye Notre-Dame de Morienval</title>
+        <title type="short">Morienval</title>
+        <author ref="https://www.idref.fr/081825390 https://data.bnf.fr/ark:/12148/cb126555990">Achille Peigné-Delacourt</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -43,7 +42,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
             (L341-1), selon les termes de la licence Creative Commons : « Paternité - Pas
@@ -79,8 +78,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l'abbaye de Morienval</title> édité par <author>Achill
-            Peigné-Delacourt</author>. Senlis, in: Memoires de la Société de l'Histoire de Paris et
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaire de l'abbaye de Morienval</title> édité par <author>Achille Peigné-Delacourt</author>. Senlis, in: Memoires de la Société de l'Histoire de Paris et
           d'Île de France , tome 18, <date>1876</date>, 8°</bibl>
       </sourceDesc>
     </fileDesc>
@@ -133,9 +131,10 @@
   </teiHeader>
   <text>
     <front>
-      <head>
+      <head>Cartulaire de l'abbaye Notre-Dame de Morienval</head>
+      <!--<head>
         <hi rend="i">Cartulaire de Morienval [sans titre ni préface]</hi>, éd. Achille
-        Peigné-Delacourt, [Senlis] : Comité archéologique de Senlis, 1876, XC-76 pages.</head>
+        Peigné-Delacourt, [Senlis] : Comité archéologique de Senlis, 1876, XC-76 pages.</head>-->
       <argument>
         <p>Établissement : Notre-Dame de Morienval (Oise, cant. Crépy-en-Valois ; diocèse ancien de
           Soissons).— Abbaye bénédictine, attestée depuis le milieu du IXᵉ siècle, d’abord peuplée

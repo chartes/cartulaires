@@ -1,14 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPO-HD">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPO-HD">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Cartulaire de l'Hôtel-Dieu de Pontoise</title>
         <title type="short">Hôtel-Dieu de Pontoise</title>
-        <author>Joseph Depoin</author>
-        <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
+        <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -59,7 +56,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
             (L341-1), selon les termes de la licence Creative Commons : « Paternité - Pas
@@ -154,9 +151,10 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’Hôtel-Dieu de Pontoise, publié avec des notes, d’après les
+      <head>Cartulaire de l’Hôtel-Dieu de Pontoise</head>
+      <!--<head><hi rend="i">Cartulaire de l’Hôtel-Dieu de Pontoise, publié avec des notes, d’après les
         originaux</hi> par Joseph Depoin, Pontoise : Société historique du Vexin, 1886, in-4°,
-        VII-131 p. (Documents édités par la Société historique du Vexin).</head>
+        VII-131 p. (Documents édités par la Société historique du Vexin).</head>-->
       <argument>
         <p>Établissement : Prieuré Saint-Nicolas puis Hôtel-Dieu de Pontoise (Val-d’Oise, ancien
           diocèse de Rouen). — Maison d’assistance attestée dès le XIIe siècle, refondée par le roi

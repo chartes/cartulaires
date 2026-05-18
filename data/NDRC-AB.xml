@@ -1,14 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDRC-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l'abbaye de Notre-Dame de la Roche</title>
-        <author>Auguste Moutié</author>
-        <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole des chartes)</principal>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11792">Cartulaire de l'abbaye de Notre-Dame de la Roche</title>
+        <title type="short">Notre-Dame de la Roche</title>
+        <author ref="https://www.idref.fr/031901131 https://data.bnf.fr/fr/ark:/12148/cb123029169">Auguste Moutié</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor>Véronique Schultz</editor>
         <editor>Anastasia Iline</editor>
-
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -63,7 +62,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
               (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -97,9 +96,12 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l'abaye de Notre-Dame de la Roche</title> publié et annoté par
-            <author>Auguste Moutié</author>, Paris, éd. <publisher>Honoré Chamion
-            libraire</publisher>, <date>1893</date>,</bibl>
+        <bibl><title>Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
+          Saint-Augustin au diocèse de Paris, d’après le manuscrit original de la Bibliothèque
+          impériale, enrichi de notes, d’index et d’un dictionnaire géographique, suivi d’un précis
+          historique et de la description de l’ancienne abbaye, d’une notice sur la paroisse et la
+          seigneurie de Lévis et de notes historiques et généalogiques sur les seigneurs de
+          Lévis</title>, éd. Auguste Moutié, Paris : H. Plon, 1862, XXXII-476 pages.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -141,7 +143,7 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>1893</date>
+        <date>1862</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -162,12 +164,13 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
+      <head>Cartulaire de l’abbaye de Notre-Dame de la Roche</head>
+      <!--<head><hi rend="i">Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
         Saint-Augustin au diocèse de Paris, d’après le manuscrit original de la Bibliothèque
         impériale, enrichi de notes, d’index et d’un dictionnaire géographique, suivi d’un précis
         historique et de la description de l’ancienne abbaye, d’une notice sur la paroisse et la
         seigneurie de Lévis et de notes historiques et généalogiques sur les seigneurs de
-        Lévis</hi>, éd. Auguste Moutié, Paris : H. Plon, 1862, XXXII-476 pages.</head> 
+        Lévis</hi>, éd. Auguste Moutié, Paris : H. Plon, 1862, XXXII-476 pages.</head>--> 
       <argument>
         <p>Établissement : Notre-Dame de la Roche (Yvelines, cant. Chevreuse, comm.
           Lévis-Saint-Nom ; diocèse ancien de Paris).— D’abord fondation de type érémitique (vers

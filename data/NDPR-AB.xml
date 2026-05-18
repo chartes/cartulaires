@@ -1,13 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Cartulaire de l'abbaye de Porrois</title>
-        <author>Edouard de Barthélémy</author>
-        <principal xml:id="OGJ">Olivier Guyotjeannin (Ecole nationale des chartes)</principal>
+        <title type="short">Port-Royal</title>
+        <author ref="https://www.idref.fr/034344764 https://data.bnf.fr/fr/ark:/12148/cb125109349">Edouard de Barthélémy</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor>Gordon Blenemann</editor>
-        
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -61,7 +61,7 @@
           <addrLine>recherche@enc.sorbonne.fr</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
               (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -97,10 +97,9 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l'abbaye de Porrois au diocèse de Paris plus connue sous son nom
-            mystique de Port-Royal.</title> publié et annoté par <author>Edouard de
-            Barthélémy</author>, Paris, <publisher>éd. Honoré Chamion libraire</publisher>,
-            <date>1893</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k132483k">Adolphe de Dion, <title>Cartulaire de l’abbaye de Porrois au diocèse de Paris,
+          plus connue sous son nom mystique Port-Royal</title>, premier volume, 1204-1280, Paris :
+          Alphonse Picard et fils, 1903, XVI-339 p.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -134,7 +133,7 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>1893</date>
+        <date>1903</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -158,9 +157,10 @@
   </teiHeader>
   <text>
     <front>
-      <head>Adolphe de Dion, <hi rend="i">Cartulaire de l’abbaye de Porrois au diocèse de Paris,
+      <head>Cartulaire de l’abbaye de Porrois</head>
+      <!--<head>Adolphe de Dion, <hi rend="i">Cartulaire de l’abbaye de Porrois au diocèse de Paris,
         plus connue sous son nom mystique Port-Royal</hi>, premier volume, 1204-1280, Paris :
-        Alphonse Picard et fils, 1903, XVI-339 p.</head>
+        Alphonse Picard et fils, 1903, XVI-339 p.</head>-->
       <argument>
         <p>Établissement : Notre-Dame de Porrois ou Port-Royal, puis Port-Royal-des-Champs
           (Yvelines, cant. Chevreuse, comm. Magny-lès-Hameaux ; diocèse ancien Paris). — Moniales.
