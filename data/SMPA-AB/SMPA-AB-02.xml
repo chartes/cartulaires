@@ -1,11 +1,14 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-AB-02">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-AB-02">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Chartes et documents de l’abbaye de Saint-Magloire, tome II, 1280 à 1330</title>
-        <author>Anne Terroine</author>
-        <author>Lucie Fossier</author>
-        <principal xml:id="OGJ">Olivier Canteaut (École des chartes)</principal>
+        <title>Chartes et documents de l’abbaye de Saint-Magloire, tome II</title>
+        <title type="short">Saint-Magloire, tome II</title>
+        <author ref="https://www.idref.fr/027157679 https://data.bnf.fr/fr/ark:/12148/cb11926235x">Anne Terroine</author>
+        <author ref="https://www.idref.fr/02687007X https://data.bnf.fr/fr/ark:/12148/cb11903181p">Lucie Fossier</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="PP">Philippe Pons (École des chartes)
               <email>philippe.pons@chartes.psl.eu</email>
@@ -95,6 +98,7 @@
     <profileDesc>
       <creation>
         <date notBefore="1966" notAfter="1998">1966-1998</date>
+        <date type="coverage" notBefore="1280" notAfter="1330">1280/1330</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -108,7 +112,8 @@
   </teiHeader>
   <text>
     <front>
-      <head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. II, Paris, 1966.</head>
+      <head>Chartes et documents de l’abbaye de Saint-Magloire, tome II</head>
+      <!--<head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. II, Paris, 1966.</head>-->
       <argument>
         <p><!-- TODO --></p>
       </argument>
