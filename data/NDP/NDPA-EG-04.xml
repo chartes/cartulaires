@@ -1,11 +1,13 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
-
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Cartulaire de l’église Notre-Dame de Paris, t. 4</title>
-        <author>Benjamin Guérard</author>
-        <principal xml:id="OC">Olivier Canteaut (École des chartes)</principal>
+        <title type="short">Notre-Dame de Paris, t. 4</title>
+        <author ref="https://www.idref.fr/03357474X https://data.bnf.fr/fr/ark:/12148/cb12442951t">Benjamin Guérard</author>
+        <principal xml:id="OGJ" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="PP">Philippe Pons (École des chartes) <email>philippe.pons@chartes.psl.eu</email>
           </name>
@@ -58,7 +60,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl>TODO</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k65348823"><title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 4, Paris, 1850.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -99,7 +101,8 @@
   </teiHeader>
   <text>
     <front>
-      <head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>
+      <head>Cartulaire de l’église Notre-Dame de Paris, t. 4</head>
+      <!--<head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>-->
       <argument>
         <p>
           <!-- TODO -->

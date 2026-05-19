@@ -7,7 +7,8 @@
     <fileDesc>
       <titleStmt>
         <title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title>
-        <author>Amédée Vattier</author>
+        <title type="short">Saint-Christophe-en-Halatte</title>
+        <author ref="https://www.idref.fr/095671560">Amédée Vattier</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
@@ -122,6 +123,7 @@
     <profileDesc>
       <creation>
         <date>1876</date>
+        <date type="coverage" notBefore="1060" notAfter="1712">1060/1712</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -141,9 +143,10 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire du prieuré de Saint-Christophe-en-Halatte</hi>, publié sous les
+      <head>Cartulaire du prieuré de Saint-Christophe-en-Halatte</head>
+      <!--<head><hi rend="i">Cartulaire du prieuré de Saint-Christophe-en-Halatte</hi>, publié sous les
         auspices du Comité archéologique de Senlis par M. l’abbé [Amédée] Vattier, Senlis,
-        Imprimerie Payen, 1876, xc-75 pages.</head>
+        Imprimerie Payen, 1876, xc-75 pages.</head>-->
       <argument>
         <p>Établissement : Saint-Christophe-en-Halatte (Oise, cant. Pont-Sainte-Maxence, comm.
           Fleurines ; ancien diocèse de Senlis). – Prieuré clunisien dépendant de La

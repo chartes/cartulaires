@@ -3,6 +3,7 @@
     <fileDesc>
       <titleStmt>
         <title>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</title>
+        <title type="short">Saint-Gondon</title>
         <author>P. Marchegay</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
@@ -79,8 +80,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire du prieuré bénédictin de Saint-Gonodn sur Loire</title>, P.
-          Marchegay (éd.). Les Roches-Baritaud: 1879.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k914156"><title>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</title>, P. Marchegay (éd.). Les Roches-Baritaud: 1879.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -115,6 +115,7 @@
     <profileDesc>
       <creation>
         <date when="1879">1879</date>
+        <date type="coverage" notBefore="866" notAfter="1172">866-1172</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -135,8 +136,9 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire du prieuré bénédictin de Saint-Gondon-sur-Loire</hi>, éd. Paul
-        Marchegay, Les-Roches-Baritaud, 1877, 64 pages.</head>
+      <head>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</head>
+      <!--<head><hi rend="i">Cartulaire du prieuré bénédictin de Saint-Gondon-sur-Loire</hi>, éd. Paul
+        Marchegay, Les-Roches-Baritaud, 1877, 64 pages.</head>-->
       <argument>
         <p>Établissement : Saint-Gondon (Loiret, cant. Gien ; diocèse ancien de
           Bourges).— Bénédictins, prieuré de Saint-Florent de Saumur.</p>

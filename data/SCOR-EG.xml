@@ -2,8 +2,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de Sainte-Croix d'Orléans (814-1300)</title>
-        <author>Joseph Thillier</author>
+        <title>Cartulaire de Sainte-Croix d'Orléans</title>
+        <title type="short">Sainte-Croix d'Orléans</title>
+        <author ref="https://www.idref.fr/099037068 https://catalogue.bnf.fr/ark:/12148/cb104195625">Joseph Thillier</author>
+        <author ref="https://www.idref.fr/099037149 https://data.bnf.fr/fr/ark:/12148/cb11802130c">Eugène Jarry</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
@@ -119,6 +121,7 @@
     <profileDesc>
       <creation>
         <date>1906</date>
+        <date type="coverage" notBefore="814" notAfter="1300">814/1300</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -141,11 +144,12 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de Sainte-Croix d’Orléans (814-1300), contenant le
+      <head>Cartulaire de Sainte-Croix d’Orléans</head>
+      <!--<head><hi rend="i">Cartulaire de Sainte-Croix d’Orléans (814-1300), contenant le
         « Chartularium ecclesiae Aurelianensis vetus », suivi d’un appendice et d’un
         supplément</hi>, par Joseph Thillier et Eugène Jarry, Paris : Alphonse Picard et fils,
         1906, CXIX-634 p., 2 pl. h.-t. (<hi rend="i">Mémoires de la Société archéologique et
-          historique de l’Orléanais</hi>, 30).</head>
+          historique de l’Orléanais</hi>, 30).</head>-->
       <!--<docAuthor>Olivier Guyotjeannin</docAuthor> <docAuthor>Thibaud Bouard </docAuthor> <docAuthor>Magali Duchesne </docAuthor> <docDate>juillet 2006</docDate>-->
       <argument>
         <p>Établissement : Chapitre cathédral d’Orléans.</p>

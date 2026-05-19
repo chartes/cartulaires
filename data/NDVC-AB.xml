@@ -2,13 +2,13 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire des Vaux-de-Cernay.</title>
-        <title>à l'ordre de Citeaux, au diocèse de Paris</title>
+        <title>Cartulaire des Vaux-de-Cernay</title>
+        <title type="short">Vaux-de-Cernay</title>
         <funder>Ecole des chartes</funder>
         <author ref="https://www.idref.fr/027024431 https://data.bnf.fr/fr/ark:/12148/cb11915693r">Lucien Merlet</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor>Clotilde Angeleys</editor>
-        <editor>Vanessa Szollosi</editor>
+        <editor ref="https://www.idref.fr/236763156">Vanessa Szollosi</editor>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -94,7 +94,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l'abbaye de Notre-Dame des Vaux de Cernay </title> publié par
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k5455505p"><title>Cartulaire de l'abbaye de Notre-Dame des Vaux de Cernay </title> publié par
             <author>Luc Merlet </author> et <author>Auguste Moutié</author>,
             Paris:<publisher>Plon</publisher>,<date>1857-1858</date>, 3 vol</bibl>
       </sourceDesc>
@@ -135,7 +135,7 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>1857-1858</date>
+        <date notBefore="1857" notAfter="1858">1857/1858</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -158,14 +158,14 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay, de l’ordre de
+      <head>Cartulaire des Vaux-de-Cernay</head>
+      <!--<head><hi rend="i">Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay, de l’ordre de
         Cîteaux, au diocèse de Paris, composé d’après les chartes originales conservées aux
         archives de Seine-et-Oise, enrichi de notes, d’index et d’un dictionnaire
         géographique</hi> par Lucien Merlet et Auguste Moutié, sous les auspices et aux dépens de
         M. H. d’Albert, duc de Luynes, [par la Société archéologique de Rambouillet], Paris :
         Imprimerie H. Plon, 1857-1858, 2 t. en 3 vol. (<hi rend="i">Documents pour servir à
-          l’histoire du département de Seine-et-Oise</hi>).</head>
-      
+          l’histoire du département de Seine-et-Oise</hi>).</head>-->
       <argument>
         <p>Établissement : Notre-Dame des Vaux-de-Cernay (Yvelines, cant. Chevreuse, comm.
           Cernay-la-Ville ; ancien diocèse de Paris). – Abbaye masculine fondée en 1118 et rattachée

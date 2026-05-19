@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le prieuré de Saint-Lieu d'Esserent - Cartulaire (1080-1538)</title>
+        <title>Cartulaire du prieuré de Saint-Leu d’Esserent</title>
         <funder>Ecole des chartes</funder>
         <author>E. Müller</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
@@ -120,7 +120,8 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1538" notAfter="1901">1538-1901</date>
+        <date when="1901">1901</date>
+        <date type="coverage" notBefore="1080" notAfter="1538">1080/1538</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -144,8 +145,9 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire du prieuré de Saint-Leu d’Esserent (1080-1538)</hi>, éd. Eugène
-        Müller, Pontoise, Société historique du Vexin, 1900-1901, 210 pages.</head>
+      <head>Cartulaire du prieuré de Saint-Leu d’Esserent</head>
+      <!--<head><hi rend="i">Cartulaire du prieuré de Saint-Leu d’Esserent (1080-1538)</hi>, éd. Eugène
+        Müller, Pontoise, Société historique du Vexin, 1900-1901, 210 pages.</head>-->
       <argument>
         <p>Établissement : Saint-Leu d’Esserent (Oise, cant. Montataire; ancien diocèse de
           Beauvais). – Prieuré clunisen..</p>
