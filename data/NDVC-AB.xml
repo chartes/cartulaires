@@ -2,12 +2,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire des Vaux-de-Cernay</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11794">Cartulaire des Vaux-de-Cernay</title>
         <title type="short">Vaux-de-Cernay</title>
         <funder>Ecole des chartes</funder>
         <author ref="https://www.idref.fr/027024431 https://data.bnf.fr/fr/ark:/12148/cb11915693r">Lucien Merlet</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
-        <editor>Clotilde Angeleys</editor>
+        <editor ref="https://www.idref.fr/130987263 https://data.bnf.fr/15614274">Clotilde Angeleys</editor>
         <editor ref="https://www.idref.fr/236763156">Vanessa Szollosi</editor>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
@@ -96,7 +96,7 @@
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k5455505p"><title>Cartulaire de l'abbaye de Notre-Dame des Vaux de Cernay </title> publié par
             <author>Luc Merlet </author> et <author>Auguste Moutié</author>,
-            Paris:<publisher>Plon</publisher>,<date>1857-1858</date>, 3 vol</bibl>
+            Paris:<publisher>Plon</publisher>,<date type="publication">1857-1858</date>, 3 vol</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -119,7 +119,7 @@
           <citeStructure unit="section" match="group" use="default">
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -136,7 +136,7 @@
     <profileDesc>
       <creation>
         <date notBefore="1857" notAfter="1858">1857/1858</date>
-      </creation>
+      <date type="coverage" notBefore="1118" notAfter="1635">1118/1635</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>

@@ -2,7 +2,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l'abbaye de Saint-Martin de Pontoise</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11814">Cartulaire de l'abbaye de Saint-Martin de Pontoise</title>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor ref="https://www.idref.fr/131043935 https://data.bnf.fr/fr/ark:/12148/cb16169151r">Hélène Becquet</editor>
@@ -95,8 +95,8 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k56748842"><title>Cartulaire de l'abbaye de Saint-Martin de Pontoise </title> publié d'après les
-          documents inédits par <author>J. Depoin</author>, <publisher>Société historique du Vexin</publisher>, <date>1895</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k56748842 https://gallica.bnf.fr/ark:/12148/bpt6k1175099 https://gallica.bnf.fr/ark:/12148/bpt6k1175107"><title>Cartulaire de l'abbaye de Saint-Martin de Pontoise </title> publié d'après les
+          documents inédits par <author>J. Depoin</author>, <publisher>Société historique du Vexin</publisher>, <date type="publication">1895</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -117,7 +117,7 @@
         <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -125,7 +125,7 @@
           <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -138,7 +138,7 @@
     <profileDesc>
       <creation>
         <date>1895</date>
-      <date type="coverage" notBefore="1000" notAfter="1200">1000/1200</date>
+      <date type="coverage" notBefore="1032" notAfter="1627">1032/1627</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -1465,7 +1465,7 @@
                   <num>II</num>, comte de Corbeil, elle se remaria à Guy le Rouge de Montlhéry et en
                 eut, entre autres enfants, Lucienne, <hi rend="i">fiancée à dix ans</hi>, en 1104, à
                 Louis le Gros.</note>, ex qua omnes predictam terram tenunt, in
-                  eodem loco, eidemque misæ<note n="*" xml:id="aid117489">La copie de la collection Décamp
+                  eodem loco, eidemque misæ<note n="1" xml:id="aid117489">La copie de la collection Décamp
                 porte, on ne sait pourquoi, <hi rend="sc">Millo</hi>.</note> præsens, hoc concessit, et quicquid habebat in terra data
                   vel danda, in elemosina ista dedit, et ibi promisit quod suos omnes heredes
                   concedere faceret.</s>
@@ -5147,7 +5147,7 @@
               St Martin.</head>
             <argument>
               <p xml:lang="lat"> [Incipit vita <abbr>Dne</abbr> Hildeburgis, que dedit nobis id quod
-                habemus in valle Gaudiaci<note n="*" xml:id="aid137886">L'intitulé de ce
+                habemus in valle Gaudiaci<note n="1" xml:id="aid137886">L'intitulé de ce
                 chapitre du Cartulaire ne nous est connu que par la transcription du <abbr>P.</abbr>
                 de Machault. — Le nécrologe de <abbr>S.</abbr> Martin porte au 3 juin la mention
                 suivante : « Obiit † <persName>Hildeburgis</persName> religiosa sanctimonialis, que
@@ -5179,7 +5179,7 @@
                   erat parti crucis septentrionali ecclesiæ, eique adhærebat. Ostium inerat per quod
                   die noctuque ecclesiam ingredi poterat. Cujus quidem clavis in ipsius monumento, a
                   paucis annis inventa fuit. In dictâ cellulâ, quamdiu vixit, morata est ; mortua et
-                  sepulta in concavo muri ecclesiæ<note n="*" target="#nid137886 #nid139002">L'intitulé de ce
+                  sepulta in concavo muri ecclesiæ<note n="2" target="#nid137886 #nid139002">L'intitulé de ce
                 chapitre du Cartulaire ne nous est connu que par la transcription du <abbr>P.</abbr>
                 de Machault. — Le nécrologe de <abbr>S.</abbr> Martin porte au 3 juin la mention
                 suivante : « Obiit † <persName>Hildeburgis</persName> religiosa sanctimonialis, que
@@ -5441,7 +5441,7 @@
           </body>
           <back>
             <div type="notes">
-              <note n="*" xml:id="nid139002" target="#aid139002"><hi rend="i">Dans un
+              <note n="3" xml:id="nid139002" target="#aid139002"><hi rend="i">Dans un
                   enfeu</hi>. </note>
             </div>
           </back>
@@ -6200,7 +6200,7 @@
                     <rs type="person"><persName>Tebaldus</persName> cancellarius</rs> scripsit. <rs type="person">Rege <persName>Ludovico</persName>
                     </rs>anno <num>XIIIº.</num> Anno <rs type="person">episcopatus
                         <persName>Girberti</persName></rs>
-                    <num>Vº</num><note n="*" xml:id="aid142692">Ces indications conviennent toutes
+                    <num>Vº</num><note n="1" xml:id="aid142692">Ces indications conviennent toutes
                 à l'année 1122, sauf celle relative au règne de Louis <num>VI</num>, qui doit être
                 lue « anno <num>xiiii</num>.» Louis <num>VI</num> ayant été sacré le 3 août 1108, la
                 charte est antérieure au 3 août 1112.</note>.</date>
@@ -7323,7 +7323,7 @@
                     <placeName>Pontesare</placeName> jure pertinere.</s>
                 <s>Quapropter mandamus atque precipimus quatenus eandem presentationem in pace amodo
                   habeat nec de ea aliquis eidem contrarius existat.</s>
-                <s> Salvo juro (sic) pontificali et parrochiali.<note n="*" xml:id="aid147245">Cette pièce appartient évidemment
+                <s> Salvo juro (sic) pontificali et parrochiali.<note n="1" xml:id="aid147245">Cette pièce appartient évidemment
                 au gouvernement de l'abbé Guillaume I<hi rend="sup">er</hi>, puisque, en 1135, le
                 même archevêque confirme sans aucune restriction, à Thibaut <num>II</num>,
                 successeur de Guillaume, les droits de l'Abbaye sur les deux cures
@@ -8009,7 +8009,7 @@
                   <abbr>nri</abbr>
                   <abbr>J.</abbr>
                   <num>C.</num> advenientis in <placeName>Jerusalem</placeName> ad Crucem usque
-                    extenditur<note n="*" xml:id="aid150562">Processio de quâ fit mentio in
+                    extenditur<note n="1" xml:id="aid150562">Processio de quâ fit mentio in
                 cartha, jam a temporibus S<hi rend="sup">i</hi> Galterii fieri solita, nostris fit
                 quoque temporibus. Pergit ad Cnacem extra septa monasterii. Habetur quoque concio
                 (D. <abbr>E.</abbr>)</note>,
@@ -8424,7 +8424,7 @@
                 <witness n="B">Bibl. mun. de Pontoise, ms. 16-18, 20 et 22: D. Estiennot,
                     <title>Historia monaterii Sancti Martini super Viosnam</title>, <abbr>l.</abbr>
                   III, iii, ii (ex cart., cap. 149. Dom Estiennot a omis dans sa transcription un
-                  passage qui rattachait cette charte à la précédente)<note n="*" xml:id="aid152759">« On finissait cette cérémonie
+                  passage qui rattachait cette charte à la précédente)<note n="1" xml:id="aid152759">« On finissait cette cérémonie
                 (l'enterrement de Hugues de Gisors) lorsque Eudes de Lieux se rendit dans l'église
                 de St Martin, manda l'abbé Guillaume et ses religieux, et posa sur l'autel l'acte
                 d'une donation de deux muids et demi de grain qu'il faisait à leur monastère...
@@ -9292,7 +9292,7 @@
               <p>
                 <s>Contigit aliquam oriri discordiam inter <rs type="person"><persName>Ludovicum</persName> regem <persName>Francorum</persName></rs> et
                     <persName>Theobaldum de Gisortio</persName>, propter quam etiam terræ suæ
-                  mansionem interdixit ei rex<note n="*" xml:id="aid156664">Cette disgrâce de Thibaut de
+                  mansionem interdixit ei rex<note n="1" xml:id="aid156664">Cette disgrâce de Thibaut de
                 Gisors semble avoir eu pour cause un incident de la guerre qui éclata en 1149 entre
                 la France et la Normandie.</note>, <abbr>Dnus</abbr> vero <persName>Theobaldus</persName> eâ
                   die quâ de terrâ regis exiit, duxit secum <abbr>Dnum</abbr>
@@ -10934,7 +10934,7 @@
                   seipsum fidejussorem abbati et ecclesiæ.</s>
                 <s>Horum omnium testes sunt præfati jussores et <rs type="person"><persName>Guiardus</persName> presbyter de
                     <placeName>Gaynericort</placeName></rs>, <rs type="person"><persName>Raynardus</persName> presbyter de
-                    <placeName>Umblevillâ</placeName></rs>, qui tunc erat diaconus<note n="*" xml:id="aid165256"><hi rend="i">Lege</hi>
+                    <placeName>Umblevillâ</placeName></rs>, qui tunc erat diaconus<note n="1" xml:id="aid165256"><hi rend="i">Lege</hi>
                 decanus.</note> de <placeName>Camblico<note n="256" xml:id="a0256e">Chambly, cant. de
                 Neuilly-en-Thelle.</note></placeName>, <rs type="person"><persName>Ansculfus</persName> pelliparius</rs>, <persName>Garinus
                     de Fossa</persName>, <rs type="person"><persName>Fulco</persName> filius
@@ -11492,7 +11492,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Eo tempore Fratres <placeName>Pontisaræ</placeName> adstabant apostolicæ
-                    curiæ<note n="*" xml:id="aid167955">A Sens, où était le pape
+                    curiæ<note n="1" xml:id="aid167955">A Sens, où était le pape
                 Alexandre.</note>,
                   interpellati a <placeName>Cluniacensibus</placeName>, eo quod vel
                     <persName>Guillelmum</persName> quondam abbatem suum
@@ -11786,7 +11786,7 @@
                   que capientur de ipso vivario.</s>
                 <s>Quando ego <persName>Ingelramnus Aculeius</persName> investivi <abbr>Dnum</abbr>
                   <persName>Lecelinum</persName> abbatem et ecclesiam de his omnibus supradictis
-                  affuerunt hi testes<note n="*" xml:id="aid169309">Presque toutes ces souscriptions
+                  affuerunt hi testes<note n="1" xml:id="aid169309">Presque toutes ces souscriptions
                 se retrouvent, en même ordre, dans une charte de 1175, <hi rend="i">infrà</hi>, nº
                   <num>CLXXV</num>.</note> : <rs type="person">Abbas de <placeName>Marcasio Radulfi<note n="408" xml:id="a0408b">Marcheroux, comm. de
                 Beaumont-les-Nonains, cant. d'Auneuil (Oise).</note></placeName></rs>, <rs type="person"><persName>Ivo</persName> canonicus ejus</rs>, <rs type="person"><persName>Robertus</persName> prior cenobii
@@ -12243,7 +12243,7 @@
                     [<persName>Gislebertus</persName> anglicus serviens
                     <persName>Johannis</persName>.]</s>
                 <s>Ex parte monachorum : <abbr>Dnus</abbr>
-                  <persName>Theobaldus de Gisortio</persName><note n="*" xml:id="aid171803">Tous ces noms, jusqu'à
+                  <persName>Theobaldus de Gisortio</persName><note n="1" xml:id="aid171803">Tous ces noms, jusqu'à
                 celui du sacristain Pierre, sont omis dans la copie des Archives et nous ont été
                 conservés dans celle de <num>D.</num>
                 <abbr>E.</abbr></note>, <rs type="person"><abbr>Dnus</abbr>
@@ -12256,7 +12256,7 @@
                       <persName>Alelmi de Cella</persName></rs>, <persName>Radulphus de
                     Capella</persName>, quadrigarius abbatis, <persName>Gislebertus de
                     Aula</persName>, <persName>Guillelmus de Nuuilly</persName>, <persName>Petrus de
-                      Sacristaria<note n="*" xml:id="aid171929">Tous ces noms, jusqu'à
+                      Sacristaria<note n="2" xml:id="aid171929">Tous ces noms, jusqu'à
                 celui du sacristain Pierre, sont omis dans la copie des Archives et nous ont été
                 conservés dans celle de <num>D.</num>
                 <abbr>E.</abbr></note></persName>.</s>
@@ -12516,7 +12516,7 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s><persName>Alexander</persName> servus servorum Dei... dilecto filii suo
-                    <persName>Lecelino</persName> abbati...<note n="*" xml:id="aid173498">Nous ne reproduisons de ce fort
+                    <persName>Lecelino</persName> abbati...<note n="1" xml:id="aid173498">Nous ne reproduisons de ce fort
                 long document que les passages différents du texte de la bulle de 1159.</note></s>
                 <s>Locum ipsum in quo prefatum monasterium est...</s>
                 <s>Decimam totam majorem et minutam totius parrochie... excepto uno modio bladi et
@@ -13532,7 +13532,7 @@
                         <persName>Ludovico</persName></rs>, residente in cathedra
                       <placeName>Rothomagensis</placeName> ecclesie venerabili archº
                       <persName>Rotrodo</persName> Idus aprilis, feria <num>vª</num> ante Pascha
-                    ipsa die Cene Dominice<note n="*" xml:id="aid178089">Les dates accessoires indiquées
+                    ipsa die Cene Dominice<note n="1" xml:id="aid178089">Les dates accessoires indiquées
                 correspondent à l'année 1172, où Pâques tomba le 16 avril, tandis que la pièce étant
                 datée de 1172 avant Pâques, le Jeudi-Saint devrait appartenir à l'année 1173, où
                 Pâques tomba le 8 avril. Mais, dans cette hypothèse, les dates accessoires ne
@@ -14746,7 +14746,7 @@
                     M.</abbr> in plenitudine libertatis tenere quidquid juris et possessionis
                   habebamus in terra quam in ambitu eorum curie continetur, et census quos reddere
                   solebant monasterio nostro, numorum, vini, et annone et lignorum, quietos
-                  dimisimus in perpetuum ; retento bisancio<note n="*" xml:id="aid182930">De nombreuses traces de cette
+                  dimisimus in perpetuum ; retento bisancio<note n="1" xml:id="aid182930">De nombreuses traces de cette
                 redevance d'un <hi rend="i">besant</hi> ou denier d'or existent dans les archives de
                 l'Abbaye. Elle paraît n'avoir cessé d'être acquittée qu'après la guerre de Cent
                 ans.</note> nobis reddendo <date>in octabis
@@ -15074,7 +15074,7 @@
                 <s><abbr>N. s. p.</abbr> et <abbr>f.</abbr> quod <rs type="person">ego
                       <persName>Galfridus</persName>
                     <seg type="theo">Dei gratia</seg> abbas <placeName><abbr>Sti</abbr>
-                      Martini</placeName></rs> dedi <persName>Radulpho de Lisle<note n="*" xml:id="aid184454">Mauvaise lecture évidente pour <hi rend="i">Radulpho Delies</hi>.</note></persName>
+                      Martini</placeName></rs> dedi <persName>Radulpho de Lisle<note n="1" xml:id="aid184454">Mauvaise lecture évidente pour <hi rend="i">Radulpho Delies</hi>.</note></persName>
                   <num>ix</num> sol. propter decimam des essarts omnium nemorum de
                     <placeName>Clery</placeName> ; quod posuit donum ipse super altare.</s>
                 <s>Testes <persName>Petrus de Longa [Essa]</persName>, etc.</s>
@@ -15297,7 +15297,7 @@
                 <s>Consuevit patrum autoritas ea fidelis pagine testimonio commendare, que nec
                   sompno oblivionis nec dampno vetustatis abolita à memoria nollent excidere vel
                   elabi, quorum nos imitantes non immutantes vestigia, ad recordationem presentium
-                  et futurorum cognitionem volumus pervenire, quod domnus <persName>Hawinus<note n="*" xml:id="aid185391"><hi rend="i">Hawin</hi> était curé
+                  et futurorum cognitionem volumus pervenire, quod domnus <persName>Hawinus<note n="1" xml:id="aid185391"><hi rend="i">Hawin</hi> était curé
                 de St-Leu Taverny, comme on le voit par une des pièces précédentes.</note></persName> duos
                   arpennos vinearum et dimidium apud <placeName><abbr>S.</abbr> Lupum</placeName>
                   quos ipse plantaverat, ab ecclesia nostra tenebat et tota vita sua tenere debebat,
@@ -15375,7 +15375,7 @@
                   se bona fide servaturum predictus presbiter in manu prioris de
                     <placeName>Pontisera</placeName> coram abbate suo firmavit.</s>
                 <s>Hujus rei testes sunt : <rs type="person"><persName>Gaufridus</persName>
-                    prior</rs>, <rs type="person"><persName>Tiboudus</persName> sacrista</rs>,<note n="*" xml:id="aid185793">Les témoins dont les noms suivent
+                    prior</rs>, <rs type="person"><persName>Tiboudus</persName> sacrista</rs>,<note n="1" xml:id="aid185793">Les témoins dont les noms suivent
                 sont les curés de diverses paroisses, comme le prouve la charte qui suit.</note>
                   <persName>Robertus de Haraviler<note n="303" xml:id="a0303e">Haravilliers, cant. de Marines.</note></persName>, <persName>Robertus de Heinouvilla<note n="385" xml:id="a0385c">
                 <p>Le même archevêque confirma en 1157, à l'abbaye de Saint-Denis, la possession

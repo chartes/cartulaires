@@ -2,8 +2,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIIIe siècle</title>
-        <author>René Poupardin</author>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=69715">Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIIIe siècle</title>
+        <author ref="https://www.idref.fr/027081125 https://data.bnf.fr/ark:/12148/cb11920471w">René Poupardin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
         <respStmt>
           <name xml:id="VJ">Vincent Jolivet (École des chartes) <email>vincent.jolivet@chartes.psl.eu</email></name>
@@ -47,8 +47,8 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-          <bibl>
-            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, 1909-1932.
+          <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k165334g https://gallica.bnf.fr/ark:/12148/bpt6k1653723">
+            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, <date type="publication">1909-1932</date>.
           </bibl>
       </sourceDesc>
     </fileDesc>
@@ -66,7 +66,7 @@
         <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -74,7 +74,7 @@
           <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -84,7 +84,7 @@
               <citeStructure unit="sous-section" match="group" use="default">
                 <citeData property="dct:title" use="head[1]"/>
                 <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-                  <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+                  <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
                   <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
                   <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
                   <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -98,7 +98,7 @@
     <profileDesc>
       <creation>
         <date notBefore="1909" notAfter="1932">1909-1932</date>
-      </creation>
+      <date type="coverage" notBefore="556" notAfter="1250">556/1250</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>

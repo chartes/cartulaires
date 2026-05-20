@@ -2,10 +2,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>
-        <author>Emile Coüard-Luys</author>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11942">Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>
+        <author ref="https://www.idref.fr/057155186 https://data.bnf.fr/ark:/12148/cb12988707x">Emile Coüard-Luys</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
-        <editor>Anastasia Iline</editor>
+        <editor ref="https://www.idref.fr/149856520 https://data.bnf.fr/ark:/12148/cb15100705p">Anastasia Iline</editor>
         
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
@@ -97,7 +97,7 @@
       <sourceDesc>
         <bibl><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title> publié par
             <author>Emile Coüard-Luys</author>, Rambouillet:<publisher> A. Douchin</publisher>,
-            <date>1882</date></bibl>
+            <date type="publication">1882</date></bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -117,7 +117,7 @@
         </citeStructure>
         <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="default">
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -134,7 +134,7 @@
     <profileDesc>
       <creation>
         <date>1882</date>
-      </creation>
+      <date type="coverage" notBefore="1071" notAfter="1327">1071/1327</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
@@ -10292,7 +10292,7 @@
       </div>--><!--<div type="table" n="1">
         <pb n="235"/>
         <head>CARTULAIRE</head>
-        <note xml:id="note61" n="*">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>
+        <note xml:id="note61" n="61">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>
         <list type="gloss">
           <!-\-<item xml:id="SSCO-AB_rs_007">1<hi rend="sup">o</hi> Privilegium claustri a Bucardo comite concessum (1071)<ref n="VI recto 1">VI recto 1</ref>.</item>-\->
           <!-\-<item xml:id="SSCO-AB_rs_008">2<hi rend="sup">o</hi> Privilegium Ludovici regis Francorum (1118)<ref n="VII verso 4">VII verso 4</ref>.</item>-\->

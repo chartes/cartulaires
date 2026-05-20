@@ -1,10 +1,8 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l’église Notre-Dame de Paris, t. 4</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11866">Cartulaire de l’église Notre-Dame de Paris, t. 4</title>
         <title type="short">Notre-Dame de Paris, t. 4</title>
         <author ref="https://www.idref.fr/03357474X https://data.bnf.fr/fr/ark:/12148/cb12442951t">Benjamin Guérard</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
@@ -60,7 +58,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k65348823"><title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 4, Paris, 1850.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k65348823"><title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 4, Paris, <date type="publication">1850</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -69,7 +67,7 @@
       </projectDesc>
       <refsDecl>
         <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $att := if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', /front/docDate/date/@notAfter) else front/docDate/date/@notAfter return if ($att) then concat(@n, ' (', $att, ')' ) else @n"/>
+          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
           <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
           <citeData property="dct:type" use="front/index/term/@key"/>
           <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
@@ -89,7 +87,7 @@
     <profileDesc>
       <creation>
         <date>1850</date>
-      </creation>
+      <date type="coverage" notBefore="856" notAfter="1492">856/1492</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>

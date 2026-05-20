@@ -2,7 +2,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaires de Saint-Thomas d'Epernon</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=12051">Cartulaires de Saint-Thomas d'Epernon</title>
         <funder>Ecole des chartes</funder>
         <author ref="https://www.idref.fr/031901131 https://data.bnf.fr/fr/ark:/12148/cb123029169">Auguste Moutié</author>
         <author ref="https://www.idref.fr/078071496 https://data.bnf.fr/fr/ark:/12148/cb130026012">Adolphe de Dion</author>
@@ -74,7 +74,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: 1878</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date type="publication">1878</date></bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -93,7 +93,7 @@
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
           <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -116,7 +116,7 @@
     <profileDesc>
       <creation>
         <date>1878</date>
-      </creation>
+      <date type="coverage" notBefore="1052" notAfter="1745">1052/1745</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
@@ -8550,7 +8550,7 @@
       <div type="table">
         <pb n="181"/>
         <head>Table générale des noms d'hommes et de lieux</head>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_A">
           <head>A</head>
           <item xml:id="STEP-AB_rs_0029"><rs><hi rend="sc">Adainville</hi></rs>, <ref target="#STEP-AB_0102" n="104.">102.</ref></item>
           <item xml:id="STEP-AB_rs_0030"><rs><hi rend="sc">Agnès</hi>, femme de Simon de Merrolles</rs>, <ref target="#STEP-AB_0048" n="52, ">48</ref> <!--<ref>145</ref>.--></item>
@@ -8602,7 +8602,7 @@
           <item xml:id="STEP-AB_rs_0589"><rs><hi rend="sc">Philippe</hi>, archev?que de Bourges</rs>, <ref target="#STEP-AB_0042" n="47.">42.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0618"><rs><hi rend="sc">Amaury de</hi></rs>, <ref>148.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_B">
           <head>B</head>
           <item xml:id="STEP-AB_rs_0072"><rs><hi rend="sc">Baignoir-aux-Moines (le)</hi></rs>, <ref target="#STEP-AB_0088" n="94.">88.</ref></item>
           <item xml:id="STEP-AB_rs_0073"><rs><hi rend="sc">Baligan (S.)</hi></rs>, <ref target="#STEP-AB_0009" n="16.">9.</ref></item>
@@ -8676,7 +8676,7 @@
           <item xml:id="STEP-AB_rs_0254"><rs><hi rend="sc">Epernon</hi>, bourgeois</rs>, <ref target="#STEP-AB_0014" n="19">14.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0537"><rs><hi rend="sc">Béatrix</hi></rs>, <ref>69</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_C">
           <head>C</head>
           <item xml:id="STEP-AB_rs_0149"><rs><hi rend="sc">Cadit</hi>, près Epernon</rs>, <ref target="#STEP-AB_0100" n="102.">100.</ref></item>
           <item xml:id="STEP-AB_rs_0150"><rs><hi rend="sc">Cadou (Jean)</hi></rs>, <ref target="#STEP-AB_0107" n="108, ">107</ref> <ref target="#STEP-AB_0108" n="109.">108.</ref></item>
@@ -8760,13 +8760,13 @@
           <!--<item xml:id="STEP-AB_rs_0638"><rs><hi rend="sc">C de Vermandois</hi></rs>, <ref>11</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0705"><rs><hi rend="sc">Simon</hi>, cur? d'Ouerre</rs>, <ref>152.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_D">
           <head>D</head>
           <item xml:id="STEP-AB_rs_0031"><rs><hi rend="sc">Agn?s</hi>, d'Aubert Chaous</rs>, <ref target="#STEP-AB_0057" n="59">57.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0032"><rs><hi rend="sc">Agn?s</hi>, d'Hugues de Maintenon</rs>, <ref>179</ref></item>-->
           <item xml:id="STEP-AB_rs_0033"><rs><hi rend="sc">Agn?s</hi>, de Phil. Poignart</rs>, <ref target="#STEP-AB_0060" n="67">60</ref>; de Thibaut d'Artie<!--, <ref>148</ref>.--></item>
           <!--<item xml:id="STEP-AB_rs_0191"><rs><hi rend="sc">Chemin des Vaches</hi>, de Croisilles ? Charpont</rs>, <ref>152.</ref></item>-->
-          <item xml:id="STEP-AB_rs_0220">Dainville. V. Adainville.</item>
+          <item xml:id="STEP-AB_rs_0220">Dainville. V. <ref type="see" target="#STEP-AB_rs_0029" corresp="#STEP-AB_liste_A">Adainville</ref>.</item>
           <item xml:id="STEP-AB_rs_0221"><rs><hi rend="sc">Dampierre (Renaud de)</hi></rs>, <ref target="#STEP-AB_0009" n="17.">9.</ref></item>
           <item xml:id="STEP-AB_rs_0222"><rs><hi rend="sc">Dardanne (Renaud)</hi></rs>, <ref target="#STEP-AB_0064" n="72.">64.</ref></item>
           <item xml:id="STEP-AB_rs_0223"><rs><hi rend="sc">Daudin (Philippe)</hi></rs>, <ref target="#STEP-AB_0071" n="82.">71.</ref></item>
@@ -8794,10 +8794,10 @@
           <item xml:id="STEP-AB_rs_0650"><rs><hi rend="sc">De Rieux</hi></rs>, <ref target="#STEP-AB_0121" n="120, ">121</ref> <ref target="#STEP-AB_0123" n="121.">123.</ref></item>
           <item xml:id="STEP-AB_rs_0684"><rs><hi rend="sc">S.-Prest</hi>, d?me de</rs>, <ref target="#STEP-AB_0080" n="89.">80.</ref></item>
           <item xml:id="STEP-AB_rs_0713">
- <rs><hi rend="i">De Stanno</hi>, V. Etang.</rs>
+ <rs><hi rend="i">De Stanno</hi>, V. <ref type="see" target="#STEP-AB_rs_0269" corresp="#STEP-AB_liste_E">Etang</ref>.</rs>
  </item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_E">
           <head>E</head>
           <item xml:id="STEP-AB_rs_0243"><rs><hi rend="sc">Ecrônes (Garin d')</hi></rs>, <ref target="#STEP-AB_0015" n="17, ">15</ref> <!-- doublon meme acte STEP-AB_0015: <ref target="#STEP-AB_0015" n="21.">15.</ref> --></item>
           <item xml:id="STEP-AB_rs_0244"><rs><hi rend="sc">Eglancourt</hi></rs>, <ref target="#STEP-AB_0105" n="106.">105.</ref></item>
@@ -8826,7 +8826,7 @@
           <!--<item xml:id="STEP-AB_rs_0486"><rs><hi rend="sc">Erard</hi></rs>, <ref>138</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0646"><rs><hi rend="sc">Renaud</hi>, ?v. de Chartres</rs>, <ref>18, </ref> <ref>24, </ref> <ref>26, </ref> <ref>27.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_F">
           <head>F</head>
           <!--<item xml:id="STEP-AB_rs_0047"><rs><hi rend="sc">Ameline</hi>, femme d'Am. de Maintenon</rs>, <ref>148.</ref></item>-->
           <item xml:id="STEP-AB_rs_0276"><rs><hi rend="sc">Le Fait à Hermeray</hi></rs>, <ref target="#STEP-AB_0116" n="116.">116.</ref></item>
@@ -8847,7 +8847,7 @@
           <item xml:id="STEP-AB_rs_0509"><rs><hi rend="sc">Marie</hi>, femme de Galeran de l'Etang</rs>, <ref target="#STEP-AB_0024" n="27.">24.</ref></item>
           <item xml:id="STEP-AB_rs_0639"><rs><hi rend="sc">C. de Vermandois</hi>, fr?re de Fontevrault</rs>, <ref target="#STEP-AB_0041" n="43, ">41</ref> moin<!--, <ref>138.</ref>.--></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_G">
           <head>G</head>
           <item xml:id="STEP-AB_rs_0270"><rs><hi rend="sc">Galeran</hi></rs><!--, <ref>27, </ref>--> <ref target="#STEP-AB_0029" n="31">29.</ref></item>
           <item xml:id="STEP-AB_rs_0287"><rs><hi rend="sc">G. official de Chartres</hi></rs>, <ref target="#STEP-AB_0032b" n="33.">32.</ref></item>
@@ -8909,7 +8909,7 @@
           <item xml:id="STEP-AB_rs_0635"><rs><hi rend="sc">Rambouillet</hi>, grange a</rs>, <ref target="#STEP-AB_0038" n="73">38.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0674"><rs><hi rend="sc">G. doyen de S.-G.-l'Auxerrois</hi></rs>, <ref>25.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_H">
           <head>H</head>
           <item xml:id="STEP-AB_rs_0113"><rs><hi rend="sc">Houx (Guill.)</hi></rs>, <ref target="#STEP-AB_0065" n="72">65.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0114"><rs><hi rend="sc">Houx (Pierre)</hi></rs>, <ref>72</ref></item>-->
@@ -8952,7 +8952,7 @@
           <item xml:id="STEP-AB_rs_0398"><rs><hi rend="sc">Hierres</hi>, abbaye</rs>, <ref target="#STEP-AB_0005" n="12.">5.</ref></item>
           <item xml:id="STEP-AB_rs_0399"><rs><hi rend="i">Hilduinus</hi></rs>, <ref target="#STEP-AB_0002" n="8, ">2</ref><ref target="#STEP-AB_2b" n="9.">2.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0400"><rs><hi rend="sc">Houdan</hi>, prieur?</rs>, <ref>139</ref></item>-->
-          <item xml:id="STEP-AB_rs_0402">Houdrepont. V. <hi rend="i">Hidulfipons.</hi></item>
+          <item xml:id="STEP-AB_rs_0402">Houdrepont. V. <ref type="see" target="#STEP-AB_rs_0397" corresp="#STEP-AB_liste_H"><hi rend="i">Hidulfipons.</hi></ref></item>
           <!--<item xml:id="STEP-AB_rs_0403"><rs><hi rend="sc">Houville</hi></rs>, <ref>160, </ref> <ref>161, </ref> <ref>167.</ref></item>-->
           <item xml:id="STEP-AB_rs_0404"><rs><hi rend="sc">Houx</hi></rs>, <ref target="#STEP-AB_0111" n="114">111.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0407"><rs><hi rend="sc">Hubert</hi>, fils de Rohard</rs>, <ref>138</ref></item>-->
@@ -8964,7 +8964,7 @@
           <item xml:id="STEP-AB_rs_0417"><rs><hi rend="sc">Hurault (Phil.)</hi></rs>, <ref target="#STEP-AB_0120" n="117, ">120</ref> <ref target="#STEP-AB_0121" n="118, ">121</ref> <ref target="#STEP-AB_0122" n="120, ">122</ref> <ref target="#STEP-AB_0123" n="121, ">123</ref> <!--<ref>134.</ref>.--></item>
           <item xml:id="STEP-AB_rs_0491"><rs><hi rend="sc">Hugues</hi></rs>, <ref target="#STEP-AB_0032b" n="58, ">32</ref> <!--<ref>139, </ref>--> <!--<ref>162, </ref>--> <!--<ref>165, </ref>--> <!--<ref>177, </ref>--> Jean<!--, <ref>140, </ref>--> <!--<ref>179</ref>.--></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_I">
           <head>I</head>
           <!--<item xml:id="STEP-AB_rs_0418"><rs><hi rend="sc">Ile</hi></rs>, <ref>160</ref></item>-->
           <item xml:id="STEP-AB_rs_0420"><rs><hi rend="sc">Illiers (Florent d')</hi></rs>, <ref target="#STEP-AB_0100" n="102, ">100</ref> <ref target="#STEP-AB_0101" n="103, ">101</ref> <ref target="#STEP-AB_0102" n="104.">102.</ref></item>
@@ -8973,7 +8973,7 @@
           <item xml:id="STEP-AB_rs_0425"><rs><hi rend="sc">Ives</hi>, év. de Chartres</rs>, <ref target="#STEP-AB_0002" n="7.">2.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0426"><rs><hi rend="sc">Ivry</hi>, prévôté d' —</rs>, <ref>141, </ref> <ref>142</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_J">
           <head>J</head>
           <!--<item xml:id="STEP-AB_rs_0089"><rs><hi rend="sc">Jean</hi></rs>, <ref>130, </ref> <ref>133</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0115"><rs><hi rend="sc">Jean</hi></rs>, <ref>156, </ref> <ref>157, </ref> <ref>160.</ref></item>-->
@@ -8992,7 +8992,7 @@
           <item xml:id="STEP-AB_rs_0608"><rs><hi rend="sc">Jean de — C. d'Aumale</hi></rs>, <ref target="#STEP-AB_0072" n="83.">72.</ref></item>
           <item xml:id="STEP-AB_rs_0744"><rs><hi rend="sc">Jean de Verges</hi>, seigneur de —</rs>, <ref target="#STEP-AB_0082" n="90.">82.</ref></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_L">
           <head>L</head>
           <item xml:id="STEP-AB_rs_0442"><rs><hi rend="sc">Laidet (Pierre)</hi></rs>, <ref target="#STEP-AB_0002" n="8, ">2</ref> <ref target="#STEP-AB_2b" n="9.">2.</ref></item>
           <item xml:id="STEP-AB_rs_0443"><rs><hi rend="i">Landricus famulus prioris</hi></rs>, <ref target="#STEP-AB_0002" n="8, ">2</ref><ref target="#STEP-AB_2b" n="9.">2.</ref></item>
@@ -9024,7 +9024,7 @@
           <!--<item xml:id="STEP-AB_rs_0469"><rs><hi rend="sc">Luxovill (Guill de)</hi></rs>, <ref>138.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0540"><rs><hi rend="sc">Laure</hi></rs>, <ref>60, </ref> <ref>65</ref>67, <ref>69</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_M">
           <head>M</head>
           <!--<item xml:id="STEP-AB_rs_0034"><rs><hi rend="sc">Agn?s</hi>, m?re d'Am. de Maintenon</rs>, <ref>141.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0043"><rs><hi rend="sc">Michel</hi>, prieur d'Epernon</rs>, <ref>83, </ref> <ref>129, </ref> <ref>130, </ref> <ref>131, </ref> <ref>134.</ref></item>-->
@@ -9095,7 +9095,7 @@
           <item xml:id="STEP-AB_rs_0624"><rs><hi rend="sc">Michel de —</hi></rs>, <ref target="#STEP-AB_0018" n="23.">18.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0645"><rs><hi rend="sc">Renaud</hi>, maire de Guiperreux</rs>, <ref>48, </ref> <ref>67</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_N">
           <head>N</head>
           <!--<item xml:id="STEP-AB_rs_0294"><rs><hi rend="sc">Nicolas</hi>, fils de —</rs>, <ref>158.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0543"><rs><hi rend="sc">Nivard</hi></rs>, <ref>4</ref></item>-->
@@ -9110,7 +9110,7 @@
           <item xml:id="STEP-AB_rs_0565"><rs><hi rend="sc">Nogent l'Erembert</hi>, châtellenie de —</rs>, <ref target="#STEP-AB_0067" n="74, ">67</ref> <ref target="#STEP-AB_0070" n="75, ">70</ref> <ref target="#STEP-AB_0079" n="85.">79.</ref></item>
           <item xml:id="STEP-AB_rs_0566"><rs><hi rend="sc">Novel (Simon</hi></rs>, <ref target="#STEP-AB_0087" n="94.">87.</ref></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_O">
           <head>O</head>
           <item xml:id="STEP-AB_rs_0386"><rs><hi rend="sc">Henri I</hi>, official de Chartres</rs>, <ref target="#STEP-AB_0032" n="33">32.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0567"><rs><hi rend="i">Ogerus, presbiter</hi></rs>, <ref>140</ref></item>-->
@@ -9119,7 +9119,7 @@
           <!--<item xml:id="STEP-AB_rs_0570"><rs><hi rend="i">Ouerre</hi>, <hi rend="i">Orreia, </hi></rs>, <ref>138, </ref> <ref>152.</ref></item>-->
           <item xml:id="STEP-AB_rs_0655"><rs><hi rend="sc">Robert</hi>, official de Chartres</rs>, <ref target="#STEP-AB_0032b" n="33, ">32</ref> év. de Chartres<!--, <ref>132</ref>.--></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_P">
           <head>P</head>
           <!--<item xml:id="STEP-AB_rs_0063"><rs><hi rend="sc">Pierre</hi>, <hi rend="i">Petrus Alberici</hi></rs>, <ref>171, </ref> <ref>178.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0079"><rs><hi rend="sc">Barth?lemy</hi>, prieur de Maintenon</rs>, <ref>159, </ref> <ref>162.</ref></item>-->
@@ -9194,11 +9194,11 @@
           <item xml:id="STEP-AB_rs_0654"><rs><hi rend="sc">Robert</hi>, prieur d'Epernon</rs>, <ref target="#STEP-AB_0006" n="13, ">6</ref> <!-- doublon meme acte STEP-AB_0006: <ref target="#STEP-AB_0006" n="14,">6</ref> --> <ref target="#STEP-AB_0007" n="15, ">7</ref> <ref target="#STEP-AB_0005" n="23, ">5</ref> <!--<ref>132</ref>.--></item>
           <!--<item xml:id="STEP-AB_rs_0656"><rs><hi rend="sc">Robert</hi>, prieur de Maintenon</rs>, <ref>159, </ref> <ref>166.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_Q">
           <head>Q</head>
           <item xml:id="STEP-AB_rs_0629"><rs><hi rend="sc">Queue (Amaury de la</hi></rs>, <ref target="#STEP-AB_0030" n="31.">30.</ref></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_R">
           <head>R</head>
           <!--<item xml:id="STEP-AB_rs_0342"><rs><hi rend="sc">Robert</hi></rs>, <ref>158.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0343"><rs><hi rend="sc">Robin</hi></rs>, <ref>158.</ref></item>-->
@@ -9235,7 +9235,7 @@
           <!--<item xml:id="STEP-AB_rs_0666"><rs><hi rend="i">Rufus Maine ius</hi></rs>, <ref>138.</ref></item>-->
           <!--<item xml:id="STEP-AB_rs_0667"><rs><hi rend="sc">Rus (Girard de)</hi></rs>, <ref>155.</ref></item>-->
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_S">
           <head>S</head>
           <item xml:id="STEP-AB_rs_0078"><rs><hi rend="sc">Barth?lemy</hi>, sous-doyen de Chartres</rs>, <ref target="#STEP-AB_0011" n="18">11.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0168"><rs><hi rend="sc">Simon</hi></rs>, <ref>156.</ref></item>-->
@@ -9289,7 +9289,7 @@
           <item xml:id="STEP-AB_rs_0711"><rs><hi rend="i">Stallarii</hi>, marchands etalagistes</rs>, <ref target="#STEP-AB_0007" n="14, ">7</ref> <!-- doublon meme acte STEP-AB_0007: <ref target="#STEP-AB_0007" n="15.">7.</ref> --></item>
           <item xml:id="STEP-AB_rs_0712"><rs><hi rend="sc">Stallis (R. de)</hi></rs>, <ref target="#STEP-AB_0009" n="16.">9.</ref></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_T">
           <head>T</head>
           <item xml:id="STEP-AB_rs_0551"><rs><hi rend="sc">Thomas</hi></rs>, <ref target="#STEP-AB_0128" n="124.">128.</ref></item>
           <item xml:id="STEP-AB_rs_0714"><rs><hi rend="sc">Tahu</hi>, Tallo, ruisseau d'Hermeray</rs>, <ref target="#STEP-AB_0001" n="2.">1.</ref></item>
@@ -9303,15 +9303,15 @@
           <item xml:id="STEP-AB_rs_0722"><rs><hi rend="sc">Thomas</hi>, fils de Froger</rs>, <ref target="#STEP-AB_0007" n="15, ">7</ref> moine<!--, <ref>140.</ref>.--></item>
           <item xml:id="STEP-AB_rs_0723"><rs><hi rend="sc">Tillon (Guill.) prieur</hi></rs>, <ref target="#STEP-AB_0095" n="100, ">95</ref> <!--<ref>134.</ref>.--></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_U">
           <head>U</head>
           <item xml:id="STEP-AB_rs_0724">
- <rs><hi rend="i">Ulmetum.</hi>, V. Ormoy.</rs>
+ <rs><hi rend="i">Ulmetum.</hi>, V. <ref type="see" target="#STEP-AB_rs_0569" corresp="#STEP-AB_liste_O">Ormoy</ref>.</rs>
  </item>
           <item xml:id="STEP-AB_rs_0725"><rs><hi rend="i">Unfredus</hi>, curé de Rambouillet</rs>, <ref target="#STEP-AB_0038" n="39.">38.</ref></item>
           <item xml:id="STEP-AB_rs_0726"><rs><hi rend="sc">Utric sous-prieur</hi></rs>, <ref target="#STEP-AB_0007" n="15.">7.</ref></item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="STEP-AB_liste_V">
           <head>V</head>
           <item xml:id="STEP-AB_rs_0727"><rs><hi rend="sc">Vacheresses (Raoul de)</hi></rs>, <ref target="#STEP-AB_0001" n="4">1.</ref></item>
           <!--<item xml:id="STEP-AB_rs_0728"><rs><hi rend="sc">Vacheresses (Jean)</hi></rs>, <ref>155</ref></item>-->
