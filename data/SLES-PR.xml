@@ -7,7 +7,7 @@
       <titleStmt>
         <title>Cartulaire du prieuré de Saint-Leu d’Esserent</title>
         <funder>Ecole des chartes</funder>
-        <author>E. Müller</author>
+        <author ref="https://www.idref.fr/079822169 https://data.bnf.fr/ark:/12148/cb121540536">E. Müller</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
@@ -85,8 +85,8 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Le prieuré de Saint-Leu d'Esserent - Cartulaire (1080-1538)</title>, E. Müller
-          (éd). Pontoise: 1901.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k406267s"><title>Le prieuré de Saint-Leu d'Esserent - Cartulaire (1080-1538)</title>, E. Müller
+          (éd). Pontoise: <date type="publication">1901</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -105,7 +105,7 @@
           </citeStructure>
         </citeStructure>
         <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
           <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -121,7 +121,7 @@
     <profileDesc>
       <creation>
         <date when="1901">1901</date>
-        <date type="coverage" notBefore="1080" notAfter="1538">1080/1538</date>
+        <date type="coverage" notBefore="1081" notAfter="1538">1081/1538</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -14792,7 +14792,7 @@
       
     <div type="index">
         <head><pb n="189"/> Index des noms de personnes et de lieux<note n="616" target="#note_0616">Les chiffres se réfèrent aux numéros des chartes.</note></head>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_A">
  <head>A</head>
  <item xml:id="SLES-PR_rs_0001"><rs><hi rend="sc">Aaco</hi> « borelli », le bourrelier ou le bourreau</rs>, <ref target="#SLES-PR_0092" n="89">92</ref>.</item>
  <item xml:id="SLES-PR_rs_0002"><rs><hi rend="sc">Aaleis</hi>, 2<hi rend="sup">e</hi> femme de Mathieu II, de Beaumont</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
@@ -14822,7 +14822,7 @@
  <item xml:id="SLES-PR_rs_0026"><rs><hi rend="sc">Agnès</hi>, femme de Florent de Léglantiers</rs>, <ref target="#SLES-PR_0127" n="121">127</ref>.</item>
  <item xml:id="SLES-PR_rs_0027"><rs><hi rend="sc">Agnès</hi>, femme de Thomas, maire de Sacy</rs>, <ref target="#SLES-PR_0199" n="157">199</ref>.</item>
  <item xml:id="SLES-PR_rs_0028"><rs><hi rend="i">Agnetz</hi> (Gautier d')</rs>, <ref target="#SLES-PR_0065" n="63">65</ref>.</item>
- <item xml:id="SLES-PR_rs_0029"><rs><hi rend="sc">Aguise Bole</hi>, v. Bole</rs>. </item>
+ <item xml:id="SLES-PR_rs_0029"><rs><hi rend="sc">Aguise Bole</hi>, v. <ref type="see" target="#SLES-PR_rs_0548" corresp="#SLES-PR_liste_D">Bole</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0030"><rs><hi rend="sc">Aiguillon (Adam)</hi></rs>, <ref target="#SLES-PR_0007" n="9">7</ref>, <ref target="#SLES-PR_0011" n="36">11</ref>, <ref target="#SLES-PR_0062" n="60">62.</ref></item>
  <!--<item xml:id="SLES-PR_rs_0031"><rs><hi rend="sc">Aiguillon (Pierre)</hi></rs>, <ref>9</ref>, <ref>36</ref>, <ref>60</ref></item>-->
  <item xml:id="SLES-PR_rs_0032"><rs><hi rend="sc">Aiguillon (Jean)</hi>, fils d'Aveline</rs>, <ref target="#SLES-PR_0033" n="37">33.</ref></item>
@@ -14831,11 +14831,11 @@
  <item xml:id="SLES-PR_rs_0035"><rs><hi rend="i">Ailly</hi> (Pierre d'), marié à Agnès, dont Marguerite et Mathilde, mariée à Simon de Clermont, etc</rs>, <ref target="#SLES-PR_0085" n="81">85</ref><!-- <ref>85</ref>-->.</item>
  <item xml:id="SLES-PR_rs_0036"><rs><hi rend="sc">Aimar</hi> I, prieur de S. Leu</rs>, <ref target="#SLES-PR_0003" n="4">3</ref>, <ref target="#SLES-PR_0006" n="7">6</ref>, <ref target="#SLES-PR_0009" n="11">9</ref>, <ref target="#SLES-PR_0013" n="16">13</ref>, <ref target="#SLES-PR_0062" n="28">62</ref>.</item>
  <item xml:id="SLES-PR_rs_0037"><rs><hi rend="sc">Aimar</hi> II, prieur de S. Leu</rs>, <ref target="#SLES-PR_0094" n="33">94</ref><!-- <ref>34</ref>-->, <ref target="#SLES-PR_0036" n="38">36</ref><!-- doublon meme acte SLES-PR_0036: <ref target="#SLES-PR_0036" n="40">36</ref> -->, <ref target="#SLES-PR_0056" n="54">56</ref>, <ref target="#SLES-PR_0013" n="55">13</ref><!-- <ref>57</ref>-->, <ref target="#SLES-PR_0062" n="58">62</ref><!-- <ref>60</ref>-->, <ref target="#SLES-PR_0068" n="66">68</ref>, <ref target="#SLES-PR_0072" n="70">72</ref>. <!-- doublon meme acte SLES-PR_0094: <ref target="#SLES-PR_0094" n="95">94</ref> --></item>
- <item xml:id="SLES-PR_rs_0038"><rs><hi rend="sc">Aimon Rosset</hi>, archidiacre</rs>, <ref target="#SLES-PR_0069" n="67">69</ref>, v. Beaumont et Rosset.</item>
+ <item xml:id="SLES-PR_rs_0038"><rs><hi rend="sc">Aimon <ref type="see" target="#SLES-PR_rs_0175" corresp="#SLES-PR_liste_B">Rosset</ref></hi>, archidiacre</rs>, <ref target="#SLES-PR_0069" n="67">69</ref>, v. <ref type="see" target="#SLES-PR_rs_0175" corresp="#SLES-PR_liste_B">Beaumont</ref> et Rosset.</item>
  <item xml:id="SLES-PR_rs_0039"><rs><hi rend="sc">Alais</hi> (Raoul fils d')</rs>, <ref target="#SLES-PR_0021" n="19">21</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0040"><rs>A[<hi rend="sc">lard</hi>] Jean, laboureur à Vineuil</rs>, <ref>195</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0041"><rs>A[<hi rend="sc">lard</hi>], prieur de Montdidier</rs>, <ref target="#SLES-PR_0084" n="96">84</ref>.</item>
- <item xml:id="SLES-PR_rs_0042"><rs><hi rend="sc">Albert</hi>, dit Harpin</rs>, <ref target="#SLES-PR_0062" n="69">62</ref>, v. Bouvier.</item>
+ <item xml:id="SLES-PR_rs_0042"><rs><hi rend="sc">Albert</hi>, dit Harpin</rs>, <ref target="#SLES-PR_0062" n="69">62</ref>, v. <ref type="see" target="#SLES-PR_rs_0283" corresp="#SLES-PR_liste_B">Bouvier</ref>.</item>
  <item xml:id="SLES-PR_rs_0043"><rs><hi rend="sc">Albert</hi>, doyen</rs>, <ref target="#SLES-PR_0060" n="58">60</ref>.</item>
  <item xml:id="SLES-PR_rs_0044"><rs><hi rend="sc">Albert</hi>, frère de Roger</rs>, <ref target="#SLES-PR_0085" n="4">85</ref>.</item>
  <item xml:id="SLES-PR_rs_0045"><rs><hi rend="sc">Albert</hi>, frère du Temple</rs>, <ref target="#SLES-PR_0085" n="81">85</ref>.</item>
@@ -14864,7 +14864,7 @@
  <item xml:id="SLES-PR_rs_0068"><rs><hi rend="i">Andeli</hi> ou <hi rend="i">Andilly</hi> (Reri d')</rs>, <ref target="#SLES-PR_0057" n="55">57</ref>, <ref target="#SLES-PR_0075" n="73">75</ref>.</item>
  <item xml:id="SLES-PR_rs_0069"><rs><hi rend="i">Andeville</hi> (Thibaud d'), écuyer, marié à Julienne</rs>, <ref target="#SLES-PR_0171" n="161">171</ref>.</item>
  <item xml:id="SLES-PR_rs_0070"><rs><hi rend="sc">André</hi>, clerc du comte de Clermont</rs>, <ref target="#SLES-PR_0084" n="86">84</ref>.</item>
- <item xml:id="SLES-PR_rs_0071"><rs><hi rend="i">Andrilleio</hi> (de), v. Andeli</rs>. </item>
+ <item xml:id="SLES-PR_rs_0071"><rs><hi rend="i">Andrilleio</hi> (de), v. <ref type="see" target="#SLES-PR_rs_0068" corresp="#SLES-PR_liste_A">Andeli</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0072"><rs><hi rend="i">Angivillers</hi> (Eudes d'), mari de Béatrix de Gerberoy</rs>, <ref target="#SLES-PR_0066" n="64">66</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0073"><rs><hi rend="sc">Anglais</hi> et <hi rend="sc">Navarrais</hi> à Creil</rs>, <ref>184</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0074"><rs><hi rend="i">Angy</hi> (Oise)</rs>. </item>
@@ -14877,7 +14877,7 @@
  <item xml:id="SLES-PR_rs_0081"><rs><hi rend="i">Angy</hi> (Serve d'): Hildearde</rs>, <ref target="#SLES-PR_0058" n="56">58</ref>.</item>
  <item xml:id="SLES-PR_rs_0082"><rs><hi rend="sc">Anscoul</hi></rs>, <ref target="#SLES-PR_0066" n="64">66.</ref></item>
  <!--<item xml:id="SLES-PR_rs_0083"><rs><hi rend="sc">Jean</hi>, frère d'Anscoul</rs>, <ref>64</ref></item>-->
- <item xml:id="SLES-PR_rs_0084"><rs><hi rend="sc">Anscoul</hi>, Pinzons, v. Pinzons</rs>. </item>
+ <item xml:id="SLES-PR_rs_0084"><rs><hi rend="sc">Anscoul</hi>, Pinzons, v. <ref type="see" target="#SLES-PR_rs_1273" corresp="#SLES-PR_liste_P">Pinzons</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0085"><rs><hi rend="sc">Anseis</hi> (Robert, fils d'). Faut-il confondre avec Alreia ?</rs>. </item>
  <item xml:id="SLES-PR_rs_0086"><rs><hi rend="sc">Anselme</hi>, dit « Baatus », Baud, de Creil</rs>, <ref target="#SLES-PR_0053" n="51">53</ref>. <!-- doublon meme acte SLES-PR_0053: <ref target="#SLES-PR_0053" n="52">53</ref> --></item>
  <item xml:id="SLES-PR_rs_0087"><rs><hi rend="sc">Anselme</hi>, père de Jean</rs>, <ref target="#SLES-PR_0060" n="58">60</ref>.</item>
@@ -14886,7 +14886,7 @@
  <item xml:id="SLES-PR_rs_0090"><rs><hi rend="sc">Ansous</hi>, moine du prieuré</rs>, <ref target="#SLES-PR_0065" n="73">65</ref>.</item>
  <item xml:id="SLES-PR_rs_0091"><rs><hi rend="sc">Ansous</hi>, sénéchal de Renaud de Clermont, qu'il faut peut-être identifier avec Ansous, échanson</rs>, <ref target="#SLES-PR_0061" n="59">61</ref>, <ref target="#SLES-PR_0065" n="63">65</ref>.</item>
  <item xml:id="SLES-PR_rs_0092"><rs><hi rend="i">Antiolt, </hi> Antheuil ou Antilly (Hugues d')</rs>, <ref target="#SLES-PR_0216" n="35">216</ref>.</item>
- <item xml:id="SLES-PR_rs_0093"><rs><hi rend="i">Anuel, </hi> v. Auneuil</rs>. </item>
+ <item xml:id="SLES-PR_rs_0093"><rs><hi rend="i">Anuel, </hi> v. <ref type="see" target="#SLES-PR_rs_0134" corresp="#SLES-PR_liste_A">Auneuil</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0094"><rs><hi rend="sc">Arbert</hi>, serviteur du prieuré</rs>, <ref target="#SLES-PR_0006" n="8">6</ref>, <ref target="#SLES-PR_0010" n="15">10</ref>, <ref target="#SLES-PR_0054" n="52">54</ref>, <ref target="#SLES-PR_0066" n="64">66</ref>.</item>
  <item xml:id="SLES-PR_rs_0095"><rs><hi rend="sc">Archambaut</hi>, chev. de Creil</rs>, <ref target="#SLES-PR_0054" n="52">54</ref>.</item>
  <item xml:id="SLES-PR_rs_0096"><rs><hi rend="sc">Ardent</hi> (Robert l')</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
@@ -14902,7 +14902,7 @@
  <item xml:id="SLES-PR_rs_0106"><rs><hi rend="sc">Arnoul</hi>, fils de Renard</rs>, <ref target="#SLES-PR_0081" n="6">81</ref>.</item>
  <item xml:id="SLES-PR_rs_0107"><rs><hi rend="sc">Arnoul</hi>, gendre d'Oury</rs>, <ref target="#SLES-PR_0060" n="58">60</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0108"><rs><hi rend="sc">Arnoul</hi>, prêtre [de Cressonsacq ?]</rs>, <ref>88</ref>.</item>-->
- <item xml:id="SLES-PR_rs_0109"><rs><hi rend="sc">Arnoul</hi>, Roussel, v. Roussel</rs>. </item>
+ <item xml:id="SLES-PR_rs_0109"><rs><hi rend="sc">Arnoul</hi>, Roussel, v. <ref type="see" target="#SLES-PR_rs_1396" corresp="#SLES-PR_liste_R">Roussel</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0110"><rs><hi rend="sc">Arnoul</hi>, serviteur du prieuré, qu'il faut peut-être identifier avec Arnoul, fils de Renard</rs><!-- <ref>17</ref>-->, <ref target="#SLES-PR_0019" n="21">19</ref>, <ref target="#SLES-PR_0025" n="29">25</ref><!--<ref>31</ref>--><!-- <ref target="#SLES-PR_0026">31</ref> --><!-- <ref>34</ref>-->.</item>
  <item xml:id="SLES-PR_rs_0111"><rs><hi rend="sc">Arnoul</hi>, <hi rend="i">Arnulfus famulus</hi></rs>, <ref target="#SLES-PR_0036" n="39">36</ref>, <ref target="#SLES-PR_0054" n="51">54</ref>, <ref target="#SLES-PR_0063" n="61">63</ref>, <!-- doublon meme acte SLES-PR_0063: <ref target="#SLES-PR_0063" n="64">63</ref> --> <ref target="#SLES-PR_0066" n="67">66.</ref></item>
  <!--<item xml:id="SLES-PR_rs_0112"><rs><hi rend="sc">Fulco</hi>, <hi rend="i">filius Arnulfi</hi></rs>, <ref>39</ref>, <ref>51</ref>, <ref>61</ref>, <ref>64</ref>, <ref>67</ref></item>-->
@@ -14941,9 +14941,9 @@
  <item xml:id="SLES-PR_rs_0145"><rs><hi rend="i">Avrigny, </hi> (Jean d')</rs>, <ref target="#SLES-PR_0138" n="74">138</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0146"><rs><hi rend="i">Avrigny (Jean)</hi>, <hi rend="i">de Avennis</hi></rs>, <ref>108</ref>, <ref>177</ref></item>-->
  <item xml:id="SLES-PR_rs_0147"><rs><hi rend="i">Avrigny (Marie)</hi>, femme de Jean</rs>, <ref target="#SLES-PR_0114" n="108">114</ref><!-- <ref>177</ref>.--></item>
- <item xml:id="SLES-PR_rs_0148"><rs><hi rend="sc">Aylard</hi> ou Ayrard, v. Oelard</rs>. </item>
+ <item xml:id="SLES-PR_rs_0148"><rs><hi rend="sc">Aylard</hi> ou Ayrard, v. <ref type="see" target="#SLES-PR_rs_1216" corresp="#SLES-PR_liste_O">Oelard</ref></rs>. </item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_B">
  <head>B</head>
  <item xml:id="SLES-PR_rs_0149"><rs><hi rend="sc">Bahalin</hi> ou Daalin, scribe du comte Mathieu de Beaumont</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
  <item xml:id="SLES-PR_rs_0150"><rs><hi rend="i">Bailleul</hi> [<hi rend="i">sur Thérain</hi>] (Oise)</rs>, <ref target="#SLES-PR_0201" n="128">201</ref>.</item>
@@ -14965,15 +14965,15 @@
  <item xml:id="SLES-PR_rs_0166"><rs><hi rend="sc">Baudoin</hi>, fils d'Aveline</rs>, <ref target="#SLES-PR_0064" n="62">64</ref>.</item>
  <item xml:id="SLES-PR_rs_0167"><rs><hi rend="sc">Baudoin</hi>, fils de Gaubert le grainetier</rs>, <ref target="#SLES-PR_0003" n="4">3</ref>.</item>
  <item xml:id="SLES-PR_rs_0168"><rs>Baudoin, plus beau « <hi rend="i">Pulchrior</hi> »</rs>, <ref target="#SLES-PR_0105" n="100">105</ref>.</item>
- <item xml:id="SLES-PR_rs_0169"><rs><hi rend="sc">Beatrix</hi>, v. Cressonsacq, Rosset, etc</rs>. </item>
+ <item xml:id="SLES-PR_rs_0169"><rs><hi rend="sc">Beatrix</hi>, v. <ref type="see" target="#SLES-PR_rs_0514" corresp="#SLES-PR_liste_C">Cressonsacq</ref>, <ref type="see" target="#SLES-PR_rs_0038" corresp="#SLES-PR_liste_A">Rosset</ref>, <ref type="see" target="#SLES-PR_rs_1531" corresp="#SLES-PR_liste_S">etc</ref></rs>. </item>
  <!--<item xml:id="SLES-PR_rs_0170"><rs><hi rend="i">Beaufort, </hi> (Raoul de)</rs>, <ref>179</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0171"><rs><hi rend="i">Beaumont</hi> (chevalier de)</rs>. Bornel.</item>
  <!--<item xml:id="SLES-PR_rs_0172"><rs><hi rend="i">Beaumont (Mathieu I, comte de)</hi></rs>, <ref>I. 33</ref>, <ref>I. 44</ref>, <ref>I. 66</ref>, <ref>I. 78</ref></item>-->
  <item xml:id="SLES-PR_rs_0173"><rs><hi rend="i">Beaumont (Mathieu II, comte de)</hi>, marié à Mathilde, puis à Aleis</rs><!-- <ref>I. 33</ref>-->, <ref target="#SLES-PR_0043" n="I. 44">43</ref>, <ref target="#SLES-PR_0068" n="I. 66">68</ref>, <ref target="#SLES-PR_0082" n="I. 78">82.</ref></item>
  <item xml:id="SLES-PR_rs_0174"><rs><hi rend="i">Beaumont</hi>, Hugues, frère de Mathieu II</rs>, <ref target="#SLES-PR_0068" n="66">68</ref>.</item>
- <item xml:id="SLES-PR_rs_0175"><rs><hi rend="i">Beaumont</hi> (Famille de): Gautier « dit Rosset » v. Rosset</rs>. </item>
- <item xml:id="SLES-PR_rs_0176"><rs><hi rend="i">Beaumont</hi>, Maison du Comte. v. Gislebert, cordonnier</rs>, <ref target="#SLES-PR_0068" n="66">68</ref>.</item>
- <item xml:id="SLES-PR_rs_0177"><rs><hi rend="i">Beaumont</hi>, Maison du Comte. v. Lambert, cubicularius</rs>, <ref target="#SLES-PR_0068" n="66">68</ref>.</item>
+ <item xml:id="SLES-PR_rs_0175"><rs><hi rend="i">Beaumont</hi> (Famille de): Gautier « dit Rosset » v. <ref type="see" target="#SLES-PR_rs_0038" corresp="#SLES-PR_liste_A">Rosset</ref></rs>. </item>
+ <item xml:id="SLES-PR_rs_0176"><rs><hi rend="i">Beaumont</hi>, Maison du Comte. v. <ref type="see" target="#SLES-PR_rs_0812" corresp="#SLES-PR_liste_G">Gislebert</ref>, <ref type="see" target="#SLES-PR_rs_0812" corresp="#SLES-PR_liste_G">cordonnier</ref></rs>, <ref target="#SLES-PR_0068" n="66">68</ref>.</item>
+ <item xml:id="SLES-PR_rs_0177"><rs><hi rend="i">Beaumont</hi>, Maison du Comte. v. <ref type="see" target="#SLES-PR_rs_1458" corresp="#SLES-PR_liste_S">Lambert</ref>, <ref type="see" target="#SLES-PR_rs_1001" corresp="#SLES-PR_liste_L">cubicularius</ref></rs>, <ref target="#SLES-PR_0068" n="66">68</ref>.</item>
  <item xml:id="SLES-PR_rs_0178"><rs><hi rend="i">Beaumont</hi> (Prévots de): Renaud</rs>, <ref target="#SLES-PR_0082" n="98">82</ref>.</item>
  <item xml:id="SLES-PR_rs_0179"><rs><hi rend="i">Beaumont</hi> (Prévots de): Robert du Mont</rs>.</item>
  <item xml:id="SLES-PR_rs_0180"><rs><hi rend="i">Beauvais</hi> (Oise)</rs>. </item>
@@ -15137,12 +15137,12 @@
  <item xml:id="SLES-PR_rs_0338"><rs><hi rend="i">Bury</hi> (Oise)</rs>, <ref target="#SLES-PR_0131" n="124bis">131</ref>.</item>
  <item xml:id="SLES-PR_rs_0339"><rs><hi rend="i">Bury</hi>, Raoul de</rs>, <ref target="#SLES-PR_0003" n="6">3</ref>.</item>
  <item xml:id="SLES-PR_rs_0340"><rs><hi rend="i">Bury</hi>, Raoul, prieur de</rs>, <ref target="#SLES-PR_0064" n="62">64</ref>.</item>
- <item xml:id="SLES-PR_rs_0341"><rs><hi rend="i">Bussy, </hi> v. Boissy</rs>. </item>
+ <item xml:id="SLES-PR_rs_0341"><rs><hi rend="i">Bussy, </hi> v. <ref type="see" target="#SLES-PR_rs_0247" corresp="#SLES-PR_liste_B">Boissy</ref></rs>. </item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_C">
  <head>C</head>
  <!--<item xml:id="SLES-PR_rs_0342"><rs><hi rend="sc">Cadurce</hi> ou Cahours, chancelier</rs>, <ref>44</ref>.</item>-->
- <item xml:id="SLES-PR_rs_0343"><rs><hi rend="i">Cailo, </hi> v. Cailloüel</rs>. </item>
+ <item xml:id="SLES-PR_rs_0343"><rs><hi rend="i">Cailo, </hi> v. <ref type="see" target="#SLES-PR_rs_0344" corresp="#SLES-PR_liste_C">Cailloüel</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0344"><rs><hi rend="i">Cailloüel</hi> (Oise)</rs>. </item>
  <item xml:id="SLES-PR_rs_0345"><rs><hi rend="i">Cailloüel (Eudes de)</hi></rs>, <ref target="#SLES-PR_0064" n="62">64.</ref></item>
  <!--<item xml:id="SLES-PR_rs_0346"><rs><hi rend="i">Cailloüel (Geoffroy de)</hi></rs>, <ref>62</ref></item>-->
@@ -15202,7 +15202,7 @@
  <!--<item xml:id="SLES-PR_rs_0400"><rs><hi rend="i">Chenevières (Guillaume de)</hi></rs>, <ref>169</ref></item>-->
  <!--<item xml:id="SLES-PR_rs_0401"><rs><hi rend="i">Chenevières (Guill. de)</hi>, fils de Guillaume</rs>, <ref>169</ref></item>-->
  <item xml:id="SLES-PR_rs_0402"><rs><hi rend="i">Chenevières</hi> (Philippe de). écuyer</rs>, <ref target="#SLES-PR_0182" n="91">182</ref>.</item>
- <item xml:id="SLES-PR_rs_0403"><rs><hi rend="i">Chenevières</hi> (Pierre de), écuyer, damoiseau, père d'Aveline de S. Leu</rs>, <ref target="#SLES-PR_0182" n="150">182</ref>, <ref target="#SLES-PR_0158" n="167">158</ref>, v. Choisel.</item>
+ <item xml:id="SLES-PR_rs_0403"><rs><hi rend="i">Chenevières</hi> (Pierre de), écuyer, damoiseau, père d'Aveline de S. Leu</rs>, <ref target="#SLES-PR_0182" n="150">182</ref>, <ref target="#SLES-PR_0158" n="167">158</ref>, v. <ref type="see" target="#SLES-PR_rs_0416" corresp="#SLES-PR_liste_C">Choisel</ref>.</item>
  <item xml:id="SLES-PR_rs_0404"><rs><hi rend="i">Chepoix</hi> (Oise)</rs>. </item>
  <item xml:id="SLES-PR_rs_0405"><rs><hi rend="i">Chepoix</hi> (Gautier de)</rs>, <ref target="#SLES-PR_0006" n="85">6</ref>.</item>
  <item xml:id="SLES-PR_rs_0406"><rs><hi rend="i">Chérisi</hi> (Pas-de-Calais) ou Quiry (Somme)</rs>. </item>
@@ -15223,7 +15223,7 @@
  <item xml:id="SLES-PR_rs_0421"><rs><hi rend="sc">Choisel</hi>, Simon, chev. père d'Adam et de Gondacre</rs>, <ref target="#SLES-PR_0084" n="80">84</ref>.</item>
  <item xml:id="SLES-PR_rs_0422"><rs><hi rend="i">Cinqueux</hi> « Sinquez » (Oise)</rs>, <ref target="#SLES-PR_0079" n="75">79</ref>bis, <ref target="#SLES-PR_0108" n="103">108</ref><!-- <ref>105</ref>--><!-- <ref>163</ref>-->.</item>
  <item xml:id="SLES-PR_rs_0423"><rs><hi rend="i">Cinqueux</hi> (Eudes de)</rs>, <ref target="#SLES-PR_0079" n="75">79</ref>bis.</item>
- <item xml:id="SLES-PR_rs_0424"><rs><hi rend="i">Cinqueux</hi> (Jean Carbonnel de), v. Carbonnel</rs>. </item>
+ <item xml:id="SLES-PR_rs_0424"><rs><hi rend="i">Cinqueux</hi> (Jean Carbonnel de), v. <ref type="see" target="#SLES-PR_rs_0352" corresp="#SLES-PR_liste_C">Carbonnel</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0425"><rs><hi rend="i">Cinqueux</hi> (Jean, doyen de Pont et curé de)</rs>, <ref target="#SLES-PR_0166" n="157">166</ref>. Jean.</item>
  <item xml:id="SLES-PR_rs_0426"><rs><hi rend="sc">Clare</hi> (Gislebert de), marié à Adélaïde de Clermont</rs>, <ref target="#SLES-PR_0042" n="40">42</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0427"><rs><hi rend="sc">Clémence de Bar</hi>, fille de Renaud, comte de Bar, veuve de Lancelin de Dammartin, seconde femme de Renaud de Clermont, etc.</rs>, <ref>II. 21</ref>, <ref>II. 44</ref>, <ref>II. 59</ref>.</item>-->
@@ -15274,7 +15274,7 @@
  <item xml:id="SLES-PR_rs_0472"><rs><hi rend="i">Corbie</hi> (Abbaye de)</rs>. </item>
  <item xml:id="SLES-PR_rs_0473"><rs><hi rend="i">Corbie</hi> (Garnier, abbé de)</rs>, <ref target="#SLES-PR_0177" n="164">177</ref>quater.</item>
  <item xml:id="SLES-PR_rs_0474"><rs><hi rend="sc">Cordelé</hi>, (Baudoin)</rs>, <ref target="#SLES-PR_0102" n="97">102</ref>.</item>
- <item xml:id="SLES-PR_rs_0475"><rs><hi rend="sc">Cordonnier</hi> ou sueur « Sutor », v. Adam</rs>. </item>
+ <item xml:id="SLES-PR_rs_0475"><rs><hi rend="sc">Cordonnier</hi> ou sueur « Sutor », v. <ref type="see" target="#SLES-PR_rs_0014" corresp="#SLES-PR_liste_A">Adam</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0476"><rs><hi rend="sc">Corart</hi> « Rauberti Corari »</rs>, <ref target="#SLES-PR_0064" n="62">64</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0477"><rs><hi rend="sc">Coulon</hi> Nicolas vend l'hôtel des Maillets</rs>, <ref>197</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0478"><rs><hi rend="i">Courlaye, </hi> aujourd'hui La Rue-St-Pierre (Oise)</rs>, <ref target="#SLES-PR_0010" n="14">10</ref><!-- <ref>31</ref>-->.</item>
@@ -15325,7 +15325,7 @@
  <item xml:id="SLES-PR_rs_0523"><rs><hi rend="i">Cuisy</hi> (S.-et-M.)</rs>. </item>
  <item xml:id="SLES-PR_rs_0524"><rs><hi rend="i">Cuisy</hi>, Guillaume de. chevalier</rs>, <ref target="#SLES-PR_0125" n="119">125</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_D">
  <head>D</head>
  <item xml:id="SLES-PR_rs_0525"><rs><hi rend="sc">Dahelin</hi>, maire</rs>, <ref target="#SLES-PR_0082" n="85">82</ref>.</item>
  <item xml:id="SLES-PR_rs_0526"><rs><hi rend="sc">Dahelin</hi></rs>. </item>
@@ -15346,9 +15346,9 @@
  <item xml:id="SLES-PR_rs_0541"><rs><hi rend="i">Dammartin, </hi> Pierre de. ev. de Beauvais</rs>, <ref target="#SLES-PR_0024" n="25">24</ref>.</item>
  <item xml:id="SLES-PR_rs_0542"><rs><hi rend="i">Dammartin, </hi> Reri, marié à Petronille dont Guillaume</rs>, <ref target="#SLES-PR_0075" n="73">75</ref>.</item>
  <item xml:id="SLES-PR_rs_0543"><rs><hi rend="i">Dammartin, </hi> Robert sénéchal de</rs>. Bourdin et Robert.</item>
- <item xml:id="SLES-PR_rs_0544"><rs><hi rend="i">Dammartin, </hi> (</rs>. Voir <hi rend="i">infrà</hi> le tableau généalogique des comtes de Dammartin).</item>
+ <item xml:id="SLES-PR_rs_0544"><rs><hi rend="i">Dammartin, </hi> (</rs>. Voir <ref type="see" target="#SLES-PR_rs_0528" corresp="#SLES-PR_liste_D"><hi rend="i">infrà</hi> le tableau généalogique des comtes de Dammartin)</ref>.</item>
  <item xml:id="SLES-PR_rs_0545"><pb n="197"/><rs><hi rend="i">Dammartin</hi></rs>, <ref target="#page197">197</ref>.</item>
- <item xml:id="SLES-PR_rs_0546"><rs><hi rend="sc">Daridel</hi>, v. Aridel</rs>. </item>
+ <item xml:id="SLES-PR_rs_0546"><rs><hi rend="sc">Daridel</hi>, v. <ref type="see" target="#SLES-PR_rs_0100" corresp="#SLES-PR_liste_A">Aridel</ref></rs>. </item>
  <!--<item xml:id="SLES-PR_rs_0547"><rs><hi rend="sc">Debrie</hi>, Jean</rs>, <ref>192</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0548"><rs><hi rend="sc">Deenel</hi> de Riu [Rieux] fils d'Aguise Bole</rs>, <ref target="#SLES-PR_0120" n="114">120</ref>.</item>
  <item xml:id="SLES-PR_rs_0549"><rs><hi rend="sc">Deennel</hi>, Aubin de</rs>, <ref target="#SLES-PR_0123" n="82">123</ref>.</item>
@@ -15406,7 +15406,7 @@
  <item xml:id="SLES-PR_rs_0601"><rs><hi rend="sc">Du Rand</hi>, prêtre de S. Martin de Pontoise</rs>, <ref target="#SLES-PR_0089" n="84">89</ref>.</item>
  <item xml:id="SLES-PR_rs_0602"><rs><hi rend="sc">Du Rand</hi>, prévôt du comte de Clermont</rs>, <ref target="#SLES-PR_0084" n="79">84</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_E">
  <head><pb n="198"/>E</head>
  <item xml:id="SLES-PR_rs_0603"><rs><hi rend="sc">Ebroïn</hi>, chapelain de la reine</rs>, <ref target="#SLES-PR_0077" n="94">77</ref>.</item>
  <item xml:id="SLES-PR_rs_0604"><rs><hi rend="sc">Edeva</hi></rs>, <ref target="#SLES-PR_0056" n="54">56</ref>.</item>
@@ -15479,7 +15479,7 @@
  <item xml:id="SLES-PR_rs_0671"><rs><hi rend="sc">Evrard</hi>, prêtre</rs>, <ref target="#SLES-PR_0031" n="34">31</ref>, <ref target="#SLES-PR_0064" n="62">64</ref>.</item>
  <item xml:id="SLES-PR_rs_0672"><rs><hi rend="sc">Evrard</hi>, Serviteur du prieuré</rs>, <ref target="#SLES-PR_0036" n="88">36</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_F">
  <head>F</head>
  <item xml:id="SLES-PR_rs_0673"><rs><hi rend="sc">Fayel</hi> (Raoul, chev. sire du)</rs>, <ref target="#SLES-PR_0174" n="164">174</ref>.</item>
  <item xml:id="SLES-PR_rs_0674"><rs><hi rend="i">Fécamp, </hi> lieudit à Villers-Saint-Paul (Oise)</rs>. </item>
@@ -15534,7 +15534,7 @@
  <item xml:id="SLES-PR_rs_0723"><rs><hi rend="sc">Fromont</hi></rs>. Cauffry et S. Maximin.</item>
  <item xml:id="SLES-PR_rs_0724"><rs><hi rend="i">Furnines</hi></rs>, <ref target="#SLES-PR_0105" n="100">105</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_G">
  <head>G</head>
  <item xml:id="SLES-PR_rs_0725"><rs><hi rend="sc">Galeux</hi> (Raoul le)</rs>, <ref target="#SLES-PR_0003" n="32">3</ref>, <ref target="#SLES-PR_0060" n="58">60</ref>, <ref target="#SLES-PR_0065" n="63">65</ref>.</item>
  <item xml:id="SLES-PR_rs_0726"><rs><hi rend="sc">Gallus</hi></rs>. Le Coq.</item>
@@ -15591,7 +15591,7 @@
  <item xml:id="SLES-PR_rs_0777"><rs><hi rend="sc">Geoffroy</hi>, du Mur</rs>. Voir du Mur.</item>
  <item xml:id="SLES-PR_rs_0778"><rs><hi rend="sc">Geoffroy</hi>, év. de Senlis</rs>, <ref target="#SLES-PR_0087" n="83">87</ref><!-- <ref>83</ref>--> bis<!-- <ref>93</ref>-->.</item>
  <item xml:id="SLES-PR_rs_0779"><rs><hi rend="sc">Geoffroy</hi>, fils d'Hersende</rs>, <ref target="#SLES-PR_0019" n="17">19</ref>.</item>
- <item xml:id="SLES-PR_rs_0780"><rs><hi rend="sc">Geoffroy</hi>, fils d'Hugues de Vézelay, v. Vézelay</rs>. </item>
+ <item xml:id="SLES-PR_rs_0780"><rs><hi rend="sc">Geoffroy</hi>, fils d'Hugues de Vézelay, v. <ref type="see" target="#SLES-PR_rs_1617" corresp="#SLES-PR_liste_V">Vézelay</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0781"><rs><hi rend="sc">Geoffroy</hi>, Forestier, serviteur du prieuré</rs>, <ref target="#SLES-PR_0003" n="4">3</ref>, <pb n="200"/> <ref target="#SLES-PR_0008" n="6">8</ref>, <ref target="#SLES-PR_0023" n="15">23</ref>, <ref target="#SLES-PR_0010" n="16">10</ref><!-- <ref>18</ref>-->, <ref target="#SLES-PR_0020" n="21">20</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0782"><rs><hi rend="sc">Geoffroy</hi>, neveu d'Eudes</rs>, <ref>109</ref>(note).</item>-->
  <item xml:id="SLES-PR_rs_0783"><rs><hi rend="sc">Geoffroy</hi>, prieur de S. Arnould, de Crépy</rs>, <ref target="#SLES-PR_0093" n="93">93</ref>.</item>
@@ -15599,7 +15599,7 @@
  <item xml:id="SLES-PR_rs_0785"><rs><hi rend="sc">Geoffroy</hi>, prieur de S. Nicolas d'Acy</rs>, <ref target="#SLES-PR_0117" n="111">117</ref>.</item>
  <item xml:id="SLES-PR_rs_0786"><rs><hi rend="sc">Geoffroy</hi>, dit le Vicomte</rs>, <ref target="#SLES-PR_0013" n="18">13</ref>.</item>
  <item xml:id="SLES-PR_rs_0787"><rs><hi rend="sc">Gerard</hi>, clerc de Bulles</rs>, <ref target="#SLES-PR_0032" n="98">32</ref>.</item>
- <item xml:id="SLES-PR_rs_0788"><rs><hi rend="sc">Gerard</hi>, de Gerberoy, v. Gerberoy</rs>. </item>
+ <item xml:id="SLES-PR_rs_0788"><rs><hi rend="sc">Gerard</hi>, de Gerberoy, v. <ref type="see" target="#SLES-PR_rs_0796" corresp="#SLES-PR_liste_G">Gerberoy</ref></rs>. </item>
  <item xml:id="SLES-PR_rs_0789"><rs><hi rend="sc">Gerard</hi>, de « Luenni » (Quesmy ?), chev</rs>, <ref target="#SLES-PR_0099" n="94">99</ref>.</item>
  <item xml:id="SLES-PR_rs_0790"><rs><hi rend="sc">Gerard</hi>, des Aloes</rs>, <ref target="#SLES-PR_0128" n="122">128</ref>. Dammartin.</item>
  <item xml:id="SLES-PR_rs_0791"><rs><hi rend="sc">Geraud</hi>, serviteur d'Hersende de Vineuil</rs>, <ref target="#SLES-PR_0127" n="121">127</ref>.</item>
@@ -15690,7 +15690,7 @@
  <!--<item xml:id="SLES-PR_rs_0876"><rs><hi rend="sc">Payen de Noisi</hi></rs>, <ref>78</ref></item>-->
  <item xml:id="SLES-PR_rs_0877"><rs><hi rend="sc">Guncelin</hi></rs>. Noisi.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_H">
  <head><pb n="201"/> H</head>
  <item xml:id="SLES-PR_rs_0878"><rs><hi rend="sc">Haimier</hi>, marié à Marie, dont Haimier, marié à Edève</rs>, <ref target="#SLES-PR_0056" n="54">56</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0879"><rs><hi rend="i">Halatte</hi> (Forêt de)</rs>, <ref>170</ref>, <ref>191</ref>.</item>-->
@@ -15761,7 +15761,7 @@
  <item xml:id="SLES-PR_rs_0944"><rs><hi rend="sc">Humbert</hi>, sacriste de Cluny</rs>, <ref target="#SLES-PR_0084" n="80">84</ref>.</item>
  <item xml:id="SLES-PR_rs_0945"><rs><hi rend="sc">Huneau</hi>, serviteur de Louis de Blois</rs>, <ref target="#SLES-PR_0084" n="86">84</ref><!-- <ref>87</ref>-->.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_I">
  <head>I</head>
  <item xml:id="SLES-PR_rs_0946"><rs><hi rend="sc">Igier</hi></rs>, <ref target="#SLES-PR_0024" n="1">24</ref><!-- doublon meme acte SLES-PR_0024: <ref target="#SLES-PR_0024" n="22">24</ref> -->, Dammartin.</item>
  <!--<item xml:id="SLES-PR_rs_0947"><rs><hi rend="sc">Igier</hi>, chev. fils de Nivelon</rs>, <ref>13</ref>, <ref>14</ref>.</item>-->
@@ -15785,7 +15785,7 @@
  <item xml:id="SLES-PR_rs_0965"><rs><hi rend="sc">Ives</hi>, père de Robert: « Robertus Ivonis »</rs>, <ref target="#SLES-PR_0056" n="54">56</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_0966"><rs><hi rend="sc">Ives</hi>, prieur de Cluny</rs>, <ref>7</ref>.</item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_J">
  <head>J</head>
  <!--<item xml:id="SLES-PR_rs_0967"><rs><hi rend="sc">Jacques Donat</hi>, prieur de S. Leu</rs>, <ref>182</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0968"><rs><hi rend="sc">Jangaria</hi></rs>. Jonquières.</item>
@@ -15816,7 +15816,7 @@
  <!--<item xml:id="SLES-PR_rs_0993"><rs><hi rend="i">Jumel</hi>, Pierre de</rs>, <ref>94</ref>.</item>-->
  <item xml:id="SLES-PR_rs_0994"><rs><hi rend="sc">Jumièges</hi>, Religieux de. à Montataire</rs>, <ref target="#SLES-PR_0060" n="58">60</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_L">
  <head>L</head>
  <!--<item xml:id="SLES-PR_rs_0995"><rs><hi rend="sc">La Charité</hi>, Guill. de</rs>, <ref>124</ref>bis.</item>-->
  <!--<item xml:id="SLES-PR_rs_0996"><rs><hi rend="sc">La Fontaine (Simon de)</hi></rs>, <ref>158</ref></item>-->
@@ -15914,7 +15914,7 @@
  <item xml:id="SLES-PR_rs_1088"><rs><hi rend="i">Luzarches (Reri de)</hi>, frère du précédent</rs>, <ref target="#SLES-PR_0008" n="11">8.</ref></item>
  <item xml:id="SLES-PR_rs_1089"><rs><hi rend="sc">Lyon</hi>, Humbert ou Héracle, év, de</rs>, <ref target="#SLES-PR_0071" n="69">71</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_M">
  <head>M</head>
  <item xml:id="SLES-PR_rs_1090"><rs><hi rend="i">Magnanville</hi> (S.-et-O.). Baudoin, maire</rs>, <ref target="#SLES-PR_0003" n="3">3</ref>.</item>
  <item xml:id="SLES-PR_rs_1091"><rs><hi rend="sc">Manassès</hi></rs>, <ref target="#SLES-PR_0034" n="32">34</ref>.</item>
@@ -16016,7 +16016,7 @@
  <item xml:id="SLES-PR_rs_1187"><rs><hi rend="i">Mur.</hi>, Raoul fils d'Aélis</rs>, <ref target="#SLES-PR_0083" n="19">83</ref>, <ref target="#SLES-PR_0021" n="23">21</ref>.</item>
  <item xml:id="SLES-PR_rs_1188"><rs><hi rend="sc">Murat</hi>. Pierre du, chev</rs>, <ref target="#SLES-PR_0120" n="114">120</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_N">
  <head>N</head>
  <item xml:id="SLES-PR_rs_1189"><rs><hi rend="i">Nanteuil</hi> (Oise)</rs>, <ref target="#SLES-PR_0001" n="3">1</ref>.</item>
  <item xml:id="SLES-PR_rs_1190"><rs><hi rend="i">Nanteuil (Adam de)</hi>, seigneur</rs>, <ref target="#SLES-PR_0001" n="1">1.</ref></item>
@@ -16040,7 +16040,7 @@
  <item xml:id="SLES-PR_rs_1208"><rs><hi rend="i">Noyon</hi> (Oise)</rs>. </item>
  <item xml:id="SLES-PR_rs_1209"><rs><hi rend="i">Noyon</hi>, Robert de Montaigu, official de</rs>, <ref target="#SLES-PR_0109" n="104">109</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_O">
  <head>O</head>
  <item xml:id="SLES-PR_rs_1210"><rs><hi rend="sc">Odardus</hi></rs>. Oudart.</item>
  <item xml:id="SLES-PR_rs_1211"><rs><hi rend="sc">Odelin</hi>, fils du prévôt Gautier</rs>, <ref target="#SLES-PR_0040" n="149">40</ref>.</item>
@@ -16069,7 +16069,7 @@
  <item xml:id="SLES-PR_rs_1234"><rs><hi rend="sc">Ourson (Galon, fils d')</hi></rs><!-- <ref>6</ref>-->, <ref target="#SLES-PR_0015" n="19">15</ref>, <ref target="#SLES-PR_0053" n="51">53.</ref></item>
  <!--<item xml:id="SLES-PR_rs_1235"><rs><hi rend="sc">Ourson (Lambert, fils d')</hi></rs>, <ref>6</ref>, <ref>19</ref>, <ref>51</ref></item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_P">
  <head>P</head>
  <item xml:id="SLES-PR_rs_1236"><rs><hi rend="i">Palaiseau</hi> (S. et O.)</rs>. </item>
  <!--<item xml:id="SLES-PR_rs_1237"><rs><hi rend="i">Palaiseau</hi>, Girard de</rs>, <ref>139</ref>.</item>-->
@@ -16151,13 +16151,13 @@
  <item xml:id="SLES-PR_rs_1313"><rs><hi rend="sc">Pruile</hi>, Henri de</rs>, <ref target="#SLES-PR_0064" n="62">64</ref>.</item>
  <item xml:id="SLES-PR_rs_1314"><rs><hi rend="i">Puits</hi> Haimard du</rs>, <ref target="#SLES-PR_0172" n="162">172</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_Q">
  <head>Q</head>
  <item xml:id="SLES-PR_rs_1315"><rs><hi rend="i">Quesnel</hi> (Oise), Aubri du</rs>, <ref target="#SLES-PR_0164" n="97">164</ref>.</item>
- <item xml:id="SLES-PR_rs_1316"><rs><hi rend="i">Queux</hi></rs>. Voir Coq.</item>
+ <item xml:id="SLES-PR_rs_1316"><rs><hi rend="i">Queux</hi></rs>. Voir <ref type="see" target="#SLES-PR_rs_1031" corresp="#SLES-PR_liste_L">Coq</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1317"><rs><hi rend="i">Quincampoix</hi></rs>, <ref>195</ref>bis.</item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_R">
  <head>R</head>
  <item xml:id="SLES-PR_rs_1318"><rs><hi rend="i">Raguet, </hi> Raoul « de Rapido vado »</rs>, <ref target="#SLES-PR_0036" n="38">36</ref>.</item>
  <item xml:id="SLES-PR_rs_1319"><rs><hi rend="i">Raide</hi> de Dammartin</rs>. Dammartin.</item>
@@ -16201,7 +16201,7 @@
  <item xml:id="SLES-PR_rs_1357"><rs><hi rend="sc">Renaud</hi>, prévôt de Beaumont</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
  <item xml:id="SLES-PR_rs_1358"><rs><hi rend="sc">Renaud</hi>, prévôt de Mello</rs>, <ref target="#SLES-PR_0066" n="64">66</ref>.</item>
  <item xml:id="SLES-PR_rs_1359"><rs><hi rend="sc">Renaud</hi>, prieur de Mello</rs>, <ref target="#SLES-PR_0009" n="7">9</ref>, <ref target="#SLES-PR_0060" n="58">60</ref>.</item>
- <item xml:id="SLES-PR_rs_1360"><rs><hi rend="sc">Renaud</hi>, Serviteur du prieuré</rs>, <ref target="#SLES-PR_0032" n="35">32</ref>. Voir <hi rend="i">Boulogne.</hi></item>
+ <item xml:id="SLES-PR_rs_1360"><rs><hi rend="sc">Renaud</hi>, Serviteur du prieuré</rs>, <ref target="#SLES-PR_0032" n="35">32</ref>. Voir <ref type="see" target="#SLES-PR_rs_0261" corresp="#SLES-PR_liste_B"><hi rend="i">Boulogne.</hi></ref></item>
  <item xml:id="SLES-PR_rs_1361"><rs><hi rend="sc">Renouard</hi> (Rainoardus), serviteur du prieuré</rs>, <ref target="#SLES-PR_0008" n="6">8</ref>, <ref target="#SLES-PR_0026" n="23">26</ref><!-- <ref>24</ref>-->.</item>
  <item xml:id="SLES-PR_rs_1362"><rs><hi rend="sc">Reri</hi> « Roricus »</rs>. Andeli. etc.</item>
  <item xml:id="SLES-PR_rs_1363"><rs><hi rend="sc">Richard</hi>, comte de Chester</rs>, <ref target="#SLES-PR_0065" n="63">65</ref>.</item>
@@ -16233,7 +16233,7 @@
  <item xml:id="SLES-PR_rs_1389"><rs><hi rend="sc">Romestans</hi>, Rogier</rs>, <ref target="#SLES-PR_0006" n="10">6</ref>.</item>
  <item xml:id="SLES-PR_rs_1390"><rs><hi rend="i">Ronquerolles</hi> (S. et O.), Pierre de</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
  <item xml:id="SLES-PR_rs_1391"><rs><hi rend="i">Rosnay</hi> en Champagne</rs>. </item>
- <item xml:id="SLES-PR_rs_1392"><rs><hi rend="sc">Rosset</hi>, Gautier dit., père d'Aimon, archid. de Frogier, de Garnier et de Gautier, famille de Beaumont</rs>, <ref target="#SLES-PR_0069" n="67">69</ref>. v. Beaumont.</item>
+ <item xml:id="SLES-PR_rs_1392"><rs><hi rend="sc">Rosset</hi>, Gautier dit., père d'Aimon, archid. de Frogier, de Garnier et de Gautier, famille de Beaumont</rs>, <ref target="#SLES-PR_0069" n="67">69</ref>. v. <ref type="see" target="#SLES-PR_rs_0175" corresp="#SLES-PR_liste_B">Beaumont</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1393"><rs><hi rend="i">Rotheleux</hi></rs>, <ref>127</ref>.</item>-->
  <!--<item xml:id="SLES-PR_rs_1394"><rs><hi rend="i">Rouen (Guill. de Rathomago)</hi></rs>, <ref>177</ref></item>-->
  <!--<item xml:id="SLES-PR_rs_1395"><rs><hi rend="i">Rouen (Géraud de Rathomago)</hi></rs>, <ref>177</ref></item>-->
@@ -16249,7 +16249,7 @@
  <item xml:id="SLES-PR_rs_1405"><rs><hi rend="i">Rufaut, </hi> lieu dit à S. Leu</rs>, <ref target="#SLES-PR_0010" n="16">10</ref><!-- <ref>35</ref>-->.</item>
  <!--<item xml:id="SLES-PR_rs_1406"><rs><hi rend="i">Rully</hi> (Oise), Renaud de</rs>, <ref>176</ref>.</item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_S">
  <head>S</head>
  <item xml:id="SLES-PR_rs_1407"><rs><hi rend="i">S. Amand</hi> (Pas-de-Calais), abbaye de</rs>, <ref target="#SLES-PR_0070" n="68">70</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1408"><rs><hi rend="i">S. Arnoul</hi> de Crépy, prieuré</rs>, <ref>75</ref>.</item>-->
@@ -16350,7 +16350,7 @@
  <item xml:id="SLES-PR_rs_1503"><rs><hi rend="i">S. Victor</hi> de Paris. Eudes, prieur de</rs>, <ref target="#SLES-PR_0089" n="84">89</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1504"><rs><hi rend="i">S. Vincent</hi> de Senlis</rs>, <ref>171</ref>.</item>-->
  <!--<item xml:id="SLES-PR_rs_1505"><rs><hi rend="i">Sainte-Geneviève</hi></rs>, <ref>178</ref>bis.</item>-->
- <item xml:id="SLES-PR_rs_1506"><rs><hi rend="i">Ste Marguerite</hi> d'Elincourt</rs>. Voir Elincourt.</item>
+ <item xml:id="SLES-PR_rs_1506"><rs><hi rend="i">Ste Marguerite</hi> d'Elincourt</rs>. Voir <ref type="see" target="#SLES-PR_rs_0850" corresp="#SLES-PR_liste_G">Elincourt</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1507"><rs><hi rend="i">Ste Marguerite</hi>, Jean de</rs>, <ref>177</ref>.</item>-->
  <item xml:id="SLES-PR_rs_1508"><rs><hi rend="i">Sacy, </hi> Mathieu de</rs>, <ref target="#SLES-PR_0108" n="103">108</ref>, <ref target="#SLES-PR_0124" n="118">124</ref>.</item>
  <item xml:id="SLES-PR_rs_1509"><rs><hi rend="i">Sacy, </hi> Pierre de</rs>, <ref target="#SLES-PR_0108" n="103">108</ref>.</item>
@@ -16394,7 +16394,7 @@
  <!--<item xml:id="SLES-PR_rs_1547"><rs><hi rend="i">Suze (Gace de)</hi></rs>, <ref>196</ref></item>-->
  <!--<item xml:id="SLES-PR_rs_1548"><rs><hi rend="i">Suze (Jean de)</hi>, fils de Gace</rs>, <ref>196</ref></item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_T">
  <head>T</head>
  <!--<item xml:id="SLES-PR_rs_1549"><rs><hi rend="sc">Taconeau</hi>, J</rs>, <ref>170</ref>.</item>-->
  <item xml:id="SLES-PR_rs_1550"><rs><hi rend="sc">Tameel</hi>, P</rs>, <ref target="#SLES-PR_0166" n="157">166</ref>.</item>
@@ -16440,12 +16440,12 @@
  <!--<item xml:id="SLES-PR_rs_1590"><rs><hi rend="i">Troyes</hi></rs>, <ref>184</ref>.</item>-->
  <!--<item xml:id="SLES-PR_rs_1591"><rs><hi rend="sc">Trufferel</hi> (Conrard de)</rs>, <ref>189</ref>.</item>-->
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_U">
  <head><pb n="210"/> <hi rend="b">U</hi></head>
  <item xml:id="SLES-PR_rs_1592"><rs><hi rend="i">Ully</hi> (Oise), Jean d'. chanc. de l'église de Beauvais</rs>, <ref target="#SLES-PR_0189" n="147">189</ref>.</item>
  <item xml:id="SLES-PR_rs_1593"><rs><hi rend="sc">Urbain</hi> IV</rs>, <ref target="#SLES-PR_0193" n="146">193</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_V">
  <head>V</head>
  <item xml:id="SLES-PR_rs_1594"><rs><hi rend="i">Vaencort</hi></rs>. Giencourt.</item>
  <item xml:id="SLES-PR_rs_1595"><rs><hi rend="i">Val Renard, </hi> abbaye du</rs>, <ref target="#SLES-PR_0082" n="78">82</ref>.</item>
@@ -16504,13 +16504,13 @@
  <!--<item xml:id="SLES-PR_rs_1648"><rs><hi rend="sc">Vulard (Gautier)</hi></rs>, <ref>6</ref></item>-->
  <item xml:id="SLES-PR_rs_1649"><rs><hi rend="sc">Vulard (Foulques)</hi>, fils de Gautier</rs>, <ref target="#SLES-PR_0003" n="6">3.</ref></item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_W">
  <head>W</head>
  <item xml:id="SLES-PR_rs_1650"><rs><hi rend="sc">Wandelgarde</hi>, fille d'Ogier de Dammartin</rs>, <ref target="#SLES-PR_0006" n="4">6</ref>.</item>
  <item xml:id="SLES-PR_rs_1651"><rs><hi rend="sc">Wiffrid</hi></rs>. Guiffrey.</item>
  <item xml:id="SLES-PR_rs_1652"><rs><hi rend="i">Winchester, </hi> Henri, év. de</rs>, <ref target="#SLES-PR_0073" n="71">73</ref>.</item>
  </list>
- <list type="index">
+ <list type="index" xml:id="SLES-PR_liste_Y">
  <head>Y</head>
  <item xml:id="SLES-PR_rs_1653"><rs><hi rend="sc">Yrlay</hi>, Pierre d'., doyen de S. Taurin</rs>, <ref target="#SLES-PR_0179" n="166">179</ref>.</item>
  <!--<item xml:id="SLES-PR_rs_1654"><rs><hi rend="sc">Yvon</hi>, écuyer de Bellefontaine</rs>, <ref>197</ref>.</item>-->

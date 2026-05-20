@@ -2,7 +2,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l'Hôtel-Dieu de Pontoise</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11879">Cartulaire de l'Hôtel-Dieu de Pontoise</title>
         <title type="short">Hôtel-Dieu de Pontoise</title>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
@@ -94,7 +94,7 @@
       <sourceDesc>
         <bibl><title>Cartulaire de l'Hôtel-Dieu de Pontoise</title> publié avec des notes d'après
           les originaux par <author>Joseph Depoin</author>, éd. <publisher>Société historique du
-            Vexin</publisher>,<date>1886</date>
+            Vexin</publisher>,<date type="publication">1886</date>
         </bibl>
       </sourceDesc>
     </fileDesc>
@@ -120,7 +120,7 @@
         <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -131,7 +131,7 @@
     <profileDesc>
       <creation>
         <date>1886</date>
-      </creation>
+      <date type="coverage" notBefore="1190" notAfter="1326">1190/1326</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
@@ -1200,7 +1200,7 @@
                 <s><persName>Roberto Minario</persName>.</s>
                 <s><persName>Drocone de Chambliaco</persName>.</s>
                 <s>Actum <date>anno gracie <num>Mº CCº XIII<hi rend="sup">mo</hi></num> in crastino
-                    festi <abbr>S<hi rend="sup">ti</hi></abbr> Gregorii.<note n="*" xml:id="aid117066">La fête de Saint Grégoire le Grand
+                    festi <abbr>S<hi rend="sup">ti</hi></abbr> Gregorii.<note n="1" xml:id="aid117066">La fête de Saint Grégoire le Grand
                 se célèbre le 13 mars.</note></date></s>
               </p>
             </div>

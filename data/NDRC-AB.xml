@@ -96,12 +96,12 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
+        <bibl source="https://gallica.bnf.fr/ark:/12148/btv1b100389713"><title>Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
           Saint-Augustin au diocèse de Paris, d’après le manuscrit original de la Bibliothèque
           impériale, enrichi de notes, d’index et d’un dictionnaire géographique, suivi d’un précis
           historique et de la description de l’ancienne abbaye, d’une notice sur la paroisse et la
           seigneurie de Lévis et de notes historiques et généalogiques sur les seigneurs de
-          Lévis</title>, éd. Auguste Moutié, Paris : H. Plon, 1862, XXXII-476 pages.</bibl>
+          Lévis</title>, éd. Auguste Moutié, Paris : H. Plon, <date type="publication">1862</date>, XXXII-476 pages.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -126,7 +126,7 @@
         <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -144,7 +144,7 @@
     <profileDesc>
       <creation>
         <date>1862</date>
-      </creation>
+      <date type="coverage" notBefore="1190" notAfter="1587">1190/1587</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>

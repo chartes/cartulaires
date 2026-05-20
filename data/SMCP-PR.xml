@@ -2,12 +2,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Recueil de chartes et documents de Saint-Martin des Champs</title>
+        <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=69567">Recueil de chartes et documents de Saint-Martin des Champs</title>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
-        <editor>Sebastien Peyrard</editor>
-        <editor>Clotilde Romet</editor>
-        <editor>Romain Wenz</editor>
+        <editor ref="https://www.idref.fr/114044023 https://data.bnf.fr/ark:/12148/cb17061429f">Sebastien Peyrard</editor>
+        <editor ref="https://www.idref.fr/139498478 https://data.bnf.fr/ark:/12148/cb16164968g">Clotilde Romet</editor>
+        <editor ref="https://www.idref.fr/133350665">Romain Wenz</editor>
         <respStmt>
           <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
           <resp>Direction éditoriale</resp>
@@ -97,10 +97,10 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Recueil de chartes et documents de Saint-Martin-des-Champs : Monastère
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k255713m"><title>Recueil de chartes et documents de Saint-Martin-des-Champs : Monastère
             parisien</title> par <author>J. Depoin</author>, Chevetogne (Bretagne):
             <publisher>Abbaye de Ligugé</publisher>, Paris: <publisher>Jouve</publisher>
-          <date>1912-1921</date>, 5 vol.</bibl>
+          <date type="publication">1912-1921</date>, 5 vol.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -125,14 +125,14 @@
             <citeStructure unit="sous-section" match="group" use="default">
               <citeData property="dct:title" use="head[1]"/>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-                <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+                <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
                 <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
                 <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
                 <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
               <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
             </citeStructure>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="concat(@n, ' (', front[1]/docDate[1]/date[1], ')' )"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
@@ -144,7 +144,7 @@
     <profileDesc>
       <creation>
         <date>1912-1921</date>
-      </creation>
+      <date type="coverage" notBefore="710" notAfter="1285">710/1285</date></creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
@@ -48281,7 +48281,7 @@
               <argument>
                 <p>Agnès, comtesse de Meulan, approuve l'aumône faite à Notre-Dame de Gournay par
                   Anseau de Combault de la dîme au Petit-Pontault, qu'Anseau avait acquise de son
-                  gendre Jean<note n="*" xml:id="aid221002">Les chartes <hi rend="b">403</hi> et <hi rend="b">404</hi> sont rapprochées du nº<hi rend="b">402</hi>
+                  gendre Jean<note n="1" xml:id="aid221002">Les chartes <hi rend="b">403</hi> et <hi rend="b">404</hi> sont rapprochées du nº<hi rend="b">402</hi>
                   par hypothèse.</note>.</p>
               </argument>
               <div type="tradition">
@@ -63299,7 +63299,7 @@
                 <p>Les Commissaires pontificaux nommés par Célestin <num>III</num> déboutent
                   Gervais, curé de Saint-Denis de la Châtre, de ses prétentions sur la chapelle
                   Sainte-Catherine, élevée dans la maison<pb n="156"/>contiguë à cette église et
-                  appartenant au comte de Beaumont-sur-Oise Mathieu III<note n="*" xml:id="aid163462">Il a paru sans intérêt de
+                  appartenant au comte de Beaumont-sur-Oise Mathieu III<note n="1" xml:id="aid163462">Il a paru sans intérêt de
                   reproduire cette sentence ; elle touche indirectement Saint-Martin-des-Champs, à
                   qui l'église Saint-Denis de la Châtre fut donnée en échange de celle de Montmartre
                   par Louis <num>VI</num> (cf. nº<hi rend="b">201,</hi>
@@ -82381,7 +82381,7 @@ chevalier, et l'hôpital
                 <p>Pierre <num>III</num>, évêque de Meaux, décide le partage égal des offrandes aux
                   enterrages ou convois faits à Saint-Martin de Crécy,<pb n="4_0002"/> entre le
                   Prieur du lieu et les chanoines de La Chapelle-sur-Crécy, à l'exception du drap
-                  funèbre placé sur les corps inhumés dans le ch&#x9C;ur des moines ; le Prieur assistera
+                  funèbre placé sur les corps inhumés dans le chur des moines ; le Prieur assistera
                   à la reddition des comptes au Chapitre, et votera comme l'un des chanoines pour la
                   désignation du gardien des troncs.</p>
               </argument>
@@ -83342,7 +83342,7 @@ chevalier, et l'hôpital
               </index>
               <argument>
                 <p>Marguerite de Persan, fille du vicomte Hugues de Beaumont, avec l'assentiment de
-                  sa s&#x9C;ur Béatrice et de leurs époux Gaucher et Guillaume de Thourotte, donne cinq
+                  sa sur Béatrice et de leurs époux Gaucher et Guillaume de Thourotte, donne cinq
                   sols par an sur le cens de Persan aux moines de Saint-Léonor de
                   Beaumont-sur-Oise.</p>
               </argument>
@@ -84216,7 +84216,7 @@ chevalier, et l'hôpital
                 <p>Baudoin, prieur de Saint-Martin-des-Champs et de Longpont, et les moines de
                   Longpont, notifient que leur frère Gui, fils de sire Jean de Massy, chevalier, et
                   de dame Marguerite, a été mis en possession par ses parents de biens consacrés à
-                  des &#x9C;uvres pies, suivant la teneur de lettres de feu Guillemin [Guillaume II],
+                  des uvres pies, suivant la teneur de lettres de feu Guillemin [Guillaume II],
                   évêque de Paris.</p>
               </argument>
               <div type="tradition">
