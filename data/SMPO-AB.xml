@@ -1,8 +1,10 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11814">Cartulaire de l'abbaye de Saint-Martin de Pontoise</title>
+        <title type="short">Saint-Martin de Pontoise</title>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor ref="https://www.idref.fr/131043935 https://data.bnf.fr/fr/ark:/12148/cb16169151r">Hélène Becquet</editor>
@@ -163,9 +165,10 @@
   </teiHeader>
   <text>
     <front>
-      <head><hi rend="i">Cartulaire de l’abbaye de Saint-Martin de Pontoise</hi>, publié d’après les
+      <head>Cartulaire de l’abbaye de Saint-Martin de Pontoise</head>
+      <!--<head><hi rend="i">Cartulaire de l’abbaye de Saint-Martin de Pontoise</hi>, publié d’après les
         documents inédits par Joseph Depoin, Pontoise : Société historique du Vexin, 1895-1909,
-        VIII-494 p. (<hi rend="i">Publications de la Société historique du Vexin</hi>).</head>
+        VIII-494 p. (<hi rend="i">Publications de la Société historique du Vexin</hi>).</head>-->
       <argument>
         <p>Établissement : Saint-Germain puis Saint-Martin-de-Pontoise (Val-d’Oise, ch.-l. dép. ;
           ancien diocèse de Rouen). — Moines bénédictins, fondation du XI<hi rend="i">e</hi> siècle.</p>
