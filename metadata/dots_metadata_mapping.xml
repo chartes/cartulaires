@@ -82,7 +82,13 @@
       <dots:objectProperty name="encodingFormat" resourceId="all">text/html</dots:objectProperty>
       <dots:objectProperty name="contentUrl" xpath="concat('https://dev.chartes.psl.eu/dots/api/dts/document?resource=', ., codepoints-to-string(38), 'mediaType=html')"/>
     </schema:encoding>
+    <schema:associatedMedia scope="document" xpath="/TEI/teiHeader/fileDesc/sourceDesc/@facs" type="object">
+      <dots:objectProperty name="@type" resourceId="all">schema:MediaObject</dots:objectProperty>
+      <dots:objectProperty name="encodingFormat" resourceId="all">application/ld+json;profile=http://iiif.io/api/presentation/3/context.json/html</dots:objectProperty>
+      <dots:objectProperty name="contentUrl" xpath="."/>
+    </schema:associatedMedia>
     <download xmlns="http://www.tei-c.org/ns/1.0" scope="document" xpath="let $id := /TEI/@xml:id return concat('api/dts/document?resource=', $id)" prefix="https://dev.chartes.psl.eu/dots/"/>
+    <dots:resourceIIIFManifest scope="document" xpath="//sourceDesc/@facs"/>
     <dots:shortTitle scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[@type='short']"/>
   </dots:mapping>
 </dots:metadataMap>
