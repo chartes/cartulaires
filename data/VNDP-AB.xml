@@ -1,8 +1,10 @@
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP-AB">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="VNDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title ref="https://catalogue.chartes.psl.eu/cgi-bin/koha/opac-detail.pl?biblionumber=11874">Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame</title>
+        <title type="short">Val-Notre-Dame</title>
         <author ref="https://www.idref.fr/029860733 https://data.bnf.fr/ark:/12148/cb12139851h">Henri Omont</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
         <respStmt>
@@ -79,7 +81,8 @@
   </teiHeader>
   <text>
     <front>
-      <head>Henri <hi rend="sc">Omont</hi>, « Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle) », dans <title>Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</title>, t. 30, 1903, p. 127-174 ; tiré à part Paris, 1904.</head>
+      <head>Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame</head>
+      <!--<head>Henri <hi rend="sc">Omont</hi>, « Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle) », dans <title>Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</title>, t. 30, 1903, p. 127-174 ; tiré à part Paris, 1904.</head>-->
       <argument>
         <p>
           <!-- TODO -->
