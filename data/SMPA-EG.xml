@@ -110,11 +110,11 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
+            <citeStructure unit="sous-partie" match="div" use="dots">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -127,7 +127,7 @@
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="dots">
+          <citeStructure match="list[@type='index']" use="@xml:id">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>

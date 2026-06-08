@@ -56,11 +56,11 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="introduction" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="introduction" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="default">
+            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -71,9 +71,9 @@
           <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
           <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[3]/div" use="default">
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[3]/div" use="dots">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure match="list[@type='index']" use="dots">
+          <citeStructure match="list[@type='index']" use="@xml:id">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>

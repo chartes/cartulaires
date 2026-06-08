@@ -64,9 +64,9 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="chapitre" match="div[@type]" use="default">
+          <citeStructure unit="chapitre" match="div[@type]" use="dots">
             <citeData property="dct:title" use="head"/>
           </citeStructure>
         </citeStructure>

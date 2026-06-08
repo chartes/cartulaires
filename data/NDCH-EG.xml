@@ -88,28 +88,29 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="default">
+            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="default">
+        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dots:resourceIIIFManifest" use="front/div/listWit/witness/@corresp"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]" use="default" unit="Index">
-          <citeStructure match="div[@type = 'index' or @type = 'table']" use="default">
+        <citeStructure match="/TEI[1]/text[1]/back[1]" use="dots" unit="Index">
+          <citeStructure match="div[@type = 'index' or @type = 'table']" use="@xml:id">
             <citeData use="head" property="dct:title"/>
-            <citeStructure match="list" use="default">
+            <citeStructure match="list" use="dots">
               <citeData use="head" property="dct:title"/>
             </citeStructure>
           </citeStructure>
