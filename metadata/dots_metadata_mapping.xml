@@ -1,4 +1,4 @@
-<dots:metadataMap xmlns:dots="https://github.com/chartes/dots/" xmlns:dts="https://dtsapi.org/context/v1.0.json" xmlns:dct="http://purl.org/dc/terms/" xmlns:schema="https://schema.org/" xmlns:html="http://www.w3.org/1999/xhtml">
+<dots:metadataMap xmlns:dots="https://github.com/chartes/dots/" xmlns:dts="https://dtsapi.org/context/v1.0.json" xmlns:dct="http://purl.org/dc/terms/" xmlns:schema="https://schema.org/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:dcat="http://www.w3.org/ns/dcat#">
   <dots:mapping>
     <dct:title scope="collection" source="./collection.csv" value="title"/>
     <dct:creator scope="collection" source="./collection.csv" value="author"/>
@@ -19,6 +19,7 @@
     </schema:publisher>
     <schema:datePublished scope="collection" source="./collection.csv" value="date"/>
     <schema:description scope="collection" source="./collection.csv" value="description"/>
+    <dcat:accessURL scope="collection" source="./collection.csv" value="id" prefix="https://dev.chartes.psl.eu/dots/api/dts/collection?id="/>
     <dct:title scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
     <dct:creator scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/author"/>
     <dct:created scope="document" xpath="/TEI/teiHeader/profileDesc/creation/date[not(@type)]"/>
@@ -28,7 +29,7 @@
     <dct:source scope="document" xpath="/TEI/teiHeader/fileDesc/sourceDesc/bibl"/>
     <dct:publisher scope="document" xpath="/TEI/teiHeader/fileDesc/publicationStmt/publisher"/>
     <dct:issued scope="document" xpath="/TEI/teiHeader/fileDesc/publicationStmt/date"/>
-    <dct:bibliographicalCitation scope="document" xpath="if (/TEI/teiHeader/fileDesc/titleStmt/editor or /TEI/teiHeader/fileDesc/titleStmt/principal) then concat( string-join(/TEI/teiHeader/fileDesc/titleStmt/node()[name() = 'editor' or name() = 'principal'], ', '), ' (éd.), ', /TEI/teiHeader/fileDesc/titleStmt/title[1], ', ', /TEI/teiHeader/fileDesc/publicationStmt/publisher, ', ', /TEI/teiHeader/fileDesc/publicationStmt/date, '. [En ligne : https://dev.chartes.psl.eu/elec/cjc/document/', /TEI/@xml:id, ']')"/>
+    <dct:bibliographicCitation scope="document" xpath="if (/TEI/teiHeader/fileDesc/titleStmt/editor or /TEI/teiHeader/fileDesc/titleStmt/principal) then concat( string-join(/TEI/teiHeader/fileDesc/titleStmt/node()[name() = 'editor' or name() = 'principal'], ', '), ' (éd.), ', /TEI/teiHeader/fileDesc/titleStmt/title[1], ', ', /TEI/teiHeader/fileDesc/publicationStmt/publisher, ', ', /TEI/teiHeader/fileDesc/publicationStmt/date, '. [En ligne : https://dev.chartes.psl.eu/elec/cjc/document/', /TEI/@xml:id, ']')"/>
     <dct:coverage scope="document" xpath="/TEI/teiHeader/profileDesc/creation/date[@type='coverage']"/>
     <dct:description scope="document" xpath="/TEI/teiHeader/encodingDesc/projectDesc/p"/>
     <dct:license scope="document" xpath="/TEI/teiHeader/fileDesc/publicationStmt/availability/licence/@target"/>
@@ -90,5 +91,6 @@
     <download xmlns="http://www.tei-c.org/ns/1.0" scope="document" xpath="let $id := /TEI/@xml:id return concat('api/dts/document?resource=', $id)" prefix="https://dev.chartes.psl.eu/dots/"/>
     <dots:resourceIIIFManifest scope="document" xpath="//sourceDesc/@facs"/>
     <dots:shortTitle scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title[@type='short']"/>
+    <dcat:accessURL scope="document" xpath="/TEI/@xml:id" prefix="https://dev.chartes.psl.eu/dots/api/dts/collection?id="/>
   </dots:mapping>
 </dots:metadataMap>

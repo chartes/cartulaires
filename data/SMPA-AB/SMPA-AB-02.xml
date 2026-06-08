@@ -72,9 +72,9 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="default">
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="dots">
           <citeData property="dct:title" use="head"/>
-          <citeStructure unit="partie" match="div" use="default">
+          <citeStructure unit="partie" match="div" use="dots">
             <citeData property="dct:title" use="head"/>
           </citeStructure>
         </citeStructure>
@@ -87,7 +87,7 @@
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="dots" unit="Index">
           <citeData use="head" property="dct:title"/>
-          <citeStructure match="list[@type='index']" use="dots">
+          <citeStructure match="list[@type='index']" use="@xml:id">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>
