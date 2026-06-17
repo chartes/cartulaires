@@ -1177,10 +1177,7 @@
           <body>
             <p/>
           </body>
-          <back>
-            <div type="notes"/>
-          </back>
-        </text>
+</text>
         <text xml:id="NDPR-AB_0010" n="X" subtype="article">
           <pb n="34" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f56/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -4211,7 +4208,9 @@
                     <persName>Theobaldi</persName>, filii mei primogeniti, et aliorum filiorum
                   meorum, dedi et concessi in puram elemosinam pro salute anime mee et patris mei et
                   matris mee, et antecessorum meorum et amicorum meorum, monialibus
-                    <placeName>Porregii</placeName> terram meam de <placeName>Chaignai</placeName>
+                    <placeName>Porregii</placeName> terram meam de <placeName>Chaignai</placeName><note n="1" xml:id="na048">Chagny, commune d'Escrones (Eure-et-Loir),
+                a pris le nom de Petit-Pourras. C'est par erreur que Lebeuf met cette possession de
+                Port-Royal à Jagny, près Chevreuse.</note>
                   quam teneo de <persName>Petro Gatteri de Escroniis</persName> ad censum pro
                     <num>quindecim</num> solidis annuatim <date>in festo Sancti Remigii</date>
                   reddendis, in perpetuum libere possidendam.</s>
@@ -4227,14 +4226,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na048" target="#aa048">Chagny, commune d'Escrones (Eure-et-Loir),
-                a pris le nom de Petit-Pourras. C'est par erreur que Lebeuf met cette possession de
-                Port-Royal à Jagny, près Chevreuse.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0077" n="LXXVII" subtype="article">
           <pb n="94" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -4668,12 +4660,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              
-            </div>
-          </back>
-        </text>
+</text>
         <text xml:id="NDPR-AB_0088" n="LXXXVIII" subtype="article">
           <pb n="101" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -5947,10 +5934,10 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s><rs type="person"><persName>Willelmus</persName> divina permissione
+                <s><rs type="person"><persName>Willelmus</persName><note n="1" xml:id="na062">Guillaume d'Auvergne, évêque de Paris de 1227 à 1249.</note> divina permissione
                       <placeName>Parisiensis</placeName> ecclesie minister indignu</rs>s, universis
                   presentes litteras inspecturis <seg type="theo">in Domino salutem</seg>.</s>
-                <s>Noverit universitas vestra quod <persName>Robertus Sinenapis</persName>, miles,
+                <s>Noverit universitas vestra quod <persName>Robertus Sinenapis</persName><note n="2" xml:id="na062b">Robertus Sinenapis de Sancto-Ciryaco était vassal de Philippe-Auguste pour la moitié des Loges-sous-Rochefort, etc., et devait deux mois de garde à Montlhéry</note>, miles,
                   in nostra presentia constitutus, concessit pariter et laudavit donationem quam
                   fecerat... filia <persName>Rolandi de Ossenies</persName> defuncti, abbatie
                   monalium de <placeName>Porresio</placeName> Cistertiensis ordinis et quod contra
@@ -5966,17 +5953,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na062">
-                <p>Guillaume d'Auvergne, évêque de Paris de 1227 à 1249.</p>
-                <p>Robertus Sinenapis de Sancto-Ciryaco était vassal de Philippe-Auguste pour la
-                  moitié des Loges-sous-Rochefort, etc., et devait deux mois de garde à
-                  Montlhéry</p>
-              </note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0121" n="CXXI" subtype="article">
           <pb n="125" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f147/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -13641,7 +13618,12 @@
             <div xml:lang="lat" type="transcription">
               <p>
                 <s>Universis presentes litteras inspecturis notum facio quod ego <persName>Herveus
-                    de Caprosia</persName>, miles, meum legatum facio in hanc modum.</s>
+                    de Caprosia</persName><note n="1" xml:id="na083">M. Moutié a raconté la vie d'Hervé de
+                Chevreuse, seigneur de Maincourt, fils de Gui <num>III</num> et frère de Gui
+                  <num>IV</num>, que le <abbr>P.</abbr> Anselme a confondu avec son neveu, Hervé,
+                fils de Gui <num>IV</num>. Son tombeau aux Vaux-de-Cernay donne ses armes : une
+                croix cantonnée de quatre lions au lieu de quatre aigles, et le nom de sa femme, qui
+                lui survécut peu, Clémence d'Aulnois.</note>, miles, meum legatum facio in hanc modum.</s>
                 <s>In primis lego abbacie <placeName>Vallium Sarney</placeName>
                   <num>centum</num> libras turonenses, pro <num>una</num> missa cotidie, pro me et
                   pro uxore mea et pro <rs type="person"><persName>Sebilla</persName>, condam domina
@@ -13679,17 +13661,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na083" target="#aa083">M. Moutié a raconté la vie d'Hervé de
-                Chevreuse, seigneur de Maincourt, fils de Gui <num>III</num> et frère de Gui
-                  <num>IV</num>, que le <abbr>P.</abbr> Anselme a confondu avec son neveu, Hervé,
-                fils de Gui <num>IV</num>. Son tombeau aux Vaux-de-Cernay donne ses armes : une
-                croix cantonnée de quatre lions au lieu de quatre aigles, et le nom de sa femme, qui
-                lui survécut peu, Clémence d'Aulnois.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0286" n="CCLXXXVI" subtype="article">
           <pb n="274" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f296/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
