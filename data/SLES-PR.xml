@@ -1,7 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
-À faire
-* Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
---><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SLES-PR">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SLES-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -789,7 +786,10 @@
               <listWit type="original">
                 <witness n="A">Original. Arch. dép. Oise, H2431 (38 x 35 cm, belle écriture.
                   Elle était scellée, dit le notaire Vatin, dans son Inventaire de 1783-1784 (Arch.
-                  de l'Oise. H. 2429), « d'un grand sceau de cire rouge »).<note n="617" target="#note_617"/></witness>
+                  de l'Oise. H. 2429), « d'un grand sceau de cire rouge »).<note n="617" xml:id="note_0617">Cette charte porte au dos cette mention : « Carta Hugonis
+          Comitis de Domno Martino super fundatione ecclesie sancti Lupi qua continentur ea que ipse
+          dedit. Carta Hugonis comitis [de] Domno Martino. Religionis christiane comes Bolonie non
+          absque dolore Jt1 [iter] sitit Beraudt »</note></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited">Cartulaire du prieuré de Saint-Leu d'Esserent (1080-1538), éd. Eugène Müller, Pontoise, 1901, p. 1-2.</witness>
@@ -14558,16 +14558,11 @@
             si dicti asini au lieu de « asini ipsi » ; — « pacifice » au lieu de « pace... »</p>
           <p>L'avait-il emprunté aussi aux archives de S. Christophe ? — Voir aussi Ch. XXVI.</p>
         </note>
-        <note xml:id="note_0616" n="616">Les chiffres se réfèrent aux numéros des chartes.</note>
-        <note xml:id="note_0617" n="617">Cette charte porte au dos cette mention : « Carta Hugonis
-          Comitis de Domno Martino super fundatione ecclesie sancti Lupi qua continentur ea que ipse
-          dedit. Carta Hugonis comitis [de] Domno Martino. Religionis christiane comes Bolonie non
-          absque dolore Jt1 [iter] sitit Beraudt »</note>
         <note xml:id="note_0621" n="621">J'ai inséré ici l'indication de ce compromis à cause du nom
           d'Étienne, prieur de S. Leu. Si les dates de ce document sont exactes, il nous fait
           connaître un nouveau prieur de S. Leu, Étienne 2e du nom, distinct de l'Etienne que nous
           ont amené les chartes de 1236, 1239, 1240.</note>
-        </div>
+                </div>
       
     <div type="index">
         <head><pb n="189" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/f196/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/manifest.json"/> Index des noms de personnes et de lieux<note n="616" target="#note_0616">Les chiffres se réfèrent aux numéros des chartes.</note></head>

@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -770,7 +770,9 @@
                   incontestable, nous n'avons pas hésité à adopter la date précise qu'il nous offre
                   pour la fondation de l'abbaye des Vaux de Cernay, contrairement à celle de 1128
                   donnée par le <hi rend="i">Gallia christiana</hi>, date que les savants auteurs de
-                  ce recueil n'appuient du reste sur aucune autorité. <abbr>A.</abbr>M.</note>.</s>
+                  ce recueil n'appuient du reste sur aucune autorité. <abbr>A.</abbr>M. Cette charte a été publiée
+                  par extraits dans le <hi rend="i">Gallia christiana</hi> (tome <num>VII</num>,
+                  Instr. col. 52).</note>.</s>
                 </p>
                 <p>
                   <s>† Signum <persName>Symonis de Gomez</persName>.</s>
@@ -796,15 +798,7 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="1" xml:id="n1004" target="#a1001 #a1003 #a1004">Cette charte a été publiée
-                  par extraits dans le <hi rend="i">Gallia christiana</hi> (tome <num>VII</num>,
-                  Instr. col. 52).</note>
-              
-                </div>
-            </back>
-          </text>
+            </text>
           <text xml:id="NDVC-AB_0003" n="III" subtype="article">
             
             <front>
@@ -878,7 +872,13 @@
                   pour la première fois le nom de val de Cernay. <hi rend="i">Sic, pro</hi>
                   Estrecheium. <hi rend="i">Voir</hi> la mention de ce don dans une confirmation du
                   pape Alexandre <num>III</num> (nºXXVI, <abbr>p.</abbr>
-                  <num>40.</num>)</note><note xml:id="n1011" n="1"><hi rend="i">Sic, pro</hi>
+                  <num>40.</num>) L'inventaire des titres
+                  des Vaux de Cernay indique comme existant encore l'original de l'acte de donation
+                  (page 148, <abbr>l.</abbr>
+                  <num>I</num>, nº 1). En 1168, Hugues Bibens, fils du donateur, confirma cette
+                  libéralité par une charte inscrite aussi dans l'inventaire (p. 148,
+                    <abbr>l.</abbr> 1, nº 2). On n'a pas pu retrouver ces deux pièces dans les
+                  archives de Seine-et-Oise.</note><note xml:id="n1011" n="1"><hi rend="i">Sic, pro</hi>
                   Estrecheium. <hi rend="i">Voir</hi> la mention de ce don dans une confirmation du
                   pape Alexandre <num>III</num> (nºXXVI, <abbr>p.</abbr>
                   <num>40.</num>)</note></persName> dedit partem nemoris sui quod habebat in monte
@@ -1022,19 +1022,7 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="1" xml:id="n1008" target="#a1006 #a1008 #a1011">L'inventaire des titres
-                  des Vaux de Cernay indique comme existant encore l'original de l'acte de donation
-                  (page 148, <abbr>l.</abbr>
-                  <num>I</num>, nº 1). En 1168, Hugues Bibens, fils du donateur, confirma cette
-                  libéralité par une charte inscrite aussi dans l'inventaire (p. 148,
-                    <abbr>l.</abbr> 1, nº 2). On n'a pas pu retrouver ces deux pièces dans les
-                  archives de Seine-et-Oise.</note>
-              
-                </div>
-            </back>
-          </text>
+            </text>
           <text xml:id="NDVC-AB_0004" n="IV" subtype="article">
             
             <front>
@@ -3707,12 +3695,12 @@
                       <persName>Guarinus de Sancto Hylarione</persName> ; et <persName>Theobaldus de
                       Boelon</persName>.</s>
                   <s>Actum <date>anno Domini millesimo centesimo <num>LXº VIIIº</num>, mense
-                        novembri<note n="2" xml:id="a1051">Ces secondes lettres de
+                        novembri</date><note n="2" xml:id="a1051">Ces secondes lettres de
                   confirmation, copiées, comme l'on voit, en partie sur les premières, sont du
                   nombre de celles que nous avons déjà signalées comme fabriquées au quinzième
                   siècle (page 28). Il est assez bizarre que les moines n'aient pas détruit l'acte
                   authentique qui pouvait servir à constater leur supercherie : ils ont aussi laissé
-                  subsister une charte de Jean de Salisbury, confirmative de la pièce originale (<hi rend="i">voyez</hi> nº XLVI). <abbr>L. M.</abbr></note></date>.</s>
+                  subsister une charte de Jean de Salisbury, confirmative de la pièce originale (<hi rend="i">voyez</hi> nº XLVI). <abbr>L. M.</abbr></note>.</s>
                 </p>
               </div>
             </body>
@@ -18944,7 +18932,7 @@
                     im perpetuum garantizare tenemur.</s>
                   <s>Que ut rata et firma permaneant, presentem paginam sigilli nostri munimine
                     fecimus roborari.</s>
-                  <s>Actum <date>anno gratie <num>Mº CCº</num> vicesimo nono, mense januario<note n="1" xml:id="a1329">
+                  <s>Actum <date>anno gratie <num>Mº CCº</num> vicesimo nono, mense januario</date><note n="1" xml:id="a1329">
                   <p>Cette charte fut confirmée par le roi saint Louis, la même année : « Ludovicus,
                     Dei gratia, Francorum rex, universis presentem paginam inspecturis, salutem :
                     Noveritis nos litteras dilecti et fidelis nostri Amalrici, comitis Montisfortis,
@@ -18953,7 +18941,7 @@
                     confirmamus et sigilli nostri munimine roboramus. Actum anno ab incarnatione
                     Domini <num>Mº CCº</num> vicesimo nono. « (<hi rend="i">Inv</hi>.,
                       <abbr>p.</abbr> 27, <abbr>l. J.</abbr>)</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -27639,9 +27627,9 @@
                   <s>In cujus rei testimonium, præsentes literas dignum duxi sigilli mei munimine
                     roborari.</s>
                   <s>Actum <date>anno Domini millesimo ducentesimo quadragesimo septimo, mense
-                        martio<note n="2" xml:id="a1469"><hi rend="i">In guttulis
+                        martio</date><note n="2" xml:id="a1469"><hi rend="i">In guttulis
                     Fontis-Johannis</hi>, nº <num>XIV</num>, <abbr>p.</abbr>
-                  <num>20.</num></note></date>.</s>
+                  <num>20.</num></note>.</s>
                 </p>
               </div>
             </body>
@@ -28647,7 +28635,7 @@
                   <s>Quod ut ratum et stabile permaneat in futurum, presentes litteras sigilli
                     nostri fecimus impressione muniri.</s>
                   <s>Actum <placeName>Parisius</placeName>, <date>anno Domini millesimo ducentesimo
-                      quinquagesimo sexto, mense augusto<note n="1" xml:id="a1481">
+                      quinquagesimo sexto, mense augusto</date><note n="1" xml:id="a1481">
                   <p>Cette convention fut de nouveau vidimée, au mois de mars 1386, par le garde des
                     sceaux de la châtellenie de Neauphle :</p>
                   <p>« A tous ceuls qui ces lettres verront, Jehan Mouroust le jeune, garde des
@@ -28668,7 +28656,7 @@
                   <p>A ce vidimus est encore pendant, sur queue de parchemin, le sceau en cire verte
                     de la châtellenie de Neauphle, représentant, au sceau et au contre-sceau, un
                     lion et un aigle, et portant pour légende au contre-sceau : <hi rend="sc">Contrasigillvm prepositvre de Nealphe castro</hi>.</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -29421,7 +29409,7 @@
                     per alium, in rebus predictis in posterum reclamare.</s>
                   <s>Ad confirmationem omnium et singularum rerum prenominatarum, presentes litteras
                     sigillo meo proprio roboravi.</s>
-                  <s>Actum <date>anno Domini <num>Mº CCº</num> quadragesimo nono, mense novembri<note n="1" xml:id="a1497">Au mois de décembre 1249,
+                  <s>Actum <date>anno Domini <num>Mº CCº</num> quadragesimo nono, mense novembri</date><note n="1" xml:id="a1497">Au mois de décembre 1249,
                   l'évêque de Chartres confirma cette donation : « Omnibus presentes litteras
                   inspecturis, M[atheus], miseratione divina, Carnotensis episcopus, salutem in
                   Domino : Noverint universi quod, in nostra presentia constitutus, Gilo, dictus <hi rend="i">Fort-Anier</hi>, presbiter de <hi rend="i">Bries</hi>, etc.............
@@ -29429,7 +29417,7 @@
                   nostro. Datum anno Domini millesimo <num>CCº</num> quadragesimo nono, mense
                   decembri. « <hi rend="i">(Original en parchemin</hi>. — <hi rend="i">Inv</hi>.,
                     <abbr>p.</abbr> 13, <abbr>l.</abbr>
-                  <num>3.</num>)</note></date>.</s>
+                  <num>3.</num>)</note>.</s>
                 </p>
               </div>
             </body>
@@ -31376,9 +31364,9 @@
                     <hi rend="sc">Iohanne domine de Montemorenciaco</hi>. Le contre-sceau est parti
                     du lion de Brienne et des seize alérions de Montmorency. <abbr>A. M.</abbr></p>
                 </note> duximus <pb n="2_0479" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00043/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>apponenda.</s>
-                  <s>Actum <date>anno Domini <num>Mº CCº</num> quinquagesimo, mense martio<note xml:id="n2007" n="1">Isabelle de Laval, sœur
+                  <s>Actum <date>anno Domini <num>Mº CCº</num> quinquagesimo, mense martio</date><note xml:id="n2007" n="1">Isabelle de Laval, sœur
                   d'Emme, dame de Laval, mariée avant 1226 à Bouchard <num>VI</num> de
-                  Montmorency.</note></date>.</s>
+                  Montmorency.</note>.</s>
                 </p>
               </div>
             </body>
@@ -32226,9 +32214,9 @@
                     post ceptam contradictionem tenebimur eisdem restituere <num>triginta</num>
                     libras turonenses predictas ; et hec omnibus tenore presentium intimamus.</s>
                   <s><date>Datum anno Domini <num>Mº CCº Lº</num> tercio, die martis in crastino
-                      sancti Egidii<note n="1" xml:id="a2025">On lit au dos : « Fidejussores :
+                      sancti Egidii</date><note n="1" xml:id="a2025">On lit au dos : « Fidejussores :
                   Radulphus de Cauda, miles ; Guillelmus de <hi rend="i">Fermainvile</hi>, miles ;
-                  Guillelmus de <hi rend="i">la Perruche</hi>. »</note></date>.</s>
+                  Guillelmus de <hi rend="i">la Perruche</hi>. »</note>.</s>
                 </p>
               </div>
             </body>
@@ -35404,7 +35392,7 @@
                   <s> <pb n="2_0545" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00109/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>In cujus rei testimonium et munimen, predictis religiosis
                     presentes litteras dedimus sigillorum nostrorum impressione munitas.</s>
                   <s><date>Datum anno Domini <num>Mº CCº</num> quinquagesimo septimo, mense
-                        martio<note n="1" xml:id="a2083">
+                        martio</date><note n="1" xml:id="a2083">
                   <p> Cette pièce fut vidimée en 1289 par le prévôt de Paris :</p>
                   <p> « A touz ceus que ces présentes lettres verront, Jehan de Montegni, garde de
                     la prévosté de Paris, salut : Nous vous faisons à savoir que nous avons veu unes
@@ -35415,7 +35403,7 @@
                   <p> "Collation fete par Thibout. »</p>
                   <p> (<hi rend="i">Inv</hi>., <abbr>p.</abbr> 16, <abbr>c. C.</abbr>, nº
                       <num>7.</num>)</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -40921,8 +40909,8 @@
                     in longitudine et latitudine, ex certa scientia et mera liberalitate, donatione
                     facta inter <pb n="2_0632" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00196/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>vivos, ob remedium animarum suarum, in puram et
                     perpetuam elemosinam, dederant et concesserant, <date>anno Domini millesimo
-                        <num>CCº Lº</num> sexto<note n="1" xml:id="a2153"><hi rend="i">Sic,
-                    pro</hi><num>MCCº</num> LX<hi rend="sup">mo</hi> sexto.</note>, mense septembri</date>, religiosis viris abbati et
+                        <num>CCº Lº</num> sexto, mense septembri</date><note n="1" xml:id="a2153"><hi rend="i">Sic,
+                    pro</hi><num>MCCº</num> LX<hi rend="sup">mo</hi> sexto.</note>, religiosis viris abbati et
                     conventui Vallis Sarnaii ; sed super predicta donacione alium factum fuerat
                     instrumentum : propter quod predicti <persName>Symon</persName> et
                       <persName>Acelina</persName> ratas, gratas et firmas habentes donacionem et
@@ -42530,14 +42518,14 @@
                   <s>In cujus rei testimonium, sigillum nostrum, <num>una</num> cum sigillo dicti
                     domini <persName>Johannis</persName>, presentibus litteris duximus
                     apponendum.</s>
-                  <s><date>Datum anno Domini <num>Mº CCº LXº</num> nono, mense octobri<note n="1" xml:id="a2172">Cette charte fut vidimée en
+                  <s><date>Datum anno Domini <num>Mº CCº LXº</num> nono, mense octobri</date><note n="1" xml:id="a2172">Cette charte fut vidimée en
                   novembre 1285 par l'official de Paris : Omnibus presentes litteras inspecturis,
                   officialis curie Parisiensis, salutem in Domino : Noveritis nos litteras inferius
                   annotatas vidisse in hec verba : Transcriptum hujusmodi litterarum fecimus sub
                   sigillo curie Parisiensis, salvo jure cujuslibet. Datum anno Domini
                     <num>Mº CCº LXXXº</num> quinto, die mercuris post festum Omnium Sanctorum.
                     « (<hi rend="i">Inv</hi>., <abbr>p.</abbr> 65, <abbr>l.</abbr> 7, nº
-                    <num>28.</num>)</note></date>.</s>
+                    <num>28.</num>)</note>.</s>
                 </p>
                 <p>
                   <note>
@@ -43058,7 +43046,14 @@
                   quatorzième siècle, ayant pour titre : <hi rend="i">Apostelle a magistro Bernardo
                     Compostellano Hyspano composite super Decretalibus</hi>. — Nous voyons qu'en
                   1372 les Décrétales de Bernard furent engagées pour 3 francs par Laurent Pimpenel.
-                    <abbr>L. M.</abbr></note><note xml:id="n2187_2" n="2">Il ne reste que les
+                    <abbr>L. M.</abbr> Outre les seize
+                  autels dont nous venons de parler, trente-huit autres chapelles furent fondées,
+                  tant dans la crypte que dans l'église supérieure, pendant le cours des treizième,
+                  quatorzième et quinzième siècles ; mais toutes sont postérieures à la date du
+                  testament de Renaud de Fessard, excepté celle de saint Nicolas ou saint Serge et
+                  saint Bache, qui existait déjà au douzième siècle, et celle des Anges et des
+                  Vierges, fondée par saint Louis en <num>1259.</num>
+                  <abbr>L. M.</abbr></note><note xml:id="n2187_2" n="2">Il ne reste que les
                   attaches en parchemin de ces sept sceaux : c'est à peine si l'on retrouve quelques
                   fragments du sceau, en cire brune, de Nicolas de Cannes. Nous le decrivons d'après
                   un autre exemplaire conservé également aux archives d'Eure-et-Loir. — Sceau
@@ -43183,17 +43178,6 @@
                   de rencontrer ces parties de l'équipement militaire du moyen âge dans le mobilier
                   d'un prêtre. Nous ne savons précisément ce que l'on doit entendre par <hi rend="i">surchauchonni</hi> ; Ducange ne cite pas ce mot dans son Glossaire : il est
                   probable que c'etait une espèce de chaussure.</note>
-                <note n="2" xml:id="n2185" target="#a2178 #a2183 #a2185 #a2187">Outre les seize
-                  autels dont nous venons de parler, trente-huit autres chapelles furent fondées,
-                  tant dans la crypte que dans l'église supérieure, pendant le cours des treizième,
-                  quatorzième et quinzième siècles ; mais toutes sont postérieures à la date du
-                  testament de Renaud de Fessard, excepté celle de saint Nicolas ou saint Serge et
-                  saint Bache, qui existait déjà au douzième siècle, et celle des Anges et des
-                  Vierges, fondée par saint Louis en <num>1259.</num>
-                  <abbr>L. M.</abbr></note>
-              
-                
-                
                 </div>
             </back>
           </text>
@@ -44852,7 +44836,7 @@
                   <s>In cujus rei memoriam et testimonium, de voluntate et assensu predicte
                       <persName>Ysabellis</persName>, quia sigillum proprium non habebat, presentes
                     litteras sigillo meo proprio roboravi.</s>
-                  <s><date>Datum anno Domini <num>Mº CCº LXXº</num> secundo, mense octobri<note n="1" xml:id="a2210">Il existe une copie de cette
+                  <s><date>Datum anno Domini <num>Mº CCº LXXº</num> secundo, mense octobri</date><note n="1" xml:id="a2210">Il existe une copie de cette
                   pièce, sur papier, du seizième siècle, réunie à plusieurs autres sous ce titre
                   commun : « Ensuit le double des Chartres et amortissemens d'une piece de boys,
                   appellée de ancienneté le petit Foilleux, assis en la chastellenie de Rochefort,
@@ -44861,7 +44845,7 @@
                   arpens troys quartiers et le tiers de ung quartier, comme appert par la teneur
                   desdites chartres qui ensuyt. » Ce titre est également celui du chapitre de la
                   Déclaration de 1511, consacré à cet article, et contenant toutes les chartes y
-                  relatives. — Voir les trois chartes suivantes.</note></date>.</s>
+                  relatives. — Voir les trois chartes suivantes.</note>.</s>
                 </p>
               </div>
             </body>
@@ -63301,9 +63285,9 @@
                   <s>In cujus rei testimonium, litteris presentibus sigillum nostrum duximus
                     apponendum.</s>
                   <s><date>Datum anno Domini <num>Mº CCCº</num> primo, die lune post festum beatorum
-                      Petri et Pauli, apostolorum<note n="2" xml:id="a3008">Cette pièce fut vidimée par
+                      Petri et Pauli, apostolorum</date><note n="2" xml:id="a3008">Cette pièce fut vidimée par
                   Philippe le Bel au mois de mai 1304, en même temps que l'acte du 9 décembre 1301.
-                  (Voir nº DCCCCXCVIII pour la formule de ce <hi rend="i">vidimus</hi>.)</note></date>.</s>
+                  (Voir nº DCCCCXCVIII pour la formule de ce <hi rend="i">vidimus</hi>.)</note>.</s>
                 </p>
               </div>
             </body>
@@ -63512,7 +63496,7 @@
                   <s>In cujus rei testimonium, sigillum meum duxi presentibus litteris
                     apponendum.</s>
                   <s><date>Datum anno Domini millesimo <num>CCCº</num> primo, die sabbati post
-                      Conceptionem beate Marie<note n="6" xml:id="a3022">
+                      Conceptionem beate Marie</date><note n="6" xml:id="a3022">
                   <p>Cette pièce fut vidimée en mai 1304 par le roi Philippe le Bel avec celle du 3
                     juillet 1301. (<hi rend="i">Voir</hi> nº DCCCCXCVI, <abbr>p.</abbr> 6.) Voici la
                     formule de ce <hi rend="i">vidimus :</hi></p>
@@ -63527,7 +63511,7 @@
                     nostro et quolibet alieno. Quod ut ratum et stabile perseveret, presentes
                     litteras sigilli nostri fecimus appensione muniri. Actum Parisius, anno
                     Incarnationis Dominice <num>Mº CCCº</num> quarto, mense maii. « (<hi rend="i">Inv</hi>., <abbr>p.</abbr> 27, <num>l.</num> 4.)</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -65225,7 +65209,7 @@
                   <s>Et en tesmoing de cey, nous avons seellé ces présentes lectres de nostre propre
                     seel.</s>
                   <s>Ce fu fet et donné <date>l'an de grace mil trois cenz et neuf, le samedi après
-                      la Tiphonie<note n="1" xml:id="a3043">
+                      la Tiphonie</date><note n="1" xml:id="a3043">
                   <p>Cette donation fut vidimée en juin 1315 par le garde de la prévôté de
                     Paris :</p>
                   <p>« A touz ceus qui ces présentes lettres verront. Jehan Ploiebauch, garde de la
@@ -65236,7 +65220,7 @@
                   <p>« Et nous, en cest présent transcript, avons mis le seel de la prévosté de
                     Paris, l'an et le jour dessus dits. » (<hi rend="i">Inv</hi>., <abbr>p.</abbr>
                     407, <num>l.</num> 2, nº 2.)</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -66182,10 +66166,10 @@
                   <s>In cujus rei testimonium et munimen, sigillum nostrum presentibus duximus
                     apponendum.</s>
                   <s><date>Datum anno Domini millesimo trecentesimo septimo decimo, mense
-                        januario<note n="1" xml:id="a3061">Cette charte se trouve jointe à
+                        januario</date><note n="1" xml:id="a3061">Cette charte se trouve jointe à
                   des pièces de procédure de l'abbaye contre Louis de Vendôme, vidame de Chartres,
                   et son fermier de Bretheucourt, qui avait abattu les fruits de dix à douze pieds
-                  d'arbres dépendants de Provellu, en 1517.</note></date>.</s>
+                  d'arbres dépendants de Provellu, en 1517.</note>.</s>
                 </p>
                 <p xml:lang="fro">
                   <s>Et nous à cest présent transcript avons mis le seel de ladicte prévosté de
@@ -66941,32 +66925,64 @@
                   droits de nouveaux acquêts en la prévôté de Paris, pièce qui nous servira à
                   combler des lacunes existantes dans l'acte que nous publions, ce territoire est
                   appelé <hi rend="i">Savyoron</hi>. Voir nº DCCCCXXVI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 895.</note>, moventia de feodo
+                  <num>I</num>, <abbr>p.</abbr> 895. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note>, moventia de feodo
                     de <placeName>Malo-repastu</placeName>, scilicet titulo emptionis.</s>
                   <s>— Item de <rs type="person"><persName>Johanne de Pomereto<note n="2" xml:id="a3076">Voir
                     n<hi rend="sup">os</hi>
                   <num>DCLXXVIII</num> et <num>DCLXXX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 630 et 632.</note></persName>, armigero</rs>, titulo
+                  <num>I</num>, <abbr>p.</abbr> 630 et 632. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note></persName>, armigero</rs>, titulo
                     emptionis, <num>X</num> arpenta terre sita in loco qui dicitur
                       <placeName>Vallis-Frogerii</placeName>, moventia de feodo de
                       <placeName>Lymosiis</placeName>.</s>
                   <s>— Item de <rs type="person"><persName>Eremburgi</persName>, [relicta]
                         <persName>Renoudi Fabri<note n="3" xml:id="a3077">Voir
                   nº <num>DCXCI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 646.</note></persName></rs>, titulo quo supra, <num>I</num> arpentum
+                  <num>I</num>, <abbr>p.</abbr> 646. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note></persName></rs>, titulo quo supra, <num>I</num> arpentum
                     terre situm in territorio de <placeName>Orliaco</placeName>, moventem de
                     [franco] allodio.</s>
                   <s>— Item de <persName>Matheo de Orliaco<note n="4" xml:id="a3078">Voir nº
                     <num>DCCXIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 676.</note></persName>, dimidium arpentum terre
+                  <num>I</num>, <abbr>p.</abbr> 676. Voir nº
+                  DCCCCI, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 867. Voir nº
+                  DCCCCXCIX, <abbr>p.</abbr> 11.</note></persName>, dimidium arpentum terre
                     in territorio de <placeName>Orliaco</placeName>, titulo quo supra.</s>
                   <s>— Item de <persName>Petro Borudot<note n="5" xml:id="a3079">Voir nº
                     <num>DCCXXVII</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 683.</note></persName>, dimidium arpentum terre, acquisitum titulo quo
+                  <num>I</num>, <abbr>p.</abbr> 683. Voir nº
+                    <num>MXII</num>, <abbr>p.</abbr> 27. Voir nº DCCCCLXVI,
+                    <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 954.</note></persName>, dimidium arpentum terre, acquisitum titulo quo
                     supra, apud <placeName>Marli[acum]</placeName>.</s>
                   <s>— Item de <persName>Guillelmo le Tirant<note n="6" xml:id="a3080">Voir nº
                     <num>DCCIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 661.</note></persName>, <num>IIII<hi rend="sup">er</hi></num> partes dimidii arpenti terre siti in t[erritorio] de
+                  <num>I</num>, <abbr>p.</abbr> 661. Voir nº
+                    <num>MXXXVIII</num>, <abbr>p.</abbr> 55. Voir nº
+                    <num>DCCXLV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 699.</note></persName>, <num>IIII<hi rend="sup">er</hi></num> partes dimidii arpenti terre siti in t[erritorio] de
                       <placeName>Marliaco</placeName>, moventes de franco allodio.</s>
                   <s>— Item de <persName>Guillelmo, dicto Aubourc</persName><note n="7" xml:id="a3081">Voir n<hi rend="sup">os</hi>
                   <num>DXLIX</num> et <num>DCCXXXII</num>, <abbr>t.</abbr>
@@ -66996,7 +67012,14 @@
                   droits de nouveaux acquêts en la prévôté de Paris, pièce qui nous servira à
                   combler des lacunes existantes dans l'acte que nous publions, ce territoire est
                   appelé <hi rend="i">Savyoron</hi>. Voir nº DCCCCXXVI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 895.</note></rs>,
+                  <num>I</num>, <abbr>p.</abbr> 895. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note></rs>,
                       <num>XXVI</num> arpenta terre, sita apud <placeName>Sarnaium</placeName>,
                     moventia de feodo castellani <placeName>Nealphe</placeName>, titulo
                     emptionis.</s>
@@ -67020,13 +67043,29 @@
                         Anglico<note n="2" xml:id="a3084">Voir
                     n<hi rend="sup">os</hi>
                   <num>DCLXXVIII</num> et <num>DCLXXX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 630 et 632.</note><note xml:id="n3094" n="2">Voir
+                  <num>I</num>, <abbr>p.</abbr> 630 et 632. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note><note xml:id="n3094" n="2">Voir
                   nº DCCCCXXXII, <abbr>t.</abbr>
                   <num>I</num>, <abbr>p.</abbr> 904.</note></persName>], titulo donationis, moventibus de feodo
                       <placeName>Mali-repasti</placeName>.</s>
                   <s>— Item [de <persName>Gaufrido] Gardiano<note n="3" xml:id="a3085">Voir
                   nº <num>DCXCI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 646.</note><note xml:id="n3095" n="3">Voir
+                  <num>I</num>, <abbr>p.</abbr> 646. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note><note xml:id="n3095" n="3">Voir
                   nº <num>MIII</num>, <abbr>p.</abbr> 14.</note></persName>, <num>II</num> arpenta
                     terre, sita juxta <placeName>Villam-Novam</placeName>, in censiva
                       <persName>Sy[monis, dicti Badaram</persName>], et <num>II</num> arpenta sita
@@ -67039,7 +67078,10 @@
                       <placeName>Feucheriis</placeName>, moventibus de feodo <rs type="person">domini <persName>[Petri] de Nemore</persName>, militis</rs>.</s>
                   <s>— Item de fratre <persName><foreign xml:lang="fro">Joce</foreign></persName><note n="4" xml:id="a3086">Voir nº
                     <num>DCCXIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 676.</note><note xml:id="n3090" n="4">Voir
+                  <num>I</num>, <abbr>p.</abbr> 676. Voir nº
+                  DCCCCI, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 867. Voir nº
+                  DCCCCXCIX, <abbr>p.</abbr> 11.</note><note xml:id="n3090" n="4">Voir
                     <abbr>p.</abbr> 39, note 2, nº <num>MXXVI</num>. — Cette mention prouve que
                   Béatrix du Bois, veuve d'Anseau de Chevreuse, était morte avant l'année 1324 ; ce
                   qui est d'autant plus important que l'année de la mort de cette dame se trouve
@@ -67053,20 +67095,43 @@
                   droits de nouveaux acquêts en la prévôté de Paris, pièce qui nous servira à
                   combler des lacunes existantes dans l'acte que nous publions, ce territoire est
                   appelé <hi rend="i">Savyoron</hi>. Voir nº DCCCCXXVI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 895.</note></persName>, <num>I</num> arpentum
+                  <num>I</num>, <abbr>p.</abbr> 895. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note></persName>, <num>I</num> arpentum
                     terre, situm apud <placeName>Sarnaium</placeName>, movens de [feodo] <rs type="person">domini <persName>Johannis de Sarnaio</persName>, militis</rs>,
                     titulo donationis.</s>
                   <s>— Item de <rs type="person"><persName>Guillelmo, dicto Bidaus</persName>,
                         [mili]te<note n="2" xml:id="a3088">Voir
                     n<hi rend="sup">os</hi>
                   <num>DCLXXVIII</num> et <num>DCLXXX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 630 et 632.</note><note xml:id="n3094_2" n="2">Voir
+                  <num>I</num>, <abbr>p.</abbr> 630 et 632. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note><note xml:id="n3094_2" n="2">Voir
                   nº DCCCCXXXII, <abbr>t.</abbr>
                   <num>I</num>, <abbr>p.</abbr> 904.</note></rs>, pressuram dimidii quarterii vinee, et <num>I</num> denarium censualem,
                     situm apud <placeName>Buxeriam</placeName>, [titu]lo donationis.</s>
                   <s>— Item de <persName>Guillelmo Pilet<note n="3" xml:id="a3089">Voir
                   nº <num>DCXCI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 646.</note><note xml:id="n3095_2" n="3">Voir
+                  <num>I</num>, <abbr>p.</abbr> 646. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note><note xml:id="n3095_2" n="3">Voir
                   nº <num>MIII</num>, <abbr>p.</abbr> 14.</note></persName>, quamdam domum, sitam
                     apud <placeName><foreign xml:lang="fro">Athies</foreign></placeName>, in [feodo
                     domini] <persName>Johannis de Trosolio</persName>, titulo donationis ; valet
@@ -67092,31 +67157,54 @@
                   qui est d'autant plus important que l'année de la mort de cette dame se trouve
                   complétement effacée sur sa tombe, comme nous le verrons dans l'épigraphie.
                     <abbr>A.</abbr>
-                  <num>M.</num></note></placeName></rs>, medietatem unius pecie nemoris, sitam
+                  <num>M.</num> Voir nº
+                  DCCCCI, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 867. Voir nº
+                  DCCCCXCIX, <abbr>p.</abbr> 11.</note></placeName></rs>, medietatem unius pecie nemoris, sitam
                     in foresta <placeName>Sancti-Dyonisii-juxta-Valenciam</placeName>, moventem de
                     feodo abbatis <placeName>Sancti-Dyonisii</placeName>, titulo donacionis, et
                       <num>XXII</num> solidos <num>VI</num> denarios censuales apud
                       <placeName>Orfinum</placeName>, quos solidos debebamus ei.</s>
-                  <s>Actum <date>anno Domini <num>Mº CCCº IXº</num>, die sabbati post Epiphaniam<note n="5" xml:id="a3091">Voir nº
-                    <num>MXXIII</num>, <abbr>p.</abbr> 38.</note></date>.</s>
+                  <s>Actum <date>anno Domini <num>Mº CCCº IXº</num>, die sabbati post Epiphaniam</date><note n="5" xml:id="a3091">Voir nº
+                    <num>MXXIII</num>, <abbr>p.</abbr> 38. Voir nº
+                    <num>MXII</num>, <abbr>p.</abbr> 27. Voir nº DCCCCLXVI,
+                    <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 954.</note>.</s>
                   <s>— Item de <rs type="person">domino <persName>Symone Caprosie</persName>,
                       milite</rs>, domino [de <placeName>Dampna]-&gt;Petra</placeName>, et <rs type="person"><persName>Johanna</persName>, ejus uxore</rs>, <num>V<hi rend="sup">que</hi></num> arpenta prati cum dimidio, moventia de suo proprio
                     [feodo], sita juxta <placeName>Salicem</placeName>, titulo donacionis.</s>
                   <s>Actum <num>Mº CCCº XIIIIº</num><note n="6" xml:id="a3092">Voir nº
-                    <num>MXXXII</num>, <abbr>p.</abbr> 50.</note>.</s>
+                    <num>MXXXII</num>, <abbr>p.</abbr> 50. Voir nº
+                    <num>MXXXVIII</num>, <abbr>p.</abbr> 55. Voir nº
+                    <num>DCCXLV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 699.</note>.</s>
                   <s>— Item de <rs type="person">domino <persName>Johanne [de Sarnaio</persName>],
                       milite</rs>, et <rs type="person"><persName>Maltidi</persName>, ejus
                       uxore</rs>, <num>XVIII</num> arpenta terre et <num>IIII</num> arpenta prati,
                     sita [in terri]torio de
                     <placeName><pb n="3_0071" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006768_00079/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006768/manifest"/>Sarnaio</placeName>, moventia de feodo
                     <placeName>Nealphe</placeName>, titulo emptionis<note n="1" xml:id="a3093">Voir
-                  nº DCCCCXCII, <abbr>p.</abbr> 1.</note>.</s>
+                  nº DCCCCXCII, <abbr>p.</abbr> 1. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Johanne de Vil[la-Regis</persName>],
                       armigero</rs>, titulo quo supra, terciam partem decime tocius territorii de
                       <placeName>Sarnaio</placeName>.</s>
                   <s>Actum <num>[Mº CCº] nonagesimo IIIIº</num><note n="2" xml:id="a3094">Voir
                   nº DCCCCXXXII, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 904.</note>.</s>
+                  <num>I</num>, <abbr>p.</abbr> 904. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note>.</s>
                   <s>— Item de fratre <persName>Johanne de Ponte</persName>, quamdam domum, sitam in
                     villa <placeName>Sarnaii</placeName> [juxta p]ontem, moventem de feodo domini
                       <placeName>Nealphe</placeName>, titulo donationis.</s>
@@ -67133,7 +67221,16 @@
                     in censiva domini <persName>Symonis de [Nealfa]</persName>, militis, titulo
                     donationis.</s>
                   <s>[Actum] <num>Mº CCCº secundo</num><note n="3" xml:id="a3095">Voir
-                  nº <num>MIII</num>, <abbr>p.</abbr> 14.</note>.</s>
+                  nº <num>MIII</num>, <abbr>p.</abbr> 14. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note>.</s>
                   <s>— Item de <persName>Philippa Rufa de Nealpha-Castro</persName>, unam peciam
                     vinee, [sitam in...........]</s>
                   <s><placeName><foreign xml:lang="fro">Condrei</foreign></placeName>, moventem de
@@ -67148,7 +67245,10 @@
                       <num>V</num> solidos redditus.</s>
                   <s>Actum <num>Mº CCCº Iº</num><note n="4" xml:id="a3096">Voir nº
                     <num>DCCXIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 676.</note><note xml:id="n3090_2" n="4">Voir
+                  <num>I</num>, <abbr>p.</abbr> 676. Voir nº
+                  DCCCCI, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 867. Voir nº
+                  DCCCCXCIX, <abbr>p.</abbr> 11.</note><note xml:id="n3090_2" n="4">Voir
                     <abbr>p.</abbr> 39, note 2, nº <num>MXXVI</num>. — Cette mention prouve que
                   Béatrix du Bois, veuve d'Anseau de Chevreuse, était morte avant l'année 1324 ; ce
                   qui est d'autant plus important que l'année de la mort de cette dame se trouve
@@ -67160,7 +67260,10 @@
                     a nobis, titulo emptionis.</s>
                   <s>Actum <num>Mº CCCº IIIIº</num><note n="5" xml:id="a3097">Voir nº
                     <num>DCCXXVII</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 683.</note><note xml:id="n3091" n="5">Voir nº
+                  <num>I</num>, <abbr>p.</abbr> 683. Voir nº
+                    <num>MXII</num>, <abbr>p.</abbr> 27. Voir nº DCCCCLXVI,
+                    <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 954.</note><note xml:id="n3091" n="5">Voir nº
                     <num>MXXIII</num>, <abbr>p.</abbr> 38.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Hemardo de Marchia</persName>,
                       armigero</rs>, et <rs type="person"><persName>Maria</persName>, ejus
@@ -67170,7 +67273,10 @@
                     super unam peciam tam terre quam bru[erie], titulo emptionis.</s>
                   <s>Actum <num>Mº CCCº XIXº</num><note n="6" xml:id="a3098">Voir nº
                     <num>DCCIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 661.</note><note xml:id="n3092" n="6">Voir nº
+                  <num>I</num>, <abbr>p.</abbr> 661. Voir nº
+                    <num>MXXXVIII</num>, <abbr>p.</abbr> 55. Voir nº
+                    <num>DCCXLV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 699.</note><note xml:id="n3092" n="6">Voir nº
                     <num>MXXXII</num>, <abbr>p.</abbr> 50.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Hemardo de Marchia</persName>,
                       armigero</rs>, et <rs type="person"><persName>Ma[ria] de Lymosiis</persName>,
@@ -67183,7 +67289,14 @@
                   droits de nouveaux acquêts en la prévôté de Paris, pièce qui nous servira à
                   combler des lacunes existantes dans l'acte que nous publions, ce territoire est
                   appelé <hi rend="i">Savyoron</hi>. Voir nº DCCCCXXVI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 895.</note>.</s>
+                  <num>I</num>, <abbr>p.</abbr> 895. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Johanne de Guernonvoisin</persName>,
                       armigero</rs>, et <rs type="person"><persName>Johanna</persName>, ejus
                       uxore</rs>, et <persName>Johanne, dicto Chevrel, de Herbouviller</persName>,
@@ -67191,22 +67304,38 @@
                       <num>unum</num> modium grani, dimidium bladi et dimidium avene, movens de
                     feodo <persName>Philippi de Gehengnay</persName>, titulo emptionis.</s>
                   <s>Actum <date><num>Mº CCCº IIIIº</num> die dominica post festum beate Marie in
-                        marcio<note n="2" xml:id="a3100">Voir
+                        marcio</date><note n="2" xml:id="a3100">Voir
                     n<hi rend="sup">os</hi>
                   <num>DCLXXVIII</num> et <num>DCLXXX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 630 et 632.</note><note xml:id="n3094_3" n="2">Voir
+                  <num>I</num>, <abbr>p.</abbr> 630 et 632. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note><note xml:id="n3094_3" n="2">Voir
                   nº DCCCCXXXII, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 904.</note></date>.</s>
+                  <num>I</num>, <abbr>p.</abbr> 904.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Helonnio de Ballisy</persName>,
                       armigero</rs>, et <rs type="person">domicella <persName>Agnete</persName>,
                       ejus uxore</rs>, <num>octoginta</num> arpenta terre tam nemoris, brueriarum,
                     pasture, quam terre arabilis, sita in parrochia de
                       <placeName>Lymosiis</placeName>, moventia de <rs type="person">domino
                         <persName>Symone de Macy</persName>, milite</rs>.</s>
-                  <s>[Actum] <date>anno <num>Mº CCCº</num><note n="3" xml:id="a3101">Voir
+                  <s>[Actum] <date>anno <num>Mº CCCº</num></date><note n="3" xml:id="a3101">Voir
                   nº <num>DCXCI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 646.</note><note xml:id="n3095_3" n="3">Voir
-                  nº <num>MIII</num>, <abbr>p.</abbr> 14.</note></date>, titulo emptionis.</s>
+                  <num>I</num>, <abbr>p.</abbr> 646. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note><note xml:id="n3095_3" n="3">Voir
+                  nº <num>MIII</num>, <abbr>p.</abbr> 14.</note>, titulo emptionis.</s>
                   <s>— Item de <rs type="person"><persName>Nicholao, dicto Preposito</persName>,
                       clerico</rs>, <num>VII</num> arpenta [terre] arabilis, sita in duabus peciis
                     in territorio de <placeName><foreign xml:lang="fro">Herboviller</foreign></placeName>, in censiva nostra.</s>
@@ -67225,7 +67354,14 @@
                     empcionis.</s>
                   <s>Actum <num>Mº CCº IIII<hi rend="sup">xx</hi> XVI</num><note n="4" xml:id="a3102">Voir nº
                     <num>DCCXIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 676.</note><note xml:id="n3090_3" n="4">Voir
+                  <num>I</num>, <abbr>p.</abbr> 676. Voir nº
+                  DCCCCI, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 867. Voir nº
+                  DCCCCXCIX, <abbr>p.</abbr> 11. Nous n'avons
+                  pas l'acte de vente de Thomas Mabre à l'abbaye, mais nous avons publié l'acquêt
+                  fait par lui de ces quatre arpents de terre sur Arnoul Bomerche. (Voir nº
+                  DCCCCLII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 923.)</note><note xml:id="n3090_3" n="4">Voir
                     <abbr>p.</abbr> 39, note 2, nº <num>MXXVI</num>. — Cette mention prouve que
                   Béatrix du Bois, veuve d'Anseau de Chevreuse, était morte avant l'année 1324 ; ce
                   qui est d'autant plus important que l'année de la mort de cette dame se trouve
@@ -67237,13 +67373,19 @@
                     [titulo don]acionis.</s>
                   <s>Actum <num>Mº CCº IIII<hi rend="sup">xx</hi> XVIº</num><note n="5" xml:id="a3103">Voir nº
                     <num>DCCXXVII</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 683.</note><note xml:id="n3091_2" n="5">Voir nº
+                  <num>I</num>, <abbr>p.</abbr> 683. Voir nº
+                    <num>MXII</num>, <abbr>p.</abbr> 27. Voir nº DCCCCLXVI,
+                    <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 954.</note><note xml:id="n3091_2" n="5">Voir nº
                     <num>MXXIII</num>, <abbr>p.</abbr> 38.</note>.</s>
                   <s>— Item de <persName>Johanne de Pleseyo</persName>, <num>XVI</num> sextaria tam
                     bladi quam ordei, titulo emptionis.</s>
                   <s>Actum <num>Mº CCº LXXIIIº</num><note n="6" xml:id="a3104">Voir nº
                     <num>DCCIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 661.</note><note xml:id="n3092_2" n="6">Voir nº
+                  <num>I</num>, <abbr>p.</abbr> 661. Voir nº
+                    <num>MXXXVIII</num>, <abbr>p.</abbr> 55. Voir nº
+                    <num>DCCXLV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 699.</note><note xml:id="n3092_2" n="6">Voir nº
                     <num>MXXXII</num>, <abbr>p.</abbr> 50.</note>.</s>
                   <s>— Item de <rs type="person">domino <persName>Johanne Acconensy<note n="7" xml:id="a3105">
                   <p>Voici le texte des divers actes relatifs à cette donation faite par Jean
@@ -67365,7 +67507,14 @@
                   droits de nouveaux acquêts en la prévôté de Paris, pièce qui nous servira à
                   combler des lacunes existantes dans l'acte que nous publions, ce territoire est
                   appelé <hi rend="i">Savyoron</hi>. Voir nº DCCCCXXVI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 895.</note>.</s>
+                  <num>I</num>, <abbr>p.</abbr> 895. Voir
+                  nº DCCCCIX, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 874. Voir
+                    n<hi rend="sup">os</hi>
+                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812 et 879. Voir
+                  note 1, <abbr>p.</abbr> 56. Voir
+                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note>.</s>
                   <s>— Item de <persName>Guillelmo, dicto Laceron</persName>, quamdam peciam vinee,
                     sitam in territorio de <placeName>Planis</placeName> juxta
                       <placeName>Broillacum</placeName>, in censiva domini de
@@ -67373,7 +67522,14 @@
                   <s>Actum <num>Mº CCº septuagesimo</num><note n="2" xml:id="a3107">Voir
                     n<hi rend="sup">os</hi>
                   <num>DCLXXVIII</num> et <num>DCLXXX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 630 et 632.</note><note xml:id="n3094_4" n="2">Voir
+                  <num>I</num>, <abbr>p.</abbr> 630 et 632. Voir
+                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 812. Voir
+                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 789. Voir
+                  nº <num>MXIV</num>, <abbr>p.</abbr> 29. Voir
+                  nº <num>DCCXI</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 663.</note><note xml:id="n3094_4" n="2">Voir
                   nº DCCCCXXXII, <abbr>t.</abbr>
                   <num>I</num>, <abbr>p.</abbr> 904.</note>.</s>
                   <s>— Item de <rs type="person"><persName>Guillelmo de Nerbona</persName>,
@@ -67389,74 +67545,23 @@
                       <persName>Medie-Curie</persName>, milite, <placeName>Carpenta</placeName>
                     nemoris, sita in haia de <placeName>Eveta</placeName>, tenta in feodo de domino
                       <placeName>Caprosie</placeName>, titulo donacionis.</s>
-                  <s>Actum <date>anno <num>Mº CCº</num> octogesimo, mense junio<note n="3" xml:id="a3108">Voir
+                  <s>Actum <date>anno <num>Mº CCº</num> octogesimo, mense junio</date><note n="3" xml:id="a3108">Voir
                   nº <num>DCXCI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 646.</note><note xml:id="n3095_4" n="3">Voir
-                  nº <num>MIII</num>, <abbr>p.</abbr> 14.</note></date>.</s>
+                  <num>I</num>, <abbr>p.</abbr> 646. Voir
+                  nº DCCCLXXXI1I, <abbr>t.</abbr>
+                  <num>I.</num>
+                  <abbr>p.</abbr> 853. Voir
+                  nº <num>DCCV</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 657. Voir
+                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 978. Voir
+                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
+                  <num>I</num>, <abbr>p.</abbr> 770.</note><note xml:id="n3095_4" n="3">Voir
+                  nº <num>MIII</num>, <abbr>p.</abbr> 14.</note>.</s>
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="1" xml:id="n3083" target="#a3075 #a3083 #a3087 #a3093 #a3099 #a3106">Voir
-                  nº DCCCCIX, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 874.</note>
-                <note n="2" xml:id="n3084" target="#a3076 #a3084 #a3088 #a3094 #a3100 #a3107">Voir
-                  nº <num>DCCCXLVII</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 812.</note>
-                <note n="3" xml:id="n3085" target="#a3077 #a3085 #a3089 #a3095 #a3101 #a3108">Voir
-                  nº DCCCLXXXI1I, <abbr>t.</abbr>
-                  <num>I.</num>
-                  <abbr>p.</abbr> 853.</note>
-                <note n="4" xml:id="n3086" target="#a3078 #a3086 #a3090 #a3096 #a3102">Voir nº
-                  DCCCCI, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 867.</note>
-                <note n="1" xml:id="n3087" target="#a3075 #a3083 #a3087 #a3093 #a3099 #a3106">Voir
-                    n<hi rend="sup">os</hi>
-                  <num>DCCCXLVIII</num> et DCCCCXIII, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 812 et 879.</note>
-                <note n="2" xml:id="n3088" target="#a3076 #a3084 #a3088 #a3094 #a3100 #a3107">Voir
-                  nº <num>DCCCXXIX</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 789.</note>
-                <note n="3" xml:id="n3089" target="#a3077 #a3085 #a3089 #a3095 #a3101 #a3108">Voir
-                  nº <num>DCCV</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 657.</note>
-                <note n="4" xml:id="n3096" target="#a3078 #a3086 #a3090 #a3096 #a3102">Voir nº
-                  DCCCCXCIX, <abbr>p.</abbr> 11.</note>
-                <note n="5" xml:id="n3097" target="#a3079 #a3091 #a3097 #a3103">Voir nº
-                    <num>MXII</num>, <abbr>p.</abbr> 27.</note>
-                <note n="6" xml:id="n3098" target="#a3080 #a3092 #a3098 #a3104">Voir nº
-                    <num>MXXXVIII</num>, <abbr>p.</abbr> 55.</note>
-                <note n="1" xml:id="n3099" target="#a3075 #a3083 #a3087 #a3093 #a3099 #a3106">Voir
-                  note 1, <abbr>p.</abbr> 56.</note>
-                <note n="2" xml:id="n3100" target="#a3076 #a3084 #a3088 #a3094 #a3100 #a3107">Voir
-                  nº <num>MXIV</num>, <abbr>p.</abbr> 29.</note>
-                <note n="3" xml:id="n3101" target="#a3077 #a3085 #a3089 #a3095 #a3101 #a3108">Voir
-                  nº DCCCCLXXXVIII, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 978.</note>
-                <note n="4" xml:id="n3102" target="#a3078 #a3086 #a3090 #a3096 #a3102">Nous n'avons
-                  pas l'acte de vente de Thomas Mabre à l'abbaye, mais nous avons publié l'acquêt
-                  fait par lui de ces quatre arpents de terre sur Arnoul Bomerche. (Voir nº
-                  DCCCCLII, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 923.)</note>
-                <note n="5" xml:id="n3103" target="#a3079 #a3091 #a3097 #a3103">Voir nº DCCCCLXVI,
-                    <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 954.</note>
-                <note n="6" xml:id="n3104" target="#a3080 #a3092 #a3098 #a3104">Voir nº
-                    <num>DCCXLV</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 699.</note>
-                <note n="1" xml:id="n3106" target="#a3075 #a3083 #a3087 #a3093 #a3099 #a3106">Voir
-                  nº <num>MXVIII</num>, <abbr>p.</abbr> 33.</note>
-                <note n="2" xml:id="n3107" target="#a3076 #a3084 #a3088 #a3094 #a3100 #a3107">Voir
-                  nº <num>DCCXI</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 663.</note>
-                <note n="3" xml:id="n3108" target="#a3077 #a3085 #a3089 #a3095 #a3101 #a3108">Voir
-                  nº <num>DCCCXII</num>, <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 770.</note>
-              
-                </div>
-            </back>
-          </text>
+            </text>
           <text xml:id="NDVC-AB_1049" n="MXLIX" subtype="article">
             
             <front>

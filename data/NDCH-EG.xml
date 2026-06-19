@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDCH-EG">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDCH-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -1477,7 +1477,8 @@
                 document intéressant, directement ou indirectement, l'église Notre-Dame de Chartres.
                 En copiant d'ailleurs ces pièces sur le manuscrit original lui-même, nous avons été
                 assez heureux pour découvrir dans le texte publié par notre savant maître quelques
-                erreurs dont la rectification pourra servir à justifier notre réimpression.</note></p>
+                erreurs dont la rectification pourra servir à justifier notre réimpression.</note><note xml:id="p1077_fn3">Ragenfroy occupa le siége de Chartres de 942 à 955,
+                environ.</note></p>
             </argument>
             <div type="tradition">
               <listWit type="copie">
@@ -1741,32 +1742,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p1077_fn3">Ragenfroy occupa le siége de Chartres de 942 à 955,
-                environ.</note>
-              
-              
-            
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="NDCH-EG_0009" n="IX">
           <pb n="t1_p082" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/f332/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/manifest.json"/>
           <front>
@@ -2476,7 +2452,7 @@
                 d'Ingré, sise au territoire dudit Orléans, et de tous les droits que ledit évêque et
                 l'archidiacre d'Orléans étaient en possession d'exercer en ladite église d'Ingré ; à
                 raison de quoi Agobert, évêque de Chartres, abandonne, par forme d'échange et de
-                compensation au Chapitre Saint-Liphard de Meung, l'église d'Oinville-en-Beauce.</p>
+                compensation au Chapitre Saint-Liphard de Meung, l'église d'Oinville-en-Beauce.<note n="4">Voir n°s VII et XIV.</note></p>
             </argument>
             <div type="tradition">
               <listWit type="copie">
@@ -2491,12 +2467,7 @@
           <body>
             <p/>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p1093_fn4">Voir n°s VII et XIV.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="NDCH-EG_0017" n="XVII">
           <pb n="t1_p093" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/f343/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/manifest.json"/>
           <front>
@@ -24781,7 +24752,18 @@
               <listWit type="original">
                 <witness n="A" source="https://nakala.fr/10.34847/nkl.96e52ca5" facs="https://api.nakala.fr/iiif/10.34847/nkl.96e52ca5/d6c500316bab33e85951fb2085ee468158f3f9f8/full/full/0/default.jpg" corresp="https://cartulaires-2fe77c.gitpages.huma-num.fr/manifests/NDCH-EG_FRAD028_G_444_01.json">Original en parchemin. Arch. dép.
                   Eure-et-Loir, G 444 (ancienne cote : fonds du Chapitre, carton III, D,
-                  3).</witness>
+                  3).<note xml:id="p2174_fn1">Cette charte était en effet scellée de quatre sceaux sur
+                double queue de parchemin. Ces sceaux sont aujourd'hui détruits, et il ne reste plus
+                que les attaches de deux d'entre eux ; mais ces attaches vont nous permettre de
+                faire une observation assez importante, et qu'il serait facile de généraliser. Pour
+                donner une plus grande authenticité à la pièce, et afin que, si la cire venait à se
+                briser, les attaches servissent elles-mêmes à légaliser l'acte, on écrivait sur le
+                parchemin quelques mots que l'on soulignait dans la charte même. C'est ainsi que
+                dans le titre qui nous occupe, on a choisi les mots in cibo et potu, qui sont
+                soulignés dans le texte et répétés sur chacune des queues. C'est ainsi que dans le
+                compromis de 1255, dont nous parlons dans la note précédente, on a souligné trois
+                mots super eo videlicet, qui sont également répétés sur les attaches de deux sceaux
+                autrefois suspendus à cette pièce.</note></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited">Cartulaire de Notre-Dame de Chartres, éd. Eugène de Lépinois et Lucien Merlet, Chartres, 1862, p. t2_p172-t2_p174.</witness>
@@ -24851,25 +24833,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p2174_fn1">Cette charte était en effet scellée de quatre sceaux sur
-                double queue de parchemin. Ces sceaux sont aujourd'hui détruits, et il ne reste plus
-                que les attaches de deux d'entre eux ; mais ces attaches vont nous permettre de
-                faire une observation assez importante, et qu'il serait facile de généraliser. Pour
-                donner une plus grande authenticité à la pièce, et afin que, si la cire venait à se
-                briser, les attaches servissent elles-mêmes à légaliser l'acte, on écrivait sur le
-                parchemin quelques mots que l'on soulignait dans la charte même. C'est ainsi que
-                dans le titre qui nous occupe, on a choisi les mots in cibo et potu, qui sont
-                soulignés dans le texte et répétés sur chacune des queues. C'est ainsi que dans le
-                compromis de 1255, dont nous parlons dans la note précédente, on a souligné trois
-                mots super eo videlicet, qui sont également répétés sur les attaches de deux sceaux
-                autrefois suspendus à cette pièce.</note>
-              
-            
-              </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="NDCH-EG_0333" n="CCCXXXIII">
           <pb n="t2_p174" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/f176/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/manifest.json"/>
           <front>
@@ -26282,7 +26246,11 @@
               <listWit type="original">
                 <witness n="A" source="https://nakala.fr/10.34847/nkl.b8f2p6z1" facs="https://api.nakala.fr/iiif/10.34847/nkl.b8f2p6z1/9d0d41bd737e36793a74feba9094e3ad2c929b60/full/full/0/default.jpg" corresp="https://cartulaires-2fe77c.gitpages.huma-num.fr/manifests/NDCH-EG_FRAD028_G_1792_02.json">Original en parchemin. Arch. dép.
                   Eure-et-Loir, G 1792 (ancienne cote : fonds du Chapitre, carton LXXXV, N,
-                  2).</witness>
+                  2).<note xml:id="p2196_fn1">A défaut du sceau qui souvent était brisé, les queues
+                servaient à prouver l'authenticité des pièces. Les queues, attachées à la charte qui
+                nous occupe, ayant été coupées par mégarde, l'official de Chartres, au mois d'août
+                1318, donna un certificat attestant que toute foi doit être accordée à ladite pièce,
+                non obstante cancellatione seu fractione caude, que facta fuit per errorem.</note></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited">Cartulaire de Notre-Dame de Chartres, éd. Eugène de Lépinois et Lucien Merlet, Chartres, 1862, p. t2_p195-t2_p196.</witness>
@@ -26292,17 +26260,7 @@
           <body>
             <p/>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p2196_fn1">A défaut du sceau qui souvent était brisé, les queues
-                servaient à prouver l'authenticité des pièces. Les queues, attachées à la charte qui
-                nous occupe, ayant été coupées par mégarde, l'official de Chartres, au mois d'août
-                1318, donna un certificat attestant que toute foi doit être accordée à ladite pièce,
-                non obstante cancellatione seu fractione caude, que facta fuit per errorem.</note>
-            
-              </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="NDCH-EG_0357" n="CCCLVII">
           <pb n="t2_p196" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/f198/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/manifest.json"/>
           <front>
@@ -31576,7 +31534,7 @@
     </group>
     <back>
       
-         <div type="index">
+      <div type="index">
         <head><pb n="229" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/manifest.json"/> Dictionnaire topographique et index géographique.</head>
         <list type="index" xml:id="NDCH-EG_liste_A">
           <head>A</head>
@@ -38410,9 +38368,6 @@
       <!--<item xml:id="NDCH-EG_rs_6680"><rs><hi rend="sc">Zetredus</hi></rs>, <ref>III. 132</ref>.</item>-->
     </list>
   </div>
-      <div type="notes">
-        <note xml:id="p3229_fn1">La plus grande partie des localités mentionnées dans ce <hi rend="i">Dictionnaire topographique</hi> étant situées dans le département d'Eure-et-Loir, nous avons jugé inutile de répéter entre parenthèses le nom du département, chaque fois que la localité citée appartient à Eure-et-Loir.</note>
-      </div>
-    </back>
+</back>
   </text>
 </TEI>

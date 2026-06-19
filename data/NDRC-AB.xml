@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDRC-AB">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDRC-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -1003,22 +1003,10 @@
                   nostrorum munimine roboravimus.</s>
                 <s>Actum <date>anno Domini <num>Mº CCº tricesimo quarto</num>, mense decembri</date><note n="8" xml:id="p9_fn1">Il y a évidemment ici erreur du copiste, qui a écrit <hi rend="i">quarto</hi> au lieu de <hi rend="i">quinto</hi>. Cette charte, en effet, ne peut être antérieure aux actes de vente et de confirmation n<hi rend="sup">os</hi>
                 <num>III</num> et <num>IV</num>, qui sont de l'an <num>1235.</num></note>.</s>
-              </p>
+              <note n="1">Voir les deux actes précédents.</note></p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="p7_fn1">Voir les deux actes précédents.</note>
-              
-            
-              
-              
-              
-              
-              
-              </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDRC-AB_0006" n="VI" subtype="article">
           <pb n="9" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$40/canvas"/>
           <!-- oldid:acte6 -->
@@ -2369,16 +2357,11 @@
                   fecimus communiri.</s>
                 <s>Actum <date>anno Domini <num>Mº CCº</num> quadragesimo tercio, mense
                     januario</date>.</s>
-              </p>
+              <note n="1">Voyez n<hi rend="sup">os</hi>
+                <num>I</num> et <num>II.</num></note></p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="pNaN_fn3">Voyez n<hi rend="sup">os</hi>
-                <num>I</num> et <num>II.</num></note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDRC-AB_0031" n="XXXI" subtype="article">
           <pb n="32" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$63/canvas"/>
           <!-- oldid:acte30 -->
@@ -3638,15 +3621,10 @@
                   et in perpetuum habebimus.</s>
                 <s><date>Datum anno Domini <num>Mº CCº</num> tricesimo sexto, mense
                   marcio</date>.</s>
-              </p>
+              <note n="1">Voyez la charte précédente.</note></p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="pNaN_fn2">Voyez la charte précédente.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDRC-AB_0053" n="LIII" subtype="article">
           <pb n="54" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$85/canvas"/>
           <front>
@@ -3656,7 +3634,7 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head xml:lang="lat">Concessio decime deTalon."</head>
+            <head xml:lang="lat">Concessio decime deTalon."<note n="1" xml:id="p54_fn1">Voir la note 2 du nº <num>III</num>.</note></head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Bib. nat. de Fr., ms. lat. 10996, cartulaire.</witness>
@@ -3675,23 +3653,18 @@
                   <seg type="theo">salutem in Domino</seg>.</s>
                 <s>Noverit universitas vestra quod <persName>Reginaldus de Mauvères</persName>, armiger, in nostra presencia constitutus, de cujus feodo decima de
                     <placeName>Talon</placeName> movere dignoscitur, donationem dicte decime, quam
-                    fecit<note n="2" target="#p53_fn2"/>
+                    fecit<note n="2" xml:id="p54_fn2">Cette donation fut faite en juillet <num>1248.</num>
+                Voyez nº <num>LXXVII</num>.</note>
                   <rs type="person"><persName>Petrus de Capella</persName></rs>, miles, ecclesie
                     <placeName>Beate Marie de Roscha</placeName>, voluit et concessit dicte ecclesie
                   perpetuo possidendam ; et ego, dominus feodi, dictam donationem similiter volui, et per appositionem sigilli mei confirmavi.</s>
-                <s><date>Datum anno Domini <num>Mº CCº</num> quadragesimo octavo, mense martio<note n="3" target="#p53_fn3"/></date>.</s>
+                <s><date>Datum anno Domini <num>Mº CCº</num> quadragesimo octavo, mense martio</date><note n="3" xml:id="p54_fn3">La date de la charte <num>LXXVII</num> nous autorise à
+                faire remonter celle-ci au mois de mars 1249 avant Pâques.</note>.</s>
               </p>
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="1" xml:id="p54_fn1">Voir la note 2 du nº <num>III</num>.</note>
-              <note n="2" xml:id="p54_fn2">Cette donation fut faite en juillet <num>1248.</num>
-                Voyez nº <num>LXXVII</num>.</note>
-              <note n="3" xml:id="p54_fn3">La date de la charte <num>LXXVII</num> nous autorise à
-                faire remonter celle-ci au mois de mars 1249 avant Pâques.</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="NDRC-AB_0054" n="LIV" subtype="article">
           <pb n="54" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$85/canvas"/>
@@ -4759,6 +4732,8 @@
             </div>
           </body>
           
+                  <back>
+            </back>
         </text>
         <text xml:id="NDRC-AB_0072" n="LXXII" subtype="article">
           <pb n="73" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$104/canvas"/>
@@ -4770,7 +4745,8 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head xml:lang="lat">De quinque solidis Parisiensibus apud <hi rend="i">Vernoil</hi><note n="1" target="p0073_fn1"/>.</head>
+            <head xml:lang="lat">De quinque solidis Parisiensibus apud <hi rend="i">Vernoil</hi><note n="1" xml:id="p73_fn1"><hi rend="i">Verneuil</hi>, dans le canton de Poissy, non
+                loin de Meulan.</note>.</head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Bib. nat. de Fr., ms. lat. 10996, cartulaire.</witness>
@@ -4804,13 +4780,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="1" xml:id="p73_fn1"><hi rend="i">Verneuil</hi>, dans le canton de Poissy, non
-                loin de Meulan.</note>
-              
-            
-              </div>
-          </back>
+            </back>
         </text>
         <text xml:id="NDRC-AB_0073" n="LXXIII" subtype="article">
           <pb n="74" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$105/canvas"/>
@@ -5183,19 +5153,10 @@
                   corporaliter prestiterunt, et sub fide prestita promiserunt quod in predictis
                   rebus venditis jure aliquo nichil in posterum reclamabunt.</s>
                 <s>Actum <date>anno Domini millesimo ducentesimo tricesimo nono</date>, mense....</s>
-              </p>
+              <note n="1">Voyez nº <num>XLVII</num>, note <num>4.</num></note></p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="p77_fn3">Voyez nº <num>XLVII</num>, note <num>4.</num></note>
-              
-            
-              
-              
-              </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDRC-AB_0080" n="LXXX" subtype="article">
           <pb n="80" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$111/canvas"/>
           <front>
@@ -6110,12 +6071,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note>Voyez les deux chartes précédentes.</note>
-            </div>
-          </back>
-        </text>
+</text>
         <text xml:id="NDRC-AB_0093" n="XCIII" subtype="article">
           <pb n="96" facs="https://iiif.archive.org/iiif/cartulairedelab00unkngoog$127/canvas"/>
           <!-- oldid:acte93 -->

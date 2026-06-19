@@ -1,4 +1,4 @@
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMCP-PR">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMCP-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -1081,7 +1081,7 @@
                 <p>
                   <s>Actum palatio <placeName>Aurelianis</placeName>
                     <date><num>III</num> idus Novembris, anno <num>VIIII. X.</num> regnante
-                        <persName>Rotberto</persName> gloriosissimo rege<note n="8" xml:id="a1008">Le diplôme étant daté d'Orléans, une des
+                        <persName>Rotberto</persName> gloriosissimo rege</date><note n="8" xml:id="a1008">Le diplôme étant daté d'Orléans, une des
                   villes du duché de France, on a pu compter les années de Robert le Pieux à partir
                   de son sacre dans cette ville le 1<hi rend="sup">er</hi> janvier 988. Dès lors
                   l'année 19 du règne répond exactement à 1006. Précisément Robert <num>II</num>
@@ -1092,7 +1092,7 @@
                   est très défendable, car on n'a point de précisions sur l'itinéraire du roi Robert
                   à l'automne de 1014. Il se trouvait à Dijon le 25 janvier 1015 : s'y serait-il
                   rendu en plein hiver, ou n'aurait-il pas fait un séjour en Bourgogne depuis les
-                  vendanges ?</note></date>.</s>
+                  vendanges ?</note>.</s>
                 </p>
               </div>
             </body>
@@ -1519,7 +1519,7 @@
                     <date>anno Incarnationis Domini <num>M. LX.V.</num> regni autem
                         <persName>Philippi</persName> regis</date>.</s>
                   <s><num>v</num>.</s>
-                  <s><date>indictione <num>xv</num><note n="23" xml:id="a1023a">Un autre état tout à fait distinct de
+                  <s><date>indictione <num>xv</num></date><note n="23" xml:id="a1023a">Un autre état tout à fait distinct de
                   la formule précédente est fourni par une copie de 1118 environ <hi rend="i">(Liber
                     Testamentorum</hi>, ms. lat. 10977, fol. 1 nº 2). « Actum <hi rend="i">Parisium</hi>, <num>III</num> idus novembris, indictione <num>xv</num>, anno
                   regni regis <hi rend="sc">Philippi</hi><num>vº</num>. « L'indiction donnerait
@@ -1527,7 +1527,7 @@
                   dernière date. La souscription du prévôt d'Orléans Maubert prouve que la rédaction
                   de l'acte s'est effectuée dans cette ville. Peut-être la promesse avait-elle été
                   faite à Paris, le jour de la fête de saint Martin, en 1062, ce qui expliquerait
-                  l'erreur d'indiction.</note></date>, <rs type="person"><persName>Balduino</persName>
+                  l'erreur d'indiction.</note>, <rs type="person"><persName>Balduino</persName>
                       cancellario</rs>.</s>
                 </p>
                 <p>
@@ -4011,8 +4011,8 @@
                     <date>anno Incarnationis Dominice <num>M. LXXXVI</num>, indictione
                         <num>viiii</num>, regnante rege</date>
                     <persName>Philippo</persName>
-                    <date>anno <num>xxvi</num><note n="b" xml:id="aid127224"><hi rend="i">B</hi> anno
-                    <num>xxv</num>.</note></date>, domno <persName>Ratbodo</persName> episcopante
+                    <date>anno <num>xxvi</num></date><note n="b" xml:id="aid127224"><hi rend="i">B</hi> anno
+                    <num>xxv</num>.</note>, domno <persName>Ratbodo</persName> episcopante
                       <date>anno <num>xviiii</num></date>.</s>
                 </p>
               </div>
@@ -6302,8 +6302,8 @@
                 </p>
                 <p>
                   <s>Hoc factum est tempore <persName>Philippi</persName> regis <date>anno Verbi
-                      Incarnati <num>Mº XCº IIIIº</num>, indictione <num>iiiiª</num><note n="a" xml:id="aid136406">L'année 1094 correspond à
-                  l'indiction 2.</note></date>.</s>
+                      Incarnati <num>Mº XCº IIIIº</num>, indictione <num>iiiiª</num></date><note n="a" xml:id="aid136406">L'année 1094 correspond à
+                  l'indiction 2.</note>.</s>
                 </p>
               </div>
             </body>
@@ -8596,12 +8596,12 @@
                   <s>Actum <placeName>Meldis</placeName> publice, sub <rs type="person"><persName>Stephano</persName> comite</rs>
                     <date>regnante <rs type="person"><persName>Philippo</persName> rege
                           <persName>Francorum</persName></rs> anno tricesimo sexto, anno ab
-                      Incarnatione Domini millesimo <num>LXXVº</num><note n="b" xml:id="aid148886">Comme le remarquent les auteurs
+                      Incarnatione Domini millesimo <num>LXXVº</num>, indictione <num>iii</num>,
+                        <num>V</num> idus Martii</date><note n="b" xml:id="aid148886">Comme le remarquent les auteurs
                   de la <title>Gallia christiana nova</title> (VIII, 1610), il faut indubitablement
                   corriger <num>Mº</num> LXXXXV, car en 1076, il n'y avait pas encore de moines à
                   St-Martin-dcs-Champs. La 36<hi rend="sup">e</hi> année de Philippe I<hi rend="sup">er</hi> part du 4 août 1095. L'indiction est exacte ; elle correspond bien à
-                  1095-96.</note>, indictione <num>iii</num>,
-                        <num>V</num> idus Martii</date>.</s>
+                  1095-96.</note>.</s>
                   <s><rs type="person"><persName>Guillelmus</persName> cancellarius</rs> scripsit et
                     subscripsit.</s>
                   <s>Si quis <pb n="110" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f113/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>huic rei ulterius contradicere voluerit, sacra auctoritate
@@ -14678,14 +14678,14 @@
                   <s><date>Actum nonis aprilis in</date> capitulo <placeName>Beate
                     Marie</placeName>, in presentia domni<rs type="person"><persName><pb n="182" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>Huberti</persName> episcopi</rs>
                     <date>anno sexto pontificatus</date> ipsius, millesimo scilicet <date>centesimo
-                      sexto anno Dominice Incarnationis<note n="290" xml:id="a1290">Le 5 avril se trouve deux fois dans
+                      sexto anno Dominice Incarnationis</date><note n="290" xml:id="a1290">Le 5 avril se trouve deux fois dans
                   l’année pascale 1106, qui a commencé le 25 mars pour se terminer, après douze mois
                   et vingt jours, le 14 avril 1107. Mais une autre charte sonlisienne étant datée de
                   1106 et de la 7º année d'Hubert. alors que l'acte du 5 avril est de sa 6º année,
                   et ce prélat ayant été sacré par Pascal <num>II</num>, non sur la fin de 1099
                   comme on l'a cru, mais après le 5 avril 1100, il faut adopter pour la présente
                   charte la date du 5 avril 1106. Thibaud 1<hi rend="sup">er</hi> étant dès lors
-                  prieur, la mort de son devancier Ourson doit être fixée au 12 octobre 1005.</note></date>.</s>
+                  prieur, la mort de son devancier Ourson doit être fixée au 12 octobre 1005.</note>.</s>
                 </p>
                 <p>
                   <s>(Scellé sur double queue de parchemin, le scel brisé.)</s>
@@ -15204,10 +15204,10 @@
                       <persName>Johannis</persName>, sancte Romane ecclesie diaconi cardinalis ac
                     bibliotecarii <date><num>II</num> Kal. Maii, indictione <num>xv</num>,
                       Incarnationis Dominice anno <num>M. C. VIII</num>, pontificatus autem domni
-                      Paschalis anno <num>viii</num><note n="a" xml:id="aid176996">L'année du pontificat doit être
+                      Paschalis anno <num>viii</num></date><note n="a" xml:id="aid176996">L'année du pontificat doit être
                   retenue ; elle date la charte du 30 avril 1107 (et non 1108), car Pascal
                     <num>II</num> fut élu pape le 14 avril 1099. C'est en effet, en 1106-1107 que ce
-                  souverain pontife séjourna en France.</note></date>.</s>
+                  souverain pontife séjourna en France.</note>.</s>
                 </p>
               </div>
             </body>
@@ -16334,43 +16334,7 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="313" xml:id="n1313d" target="#a1313b #a0313c #a0313d">
-                  <p>Gervais succéda comme sénéchal de Philippe I<hi rend="sup">er</hi>, dès 1081, à
-                    son devancier Adam, promu au dapiférat en 1079, et qui exerçait peut-être encore
-                    sa charge en 1080. Son dernier acte est de 1090. La même année ou la suivante au
-                    plus tard il fut remplacé par Manassé, et celui-ci dès 1091 par Gui de Rochefort
-                    (Maurice Prou, <title>Recueil des Actes de Philippe I</title><hi rend="sup">er</hi>, Introd., <abbr>p.</abbr> 138). — Quant à la seconde notice, il
-                    résulte d'une charte confirmative d'Eudes <num>III</num>, év. de Beauvais (LL
-                    1351, fol. 68) que ce <hi rend="i">Gervasius miles</hi> fut <hi rend="i">dapifer
-                      regis</hi>. C'est <persName>Gervais <num>I</num> de
-                      Châteauneuf-en-Thimerais</persName>, nommé avec sa femme, ses quatre fils et
-                    ses deux filles dans une charte de 1104 (Coll. Moreau, <num>XLI</num>, 149).
-                    Mabile survécut à son mari ; elle est citée avec son fils Hugues <num>II</num>
-                    et sa bru Auberée, fille du comte Robert <num>I</num> de Meulan (Coll. Baluze,
-                      <num>XXXVIII</num>, 231). — Elle était probablement sœur de <persName>Sagalon
-                        <num>III</num> de Milly</persName>, d'où lui seraient venus les droits sur
-                    les travers de Milly et de Conty, qui paraissent bien avoir fait partie de sa
-                    dot. Amicie, fille aînée de Sagalon <num>III</num> et héritière de Milly, unie à
-                    Pierre de Gerberoy, eut une fille appelée <hi rend="i">Mabile</hi>.</p>
-                  <p>La mère de Mabile de Châteauneuf est connue par une lettre d'Ives de Chartres.
-                    C'est une autre Mabile, sœur de Robert de Bellesme et fille de Roger de
-                    Montgommery. Josseline, mère de Roger, avait elle-même pour mère Seufrie, sœur
-                    de la duchesse Gonnor de Normandie. Ives s'opposa, en vertu de cette généalogie,
-                    au mariage de Hugues de Châteauneuf, fils aîné de Gervais, avec une fille du roi
-                    Henry I<hi rend="sup">er</hi> d'Angleterre, lequel out Gonnor pour trisaïeule.
-                    Aucun compte n'ayant été tenu de ses menaces, Ives excommunia le jeune Hugues.
-                    Le légat du Saint-Siège, Gonon de Préneste, paraît lui avoir donné tort (Migne,
-                      <hi rend="i">Patrologia latina</hi>, <abbr>t.</abbr> 162, <abbr>pp.</abbr>
-                    265, 270, epp. 261, 266). Cependant Hugues ayant fini par épouser la sœur de
-                    Galeran <num>II</num>, comte de Meulan, partagea en 1124 le sort de celui-ci,
-                    qui, s'étant révolté contre Henry I<hi rend="sup">er</hi>, fut défait et
-                    puni.</p>
-                </note>
-              </div>
-            </back>
-          </text>
+            </text>
           <text xml:id="SMCP-PR_0127b" n="127 bis" subtype="article">
             
             <front>
@@ -16744,12 +16708,12 @@
                   <s>Actum <placeName>Parisius</placeName>
                     <date>anno Incarnati Verbi <num>Mº Cº X<hi rend="sup">mo</hi></num> indictione
                         <num>iiiª</num> <pb n="209" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f212/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>pridie nonas februarii, anno unctionis nostre
-                        <num>iiº</num><note n="a" xml:id="aid182838">Ces indications
+                        <num>iiº</num></date><note n="a" xml:id="aid182838">Ces indications
                   chronologiques ne permettent pas de placer en 1111 le diplôme, car Louis
                     <num>VI</num> fut sacré le 3 août 1108 à Orléans. Luchaire s'associe, à cet
                   égard, à la critique que <abbr>R.</abbr> de Lasteyrie adresse à <abbr>J.</abbr>
                   Tardif (<title>Annales de la vie de Louis VI</title>, nº 95, <abbr>p.</abbr>
-                  52).</note></date>.</s>
+                  52).</note>.</s>
                   <s><rs type="person"><persName>Stephanus</persName> cancellarius</rs> relegendo
                     subscripsit.</s>
                 </p>
@@ -18256,8 +18220,8 @@
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName>
-                    <date>anno Incarnati Verbi <num>MCXV</num><note n="g" xml:id="aid189222">1115 <hi rend="i">C</hi> et <hi rend="i">D</hi>.</note> regni nostri <num>viiº</num><note n="h" xml:id="aid189250">7º<hi rend="i">B C
-                  D</hi>.</note></date>
+                    <date>anno Incarnati Verbi <num>MCXV</num> regni nostri <num>viiº</num></date><note n="g" xml:id="aid189222">1115 <hi rend="i">C</hi> et <hi rend="i">D</hi>.</note><note n="h" xml:id="aid189250">7º<hi rend="i">B C
+                  D</hi>.</note>
                     astantibus in palatio nostro quorum nomina subtitulata sunt<note n="i" xml:id="aid189268"><hi rend="i">B</hi> furerunt. —
                     <hi rend="i">C, D</hi> et <hi rend="i">a</hi> omettent « et signa ».</note> et signa.</s>
                   <s>Signa <rs type="person"><persName>Anselmi</persName> dapiferi</rs> ; <rs type="person"><persName>Gilberti</persName>, fratris<note n="j" xml:id="aid189309"><hi rend="i">B</hi> omet
@@ -19155,10 +19119,10 @@
                       Marie</placeName>
                     <date>anno Incarnationis Domini millesimo centesimo decimo septimo, regnante
                       rege <persName>Ludovico</persName> anno decimo, et episcopatus nostri anno
-                        quinto<note n="b" xml:id="aid193704">Ici s'arrête le texte édité par
-                    <hi rend="i">a</hi>.</note>,
+                        quinto,
                       indictione <num>i</num>, epacta <num>xx</num>, concurrente
-                      <num>iiii</num></date>.</s>
+                      <num>iiii</num></date><note n="b" xml:id="aid193704">Ici s'arrête le texte édité par
+                    <hi rend="i">a</hi>.</note>.</s>
                   <s><rs type="person">Ego <persName>Theobaldus</persName> cancellarius</rs> legi et
                     subscripsi.</s>
                 </p>
@@ -19442,12 +19406,12 @@
                     <date>anno Incarnati Verbi <num>millº Cº Xº VIIII</num> indictione
                         <num>xiª</num>, regnante <persName>Ludovico</persName> gloriosissimo rege
                         <persName>Francorum</persName> anno <num>xii</num> archiepiscopatus autem
-                      domni <persName>Rodulfi</persName> anno <num>xiii</num><note n="a" xml:id="aid195013">A défaut de la date précise de
+                      domni <persName>Rodulfi</persName> anno <num>xiii</num></date><note n="a" xml:id="aid195013">A défaut de la date précise de
                   consécration de l'archevêque Raoul, on connaît celle de la mort de son devancier
                   (17 septembre 1106) ; sa 13<hi rend="sup">e</hi> année n'a pu commencer avant fin
                   septembre 1118. La 12<hi rend="sup">e</hi> année de Louis <num>VI</num> commence
                   le 3 août 1119. Les limites probables de date pour cette pièce sont donc : « 3
-                  août — fin septembre 1119. »</note></date>.</s>
+                  août — fin septembre 1119. »</note>.</s>
                 </p>
                 <p>
                   <s><persName>Fulchradus</persName> cancellarius recognovit, scripsit et
@@ -20166,23 +20130,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="362" xml:id="n1362c" target="#a1362b #a0362c #a0362d #a0362e">Wahagnies,
-                  ca. Pont-à-Marcq, ar. Lille. — Tous les dignitaires rémois sont mentionnés dans la
-                    <title>Gallia</title>, <abbr>t.</abbr>
-                  <num>IX</num>, sauf Joran, abbé de St-Nicolas-au-Bois, qui doit s'intercaler
-                  (ibid., col. 612) entre Bernier (1102) et Denis (1120).</note>
-                <note n="362" xml:id="n1362e" target="#a1362b #a0362c #a0362d #a0362e">Wahagnies,
-                  ca. Pont-à-Marcq, ar. Lille. — Tous les dignitaires rémois sont mentionnés dans la
-                    <title>Gallia</title>, <abbr>t.</abbr>
-                  <num>IX</num>, sauf Joran, abbé de St-Nicolas-au-Bois, qui doit s'intercaler
-                  (ibid., col. 612) entre Bernier (1102) et Denis (1120).</note>
-                
-                
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0158" n="158" subtype="article">
             
             <front>
@@ -20241,8 +20191,8 @@
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName>
-                    <date>anno Incarnati Verbi <num>Mº Cº XVIIII</num><note n="e" xml:id="aid197933">decimo quarto <hi rend="i">D</hi> qui s'arrête ici ; de même <hi rend="i">E, F</hi>.</note>, regni nostri
-                      <num>xiiº</num></date>, <persName>Adelaidis</persName> regine
+                    <date>anno Incarnati Verbi <num>Mº Cº XVIIII</num>, regni nostri
+                      <num>xiiº</num></date><note n="e" xml:id="aid197933">decimo quarto <hi rend="i">D</hi> qui s'arrête ici ; de même <hi rend="i">E, F</hi>.</note>, <persName>Adelaidis</persName> regine
                     <num>viº</num>.</s>
                   <s>Astantibus in palatio nostro quorum nomina subtitulata sunt et signa.</s>
                   <s><abbr>S.</abbr>
@@ -20654,7 +20604,7 @@
                   présente notice, se retrouve en 1146 (Cartul. de Prémontré, fol. 91, copie dans
                   Duchesne, <num>LXXVII</num>, 123). — Guerri <num>II</num>, mari d'Odote, est cité
                   en 1151 avec son fils Pierre <num>III</num>.</note></placeName>
-                    <date>anno ab Incarnatione Domini <num>M CXX</num><note n="379" xml:id="a1379a">Cet acte démontre que la comtesse
+                    <date>anno ab Incarnatione Domini <num>M CXX</num></date><note n="379" xml:id="a1379a">Cet acte démontre que la comtesse
                   Adèle de Vermandois, veuve de Hugues le Grand, n'a nullement fini ses jours en
                   1118, comme le porte l'<hi rend="i">Art de vérifier les dates</hi> (t.
                     <num>II</num>, <abbr>p.</abbr> 706). — Après la mort de Hugues le Grand (à
@@ -20666,7 +20616,7 @@
                   qu'avait donné le châtelain de la Ferté à St-Martin, et qui fut le berceau de
                   l'abbaye de Valsery. Les pièces relatives à ces deux affaires sont insérées plus
                   loin dans un chapitre consacré aux <hi rend="i">Donations à St-Martin restées sans
-                    effet sous le règne de Louis VI</hi>.</note></date>, in
+                    effet sous le règne de Louis VI</hi>.</note>, in
                       <placeName>Francia</placeName> regnante <persName>Ludovico</persName>,
                       <placeName>Remis</placeName> presidente in archiepiscopatu
                       <persName>Radulfo</persName>, <placeName>Suessionis</placeName> episcopante
@@ -21300,12 +21250,12 @@
                   Galerannus arch. cum aliis.</note></rs>, <rs type="person"><persName>Manasses</persName> archidiaconus</rs>, <rs type="person"><persName>Stephanus</persName> prepositus</rs>, <rs type="person"><persName>Petrus</persName> clericus</rs>, <persName>Hugo de
                       Miniaco</persName>, <rs type="person"><persName>Stephanus</persName>
                       conversus</rs>, per cujus manum cartula hec data est.</s>
-                  <s><date>Anno ab Incarnatione Domini <num>Mº C XXII</num><note n="b" xml:id="aid201944">Mº <num>CXXV</num>
-                  <hi rend="i">E</hi> ; <hi rend="i">C D E F</hi> omettent la fin.</note>, anno
-                        <persName>Ludovici</persName> regis <num>xvii</num><note n="c" xml:id="aid201976">Marrier a corrigé
-                  <num>xv</num>.</note> anno pontificatus
+                  <s><date>Anno ab Incarnatione Domini <num>Mº C XXII</num>, anno
+                        <persName>Ludovici</persName> regis <num>xvii</num> anno pontificatus
                         <persName>Burchardi</persName>
-                      <num>iiiº</num></date>.</s>
+                      <num>iiiº</num></date><note n="b" xml:id="aid201944">Mº <num>CXXV</num>
+                  <hi rend="i">E</hi> ; <hi rend="i">C D E F</hi> omettent la fin.</note><note n="c" xml:id="aid201976">Marrier a corrigé
+                  <num>xv</num>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -21505,12 +21455,12 @@
                       Marie</placeName>
                     <date>anno Incarnationis Domini <num>Mº Cº XXº IIº</num>, regni
                         <persName>Ludovici</persName></date> regis <date>anno <num>xiiiº</num>,
-                      episcopatus autem nostri anno <num>viº</num><note n="b" xml:id="aid202781">anno <num>vº</num>
-                  <hi rend="i">C</hi>.</note>, indictione <num>i</num>, epacta
-                        <num>xxii</num><note n="c" xml:id="aid202815">epacta <num>xxxi</num>
+                      episcopatus autem nostri anno <num>viº</num>, indictione <num>i</num>, epacta
+                        <num>xxii</num></date><note n="b" xml:id="aid202781">anno <num>vº</num>
+                  <hi rend="i">C</hi>.</note><note n="c" xml:id="aid202815">epacta <num>xxxi</num>
                   <hi rend="i">C</hi>. L'épacte 22 commence au 1<hi rend="sup">er</hi> janvier 1123.
                   Le concurrent appartient à 1122 (année pascale, se terminant le 15 avril
-                  1123).</note></date>, concurrente <num>vi</num>.</s>
+                  1123).</note>, concurrente <num>vi</num>.</s>
                 </p>
                 <p>
                   <s><rs type="person">Ego <persName>Theobadus</persName> cancellarius</rs> legi et
@@ -22178,8 +22128,8 @@
                         <num>1ª</num>, regnante <rs type="person">rege
                           <persName>Francorum</persName>
                         <persName>Ludovico</persName></rs>, anno regni sui <num>xvi</num>,
-                      episcopatus autem domni <persName>Lysiardi</persName> anno <num>xv</num><note n="a" xml:id="aid205279">Cette date confìrme celle de
-                  1108 donnée par la chronique d'Aubri pour l'élection de Lisiard.</note></date>.</s>
+                      episcopatus autem domni <persName>Lysiardi</persName> anno <num>xv</num></date><note n="a" xml:id="aid205279">Cette date confìrme celle de
+                  1108 donnée par la chronique d'Aubri pour l'élection de Lisiard.</note>.</s>
                 </p>
               </div>
             </body>
@@ -23031,18 +22981,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="398" xml:id="n1398d" target="#a1398b #a0398c #a0398d">Saint-Brice-sous-Montmorency, ar. Pontoise. — Oissery, ca. Dammartin ; Fresnes,
-                  ca. Claye ; Chessy, ca. Lagny ; ar. de Meaux. — Chevry-Cossigny, ca.
-                  Brie-Comte-Robert, ar. Melun.</note>
-                <note n="283" xml:id="n1283c">Argenteuil, ar. Versailles, —
-                  Groslay, ca. Montmorency, ar. Pontoise. Eudes de Groslay, vassal de Bouchard
-                    <num>IV</num>, pourrait s'identifier avec <hi rend="i">Odo, filius Odonis</hi>,
-                  l'un des six chevaliers de ce haut baron, cité dans la notice <hi rend="b">59.</hi></note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0175" n="175" subtype="article">
             
             <front>
@@ -24203,12 +24144,12 @@
                         <num>mº</num>, <rs type="person"><persName>Ludovico</persName>
                         <persName>Francorum</persName> rege</rs> anno regni sui <num>xxº</num>,
                       episcopatus <rs type="person">donni <persName>Petri</persName>,
-                          <placeName>Belvacensis</placeName> episcopi</rs> anno <num>xiº</num><note n="413" xml:id="a1413a">L'an 20 de Louis <num>VI</num>
+                          <placeName>Belvacensis</placeName> episcopi</rs> anno <num>xiº</num></date><note n="413" xml:id="a1413a">L'an 20 de Louis <num>VI</num>
                   commence le 4 août 1127, et l'an 3 d'Honoré <num>II</num>, qui fut élu le 21
                   décembre 1125, commence le 21 décembre 1127. Les limites attribuables à la date
                   des actes <hi rend="b">184</hi> et <hi rend="b">18</hi> sont donc « 20 décembre
                   1127 — 1<hi rend="sup">er</hi> janvier <hi rend="i">ou</hi> 22 avril
-                  1128 ».</note></date>.</s>
+                  1128 ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -24288,12 +24229,12 @@
                     <date>anno Incarnati Dei <num>Mº Cº XXº VIIº</num> indictione <num>vª</num>,
                       anno Romani pontificis, videlicet domini <persName>Honorii secundi</persName>
                       pontificatus <num>iiiº</num>, regnante <rs type="person"><persName>Ludovico</persName> rege <persName>Francorum</persName></rs>
-                      anno <num>xxº</num><note n="413" xml:id="a1413b">L'an 20 de Louis <num>VI</num>
+                      anno <num>xxº</num></date><note n="413" xml:id="a1413b">L'an 20 de Louis <num>VI</num>
                   commence le 4 août 1127, et l'an 3 d'Honoré <num>II</num>, qui fut élu le 21
                   décembre 1125, commence le 21 décembre 1127. Les limites attribuables à la date
                   des actes <hi rend="b">184</hi> et <hi rend="b">18</hi> sont donc « 20 décembre
                   1127 — 1<hi rend="sup">er</hi> janvier <hi rend="i">ou</hi> 22 avril
-                  1128 ».</note></date>.</s>
+                  1128 ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -24373,8 +24314,8 @@
                     monachos pred. monasterii imposterum dissensio oriretur.</s>
                 </p>
                 <p>
-                  <s><date>Anno itaque ab Incarnatione Domini <num>M. C. XXVII</num><note n="414" xml:id="a1414">Guérin fut élu le 16 octobre 1127
-                  évêque d'Amiens.</note> indictione <num>v</num></date>,
+                  <s><date>Anno itaque ab Incarnatione Domini <num>M. C. XXVII</num> indictione <num>v</num></date><note n="414" xml:id="a1414">Guérin fut élu le 16 octobre 1127
+                  évêque d'Amiens.</note>,
                     predicta altaria cum appendiciis suis et omni possessione quam prefatus
                       <persName>Guido</persName> habebat predicto priori <placeName><abbr>Sti</abbr>
                       Martini de Campis</placeName>
@@ -25182,7 +25123,7 @@
                 <p>
                   <s><pb n="7" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/f10/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/manifest.json"/>Actum <placeName>Parisius</placeName> publice in palatio, <date>anno ab
                       incarnatione Domini <num>Mº Cº XXVIIII</num>, regni vero nostri
-                        <num>xxiii</num><note n="6" xml:id="a2006b">La charte porte, sur
+                        <num>xxiii</num></date><note n="6" xml:id="a2006b">La charte porte, sur
                   l'original, l'an 23 du règne (sur la copie de Arch. nat., LL 1351, l'an 24), avec
                   le millésime 1129, que Luchaire corrige en <num>1132.</num> Bien qu'il soit
                   malaisé de s'expliquer l'erreur du scribe, la correction semble s'imposer : en
@@ -25197,7 +25138,7 @@
                   devancier Eudes I<hi rend="sup">er</hi> comme abbé de Saint-Médard. La date de
                   1132 s'impose dès lors. Ce diplôme ne figure pas parmi les actes de Louis
                     <num>VI</num> transcrits au <title>Liber Testamentorum</title>, fol. 76 à 78, et
-                  dont le dernier en date est de <num>1128.</num></note></date>.</s>
+                  dont le dernier en date est de <num>1128.</num></note>.</s>
                   <s>Astantibus in palatio quorum nomina subtitulata sunt.</s>
                   <s><abbr>S.</abbr>
                     <rs type="person"><persName>Radulfi</persName>,
@@ -25419,11 +25360,11 @@
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName> publice, <date>anno Incarnati Verbi
-                      millesimo centesimo tricesimo secundo, Regni nostri vicesimo quarto<note n="a" xml:id="aid112865">Il faut corriger « quinto ». La
+                      millesimo centesimo tricesimo secundo, Regni nostri vicesimo quarto, regnante
+                        <persName>Ludovico</persName>, filio nostro, anno secundo</date><note n="a" xml:id="aid112865">Il faut corriger « quinto ». La
                     24<hi rend="sup">e</hi> année de Louis <num>VI</num> se termine le 3 août 1132 ;
                   la seconde année de Louis <num>VII</num> commence le 25 octobre
-                  <num>1132.</num></note>, regnante
-                        <persName>Ludovico</persName>, filio nostro, anno secundo</date>, astantibus
+                  <num>1132.</num></note>, astantibus
                     in palatio nostro quorum nomina subtitulata sunt et signa.</s>
                   <s><abbr>S.</abbr>
                     <rs type="person"><persName>Radulfi</persName>,
@@ -25615,12 +25556,12 @@
                   <s>Actum <placeName>Parisius</placeName> in capitulo, <date>anno Incarnationis
                       Domini <num>Mº Cº XXXº IIIº</num>, regnante <persName>Ludovico</persName> anno
                       vigesimo <num>vº</num></date>,<note n="c" xml:id="aid113868">ici s'arrètait <hi rend="i">B</hi>, et se terminent <hi rend="i">C</hi> et <hi rend="i">D</hi>.</note>
-                    <date>episcopatus autem nostri nono<note n="14" xml:id="a2014">Les notes chronologiques fournissent
+                    <date>episcopatus autem nostri nono</date><note n="14" xml:id="a2014">Les notes chronologiques fournissent
                   comme limites, quant au millésime, le point de départ de l'année, 1<hi rend="sup">er</hi> janvier ou 26 mars 1133 ; quant au règne de Louis <num>VI</num>,
                   l'expiration de sa 25<hi rend="sup">e</hi> année (2 août 1133). L'épiscopat
                   d'Etienne a commencé à une date postérieure à la mort de Gilbert <num>II</num> (25
                   janvier 1124) ; la charte actuelle démontre que la vacance du siège ne se
-                  prolongea pas jusqu'au 2 août <num>1124.</num></note></date>.</s>
+                  prolongea pas jusqu'au 2 août <num>1124.</num></note>.</s>
                   <s>Signa quoque fratrum nostrorum subtitulari decrevimus, ut, testimonio
                     veritatis, quod factum est corroboraretur.</s>
                   <s>Signum <rs type="person"><persName>Bernerii</persName> decani</rs>.</s>
@@ -25731,9 +25672,9 @@
                 <p>
                   <s>Actum publice in Capitulo <placeName>Beati Martini</placeName>, <date>anno
                       Incarnatonis Verbi <num>Mº Cº XXXº IIIº</num></date>.</s>
-                  <s><date>Regnante <persName>Ludovico</persName> anno <num>xxºviiº</num><note n="e" xml:id="aid114534">La correction
+                  <s><date>Regnante <persName>Ludovico</persName> anno <num>xxºviiº</num></date><note n="e" xml:id="aid114534">La correction
                     « <num>xxºviº</num> « s'impose : l'année 27 du règne, commençant le 2 août 1134,
-                  est inconciliable avec le millésime <num>1133.</num></note></date>.</s>
+                  est inconciliable avec le millésime <num>1133.</num></note>.</s>
                   <s>Signum <rs type="person"><persName>Teobaldi</persName> prioris</rs>.</s>
                   <s><abbr>S.</abbr>
                     <rs type="person"><persName>Odonis</persName> subprioris</rs>.</s>
@@ -25825,9 +25766,9 @@
                 <p>
                   <s>Actum <placeName>Parisius</placeName>, apud <placeName>Sanctum Martinum de
                       Campis</placeName>, <date>anno ab Incarnatione Domini
-                        <num>Mº Cº XXXº IIIº</num>, indictione <num>xivª</num><note n="a" xml:id="aid115126">Corr. « <num>xi<hi rend="sup">e</hi></num> « d'après la concordance entre le millésime et le nombre
+                        <num>Mº Cº XXXº IIIº</num>, indictione <num>xivª</num></date><note n="a" xml:id="aid115126">Corr. « <num>xi<hi rend="sup">e</hi></num> « d'après la concordance entre le millésime et le nombre
                   d'années écoulé depuis l'élection de Pierre I<hi rend="sup">er</hi> comme abbé de
-                  Cluny.</note></date>, residente in apostolica
+                  Cluny.</note>, residente in apostolica
                     sede <persName>Innocentio</persName>, <rs type="person"><persName>Ludovico</persName> rege <persName>Francorum</persName></rs>, et
                       <rs type="person">domini <persName>Petri</persName>
                       <placeName>Cluniacensis</placeName> abbatis</rs> anno duodecimo.</s>
@@ -26722,8 +26663,8 @@
                     de cujus feodo prefata altaria fuerunt, huic actioni presens interfuit et
                     libentissime concessit.</s>
                   <s>Acta <date>anno Verbi incarnati <num>M. C. XXXV</num>, indictione
-                        <num>xiiii</num><note n="a" xml:id="aid119617">Il faut corriger
-                  <num>xiii</num> ; l'indiction <num>xiv</num> répond à <num>1136.</num></note> feliciter</date>.</s>
+                        <num>xiiii</num> feliciter</date><note n="a" xml:id="aid119617">Il faut corriger
+                  <num>xiii</num> ; l'indiction <num>xiv</num> répond à <num>1136.</num></note>.</s>
                   <s><seg type="theo">Amen</seg>.</s>
                 </p>
                 <p>
@@ -26856,9 +26797,9 @@
                   <s><date>Datum <placeName>Pisis</placeName></date>, per manum <rs type="person"><persName>almerigi</persName>, Sanctæ Romanæ Ecclesiæ diaconi cardinalis et
                       cancellarii</rs>, <date><num>7º</num> idus Junii, indict. <num>13ª</num>,
                       Incarnationis Dominice anno <num>1135</num>, Pontificatus vero domni <rs type="person"><persName>Innogentii</persName> pape Segundi</rs> anno
-                        <num>2º</num><note n="38" xml:id="a2038">Le 7 juin 1135, Innocent <num>II</num>
+                        <num>2º</num></date><note n="38" xml:id="a2038">Le 7 juin 1135, Innocent <num>II</num>
                   est bien à Pise (Jaffré-Lœwenfeld, <abbr>p.</abbr> 866, qui n'indique pas la bulle
-                  pour Corbie). Il faut lire :« anno sexto ", au lieu de " anno secundo ».</note></date></s>
+                  pour Corbie). Il faut lire :« anno sexto ", au lieu de " anno secundo ».</note></s>
                 </p>
               </div>
             </body>
@@ -27090,12 +27031,12 @@
                   <s>Acta sunt hec <date>anno Domini <num>M. C. XXXV</num>, indictione
                         <num>xiii</num>, anno autem ordinationis <rs type="person">domni
                           <persName>Innocentii</persName> Pape <num>vi</num></rs>, ordinationis
-                      nostre <num>ii</num><note n="46" xml:id="a2046b">Innocent <num>II</num> fut
+                      nostre <num>ii</num></date><note n="46" xml:id="a2046b">Innocent <num>II</num> fut
                   consacré le 23 février 1130, suivant Onuphre et le <abbr>P.</abbr> Pagi : l'acte
                   se place donc entre le 1<hi rend="sup">er</hi> janvier 1135 ou le 7 avril, date de
                   Pâques, et le 22 février <num>1136.</num> — L'évêque de Chartres, Geofroi
                     <num>II</num> de Lèves, fut nommé légat en France, avec saint Bernard, par
-                  Innocent <num>II</num> au concile de Pise, en <num>1134.</num></note></date>.</s>
+                  Innocent <num>II</num> au concile de Pise, en <num>1134.</num></note>.</s>
                 </p>
               </div>
             </body>
@@ -29081,8 +29022,8 @@
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName>, <date>anno Incarnati Verbi
-                        <num>Mº Cº XXVIIIº</num>, regni nostri <num>xxº</num><note n="a" xml:id="aid130451">La fin du diplôme est omise dans
-                    <hi rend="i">C</hi> et les copies faites d'après lui.</note></date>.</s>
+                        <num>Mº Cº XXVIIIº</num>, regni nostri <num>xxº</num></date><note n="a" xml:id="aid130451">La fin du diplôme est omise dans
+                    <hi rend="i">C</hi> et les copies faites d'après lui.</note>.</s>
                   <s>Astantibus in palatio nostro quorum nomina substitulata sunt et signa.</s>
                   <s><abbr>S.</abbr>
                     <rs type="person"><persName>Ludovici</persName> buticularii</rs>.</s>
@@ -30867,8 +30808,8 @@
                     feodo, piis et devotis ipsius <persName>Burcardi</persName> precibus ; qui
                       <num>centum</num> solidi statuti sunt persolvi i<date>n Capite Jejunii</date>,
                     et <num>quadraginta</num>
-                    <date>in Transitu <abbr>Sti</abbr> Martini<note n="159" xml:id="a2159">En 1116 (t. <num>I</num>,
-                    <abbr>p.</abbr> 231).</note></date>.</s>
+                    <date>in Transitu <abbr>Sti</abbr> Martini</date><note n="159" xml:id="a2159">En 1116 (t. <num>I</num>,
+                    <abbr>p.</abbr> 231).</note>.</s>
                   <s>Donationem etiam quam fecit pater meus, pie memorie <rs type="person">rex
                         <persName>Ludovicus</persName></rs>, monachis <placeName><abbr>Sti</abbr>
                       Martini de Campis</placeName>, temporibus et humili prece domni
@@ -31243,9 +31184,9 @@
                 </p>
                 <p>
                   <s>Actum <placeName>Silvanectis</placeName> publice, in capitulo <placeName>Sancte
-                      Marie</placeName>, <date>anno Verbi Incarnati <num>M. C. XXXVIII</num><note n="e" xml:id="aid143870"> La copie <hi rend="i">B</hi>
-                  reproduite par <abbr>D.</abbr> Marrier s'arrête ici.</note>, episcopatus
-                      autem nostri <num>v<hi rend="sup">to</hi></num></date> ; astantibus quorum
+                      Marie</placeName>, <date>anno Verbi Incarnati <num>M. C. XXXVIII</num>, episcopatus
+                      autem nostri <num>v<hi rend="sup">to</hi></num></date><note n="e" xml:id="aid143870"> La copie <hi rend="i">B</hi>
+                  reproduite par <abbr>D.</abbr> Marrier s'arrête ici.</note> ; astantibus quorum
                     nomina subtitulata sunt et signa.</s>
                 </p>
                 <p>
@@ -31989,9 +31930,9 @@
                   <s>Actum <placeName>Parisius</placeName>
                     <date>anno ab Incarnatione Domini <num>Mº Cº XLº</num>, regnante</date>
                     <persName>Ludovico</persName>
-                    <date>rege anno <num>IXº</num><note n="180" xml:id="a2180a">Le chancelier fait partir le début
+                    <date>rege anno <num>IXº</num></date><note n="180" xml:id="a2180a">Le chancelier fait partir le début
                   du règne de Louis <num>VII</num> du jour de son sacre comme roi-asssocié le 25
-                  octobre 1131. L'année 1140 a commencé le jour de Pâques, 7 avril.</note></date>.</s>
+                  octobre 1131. L'année 1140 a commencé le jour de Pâques, 7 avril.</note>.</s>
                 </p>
               </div>
             </body>
@@ -33296,7 +33237,7 @@
                       et bibliothecarii</rs>, <num>x</num>.</s>
                   <s><date>Kal. Aprilis, Incarnationis Dominice anno. <num>Mº. Cº. XL II.</num>,
                       indictione <num>vi.</num>, pontificatus vero domni <persName>Innocentii.
-                          <num>II.</num></persName> pape anno. <num>xiiii.</num><note n="224" xml:id="a2224c">« Conçue dans les
+                          <num>II.</num></persName> pape anno. <num>xiiii.</num></date><note n="224" xml:id="a2224c">« Conçue dans les
                   mêmes termes que la bulle du Pape de 1135, elle peut aider à fixer le commencement
                   de l'épiscopat de l'évèque de Paris Thibaud. Il était en effet prieur de
                   St-Martin-des-Champs lorsqu'il fut élu évèque. Or cette bulle prouve qu'il n'avait
@@ -33307,7 +33248,7 @@
                   <num>I</num>, <abbr>p.</abbr>
                   <num>285.</num>) — Voir la note suivante. — Les cardinaux. Aubri et Imier étaient
                   d'anciens moines de St-Martin (Lesort, <title>Cartulaire de St-Mihiel,
-                    Mettensia</title>, <num>VI</num>, 315-316).</note></date>.</s>
+                    Mettensia</title>, <num>VI</num>, 315-316).</note>.</s>
                 </p>
               </div>
             </body>
@@ -35077,10 +35018,10 @@
                 </p>
                 <p>
                   <s>Actum publice <placeName>Parisius</placeName>
-                    <date>anno ab Incarnatione Domini<note n="a" xml:id="aid162125">1144 <hi rend="i">B
-                  C</hi>.</note>
-                      <num>Mº Cº XLº IIIIº</num>, regni vero nostri<note n="b" xml:id="aid162161">8 <hi rend="i">B C</hi>.</note>
-                      <num>viiiº</num></date>, astantibus in palatio nostro quorum nomina
+                    <date>anno ab Incarnatione Domini
+                      <num>Mº Cº XLº IIIIº</num>, regni vero nostri
+                      <num>viiiº</num></date><note n="a" xml:id="aid162125">1144 <hi rend="i">B
+                  C</hi>.</note><note n="b" xml:id="aid162161">8 <hi rend="i">B C</hi>.</note>, astantibus in palatio nostro quorum nomina
                     subtitulata sunt et signa.</s>
                   <s><abbr>S.</abbr>
                     <rs type="person"><persName>Radulphi</persName>, <placeName>Viromandorum<note n="c" xml:id="aid162193">Normandorum <hi rend="i">B</hi>.</note></placeName>
@@ -35477,10 +35418,10 @@
                 <p>
                   <s>Acta sunt hec <date>anno Incarnati Verbi <num>Mº Cº XLº Vº</num></date>,
                       [<date>regnante <rs type="person"><persName>Ludovico</persName> rege
-                          <persName>Francorum</persName></rs> anno imperii sui quinto decimo<note n="253" xml:id="a2253a">Le 25 octobre 1145, commence la
+                          <persName>Francorum</persName></rs> anno imperii sui quinto decimo, episcopatus nostri
+                      anno secundo</date><note n="253" xml:id="a2253a">Le 25 octobre 1145, commence la
                   quinzième année de Louis <num>VII</num> à compter de son premier sacre. L'année
-                  pascale 1145 se termina le 30 mars 1146, veille de Pâques. </note>, episcopatus nostri
-                      anno secundo</date>.]</s>
+                  pascale 1145 se termina le 30 mars 1146, veille de Pâques. </note>.]</s>
                 </p>
               </div>
             </body>
@@ -35747,12 +35688,12 @@
                   <s>Actum publice <placeName>Parisius</placeName>, in capitulo
                         <placeName><abbr>Bte</abbr> Marie</placeName>, <date>anno Incarnationis
                         <num>M. CXLVI</num>, episcopatus autem domni <persName>Theobaldi</persName>
-                      anno tertio<note n="258" xml:id="a2258">Le règlement antérieur, promulgué par
+                      anno tertio</date><note n="258" xml:id="a2258">Le règlement antérieur, promulgué par
                   le même doyen (15 avril 1145 — 30 mars 1146) au sujet de la prébende dont
                   jouissait l'abbaye de Saint-Victor, et seul reproduit au <title>Cartulaire de
                     Paris</title> (p. 295, nº 319), quoique très analogue à celui-ci en ses grandes
                   lignes, n'est pas identique ; les avantages assurés au vicaire, notamment, ne sont
-                  point les mêmes.</note></date>.</s>
+                  point les mêmes.</note>.</s>
                 </p>
               </div>
             </body>
@@ -37109,30 +37050,18 @@
                       Romane ecclesie diaconi cardinalis et cancellarii</rs>, <date><num>vi</num>
                       nonas junii, indictione decima, Incarnationis Dominice anno <abbr>M.</abbr>
                       <num>CXLVII</num>, pontificatus vero <rs type="person">domni
-                          <persName>Eugenii</persName> pape tertii</rs> anno tertio<note n="281" xml:id="a2281b">La correction
+                          <persName>Eugenii</persName> pape tertii</rs> anno tertio</date><note n="281" xml:id="a2281b">La correction
                     « <num>vi</num> nonas julii « ne peut être admise. Le 2 juillet, Eugène
                     <num>III</num> était sur le chemin du retour. On le voit à Rebais le 30 juin, à
                   Auxerre le 14 juillet. Mieux vaut admettre une méprise du scribe qui a interverti
                   les deux chiffres de la véritable date : « <num>iv</num> nonas junii. « La formule
-                  d'excommunication finale est identique à celle des bulles précédentes.</note></date>.</s>
+                  d'excommunication finale est identique à celle des bulles précédentes.</note>.</s>
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                
-                <note n="272" xml:id="n2272f" target="#a2272e #a0272f #a0272g #a0272h">Barleux, ca.
-                  et ar. Péronne. — Fontaine-lès-Cappy, Vauvillers, ea. Chaulnes, ar. Péronne. —
-                  Longueval, ca. Combles, ar. Péronnes (Somme). — L'église de Vauvillers appartenait
-                  à St-Martin dès 1096 (t. <num>I</num>, <abbr>p.</abbr> 121).</note>
-                <note n="272" xml:id="n2272g" target="#a2272e #a0272f #a0272g #a0272h">Barleux, ca.
-                  et ar. Péronne. — Fontaine-lès-Cappy, Vauvillers, ea. Chaulnes, ar. Péronne. —
-                  Longueval, ca. Combles, ar. Péronnes (Somme). — L'église de Vauvillers appartenait
-                  à St-Martin dès 1096 (t. <num>I</num>, <abbr>p.</abbr> 121).</note>
-                
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0296" n="296" subtype="article">
             
             <front>
@@ -38357,7 +38286,7 @@
                   <s>Cujus sustentationi — — jubemus.</s>
                 </p>
                 <p>
-                  <s><date>Datum <placeName>Lingonis</placeName>, <num>iii</num> calendas Maii<note n="293" xml:id="a2293">La mesure annoncée par ces lettres
+                  <s><date>Datum <placeName>Lingonis</placeName>, <num>iii</num> calendas Maii</date><note n="293" xml:id="a2293">La mesure annoncée par ces lettres
                   était-elle une simple menace ? La faiblesse du prieur Eudes <num>II</num>
                   laissa-t-elle échapper l'occasion de mettre la main sur la collégiale si
                   renommée ? Les chanoines s'adressèrent au Pape et lui remontrèrent qu'ils étaient
@@ -38371,7 +38300,7 @@
                   <num>II</num>, <abbr>p.</abbr> 58, nº 9272 ; <title>Gallia christiana</title>,
                     <num>VII</num>, 712). Eugène <num>III</num> félicita Suger du succès de sa
                   mission (Migne, <hi rend="i">Patrol. lat</hi>., <abbr>t.</abbr> 180, col. 1134,
-                  1368).</note></date>.</s>
+                  1368).</note>.</s>
                 </p>
               </div>
             </body>
@@ -38868,9 +38797,9 @@
                 <p>
                   <s>Actum est <placeName>Parisius</placeName>, <date>anno ab lncarnatione Domini
                       milesimo centesimo <num>XLº VIII</num>, regnante <rs type="person"><persName>Ludovico</persName> rege <persName>Francorum</persName> et duce
-                          <persName>Aquitanorum</persName></rs>, anno regni sui <num>xviii</num><note n="180" xml:id="a2180b">Le chancelier fait partir le début
+                          <persName>Aquitanorum</persName></rs>, anno regni sui <num>xviii</num></date><note n="180" xml:id="a2180b">Le chancelier fait partir le début
                   du règne de Louis <num>VII</num> du jour de son sacre comme roi-asssocié le 25
-                  octobre 1131. L'année 1140 a commencé le jour de Pâques, 7 avril.</note></date>.</s>
+                  octobre 1131. L'année 1140 a commencé le jour de Pâques, 7 avril.</note>.</s>
                 </p>
               </div>
             </body>
@@ -39091,8 +39020,8 @@
                 <p>
                   <s>Actum est hoc et hec carta <date>anno ab Incarnatione Domini
                         <num>MCXLVIII</num>, regnante <rs type="person"><persName>Ludovico</persName> rege <persName>Francorum</persName> et duce
-                          <persName>Aquitanorum</persName></rs>, anno regni sui <num>XVIII</num><note n="180" xml:id="a2180c"/>
-                  <note>(le texte comporte ici une lacune)...</note></date>, <rs type="person"><persName>Theobaldo</persName>
+                          <persName>Aquitanorum</persName></rs>, anno regni sui <num>XVIII</num>
+                  </date><note n="180" xml:id="a2180c"/><note>(le texte comporte ici une lacune)...</note>, <rs type="person"><persName>Theobaldo</persName>
                       <placeName>Parisiorum</placeName> episcopo</rs>.]</s>
                 </p>
               </div>
@@ -39522,8 +39451,8 @@
                   Reims.</note></placeName> partim
                     pro emptione <num>octoginta</num> librarum et unius equitature, partim ob
                     remedium anime sue et parentum suorum<note n="d" xml:id="aid182367">de quibus <hi rend="i">B</hi>.</note> ; scilicet<note n="e" xml:id="aid182379"><hi rend="i">B</hi> traduit les chiffres.</note>
-                    <num>lx</num>. solidos <date>in festo sancti Remigii,<note n="e" xml:id="aid182397"><hi rend="i">B</hi> traduit les chiffres.</note>
-                      <num>l.</num> mediante maio</date>, annuatim persolventur : ita dumtaxat quod
+                    <num>lx</num>. solidos <date>in festo sancti Remigii,
+                      <num>l.</num> mediante maio</date><note n="e" xml:id="aid182397"><hi rend="i">B</hi> traduit les chiffres.</note>, annuatim persolventur : ita dumtaxat quod
                     si, infra predictos terminos, rustici censum suum persolvere neglegerent<note n="f" xml:id="aid182411">noluerint <hi rend="i">B</hi>.</note>, prior de
                       <placeName>Sancta Gemma<note n="313" xml:id="a2313d">Gaucher de Bazoches
                   (ca. Braisne, ar. Soissons) n'est autre qu'un fils de Gaucher <num>II</num> de
@@ -39572,10 +39501,10 @@
                 <p>
                   <s>Datum<note n="l" xml:id="aid182601">Actum <hi rend="i">B</hi>.</note>
                     <placeName>Remis</placeName>
-                    <date>anno Incarnati Verbi <num>Mº Cº XLVIIIº</num>, <note n="m" xml:id="aid182637">Ici s'arrête <hi rend="i">B</hi>.</note>indictione <num>xiª</num><note n="m" xml:id="aid182659">Ici s'arrête <hi rend="i">B</hi>.</note>, regnante <rs type="person"><persName>Ludovico</persName>
+                    <date>anno Incarnati Verbi <num>Mº Cº XLVIIIº</num>, indictione <num>xiª</num>, regnante <rs type="person"><persName>Ludovico</persName>
                         <persName>Francorum</persName> rege</rs> anno <num>xiiiº</num>,
                       archiepiscopatus autem domni <persName>Sansonis</persName> anno
-                        <num>viiiiº</num></date>.</s>
+                        <num>viiiiº</num></date><note n="m" xml:id="aid182637">Ici s'arrête <hi rend="i">B</hi>.</note><note n="m" xml:id="aid182659">Ici s'arrête <hi rend="i">B</hi>.</note>.</s>
                 </p>
                 <p>
                   <s><rs type="person"><persName>Drogo</persName> cancellarius</rs> recognovit,
@@ -41584,22 +41513,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="344" xml:id="n2344c" target="#a2344c">
-                  <p>Cette charte se place, ainsi que les suivantes, entre le 27 octobre 1147, date
-                    de la bulle d'Eugène <num>III</num> où il n'est point question des donations qui
-                    y sont énoncées (nº <hi rend="b">299</hi>) et le 14 décembre 1154, date de la
-                    bulle d'Adrien <num>IV</num> qui les confirme (nº <hi rend="b">343</hi>).</p>
-                  <p>Nous classons ces actes de Galeran <num>II</num> d'après l'ordre suivant : <hi rend="i">A)</hi> mention des enfants, sans désignation de nom, antérieurement
-                    au baptême de l'aîné des fils, Robert (nº <hi rend="b">337, 338</hi>) ; — <hi rend="i">B)</hi> association de Robert à sa mère Agnès comme témoin d'actes
-                    paternels (nº <hi rend="b">339, 340</hi>) ; — <hi rend="i">C)</hi> mention du
-                    consentement de Robert (nº <hi rend="b">341</hi>) ; — <hi rend="i">D)</hi>
-                    association de Robert à ses parents dans l'intitulé de l'acte (nº <hi rend="b">342</hi>).</p>
-                </note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0340" n="340" subtype="article">
             
             <front>
@@ -41981,7 +41897,7 @@
                 <p>
                   <s><date>Datum <placeName>Rome</placeName></date>, apud <placeName>Sanctum
                       Petrum</placeName>, <num>xviiiº</num> cal.</s>
-                  <s><date>januarii<note n="348" xml:id="a2348">Adrien <num>IV</num>, consacré le 5
+                  <s><date>januarii</date><note n="348" xml:id="a2348">Adrien <num>IV</num>, consacré le 5
                   décembre 1154, a daté ses bulles : « Rome, apud Sanctum Petrum » de ce jour au 10
                   mai <num>1155.</num> Il est resté à Bénévent du 21 novembre 1155 au 10 juillet
                     <num>1156.</num> Toutes ses bulles du 12 novembre 1156 au 22 mai 1157, sont
@@ -41989,7 +41905,7 @@
                   1158 au 26 mai <num>1159.</num> Adrien <num>IV</num> mourut le 1<hi rend="sup">er</hi> septembre suivant. (Jaffé-Wattenbach, <abbr>t.</abbr>
                   <num>II</num>, <abbr>pp.</abbr> 102-146.) De la comparaison de ces itinéraires il
                   ressort que la bulle de ce pape pour le prieuré de Gournay fut expédiée le 14
-                  décembre <num>1154.</num></note></date>.</s>
+                  décembre <num>1154.</num></note>.</s>
                 </p>
               </div>
             </body>
@@ -42585,27 +42501,7 @@
                 <p/>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="358" xml:id="n2358a" target="#a2358a">Agnès, dame de Livry, est la veuve
-                  de Guillaume <num>II</num> de Garlande, frère du sénéchal Anseau. Celui-ci
-                  possédait la terre de Roissy, qu'il donna à Notre-Dame de Gournay (n<hi rend="sup">os</hi><hi rend="b">157, 165</hi>), et qu'il avait recueillie dans la
-                  succession de Gui le Rouge, son beau-père. Les cens dont jouissaient Agnès et ses
-                  fils provenaient sans doute de concessions faites par Anseau à son frère. C'est de
-                  la même façon qu'Agnès, fille de Guillaume <num>II</num> de Garlande, tenait en
-                  fief de Galeran <num>II</num> de Meulan, héritier d'Anseau, une part des revenus
-                  du péage perçu par les châtelains de Gournay (nº<hi rend="b">341</hi>). Il est
-                  expliqué, dans les lettres de Thibaud, qu'Agnès de Livry concéda ce cens de Roissy
-                  avec l'assentiment de ses fils Gill. <sic>(sic)</sic> et Robert. Plus tard nous
-                  retrouverons, dans des listes de témoins : « Willelmus de Garlanda, Robertus
-                  Malusvicinus, Drogo de Melio, fratres. " Le terme " frater » est employé
-                  couramment au <num>xii<hi rend="sup">e</hi></num> siècle pour « sororius " de même
-                  que " filius " pour " privignus ». La charte nº<hi rend="b">341</hi> nous montre
-                  que Robert (Mauvoisin) est l'époux d'Agnès, fille homonyme d'Agnès de
-                  Livry.</note>
-              </div>
-            </back>
-          </text>
+            </text>
           <text xml:id="SMCP-PR_0351" n="351" subtype="article">
             
             <front>
@@ -43097,15 +42993,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="64" xml:id="n2064j" target="#a2064i #a0064j #a0064k">Roissy, Pontault, ca.
-                  Tournan, ar. Meaux (<abbr>lb.</abbr>, note 141).</note>
-                <note n="285" xml:id="n2285m" target="#a2285k #a0285l #a0285m #a0285n">Champs-sur-Marne, Ferrières, Torcy, ca. Lagny, ar. Meaux.</note>
-                <note n="285" xml:id="n2285n" target="#a2285k #a0285l #a0285m #a0285n">Champs-sur-Marne, Ferrières, Torcy, ca. Lagny, ar. Meaux.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0354b" n="354 bis" subtype="article">
             
             <front>
@@ -44309,11 +44199,11 @@
                         <placeName>Parisiorum</placeName> episcopus</rs>, dedit <num>xx</num> libras
                     parisiensis monete <rs type="person">domno <persName>Nicholao</persName>,
                       quondam subpriori hujus loci</rs>, qui a secundo <date>episcopatus sui
-                        anno<note n="393" xml:id="a2393">C'est dans la seconde année de son
+                        anno</date><note n="393" xml:id="a2393">C'est dans la seconde année de son
                   épiscopat que Thibaud organisa sa maison, en prenant pour majordome Nicolas, qui
                   conserva cette charge jusqu'au 8 janvier 1159, et qui occupa simultanément les
                   fonctions de sous-prieur. Nous l'avons vu en charge en 1151, et il paraît avoir
-                  occupé plus tard un prieuré.</note></date> usque
+                  occupé plus tard un prieuré.</note> usque
                     ad finem vite sue<note n="394" xml:id="a2394">
                   <p>La mort de l'évêque Thibaud est commémorée le 8 janvier par l'obituaire de la
                     cathédrale de Paris et par le Livre des Anniversaires, du <num>xiv<hi rend="sup">e</hi></num> siècle (Molinier, <hi rend="i">Obituaires de la province de
@@ -45509,8 +45399,8 @@
                     firmavimus et presentis scripti patrocinio communivimus.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Incarnationis Dominice <num>Mº Cº LXº</num> quarto<note n="e" xml:id="aid210686"><hi rend="i">D</hi> traduit les
-                  chiffres.</note></date>.</s>
+                  <s>Actum <date>anno Incarnationis Dominice <num>Mº Cº LXº</num> quarto</date><note n="e" xml:id="aid210686"><hi rend="i">D</hi> traduit les
+                  chiffres.</note>.</s>
                 </p>
               </div>
             </body>
@@ -45668,8 +45558,8 @@
                       <persName>Sanson</persName>, <persName>Laurencius<note n="h" xml:id="aid211692"><hi rend="i">B</hi> omet toutes
                   les souscriptions intercalaires et les remplace par ces mots : « et alii ».</note></persName>.</s>
                   <s>Hoc autem factum est <date>anno ab Incarnatione Domini
-                        <num>Mº Cº LXº IIIIº</num><note n="i" xml:id="aid211729"><num>Mº Cº LXº IIIº</num>
-                  <hi rend="i">B</hi>.</note></date>.</s>
+                        <num>Mº Cº LXº IIIIº</num></date><note n="i" xml:id="aid211729"><num>Mº Cº LXº IIIº</num>
+                  <hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -46914,14 +46804,7 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="202" xml:id="n2202f" target="#a2202f">
-                  <p/>
-                </note>
-</div>
-            </back>
-          </text>
+</text>
           <text xml:id="SMCP-PR_0398" n="398" subtype="article">
             
             <front>
@@ -47061,8 +46944,8 @@
                     <rs type="person"><persName>Petrus</persName>, decanus ejusdem ville</rs>,
                       <persName>Constabulus</persName>, <persName>Thomas</persName> ; <rs type="person"><persName>Fulcherius</persName> major de
                         <placeName>Ceverento</placeName></rs>, <rs type="person"><persName>Guido</persName> frater ejus</rs>, quo hoc concessio facta erat,
-                      <date>anno ab Incarnatione Domini <num>Mº Cº LXVIIº</num><note n="b" xml:id="aid219393">Mº <num>Cº LXVIIIº</num>
-                  <hi rend="i">B</hi> rectifié.</note></date>.</s>
+                      <date>anno ab Incarnatione Domini <num>Mº Cº LXVIIº</num></date><note n="b" xml:id="aid219393">Mº <num>Cº LXVIIIº</num>
+                  <hi rend="i">B</hi> rectifié.</note>.</s>
                 </p>
               </div>
             </body>
@@ -48489,8 +48372,8 @@
                   <s>Isti surit testes hujus rei : <rs type="person"><persName>Galterius</persName>
                       prior</rs>, <rs type="person"><persName>Joscelinus</persName> supprior</rs>,
                     et alii.</s>
-                  <s><date>Annus<note n="b" xml:id="aid226829"><sic>sic</sic><hi rend="i">B</hi>.</note> ab
-                      incarnatione Domini <num>Mº Cº LXXº IIº</num></date>.</s>
+                  <s><date>Annus ab
+                      incarnatione Domini <num>Mº Cº LXXº IIº</num></date><note n="b" xml:id="aid226829"><sic>sic</sic><hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -48805,7 +48688,7 @@
                 </p>
                 <p>
                   <s>Actum publice <placeName>Meleduni<note n="b" xml:id="aid228301">Parisius <hi rend="i">B</hi>.</note></placeName>, <date>anno ab Incarnatione Domini
-                        <num>Mº Cº LXXº IIIº</num><note n="c" xml:id="aid228336">Mº <num>Cº</num> XXLXXº IIIº<hi rend="i">B</hi>, qui s'arrête ici.</note></date>, astantibus in palatio nostro quorum nomina
+                        <num>Mº Cº LXXº IIIº</num></date><note n="c" xml:id="aid228336">Mº <num>Cº</num> XXLXXº IIIº<hi rend="i">B</hi>, qui s'arrête ici.</note>, astantibus in palatio nostro quorum nomina
                     subposita sunt et signa.</s>
                   <s>Signum <rs type="person">comitis <persName>Theobaldi</persName>, dapiferi
                       nostri</rs>.</s>
@@ -49155,9 +49038,9 @@
                 <p>
                   <s>Actum publice apud ecclesiam <placeName><abbr>Bti</abbr> Martini de
                       Campis</placeName>, <date>anno ab Incarnatione Domini
-                        <num>Mº Cº LXXº IIIIº</num><note n="b" xml:id="aid230060">Ici s'arrêtent <hi rend="i">B
+                        <num>Mº Cº LXXº IIIIº</num></date><note n="b" xml:id="aid230060">Ici s'arrêtent <hi rend="i">B
                     C D E ; B</hi> a été complété au <num>xvii<hi rend="sup">e</hi></num>
-                  <abbr>s.</abbr></note></date>.</s>
+                  <abbr>s.</abbr></note>.</s>
                   <s>Astantibus nobis <rs type="person"><persName>Girardo</persName>, archidiacono
                         <placeName>Trecensi</placeName></rs>, magistro <persName>Alexandro
                       Walensi</persName>, et <persName>Garnerio de Triagnello</persName>, canonicis
@@ -50700,15 +50583,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="462" xml:id="n2462d" target="#a2462b #a0462c #a0462d #a0462e">Le
-                  Sausseron, affluent de l'Oise.</note>
-                <note n="462" xml:id="n2462e" target="#a2462b #a0462c #a0462d #a0462e">Le
-                  Sausseron, affluent de l'Oise.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0434" n="434" subtype="article">
             
             <front>
@@ -51032,14 +50909,14 @@
                       <placeName>Belvacensium</placeName>, quos ipse assignavit ad refectionem
                     fratrum, in tribus festivitatibus sanctorum quorum corpora et reliquie in eadem
                     ecclesia continentur, videlicet <date>in festivitate sancti Calixti et beati
-                      Cunuali sanctique Etretuali<note n="468" xml:id="a2468b">
+                      Cunuali sanctique Etretuali</date><note n="468" xml:id="a2468b">
                   <p>Laboissière et Le Déluge, ca. Noailles, ar. Beauvais.</p>
                   <p>Cette charte montre que les reliques de saint-Léonor n'étaient point les seules
                     conservées à Beaumont-sur-Oise. Il n'est pas surprenant de rencontrer ici
                     d'origine bretonne, mais il faut noter le transfert du corps de saint Calixte,
                     déposé par le duc Ebrard de Frioul dans l'abbaye belge de Cysoing, au milieu du
                       IX<hi rend="sup">e</hi> siècle.</p>
-                </note></date>.</s>
+                </note>.</s>
                   <s>Quorum denariorum, <num>xii</num> solidos carnifices de
                       <placeName>Bellomonte</placeName>, de estallis suis, annuatim persolvent.</s>
                   <s><num> Tres</num> vero solidi assignati sunt in censu quem ipse Comes emit a
@@ -52234,7 +52111,7 @@
                     intercipiunt adversus eos in bosco suo, et nos mandamus tibi ut rem facias ire
                     sicut fuit usque ad hoc tempus.</s>
                   <s>Et si fuerit contentio, submone nos <date>in crastino octabarum Sancte Marie
-                        Parisuis<note n="481" xml:id="a2481">
+                        Parisuis</date><note n="481" xml:id="a2481">
                   <p>Entre la perte du duché d'Aquitaine (1154) et le 19 septembre 1180, date
                     funèbre du roi, se place le mandement de Louis <num>VII</num>, imprimé par
                     Duchesne (<hi rend="i">Scriptores Histor. Franc</hi>., <num>IV</num>, 724) puis
@@ -52264,7 +52141,7 @@
                     sous la direction d'abbés, agissant au nom de la Communauté.
                     St-Martin-des-Champs n'ayant qu'un prieur amovible, l'expression " monachi » est
                     assurément mieux justifiée.</p>
-                </note></date>.</s>
+                </note>.</s>
                 </p>
               </div>
             </body>
@@ -52669,10 +52546,10 @@
                 </p>
                 <p>
                   <s><date>Datum <placeName>Tusculani</placeName>, <num>viii</num> kal.
-                        februarii<note n="a" xml:id="aid111695">Pendant onze années
+                        februarii</date><note n="a" xml:id="aid111695">Pendant onze années
                   consécutives, Alexandre <num>III</num> passa la journée du 25 janvier à Frascati
                     (<hi rend="i">Tusculanum</hi>). - L'année où fut donné ce bref reste donc
-                  incertaine.</note></date>.</s>
+                  incertaine.</note>.</s>
                 </p>
               </div>
             </body>
@@ -53175,10 +53052,10 @@
                     id idipsum consentientibus.</s>
                   <s>Ut autem hec inviolabilem obtineant firmitatem, scripto commendari et sigillo
                     capituli nostri et nostro fecimus roborari.</s>
-                  <s>Actum <date>anno incarnati Verbi <num>Mº Cº LXXXº</num><note n="a" xml:id="aid114335">Nous devons à l'amabilité de
+                  <s>Actum <date>anno incarnati Verbi <num>Mº Cº LXXXº</num></date><note n="a" xml:id="aid114335">Nous devons à l'amabilité de
                     <abbr>M.</abbr>
                   <abbr>G.</abbr> Estournet le texte de cette contrepartie de la charte de l'abbé
-                  Ives, ainsi que l'établissement des références qui suivent.</note></date>.</s>
+                  Ives, ainsi que l'établissement des références qui suivent.</note>.</s>
                 </p>
               </div>
             </body>
@@ -54168,12 +54045,12 @@
                 </p>
                 <p>
                   <s>
-                    <date>Datum <placeName>Veronae</placeName> , <num>iii</num> nonas septembris<note n="a" xml:id="aid119603">Eugène <num>III</num> passa le
+                    <date>Datum <placeName>Veronae</placeName> , <num>iii</num> nonas septembris</date><note n="a" xml:id="aid119603">Eugène <num>III</num> passa le
                   début de septembre à Velletri en 1181 et 1182, à Segni en 1183, à Vérone en 1184
                   et 1185. Mais il est tout à fait probable que ce bref du 3 septembre, en raison du
                   voisinage des dates, fut expédié à la sollicitation du même envoyé de
                   St-Martin-des-Champs qui obtint pour le monastère de Paris la bulle du 4 septembre
-                  1184.</note></date>
+                  1184.</note>
                   </s>
                 </p>
               </div>
@@ -55107,10 +54984,10 @@
                 <p>
                   <s>Actum est hoc tempore <rs type="person"><persName>Ade de Bellomonte</persName>,
                       tunc temporis prioris <placeName>Sancti Leonorii</placeName></rs>
-                    <date>anno<note n="l" xml:id="aid126073">anno <hi rend="i">est omis par
-                    C</hi>.</note> ab
+                    <date>anno ab
                       Incarnatione Domini <num>Mº CLXXXº IIIIº</num> regnante <rs type="person"><persName>Philippo secundo</persName>
-                        <persName>Francorum</persName> rege</rs></date>.</s>
+                        <persName>Francorum</persName> rege</rs></date><note n="l" xml:id="aid126073">anno <hi rend="i">est omis par
+                    C</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -55291,7 +55168,7 @@
                   dehors de celui-ci, parmi ceux de Philippe-Auguste que Léopold Delisle a
                   catalogués, est daté de 1197 (nº 515, <abbr>p.</abbr> 122). Le roi confirme une
                   libéralité de sa mère à son chapelain.</note></placeName>
-                    <date>anno ab Incarnatione Domini <num>Mº Cº LXXXº</num><note n="c" xml:id="aid127365">Cette date est inadmissible. En
+                    <date>anno ab Incarnatione Domini <num>Mº Cº LXXXº</num>, mense maio</date><note n="c" xml:id="aid127365">Cette date est inadmissible. En
                   mai 1180 Louis <num>VII</num> régnait encore. A sa mort, le 18 septembre 1180, sa
                   veuve Ale de Champagne, fille de Thibaud <num>V</num> et qu'il avait épousée le 13
                   novembre 1160 (<hi rend="i">Art de vérifier les Dates</hi>, <num>I</num>, 578),
@@ -55302,7 +55179,7 @@
                   faisant aucune allusion à cette libéralité de Pierre, lui est évidemment
                   antérieur. Léopold Delisle avait signalé l'erreur commise par les copistes en
                   transcrivant la date du diplôme ; en 1180 aucune confiscation n'avait encore été
-                  faite sur les Juifs.</note>, mense maio</date>.</s>
+                  faite sur les Juifs.</note>.</s>
                   <s>Datum per manum <rs type="person"><persName>Hugonis</persName> cancellarii<note n="d" xml:id="aid127421">Hugues fut chancelier de
                   Philippe <num>II</num> jusqu'en 1183 (à une date comprise entre avril et le 31
                   octobre) ; en 1186 il était mort et inhumé à Béthisy (Delisle, <hi rend="i">Catalogue</hi>, <abbr>p.</abbr>
@@ -56389,7 +56266,7 @@
                   <s>Actum ab <date>Incarnatione Domini anno <num>Mº Cº LXXXº VIº</num></date>.</s>
                   <s><date>Regnante <persName>Philippo</persName>
                       <placeName>Victorioso</placeName></date>, ejus filio <date>regni sui anno
-                        <num>VIIIº</num><note n="b" xml:id="aid133748">Les deux dates forment un
+                        <num>VIIIº</num></date><note n="b" xml:id="aid133748">Les deux dates forment un
                   anachronisme apparent. La 8<hi rend="sup">e</hi> année de Philippe-Auguste a
                   commencé le 18 septembre 1187, si l'on prend pour point de départ la mort de Louis
                     <num>VII</num>. Mais ici les années du règne de Philippe-Auguste sont comptées
@@ -56399,7 +56276,7 @@
                   consistoire est visiblement en connexion avec les démarches qu'Urbain
                     <num>III</num> fit, au début de cette année, auprès du roi de France pour qu'il
                   se mit à la tête d'une nouvelle croisade (Jaffé-Lœwenfeld, <hi rend="i">Reg. Pont.
-                    Rom</hi>., nº 15924).</note></date>.</s>
+                    Rom</hi>., nº 15924).</note>.</s>
                 </p>
               </div>
             </body>
@@ -57054,9 +56931,9 @@
                   <s>Quod ut <pb n="88" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f91/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>ratum permaneat, ad petitionem memorati <rs type="person"><persName>Petri</persName> clerici nostri</rs>, sigilli nostri munimine
                     precepimus confirmari.</s>
                   <s>Actum <placeName>Corboili</placeName>
-                    <date>anno<note n="d" xml:id="aid137102"><hi rend="i">B omet</hi>
-                  anno.</note> Verbi
-                      Incarnati <num>Mº Cº LXXXº VIIIº</num></date>.</s>
+                    <date>anno Verbi
+                      Incarnati <num>Mº Cº LXXXº VIIIº</num></date><note n="d" xml:id="aid137102"><hi rend="i">B omet</hi>
+                  anno.</note>.</s>
                 </p>
               </div>
             </body>
@@ -58253,10 +58130,10 @@
                     meum et anniversarium matris mee pro hac elemosina facient.</s>
                   <s>[Ut autem hoc ratum et inconcussum permaneat, presentem paginam sigillo meo
                     muniri feci.</s>
-                  <s>Actum <date>anno ab Incarnatione Domini <num>Mº Cº Xº</num>]<note n="b" xml:id="aid143219">« Error in numero » <hi rend="i">G</hi>. Le passage final de la charte n'existe que dans <hi rend="i">E</hi>,
+                  <s>Actum <date>anno ab Incarnatione Domini <num>Mº Cº Xº</num>]</date><note n="b" xml:id="aid143219">« Error in numero » <hi rend="i">G</hi>. Le passage final de la charte n'existe que dans <hi rend="i">E</hi>,
                   qui est la transcription d'une copie. La date est visiblement erronée. Douët
                   d'Arcq propose de lire <num>MCXCIX</num> ; nous pensons qu'il faut s'en tenir à
-                    <num>Mº Cº XCº</num>.</note></date>.</s>
+                    <num>Mº Cº XCº</num>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -60090,29 +59967,20 @@
                       et fratres prebendam ipsam et fructus Vobis duxerunt subtrahendos.</s>
                   </p>
                   <p>
-                    <s><date>Datum <placeName>Agnanie</placeName>, <num>xvi</num> Kal. Augusti<note n="b" xml:id="aid152926">D'après le dépouillement de
+                    <s><date>Datum <placeName>Agnanie</placeName>, <num>xvi</num> Kal. Augusti</date><note n="b" xml:id="aid152926">D'après le dépouillement de
                     Jaffé, Alexandre <num>III</num> résidait à Anagni le 18 juillet 1173 (t.
                       <num>II</num>, <abbr>p.</abbr> 272, n<hi rend="sup">os</hi> 23314-23315) et le
                     17 juillet 1174 (p. 277, nº 12387). A ce quantième du 17 juillet fut aussi donné
                     à Anagni un bref pour le chapitre de Laon (A. <abbr>N.</abbr> L. 231, nº 39) que
                     Jaffé (t. <num>II</num>, <abbr>p.</abbr> 290, nº 12586) porte à la date
                     flottante 1160-1174 ; on ne saurait dire pourquoi, le pape Alexandre n'ayant
-                    jamais passé le mois de juillet à Anagni avant 1173.</note></date>.</s>
+                    jamais passé le mois de juillet à Anagni avant 1173.</note>.</s>
                   </p>
                 </div>
               </body>
-              <back>
-                <div type="notes">
-                  <note n="35" xml:id="n3035g">Amauri <num>II</num>, seigneur de
-                    Gournay, fils d'Agnès <num>II</num> dame de Gournay et de Galeran <num>II</num>,
-                    comte de Meulan, perdit son père le 9 avril 1166. La charte de celui-ci, datée
-                    de 1165 (nº<hi rend="b">386</hi>, <abbr>t.</abbr>
-                    <num>II</num>, <abbr>p.</abbr> 291), donne le troisième rang à Amauri parmi les
-                    six frères énumérés. Mais Galeran, le second, mourut sans doute
-                    prématurément.</note>
-                </div>
-              </back>
-            </text>
+          <back>
+            </back>
+        </text>
             <text xml:id="SMCP-PR_0534" n="534" subtype="article">
               
               <front>
@@ -60426,7 +60294,7 @@
                 </p>
                 <p>
                   <s>Actum hoc <date>anno ab incarnatione Domini <num>millº centº nonagº
-                        quarto</num><note n="b" xml:id="aid154528">Mº <num>Cº XCº</num> IIIIº<hi rend="i">B</hi>.</note></date>.</s>
+                        quarto</num></date><note n="b" xml:id="aid154528">Mº <num>Cº XCº</num> IIIIº<hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -60803,9 +60671,9 @@
                     firmatam.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno dominice Incarnationis <num>Mº Cº LXXXXº Vº</num><note n="a" xml:id="aid156519">Nous devons la communication de
+                  <s>Actum <date>anno dominice Incarnationis <num>Mº Cº LXXXXº Vº</num> t</date><note n="a" xml:id="aid156519">Nous devons la communication de
                   cet acte à l'obligeance de <abbr>M.</abbr> Roussel, archiviste de l'Oise, qui a
-                  bien voulu nous en envoyer la transcription.</note> t</date>.</s>
+                  bien voulu nous en envoyer la transcription.</note>.</s>
                 </p>
               </div>
             </body>
@@ -61782,12 +61650,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="48" xml:id="n3048b">Eudes, châtelain de Meaux.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0551" n="551" subtype="article">
             
             <front>
@@ -61948,11 +61813,11 @@
                     assignatos, nobis pro anima sua legavit, <pb n="154" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f157/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>in tribus terminis
                     percipiendos, scilicet <date>in Natale Domini</date> et <date>in festo
                         <abbr>Sti</abbr> Petri ad Vincula</date>, et <date>ad festum
-                        <abbr>Sti</abbr> Dionisii<note n="a" xml:id="aid162816">Jean de Drancy était vivant en
+                        <abbr>Sti</abbr> Dionisii</date><note n="a" xml:id="aid162816">Jean de Drancy était vivant en
                   1194, d'après le chirographe nº<hi rend="b">536.</hi> Son obit ne figure pas dans
                   les mentions données par Auguste Molinier au tome I<hi rend="sup">er</hi> des <hi rend="i">Obituaires de la province de Sens</hi>. Son testament est antérieur au
                   25 septembre 1197, date funèbre du préchantre Pierre (cf. note 202,
-                    <abbr>p.</abbr> 121).</note></date>.</s>
+                    <abbr>p.</abbr> 121).</note>.</s>
                 </p>
               </div>
             </body>
@@ -62597,9 +62462,9 @@
                 </p>
                 <p>
                   <s><date>Datum <placeName>Lateranis</placeName>
-                      <num>XV</num> kal. marcii, pontificatus nostri anno primo<note n="j" xml:id="aid165723">Innocent <num>II</num> fut élu
+                      <num>XV</num> kal. marcii, pontificatus nostri anno primo</date><note n="j" xml:id="aid165723">Innocent <num>II</num> fut élu
                   le 8 janvier 1198 et sacré le 22 février : le sacre est le point de départ pour le
-                  calcul des années du pontificat.</note></date>.</s>
+                  calcul des années du pontificat.</note>.</s>
                 </p>
               </div>
             </body>
@@ -62878,9 +62743,9 @@
                 <p>
                   <s>Actum apud <placeName>Mareolum<note n="237" xml:id="a3237">Marœil, ca. et ar. Arras. - Ambrines,
                   ca. Aubigny, ar. Saint-Pol.</note></placeName>
-                    <date>anno Incarnationis Domini <num>Mº Cº XCº</num> octavo, mense aprilis<note n="a" xml:id="aid167246">L'année pascale 1198 a commencé
+                    <date>anno Incarnationis Domini <num>Mº Cº XCº</num> octavo, mense aprilis</date><note n="a" xml:id="aid167246">L'année pascale 1198 a commencé
                   le 29 mars et a englobé tout le mois d'avril 1198, mais elle comprend aussi le
-                  dix-sept premiers jours d'avril 1199.</note></date>.</s>
+                  dix-sept premiers jours d'avril 1199.</note>.</s>
                 </p>
               </div>
             </body>
@@ -64030,7 +63895,7 @@
                       tradidimus.</s>
                   </p>
                   <p>
-                    <s>Actum <date>anno Incarnati Verbi millesimo ducentesimo<note n="b" xml:id="aid172789">Cet acte est le dernier que
+                    <s>Actum <date>anno Incarnati Verbi millesimo ducentesimo</date><note n="b" xml:id="aid172789">Cet acte est le dernier que
                     nous ayons du prieur Robert. La lettre transcrite au Cartulaire ecclésiastique
                     de Champagne (dit <title>Liber pontificum</title>, ms. lat. 5993 A, fol. 409),
                     datée comme suit : « anno <num>M. CC.</num> die mercurii proxima aute
@@ -64045,7 +63910,7 @@
                     1214, pendant la minorité de son fils posthume Thibaud <num>IV</num>. Nous
                     pensons qu'il s'agit de ce dernier ; le copiste du cartulaire aura omis les
                     chiffres qui suivaient le millésime ; de telles bévues ne sont point
-                    rares.</note></date>.</s>
+                    rares.</note>.</s>
                   </p>
                 </div>
               </body>
@@ -64424,8 +64289,8 @@
                   <abbr>p.</abbr> 104).</note></persName> socii nostri et canonici
                       <placeName>Carnotensis</placeName></rs>, <rs type="person"><persName>Guarnerii</persName> capellani nostri</rs>, <rs type="person"><persName>Willelmi</persName> camerarii nostri</rs>, <rs type="person"><persName>Nicolai de Fresgot<note n="251" xml:id="a3251">Bérou-la-Mulotière, ca. Brezolles. ar.
                   Dreux. - Le Frécot, éc. Thibouville, ca. Beaumont-le-Roger, ar. Bernay.</note></persName> socii nostri</rs>, et aliorum multorum.</s>
-                  <s><date>Anno gratie millesimo ducentesimo, tercio<note n="b" xml:id="aid174827">Il faut ponctuer ainsi,
-                  l'original portant très lisiblement « nonas ", et non pas " nonis ».</note>nonas martii</date>.</s>
+                  <s><date>Anno gratie millesimo ducentesimo, terciononas martii</date><note n="b" xml:id="aid174827">Il faut ponctuer ainsi,
+                  l'original portant très lisiblement « nonas ", et non pas " nonis ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -64708,13 +64573,9 @@
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="44" xml:id="n3044b">Auger-Saint-Vincent, ca.
-                  Senlis.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <group>
             <!-- 585-596. -->
             <head>(1140-1202) Documents concernant les bénéfices compris dans le diocèse de Châlons,
@@ -65365,8 +65226,8 @@
                   
                   <p>
                     <s><pb n="197" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f200/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>Actum sollempniter apud <placeName>Sanctum Martinum de Campis</placeName>
-                      <date>anno Domini <num>Mº CCº</num> secundo<note type="note" n="a" xml:id="aid179159">Sur la date de cet
-                    acte et des suivants, cf. la note 266, sur le nº<hi rend="b">595.</hi></note></date>.</s>
+                      <date>anno Domini <num>Mº CCº</num> secundo</date><note type="note" n="a" xml:id="aid179159">Sur la date de cet
+                    acte et des suivants, cf. la note 266, sur le nº<hi rend="b">595.</hi></note>.</s>
                   </p>
                 </div>
               </body>
@@ -65568,7 +65429,7 @@
                   </p>
                   <p>
                     <s>Actum <date>anno Domini <num>Mº CCº IIº</num>, pontificatus nostri anno
-                          quinto<note n="266" xml:id="a3266">Maurice de Sully mourut le 11
+                          quinto</date><note n="266" xml:id="a3266">Maurice de Sully mourut le 11
                     septembre 1196. Si son successeur Eudes eut été élu avant le 31 décembre, sa
                       5<hi rend="sup">e</hi> année se serait terminée en 1201. Nous savons, par la
                     charte <hi rend="b">613,</hi> que septembre 1203 est compris dans sa 7<hi rend="sup">e</hi> année. Son intronisation n'est donc pas postérieure au mois
@@ -65578,7 +65439,7 @@
                       1<hi rend="sup">er</hi> janvier ou 12 avril 1203, l'élection est postérieure
                     au 1<hi rend="sup">er</hi> janvier 1197. La charte <hi rend="b">595</hi> se
                     place donc entre janvier et août 1202, fort probablement dans les premiers mois
-                    de l'année.</note></date>.</s>
+                    de l'année.</note>.</s>
                   </p>
                 </div>
               </body>
@@ -65919,9 +65780,9 @@
                     corpora sua in cimiterio nostro tradiderint, media pars oblationum ipsorum erit,
                     reliqua erit propria monachorum.</s>
                   <s>Quod ut ratum permaneat, sigilli nostri impressione roboramus <date>anno
-                      incarnati Verbi <num>M. CCII</num><note n="c" xml:id="aid181532">Cet acte serait du mois de
+                      incarnati Verbi <num>M. CCII</num></date><note n="c" xml:id="aid181532">Cet acte serait du mois de
                   décembre, comme le précédent, mais il nous est parvenu par la voie d'un document
-                  faux (cf. nº<hi rend="b">668</hi>).</note></date>.</s>
+                  faux (cf. nº<hi rend="b">668</hi>).</note>.</s>
                 </p>
               </div>
             </body>
@@ -66075,10 +65936,10 @@
                 </p>
                 <p>
                   <s>Actum apud <placeName>Carnotas<note n="d" xml:id="aid182228">Carnotum <hi rend="i">B</hi></note></placeName>
-                    <date>anno gracie <num>Mº CCº IIIº</num>, mense februario<note n="e" xml:id="aid182259">Cet acte prouve que le doyen de
+                    <date>anno gracie <num>Mº CCº IIIº</num>, mense februario</date><note n="e" xml:id="aid182259">Cet acte prouve que le doyen de
                   Chartres Hugues <num>II</num> était bien en fonctions dès 1202 : il succéda à
                   Eudes I<hi rend="sup">er</hi>, qui l'était encore en septembre 1200.
-                    (<title>Gallia christ</title>., <num>VIII</num>, 1201.)</note></date>.</s>
+                    (<title>Gallia christ</title>., <num>VIII</num>, 1201.)</note>.</s>
                 </p>
               </div>
             </body>
@@ -66277,8 +66138,8 @@
                     ejusdem amite.</s>
                   <s>In cujus rei memoriam, presentem cartam sigilli nostri fecimus impressione
                     muniri.</s>
-                  <s>Actum <date>anno Domini milesimo ducentesimo <num>IIº</num><note n="u" xml:id="aid183515">millesimo ducentesimo secundo
-                    <hi rend="i">C</hi>.</note></date>.</s>
+                  <s>Actum <date>anno Domini milesimo ducentesimo <num>IIº</num></date><note n="u" xml:id="aid183515">millesimo ducentesimo secundo
+                    <hi rend="i">C</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -66362,7 +66223,7 @@
                     sigilli nostri fecimus impressione muniri.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº IIº</num><note n="d" xml:id="aid184048">millesimo centesimo IIº<hi rend="i">B</hi>.</note></date>.</s>
+                  <s>Actum <date>anno Domini <num>Mº CCº IIº</num></date><note n="d" xml:id="aid184048">millesimo centesimo IIº<hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -66437,11 +66298,11 @@
                 </p>
                 <p>
                   <s>Actum <date>anno Domini <num>Mº CCº</num> tercio, mense septembri, pontificatus
-                      nostri anno septimo<note n="272" xml:id="a3272b">Cette charte peut aider à préciser
+                      nostri anno septimo</date><note n="272" xml:id="a3272b">Cette charte peut aider à préciser
                   la date de l'élection de l'évêque Eudes de Sully, incertaine dans la
                     <title>Gallia</title> (VIII, 79). Elle est postérieure au 1<hi rend="sup">er</hi> octobre 1196 et antérieure au 1<hi rend="sup">er</hi> septembre 1197 ;
                   or Maurice de Sully est mort le 11 septembre 1196, et, d'autre part, son
-                  successeur fut élu avant le 12 avril 1197 (Voir note 266).</note></date>.</s>
+                  successeur fut élu avant le 12 avril 1197 (Voir note 266).</note>.</s>
                 </p>
               </div>
             </body>
@@ -66942,8 +66803,8 @@
                     impressione signavit.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Verbi incarnati<note n="c" xml:id="aid186675">incarnati Verbi <hi rend="i">B</hi>.</note>
-                      <num>Mº ducentesimo tertio</num></date>.</s>
+                  <s>Actum <date>anno Verbi incarnati
+                      <num>Mº ducentesimo tertio</num></date><note n="c" xml:id="aid186675">incarnati Verbi <hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -67404,8 +67265,8 @@
                     nostri impressione signatum ipsis in testimonium tradidimus.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gratie <num>Mº CCº</num> quarto<note n="b" xml:id="aid188692">Nous devons l'indication de
-                  cette pièce à l'obligeance de <abbr>M.</abbr> Louis Halphen.</note></date>.</s>
+                  <s>Actum <date>anno gratie <num>Mº CCº</num> quarto</date><note n="b" xml:id="aid188692">Nous devons l'indication de
+                  cette pièce à l'obligeance de <abbr>M.</abbr> Louis Halphen.</note>.</s>
                 </p>
               </div>
             </body>
@@ -67542,10 +67403,10 @@
                   <s>Qui <persName>Philipus</persName> obiit <date>anno domini <num>M. II<hi rend="sup">cc</hi> XXIIº</num></date>.</s>
                   <s>Et in regem ungtus <placeName>Remis</placeName>
                     <date>anno Domini <num>Mº</num>
-                      <num>179</num><note n="c" xml:id="aid189344"><hi rend="i">En tête</hi> :
+                      <num>179</num></date><note n="c" xml:id="aid189344"><hi rend="i">En tête</hi> :
                   Copie de lettres lesquelles sont au trésor de Saint-Martin-des-Champs, et y
                   portées par [<hi rend="i">en blanc</hi>] prieur de Saint-Denis de la Châtre, le
-                    [<hi rend="i">en blanc</hi>] 1580.</note></date>.</s>
+                    [<hi rend="i">en blanc</hi>] 1580.</note>.</s>
                 </p>
               </div>
             </body>
@@ -67928,8 +67789,8 @@
                     nostro munimus.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº</num> quarto<note n="a" xml:id="aid191097">Ici s'arrêtent <hi rend="i">B C
-                    D</hi>.</note>, mense martio</date>.</s>
+                  <s>Actum <date>anno Domini <num>Mº CCº</num> quarto, mense martio</date><note n="a" xml:id="aid191097">Ici s'arrêtent <hi rend="i">B C
+                    D</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -68434,9 +68295,9 @@
                     fecimus impressione muniri.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini millesimo ducentesimo quinto<note n="b" xml:id="aid193400">Ici s'arrêtent <hi rend="i">B C
-                    D</hi>.</note>, pontificatus nostri anno
-                      nono</date>.</s>
+                  <s>Actum <date>anno Domini millesimo ducentesimo quinto, pontificatus nostri anno
+                      nono</date><note n="b" xml:id="aid193400">Ici s'arrêtent <hi rend="i">B C
+                    D</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -68522,8 +68383,8 @@
                 <p>
                   <s><date>Datum <placeName>Rome</placeName></date>, apud <placeName>Sanctum
                       Petrum</placeName><date><num>xvii</num> kal. aprilis, pontificatus nostri anno
-                        nono<note n="c" xml:id="aid193800">nono <hi rend="i">omis par
-                    C</hi>.</note></date>.</s>
+                        nono</date><note n="c" xml:id="aid193800">nono <hi rend="i">omis par
+                    C</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -68960,8 +68821,8 @@
                     ei tradidimus.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno ab Incarnatione Domini millesimo ducentesimo quinto<note n="o" xml:id="aid195947">M.CC.V <hi rend="i">E</hi> qui
-                  ajoute : « cotte <num>v.</num> »</note></date>.</s>
+                  <s>Actum <date>anno ab Incarnatione Domini millesimo ducentesimo quinto</date><note n="o" xml:id="aid195947">M.CC.V <hi rend="i">E</hi> qui
+                  ajoute : « cotte <num>v.</num> »</note>.</s>
                 </p>
               </div>
             </body>
@@ -69110,11 +68971,11 @@
                 <p>
                   <s><date>Datum <placeName>Rome</placeName></date>, apud <placeName>Sanctum
                       Petrum</placeName><date><num>ii</num> idus aprilis, pontificatus nostri anno
-                        <num>viiiiº</num><note n="a" xml:id="aid196741">D'après l'itinéraire d'Innocent
+                        <num>viiiiº</num></date><note n="a" xml:id="aid196741">D'après l'itinéraire d'Innocent
                     <num>III</num> établi par Potthast, il quitta Saint-Pierre le 8 mars 1207 (9<hi rend="sup">e</hi> année de son pontificat) pour aller habiter le palais de
                   Latran dont il ne s'éloigna plus de longtemps. Le 12 avril 1206 il résidait à
                   Saint-Pierre. On peut donc soupçonner une erreur de date dans la transcription du
-                  bref, dont nous n'avons plus l'original, et qui aurait porté « anno <num>viii<hi rend="sup">e</hi></num> ».</note></date>.</s>
+                  bref, dont nous n'avons plus l'original, et qui aurait porté « anno <num>viii<hi rend="sup">e</hi></num> ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -69606,11 +69467,11 @@
                     fecimus sigillo muniri.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gracie <num>Mº CCº VIº</num><note n="304" xml:id="a3304">Cet acte, daté de 1206, et les deux
+                  <s>Actum <date>anno gracie <num>Mº CCº VIº</num></date><note n="304" xml:id="a3304">Cet acte, daté de 1206, et les deux
                   suivants, datés de 1207, ont ensemble une évidente connexion ; la cession faite
                   par Renaud de Bouqueval doit être très voisine de la fin de la première année, et
                   les contrats de garantie, du début de la seconde année. En 1207, la date pascale
-                  répond au 22 avril.</note></date>.</s>
+                  répond au 22 avril.</note>.</s>
                 </p>
               </div>
             </body>
@@ -69943,9 +69804,9 @@
                     etc.</s>
                   <s>Is autem est <rs type="person"><persName>Hugo <num>V</num></persName>, abbas
                         <placeName>Cluniacensis</placeName></rs> ab <date>anno <num>1199</num> ad
-                        <num>1207</num><note n="b" xml:id="aid200631">Léger était prieur d'Acy dès
+                        <num>1207</num></date><note n="b" xml:id="aid200631">Léger était prieur d'Acy dès
                   1200 (nº<hi rend="b">577,</hi>
-                  <abbr>p.</abbr> 180).</note></date></s>
+                  <abbr>p.</abbr> 180).</note></s>
                 </p>
               </div>
             </body>
@@ -70338,12 +70199,7 @@ chevalier, et l'hôpital
             <body>
               <p/>
             </body>
-            <back>
-              <div type="notes">
-                <note n="310" xml:id="n3310a" target="#a3310a"/>
-              </div>
-            </back>
-          </text>
+</text>
           <text xml:id="SMCP-PR_0657" n="657" subtype="article">
             
             <front>
@@ -70819,13 +70675,13 @@ chevalier, et l'hôpital
                     annualis census, quos monaci nostri <placeName>Sancti Petri de
                       Pontisara</placeName> debent pro domo <rs type="person"><persName>Roberti
                         Minutoris</persName> confratris sui</rs>, persolvendos in censibus
-                      <placeName>Sancti Martini</placeName>, quando colligentur <date>in maio<note n="311" xml:id="a3311">Guillaume <num>II</num>, abbé du Bec,
+                      <placeName>Sancti Martini</placeName>, quando colligentur <date>in maio</date><note n="311" xml:id="a3311">Guillaume <num>II</num>, abbé du Bec,
                   mourut le 18 septembre 1211, ayant siégé, dit la <title>Chronique du Bec</title>,
                   13 ans 2 mois et 13 jours ; ce calcul ferait remonter son entrée en charge au 5
                   juillet 1198 ; mais une charte de son devancier étant datée de l'année suivante,
                   il faudrait admettre une erreur dans le nombre des années (<num>xii</num> au lieu
                   de <num>xiii</num>) et placer son avènement au 5 juillet 1199 (Cf. <title>Gallia
-                    christiana</title>, <num>XI</num>, 231).</note></date>.</s>
+                    christiana</title>, <num>XI</num>, 231).</note>.</s>
                   <s>Et ut ratum, <hi rend="i">etc</hi>.</s>
                 </p>
                 <p>
@@ -70902,10 +70758,10 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s>Actum <placeName>Silvanectis</placeName>
-                    <date>anno gratie <num>Mº CCº</num> octavo, <num>xiiiiº</num> kal. maii<note n="a" xml:id="aid204813">Il n'y a point de doute sur
+                    <date>anno gratie <num>Mº CCº</num> octavo, <num>xiiiiº</num> kal. maii</date><note n="a" xml:id="aid204813">Il n'y a point de doute sur
                   l'attribution de cet acte à l'année 1208, où Pâques tomba le 6 avril ; le mois
                   d'avril suivant fut tout entier compris dans l'année 1209, où la date pascale est
-                  le 29 mars.</note></date>.</s>
+                  le 29 mars.</note>.</s>
                 </p>
               </div>
             </body>
@@ -71085,7 +70941,7 @@ chevalier, et l'hôpital
                   <s><pb n="269" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f272/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>In cujus rei testimonium, sigilla nostra duximus apponenda.</s>
                 </p>
                 <p>
-                  <s><date>Datum anno Domini <num>M. CCVIII</num>, mense aprili<note n="313" xml:id="a3313">Ce document, dont l'original ne se
+                  <s><date>Datum anno Domini <num>M. CCVIII</num>, mense aprili</date><note n="313" xml:id="a3313">Ce document, dont l'original ne se
                   retrouve pas, est, dans la teneur qui nous en a été transmise et avec la date
                   qu'on lui donne, inadmissible pour deux motifs. Foulques, prieur de Saint-Martin,
                   est cité dans un acte daté de 1207, dont nous avons l'original (nº<hi rend="b">660</hi>), il conserve ses fonctions durant les années suivantes.
@@ -71099,7 +70955,7 @@ chevalier, et l'hôpital
                   faisant foi en justice, était réservée aux chancelleries officielles. Qu'on
                   n'objecte point la mort de l'évèque Anseau, remontant au 8 juin 1207 ; si son
                   successeur n'était pas encore ordonné, il revenait au Chapitre de mettre son sceau
-                  aux expéditions d'actes épiscopaux qui pouvaient être demandées.</note></date>.</s>
+                  aux expéditions d'actes épiscopaux qui pouvaient être demandées.</note>.</s>
                 </p>
               </div>
             </body>
@@ -71767,7 +71623,7 @@ chevalier, et l'hôpital
                   <s>In cujus rei memoriam - -</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gratie millesimo<note n="c" xml:id="aid208724">milesimo <hi rend="i">B</hi>.</note> ducentesimo octavo mense novembris</date>.</s>
+                  <s>Actum <date>anno gratie millesimo ducentesimo octavo mense novembris</date><note n="c" xml:id="aid208724">milesimo <hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -71915,8 +71771,8 @@ chevalier, et l'hôpital
                     se super hoc contra omnes guarantiam laturum.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno ab Incarnatione Domini <num>Mº</num> ducentesimo octavo<note n="c" xml:id="aid209488">Mº <num>Cº VIIIº</num>
-                  <hi rend="i">B</hi>.</note></date>.</s>
+                  <s>Actum <date>anno ab Incarnatione Domini <num>Mº</num> ducentesimo octavo</date><note n="c" xml:id="aid209488">Mº <num>Cº VIIIº</num>
+                  <hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -72773,8 +72629,8 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s>Actum <placeName>Carnoti</placeName>
-                    <date>anno <num>Mº CCº IXº</num><note n="d" xml:id="aid213837"><hi rend="i">B amet la fin de la
-                    date</hi>. </note>, mense junio</date>.</s>
+                    <date>anno <num>Mº CCº IXº</num>, mense junio</date><note n="d" xml:id="aid213837"><hi rend="i">B amet la fin de la
+                    date</hi>. </note>.</s>
                 </p>
               </div>
             </body>
@@ -73104,8 +72960,8 @@ chevalier, et l'hôpital
                       Omnium</placeName>, habebunt ab illo qui domum possidebit predictam.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini milesimo ducentesimo nono<note n="a" xml:id="aid215184"><hi rend="i">B C</hi> omettent
-                  « nono ».</note></date>.</s>
+                  <s>Actum <date>anno Domini milesimo ducentesimo nono</date><note n="a" xml:id="aid215184"><hi rend="i">B C</hi> omettent
+                  « nono ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -73154,8 +73010,8 @@ chevalier, et l'hôpital
                     -</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno ab Incarnatione Domini <num>MºCCº nono</num><note n="a" xml:id="aid215510">Cette confirmation s'applique à
-                  l'acte nº<hi rend="b">561</hi> ci-dessus.</note></date>.</s>
+                  <s>Actum <date>anno ab Incarnatione Domini <num>MºCCº nono</num></date><note n="a" xml:id="aid215510">Cette confirmation s'applique à
+                  l'acte nº<hi rend="b">561</hi> ci-dessus.</note>.</s>
                 </p>
               </div>
             </body>
@@ -73930,12 +73786,12 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName>
-                    <date>anno Domini millesimo ducentº duodecimo mense februario<note n="337" xml:id="a3337">Le nom du vicomte de Corbeil, qui
+                    <date>anno Domini millesimo ducentº duodecimo mense februario</date><note n="337" xml:id="a3337">Le nom du vicomte de Corbeil, qui
                   n'avait pas été exprimé, et celui de son fils qui a disparu par accident, peuvent
                   être aisément suppléés. Le vicomte en fonctions en 1213, et que nomme une charte
                   de 1205 (nº<hi rend="b">636</hi> ci-dessus), est Payen, dont le fils et successeur
                   Gui <num>II</num> est cité peu après. La partie emportée du parchemin peut être
-                  convenablement remplie par les huit lettres « Ego Guido ». - Cf. note 295.</note></date>.</s>
+                  convenablement remplie par les huit lettres « Ego Guido ». - Cf. note 295.</note>.</s>
                 </p>
               </div>
             </body>
@@ -77632,8 +77488,8 @@ chevalier, et l'hôpital
                       <placeName>Silvanectensis</placeName> fecimus communiri.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>1219</num>, mense novembri<note n="a" xml:id="aid235763">Voir le nº<hi rend="b">725,</hi>
-                  <abbr>p.</abbr> 328.</note></date>.</s>
+                  <s>Actum <date>anno Domini <num>1219</num>, mense novembri</date><note n="a" xml:id="aid235763">Voir le nº<hi rend="b">725,</hi>
+                  <abbr>p.</abbr> 328.</note>.</s>
                 </p>
               </div>
             </body>
@@ -78467,7 +78323,7 @@ chevalier, et l'hôpital
                     antecessorum suorum, de assensu et voluntate mea, dedit monachis
                         <placeName><abbr>Bte</abbr> Marie de Gornaio super Maternam</placeName>
                     <num>xx</num> solidos <placeName>Paris</placeName>, monete, singulis annis
-                      <date>in octavis<note n="a" xml:id="aid239733">et octaviis <hi rend="i">B</hi>.</note> Sancti Dionisii</date> ab eisdem monachis percipiendos in censu de
+                      <date>in octavis Sancti Dionisii</date><note n="a" xml:id="aid239733">et octaviis <hi rend="i">B</hi>.</note> ab eisdem monachis percipiendos in censu de
                         <placeName>Mostariolo<note n="b" xml:id="aid239751">Monstariolo <hi rend="i">B</hi>.</note></placeName>.</s>
                   <s>Quod autem ut perpetuam stabilitatem obtineat, ego et prefata uxor mea prefatam
                     cartam conscribi et sigillorum nostrorum munimine fecimus roborari.</s>
@@ -78583,8 +78439,8 @@ chevalier, et l'hôpital
                     omnium antecessorum meorum, dedi monachis <placeName>Sancti Leonorii
                       Bellimontis</placeName>, in perpetuam elemosinam, <num>xx</num> solidos
                     parisiensis monete, singulis annis ab eisdem fratribus percipiendos <date>in
-                        vigiliis<note n="a" xml:id="aid240241">vigilia <hi rend="i">D</hi>.</note>
-                      <abbr>Sti</abbr> Andree</date> apostoli in transverso de
+                        vigiliis
+                      <abbr>Sti</abbr> Andree</date><note n="a" xml:id="aid240241">vigilia <hi rend="i">D</hi>.</note> apostoli in transverso de
                       <placeName>Bellomonte</placeName>.</s>
                   <s>Quod ut perpetuam stabilitatem obtineat, presentem cartam sigilli mei munimine
                     roboravi.</s>
@@ -78923,8 +78779,8 @@ chevalier, et l'hôpital
                     meis de <placeName>Bellomonte</placeName>, quantum quidam asinus ad usum eorum
                     singulis diebus afferre potuerit.</s>
                   <s>Et quindecim solidos <placeName>Belvacensium<note n="d" xml:id="aid241641">Belluacensium <hi rend="i">E</hi>.</note></placeName> assignatos ad
-                    refectionem <date>in tribus festivitatibus <abbr>SS.</abbr> Calixti,<note n="e" xml:id="aid241654">Cunualdi et Etrualdi <hi rend="i">a</hi>.</note> Cunuali et
-                        Etruetali<note n="386" xml:id="a3386">
+                    refectionem <date>in tribus festivitatibus <abbr>SS.</abbr> Calixti, Cunuali et
+                        Etruetali</date><note n="e" xml:id="aid241654">Cunualdi et Etrualdi <hi rend="i">a</hi>.</note><note n="386" xml:id="a3386">
                   <p>Ces saints n'ont point avec saint Léonor de rapport étroit. Calixte 1<hi rend="sup">er</hi> est le souverain pontife dont les reliques furent apportées
                     par Ebrard de Frioul, gendre de Louis le Pieux, dans une abbaye du nord de la
                     France, à Cysoing. Cunual est peut-être Congall, fondateur du célèbre monastère
@@ -78936,7 +78792,7 @@ chevalier, et l'hôpital
                       latinorum</hi>, <abbr>t.</abbr>
                     <num>II</num>, <abbr>pp.</abbr> 153-173, d'après le ms. latin 5317), ne lui
                     attribue point de compagnons.</p>
-                </note></date>.</s>
+                </note>.</s>
                   <s>Quorum denariorum <num>xii</num> sol. carnifices de
                       <placeName>Bellomonte</placeName> de stallis suis persolvent annuatim ; tres
                     vero solidi assignati <pb n="375" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f378/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>sunt in censu quem pater meus emit ab
@@ -79106,10 +78962,10 @@ chevalier, et l'hôpital
                     roboravi.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gracie <num>Mº CCº vicesimo primo</num>, mense septembris<note n="a" xml:id="aid242710">Cette donation, inconnue de
+                  <s>Actum <date>anno gracie <num>Mº CCº vicesimo primo</num>, mense septembris</date><note n="a" xml:id="aid242710">Cette donation, inconnue de
                   Douët d'Arcq, s'ajoute à la très longue liste des libéralités testamentaires que
                   fit, à cette même date, le dernier comte de Beaumont-sur-Oise à la plupart des
-                  abbayes circonvoisines.</note></date>.</s>
+                  abbayes circonvoisines.</note>.</s>
                 </p>
               </div>
             </body>
@@ -80265,9 +80121,9 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s>Actum <date>anno gracie millesimo ducentesimo vicesimo secondo, mense
-                        marcio<note n="a" xml:id="aid247965">Cette charte reproduit, à
+                        marcio</date><note n="a" xml:id="aid247965">Cette charte reproduit, à
                   quelques variantes près, celle de septembre 1221 ayant le même objet. Douët d'Arcq
-                  a jugé inutile de la mentionner, bien qu'elle n'ait pu lui échapper.</note></date>.</s>
+                  a jugé inutile de la mentionner, bien qu'elle n'ait pu lui échapper.</note>.</s>
                 </p>
               </div>
             </body>
@@ -80322,13 +80178,9 @@ chevalier, et l'hôpital
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="74" xml:id="n3074c">Probablement Rueil, ca. Marly-le-Roi,
-                  et Orgeval, ca. Poissy, ar. Versailles.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0806" n="806" subtype="article">
             
             <front>
@@ -80380,13 +80232,9 @@ chevalier, et l'hôpital
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="75" xml:id="n3075b">Peut-être Guépel, éc. Fosses, ca.
-                  Luzarches.</note>
-              </div>
+          <back>
             </back>
-          </text>
+        </text>
           <text xml:id="SMCP-PR_0807" n="807" subtype="article">
             
             <front>
@@ -81237,8 +81085,8 @@ chevalier, et l'hôpital
                     usagio hominum et hospitum ; ita quidem quod in mea gryaria remanebit — —</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gracie <num>Mº CCº XXº</num> tercio, mense decembri<note n="9" xml:id="a4009">Berzieux, ca. Ville-sur-Tourbe, ar.
-                  Sainte-Menehould (Berzy-le-Sec, ca, Soissons ?).</note></date>.</s>
+                  <s>Actum <date>anno gracie <num>Mº CCº XXº</num> tercio, mense decembri</date><note n="9" xml:id="a4009">Berzieux, ca. Ville-sur-Tourbe, ar.
+                  Sainte-Menehould (Berzy-le-Sec, ca, Soissons ?).</note>.</s>
                 </p>
               </div>
             </body>
@@ -81594,11 +81442,11 @@ chevalier, et l'hôpital
                     sigillorum nostrorum munimine fecimus roborari<note n="e" xml:id="aid116605">roboravi <hi rend="i">a</hi>.</note>.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gratie <num>Mº CCº XXº IIIIº</num>, mense aprilis<note n="f" xml:id="aid116646">En 1224 Pâques tomba le 14
+                  <s>Actum <date>anno gratie <num>Mº CCº XXº IIIIº</num>, mense aprilis</date><note n="f" xml:id="aid116646">En 1224 Pâques tomba le 14
                   avril ; mais l'année pascale se termina le 29 mars 1225 ; la fête de Pâques fut
                   célébrée le 30 mars. Cette charte est donc, en toute hypothèse, de l'année 1224 ;
                   il faut corriger en ce sens la note 1 de la page 112 des
-                  <title>Recherches</title>, résultat d'une méprise de Douët d'Arcq.</note></date>.</s>
+                  <title>Recherches</title>, résultat d'une méprise de Douët d'Arcq.</note>.</s>
                 </p>
               </div>
             </body>
@@ -83194,12 +83042,7 @@ chevalier, et l'hôpital
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="215" xml:id="n215" target="#a215"/>
-              </div>
-            </back>
-          </text>
+</text>
           <text xml:id="SMCP-PR_0851" n="851" subtype="article">
             
             <front>
@@ -83269,8 +83112,8 @@ chevalier, et l'hôpital
                   <s>Quod ne possit oblivione deleri, sigillorum nostrorum munimine roboravimus.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno gracie <num>Mº CCº XXVº</num>, mense martio<note n="a" xml:id="aid125032">Non reproduit par Douët d'Arcq
-                  dans ses <title>Recherches sur les comtes de Beaumont-sur-Oise</title>.</note></date>.</s>
+                  <s>Actum <date>anno gracie <num>Mº CCº XXVº</num>, mense martio</date><note n="a" xml:id="aid125032">Non reproduit par Douët d'Arcq
+                  dans ses <title>Recherches sur les comtes de Beaumont-sur-Oise</title>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -84398,12 +84241,7 @@ chevalier, et l'hôpital
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note n="216" xml:id="n216" target="#a216"/>
-              </div>
-            </back>
-          </text>
+</text>
           <text xml:id="SMCP-PR_0873" n="873" subtype="article">
             
             <front>
@@ -85104,8 +84942,8 @@ chevalier, et l'hôpital
                     denariis de capitali censu — persolvendis — canonicis memoratis — —</s>
                 </p>
                 <p>
-                  <s><date>Datum anno Dominice Incarnationis millesimo ducentesimo vicesimo nono<note n="a" xml:id="aid133273">vicesimo octavo, mense augusto
-                    <hi rend="i">C</hi>.</note></date>.</s>
+                  <s><date>Datum anno Dominice Incarnationis millesimo ducentesimo vicesimo nono</date><note n="a" xml:id="aid133273">vicesimo octavo, mense augusto
+                    <hi rend="i">C</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -85183,9 +85021,9 @@ chevalier, et l'hôpital
                     nichilominus exequentur.</s>
                 </p>
                 <p>
-                  <s><date>Datum <placeName>Perusii</placeName>, <num>xv</num> kal. decembris<note n="b" xml:id="aid133704">Cette date convient à l'année
+                  <s><date>Datum <placeName>Perusii</placeName>, <num>xv</num> kal. decembris</date><note n="b" xml:id="aid133704">Cette date convient à l'année
                   1229, où Grégoire <num>IX</num>, d'après le relevé de Potthast, a séjourné en
-                  novembre à Pérouse. Il s'y trouva aussi en <num>1235.</num></note></date>.</s>
+                  novembre à Pérouse. Il s'y trouva aussi en <num>1235.</num></note>.</s>
                 </p>
               </div>
             </body>
@@ -85773,7 +85611,7 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName>, <date>anno Domini <num>Mº CCº</num>
-                      tricesimo, mense martio<note n="e" xml:id="aid136654">marcio <hi rend="i">B</hi>.</note></date>.</s>
+                      tricesimo, mense martio</date><note n="e" xml:id="aid136654">marcio <hi rend="i">B</hi>.</note>.</s>
                 </p>
               </div>
             </body>
@@ -86925,9 +86763,9 @@ chevalier, et l'hôpital
                     predicta terra.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº XXXº</num> secundo, mense januario<note n="a" xml:id="aid141863">Au dos se trouve une mention du
+                  <s>Actum <date>anno Domini <num>Mº CCº XXXº</num> secundo, mense januario</date><note n="a" xml:id="aid141863">Au dos se trouve une mention du
                       <num>xv<hi rend="sup">e</hi></num> siècle : « Acquisitio cujusdam terre, in
-                  territorio de <hi rend="i">Gumevel</hi> situate ».</note></date></s>
+                  territorio de <hi rend="i">Gumevel</hi> situate ».</note></s>
                 </p>
               </div>
             </body>
@@ -90848,8 +90686,8 @@ chevalier, et l'hôpital
                     venditionem voluerunt — —</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº</num> tricesimo octavo, mense novembris<note n="a" xml:id="aid160801">Cette pièce se trouve dans le
-                  dossier de Montmartre.</note></date>.</s>
+                  <s>Actum <date>anno Domini <num>Mº CCº</num> tricesimo octavo, mense novembris</date><note n="a" xml:id="aid160801">Cette pièce se trouve dans le
+                  dossier de Montmartre.</note>.</s>
                 </p>
               </div>
             </body>
@@ -92139,8 +91977,8 @@ chevalier, et l'hôpital
                     roborari.</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº</num> quadragesimo primo, mense marcio<note n="a" xml:id="aid167112">Cette pièce et celle qui suit
-                  sont datées d'après le style de Noël.</note></date>.</s>
+                  <s>Actum <date>anno Domini <num>Mº CCº</num> quadragesimo primo, mense marcio</date><note n="a" xml:id="aid167112">Cette pièce et celle qui suit
+                  sont datées d'après le style de Noël.</note>.</s>
                 </p>
               </div>
             </body>
@@ -95123,10 +94961,10 @@ chevalier, et l'hôpital
                     in censiva ejusdem Prioris — —</s>
                 </p>
                 <p>
-                  <s><date>Datum anno Domini <num>Mº CCº XLº</num> septimo, mense martio<note n="a" xml:id="aid183506">Cession en aumône de 6 sous
+                  <s><date>Datum anno Domini <num>Mº CCº XLº</num> septimo, mense martio</date><note n="a" xml:id="aid183506">Cession en aumône de 6 sous
                   parisis de cens sur la même maison par « <hi rend="sc">Odelina de Pertico</hi>,
                   relicta defuncti <hi rend="sc">Omundi</hi> piscenarii », à St-Martin-des-Champs. —
-                  Même date (Arch. nat., S 1372, nº 29).</note></date>.</s>
+                  Même date (Arch. nat., S 1372, nº 29).</note>.</s>
                 </p>
               </div>
             </body>
@@ -95275,12 +95113,12 @@ chevalier, et l'hôpital
                     pecia vinee — — apud <placeName>Roissiacum</placeName> — —</s>
                 </p>
                 <p>
-                  <s>Actum <date>anno Domini <num>Mº CCº XLº VIIIº</num>, mense septembri<note n="a" xml:id="aid184310">Cet échange est déjà visé dans
+                  <s>Actum <date>anno Domini <num>Mº CCº XLº VIIIº</num>, mense septembri</date><note n="a" xml:id="aid184310">Cet échange est déjà visé dans
                   un acte de juin 1239 (Arch. nat., S 1417, nº 64) donné par « <abbr>B.</abbr>
                   humilis prior <hi rend="i">Bte Marie de Gornaio</hi> ». Il se distingue
                   complètement d'un acte de même date, qui n'est connu que par un vidimus, et qui
                   paraît absolument suspect. Nous le reproduisons toutefois sous le numéro
-                  suivant.</note></date>.</s>
+                  suivant.</note>.</s>
                 </p>
               </div>
             </body>
@@ -95820,11 +95658,11 @@ chevalier, et l'hôpital
                     omnes.</s>
                 </p>
                 <p>
-                  <s><date>Datum mense aprili, anno Domini <num>Mº CCº</num> quinquagesimo<note n="a" xml:id="aid187338">A cet acte se rattache une
+                  <s><date>Datum mense aprili, anno Domini <num>Mº CCº</num> quinquagesimo</date><note n="a" xml:id="aid187338">A cet acte se rattache une
                   reconnaissance de la cession de ladite maison à eux faite par Guibert et Gile,
                   formulée devant l'official en avril 1255 par « <hi rend="sc">Girardus</hi> dictus
                     <hi rend="sc">Anglicus</hi>, clericus, et <hi rend="sc">Matildis</hi> ejus
-                  uxor ». (Original, Arch. nat., S 1371 B, nº <num>33.</num>)</note></date>.</s>
+                  uxor ». (Original, Arch. nat., S 1371 B, nº <num>33.</num>)</note>.</s>
                 </p>
               </div>
             </body>
@@ -97661,10 +97499,10 @@ chevalier, et l'hôpital
                       <num>novem</num> pictavinas censuales — —</s>
                 </p>
                 <p>
-                  <s><date>Datum anno Domini <num>MºCCºLº quarto</num>, mense mayo<note n="a" xml:id="aid111033">Autres ventes par « Heloynus
+                  <s><date>Datum anno Domini <num>MºCCºLº quarto</num>, mense mayo</date><note n="a" xml:id="aid111033">Autres ventes par « Heloynus
                   dictus de Atrio et Eremburgis ejus uxor, et Euvroynus frater dicti Heloyni et
                   Eremburgis ejus uxor " en novembre 1250 ; par " Hellouynus filius defuncti Giroudi
-                  de Atrio et Gila ejus uxor » en octobre 1248 (Arch. nat., S 1356, n<hi rend="sup">os</hi> 14, 15).</note></date>.</s>
+                  de Atrio et Gila ejus uxor » en octobre 1248 (Arch. nat., S 1356, n<hi rend="sup">os</hi> 14, 15).</note>.</s>
                 </p>
               </div>
             </body>
@@ -99060,9 +98898,9 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s><date>Datum anno Domini <num>MºCCº</num> quinquagesimo septimo, mense
-                        augusto<note n="l" xml:id="aid122365"><hi rend="i">B</hi> ajoute :
+                        augusto</date><note n="l" xml:id="aid122365"><hi rend="i">B</hi> ajoute :
                   « Sellé de cire verde, dans laquelle est figuré St Nicolas, sur des lacs de soye
-                  rouge ».</note></date>.</s>
+                  rouge ».</note>.</s>
                 </p>
               </div>
             </body>
@@ -102661,11 +102499,11 @@ chevalier, et l'hôpital
                 </p>
                 <p>
                   <s><date>Datum anno Domini <num>Mº CCº LX<hi rend="sup">mo</hi> sexto</num>, die
-                      sabbati post octabas Pasche, mense aprili<note n="a" xml:id="aid138316">Autres actes relatifs à la <hi rend="i">rue de Culdesac</hi>, ou « vicus dictus <hi rend="i">Culus sacci</hi>
+                      sabbati post octabas Pasche, mense aprili</date><note n="a" xml:id="aid138316">Autres actes relatifs à la <hi rend="i">rue de Culdesac</hi>, ou « vicus dictus <hi rend="i">Culus sacci</hi>
                   ", par » <hi rend="sc">Arnulphus Violete</hi> et <hi rend="sc">Beatrix</hi> ejus
                   uxor ", en février 1245 (Arch. nat., S 1384, nº 8) ; par » <hi rend="sc">Guillelmus Barbitonsor</hi>, anglicus, et <hi rend="sc">Nicholaa</hi> ejus uxor
                   « en mars 1240 (<abbr>nº</abbr> 6) ; par <hi rend="sc">Petronilla</hi> dicta <hi rend="sc">de Perona</hi>, civis <hi rend="i">Parisiensis</hi>, en octobre 1265
-                    (<abbr>nº</abbr> 9).</note></date>.</s>
+                    (<abbr>nº</abbr> 9).</note>.</s>
                 </p>
               </div>
             </body>
@@ -107655,11 +107493,11 @@ chevalier, et l'hôpital
                 <p>
                   <s>
                     <date>Datum anno Domini <num>Mº CCº LXXXº</num>, die martis ante festum
-                        <abbr>Bti</abbr> Arnulphi martiris<note n="a" xml:id="aid164271">La fête de saint Arnoul se
+                        <abbr>Bti</abbr> Arnulphi martiris</date><note n="a" xml:id="aid164271">La fête de saint Arnoul se
                   célébrait le 16 août ; l'indication donnée dans cet acte de l'officialité prouve
                   que la fête de l'Assomption qui tombe la veille ne se solennisait pas encore dans
                   le diocèse de Paris, car le greffier épiscopal n'eût pas manqué d'écrire : « die
-                  martis ante Assumptionem Beate Marie Virginis. »</note></date>
+                  martis ante Assumptionem Beate Marie Virginis. »</note>
                   </s>
                 </p>
               </div>
@@ -107976,7 +107814,7 @@ chevalier, et l'hôpital
               <div type="tradition">
                 <listWit type="original">
                   <witness n="A"> Original rongé dans ses dernières lignes, Arch. de l'Oise <num>H
-                        2580<hi rend="sup">3</hi></num>.</witness>
+                        2580<hi rend="sup">3</hi></num>.<note>(Sceau brisé sur tresse de soie rouge)</note></witness>
                 </listWit>
                 <listWit type="copie">
                   <witness n="B"> Copie collationnée du 10 mars 1535, constatant les mêmes lacunes
@@ -108024,12 +107862,7 @@ chevalier, et l'hôpital
                 </p>
               </div>
             </body>
-            <back>
-              <div type="notes">
-                <note>(Sceau brisé sur tresse de soie rouge)</note>
-              </div>
-            </back>
-          </text>
+</text>
           <text xml:id="SMCP-PR_1290" n="1290" subtype="article">
             
             <front>

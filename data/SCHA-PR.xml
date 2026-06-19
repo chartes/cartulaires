@@ -1,8 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
-À faire
-* Renuméroter les actes pour que les identifiants soient au plus proche de l'imprimé
-* Réfléchir à quoi faire avec <titlePart type="title" xml:lang="lat">
---><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -3056,7 +3052,8 @@
             </argument>
             <div type="tradition">
               <listWit type="original">
-                <witness n="A">Scel et attaches ôtés.</witness>
+                <witness n="A">Scel et attaches ôtés.<note xml:id="p29_fn1">La transaction et le vidimus sont conservés aux Archives de
+                l'Oise.</note></witness>
               </listWit>
               <listWit type="copie">
                 <witness n="B"><ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/slides/B606126201_afforty_T0010_00041.html">Bibl. mun. de Senlis, coll. Afforty, tome X, 5295, tome XVI, p.
@@ -3196,15 +3193,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p29_fn1">La transaction et le vidimus sont conservés aux Archives de
-                l'Oise.</note>
-              
-            
-              </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="SCHA-PR_0045" n="45">
           <pb n="31" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486066q/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486066q/manifest.json"/>
           <front>
@@ -3821,7 +3810,12 @@
             </argument>
             <div type="tradition">
               <listWit type="copie">
-                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, 5311 (84)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00138.html">tome XVI, 273.</ref></witness>
+                <witness n="B">Bibl. mun. de Senlis, coll. Afforty, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2010/Pages%205228-5334/B606126201_afforty_T0010_00049.jpg">tome X, 5311 (84)</ref>, <ref target="http://www.bmsenlis.com/sitebmsenlis/afy/album/Tome%2016/Pages%20200-311/slides/B606126201_afforty_T0016_00138.html">tome XVI, 273.</ref><note xml:id="p38_fn1">Cette pièce porte le n<hi rend="sup">o</hi> 52 dans le registre
+                des chartes et titres relatifs à la fondation et aux revenus de St Christophe, et
+                suit immédiatement l'acte de location de la maison de Cinqueux à Huilart.
+                L'expression Prior Beati Petri doit donc se rapporter au Prieur de St-Christophe,
+                propriétaire de l'<hi rend="i">autel</hi> ou de l'Eglise St-Pierre de
+                Pontpoing.</note></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited">Cartulaire du prieuré de Saint-Christophe-en-Halatte, éd. Amédée Vattier, Senlis, 1876, p. 38.</witness>
@@ -3865,17 +3859,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p38_fn1">Cette pièce porte le n<hi rend="sup">o</hi> 52 dans le registre
-                des chartes et titres relatifs à la fondation et aux revenus de St Christophe, et
-                suit immédiatement l'acte de location de la maison de Cinqueux à Huilart.
-                L'expression Prior Beati Petri doit donc se rapporter au Prieur de St-Christophe,
-                propriétaire de l'<hi rend="i">autel</hi> ou de l'Eglise St-Pierre de
-                Pontpoing.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="SCHA-PR_0056" n="56">
           <pb n="39" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486066q/f130/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486066q/manifest.json"/>
           <front>
