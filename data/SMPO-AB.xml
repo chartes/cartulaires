@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -1932,23 +1932,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="103" xml:id="n0103a" target="#a0103a">
-                <p>Forte <hi rend="i">Guischardus</hi> iste filius fuit Eblonis de Ruciaco, vir
-                  bellicosissimus (D. Estiennot).</p>
-                <p>Nous ne le pensons pas. Ebles <num>II</num> de Roucy vivait encore en 1105 (<hi rend="i">suprà</hi>, note 86), et l'église St Martin faisait partie de l'abbaye
-                  dès 1092. La date de cette charte est à fixer entre 1085, époque où les actes
-                  relatifs à St Prix de Tour ne nomment que <hi rend="i">Saint Germain</hi> comme
-                  patron de l'abbaye, et 1092-1093, où le nom de <hi rend="i">Saint Martin</hi> lui
-                  est associé et tend à se substituer au sien.</p>
-              </note>
-              <note n="104" xml:id="n0104a">Peut-être Blargies, cant. de Formerie,
-                arr. de Beauvais.</note>
-              <note n="105" xml:id="n0105a"><hi rend="i">Eudes le Valet</hi>.
-                Cette famille a possédé de nombreux fiefs dans le Vexin, notamment à Osny et
-                Genicourt.</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="SMPO-AB_0018" n="XVIII" subtype="article">
           <pb n="16" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f33/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/>
@@ -3926,12 +3910,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="181" xml:id="n0181c" target="#a0181b #a0181c #a0181d"><hi rend="i">Robert de
-                  Cergy</hi> était fils de <hi rend="i">Guerry</hi>, chevalier de Cergy en 1069 (<hi rend="i">suprà</hi>, nº VI) et beau-frère d'<hi rend="i">Evroin le
-                Maçon</hi>.</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="SMPO-AB_0041" n="XLI" subtype="article">
           <pb n="36" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f53/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/>
@@ -4391,10 +4370,10 @@
                     pistore</rs>, <rs type="person"><persName>Wermondo</persName> pistore</rs>, <rs type="person"><persName>Ansculfo</persName> sartore</rs>, <persName>Gauterio
                     Mantello</persName>, <persName>Gerardo Malrepast<note n="239" xml:id="a0239"><hi rend="i">Manteau</hi> et <hi rend="i">Maurepas</hi> sont ici des surnoms de gens du peuple.</note></persName>, <rs type="person"><persName>Aymerico</persName><pb n="42" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f59/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/> famulo abbatis</rs>, <rs type="person"><persName>Alberto</persName> coquo</rs>.</s>
                 <s>Actum publice <placeName>Pontisarœ</placeName>
-                  <date>anno Incarnati Verbi <num>mº cº quarto, Indictione IIª</num><note n="240" xml:id="a0240">Corrupta est indictio, et pro ijª
+                  <date>anno Incarnati Verbi <num>mº cº quarto, Indictione IIª</num> regnante Domino nostro Jesu
+                    Christo</date><note n="240" xml:id="a0240">Corrupta est indictio, et pro ijª
                 legendum xijª quæ anno 1104 occurrebat. Cum ex transcripto acceperim, facile
-                prædictum mendum irrepsit (D. <abbr>E.</abbr>)</note> regnante Domino nostro Jesu
-                    Christo</date>.</s>
+                prædictum mendum irrepsit (D. <abbr>E.</abbr>)</note>.</s>
               </p>
               <p>
                 <s><date>In die festivitatis Sti Germani de Burricio</date>, præsente
@@ -4710,7 +4689,7 @@
                 <s>[Ex pervetusto <abbr>Mss.</abbr> Codice.</s>
                 <s>— Hactenus in præfato monasterio asservatur corpus dicti <rs type="person"><abbr>S.</abbr>
                     <persName>Flavii</persName></rs>, ejusdem dies festus colitur sub ritu
-                  festivitatum <num>2<hi rend="sup">i</hi></num> ordinis et <num>2<hi rend="sup">œ</hi></num> classis<date>23 augusti<note n="259" xml:id="a0259">
+                  festivitatum <num>2<hi rend="sup">i</hi></num> ordinis et <num>2<hi rend="sup">œ</hi></num> classis<date>23 augusti</date><note n="259" xml:id="a0259">
                 <p>Nous croyons intéressant de compléter ces indications sommaires par les détails
                   que fournit à cet égard le manuscrit de Pihan de la Forest, plus complet que celui
                   de Dom Racine :</p>
@@ -4743,7 +4722,7 @@
                   frayeur, brûlèrent les authentiques et se partagèrent les reliques. »</p>
                 <p>(Pihan de la Forest, <hi rend="i">Hist. de l'abbaye de St Martin</hi>,
                     <abbr>p.</abbr> 13. Bibl. mun. de Pontoise).</p>
-              </note></date>.]</s>
+              </note>.]</s>
               </p>
               <p>
                 <s>Ejus sacræ reliquæ in capsa lignea, variis coloribus depictâ continentur,
@@ -6104,10 +6083,10 @@
                     <rs type="person"><persName>Tebaldus</persName> cancellarius</rs> scripsit. <rs type="person">Rege <persName>Ludovico</persName>
                     </rs>anno <num>XIIIº.</num> Anno <rs type="person">episcopatus
                         <persName>Girberti</persName></rs>
-                    <num>Vº</num><note n="1" xml:id="aid142692">Ces indications conviennent toutes
+                    <num>Vº</num>.</date><note n="1" xml:id="aid142692">Ces indications conviennent toutes
                 à l'année 1122, sauf celle relative au règne de Louis <num>VI</num>, qui doit être
                 lue « anno <num>xiiii</num>.» Louis <num>VI</num> ayant été sacré le 3 août 1108, la
-                charte est antérieure au 3 août 1112.</note>.</date>
+                charte est antérieure au 3 août 1112.</note>
                 </s>
               </p>
             </div>
@@ -8849,23 +8828,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="357" xml:id="n0357c">Lachelle, canton d'Estrées-St-Denis
-                (Oise). - Béthisy-St-Martin ou Béthisy-St-Pierre, cant. de Senlis (Oise).</note>
-              <note n="358" xml:id="n0358b"><hi rend="i">Gente</hi>, qui figure
-                ici parmi les filles d'honneur de la reine Adelaïde, était sans doute fille de
-                l'italien Obizon, médecin de Louis <num>VI</num>, qui en 1128, en présence du roi et
-                de la reine, fit un échange important d'immeubles situés à Paris, avec sa femme
-                Gente dont il s'était séparé. En 1137, Louis <num>VII</num> exempta de tous droits
-                un four construit à Champeaux par Adelaïde, surnommée Gente (<hi rend="i">Adeleudis
-                  quœ Genta cognominatur</hi>), et celle-ci, avant 1147, donna aux Templiers un
-                moulin sous le Grand-Pont de Paris « pro animâ nobilissimi Francorum regis venerandæ
-                memoriæ Ludovici (VI) qui me benignitate regiâ enutrivit. » (Tardif, <hi rend="i">Cart. des Rois</hi>, n<hi rend="sup">os</hi> 402, 420, 432 et 498.
-                  <abbr>A. N.</abbr> K 22, nº 5<hi rend="sup">4</hi> ; K 22, nº 9<hi rend="sup">2</hi> ; K 23, nº 2 ; <abbr>K.</abbr> 23, nº 15<hi rend="sup">4</hi>). On voit
-                par cette dernière charte, donnée en présence de Louis <num>VII</num> et de sa mère
-                Adelaïde, que Gente était la pupille du feu roi.</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="SMPO-AB_0112" n="CXII" subtype="article">
           <pb n="89" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f106/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/>
@@ -13347,11 +13310,11 @@
                         <persName>Ludovico</persName></rs>, residente in cathedra
                       <placeName>Rothomagensis</placeName> ecclesie venerabili archº
                       <persName>Rotrodo</persName> Idus aprilis, feria <num>vª</num> ante Pascha
-                    ipsa die Cene Dominice<note n="1" xml:id="aid178089">Les dates accessoires indiquées
+                    ipsa die Cene Dominice</date><note n="1" xml:id="aid178089">Les dates accessoires indiquées
                 correspondent à l'année 1172, où Pâques tomba le 16 avril, tandis que la pièce étant
                 datée de 1172 avant Pâques, le Jeudi-Saint devrait appartenir à l'année 1173, où
                 Pâques tomba le 8 avril. Mais, dans cette hypothèse, les dates accessoires ne
-                cadreraient plus.</note></date>, <placeName>Pontisaram</placeName> veni ego
+                cadreraient plus.</note>, <placeName>Pontisaram</placeName> veni ego
                     <persName>Theobaldus de Gisortio</persName> ad ecclesiam
                       <placeName><abbr>Sti</abbr> Martini</placeName>, ibique post ipsa missarum
                   sollempnia à donno <persName>Lecelino</persName> loci illius tunc temporis abbate
@@ -15276,19 +15239,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="444" xml:id="n0444b">
-                <p><hi rend="i">Gautier Buffé</hi> est nommé dans des textes de 1160 à 1182.
-                    <num>V.</num>
-                  <hi rend="i">Histoire de Méry-sur-Oise</hi>, par le comte de Ségur Lamoignon et
-                    <abbr>J.</abbr> Depoin, <abbr>t.</abbr>
-                  <num>I.</num> La donation relatée dans cette notice est confirmée dans la bulle
-                  d'Alexandre <num>III</num> (<hi rend="i">suprà</hi>, nº CLX).</p>
-              </note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="SMPO-AB_0198" n="CXCVIII" subtype="article">
           <pb n="155" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f172/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/>
           <front>

@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEP-AB">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -2401,7 +2401,13 @@
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Double queue de parchemin. Arch. dép. Eure-et-Loir, H 2330 (ancienne
-                  cote : n° 53 de la liasse). </witness>
+                  cote : n° 53 de la liasse). <note xml:id="p32_fn1">La collection Moreau, t. 133, fol. 46, renferme une copie de
+                cet acte accompagnée de la note suivante : Feuille de cinq pouces de haut sur huit
+                de large saine et entière, mais sa surface est sale et velue ; l'encre est
+                blanchâtre et usée. Au bas est un sceau de craie rousse pendant à un lemnisque de
+                parchemin à deux queues, chargé d'un écusson en forme de cœur portant trois bandes.
+                La légende est effacée. Le sceau est le même que celui de la charte de Simon de
+                Villeneuve en 1210.</note></witness>
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 31-32.</witness>
@@ -2434,18 +2440,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p32_fn1">La collection Moreau, t. 133, fol. 46, renferme une copie de
-                cet acte accompagnée de la note suivante : Feuille de cinq pouces de haut sur huit
-                de large saine et entière, mais sa surface est sale et velue ; l'encre est
-                blanchâtre et usée. Au bas est un sceau de craie rousse pendant à un lemnisque de
-                parchemin à deux queues, chargé d'un écusson en forme de cœur portant trois bandes.
-                La légende est effacée. Le sceau est le même que celui de la charte de Simon de
-                Villeneuve en 1210.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="STEP-AB_0032" n="XXXII">
           <pb n="32" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f42/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
           <front>
@@ -7868,19 +7863,14 @@
             </argument>
             <div type="tradition">
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 122.</witness>
+                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 122.<note xml:id="p122_fn1">Archives d'Eure-et-Loir.</note></witness>
               </listWit>
             </div>
           </front>
           <body>
             <p/>
           </body>
-          <back>
-            <div type="notes">
-              <note xml:id="p122_fn1">Archives d'Eure-et-Loir.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text subtype="article" xml:id="STEP-AB_0126" n="CXXVI">
           <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f133/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
           <front>

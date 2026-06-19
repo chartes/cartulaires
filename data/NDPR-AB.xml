@@ -1,4 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPR-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -1027,7 +1027,8 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s><rs type="person">Ego <persName>Guido</persName>, dominus
+                <s><rs type="person">Ego <persName>Guido<note n="1" xml:id="na008" target="#aa008">Gui <num>III</num>, seigneur de Chevreuse
+                de 1191 à 1208.</note></persName>, dominus
                       <placeName>Caprosie</placeName></rs>, omnibus presentes litteras inspecturis
                   notum facio quod novelle domui de <placeName>Porrois</placeName> pro octies
                     <num>viginti</num> libris parisiensium vendidi molendinum quod habebam apud
@@ -1046,11 +1047,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="1" xml:id="na008" target="#aa008">Gui <num>III</num>, seigneur de Chevreuse
-                de 1191 à 1208.</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="NDPR-AB_0007" n="VII" subtype="article">
           <pb n="32" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f54/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
@@ -3547,7 +3544,9 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head>Marguerite de Marly, dame de Narbonne, donne 100 sous sur les cens de Marly. </head>
+            <head>Marguerite de Marly, dame de Narbonne, donne 100 sous sur les cens de Marly. <note n="1" xml:id="aa045">Marguerite, fille de Mathieu de Marly et
+                de Mathilde de Garlande, fut dame de Verneuil. Epousa Aimeri, vicomte de Narbonne,
+                fils de don Pedre de Lava et de Sanche, fille du roi de Navarre.</note></head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Bibl. nat. de France, lat. 10997, nº 97.</witness>
@@ -3572,14 +3571,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na045" target="#aa045">Marguerite, fille de Mathieu de Marly et
-                de Mathilde de Garlande, fut dame de Verneuil. Epousa Aimeri, vicomte de Narbonne,
-                fils de don Pedre de Lava et de Sanche, fille du roi de Navarre.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0063" n="LXIII" subtype="article">
           <pb n="81" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f103/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -3702,7 +3694,8 @@
             <index>
               <term type="nature" key="act"/>
             </index>
-            <head>Pierre de Marly confirme le don d'Adam de Bougival.</head>
+            <head>Pierre de Marly confirme le don d'Adam de Bougival.<note n="1" xml:id="aa046">Pierre, seigneur de Marly en 1226, après
+                son père, Bouchard, mourut sans enfant de sa femme, Jeanne, peu après 1259.</note></head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Bibl. nat. de France, lat. 10997, nº 102.</witness>
@@ -3730,13 +3723,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na046" target="#aa046">Pierre, seigneur de Marly en 1226, après
-                son père, Bouchard, mourut sans enfant de sa femme, Jeanne, peu après 1259.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0067" n="LXVII" subtype="article">
           <pb n="84" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f106/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -3747,7 +3734,8 @@
               <term type="nature" key="act"/>
             </index>
             <head>Mathilde de Garlande, veuve de Mathieu de Montmorency confirme le don de son mari
-              d'une rente de 15 livres sur Meulan. </head>
+              d'une rente de 15 livres sur Meulan. <note n="1" xml:id="aa047">Mathilde de Garlande mourut le 16 mars
+                1224 (<hi rend="i">Nécrologe de Port-Royal</hi>, <abbr>p.</abbr> 465).</note></head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Arch. nat., K 181, nº 202, d'après l'original scellé.</witness>
@@ -3775,13 +3763,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na047" target="#aa047">Mathilde de Garlande mourut le 16 mars
-                1224 (<hi rend="i">Nécrologe de Port-Royal</hi>, <abbr>p.</abbr> 465).</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0068" n="LXVIII" subtype="article">
           <pb n="85" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f107/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -4293,7 +4275,12 @@
           <body>
             <div xml:lang="lat" type="transcription">
               <p>
-                <s>Noverint universi quod ego <persName>Guido de Monteforti</persName> de assensu et
+                <s>Noverint universi quod ego <persName>Guido de Monteforti<note n="1" xml:id="na049">Guide Montfort, troisième fils de Simon
+                  <num>III</num>, seigneur de Breteucourt, veuf d'Helvise d'Ibelin, dame de Tyr,
+                épousa Briende de Beynes, dont deux filles religieuses à Porrois. Le 16 juin 1224,
+                eut lieu la consécration de l'église de Joyenval. Gui de Montfort donna une rente de
+                100 sous sur Beynes ; Bouchard de Marly, 20 sous sur Marly, et Mathieu, 10 sous sur
+                Meulan (Arch. de Seine-et-Oise, fonds de Joyenval.)</note></persName> de assensu et
                   voluntate <rs type="person"><persName>Brienni</persName>, uxoris mee</rs>, et <rs type="person"><persName>Filippi</persName>, filii mei</rs>, et ceterorum
                   liberorum meorum, dedi in perpetuam elemosinam conventui de <placeName>Portu
                     Regio</placeName>, <num>viginti</num> solidos parisiensium percipiendos singulis
@@ -4306,15 +4293,7 @@
             </div>
           </body>
           <back>
-            <div type="notes">
-              <note n="1" xml:id="na049">Guide Montfort, troisième fils de Simon
-                  <num>III</num>, seigneur de Breteucourt, veuf d'Helvise d'Ibelin, dame de Tyr,
-                épousa Briende de Beynes, dont deux filles religieuses à Porrois. Le 16 juin 1224,
-                eut lieu la consécration de l'église de Joyenval. Gui de Montfort donna une rente de
-                100 sous sur Beynes ; Bouchard de Marly, 20 sous sur Marly, et Mathieu, 10 sous sur
-                Meulan (Arch. de Seine-et-Oise, fonds de Joyenval.)</note>
-            </div>
-          </back>
+            </back>
         </text>
         <text xml:id="NDPR-AB_0079" n="LXXIX" subtype="article">
           <pb n="95" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f117/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
@@ -4847,7 +4826,11 @@
               <term type="nature" key="act"/>
             </index>
             <head>Simon de Neaufle donne ce qu'il possède dans la dîme de
-              Saint-Rémy-l'Honoré.</head>
+              Saint-Rémy-l'Honoré.<note n="1" xml:id="aa053">Simon <num>IV</num> de Neaufle suivit
+                Simon de Montfort à la quatrième croisade. Prit en 1213 le titre de châtelain de
+                Neaufle. Plusieurs chartes de lui, de 1206 à 1220, dans le cartulaire des
+                Vaux-de-Cernay. En août 1220, donne à Notre-Dame-de-la-Roche 5 sous de vente sur
+                Saint-Rémy. Sa femme, Fennie, était veuve en 1229.</note></head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B">Bibl. nat. de France, lat. 10997, nº 44.</witness>
@@ -4874,16 +4857,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na053" target="#aa053">Simon <num>IV</num> de Neaufle suivit
-                Simon de Montfort à la quatrième croisade. Prit en 1213 le titre de châtelain de
-                Neaufle. Plusieurs chartes de lui, de 1206 à 1220, dans le cartulaire des
-                Vaux-de-Cernay. En août 1220, donne à Notre-Dame-de-la-Roche 5 sous de vente sur
-                Saint-Rémy. Sa femme, Fennie, était veuve en 1229.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0094" n="XCIV" subtype="article">
           <pb n="105" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
@@ -15602,7 +15576,7 @@
                   nostre, moniale de <placeName>Portu Regis</placeName>, <num>decem</num> libras
                   turonensium annui redditus, quamdiu dicta <persName>Ysabellis</persName> vixerit
                   et in habitu monialis permanserit, percipiendas annuatim apud
-                    <placeName>Mardiliacum</placeName>, etc.....</s>
+                    <placeName>Mardiliacum<note n="1" xml:id="aa086">Mardilly, dans Seine-et-Marne.</note></placeName>, etc.....</s>
                 <s>Ita tamen quod dicte <num>decem</num> libre post decessum filie nostre ad nos vel
                   heredes nostros, seu causam habentes a nobis, libere devolventur, etc.....</s>
                 <s><date>Datum anno Domini <num>Mº CCº</num> sexagesimo nono, die martis ante
@@ -15610,12 +15584,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na086">Mardilly, dans Seine-et-Marne.</note>
-            </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="NDPR-AB_0320" n="CCCXX" subtype="article">
           <pb n="315" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f337/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
           <front>
