@@ -1,0 +1,518 @@
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB-tables-test">
+  <!-- ================================================================
+      
+       RÈGLES GÉNÉRALES
+       1. Transcription fidèle : orthographe, accents, ponctuation et
+          coquilles de l'imprimé conservés tels quels.
+       2. Les points de conduite et l'alignement des numéros en colonne
+          de droite sont de la mise en page : ne pas les transcrire.
+       3. Sauts de page du fascicule : <pb n="X"/> à chaque page.
+       4. Petites capitales = <hi rend="sc"> ; italique = <hi rend="i">.
+       5. Une entrée = un <item xml:id="SMPO-AB_rs_NNNN">, numérotation
+          continue à 4 chiffres, sans remise à zéro entre les index.
+       6. Une liste par lettre : SMPO-AB_liste_A (personnes),
+          SMPO-AB_liste_geo_A (lieux).
+       7. <rs> englobe le lemme ET son qualificatif.
+       8. Un numéro de page = un <ref> ; ne jamais regrouper plusieurs
+          numéros dans un même <ref>.
+       9. Titres courants (« 10 », filets) et fleurons : non transcrits ;
+          la seule trace du changement de page est le <pb n="10"/>.
+       10. Césures de fin de ligne : restituer le mot entier, sans trait
+           d'union (« Umblein-villa » devient « Umbleinvilla »,
+           « Monte-chevrel » devient « Montechevrel »). Ne pas confondre
+           avec les traits d'union lexicaux (« Ivry-le-Temple »,
+           « (-Adam) », « (La-) »), qui sont conservés.
+       11. Accents et signes diacritiques conservés partout, y compris
+           sur les capitales et petites capitales (AGNÈS, MONTLHÉRY,
+           JÉRUSALEM, NEUFVY…) ; ligatures conservées (sœur, œ).
+       12. Apostrophe typographique (U+2019), conforme aux fichiers
+           existants du corpus.
+       13. Ordinaux en chiffres romains dans les lemmes (Adam II,
+           Girard III de Vallangoujard, Alexandre III) : transcrits tels
+           quels, sans balisage particulier.
+       14. Suivre STRICTEMENT l'ordre de l'imprimé : ne jamais reclasser
+           une entrée mal alphabétisée, ne jamais fusionner ou
+           dédoublonner. Ne créer une section de lettre que si elle
+           existe dans l'imprimé (pas de section vide).
+       15. Numéro ou mot illisible / douteux : saisir la lecture la plus
+           probable et la signaler par un commentaire XML « lecture
+           incertaine » immédiatement après (jamais de correction ni de
+           devinette silencieuses). Voir rs_0055 pour un exemple.
+       16. Transcrire la page de titre et l'achevé d'imprimer du
+           fascicule en tête de livraison, dans un <div type="titre">
+           provisoire (ils fourniront l'auteur et la date pour le
+           teiHeader ; reprise en interne).
+
+       Transcriptions établies sur les photographies de contrôle
+       (31423full.pdf à 31448full.pdf) : à collationner sur l'original.
+       Destination finale : <back> du fichier SMPO-AB.xml.
+       Documentation associée : guidelines-encodage-SMPO-tables.md
+       17. Le contenu texte du <ref> reproduit exactement ce qui est
+           imprimé : presque toujours un numéro de page, parfois un
+           numéro d'acte (signalé alors par <abbr>p.</abbr>).
+           L'attribut @n contient SYSTÉMATIQUEMENT le numéro de page.
+           Exemple : <ref n="40">40</ref>. Autre exemple (acte) :
+           <abbr>p.</abbr> <ref n="227">129</ref>. Les attributs
+           @target et @corresp seront ajoutés en interne.
+       18. L'abréviation <abbr>p.</abbr> devant un <ref> se
+           rencontre parfois (renvoi à un numéro d'acte) : transcrire
+           telle quelle si elle figure dans l'imprimé. Voir l'exemple
+           de la règle 17 (second cas).
+       19. Chaque index de l'imprimé = un <div type="index" n="X">
+           distinct (X = 1, 2, 3...). Ne pas se limiter aux index
+           personarum et geographicus : l'imprimé peut contenir un
+           index sigillographique, un index rerum, etc.
+           La règle 6 (une liste par lettre) s'applique à chaque
+           index.
+       ================================================================ -->
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Tables du Cartulaire de l'abbaye Saint-Martin de Pontoise [recommandations d'encodage]</title>
+        <title type="short">Saint-Martin de Pontoise, tables</title>
+        <author><!-- TODO : à relever sur la page de titre du fascicule --></author>
+        <principal ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
+      </titleStmt>
+      <publicationStmt>
+        <date>2026</date>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/pontoise/</idno>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
+        <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-nc/3.0/fr/">© École nationale des chartes - PSL (CC BY-NC 3.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl xml:id="tables1">
+          <title>Tables du Cartulaire de l'abbaye Saint-Martin de Pontoise</title>,
+          <publisher>Société historique et archéologique de Pontoise et du Vexin</publisher>,
+          <date type="publication"><!-- TODO : à relever sur la page de titre --></date>.
+        </bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k56748842"><title>Cartulaire de l'abbaye de Saint-Martin de Pontoise</title>, éd. <author>J. Depoin</author>, <publisher>Société historique du Vexin</publisher>, <date type="publication">1895</date>. [= fichier SMPO-AB.xml, cible des renvois]</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="lat">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-06">Recommandations d'encodage et maquette (échantillon)</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p><!-- Maquette : le contenu utile est dans le <back> ci-dessous, destiné à être
+           fusionné dans SMPO-AB.xml. --></p>
+    </body>
+    <back>
+
+      <!-- ============================================================
+           0. PAGE DE TITRE ET ACHEVÉ D'IMPRIMER (règle 16)
+           À transcrire intégralement par le prestataire : ces éléments
+           fournissent l'auteur et la date du fascicule pour le
+           teiHeader. Division provisoire, reprise en interne.
+           ============================================================ -->
+      <div type="titre">
+        <p><!-- TODO prestataire : transcription de la page de titre
+             (« Tables du Cartulaire de l'abbaye Saint-Martin de
+             Pontoise », auteur, lieu, éditeur, date…) --></p>
+        <p><!-- TODO prestataire : transcription de l'achevé d'imprimer
+             (colophon), s'il existe --></p>
+      </div>
+
+      <!-- ============================================================
+           1. INTRODUCTION (p. 1 à 4)
+           Prose en <p>. Les notes d'identification toponymique de la
+           fin de l'introduction : un <p> par toponyme discuté, lemme
+           latin en italique, références « (notice X, p. N) »
+           transcrites telles quelles, sans balisage particulier.
+           ============================================================ -->
+      <div type="introduction">
+        <pb n="1"/>
+        <head>Introduction</head>
+        <p>Le Deuxième Fascicule du Cartulaire de l'abbaye Saint-Martin de Pontoise, publié
+          en 1896, portait cet avis au verso de son dernier feuillet : « Un appendice et la
+          Table du Cartulaire paraîtront ultérieurement dans un fascicule complémentaire. »</p>
+        <p>Les années passèrent. Les Appendices parurent de 1901 à 1909, en trois et non en
+          un fascicule. Et puis survint la guerre de 1914-1918. Joseph Depoin mourait en 1924.
+          La table annoncée en 1896 ne devait jamais voir le jour.</p>
+        <p>Un document comme le Cartulaire de Saint-Martin, qui est un monument précieux
+          entre tous tant par l'érudition de son auteur que pour son importance dans l'étude
+          de l'histoire du Vexin au Moyen-Age, était à la vérité, sans tables, sans index,
+          comme le Labyrinthe sans fil d'Ariane. Cette lacune n'a pas manqué, sinon d'arrêter
+          les travaux de bien des chercheurs, du moins de leur compliquer la tâche en les
+          obligeant à découvrir, par des recherches de plusieurs heures, dans un texte de
+          170 pages, grand in-4°, des renseignements qu'une table alphabétique leur aurait
+          fournis en quelques minutes. Aussi, la Société Historique et Archéologique de
+          Pontoise et du Vexin, qui avait entrepris la publication du Cartulaire, se
+          devait-elle de combler cette lacune. Sur la suggestion de M. André Lapeyre, son
+          distingué Président, j'ai entrepris cette tâche, sans avoir, je dois l'avouer, la
+          compétence de Joseph Depoin.</p>
+        <p>Le document qui est ici présenté comporte une table des matières et deux index,
+          l'un géographique, l'autre des noms de personnes physiques et morales. À la
+          différence de la plupart des index de noms de personnes, celui qui est présenté
+          ci-dessous contient les surnoms, sobriquets et patronymes. Si la table des matières
+          concerne l'ensemble de l'ouvrage de Joseph Depoin, à savoir le Cartulaire, ses
+          Annexes et ses Appendices, les index ont été limités au Cartulaire seul, car
+          l'établissement d'un index pour les Appendices, dont le besoin ne se fait pas
+          absolument sentir, aurait constitué une besogne de longue haleine qui aurait, sans
+          grands avantages, retardé la publication des présentes tables.</p>
+        <!-- … suite de l'introduction (p. 1 à 3) à transcrire … -->
+        <pb n="3"/>
+        <!-- Notes d'identification toponymique. Exemples (transcription
+             partielle, marges masquées sur les photographies) : -->
+        <p><hi rend="i">Ballolium</hi> (notice CLX, p. 31). — Au lieu de Baillet
+          <!-- … texte masqué sur la prise de vue … -->, je proposerai plutôt Bailleul
+          (aujourd'hui Fosseuse, Oise).</p>
+        <p><hi rend="i">Vals</hi> (notice XXXV, p. 29). — Vaux, hameau de
+          Liancourt-Saint-Pierre, voisin de Marquemont, est plus probable que Vaux-sur-Seine.</p>
+        <!-- … autres notes d'identification (p. 3 et 4) à transcrire … -->
+      </div>
+
+      <!-- ============================================================
+           2. TABLE DES MATIÈRES (p. 5 à 7)
+           Porte sur l'ensemble de l'ouvrage de Depoin (Cartulaire,
+           Annexes, Appendices). Hiérarchie : fascicule, puis chapitre
+           (numéro romain, titre en italique), puis §, rendue par des
+           <list> imbriquées. Numéro de page imprimé en contenu du
+           <ref> et dans @n.
+           ============================================================ -->
+      <div type="table">
+        <pb n="5"/>
+        <head>Table des matières</head>
+        <list>
+          <!-- … Premier à Quatrième fascicule (p. 5 à 7) à transcrire … -->
+          <item>Cinquième fascicule
+            <list>
+              <item>X. <hi rend="i">Sur la famille Tirel de Poix</hi>
+                <ref n="455">455</ref><!-- n° de page coupé sur la photo, à vérifier --></item>
+              <item>XI. <hi rend="i">Sur les Seigneurs de Banthelu</hi>
+                <ref n="461">461</ref><!-- n° de page coupé sur la photo, à vérifier --></item>
+              <item>XII. <hi rend="i">Sur la famille de la Bienheureuse Hildeburge</hi>
+                <list>
+                  <item>§ I. Maison de Gallardon <ref n="465">465</ref><!-- à vérifier --></item>
+                  <item>§ II. Famille d'Ivry <ref n="471">471</ref><!-- à vérifier --></item>
+                </list>
+              </item>
+              <item><hi rend="i">Supplément</hi>. — Documents retrouvés en cours
+                d'impression <ref n="477">477</ref></item>
+              <item>Rectifications et notes complémentaires <ref n="485">485</ref></item>
+            </list>
+          </item>
+        </list>
+      </div>
+
+      <!-- ============================================================
+           3. INDEX PERSONARUM (p. 9 à 42)
+
+           TYPOLOGIE DES CAS (voir les items signalés ci-dessous) :
+           CAS 1  entrée simple ........................ rs_0001
+           CAS 2  qualificatif après virgule ........... rs_0025
+           CAS 3  plusieurs renvois ..................... rs_0011
+           CAS 4  renvois sur plusieurs lignes ......... rs_0023, rs_0048
+           CAS 5  numéros entièrement rejetés à la ligne  rs_0042
+           CAS 6  article entre parenthèses « (L') » ... rs_0043
+           CAS 7  italique dans le lemme ................ rs_0012
+           CAS 8  parenthèse insérée dans le nom ........ rs_0044
+           CAS 9  variantes + renvoi croisé « voir : » .. rs_0045
+           CAS 10 renvoi croisé sans deux-points ........ rs_0046
+           CAS 11 personne morale ....................... rs_0047
+           CAS 12 homonymes successifs .................. rs_0010 à rs_0014
+           CAS 22 entrée à cheval sur deux pages ........ (schéma en fin de liste)
+           CAS 23 entrées composites .................... (non observées, voir fin de liste)
+           CAS 24 autre type d'index .................... (voir règle 19, fin de liste)
+           CAS 25 <abbr>p.</abbr> devant un renvoi ........ (voir règle 18, fin de liste)
+           ============================================================ -->
+      <div type="index" n="1">
+        <pb n="9"/>
+        <head>Index personarum</head>
+        <list type="index" xml:id="SMPO-AB_liste_A">
+          <head>A</head>
+
+          <!-- ÉCHANTILLON CONTINU : page 9 complète, dans l'ordre. -->
+
+          <!-- CAS 1, entrée simple. Imprimé : « Acrocante Prunum ……… 40 ».
+               Seule la partie en petites capitales est dans <hi rend="sc"> ;
+               la suite du nom (« Prunum ») reste en romain. -->
+          <item xml:id="SMPO-AB_rs_0001"><rs><hi rend="sc">Acrocante</hi> Prunum</rs>, <ref n="40">40</ref>.</item>
+
+          <!-- CAS 25 (p. 42 environ), <abbr>p.</abbr> devant un renvoi
+               a un numero d'acte. Imprime : « Quarre, Thibaut, pretre … p. 129 ».
+               Transcrire <abbr>p.</abbr> tel quel. -->
+          <item xml:id="SMPO-AB_rs_0072"><rs><hi rend="sc">Quarre</hi>, Thibaut, pr" + chr(234) + "tre</rs>, <abbr>p.</abbr> <ref n="227">129</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0002"><rs><hi rend="sc">Adam</hi> l'Anglais</rs>, <ref n="134">134</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0003"><rs><hi rend="sc">Adam</hi> d'Argenteuil</rs>, <ref n="72">72</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0004"><rs><hi rend="sc">Adam</hi> de Beauvais</rs>, <ref n="71">71</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0005"><rs><hi rend="sc">Adam</hi> de Chanteraine</rs>, <ref n="41">41</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0006"><rs><hi rend="sc">Adam</hi> de Frépillon</rs>, <ref n="85">85</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0007"><rs><hi rend="sc">Adam</hi>, fils de Fromond</rs>, <ref n="40">40</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0008"><rs><hi rend="sc">Adam</hi> de Gency</rs>, <ref n="143">143</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0009"><rs><hi rend="sc">Adam</hi>, fils d'Heldrade</rs>, <ref n="20">20</ref>.</item>
+
+          <!-- CAS 12, homonymes successifs (ici rs_0010 à rs_0014) :
+               chaque ligne de l'imprimé = un <item> distinct, même si les
+               lemmes sont identiques ou très proches. Ne pas fusionner. -->
+          <item xml:id="SMPO-AB_rs_0010"><rs><hi rend="sc">Adam</hi> de l'Isle (-Adam)</rs>, <ref n="4">4</ref>.</item>
+
+          <!-- CAS 3, plusieurs renvois. Imprimé : « Adam II de l'Isle (-Adam) ……… 22, 123 ».
+               Un <ref> par numéro, jamais « 22, 123 » dans un seul <ref>. -->
+          <item xml:id="SMPO-AB_rs_0011"><rs><hi rend="sc">Adam</hi> II de l'Isle (-Adam)</rs>, <ref n="22">22</ref>, <ref n="123">123</ref>.</item>
+
+          <!-- CAS 7, italique dans le lemme. Imprimé : « Adam IV de l'Isle (-Adam) ……… 152 »
+               avec « IV de l'Isle » en italique. Reproduire l'italique tel quel,
+               même s'il semble incohérent d'une entrée à l'autre. -->
+          <item xml:id="SMPO-AB_rs_0012"><rs><hi rend="sc">Adam</hi> <hi rend="i">IV de l'Isle</hi> (-Adam)</rs>, <ref n="152">152</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0013"><rs><hi rend="sc">Adam</hi> fils d'Adam IV de l'Isle (-Adam)</rs>, <ref n="152">152</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0014"><rs><hi rend="sc">Adam</hi>, frère d'Adam IV de l'Isle (-Adam)</rs>, <ref n="152">152</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0015"><rs><hi rend="sc">Adam</hi> de Laboissière</rs>, <ref n="102">102</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0016"><rs><hi rend="sc">Adam</hi> des Loges</rs>, <ref n="85">85</ref>, <ref n="86">86</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0017"><rs><hi rend="sc">Adam</hi> le Loup</rs>, <ref n="42">42</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0018"><rs><hi rend="sc">Adam</hi>, fils d'Adam le Loup</rs>, <ref n="41">41</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0019"><rs><hi rend="sc">Adam</hi> de Presles</rs>, <ref n="31">31</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0020"><rs><hi rend="sc">Adam</hi> de la Rive</rs>, <ref n="65">65</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0021"><rs><hi rend="sc">Adam</hi> de la Ruelle</rs>, <ref n="170">170</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0022"><rs><hi rend="sc">Adam</hi> Valet</rs>, <ref n="27">27</ref>.</item>
+
+          <!-- CAS 4, renvois se poursuivant à la ligne. Imprimé :
+               « Adam de Valmondois ……… 72, 93, 121
+                    122, 123, 124. »
+               Le retour à la ligne n'est PAS marqué : tous les numéros
+               appartiennent au même <item>, dans l'ordre. -->
+          <item xml:id="SMPO-AB_rs_0023"><rs><hi rend="sc">Adam</hi> de Valmondois</rs>, <ref n="72">72</ref>, <ref n="93">93</ref>, <ref n="121">121</ref>, <ref n="122">122</ref>, <ref n="123">123</ref>, <ref n="124">124</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0024"><rs><hi rend="sc">Adam</hi> de Vineseuil</rs>, <ref n="40">40</ref>.</item>
+
+          <!-- CAS 2, qualificatif après virgule (filiation, alliance,
+               fonction, état). Le qualificatif fait partie du <rs>. -->
+          <item xml:id="SMPO-AB_rs_0025"><rs><hi rend="sc">Ada</hi>, fille de Thibaud de Conflans</rs>, <ref n="64">64</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0026"><rs><hi rend="sc">Ade</hi> de Moussy</rs>, <ref n="44">44</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0027"><rs><hi rend="sc">Ade</hi>, préchantre</rs>, <ref n="60">60</ref>, <ref n="61">61</ref>, <ref n="69">69</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0028"><rs><hi rend="sc">Ade</hi> de Rosnel, femme d'Eudes de Pouilly</rs>, <ref n="72">72</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0029"><rs><hi rend="sc">Ade</hi>, femme d'Hugues Tirel</rs>, <ref n="68">68</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0030"><rs><hi rend="sc">Ade</hi>, fille de Gautier de Valmondois</rs>, <ref n="121">121</ref>, <ref n="124">124</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0031"><rs><hi rend="sc">Adélaide</hi>, fille de Guillaume Aiguillon II de Trie</rs>, <ref n="80">80</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0032"><rs><hi rend="sc">Adélaide</hi>, femme de Thibaud de Conflans</rs>, <ref n="64">64</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0033"><rs><hi rend="sc">Adélaide</hi>, femme de Raoul III Deliés</rs>, <ref n="28">28</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0034"><rs><hi rend="sc">Adélaide</hi>, femme d'Adam III de l'Isle (-Adam)</rs>, <ref n="123">123</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0035"><rs><hi rend="sc">Adélaide</hi>, reine, femme de Louis VI</rs>, <ref n="86">86</ref>, <ref n="87">87</ref>, <ref n="97">97</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0036"><rs><hi rend="sc">Adélaide</hi>, fille de Thibaud de Maudétour</rs>, <ref n="83">83</ref>, <ref n="91">91</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0037"><rs><hi rend="sc">Adeline</hi>, fille de Mathieu des Flessards</rs>, <ref n="100">100</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0038"><rs><hi rend="sc">Adelvide</hi>, femme de Gautier d'Hérouville</rs>, <ref n="118">118</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0039"><rs><hi rend="sc">Adon</hi> le Gris</rs>, <ref n="108">108</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0040"><rs><hi rend="sc">Agnès</hi>, femme d'Eudes de Chauvry</rs>, <ref n="480">480</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0041"><rs><hi rend="sc">Agnès</hi>, femme de Dreux Corsaint</rs>, <ref n="124">124</ref>.</item>
+          <!-- … fin de la page 9 ; suite de la lettre A (p. 10 et suiv.) à transcrire … -->
+
+          <!-- ────────────────────────────────────────────────────────
+               EXEMPLES COMPLÉMENTAIRES, tirés d'autres pages du
+               fascicule pour illustrer les cas absents de la page 9.
+               Lors de la saisie complète, ces entrées reprendront leur
+               place et leur numéro d'ordre réels.
+               ──────────────────────────────────────────────────────── -->
+
+          <!-- CAS 5 (p. 10), numéros entièrement rejetés à la ligne :
+               la colonne de droite est vide sur la ligne du lemme, tous
+               les numéros sont sur les lignes suivantes, en retrait.
+               Imprimé : « Aiguillon ………
+                    92, 97, 100, 101, 117, 123, 134, 136, 137, 141, 144,
+                    156, 157. » -->
+          <item xml:id="SMPO-AB_rs_0042"><rs><hi rend="sc">Aiguillon</hi></rs>, <ref n="92">92</ref>, <ref n="97">97</ref>, <ref n="100">100</ref>, <ref n="101">101</ref>, <ref n="117">117</ref>, <ref n="123">123</ref>, <ref n="134">134</ref>, <ref n="136">136</ref>, <ref n="137">137</ref>, <ref n="141">141</ref>, <ref n="144">144</ref>, <ref n="156">156</ref>, <ref n="157">157</ref>.</item>
+
+          <!-- CAS 6 (p. 11), article rejeté entre parenthèses.
+               Imprimé : « Anglais (L') ……… 122, 134, 156 ». -->
+          <item xml:id="SMPO-AB_rs_0043"><rs><hi rend="sc">Anglais (L')</hi></rs>, <ref n="122">122</ref>, <ref n="134">134</ref>, <ref n="156">156</ref>.</item>
+
+          <!-- CAS 8 (p. 28), parenthèse de précision insérée dans le nom.
+               Imprimé : « Hugues, abbé de Sainte-Geneviève (-du-Mont) de Paris ……… 131 ». -->
+          <item xml:id="SMPO-AB_rs_0044"><rs><hi rend="sc">Hugues</hi>, abbé de Sainte-Geneviève (-du-Mont) de Paris</rs>, <ref n="131">131</ref>.</item>
+
+          <!-- CAS 9 (p. 10), variantes du nom + renvoi croisé « voir : ».
+               Imprimé : « Alec, Allec (voir : Harenc). »
+               Pas de numéro de page. Transcrire la formule telle
+               qu'imprimée et baliser le nom cible en <ref type="see">
+               SANS attribut (liage fait en interne). -->
+          <item xml:id="SMPO-AB_rs_0045"><rs><hi rend="sc">Alec</hi>, Allec</rs> (voir : <ref type="see">Harenc</ref>).</item>
+
+          <!-- CAS 10 (p. 11), renvoi croisé sans deux-points, après un
+               lemme composé. Imprimé : « Ascelin Goheu (voir Goheu d'Ivry). » -->
+          <item xml:id="SMPO-AB_rs_0046"><rs><hi rend="sc">Ascelin</hi> Goheu</rs> (voir <ref type="see">Goheu d'Ivry</ref>).</item>
+
+          <!-- CAS 11 (p. 18), personne morale.
+               Imprimé : « Froidmont (Abbaye de) ……… 71 ». -->
+          <item xml:id="SMPO-AB_rs_0047"><rs><hi rend="sc">Froidmont</hi> (Abbaye de)</rs>, <ref n="71">71</ref>.</item>
+
+          <!-- CAS 4 bis (p. 40), longue série de renvois sur plusieurs
+               lignes, y compris une ligne de continuation ne contenant
+               qu'une partie des numéros. Imprimé :
+               « Thibaud I, abbé de Saint-Martin ……… 6, 7, 9, 17
+                    21, 25, 29, 30, 33, 34, 36, 37, 38, 40, 44, 45, 47, 48,
+                    52, 55, 57, 58, 62, 63, 64, 66. » -->
+          <item xml:id="SMPO-AB_rs_0048"><rs><hi rend="sc">Thibaud</hi> I, abbé de Saint-Martin</rs>, <ref n="6">6</ref>, <ref n="7">7</ref>, <ref n="9">9</ref>, <ref n="17">17</ref>, <ref n="21">21</ref>, <ref n="25">25</ref>, <ref n="29">29</ref>, <ref n="30">30</ref>, <ref n="33">33</ref>, <ref n="34">34</ref>, <ref n="36">36</ref>, <ref n="37">37</ref>, <ref n="38">38</ref>, <ref n="40">40</ref>, <ref n="44">44</ref>, <ref n="45">45</ref>, <ref n="47">47</ref>, <ref n="48">48</ref>, <ref n="52">52</ref>, <ref n="55">55</ref>, <ref n="57">57</ref>, <ref n="58">58</ref>, <ref n="62">62</ref>, <ref n="63">63</ref>, <ref n="64">64</ref>, <ref n="66">66</ref>.</item>
+
+          <!-- CAS 22, entrée à cheval sur deux pages : l'entrée n'est
+               JAMAIS scindée en deux <item> ; le <pb> se place à
+               l'intérieur de l'<item>, à l'endroit exact de la coupure
+               (modèle NDPA-EG-04). Cela vaut aussi quand une page
+               commence par une ligne de continuation de numéros : ces
+               numéros appartiennent à la dernière entrée de la page
+               précédente, et le <pb> les précède dans le même <item>.
+               Schéma de principe (entrée fictive) :
+
+               <item xml:id="SMPO-AB_rs_NNNN"><rs><hi rend="sc">Untel</hi>,
+                 qualificatif</rs>, <ref n="12">12</ref>, <pb n="11"/>
+                 <ref n="15">15</ref>, <ref n="17">17</ref>.</item>
+          -->
+
+          <!-- CAS 23, entrées composites (plusieurs personnes regroupées
+               sous un même lemme, séparées par des points-virgules,
+               comme dans d'autres index du corpus, p. ex. STEP-AB
+               « Montfort, (Amaury VI ; Béatrix ; Jean ; …) ») :
+               AUCUNE n'a été observée dans ce fascicule, qui consacre
+               une ligne par personne (voir CAS 12, homonymes successifs).
+               Si le prestataire en rencontre néanmoins une : tout reste
+               dans un seul <item>, sous-personnes et renvois compris,
+               sans création d'items multiples ; signaler l'entrée par un
+               commentaire XML « entrée composite » pour vérification. -->
+
+          <!-- CAS 24, autres types d'index : si l'imprimé contient un
+               index sigillographique, un index rerum, etc.
+           La règle 6 (une liste par lettre) s'applique à chaque
+           index., créer un
+               <div type="index" n="X"> distinct (règle 19).
+               La structure interne (items, rs, ref) reste identique. -->
+
+          <!-- CAS 25, <abbr>p.</abbr> : voir règle 18. -->
+        </list>
+        <!-- … lettres B à V (p. 10 à 42) à transcrire, une <list> par lettre :
+             <list type="index" xml:id="SMPO-AB_liste_B"><head>B</head> … </list> … -->
+      </div>
+
+      <!-- ============================================================
+           4. INDEX GEOGRAPHICUS (p. 43 à 55)
+
+           Structure générale d'une entrée :
+           Toponyme moderne (précisions) (département). Formes anciennes
+           en italique. Numéros.
+           Le toponyme moderne et TOUTES ses parenthèses restent dans le
+           <rs> ; les formes anciennes dans UN SEUL <hi rend="i">,
+           virgules comprises, hors du <rs>.
+
+           TYPOLOGIE DES CAS :
+           CAS 13 entrée type ........................... rs_0049
+           CAS 14 « aujourd'hui X » ..................... rs_0064
+           CAS 15 article avec tiret « (La-) » .......... rs_0065
+           CAS 16 sans département (pays, étranger) ..... rs_0062, rs_0067
+           CAS 17 sans forme ancienne ................... rs_0066
+           CAS 18 formes anciennes nombreuses / à
+                  plusieurs mots, sur plusieurs lignes ... rs_0054, rs_0068
+           CAS 19 renvoi croisé géographique ............ rs_0069
+           CAS 20 département en abrégé ................. rs_0061, rs_0070
+           CAS 21 quartier ou lieu-dit rattaché ......... rs_0071
+           CAS 25 <abbr>p.</abbr> devant un renvoi ........ (voir règle 18)
+           ============================================================ -->
+      <div type="index" n="2">
+        <pb n="43"/>
+        <head>Index geographicus</head>
+        <list type="index" xml:id="SMPO-AB_liste_geo_A">
+          <head>A</head>
+
+          <!-- ÉCHANTILLON CONTINU : début de la page 43, dans l'ordre. -->
+
+          <!-- CAS 13, entrée type : toponyme + commune de rattachement
+               + département, puis formes anciennes en italique.
+               Imprimé : « Abbecourt (Orgeval) (Yvelines). Habicurt,
+               Haulbecurth. ……… 9, 157 ». -->
+          <item xml:id="SMPO-AB_rs_0049"><rs><hi rend="sc">Abbecourt</hi> (Orgeval) (Yvelines)</rs>. <hi rend="i">Habicurt, Haulbecurth</hi>. <ref n="9">9</ref>, <ref n="157">157</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0050"><rs><hi rend="sc">Abbeville</hi> (Somme)</rs>. <hi rend="i">Abbatisvilla</hi>. <ref n="483">483</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0051"><rs><hi rend="sc">Ableiges</hi> (Val-d'Oise)</rs>. <hi rend="i">Ableges</hi>. <ref n="96">96</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0052"><rs><hi rend="sc">Aincourt</hi> (Val-d'Oise)</rs>. <hi rend="i">Aiencourt</hi>. <ref n="83">83</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0053"><rs><hi rend="sc">Alleu (L')</hi> (Yvelines)</rs>. <hi rend="i">Allodium</hi>. <ref n="64">64</ref>, <ref n="72">72</ref>, <ref n="479">479</ref>.</item>
+
+          <!-- CAS 18, formes anciennes nombreuses, renvois sur
+               plusieurs lignes. Imprimé :
+               « Amblainville (Oise). Umbleville, Umblenvilla, Umblein-
+                    villa, Onbleinvilla ……… 32, 44, 63
+                    64, 65, 69, 74, 75, 95, 108, 119, 127, 129, 154, 161, 479. »
+               La coupure « Umblein-/villa » est de la mise en page :
+               restituer « Umbleinvilla » sans trait d'union. -->
+          <item xml:id="SMPO-AB_rs_0054"><rs><hi rend="sc">Amblainville</hi> (Oise)</rs>. <hi rend="i">Umbleville, Umblenvilla, Umbleinvilla, Onbleinvilla</hi>. <ref n="32">32</ref>, <ref n="44">44</ref>, <ref n="63">63</ref>, <ref n="64">64</ref>, <ref n="65">65</ref>, <ref n="69">69</ref>, <ref n="74">74</ref>, <ref n="75">75</ref>, <ref n="95">95</ref>, <ref n="108">108</ref>, <ref n="119">119</ref>, <ref n="127">127</ref>, <ref n="129">129</ref>, <ref n="154">154</ref>, <ref n="161">161</ref>, <ref n="479">479</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0055"><rs><hi rend="sc">Ambleville</hi> (Val-d'Oise)</rs>. <hi rend="i">Ambleville</hi>. <ref n="110">110</ref><!-- lecture du n° à confirmer sur l'original -->.</item>
+          <item xml:id="SMPO-AB_rs_0056"><rs><hi rend="sc">Amiens</hi> (Somme)</rs>. <hi rend="i">Ambianensis</hi>. <ref n="482">482</ref><!-- lecture du n° à confirmer sur l'original -->.</item>
+          <item xml:id="SMPO-AB_rs_0057"><rs><hi rend="sc">Amillis</hi> (Seine-et-Marne)</rs>. <hi rend="i">Amilleius</hi>. <ref n="139">139</ref><!-- lecture du n° à confirmer sur l'original -->.</item>
+          <item xml:id="SMPO-AB_rs_0058"><rs><hi rend="sc">Anagni</hi> (Italie)</rs>. <hi rend="i">Anagnie</hi>. <ref n="72">72</ref>, <ref n="139">139</ref><!-- lecture du n° à confirmer sur l'original -->.</item>
+          <item xml:id="SMPO-AB_rs_0059"><rs><hi rend="sc">Andelys</hi> (Eure)</rs>. <hi rend="i">Andeleius</hi>. <ref n="155">155</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0060"><rs><hi rend="sc">Andrésy</hi> (Yvelines)</rs>. <hi rend="i">Undreus</hi>. <ref n="55">55</ref>.</item>
+
+          <!-- CAS 20, département en abrégé : transcrire tel quel,
+               sans développer (« E.-et-L. », « S.-et-M. »…). -->
+          <item xml:id="SMPO-AB_rs_0061"><rs><hi rend="sc">Anet</hi> (E.-et-L.)</rs>. <hi rend="i">Anetum Castellum</hi>. <ref n="53">53</ref>, <ref n="89">89</ref>, <ref n="101">101</ref>.</item>
+
+          <!-- CAS 16, toponyme sans département (pays). -->
+          <item xml:id="SMPO-AB_rs_0062"><rs><hi rend="sc">Angleterre</hi></rs>. <hi rend="i">Anglia</hi>. <ref n="134">134</ref>, <ref n="140">140</ref>.</item>
+          <item xml:id="SMPO-AB_rs_0063"><rs><hi rend="sc">Argenteuil</hi> (Val-d'Oise)</rs>. <hi rend="i">Argentogilus, Argentolus, Argenteolus, Argentolium</hi>. <ref n="57">57</ref>, <ref n="58">58</ref>, <ref n="64">64</ref>, <ref n="72">72</ref>, <ref n="77">77</ref>, <ref n="81">81</ref>, <ref n="99">99</ref>, <ref n="136">136</ref>, <ref n="169">169</ref>, <ref n="170">170</ref>, <ref n="479">479</ref>.</item>
+          <!-- … suite de la lettre A (p. 43) à transcrire … -->
+
+          <!-- ────────────────────────────────────────────────────────
+               EXEMPLES COMPLÉMENTAIRES, tirés d'autres pages du
+               fascicule pour illustrer les cas absents du début de la
+               page 43. Lors de la saisie complète, ces entrées
+               reprendront leur place et leur numéro d'ordre réels.
+               ──────────────────────────────────────────────────────── -->
+
+          <!-- CAS 14 (p. 44), « aujourd'hui X ». Imprimé :
+               « Bailleul (aujourd'hui Fosseuse) (Oise). Ballolium,
+               Bailolum ……… 31, 67, 112
+                    130. » -->
+          <item xml:id="SMPO-AB_rs_0064"><rs><hi rend="sc">Bailleul</hi> (aujourd'hui Fosseuse) (Oise)</rs>. <hi rend="i">Ballolium, Bailolum</hi>. <ref n="31">31</ref>, <ref n="67">67</ref>, <ref n="112">112</ref>, <ref n="130">130</ref>.</item>
+
+          <!-- CAS 15 (p. 49), article rejeté avec tiret « (La-) », « (Les-) ».
+               Imprimé : « Houssoye (La-) (Oise). Halfetus, Hulselus ……… 23, 72 ». -->
+          <item xml:id="SMPO-AB_rs_0065"><rs><hi rend="sc">Houssoye (La-)</hi> (Oise)</rs>. <hi rend="i">Halfetus, Hulselus</hi>. <ref n="23">23</ref>, <ref n="72">72</ref>.</item>
+
+          <!-- CAS 17 (p. 49), entrée SANS forme ancienne : pas de
+               <hi rend="i"> après le <rs>. Imprimé :
+               « Ivry-le-Temple (Oise) ……… 102, 113 ». -->
+          <item xml:id="SMPO-AB_rs_0066"><rs><hi rend="sc">Ivry-le-Temple</hi> (Oise)</rs>. <ref n="102">102</ref>, <ref n="113">113</ref>.</item>
+
+          <!-- CAS 16 bis (p. 49), ville étrangère sans département.
+               Imprimé : « Jérusalem. Jerosolyma, Hierosolima ……… 1, 21, 37, 62
+                    79, 104, 117, 120, 123, 144. » -->
+          <item xml:id="SMPO-AB_rs_0067"><rs><hi rend="sc">Jérusalem</hi></rs>. <hi rend="i">Jerosolyma, Hierosolima</hi>. <ref n="1">1</ref>, <ref n="21">21</ref>, <ref n="37">37</ref>, <ref n="62">62</ref>, <ref n="79">79</ref>, <ref n="104">104</ref>, <ref n="117">117</ref>, <ref n="120">120</ref>, <ref n="123">123</ref>, <ref n="144">144</ref>.</item>
+
+          <!-- CAS 18 bis (p. 49), formes anciennes à plusieurs mots
+               (« Jhoy Supra Isaram », « Vallis Gaudiaci ») : tout reste
+               dans le même <hi rend="i">, virgules comprises. Imprimé :
+               « Jouy-le-Comte (Parmain) (Val-d'Oise). Gaudiacus, Jhoy Supra
+                 Isaram, Vallis Gaudiaci, Joy, Jhoi ……… 32, 36, 46
+                    52, 54, 65, 66, 83, 89, 95, 100, 106, 110, 114, 123, 124,
+                    127, 128, 143, 479. » -->
+          <item xml:id="SMPO-AB_rs_0068"><rs><hi rend="sc">Jouy-le-Comte</hi> (Parmain) (Val-d'Oise)</rs>. <hi rend="i">Gaudiacus, Jhoy Supra Isaram, Vallis Gaudiaci, Joy, Jhoi</hi>. <ref n="32">32</ref>, <ref n="36">36</ref>, <ref n="46">46</ref>, <ref n="52">52</ref>, <ref n="54">54</ref>, <ref n="65">65</ref>, <ref n="66">66</ref>, <ref n="83">83</ref>, <ref n="89">89</ref>, <ref n="95">95</ref>, <ref n="100">100</ref>, <ref n="106">106</ref>, <ref n="110">110</ref>, <ref n="114">114</ref>, <ref n="123">123</ref>, <ref n="124">124</ref>, <ref n="127">127</ref>, <ref n="128">128</ref>, <ref n="143">143</ref>, <ref n="479">479</ref>.</item>
+
+          <!-- CAS 19 (p. 49), renvoi croisé dans l'index géographique,
+               sans numéro de page. Imprimé :
+               « Ibouvillers (voir Saint-Crépin-Ibouvillers) ». -->
+          <item xml:id="SMPO-AB_rs_0069"><rs><hi rend="sc">Ibouvillers</hi></rs> (voir <ref type="see">Saint-Crépin-Ibouvillers</ref>).</item>
+
+          <!-- CAS 20 bis (p. 49), département en abrégé. Imprimé :
+               « Lagny (S.-et-M.). Latigniacus, Latiniacus ……… 110 ». -->
+          <item xml:id="SMPO-AB_rs_0070"><rs><hi rend="sc">Lagny</hi> (S.-et-M.)</rs>. <hi rend="i">Latigniacus, Latiniacus</hi>. <ref n="110">110</ref>.</item>
+
+          <!-- CAS 21 (p. 44), quartier ou lieu-dit rattaché à une
+               commune : la précision fait partie du <rs>. Imprimé :
+               « Becherel, quartier de Pontoise (Val-d'Oise) ……… 6, 21, 38, 46
+                    47, 479. » -->
+          <item xml:id="SMPO-AB_rs_0071"><rs><hi rend="sc">Becherel</hi>, quartier de Pontoise (Val-d'Oise)</rs>. <ref n="6">6</ref>, <ref n="21">21</ref>, <ref n="38">38</ref>, <ref n="46">46</ref>, <ref n="47">47</ref>, <ref n="479">479</ref>.</item>
+
+          <!-- CAS 25 geo, <abbr>p.</abbr> devant un renvoi a un numero
+               d'acte dans l'index geographique. Meme principe que pour
+               l'index personarum : transcrire <abbr>p.</abbr> tel quel. -->
+          <item xml:id="SMPO-AB_rs_0073"><rs><hi rend="sc">Villare</hi> (Oise)</rs>. <hi rend="i">Villaris</hi>. <abbr>p.</abbr> <ref n="455">84</ref>.</item>
+        </list>
+        <!-- … lettres B à W (p. 43 à 55) à transcrire, une <list> par lettre :
+             <list type="index" xml:id="SMPO-AB_liste_geo_B"><head>B</head> … </list> … -->
+      </div>
+
+
+    </back>
+  </text>
+</TEI>
