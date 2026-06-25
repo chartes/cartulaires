@@ -1,4 +1,6 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -493,22 +495,11 @@
                 <num>IV</num>, <abbr>p.</abbr> 201.</note></persName>, <persName>Petrus</persName> capellanus, <persName>Theobaldus <pb n="37v" ed="B" facs="https://digi.vatlib.it/iiif/MSS_Reg.lat.907/res/img0081" corresp="https://digi.vatlib.it/iiif/MSS_Reg.lat.907/manifest.json"/> de Corbolio</persName><note n="4" xml:id="na006">Thibaut de Corbeil était sous-chantre à
                 l'église de Paris. Cf. <title>Cartulaire de N-D</title>., <abbr>t.</abbr>
                 <num>IV</num>, <abbr>p.</abbr> 106 et 114.</note>,<pb n="106"/>
-                  <persName>Herveus de Montmarenci<note type="note" n="1" xml:id="aa007">C'est grâce à la mention de
-                l'année du règne de Louis <num>VII</num> que la date de cette pièce a pu être ainsi
-                relativement précisée. <num>M.</num> Luchaire a montré, en effet, dans ses Études
-                sur les actes de Louis <num>VII</num> (Paris, Picard, 1885), <abbr>p.</abbr> 40,
-                qu'un acte de la chancellerie royale, daté de l'an 1175 de l'Incarnation et de la
-                38e année du règne de ce roi, avait dû être rédigé entre le 13 avril et le 31
-                juillet de cette même année. On est en droit de supposer que la chancellerie
-                épiscopale de Paris a, pour cet important détail, suivi la meilleure tradition de la
-                chancellerie royale et fait commencer comme elle, au 1er août 1137, le compte des
-                années du règne de Louis <num>VII</num>. La mention de l'année de l'episcopat
-                n'aurait pas permis d'arriver à une aussi grande approximation. On aurait dû se
-                contenter de dater la pièce du 13 avril-17 octobre 1175 ; le point de départ du
-                compte des années de l'episcopat de Maurice de Sully étant compris entre le 17
-                octobre et le 30 novembre 1160. Cf. <num>V.</num> Mortet, Maurice de Sully, dans les
-                Mémoires de la Société de l'histoire de Paris, <abbr>t.</abbr>
-                <num>XVI</num> (1889), <abbr>p.</abbr> 283.</note></persName>, canonici, <persName>Robertus de Beeloi<note n="2" xml:id="aa008">Robert de Belloy était
+                  <persName>Herveus de Montmarenci<note type="note" n="1" xml:id="aa007">Hervé de Montmorency fut
+                doyen du chapitre de Notre-Dame de 1185 à 1192. Il mourut le 25 mars de cette
+                dernière année. Cf. <hi rend="i">Gallia christiana</hi>, <abbr>t.</abbr>
+                <num>VII</num>, col. 198, et <title>Cartulaire de N-D</title>., <abbr>t.</abbr>
+                <num>IV</num>, <abbr>p.</abbr> 35.</note></persName>, canonici, <persName>Robertus de Beeloi<note n="2" xml:id="aa008">Robert de Belloy était
                 vicaire de Saint-Pierre-des-Fossés.</note></persName>, qui ibidem
                   missam celebravit, <persName>Guido de Issi</persName>, <persName>Galo [de Passu</persName>, canonicus <placeName><abbr>S.</abbr>]
                       Dyonisii de Passu<note n="3" xml:id="aa009">Le nom de ce chanoine revient
@@ -525,17 +516,7 @@
               </p>
             </div>
           </body>
-          <back>
-            <div type="notes">
-              <note n="1" xml:id="na007" target="#aa001 #aa003 #aa007">Hervé de Montmorency fut
-                doyen du chapitre de Notre-Dame de 1185 à 1192. Il mourut le 25 mars de cette
-                dernière année. Cf. <hi rend="i">Gallia christiana</hi>, <abbr>t.</abbr>
-                <num>VII</num>, col. 198, et <title>Cartulaire de N-D</title>., <abbr>t.</abbr>
-                <num>IV</num>, <abbr>p.</abbr> 35.</note>
-            
-              </div>
-          </back>
-        </text>
+          </text>
         <text xml:id="SMPA-EG_0002" n="II" subtype="article">
           <pb n="106"/>
           <front>
