@@ -108,11 +108,11 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeStructure unit="sous-partie" match="div" use="default">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -126,7 +126,7 @@
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="dots" unit="Index">
           <citeData use="head" property="dct:title"/>
-          <citeStructure match="list[@type='index']" use="@xml:id">
+          <citeStructure match="list[@type='index']" use="dots">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>
@@ -13995,7 +13995,7 @@
           <item xml:id="NDMT-AB_rs_0040"><rs><hi rend="sc">Aubin</hi>, Guillaume, orfèvre</rs>, <ref target="#NDMT-AB_0130" n="229">130</ref>.</item>
           <item xml:id="NDMT-AB_rs_0041"><rs><hi rend="sc">Aubineau</hi>, Marie, maîtresse des novices</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0042"><rs><hi rend="sc">Auci</hi>, lieu</rs>, <ref target="#NDMT-AB_0004" n="64">4</ref>, <ref target="#NDMT-AB_0028" n="102">28</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0043"><pb n="332" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f344/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0043">
  
  <rs><hi rend="sc">Aurelianis (Hemeris dit de)</hi>, clerc</rs>, <ref target="171" n="171">171</ref>, <ref target="#NDMT-AB_0088" n="172">88</ref>.</item>
           <item xml:id="NDMT-AB_rs_0044"><rs><hi rend="sc">Ausodus</hi></rs>, <ref target="123" n="123">123</ref>.</item>
@@ -14056,7 +14056,7 @@
           <item xml:id="NDMT-AB_rs_0095"><rs><hi rend="sc">Berthe</hi>, nièce de l'abbesse Edeline</rs>, <ref target="#NDMT-AB_0068" n="146">68</ref>.</item>
           <item xml:id="NDMT-AB_rs_0096"><rs><hi rend="sc">Berthélemy</hi>, Jean, notaire</rs>, <ref target="#NDMT-AB_0115" n="212">115</ref>.</item>
           <item xml:id="NDMT-AB_rs_0097"><rs><hi rend="sc">Bertrand</hi>, fils de Ferlo</rs>, <ref target="#NDMT-AB_0004" n="64">4</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0098"><pb n="333" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f345/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0098">
  
  <rs><hi rend="sc">Béthisy</hi>, village</rs>, <ref target="#NDMT-AB_0009" n="73">9</ref>, <!-- doublon meme acte NDMT-AB_0009: <ref target="#NDMT-AB_0009" n="74">9</ref> --> <ref target="#NDMT-AB_0010" n="75">10</ref>, <ref target="#NDMT-AB_0015" n="81">15</ref>, <!-- doublon meme acte NDMT-AB_0015: <ref target="#NDMT-AB_0015" n="82">15</ref> --> <ref target="#NDMT-AB_0028" n="100">28</ref>, <ref target="#NDMT-AB_0059" n="138">59</ref>, <ref target="#NDMT-AB_0066" n="144">66</ref>.</item>
           <item xml:id="NDMT-AB_rs_0099"><rs><hi rend="sc">Béthisy</hi>, (Gui de)</rs>, <ref target="#NDMT-AB_0009" n="74">9</ref>, <ref target="#NDMT-AB_0084" n="166">84</ref>.</item>
@@ -14125,7 +14125,7 @@
           <item xml:id="NDMT-AB_rs_0158"><rs><hi rend="sc">Cambitor</hi>, Bernardus, templier</rs>, <ref target="#NDMT-AB_0186" n="325">186</ref>.</item>
           <item xml:id="NDMT-AB_rs_0159"><rs><hi rend="sc">Campanis (Arnold de)</hi></rs>, <ref target="#NDMT-AB_0031" n="107">31</ref>.</item>
           <item xml:id="NDMT-AB_rs_0160"><rs><hi rend="sc">Campellis (Pierre de)</hi>, diacre</rs>, <ref target="#NDMT-AB_0056" n="136">56</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0161"><pb n="334" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f346/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0161">
  
  <rs><hi rend="sc">Camptembro</hi>, (Renaud de)</rs>, <ref target="104" n="104">104</ref>.</item>
           <item xml:id="NDMT-AB_rs_0162"><rs><hi rend="sc">Camptembro</hi>, (Robert de)</rs>, <ref target="104" n="104">104</ref>.</item>
@@ -14199,7 +14199,7 @@
           </list>
         <list type="index" xml:id="NDMT-AB_liste_D">
           <head>D</head>
-          <item xml:id="NDMT-AB_rs_0230"><pb n="335" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f347/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0230">
  
  <rs><hi rend="sc">Damien</hi>, Ph. bourgeois de Paris</rs>, <ref target="214" n="214">214</ref>.</item>
           <item xml:id="NDMT-AB_rs_0231"><rs><hi rend="sc">Danemois (Gui de)</hi></rs>, <ref target="139" n="139">139</ref>.</item>
@@ -14253,7 +14253,7 @@
           <item xml:id="NDMT-AB_rs_0271"><rs><hi rend="sc">Ferlo</hi></rs>, <ref target="#NDMT-AB_0004" n="64">4</ref>.</item>
           <item xml:id="NDMT-AB_rs_0272"><rs><hi rend="sc">Fernicle</hi>, Eustache, procureur de l'abbaye</rs>, <ref target="#NDMT-AB_0128" n="225">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0273"><rs><hi rend="sc">Ferrand</hi>, Marguerite, cellerière de l'abbaye</rs>, <ref target="#NDMT-AB_0150" n="261">150</ref>, <ref target="#NDMT-AB_0152" n="266">152</ref>, <ref target="#NDMT-AB_0156" n="274">156</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0274"><pb n="336" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f348/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0274">
  
  <rs><hi rend="sc">Fishot</hi>, Jeanne, religieuse</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0275"><rs><hi rend="sc">Fournier</hi>, Gabrielle, relig</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>.</item>
@@ -14322,7 +14322,7 @@
           </list>
         <list type="index" xml:id="NDMT-AB_liste_H">
           <head>H</head>
-          <item xml:id="NDMT-AB_rs_0334"><pb n="337" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f349/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0334">
  
  <rs><hi rend="sc">Hamel (Du)</hi>, Raoul</rs>, <ref target="#NDMT-AB_0128" n="226">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0335"><rs><hi rend="sc">Hamelin</hi>, Marguerite, religieuse</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>.</item>
@@ -14371,7 +14371,7 @@
           <item xml:id="NDMT-AB_rs_0374"><rs><hi rend="sc">Jolly</hi>, Nicolas, notaire</rs>, <ref target="#NDMT-AB_0145" n="250">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0375"><rs><hi rend="sc">Jovin</hi>, maître des écoles d'Orléans</rs>, <ref target="115" n="115">115</ref>.</item>
           </list>
-        <list type="index"><head>K</head><item xml:id="NDMT-AB_rs_0376"><pb n="338" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f350/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+        <list type="index"><head>K</head><item xml:id="NDMT-AB_rs_0376">
  
  <rs><hi rend="sc">Kerisius</hi>, boucher</rs>, <ref target="#NDMT-AB_0048" n="130">48</ref>.</item>
           </list><list type="index" xml:id="NDMT-AB_liste_L">
@@ -14441,7 +14441,7 @@
           <item xml:id="NDMT-AB_rs_0439"><rs><hi rend="sc">Le Normand</hi>, Jensan</rs>, <ref target="#NDMT-AB_0092" n="179">92</ref>.</item>
           <item xml:id="NDMT-AB_rs_0440"><rs><hi rend="sc">Le Picart</hi>, Etienne, poissonnier</rs>, <ref target="#NDMT-AB_0098" n="188">98</ref>.</item>
           <item xml:id="NDMT-AB_rs_0441"><rs><hi rend="sc">Limousin (Bernard le)</hi></rs>, <ref target="#NDMT-AB_0077" n="158">77</ref>, <ref target="#NDMT-AB_0085" n="167">85</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0442"><pb n="339" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f351/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0442">
  
  <rs><hi rend="sc">Limousin</hi>, Odeline, sa femme</rs>, <ref target="#NDMT-AB_0077" n="158">77</ref>, <ref target="#NDMT-AB_0085" n="167">85</ref>.</item>
                     <item xml:id="NDMT-AB_rs_0443"><rs><hi rend="sc">Limousin (Isabelle)</hi>, relig.</rs>, <ref target="#NDMT-AB_0077" n="158">77</ref>, <!-- doublon meme acte NDMT-AB_0077: <ref target="#NDMT-AB_0077" n="159">77</ref> --> <ref target="#NDMT-AB_0085" n="167">85</ref>.</item>
@@ -14503,7 +14503,7 @@
           <item xml:id="NDMT-AB_rs_0495"><rs><hi rend="sc">Mansionillum</hi>, villa</rs>, <ref target="#NDMT-AB_0003" n="61">3</ref>, <ref target="#NDMT-AB_0008" n="71">8</ref>, <ref target="#NDMT-AB_0015" n="80">15</ref>, <ref target="#NDMT-AB_0028" n="99">28</ref>, <ref target="#NDMT-AB_0090" n="175">90</ref>.</item>
           <item xml:id="NDMT-AB_rs_0496"><rs><hi rend="sc">Maquard</hi>, Elisabeth, relig</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0497"><rs><hi rend="sc">Marcadé</hi>, Catherine, boursière de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="266">152</ref>, <ref target="#NDMT-AB_0156" n="274">156</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0498"><pb n="340" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f352/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0498">
  
  <rs><hi rend="sc">Marchecon</hi>, Mathieu, seigneur de Passy</rs>, <ref target="239" n="239">239</ref>.</item>
           <item xml:id="NDMT-AB_rs_0499"><rs><hi rend="sc">Mareis</hi>, prés</rs>, <ref target="#NDMT-AB_0015" n="82">15</ref>, <ref target="#NDMT-AB_0028" n="101">28</ref>.</item>
@@ -14566,7 +14566,7 @@
           <item xml:id="NDMT-AB_rs_0556"><rs><hi rend="sc">Montmartre</hi>, (G. abbesse de)</rs>, <ref target="#NDMT-AB_0018" n="130">18</ref>, <ref target="#NDMT-AB_0034" n="140">34</ref>.</item>
           <item xml:id="NDMT-AB_rs_0557"><rs><hi rend="sc">Montmartre</hi>, Helissende, abbesse</rs>, <ref target="150" n="150">150</ref>, <ref target="134" n="134">134</ref>, <ref target="#NDMT-AB_0078" n="159">78</ref>.</item>
           <item xml:id="NDMT-AB_rs_0558"><rs><hi rend="sc">Montmartre</hi>, Helissendi, chantre</rs>, <ref target="#NDMT-AB_0057" n="137">57</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0559"><pb n="341" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f353/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0559">
  
  <rs><hi rend="sc">Montmartre</hi>, Hodierne, cellerière</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0186" n="325">186</ref>.</item>
           <item xml:id="NDMT-AB_rs_0560"><rs><hi rend="sc">Montmartre</hi>, Isabelle, prieure</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0057" n="137">57</ref>.</item>
@@ -14625,7 +14625,7 @@
           </list>
         <list type="index" xml:id="NDMT-AB_liste_P">
           <head>P</head>
-          <item xml:id="NDMT-AB_rs_0605"><pb n="342" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f354/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0605">
  
  <rs><hi rend="sc">Pacy (Renaud de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0034" n="111">34</ref>.</item>
           <item xml:id="NDMT-AB_rs_0606"><rs><hi rend="sc">Paciaco (Louis de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0090" n="175">90</ref>.</item>
@@ -14684,7 +14684,7 @@
           <item xml:id="NDMT-AB_rs_0659"><rs><hi rend="sc">Philippe de Valois</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0099" n="190">99</ref>.</item>
           <item xml:id="NDMT-AB_rs_0660"><rs><hi rend="sc">Philippe</hi>, frère du roi Louis <num>VII</num></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0026" n="96">26</ref>, <ref target="97" n="97">97</ref>.</item>
           <item xml:id="NDMT-AB_rs_0661"><rs><hi rend="sc">Phelippeaux</hi>, secrétaire d'Etat</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0166" n="287">166</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0662"><pb n="343" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f355/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0662">
  
  <rs><hi rend="sc">Philippus</hi>, vitrearius</rs>, <abbr>p.</abbr> <ref target="163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0663"><rs><hi rend="sc">Picart</hi>, Madeleine, prieure du Saint-Martyr</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0150" n="261">150</ref>.</item>
@@ -14742,7 +14742,7 @@
           <item xml:id="NDMT-AB_rs_0711"><rs><hi rend="sc">Regnier</hi>, René</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0108" n="203">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0712"><rs><hi rend="sc">Rembault</hi>, Jean, chevalier</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0067" n="144">67</ref><!--, <ref>145</ref>-->.</item>
           <item xml:id="NDMT-AB_rs_0713"><rs><hi rend="sc">Rembault</hi>, Theofonia, sa femme</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0067" n="145">67</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0714"><pb n="344" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f356/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0714">
  
  <rs><hi rend="sc">Remis (Adeline de)</hi>, religieuse de Montmartre</rs>, <abbr>p.</abbr> <ref target="425" n="425">425</ref>.</item>
           <item xml:id="NDMT-AB_rs_0715"><rs><hi rend="sc">Renaud</hi>, rémois</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0039" n="118">39</ref>.</item>
@@ -14817,7 +14817,7 @@
           <item xml:id="NDMT-AB_rs_0780"><rs><hi rend="sc">Sainte-Geneviève</hi>, (Jean, abbé de)</rs>, <ref target="148" n="148">148</ref>.</item>
           <item xml:id="NDMT-AB_rs_0781"><rs><hi rend="sc">Sainte-Geneviève</hi>, Fulcon, prieur</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0070" n="149">70</ref>.</item>
           <item xml:id="NDMT-AB_rs_0782"><rs><hi rend="sc">Sainte-Geneviève</hi>, Ricard, sous-prieur</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0070" n="149">70</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0783"><pb n="345" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f357/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0783">
  
  <rs><hi rend="sc">Sainte-Opportune</hi>, (Chanoines de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0108" n="200">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0784"><rs><hi rend="sc">Sainte-Opportune</hi>, censive</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0108" n="200">108</ref>.</item>
@@ -14885,7 +14885,7 @@
           <item xml:id="NDMT-AB_rs_0842"><rs><hi rend="sc">Tivalare</hi>, Simon, bourgeois de Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0107" n="199">107</ref>.</item>
           <item xml:id="NDMT-AB_rs_0843"><rs><hi rend="sc">Torfou</hi>, village</rs>, <ref target="#NDMT-AB_0003" n="62">3</ref>, <ref target="#NDMT-AB_0008" n="72">8</ref>, <ref target="#NDMT-AB_0015" n="81">15</ref>, <ref target="#NDMT-AB_0028" n="100">28</ref>, <!-- doublon meme acte NDMT-AB_0003: <ref target="#NDMT-AB_0003" n="137">3</ref> --> <ref target="#NDMT-AB_0108" n="201">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0844"><rs><hi rend="sc">Torfou</hi>, (Etienne, mayeur de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0057" n="137">57</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0845"><pb n="346" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f358/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+          <item xml:id="NDMT-AB_rs_0845">
  
  <rs><hi rend="sc">Torchart</hi>, Pierre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0041" n="122">41</ref>.</item>
           <item xml:id="NDMT-AB_rs_0846"><rs><hi rend="sc">Torchart</hi>, Jean</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0041" n="122">41</ref>.</item>

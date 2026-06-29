@@ -107,16 +107,16 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeStructure unit="sous-partie" match="div" use="default">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]" use="dots">
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -124,7 +124,7 @@
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-          <citeStructure unit="sous-section" match="group" use="dots">
+          <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -17409,7 +17409,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_A">
           <head>A</head>
-          <pb n="10"/>
           <item xml:id="SMPO-AB_rs_0043"><rs><hi rend="sc">Agnès</hi>, femme d'Aubert Faget</rs>, <ref n="108" target="#SMPO-AB_0133">108</ref>.</item>
           <item xml:id="SMPO-AB_rs_0044"><rs><hi rend="sc">Agnès</hi>, femme de Thibaud de Gisors</rs>, <ref n="77" target="#SMPO-AB_0097">77</ref>.</item>
           <item xml:id="SMPO-AB_rs_0045"><rs><hi rend="sc">Agnès</hi>, femme de Baudoin de l'Islette</rs>, <ref n="49" target="#SMPO-AB_0054">49</ref>.</item>
@@ -17460,7 +17459,6 @@
           <item xml:id="SMPO-AB_rs_0090"><rs><hi rend="sc">André</hi> de Poix</rs>, <ref n="7" target="#SMPO-AB_8b">7</ref>.</item>
           <item xml:id="SMPO-AB_rs_0091"><rs><hi rend="sc">André</hi>, prédicateur</rs>, <ref n="116" target="#SMPO-AB_0194">116</ref>.</item>
           <item xml:id="SMPO-AB_rs_0092"><rs><hi rend="sc">André</hi>, prêtre</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
-          <pb n="11"/>
           <item xml:id="SMPO-AB_rs_0093"><rs><hi rend="sc">Ancelin</hi> d'Auteui</rs>, <ref n="1" target="#SMPO-AB_0157">1</ref>.</item>
           <item xml:id="SMPO-AB_rs_0094"><rs><hi rend="sc">Ane</hi> (L</rs>, <ref n="8">8</ref>, <ref n="17">17</ref>, <ref n="37" target="#SMPO-AB_0041">37</ref>, <ref n="43" target="#SMPO-AB_0021">43</ref>, <ref n="134" target="#SMPO-AB_0167">134</ref>, <ref n="157" target="#SMPO-AB_0200">157</ref>.</item>
           <item xml:id="SMPO-AB_rs_0095"><rs><hi rend="sc">Anglais</hi> (L</rs>, <ref n="122" target="#SMPO-AB_0157">122</ref>, <ref n="134" target="#SMPO-AB_0167">134</ref>, <ref n="156" target="#SMPO-AB_0199">156</ref>.</item>
@@ -17515,7 +17513,6 @@
           <item xml:id="SMPO-AB_rs_0144"><rs><hi rend="sc">Aubry</hi> de Conflans</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0145"><rs><hi rend="sc">Aubry</hi> du Coudray</rs>, <ref n="100" target="#SMPO-AB_0125">100</ref>.</item>
           <item xml:id="SMPO-AB_rs_0146"><rs><hi rend="sc">Aubry</hi> de Gency</rs>, <ref n="89" target="#SMPO-AB_0113">89</ref>.</item>
-          <pb n="12"/>
           <item xml:id="SMPO-AB_rs_0147"><rs><hi rend="sc">Aubry</hi> Le Goez</rs>, <ref n="102" target="#SMPO-AB_0127">102</ref>.</item>
           <item xml:id="SMPO-AB_rs_0148"><rs><hi rend="sc">Aubry</hi> Terneau</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0149"><rs><hi rend="sc">Aude</hi>, femme de Guerry de Tour</rs>, <ref n="112" target="#SMPO-AB_0136">112</ref>.</item>
@@ -17570,7 +17567,6 @@
           <item xml:id="SMPO-AB_rs_0195"><rs><hi rend="sc">Bernier</hi>, curé de Cergy</rs>, <ref n="78" target="#SMPO-AB_0099">78</ref>, <ref n="156" target="#SMPO-AB_0199">156</ref>.</item>
           <item xml:id="SMPO-AB_rs_0196"><rs><hi rend="sc">Bernier</hi>, clerc</rs>, <ref n="116">116</ref>.</item>
           <item xml:id="SMPO-AB_rs_0197"><rs><hi rend="sc">Bernier</hi> de Montreui</rs>, <ref n="1" target="#SMPO-AB_0202">1</ref>, <ref n="159" target="#SMPO-AB_0202">159</ref>.</item>
-          <pb n="13"/>
           <item xml:id="SMPO-AB_rs_0198"><rs><hi rend="sc">Bernier</hi>, doyen de Pontoise</rs>, <ref n="35" target="#SMPO-AB_40b">35</ref>, <ref n="60" target="#SMPO-AB_0061">60</ref>, <ref n="61">61</ref>, <ref n="69" target="#SMPO-AB_0086">69</ref>.</item>
           <item xml:id="SMPO-AB_rs_0199"><rs><hi rend="sc">Bernuin</hi></rs>, <ref n="150" target="#SMPO-AB_0190">150</ref>.</item>
           <item xml:id="SMPO-AB_rs_0200"><rs><hi rend="sc">Berteaucourt</hi> (Abbaye Notre-Dame de</rs>, <ref n="484">484</ref>.</item>
@@ -17620,7 +17616,6 @@
           <item xml:id="SMPO-AB_rs_0241"><rs><hi rend="sc">Coplehe</hi></rs>, <ref n="143" target="#SMPO-AB_0180">143</ref>.</item>
           <item xml:id="SMPO-AB_rs_0242"><rs><hi rend="sc">Corbie</hi> (Abbaye de</rs>, <ref n="484">484</ref>.</item>
           <item xml:id="SMPO-AB_rs_0243"><rs><hi rend="sc">Cordouanier</hi> (Le</rs>, <ref n="154" target="#SMPO-AB_0195">154</ref>.</item>
-          <pb n="14"/>
           <item xml:id="SMPO-AB_rs_0244"><rs><hi rend="sc">Cornu</hi></rs>, <ref n="112" target="#SMPO-AB_0136">112</ref>.</item>
           <item xml:id="SMPO-AB_rs_0245"><rs><hi rend="sc">Corsaint</hi></rs>, <ref n="73" target="#SMPO-AB_0094">73</ref>, <ref n="110" target="#SMPO-AB_0134">110</ref>, <ref n="124" target="#SMPO-AB_0134">124</ref>.</item>
           <item xml:id="SMPO-AB_rs_0246"><rs><hi rend="sc">Coulombs</hi> (Abbaye Notre-Dame de</rs>, <ref n="51" target="#SMPO-AB_0056">51</ref>, <ref n="157" target="#SMPO-AB_0201">157</ref>.</item>
@@ -17674,7 +17669,6 @@
           <item xml:id="SMPO-AB_rs_0291"><rs><hi rend="sc">Dreux</hi> de Tourly</rs>, <ref n="32" target="#SMPO-AB_0038">32</ref>.</item>
           <item xml:id="SMPO-AB_rs_0292"><rs><hi rend="sc">Dreux</hi> du Va</rs>, <ref n="1" target="#SMPO-AB_0001">1</ref>, <ref n="82" target="#SMPO-AB_0103">82</ref>, <ref n="155" target="#SMPO-AB_0198">155</ref>.</item>
           <item xml:id="SMPO-AB_rs_0293"><rs><hi rend="sc">Dreux</hi> de Vineseui</rs>, <ref n="1" target="#SMPO-AB_0001">1</ref>, <ref n="79" target="#SMPO-AB_0101">79</ref>.</item>
-          <pb n="15"/>
           <item xml:id="SMPO-AB_rs_0294"><rs><hi rend="sc">Durand</hi>, abbé de Notre-Dame d'Ivry</rs>, <ref n="55" target="#SMPO-AB_0057">55</ref>.</item>
           <item xml:id="SMPO-AB_rs_0295"><rs><hi rend="sc">Durand</hi>, prêtre de Saint-Martin</rs>, <ref n="481" target="#SMPO-AB_102b">481</ref>.</item>
         </list>
@@ -17728,7 +17722,6 @@
           <item xml:id="SMPO-AB_rs_0341"><rs><hi rend="sc">Ernaud</hi> de Taverny</rs>, <ref n="116" target="#SMPO-AB_0038">116</ref>.</item>
           <item xml:id="SMPO-AB_rs_0342"><rs><hi rend="sc">Ernaud</hi> de Voulangis</rs>, <ref n="12" target="#SMPO-AB_0014">12</ref>.</item>
           <item xml:id="SMPO-AB_rs_0343"><rs><hi rend="sc">Ernoud</hi> de Courtry</rs>, <ref n="26" target="#SMPO-AB_0029">26</ref>.</item>
-          <pb n="16"/>
           <item xml:id="SMPO-AB_rs_0344"><rs><hi rend="sc">Ernoud</hi> de la Fontaine</rs>, <ref n="120" target="#SMPO-AB_0154">120</ref>.</item>
           <item xml:id="SMPO-AB_rs_0345"><rs><hi rend="sc">Espiebos</hi></rs>, <ref n="23" target="#SMPO-AB_0025">23</ref>, <ref n="27" target="#SMPO-AB_0031">27</ref>.</item>
           <item xml:id="SMPO-AB_rs_0346"><rs><hi rend="sc">Etienne</hi>, abbé de Sainte-Geneviève du Mont</rs>, <ref n="154" target="#SMPO-AB_0196">154</ref>.</item>
@@ -17789,7 +17782,6 @@
         <list type="index" xml:id="SMPO-AB_liste_E">
           <head>E</head>
           <item xml:id="SMPO-AB_rs_0397"><rs><hi rend="sc">Eudes</hi> le Menu</rs>, <ref n="153" target="#SMPO-AB_0194">153</ref>.</item>
-          <pb n="17"/>
           <item xml:id="SMPO-AB_rs_0398"><rs><hi rend="sc">Eudes</hi> de Méru</rs>, <ref n="81" target="#SMPO-AB_0102">81</ref>.</item>
           <item xml:id="SMPO-AB_rs_0399"><rs><hi rend="sc">Eudes</hi> de Montchauvet</rs>, <ref n="119" target="#SMPO-AB_0152">119</ref>.</item>
           <item xml:id="SMPO-AB_rs_0400"><rs><hi rend="sc">Eudes</hi> d'Orléans</rs>, <ref n="49" target="#SMPO-AB_0054">49</ref>.</item>
@@ -17843,7 +17835,6 @@
           <item xml:id="SMPO-AB_rs_0445"><rs><hi rend="sc">Fouques</hi>, fils d'Herbert</rs>, <ref n="108" target="#SMPO-AB_0133">108</ref>.</item>
           <item xml:id="SMPO-AB_rs_0446"><rs><hi rend="sc">Fouques</hi> de Lieux</rs>, <ref n="82" target="#SMPO-AB_0104">82</ref>, <ref n="89" target="#SMPO-AB_0113">89</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_0447"><rs><hi rend="sc">Fouques</hi> de Méry</rs>, <ref n="85" target="#SMPO-AB_0107">85</ref>.</item>
-          <pb n="18"/>
           <item xml:id="SMPO-AB_rs_0448"><rs><hi rend="sc">Fouques</hi>, prévôt</rs>, <ref n="72" target="#SMPO-AB_0094">72</ref>.</item>
           <item xml:id="SMPO-AB_rs_0449"><rs><hi rend="sc">Fouques</hi>, prieur de la Ferté-Gaucher</rs>, <ref n="482" target="#SMPO-AB_193b">482</ref>.</item>
           <item xml:id="SMPO-AB_rs_0450"><rs><hi rend="sc">Fouques</hi> de Puiseux</rs>, <ref n="66" target="#SMPO-AB_0077">66</ref>.</item>
@@ -17895,7 +17886,6 @@
           <item xml:id="SMPO-AB_rs_0493"><rs><hi rend="sc">Garnier</hi> le Clerc</rs>, <ref n="143" target="#SMPO-AB_0179">143</ref>.</item>
           <item xml:id="SMPO-AB_rs_0494"><rs><hi rend="sc">Garnier</hi> de Commény</rs>, <ref n="13" target="#SMPO-AB_0015">13</ref>.</item>
           <item xml:id="SMPO-AB_rs_0495"><rs><hi rend="sc">Garnier</hi> de Courcelles</rs>, <ref n="93" target="#SMPO-AB_0120">93</ref>.</item>
-          <pb n="19"/>
           <item xml:id="SMPO-AB_rs_0496"><rs><hi rend="sc">Garnier</hi> Deliés</rs>, <ref n="30" target="#SMPO-AB_0036">30</ref>.</item>
           <item xml:id="SMPO-AB_rs_0497"><rs><hi rend="sc">Garnier</hi> du Fay</rs>, <ref n="93" target="#SMPO-AB_0120">93</ref>.</item>
           <item xml:id="SMPO-AB_rs_0498"><rs><hi rend="sc">Garnier</hi> des Flessards</rs>, <ref n="100" target="#SMPO-AB_0125">100</ref>.</item>
@@ -17949,7 +17939,6 @@
           <item xml:id="SMPO-AB_rs_0546"><rs><hi rend="sc">Gautier</hi>, connétable</rs>, <ref n="4" target="#SMPO-AB_0005">4</ref>.</item>
           <item xml:id="SMPO-AB_rs_0547"><rs><hi rend="sc">Gautier</hi> de Cormeilles</rs>, <ref n="112" target="#SMPO-AB_0137">112</ref>.</item>
           <item xml:id="SMPO-AB_rs_0548"><rs><hi rend="sc">Gautier</hi> du Coudray</rs>, <ref n="32" target="#SMPO-AB_0038">32</ref>, <ref n="93" target="#SMPO-AB_0120">93</ref>.</item>
-          <pb n="20"/>
           <item xml:id="SMPO-AB_rs_0549"><rs><hi rend="sc">Gautier</hi> de Deverio</rs>, <ref n="106" target="#SMPO-AB_0130">106</ref>.</item>
           <item xml:id="SMPO-AB_rs_0550"><rs><hi rend="sc">Gautier</hi> de Drocourt</rs>, <ref n="118" target="#SMPO-AB_0152">118</ref>, <ref n="136" target="#SMPO-AB_0169">136</ref>, <ref n="141" target="#SMPO-AB_0178">141</ref>.</item>
           <item xml:id="SMPO-AB_rs_0551"><rs><hi rend="sc">Gautier</hi> d'Eperon</rs>, <ref n="55" target="#SMPO-AB_0057">55</ref>.</item>
@@ -18009,7 +17998,6 @@
           <item xml:id="SMPO-AB_rs_0599"><rs><hi rend="sc">Geoffroi</hi> de Boissy</rs>, <ref n="106" target="#SMPO-AB_0105">106</ref>.</item>
           <item xml:id="SMPO-AB_rs_0600"><rs><hi rend="sc">Geoffroi</hi> de Boury</rs>, <ref n="6" target="#SMPO-AB_0009">6</ref>.</item>
           <item xml:id="SMPO-AB_rs_0601"><rs><hi rend="sc">Geoffroi</hi> de Boutencourt</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
-          <pb n="21"/>
           <item xml:id="SMPO-AB_rs_0602"><rs><hi rend="sc">Geoffroi</hi> de Chenevières</rs>, <ref n="158" target="#SMPO-AB_0201">158</ref>.</item>
           <item xml:id="SMPO-AB_rs_0603"><rs><hi rend="sc">Geoffroi</hi>, doyen de Rouen</rs>, <ref n="74" target="#SMPO-AB_0095">74</ref>, <ref n="98" target="#SMPO-AB_0122">98</ref>, <ref n="137" target="#SMPO-AB_0171">137</ref>.</item>
           <item xml:id="SMPO-AB_rs_0604"><rs><hi rend="sc">Geoffroi</hi> Hame</rs>, <ref n="1" target="#SMPO-AB_1b">1</ref>, <ref n="83" target="#SMPO-AB_0106">83</ref>.</item>
@@ -18065,7 +18053,6 @@
           <item xml:id="SMPO-AB_rs_0654"><rs><hi rend="sc">Girard</hi> de Blargies</rs>, <ref n="16" target="#SMPO-AB_0018">16</ref>, <ref n="62">62</ref>.</item>
           <item xml:id="SMPO-AB_rs_0655"><rs><hi rend="sc">Girard</hi>, chantre de Saint-Denis</rs>, <ref n="149" target="#SMPO-AB_0188">149</ref>.</item>
           <item xml:id="SMPO-AB_rs_0656"><rs><hi rend="sc">Girard</hi> de Chars</rs>, <ref n="7" target="#SMPO-AB_0008">7</ref>, <ref n="45" target="#SMPO-AB_0048">45</ref>, <ref n="71" target="#SMPO-AB_0093">71</ref>, <ref n="82" target="#SMPO-AB_0103">82</ref>.</item>
-          <pb n="22"/>
           <item xml:id="SMPO-AB_rs_0657"><rs><hi rend="sc">Girard</hi> du Déluge</rs>, <ref n="102" target="#SMPO-AB_0127">102</ref>.</item>
           <item xml:id="SMPO-AB_rs_0658"><rs><hi rend="sc">Girard</hi>, doyen</rs>, <ref n="74" target="#SMPO-AB_0095">74</ref>.</item>
           <item xml:id="SMPO-AB_rs_0659"><rs><hi rend="sc">Girard</hi> du Houssoy</rs>, <ref n="72" target="#SMPO-AB_0094">72</ref>.</item>
@@ -18119,7 +18106,6 @@
           <item xml:id="SMPO-AB_rs_0707"><rs><hi rend="sc">Gui</hi> de la Roche (-Guyon</rs>, <ref n="40" target="#SMPO-AB_0045">40</ref>.</item>
           <item xml:id="SMPO-AB_rs_0708"><rs><hi rend="sc">Gui</hi> de Senlis</rs>, <ref n="7" target="#SMPO-AB_8b">7</ref>, <ref n="39" target="#SMPO-AB_0044">39</ref>.</item>
           <item xml:id="SMPO-AB_rs_0709"><rs><hi rend="sc">Guiard</hi> Aiguillon</rs>, <ref n="101" target="#SMPO-AB_0126">101</ref>, <ref n="123" target="#SMPO-AB_0157">123</ref>, <ref n="144" target="#SMPO-AB_0181">144</ref>, <ref n="156" target="#SMPO-AB_0199">156</ref>.</item>
-          <pb n="23"/>
           <item xml:id="SMPO-AB_rs_0710"><rs><hi rend="sc">Guiard</hi> de Bayard</rs>, <ref n="113" target="#SMPO-AB_0138">113</ref>.</item>
           <item xml:id="SMPO-AB_rs_0711"><rs><hi rend="sc">Guiard</hi> de Frocourt</rs>, <ref n="6" target="#SMPO-AB_0007">6</ref>.</item>
           <item xml:id="SMPO-AB_rs_0712"><rs><hi rend="sc">Guiard</hi>, curé de Génicourt</rs>, <ref n="108" target="#SMPO-AB_0133">108</ref>.</item>
@@ -18172,7 +18158,6 @@
           <item xml:id="SMPO-AB_rs_0759"><rs><hi rend="sc">Guillaume</hi>, fils de Robert d'Ivry</rs>, <ref n="50" target="#SMPO-AB_0056">50</ref>.</item>
           <item xml:id="SMPO-AB_rs_0760"><rs><hi rend="sc">Guillaume</hi>, chapelain d'Ivry</rs>, <ref n="55" target="#SMPO-AB_0057">55</ref>.</item>
           <item xml:id="SMPO-AB_rs_0761"><rs><hi rend="sc">Guillaume</hi> de Liancourt</rs>, <ref n="72" target="#SMPO-AB_0094">72</ref>.</item>
-          <pb n="24"/>
           <item xml:id="SMPO-AB_rs_0762"><rs><hi rend="sc">Guillaume</hi> de Lieux</rs>, <ref n="151" target="#SMPO-AB_0188">151</ref>.</item>
           <item xml:id="SMPO-AB_rs_0763"><rs><hi rend="sc">Guillaume</hi> de Loconville</rs>, <ref n="118" target="#SMPO-AB_0151">118</ref>, <ref n="141" target="#SMPO-AB_0177">141</ref>.</item>
           <item xml:id="SMPO-AB_rs_0764"><rs><hi rend="sc">Guillaume</hi> de Longuesse</rs>, <ref n="151" target="#SMPO-AB_0191">151</ref>.</item>
@@ -18225,7 +18210,6 @@
           <item xml:id="SMPO-AB_rs_0808"><rs><hi rend="sc">Haimard</hi> Malfiliâtre</rs>, <ref n="93" target="#SMPO-AB_0119">93</ref>, <ref n="6" target="#SMPO-AB_8c">6</ref>, <ref n="21" target="#SMPO-AB_20b">21</ref>.</item>
           <item xml:id="SMPO-AB_rs_0809"><rs><hi rend="sc">Haimard</hi> ou Haimon de Montgérain</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0810"><rs><hi rend="sc">Haimard</hi> de Persan</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
-          <pb n="25"/>
           <item xml:id="SMPO-AB_rs_0811"><rs><hi rend="sc">Haintard</hi> de Pouilly</rs>, <ref n="162" target="#SMPO-AB_0207">162</ref>.</item>
           <item xml:id="SMPO-AB_rs_0812"><rs><hi rend="sc">Haimard</hi> de Vineseui</rs>, <ref n="1" target="#SMPO-AB_1b">1</ref>, <ref n="31" target="#SMPO-AB_0037">31</ref>.</item>
           <item xml:id="SMPO-AB_rs_0813"><rs><hi rend="sc">Hai</hi>,MERY de Belle-Eglise Z</rs>, <ref n="28" target="#SMPO-AB_0032">28</ref>, <ref n="113" target="#SMPO-AB_0138">113</ref>.</item>
@@ -18280,7 +18264,6 @@
           <item xml:id="SMPO-AB_rs_0862"><rs><hi rend="sc">Herbert</hi>, diacre</rs>, <ref n="109" target="#SMPO-AB_0133">109</ref>.</item>
           <item xml:id="SMPO-AB_rs_0863"><rs><hi rend="sc">Herbert</hi> d'Epiais</rs>, <ref n="6" target="#SMPO-AB_7b">6</ref>, <ref n="13" target="#SMPO-AB_0015">13</ref>, <ref n="20" target="#SMPO-AB_7b">20</ref>, <ref n="27" target="#SMPO-AB_0031">27</ref>, <ref n="33" target="#SMPO-AB_0039">33</ref>, <ref n="34" target="#SMPO-AB_0040">34</ref>, <ref n="35" target="#SMPO-AB_40b">35</ref>.</item>
           <item xml:id="SMPO-AB_rs_0864"><rs><hi rend="sc">Herbert</hi> de l'Estache</rs>, <ref n="168" target="#SMPO-AB_0217">168</ref>.</item>
-          <pb n="26"/>
           <item xml:id="SMPO-AB_rs_0865"><rs><hi rend="sc">Herbert</hi> du Moutier de Jouy</rs>, <ref n="124" target="#SMPO-AB_0157">124</ref>.</item>
           <item xml:id="SMPO-AB_rs_0866"><rs><hi rend="sc">Herbert</hi> de Magny</rs>, <ref n="59" target="#SMPO-AB_0060">59</ref>, <ref n="70" target="#SMPO-AB_0134">70</ref>.</item>
           <item xml:id="SMPO-AB_rs_0867"><rs><hi rend="sc">Herbert</hi> de Mello</rs>, <ref n="114" target="#SMPO-AB_0138">114</ref>.</item>
@@ -18336,7 +18319,6 @@
           <item xml:id="SMPO-AB_rs_0917"><rs><hi rend="sc">Hubert</hi> de Méry</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0918"><rs><hi rend="sc">Hubert</hi> du Moutier</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0919"><rs><hi rend="sc">Hubert</hi> du Rosne</rs>, <ref n="1" target="#SMPO-AB_0002">1</ref>.</item>
-          <pb n="27"/>
           <item xml:id="SMPO-AB_rs_0920"><rs><hi rend="sc">Hubert</hi>, fils de Thévin</rs>, <ref n="39" target="#SMPO-AB_0044">39</ref>.</item>
           <item xml:id="SMPO-AB_rs_0921"><rs><hi rend="sc">Hubert</hi> le Tourneur</rs>, <ref n="116" target="#SMPO-AB_0150">116</ref>.</item>
           <item xml:id="SMPO-AB_rs_0922"><rs><hi rend="sc">Hubon</hi>, curé de Gérocourt</rs>, <ref n="141" target="#SMPO-AB_0178">141</ref>.</item>
@@ -18389,7 +18371,6 @@
           <item xml:id="SMPO-AB_rs_0969"><rs><hi rend="sc">Hugues</hi> de Gournay</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0970"><rs><hi rend="sc">Hugues</hi> de Grisy</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_0971"><rs><hi rend="sc">Hugues</hi> le Gros</rs>, <ref n="128" target="#SMPO-AB_0160">128</ref>.</item>
-          <pb n="28"/>
           <item xml:id="SMPO-AB_rs_0972"><rs><hi rend="sc">Hugues</hi> de l'Isle (-Adam</rs>, <ref n="93" target="#SMPO-AB_0119">93</ref>.</item>
           <item xml:id="SMPO-AB_rs_0973"><rs><hi rend="sc">Hugues</hi> de Lormaison</rs>, <ref n="64" target="#SMPO-AB_0076">64</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_0974"><rs><hi rend="sc">Hugues</hi> de Luzarches</rs>, <ref n="40" target="#SMPO-AB_0045">40</ref>.</item>
@@ -18446,7 +18427,6 @@
           <item xml:id="SMPO-AB_rs_1016"><rs><hi rend="sc">Ive</hi>, archidiacre de Rouen</rs>, <ref n="131" target="#SMPO-AB_0162">131</ref>, <ref n="132">132</ref>, <ref n="133" target="#SMPO-AB_0164">133</ref>, <ref n="137" target="#SMPO-AB_0171">137</ref>, <ref n="138" target="#SMPO-AB_0172">138</ref>.</item>
           <item xml:id="SMPO-AB_rs_1017"><rs><hi rend="sc">Ive</hi> de la Celle</rs>, <ref n="157" target="#SMPO-AB_0200">157</ref>.</item>
           <item xml:id="SMPO-AB_rs_1018"><rs><hi rend="sc">Ive</hi>, chanoine, puis abbé de Marcheroux</rs>, <ref n="118" target="#SMPO-AB_0151">118</ref>, <ref n="141" target="#SMPO-AB_0177">141</ref>, <ref n="16">16</ref>.</item>
-          <pb n="29"/>
           <item xml:id="SMPO-AB_rs_1019"><rs><hi rend="sc">Ive</hi>, chapelain de Saint-Martin</rs>, <ref n="57" target="#SMPO-AB_0059">57</ref>.</item>
           <item xml:id="SMPO-AB_rs_1020"><rs><hi rend="sc">Ive</hi> de Conflans</rs>, <ref n="7" target="#SMPO-AB_8c">7</ref>, <ref n="19" target="#SMPO-AB_21b">19</ref>, <ref n="35" target="#SMPO-AB_40b">35</ref>, <ref n="64" target="#SMPO-AB_0075">64</ref>, <ref n="67" target="#SMPO-AB_0085">67</ref>.</item>
           <item xml:id="SMPO-AB_rs_1021"><rs><hi rend="sc">Ive</hi> de Courcelles</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
@@ -18497,7 +18477,6 @@
           <item xml:id="SMPO-AB_rs_1063"><rs><hi rend="sc">Jean</hi> de Gisors</rs>, <ref n="91" target="#SMPO-AB_0116">91</ref>, <ref n="100" target="#SMPO-AB_0126">100</ref>, <ref n="134" target="#SMPO-AB_0167">134</ref>, <ref n="140" target="#SMPO-AB_0177">140</ref>, <ref n="156" target="#SMPO-AB_0200">156</ref>, <ref n="168" target="#SMPO-AB_0218">168</ref>.</item>
           <item xml:id="SMPO-AB_rs_1064"><rs><hi rend="sc">Jean</hi> le Grand</rs>, <ref n="123" target="#SMPO-AB_0157">123</ref>.</item>
           <item xml:id="SMPO-AB_rs_1065"><rs><hi rend="sc">Jean</hi> de Grand-Pont, doyen de Paris</rs>, <ref n="15" target="#SMPO-AB_0016">15</ref>.</item>
-          <pb n="30"/>
           <item xml:id="SMPO-AB_rs_1066"><rs><hi rend="sc">Jean</hi> de Ham-lès-Cergy</rs>, <ref n="65" target="#SMPO-AB_0076">65</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1067"><rs><hi rend="sc">Jean</hi> le Hauberger</rs>, <ref n="168" target="#SMPO-AB_0216">168</ref>.</item>
           <item xml:id="SMPO-AB_rs_1068"><rs><hi rend="sc">Jean</hi> Haubert</rs>, <ref n="170" target="#SMPO-AB_0220">170</ref>.</item>
@@ -18551,7 +18530,6 @@
           <item xml:id="SMPO-AB_rs_1113"><rs><hi rend="sc">Letran</hi> de Us</rs>, <ref n="110" target="#SMPO-AB_0134">110</ref>.</item>
           <item xml:id="SMPO-AB_rs_1114"><rs><hi rend="sc">Ligier</hi> de Ruvigny</rs>, <ref n="85" target="#SMPO-AB_0108">85</ref>, <ref n="87">87</ref>.</item>
           <item xml:id="SMPO-AB_rs_1115"><rs><hi rend="sc">Lisiard</hi>, archidiacre</rs>, <ref n="31" target="#SMPO-AB_0037">31</ref>.</item>
-          <pb n="31"/>
           <item xml:id="SMPO-AB_rs_1116"><rs><hi rend="sc">Lisiard</hi> le Breton</rs>, <ref n="57" target="#SMPO-AB_0059">57</ref>.</item>
           <item xml:id="SMPO-AB_rs_1117"><rs><hi rend="sc">Lisoie</hi> de Chaudry</rs>, <ref n="34" target="#SMPO-AB_0040">34</ref>.</item>
           <item xml:id="SMPO-AB_rs_1118"><rs><hi rend="sc">Livry</hi> (Abbaye de)</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
@@ -18601,7 +18579,6 @@
           <item xml:id="SMPO-AB_rs_1159"><rs><hi rend="sc">Mathilde</hi>, fille de Guillaume Aiguillon IT de Trie</rs>, <ref n="80" target="#SMPO-AB_0102">80</ref>.</item>
           <item xml:id="SMPO-AB_rs_1160"><rs><hi rend="sc">Mathilde</hi>, femme de Mathieu de Beaumont</rs>, <ref n="165" target="#SMPO-AB_0213">165</ref>.</item>
           <item xml:id="SMPO-AB_rs_1161"><rs><hi rend="sc">Mathilde</hi> de Banthelu</rs>, <ref n="136" target="#SMPO-AB_0169">136</ref>.</item>
-          <pb n="32"/>
           <item xml:id="SMPO-AB_rs_1162"><rs><hi rend="sc">Mathilde</hi>, femme de Hugues de Gisors</rs>, <ref n="3" target="#SMPO-AB_0003">3</ref>, <ref n="81" target="#SMPO-AB_0103">81</ref>, <ref n="91" target="#SMPO-AB_0116">91</ref>, <ref n="100" target="#SMPO-AB_0126">100</ref>, <ref n="140" target="#SMPO-AB_0177">140</ref>.</item>
           <item xml:id="SMPO-AB_rs_1163"><rs><hi rend="sc">Mathilde</hi>, femme de Payen de Gisors</rs>, <ref n="84" target="#SMPO-AB_0106">84</ref>.</item>
           <item xml:id="SMPO-AB_rs_1164"><rs><hi rend="sc">Mathilde</hi>, femme de Dreux de Guiry</rs>, <ref n="63" target="#SMPO-AB_0074">63</ref>.</item>
@@ -18651,7 +18628,6 @@
           <item xml:id="SMPO-AB_rs_1202"><rs><hi rend="sc">Oger</hi> Galeran</rs>, <ref n="62" target="#SMPO-AB_0063">62</ref>.</item>
           <item xml:id="SMPO-AB_rs_1203"><rs><hi rend="sc">Orphelin</hi> (L</rs>, <ref n="10" target="#SMPO-AB_0011">10</ref>.</item>
           <item xml:id="SMPO-AB_rs_1204"><rs><hi rend="sc">Orielde</hi></rs>, <ref n="36" target="#SMPO-AB_0044">36</ref>, <ref n="114">114</ref>, <ref n="130">130</ref>.</item>
-          <pb n="33"/>
           <item xml:id="SMPO-AB_rs_1205"><rs><hi rend="sc">Osmond</hi>, archidiacre</rs>, <ref n="98" target="#SMPO-AB_0122">98</ref>.</item>
           <item xml:id="SMPO-AB_rs_1206"><rs><hi rend="sc">Osmond</hi> de Chars</rs>, <ref n="102" target="#SMPO-AB_0127">102</ref>, <ref n="114" target="#SMPO-AB_0138">114</ref>.</item>
           <item xml:id="SMPO-AB_rs_1207"><rs><hi rend="sc">Osmond</hi>, fils de Robert, vidame de Gerberoy</rs>, <ref n="55" target="#SMPO-AB_0057">55</ref>.</item>
@@ -18707,7 +18683,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_I">
           <head>I</head>
-          <pb n="34"/>
           <item xml:id="SMPO-AB_rs_1254"><rs><hi rend="sc">Ierre</hi>, évêque de Beauvais</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_1255"><rs><hi rend="sc">Ierre</hi> Faget</rs>, <ref n="108" target="#SMPO-AB_0133">108</ref>.</item>
           <item xml:id="SMPO-AB_rs_1256"><rs><hi rend="sc">Ierre</hi> de Frocourt</rs>, <ref n="85" target="#SMPO-AB_0107">85</ref>.</item>
@@ -18735,7 +18710,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_R">
           <head>R</head>
-          <pb n="35"/>
           <item xml:id="SMPO-AB_rs_1263"><rs><hi rend="sc">Raoul</hi> Caperon</rs>, <ref n="116" target="#SMPO-AB_0150">116</ref>.</item>
           <item xml:id="SMPO-AB_rs_1264"><rs><hi rend="sc">Raoul</hi> de Cergy</rs>, <ref n="5" target="#SMPO-AB_0006">5</ref>, <ref n="16" target="#SMPO-AB_0018">16</ref>, <ref n="93" target="#SMPO-AB_0120">93</ref>.</item>
           <item xml:id="SMPO-AB_rs_1265"><rs><hi rend="sc">Raoul</hi>, chanoine</rs>, <ref n="137" target="#SMPO-AB_0171">137</ref>.</item>
@@ -18813,7 +18787,6 @@
           <item xml:id="SMPO-AB_rs_1313"><rs><hi rend="sc">Reine</hi> de Banthelu</rs>, <ref n="98" target="#SMPO-AB_0123">98</ref>.</item>
           <item xml:id="SMPO-AB_rs_1314"><rs><hi rend="sc">Remi</hi>, moine du Bec, puis prieur de Saint-Pierre de Pontoise</rs>, <ref n="156" target="#SMPO-AB_0200">156</ref>.</item>
           <item xml:id="SMPO-AB_rs_1315"><rs><hi rend="sc">Renard</hi>, frère du clerc Geoffroi</rs>, <ref n="40" target="#SMPO-AB_0045">40</ref>.</item>
-          <pb n="36"/>
           <item xml:id="SMPO-AB_rs_1316"><rs><hi rend="sc">Renard</hi>, curé d'Amblainville</rs>, <ref n="108" target="#SMPO-AB_0133">108</ref>.</item>
           <item xml:id="SMPO-AB_rs_1317"><rs><hi rend="sc">Renard</hi> Terrier</rs>, <ref n="62" target="#SMPO-AB_0065">62</ref>.</item>
           <item xml:id="SMPO-AB_rs_1318"><rs><hi rend="sc">Renard</hi>, fils de Josuin</rs>, <ref n="2" target="#SMPO-AB_0002">2</ref>.</item>
@@ -18888,7 +18861,6 @@
           <item xml:id="SMPO-AB_rs_1363"><rs><hi rend="sc">Richard</hi> Charpentier</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_1364"><rs><hi rend="sc">Richard</hi> Cresson</rs>, <ref n="55" target="#SMPO-AB_0057">55</ref>.</item>
           <item xml:id="SMPO-AB_rs_1365"><rs><hi rend="sc">Richard</hi> Dolier</rs>, <ref n="137" target="#SMPO-AB_0170">137</ref>.</item>
-          <pb n="37"/>
           <item xml:id="SMPO-AB_rs_1366"><rs><hi rend="sc">Richard</hi> Drapier</rs>, <ref n="168" target="#SMPO-AB_0216">168</ref>, <ref n="170" target="#SMPO-AB_0220">170</ref>.</item>
         </list>
         <list type="index" xml:id="SMPO-AB_liste_I">
@@ -18993,7 +18965,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_O">
           <head>O</head>
-          <pb n="38"/>
           <item xml:id="SMPO-AB_rs_1419"><rs><hi rend="sc">Obert</hi> de Gérocourt</rs>, <ref n="137" target="#SMPO-AB_0133">137</ref>.</item>
           <item xml:id="SMPO-AB_rs_1420"><rs><hi rend="sc">Obert</hi> Goheu</rs>, <ref n="42" target="#SMPO-AB_0046">42</ref>.</item>
           <item xml:id="SMPO-AB_rs_1421"><rs><hi rend="sc">Obert</hi>, curé d'Haravilliers</rs>, <ref n="154" target="#SMPO-AB_0196">154</ref>, <ref n="155" target="#SMPO-AB_0197">155</ref>.</item>
@@ -19019,7 +18990,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_R">
           <head>R</head>
-          <pb n="39"/>
           <item xml:id="SMPO-AB_rs_1432"><rs><hi rend="sc">Roger</hi>, doyen de Beauvais</rs>, <ref n="62" target="#SMPO-AB_0063">62</ref>.</item>
           <item xml:id="SMPO-AB_rs_1433"><rs><hi rend="sc">Roger</hi>, fils d'Erembert</rs>, <ref n="25" target="#SMPO-AB_0028">25</ref>.</item>
           <item xml:id="SMPO-AB_rs_1434"><rs><hi rend="sc">Roger</hi> le Maçon</rs>, <ref n="65" target="#SMPO-AB_0113">65</ref>.</item>
@@ -19076,7 +19046,6 @@
           <item xml:id="SMPO-AB_rs_1476"><rs><hi rend="sc">Saint-Symphorien</hi> (Abbaye de</rs>, <ref n="62" target="#SMPO-AB_0063">62</ref>.</item>
           <item xml:id="SMPO-AB_rs_1477"><rs><hi rend="sc">Saint-Taurin</hi> d'Evreux (Abbaye de</rs>, <ref n="51" target="#SMPO-AB_0056">51</ref>, <ref n="484">484</ref>.</item>
           <item xml:id="SMPO-AB_rs_1478"><rs><hi rend="sc">Saint-Victor</hi> de Paris (Abbaye de</rs>, <ref n="131" target="#SMPO-AB_0161">131</ref>, <ref n="481" target="#SMPO-AB_102b">481</ref>.</item>
-          <pb n="40"/>
           <item xml:id="SMPO-AB_rs_1479"><rs><hi rend="sc">Sanctissima</hi>, mère d'Eufémie, femme de Gibert de SaintDenis</rs>, <ref n="36" target="#SMPO-AB_0041">36</ref>.</item>
           <item xml:id="SMPO-AB_rs_1480"><rs><hi rend="sc">Sanglier</hi></rs>, <ref n="123">123</ref>.</item>
           <item xml:id="SMPO-AB_rs_1481"><rs><hi rend="sc">Sans-Barbe</hi></rs>, <ref n="120" target="#SMPO-AB_0154">120</ref>.</item>
@@ -19125,7 +19094,6 @@
           <item xml:id="SMPO-AB_rs_1521"><rs><hi rend="sc">Thibaud</hi> de Chars</rs>, <ref n="71" target="#SMPO-AB_0093">71</ref>, <ref n="102" target="#SMPO-AB_0127">102</ref>.</item>
           <item xml:id="SMPO-AB_rs_1522"><rs><hi rend="sc">Thibaud</hi>, prévôt de Chars</rs>, <ref n="123" target="#SMPO-AB_0157">123</ref>, <ref n="157" target="#SMPO-AB_0200">157</ref>.</item>
           <item xml:id="SMPO-AB_rs_1523"><rs><hi rend="sc">Thibaud</hi> le Clerc</rs>, <ref n="142" target="#SMPO-AB_0179">142</ref>.</item>
-          <pb n="41"/>
           <item xml:id="SMPO-AB_rs_1524"><rs><hi rend="sc">Thibaud</hi> de Conflans</rs><!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_1525"><rs><hi rend="sc">Thibaud</hi> de Corbei</rs>, <ref n="1" target="#SMPO-AB_20b">1</ref>, <ref n="90" target="#SMPO-AB_0115">90</ref>.</item>
           <item xml:id="SMPO-AB_rs_1526"><rs><hi rend="sc">Thibaud</hi>, évêque de Senlis</rs>, <ref n="102" target="#SMPO-AB_0128">102</ref>.</item>
@@ -19209,7 +19177,6 @@
           <head>B</head>
           <item xml:id="SMPO-AB_rs_1591"><rs><hi rend="sc">Bachaumont</hi> (La Villetertre) (Oise)</rs> <hi rend="i">Bacelmont</hi>. <ref n="83">83</ref>.</item>
           <item xml:id="SMPO-AB_rs_1592"><rs><hi rend="sc">Bachivillers</hi> (Oise)</rs> <hi rend="i">Bechinvillier</hi>. <ref n="100">100</ref>.</item>
-          <pb n="44"/>
           <item xml:id="SMPO-AB_rs_1593"><rs><hi rend="sc">Bailleul</hi> (aujourd'hui Fosseuse) (Oise)</rs> <hi rend="i">Ballolium, BailIolum</hi>. <ref n="31">31</ref>, <ref n="67">67</ref>, <ref n="112">112</ref>, <ref n="130">130</ref>.</item>
           <item xml:id="SMPO-AB_rs_1594"><rs><hi rend="sc">Banthelu</hi> (Val-d'Oise)</rs> <hi rend="i">Banterlu, Banterlutus, Bantellutus, Banteleutus, Banterliu, Bantellu</hi>. <ref n="8">8</ref>, <ref n="35">35</ref>, <ref n="43">43</ref>, <ref n="44">44</ref>, <ref n="57">57</ref>, <ref n="58">58</ref>, <ref n="62">62</ref>, <ref n="72">72</ref>, <ref n="74">74</ref>, <ref n="78">78</ref>, <ref n="82">82</ref>, <ref n="93">93</ref>, <ref n="95">95</ref>, <ref n="110">110</ref>, <ref n="126">126</ref>, <ref n="136">136</ref>, <ref n="137">137</ref>, <ref n="144">144</ref>, <ref n="155">155</ref>, <ref n="169">169</ref>.</item>
           <item xml:id="SMPO-AB_rs_1595"><rs><hi rend="sc">Bazancourt</hi> (Cormeilles-en-Vexin) (Val-d'Oise)</rs> <hi rend="i">Basincourt, Basincort</hi>. <ref n="18">18</ref>, <ref n="22">22</ref>, <ref n="73">73</ref>, <ref n="78">78</ref>.</item>
@@ -19241,7 +19208,6 @@
           <item xml:id="SMPO-AB_rs_1621"><rs><hi rend="sc">Boubiers</hi> (Oise)</rs> <hi rend="i">Bobers</hi>. <ref n="93">93</ref>.</item>
           <item xml:id="SMPO-AB_rs_1622"><rs><hi rend="sc">Bouconvillers</hi> (Oise)</rs> <hi rend="i">Bochinviller, Bocunvilerius, Boconviler</hi>. <ref n="23">23</ref>, <ref n="25">25</ref>, <ref n="83">83</ref>, <ref n="104">104</ref>, <ref n="165">165</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1623"><rs><hi rend="sc">Bourg-Saint-Martin</hi> (Pontoise) (Val-d'Oise)</rs> <hi rend="i">Burgus Beati Martini</hi>. <ref n="97">97</ref>, <ref n="116">116</ref>.</item>
-          <pb n="45"/>
           <item xml:id="SMPO-AB_rs_1624"><rs><hi rend="sc">Boury</hi> (Oise)</rs> <hi rend="i">Burricius, Bourris, Bourritus, Borriz,</hi>. <!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_1625"><rs><hi rend="sc">B</hi> uri</rs> <ref n="74">74</ref>, <ref n="95">95</ref>, <ref n="106">106</ref>, <ref n="127">127</ref>, <ref n="128">128</ref>, <ref n="480">480</ref>.</item>
           <item xml:id="SMPO-AB_rs_1626"><rs><hi rend="sc">Boutencourt</hi> (Oise)</rs> <hi rend="i">Butincurl, Butincourt</hi>. <ref n="6">6</ref>, <ref n="7">7</ref>, <ref n="21">21</ref>.</item>
@@ -19277,7 +19243,6 @@
           <item xml:id="SMPO-AB_rs_1653"><rs><hi rend="sc">Chauvry</hi> (Oise)</rs> <hi rend="i">Calferiacus</hi>. <ref n="480">480</ref>.</item>
           <item xml:id="SMPO-AB_rs_1654"><rs><hi rend="sc">Chavençon</hi> (Neuville-Bosc) (Oise)</rs> <hi rend="i">Cavenzon</hi>. <ref n="2">2</ref>.</item>
           <item xml:id="SMPO-AB_rs_1655"><rs><hi rend="sc">Chelles</hi> (Seine-et-Marne)</rs> <hi rend="i">Kala, Chela</hi>. <ref n="92">92</ref>, <ref n="125">125</ref>, <ref n="481">481</ref>.</item>
-          <pb n="46"/>
           <item xml:id="SMPO-AB_rs_1656"><rs><hi rend="sc">Chennevières</hi> (Val-d'Oise)</rs> <hi rend="i">Canaveriae</hi>. <ref n="158">158</ref>.</item>
           <item xml:id="SMPO-AB_rs_1657"><rs><hi rend="sc">Cherbourg</hi> (Manche)</rs> <hi rend="i">Cesarisburgus</hi>. <ref n="160">160</ref>.</item>
           <item xml:id="SMPO-AB_rs_1658"><rs><hi rend="sc">Chevru</hi> (Seine-et-Marne)</rs> <hi rend="i">Cebruus</hi>. <ref n="24">24</ref>, <ref n="128">128</ref>, <ref n="482">482</ref>.</item>
@@ -19318,7 +19283,6 @@
           <item xml:id="SMPO-AB_rs_1690"><rs><hi rend="sc">Deluge (Le)</hi> (Oise)</rs> <hi rend="i">Delage</hi>. <ref n="102">102</ref>.</item>
           <item xml:id="SMPO-AB_rs_1691"><rs><hi rend="sc">Deuil-La-Barre</hi> (Val-d'Oise)</rs> <hi rend="i">Duogilus</hi>. <ref n="40">40</ref>.</item>
           <item xml:id="SMPO-AB_rs_1692"><rs><hi rend="sc">Draveil</hi> (Essonne)</rs> <hi rend="i">Dravelae II</hi>. <!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
-          <pb n="47"/>
           <item xml:id="SMPO-AB_rs_1693"><rs><hi rend="sc">Domont</hi> (Val-d'Oise)</rs> <hi rend="i">Doemount</hi>. <!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
           <item xml:id="SMPO-AB_rs_1694"><rs><hi rend="sc">Drocourt</hi> (Yvelines)</rs> <hi rend="i">Droolcurth, Droencort, Droocurth</hi>. <ref n="118">118</ref>, <ref n="136">136</ref>, <ref n="141">141</ref>.</item>
         </list>
@@ -19363,7 +19327,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_geo_G">
           <head>G</head>
-          <pb n="48"/>
           <item xml:id="SMPO-AB_rs_1728"><rs><hi rend="sc">Gaillon</hi> (Yvelines)</rs> <hi rend="i">Wallonius, Walo</hi>. <ref n="63">63</ref>, <ref n="71">71</ref>, <ref n="83">83</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1729"><rs><hi rend="sc">Gallardon</hi> (Eure-et-Loir)</rs> <hi rend="i">Galardo</hi>. <ref n="50">50</ref>, <ref n="109">109</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1730"><rs><hi rend="sc">Gandicourt</hi> (Belle-Eglise) (Oise)</rs> <hi rend="i">Gundelcuria</hi>. <ref n="31">31</ref>, <ref n="62">62</ref>, <ref n="79">79</ref>.</item>
@@ -19400,7 +19363,6 @@
           <item xml:id="SMPO-AB_rs_1758"><rs><hi rend="sc">Hedouville</hi> (Val-d'Oise)</rs> <hi rend="i">Heduvilla</hi>. <ref n="102">102</ref>.</item>
           <item xml:id="SMPO-AB_rs_1759"><rs><hi rend="sc">Henonville</hi> (Oise)</rs> <hi rend="i">Hainovilla, Hainouvilla</hi>. <ref n="97">97</ref>, <ref n="125">125</ref>, <ref n="154">154</ref>.</item>
           <item xml:id="SMPO-AB_rs_1760"><rs><hi rend="sc">Hermes</hi> (Oise)</rs> <hi rend="i">Harmae</hi>. <ref n="124">124</ref>.</item>
-          <pb n="49"/>
           <item xml:id="SMPO-AB_rs_1761"><rs><hi rend="sc">Herouville</hi> (Val-d'Oise)</rs> <hi rend="i">Herulvilla, Heruvilla, Herolvilla, Herovilla</hi>. <ref n="2">2</ref>, <ref n="9">9</ref>, <ref n="17">17</ref>, <ref n="192">192</ref>, <ref n="7">7</ref>, <ref n="28">28</ref>, <ref n="64">64</ref>, <ref n="74">74</ref>, <ref n="118">118</ref>, <ref n="121">121</ref>, <ref n="128">128</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1762"><rs><hi rend="sc">Houssoye (La-)</hi> (Oise)</rs> <hi rend="i">HalÎetus, Hulsetus</hi>. <ref n="23">23</ref>, <ref n="72">72</ref>.</item>
         </list>
@@ -19444,7 +19406,6 @@
           <item xml:id="SMPO-AB_rs_1786"><rs><hi rend="sc">Livry-Gargan</hi> (Seine-Saint-Denis)</rs> <hi rend="i">Livriacus</hi>. <ref n="484">484</ref>.</item>
           <item xml:id="SMPO-AB_rs_1787"><rs><hi rend="sc">Loconville</hi> (Oise)</rs> <hi rend="i">Locunvilla, Lonconvilla, Loncunvilla</hi>. <ref n="118">118</ref>, <ref n="141">141</ref>, <ref n="154">154</ref>, <ref n="155">155</ref>.</item>
           <item xml:id="SMPO-AB_rs_1788"><rs><hi rend="sc">Loges (Les-)</hi> (Saint-Germain-en-Laye) (Yvelines)</rs> <hi rend="i">Lobiae, Logiae, Logius</hi>. <ref n="62">62</ref>, <ref n="85">85</ref>, <ref n="86">86</ref>, <ref n="102">102</ref>.</item>
-          <pb n="50"/>
           <item xml:id="SMPO-AB_rs_1789"><rs><hi rend="sc">Longuesse</hi> (Val-d'Oise)</rs> <hi rend="i">Longhessa, Longuessa, Longa Essa</hi>. <ref n="93">93</ref>, <ref n="151">151</ref>.</item>
           <item xml:id="SMPO-AB_rs_1790"><rs><hi rend="sc">Lormaison</hi> (Oise)</rs> <hi rend="i">Lupidomus, Leurmaisons</hi>. <ref n="64">64</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1791"><rs><hi rend="sc">Loudun</hi> (Vienne)</rs> <hi rend="i">Laudanum</hi>. <ref n="483">483</ref>.</item>
@@ -19480,7 +19441,6 @@
           <item xml:id="SMPO-AB_rs_1818"><rs><hi rend="sc">Meulan</hi> (Yvelines)</rs> <hi rend="i">Mellentus, Mellantus</hi>. <ref n="40">40</ref>, <ref n="71">71</ref>, <ref n="89">89</ref>, <ref n="91">91</ref>, <ref n="121">121</ref>, <ref n="123">123</ref>, <ref n="124">124</ref>, <ref n="143">143</ref>.</item>
           <item xml:id="SMPO-AB_rs_1819"><rs><hi rend="sc">Mézières</hi> (Vallangoujard) (Val-d'Oise)</rs> <hi rend="i">Mascheria, ceriae</hi>. <ref n="78">78</ref>, <ref n="113">113</ref>.</item>
           <item xml:id="SMPO-AB_rs_1820"><rs><hi rend="sc">Molesme</hi> (Côte-d'Or)</rs> <hi rend="i">Molismus</hi>. <ref n="482">482</ref>.</item>
-          <pb n="51"/>
           <item xml:id="SMPO-AB_rs_1821"><rs><hi rend="sc">Moncelles</hi> (Taverny) (Val-d'OiSe)</rs> <hi rend="i">Moncellae, Monticellae</hi>. <ref n="56">56</ref>, <ref n="58">58</ref>, <ref n="60">60</ref>, <ref n="70">70</ref>, <ref n="107">107</ref>, <ref n="113">113</ref>.</item>
           <item xml:id="SMPO-AB_rs_1822"><rs><hi rend="sc">Montchauvet</hi> (Yvelines)</rs> <hi rend="i">Monchauvet</hi>. <ref n="119">119</ref>.</item>
           <item xml:id="SMPO-AB_rs_1823"><rs><hi rend="sc">Montchavert</hi> (Neuilly-en-Thelle) (Oise)</rs> <hi rend="i">Mons Calvaris</hi>. <ref n="129">129</ref>.</item>
@@ -19523,7 +19483,6 @@
         </list>
         <list type="index" xml:id="SMPO-AB_liste_geo_O">
           <head>O</head>
-          <pb n="52"/>
           <item xml:id="SMPO-AB_rs_1857"><rs><hi rend="sc">Orgemont</hi></rs> <ref n="480">480</ref>.</item>
           <item xml:id="SMPO-AB_rs_1858"><rs><hi rend="sc">Orgeval</hi> (Yvelines)</rs> <hi rend="i">Orgesvals, Orqivalle</hi>. <ref n="99">99</ref>, <ref n="157">157</ref>.</item>
           <item xml:id="SMPO-AB_rs_1859"><rs><hi rend="sc">Osny</hi> (Val-d'Oise)</rs> <hi rend="i">Œniacus, (Eni, (Enius, Oeneius,</hi>. <!-- lecture incertaine : aucun renvoi numérique reconnu --></item>
@@ -19563,7 +19522,6 @@
           <item xml:id="SMPO-AB_rs_1887"><rs><hi rend="sc">Roman</hi> (Eure)</rs> <hi rend="i">Rouman</hi>. <ref n="55">55</ref>.</item>
           <item xml:id="SMPO-AB_rs_1888"><rs><hi rend="sc">Romesnil</hi> (Villetertre) (Oise)</rs> <hi rend="i">Rufus Mesnilius</hi>. <ref n="28">28</ref>.</item>
           <item xml:id="SMPO-AB_rs_1889"><rs><hi rend="sc">Ronquerolles</hi> (Val-d'Oise)</rs> <hi rend="i">Ronkerolae, Roncherollae, Ronquerollae, Runcherolae, Ronqueroliae</hi>. <ref n="44">44</ref>, <ref n="48">48</ref>, <ref n="65">65</ref>, <ref n="76">76</ref>, <ref n="100">100</ref>, <ref n="107">107</ref>, <ref n="123">123</ref>, <ref n="128">128</ref>, <ref n="150">150</ref>, <ref n="169">169</ref>, <ref n="479">479</ref>.</item>
-          <pb n="53"/>
           <item xml:id="SMPO-AB_rs_1890"><rs><hi rend="sc">Rosnel (Le)</hi> (Bréançon) (Val-d'Oise)</rs> <hi rend="i">Rotnel, Ronellus, Rotnellus, Roqne</hi>. <ref n="1">1</ref>, <ref n="6">6</ref>, <ref n="16">16</ref>, <ref n="27">27</ref>, <ref n="57">57</ref>, <ref n="67">67</ref>, <ref n="72">72</ref>, <ref n="78">78</ref>, <ref n="95">95</ref>, <ref n="110">110</ref>, <ref n="127">127</ref>, <ref n="479">479</ref>.</item>
           <item xml:id="SMPO-AB_rs_1891"><rs><hi rend="sc">Roucy</hi></rs> <ref n="12">12</ref>.</item>
           <item xml:id="SMPO-AB_rs_1892"><rs><hi rend="sc">Rouen</hi> (Seine-Maritime)</rs> <hi rend="i">Rothomgensis, Rothoman</hi>. <ref n="58">58</ref>, <ref n="66">66</ref>, <ref n="73">73</ref>, <ref n="74">74</ref>, <ref n="95">95</ref>, <ref n="98">98</ref>, <ref n="102">102</ref>, <ref n="106">106</ref>, <ref n="115">115</ref>, <ref n="131">131</ref>, <ref n="132">132</ref>, <ref n="484">484</ref>.</item>
@@ -19602,7 +19560,6 @@
           <item xml:id="SMPO-AB_rs_1922"><rs><hi rend="sc">Senots</hi> (Oise)</rs> <hi rend="i">Senooz</hi>. <ref n="93">93</ref>.</item>
           <item xml:id="SMPO-AB_rs_1923"><rs><hi rend="sc">Serans</hi> (Oise)</rs> <hi rend="i">Serrans, Serrannus, Cerons</hi>. <ref n="59">59</ref>, <ref n="110">110</ref>, <ref n="123">123</ref>.</item>
           <item xml:id="SMPO-AB_rs_1924"><rs><hi rend="sc">Serifontaine</hi> (Oise)</rs> <hi rend="i">Serifons</hi>. <ref n="95">95</ref>.</item>
-          <pb n="54"/>
           <item xml:id="SMPO-AB_rs_1925"><rs><hi rend="sc">Silly</hi> (Oise</rs> <ref n="480">480</ref>.</item>
           <item xml:id="SMPO-AB_rs_1926"><rs><hi rend="sc">Sognolles</hi> (Méry-sur-Oise) (Val-d'Oise)</rs> <hi rend="i">Zoognoles</hi>. <ref n="130">130</ref>.</item>
           <item xml:id="SMPO-AB_rs_1927"><rs><hi rend="sc">Soissons</hi> (Aisne)</rs> <hi rend="i">Suessioneusis</hi>. <ref n="169">169</ref>.</item>
@@ -19647,7 +19604,6 @@
           <item xml:id="SMPO-AB_rs_1957"><rs><hi rend="sc">Villetaneuse</hi> (Seine-Saint-Denis)</rs> <hi rend="i">Villatinosa</hi>. <ref n="40">40</ref>.</item>
           <item xml:id="SMPO-AB_rs_1958"><rs><hi rend="sc">Ville-Saint-Martin</hi> (Pontoise) (Val-d'Oise)</rs> <hi rend="i">Villa Sti Martini</hi>. <ref n="126">126</ref>, <ref n="147">147</ref>.</item>
           <item xml:id="SMPO-AB_rs_1959"><rs><hi rend="sc">Villette</hi> (Yvelines)</rs> <hi rend="i">Villetus, Villula</hi>. <ref n="8">8</ref>, <ref n="96">96</ref>.</item>
-          <pb n="55"/>
           <item xml:id="SMPO-AB_rs_1960"><rs><hi rend="sc">Villiers-Adam</hi> (Val-d'Oise)</rs> <hi rend="i">Villei</hi>. <ref n="23">23</ref>.</item>
           <item xml:id="SMPO-AB_rs_1961"><rs><hi rend="sc">Vineseuil</hi> (Chambly) (Oise)</rs> <hi rend="i">Vindezolius, Windoceolus, Vasquiniolae, Visnecellus</hi>. <ref n="31">31</ref>, <ref n="40">40</ref>, <ref n="63">63</ref>, <ref n="79">79</ref>.</item>
           <item xml:id="SMPO-AB_rs_1962"><rs><hi rend="sc">Voulangis</hi> (Seine-et-Marne)</rs> <hi rend="i">Volengiacus</hi>. <ref n="12">12</ref>.</item>

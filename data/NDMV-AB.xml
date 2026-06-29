@@ -92,11 +92,11 @@
           effectués par Jean-Charles Martin et Gautier Poupeau.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
+            <citeStructure unit="sous-partie" match="div[@type]" use="default">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
