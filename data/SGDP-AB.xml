@@ -58,13 +58,13 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div" use="dots">
+          <citeStructure unit="partie" match="div" use="default">
             <citeData property="dct:title" use="head[1]"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]" use="dots">
+        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -72,7 +72,7 @@
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-          <citeStructure unit="sous-section" match="group" use="dots">
+          <citeStructure unit="sous-section" match="group" use="default">
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -80,9 +80,9 @@
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
             <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-            <citeStructure unit="sous-section" match="group" use="dots">
+            <citeStructure unit="sous-section" match="group" use="default">
               <citeData property="dct:title" use="head[1]"/>
-              <citeStructure unit="sous-section" match="group" use="dots">
+              <citeStructure unit="sous-section" match="group" use="default">
                 <citeData property="dct:title" use="head[1]"/>
                 <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                   <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>

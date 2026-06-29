@@ -112,11 +112,11 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeStructure unit="sous-partie" match="div" use="default">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -129,7 +129,7 @@
         <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="@xml:id">
+          <citeStructure match="list[@type='index']" use="dots">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>
@@ -4824,7 +4824,7 @@
           <!--<item xml:id="SMPA-EG_rs_0074"><rs><hi rend="sc">Ameline de Rosay</hi></rs>, <ref>171</ref>, <ref>220</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0075"><rs><hi rend="sc">Amicia</hi>, abbatissa Sancti Antonii</rs>, <ref target="#SMPA-EG_0022" n="128">22</ref>, <ref target="#SMPA-EG_0033" n="140">33</ref>, <ref target="#SMPA-EG_0039" n="144">39</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_0076"><rs><hi rend="sc">Amiens (Adam d')</hi></rs>, <ref>174</ref>, <ref>198</ref>, <ref>227</ref>, <ref>235</ref>, <ref>242</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_0077"><pb n="250"/><rs><hi rend="sc"> Ancel Bonnefille</hi></rs>, <ref>204</ref>.</item>-->
+          <!--<item xml:id="SMPA-EG_rs_0077"><rs><hi rend="sc"> Ancel Bonnefille</hi></rs>, <ref>204</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0078"><rs><hi rend="sc">Ancel de Bussy</hi></rs>, <ref target="#SMPA-EG_0058" n="167">58</ref><!--, <ref>168</ref>-->.</item>
           <!--<item xml:id="SMPA-EG_rs_0079"><rs><hi rend="sc">Ancel de Morgneval</hi></rs>, <ref>179</ref>, <ref>186</ref>, <ref>207</ref>, <ref>229</ref>, <ref>237</ref>, <ref>244</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0080"><rs><hi rend="sc">Ancelet de la Halle</hi></rs>, <ref>192</ref>, <ref>198</ref>, <ref>225</ref>, <ref>234</ref>, <ref>241</ref>.</item>-->
@@ -4932,7 +4932,7 @@
           <!--<item xml:id="SMPA-EG_rs_0179"><rs><hi rend="sc">Barate (Lancelot)</hi></rs>, <ref>198</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0180"><rs><hi rend="sc">Barbe (Elisabeth)</hi></rs>, <ref target="#SMPA-EG_0029" n="135">29</ref>. <!-- doublon meme acte SMPA-EG_0029: <ref target="#SMPA-EG_0029" n="136">29</ref> --></item>
           <item xml:id="SMPA-EG_rs_0181"><rs><hi rend="sc">Barbe (Hugo)</hi></rs>, <ref target="#SMPA-EG_0029" n="135">29</ref>.</item>
-          <item xml:id="SMPA-EG_rs_0182"><pb n="251"/>
+          <item xml:id="SMPA-EG_rs_0182">
  <rs><hi rend="sc">Barbe (Richardus)</hi></rs>, <ref target="#SMPA-EG_0029" n="136">29</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_0183"><rs><hi rend="sc">Barbette (Denise)</hi></rs>, <ref>193</ref>, <ref>195</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0184"><rs><hi rend="sc">Barbette (Johannes)</hi></rs>, <ref target="#SMPA-EG_0057" n="166">57</ref>.</item>
@@ -5043,7 +5043,7 @@
           <!--<item xml:id="SMPA-EG_rs_0289"><rs><hi rend="sc">Boucel (Jacquet)</hi></rs>, <ref>214</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0290"><rs><hi rend="sc">Boucel (Marguerite)</hi></rs>, <ref>212</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0291"><rs><hi rend="sc">Boucel (Thomas)</hi></rs>, <ref target="#SMPA-EG_0001" n="106">1</ref>.</item>
-          <item xml:id="SMPA-EG_rs_0292"><pb n="252"/>
+          <item xml:id="SMPA-EG_rs_0292">
  <rs><hi rend="sc">Boucelli (Guarinus)</hi></rs>, <ref target="#SMPA-EG_0002" n="107">2</ref>, <ref target="#SMPA-EG_0014" n="120">14</ref><!--, <ref>192</ref>-->.</item>
           <item xml:id="SMPA-EG_rs_0293"><rs><hi rend="sc">Boucelli (Robertus)</hi></rs>, <ref target="#SMPA-EG_0002" n="107">2</ref>.</item>
           <item xml:id="SMPA-EG_rs_0294"><rs><hi rend="sc">Boucelli (Stephanus)</hi></rs>, <ref target="#SMPA-EG_0014" n="120">14</ref>, <ref target="#SMPA-EG_0056" n="165">56</ref>.</item>
@@ -5158,7 +5158,7 @@
           <!--<item xml:id="SMPA-EG_rs_0400"><rs><hi rend="sc">Cleville (G. de)</hi></rs>, <ref>194</ref>, <ref>207</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0401"><rs><hi rend="sc">Clichy (chemin de)</hi></rs>, <ref>221</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0402"><rs><hi rend="sc">Cloistre (Etienne du)</hi></rs>, <ref>248</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_0403"><pb n="253"/>
+          <!--<item xml:id="SMPA-EG_rs_0403">
  <rs><hi rend="sc">Cloître Saint-Merry</hi></rs>, <ref>171</ref>, <ref>172</ref>, <ref>183</ref>, <ref>191</ref>, <ref>192</ref>, <ref>193</ref>, <ref>194</ref>, <ref>209</ref>, <ref>211</ref>, <ref>215</ref>, <ref>223</ref>, <ref>225</ref>, <ref>231</ref>, <ref>234</ref>, <ref>239</ref>, <ref>241</ref>, <ref>242</ref>, <ref>248</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0404"><rs><hi rend="sc">Colin Daube</hi></rs>, <ref>215</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0405"><rs><hi rend="sc">Colin le Bègue</hi></rs>, <ref>243</ref>.</item>-->
@@ -5259,7 +5259,7 @@
           <!--<item xml:id="SMPA-EG_rs_0497"><rs><hi rend="sc">Dupin (Jean)</hi></rs>, <ref>214</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0498"><rs><hi rend="sc">Du Presseur</hi>, ou Pressoeur (Henri)</rs>, <ref>174</ref>, <ref>182</ref>, <ref>187</ref>, <ref>231</ref>, <ref>239</ref>, <ref>246</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0499"><rs><hi rend="sc">Durandus</hi>, canonicus Sancti Mederici</rs>, <ref target="#SMPA-EG_0010" n="116">10</ref>.</item>
-          <item xml:id="SMPA-EG_rs_0500"><pb n="254"/>
+          <item xml:id="SMPA-EG_rs_0500">
  <rs><hi rend="sc">Durandus</hi>, presbyter</rs><!--, <ref>117</ref>-->, <ref target="#SMPA-EG_0056" n="164">56</ref>.</item>
           <item xml:id="SMPA-EG_rs_0501"><rs><hi rend="sc">Durandus Poncherus</hi></rs>, <ref target="#SMPA-EG_0050" n="154">50</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_0502"><rs><hi rend="sc">Du Tertre (J.)</hi></rs>, <ref>225</ref>.</item>-->
@@ -5367,7 +5367,7 @@
           <!--<item xml:id="SMPA-EG_rs_0598"><rs><hi rend="sc">Forges (Jean de)</hi></rs>, <ref>206</ref>, <ref>227</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0599"><rs><hi rend="sc">Fossez (Jean de)</hi></rs>, <ref>193</ref>, <ref>196</ref>, <ref>200</ref>, <ref>205</ref>, <ref>206</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0600"><rs><hi rend="sc">Four des Arsis</hi></rs>, <ref>180</ref>, <ref>186</ref>, <ref>212</ref>, <ref>230</ref>, <ref>238</ref>, <ref>245</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_0601"><pb n="255"/>
+          <!--<item xml:id="SMPA-EG_rs_0601">
  <rs><hi rend="sc">Four des Horges</hi></rs>, <ref>195</ref>, <ref>196</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0602"><rs><hi rend="sc">Four de Livry</hi></rs>, <ref target="#SMPA-EG_0025" n="131">25</ref>, <!-- doublon meme acte SMPA-EG_0025: <ref target="#SMPA-EG_0025" n="132">25</ref> --> <ref target="#SMPA-EG_0027" n="133">27</ref>.</item>
           <item xml:id="SMPA-EG_rs_0603"><rs><hi rend="sc">Four du Temple</hi></rs>, <ref target="#SMPA-EG_0009" n="115">9</ref>, <ref target="#SMPA-EG_0057" n="165">57</ref>.</item>
@@ -5478,7 +5478,7 @@
           <item xml:id="SMPA-EG_rs_0705"><rs><hi rend="sc">Grand-Pont</hi></rs>, <ref target="#SMPA-EG_0058" n="167">58</ref><!--, <ref>214</ref>--><!--, <ref>216</ref>-->.</item>
           <!--<item xml:id="SMPA-EG_rs_0706"><rs><hi rend="sc">Grand-Pont (changeur sur)</hi></rs>, <ref>177</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0707"><rs><hi rend="sc">Grand-Pont (moulin sous)</hi></rs>, <ref>182</ref>, <ref>187</ref>, <ref>223</ref>, <ref>231</ref>, <ref>239</ref>, <ref>240</ref>, <ref>247</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_0708"><pb n="256"/>
+          <!--<item xml:id="SMPA-EG_rs_0708">
  <rs><hi rend="sc">Grand-Pont (ouvroir sur)</hi></rs>, <ref>187</ref>, <ref>231</ref>, <ref>239</ref>, <ref>246</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0709"><rs><hi rend="sc">Grande Rue Saint-Denis</hi></rs>, <ref>214</ref>, <ref>230</ref>, <ref>232</ref>, <ref>239</ref>, <ref>246</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0710"><rs><hi rend="sc">Grande Rue Saint-Merry</hi></rs>, <ref>209</ref>, <ref>212</ref>.</item>-->
@@ -5582,7 +5582,7 @@
           <!--<item xml:id="SMPA-EG_rs_0808"><rs><hi rend="sc">Guillelmus Cementarii</hi></rs>, <ref>130</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0809"><rs><hi rend="sc">Guillelmus Drocaus</hi></rs>, <ref>231</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_0810"><rs><hi rend="sc">Guillelmus Esaiacos</hi></rs>, <ref target="#SMPA-EG_0031" n="137">31</ref>.</item>
-          <item xml:id="SMPA-EG_rs_0811"><pb n="257"/>
+          <item xml:id="SMPA-EG_rs_0811">
  <rs><hi rend="sc">Guillelmus de Grisiaco</hi></rs>, <ref target="#SMPA-EG_0005" n="111">5</ref>.</item>
           <item xml:id="SMPA-EG_rs_0812"><rs><hi rend="sc">Guillelmus de Meldis</hi></rs>, <ref target="#SMPA-EG_0009" n="114">9</ref>, <!-- doublon meme acte SMPA-EG_0009: <ref target="#SMPA-EG_0009" n="115">9</ref> --> <!-- doublon meme acte SMPA-EG_0009: <ref target="#SMPA-EG_0009" n="116">9</ref> --> <!-- doublon meme acte SMPA-EG_0009: <ref target="#SMPA-EG_0009" n="119">9</ref> --> <ref target="#SMPA-EG_0056" n="164">56</ref>.</item>
           <item xml:id="SMPA-EG_rs_0813"><rs><hi rend="sc">Guillelmus Rotondi</hi></rs>, <ref target="#SMPA-EG_0054" n="160">54</ref>.</item>
@@ -5685,7 +5685,7 @@
         <list type="index" xml:id="SMPA-EG_liste_I">
           <head>I</head>
           <item xml:id="SMPA-EG_rs_0906"><rs><hi rend="sc">Injorannus Ferperius</hi></rs>, <ref target="#SMPA-EG_0055" n="160">55</ref>.</item>
-          <!--<item xml:id="SMPA-EG_rs_0907"><pb n="258"/>
+          <!--<item xml:id="SMPA-EG_rs_0907">
  <rs><hi rend="sc">Innocents (fontaine des)</hi></rs>, <ref>181</ref>, <ref>186</ref>, <ref>214</ref>, <ref>230</ref>, <ref>232</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0908"><rs><hi rend="sc">Isabeau du Corneit</hi></rs>, <ref>220</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_0909"><rs><hi rend="sc">Isabeau de Glatigny</hi></rs>, <ref>205</ref>.</item>-->
@@ -5798,7 +5798,7 @@
           <!--<item xml:id="SMPA-EG_rs_1013"><rs><hi rend="sc">Jean le Coc</hi></rs>, <ref>186</ref>, <ref>230</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1014"><rs><hi rend="sc">Jean Lecomte</hi></rs>, <ref>215</ref>, <ref>218</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1015"><rs><hi rend="sc">Jean le Convers</hi></rs>, <ref>216</ref>, <ref>217</ref>, <ref>218</ref>, <ref>240</ref>, <ref>241</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1016"><pb n="259"/>
+          <!--<item xml:id="SMPA-EG_rs_1016">
  <rs><hi rend="sc">Jean le Cordier</hi></rs>, <ref>217</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1017"><rs><hi rend="sc">Jean le Douz</hi></rs>, <ref>219</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1018"><rs><hi rend="sc">Jean le Gales</hi></rs>, <ref>232</ref>, <ref>233</ref>.</item>-->
@@ -5912,7 +5912,7 @@
           </list>
         <list type="index" xml:id="SMPA-EG_liste_K">
           <head>K</head>
-          <item xml:id="SMPA-EG_rs_1126"><pb n="260"/>
+          <item xml:id="SMPA-EG_rs_1126">
  <rs><hi rend="sc">Kala</hi></rs>, Voy. <ref type="see" target="#SMPA-EG_rs_0973" corresp="#SMPA-EG_liste_J">Chelles</ref>.</item>
         </list>
         <list type="index" xml:id="SMPA-EG_liste_L">
@@ -6016,7 +6016,7 @@
           <!--<item xml:id="SMPA-EG_rs_1223"><rs><hi rend="sc">Le Bègue (Guibert)</hi></rs>, <ref>175</ref>, <ref>184</ref>, <ref>228</ref>, <ref>236</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1224"><rs><hi rend="sc">Le Bègue (Jean)</hi></rs>, <ref>210</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1225"><rs><hi rend="sc">Lebel (Charles)</hi></rs>, <ref>201</ref>.</item>-->
-          <item xml:id="SMPA-EG_rs_1226"><pb n="261"/>
+          <item xml:id="SMPA-EG_rs_1226">
  <rs><hi rend="sc">Leber (Agnès)</hi></rs>, <ref target="#SMPA-EG_0003" n="107">3</ref>, <!-- doublon meme acte SMPA-EG_0003: <ref target="#SMPA-EG_0003" n="108">3</ref> --> <ref target="#SMPA-EG_0020" n="126">20</ref>, <ref target="#SMPA-EG_0034" n="141">34</ref>, <ref target="#SMPA-EG_0056" n="164">56</ref>.</item>
           <item xml:id="SMPA-EG_rs_1227"><rs><hi rend="sc">Leber (Pierre)</hi></rs>, <ref target="#SMPA-EG_0003" n="107">3</ref>, <!-- doublon meme acte SMPA-EG_0003: <ref target="#SMPA-EG_0003" n="108">3</ref> --> <ref target="#SMPA-EG_0013" n="120">13</ref>, <ref target="#SMPA-EG_0020" n="126">20</ref>, <ref target="#SMPA-EG_0034" n="141">34</ref>, <ref target="#SMPA-EG_0039" n="144">39</ref>, <!-- doublon meme acte SMPA-EG_0039: <ref target="#SMPA-EG_0039" n="145">39</ref> --> <ref target="#SMPA-EG_0056" n="164">56</ref><!--, <ref>180</ref>--><!--, <ref>210</ref>--><!--, <ref>230</ref>--><!--, <ref>245</ref>-->.</item>
           <!--<item xml:id="SMPA-EG_rs_1228"><rs><hi rend="sc">Le Blont (Jean)</hi></rs>, <ref>195</ref>, <ref>197</ref>.</item>-->
@@ -6120,7 +6120,7 @@
           <!--<item xml:id="SMPA-EG_rs_1326"><rs><hi rend="sc">Le Lombart (Jeannot)</hi></rs>, <ref>219</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1327"><rs><hi rend="sc">Le Lombart (Maruche)</hi></rs>, <ref>197</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1328"><rs><hi rend="sc">Le Long (Jeanne)</hi></rs>, <ref>190</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1329"><pb n="262"/>
+          <!--<item xml:id="SMPA-EG_rs_1329">
  <rs><hi rend="sc">Le Long (Rolin)</hi></rs>, <ref>189</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1330"><rs><hi rend="sc">Le Long (Thomas)</hi></rs>, <ref>188</ref>, <ref>190</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1331"><rs><hi rend="sc">Le Macon (Jean)</hi></rs>, <ref>219</ref>.</item>-->
@@ -6235,7 +6235,7 @@
           <!--<item xml:id="SMPA-EG_rs_1440"><rs><hi rend="sc">L'Orfèvre (Richard)</hi></rs>, <ref>172</ref>, <ref>173</ref>, <ref>176</ref>, <ref>183</ref>, <ref>193</ref>, <ref>194</ref>, <ref>205</ref>, <ref>225</ref>, <ref>235</ref>, <ref>242</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1441"><rs><hi rend="sc">Lorier (Jehannot)</hi></rs>, <ref>188</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1442"><rs><hi rend="sc">Lorier (Macé)</hi></rs>, <ref>188</ref>, <ref>190</ref>, <ref>191</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1443"><pb n="263"/>
+          <!--<item xml:id="SMPA-EG_rs_1443">
  <rs><hi rend="sc">Lot(J. de)</hi></rs>, <ref>231</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_1444"><rs><hi rend="sc">Loubert</hi></rs>, Voy. <ref type="see" target="#SMPA-EG_rs_0592" corresp="#SMPA-EG_liste_F">Fleurance</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_1445"><rs><hi rend="sc">Loubert (Guy)</hi></rs>, <ref>179</ref>, <ref>186</ref>, <ref>244</ref>.</item>-->
@@ -6285,7 +6285,7 @@
           <item xml:id="SMPA-EG_rs_1486"><rs><hi rend="sc">Malcoart</hi>, seu Maucart (clausum de)</rs><!--, <ref>104</ref>-->, <ref target="#SMPA-EG_0001" n="105">1</ref>, <ref target="#SMPA-EG_0014" n="120">14</ref>, <ref target="#SMPA-EG_0056" n="163">56</ref>. <!-- doublon meme acte SMPA-EG_0056: <ref target="#SMPA-EG_0056" n="165">56</ref> --><!--, <ref>217</ref>--></item>
           <!--<item xml:id="SMPA-EG_rs_1487"><rs><hi rend="sc">Mallert (Nicolas)</hi></rs>, <ref>201</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1488"><rs><hi rend="sc">Malpas (Etienne)</hi></rs>, <ref>191</ref>, <ref>210</ref>, <ref>211</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1489"><pb n="264"/>
+          <!--<item xml:id="SMPA-EG_rs_1489">
  <rs><hi rend="sc">Malpas</hi>, ou Maupas (Gilles)</rs>, <ref>192</ref>, <ref>208</ref>, <ref>211</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1490"><rs><hi rend="sc">Malpas (Gilot)</hi></rs>, <ref>191</ref>, <ref>211</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1491"><rs><hi rend="sc">Malpas (Jacqueline)</hi></rs>, <ref>208</ref>.</item>-->
@@ -6450,7 +6450,7 @@
           <!--<item xml:id="SMPA-EG_rs_1647"><rs><hi rend="sc">Nicolas Mallert</hi></rs>, <ref>201</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1648"><rs><hi rend="sc">Nicolas de Meuns</hi></rs>, <ref>200</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1649"><rs><hi rend="sc">Nicolas de Pontoise</hi></rs>, <ref>196</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1650"><pb n="265"/>
+          <!--<item xml:id="SMPA-EG_rs_1650">
  <rs><hi rend="sc">Nicolas de Rosay</hi></rs>, <ref>171</ref>, <ref>183</ref>, <ref>192</ref>, <ref>198</ref>, <ref>220</ref>, <ref>223</ref>, <ref>225</ref>, <ref>234</ref>, <ref>241</ref>, <ref>248</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1651"><rs><hi rend="sc">Nicolas Sance</hi></rs>, <ref>214</ref>, <ref>215</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1652"><rs><hi rend="sc">Nicolas de Veires</hi></rs>, <ref>177</ref>, <ref>178</ref>.</item>-->
@@ -6566,7 +6566,7 @@
           <item xml:id="SMPA-EG_rs_1756"><rs><hi rend="sc">Petrus de Latigniaco</hi></rs>, <ref target="#SMPA-EG_0054" n="160">54</ref>, <ref target="#SMPA-EG_0055" n="161">55</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_1757"><rs><hi rend="sc">Petrus de Montevreno</hi></rs>, <ref>213</ref>, <ref>247</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_1758"><rs><hi rend="sc">Petrus de Nemosio</hi></rs>, <ref target="#SMPA-EG_0014" n="120">14</ref><!--, <ref>121</ref>-->.</item>
-          <item xml:id="SMPA-EG_rs_1759"><pb n="266"/>
+          <item xml:id="SMPA-EG_rs_1759">
  <rs><hi rend="sc">Petrus de Tria</hi></rs>, <ref target="#SMPA-EG_0028" n="135">28</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_1760"><rs><hi rend="sc">Petrus de Villa Cerorum</hi></rs>, <ref>206</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1761"><rs><hi rend="sc">Philippe Anquetin</hi></rs>, <ref>208</ref>.</item>-->
@@ -6678,7 +6678,7 @@
           <head>Q</head>
           <!--<item xml:id="SMPA-EG_rs_1865"><rs><hi rend="sc">Quarie</hi></rs>, <ref>215</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1866"><rs><hi rend="sc">Quavelier (Mauger)</hi></rs>, <ref>177</ref>.</item>-->
-          <!--<item xml:id="SMPA-EG_rs_1867"><pb n="267"/>
+          <!--<item xml:id="SMPA-EG_rs_1867">
  <rs><hi rend="sc">Quenel (André)</hi></rs>, <ref>173</ref>, <ref>184</ref>, <ref>195</ref>, <ref>226</ref>, <ref>235</ref>, <ref>242</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1868"><rs><hi rend="sc">Quidonpnaie (Laurent)</hi></rs>, <ref>213</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1869"><rs><hi rend="sc">Quidonpnaie (Simon)</hi></rs>, <ref>212</ref>, <ref>213</ref>.</item>-->
@@ -6788,7 +6788,7 @@
           <item xml:id="SMPA-EG_rs_1970"><rs><hi rend="sc">Robertus Leber</hi></rs>, <ref target="#SMPA-EG_0056" n="164">56</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_1971"><rs><hi rend="sc">Robertus Matricularius</hi></rs>, <ref>117</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_1972"><rs><hi rend="sc">Robertus de Paris</hi></rs>, <ref target="#SMPA-EG_0002" n="106">2</ref>, <ref target="#SMPA-EG_0056" n="163">56</ref>.</item>
-          <!--<item xml:id="SMPA-EG_rs_1973"><pb n="268"/>
+          <!--<item xml:id="SMPA-EG_rs_1973">
  <rs><hi rend="sc">Robertus de Silvanectis</hi></rs>, <ref>158</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1974"><rs><hi rend="sc">Roger du Fruit-le-Roi</hi></rs>, <ref>173</ref>, <ref>196</ref>, <ref>226</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_1975"><rs><hi rend="sc">Roger de la Vasti</hi></rs>, <ref>194</ref>.</item>-->
@@ -6896,7 +6896,7 @@
           <item xml:id="SMPA-EG_rs_2074"><rs><hi rend="sc">Saint-Merry (mairie de)</hi></rs>, <ref target="#SMPA-EG_0055" n="164">55</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_2075"><rs><hi rend="sc">Saint-Merry (grande rue)</hi></rs>, <ref>209</ref>, <ref>212</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2076"><rs><hi rend="sc">Saint-Merry (porte)</hi></rs>, <ref>127</ref>, <ref>173</ref>, <ref>184</ref>, <ref>195</ref>, <ref>225</ref>, <ref>234</ref>, <ref>242</ref>.</item>-->
-          <item xml:id="SMPA-EG_rs_2077"><pb n="269"/><rs><hi rend="sc">Saint-Merry (rue neuve)</hi></rs>, <ref target="#SMPA-EG_0048" n="152">48</ref><!--, <ref>184</ref>--><!--, <ref>196</ref>--><!--, <ref>199</ref>--><!--, <ref>201</ref>--><!--, <ref>204</ref>--><!--, <ref>206</ref>--><!--, <ref>208</ref>-->.</item>
+          <item xml:id="SMPA-EG_rs_2077"><rs><hi rend="sc">Saint-Merry (rue neuve)</hi></rs>, <ref target="#SMPA-EG_0048" n="152">48</ref><!--, <ref>184</ref>--><!--, <ref>196</ref>--><!--, <ref>199</ref>--><!--, <ref>201</ref>--><!--, <ref>204</ref>--><!--, <ref>206</ref>--><!--, <ref>208</ref>-->.</item>
           <!--<item xml:id="SMPA-EG_rs_2078"><rs><hi rend="sc">Saint-Merry (vigne de)</hi></rs>, <ref>217</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2079"><rs><hi rend="sc">Saint-Nicolas-des-Champs</hi></rs>, <ref>218</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2080"><rs><hi rend="sc">Saint-Quentin (Jean de)</hi></rs>, <ref>174</ref>.</item>-->
@@ -6994,7 +6994,7 @@
           <item xml:id="SMPA-EG_rs_2169"><rs><hi rend="sc">Temple</hi></rs>, <ref target="#SMPA-EG_0009" n="115">9</ref><!--, <ref>240</ref>-->.</item>
           <item xml:id="SMPA-EG_rs_2170"><rs><hi rend="sc">Temple</hi></rs>. </item>
           <!--<item xml:id="SMPA-EG_rs_2171"><rs><hi rend="sc">Temple (carrefour du)</hi></rs>, <ref>184</ref>, <ref>196</ref>, <ref>205</ref>, <ref>206</ref>, <ref>227</ref>, <ref>235</ref>, <ref>242</ref>.</item>-->
-          <item xml:id="SMPA-EG_rs_2172"><pb n="270"/><rs><hi rend="sc">Temple (four du)</hi></rs><!--, <ref>115</ref>-->, <ref target="#SMPA-EG_0057" n="165">57</ref>.</item>
+          <item xml:id="SMPA-EG_rs_2172"><rs><hi rend="sc">Temple (four du)</hi></rs><!--, <ref>115</ref>-->, <ref target="#SMPA-EG_0057" n="165">57</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_2173"><rs><hi rend="sc">Temple (rue du)</hi></rs>, <ref>174</ref>, <ref>184</ref>, <ref>203</ref>, <ref>204</ref>, <ref>209</ref>, <ref>227</ref>, <ref>236</ref>, <ref>238</ref>, <ref>243</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2174"><rs><hi rend="sc">Temple (vigne du)</hi></rs>, <ref>216</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_2175"><rs><hi rend="sc">Terra Sancta</hi></rs>, <ref target="#SMPA-EG_0009" n="115">9</ref>.</item>
@@ -7104,7 +7104,7 @@
           <!--<item xml:id="SMPA-EG_rs_2276"><rs><hi rend="sc">Vincent le Cordier</hi></rs>, <ref>148</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2277"><rs><hi rend="sc">Viri (Gace de)</hi></rs>, <ref>231</ref>, <ref>240</ref>.</item>-->
           <item xml:id="SMPA-EG_rs_2278"><rs><hi rend="sc">Vitrearii (Guido)</hi></rs>, <ref target="#SMPA-EG_0002" n="106">2</ref>, <ref target="#SMPA-EG_0056" n="163">56</ref>.</item>
-          <item xml:id="SMPA-EG_rs_2279"><pb n="271"/>
+          <item xml:id="SMPA-EG_rs_2279">
  <rs><hi rend="sc">Vitriaco (Landricus, presbyter de)</hi></rs>, <ref target="#SMPA-EG_0032" n="139">32</ref>.</item>
           <!--<item xml:id="SMPA-EG_rs_2280"><rs><hi rend="sc">Vitry (terroir de)</hi></rs>, <ref>182</ref>.</item>-->
           <!--<item xml:id="SMPA-EG_rs_2281"><rs><hi rend="sc">Vitry (Geoffroy de)</hi></rs>, <ref>210</ref>.</item>-->

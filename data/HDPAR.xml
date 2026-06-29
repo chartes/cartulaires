@@ -98,6 +98,12 @@
           <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
           <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
         </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[@type='index']" use="default">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeStructure match="list[@type='index']" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+          </citeStructure>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -34482,7 +34488,6 @@
         </div>
         <list type="index" xml:id="HDPAR_liste_A">
           <head>A</head>
-          <pb n="565" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$649/canvas"/>
           <!-- Colonne 1 -->
           <item xml:id="HDPAR_rs_0001"><rs><hi rend="sc">A.</hi>, frater Hugonis Clementis, decani Parisiensis</rs>, *<ref n="911">911</ref>.</item>
           <item xml:id="HDPAR_rs_0002"><rs><hi rend="sc">A. de Noereio</hi></rs>, <ref n="84" target="#HDPAR_0084">84</ref>.</item>
@@ -34577,7 +34582,6 @@
           <item xml:id="HDPAR_rs_0089"><rs><hi rend="sc">Adam</hi>, subdiaconus</rs>, <ref n="42" target="#HDPAR_0042">42</ref>.</item>
           <item xml:id="HDPAR_rs_0090"><rs><hi rend="sc">Adam</hi>, tabernarius</rs>, <ref n="2" target="#HDPAR_0002">2</ref>.</item>
           <item xml:id="HDPAR_rs_0091"><rs><hi rend="sc">Adam Anglicus</hi></rs>, <ref n="21" target="#HDPAR_0021">21</ref>.</item>
-          <pb n="566" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$650/canvas"/>
           <!-- Page 566, colonne 1 — suite de la vedette Adam -->
           <item xml:id="HDPAR_rs_0092"><rs><hi rend="sc">Adam Anglicus</hi></rs>, <ref n="902">902</ref>.<!-- distinct de rs_0091 (Adam Anglicus, 21) : homonyme, vedette répétée en tête de page --></item>
           <item xml:id="HDPAR_rs_0093"><rs><hi rend="sc">Adam Anglicus</hi>, cordubanarius</rs>, <ref n="498" target="#HDPAR_0498">498</ref>.</item>
@@ -34697,7 +34701,6 @@
           <item xml:id="HDPAR_rs_0205"><rs><hi rend="sc">Alardus</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0003 #HDPAR_rs_0004" corresp="#HDPAR_liste_A"><hi rend="sc">Aalardus</hi></ref>.</item>
           <item xml:id="HDPAR_rs_0206"><rs><hi rend="sc">Alays</hi>, uxor Renerii de Bosco</rs>, <ref n="261" target="#HDPAR_0261">261</ref>, <ref n="343" target="#HDPAR_0343">343</ref>.</item>
           <item xml:id="HDPAR_rs_0207"><rs><hi rend="sc">Alays</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0005 #HDPAR_rs_0006 #HDPAR_rs_0007 #HDPAR_rs_0008" corresp="#HDPAR_liste_A"><hi rend="sc">Aales</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_0029 #HDPAR_rs_0030 #HDPAR_rs_0031 #HDPAR_rs_0032 #HDPAR_rs_0033 #HDPAR_rs_0034 #HDPAR_rs_0035 #HDPAR_rs_0036 #HDPAR_rs_0037 #HDPAR_rs_0038 #HDPAR_rs_0039 #HDPAR_rs_0040 #HDPAR_rs_0041" corresp="#HDPAR_liste_A"><hi rend="sc">Aalipdis</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_0134" corresp="#HDPAR_liste_A"><hi rend="sc">Adelaidis</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_0144" corresp="#HDPAR_liste_A"><hi rend="sc">Aelesia</hi></ref>, <ref type="see" target="#HDPAR_rs_0147 #HDPAR_rs_0148" corresp="#HDPAR_liste_A"><hi rend="sc">Aelis</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_0242" corresp="#HDPAR_liste_A"><hi rend="sc">Alesia</hi></ref>, <ref type="see" target="#HDPAR_rs_0253" corresp="#HDPAR_liste_A"><hi rend="sc">Alipdis</hi></ref>.</item>
-          <pb n="567" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$651/canvas"/>
           <!-- Page 567, colonne 1 -->
           <item xml:id="HDPAR_rs_0208"><rs><hi rend="sc">Alberea</hi>, uxor Guillelmi, moustarderii</rs>, <ref n="674" target="#HDPAR_0674">674</ref>, <ref n="693" target="#HDPAR_0693">693</ref>, <ref n="706" target="#HDPAR_0706">706</ref>.</item>
           <item xml:id="HDPAR_rs_0209"><rs><hi rend="sc">Alberea</hi>, uxor Nicolai Barberii</rs>, <ref n="760" target="#HDPAR_0760">760</ref>.</item>
@@ -34820,7 +34823,6 @@
           <item xml:id="HDPAR_rs_0324"><rs><hi rend="sc">Andreas li Gruiers</hi></rs>, <ref n="80" target="#HDPAR_0080">80</ref>.</item>
           <item xml:id="HDPAR_rs_0325"><rs><hi rend="sc">Andreas Miles</hi></rs>, <ref n="257" target="#HDPAR_0257">257</ref>.</item>
           <item xml:id="HDPAR_rs_0326"><rs><hi rend="sc">Andreas Parmentarius</hi></rs>, <ref n="873">873</ref>.</item>
-          <pb n="568" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$652/canvas"/>
           <!-- Page 568, colonne 1 -->
           <item xml:id="HDPAR_rs_0327"><rs><hi rend="sc">Andreas Piscator</hi>, de Kala</rs>, <ref n="566" target="#HDPAR_0566">566</ref>, <ref n="568" target="#HDPAR_0568">568</ref>, <ref n="579" target="#HDPAR_0579">579</ref>.</item>
           <item xml:id="HDPAR_rs_0328"><rs><hi rend="sc">Andreas Polins</hi>, miles</rs>, <ref n="145" target="#HDPAR_0145">145</ref>, <ref n="146" target="#HDPAR_0146">146</ref>, <ref n="189" target="#HDPAR_0189">189</ref>, <ref n="191" target="#HDPAR_0191">191</ref>, <ref n="197" target="#HDPAR_0197">197</ref>.</item>
@@ -34947,7 +34949,6 @@
           <item xml:id="HDPAR_rs_0447"><rs><hi rend="sc">Atenvilla (Ferricus de)</hi>, miles</rs>, <ref n="515" target="#HDPAR_0515">515</ref>. — <hi rend="i">Peut-être Attainville : Seine-et-Oise, arr. Pontoise, cant. Écouen.</hi></item>
           <item xml:id="HDPAR_rs_0448"><rs><hi rend="sc">Athelinus</hi>, miles</rs>, <ref n="29" target="#HDPAR_0029">29</ref>.</item>
           <item xml:id="HDPAR_rs_0449"><rs><hi rend="sc">Athelinus</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0062" corresp="#HDPAR_liste_A"><hi rend="sc">Acellinus</hi></ref>, <ref type="see" target="#HDPAR_rs_0441" corresp="#HDPAR_liste_A"><hi rend="sc">Ascelinus</hi></ref>, <ref type="see" target="#HDPAR_rs_0446" corresp="#HDPAR_liste_A"><hi rend="sc">Atelini</hi></ref>, <ref type="see" target="#HDPAR_rs_2846" corresp="#HDPAR_liste_H"><hi rend="sc">Hecelini</hi></ref> et seq.</item>
-          <pb n="569" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$653/canvas"/>
           <!-- Page 569, colonne 1 (fin de la lettre A) -->
           <item xml:id="HDPAR_rs_0450"><rs><hi rend="sc">Athies</hi></rs>, <ref n="482" target="#HDPAR_0482">482</ref>. — <hi rend="sc">Aties</hi>, <ref n="231" target="#HDPAR_0231">231</ref>. — <hi rend="i">Athis : Seine-et-Oise, arr. Corbeil, cant. Longjumeau.</hi></item>
           <item xml:id="HDPAR_rs_0451"><rs><hi rend="sc">Athiolis (Guillelmus de)</hi>, armiger</rs>, <ref n="276" target="#HDPAR_0276">276</ref>.</item>
@@ -35065,7 +35066,7 @@
           <item xml:id="HDPAR_rs_0556"><rs><hi rend="sc">Baignicius</hi>, apud Campaniacum</rs>, <ref n="633" target="#HDPAR_0633">633</ref>.</item>
           <item xml:id="HDPAR_rs_0557"><rs><hi rend="sc">Baillaue (Jean)</hi></rs>, <ref n="358" target="#HDPAR_0358">358</ref>.</item>
           <!-- Page 570, colonne 1 (l'entrée Bailliacum est à cheval 569/570) -->
-          <item xml:id="HDPAR_rs_0558"><rs><hi rend="sc">Bailliacum</hi>, prope Campos</rs>, <ref n="465" target="#HDPAR_0466">465</ref>, <ref n="466" target="#HDPAR_0465">466</ref>, <pb n="570" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$654/canvas"/><ref n="550" target="#HDPAR_0550">550</ref>, <ref n="625" target="#HDPAR_0625">625</ref>, <ref n="639" target="#HDPAR_0639">639</ref>, <ref n="640" target="#HDPAR_0640">640</ref>, **<ref n="986">986</ref>. — <hi rend="sc">Baalli</hi>, <ref n="530" target="#HDPAR_0530">530</ref>, <ref n="563" target="#HDPAR_0563">563</ref>, <ref n="566" target="#HDPAR_0566">566</ref>, <ref n="568" target="#HDPAR_0568">568</ref>, <ref n="579" target="#HDPAR_0579">579</ref>, **<ref n="962">962</ref>, <ref n="966">966</ref>.</item>
+          <item xml:id="HDPAR_rs_0558"><rs><hi rend="sc">Bailliacum</hi>, prope Campos</rs>, <ref n="465" target="#HDPAR_0466">465</ref>, <ref n="466" target="#HDPAR_0465">466</ref>, <ref n="550" target="#HDPAR_0550">550</ref>, <ref n="625" target="#HDPAR_0625">625</ref>, <ref n="639" target="#HDPAR_0639">639</ref>, <ref n="640" target="#HDPAR_0640">640</ref>, **<ref n="986">986</ref>. — <hi rend="sc">Baalli</hi>, <ref n="530" target="#HDPAR_0530">530</ref>, <ref n="563" target="#HDPAR_0563">563</ref>, <ref n="566" target="#HDPAR_0566">566</ref>, <ref n="568" target="#HDPAR_0568">568</ref>, <ref n="579" target="#HDPAR_0579">579</ref>, **<ref n="962">962</ref>, <ref n="966">966</ref>.</item>
           <item xml:id="HDPAR_rs_0559"><rs><hi rend="sc">Baiocensi (Garinus de Gisiers, archidiaconus in ecclesia)</hi></rs>, <ref n="336" target="#HDPAR_0336">336</ref>, <ref n="337" target="#HDPAR_0337">337</ref>, C <ref n="480" type="censier">480</ref>.</item>
           <item xml:id="HDPAR_rs_0560"><rs><hi rend="sc">Baiocensis (Guillelmus)</hi></rs>, <ref n="53" target="#HDPAR_0053">53</ref>.</item>
           <item xml:id="HDPAR_rs_0561"><rs><hi rend="sc">Bayeux (Hubert Cochart, chanoine de)</hi></rs>, <ref n="691" target="#HDPAR_0691">691</ref>. — <hi rend="i">Calvados, chef-lieu d’arrondissement.</hi></item>
@@ -35174,7 +35175,6 @@
           <item xml:id="HDPAR_rs_0662"><rs><hi rend="sc">Basilia</hi>, uxor Ferrici de Maciaco</rs>, <ref n="126" target="#HDPAR_0126">126</ref>.</item>
           <item xml:id="HDPAR_rs_0663"><rs><hi rend="sc">Basilia</hi>, uxor Rogeri Piete</rs>, <ref n="546" target="#HDPAR_0546">546</ref>, <ref n="579" target="#HDPAR_0579">579</ref>, <ref n="562" target="#HDPAR_0562">562</ref>.</item>
           <item xml:id="HDPAR_rs_0664"><rs><hi rend="sc">Basilia</hi>, uxor Willelmi Marmerel</rs>, <ref n="72" target="#HDPAR_0072">72</ref>, <ref n="74" target="#HDPAR_0074">74</ref>.</item>
-          <pb n="571" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$655/canvas"/>
           <!-- Page 571, colonne 1 -->
           <item xml:id="HDPAR_rs_0665"><rs><hi rend="sc">Basin (Girardus)</hi></rs>, <ref n="398" target="#HDPAR_0398">398</ref>, <ref n="403" target="#HDPAR_0403">403</ref>, <ref n="404" target="#HDPAR_0404">404</ref>, <ref n="495" target="#HDPAR_0495">495</ref>.</item>
           <item xml:id="HDPAR_rs_0666"><rs><hi rend="sc">Basin (Lambertus)</hi></rs>, <ref n="398" target="#HDPAR_0398">398</ref>, <ref n="403" target="#HDPAR_0403">403</ref>, <ref n="404" target="#HDPAR_0404">404</ref>.</item>
@@ -35294,7 +35294,6 @@
           <item xml:id="HDPAR_rs_0778"><rs><hi rend="sc">Bertaudus de Bono Oculo</hi></rs>, <ref n="105" target="#HDPAR_0105">105</ref>.</item>
           <item xml:id="HDPAR_rs_0779"><rs><hi rend="sc">Bertaudus de Monte Forti</hi></rs>, <ref n="321" target="#HDPAR_0321">321</ref>.</item>
           <item xml:id="HDPAR_rs_0780"><rs><hi rend="sc">Bertaudus de Villaribus</hi></rs>, <ref n="576" target="#HDPAR_0576">576</ref>.</item>
-          <pb n="572" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$656/canvas"/>
           <!-- Page 572, colonne 1 -->
           <item xml:id="HDPAR_rs_0781"><rs><hi rend="sc">Bertaudus de Villaribus</hi>, scutifer</rs>, <ref n="269" target="#HDPAR_0269">269</ref>.</item>
           <item xml:id="HDPAR_rs_0782"><rs><hi rend="sc">Bertaudus Picardus</hi></rs>, <ref n="837" target="#HDPAR_0837">837</ref>.</item>
@@ -35400,7 +35399,6 @@
           <item xml:id="HDPAR_rs_0880"><rs><hi rend="sc">Borelarius (Petrus)</hi></rs>, <ref n="798" target="#HDPAR_0798">798</ref>, <ref n="845" target="#HDPAR_0845">845</ref>, C <ref n="473" type="censier">473</ref>, C <ref n="487" type="censier">487</ref>.</item>
           <item xml:id="HDPAR_rs_0881"><rs><hi rend="sc">Borelarius</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0884" corresp="#HDPAR_liste_B"><hi rend="sc">Borreliers</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_0937" corresp="#HDPAR_liste_B"><hi rend="sc">Bourrellarius</hi></ref>.</item>
           <item xml:id="HDPAR_rs_0882"><rs><hi rend="sc">Boremont</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0908" corresp="#HDPAR_liste_B"><hi rend="sc">Botemont</hi></ref>.</item>
-          <pb n="573" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$657/canvas"/>
           <!-- Page 573, colonne 1 -->
           <item xml:id="HDPAR_rs_0883"><rs><hi rend="sc">Borrai (Hugo de)</hi>, miles</rs>, <ref n="125" target="#HDPAR_0125">125</ref>. — <hi rend="i">Bouray : Seine-et-Oise, arr. Étampes, cant. La Ferté-Alais.</hi></item>
           <item xml:id="HDPAR_rs_0884"><rs><hi rend="sc">Borreliers (Odo li)</hi></rs>, <ref n="347" target="#HDPAR_0347">347</ref>.</item>
@@ -35504,7 +35502,6 @@
           <item xml:id="HDPAR_rs_0980"><rs><hi rend="sc">Brecelli (Hanricus)</hi>, de Caprosia</rs>, <ref n="524" target="#HDPAR_0524">524</ref>. — <hi rend="sc">Bretel (H.)</hi>, <ref n="437" target="#HDPAR_0437">437</ref>.</item>
           <item xml:id="HDPAR_rs_0981"><rs><hi rend="sc">Breconviller (Heccardus de)</hi></rs>, <ref n="620" target="#HDPAR_0620">620</ref>.</item>
           <item xml:id="HDPAR_rs_0982"><rs><hi rend="sc">Brecunviler (Aubericus de)</hi></rs>, <ref n="620" target="#HDPAR_0620">620</ref>, <ref n="969">969</ref>. — <hi rend="i">Bressonvilliers : Seine-et-Oise, arr. Corbeil, cant. Arpajon, comm. Leudeville.</hi></item>
-          <pb n="574" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$658/canvas"/>
           <!-- Page 574, colonne 1 (fin de la lettre B) -->
           <item xml:id="HDPAR_rs_0983"><rs><hi rend="sc">Bretachia de Duini (Molendinum de)</hi></rs>, <ref n="28" target="#HDPAR_0028">28</ref>.</item>
           <item xml:id="HDPAR_rs_0984"><rs><hi rend="sc">Bretachia</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0987" corresp="#HDPAR_liste_B"><hi rend="sc">Bretèche</hi></ref>.</item>
@@ -35531,8 +35528,7 @@
           <item xml:id="HDPAR_rs_1005"><rs><hi rend="sc">Brito (Alfredus)</hi></rs>, <ref n="51" target="#HDPAR_0051">51</ref>.</item>
           <item xml:id="HDPAR_rs_1006"><rs><hi rend="sc">Brito (Daniel)</hi>, canonicus de Campellis in Brya</rs>, C <ref n="488" type="censier">488</ref>, C <ref n="490" type="censier">490</ref>.</item>
           <item xml:id="HDPAR_rs_1007"><rs><hi rend="sc">Brito (Galaranus)</hi>, clericus</rs>, <ref n="845" target="#HDPAR_0845">845</ref>, C <ref n="487" type="censier">487</ref>.</item>
-          <item xml:id="HDPAR_rs_1008"><rs><hi rend="sc">Brito (Gaufridus)</hi>, de Villa Episcopi, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref>; — canonicus et officialis Parisiensis, <ref n="734" target="#HDPAR_0734">734</ref>.</item>
-          <item xml:id="HDPAR_rs_1009"><rs><hi rend="sc">Brito (Guillelmus)</hi>, advocatus</rs>, C <ref n="494" type="censier">494</ref>.</item>
+          <item xml:id="HDPAR_rs_1008"><rs><hi rend="sc">Brito (Gaufridus)</hi>, de Villa Episcopi, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref></item><item xml:id="HDPAR_rs_1008_1"><rs>Brito canonicus et officialis Parisiensis</rs>, <ref n="734" target="#HDPAR_0734">734</ref>.</item><item xml:id="HDPAR_rs_1009"><rs><hi rend="sc">Brito (Guillelmus)</hi>, advocatus</rs>, C <ref n="494" type="censier">494</ref>.</item>
           <item xml:id="HDPAR_rs_1010"><rs><hi rend="sc">Brito (Guillelmus)</hi>, de Castello Audreni, clericus</rs>, <ref n="734" target="#HDPAR_0734">734</ref>, <ref n="1010">1010</ref>.</item>
           <item xml:id="HDPAR_rs_1011"><rs><hi rend="sc">Brito (Hamo)</hi>, canonicus Sancte Oportune Parisiensis</rs>, <ref n="268" target="#HDPAR_0268">268</ref>, <ref n="674" target="#HDPAR_0674">674</ref>, <ref n="706" target="#HDPAR_0706">706</ref>, <ref n="710" target="#HDPAR_0710">710</ref>, <ref n="734" target="#HDPAR_0734">734</ref>, <ref n="1010">1010</ref>, C <ref n="485" type="censier">485</ref>, C <ref n="486" type="censier">486</ref>, C <ref n="490" type="censier">490</ref>.</item>
           <!-- Page 574, colonne 2 -->
@@ -35600,7 +35596,7 @@
           <item xml:id="HDPAR_rs_1067"><rs><hi rend="sc">Cadomo (Martinus de)</hi></rs>, <ref n="745" target="#HDPAR_0745">745</ref>. — <hi rend="i">Caen : Calvados, chef-lieu du département.</hi></item>
           <item xml:id="HDPAR_rs_1068"><rs><hi rend="sc">Cagiam (Johannes ad)</hi></rs>, <ref n="255" target="#HDPAR_0255">255</ref>, C <ref n="484" type="censier">484</ref>.</item>
           <!-- Page 575, colonne 1 (Caillouello à cheval 574/575) -->
-          <item xml:id="HDPAR_rs_1069"><rs><hi rend="sc">Caillouello (Petrus de)</hi>, canonicus <pb n="575" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$659/canvas"/>Sancti Quintini</rs>, <ref n="622" target="#HDPAR_0622">622</ref>. — <hi rend="i">Caillouël-Crépigny : Aisne, arr. Laon, cant. Chauny.</hi></item>
+          <item xml:id="HDPAR_rs_1069"><rs><hi rend="sc">Caillouello (Petrus de)</hi>, canonicus Sancti Quintini</rs>, <ref n="622" target="#HDPAR_0622">622</ref>. — <hi rend="i">Caillouël-Crépigny : Aisne, arr. Laon, cant. Chauny.</hi></item>
           <item xml:id="HDPAR_rs_1070"><rs><hi rend="sc">Calceia</hi>, extra muros Parisienses</rs>, <ref n="441" target="#HDPAR_0441">441</ref>. — <hi rend="sc">Magnus vicus super Calceiam</hi>, <ref n="761" target="#HDPAR_0761">761</ref>.</item>
           <item xml:id="HDPAR_rs_1071"><rs><hi rend="sc">Calido Furno (Bouchardus de)</hi>, miles</rs>, <ref n="552" target="#HDPAR_0552">552</ref>, <ref n="555" target="#HDPAR_0555">555</ref>. — <hi rend="i">Chauffour : Seine-et-Oise, arr. et cant. Étampes.</hi></item>
           <item xml:id="HDPAR_rs_1072"><rs><hi rend="sc">Calligarius (Hugo)</hi></rs>, *<ref n="984">984</ref>.</item>
@@ -35692,7 +35688,6 @@
           <item xml:id="HDPAR_rs_1156"><rs><hi rend="sc">Castelleto (Hubertus de)</hi></rs>, <ref n="407" target="#HDPAR_0407">407</ref>.</item>
           <item xml:id="HDPAR_rs_1157"><rs><hi rend="sc">Castelleto (Hubertus de)</hi></rs>, <ref n="705" target="#HDPAR_0705">705</ref>.</item>
           <item xml:id="HDPAR_rs_1158"><rs><hi rend="sc">Castelleto (Martinus de)</hi></rs>, <ref n="569" target="#HDPAR_0569">569</ref>.</item>
-          <pb n="576" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$660/canvas"/>
           <!-- Page 576, colonne 1 -->
           <item xml:id="HDPAR_rs_1159"><rs><hi rend="sc">Castelleto (Richardus de)</hi></rs>, <ref n="804" target="#HDPAR_0804">804</ref>, <ref n="837" target="#HDPAR_0837">837</ref>, C <ref n="482" type="censier">482</ref>.</item>
           <item xml:id="HDPAR_rs_1160"><rs><hi rend="sc">Castellione (Gaucherus de)</hi></rs>, <ref n="76" target="#HDPAR_0076">76</ref>.</item>
@@ -35789,7 +35784,7 @@
           <item xml:id="HDPAR_rs_1249"><rs><hi rend="sc">Charenton (Petrus de)</hi></rs>, <ref n="304" target="#HDPAR_0304">304</ref>.</item>
           <item xml:id="HDPAR_rs_1250"><rs><hi rend="sc">Charenton (Petrus de)</hi></rs>, <ref n="590" target="#HDPAR_0590">590</ref>. — <hi rend="i">Seine, arr. Sceaux, chef-lieu de canton.</hi></item>
           <!-- Page 577, colonne 1 (Charmentré à cheval 576/577) -->
-          <item xml:id="HDPAR_rs_1251"><rs><hi rend="sc">Charmentré</hi></rs>, <ref n="581" target="#HDPAR_0581">581</ref>. — <hi rend="i">Charmentray : <pb n="577" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$661/canvas"/>Seine-et-Marne, arr. Meaux, cant. Claye.</hi></item>
+          <item xml:id="HDPAR_rs_1251"><rs><hi rend="sc">Charmentré</hi></rs>, <ref n="581" target="#HDPAR_0581">581</ref>. — <hi rend="i">Charmentray : Seine-et-Marne, arr. Meaux, cant. Claye.</hi></item>
           <item xml:id="HDPAR_rs_1252"><rs><hi rend="sc">Charpentier (Henri le)</hi></rs>, *<ref n="1034">1034</ref>.</item>
           <item xml:id="HDPAR_rs_1253"><rs><hi rend="sc">Charpentier</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1147" corresp="#HDPAR_liste_C"><hi rend="sc">Carpentarius</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1254"><rs><hi rend="sc">Charron (Gilo le)</hi></rs>, <ref n="458" target="#HDPAR_0458">458</ref>.</item>
@@ -35893,7 +35888,6 @@
           <item xml:id="HDPAR_rs_1350"><rs><hi rend="sc">Claromonte (Raymondus de)</hi>, canonicus Parisiensis</rs>, <ref n="711" target="#HDPAR_0711">711</ref>, C <ref n="477" type="censier">477</ref>.</item>
           <item xml:id="HDPAR_rs_1351"><rs><hi rend="sc">Claromonte</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1374" corresp="#HDPAR_liste_C"><hi rend="sc">Clermont</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1352"><rs><hi rend="sc">Clausum Episcopi</hi></rs>, <ref n="205" target="#HDPAR_0205">205</ref>.</item>
-          <pb n="578" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$662/canvas"/>
           <!-- Page 578, colonne 1 -->
           <item xml:id="HDPAR_rs_1353"><rs><hi rend="sc">Clemencia</hi>, filia Radulphi, clerici</rs>, <ref n="545" target="#HDPAR_0545">545</ref>.</item>
           <item xml:id="HDPAR_rs_1354"><rs><hi rend="sc">Clemencia de Compans</hi></rs>, <ref n="479" target="#HDPAR_0479">479</ref>.</item>
@@ -36005,7 +35999,7 @@
           <item xml:id="HDPAR_rs_1458"><rs><hi rend="sc">Compigne (Gile de)</hi>, garde de la prevosté de Paris</rs>, <ref n="803" target="#HDPAR_0803">803</ref>, <ref n="809" target="#HDPAR_0809">809</ref>, <ref n="1019">1019</ref>. — <hi rend="i">Compiègne : Oise, chef-lieu d’arrondissement.</hi></item>
           <item xml:id="HDPAR_rs_1459"><rs><hi rend="sc">Compigne (Radulphus de)</hi></rs>, <ref n="734" target="#HDPAR_0734">734</ref>.</item>
           <!-- Page 579, colonne 1 (Compensum/Compans à cheval 578/579) -->
-          <item xml:id="HDPAR_rs_1460"><rs><hi rend="sc">Compensum</hi></rs>, <ref n="672" target="#HDPAR_0672">672</ref>, <ref n="676" target="#HDPAR_0676">676</ref>. — <hi rend="sc">Compandium</hi>, <ref n="630" target="#HDPAR_0630">630</ref>. — <hi rend="sc">Compans</hi>, <ref n="29" target="#HDPAR_0029">29</ref>, <ref n="38" target="#HDPAR_0038">38</ref>, <pb n="579" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$663/canvas"/><ref n="60" target="#HDPAR_0060">60</ref>, <ref n="77" target="#HDPAR_0077">77</ref>, <ref n="193" target="#HDPAR_0193">193</ref>, <ref n="206" target="#HDPAR_0206">206</ref>, <ref n="228" target="#HDPAR_0228">228</ref>, <ref n="229" target="#HDPAR_0229">229</ref>, <ref n="230" target="#HDPAR_0230">230</ref>, <ref n="239" target="#HDPAR_0239">239</ref>, <ref n="241" target="#HDPAR_0241">241</ref>, <ref n="242" target="#HDPAR_0242">242</ref>, <ref n="244" target="#HDPAR_0244">244</ref>, <ref n="329" target="#HDPAR_0329">329</ref>, <ref n="332" target="#HDPAR_0332">332</ref>, <ref n="351" target="#HDPAR_0351">351</ref>, <ref n="372" target="#HDPAR_0372">372</ref>, <ref n="394" target="#HDPAR_0394">394</ref>, <ref n="425" target="#HDPAR_0425">425</ref>, <ref n="427" target="#HDPAR_0427">427</ref>, <ref n="479" target="#HDPAR_0479">479</ref>, <ref n="494" target="#HDPAR_0494">494</ref>, <ref n="629" target="#HDPAR_0629">629</ref>, <ref n="672" target="#HDPAR_0672">672</ref>, <ref n="709" target="#HDPAR_0709">709</ref>, <ref n="737" target="#HDPAR_0737">737</ref>. — <hi rend="sc">Compens</hi>, <ref n="329" target="#HDPAR_0329">329</ref>, **<ref n="998">998</ref>. — <hi rend="sc">Compensium</hi>, <ref n="676">676</ref>. — <hi rend="sc">Compentium</hi>, <ref n="644" target="#HDPAR_0644">644</ref>, <ref n="984">984</ref> bis. — <hi rend="sc">Domus Dei</hi>, <ref n="56" target="#HDPAR_0056">56</ref>, <ref n="332" target="#HDPAR_0332">332</ref>, <ref n="425" target="#HDPAR_0427">425</ref>, <ref n="428" target="#HDPAR_0428">428</ref>, <ref n="534" target="#HDPAR_0534">534</ref>.</item>
+          <item xml:id="HDPAR_rs_1460"><rs><hi rend="sc">Compensum</hi></rs>, <ref n="672" target="#HDPAR_0672">672</ref>, <ref n="676" target="#HDPAR_0676">676</ref>. — <hi rend="sc">Compandium</hi>, <ref n="630" target="#HDPAR_0630">630</ref>. — <hi rend="sc">Compans</hi>, <ref n="29" target="#HDPAR_0029">29</ref>, <ref n="38" target="#HDPAR_0038">38</ref>, <ref n="60" target="#HDPAR_0060">60</ref>, <ref n="77" target="#HDPAR_0077">77</ref>, <ref n="193" target="#HDPAR_0193">193</ref>, <ref n="206" target="#HDPAR_0206">206</ref>, <ref n="228" target="#HDPAR_0228">228</ref>, <ref n="229" target="#HDPAR_0229">229</ref>, <ref n="230" target="#HDPAR_0230">230</ref>, <ref n="239" target="#HDPAR_0239">239</ref>, <ref n="241" target="#HDPAR_0241">241</ref>, <ref n="242" target="#HDPAR_0242">242</ref>, <ref n="244" target="#HDPAR_0244">244</ref>, <ref n="329" target="#HDPAR_0329">329</ref>, <ref n="332" target="#HDPAR_0332">332</ref>, <ref n="351" target="#HDPAR_0351">351</ref>, <ref n="372" target="#HDPAR_0372">372</ref>, <ref n="394" target="#HDPAR_0394">394</ref>, <ref n="425" target="#HDPAR_0425">425</ref>, <ref n="427" target="#HDPAR_0427">427</ref>, <ref n="479" target="#HDPAR_0479">479</ref>, <ref n="494" target="#HDPAR_0494">494</ref>, <ref n="629" target="#HDPAR_0629">629</ref>, <ref n="672" target="#HDPAR_0672">672</ref>, <ref n="709" target="#HDPAR_0709">709</ref>, <ref n="737" target="#HDPAR_0737">737</ref>. — <hi rend="sc">Compens</hi>, <ref n="329" target="#HDPAR_0329">329</ref>, **<ref n="998">998</ref>. — <hi rend="sc">Compensium</hi>, <ref n="676">676</ref>. — <hi rend="sc">Compentium</hi>, <ref n="644" target="#HDPAR_0644">644</ref>, <ref n="984">984</ref> bis. — <hi rend="sc">Domus Dei</hi>, <ref n="56" target="#HDPAR_0056">56</ref>, <ref n="332" target="#HDPAR_0332">332</ref>, <ref n="425" target="#HDPAR_0427">425</ref>, <ref n="428" target="#HDPAR_0428">428</ref>, <ref n="534" target="#HDPAR_0534">534</ref>.</item>
           <item xml:id="HDPAR_rs_1461"><rs><hi rend="sc">Compans (Agnes de)</hi></rs>, <ref n="193" target="#HDPAR_0193">193</ref>, <ref n="351" target="#HDPAR_0351">351</ref>, <ref n="372" target="#HDPAR_0372">372</ref>.</item>
           <item xml:id="HDPAR_rs_1462"><rs><hi rend="sc">Compans (Amauricus de)</hi></rs>, <ref n="38" target="#HDPAR_0038">38</ref>.</item>
           <item xml:id="HDPAR_rs_1463"><rs><hi rend="sc">Compans (Clemencia de)</hi></rs>, <ref n="479" target="#HDPAR_0479">479</ref>.</item>
@@ -36113,7 +36107,6 @@
           <item xml:id="HDPAR_rs_1563"><rs><hi rend="sc">Corona (Thomicis de)</hi></rs>, <ref n="837" target="#HDPAR_0837">837</ref>.</item>
           <item xml:id="HDPAR_rs_1564"><rs><hi rend="sc">Corqueteine (Natalis de)</hi>, presbiter</rs>, <ref n="506" target="#HDPAR_0506">506</ref>. — <hi rend="i">Courquetaine : Seine-et-Marne, arr. Melun, cant. Tournan.</hi></item>
           <item xml:id="HDPAR_rs_1565"><rs><hi rend="sc">Corraldus Loremerius</hi></rs>, <ref n="752" target="#HDPAR_0752">752</ref>.</item>
-          <pb n="580" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$664/canvas"/>
           <!-- Page 580, colonne 1 (fin de la lettre C) -->
           <item xml:id="HDPAR_rs_1566"><rs><hi rend="sc">Corrardus le Forbiseur</hi></rs>, <ref n="762" target="#HDPAR_0762">762</ref>.</item>
           <item xml:id="HDPAR_rs_1567"><rs><hi rend="sc">Corrardus</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1522 #HDPAR_rs_1523" corresp="#HDPAR_liste_C"><hi rend="sc">Coraldus</hi></ref>.</item>
@@ -36225,7 +36218,6 @@
           <item xml:id="HDPAR_rs_1666"><rs><hi rend="sc">Doliarius (Galo)</hi></rs>, <ref n="294" target="#HDPAR_0294">294</ref>.</item>
           <item xml:id="HDPAR_rs_1667"><rs><hi rend="sc">Doliarius</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6786" corresp="#HDPAR_liste_T"><hi rend="sc">Tonnelleresse</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1668"><rs><hi rend="sc">Dominicus</hi>, canonicus Parisiensis</rs>, <ref n="471" target="#HDPAR_0471">471</ref>.</item>
-          <pb n="581" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$665/canvas"/>
           <!-- Page 581, colonne 1 (fin de la lettre D) -->
           <item xml:id="HDPAR_rs_1669"><rs><hi rend="sc">Domnus Martinus</hi></rs>, <ref n="8" target="#HDPAR_0008">8</ref>.</item>
           <item xml:id="HDPAR_rs_1670"><rs><hi rend="sc">Domnimartini (Albericus, comes)</hi></rs>, <ref n="900">900</ref>, <ref n="901">901</ref>.</item>
@@ -36342,7 +36334,6 @@
           <item xml:id="HDPAR_rs_1774"><rs><hi rend="sc">Elienor</hi>, uxor Odonis de Meinpincein</rs>, <ref n="236" target="#HDPAR_0236">236</ref>, <ref n="934">934</ref>.</item>
           <item xml:id="HDPAR_rs_1775"><rs><hi rend="sc">Elienor</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_0146" corresp="#HDPAR_liste_A"><hi rend="sc">Aelinor</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1776"><rs><hi rend="sc">Elieudis</hi>, uxor Ferrici Divitis</rs>, <ref n="588" target="#HDPAR_0588">588</ref>.</item>
-          <pb n="582" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$666/canvas"/>
           <!-- Page 582, colonne 1 -->
           <item xml:id="HDPAR_rs_1777"><rs><hi rend="sc">Elisabet</hi>, domina de Curteneto</rs>, **<ref n="893">893</ref>.</item>
           <item xml:id="HDPAR_rs_1778"><rs><hi rend="sc">Elizabet</hi>, uxor Gervasii de Chamigniaco</rs>, <ref n="166" target="#HDPAR_0166">166</ref>, <ref n="167" target="#HDPAR_0167">167</ref>, <ref n="171" target="#HDPAR_0171">171</ref>.</item>
@@ -36455,7 +36446,6 @@
           <item xml:id="HDPAR_rs_1883"><rs><hi rend="sc">Eudes de Bretagne</hi></rs>, <ref n="777" target="#HDPAR_0777">777</ref>.</item>
           <item xml:id="HDPAR_rs_1884"><rs><hi rend="sc">Eudes de Saint-Merry</hi></rs>, <ref n="777" target="#HDPAR_0777">777</ref>.</item>
           <item xml:id="HDPAR_rs_1885"><rs><hi rend="sc">Eudes de Vert-le-Petit</hi>, maître et trésorier de la chapelle royale à Paris</rs>, <ref n="822" target="#HDPAR_0822">822</ref>, <ref n="831" target="#HDPAR_0831">831</ref>.</item>
-          <pb n="583" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$667/canvas"/>
           <!-- Page 583, colonne 1 (fin de la lettre E) -->
           <item xml:id="HDPAR_rs_1886"><rs><hi rend="sc">Eudes</hi></rs>. Vide <ref type="see"><hi rend="sc">Odo</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1887"><rs><hi rend="sc">Eugenia</hi>, uxor Johannis Coci</rs>, <ref n="309" target="#HDPAR_0309">309</ref>.</item>
@@ -36571,7 +36561,6 @@
           <item xml:id="HDPAR_rs_1988"><rs><hi rend="sc">Flechier (Robertus le)</hi></rs>, <ref n="217" target="#HDPAR_0217">217</ref>.</item>
           <item xml:id="HDPAR_rs_1989"><rs><hi rend="sc">Flechier</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6168" corresp="#HDPAR_liste_S"><hi rend="sc">Sagitarius</hi></ref>.</item>
           <item xml:id="HDPAR_rs_1990"><rs><hi rend="sc">Flemenc (Guillelmus le)</hi></rs>, <ref n="744" target="#HDPAR_0744">744</ref>.</item>
-          <pb n="584" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$668/canvas"/>
           <!-- Page 584, colonne 1 (fin de la lettre F) -->
           <item xml:id="HDPAR_rs_1991"><rs><hi rend="sc">Flemenc</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1979" corresp="#HDPAR_liste_F"><hi rend="sc">Flamanc</hi></ref>, <ref type="see" target="#HDPAR_rs_1981" corresp="#HDPAR_liste_F"><hi rend="sc">Flamigus</hi></ref> et seq.</item>
           <item xml:id="HDPAR_rs_1992"><rs><hi rend="sc">Floherius (Stephanus)</hi>, burgensis Carnotensis</rs>, <ref n="213" target="#HDPAR_0213">213</ref>, <ref n="215" target="#HDPAR_0215">215</ref>.</item>
@@ -36677,7 +36666,6 @@
           <item xml:id="HDPAR_rs_2085"><rs><hi rend="sc">G. de Alneto</hi></rs>, **<ref n="1039">1039</ref>.</item>
           <item xml:id="HDPAR_rs_2086"><rs><hi rend="sc">G. de Mineria</hi></rs>, *<ref n="1047">1047</ref>.</item>
           <item xml:id="HDPAR_rs_2087"><rs><hi rend="sc">Gaart (Henricus)</hi></rs>, <ref n="525" target="#HDPAR_0525">525</ref>, <ref n="578" target="#HDPAR_0578">578</ref>.</item>
-          <pb n="585" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$669/canvas"/>
           <!-- Page 585, colonne 1 -->
           <item xml:id="HDPAR_rs_2088"><rs><hi rend="sc">Gaart</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_2502" corresp="#HDPAR_liste_G"><hi rend="sc">Guart</hi></ref>.</item>
           <item xml:id="HDPAR_rs_2089"><rs><hi rend="sc">Gacio de Villoflein</hi></rs>, <ref n="92" target="#HDPAR_0092">92</ref>, <ref n="96" target="#HDPAR_0096">96</ref>, <ref n="99" target="#HDPAR_0099">99</ref>.</item>
@@ -36807,7 +36795,6 @@
           <item xml:id="HDPAR_rs_2211"><rs><hi rend="sc">Garnerus</hi>, comes</rs>, <ref n="2" target="#HDPAR_0002">2</ref>.</item>
           <item xml:id="HDPAR_rs_2212"><rs><hi rend="sc">Garnerus (Frater)</hi>, de Domo Dei</rs>, <ref n="45" target="#HDPAR_0045">45</ref>, <ref n="46" target="#HDPAR_0046">46</ref>, <ref n="51" target="#HDPAR_0051">51</ref>.</item>
           <item xml:id="HDPAR_rs_2213"><rs><hi rend="sc">Garnerus</hi>, filius Guillelmi, barbitonsoris</rs>, <ref n="732" target="#HDPAR_0732">732</ref>.</item>
-          <pb n="586" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$670/canvas"/>
           <!-- Page 586, colonne 1 (suite Garnerus / Gaufridus) -->
           <item xml:id="HDPAR_rs_2214"><rs><hi rend="sc">Garnerus</hi>, notarius</rs>, <ref n="466" target="#HDPAR_0466">466</ref>.</item>
           <item xml:id="HDPAR_rs_2215"><rs><hi rend="sc">Garnerus Briseboc</hi></rs>, <ref n="175" target="#HDPAR_0175">175</ref>.</item>
@@ -36855,8 +36842,7 @@
           <item xml:id="HDPAR_rs_2257"><rs><hi rend="sc">Gaufridus Borrellarius</hi></rs>, C <ref n="489" type="censier">489</ref>.</item>
           <!-- Page 586, colonne 2 (suite Gaufridus) -->
           <item xml:id="HDPAR_rs_2258"><rs><hi rend="sc">Gaufridus Brito</hi>, tailliator lapidum</rs>, <ref n="840" target="#HDPAR_0840">840</ref>.</item>
-          <item xml:id="HDPAR_rs_2259"><rs><hi rend="sc">Gaufridus Brito</hi>, de Villa Episcopi, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref>; — canonicus et officialis Parisiensis, <ref n="734" target="#HDPAR_0734">734</ref>.</item>
-          <item xml:id="HDPAR_rs_2260"><rs><hi rend="sc">Gaufridus Chaucoun</hi>, civis Parisiensis</rs>, <ref n="440" target="#HDPAR_0440">440</ref>.</item>
+          <item xml:id="HDPAR_rs_2259"><rs><hi rend="sc">Gaufridus Brito</hi>, de Villa Episcopi, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref></item><item xml:id="HDPAR_rs_2259_1"><rs>Gaufridus canonicus et officialis Parisiensis</rs>, <ref n="734" target="#HDPAR_0734">734</ref>.</item><item xml:id="HDPAR_rs_2260"><rs><hi rend="sc">Gaufridus Chaucoun</hi>, civis Parisiensis</rs>, <ref n="440" target="#HDPAR_0440">440</ref>.</item>
           <item xml:id="HDPAR_rs_2261"><rs><hi rend="sc">Gaufridus Chauvel</hi>, civis Parisiensis, scamptio Regis</rs>, *<ref n="997">997</ref>, *<ref n="1025">1025</ref>, **<ref n="1046">1046</ref>, *<ref n="1047">1047</ref>.</item>
           <item xml:id="HDPAR_rs_2262"><rs><hi rend="sc">Gaufridus de Bello Monte</hi></rs>, <ref n="752" target="#HDPAR_0752">752</ref>.</item>
           <item xml:id="HDPAR_rs_2263"><rs><hi rend="sc">Gaufridus de Bono Amore</hi></rs>, <ref n="957">957</ref>, **<ref n="993">993</ref>, <ref n="1037">1037</ref>.</item>
@@ -36925,7 +36911,7 @@
           <item xml:id="HDPAR_rs_2325"><rs><hi rend="sc">Gif (Aaliz de)</hi></rs>, <ref n="61" target="#HDPAR_0061">61</ref>, <ref n="68" target="#HDPAR_0068">68</ref>.</item>
           <item xml:id="HDPAR_rs_2326"><rs><hi rend="sc">Gif (Adam de)</hi></rs>, <ref n="30" target="#HDPAR_0030">30</ref>.</item>
           <!-- Page 587, colonne 1 (Giffo à cheval 586/587) -->
-          <item xml:id="HDPAR_rs_2327"><rs><hi rend="sc">Giffo (Guillelmus de)</hi>, beneficiatus in ecclesia Parisiensi</rs>, <pb n="587" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$671/canvas"/><ref n="1037">1037</ref>.</item>
+          <item xml:id="HDPAR_rs_2327"><rs><hi rend="sc">Giffo (Guillelmus de)</hi>, beneficiatus in ecclesia Parisiensi</rs>, <ref n="1037">1037</ref>.</item>
           <item xml:id="HDPAR_rs_2328"><rs><hi rend="sc">Gyfo (Abbatia de)</hi></rs>, <ref n="352" target="#HDPAR_0352">352</ref>. — <hi rend="i">Gif : Seine-et-Oise, arr. Versailles, cant. Palaiseau.</hi></item>
           <item xml:id="HDPAR_rs_2329"><rs><hi rend="sc">Giffart (Nicholaus)</hi></rs>, <ref n="818" target="#HDPAR_0818">818</ref>, C <ref n="479" type="censier">479</ref>.</item>
           <item xml:id="HDPAR_rs_2330"><rs><hi rend="sc">Gila</hi>, soror Arnulphi de Meleduno</rs>, <ref n="957">957</ref>.</item>
@@ -36984,8 +36970,7 @@
           <item xml:id="HDPAR_rs_2382"><rs><hi rend="sc">Gilo de Sancto Germano</hi></rs>, C <ref n="484" type="censier">484</ref>.</item>
           <item xml:id="HDPAR_rs_2383"><rs><hi rend="sc">Gilo de Sancto Lazaro</hi>, civis Parisiensis</rs>, <ref n="344" target="#HDPAR_0344">344</ref>, <ref n="363" target="#HDPAR_0363">363</ref>, <ref n="390" target="#HDPAR_0390">390</ref>, <ref n="623" target="#HDPAR_0623">623</ref>, <ref n="632" target="#HDPAR_0632">632</ref>.</item>
           <item xml:id="HDPAR_rs_2384"><rs><hi rend="sc">Gilo de Stampis</hi>, capellanus in ecclesia Parisiensi</rs>, <ref n="497" target="#HDPAR_0497">497</ref>, C <ref n="476" type="censier">476</ref>.</item>
-          <item xml:id="HDPAR_rs_2385"><rs><hi rend="sc">Gilo de Suciaco</hi>, armiger</rs>, <ref n="320" target="#HDPAR_0320">320</ref>, <ref n="406" target="#HDPAR_0406">406</ref>; — miles, <ref n="499" target="#HDPAR_0499">499</ref>.</item>
-          <item xml:id="HDPAR_rs_2386"><rs><hi rend="sc">Gilo de Torailles</hi></rs>, <ref n="151" target="#HDPAR_0151">151</ref>.</item>
+          <item xml:id="HDPAR_rs_2385"><rs><hi rend="sc">Gilo de Suciaco</hi>, armiger</rs>, <ref n="320" target="#HDPAR_0320">320</ref>, <ref n="406" target="#HDPAR_0406">406</ref></item><item xml:id="HDPAR_rs_2385_1"><rs>Gilo miles</rs>, <ref n="499" target="#HDPAR_0499">499</ref>.</item><item xml:id="HDPAR_rs_2386"><rs><hi rend="sc">Gilo de Torailles</hi></rs>, <ref n="151" target="#HDPAR_0151">151</ref>.</item>
           <item xml:id="HDPAR_rs_2387"><rs><hi rend="sc">Gilo le Charron</hi></rs>, <ref n="458" target="#HDPAR_0458">458</ref>.</item>
           <item xml:id="HDPAR_rs_2388"><rs><hi rend="sc">Gilo Scancio</hi></rs>, <ref n="553" target="#HDPAR_0553">553</ref>.</item>
           <item xml:id="HDPAR_rs_2389"><rs><hi rend="sc">Gilo</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1757 #HDPAR_rs_1758 #HDPAR_rs_1759 #HDPAR_rs_1760 #HDPAR_rs_1768" corresp="#HDPAR_liste_E"><hi rend="sc">Egidius</hi></ref>, <ref type="see" target="#HDPAR_rs_2342" corresp="#HDPAR_liste_G"><hi rend="sc">Gile</hi></ref>, <ref type="see" target="#HDPAR_rs_2369" corresp="#HDPAR_liste_G"><hi rend="sc">Gilles</hi></ref>.</item>
@@ -37032,13 +37017,11 @@
           <item xml:id="HDPAR_rs_2429"><rs><hi rend="sc">Gomel (Johannes)</hi>, campsor</rs>, <ref n="840" target="#HDPAR_0840">840</ref>, C <ref n="495" type="censier">495</ref>.</item>
           <item xml:id="HDPAR_rs_2430"><rs><hi rend="sc">Gomer (Molendinum de)</hi></rs>, <ref n="112" target="#HDPAR_0112">112</ref>.</item>
           <item xml:id="HDPAR_rs_2431"><rs><hi rend="sc">Gomer Fontaene (Moniales de)</hi></rs>, <ref n="286" target="#HDPAR_0286">286</ref>. — <hi rend="i">Gomerfontaine : Oise, arr. Beauvais, cant. Chaumont, comm. Trye-la-Ville.</hi></item>
-          <item xml:id="HDPAR_rs_2432"><rs><hi rend="sc">Gometz (Marie de)</hi></rs>, <ref n="776" target="#HDPAR_0776">776</ref>; — dite la Châtelaine de Champlan, <ref n="813" target="#HDPAR_0813">813</ref>; — dite la Trésorière, <ref n="794" target="#HDPAR_0794">794</ref>, <ref n="834" target="#HDPAR_0834">834</ref>. — <hi rend="i">Gometz-la-Ville ou Gometz-le-Châtel : Seine-et-Oise, arr. Rambouillet, cant. Limours.</hi></item>
-          <item xml:id="HDPAR_rs_2433"><rs><hi rend="sc">Gondadius</hi>, Gundaclius, hospitalis Karoli Loci</rs>, <ref n="22" target="#HDPAR_0022">22</ref>.</item>
+          <item xml:id="HDPAR_rs_2432"><rs><hi rend="sc">Gometz (Marie de)</hi></rs>, <ref n="776" target="#HDPAR_0776">776</ref></item><item xml:id="HDPAR_rs_2432_1"><rs>Gometz dite la Châtelaine de Champlan</rs>, <ref n="813" target="#HDPAR_0813">813</ref></item><item xml:id="HDPAR_rs_2432_2"><rs>Gometz dite la Trésorière</rs>, <ref n="794" target="#HDPAR_0794">794</ref>, <ref n="834" target="#HDPAR_0834">834</ref>. — <hi rend="i">Gometz-la-Ville ou Gometz-le-Châtel : Seine-et-Oise, arr. Rambouillet, cant. Limours.</hi></item><item xml:id="HDPAR_rs_2433"><rs><hi rend="sc">Gondadius</hi>, Gundaclius, hospitalis Karoli Loci</rs>, <ref n="22" target="#HDPAR_0022">22</ref>.</item>
           <item xml:id="HDPAR_rs_2434"><rs><hi rend="sc">Gonessia</hi></rs>, **<ref n="1000">1000</ref>. — <hi rend="sc">Gonesse</hi>, <ref n="685" target="#HDPAR_0685">685</ref>. — <hi rend="i">Seine-et-Oise, arr. Pontoise, chef-lieu de canton.</hi></item>
           <item xml:id="HDPAR_rs_2435"><rs><hi rend="sc">Gonsenville (Robertus de)</hi></rs>, <ref n="41" target="#HDPAR_0041">41</ref>.</item>
           <item xml:id="HDPAR_rs_2436"><rs><hi rend="sc">Gonsevilla (Herbertus de)</hi>, canonicus Parisiensis et capellanus episcopi</rs>, <ref n="288" target="#HDPAR_0288">288</ref>, <ref n="290" target="#HDPAR_0290">290</ref>, <ref n="477" target="#HDPAR_0477">477</ref>.</item>
           <item xml:id="HDPAR_rs_2437"><rs><hi rend="sc">Gonsevilla</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_2455" corresp="#HDPAR_liste_G"><hi rend="sc">Gosenvilla</hi></ref>.</item>
-          <pb n="588" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$672/canvas"/>
           <!-- Page 588, colonne 1 -->
           <item xml:id="HDPAR_rs_2438"><rs><hi rend="sc">Goriart</hi></rs>, <ref n="766" target="#HDPAR_0766">766</ref>.</item>
           <item xml:id="HDPAR_rs_2439"><rs><hi rend="sc">Gorjarz (Thomas)</hi>, miles</rs>, <ref n="170" target="#HDPAR_0070">170</ref>.</item>
@@ -37153,7 +37136,6 @@
           <item xml:id="HDPAR_rs_2546"><rs><hi rend="sc">Guido</hi>, scriptor</rs>, <ref n="219" target="#HDPAR_0219">219</ref>.</item>
           <item xml:id="HDPAR_rs_2547"><rs><hi rend="sc">Guido Archarius</hi></rs>, <ref n="181" target="#HDPAR_0181">181</ref>.</item>
           <item xml:id="HDPAR_rs_2548"><rs><hi rend="sc">Guido Barbedaurus</hi></rs>, <ref n="44" target="#HDPAR_0044">44</ref>.</item>
-          <pb n="589" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$673/canvas"/>
           <!-- Page 589, colonne 1 (suite Guido) -->
           <item xml:id="HDPAR_rs_2549"><rs><hi rend="sc">Guido Cocus</hi></rs>, <ref n="565" target="#HDPAR_0565">565</ref>.</item>
           <item xml:id="HDPAR_rs_2550"><rs><hi rend="sc">Guido de Alneto</hi></rs>, <ref n="14" target="#HDPAR_0014">14</ref>.</item>
@@ -37172,8 +37154,7 @@
           <item xml:id="HDPAR_rs_2563"><rs><hi rend="sc">Guido de Navibus</hi></rs>, <ref n="556" target="#HDPAR_0556">556</ref>.</item>
           <item xml:id="HDPAR_rs_2564"><rs><hi rend="sc">Guido de Orceio</hi>, scutifer</rs>, <ref n="163" target="#HDPAR_0163">163</ref>.</item>
           <item xml:id="HDPAR_rs_2565"><rs><hi rend="sc">Guido de Palaciolo</hi></rs>, <ref n="184" target="#HDPAR_0184">184</ref>.</item>
-          <item xml:id="HDPAR_rs_2566"><rs><hi rend="sc">Guido de Palaciolo</hi>, canonicus Cathalonensis</rs>, <ref n="264" target="#HDPAR_0264">264</ref>, <ref n="267" target="#HDPAR_0267">267</ref>, <ref n="281" target="#HDPAR_0281">281</ref>, <ref n="282" target="#HDPAR_0282">282</ref>, <ref n="289" target="#HDPAR_0289">289</ref>, <ref n="339" target="#HDPAR_0339">339</ref>; — canonicus Parisiensis, <ref n="402" target="#HDPAR_0402">402</ref>, <ref n="409" target="#HDPAR_0409">409</ref>, <ref n="410" target="#HDPAR_0410">410</ref>, <ref n="412" target="#HDPAR_0412">412</ref>, <ref n="415" target="#HDPAR_0415">415</ref>, <ref n="485" target="#HDPAR_0485">485</ref>, <ref n="505" target="#HDPAR_0505">505</ref>.</item>
-          <item xml:id="HDPAR_rs_2567"><rs><hi rend="sc">Guido de Penulo</hi>, miles</rs>, <ref n="492" target="#HDPAR_0492">492</ref>.</item>
+          <item xml:id="HDPAR_rs_2566"><rs><hi rend="sc">Guido de Palaciolo</hi>, canonicus Cathalonensis</rs>, <ref n="264" target="#HDPAR_0264">264</ref>, <ref n="267" target="#HDPAR_0267">267</ref>, <ref n="281" target="#HDPAR_0281">281</ref>, <ref n="282" target="#HDPAR_0282">282</ref>, <ref n="289" target="#HDPAR_0289">289</ref>, <ref n="339" target="#HDPAR_0339">339</ref></item><item xml:id="HDPAR_rs_2566_1"><rs>Guido canonicus Parisiensis</rs>, <ref n="402" target="#HDPAR_0402">402</ref>, <ref n="409" target="#HDPAR_0409">409</ref>, <ref n="410" target="#HDPAR_0410">410</ref>, <ref n="412" target="#HDPAR_0412">412</ref>, <ref n="415" target="#HDPAR_0415">415</ref>, <ref n="485" target="#HDPAR_0485">485</ref>, <ref n="505" target="#HDPAR_0505">505</ref>.</item><item xml:id="HDPAR_rs_2567"><rs><hi rend="sc">Guido de Penulo</hi>, miles</rs>, <ref n="492" target="#HDPAR_0492">492</ref>.</item>
           <item xml:id="HDPAR_rs_2568"><rs><hi rend="sc">Guido de Petra Lata</hi></rs>, <ref n="67" target="#HDPAR_0067">67</ref>.</item>
           <item xml:id="HDPAR_rs_2569"><rs><hi rend="sc">Guido de Petra Lata</hi></rs>, <ref n="128" target="#HDPAR_0128">128</ref>.</item>
           <item xml:id="HDPAR_rs_2570"><rs><hi rend="sc">Guido de Plassiaco</hi></rs>, <ref n="352" target="#HDPAR_0352">352</ref>.</item>
@@ -37272,7 +37253,6 @@
           <item xml:id="HDPAR_rs_2661"><rs><hi rend="sc">Guillelmus de Braia</hi>, miles</rs>, <ref n="537" target="#HDPAR_0537">537</ref>.</item>
           <item xml:id="HDPAR_rs_2662"><rs><hi rend="sc">Guillelmus de Britoneria</hi>, miles</rs>, <ref n="102" target="#HDPAR_0102">102</ref>, <ref n="103" target="#HDPAR_0103">103</ref>.</item>
           <item xml:id="HDPAR_rs_2663"><rs><hi rend="sc">Guillelmus de Buc</hi>, miles</rs>, <ref n="486" target="#HDPAR_0271">486</ref>, <ref n="509" target="#HDPAR_0509">509</ref>, <ref n="510" target="#HDPAR_0510">510</ref>, <ref n="527" target="#HDPAR_0527">527</ref>, <ref n="528" target="#HDPAR_0528">528</ref>.</item>
-          <pb n="590" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$674/canvas"/>
           <!-- Page 590, colonne 1 (suite Guillelmus de…) -->
           <item xml:id="HDPAR_rs_2664"><rs><hi rend="sc">Guillelmus de Buch</hi>, miles</rs>, <ref n="70" target="#HDPAR_0070">70</ref>.</item>
           <item xml:id="HDPAR_rs_2665"><rs><hi rend="sc">Guillelmus de Cadomo</hi></rs>, <ref n="477" target="#HDPAR_0477">477</ref>.</item>
@@ -37306,8 +37286,7 @@
           <item xml:id="HDPAR_rs_2693"><rs><hi rend="sc">Guillelmus de Parigan</hi></rs>, *<ref n="1020">1020</ref>.</item>
           <item xml:id="HDPAR_rs_2694"><rs><hi rend="sc">Guillelmus de Periers</hi></rs>, C <ref n="473" type="censier">473</ref>.</item>
           <item xml:id="HDPAR_rs_2695"><rs><hi rend="sc">Guillelmus de Pontperrin</hi></rs>, <ref n="746" target="#HDPAR_0746">746</ref>.</item>
-          <item xml:id="HDPAR_rs_2696"><rs><hi rend="sc">Guillelmus de Ruppe</hi>, canonicus Ambianensis</rs>, *<ref n="1020">1020</ref>; — episcopus Redonensis, <ref n="827" target="#HDPAR_0827">827</ref>.</item>
-          <item xml:id="HDPAR_rs_2697"><rs><hi rend="sc">Guillelmus de Saint Pelerin</hi></rs>, C <ref n="491" type="censier">491</ref>.</item>
+          <item xml:id="HDPAR_rs_2696"><rs><hi rend="sc">Guillelmus de Ruppe</hi>, canonicus Ambianensis</rs>, *<ref n="1020">1020</ref></item><item xml:id="HDPAR_rs_2696_1"><rs>Guillelmus episcopus Redonensis</rs>, <ref n="827" target="#HDPAR_0827">827</ref>.</item><item xml:id="HDPAR_rs_2697"><rs><hi rend="sc">Guillelmus de Saint Pelerin</hi></rs>, C <ref n="491" type="censier">491</ref>.</item>
           <item xml:id="HDPAR_rs_2698"><rs><hi rend="sc">Guillelmus de Salceia</hi></rs>, <ref n="112" target="#HDPAR_0112">112</ref>.</item>
           <item xml:id="HDPAR_rs_2699"><rs><hi rend="sc">Guillelmus de Sancto Benedicto</hi></rs>, <ref n="336" target="#HDPAR_0336">336</ref>, <ref n="698" target="#HDPAR_0698">698</ref>, C <ref n="480" type="censier">480</ref>.</item>
           <item xml:id="HDPAR_rs_2700"><rs><hi rend="sc">Guillelmus de Sancto Paulo</hi></rs>, <ref n="775" target="#HDPAR_0775">775</ref>.</item>
@@ -37402,7 +37381,6 @@
         </list>
         <list type="index" xml:id="HDPAR_liste_H">
           <head>H</head>
-          <pb n="591" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$675/canvas"/>
           <!-- Page 591, colonne 1 -->
           <item xml:id="HDPAR_rs_2786"><rs><hi rend="sc">Hacart (Henricus)</hi></rs>, <ref n="837" target="#HDPAR_0837">837</ref>.</item>
           <item xml:id="HDPAR_rs_2787"><rs><hi rend="sc">Hacart</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_2841" corresp="#HDPAR_liste_H"><hi rend="sc">Hécart</hi></ref> et seq.</item>
@@ -37503,7 +37481,6 @@
           <item xml:id="HDPAR_rs_2880"><rs><hi rend="sc">Heluisis</hi>, uxor Petri Chatblant</rs>, <ref n="198" target="#HDPAR_0198">198</ref>.</item>
           <item xml:id="HDPAR_rs_2881"><rs><hi rend="sc">Heluisis</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_2849" corresp="#HDPAR_liste_H"><hi rend="sc">Helevisa</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_2862" corresp="#HDPAR_liste_H"><hi rend="sc">Helloys</hi></ref> et seq., <ref type="see" target="#HDPAR_rs_2976" corresp="#HDPAR_liste_H"><hi rend="sc">Herloysis</hi></ref>.</item>
           <item xml:id="HDPAR_rs_2882"><rs><hi rend="sc">Helyas de Parvo Ponte</hi>, clericus</rs>, *<ref n="1047">1047</ref>.</item>
-          <pb n="592" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$676/canvas"/>
           <!-- Page 592, colonne 1 -->
           <item xml:id="HDPAR_rs_2883"><rs><hi rend="sc">Helye (Johannes)</hi></rs>, <ref n="860" target="#HDPAR_0860">860</ref>.</item>
           <item xml:id="HDPAR_rs_2884"><rs><hi rend="sc">Helye</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_2854" corresp="#HDPAR_liste_H"><hi rend="sc">Helias</hi></ref>.</item>
@@ -37624,7 +37601,6 @@
           <item xml:id="HDPAR_rs_2997"><rs><hi rend="sc">Hersendis</hi></rs>, <ref n="533" target="#HDPAR_0533">533</ref>.</item>
           <item xml:id="HDPAR_rs_2998"><rs><hi rend="sc">Hersendis</hi>, mater Hugonis Clementis</rs>, *<ref n="911">911</ref>.</item>
           <item xml:id="HDPAR_rs_2999"><rs><hi rend="sc">Hersendis</hi>, mater Petri Marmerel</rs>, <ref n="47" target="#HDPAR_0047">47</ref>.</item>
-          <pb n="593" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$677/canvas"/>
           <!-- Page 593, colonne 1 -->
           <item xml:id="HDPAR_rs_3000"><rs><hi rend="sc">Hersendis</hi>, uxor Johannis Evroini</rs>, <ref n="118" target="#HDPAR_0118">118</ref>.</item>
           <item xml:id="HDPAR_rs_3001"><rs><hi rend="sc">Hersent (Vinea cognomine)</hi></rs>, <ref n="105" target="#HDPAR_0105">105</ref>.</item>
@@ -37750,7 +37726,6 @@
           <item xml:id="HDPAR_rs_3119"><rs><hi rend="sc">Hugo de Compans</hi>, clericus</rs>, <ref n="351" target="#HDPAR_0351">351</ref>, <ref n="479" target="#HDPAR_0479">479</ref>.</item>
           <item xml:id="HDPAR_rs_3120"><rs><hi rend="sc">Hugo de Gernivuile</hi></rs>, <ref n="897">897</ref>.</item>
           <item xml:id="HDPAR_rs_3121"><rs><hi rend="sc">Hugo de Gravenni</hi></rs>, <ref n="6" target="#HDPAR_0006">6</ref>, <ref n="41" target="#HDPAR_0041">41</ref>.</item>
-          <pb n="594" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$678/canvas"/>
           <!-- Page 594, colonne 1 (fin de la lettre H, suite Hugo de…) -->
           <item xml:id="HDPAR_rs_3122"><rs><hi rend="sc">Hugo Deimberti</hi>, canonicus Senonensis</rs>, <ref n="344" target="#HDPAR_0344">344</ref>, <ref n="361" target="#HDPAR_0361">361</ref>, <ref n="362" target="#HDPAR_0362">362</ref>, <ref n="363" target="#HDPAR_0363">363</ref>, C <ref n="476" type="censier">476</ref>.</item>
           <item xml:id="HDPAR_rs_3123"><rs><hi rend="sc">Hugo de Issi</hi></rs>, <ref n="45" target="#HDPAR_0045">45</ref>.</item>
@@ -37866,7 +37841,6 @@
           <item xml:id="HDPAR_rs_3221"><rs><hi rend="sc">J. de la Cell...</hi></rs>, *<ref n="1025">1025</ref>.<!-- vedette abrégée par des points dans l'imprimé --></item>
           <item xml:id="HDPAR_rs_3222"><rs><hi rend="sc">J. de Lavil...</hi></rs>, **<ref n="1039">1039</ref>.<!-- vedette abrégée par des points dans l'imprimé --></item>
           <item xml:id="HDPAR_rs_3223"><rs><hi rend="sc">J. Suessionensis</hi></rs>, *<ref n="1021">1021</ref>, *<ref n="1047">1047</ref>.</item>
-          <pb n="595" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$679/canvas"/>
           <!-- Page 595, colonne 1 (Jacobus) -->
           <item xml:id="HDPAR_rs_3224"><rs><hi rend="sc">Jacelinus de Cornoalle</hi> (B *210, <hi rend="sc">Corvalle</hi>)</rs>, <ref n="205" target="#HDPAR_0205">205</ref>.</item>
           <item xml:id="HDPAR_rs_3225"><rs><hi rend="sc">Jacobus</hi></rs>, <ref n="53" target="#HDPAR_0053">53</ref>.</item>
@@ -37986,7 +37960,6 @@
           <item xml:id="HDPAR_rs_3337"><rs><hi rend="sc">Johanna</hi>, uxor Michaelis Tout Sac</rs>, <ref n="1041">1041</ref>.</item>
           <item xml:id="HDPAR_rs_3338"><rs><hi rend="sc">Johanna</hi>, uxor Petri Buisncle</rs>, <ref n="972">972</ref>.</item>
           <item xml:id="HDPAR_rs_3339"><rs><hi rend="sc">Johanna</hi>, uxor Petri de Flacort</rs>, <ref n="445" target="#HDPAR_0445">445</ref>.</item>
-          <pb n="596" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$680/canvas"/>
           <!-- Page 596, colonne 1 (fin Johanna, début Johannes) -->
           <item xml:id="HDPAR_rs_3340"><rs><hi rend="sc">Johanna</hi>, uxor Reginaldi Cristati</rs>, <ref n="203" target="#HDPAR_0203">203</ref>, <ref n="454" target="#HDPAR_0454">454</ref>, <ref n="459" target="#HDPAR_0459">459</ref>.</item>
           <item xml:id="HDPAR_rs_3341"><rs><hi rend="sc">Johanna</hi>, uxor Richardi de Castelleto</rs>, <ref n="837" target="#HDPAR_0837">837</ref>.</item>
@@ -38108,7 +38081,6 @@
           <item xml:id="HDPAR_rs_3455"><rs><hi rend="sc">Johannes de Bouleire</hi></rs>, <ref n="995">995</ref>.</item>
           <item xml:id="HDPAR_rs_3456"><rs><hi rend="sc">Johannes de Braya</hi>, miles</rs>, <ref n="523" target="#HDPAR_0523">523</ref>, <ref n="540" target="#HDPAR_0540">540</ref>, <ref n="541" target="#HDPAR_0541">541</ref>.</item>
           <item xml:id="HDPAR_rs_3457"><rs><hi rend="sc">Johannes de Brebancia</hi></rs>, <ref n="828" target="#HDPAR_0828">828</ref>.</item>
-          <pb n="597" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$681/canvas"/>
           <!-- Page 597, colonne 1 (suite Johannes de…) -->
           <item xml:id="HDPAR_rs_3458"><rs><hi rend="sc">Johannes de Brisiaco</hi></rs>, <ref n="12" target="#HDPAR_0012">12</ref>, <ref n="100" target="#HDPAR_0100">100</ref>, C <ref n="476" type="censier">476</ref>.</item>
           <item xml:id="HDPAR_rs_3459"><rs><hi rend="sc">Johannes de Cadomo</hi>, canonicus Ebroicensis</rs>, <ref n="407" target="#HDPAR_0407">407</ref>, <ref n="408" target="#HDPAR_0408">408</ref>.</item>
@@ -38234,7 +38206,6 @@
           <item xml:id="HDPAR_rs_3577"><rs><hi rend="sc">Johannes Gaepin</hi></rs>, <ref n="265" target="#HDPAR_0265">265</ref>.</item>
           <item xml:id="HDPAR_rs_3578"><rs><hi rend="sc">Johannes Galensis</hi></rs>, <ref n="493" target="#HDPAR_0493">493</ref>.</item>
           <item xml:id="HDPAR_rs_3579"><rs><hi rend="sc">Johannes Galerne</hi></rs>, <ref n="387" target="#HDPAR_0387">387</ref>, <ref n="708" target="#HDPAR_0708">708</ref>, <ref n="728" target="#HDPAR_0728">728</ref>, <ref n="745" target="#HDPAR_0745">745</ref>, <ref n="754" target="#HDPAR_0754">754</ref>, C <ref n="484" type="censier">484</ref>, C <ref n="492" type="censier">492</ref>.</item>
-          <pb n="598" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$682/canvas"/>
           <!-- Page 598, colonne 1 (Johannes + surnoms) -->
           <item xml:id="HDPAR_rs_3580"><rs><hi rend="sc">Johannes Galonis</hi></rs>, <ref n="388" target="#HDPAR_0388">388</ref>.</item>
           <item xml:id="HDPAR_rs_3581"><rs><hi rend="sc">Johannes Godichal</hi></rs>, <ref n="1052">1052</ref>.</item>
@@ -38358,7 +38329,6 @@
         </list>
         <list type="index" xml:id="HDPAR_liste_K">
           <head>K</head>
-          <pb n="599" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$683/canvas"/>
           <!-- Page 599, bande K (Kala…) -->
           <item xml:id="HDPAR_rs_3696"><rs><hi rend="sc">Kala</hi></rs>, <ref n="546" target="#HDPAR_0546">546</ref>. — <hi rend="sc">Abbatia</hi>, <ref n="37" target="#HDPAR_0031">37</ref>, <ref n="670" target="#HDPAR_0670">670</ref>, <ref n="676" target="#HDPAR_0676">676</ref>.</item>
           <item xml:id="HDPAR_rs_3697"><rs><hi rend="sc">Kala (Andreas Piscator, de)</hi></rs>, <ref n="566" target="#HDPAR_0566">566</ref>, <ref n="568" target="#HDPAR_0566">568</ref>, <ref n="579" target="#HDPAR_0579">579</ref>.</item>
@@ -38455,7 +38425,6 @@
           <item xml:id="HDPAR_rs_3781"><rs><hi rend="sc">Liecia</hi>, uxor Laurencii de Fonte</rs>, <ref n="590" target="#HDPAR_0590">590</ref>.</item>
           <item xml:id="HDPAR_rs_3782"><rs><hi rend="sc">Liecia</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_3774" corresp="#HDPAR_liste_L"><hi rend="sc">Leticia</hi></ref>.</item>
           <item xml:id="HDPAR_rs_3783"><rs><hi rend="sc">Liers (Hugo de)</hi></rs>, <ref n="243" target="#HDPAR_0243">243</ref>, <ref n="247" target="#HDPAR_0247">247</ref>, <ref n="251" target="#HDPAR_0251">251</ref>. — <hi rend="sc">Lers (H. de)</hi>, <ref n="416" target="#HDPAR_0416">416</ref>.</item>
-          <pb n="600" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$684/canvas"/>
           <!-- Page 600, colonne 1 (suite L) -->
           <item xml:id="HDPAR_rs_3784"><rs><hi rend="sc">Liers (Symon de)</hi>, miles</rs>, <ref n="276" target="#HDPAR_0276">276</ref>. — <hi rend="i">Seine-et-Oise, arr. Corbeil, cant. Longjumeau, comm. Sainte-Geneviève-des-Bois.</hi></item>
           <item xml:id="HDPAR_rs_3785"><rs><hi rend="sc">Lies (Theobaldus de)</hi></rs>, *<ref n="981">981</ref>.</item>
@@ -38548,7 +38517,6 @@
           <item xml:id="HDPAR_rs_3870"><rs><hi rend="sc">Ludovicus VIII</hi>, rex Francorum</rs>, <ref n="182" target="#HDPAR_0182">182</ref>, <ref n="292" target="#HDPAR_0292">292</ref>, <ref n="324" target="#HDPAR_0324">324</ref>, <ref n="336" target="#HDPAR_0336">336</ref>, <ref n="337" target="#HDPAR_0001">337</ref>, <ref n="923">923</ref>.</item>
           <item xml:id="HDPAR_rs_3871"><rs><hi rend="sc">Ludovicus IX</hi>, rex Francorum</rs>, <ref n="234" target="#HDPAR_0234">234</ref>, <ref n="292" target="#HDPAR_0292">292</ref>, <ref n="322" target="#HDPAR_0322">322</ref>, <ref n="601" target="#HDPAR_0601">601</ref>, <ref n="623" target="#HDPAR_0623">623</ref>, <ref n="632" target="#HDPAR_0632">632</ref>, <ref n="681" target="#HDPAR_0681">681</ref>, <ref n="682" target="#HDPAR_0682">682</ref>, <ref n="683" target="#HDPAR_0683">683</ref>, <ref n="691" target="#HDPAR_0691">691</ref>, <ref n="695" target="#HDPAR_0001">695</ref>, <ref n="720" target="#HDPAR_0720">720</ref>, <ref n="735" target="#HDPAR_0735">735</ref>, **<ref n="968">968</ref>, **<ref n="979">979</ref>, **<ref n="999">999</ref>, **<ref n="1013">1013</ref>, C <ref n="475" type="censier">475</ref>.</item>
           <item xml:id="HDPAR_rs_3872"><rs><hi rend="sc">Luinvile (Johannes de)</hi>, armiger</rs>, <ref n="543" target="#HDPAR_0543">543</ref>.</item>
-          <pb n="601" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$685/canvas"/>
           <!-- Page 601, bande supérieure : fin de la lettre L (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_3873"><rs><hi rend="sc">Lumbardus (Albertus)</hi></rs>, <ref n="37" target="#HDPAR_0037">37</ref>.</item>
           <item xml:id="HDPAR_rs_3874"><rs><hi rend="sc">Lumbardus (Rembaudus)</hi></rs>, <ref n="172" target="#HDPAR_0172">172</ref>, C <ref n="492" type="censier">492</ref>.</item>
@@ -38654,7 +38622,6 @@
           <item xml:id="HDPAR_rs_3962"><rs><hi rend="sc">Marche Bone (Marguerite la)</hi></rs>, *<ref n="1025">1025</ref>.</item>
           <item xml:id="HDPAR_rs_3963"><rs><hi rend="sc">Marche Bone (Nicholas)</hi></rs>, *<ref n="1025">1025</ref>.</item>
           <item xml:id="HDPAR_rs_3964"><rs><hi rend="sc">Marchesio (Albericus de)</hi></rs>, <ref n="149" target="#HDPAR_0149">149</ref>.</item>
-          <pb n="602" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$686/canvas"/>
           <!-- Page 602, colonne 1 (suite M) -->
           <item xml:id="HDPAR_rs_3965"><rs><hi rend="sc">Marchesio (Thebaudus de)</hi></rs>, <ref n="149" target="#HDPAR_0149">149</ref>.</item>
           <item xml:id="HDPAR_rs_3966"><rs><hi rend="sc">Marchia (Maria de)</hi></rs>, <ref n="857" target="#HDPAR_0857">857</ref>.</item>
@@ -38772,11 +38739,9 @@
           <item xml:id="HDPAR_rs_4076"><rs><hi rend="sc">Marie</hi>, fame Jehan le Cochetier</rs>, <ref n="783" target="#HDPAR_0783">783</ref>.</item>
           <item xml:id="HDPAR_rs_4077"><rs><hi rend="sc">Marie</hi>, fame Tibaut le Tourneeur</rs>, <ref n="779" target="#HDPAR_0779">779</ref>.</item>
           <item xml:id="HDPAR_rs_4078"><rs><hi rend="sc">Marie</hi>, fille d’Arnoul</rs>, <ref n="755" target="#HDPAR_0755">755</ref>.</item>
-          <item xml:id="HDPAR_rs_4079"><rs><hi rend="sc">Marie de Gometz</hi></rs>, <ref n="776" target="#HDPAR_0776">776</ref> ; — dite la Châtelaine de Champlan, <ref n="813" target="#HDPAR_0813">813</ref> ; — dite la Trésorière, <ref n="794" target="#HDPAR_0794">794</ref>, <ref n="834" target="#HDPAR_0834">834</ref>.</item>
-          <item xml:id="HDPAR_rs_4080"><rs><hi rend="sc">Marie de Montjay</hi></rs>, <ref n="764" target="#HDPAR_0764">764</ref>.</item>
+          <item xml:id="HDPAR_rs_4079"><rs><hi rend="sc">Marie de Gometz</hi></rs>, <ref n="776" target="#HDPAR_0776">776</ref> </item><item xml:id="HDPAR_rs_4079_1"><rs>Marie dite la Châtelaine de Champlan</rs>, <ref n="813" target="#HDPAR_0813">813</ref> </item><item xml:id="HDPAR_rs_4079_2"><rs>Marie dite la Trésorière</rs>, <ref n="794" target="#HDPAR_0794">794</ref>, <ref n="834" target="#HDPAR_0834">834</ref>.</item><item xml:id="HDPAR_rs_4080"><rs><hi rend="sc">Marie de Montjay</hi></rs>, <ref n="764" target="#HDPAR_0764">764</ref>.</item>
           <item xml:id="HDPAR_rs_4081"><rs><hi rend="sc">Marie la Chevalière</hi></rs>, <ref n="691" target="#HDPAR_0691">691</ref>.</item>
           <item xml:id="HDPAR_rs_4082"><rs><hi rend="sc">Marisia</hi>, prope Parisius</rs>, <ref n="116" target="#HDPAR_0116">116</ref>.</item>
-          <pb n="603" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$687/canvas"/>
           <!-- Page 603, colonne 1 (suite M) -->
           <item xml:id="HDPAR_rs_4083"><rs><hi rend="sc">Marisia</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_3973 #HDPAR_rs_3974" corresp="#HDPAR_liste_M"><hi rend="sc">Maresiis</hi></ref> et seq.</item>
           <item xml:id="HDPAR_rs_4084"><rs><hi rend="sc">Marivas (Via de)</hi></rs>, <ref n="544" target="#HDPAR_0544">544</ref>.</item>
@@ -38899,7 +38864,6 @@
           <item xml:id="HDPAR_rs_4199"><rs><hi rend="sc">Maupas (Alannus)</hi></rs>, <ref n="925">925</ref>.</item>
           <item xml:id="HDPAR_rs_4200"><rs><hi rend="sc">Mauperrins</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_4198" corresp="#HDPAR_liste_M"><hi rend="sc">Mauparvis</hi></ref>.</item>
           <item xml:id="HDPAR_rs_4201"><rs><hi rend="sc">Maupertuis</hi></rs>, <ref n="475" target="#HDPAR_0475">475</ref>, <ref n="834" target="#HDPAR_0834">834</ref>.</item>
-          <pb n="604" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$688/canvas"/>
           <!-- Page 604, colonne 1 (suite M) -->
           <item xml:id="HDPAR_rs_4202"><rs><hi rend="sc">Maupertuis</hi>, apud Ver Magnum</rs>, <ref n="969">969</ref>.</item>
           <item xml:id="HDPAR_rs_4203"><rs><hi rend="sc">Mauricii (Theobaldus)</hi></rs>, <ref n="390" target="#HDPAR_0390">390</ref>, <ref n="391" target="#HDPAR_0391">391</ref>.</item>
@@ -39004,7 +38968,6 @@
           <item xml:id="HDPAR_rs_4300"><rs><hi rend="sc">Miles (Jacobus)</hi></rs>, <ref n="641" target="#HDPAR_0641">641</ref>, <ref n="660" target="#HDPAR_0660">660</ref>, <ref n="667" target="#HDPAR_0667">667</ref>, <ref n="686" target="#HDPAR_0686">686</ref>, **<ref n="996">996</ref>.</item>
           <item xml:id="HDPAR_rs_4301"><rs><hi rend="sc">Miliaco (Robertus de)</hi></rs>, <ref n="94" target="#HDPAR_0094">94</ref>.</item>
           <item xml:id="HDPAR_rs_4302"><rs><hi rend="sc">Milisendis de Bevra</hi></rs>, <ref n="69" target="#HDPAR_0069">69</ref>.</item>
-          <pb n="605" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$689/canvas"/>
           <!-- Page 605, colonne 1 (suite M) -->
           <item xml:id="HDPAR_rs_4303"><rs><hi rend="sc">Millesent</hi>, uxor Guillelmi de Villoflein</rs>, <ref n="96" target="#HDPAR_0096">96</ref>.</item>
           <item xml:id="HDPAR_rs_4304"><rs><hi rend="sc">Milo</hi></rs>, <ref n="2" target="#HDPAR_0002">2</ref>.</item>
@@ -39105,7 +39068,6 @@
           <item xml:id="HDPAR_rs_4397"><rs><hi rend="sc">Monte Capreoli (Philippus de)</hi></rs>, <ref n="48" target="#HDPAR_0048">48</ref>. — <hi rend="i">Montchevreuil : Oise, arr. Beauvais, cant. Méru, comm. Fresneaux-Montchevreuil.</hi></item>
           <item xml:id="HDPAR_rs_4398"><rs><hi rend="sc">Monte Forti (Bertaudus de)</hi></rs>, <ref n="321" target="#HDPAR_0321">321</ref>.</item>
           <item xml:id="HDPAR_rs_4399"><rs><hi rend="sc">Monte Forti (Guillermus de)</hi></rs>, <ref n="321" target="#HDPAR_0321">321</ref>.</item>
-          <pb n="606" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$690/canvas"/>
           <!-- Page 606, colonne 1 (suite M) -->
           <item xml:id="HDPAR_rs_4400"><rs><hi rend="sc">Monte Gisonis (Robertus de)</hi></rs>, <ref n="757" target="#HDPAR_0757">757</ref>. — <hi rend="i">Peut-être Montgison : Seine-et-Oise, arr. Mantes, cant. Limay, comm. Fontenay-Saint-Père.</hi></item>
           <item xml:id="HDPAR_rs_4401"><rs><hi rend="sc">Monte Guillelmi (Aubericus de)</hi></rs>, <ref n="48" target="#HDPAR_0048">48</ref>.</item>
@@ -39197,7 +39159,6 @@
         </list>
         <list type="index" xml:id="HDPAR_liste_N">
           <head>N</head>
-          <pb n="607" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$691/canvas"/>
           <!-- Page 607, colonne 1 (titre « N » centré sur l'imprimé) -->
           <item xml:id="HDPAR_rs_4484"><rs><hi rend="sc">N.</hi>, cantor Parisiensis</rs>, <ref n="207" target="#HDPAR_0207">207</ref>, <ref n="208" target="#HDPAR_0208">208</ref>, <ref n="223" target="#HDPAR_0223">223</ref>, <ref n="277" target="#HDPAR_0277">277</ref>, C <ref n="480" type="censier">480</ref>.</item>
           <item xml:id="HDPAR_rs_4485"><rs><hi rend="sc">N.</hi>, decanus Parisiensis et cardinalis</rs>, C <ref n="495" type="censier">495</ref>.</item>
@@ -39311,7 +39272,6 @@
           <item xml:id="HDPAR_rs_4591"><rs><hi rend="sc">Nogent (Gilles de)</hi>, écuyer</rs>, <ref n="782" target="#HDPAR_0782">782</ref>.</item>
           <item xml:id="HDPAR_rs_4592"><rs><hi rend="sc">Nogento (Guillelmus de)</hi>, miles</rs>, <ref n="797" target="#HDPAR_0797">797</ref>.</item>
           <item xml:id="HDPAR_rs_4593"><rs><hi rend="sc">Noier (Theobaldus de)</hi></rs>, <ref n="347" target="#HDPAR_0347">347</ref>.</item>
-          <pb n="608" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$692/canvas"/>
           <!-- Page 608, bande supérieure : fin de la lettre N (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_4594"><rs><hi rend="sc">Noisiaco (Droco de)</hi></rs>, <ref n="736" target="#HDPAR_0736">736</ref>. — <hi rend="sc">Moisiaco (D. de)</hi>, <ref n="742" target="#HDPAR_0742">742</ref>.</item>
           <item xml:id="HDPAR_rs_4595"><rs><hi rend="sc">Noisiaco (Leprosaria de)</hi></rs>, <ref n="213" target="#HDPAR_0213">213</ref>.</item>
@@ -39420,7 +39380,6 @@
           <item xml:id="HDPAR_rs_4690"><rs><hi rend="sc">Odo</hi>, filius Odonis de Compans</rs>, <ref n="193" target="#HDPAR_0193">193</ref>.</item>
           <item xml:id="HDPAR_rs_4691"><rs><hi rend="sc">Odo</hi>, filius Rogeri de Vile d’Avrei</rs>, <ref n="73" target="#HDPAR_0073">73</ref>.</item>
           <item xml:id="HDPAR_rs_4692"><rs><hi rend="sc">Odo</hi>, frater Petri Frument</rs>, <ref n="34" target="#HDPAR_0034">34</ref>.</item>
-          <pb n="609" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$693/canvas"/>
           <!-- Page 609, bande supérieure : fin de la lettre O (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_4693"><rs><hi rend="sc">Odo</hi>, frater Philippi de Vere Magno</rs>, <ref n="403" target="#HDPAR_0403">403</ref>.</item>
           <item xml:id="HDPAR_rs_4694"><rs><hi rend="sc">Odo</hi>, maritus Aeliz de Gif</rs>, <ref n="61" target="#HDPAR_0061">61</ref>, <ref n="68" target="#HDPAR_0068">68</ref>.</item>
@@ -39530,7 +39489,6 @@
           <item xml:id="HDPAR_rs_4790"><rs><hi rend="sc">Page (Johannes le)</hi>, de Noisiaco Magno</rs>, <ref n="559" target="#HDPAR_0559">559</ref>.</item>
           <item xml:id="HDPAR_rs_4791"><rs><hi rend="sc">Paielée (Johannes)</hi>, clericus</rs>, *<ref n="997">997</ref>. — <hi rend="sc">Paalée (J.)</hi>, <ref n="1047">1047</ref>, C <ref n="492" type="censier">492</ref>.</item>
           <item xml:id="HDPAR_rs_4792"><rs><hi rend="sc">Paillarde (La)</hi></rs>, C <ref n="473" type="censier">473</ref>.</item>
-          <pb n="610" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$694/canvas"/>
           <!-- Page 610, colonne 1 (suite P) -->
           <item xml:id="HDPAR_rs_4793"><rs><hi rend="sc">Paillart (Radulphus)</hi></rs>, <ref n="425" target="#HDPAR_0425">425</ref>, <ref n="428" target="#HDPAR_0428">428</ref>.</item>
           <item xml:id="HDPAR_rs_4794"><rs><hi rend="sc">Palaciolo (Girardus de)</hi>, serviens Regis</rs>, <ref n="626" target="#HDPAR_0626">626</ref>.</item>
@@ -39538,8 +39496,7 @@
           <item xml:id="HDPAR_rs_4796"><rs><hi rend="sc">Palaciolo (Aalipdis de)</hi></rs>, <ref n="418" target="#HDPAR_0418">418</ref>, <ref n="434" target="#HDPAR_0434">434</ref>, <ref n="474" target="#HDPAR_0474">474</ref>.</item>
           <item xml:id="HDPAR_rs_4797"><rs><hi rend="sc">Palaciolo (Ferricus de)</hi>, miles</rs>, <ref n="184" target="#HDPAR_0184">184</ref>, <ref n="965">965</ref>.</item>
           <item xml:id="HDPAR_rs_4798"><rs><hi rend="sc">Palaciolo (Guido de)</hi></rs>, <ref n="184" target="#HDPAR_0184">184</ref>.</item>
-          <item xml:id="HDPAR_rs_4799"><rs><hi rend="sc">Palaciolo (Guido de)</hi>, canonicus Cathalonensis</rs>, <ref n="264" target="#HDPAR_0264">264</ref>, <ref n="267" target="#HDPAR_0267">267</ref>, <ref n="281" target="#HDPAR_0281">281</ref>, <ref n="282" target="#HDPAR_0282">282</ref>, <ref n="289" target="#HDPAR_0289">289</ref>, <ref n="339" target="#HDPAR_0339">339</ref> ; — canonicus Parisiensis, <ref n="402" target="#HDPAR_0402">402</ref>, <ref n="409" target="#HDPAR_0409">409</ref>, <ref n="410" target="#HDPAR_0410">410</ref>, <ref n="412" target="#HDPAR_0412">412</ref>, <ref n="415" target="#HDPAR_0415">415</ref>, <ref n="485" target="#HDPAR_0485">485</ref>, <ref n="505" target="#HDPAR_0505">505</ref>.</item>
-          <item xml:id="HDPAR_rs_4800"><rs><hi rend="sc">Palaciolo (Guillelmus de)</hi>, armiger</rs>, <ref n="414" target="#HDPAR_0414">414</ref>.</item>
+          <item xml:id="HDPAR_rs_4799"><rs><hi rend="sc">Palaciolo (Guido de)</hi>, canonicus Cathalonensis</rs>, <ref n="264" target="#HDPAR_0264">264</ref>, <ref n="267" target="#HDPAR_0267">267</ref>, <ref n="281" target="#HDPAR_0281">281</ref>, <ref n="282" target="#HDPAR_0282">282</ref>, <ref n="289" target="#HDPAR_0289">289</ref>, <ref n="339" target="#HDPAR_0339">339</ref> </item><item xml:id="HDPAR_rs_4799_1"><rs>Palaciolo canonicus Parisiensis</rs>, <ref n="402" target="#HDPAR_0402">402</ref>, <ref n="409" target="#HDPAR_0409">409</ref>, <ref n="410" target="#HDPAR_0410">410</ref>, <ref n="412" target="#HDPAR_0412">412</ref>, <ref n="415" target="#HDPAR_0415">415</ref>, <ref n="485" target="#HDPAR_0485">485</ref>, <ref n="505" target="#HDPAR_0505">505</ref>.</item><item xml:id="HDPAR_rs_4800"><rs><hi rend="sc">Palaciolo (Guillelmus de)</hi>, armiger</rs>, <ref n="414" target="#HDPAR_0414">414</ref>.</item>
           <item xml:id="HDPAR_rs_4801"><rs><hi rend="sc">Palaciolo (Guillermus de Vanves, de)</hi></rs>, <ref n="414" target="#HDPAR_0414">414</ref>. — <hi rend="i">Palaiseau : Seine-et-Oise, arr. Versailles, chef-lieu de canton.</hi></item>
           <item xml:id="HDPAR_rs_4802"><rs><hi rend="sc">Palliaco</hi>, <hi rend="sc">Polliaco (Bernardus de)</hi>, presbiter</rs>, <ref n="1037">1037</ref>.</item>
           <item xml:id="HDPAR_rs_4803"><rs><hi rend="sc">Paneler (Guiardus le)</hi></rs>, <ref n="253" target="#HDPAR_0253">253</ref>.</item>
@@ -39625,7 +39582,6 @@
           <item xml:id="HDPAR_rs_4881"><rs><hi rend="sc">Parisius</hi>, Forum Regis</rs>, <ref n="707" target="#HDPAR_0707">707</ref>.</item>
           <item xml:id="HDPAR_rs_4882"><rs><hi rend="sc">Parisius</hi>, Fossata Sancti Germani Altissiodorensis</rs>, <ref n="294" target="#HDPAR_0294">294</ref>, <ref n="433" target="#HDPAR_0433">433</ref>.</item>
           <item xml:id="HDPAR_rs_4883"><rs><hi rend="sc">Parisius</hi>, Fossato Sancti Germani (Robertus de)</rs>, pelliparius, <ref n="708" target="#HDPAR_0708">708</ref>, <ref n="728" target="#HDPAR_0728">728</ref>, <ref n="745" target="#HDPAR_0745">745</ref>.</item>
-          <pb n="611" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$695/canvas"/>
           <!-- Page 611, colonne 1 (suite « Parisius, … ») -->
           <item xml:id="HDPAR_rs_4884"><rs><hi rend="sc">Parisius</hi>, Furnum concergii</rs>, <ref n="272" target="#HDPAR_0272">272</ref>.</item>
           <item xml:id="HDPAR_rs_4885"><rs><hi rend="sc">Parisius</hi>, Furnum Episcopi</rs>, <ref n="493" target="#HDPAR_0493">493</ref>.</item>
@@ -39710,7 +39666,6 @@
           <item xml:id="HDPAR_rs_4962"><rs><hi rend="sc">Parisius</hi>, Sancto Christophoro (Balduinus de)</rs>, <ref n="12" target="#HDPAR_0012">12</ref>, <ref n="19" target="#HDPAR_0019">19</ref>.</item>
           <item xml:id="HDPAR_rs_4963"><rs><hi rend="sc">Parisius</hi>, Sancto Christophoro (Hemericus de), clericus, procurator clericorum matutinalium ecclesie Parisiensis</rs>, *<ref n="981">981</ref>.</item>
           <item xml:id="HDPAR_rs_4964"><rs><hi rend="sc">Parisius</hi>, Sancti Dyonisii de Carcere (Ecclesia)</rs>, <ref n="31" target="#HDPAR_0031">31</ref>, <ref n="40" target="#HDPAR_0040">40</ref>, C <ref n="476" type="censier">476</ref>, C <ref n="478" type="censier">478</ref>.</item>
-          <pb n="612" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$696/canvas"/>
           <!-- Page 612, colonne 1 (suite « Parisius, … ») -->
           <item xml:id="HDPAR_rs_4965"><rs><hi rend="sc">Parisius</hi>, Sancti Dyonisii de Passu (Ecclesia)</rs>, <ref n="49" target="#HDPAR_0049">49</ref>.</item>
           <item xml:id="HDPAR_rs_4966"><rs><hi rend="sc">Parisius</hi>, Sancti Eligii (Ecclesia)</rs>, <ref n="3" target="#HDPAR_0003">3</ref>, <ref n="46" target="#HDPAR_0046">46</ref>, <ref n="113" target="#HDPAR_0113">113</ref>, <ref n="139" target="#HDPAR_0139">139</ref>, <ref n="181" target="#HDPAR_0181">181</ref>, <ref n="235" target="#HDPAR_0235">235</ref>, <ref n="237" target="#HDPAR_0237">237</ref>, <ref n="260" target="#HDPAR_0260">260</ref>, <ref n="376" target="#HDPAR_0376">376</ref>, <ref n="440" target="#HDPAR_0440">440</ref>, <ref n="746" target="#HDPAR_0746">746</ref>, <ref n="810" target="#HDPAR_0810">810</ref>, C <ref n="476" type="censier">476</ref>, C <ref n="478" type="censier">478</ref>, C <ref n="479" type="censier">479</ref>, C <ref n="494" type="censier">494</ref>.</item>
@@ -39802,7 +39757,6 @@
           <item xml:id="HDPAR_rs_5050"><rs><hi rend="sc">Parisius</hi>, Vicus de Joyaco</rs>, C <ref n="487" type="censier">487</ref>.</item>
           <item xml:id="HDPAR_rs_5051"><rs><hi rend="sc">Parisius</hi>, Vicus Jude</rs>, <ref n="407" target="#HDPAR_0407">407</ref>, <ref n="408" target="#HDPAR_0408">408</ref>, C <ref n="481" type="censier">481</ref>.</item>
           <item xml:id="HDPAR_rs_5052"><rs><hi rend="sc">Parisius</hi>, Vicus Judearie</rs>, C <ref n="478" type="censier">478</ref>. — Judaria Panificorum, <ref n="83" target="#HDPAR_0083">83</ref>.</item>
-          <pb n="613" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$697/canvas"/>
           <!-- Page 613, colonne 1 (suite « Parisius, … ») -->
           <item xml:id="HDPAR_rs_5053"><rs><hi rend="sc">Parisius</hi>, Judearia (Ysanbardus de)</rs>, <ref n="252" target="#HDPAR_0252">252</ref>.</item>
           <item xml:id="HDPAR_rs_5054"><rs><hi rend="sc">Parisius</hi>, Vicus Kalandre</rs>, <ref n="152" target="#HDPAR_0152">152</ref>, <ref n="577" target="#HDPAR_0577">577</ref>, <ref n="860" target="#HDPAR_0860">860</ref>, C <ref n="478" type="censier">478</ref>.</item>
@@ -39883,7 +39837,6 @@
           <item xml:id="HDPAR_rs_5127"><rs><hi rend="sc">Parisius</hi>, Vicus de Transverso</rs>, <ref n="852" target="#HDPAR_0852">852</ref>.</item>
           <item xml:id="HDPAR_rs_5128"><rs><hi rend="sc">Parisius</hi>, Vicus de Trousse Vache</rs>, <ref n="772" target="#HDPAR_0772">772</ref>, C <ref n="488" type="censier">488</ref>.</item>
           <item xml:id="HDPAR_rs_5129"><rs><hi rend="sc">Parisius</hi>, Trutannaria</rs>, <ref n="217" target="#HDPAR_0217">217</ref>, C <ref n="493" type="censier">493</ref>.</item>
-          <pb n="614" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$698/canvas"/>
           <!-- Page 614, colonne 1 (fin de « Parisius » puis suite P) -->
           <item xml:id="HDPAR_rs_5130"><rs><hi rend="sc">Parisius</hi>, Vicus Verrerarie</rs>, C <ref n="484" type="censier">484</ref>.</item>
           <item xml:id="HDPAR_rs_5131"><rs><hi rend="sc">Parisius</hi>, Vicus ad Ymaginem Beate Katerine</rs>, C <ref n="477" type="censier">477</ref>, C <ref n="494" type="censier">494</ref>.</item>
@@ -40008,7 +39961,6 @@
           <item xml:id="HDPAR_rs_5248"><rs><hi rend="sc">Petronilla de Perona</hi>, familiaris Domus Dei</rs>, <ref n="772" target="#HDPAR_0772">772</ref>, C <ref n="488" type="censier">488</ref>.</item>
           <item xml:id="HDPAR_rs_5249"><rs><hi rend="sc">Petronilla Gros Parmi</hi></rs>, C <ref n="490" type="censier">490</ref>.</item>
           <item xml:id="HDPAR_rs_5250"><rs><hi rend="sc">Petronilla la Grimoude</hi></rs>, <ref n="458" target="#HDPAR_0458">458</ref>.</item>
-          <pb n="615" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$699/canvas"/>
           <!-- Page 615, colonne 1 (suite P) -->
           <item xml:id="HDPAR_rs_5251"><rs><hi rend="sc">Petronilla la Jadinere</hi></rs>, <ref n="205" target="#HDPAR_0205">205</ref>.</item>
           <item xml:id="HDPAR_rs_5252"><rs><hi rend="sc">Petronilla Suessionensis</hi></rs>, <ref n="529" target="#HDPAR_0529">529</ref>.</item>
@@ -40135,7 +40087,6 @@
           <item xml:id="HDPAR_rs_5371"><rs><hi rend="sc">Petrus de Monte Omeri</hi></rs>, <ref n="239" target="#HDPAR_0239">239</ref>.</item>
           <item xml:id="HDPAR_rs_5372"><rs><hi rend="sc">Petrus de Monterol</hi>, miles</rs>, <ref n="187" target="#HDPAR_0187">187</ref>, <ref n="925">925</ref>.</item>
           <item xml:id="HDPAR_rs_5373"><rs><hi rend="sc">Petrus de Montrolle</hi></rs>, <ref n="42" target="#HDPAR_0042">42</ref>.</item>
-          <pb n="616" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$700/canvas"/>
           <!-- Page 616, colonne 1 (suite « Petrus … ») -->
           <item xml:id="HDPAR_rs_5374"><rs><hi rend="sc">Petrus de Mostorolio</hi>, miles</rs>, <ref n="350" target="#HDPAR_0350">350</ref>, <ref n="383" target="#HDPAR_0383">383</ref>, <ref n="451" target="#HDPAR_0451">451</ref>.</item>
           <item xml:id="HDPAR_rs_5375"><rs><hi rend="sc">Petrus de Mota</hi>, de Castris, armiger</rs>, <ref n="308" target="#HDPAR_0308">308</ref>.</item>
@@ -40262,7 +40213,6 @@
           <item xml:id="HDPAR_rs_5494"><rs><hi rend="sc">Philippus de Monte Calido</hi></rs>, <ref n="1041">1041</ref>, *<ref n="1043">1043</ref>.</item>
           <item xml:id="HDPAR_rs_5495"><rs><hi rend="sc">Philippus de Periers</hi></rs>, *<ref n="1047">1047</ref>.</item>
           <item xml:id="HDPAR_rs_5496"><rs><hi rend="sc">Philippus de Periers</hi></rs>, C <ref n="473" type="censier">473</ref>.</item>
-          <pb n="617" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$701/canvas"/>
           <!-- Page 617, colonne 1 (suite « Philippus … » puis P) -->
           <item xml:id="HDPAR_rs_5497"><rs><hi rend="sc">Philippus de Petroso</hi>, miles</rs>, <ref n="164" target="#HDPAR_0164">164</ref>.</item>
           <item xml:id="HDPAR_rs_5498"><rs><hi rend="sc">Philippus de Rolia</hi></rs>, <ref n="860" target="#HDPAR_0860">860</ref>.</item>
@@ -40273,8 +40223,7 @@
           <item xml:id="HDPAR_rs_5503"><rs><hi rend="sc">Philippus de Tyeuz</hi></rs>, <ref n="456" target="#HDPAR_0456">456</ref>.</item>
           <item xml:id="HDPAR_rs_5504"><rs><hi rend="sc">Philippus de Vere Magno</hi>, miles</rs>, <ref n="398" target="#HDPAR_0398">398</ref>, <ref n="403" target="#HDPAR_0403">403</ref>, <ref n="404" target="#HDPAR_0404">404</ref>, <ref n="495" target="#HDPAR_0495">495</ref>, <ref n="503" target="#HDPAR_0503">503</ref>.</item>
           <item xml:id="HDPAR_rs_5505"><rs><hi rend="sc">Philippus Faber</hi></rs>, <ref n="475" target="#HDPAR_0475">475</ref>, <ref n="515" target="#HDPAR_0515">515</ref>.</item>
-          <item xml:id="HDPAR_rs_5506"><rs><hi rend="sc">Philippus Farsitus</hi>, matricularius ecclesie Parisiensis</rs>, <ref n="279" target="#HDPAR_0279">279</ref> ; — capellanus in ecclesia Parisiensi, <ref n="464" target="#HDPAR_0464">464</ref>.</item>
-          <item xml:id="HDPAR_rs_5507"><rs><hi rend="sc">Philippus Hamel</hi></rs>, <ref n="186" target="#HDPAR_0186">186</ref>.</item>
+          <item xml:id="HDPAR_rs_5506"><rs><hi rend="sc">Philippus Farsitus</hi>, matricularius ecclesie Parisiensis</rs>, <ref n="279" target="#HDPAR_0279">279</ref> </item><item xml:id="HDPAR_rs_5506_1"><rs>Philippus capellanus in ecclesia Parisiensi</rs>, <ref n="464" target="#HDPAR_0464">464</ref>.</item><item xml:id="HDPAR_rs_5507"><rs><hi rend="sc">Philippus Hamel</hi></rs>, <ref n="186" target="#HDPAR_0186">186</ref>.</item>
           <item xml:id="HDPAR_rs_5508"><rs><hi rend="sc">Philippus Hamelini</hi>, civis Parisiensis</rs>, <ref n="113" target="#HDPAR_0113">113</ref>, <ref n="118" target="#HDPAR_0118">118</ref>, <ref n="131" target="#HDPAR_0131">131</ref>, <ref n="136" target="#HDPAR_0136">136</ref>, <ref n="138" target="#HDPAR_0138">138</ref>, <ref n="160" target="#HDPAR_0160">160</ref>, <ref n="161" target="#HDPAR_0161">161</ref>, <ref n="235" target="#HDPAR_0235">235</ref>, <ref n="237" target="#HDPAR_0237">237</ref>, <ref n="356" target="#HDPAR_0356">356</ref>, C <ref n="478" type="censier">478</ref>.</item>
           <item xml:id="HDPAR_rs_5509"><rs><hi rend="sc">Philippus Hostiarius</hi></rs>, <ref n="375" target="#HDPAR_0375">375</ref>, C <ref n="485" type="censier">485</ref>.</item>
           <item xml:id="HDPAR_rs_5510"><rs><hi rend="sc">Philippus Omondi</hi></rs>, *<ref n="958">958</ref>.</item>
@@ -40372,7 +40321,6 @@
           <item xml:id="HDPAR_rs_5600"><rs><hi rend="sc">Poolina</hi>, filia Andree Capellarii</rs>, <ref n="816" target="#HDPAR_0816">816</ref>.</item>
           <item xml:id="HDPAR_rs_5601"><rs><hi rend="sc">Poon (Stephanus)</hi></rs>, <ref n="183" target="#HDPAR_0183">183</ref>.</item>
           <item xml:id="HDPAR_rs_5602"><rs><hi rend="sc">Poon</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_4808" corresp="#HDPAR_liste_P"><hi rend="sc">Paon</hi></ref>, <ref type="see" target="#HDPAR_rs_5173" corresp="#HDPAR_liste_P"><hi rend="sc">Pavonis</hi></ref>.</item>
-          <pb n="618" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$702/canvas"/>
           <!-- Page 618, bande supérieure : fin de la lettre P (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_5603"><rs><hi rend="sc">Pootel (Galterus)</hi>, miles</rs>, <ref n="698" target="#HDPAR_0698">698</ref>, C <ref n="480" type="censier">480</ref>. — <hi rend="sc">Postel (G.)</hi>, <ref n="702" target="#HDPAR_0702">702</ref>.</item>
           <item xml:id="HDPAR_rs_5604"><rs><hi rend="sc">Popin (Johannes)</hi>, civis Parisiensis</rs>, <ref n="773" target="#HDPAR_0773">773</ref>.</item>
@@ -40476,7 +40424,6 @@
           <item xml:id="HDPAR_rs_5692"><rs><hi rend="sc">Radulfus de Marolio</hi>, miles</rs>, <ref n="211" target="#HDPAR_0211">211</ref>.</item>
           <item xml:id="HDPAR_rs_5693"><rs><hi rend="sc">Radulfus de Muntgier</hi></rs>, <ref n="7" target="#HDPAR_0007">7</ref>.</item>
           <item xml:id="HDPAR_rs_5694"><rs><hi rend="sc">Radulfus de Puteolis</hi></rs>, <ref n="9" target="#HDPAR_0009">9</ref>.</item>
-          <pb n="619" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$703/canvas"/>
           <!-- Page 619, colonne 1 (suite R) -->
           <item xml:id="HDPAR_rs_5695"><rs><hi rend="sc">Radulfus de Sarclaio</hi></rs>, <ref n="81" target="#HDPAR_0081">81</ref>.</item>
           <item xml:id="HDPAR_rs_5696"><rs><hi rend="sc">Radulfus de Torailles</hi></rs>, <ref n="151" target="#HDPAR_0151">151</ref>.</item>
@@ -40610,7 +40557,6 @@
           <item xml:id="HDPAR_rs_5822"><rs><hi rend="sc">Reginaldus de Thiesio</hi></rs>, <ref n="804" target="#HDPAR_0804">804</ref>.</item>
           <item xml:id="HDPAR_rs_5823"><rs><hi rend="sc">Reginaldus de Vallibus</hi></rs>, <ref n="463" target="#HDPAR_0463">463</ref>.</item>
           <item xml:id="HDPAR_rs_5824"><rs><hi rend="sc">Reginaldus de Villa Bona</hi>, armiger</rs>, <ref n="412" target="#HDPAR_0412">412</ref>, <ref n="424" target="#HDPAR_0424">424</ref>.</item>
-          <pb n="620" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$704/canvas"/>
           <!-- Page 620, colonne 1 (suite « Reginaldus … » puis R) -->
           <item xml:id="HDPAR_rs_5825"><rs><hi rend="sc">Reginaldus le Talleor</hi></rs>, <ref n="256" target="#HDPAR_0256">256</ref>.</item>
           <item xml:id="HDPAR_rs_5826"><rs><hi rend="sc">Reginaldus Macuel</hi>, miles</rs>, <ref n="403" target="#HDPAR_0403">403</ref>.</item>
@@ -40675,8 +40621,7 @@
           <item xml:id="HDPAR_rs_5884"><rs><hi rend="sc">Ricardus Cancellarius</hi>, clericus</rs>, <ref n="598" target="#HDPAR_0598">598</ref>.</item>
           <item xml:id="HDPAR_rs_5885"><rs><hi rend="sc">Ricardus de Vere Magno</hi>, carnifex</rs>, <ref n="446" target="#HDPAR_0446">446</ref>.</item>
           <item xml:id="HDPAR_rs_5886"><rs><hi rend="sc">Ricardus de Motardier</hi></rs>, <ref n="253" target="#HDPAR_0253">253</ref>.</item>
-          <item xml:id="HDPAR_rs_5887"><rs><hi rend="sc">Richardus</hi>, capellanus in ecclesia Parisiensi</rs>, <ref n="582" target="#HDPAR_0582">582</ref>, <ref n="965">965</ref> ; — capellanus cancellarii Parisiensis, <ref n="640" target="#HDPAR_0640">640</ref> ; — canonicus Sancti Dyonisii de Passu, <ref n="750" target="#HDPAR_0750">750</ref>, <ref n="811" target="#HDPAR_0811">811</ref>, <ref n="820" target="#HDPAR_0820">820</ref>, <ref n="832" target="#HDPAR_0832">832</ref>, <ref n="840" target="#HDPAR_0840">840</ref>, <ref n="855" target="#HDPAR_0855">855</ref>, <ref n="956">956</ref>, *<ref n="1012">1012</ref>, <ref n="1019">1019</ref>, C <ref n="475" type="censier">475</ref>, C <ref n="495" type="censier">495</ref> ; — <hi rend="sc">Richardus Normannus</hi>, capellanus Adenulphi, canonici Parisiensis, *<ref n="981">981</ref>.</item>
-          <item xml:id="HDPAR_rs_5888"><rs><hi rend="sc">Richardus</hi>, capellarius</rs>, <ref n="518" target="#HDPAR_0518">518</ref>.</item>
+          <item xml:id="HDPAR_rs_5887"><rs><hi rend="sc">Richardus</hi>, capellanus in ecclesia Parisiensi</rs>, <ref n="582" target="#HDPAR_0582">582</ref>, <ref n="965">965</ref> </item><item xml:id="HDPAR_rs_5887_1"><rs>Richardus capellanus cancellarii Parisiensis</rs>, <ref n="640" target="#HDPAR_0640">640</ref> </item><item xml:id="HDPAR_rs_5887_2"><rs>Richardus canonicus Sancti Dyonisii de Passu</rs>, <ref n="750" target="#HDPAR_0750">750</ref>, <ref n="811" target="#HDPAR_0811">811</ref>, <ref n="820" target="#HDPAR_0820">820</ref>, <ref n="832" target="#HDPAR_0832">832</ref>, <ref n="840" target="#HDPAR_0840">840</ref>, <ref n="855" target="#HDPAR_0855">855</ref>, <ref n="956">956</ref>, *<ref n="1012">1012</ref>, <ref n="1019">1019</ref>, C <ref n="475" type="censier">475</ref>, C <ref n="495" type="censier">495</ref> </item><item xml:id="HDPAR_rs_5887_3"><rs>Richardus <hi rend="sc">Richardus Normannus</hi>, capellanus Adenulphi, canonici Parisiensis, *</rs><ref n="981">981</ref>.</item><item xml:id="HDPAR_rs_5888"><rs><hi rend="sc">Richardus</hi>, capellarius</rs>, <ref n="518" target="#HDPAR_0518">518</ref>.</item>
           <item xml:id="HDPAR_rs_5889"><rs><hi rend="sc">Richardus</hi>, gener Auburgis</rs>, <ref n="381" target="#HDPAR_0381">381</ref>.</item>
           <item xml:id="HDPAR_rs_5890"><rs><hi rend="sc">Richardus</hi>, pastillarius regis Sicilie</rs>, <ref n="631" target="#HDPAR_0631">631</ref>, <ref n="736" target="#HDPAR_0736">736</ref>, <ref n="742" target="#HDPAR_0742">742</ref>, <ref n="1016">1016</ref>, **<ref n="1029">1029</ref>.</item>
           <item xml:id="HDPAR_rs_5891"><rs><hi rend="sc">Richardus</hi>, sacrista Karoli Loci</rs>, <ref n="22" target="#HDPAR_0022">22</ref>.</item>
@@ -40726,7 +40671,6 @@
           <item xml:id="HDPAR_rs_5934"><rs><hi rend="sc">Rivet (Robertus)</hi></rs>, <ref n="466" target="#HDPAR_0466">466</ref>.</item>
           <item xml:id="HDPAR_rs_5935"><rs><hi rend="sc">Rivus Berte</hi>, apud Braiam</rs>, <ref n="331" target="#HDPAR_0331">331</ref>, <ref n="335" target="#HDPAR_0335">335</ref>. — <hi rend="sc">Rueberteim</hi>, <ref n="334" target="#HDPAR_0334">334</ref>, <ref n="484" target="#HDPAR_0484">484</ref>.</item>
           <item xml:id="HDPAR_rs_5936"><rs><hi rend="sc">Riz</hi></rs>, <ref n="818" target="#HDPAR_0818">818</ref>. — <hi rend="i">Ris-Orangis : Seine-et-Oise, arr. et cant. Corbeil.</hi></item>
-          <pb n="621" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$705/canvas"/>
           <!-- Page 621, colonne 1 (suite R, « Robertus … ») -->
           <item xml:id="HDPAR_rs_5937"><rs><hi rend="sc">Robert de Bougis</hi></rs>, <ref n="814" target="#HDPAR_0814">814</ref>, <ref n="839" target="#HDPAR_0839">839</ref>.</item>
           <item xml:id="HDPAR_rs_5938"><rs><hi rend="sc">Robert de Mouci</hi></rs>, *<ref n="1048">1048</ref>.</item>
@@ -40858,7 +40802,6 @@
           <item xml:id="HDPAR_rs_6062"><rs><hi rend="sc">Robinus (Stephanus)</hi>, de Compenso</rs>, <ref n="666" target="#HDPAR_0666">666</ref>, <ref n="672" target="#HDPAR_0672">672</ref>.</item>
           <item xml:id="HDPAR_rs_6063"><rs><hi rend="sc">Robinus</hi>, filius Guillelmi Olearii</rs>, <ref n="680" target="#HDPAR_0680">680</ref>.</item>
           <item xml:id="HDPAR_rs_6064"><rs><hi rend="sc">Robinus</hi>, filius Petri de Monduno</rs>, <ref n="303" target="#HDPAR_0303">303</ref>.</item>
-          <pb n="622" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$706/canvas"/>
           <!-- Page 622, bande supérieure : fin de la lettre R (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_6065"><rs><hi rend="sc">Robinus</hi>, nepos Herquengeri de la Bolia</rs>, <ref n="82" target="#HDPAR_0082">82</ref>.</item>
           <item xml:id="HDPAR_rs_6066"><rs><hi rend="sc">Robinus (Stephanus)</hi>, de Compenso</rs>, <ref n="666">666</ref>, <ref n="672" target="#HDPAR_0672">672</ref>.</item>
@@ -40947,8 +40890,7 @@
           <item xml:id="HDPAR_rs_6149"><rs><hi rend="sc">Rully (Renaud de)</hi></rs>, <ref n="794" target="#HDPAR_0794">794</ref>.</item>
           <item xml:id="HDPAR_rs_6150"><rs><hi rend="sc">Runci</hi></rs>, **<ref n="876">876</ref>.</item>
           <item xml:id="HDPAR_rs_6151"><rs><hi rend="sc">Rungiaco (Johannes de)</hi></rs>, <ref n="319" target="#HDPAR_0319">319</ref>. — <hi rend="i">Rungis : Seine, arr. Sceaux, cant. Villejuif.</hi></item>
-          <item xml:id="HDPAR_rs_6152"><rs><hi rend="sc">Ruppe (Guillelmus de)</hi>, canonicus Ambianensis</rs>, *<ref n="1020">1020</ref> ; — episcopus Redonensis, <ref n="827" target="#HDPAR_0827">827</ref>.</item>
-          <item xml:id="HDPAR_rs_6153"><rs><hi rend="sc">Ruppe (Martinus de)</hi></rs>, <ref n="602" target="#HDPAR_0602">602</ref>, C <ref n="492" type="censier">492</ref>.</item>
+          <item xml:id="HDPAR_rs_6152"><rs><hi rend="sc">Ruppe (Guillelmus de)</hi>, canonicus Ambianensis</rs>, *<ref n="1020">1020</ref> </item><item xml:id="HDPAR_rs_6152_1"><rs>Ruppe episcopus Redonensis</rs>, <ref n="827" target="#HDPAR_0827">827</ref>.</item><item xml:id="HDPAR_rs_6153"><rs><hi rend="sc">Ruppe (Martinus de)</hi></rs>, <ref n="602" target="#HDPAR_0602">602</ref>, C <ref n="492" type="censier">492</ref>.</item>
           <item xml:id="HDPAR_rs_6154"><rs><hi rend="sc">Ruppe</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6068" corresp="#HDPAR_liste_R"><hi rend="sc">Roche</hi></ref>, <ref type="see" target="#HDPAR_rs_6111" corresp="#HDPAR_liste_R"><hi rend="sc">Rooscha</hi></ref>, <ref type="see" target="#HDPAR_rs_6118" corresp="#HDPAR_liste_R"><hi rend="sc">Rosca</hi></ref>.</item>
           <item xml:id="HDPAR_rs_6155"><rs><hi rend="sc">Rus-de-Paroi (Le)</hi>, lieu-dit à Louans</rs>, <ref n="836" target="#HDPAR_0836">836</ref>.</item>
           <item xml:id="HDPAR_rs_6156"><rs><hi rend="sc">Rusticus (Johannes)</hi></rs>, *<ref n="1021">1021</ref>.</item>
@@ -40974,7 +40916,6 @@
           <item xml:id="HDPAR_rs_6168"><rs><hi rend="sc">Sagitarius</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1987" corresp="#HDPAR_liste_F"><hi rend="sc">Flecherius</hi></ref> et seq.</item>
           <item xml:id="HDPAR_rs_6169"><rs><hi rend="sc">Saguncia (Cantor de)</hi></rs>, <ref n="37" target="#HDPAR_0037">37</ref>.</item>
           <item xml:id="HDPAR_rs_6170"><rs><hi rend="sc">Sail en bien (Maria)</hi></rs>, <ref n="660" target="#HDPAR_0660">660</ref>.</item>
-          <pb n="623" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$707/canvas"/>
           <!-- Page 623, colonne 1 (suite S) -->
           <item xml:id="HDPAR_rs_6171"><rs><hi rend="sc">Sail en Bien</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6185" corresp="#HDPAR_liste_S"><hi rend="sc">Saliens in Bonum</hi></ref>, <ref type="see" target="#HDPAR_rs_6190" corresp="#HDPAR_liste_S"><hi rend="sc">Salliens in Bonum</hi></ref>.</item>
           <item xml:id="HDPAR_rs_6172"><rs><hi rend="sc">Saine (Climent de)</hi>, clerc le Roy</rs>, *<ref n="1048">1048</ref>.</item>
@@ -41067,7 +41008,6 @@
           <item xml:id="HDPAR_rs_6257"><rs><hi rend="sc">Sancto Marcello (Johannes Evroyni, de)</hi></rs>, <ref n="943">943</ref>.</item>
           <item xml:id="HDPAR_rs_6258"><rs><hi rend="sc">Sancto Marcello (Nicholaus de)</hi>, canonicus Parisiensis</rs>, <ref n="447" target="#HDPAR_0447">447</ref>.</item>
           <item xml:id="HDPAR_rs_6259"><rs><hi rend="sc">Sancto Marcello (Robertus Sancti Ypoliti de)</hi>, presbiter</rs>, <ref n="506" target="#HDPAR_0506">506</ref>.</item>
-          <pb n="624" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$708/canvas"/>
           <!-- Page 624, colonne 1 (suite « Sancti/Sancto … » ; « Beate Marie de Campis » à cheval depuis p. 623) -->
           <item xml:id="HDPAR_rs_6260"><rs><hi rend="sc">Beate Marie de Campis (Monasterium)</hi>, juxta Parisius</rs>, <ref n="37" target="#HDPAR_0037">37</ref>, <ref n="273" target="#HDPAR_0273">273</ref>, <ref n="663" target="#HDPAR_0663">663</ref>, <ref n="729" target="#HDPAR_0729">729</ref>, **<ref n="1003">1003</ref>.</item>
           <item xml:id="HDPAR_rs_6261"><rs><hi rend="sc">Sancti Martini de Campis (Prioratus)</hi></rs>, <ref n="152" target="#HDPAR_0152">152</ref>, <ref n="216" target="#HDPAR_0216">216</ref>, <ref n="238" target="#HDPAR_0238">238</ref>, <ref n="656" target="#HDPAR_0656">656</ref>, <ref n="798" target="#HDPAR_0798">798</ref>, <ref n="891">891</ref>, <ref n="904">904</ref>, <ref n="1019">1019</ref>, C <ref n="478" type="censier">478</ref>, C <ref n="494" type="censier">494</ref>.</item>
@@ -41165,7 +41105,6 @@
           <item xml:id="HDPAR_rs_6351"><rs><hi rend="sc">Scupiis (Adam de)</hi></rs>, <ref n="840" target="#HDPAR_0840">840</ref>.</item>
           <item xml:id="HDPAR_rs_6352"><rs><hi rend="sc">Scupiis (Hugo de)</hi></rs>, <ref n="840" target="#HDPAR_0840">840</ref>.</item>
           <item xml:id="HDPAR_rs_6353"><rs><hi rend="sc">Sec (Petrus le)</hi></rs>, <ref n="627" target="#HDPAR_0627">627</ref>.</item>
-          <pb n="625" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$709/canvas"/>
           <!-- Page 625, colonne 1 (suite S) -->
           <item xml:id="HDPAR_rs_6354"><rs><hi rend="sc">Sec</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6413" corresp="#HDPAR_liste_S"><hi rend="sc">Siccus</hi></ref>.</item>
           <item xml:id="HDPAR_rs_6355"><rs><hi rend="sc">Secana</hi></rs>, <ref n="83" target="#HDPAR_0083">83</ref>, <ref n="386" target="#HDPAR_0386">386</ref>, <ref n="545" target="#HDPAR_0545">545</ref>, <ref n="636" target="#HDPAR_0636">636</ref>, <ref n="681" target="#HDPAR_0681">681</ref>, <ref n="750" target="#HDPAR_0750">750</ref>, <ref n="765" target="#HDPAR_0765">765</ref>, <ref n="775" target="#HDPAR_0775">775</ref>, <ref n="819" target="#HDPAR_0819">819</ref>, <ref n="838" target="#HDPAR_0838">838</ref>, <ref n="852" target="#HDPAR_0852">852</ref>, <ref n="855" target="#HDPAR_0855">855</ref>, <ref n="856" target="#HDPAR_0856">856</ref>, *<ref n="938">938</ref>, **<ref n="1023">1023</ref>, C <ref n="477" type="censier">477</ref>. — <hi rend="i">La Seine, fleuve.</hi></item>
@@ -41275,7 +41214,6 @@
           <item xml:id="HDPAR_rs_6457"><rs><hi rend="sc">Souplicia</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_6544" corresp="#HDPAR_liste_S"><hi rend="sc">Sulpicia</hi></ref>.</item>
           <item xml:id="HDPAR_rs_6458"><rs><hi rend="sc">Spedona</hi></rs>, *<ref n="871">871</ref>.</item>
           <item xml:id="HDPAR_rs_6459"><rs><hi rend="sc">Spedona (Robertus, major de)</hi></rs>, *<ref n="871">871</ref>. — <hi rend="i">Épône : Seine-et-Oise, arr. et cant. Mantes.</hi></item>
-          <pb n="626" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$710/canvas"/>
           <!-- Page 626, colonne 1 (suite S) -->
           <item xml:id="HDPAR_rs_6460"><rs><hi rend="sc">Spinolium</hi></rs>, <ref n="482" target="#HDPAR_0482">482</ref>. — <hi rend="i">Épinay-sous-Sénart : Seine-et-Oise, arr. Corbeil, cant. Boissy-Saint-Léger.</hi></item>
           <item xml:id="HDPAR_rs_6461"><rs><hi rend="sc">Spinolium</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1868 #HDPAR_rs_1869" corresp="#HDPAR_liste_E"><hi rend="sc">Espinolium</hi></ref>.</item>
@@ -41382,7 +41320,6 @@
           <item xml:id="HDPAR_rs_6560"><rs><hi rend="sc">Symon</hi>, episcopus Parisiensis</rs>, <ref n="856" target="#HDPAR_0856">856</ref>.</item>
           <item xml:id="HDPAR_rs_6561"><rs><hi rend="sc">Symon</hi>, filius Augnis la Pevresse</rs>, <ref n="574" target="#HDPAR_0574">574</ref>.</item>
           <item xml:id="HDPAR_rs_6562"><rs><hi rend="sc">Symon</hi>, filius Gile de Retella</rs>, <ref n="333" target="#HDPAR_0333">333</ref>, <ref n="382" target="#HDPAR_0382">382</ref>.</item>
-          <pb n="627" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$711/canvas"/>
           <!-- Page 627, bande supérieure : fin de la lettre S (« Symon … » ; « Symon filius Petronille » à cheval depuis p. 626) -->
           <item xml:id="HDPAR_rs_6563"><rs><hi rend="sc">Symon</hi>, filius Petronille, uxoris Roberti de Noisiaco seu Noisiello</rs>, <ref n="629" target="#HDPAR_0629">629</ref>.</item>
           <item xml:id="HDPAR_rs_6564"><rs><hi rend="sc">Symon</hi>, frater Emeline de Daroniaco</rs>, <ref n="487" target="#HDPAR_0487">487</ref>.</item>
@@ -41494,7 +41431,6 @@
           <item xml:id="HDPAR_rs_6662"><rs><hi rend="sc">Theobaldus</hi>, frater Roberti de Insula</rs>, <ref n="101" target="#HDPAR_0101">101</ref>.</item>
           <item xml:id="HDPAR_rs_6663"><rs><hi rend="sc">Theobaldus</hi>, presbiter de Cort Demenche</rs>, <ref n="221" target="#HDPAR_0221">221</ref>.</item>
           <item xml:id="HDPAR_rs_6664"><rs><hi rend="sc">Theobaldus Boder</hi>, de Brai, de Domo Dei</rs>, <ref n="13" target="#HDPAR_0013">13</ref>, <ref n="66" target="#HDPAR_0066">66</ref>, <ref n="905">905</ref>.</item>
-          <pb n="628" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$712/canvas"/>
           <!-- Page 628, colonne 1 (suite T ; « Theobaldus Brito » à cheval depuis p. 627) -->
           <item xml:id="HDPAR_rs_6665"><rs><hi rend="sc">Theobaldus Brito</hi>, stacionarius, clericus</rs>, <ref n="714" target="#HDPAR_0714">714</ref>, <ref n="715" target="#HDPAR_0715">715</ref>, <ref n="730" target="#HDPAR_0730">730</ref>, <ref n="733" target="#HDPAR_0733">733</ref>, <ref n="738" target="#HDPAR_0738">738</ref>, <ref n="740" target="#HDPAR_0740">740</ref>, <ref n="828" target="#HDPAR_0828">828</ref>, <ref n="833" target="#HDPAR_0833">833</ref>, **<ref n="1008">1008</ref>, **<ref n="1009">1009</ref>, C <ref n="481" type="censier">481</ref>, C <ref n="482" type="censier">482</ref>.</item>
           <item xml:id="HDPAR_rs_6666"><rs><hi rend="sc">Theobaldus Buisnel</hi></rs>, <ref n="43" target="#HDPAR_0043">43</ref>.</item>
@@ -41622,7 +41558,6 @@
           <item xml:id="HDPAR_rs_6786"><rs><hi rend="sc">Tonnelleresse</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1667" corresp="#HDPAR_liste_D"><hi rend="sc">Doliarius</hi></ref>.</item>
           <item xml:id="HDPAR_rs_6787"><rs><hi rend="sc">Torailles (Gilo de)</hi></rs>, <ref n="151" target="#HDPAR_0151">151</ref>.</item>
           <item xml:id="HDPAR_rs_6788"><rs><hi rend="sc">Torailles (Radulphus de)</hi></rs>, <ref n="151" target="#HDPAR_0151">151</ref>.</item>
-          <pb n="629" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$713/canvas"/>
           <!-- Page 629, bande supérieure : fin de la lettre T (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_6789"><rs><hi rend="sc">Torbiniaci (Territorium)</hi></rs>, <ref n="53" target="#HDPAR_0053">53</ref>.</item>
           <item xml:id="HDPAR_rs_6790"><rs><hi rend="sc">Torceio (Robertus de)</hi>, armiger</rs>, <ref n="435" target="#HDPAR_0435">435</ref>.</item>
@@ -41719,7 +41654,6 @@
           <item xml:id="HDPAR_rs_6871"><rs><hi rend="sc">Valis Redolii</hi></rs>, <ref n="601" target="#HDPAR_0601">601</ref>. — <hi rend="i">Le Vaudreuil : Eure, arr. et cant. Louviers, comm. Saint-Étienne-du-Vauvray.</hi></item>
           <item xml:id="HDPAR_rs_6872"><rs><hi rend="sc">Valle (Odo de)</hi></rs>, <ref n="149" target="#HDPAR_0149">149</ref>, <ref n="635" target="#HDPAR_0635">635</ref>.</item>
           <item xml:id="HDPAR_rs_6873"><rs><hi rend="sc">Valle (Radulphus de)</hi></rs>, <ref n="744" target="#HDPAR_0744">744</ref>.</item>
-          <pb n="630" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$714/canvas"/>
           <!-- Page 630, colonne 1 (suite V) -->
           <item xml:id="HDPAR_rs_6874"><rs><hi rend="sc">Vallegrignosa (Symon de)</hi>, miles</rs>, <ref n="267" target="#HDPAR_0267">267</ref>, <ref n="339" target="#HDPAR_0339">339</ref>.</item>
           <item xml:id="HDPAR_rs_6875"><rs><hi rend="sc">Valle Grinosa (Guillelmus de)</hi>, miles</rs>, <ref n="310" target="#HDPAR_0310">310</ref>.</item>
@@ -41797,7 +41731,6 @@
           <item xml:id="HDPAR_rs_6945"><rs><hi rend="sc">Vernone (Guillelmus Barberius, de)</hi></rs>, <ref n="631" target="#HDPAR_0631">631</ref>, <ref n="760" target="#HDPAR_0760">760</ref>.</item>
           <item xml:id="HDPAR_rs_6946"><rs><hi rend="sc">Vernone (Johannes de Frencia, castellanus de)</hi></rs>, <ref n="511" target="#HDPAR_0511">511</ref>.</item>
           <item xml:id="HDPAR_rs_6947"><rs><hi rend="sc">Vernone (Odo Platraz, castellanus de)</hi></rs>, <ref n="245" target="#HDPAR_0245">245</ref>, <ref n="417" target="#HDPAR_0417">417</ref>, <ref n="468" target="#HDPAR_0468">468</ref>, <ref n="490" target="#HDPAR_0490">490</ref>, <ref n="957">957</ref>, **<ref n="1039">1039</ref>.</item>
-          <pb n="631" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$715/canvas"/>
           <!-- Page 631, colonne 1 (suite V) -->
           <item xml:id="HDPAR_rs_6948"><rs><hi rend="sc">Vernoto (Willelmus de)</hi>, thesaurarius et notarius abbatie Sancti Germani de Pratis</rs>, <ref n="194" target="#HDPAR_0194">194</ref>, <ref n="259" target="#HDPAR_0259">259</ref>.</item>
           <item xml:id="HDPAR_rs_6949"><rs><hi rend="sc">Versallis (Thomas de)</hi></rs>, <ref n="86" target="#HDPAR_0086">86</ref>, <ref n="91" target="#HDPAR_0091">91</ref>.</item>
@@ -41840,8 +41773,7 @@
           <item xml:id="HDPAR_rs_6985"><rs><hi rend="sc">Villa d’Avrai (Rogerus de)</hi>, miles</rs>, <ref n="306" target="#HDPAR_0306">306</ref>.</item>
           <item xml:id="HDPAR_rs_6986"><rs><hi rend="sc">Villa d’Avroi (Rogerus de)</hi>, miles</rs>, <ref n="73" target="#HDPAR_0073">73</ref>, <ref n="92" target="#HDPAR_0092">92</ref>, <ref n="308" target="#HDPAR_0308">308</ref>. — <hi rend="i">Ville-d’Avray : Seine-et-Oise, arr. Versailles, cant. Sèvres.</hi></item>
           <item xml:id="HDPAR_rs_6987"><rs><hi rend="sc">Villa Episcopi</hi>, prope Parisius</rs>, <ref n="493" target="#HDPAR_0493">493</ref>.</item>
-          <item xml:id="HDPAR_rs_6988"><rs><hi rend="sc">Villa Episcopi (Gaufridus Brito, de)</hi>, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref> ; — canonicus et officialis Parisiensis, <ref n="734" target="#HDPAR_0734">734</ref>.</item>
-          <item xml:id="HDPAR_rs_6989"><rs><hi rend="sc">Villa Escomblen</hi></rs>, <ref n="308" target="#HDPAR_0308">308</ref>. — <hi rend="sc">Vile Escublen</hi>, <ref n="73" target="#HDPAR_0073">73</ref>.</item>
+          <item xml:id="HDPAR_rs_6988"><rs><hi rend="sc">Villa Episcopi (Gaufridus Brito, de)</hi>, clericus</rs>, <ref n="678" target="#HDPAR_0678">678</ref>, <ref n="679" target="#HDPAR_0679">679</ref> </item><item xml:id="HDPAR_rs_6988_1"><rs>Villa canonicus et officialis Parisiensis</rs>, <ref n="734" target="#HDPAR_0734">734</ref>.</item><item xml:id="HDPAR_rs_6989"><rs><hi rend="sc">Villa Escomblen</hi></rs>, <ref n="308" target="#HDPAR_0308">308</ref>. — <hi rend="sc">Vile Escublen</hi>, <ref n="73" target="#HDPAR_0073">73</ref>.</item>
           <item xml:id="HDPAR_rs_6990"><rs><hi rend="sc">Villa Escobledi (Laurencia de)</hi></rs>, <ref n="415" target="#HDPAR_0415">415</ref>. — <hi rend="i">Villacoublay : Seine-et-Oise, arr. et cant. Versailles, comm. Vélizy.</hi></item>
           <item xml:id="HDPAR_rs_6991"><rs><hi rend="sc">Villa Judea</hi></rs>, <ref n="315" target="#HDPAR_0315">315</ref>, <ref n="775" target="#HDPAR_0775">775</ref>.</item>
           <item xml:id="HDPAR_rs_6992"><rs><hi rend="sc">Villa Judea (Cristianus de)</hi></rs>, <ref n="263" target="#HDPAR_0263">263</ref>.</item>
@@ -41893,7 +41825,6 @@
           <item xml:id="HDPAR_rs_7037"><rs><hi rend="sc">Villiers</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_7020" corresp="#HDPAR_liste_V"><hi rend="sc">Villaria</hi></ref> et seq.</item>
           <item xml:id="HDPAR_rs_7038"><rs><hi rend="sc">Villoflein (Gacio de)</hi></rs>, <ref n="92" target="#HDPAR_0092">92</ref>, <ref n="96" target="#HDPAR_0096">96</ref>, <ref n="99" target="#HDPAR_0099">99</ref>.</item>
           <item xml:id="HDPAR_rs_7039"><rs><hi rend="sc">Villoflein (Guillelmus de)</hi></rs>, <ref n="96" target="#HDPAR_0096">96</ref>.</item>
-          <pb n="632" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$716/canvas"/>
           <!-- Page 632, bande supérieure : fin de la lettre V (colonnes 1-2-3) -->
           <item xml:id="HDPAR_rs_7040"><rs><hi rend="sc">Villoflen (Herbertus de)</hi></rs>, <ref n="82" target="#HDPAR_0082">82</ref>.</item>
           <item xml:id="HDPAR_rs_7041"><rs><hi rend="sc">Vileaflein (Bartholomeus de)</hi>, miles</rs>, <ref n="188" target="#HDPAR_0188">188</ref>, <ref n="220" target="#HDPAR_0220">220</ref>.</item>
@@ -42003,7 +41934,6 @@
           <item xml:id="HDPAR_rs_7135"><rs><hi rend="sc">Ysabellis</hi>, uxor Johannis Galerne</rs>, <ref n="387" target="#HDPAR_0387">387</ref>, <ref n="708" target="#HDPAR_0708">708</ref>, <ref n="728" target="#HDPAR_0728">728</ref>, <ref n="745" target="#HDPAR_0745">745</ref>, C <ref n="492" type="censier">492</ref>.</item>
           <item xml:id="HDPAR_rs_7136"><rs><hi rend="sc">Ysabellis</hi>, uxor Johannis Guart, de Campis</rs>, <ref n="637" target="#HDPAR_0637">637</ref>.</item>
           <item xml:id="HDPAR_rs_7137"><rs><hi rend="sc">Ysabellis</hi>, uxor Johannis Majoris</rs>, *<ref n="1020">1020</ref>.</item>
-          <pb n="633" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$717/canvas"/>
           <!-- Page 633, colonne 1 (suite et fin Y) -->
           <item xml:id="HDPAR_rs_7138"><rs><hi rend="sc">Ysabellis</hi>, uxor Natalis le Flamanc</rs>, <ref n="599" target="#HDPAR_0599">599</ref>.</item>
           <item xml:id="HDPAR_rs_7139"><rs><hi rend="sc">Ysabellis</hi>, uxor Petri Borelarii</rs>, <ref n="845" target="#HDPAR_0845">845</ref>.</item>
