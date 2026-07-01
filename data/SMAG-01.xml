@@ -5,18 +5,22 @@
       <titleStmt>
         <title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I : fin du Xe siècle-1280</title>
         <title type="short">Saint-Magloire</title>
-        <author ref="https://www.idref.fr/027157679 https://data.bnf.fr/fr/ark:/12148/cb11926235x">Anne Terroine</author>
-        <author ref="https://www.idref.fr/02687007X https://data.bnf.fr/ark:/12148/cb11903181p">Lucie Fossier</author>
-        <editor>Yvonne de Montenon</editor>
-        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
+        <author ref="https://www.wikidata.org/wiki/Q36369211 https://data.bnf.fr/fr/ark:/12148/cb11926235x https://www.idref.fr/027157679">Anne Terroine</author>
+        <author ref="https://www.wikidata.org/wiki/Q36198380 https://data.bnf.fr/fr/ark:/12148/cb11903181p https://www.idref.fr/02687007X">Lucie Fossier</author>
+        <author ref="https://data.bnf.fr/fr/ark:/12148/cb12626623n">Yvonne de Montenon</author>
+        <principal xml:id="OC" ref="https://www.wikidata.org/wiki/Q41431010 https://data.bnf.fr/fr/ark:/12148/cb178392047 https://www.idref.fr/101839839">Olivier Canteaut</principal>
         <respStmt>
-          <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
+          <name xml:id="OGJ" ref="https://www.wikidata.org/wiki/Q3351082 https://data.bnf.fr/fr/ark:/12148/cb11906612z https://www.idref.fr/026911337">Olivier Guyotjeannin</name>
           <resp>Direction éditoriale</resp>
         </respStmt>
         <respStmt>
           <name xml:id="FG">Frédéric Glorieux (École des chartes)
             <email>frederic.glorieux@enc.sorbonne.fr</email></name>
           <resp>Suivi technique (2007–…)</resp>
+        </respStmt>
+        <respStmt>
+          <name xml:id="MP">Maxime Popineau</name>
+          <resp>Suivi technique (2026)</resp>
         </respStmt>
         <respStmt>
           <name xml:id="JC">Joana Casenave (École des chartes)</name>
@@ -45,52 +49,28 @@
         <idno>SMAG-01</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
-          <addrLine>19, rue de la Sorbonne</addrLine>
-          <addrLine>75005 Paris</addrLine>
+          <addrLine>65, rue de Richelieu</addrLine>
+          <addrLine>75002 Paris</addrLine>
           <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
-          <addrLine>http://enc.sorbonne.fr/</addrLine>
-          <addrLine>recherche@enc.sorbonne.fr</addrLine>
+          <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc/3.0/fr/">© École nationale des chartes - PSL (CC BY-NC 3.0)</licence>
-          <p>L'École nationale des chartes met à disposition cette ressource électronique
-            structurée, protégée par le code de la propriété intellectuelle sur les bases de données
-            (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
-              d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
-          <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation
-            et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement
-            et de la recherche. Toute autorisation au-delà du champ de cette licence doit être
-            obtenue auprès de nous.</p>
-          <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique,
-            nous nous engageons à conserver et à toujours offrir publiquement la version la plus à
-            jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les
-            corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après
-            validation par un comité scientifique), et à référencer l'origine de ces contributions.
-            Toute modification de la ressource qui ne serait pas reversée à la version de référence
-            sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser
-            les contributions et de permettre les meilleures conditions possibles de collaboration
-            scientifique.</p>
-          <p><ident>Paternité</ident> — L'École nationale des chartes demande à ce que toute
-            publication dérivée de ses ressources électroniques comporte : <list><item>un lien vers l'adresse pérenne de la dernière version de la ressource sur notre site ;</item><item>la date du fichier source utilisé ;</item><item>nos noms.</item>
-          </list>
-          </p>
-          <p>Tout litige soulevé par le non-respect des termes de cette licence sera soumis à la
-            juridiction des tribunaux de Paris.</p>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC BY-NC-SA 4.0)</licence>
+          <p>L'École nationale des chartes met à disposition cette ressource électronique structurée selon les termes de la licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.</p>
         </availability>
       </publicationStmt>
       <seriesStmt>
         <title>Éditions en ligne de l'École des Chartes</title>
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
-        <idno type="vol">1</idno>
+        <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1998_cat_12_1"><title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I, Fin du Xe siècle-1280</title>, <author ref="https://www.idref.fr/027157679 https://data.bnf.fr/fr/ark:/12148/cb11926235x">Anne Terroine</author> et <author ref="https://www.idref.fr/02687007X https://data.bnf.fr/ark:/12148/cb11903181p">Lucie Fossier</author>, avec le concours d’<editor>Yvonne de Montenon</editor>, Aubervilliers : <publisher>Institut de recherche et d’histoire des textes</publisher>, <date type="publication">1998</date>.</bibl>
+        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1998_cat_12_1"><title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I, Fin du Xe siècle-1280</title>, <author ref="https://www.wikidata.org/wiki/Q36369211 https://data.bnf.fr/fr/ark:/12148/cb11926235x https://www.idref.fr/027157679">Anne Terroine</author> et <author ref="https://www.wikidata.org/wiki/Q36198380 https://data.bnf.fr/fr/ark:/12148/cb11903181p https://www.idref.fr/02687007X">Lucie Fossier</author>, avec le concours d’<editor ref="https://data.bnf.fr/fr/ark:/12148/cb12626623n">Yvonne de Montenon</editor>, Aubervilliers : <publisher>Institut de recherche et d’histoire des textes</publisher>, <date type="publication">1998</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p>Transformation automatique depuis les XML du dossier fichier_en_cours, d'apres les patrons TEI du
-          corpus existant.</p>
+        <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL.</p>
       </projectDesc>
       <refsDecl>
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
@@ -121,10 +101,16 @@
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage"><date notBefore="0990" notAfter="1280">fin du Xe siècle/1280</date></term>
+        </keywords>
+      </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-06-18" who="#COD">Conversion initiale.</change>
-      <change when="2026-06-18" who="#COD">Enrichissement bibliographique du teiHeader : auteurs/éditeurs, contributeurs, identifiants d'autorité et liens de source.</change>
+      <change when="2026-07-01" who="#MP">Alignement des métadonnées du teiHeader.</change>
+      <change when="2026-06-18" who="#MP">Conversion initiale.</change>
+      <change when="2026-06-18" who="#MP">Enrichissement bibliographique du teiHeader : auteurs/éditeurs, contributeurs, identifiants d'autorité et liens de source.</change>
     </revisionDesc>
   </teiHeader>
   <text>
