@@ -1,4 +1,4 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
+﻿<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCHA-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -93,11 +93,11 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
+            <citeStructure unit="sous-partie" match="div" use="dots">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -5345,54 +5345,54 @@
         <list type="index">
           <head>A</head>
           <item xml:id="SCHA-PR_rs_001"><rs><hi rend="sc">Abbatiola</hi></rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --><!--, <ref>5</ref>--></item>
-          <item xml:id="SCHA-PR_rs_002"><rs><hi rend="sc">Adam</hi>, évêque de Senlis</rs>, <ref target="#SCHA-PR_0034" n="22">34</ref>.</item>
-          <item xml:id="SCHA-PR_rs_003"><rs><hi rend="sc">Adam</hi>, archidiacre</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
-          <item xml:id="SCHA-PR_rs_004"><rs><hi rend="sc">Afforty</hi></rs>, <ref target="#SCHA-PR_0001" n="i">1</ref><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">lxxxvi</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>--><!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> -->.</item>
+          <item xml:id="SCHA-PR_rs_002"><rs><hi rend="sc">Adam</hi>, évêque de Senlis</rs>, <ref target="#SCHA-PR_0034" n="34">34</ref>.</item>
+          <item xml:id="SCHA-PR_rs_003"><rs><hi rend="sc">Adam</hi>, archidiacre</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_004"><rs><hi rend="sc">Afforty</hi></rs>, <ref target="#SCHA-PR_0001" n="1">1</ref><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">lxxxvi</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>--><!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> -->.</item>
           <!--<item xml:id="SCHA-PR_rs_005"><rs><hi rend="sc">Alby (archevêché d')</hi></rs>, <ref>44</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_006"><rs><hi rend="sc">Aleigre (Christophe d')</hi></rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_007"><rs><hi rend="sc">Alexandre VI</hi>, pape</rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0064" n="55">64</ref>.</item>
+          <item xml:id="SCHA-PR_rs_007"><rs><hi rend="sc">Alexandre VI</hi>, pape</rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0064" n="64">64</ref>.</item>
           <item xml:id="SCHA-PR_rs_008"><rs><hi rend="sc">Amimate</hi>, Amigny</rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --></item>
-          <item xml:id="SCHA-PR_rs_009"><rs><hi rend="sc">Angy</hi></rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
-          <item xml:id="SCHA-PR_rs_010"><rs><hi rend="sc">Anthonis</hi></rs>, <ref target="#SCHA-PR_0065" n="52">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_009"><rs><hi rend="sc">Angy</hi></rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_010"><rs><hi rend="sc">Anthonis</hi></rs>, <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_011"><rs><hi rend="sc">Apport-au-Pain (rue de l')</hi></rs>, <ref><hi rend="sc">xxxii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_012"><rs><hi rend="sc">Apremont (Jacques d')</hi></rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>, <ref><hi rend="sc">xlviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_013"><rs><hi rend="sc">Apremont (Balthasar d')</hi></rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_014"><rs><hi rend="sc">Archebaldus</hi>, Archambault</rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_014"><rs><hi rend="sc">Archebaldus</hi>, Archambault</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_015"><rs><hi rend="sc">Arnault</hi>, officier municipal</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_016"><rs><hi rend="sc">Arnoult</hi>, prêtre</rs>, <ref target="#SCHA-PR_0013" n="11">13</ref>.</item>
-          <item xml:id="SCHA-PR_rs_017"><rs><hi rend="sc">Arnulfus</hi>, decanus</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_016"><rs><hi rend="sc">Arnoult</hi>, prêtre</rs>, <ref target="#SCHA-PR_0013" n="13">13</ref>.</item>
+          <item xml:id="SCHA-PR_rs_017"><rs><hi rend="sc">Arnulfus</hi>, decanus</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_018"><rs><hi rend="sc">Arondel</hi>, Maixent</rs>, <ref><hi rend="sc">xlviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_019"><rs><hi rend="sc">Ascelin</hi>, moine</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
-          <item xml:id="SCHA-PR_rs_020"><rs><hi rend="sc">Aubermont</hi></rs>, <ref target="#SCHA-PR_0027" n="19">27</ref>.</item>
-          <item xml:id="SCHA-PR_rs_021"><rs><hi rend="sc">Aulnay (Gautier d')</hi></rs>, <ref target="#SCHA-PR_0029" n="20">29</ref>.</item>
+          <item xml:id="SCHA-PR_rs_019"><rs><hi rend="sc">Ascelin</hi>, moine</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_020"><rs><hi rend="sc">Aubermont</hi></rs>, <ref target="#SCHA-PR_0027" n="27">27</ref>.</item>
+          <item xml:id="SCHA-PR_rs_021"><rs><hi rend="sc">Aulnay (Gautier d')</hi></rs>, <ref target="#SCHA-PR_0029" n="29">29</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_022"><rs><hi rend="sc">Aumailles</hi></rs>, <ref><hi rend="sc">xx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_023"><rs><hi rend="sc">Aussart</hi>, Jean</rs>, <ref><hi rend="sc">xxxi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_024"><rs><hi rend="sc">Austin</hi>, Jean</rs>, <ref><hi rend="sc">xxxix</hi></ref>, <ref>45</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_025"><rs><hi rend="sc">Auviler (Raoul d')</hi></rs>, <ref target="#SCHA-PR_0052" n="37">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_025"><rs><hi rend="sc">Auviler (Raoul d')</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
         </list>
         <list type="index">
           <head>B</head>
-          <item xml:id="SCHA-PR_rs_026"><rs><hi rend="sc">Bacouel</hi></rs>, <ref target="#SCHA-PR_0068" n="61">68</ref>. <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
-          <item xml:id="SCHA-PR_rs_027"><rs><hi rend="sc">Bailli de Senlis</hi></rs><!--, <ref><hi rend="sc">xviii</hi></ref>-->, <ref target="#SCHA-PR_0047" n="30">47</ref>, <ref target="#SCHA-PR_0059" n="31">59</ref>, <ref target="#SCHA-PR_0062" n="33">62</ref>, <ref target="#SCHA-PR_0058" n="48">58</ref>.</item>
-          <item xml:id="SCHA-PR_rs_028"><rs><hi rend="sc">Balagny</hi></rs>, <ref target="#SCHA-PR_0005" n="vii">5</ref><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">lvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="lxii">68</ref><!--, <ref><hi rend="sc">lxxvii</hi></ref>--><!--, <ref><hi rend="sc">lxxx</hi></ref>--><!--, <ref><hi rend="sc">lxxxv</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0005: <ref target="#SCHA-PR_0005" n="7">5</ref> --><!--, <ref>8</ref>--> <ref target="#SCHA-PR_0016" n="13">16</ref>. <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="61">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
-          <item xml:id="SCHA-PR_rs_029"><rs><hi rend="sc">Balagny (Guillaume de)</hi></rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
-          <item xml:id="SCHA-PR_rs_030"><rs><hi rend="sc">Balduinus</hi>, Baudouin, fils de Waleran</rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="iii">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
-          <item xml:id="SCHA-PR_rs_031"><rs><hi rend="sc">Balduinus</hi>, cancellarius</rs>, <ref target="#SCHA-PR_0001" n="i">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --></item>
+          <item xml:id="SCHA-PR_rs_026"><rs><hi rend="sc">Bacouel</hi></rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>. <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
+          <item xml:id="SCHA-PR_rs_027"><rs><hi rend="sc">Bailli de Senlis</hi></rs><!--, <ref><hi rend="sc">xviii</hi></ref>-->, <ref target="#SCHA-PR_0047" n="47">47</ref>, <ref target="#SCHA-PR_0059" n="59">59</ref>, <ref target="#SCHA-PR_0062" n="62">62</ref>, <ref target="#SCHA-PR_0058" n="58">58</ref>.</item>
+          <item xml:id="SCHA-PR_rs_028"><rs><hi rend="sc">Balagny</hi></rs>, <ref target="#SCHA-PR_0005" n="5">5</ref><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">lvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref><!--, <ref><hi rend="sc">lxxvii</hi></ref>--><!--, <ref><hi rend="sc">lxxx</hi></ref>--><!--, <ref><hi rend="sc">lxxxv</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0005: <ref target="#SCHA-PR_0005" n="7">5</ref> --><!--, <ref>8</ref>--> <ref target="#SCHA-PR_0016" n="16">16</ref>. <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="61">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
+          <item xml:id="SCHA-PR_rs_029"><rs><hi rend="sc">Balagny (Guillaume de)</hi></rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_030"><rs><hi rend="sc">Balduinus</hi>, Baudouin, fils de Waleran</rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
+          <item xml:id="SCHA-PR_rs_031"><rs><hi rend="sc">Balduinus</hi>, cancellarius</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_032"><rs><hi rend="sc">Barbelat</hi>, Victor</rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_033"><rs><hi rend="sc">Barbery</hi></rs><!--, <ref><hi rend="sc">lix</hi></ref>-->, <ref target="#SCHA-PR_0010" n="9">10</ref>.</item>
+          <item xml:id="SCHA-PR_rs_033"><rs><hi rend="sc">Barbery</hi></rs><!--, <ref><hi rend="sc">lix</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_034"><rs><hi rend="sc">Bastonneau</hi>, notaire</rs>, <ref><hi rend="sc">lv</hi></ref>, <ref>42</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_035"><rs><hi rend="sc">Bataille</hi>, Jacques</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_036"><rs><hi rend="sc">Baterel</hi>, Guiard</rs><!--, <ref><hi rend="sc">xii</hi></ref>-->, <ref target="#SCHA-PR_0043" n="28">43</ref>.</item>
-          <item xml:id="SCHA-PR_rs_037"><rs><hi rend="sc">Bauchesy</hi>, Guillaume</rs><!--, <ref><hi rend="sc">xliii</hi></ref>--><!--, <ref>45</ref>-->, <ref target="#SCHA-PR_0065" n="59">65</ref>.</item>
-          <item xml:id="SCHA-PR_rs_038"><rs><hi rend="sc">Baudouin</hi></rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_036"><rs><hi rend="sc">Baterel</hi>, Guiard</rs><!--, <ref><hi rend="sc">xii</hi></ref>-->, <ref target="#SCHA-PR_0043" n="43">43</ref>.</item>
+          <item xml:id="SCHA-PR_rs_037"><rs><hi rend="sc">Bauchesy</hi>, Guillaume</rs><!--, <ref><hi rend="sc">xliii</hi></ref>--><!--, <ref>45</ref>-->, <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_038"><rs><hi rend="sc">Baudouin</hi></rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_039"><rs><hi rend="sc">Bay (Jean de)</hi></rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_040"><rs><hi rend="sc">Bazin</hi>, François, prieur</rs>, <ref><hi rend="sc">xvi</hi></ref>, <ref>43</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_041"><rs><hi rend="sc">Beauvais</hi></rs>, <ref target="#SCHA-PR_0001" n="i">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="5">1</ref> --></item>
-          <item xml:id="SCHA-PR_rs_042"><rs><hi rend="sc">Becconne</hi></rs>, <ref target="#SCHA-PR_0063" n="56">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_041"><rs><hi rend="sc">Beauvais</hi></rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="5">1</ref> --></item>
+          <item xml:id="SCHA-PR_rs_042"><rs><hi rend="sc">Becconne</hi></rs>, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_043"><rs><hi rend="sc">Begers</hi>, Gautier, maire de Pontpoint</rs>, <ref><hi rend="sc">xv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_044"><rs><hi rend="sc">Begiers</hi>, Pierre</rs>, <ref target="#SCHA-PR_0037" n="24">37</ref><!--, <ref>25</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_045"><rs><hi rend="sc">Bellart</hi>, Collart</rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
-          <item xml:id="SCHA-PR_rs_046"><rs><hi rend="sc">Bellart</hi>, Guillaume</rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_044"><rs><hi rend="sc">Begiers</hi>, Pierre</rs>, <ref target="#SCHA-PR_0037" n="37">37</ref><!--, <ref>25</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_045"><rs><hi rend="sc">Bellart</hi>, Collart</rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_046"><rs><hi rend="sc">Bellart</hi>, Guillaume</rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_047"><rs><hi rend="sc">Bellenger</hi>, Guillaume</rs>, <ref><hi rend="sc">xxv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_048"><rs><hi rend="sc">Bermond d'Anduze</hi></rs>, <ref>45</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_049"><rs><hi rend="sc">Bermond de Sommières</hi></rs>, <ref>45</ref>.</item>-->
@@ -5403,19 +5403,19 @@
           <!--<item xml:id="SCHA-PR_rs_054"><rs><hi rend="sc">Bernis (François de Pierres de)</hi></rs>, <ref><hi rend="sc">lxxxvi</hi></ref>, <ref><hi rend="sc">lxxxvii</hi></ref>, <ref>44</ref>, <ref>45</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_055"><rs><hi rend="sc">Bertault</hi>, Boitart</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_056"><rs><hi rend="sc">Berthe</hi>, Thomas</rs>, <ref>45</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_057"><rs><hi rend="sc">Berthélemy</hi>, Adam</rs>, <ref target="#SCHA-PR_0062" n="51">62</ref>. <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="52">62</ref> --> <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="53">62</ref> --></item>
+          <item xml:id="SCHA-PR_rs_057"><rs><hi rend="sc">Berthélemy</hi>, Adam</rs>, <ref target="#SCHA-PR_0062" n="62">62</ref>. <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="52">62</ref> --> <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="53">62</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_058"><rs><hi rend="sc">Berthélemy</hi>, Denis</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_059"><rs><hi rend="sc">Béthisy (Nicolas de)</hi></rs>, <ref>35</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_060"><rs><hi rend="sc">Beu</hi>, Jean</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_061"><rs><hi rend="sc">Biberei</hi>, Etienne</rs>, <ref target="#SCHA-PR_0030" n="20">30</ref>. <!-- doublon meme acte SCHA-PR_0030: <ref target="#SCHA-PR_0030" n="21">30</ref> --><!--, <ref>23</ref>--></item>
-          <item xml:id="SCHA-PR_rs_062"><rs><hi rend="sc">Biberei</hi>, Jean</rs>, <ref target="#SCHA-PR_0030" n="21">30</ref>.</item>
+          <item xml:id="SCHA-PR_rs_061"><rs><hi rend="sc">Biberei</hi>, Etienne</rs>, <ref target="#SCHA-PR_0030" n="30">30</ref>. <!-- doublon meme acte SCHA-PR_0030: <ref target="#SCHA-PR_0030" n="21">30</ref> --><!--, <ref>23</ref>--></item>
+          <item xml:id="SCHA-PR_rs_062"><rs><hi rend="sc">Biberei</hi>, Jean</rs>, <ref target="#SCHA-PR_0030" n="30">30</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_063"><rs><hi rend="sc">Bidet</hi>, Jacques</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_064"><rs><hi rend="sc">Bisendus de Forfery</hi></rs>, <ref target="#SCHA-PR_0007" n="vii">7</ref>. <!-- doublon meme acte SCHA-PR_0007: <ref target="#SCHA-PR_0007" n="8">7</ref> --></item>
-          <item xml:id="SCHA-PR_rs_065"><rs><hi rend="sc">Blaincourt</hi></rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
-          <item xml:id="SCHA-PR_rs_066"><rs><hi rend="sc">Bobusse</hi>, notaire</rs>, <ref target="#SCHA-PR_0068" n="58">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_067"><rs><hi rend="sc">Bombart</hi>, Charles</rs>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_064"><rs><hi rend="sc">Bisendus de Forfery</hi></rs>, <ref target="#SCHA-PR_0007" n="7">7</ref>. <!-- doublon meme acte SCHA-PR_0007: <ref target="#SCHA-PR_0007" n="8">7</ref> --></item>
+          <item xml:id="SCHA-PR_rs_065"><rs><hi rend="sc">Blaincourt</hi></rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_066"><rs><hi rend="sc">Bobusse</hi>, notaire</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_067"><rs><hi rend="sc">Bombart</hi>, Charles</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_068"><rs><hi rend="sc">Bone (Jean de)</hi></rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_069"><rs><hi rend="sc">Bonjour</hi>, Jean</rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_069"><rs><hi rend="sc">Bonjour</hi>, Jean</rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_070"><rs><hi rend="sc">Bonnaure</hi>, Jacques, prieur</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_071"><rs><hi rend="sc">Bonrepos (abbé de)</hi></rs>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref>44</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_072"><rs><hi rend="sc">Bony (prieuré de)</hi></rs>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>, <ref>44</ref>.</item>-->
@@ -5427,19 +5427,19 @@
           <!--<item xml:id="SCHA-PR_rs_078"><rs><hi rend="sc">Bourbon (Antoine de)</hi></rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_079"><rs><hi rend="sc">Bourdeaux (Françoise de)</hi></rs>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref>43</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_080"><rs><hi rend="sc">Bourgoing (Guillaume le)</hi></rs>, <ref><hi rend="sc">xxvii</hi></ref>, <ref><hi rend="sc">xxviii</hi></ref>, <ref>45</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_081"><rs><hi rend="sc">Boyleau</hi>, Hugues</rs><!--, <ref><hi rend="sc">xxxviii</hi></ref>-->, <ref target="#SCHA-PR_0062" n="51">62</ref>. <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="52">62</ref> --><!--, <ref>53</ref>--></item>
+          <item xml:id="SCHA-PR_rs_081"><rs><hi rend="sc">Boyleau</hi>, Hugues</rs><!--, <ref><hi rend="sc">xxxviii</hi></ref>-->, <ref target="#SCHA-PR_0062" n="62">62</ref>. <!-- doublon meme acte SCHA-PR_0062: <ref target="#SCHA-PR_0062" n="52">62</ref> --><!--, <ref>53</ref>--></item>
           <item xml:id="SCHA-PR_rs_082"><rs><hi rend="sc">Bouteiller (Guy le)</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0008" n="8">8</ref>.</item>
-          <item xml:id="SCHA-PR_rs_083"><rs><hi rend="sc">Boutinval</hi></rs>, <ref target="#SCHA-PR_0025" n="18">25</ref>.</item>
+          <item xml:id="SCHA-PR_rs_083"><rs><hi rend="sc">Boutinval</hi></rs>, <ref target="#SCHA-PR_0025" n="25">25</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_084"><rs><hi rend="sc">Brandons (feu des)</hi></rs>, <ref><hi rend="sc">xxxvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_085"><rs><hi rend="sc">Brasseuse</hi></rs><!--, <ref><hi rend="sc">lxxvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_086"><rs><hi rend="sc">Bray</hi></rs><!--, <ref><hi rend="sc">lxxvi</hi></ref>--><!--, <ref><hi rend="sc">lxxvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_087"><rs><hi rend="sc">Brenouille</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0028" n="19">28</ref>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
-          <item xml:id="SCHA-PR_rs_088"><rs><hi rend="sc">Breteuil</hi></rs>, <ref target="#SCHA-PR_0004" n="6">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_085"><rs><hi rend="sc">Brasseuse</hi></rs><!--, <ref><hi rend="sc">lxxvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_086"><rs><hi rend="sc">Bray</hi></rs><!--, <ref><hi rend="sc">lxxvi</hi></ref>--><!--, <ref><hi rend="sc">lxxvii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_087"><rs><hi rend="sc">Brenouille</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0028" n="28">28</ref>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_088"><rs><hi rend="sc">Breteuil</hi></rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_089"><rs><hi rend="sc">Bretignolles</hi></rs>, <ref>44</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_090"><rs><hi rend="sc">Brosse (Pierre de la)</hi>, prieur</rs>, <ref><hi rend="sc">xix</hi></ref>, <ref><hi rend="sc">xx</hi></ref>, <ref><hi rend="sc">xxi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_091"><rs><hi rend="sc">Brunnus</hi>, Le Brun de Sancerre</rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_091"><rs><hi rend="sc">Brunnus</hi>, Le Brun de Sancerre</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_092"><rs><hi rend="sc">Bue</hi>, Laurent</rs>, <ref>45</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_093"><rs><hi rend="sc">Buffet</hi>, Guillaume</rs>, <ref target="#SCHA-PR_0059" n="49">59</ref>.</item>
+          <item xml:id="SCHA-PR_rs_093"><rs><hi rend="sc">Buffet</hi>, Guillaume</rs>, <ref target="#SCHA-PR_0059" n="59">59</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_094"><rs><hi rend="sc">Buisson (Jacqueline le)</hi></rs>, <ref><hi rend="sc">lxx</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_095"><rs><hi rend="sc">Buisson de Paris (le)</hi></rs>, <ref><hi rend="sc">lxx</hi></ref>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_096"><rs><hi rend="sc">Buzenot</hi>, Albert, prieur</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>, <ref>44</ref>.</item>-->
@@ -5448,21 +5448,21 @@
           <head>C</head>
           <!--<item xml:id="SCHA-PR_rs_097"><rs><hi rend="sc">Cagniard</hi></rs>, offic. munic. de Fleurines, <ref><hi rend="sc">lxxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_098"><rs><hi rend="sc">Cain</hi>, Claude</rs>, <ref><hi rend="sc">lxi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_099"><rs><hi rend="sc">Caignan</hi>, Jean</rs>, <ref target="#SCHA-PR_0052" n="37">52</ref>.</item>
-          <item xml:id="SCHA-PR_rs_100"><rs><hi rend="sc">Cambellan</hi>, Jean</rs><!--, <ref><hi rend="sc">xxvii</hi></ref>-->, <ref target="#SCHA-PR_0060" n="50">60</ref>.</item>
-          <item xml:id="SCHA-PR_rs_101"><rs><hi rend="sc">Capperon</hi>, Jean</rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_099"><rs><hi rend="sc">Caignan</hi>, Jean</rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_100"><rs><hi rend="sc">Cambellan</hi>, Jean</rs><!--, <ref><hi rend="sc">xxvii</hi></ref>-->, <ref target="#SCHA-PR_0060" n="60">60</ref>.</item>
+          <item xml:id="SCHA-PR_rs_101"><rs><hi rend="sc">Capperon</hi>, Jean</rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_102"><rs><hi rend="sc">Carrier (Barthélemy le)</hi></rs>, <ref><hi rend="sc">viii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_103"><rs><hi rend="sc">Cella</hi>, Le Montcel, près Pont-Sainte-Maxence</rs>, <ref target="#SCHA-PR_0001" n="4">1</ref><!--, <ref><hi rend="sc">xxx</hi></ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_104"><rs><hi rend="sc">Cens sur une maison à Senlis</hi></rs>, <ref target="#SCHA-PR_0022" n="16">22</ref>.</item>
-          <item xml:id="SCHA-PR_rs_105"><rs><hi rend="sc">Cens à Villemétrie</hi></rs>, <ref target="#SCHA-PR_0024" n="17">24</ref>.</item>
-          <item xml:id="SCHA-PR_rs_106"><rs><hi rend="sc">Chaalis</hi></rs>, <ref target="#SCHA-PR_0016" n="10">16</ref>.</item>
-          <item xml:id="SCHA-PR_rs_107"><rs><hi rend="sc">Château-Rouge (maison du)</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>-->, <ref target="#SCHA-PR_0030" n="20">30</ref>. <!-- doublon meme acte SCHA-PR_0030: <ref target="#SCHA-PR_0030" n="22">30</ref> --></item>
-          <item xml:id="SCHA-PR_rs_108"><rs><hi rend="sc">Chapelle-en-Serval (la)</hi></rs><!--, <ref><hi rend="sc">xli</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>-->, <ref target="#SCHA-PR_0069" n="61">69</ref>.</item>
-          <item xml:id="SCHA-PR_rs_109"><rs><hi rend="sc">Chapelle-Galon (la)</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_110"><rs><hi rend="sc">Chapelle (Pierre de la)</hi></rs>, <ref target="#SCHA-PR_0052" n="36">52</ref>.</item>
-          <item xml:id="SCHA-PR_rs_111"><rs><hi rend="sc">Chapelle (Hersans de la)</hi></rs>, <ref target="#SCHA-PR_0052" n="36">52</ref>.</item>
-          <item xml:id="SCHA-PR_rs_112"><rs><hi rend="sc">Charetier (Jehan le)</hi></rs>, <ref target="#SCHA-PR_0040" n="26">40</ref>.</item>
-          <item xml:id="SCHA-PR_rs_113"><rs><hi rend="sc">Charité-sur-Loire (la)</hi></rs>, <ref target="#SCHA-PR_0002" n="v">2</ref><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --> <ref target="#SCHA-PR_0063" n="9">63</ref>, <ref target="#SCHA-PR_0011" n="13">11</ref>, <ref target="#SCHA-PR_0034" n="23">34</ref>, <ref target="#SCHA-PR_0044" n="37">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_103"><rs><hi rend="sc">Cella</hi>, Le Montcel, près Pont-Sainte-Maxence</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref><!--, <ref><hi rend="sc">xxx</hi></ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_104"><rs><hi rend="sc">Cens sur une maison à Senlis</hi></rs>, <ref target="#SCHA-PR_0022" n="22">22</ref>.</item>
+          <item xml:id="SCHA-PR_rs_105"><rs><hi rend="sc">Cens à Villemétrie</hi></rs>, <ref target="#SCHA-PR_0024" n="24">24</ref>.</item>
+          <item xml:id="SCHA-PR_rs_106"><rs><hi rend="sc">Chaalis</hi></rs>, <ref target="#SCHA-PR_0016" n="16">16</ref>.</item>
+          <item xml:id="SCHA-PR_rs_107"><rs><hi rend="sc">Château-Rouge (maison du)</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>-->, <ref target="#SCHA-PR_0030" n="30">30</ref>. <!-- doublon meme acte SCHA-PR_0030: <ref target="#SCHA-PR_0030" n="22">30</ref> --></item>
+          <item xml:id="SCHA-PR_rs_108"><rs><hi rend="sc">Chapelle-en-Serval (la)</hi></rs><!--, <ref><hi rend="sc">xli</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>-->, <ref target="#SCHA-PR_0069" n="69">69</ref>.</item>
+          <item xml:id="SCHA-PR_rs_109"><rs><hi rend="sc">Chapelle-Galon (la)</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_110"><rs><hi rend="sc">Chapelle (Pierre de la)</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_111"><rs><hi rend="sc">Chapelle (Hersans de la)</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_112"><rs><hi rend="sc">Charetier (Jehan le)</hi></rs>, <ref target="#SCHA-PR_0040" n="40">40</ref>.</item>
+          <item xml:id="SCHA-PR_rs_113"><rs><hi rend="sc">Charité-sur-Loire (la)</hi></rs>, <ref target="#SCHA-PR_0002" n="2">2</ref><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --> <ref target="#SCHA-PR_0063" n="63">63</ref>, <ref target="#SCHA-PR_0011" n="11">11</ref>, <ref target="#SCHA-PR_0034" n="34">34</ref>, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_114"><rs><hi rend="sc">Charles-le-Bel</hi></rs>, <ref><hi rend="sc">iv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_115"><rs><hi rend="sc">Charton</hi>, Jean</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_116"><rs><hi rend="sc">Chatel (Jean du)</hi></rs>, <ref><hi rend="sc">xlviii</hi></ref>, <ref>57</ref>.</item>-->
@@ -5472,38 +5472,38 @@
           <!--<item xml:id="SCHA-PR_rs_120"><rs><hi rend="sc">Cheron</hi>, Jacques-Pierre</rs>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_121"><rs><hi rend="sc">Cherrier</hi>, Jacques</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_122"><rs><hi rend="sc">Chesneau</hi>, Robert, prieur</rs>, <ref><hi rend="sc">lv</hi></ref>, <ref><hi rend="sc">lviii</hi></ref>, <ref>43</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_123"><rs><hi rend="sc">Choiselle (Jeanne la)</hi></rs><!--, <ref><hi rend="sc">xix</hi></ref>--><!--, <ref><hi rend="sc">xxi</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0063" n="54">63</ref>.</item>
-          <item xml:id="SCHA-PR_rs_124"><rs><hi rend="sc">Choisel</hi>, Pierre</rs><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">xix</hi></ref>-->, <ref target="#SCHA-PR_0016" n="13">16</ref><!--, <ref>16</ref>-->, <ref target="#SCHA-PR_0021" n="17">21</ref>, <ref target="#SCHA-PR_0035" n="23">35</ref>, <ref target="#SCHA-PR_0022" n="24">22</ref>.</item>
-          <item xml:id="SCHA-PR_rs_125"><rs><hi rend="sc">Cinqueux (maison à)</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>--><!--, <ref><hi rend="sc">xxiv</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0006" n="7">6</ref>, <ref target="#SCHA-PR_0051" n="36">51</ref>.</item>
-          <item xml:id="SCHA-PR_rs_126"><rs><hi rend="sc">Cinqueux (Henri de)</hi></rs>, <ref target="#SCHA-PR_0006" n="7">6</ref>.</item>
-<item xml:id="SCHA-PR_rs_127"><rs><hi rend="sc">Clermont (Thibault)</hi>, comte de</rs>, <ref target="#SCHA-PR_0006" n="vi">6</ref>. <!-- doublon meme acte SCHA-PR_0006: <ref target="#SCHA-PR_0006" n="6">6</ref> --><!--, <ref>7</ref>--></item>
-          <item xml:id="SCHA-PR_rs_128"><rs><hi rend="sc">Cluny (Ordre de)</hi></rs><!--, <ref><hi rend="sc">iv</hi></ref>--><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xlv</hi></ref>--><!--, <ref><hi rend="sc">lxxix</hi></ref>--><!--, <ref><hi rend="sc">lxxxi</hi></ref>--><!--, <ref>1</ref>--><!--, <ref>42</ref>--><!--, <ref>43</ref>--><!--, <ref>44</ref>-->, <ref target="#SCHA-PR_0058" n="48">58</ref>.</item>
+          <item xml:id="SCHA-PR_rs_123"><rs><hi rend="sc">Choiselle (Jeanne la)</hi></rs><!--, <ref><hi rend="sc">xix</hi></ref>--><!--, <ref><hi rend="sc">xxi</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_124"><rs><hi rend="sc">Choisel</hi>, Pierre</rs><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">xix</hi></ref>-->, <ref target="#SCHA-PR_0016" n="16">16</ref><!--, <ref>16</ref>-->, <ref target="#SCHA-PR_0021" n="21">21</ref>, <ref target="#SCHA-PR_0035" n="35">35</ref>, <ref target="#SCHA-PR_0022" n="22">22</ref>.</item>
+          <item xml:id="SCHA-PR_rs_125"><rs><hi rend="sc">Cinqueux (maison à)</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>--><!--, <ref><hi rend="sc">xxiv</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0006" n="6">6</ref>, <ref target="#SCHA-PR_0051" n="51">51</ref>.</item>
+          <item xml:id="SCHA-PR_rs_126"><rs><hi rend="sc">Cinqueux (Henri de)</hi></rs>, <ref target="#SCHA-PR_0006" n="6">6</ref>.</item>
+<item xml:id="SCHA-PR_rs_127"><rs><hi rend="sc">Clermont (Thibault)</hi>, comte de</rs>, <ref target="#SCHA-PR_0006" n="6">6</ref>. <!-- doublon meme acte SCHA-PR_0006: <ref target="#SCHA-PR_0006" n="6">6</ref> --><!--, <ref>7</ref>--></item>
+          <item xml:id="SCHA-PR_rs_128"><rs><hi rend="sc">Cluny (Ordre de)</hi></rs><!--, <ref><hi rend="sc">iv</hi></ref>--><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xlv</hi></ref>--><!--, <ref><hi rend="sc">lxxix</hi></ref>--><!--, <ref><hi rend="sc">lxxxi</hi></ref>--><!--, <ref>1</ref>--><!--, <ref>42</ref>--><!--, <ref>43</ref>--><!--, <ref>44</ref>-->, <ref target="#SCHA-PR_0058" n="58">58</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_129"><rs><hi rend="sc">Cohen (prieuré de)</hi></rs>, <ref><hi rend="sc">xlvi</hi></ref>, ]<ref><hi rend="sc">l</hi></ref>, <ref><hi rend="sc">li</hi></ref>, [42.</item>-->
-          <item xml:id="SCHA-PR_rs_130"><rs><hi rend="sc">Coleurs (André de)</hi></rs><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="12">15</ref><!--, <ref>13</ref>--><!--, <ref>15</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_130"><rs><hi rend="sc">Coleurs (André de)</hi></rs><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref><!--, <ref>13</ref>--><!--, <ref>15</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_131"><rs><hi rend="sc">Communauté des habitants de Fleurines</hi></rs>, <ref><hi rend="sc">lxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_132"><rs><hi rend="sc">Commanderie de Lagny</hi></rs>, <ref><hi rend="sc">vi</hi></ref>, <ref><hi rend="sc">vii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_133"><rs><hi rend="sc">Compiègne</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>--><!--, <ref><hi rend="sc">xviii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0038" n="25">38</ref>.</item>
+          <item xml:id="SCHA-PR_rs_133"><rs><hi rend="sc">Compiègne</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>--><!--, <ref><hi rend="sc">xviii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0038" n="38">38</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_134"><rs><hi rend="sc">Concques (église de)</hi></rs>, <ref><hi rend="sc">lxxx</hi></ref>, <ref>44</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_135"><rs><hi rend="sc">Conon</hi>, Robert</rs>, <ref>45</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_136"><rs><hi rend="sc">Contesse</hi>, Etienne</rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_137"><rs><hi rend="sc">Corbilly (Claude de)</hi>, prieur</rs>, <ref><hi rend="sc">lxii</hi></ref>, <ref>43</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_138"><rs><hi rend="sc">Cordonnier (Pierre le)</hi></rs>, <ref target="#SCHA-PR_0039" n="26">39</ref>.</item>
-          <item xml:id="SCHA-PR_rs_139"><rs><hi rend="sc">Corne de l'Ouye (la)</hi></rs><!--, <ref><hi rend="sc">xxxvi</hi></ref>-->, <ref target="#SCHA-PR_0062" n="53">62</ref>.</item>
-          <item xml:id="SCHA-PR_rs_140"><rs><hi rend="sc">Cornillier (le)</hi></rs>, <ref target="#SCHA-PR_0041" n="27">41</ref>.</item>
-          <item xml:id="SCHA-PR_rs_141"><rs><hi rend="sc">Cornu</hi>, Galeran</rs><!--, <ref><hi rend="sc">xliii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="57">65</ref>.</item>
-          <item xml:id="SCHA-PR_rs_142"><rs><hi rend="sc">Cornu</hi>, Thomas</rs><!--, <ref><hi rend="sc">xliii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="58">65</ref>.</item>
-          <item xml:id="SCHA-PR_rs_143"><rs><hi rend="sc">Coudray (Pierre du)</hi></rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="57">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_138"><rs><hi rend="sc">Cordonnier (Pierre le)</hi></rs>, <ref target="#SCHA-PR_0039" n="39">39</ref>.</item>
+          <item xml:id="SCHA-PR_rs_139"><rs><hi rend="sc">Corne de l'Ouye (la)</hi></rs><!--, <ref><hi rend="sc">xxxvi</hi></ref>-->, <ref target="#SCHA-PR_0062" n="62">62</ref>.</item>
+          <item xml:id="SCHA-PR_rs_140"><rs><hi rend="sc">Cornillier (le)</hi></rs>, <ref target="#SCHA-PR_0041" n="41">41</ref>.</item>
+          <item xml:id="SCHA-PR_rs_141"><rs><hi rend="sc">Cornu</hi>, Galeran</rs><!--, <ref><hi rend="sc">xliii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_142"><rs><hi rend="sc">Cornu</hi>, Thomas</rs><!--, <ref><hi rend="sc">xliii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_143"><rs><hi rend="sc">Coudray (Pierre du)</hi></rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_144"><rs><hi rend="sc">Coulon</hi>, Jean</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_145"><rs><hi rend="sc">Courcelles (Gilles de)</hi></rs><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0047" n="33">47</ref>.</item>
-          <item xml:id="SCHA-PR_rs_146"><rs><hi rend="sc">Court (Arnault de la)</hi></rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
-          <item xml:id="SCHA-PR_rs_147"><rs><hi rend="sc">Court (Renier de la)</hi></rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
-          <item xml:id="SCHA-PR_rs_148"><rs><hi rend="sc">Cousture (Garnier de la)</hi></rs><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_145"><rs><hi rend="sc">Courcelles (Gilles de)</hi></rs><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0047" n="47">47</ref>.</item>
+          <item xml:id="SCHA-PR_rs_146"><rs><hi rend="sc">Court (Arnault de la)</hi></rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_147"><rs><hi rend="sc">Court (Renier de la)</hi></rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_148"><rs><hi rend="sc">Cousture (Garnier de la)</hi></rs><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_149"><rs><hi rend="sc">Cousturier</hi>, prieur</rs>, <ref><hi rend="sc">xv</hi></ref>, <ref><hi rend="sc">xvii</hi></ref>, <ref>41</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_150"><rs><hi rend="sc">Crespy (chemin de)</hi></rs>, <ref target="#SCHA-PR_0027" n="19">27</ref>.</item>
+          <item xml:id="SCHA-PR_rs_150"><rs><hi rend="sc">Crespy (chemin de)</hi></rs>, <ref target="#SCHA-PR_0027" n="27">27</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_151"><rs><hi rend="sc">Crestel</hi>, Louis</rs>, <ref><hi rend="sc">lxxxvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_152"><rs><hi rend="sc">Cretté</hi>, Jean, prieur</rs>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>, <ref>43</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_153"><rs><hi rend="sc">Curé de Balagny</hi></rs>, <ref><hi rend="sc">lvii</hi></ref>, <ref><hi rend="sc">lxxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_154"><rs><hi rend="sc">Curé de Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0018" n="14">18</ref>.</item>
+          <item xml:id="SCHA-PR_rs_154"><rs><hi rend="sc">Curé de Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0018" n="18">18</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_155"><rs><hi rend="sc">Curé de Saint-Pierre-Pontpoint</hi></rs>, <ref><hi rend="sc">xvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_156"><rs><hi rend="sc">Curé de Fleurines</hi></rs>, <ref><hi rend="sc">xx</hi></ref>, <ref><hi rend="sc">xliii</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxix</hi></ref>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_157"><rs><hi rend="sc">Curé du Plessis-le-Vicomte</hi></rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>-->
@@ -5514,179 +5514,179 @@
           <head>D</head>
           <!--<item xml:id="SCHA-PR_rs_160"><rs><hi rend="sc">Dambin</hi>, Jean</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_161"><rs><hi rend="sc">Dammartin</hi></rs>, <ref><hi rend="sc">vii</hi></ref>, <ref><hi rend="sc">lxvi</hi></ref>, <ref><hi rend="sc">lxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_162"><rs><hi rend="sc">Damoiselle Catherine Larcher</hi></rs>, <ref target="#SCHA-PR_0025" n="17">25</ref><!--, <ref>18</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_162"><rs><hi rend="sc">Damoiselle Catherine Larcher</hi></rs>, <ref target="#SCHA-PR_0025" n="25">25</ref><!--, <ref>18</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_163"><rs><hi rend="sc">Danse Claude</hi></rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_164"><rs><hi rend="sc">Debonnaire</hi>, Jean</rs>, <ref><hi rend="sc">lix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_165"><rs><hi rend="sc">Deffois (bois du)</hi></rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0044" n="29">44</ref><!--, <ref>30</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_165"><rs><hi rend="sc">Deffois (bois du)</hi></rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0044" n="44">44</ref><!--, <ref>30</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_166"><rs><hi rend="sc">De Jean</hi>, Antoine-Simon</rs>, <ref><hi rend="sc">lxxxii</hi></ref>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_167"><rs><hi rend="sc">De Laitre</hi></rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_167"><rs><hi rend="sc">De Laitre</hi></rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_168"><rs><hi rend="sc">De Lastre</hi>, Pierre</rs>, <ref><hi rend="sc">l</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_169"><rs><hi rend="sc">De Lorme</hi>, Jean</rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="57">65</ref>. <!-- doublon meme acte SCHA-PR_0065: <ref target="#SCHA-PR_0065" n="58">65</ref> --></item>
-          <item xml:id="SCHA-PR_rs_170"><rs><hi rend="sc">Descroisette</hi></rs>, <ref target="#SCHA-PR_0062" n="52">62</ref>.</item>
+          <item xml:id="SCHA-PR_rs_169"><rs><hi rend="sc">De Lorme</hi>, Jean</rs><!--, <ref><hi rend="sc">xlii</hi></ref>-->, <ref target="#SCHA-PR_0065" n="65">65</ref>. <!-- doublon meme acte SCHA-PR_0065: <ref target="#SCHA-PR_0065" n="58">65</ref> --></item>
+          <item xml:id="SCHA-PR_rs_170"><rs><hi rend="sc">Descroisette</hi></rs>, <ref target="#SCHA-PR_0062" n="62">62</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_171"><rs><hi rend="sc">Deslandes</hi>, Charles</rs>, <ref><hi rend="sc">lxxi</hi></ref>, <ref><hi rend="sc">lxxiii</hi></ref>, <ref>45</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_172"><rs><hi rend="sc">Deslyons</hi>, Jean</rs>, <ref><hi rend="sc">lxxvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_173"><rs><hi rend="sc">Desprez</hi>, Pierre</rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_174"><rs><hi rend="sc">Devaus</hi>, Jean</rs>, <ref target="#SCHA-PR_0017" n="14">17</ref>.</item>
-          <item xml:id="SCHA-PR_rs_175"><rs><hi rend="sc">Dîme à Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0018" n="14">18</ref>.</item>
+          <item xml:id="SCHA-PR_rs_174"><rs><hi rend="sc">Devaus</hi>, Jean</rs>, <ref target="#SCHA-PR_0017" n="17">17</ref>.</item>
+          <item xml:id="SCHA-PR_rs_175"><rs><hi rend="sc">Dîme à Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0018" n="18">18</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_176"><rs><hi rend="sc">Dîme de Lagny</hi>, le Plessis-Belleville</rs>, <ref><hi rend="sc">xxix</hi></ref>.</item>-->
           <item xml:id="SCHA-PR_rs_177"><rs><hi rend="sc">Doyen de Saint-Frambauld</hi></rs>, <ref target="#SCHA-PR_0009" n="9">9</ref>.</item>
-          <item xml:id="SCHA-PR_rs_178"><rs><hi rend="sc">Doyen de Notre-Dame</hi></rs>, <ref target="#SCHA-PR_0009" n="9">9</ref>, <ref target="#SCHA-PR_0018" n="14">18</ref>.</item>
-          <item xml:id="SCHA-PR_rs_179"><rs><hi rend="sc">Doyen de Saint-Pierre de Beauvais</hi></rs>, <ref target="#SCHA-PR_0050" n="35">50</ref>.</item>
+          <item xml:id="SCHA-PR_rs_178"><rs><hi rend="sc">Doyen de Notre-Dame</hi></rs>, <ref target="#SCHA-PR_0009" n="9">9</ref>, <ref target="#SCHA-PR_0018" n="18">18</ref>.</item>
+          <item xml:id="SCHA-PR_rs_179"><rs><hi rend="sc">Doyen de Saint-Pierre de Beauvais</hi></rs>, <ref target="#SCHA-PR_0050" n="50">50</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_180"><rs><hi rend="sc">Droit de brelan</hi></rs>, <ref><hi rend="sc">xxxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_181"><rs><hi rend="sc">Droit de cendrier</hi></rs>, <ref target="#SCHA-PR_0036" n="24">36</ref>.</item>
-          <item xml:id="SCHA-PR_rs_182"><rs><hi rend="sc">Droit d'échelle</hi></rs><!--, <ref><hi rend="sc">xxxvi</hi></ref>--><!--, <ref><hi rend="sc">xxxvii</hi></ref>-->, <ref target="#SCHA-PR_0062" n="51">62</ref><!--, <ref>52</ref>--><!--, <ref>53</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_181"><rs><hi rend="sc">Droit de cendrier</hi></rs>, <ref target="#SCHA-PR_0036" n="36">36</ref>.</item>
+          <item xml:id="SCHA-PR_rs_182"><rs><hi rend="sc">Droit d'échelle</hi></rs><!--, <ref><hi rend="sc">xxxvi</hi></ref>--><!--, <ref><hi rend="sc">xxxvii</hi></ref>-->, <ref target="#SCHA-PR_0062" n="62">62</ref><!--, <ref>52</ref>--><!--, <ref>53</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_183"><rs><hi rend="sc">Droit de gruerie et grairie</hi></rs>, <ref><hi rend="sc">xxii</hi></ref>, <ref><hi rend="sc">lxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_184"><rs><hi rend="sc">Droit de mainmorte</hi></rs>, <ref><hi rend="sc">vi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_185"><rs><hi rend="sc">Droit de pégier</hi></rs>, <ref target="#SCHA-PR_0036" n="24">36</ref>.</item>
+          <item xml:id="SCHA-PR_rs_185"><rs><hi rend="sc">Droit de pégier</hi></rs>, <ref target="#SCHA-PR_0036" n="36">36</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_186"><rs><hi rend="sc">Droit de plaids</hi></rs>, <ref><hi rend="sc">xiv</hi></ref>, <ref><hi rend="sc">xv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_187"><rs><hi rend="sc">Droit de relief</hi></rs>, <ref target="#SCHA-PR_0069" n="61">69</ref>.</item>
+          <item xml:id="SCHA-PR_rs_187"><rs><hi rend="sc">Droit de relief</hi></rs>, <ref target="#SCHA-PR_0069" n="69">69</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_188"><rs><hi rend="sc">Droit de retrait lignager</hi></rs>, <ref><hi rend="sc">xi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_189"><rs><hi rend="sc">Droit de synode et de visite</hi></rs>, <ref><hi rend="sc">vi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_190"><rs><hi rend="sc">Droit de travers</hi></rs>, <ref><hi rend="sc">vii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_191"><rs><hi rend="sc">Droit de vent</hi></rs>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_192"><rs><hi rend="sc">Droit du roi sur la forêt d'Halatte</hi></rs>, <ref target="#SCHA-PR_0044" n="30">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_192"><rs><hi rend="sc">Droit du roi sur la forêt d'Halatte</hi></rs>, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_193"><rs><hi rend="sc">Dubuat</hi>, Michel</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_194"><rs><hi rend="sc">Dubuef</hi>, Yvonnet</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_195"><rs><hi rend="sc">Du Drac</hi>, Adrien</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_196"><rs><hi rend="sc">Dufresne</hi>, Daniel</rs>, <ref><hi rend="sc">liv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_197"><rs><hi rend="sc">Dugest</hi></rs>, <ref target="#SCHA-PR_0069" n="61">69</ref>.</item>
+          <item xml:id="SCHA-PR_rs_197"><rs><hi rend="sc">Dugest</hi></rs>, <ref target="#SCHA-PR_0069" n="69">69</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_198"><rs><hi rend="sc">Duguet</hi>, François</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_199"><rs><hi rend="sc">Du Mont</hi>, Jean</rs>, <ref target="#SCHA-PR_0004" n="7">4</ref>.</item>
-          <item xml:id="SCHA-PR_rs_200"><rs><hi rend="sc">Dun</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_199"><rs><hi rend="sc">Du Mont</hi>, Jean</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_200"><rs><hi rend="sc">Dun</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_201"><rs><hi rend="sc">Durand</hi>, Pierre</rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_202"><rs><hi rend="sc">Duruel</hi>, Louis</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>.</item>-->
         </list>
         <list type="index">
           <head>E</head>
-          <item xml:id="SCHA-PR_rs_203"><rs><hi rend="sc">Ebrardus de Duno</hi></rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_203"><rs><hi rend="sc">Ebrardus de Duno</hi></rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_204"><rs><hi rend="sc">Echelle</hi></rs>, <ref><hi rend="sc">xxxvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_205"><rs><hi rend="sc">Ecrevisse (fief de l')</hi></rs>, <ref><hi rend="sc">xxxii</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_206"><rs><hi rend="sc">Ermengarde</hi></rs>, <ref target="#SCHA-PR_0029" n="20">29</ref>.</item>
+          <item xml:id="SCHA-PR_rs_206"><rs><hi rend="sc">Ermengarde</hi></rs>, <ref target="#SCHA-PR_0029" n="29">29</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_207"><rs><hi rend="sc">Epine Servelot (lieu dit l')</hi></rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_208"><rs><hi rend="sc">Etienne</hi>, prieur</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="9">10</ref>.</item>
-          <item xml:id="SCHA-PR_rs_209"><rs><hi rend="sc">Etienne</hi>, prieur de Saint-Leu-d'Esserent</rs><!--, <ref><hi rend="sc">xv</hi></ref>-->, <ref target="#SCHA-PR_0050" n="35">50</ref>. <!-- doublon meme acte SCHA-PR_0050: <ref target="#SCHA-PR_0050" n="37">50</ref> --></item>
-          <item xml:id="SCHA-PR_rs_210"><rs><hi rend="sc">Evrard</hi>, maire de Villemétrie</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="9">10</ref>, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
+          <item xml:id="SCHA-PR_rs_208"><rs><hi rend="sc">Etienne</hi>, prieur</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
+          <item xml:id="SCHA-PR_rs_209"><rs><hi rend="sc">Etienne</hi>, prieur de Saint-Leu-d'Esserent</rs><!--, <ref><hi rend="sc">xv</hi></ref>-->, <ref target="#SCHA-PR_0050" n="50">50</ref>. <!-- doublon meme acte SCHA-PR_0050: <ref target="#SCHA-PR_0050" n="37">50</ref> --></item>
+          <item xml:id="SCHA-PR_rs_210"><rs><hi rend="sc">Evrard</hi>, maire de Villemétrie</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref>, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
         </list>
         <list type="index">
           <head>F</head>
-          <item xml:id="SCHA-PR_rs_211"><rs><hi rend="sc">Faiel (Pierre du)</hi>, chevalier</rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0033" n="22">33</ref>.</item>
+          <item xml:id="SCHA-PR_rs_211"><rs><hi rend="sc">Faiel (Pierre du)</hi>, chevalier</rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0033" n="33">33</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_212"><rs><hi rend="sc">Favergies</hi>, Jacques (de)</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_213"><rs><hi rend="sc">Feodandus</hi>, Frolland, évêque de Senlis</rs>, <ref target="#SCHA-PR_0001" n="4">1</ref>.</item>
+          <item xml:id="SCHA-PR_rs_213"><rs><hi rend="sc">Feodandus</hi>, Frolland, évêque de Senlis</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_214"><rs><hi rend="sc">Feyssier</hi>, Antoine, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_215"><rs><hi rend="sc">Flan</hi>, Flamiche</rs>, <ref target="#SCHA-PR_0037" n="25">37</ref>.</item>
+          <item xml:id="SCHA-PR_rs_215"><rs><hi rend="sc">Flan</hi>, Flamiche</rs>, <ref target="#SCHA-PR_0037" n="37">37</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_216"><rs><hi rend="sc">Flay (abbé de)</hi></rs>, <ref><hi rend="sc">vii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_217"><rs><hi rend="sc">Florea</hi>, Simon</rs>, <ref target="#SCHA-PR_0040" n="26">40</ref>.</item>
-          <item xml:id="SCHA-PR_rs_218"><rs><hi rend="sc">Florine</hi>, Fleurines</rs><!--, <ref><hi rend="sc">xx</hi></ref>--><!--, <ref><hi rend="sc">xxi</hi></ref>--><!--, <ref><hi rend="sc">xxx</hi></ref>--><!--, <ref><hi rend="sc">xxxiv</hi></ref>--><!--, <ref><hi rend="sc">xli</hi></ref>--><!--, <ref><hi rend="sc">lv</hi></ref>--><!--, <ref><hi rend="sc">lxxiii</hi></ref>--><!--, <ref><hi rend="sc">lxxiv</hi></ref>--><!--, <ref><hi rend="sc">lxxxi</hi></ref>--><!--, <ref><hi rend="sc">lxxxviii</hi></ref>--><!--, <ref><hi rend="sc">lxxxix</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0057" n="47">57</ref>, <ref target="#SCHA-PR_0063" n="60">63</ref>, <!-- doublon meme acte SCHA-PR_0063: <ref target="#SCHA-PR_0063" n="61">63</ref> --> <ref target="#SCHA-PR_0065" n="62">65</ref>.</item>
+          <item xml:id="SCHA-PR_rs_217"><rs><hi rend="sc">Florea</hi>, Simon</rs>, <ref target="#SCHA-PR_0040" n="40">40</ref>.</item>
+          <item xml:id="SCHA-PR_rs_218"><rs><hi rend="sc">Florine</hi>, Fleurines</rs><!--, <ref><hi rend="sc">xx</hi></ref>--><!--, <ref><hi rend="sc">xxi</hi></ref>--><!--, <ref><hi rend="sc">xxx</hi></ref>--><!--, <ref><hi rend="sc">xxxiv</hi></ref>--><!--, <ref><hi rend="sc">xli</hi></ref>--><!--, <ref><hi rend="sc">lv</hi></ref>--><!--, <ref><hi rend="sc">lxxiii</hi></ref>--><!--, <ref><hi rend="sc">lxxiv</hi></ref>--><!--, <ref><hi rend="sc">lxxxi</hi></ref>--><!--, <ref><hi rend="sc">lxxxviii</hi></ref>--><!--, <ref><hi rend="sc">lxxxix</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0057" n="57">57</ref>, <ref target="#SCHA-PR_0063" n="63">63</ref>, <!-- doublon meme acte SCHA-PR_0063: <ref target="#SCHA-PR_0063" n="61">63</ref> --> <ref target="#SCHA-PR_0065" n="65">65</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_219"><rs><hi rend="sc">Fortier</hi>, François</rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_220"><rs><hi rend="sc">Fossé (Eudes du)</hi>, clerc</rs>, <ref target="#SCHA-PR_0032" n="22">32</ref>.</item>
-          <item xml:id="SCHA-PR_rs_221"><rs><hi rend="sc">Foucauld de Balagny</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0011" n="9">11</ref><!--, <ref>10</ref>--><!--, <ref>11</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_222"><rs><hi rend="sc">Fouilleuse (Ada de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="21">31</ref><!--, <ref>22</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_223"><rs><hi rend="sc">Fouilleuse (Simon de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="21">31</ref>, <ref target="#SCHA-PR_0032" n="22">32</ref><!--, <ref>23</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_224"><rs><hi rend="sc">Fouilleuse (Thibault de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="22">31</ref><!--, <ref>23</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_220"><rs><hi rend="sc">Fossé (Eudes du)</hi>, clerc</rs>, <ref target="#SCHA-PR_0032" n="32">32</ref>.</item>
+          <item xml:id="SCHA-PR_rs_221"><rs><hi rend="sc">Foucauld de Balagny</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0011" n="11">11</ref><!--, <ref>10</ref>--><!--, <ref>11</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_222"><rs><hi rend="sc">Fouilleuse (Ada de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="31">31</ref><!--, <ref>22</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_223"><rs><hi rend="sc">Fouilleuse (Simon de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="31">31</ref>, <ref target="#SCHA-PR_0032" n="32">32</ref><!--, <ref>23</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_224"><rs><hi rend="sc">Fouilleuse (Thibault de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0031" n="31">31</ref><!--, <ref>23</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_225"><rs><hi rend="sc">Four banal</hi></rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_226"><rs><hi rend="sc">Fournier</hi>, Barthélemy</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0026" n="18">26</ref>.</item>
+          <item xml:id="SCHA-PR_rs_226"><rs><hi rend="sc">Fournier</hi>, Barthélemy</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0026" n="26">26</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_227"><rs><hi rend="sc">Fournier Eudes</hi></rs>, <ref>28</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_228"><rs><hi rend="sc">Fournier Pétronille</hi></rs>, <ref target="#SCHA-PR_0026" n="18">26</ref>.</item>
+          <item xml:id="SCHA-PR_rs_228"><rs><hi rend="sc">Fournier Pétronille</hi></rs>, <ref target="#SCHA-PR_0026" n="26">26</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_229"><rs><hi rend="sc">François</hi></rs>, <hi rend="sup">er</hi>, roi, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_230"><rs><hi rend="sc">Frémin</hi>, chapelain</rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
-          <item xml:id="SCHA-PR_rs_231"><rs><hi rend="sc">Fréret</hi>, Thomas</rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
-          <item xml:id="SCHA-PR_rs_232"><rs><hi rend="sc">Fresnoy</hi>, sa mesure</rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
-          <item xml:id="SCHA-PR_rs_233"><rs><hi rend="sc">Froment</hi>, louable</rs>, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_234"><rs><hi rend="sc">Fromont</hi>, notaire</rs><!--, <ref><hi rend="sc">lxxx</hi></ref>-->, <ref target="#SCHA-PR_0068" n="59">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_235"><rs><hi rend="sc">Fuizelier (Foubert le)</hi></rs>, <ref target="#SCHA-PR_0042" n="27">42</ref><!--, <ref>28</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_236"><rs><hi rend="sc">Fuizelier (Hellende le)</hi></rs>, <ref target="#SCHA-PR_0042" n="27">42</ref><!--, <ref>28</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_230"><rs><hi rend="sc">Frémin</hi>, chapelain</rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_231"><rs><hi rend="sc">Fréret</hi>, Thomas</rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_232"><rs><hi rend="sc">Fresnoy</hi>, sa mesure</rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_233"><rs><hi rend="sc">Froment</hi>, louable</rs>, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_234"><rs><hi rend="sc">Fromont</hi>, notaire</rs><!--, <ref><hi rend="sc">lxxx</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_235"><rs><hi rend="sc">Fuizelier (Foubert le)</hi></rs>, <ref target="#SCHA-PR_0042" n="42">42</ref><!--, <ref>28</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_236"><rs><hi rend="sc">Fuizelier (Hellende le)</hi></rs>, <ref target="#SCHA-PR_0042" n="42">42</ref><!--, <ref>28</ref>-->.</item>
         </list>
         <list type="index">
           <head>G</head>
-          <item xml:id="SCHA-PR_rs_237"><rs><hi rend="sc">Gandelus</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_238"><rs><hi rend="sc">Garingue</hi>, maison</rs>, <ref target="#SCHA-PR_0049" n="34">49</ref>.</item>
+          <item xml:id="SCHA-PR_rs_237"><rs><hi rend="sc">Gandelus</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_238"><rs><hi rend="sc">Garingue</hi>, maison</rs>, <ref target="#SCHA-PR_0049" n="49">49</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_239"><rs><hi rend="sc">Gausbertus</hi>, Goisbert, évêque de Beauvais</rs>, <ref><hi rend="sc">ii</hi></ref>, <ref>1</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_240"><rs><hi rend="sc">Gautier</hi>, évêque de Meaux</rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0003" n="iii">3</ref>. <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="5">3</ref> --><!--, <ref>6</ref>--></item>
-          <item xml:id="SCHA-PR_rs_241"><rs><hi rend="sc">Geoffroy</hi>, chanoine et official de Senlis</rs>, <ref target="#SCHA-PR_0007" n="8">7</ref>, <ref target="#SCHA-PR_0011" n="10">11</ref>.</item>
-          <item xml:id="SCHA-PR_rs_242"><rs><hi rend="sc">Gérard</hi>, prieur de la Charité-sur-Loire</rs>, <ref target="#SCHA-PR_0002" n="5">2</ref>.</item>
-          <item xml:id="SCHA-PR_rs_243"><rs><hi rend="sc">Gilbert</hi>, prévôt</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
-          <item xml:id="SCHA-PR_rs_244"><rs><hi rend="sc">Gouin</hi>, Oudart</rs>, <ref target="#SCHA-PR_0037" n="24">37</ref>. <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="25">37</ref> --></item>
+          <item xml:id="SCHA-PR_rs_240"><rs><hi rend="sc">Gautier</hi>, évêque de Meaux</rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0003" n="3">3</ref>. <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="5">3</ref> --><!--, <ref>6</ref>--></item>
+          <item xml:id="SCHA-PR_rs_241"><rs><hi rend="sc">Geoffroy</hi>, chanoine et official de Senlis</rs>, <ref target="#SCHA-PR_0007" n="7">7</ref>, <ref target="#SCHA-PR_0011" n="11">11</ref>.</item>
+          <item xml:id="SCHA-PR_rs_242"><rs><hi rend="sc">Gérard</hi>, prieur de la Charité-sur-Loire</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>.</item>
+          <item xml:id="SCHA-PR_rs_243"><rs><hi rend="sc">Gilbert</hi>, prévôt</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_244"><rs><hi rend="sc">Gouin</hi>, Oudart</rs>, <ref target="#SCHA-PR_0037" n="37">37</ref>. <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="25">37</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_245"><rs><hi rend="sc">Gondy (Paul de)</hi></rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_246"><rs><hi rend="sc">Goullerat</hi></rs>, <ref target="#SCHA-PR_0059" n="49">59</ref>.</item>
+          <item xml:id="SCHA-PR_rs_246"><rs><hi rend="sc">Goullerat</hi></rs>, <ref target="#SCHA-PR_0059" n="59">59</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_247"><rs><hi rend="sc">Gradués</hi></rs>, <ref><hi rend="sc">lxxxii-iv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_248"><rs><hi rend="sc">Grand Conseil</hi></rs>, <ref><hi rend="sc">lxxxi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_249"><rs><hi rend="sc">Grégoire</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, pape, <ref target="#SCHA-PR_0066" n="lviii">66</ref>. <!-- doublon meme acte SCHA-PR_0066: <ref target="#SCHA-PR_0066" n="58">66</ref> --></item>
-          <item xml:id="SCHA-PR_rs_250"><rs><hi rend="sc">Gruerie</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>-->, <ref target="#SCHA-PR_0036" n="24">36</ref>.</item>
-          <item xml:id="SCHA-PR_rs_251"><rs><hi rend="sc">Gruyer</hi></rs>, <ref target="#SCHA-PR_0028" n="xix">28</ref>, <!-- doublon meme acte SCHA-PR_0028: <ref target="#SCHA-PR_0028" n="19">28</ref> --> <ref target="#SCHA-PR_0036" n="23">36</ref>, <!-- doublon meme acte SCHA-PR_0028: <ref target="#SCHA-PR_0028" n="29">28</ref> --> <ref target="#SCHA-PR_0044" n="30">44</ref>.</item>
-          <item xml:id="SCHA-PR_rs_252"><rs><hi rend="sc">Guérin</hi>, évêque de Senlis</rs>, <ref target="#SCHA-PR_0005" n="7">5</ref>.</item>
+          <item xml:id="SCHA-PR_rs_249"><rs><hi rend="sc">Grégoire</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, pape, <ref target="#SCHA-PR_0066" n="66">66</ref>. <!-- doublon meme acte SCHA-PR_0066: <ref target="#SCHA-PR_0066" n="58">66</ref> --></item>
+          <item xml:id="SCHA-PR_rs_250"><rs><hi rend="sc">Gruerie</hi></rs><!--, <ref><hi rend="sc">ix</hi></ref>-->, <ref target="#SCHA-PR_0036" n="36">36</ref>.</item>
+          <item xml:id="SCHA-PR_rs_251"><rs><hi rend="sc">Gruyer</hi></rs>, <ref target="#SCHA-PR_0028" n="28">28</ref>, <!-- doublon meme acte SCHA-PR_0028: <ref target="#SCHA-PR_0028" n="19">28</ref> --> <ref target="#SCHA-PR_0036" n="36">36</ref>, <!-- doublon meme acte SCHA-PR_0028: <ref target="#SCHA-PR_0028" n="29">28</ref> --> <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_252"><rs><hi rend="sc">Guérin</hi>, évêque de Senlis</rs>, <ref target="#SCHA-PR_0005" n="5">5</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_253"><rs><hi rend="sc">Guérin Jean</hi></rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_254"><rs><hi rend="sc">Guiard</hi></rs>, <ref target="#SCHA-PR_0043" n="27">43</ref>. <!-- doublon meme acte SCHA-PR_0043: <ref target="#SCHA-PR_0043" n="33">43</ref> --></item>
-          <item xml:id="SCHA-PR_rs_255"><rs><hi rend="sc">Guibert</hi>, prieur de Saint-Christophe</rs>, <ref target="#SCHA-PR_0004" n="vii">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --><!--, <ref>41</ref>--></item>
+          <item xml:id="SCHA-PR_rs_254"><rs><hi rend="sc">Guiard</hi></rs>, <ref target="#SCHA-PR_0043" n="43">43</ref>. <!-- doublon meme acte SCHA-PR_0043: <ref target="#SCHA-PR_0043" n="33">43</ref> --></item>
+          <item xml:id="SCHA-PR_rs_255"><rs><hi rend="sc">Guibert</hi>, prieur de Saint-Christophe</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --><!--, <ref>41</ref>--></item>
           <!--<item xml:id="SCHA-PR_rs_256"><rs><hi rend="sc">Gui de Morry</hi>, prieur</rs>, <ref>41</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_257"><rs><hi rend="sc">Gui de Vieuxcamp</hi>, prieur</rs>, <ref>41</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_258"><rs><hi rend="sc">Guillanche (Charles de la)</hi>, prieur</rs>, <ref>42</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_259"><rs><hi rend="sc">Guillanche (Jean de la)</hi></rs>, <ref><hi rend="sc">xxxi</hi></ref>, <ref><hi rend="sc">li</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_260"><rs><hi rend="sc">Guillaume</hi>, prieur de la Charité-sur-Loire</rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0012" n="11">12</ref>.</item>
-          <item xml:id="SCHA-PR_rs_261"><rs><hi rend="sc">Guillaume</hi>, chapelain</rs>, <ref target="#SCHA-PR_0004" n="7">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_260"><rs><hi rend="sc">Guillaume</hi>, prieur de la Charité-sur-Loire</rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0012" n="12">12</ref>.</item>
+          <item xml:id="SCHA-PR_rs_261"><rs><hi rend="sc">Guillaume</hi>, chapelain</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
         </list>
         <list type="index">
           <head>H</head>
           <!--<item xml:id="SCHA-PR_rs_262"><rs><hi rend="sc">Halatte (forêt de)</hi></rs>, <ref><hi rend="sc">i</hi></ref>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">xix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_263"><rs><hi rend="sc">Harcourt (chevalier d')</hi></rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_264"><rs><hi rend="sc">Hardy (Nicolas le)</hi></rs>, <ref><hi rend="sc">lxi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_265"><rs><hi rend="sc">Harlaut</hi>, Françoise</rs>, <ref target="#SCHA-PR_0069" n="61">69</ref>.</item>
+          <item xml:id="SCHA-PR_rs_265"><rs><hi rend="sc">Harlaut</hi>, Françoise</rs>, <ref target="#SCHA-PR_0069" n="69">69</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_266"><rs><hi rend="sc">Harlet</hi>, Jean</rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_267"><rs><hi rend="sc">Havy</hi>, Jacques, maire de Fleurines</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_268"><rs><hi rend="sc">Havy Nicolas</hi>, notable</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_269"><rs><hi rend="sc">Hellende</hi>, de Saumur</rs>, <ref target="#SCHA-PR_0021" n="16">21</ref>.</item>
+          <item xml:id="SCHA-PR_rs_269"><rs><hi rend="sc">Hellende</hi>, de Saumur</rs>, <ref target="#SCHA-PR_0021" n="21">21</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_270"><rs><hi rend="sc">Hénault</hi>, Pierre</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_271"><rs><hi rend="sc">Hennique</hi>, Jean</rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_272"><rs><hi rend="sc">Henri</hi></rs>, <hi rend="sup">er</hi>, roi, <ref target="#SCHA-PR_0001" n="I. 4">1</ref>.</item>
+          <item xml:id="SCHA-PR_rs_272"><rs><hi rend="sc">Henri</hi></rs>, <hi rend="sup">er</hi>, roi, <ref target="#SCHA-PR_0001" n="1">1</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_273"><rs><hi rend="sc">Herambourt</hi>, Jean</rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_274"><rs><hi rend="sc">Hermenc</hi>, Hermene</rs><!--, <ref><hi rend="sc">ii</hi></ref>--><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0011" n="14">11</ref>.</item>
-          <item xml:id="SCHA-PR_rs_275"><rs><hi rend="sc">Hermengarde</hi>, de Balagny</rs>, <ref target="#SCHA-PR_0011" n="9">11</ref>.</item>
+          <item xml:id="SCHA-PR_rs_274"><rs><hi rend="sc">Hermenc</hi>, Hermene</rs><!--, <ref><hi rend="sc">ii</hi></ref>--><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0011" n="11">11</ref>.</item>
+          <item xml:id="SCHA-PR_rs_275"><rs><hi rend="sc">Hermengarde</hi>, de Balagny</rs>, <ref target="#SCHA-PR_0011" n="11">11</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_276"><rs><hi rend="sc">Hervé</hi>, prieur</rs>, <ref>41</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_277"><rs><hi rend="sc">Hiannet</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0012" n="11">12</ref>.</item>
-          <item xml:id="SCHA-PR_rs_278"><rs><hi rend="sc">Hivernage</hi></rs>, <ref target="#SCHA-PR_0010" n="9">10</ref>.</item>
-          <item xml:id="SCHA-PR_rs_279"><rs><hi rend="sc">Hugues</hi>, abbé de Flay</rs>, <ref target="#SCHA-PR_0004" n="vii">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --></item>
-          <item xml:id="SCHA-PR_rs_280"><rs><hi rend="sc">Hugues de Balagny</hi></rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
-          <item xml:id="SCHA-PR_rs_281"><rs><hi rend="sc">Hugues fils de Waleran</hi></rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="iii">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
-          <item xml:id="SCHA-PR_rs_282"><rs><hi rend="sc">Hugues des Prés</hi></rs>, <ref target="#SCHA-PR_0004" n="7">4</ref>.</item>
-          <item xml:id="SCHA-PR_rs_283"><rs><hi rend="sc">Hulin</hi>, Jacques</rs>, <ref target="#SCHA-PR_0068" n="61">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_284"><rs><hi rend="sc">Humières</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_277"><rs><hi rend="sc">Hiannet</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>-->, <ref target="#SCHA-PR_0012" n="12">12</ref>.</item>
+          <item xml:id="SCHA-PR_rs_278"><rs><hi rend="sc">Hivernage</hi></rs>, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
+          <item xml:id="SCHA-PR_rs_279"><rs><hi rend="sc">Hugues</hi>, abbé de Flay</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --></item>
+          <item xml:id="SCHA-PR_rs_280"><rs><hi rend="sc">Hugues de Balagny</hi></rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_281"><rs><hi rend="sc">Hugues fils de Waleran</hi></rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
+          <item xml:id="SCHA-PR_rs_282"><rs><hi rend="sc">Hugues des Prés</hi></rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_283"><rs><hi rend="sc">Hulin</hi>, Jacques</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_284"><rs><hi rend="sc">Humières</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
         </list>
         <list type="index">
           <head>I</head>
-          <item xml:id="SCHA-PR_rs_285"><rs><hi rend="sc">Ingerand</hi>, moine</rs>, <ref target="#SCHA-PR_0004" n="7">4</ref>.</item>
-          <item xml:id="SCHA-PR_rs_286"><rs><hi rend="sc">Isabelle Choisel</hi></rs>, <ref target="#SCHA-PR_0022" n="16">22</ref>, <ref target="#SCHA-PR_0023" n="17">23</ref>.</item>
+          <item xml:id="SCHA-PR_rs_285"><rs><hi rend="sc">Ingerand</hi>, moine</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_286"><rs><hi rend="sc">Isabelle Choisel</hi></rs>, <ref target="#SCHA-PR_0022" n="22">22</ref>, <ref target="#SCHA-PR_0023" n="23">23</ref>.</item>
         </list>
         <list type="index">
           <head>J</head>
-          <item xml:id="SCHA-PR_rs_287"><rs><hi rend="sc">Jacqueline</hi></rs>, <ref target="#SCHA-PR_0030" n="21">30</ref><!--, <ref>23</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_288"><rs><hi rend="sc">Jacques</hi>, prieur</rs><!--, <ref><hi rend="sc">xii</hi></ref>--><!--, <ref><hi rend="sc">xv</hi></ref>-->, <ref target="#SCHA-PR_0049" n="34">49</ref>, <!-- doublon meme acte SCHA-PR_0049: <ref target="#SCHA-PR_0049" n="36">49</ref> --> <ref target="#SCHA-PR_0051" n="37">51</ref><!--, <ref>41</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_289"><rs><hi rend="sc">Jean</hi>, abbé de Saint-Corneille</rs>, <ref target="#SCHA-PR_0038" n="25">38</ref>.</item>
+          <item xml:id="SCHA-PR_rs_287"><rs><hi rend="sc">Jacqueline</hi></rs>, <ref target="#SCHA-PR_0030" n="30">30</ref><!--, <ref>23</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_288"><rs><hi rend="sc">Jacques</hi>, prieur</rs><!--, <ref><hi rend="sc">xii</hi></ref>--><!--, <ref><hi rend="sc">xv</hi></ref>-->, <ref target="#SCHA-PR_0049" n="49">49</ref>, <!-- doublon meme acte SCHA-PR_0049: <ref target="#SCHA-PR_0049" n="36">49</ref> --> <ref target="#SCHA-PR_0051" n="51">51</ref><!--, <ref>41</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_289"><rs><hi rend="sc">Jean</hi>, abbé de Saint-Corneille</rs>, <ref target="#SCHA-PR_0038" n="38">38</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_290"><rs><hi rend="sc">Jean-le-Bon</hi>, roi</rs>, <ref><hi rend="sc">xxi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_291"><rs><hi rend="sc">Jean</hi>, clerc du prévôt</rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
-          <item xml:id="SCHA-PR_rs_292"><rs><hi rend="sc">Jean</hi>, prévôt de Saint-Lucien</rs>, <ref target="#SCHA-PR_0004" n="vii">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --></item>
-          <item xml:id="SCHA-PR_rs_293"><rs><hi rend="sc">Jean</hi>, prieur de la Charité-sur-Loire</rs><!--, <ref>2</ref>-->, <ref target="#SCHA-PR_0004" n="3">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_291"><rs><hi rend="sc">Jean</hi>, clerc du prévôt</rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_292"><rs><hi rend="sc">Jean</hi>, prévôt de Saint-Lucien</rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>. <!-- doublon meme acte SCHA-PR_0004: <ref target="#SCHA-PR_0004" n="7">4</ref> --></item>
+          <item xml:id="SCHA-PR_rs_293"><rs><hi rend="sc">Jean</hi>, prieur de la Charité-sur-Loire</rs><!--, <ref>2</ref>-->, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_294"><rs><hi rend="sc">Jolis</hi>, Oudart</rs>, <ref><hi rend="sc">xv</hi></ref>.</item>-->
           <item xml:id="SCHA-PR_rs_295"><rs><hi rend="sc">Jonenques (Jean de)</hi></rs>. </item>
         </list>
         <list type="index">
           <head>L</head>
-          <item xml:id="SCHA-PR_rs_296"><rs><hi rend="sc">La Fontaine (Simon de)</hi></rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_296"><rs><hi rend="sc">La Fontaine (Simon de)</hi></rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_297"><rs><hi rend="sc">La Fosse (l'abbé de)</hi></rs>, <ref><hi rend="sc">liv</hi></ref>, <ref>42</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_298"><rs><hi rend="sc">Lagny-le-Sec</hi></rs>, <ref target="#SCHA-PR_0003" n="v">3</ref><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xxxvi</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">xliv</hi></ref>--><!--, <ref><hi rend="sc">xlvi</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>--><!--, <ref><hi rend="sc">xlix</hi></ref>--><!--, <ref><hi rend="sc">lviii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="lx">68</ref>, <ref target="#SCHA-PR_0064" n="lxiv">64</ref><!--, <ref><hi rend="sc">lxv</hi></ref>--><!--, <ref><hi rend="sc">lxxv</hi></ref>--><!--, <ref><hi rend="sc">lxxx</hi></ref>--><!--, <ref><hi rend="sc">lxxxv</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="5">3</ref> --><!--, <ref>6</ref>--> <ref target="#SCHA-PR_0009" n="9">9</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0015" n="13">15</ref>, <ref target="#SCHA-PR_0053" n="37">53</ref>. <!-- doublon meme acte SCHA-PR_0064: <ref target="#SCHA-PR_0064" n="57">64</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="60">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="61">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
+          <item xml:id="SCHA-PR_rs_298"><rs><hi rend="sc">Lagny-le-Sec</hi></rs>, <ref target="#SCHA-PR_0003" n="3">3</ref><!--, <ref><hi rend="sc">vi</hi></ref>--><!--, <ref><hi rend="sc">xxxvi</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">xliv</hi></ref>--><!--, <ref><hi rend="sc">xlvi</hi></ref>--><!--, <ref><hi rend="sc">xlvii</hi></ref>--><!--, <ref><hi rend="sc">xlix</hi></ref>--><!--, <ref><hi rend="sc">lviii</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref>, <ref target="#SCHA-PR_0064" n="64">64</ref><!--, <ref><hi rend="sc">lxv</hi></ref>--><!--, <ref><hi rend="sc">lxxv</hi></ref>--><!--, <ref><hi rend="sc">lxxx</hi></ref>--><!--, <ref><hi rend="sc">lxxxv</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="5">3</ref> --><!--, <ref>6</ref>--> <ref target="#SCHA-PR_0009" n="9">9</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>, <ref target="#SCHA-PR_0053" n="53">53</ref>. <!-- doublon meme acte SCHA-PR_0064: <ref target="#SCHA-PR_0064" n="57">64</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="60">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="61">68</ref> --> <!-- doublon meme acte SCHA-PR_0068: <ref target="#SCHA-PR_0068" n="62">68</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_299"><rs><hi rend="sc">La Grange (Gabriel de)</hi></rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_300"><rs><hi rend="sc">La Grevache</hi></rs>, <ref><hi rend="sc">lxvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_301"><rs><hi rend="sc">Laigneville</hi></rs><!--, <ref><hi rend="sc">xxxii</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0056" n="39">56</ref>, <ref target="#SCHA-PR_0068" n="61">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_301"><rs><hi rend="sc">Laigneville</hi></rs><!--, <ref><hi rend="sc">xxxii</hi></ref>--><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0056" n="56">56</ref>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_302"><rs><hi rend="sc">La Londe (Simon de)</hi></rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_303"><rs><hi rend="sc">La Mire</hi>, Olivier</rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_304"><rs><hi rend="sc">La Mothe Houdancourt (Henri de)</hi></rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_305"><rs><hi rend="sc">Langlois</hi>, Geoffroy</rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_305"><rs><hi rend="sc">Langlois</hi>, Geoffroy</rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_306"><rs><hi rend="sc">Lanier</hi>, Jean</rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_307"><rs><hi rend="sc">La Rocque (Michel de)</hi></rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxv</hi></ref>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_308"><rs><hi rend="sc">La Rue (Antoine de)</hi></rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_309"><rs><hi rend="sc">Latabonde</hi>, Ascelin</rs>, <ref target="#SCHA-PR_0042" n="28">42</ref>.</item>
-          <item xml:id="SCHA-PR_rs_310"><rs><hi rend="sc">Lathome</hi>, Barthélemy</rs>, <ref target="#SCHA-PR_0024" n="17">24</ref>.</item>
-          <item xml:id="SCHA-PR_rs_311"><rs><hi rend="sc">Launoy (Mahon de)</hi></rs>, <ref target="#SCHA-PR_0052" n="37">52</ref>.</item>
-          <item xml:id="SCHA-PR_rs_312"><rs><hi rend="sc">Launoy (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0052" n="37">52</ref>.</item>
-          <item xml:id="SCHA-PR_rs_313"><rs><hi rend="sc">Laval</hi>, Jean-Baptiste</rs>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_309"><rs><hi rend="sc">Latabonde</hi>, Ascelin</rs>, <ref target="#SCHA-PR_0042" n="42">42</ref>.</item>
+          <item xml:id="SCHA-PR_rs_310"><rs><hi rend="sc">Lathome</hi>, Barthélemy</rs>, <ref target="#SCHA-PR_0024" n="24">24</ref>.</item>
+          <item xml:id="SCHA-PR_rs_311"><rs><hi rend="sc">Launoy (Mahon de)</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_312"><rs><hi rend="sc">Launoy (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_313"><rs><hi rend="sc">Laval</hi>, Jean-Baptiste</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_314"><rs><hi rend="sc">Laval (Louise de)</hi></rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_315"><rs><hi rend="sc">Lavaur</hi></rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_316"><rs><hi rend="sc">Le Barbier</hi>, Etienne</rs>, <ref><hi rend="sc">xxix</hi></ref>.</item>-->
@@ -5694,25 +5694,25 @@
           <!--<item xml:id="SCHA-PR_rs_318"><rs><hi rend="sc">Le Bel Philippe</hi></rs>, <ref><hi rend="sc">lxviii</hi></ref>, <ref><hi rend="sc">lxxi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_319"><rs><hi rend="sc">Le Bon</hi>, Gabriel</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_320"><rs><hi rend="sc">Le Camus</hi>, Pierre</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_321"><rs><hi rend="sc">Le Clerc</hi>, Jean</rs><!--, <ref><hi rend="sc">lxii</hi></ref>--><!--, <ref><hi rend="sc">lxviii</hi></ref>--><!--, <ref>43</ref>-->, <ref target="#SCHA-PR_0067" n="58">67</ref>.</item>
-          <item xml:id="SCHA-PR_rs_322"><rs><hi rend="sc">Le Clerc Louis</hi>, prieur</rs><!--, <ref><hi rend="sc">liv</hi></ref>-->, <ref target="#SCHA-PR_0066" n="lviii">66</ref><!--, <ref><hi rend="sc">lx</hi></ref>--><!--, <ref><hi rend="sc">lxiv</hi></ref>--><!--, <ref><hi rend="sc">lxviii</hi></ref>--><!--, <ref>43</ref>--><!-- doublon meme acte SCHA-PR_0066: <ref target="#SCHA-PR_0066" n="58">66</ref> -->.</item>
+          <item xml:id="SCHA-PR_rs_321"><rs><hi rend="sc">Le Clerc</hi>, Jean</rs><!--, <ref><hi rend="sc">lxii</hi></ref>--><!--, <ref><hi rend="sc">lxviii</hi></ref>--><!--, <ref>43</ref>-->, <ref target="#SCHA-PR_0067" n="67">67</ref>.</item>
+          <item xml:id="SCHA-PR_rs_322"><rs><hi rend="sc">Le Clerc Louis</hi>, prieur</rs><!--, <ref><hi rend="sc">liv</hi></ref>-->, <ref target="#SCHA-PR_0066" n="66">66</ref><!--, <ref><hi rend="sc">lx</hi></ref>--><!--, <ref><hi rend="sc">lxiv</hi></ref>--><!--, <ref><hi rend="sc">lxviii</hi></ref>--><!--, <ref>43</ref>--><!-- doublon meme acte SCHA-PR_0066: <ref target="#SCHA-PR_0066" n="58">66</ref> -->.</item>
           <!--<item xml:id="SCHA-PR_rs_323"><rs><hi rend="sc">Le Clerc</hi>, Nicolas</rs>, <ref><hi rend="sc">lxi</hi></ref>, <ref>43</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_324"><rs><hi rend="sc">Le Coq</hi>, Pierre</rs>, <ref target="#SCHA-PR_0017" n="14">17</ref>, <ref target="#SCHA-PR_0028" n="19">28</ref>.</item>
+          <item xml:id="SCHA-PR_rs_324"><rs><hi rend="sc">Le Coq</hi>, Pierre</rs>, <ref target="#SCHA-PR_0017" n="17">17</ref>, <ref target="#SCHA-PR_0028" n="28">28</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_325"><rs><hi rend="sc">Le Couturier</hi>, Godefroy</rs>, <ref><hi rend="sc">xxxvii</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_326"><rs><hi rend="sc">Le Grancher</hi>, Adam</rs>, <ref target="#SCHA-PR_0027" n="18">27</ref>.</item>
-          <item xml:id="SCHA-PR_rs_327"><rs><hi rend="sc">Le Grancher Marie</hi></rs>, <ref target="#SCHA-PR_0027" n="18">27</ref>.</item>
+          <item xml:id="SCHA-PR_rs_326"><rs><hi rend="sc">Le Grancher</hi>, Adam</rs>, <ref target="#SCHA-PR_0027" n="27">27</ref>.</item>
+          <item xml:id="SCHA-PR_rs_327"><rs><hi rend="sc">Le Grancher Marie</hi></rs>, <ref target="#SCHA-PR_0027" n="27">27</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_328"><rs><hi rend="sc">Le Gras</hi>, Louis, prieur</rs>, <ref><hi rend="sc">lxxvi</hi></ref>, <ref><hi rend="sc">ix</hi></ref>, <ref>44</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_329"><rs><hi rend="sc">Le Large</hi>, Thomas, prieur</rs>, <ref><hi rend="sc">lxviii</hi></ref>, <ref>43</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_330"><rs><hi rend="sc">Lenoncourt (Robert de)</hi>, cardinal</rs>, <ref><hi rend="sc">l</hi></ref>, <ref><hi rend="sc">li</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_331"><rs><hi rend="sc">Léon X</hi>, pape</rs>, <ref><hi rend="sc">xliii</hi></ref>, <ref><hi rend="sc">xliv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_332"><rs><hi rend="sc">Lepage</hi>, Pierre</rs><!--, <ref><hi rend="sc">xxiv</hi></ref>-->, <ref target="#SCHA-PR_0068" n="59">68</ref>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_332"><rs><hi rend="sc">Lepage</hi>, Pierre</rs><!--, <ref><hi rend="sc">xxiv</hi></ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_333"><rs><hi rend="sc">Le Riche</hi>, Claude</rs>, <ref><hi rend="sc">lxii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_334"><rs><hi rend="sc">Le Roy</hi>, François</rs>, <ref><hi rend="sc">lxv</hi></ref>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_335"><rs><hi rend="sc">Le Roy Jean</hi></rs>, <ref><hi rend="sc">xxxvii</hi></ref>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_336"><rs><hi rend="sc">Le Tannois</hi>, François</rs>, <ref><hi rend="sc">lxxix</hi></ref>, <ref>44</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_337"><rs><hi rend="sc">Lin et chanvre (dîme sur le)</hi></rs>, <ref target="#SCHA-PR_0052" n="36">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_337"><rs><hi rend="sc">Lin et chanvre (dîme sur le)</hi></rs>, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_338"><rs><hi rend="sc">Loisel</hi>, Claude</rs>, <ref><hi rend="sc">lx</hi></ref>, <ref><hi rend="sc">lxii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_339"><rs><hi rend="sc">Lorfelin</hi>, Durand</rs>, <ref target="#SCHA-PR_0039" n="26">39</ref>.</item>
+          <item xml:id="SCHA-PR_rs_339"><rs><hi rend="sc">Lorfelin</hi>, Durand</rs>, <ref target="#SCHA-PR_0039" n="39">39</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_340"><rs><hi rend="sc">Louis XI</hi>, roi</rs>, <ref><hi rend="sc">xxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_341"><rs><hi rend="sc">Luillier</hi>, Philibert</rs>, <ref><hi rend="sc">lxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_342"><rs><hi rend="sc">Lys (Jeanne du)</hi></rs>, <ref><hi rend="sc">xli</hi></ref>.</item>-->
@@ -5720,43 +5720,43 @@
         <list type="index">
           <head>M</head>
           <!--<item xml:id="SCHA-PR_rs_343"><rs><hi rend="sc">Maillac de Sacquenville (Louis de)</hi></rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_344"><rs><hi rend="sc">Maillard</hi>, Pierre, chapelain du Plessier</rs>, <ref target="#SCHA-PR_0045" n="32">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_344"><rs><hi rend="sc">Maillard</hi>, Pierre, chapelain du Plessier</rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_345"><rs><hi rend="sc">Marcellot</hi>, Jean</rs>, <ref><hi rend="sc">lxii</hi></ref>, <ref><hi rend="sc">lxiii</hi></ref>.</item>-->
           <item xml:id="SCHA-PR_rs_346"><rs><hi rend="sc">Maison à Cinqueux</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0006" n="6">6</ref>.</item>
-          <item xml:id="SCHA-PR_rs_347"><rs><hi rend="sc">Maison à Rieux</hi></rs>, <ref target="#SCHA-PR_0012" n="11">12</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0031" n="21">31</ref>. <!-- doublon meme acte SCHA-PR_0031: <ref target="#SCHA-PR_0031" n="22">31</ref> --></item>
-          <item xml:id="SCHA-PR_rs_348"><rs><hi rend="sc">Maison à Senlis</hi>, hors la porte Saint-Sanctin</rs>, <ref target="#SCHA-PR_0021" n="16">21</ref><!--, <ref>17</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_349"><rs><hi rend="sc">Maison à Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0042" n="26">42</ref><!--, <ref>27</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_350"><rs><hi rend="sc">Marie Choisel</hi></rs>, <ref target="#SCHA-PR_0022" n="16">22</ref>.</item>
+          <item xml:id="SCHA-PR_rs_347"><rs><hi rend="sc">Maison à Rieux</hi></rs>, <ref target="#SCHA-PR_0012" n="12">12</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0031" n="31">31</ref>. <!-- doublon meme acte SCHA-PR_0031: <ref target="#SCHA-PR_0031" n="22">31</ref> --></item>
+          <item xml:id="SCHA-PR_rs_348"><rs><hi rend="sc">Maison à Senlis</hi>, hors la porte Saint-Sanctin</rs>, <ref target="#SCHA-PR_0021" n="21">21</ref><!--, <ref>17</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_349"><rs><hi rend="sc">Maison à Saint-Christophe</hi></rs>, <ref target="#SCHA-PR_0042" n="42">42</ref><!--, <ref>27</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_350"><rs><hi rend="sc">Marie Choisel</hi></rs>, <ref target="#SCHA-PR_0022" n="22">22</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_351"><rs><hi rend="sc">Martineau</hi>, Guillaume, prieur</rs>, <ref><hi rend="sc">lxxii</hi></ref>, <ref><hi rend="sc">lxxvii</hi></ref>, <ref>43</ref>, <ref>44</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_352"><rs><hi rend="sc">Mathieu</hi>, abbé de Saint-Denys</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0044" n="30">44</ref>.</item>
-          <item xml:id="SCHA-PR_rs_353"><rs><hi rend="sc">Mathieu chapelain</hi></rs><!--, <ref><hi rend="sc">xvi</hi></ref>-->, <ref target="#SCHA-PR_0054" n="37">54</ref>.</item>
+          <item xml:id="SCHA-PR_rs_352"><rs><hi rend="sc">Mathieu</hi>, abbé de Saint-Denys</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_353"><rs><hi rend="sc">Mathieu chapelain</hi></rs><!--, <ref><hi rend="sc">xvi</hi></ref>-->, <ref target="#SCHA-PR_0054" n="54">54</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_354"><rs><hi rend="sc">Mauny (Jean de)</hi>, potier d'étain</rs>, <ref><hi rend="sc">xxix</hi></ref>, <ref><hi rend="sc">xxx</hi></ref>, <ref><hi rend="sc">xxxii</hi></ref>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_355"><rs><hi rend="sc">Maupeou</hi>, notaire</rs>, <ref>43</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_356"><rs><hi rend="sc">Meaux (doyen de)</hi></rs>, <ref target="#SCHA-PR_0053" n="37">53</ref>.</item>
+          <item xml:id="SCHA-PR_rs_356"><rs><hi rend="sc">Meaux (doyen de)</hi></rs>, <ref target="#SCHA-PR_0053" n="53">53</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_357"><rs><hi rend="sc">Médicis (Jules de)</hi>, cardinal</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_358"><rs><hi rend="sc">Meldensis pagus</hi></rs>, <ref target="#SCHA-PR_0003" n="iii">3</ref><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref>1</ref>-->, <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="4">3</ref> --> <ref target="#SCHA-PR_0009" n="9">9</ref>.</item>
-          <item xml:id="SCHA-PR_rs_359"><rs><hi rend="sc">Mêlée</hi>, rixe</rs>, <ref target="#SCHA-PR_0035" n="23">35</ref>.</item>
+          <item xml:id="SCHA-PR_rs_358"><rs><hi rend="sc">Meldensis pagus</hi></rs>, <ref target="#SCHA-PR_0003" n="3">3</ref><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref>1</ref>-->, <!-- doublon meme acte SCHA-PR_0003: <ref target="#SCHA-PR_0003" n="4">3</ref> --> <ref target="#SCHA-PR_0009" n="9">9</ref>.</item>
+          <item xml:id="SCHA-PR_rs_359"><rs><hi rend="sc">Mêlée</hi>, rixe</rs>, <ref target="#SCHA-PR_0035" n="35">35</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_360"><rs><hi rend="sc">Mello</hi>, baronnie</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_361"><rs><hi rend="sc">Melun (Philippe de)</hi></rs>, <ref><hi rend="sc">xxvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_362"><rs><hi rend="sc">Menou (Daniel de)</hi></rs>, <ref><hi rend="sc">lxxxv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_363"><rs><hi rend="sc">Menou (Louis de)</hi>, prieur</rs><!--, <ref><hi rend="sc">lxxix</hi></ref>--><!--, <ref><hi rend="sc">lxxxii</hi></ref>--><!--, <ref>44</ref>-->, <ref target="#SCHA-PR_0068" n="59">68</ref><!--, <ref>62</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_363"><rs><hi rend="sc">Menou (Louis de)</hi>, prieur</rs><!--, <ref><hi rend="sc">lxxix</hi></ref>--><!--, <ref><hi rend="sc">lxxxii</hi></ref>--><!--, <ref>44</ref>-->, <ref target="#SCHA-PR_0068" n="68">68</ref><!--, <ref>62</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_364"><rs><hi rend="sc">Merrain</hi></rs>, <ref><hi rend="sc">xx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_365"><rs><hi rend="sc">Mesnil (Gautier du)</hi></rs>, <ref target="#SCHA-PR_0029" n="19">29</ref>.</item>
+          <item xml:id="SCHA-PR_rs_365"><rs><hi rend="sc">Mesnil (Gautier du)</hi></rs>, <ref target="#SCHA-PR_0029" n="29">29</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_366"><rs><hi rend="sc">Michy (Gérard de)</hi></rs>, <ref><hi rend="sc">xlv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_367"><rs><hi rend="sc">Minos</hi>, Claudius</rs><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0067" n="59">67</ref>.</item>
-          <item xml:id="SCHA-PR_rs_368"><rs><hi rend="sc">Milon</hi>, prieur de la Charité</rs>, <ref target="#SCHA-PR_0044" n="29">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_367"><rs><hi rend="sc">Minos</hi>, Claudius</rs><!--, <ref><hi rend="sc">lx</hi></ref>-->, <ref target="#SCHA-PR_0067" n="67">67</ref>.</item>
+          <item xml:id="SCHA-PR_rs_368"><rs><hi rend="sc">Milon</hi>, prieur de la Charité</rs>, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_369"><rs><hi rend="sc">Mogneville</hi></rs>, <ref><hi rend="sc">xxxii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_370"><rs><hi rend="sc">Moivinet (fief de)</hi></rs><!--, <ref><hi rend="sc">lxviii</hi></ref>-->, <ref target="#SCHA-PR_0069" n="61">69</ref>.</item>
+          <item xml:id="SCHA-PR_rs_370"><rs><hi rend="sc">Moivinet (fief de)</hi></rs><!--, <ref><hi rend="sc">lxviii</hi></ref>-->, <ref target="#SCHA-PR_0069" n="69">69</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_371"><rs><hi rend="sc">Moncel (Dames du)</hi></rs>, <ref><hi rend="sc">xxx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_372"><rs><hi rend="sc">Moncornet (Gérard de)</hi></rs>, <ref><hi rend="sc">xv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_373"><rs><hi rend="sc">Montaigne (Saincturion de la)</hi></rs>, <ref><hi rend="sc">lxvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_374"><rs><hi rend="sc">Montaigny (Jean de)</hi></rs>, <ref><hi rend="sc">xl</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_375"><rs><hi rend="sc">Montataire</hi></rs>, <ref target="#SCHA-PR_0004" n="6">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_375"><rs><hi rend="sc">Montataire</hi></rs>, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_376"><rs><hi rend="sc">Montaulnay (Etienne de)</hi></rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_377"><rs><hi rend="sc">Moreau</hi>, François</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_378"><rs><hi rend="sc">Mory (Gui de)</hi>, prieur</rs>, <ref><hi rend="sc">xxiv</hi></ref>, <ref><hi rend="sc">xxv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_379"><rs><hi rend="sc">Mouchy-le-Châtel</hi>, baronnie</rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_380"><rs><hi rend="sc">Moulin de l'Evêché</hi></rs>, <ref target="#SCHA-PR_0039" n="26">39</ref>.</item>
+          <item xml:id="SCHA-PR_rs_380"><rs><hi rend="sc">Moulin de l'Evêché</hi></rs>, <ref target="#SCHA-PR_0039" n="39">39</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_381"><rs><hi rend="sc">Mouton (Jean du)</hi></rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>-->
         </list>
         <list type="index">
@@ -5764,140 +5764,140 @@
           <!--<item xml:id="SCHA-PR_rs_382"><rs><hi rend="sc">Narbonne Pelet (Claude de)</hi></rs>, <ref><hi rend="sc">lxxxvi</hi></ref>, <ref>44</ref>.</item>-->
           <item xml:id="SCHA-PR_rs_383"><rs><hi rend="sc">Narbonne Pelet</hi></rs>. </item>
           <!--<item xml:id="SCHA-PR_rs_384"><rs><hi rend="sc">Narbonne Pelet</hi>, (Joachim de)</rs>, <ref><hi rend="sc">lxxxv</hi></ref>, <ref>44</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_385"><rs><hi rend="sc">Neuville-en-Hez (la)</hi></rs><!--, <ref><hi rend="sc">xvi</hi></ref>-->, <ref target="#SCHA-PR_0054" n="37">54</ref>.</item>
-          <item xml:id="SCHA-PR_rs_386"><rs><hi rend="sc">Nicolas</hi>, prieur</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="9">10</ref><!--, <ref>41</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_387"><rs><hi rend="sc">Nielle (Simon de)</hi></rs><!--, <ref><hi rend="sc">xi</hi></ref>-->, <ref target="#SCHA-PR_0044" n="30">44</ref>.</item>
-          <item xml:id="SCHA-PR_rs_388"><rs><hi rend="sc">Noë Saint-Remy</hi></rs>, <ref target="#SCHA-PR_0038" n="25">38</ref>.</item>
-          <item xml:id="SCHA-PR_rs_389"><rs><hi rend="sc">Nogent (Hémard de)</hi></rs>, <ref target="#SCHA-PR_0045" n="31">45</ref>.</item>
+          <item xml:id="SCHA-PR_rs_385"><rs><hi rend="sc">Neuville-en-Hez (la)</hi></rs><!--, <ref><hi rend="sc">xvi</hi></ref>-->, <ref target="#SCHA-PR_0054" n="54">54</ref>.</item>
+          <item xml:id="SCHA-PR_rs_386"><rs><hi rend="sc">Nicolas</hi>, prieur</rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref><!--, <ref>41</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_387"><rs><hi rend="sc">Nielle (Simon de)</hi></rs><!--, <ref><hi rend="sc">xi</hi></ref>-->, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_388"><rs><hi rend="sc">Noë Saint-Remy</hi></rs>, <ref target="#SCHA-PR_0038" n="38">38</ref>.</item>
+          <item xml:id="SCHA-PR_rs_389"><rs><hi rend="sc">Nogent (Hémard de)</hi></rs>, <ref target="#SCHA-PR_0045" n="45">45</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_390"><rs><hi rend="sc">Notre-Dame de Senlis</hi></rs>, <ref><hi rend="sc">iii</hi></ref>, <ref><hi rend="sc">vi</hi></ref>, <ref>4</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_391"><rs><hi rend="sc">Noyal</hi>, Magdelaine</rs>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>-->
         </list>
         <list type="index">
           <head>O</head>
-          <item xml:id="SCHA-PR_rs_392"><rs><hi rend="sc">Official de Beauvais</hi></rs>, <ref target="#SCHA-PR_0046" n="32">46</ref>.</item>
+          <item xml:id="SCHA-PR_rs_392"><rs><hi rend="sc">Official de Beauvais</hi></rs>, <ref target="#SCHA-PR_0046" n="46">46</ref>.</item>
           <item xml:id="SCHA-PR_rs_393"><rs><hi rend="sc">Official de Meaux</hi></rs><!--, <ref><hi rend="sc">vi</hi></ref>-->, <ref target="#SCHA-PR_0009" n="9">9</ref>.</item>
-          <item xml:id="SCHA-PR_rs_394"><rs><hi rend="sc">Official de Senlis</hi></rs>, <ref target="#SCHA-PR_0013" n="xiii">13</ref>, <ref target="#SCHA-PR_0011" n="9">11</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0039" n="26">39</ref><!--, <ref>27</ref>-->, <!-- doublon meme acte SCHA-PR_0013: <ref target="#SCHA-PR_0013" n="28">13</ref> --> <ref target="#SCHA-PR_0014" n="29">14</ref>.</item>
-          <item xml:id="SCHA-PR_rs_395"><rs><hi rend="sc">Ognon</hi></rs>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_396"><rs><hi rend="sc">Olland</hi>, chantre</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
-          <item xml:id="SCHA-PR_rs_397"><rs><hi rend="sc">Olland prévôt</hi></rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_394"><rs><hi rend="sc">Official de Senlis</hi></rs>, <ref target="#SCHA-PR_0013" n="13">13</ref>, <ref target="#SCHA-PR_0011" n="11">11</ref><!--, <ref>12</ref>-->, <ref target="#SCHA-PR_0039" n="39">39</ref><!--, <ref>27</ref>-->, <!-- doublon meme acte SCHA-PR_0013: <ref target="#SCHA-PR_0013" n="28">13</ref> --> <ref target="#SCHA-PR_0014" n="14">14</ref>.</item>
+          <item xml:id="SCHA-PR_rs_395"><rs><hi rend="sc">Ognon</hi></rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_396"><rs><hi rend="sc">Olland</hi>, chantre</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_397"><rs><hi rend="sc">Olland prévôt</hi></rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
         </list>
         <list type="index">
           <head>P</head>
-          <item xml:id="SCHA-PR_rs_398"><rs><hi rend="sc">Pacy (Pierre de)</hi></rs><!--, <ref><hi rend="sc">xix</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0063" n="54">63</ref>.</item>
-          <item xml:id="SCHA-PR_rs_399"><rs><hi rend="sc">Pairs</hi></rs><!--, <ref>24</ref>-->, <ref target="#SCHA-PR_0028" n="25">28</ref>.</item>
+          <item xml:id="SCHA-PR_rs_398"><rs><hi rend="sc">Pacy (Pierre de)</hi></rs><!--, <ref><hi rend="sc">xix</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_399"><rs><hi rend="sc">Pairs</hi></rs><!--, <ref>24</ref>-->, <ref target="#SCHA-PR_0028" n="28">28</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_400"><rs><hi rend="sc">Parent</hi>, Christophe</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_401"><rs><hi rend="sc">Parent Claude</hi></rs>, <ref><hi rend="sc">xxviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_402"><rs><hi rend="sc">Parent Antoine</hi></rs><!--, <ref><hi rend="sc">xxix</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>--><!--, <ref>41</ref>-->, <ref target="#SCHA-PR_0064" n="57">64</ref>.</item>
-          <item xml:id="SCHA-PR_rs_403"><rs><hi rend="sc">Parent Zacharie</hi></rs><!--, <ref><hi rend="sc">xxviii</hi></ref>--><!--, <ref><hi rend="sc">xxix</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">xlviii</hi></ref>--><!--, <ref><hi rend="sc">xlix</hi></ref>-->, <ref target="#SCHA-PR_0060" n="l">60</ref><!--, <ref>40</ref>-->, <!-- doublon meme acte SCHA-PR_0060: <ref target="#SCHA-PR_0060" n="50">60</ref> --><!--, <ref>57</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_402"><rs><hi rend="sc">Parent Antoine</hi></rs><!--, <ref><hi rend="sc">xxix</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>--><!--, <ref>41</ref>-->, <ref target="#SCHA-PR_0064" n="64">64</ref>.</item>
+          <item xml:id="SCHA-PR_rs_403"><rs><hi rend="sc">Parent Zacharie</hi></rs><!--, <ref><hi rend="sc">xxviii</hi></ref>--><!--, <ref><hi rend="sc">xxix</hi></ref>--><!--, <ref><hi rend="sc">xlii</hi></ref>--><!--, <ref><hi rend="sc">xlviii</hi></ref>--><!--, <ref><hi rend="sc">xlix</hi></ref>-->, <ref target="#SCHA-PR_0060" n="60">60</ref><!--, <ref>40</ref>-->, <!-- doublon meme acte SCHA-PR_0060: <ref target="#SCHA-PR_0060" n="50">60</ref> --><!--, <ref>57</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_404"><rs><hi rend="sc">Parvi</hi>, Guillaume, évêque</rs>, <ref><hi rend="sc">xlv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_405"><rs><hi rend="sc">Pasnage (droit de)</hi></rs>, <ref>31</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_406"><rs><hi rend="sc">Past</hi></rs>, <ref target="#SCHA-PR_0037" n="24">37</ref>. <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="25">37</ref> --></item>
-          <item xml:id="SCHA-PR_rs_407"><rs><hi rend="sc">Pâturage</hi></rs>, <ref target="#SCHA-PR_0044" n="31">44</ref>.</item>
+          <item xml:id="SCHA-PR_rs_406"><rs><hi rend="sc">Past</hi></rs>, <ref target="#SCHA-PR_0037" n="37">37</ref>. <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="25">37</ref> --></item>
+          <item xml:id="SCHA-PR_rs_407"><rs><hi rend="sc">Pâturage</hi></rs>, <ref target="#SCHA-PR_0044" n="44">44</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_408"><rs><hi rend="sc">Paul II</hi>, pape</rs>, <ref><hi rend="sc">xxxi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_409"><rs><hi rend="sc">Pennet</hi>, Philippe, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref><hi rend="sc">liii</hi></ref>, <ref>42</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_410"><rs><hi rend="sc">Périn</hi>, curé du Plessier-le-Vicomte</rs>, <ref target="#SCHA-PR_0053" n="38">53</ref>.</item>
+          <item xml:id="SCHA-PR_rs_410"><rs><hi rend="sc">Périn</hi>, curé du Plessier-le-Vicomte</rs>, <ref target="#SCHA-PR_0053" n="53">53</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_411"><rs><hi rend="sc">Peton</hi>, Mathieu, curé</rs>, <ref><hi rend="sc">xlix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_412"><rs><hi rend="sc">Peton Mathurin</hi></rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_413"><rs><hi rend="sc">Philippe</hi></rs>, <hi rend="sup">er</hi>, roi, <ref target="#SCHA-PR_0001" n="iii">1</ref>, <ref target="#SCHA-PR_0002" n="iv">2</ref><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref><hi rend="sc">vi</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="I. 1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="I. 3">1</ref> --> <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="I. 4">2</ref> --><!--, <ref>I. 5</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_414"><rs><hi rend="sc">Philippe III</hi>, le Hardi</rs><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">xi</hi></ref>-->, <ref target="#SCHA-PR_0063" n="29">63</ref><!--, <ref>56</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_413"><rs><hi rend="sc">Philippe</hi></rs>, <hi rend="sup">er</hi>, roi, <ref target="#SCHA-PR_0001" n="1">1</ref>, <ref target="#SCHA-PR_0002" n="2">2</ref><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref><hi rend="sc">vi</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="I. 1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="I. 3">1</ref> --> <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="I. 4">2</ref> --><!--, <ref>I. 5</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_414"><rs><hi rend="sc">Philippe III</hi>, le Hardi</rs><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">xi</hi></ref>-->, <ref target="#SCHA-PR_0063" n="63">63</ref><!--, <ref>56</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_415"><rs><hi rend="sc">Picquet</hi>, Nicolas, sergent</rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_416"><rs><hi rend="sc">Pierre</hi>, prieur</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0043" n="28">43</ref>, <ref target="#SCHA-PR_0044" n="29">44</ref>, <ref target="#SCHA-PR_0059" n="31">59</ref><!--, <ref>41</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_416"><rs><hi rend="sc">Pierre</hi>, prieur</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0043" n="43">43</ref>, <ref target="#SCHA-PR_0044" n="44">44</ref>, <ref target="#SCHA-PR_0059" n="59">59</ref><!--, <ref>41</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_417"><rs><hi rend="sc">Pierre qui corne (la)</hi></rs>, <ref><hi rend="sc">lxx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_418"><rs><hi rend="sc">Pierre de la Brosse</hi>, prieur</rs>, <ref><hi rend="sc">xxvii</hi></ref>, <ref>41</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_419"><rs><hi rend="sc">Pierre</hi>, fils de Waleran</rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
-          <item xml:id="SCHA-PR_rs_420"><rs><hi rend="sc">Pierre de prés</hi></rs>, <ref target="#SCHA-PR_0016" n="7">16</ref>.</item>
+          <item xml:id="SCHA-PR_rs_419"><rs><hi rend="sc">Pierre</hi>, fils de Waleran</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_420"><rs><hi rend="sc">Pierre de prés</hi></rs>, <ref target="#SCHA-PR_0016" n="16">16</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_421"><rs><hi rend="sc">Piétrequin</hi>, Pierre</rs>, <ref><hi rend="sc">lxxvii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_422"><rs><hi rend="sc">Pilori</hi></rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_423"><rs><hi rend="sc">Pirlot</hi>, Jacques</rs>, <ref><hi rend="sc">lxxx</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_424"><rs><hi rend="sc">Plége</hi></rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_425"><rs><hi rend="sc">Plessis-Belleville (le)</hi></rs>, <ref target="#SCHA-PR_0009" n="8">9</ref>, <!-- doublon meme acte SCHA-PR_0009: <ref target="#SCHA-PR_0009" n="12">9</ref> --> <ref target="#SCHA-PR_0065" n="60">65</ref>, <ref target="#SCHA-PR_0015" n="61">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_426"><rs><hi rend="sc">Plessis-Choisel (le)</hi></rs>, <ref target="#SCHA-PR_0022" n="17">22</ref>.</item>
-          <item xml:id="SCHA-PR_rs_427"><rs><hi rend="sc">Plessis (Jean du)</hi>, Gruyer</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0028" n="19">28</ref>, <ref target="#SCHA-PR_0044" n="29">44</ref><!--, <ref>30</ref>--><!--, <ref>31</ref>-->, <ref target="#SCHA-PR_0063" n="56">63</ref>.</item>
-          <item xml:id="SCHA-PR_rs_428"><rs><hi rend="sc">Poitevine ou picte</hi></rs>, <ref target="#SCHA-PR_0043" n="28">43</ref>.</item>
-          <item xml:id="SCHA-PR_rs_429"><rs><hi rend="sc">Pompoint</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>--><!--, <ref><hi rend="sc">xv</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0037" n="xxiv">37</ref><!--, <ref><hi rend="sc">xlix</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="24">37</ref> --> <ref target="#SCHA-PR_0068" n="25">68</ref>, <ref target="#SCHA-PR_0050" n="35">50</ref>, <ref target="#SCHA-PR_0069" n="36">69</ref>. <!-- doublon meme acte SCHA-PR_0050: <ref target="#SCHA-PR_0050" n="37">50</ref> --><!--, <ref>38</ref>--></item>
-          <item xml:id="SCHA-PR_rs_430"><rs><hi rend="sc">Pompoint</hi>, Guillaume (de), écuyer</rs>, <ref target="#SCHA-PR_0041" n="27">41</ref>.</item>
-          <item xml:id="SCHA-PR_rs_431"><rs><hi rend="sc">Pompoint Pierre (de)</hi></rs>, <ref target="#SCHA-PR_0068" n="38">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_432"><rs><hi rend="sc">Ponce d'Ambon</hi>, grand-maître des Templiers</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="12">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_433"><rs><hi rend="sc">Pont-Sainte-Maxence</hi></rs><!--, <ref>1</ref>-->, <ref target="#SCHA-PR_0069" n="4">69</ref>, <ref target="#SCHA-PR_0059" n="49">59</ref><!--, <ref>50</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_425"><rs><hi rend="sc">Plessis-Belleville (le)</hi></rs>, <ref target="#SCHA-PR_0009" n="9">9</ref>, <!-- doublon meme acte SCHA-PR_0009: <ref target="#SCHA-PR_0009" n="12">9</ref> --> <ref target="#SCHA-PR_0065" n="65">65</ref>, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_426"><rs><hi rend="sc">Plessis-Choisel (le)</hi></rs>, <ref target="#SCHA-PR_0022" n="22">22</ref>.</item>
+          <item xml:id="SCHA-PR_rs_427"><rs><hi rend="sc">Plessis (Jean du)</hi>, Gruyer</rs><!--, <ref><hi rend="sc">x</hi></ref>-->, <ref target="#SCHA-PR_0028" n="28">28</ref>, <ref target="#SCHA-PR_0044" n="44">44</ref><!--, <ref>30</ref>--><!--, <ref>31</ref>-->, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_428"><rs><hi rend="sc">Poitevine ou picte</hi></rs>, <ref target="#SCHA-PR_0043" n="43">43</ref>.</item>
+          <item xml:id="SCHA-PR_rs_429"><rs><hi rend="sc">Pompoint</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>--><!--, <ref><hi rend="sc">xv</hi></ref>--><!--, <ref><hi rend="sc">xxii</hi></ref>-->, <ref target="#SCHA-PR_0037" n="37">37</ref><!--, <ref><hi rend="sc">xlix</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <!-- doublon meme acte SCHA-PR_0037: <ref target="#SCHA-PR_0037" n="24">37</ref> --> <ref target="#SCHA-PR_0068" n="68">68</ref>, <ref target="#SCHA-PR_0050" n="50">50</ref>, <ref target="#SCHA-PR_0069" n="69">69</ref>. <!-- doublon meme acte SCHA-PR_0050: <ref target="#SCHA-PR_0050" n="37">50</ref> --><!--, <ref>38</ref>--></item>
+          <item xml:id="SCHA-PR_rs_430"><rs><hi rend="sc">Pompoint</hi>, Guillaume (de), écuyer</rs>, <ref target="#SCHA-PR_0041" n="41">41</ref>.</item>
+          <item xml:id="SCHA-PR_rs_431"><rs><hi rend="sc">Pompoint Pierre (de)</hi></rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_432"><rs><hi rend="sc">Ponce d'Ambon</hi>, grand-maître des Templiers</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_433"><rs><hi rend="sc">Pont-Sainte-Maxence</hi></rs><!--, <ref>1</ref>-->, <ref target="#SCHA-PR_0069" n="69">69</ref>, <ref target="#SCHA-PR_0059" n="59">59</ref><!--, <ref>50</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_434"><rs><hi rend="sc">Pontoise</hi></rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_435"><rs><hi rend="sc">Porte-l'Eguillère</hi>, à Senlis</rs>, <ref><hi rend="sc">xliii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_436"><rs><hi rend="sc">Potier</hi>, Nicolas, sieur de la Mairie</rs>, <ref><hi rend="sc">lxxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_437"><rs><hi rend="sc">Prédeseigle</hi>, René, prieur</rs>, <ref><hi rend="sc">li</hi></ref>, <ref><hi rend="sc">lii</hi></ref>, <ref><hi rend="sc">liii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_438"><rs><hi rend="sc">Pressoir</hi>, à Rieux</rs>, <ref target="#SCHA-PR_0012" n="11">12</ref>.</item>
+          <item xml:id="SCHA-PR_rs_438"><rs><hi rend="sc">Pressoir</hi>, à Rieux</rs>, <ref target="#SCHA-PR_0012" n="12">12</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_439"><rs><hi rend="sc">Prévost</hi>, Etienne, prieur</rs>, <ref>41</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_0440"><rs><hi rend="sc">Prévôt de Clermont</hi></rs>, <!-- <ref><hi rend="sc">xiv</hi></ref>, --> <ref target="#SCHA-PR_0047" n="37">47</ref>.</item>
-          <item xml:id="SCHA-PR_rs_441"><rs><hi rend="sc">Prévôt de Clermont de Senlis</hi></rs><!--, <ref><hi rend="sc">xxvi</hi></ref>--><!--, <ref>30</ref>-->, <ref target="#SCHA-PR_0047" n="31">47</ref>.</item>
-          <item xml:id="SCHA-PR_rs_442"><rs><hi rend="sc">Prévôt de Pont</hi></rs>, <ref target="#SCHA-PR_0059" n="xxiv">59</ref>. <!-- doublon meme acte SCHA-PR_0059: <ref target="#SCHA-PR_0059" n="24">59</ref> --></item>
+          <item xml:id="SCHA-PR_rs_0440"><rs><hi rend="sc">Prévôt de Clermont</hi></rs>, <!-- <ref><hi rend="sc">xiv</hi></ref>, --> <ref target="#SCHA-PR_0047" n="47">47</ref>.</item>
+          <item xml:id="SCHA-PR_rs_441"><rs><hi rend="sc">Prévôt de Clermont de Senlis</hi></rs><!--, <ref><hi rend="sc">xxvi</hi></ref>--><!--, <ref>30</ref>-->, <ref target="#SCHA-PR_0047" n="47">47</ref>.</item>
+          <item xml:id="SCHA-PR_rs_442"><rs><hi rend="sc">Prévôt de Pont</hi></rs>, <ref target="#SCHA-PR_0059" n="59">59</ref>. <!-- doublon meme acte SCHA-PR_0059: <ref target="#SCHA-PR_0059" n="24">59</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_443"><rs><hi rend="sc">Prieurs de Saint-Christophe</hi></rs>, <ref>41</ref>, <ref>45</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_444"><rs><hi rend="sc">Prise de possession</hi></rs>, <ref target="#SCHA-PR_0061" n="50">61</ref>.</item>
-          <item xml:id="SCHA-PR_rs_445"><rs><hi rend="sc">Privilége royal</hi>, en faveur de l'abbaye</rs>, <ref target="#SCHA-PR_0001" n="3">1</ref>.</item>
-          <item xml:id="SCHA-PR_rs_446"><rs><hi rend="sc">Provisions du prieuré</hi></rs>, <ref target="#SCHA-PR_0060" n="50">60</ref>.</item>
+          <item xml:id="SCHA-PR_rs_444"><rs><hi rend="sc">Prise de possession</hi></rs>, <ref target="#SCHA-PR_0061" n="61">61</ref>.</item>
+          <item xml:id="SCHA-PR_rs_445"><rs><hi rend="sc">Privilége royal</hi>, en faveur de l'abbaye</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>.</item>
+          <item xml:id="SCHA-PR_rs_446"><rs><hi rend="sc">Provisions du prieuré</hi></rs>, <ref target="#SCHA-PR_0060" n="60">60</ref>.</item>
         </list>
         <list type="index">
           <head>R</head>
-          <item xml:id="SCHA-PR_rs_447"><rs><hi rend="sc">Rainaldus</hi>, Renaud, fils de Wateran</rs>, <ref target="#SCHA-PR_0002" n="ii">2</ref>, <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="iii">2</ref> --><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref>1</ref>--><!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="3">2</ref> -->.</item>
-          <item xml:id="SCHA-PR_rs_448"><rs><hi rend="sc">Rainaldus</hi></rs>, <ref target="#SCHA-PR_0002" n="5">2</ref>.</item>
-          <item xml:id="SCHA-PR_rs_449"><rs><hi rend="sc">Raoul</hi>, comte de Clermont</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0004" n="6">4</ref>.</item>
-          <item xml:id="SCHA-PR_rs_450"><rs><hi rend="sc">Raoul</hi>, prieur de Saint-Christophe</rs><!--, <ref><hi rend="sc">v</hi></ref>-->, <ref target="#SCHA-PR_0003" n="6">3</ref><!--, <ref>41</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_447"><rs><hi rend="sc">Rainaldus</hi>, Renaud, fils de Wateran</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>, <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="iii">2</ref> --><!--, <ref><hi rend="sc">v</hi></ref>--><!--, <ref>1</ref>--><!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="3">2</ref> -->.</item>
+          <item xml:id="SCHA-PR_rs_448"><rs><hi rend="sc">Rainaldus</hi></rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>.</item>
+          <item xml:id="SCHA-PR_rs_449"><rs><hi rend="sc">Raoul</hi>, comte de Clermont</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_450"><rs><hi rend="sc">Raoul</hi>, prieur de Saint-Christophe</rs><!--, <ref><hi rend="sc">v</hi></ref>-->, <ref target="#SCHA-PR_0003" n="3">3</ref><!--, <ref>41</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_451"><rs><hi rend="sc">Raoul II</hi>, prieur</rs>, <ref><hi rend="sc">ix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_452"><rs><hi rend="sc">Raoul du Bosc</hi></rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_452"><rs><hi rend="sc">Raoul du Bosc</hi></rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <item xml:id="SCHA-PR_rs_453"><rs><hi rend="sc">Redevance en grains à Lagny-le-Sec</hi></rs>, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_454"><rs><hi rend="sc">Regnault</hi>, curé de Fleurines</rs>, <ref target="#SCHA-PR_0057" n="47">57</ref>.</item>
-          <item xml:id="SCHA-PR_rs_455"><rs><hi rend="sc">Regnault de Luzarches</hi>, curé de Rieux</rs>, <ref target="#SCHA-PR_0012" n="xii">12</ref>. <!-- doublon meme acte SCHA-PR_0012: <ref target="#SCHA-PR_0012" n="11">12</ref> --></item>
-          <item xml:id="SCHA-PR_rs_456"><rs><hi rend="sc">Renauld</hi>, de Montigny</rs>, <ref target="#SCHA-PR_0005" n="vii">5</ref>, <!-- doublon meme acte SCHA-PR_0005: <ref target="#SCHA-PR_0005" n="7">5</ref> --> <ref target="#SCHA-PR_0007" n="8">7</ref>.</item>
-          <item xml:id="SCHA-PR_rs_457"><rs><hi rend="sc">Rente à Villemétrie</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="ix">10</ref>, <!-- doublon meme acte SCHA-PR_0010: <ref target="#SCHA-PR_0010" n="9">10</ref> --> <!-- <ref target="#SCHA-PR_0010">10</ref> -->.</item>
+          <item xml:id="SCHA-PR_rs_454"><rs><hi rend="sc">Regnault</hi>, curé de Fleurines</rs>, <ref target="#SCHA-PR_0057" n="57">57</ref>.</item>
+          <item xml:id="SCHA-PR_rs_455"><rs><hi rend="sc">Regnault de Luzarches</hi>, curé de Rieux</rs>, <ref target="#SCHA-PR_0012" n="12">12</ref>. <!-- doublon meme acte SCHA-PR_0012: <ref target="#SCHA-PR_0012" n="11">12</ref> --></item>
+          <item xml:id="SCHA-PR_rs_456"><rs><hi rend="sc">Renauld</hi>, de Montigny</rs>, <ref target="#SCHA-PR_0005" n="5">5</ref>, <!-- doublon meme acte SCHA-PR_0005: <ref target="#SCHA-PR_0005" n="7">5</ref> --> <ref target="#SCHA-PR_0007" n="7">7</ref>.</item>
+          <item xml:id="SCHA-PR_rs_457"><rs><hi rend="sc">Rente à Villemétrie</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref>, <!-- doublon meme acte SCHA-PR_0010: <ref target="#SCHA-PR_0010" n="9">10</ref> --> <!-- <ref target="#SCHA-PR_0010">10</ref> -->.</item>
           <!--<item xml:id="SCHA-PR_rs_458"><rs><hi rend="sc">Reuil</hi></rs>, <ref>13</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_459"><rs><hi rend="sc">Ribergau</hi>, Antoine (de)</rs>, <ref target="#SCHA-PR_0068" n="61">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_459"><rs><hi rend="sc">Ribergau</hi>, Antoine (de)</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_460"><rs><hi rend="sc">Richilde</hi>, serve, à Pont</rs>, <ref><hi rend="sc">iii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_461"><rs><hi rend="sc">Rieux</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="iv">1</ref><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">xii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0013" n="11">13</ref>, <ref target="#SCHA-PR_0031" n="21">31</ref><!--, <ref>22</ref>--><!--, <ref>23</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_462"><rs><hi rend="sc">Rieux Agnès (de)</hi></rs>, <ref target="#SCHA-PR_0046" n="32">46</ref>.</item>
-          <item xml:id="SCHA-PR_rs_463"><rs><hi rend="sc">Rieux Nouvion (de)</hi></rs>, <ref target="#SCHA-PR_0046" n="32">46</ref>.</item>
+          <item xml:id="SCHA-PR_rs_461"><rs><hi rend="sc">Rieux</hi></rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref><!--, <ref><hi rend="sc">ix</hi></ref>--><!--, <ref><hi rend="sc">xii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --> <ref target="#SCHA-PR_0013" n="13">13</ref>, <ref target="#SCHA-PR_0031" n="31">31</ref><!--, <ref>22</ref>--><!--, <ref>23</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_462"><rs><hi rend="sc">Rieux Agnès (de)</hi></rs>, <ref target="#SCHA-PR_0046" n="46">46</ref>.</item>
+          <item xml:id="SCHA-PR_rs_463"><rs><hi rend="sc">Rieux Nouvion (de)</hi></rs>, <ref target="#SCHA-PR_0046" n="46">46</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_464"><rs><hi rend="sc">Robert</hi>, évêque de Beauvais</rs>, <ref><hi rend="sc">xii</hi></ref>.</item>-->
           <item xml:id="SCHA-PR_rs_465"><rs><hi rend="sc">Robert</hi></rs>. </item>
-          <item xml:id="SCHA-PR_rs_466"><rs><hi rend="sc">Robert</hi>, de Nevers</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0020" n="15">20</ref>.</item>
+          <item xml:id="SCHA-PR_rs_466"><rs><hi rend="sc">Robert</hi>, de Nevers</rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0020" n="20">20</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_467"><rs><hi rend="sc">Rogerie</hi>, Jean</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_468"><rs><hi rend="sc">Rostolum</hi>, Rotheleu</rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="4">1</ref>.</item>
+          <item xml:id="SCHA-PR_rs_468"><rs><hi rend="sc">Rostolum</hi>, Rotheleu</rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_0469"><rs><hi rend="sc">Rouen</hi>, église (de)</rs>, <ref>35</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_470"><rs><hi rend="sc">Royaumont</hi>, abbé (de)</rs>, <ref><hi rend="sc">lxxv</hi></ref>.</item>-->
         </list>
         <list type="index">
           <head>S</head>
-          <item xml:id="SCHA-PR_rs_471"><rs><hi rend="sc">Sailleville</hi>, Sageville</rs>, <ref target="#SCHA-PR_0056" n="39">56</ref>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_471"><rs><hi rend="sc">Sailleville</hi>, Sageville</rs>, <ref target="#SCHA-PR_0056" n="56">56</ref>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_472"><rs><hi rend="sc">Saingue ou Samgas</hi>, Antoine</rs>, <ref><hi rend="sc">li</hi></ref>, <ref>42</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_473"><rs><hi rend="sc">Saint-Adrien de Béthisy</hi></rs>, <ref><hi rend="sc">ii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_474"><rs><hi rend="sc">Saint-Christophe</hi>, prieuré</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --> <ref target="#SCHA-PR_0042" n="4">42</ref>, <ref target="#SCHA-PR_0062" n="5">62</ref>, <ref target="#SCHA-PR_0063" n="6">63</ref>.</item>
-          <item xml:id="SCHA-PR_rs_475"><rs><hi rend="sc">Saint-Corneille de Compiègne</hi></rs>, <ref target="#SCHA-PR_0038" n="25">38</ref>.</item>
+          <item xml:id="SCHA-PR_rs_474"><rs><hi rend="sc">Saint-Christophe</hi>, prieuré</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --> <ref target="#SCHA-PR_0042" n="42">42</ref>, <ref target="#SCHA-PR_0062" n="62">62</ref>, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_475"><rs><hi rend="sc">Saint-Corneille de Compiègne</hi></rs>, <ref target="#SCHA-PR_0038" n="38">38</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_476"><rs><hi rend="sc">Saint-Frambauld</hi></rs>, <ref><hi rend="sc">vi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_477"><rs><hi rend="sc">Saint-Leu (François de)</hi></rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_478"><rs><hi rend="sc">Saint-Leu-d'Esserent</hi></rs><!--, <ref><hi rend="sc">lvii</hi></ref>-->, <ref target="#SCHA-PR_0054" n="35">54</ref><!--, <ref>37</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_478"><rs><hi rend="sc">Saint-Leu-d'Esserent</hi></rs><!--, <ref><hi rend="sc">lvii</hi></ref>-->, <ref target="#SCHA-PR_0054" n="54">54</ref><!--, <ref>37</ref>-->.</item>
           <!--<item xml:id="SCHA-PR_rs_479"><rs><hi rend="sc">Saint-Martin-des-Champs</hi></rs>, <ref><hi rend="sc">xlii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_480"><rs><hi rend="sc">Saint-Martin-de-Mitry</hi></rs>, <ref><hi rend="sc">lxxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_481"><rs><hi rend="sc">Saint-Martin-Longuau</hi></rs>, <ref><hi rend="sc">xxviii</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_482"><rs><hi rend="sc">Saint-Maurice de Senlis</hi></rs>, <ref><hi rend="sc">xliv</hi></ref>, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_483"><rs><hi rend="sc">Saint-Médard de Soissons</hi></rs>, <ref><hi rend="sc">xliv</hi></ref>.</item>-->
           <item xml:id="SCHA-PR_rs_484"><rs><hi rend="sc">Saint-Pierre de Beauvais</hi></rs><!--, <ref><hi rend="sc">ii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
-          <item xml:id="SCHA-PR_rs_485"><rs><hi rend="sc">Saint-Pierre-Pontpoint</hi></rs><!--, <ref><hi rend="sc">xlviii</hi></ref>--><!--, <ref><hi rend="sc">lvi</hi></ref>--><!--, <ref><hi rend="sc">lxxvi</hi></ref>-->, <ref target="#SCHA-PR_0052" n="4">52</ref>.</item>
+          <item xml:id="SCHA-PR_rs_485"><rs><hi rend="sc">Saint-Pierre-Pontpoint</hi></rs><!--, <ref><hi rend="sc">xlviii</hi></ref>--><!--, <ref><hi rend="sc">lvi</hi></ref>--><!--, <ref><hi rend="sc">lxxvi</hi></ref>-->, <ref target="#SCHA-PR_0052" n="52">52</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_486"><rs><hi rend="sc">Saint-Quentin de Beauvais</hi></rs>, <ref><hi rend="sc">ii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_487"><rs><hi rend="sc">Saint-Rieule de Senlis</hi></rs>, <ref><hi rend="sc">lvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_488"><rs><hi rend="sc">Saint-Sanctin (porte)</hi></rs>, <ref target="#SCHA-PR_0021" n="16">21</ref>.</item>
+          <item xml:id="SCHA-PR_rs_488"><rs><hi rend="sc">Saint-Sanctin (porte)</hi></rs>, <ref target="#SCHA-PR_0021" n="21">21</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_489"><rs><hi rend="sc">Saint-Simon (Guillaume de)</hi></rs>, <ref><hi rend="sc">xl</hi></ref>, <ref><hi rend="sc">xlii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_490"><rs><hi rend="sc">Saint-Vincent de Senlis</hi></rs>, <ref><hi rend="sc">ii</hi></ref>, <ref><hi rend="sc">xliv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_491"><rs><hi rend="sc">Sainte-Marie-sur-Loire</hi></rs>, <ref><hi rend="sc">i</hi></ref>, <ref>5</ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_492"><rs><hi rend="sc">Salviati</hi>, Antoine-Marie</rs>, <ref><hi rend="sc">lviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_493"><rs><hi rend="sc">Sanctissima</hi></rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_494"><rs><hi rend="sc">Sarrasin</hi>, Pierre</rs>, <ref target="#SCHA-PR_0039" n="26">39</ref>.</item>
-          <item xml:id="SCHA-PR_rs_495"><rs><hi rend="sc">Saumur (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0021" n="16">21</ref>.</item>
-          <item xml:id="SCHA-PR_rs_496"><rs><hi rend="sc">Sébert</hi>, Alexandre</rs>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
-          <item xml:id="SCHA-PR_rs_497"><rs><hi rend="sc">Scrannus</hi>, clerc</rs>, <ref target="#SCHA-PR_0024" n="25">24</ref>.</item>
-          <item xml:id="SCHA-PR_rs_498"><rs><hi rend="sc">Ségaud</hi>, prévôt</rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_494"><rs><hi rend="sc">Sarrasin</hi>, Pierre</rs>, <ref target="#SCHA-PR_0039" n="39">39</ref>.</item>
+          <item xml:id="SCHA-PR_rs_495"><rs><hi rend="sc">Saumur (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0021" n="21">21</ref>.</item>
+          <item xml:id="SCHA-PR_rs_496"><rs><hi rend="sc">Sébert</hi>, Alexandre</rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_497"><rs><hi rend="sc">Scrannus</hi>, clerc</rs>, <ref target="#SCHA-PR_0024" n="24">24</ref>.</item>
+          <item xml:id="SCHA-PR_rs_498"><rs><hi rend="sc">Ségaud</hi>, prévôt</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_499"><rs><hi rend="sc">Séguin</hi>, François</rs>, <ref><hi rend="sc">lxxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_500"><rs><hi rend="sc">Selenensis curia</hi></rs>, <ref target="#SCHA-PR_0013" n="12">13</ref>.</item>
+          <item xml:id="SCHA-PR_rs_500"><rs><hi rend="sc">Selenensis curia</hi></rs>, <ref target="#SCHA-PR_0013" n="13">13</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_501"><rs><hi rend="sc">Sempigny (Thibault de)</hi></rs>, <ref><hi rend="sc">xxviii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_502"><rs><hi rend="sc">Sénéchal (Jean le)</hi></rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_502"><rs><hi rend="sc">Sénéchal (Jean le)</hi></rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_503"><rs><hi rend="sc">Senlis</hi></rs>, <ref><hi rend="sc">iii</hi></ref>, <ref>1</ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_504"><rs><hi rend="sc">Senlis (maison à)</hi></rs>, <ref target="#SCHA-PR_0021" n="16">21</ref>.</item>
+          <item xml:id="SCHA-PR_rs_504"><rs><hi rend="sc">Senlis (maison à)</hi></rs>, <ref target="#SCHA-PR_0021" n="21">21</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_505"><rs><hi rend="sc">Sévin</hi>, Hugues, chantre en dignité</rs>, <ref><hi rend="sc">xlvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_506"><rs><hi rend="sc">Serment d'Antoine Parent</hi></rs>, <ref target="#SCHA-PR_0064" n="58">64</ref>.</item>
+          <item xml:id="SCHA-PR_rs_506"><rs><hi rend="sc">Serment d'Antoine Parent</hi></rs>, <ref target="#SCHA-PR_0064" n="64">64</ref>.</item>
           <item xml:id="SCHA-PR_rs_507"><rs><hi rend="sc">Sincueric</hi>, Sineverie, Sennevières</rs><!--, <ref><hi rend="sc">iii</hi></ref>-->, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_508"><rs><hi rend="sc">Sponville</hi>, Ignace-Jannez</rs>, <ref><hi rend="sc">lxxxviii</hi></ref>.</item>-->
         </list>
@@ -5905,26 +5905,26 @@
           <head>T</head>
           <!--<item xml:id="SCHA-PR_rs_509"><rs><hi rend="sc">Table de marbre</hi></rs>, <ref><hi rend="sc">xxxiv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_510"><rs><hi rend="sc">Tancarville (comte de)</hi></rs>, <ref><hi rend="sc">xxv</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_511"><rs><hi rend="sc">Templiers à Lagny-le-Sec</hi></rs>, <ref target="#SCHA-PR_0015" n="12">15</ref><!--, <ref>15</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_512"><rs><hi rend="sc">Terric</hi>, chancelier</rs>, <ref target="#SCHA-PR_0006" n="8">6</ref>.</item>
-          <item xml:id="SCHA-PR_rs_513"><rs><hi rend="sc">Tescelin</hi>, moine</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_511"><rs><hi rend="sc">Templiers à Lagny-le-Sec</hi></rs>, <ref target="#SCHA-PR_0015" n="15">15</ref><!--, <ref>15</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_512"><rs><hi rend="sc">Terric</hi>, chancelier</rs>, <ref target="#SCHA-PR_0006" n="6">6</ref>.</item>
+          <item xml:id="SCHA-PR_rs_513"><rs><hi rend="sc">Tescelin</hi>, moine</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_514"><rs><hi rend="sc">Testelin</hi>, procureur de Fleurines</rs>, <ref><hi rend="sc">lxxxix</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_515"><rs><hi rend="sc">Thévenin</hi>, Claude</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_516"><rs><hi rend="sc">Thibault</hi>, Louis (chanoine)</rs>, <ref><hi rend="sc">lxxiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_517"><rs><hi rend="sc">Thibault (comte de Blois)</hi></rs>, <ref target="#SCHA-PR_0006" n="vii">6</ref>. <!-- doublon meme acte SCHA-PR_0006: <ref target="#SCHA-PR_0006" n="7">6</ref> --></item>
-          <item xml:id="SCHA-PR_rs_518"><rs><hi rend="sc">Thibault (de Verneuil)</hi></rs>, <ref target="#SCHA-PR_0013" n="11">13</ref><!--, <ref>12</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_517"><rs><hi rend="sc">Thibault (comte de Blois)</hi></rs>, <ref target="#SCHA-PR_0006" n="6">6</ref>. <!-- doublon meme acte SCHA-PR_0006: <ref target="#SCHA-PR_0006" n="7">6</ref> --></item>
+          <item xml:id="SCHA-PR_rs_518"><rs><hi rend="sc">Thibault (de Verneuil)</hi></rs>, <ref target="#SCHA-PR_0013" n="13">13</ref><!--, <ref>12</ref>-->.</item>
           <item xml:id="SCHA-PR_rs_519"><rs><hi rend="sc">Thiers</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_520"><rs><hi rend="sc">Thoré (M. de)</hi></rs>, <ref><hi rend="sc">lxv</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_521"><rs><hi rend="sc">Tiraqueau</hi>, André</rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_522"><rs><hi rend="sc">Travers (droit de)</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0004" n="6">4</ref>.</item>
-          <item xml:id="SCHA-PR_rs_523"><rs><hi rend="sc">Troan (mesure de)</hi></rs>, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
-          <item xml:id="SCHA-PR_rs_524"><rs><hi rend="sc">Troussebois</hi>, Etienne, prieur</rs><!--, <ref><hi rend="sc">xxii</hi></ref>--><!--, <ref><hi rend="sc">xxiii</hi></ref>--><!--, <ref><hi rend="sc">xxiv</hi></ref>-->, <ref target="#SCHA-PR_0059" n="49">59</ref>.</item>
+          <item xml:id="SCHA-PR_rs_522"><rs><hi rend="sc">Travers (droit de)</hi></rs><!--, <ref><hi rend="sc">vii</hi></ref>-->, <ref target="#SCHA-PR_0004" n="4">4</ref>.</item>
+          <item xml:id="SCHA-PR_rs_523"><rs><hi rend="sc">Troan (mesure de)</hi></rs>, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_524"><rs><hi rend="sc">Troussebois</hi>, Etienne, prieur</rs><!--, <ref><hi rend="sc">xxii</hi></ref>--><!--, <ref><hi rend="sc">xxiii</hi></ref>--><!--, <ref><hi rend="sc">xxiv</hi></ref>-->, <ref target="#SCHA-PR_0059" n="59">59</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_525"><rs><hi rend="sc">Tuilerie de Fleurines</hi></rs>, <ref><hi rend="sc">xxiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_526"><rs><hi rend="sc">Tumeny</hi></rs>, <ref target="#SCHA-PR_0058" n="48">58</ref>.</item>
+          <item xml:id="SCHA-PR_rs_526"><rs><hi rend="sc">Tumeny</hi></rs>, <ref target="#SCHA-PR_0058" n="58">58</ref>.</item>
         </list>
         <!--<list type="index">
           <head>U</head>
-          <!-\-<item xml:id="SCHA-PR_rs_527"><rs><hi rend="sc">Usages de Fleurines</hi></rs>, <ref><hi rend="sc">lxxiv</hi></ref>.</item>-\->
+          <item xml:id="SCHA-PR_rs_527"><rs><hi rend="sc">Usages de Fleurines</hi></rs>, <ref><hi rend="sc">lxxiv</hi></ref>.</item>
         </list>-->
         <list type="index">
           <head>V</head>
@@ -5934,29 +5934,29 @@
           <!--<item xml:id="SCHA-PR_rs_531"><rs><hi rend="sc">Vente Godard (La)</hi></rs>, <ref><hi rend="sc">lxxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_532"><rs><hi rend="sc">Verberie</hi></rs>, <ref><hi rend="sc">xviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_533"><rs><hi rend="sc">Verneuil (Thibault de)</hi></rs>, <ref><hi rend="sc">xiii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_534"><rs><hi rend="sc">Verneuil</hi></rs>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_534"><rs><hi rend="sc">Verneuil</hi></rs>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_535"><rs><hi rend="sc">Vérines (le sieur de)</hi></rs>, <ref><hi rend="sc">lxvi</hi></ref>, <ref><hi rend="sc">lxvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_536"><rs><hi rend="sc">Vest (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0063" n="56">63</ref>.</item>
+          <item xml:id="SCHA-PR_rs_536"><rs><hi rend="sc">Vest (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0063" n="63">63</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_537"><rs><hi rend="sc">Viefville de Vignacourt (Adrien de la)</hi></rs>, <ref><hi rend="sc">lxxx</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_538"><rs><hi rend="sc">Vieuxcamp (Gui de)</hi>, prieur</rs><!--, <ref><hi rend="sc">xxvi</hi></ref>--><!--, <ref><hi rend="sc">xxviii</hi></ref>-->, <ref target="#SCHA-PR_0060" n="50">60</ref>.</item>
-          <item xml:id="SCHA-PR_rs_539"><rs><hi rend="sc">Villa Scabiosa (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0029" n="20">29</ref>.</item>
-          <item xml:id="SCHA-PR_rs_540"><rs><hi rend="sc">Villemétrie (rente à)</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="ix">10</ref><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>--><!--, <ref><hi rend="sc">lix</hi></ref>--><!--, <ref><hi rend="sc">lxxvii</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0010: <ref target="#SCHA-PR_0010" n="9">10</ref> --><!--, <ref>10</ref>--> <ref target="#SCHA-PR_0026" n="17">26</ref><!--, <ref>18</ref>-->, <ref target="#SCHA-PR_0039" n="25">39</ref><!--, <ref>26</ref>-->, <ref target="#SCHA-PR_0043" n="28">43</ref>, <ref target="#SCHA-PR_0068" n="60">68</ref>.</item>
+          <item xml:id="SCHA-PR_rs_538"><rs><hi rend="sc">Vieuxcamp (Gui de)</hi>, prieur</rs><!--, <ref><hi rend="sc">xxvi</hi></ref>--><!--, <ref><hi rend="sc">xxviii</hi></ref>-->, <ref target="#SCHA-PR_0060" n="60">60</ref>.</item>
+          <item xml:id="SCHA-PR_rs_539"><rs><hi rend="sc">Villa Scabiosa (Pierre de)</hi></rs>, <ref target="#SCHA-PR_0029" n="29">29</ref>.</item>
+          <item xml:id="SCHA-PR_rs_540"><rs><hi rend="sc">Villemétrie (rente à)</hi></rs><!--, <ref><hi rend="sc">viii</hi></ref>-->, <ref target="#SCHA-PR_0010" n="10">10</ref><!--, <ref><hi rend="sc">x</hi></ref>--><!--, <ref><hi rend="sc">liii</hi></ref>--><!--, <ref><hi rend="sc">lix</hi></ref>--><!--, <ref><hi rend="sc">lxxvii</hi></ref>--><!--, <ref><hi rend="sc">lxxxvii</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0010: <ref target="#SCHA-PR_0010" n="9">10</ref> --><!--, <ref>10</ref>--> <ref target="#SCHA-PR_0026" n="26">26</ref><!--, <ref>18</ref>-->, <ref target="#SCHA-PR_0039" n="39">39</ref><!--, <ref>26</ref>-->, <ref target="#SCHA-PR_0043" n="43">43</ref>, <ref target="#SCHA-PR_0068" n="68">68</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_541"><rs><hi rend="sc">Villemétrie (Guiard de)</hi></rs>, <ref><hi rend="sc">xii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_542"><rs><hi rend="sc">Villers (Simon de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0048" n="33">48</ref>.</item>
-          <item xml:id="SCHA-PR_rs_543"><rs><hi rend="sc">Villers (Gautier de)</hi></rs>, <ref target="#SCHA-PR_0047" n="17">47</ref>.</item>
+          <item xml:id="SCHA-PR_rs_542"><rs><hi rend="sc">Villers (Simon de)</hi></rs><!--, <ref><hi rend="sc">xiii</hi></ref>--><!--, <ref><hi rend="sc">xiv</hi></ref>-->, <ref target="#SCHA-PR_0048" n="48">48</ref>.</item>
+          <item xml:id="SCHA-PR_rs_543"><rs><hi rend="sc">Villers (Gautier de)</hi></rs>, <ref target="#SCHA-PR_0047" n="47">47</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_544"><rs><hi rend="sc">Villers Safnt-Frambauld</hi></rs>, <ref><hi rend="sc">xxxiii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_545"><rs><hi rend="sc">Villiers</hi></rs>, <ref><hi rend="sc">xlvii</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_546"><rs><hi rend="sc">Villers-sous-Gaudelus</hi></rs>, <ref target="#SCHA-PR_0015" n="13">15</ref>.</item>
+          <item xml:id="SCHA-PR_rs_546"><rs><hi rend="sc">Villers-sous-Gaudelus</hi></rs>, <ref target="#SCHA-PR_0015" n="15">15</ref>.</item>
           <!--<item xml:id="SCHA-PR_rs_547"><rs><hi rend="sc">Vinnet (Louis de)</hi></rs>, <ref><hi rend="sc">lxviii</hi></ref>.</item>-->
           <!--<item xml:id="SCHA-PR_rs_548"><rs><hi rend="sc">Visite (droit de)</hi></rs>, <ref>6</ref>.</item>-->
         </list>
         <list type="index">
           <head>W</head>
-          <item xml:id="SCHA-PR_rs_549"><rs><hi rend="sc">Waleran</hi>, fondateur du prieuré</rs>, <ref target="#SCHA-PR_0002" n="iii">2</ref>, <ref target="#SCHA-PR_0001" n="iv">1</ref><!--, <ref><hi rend="sc">vi</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="3">2</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --><!--, <ref>5</ref>-->.</item>
-          <item xml:id="SCHA-PR_rs_550"><rs><hi rend="sc">Walcot</hi>, abbé</rs>, <ref target="#SCHA-PR_0003" n="6">3</ref>.</item>
+          <item xml:id="SCHA-PR_rs_549"><rs><hi rend="sc">Waleran</hi>, fondateur du prieuré</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>, <ref target="#SCHA-PR_0001" n="1">1</ref><!--, <ref><hi rend="sc">vi</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="3">2</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --><!--, <ref>5</ref>-->.</item>
+          <item xml:id="SCHA-PR_rs_550"><rs><hi rend="sc">Walcot</hi>, abbé</rs>, <ref target="#SCHA-PR_0003" n="3">3</ref>.</item>
           <item xml:id="SCHA-PR_rs_551"><rs><hi rend="sc">Wautier</hi>, archidiacre</rs>, <ref target="#SCHA-PR_0001" n="1">1</ref>. <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="3">1</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_552"><rs><hi rend="sc">Waru (Jean de)</hi></rs>, <ref><hi rend="sc">xxvi</hi></ref>.</item>-->
-          <item xml:id="SCHA-PR_rs_553"><rs><hi rend="sc">Warin</hi>, Guérin</rs>, <ref target="#SCHA-PR_0002" n="v">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
+          <item xml:id="SCHA-PR_rs_553"><rs><hi rend="sc">Warin</hi>, Guérin</rs>, <ref target="#SCHA-PR_0002" n="2">2</ref>. <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="5">2</ref> --></item>
           <!--<item xml:id="SCHA-PR_rs_554"><rs><hi rend="sc">Watrin</hi>, Jean</rs>, <ref><hi rend="sc">lxxix</hi></ref>.</item>-->
         </list>
       </div>
