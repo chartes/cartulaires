@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMCP-PR">
   <teiHeader>
     <fileDesc>
@@ -111,20 +111,20 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
+            <citeStructure unit="sous-partie" match="div" use="dots">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group[@type='tome']" use="default">
+        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group[@type='tome']" use="dots">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="section" match="group" use="default">
+          <citeStructure unit="section" match="group" use="dots">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-section" match="group" use="default">
+            <citeStructure unit="sous-section" match="group" use="dots">
               <citeData property="dct:title" use="head[1]"/>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                 <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -43460,7 +43460,7 @@
                     parte decime ; ecclesiam de <placeName>Nusiaco<note n="72" xml:id="a2072k">Livry,
                   Gournay-sur-Marne, Noisy-le-Grand, ca. Le Raincy, ar. Pontoise (Cf.
                     <abbr>t.</abbr>
-                  <num>I</num>, <abbr>pp.</abbr> 16, 168, 190).</note></placeName> cum decimis majoribus ;*<note n="b" xml:id="aid199398">En marge, d'une écriture du
+                  <num>I</num>, <abbr>pp.</abbr> 16, 168, 190).</note></placeName> cum decimis majoribus ;<note n="b" xml:id="aid199398">En marge, d'une écriture du
                       <num>xiv<hi rend="sup">e</hi></num> siècle, répondant à ces deux étoiles :
                   « Priori de Marrolliis ».</note> decimam de
                         <placeName>Gragi<note n="367" xml:id="a2367a">Gragy, auj. Grégy, ca.
@@ -74180,7 +74180,7 @@ chevalier, et l'hôpital
                 </listWit>
                 <listWit type="indiqué">
                   <witness> L. Delisle, Introduction au <abbr>t.</abbr> XXIV du <title>Recueil des
-                      Historiens de France</title>, <abbr>p.</abbr> *35, d'après <ref target="#smchamps_0704_C">C</ref>, sans indication de date.</witness>
+                      Historiens de France</title>, <abbr>p.</abbr> 35, d'après <ref target="#smchamps_0704_C">C</ref>, sans indication de date.</witness>
                 </listWit>
               </div>
             </front>
@@ -74195,7 +74195,7 @@ chevalier, et l'hôpital
                 <p>
                   <s>Excellencie vestre notum fieri volumus quod <rs type="person"><persName>Stephanus de Auviler</persName>, baillivus Domini Regis<note n="338" xml:id="a3338a">Ce bailli royal de Sens figure,
                   d'après les savantes recherches de Léopold Delisle (<title>Recueil des Historiens
-                    de France</title>, <num>XXIV</num>, *35-36), dans des actes de 1205 à 1227. Il
+                    de France</title>, <num>XXIV</num>, 35-36), dans des actes de 1205 à 1227. Il
                   est appelé en latin <hi rend="i">Stephanus de Alto-Villari</hi>. <abbr>L.</abbr>
                   Delisle traduit « Etienne de Hautvilliers ». Il semble probable, d'après la forme
                   adoptée par le document que nous annotons, et qui concerne le prieuré de
@@ -74377,7 +74377,7 @@ chevalier, et l'hôpital
                     dedit conventui dimidium modium bladi ad anniversarium suum faciendum singulis
                     annis, ad mensuram de <placeName>Mosterolio<note n="338" xml:id="a3338b">Ce bailli royal de Sens figure,
                   d'après les savantes recherches de Léopold Delisle (<title>Recueil des Historiens
-                    de France</title>, <num>XXIV</num>, *35-36), dans des actes de 1205 à 1227. Il
+                    de France</title>, <num>XXIV</num>, 35-36), dans des actes de 1205 à 1227. Il
                   est appelé en latin <hi rend="i">Stephanus de Alto-Villari</hi>. <abbr>L.</abbr>
                   Delisle traduit « Etienne de Hautvilliers ». Il semble probable, d'après la forme
                   adoptée par le document que nous annotons, et qui concerne le prieuré de
