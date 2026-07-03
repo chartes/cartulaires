@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPAR">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="HDPAR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37074,7 +37076,8 @@
             <dateline>Août 1893.</dateline>
           </closer>
         </div>
-        <list type="index" xml:id="HDPAR_liste_A">
+        <div>
+          <list type="index" xml:id="HDPAR_liste_A">
           <head>A</head>
           <!-- Colonne 1 -->
           <pb n="565" facs="https://iiif.archive.org/iiif/archivesdelhte00htuoft$649/canvas" /><item xml:id="HDPAR_rs_0001"><rs><hi rend="sc">A.</hi>, frater Hugonis Clementis, decani Parisiensis</rs><!--, <ref n="911">911</ref>-->.</item>
@@ -44554,6 +44557,7 @@
           <item xml:id="HDPAR_rs_7164"><rs><hi rend="sc">Yvriacum</hi></rs>. Vide <ref type="see" target="#HDPAR_rs_1911" corresp="#HDPAR_liste_E"><hi rend="sc">Evri</hi></ref>, <ref type="see" target="#HDPAR_rs_3034" corresp="#HDPAR_liste_H"><hi rend="sc">Hivreio</hi></ref>.</item>
           <!-- FIN DE L'INDEX (dernière entrée du texte imprimé, p. 633). -->
         </list>
+        </div>
       </div>
     </back>
   </text>
