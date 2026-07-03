@@ -1,4 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
   <teiHeader>
     <fileDesc>
@@ -652,7 +654,7 @@
             
             <front>
               <docDate>
-                <date when="1118-09-17"><pb n=""/>1118, 17 sept</date>
+                <date when="1118-09-17"><pb n="1_0002"/>1118, 17 sept</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
