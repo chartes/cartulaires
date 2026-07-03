@@ -178,6 +178,38 @@
     </rng:element>
   </rng:define>
   
+<!-- PP. Réécriture des attributs de <witness> pour autoriser l'attribut facultatif @source (lien à une image)
+  Autorise aussi @corresp mais élément à confirmer
+  -->
+  <rng:define name="witness.atts" combine="choice">
+    <rng:optional>
+      <rng:attribute name="xml:id">
+        <data type="ID"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="n"/>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="facs"/>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="ana">
+        <rng:value>edited</rng:value>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="source">
+        <rng:data type="anyURI"/>
+      </rng:attribute>
+    </rng:optional>
+    <rng:optional>
+      <rng:attribute name="corresp">
+        <rng:data type="anyURI"/>
+      </rng:attribute>
+    </rng:optional>
+  </rng:define>
+  
   <a:documentation>
     <h2 id="idf.tradition">Tableau de la tradition</h2>
     <p>Pour 2010, il est prévu de revoir les références aux témoins manuscrits des 5000 actes franciliens, afin de fournir des cotes modernes.
@@ -351,5 +383,76 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
       </rng:element>
     </rng:optional>
   </rng:define>
-  <rng:include href="acte.rng"/>
+  
+  <rng:define name="pb" combine="choice">
+    <rng:element name="pb">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Pagination ou foliotation, pour édition électronique d'imprimé ou de manuscrit. Le numéro est obligatoire, sauf dans le cas de pages ou folios manquants, en ce cas une explication est nécessaire.</a:documentation>
+      <rng:choice>
+        <rng:attribute name="n">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Le numéro de page est obligatoire.</a:documentation>
+        </rng:attribute>
+        <rng:attribute name="ana">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Commentaire explicatif s'il n'y a pas de </a:documentation>
+        </rng:attribute>
+      </rng:choice>
+      <!-- PP. Ajout d'un attribut facultatif @facs pour lien à une image IIIF (API Nakala) -->
+      <rng:optional>
+        <rng:attribute name="facs">
+          <data type="anyURI"/>
+        </rng:attribute>
+      </rng:optional>
+      <!-- PP. Attribut facultatif @corresp autorisé. Mais choix à confirmer -->
+      <rng:optional>
+        <rng:attribute name="corresp">
+          <rng:data type="anyURI"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="ed">
+          <a:documentation xmlns="http://www.w3.org/1999/xhtml">Référence au témoin dont est issu le numéro de page ou de folio inséré dans l'attribut n.</a:documentation>
+        </rng:attribute>
+      </rng:optional>
+      <rng:empty/>
+    </rng:element>
+  </rng:define>
+  
+  <rng:define name="ref" combine="choice">
+    <rng:element name="ref">
+      <a:documentation xmlns="http://www.w3.org/1999/xhtml">Lien simple. &lt;htm:a href="ref">texte&lt;/a></a:documentation>
+      <rng:ref name="rend.mot"/>
+      <rng:optional><!-- MP: nouveaux besoins pour les index -->
+        <rng:attribute name="target">
+          <rng:text/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+        <rng:attribute name="n">
+          <rng:text/>
+        </rng:attribute>
+      </rng:optional>
+      <!-- PP. Ajout d'un attribut facultatif @type pour les renvois à l'intérieur de l'index. Value = "see" à revoir ? -->
+      <rng:optional>
+        <rng:attribute name="type">
+          <rng:value>see</rng:value>
+        </rng:attribute>
+      </rng:optional>
+      <!-- PP. Attribut facultatif @corresp autorisé. Mais choix à confirmer -->
+      <rng:optional>
+        <rng:attribute name="corresp">
+          <rng:data type="anyURI"/>
+        </rng:attribute>
+      </rng:optional>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="i"/>
+          <rng:ref name="b"/>
+          <rng:ref name="typo"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  
+<!--  <rng:include href="http://localhost:8080/dots/schema/acte.rng"/>-->
+  <rng:include href="https://dev.chartes.psl.eu/dots/schema/acte.rng"/>
 </rng:grammar>
