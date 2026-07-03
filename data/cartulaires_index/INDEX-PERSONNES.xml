@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INDEX-PERSONNES">
   <teiHeader>
@@ -16,22 +16,19 @@
     </fileDesc>
     <encodingDesc>
       <refsDecl>
-        <citeStructure unit="index" match="/TEI[1]" use="@xml:id">
-          <citeData property="dct:title" use="teiHeader/fileDesc/titleStmt/title"/>
-          <citeStructure unit="index-section" match="text/body/div[@type='index']/div[@type='index-section']" use="@xml:id">
-            <citeData property="dct:title" use="head"/>
-          </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text/body/div/list" use="dots">
+          <citeData property="dct:title" use="head"/>
+          <citeData use="head" property="schema:name"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="index">
+      <div>
         <head>Index des personnes</head>
-        <div type="index-section" n="A" xml:id="index_personne_liste_A">
-          <head>A</head>
           <list type="index">
+            <head>A</head>
 <item xml:id="HDPAR_rs_0001"><rs><hi rend="sc">A.</hi>, frater Hugonis Clementis, decani Parisiensis</rs><!--, <ref n="911">911</ref>-->.</item>
 <item xml:id="HDPAR_rs_0002"><rs><hi rend="sc">A. de Noereio</hi></rs><!--, <ref n="84">84</ref>-->.</item>
 <item xml:id="SCOR-EG_rs_0001"><rs><hi rend="sc">A. decanus Meldensis</hi></rs>, <abbr>pp.</abbr> <ref target="#SCOR-EG_0177" n="265">SCOR-EG 177</ref><!--, <ref>269</ref>-->.</item>
@@ -2714,10 +2711,8 @@
           <item xml:id="STEP-AB_rs_0431"><rs><hi rend="sc">Jean</hi>, abb? de Marmoutier</rs>, <ref target="#STEP-AB_0075" n="83">STEP-AB 75.</ref></item>
           <item xml:id="STEP-AB_rs_0589"><rs><hi rend="sc">Philippe</hi>, archev?que de Bourges</rs>, <ref target="#STEP-AB_0042" n="47.">STEP-AB 42.</ref></item>
         </list>
-        </div>
-        <div type="index-section" n="B" xml:id="index_personne_liste_B">
-          <head>B</head>
           <list type="index">
+            <head>B</head>
 <item xml:id="HDPAR_rs_0551"><rs><hi rend="sc">B.</hi>, persona de Cort Demenche</rs><!--, <ref n="221">221</ref>-->.</item>
 <item xml:id="HDPAR_rs_0552"><rs><hi rend="sc">B.</hi>, prior Beate Marie de Cagia</rs><!--, <ref n="105">105</ref>-->.</item>
 <item xml:id="HDPAR_rs_0553"><rs><hi rend="sc">B.</hi>, prior de Messa</rs><!--, <ref n="50">50</ref>-->.</item>
@@ -6007,10 +6002,8 @@
 <item xml:id="STEP-AB_rs_0148"><rs><hi rend="sc">La Butte</hi>, à Rambouillet</rs>, <ref target="#STEP-AB_0130" n="125.">STEP-AB 130.</ref></item>
 <item xml:id="STEP-AB_rs_0140"><rs><hi rend="sc">Les Brosses de Villeneuve</hi></rs>, <ref target="#STEP-AB_0027" n="29.">STEP-AB 27.</ref></item>
 </list>
-        </div>
-        <div type="index-section" n="C" xml:id="index_personne_liste_C">
-          <head>C</head>
           <list type="index">
+            <head>C</head>
 <item xml:id="NDPA-EG-04_rs_1782"><rs><hi rend="sc">Cœcorum (clausum) Parisiensium</hi></rs>. <ref n="96" target="#NDPA-EG-03_0096">NDPA-EG-03 96</ref>, <ref n="310" target="#NDPA-EG-03_0310">NDPA-EG-03 310</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_1783"><rs><hi rend="sc">Cœcorum (domus) Parisiensium</hi></rs>. <ref n="328" target="#NDPA-EG-01_0328">NDPA-EG-01 328</ref> ; <ref n="3" target="#NDPA-EG-03_0003">NDPA-EG-03 3</ref>, <ref n="44" target="#NDPA-EG-03_0044">NDPA-EG-03 44</ref>, <ref n="49" target="#NDPA-EG-03_0049">NDPA-EG-03 49</ref>, <!-- doublon meme acte NDPA-EG-03_0049: <ref n="III-41" target="#NDPA-EG-03_0049">49</ref> --> <!-- doublon meme acte NDPA-EG-03_0049: <ref n="III-42" target="#NDPA-EG-03_0049">49</ref> --> <!-- doublon meme acte NDPA-EG-03_0049: <ref n="III-43" target="#NDPA-EG-03_0049">49</ref> --> <!-- doublon meme acte NDPA-EG-03_0049: <ref n="III-44" target="#NDPA-EG-03_0049">49</ref> --> <ref n="85" target="#NDPA-EG-03_0085">NDPA-EG-03 85</ref>, <ref n="142" target="#NDPA-EG-03_0142">NDPA-EG-03 142</ref>, <ref n="273" target="#NDPA-EG-03_0273">NDPA-EG-03 273</ref><!--, <ref n="III-218">III. 218</ref>--> <ref n="420" target="#NDPA-EG-03_420">NDPA-EG-03 420</ref>, <ref n="422" target="#NDPA-EG-03_422">NDPA-EG-03 422</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_1784"><rs><hi rend="sc">Cœli seu Cœli Magni</hi></rs>. <note>Vide <ref type="see">Celi</ref></note>.</item>
@@ -9364,10 +9357,8 @@
           <item xml:id="STEP-AB_rs_0515"><rs><hi rend="sc">Mathieu</hi>, chambrier</rs>, <ref target="#STEP-AB_0003" n="11, ">STEP-AB 3</ref> clerc<!--, <ref>153</ref>.--></item>
           <item xml:id="STEP-AB_rs_0516"><rs><hi rend="sc">Mathieu</hi>, conn?table</rs>, <ref target="#STEP-AB_0003" n="11.">STEP-AB 3.</ref></item>
         </list>
-        </div>
-        <div type="index-section" n="D" xml:id="index_personne_liste_D">
-          <head>D</head>
           <list type="index">
+            <head>D</head>
 <item xml:id="NDMA-AB_rs_034"><rs><hi rend="sc">D'Aubert Chaous (Agnès)</hi></rs>.</item>
 <item xml:id="SCOR-EG_rs_0865"><rs><hi rend="sc">Dacbertus archidiaconus [Bituricensis]</hi></rs>, <abbr>p.</abbr> <ref target="#SCOR-EG_0062" n="122">SCOR-EG 62</ref>.</item>
 <item xml:id="HDPAR_rs_1638"><rs><hi rend="sc">Daci (Gilo)</hi></rs><!--, <ref n="396">396</ref>-->.</item>
@@ -10198,10 +10189,8 @@
 <item xml:id="NDVC-AB_rs_1460"><rs><hi rend="sc">Elisabeth</hi>, uxor Philippi (<hi rend="sc">ii</hi>), regis Francorum, <hi rend="i">vid.</hi> <hi rend="sc">Hainaut</hi> (?lisabeth de)</rs>. </item>
 <item xml:id="STEP-AB_rs_0273"><rs><hi rend="sc">Eudes</hi>, doyen de Mantes</rs>, <ref target="#STEP-AB_0050" n="53, ">STEP-AB 50</ref> <!-- doublon meme acte STEP-AB_0050: <ref target="#STEP-AB_0050" n="56,">50</ref> --> <ref target="#STEP-AB_0053" n="57.">STEP-AB 53.</ref></item>
 </list>
-        </div>
-        <div type="index-section" n="E" xml:id="index_personne_liste_E">
-          <head>E</head>
           <list type="index">
+            <head>E</head>
 <item xml:id="HDPAR_rs_1744"><rs><hi rend="sc">E.</hi>, archidiaconus Parisiensis</rs><!--, <ref n="116">116</ref>--><!--, <ref n="128">128</ref>--><!--, <ref n="131">131</ref>--><!--, <ref n="159">159</ref>--><!--, <ref n="209">209</ref>--><!--, <ref n="393">393</ref>-->.</item>
 <item xml:id="HDPAR_rs_1745"><rs><hi rend="sc">E.</hi>, uxor Johannis de Sancto Dyonisio</rs><!--, <ref n="200">200</ref>-->.</item>
 <item xml:id="SMPA-EG_rs_0506"><rs><hi rend="sc">Eadem (Herveus de)</hi></rs>, <ref target="#SMPA-EG_0053" n="162">SMPA-EG 53</ref>.</item>
@@ -11283,10 +11272,8 @@
 <item xml:id="SMAG-01_rs_0735"><rs><hi rend="sc">Ézanville (Jean d’)</hi>, Johannes de Hesanvilla</rs>, <ref n="249" target="#SMAG-01_0249">SMAG-01 249</ref>.</item>
 <item xml:id="SCOR-EG_rs_0992"><rs><hi rend="i">Ezerville</hi> (<hi rend="i">Aerisvilla</hi>)</rs>, <abbr>p.</abbr> <ref target="#SCOR-EG_0075" n="147">SCOR-EG 75</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="F" xml:id="index_personne_liste_F">
-          <head>F</head>
           <list type="index">
+            <head>F</head>
 <item xml:id="STEP-AB_rs_0639"><rs><hi rend="sc">C. de Vermandois</hi>, fr?re de Fontevrault</rs>, <ref target="#STEP-AB_0041" n="43, ">STEP-AB 41</ref> moin<!--, <ref>138.</ref>.--></item>
 <item xml:id="HDPAR_rs_1916"><rs><hi rend="sc">F.</hi>, decanus de Grisiaco</rs><!--, <ref n="523">523</ref>--><!--, <ref n="540">540</ref>-->.</item>
 <item xml:id="HDPAR_rs_1917"><rs><hi rend="sc">Fabas (Aubertus ad)</hi></rs><!--, <ref n="624">624</ref>--><!--, <ref n="1023">1023</ref>-->.</item>
@@ -12294,10 +12281,8 @@
 <item xml:id="STEP-AB_rs_0276"><rs><hi rend="sc">Le Fait à Hermeray</hi></rs>, <ref target="#STEP-AB_0116" n="116.">STEP-AB 116.</ref></item>
 <item xml:id="STEP-AB_rs_0509"><rs><hi rend="sc">Marie</hi>, femme de Galeran de l'Etang</rs>, <ref target="#STEP-AB_0024" n="27.">STEP-AB 24.</ref></item>
 </list>
-        </div>
-        <div type="index-section" n="G" xml:id="index_personne_liste_G">
-          <head>G</head>
           <list type="index">
+            <head>G</head>
 <item xml:id="HDPAR_rs_2079"><rs><hi rend="sc">G.</hi>, archidiaconus Briensis</rs><!--, <ref n="166">166</ref>--><!--, <ref n="171">171</ref>-->.</item>
 <item xml:id="SMAG-01_rs_0802"><rs>G., archidiaconus Parisiensis</rs>, <ref n="110" target="#SMAG-01_0110">SMAG-01 110</ref>.</item>
 <item xml:id="HDPAR_rs_2080"><rs><hi rend="sc">G.</hi>, archidiaconus Parisiensis</rs><!--, <ref n="75">75</ref>--><!--, <ref n="173">173</ref>--><!--, <ref n="181">181</ref>--><!--, <ref n="183">183</ref>--><!--, <ref n="211">211</ref>--><!--, <ref n="237">237</ref>--><!--, <ref n="241">241</ref>--><!--, <ref n="290">290</ref>--><!--, <ref n="969">969</ref>--><!--, <ref n="970">970</ref>-->.</item>
@@ -15854,10 +15839,8 @@
           <item xml:id="STEP-AB_rs_0317"><rs><hi rend="sc">le Gendre</hi></rs>, <ref target="#STEP-AB_0121" n="118.">STEP-AB 121.</ref></item>
           <item xml:id="STEP-AB_rs_0635"><rs><hi rend="sc">Rambouillet</hi>, grange a</rs>, <ref target="#STEP-AB_0038" n="73">STEP-AB 38.</ref></item>
         </list>
-        </div>
-        <div type="index-section" n="H" xml:id="index_personne_liste_H">
-          <head>H</head>
           <list type="index">
+            <head>H</head>
 <item xml:id="STEP-AB_rs_0250"><rs><hi rend="sc">Epernon</hi>, Harduin d'</rs>, <ref target="#STEP-AB_0005" n="7, ">STEP-AB 5</ref> <!--<ref>132</ref>.--></item>
 <item xml:id="SCOR-EG_rs_1294"><rs><hi rend="sc">H</hi>., decanus Nivernensis</rs>, <abbr>p.</abbr> <ref target="#SCOR-EG_0156" n="240">SCOR-EG 156</ref>.</item>
 <item xml:id="SMPA-EG_rs_0830"><rs><hi rend="sc">H. d'Artois</hi></rs><!--, <ref>207</ref>-->.</item>
@@ -17790,10 +17773,8 @@
           <item xml:id="STEP-AB_rs_0379"><rs><hi rend="sc">La Hauteville</hi></rs>, <ref target="#STEP-AB_0102" n="114.">STEP-AB 102.</ref></item>
           <item xml:id="NDPR-AB_rs_0366"><rs><hi rend="sc">lmbert</hi>, bouteiller</rs>, <ref target="#NDPR-AB_253b" n="239">NDPR-AB 253</ref>.</item>
         </list>
-        </div>
-        <div type="index-section" n="I" xml:id="index_personne_liste_I">
-          <head>I</head>
           <list type="index">
+            <head>I</head>
 <item xml:id="SMPO-AB_rs_0042"><rs><hi rend="sc">I</hi>;i</rs><!--, <ref n="1">1</ref>-->.</item>
 <item xml:id="NDCH-EG_rs_4455"><rs><hi rend="sc">Ibreio</hi> (Gaufridus de), canonicus Carnotensis</rs>, <ref target="#NDCH-EG_0108" n="I. 217">NDCH-EG 108</ref>.</item>
 <item xml:id="NDCH-EG_rs_4456"><rs><hi rend="sc">Ibreio</hi>, (Hugo de)</rs>, <ref target="#NDCH-EG_0268" n="II. 119">NDCH-EG 268</ref>.</item>
@@ -18164,10 +18145,8 @@
 <item xml:id="HDPAR_rs_3197"><rs><hi rend="sc">Ysseio (Almaricus de)</hi>, miles</rs><!--, <ref n="232">232</ref>-->.</item>
 <item xml:id="HDPAR_rs_3198"><rs><hi rend="sc">Yssiaco (Joysbertus, major de)</hi></rs><!--, <ref n="349">349</ref>-->.</item>
 </list>
-        </div>
-        <div type="index-section" n="J" xml:id="index_personne_liste_J">
-          <head>J</head>
           <list type="index">
+            <head>J</head>
 <item xml:id="HDPAR_rs_3216"><rs><hi rend="sc">J.</hi>, archidiaconus in ecclesia Parisiensi</rs><!--, <ref n="457">457</ref>--><!--, <ref n="611">611</ref>-->.</item>
 <item xml:id="HDPAR_rs_3217"><rs><hi rend="sc">J.</hi>, decanus Beate Marie Vernonis</rs><!--, <ref n="240">240</ref>-->.</item>
 <item xml:id="HDPAR_rs_3218"><rs><hi rend="sc">J.</hi>, officialis archidiaconi Meldensis</rs><!--, <ref n="329">329</ref>-->.</item>
@@ -19710,10 +19689,8 @@
 <item xml:id="NDCH-EG_rs_4683"><rs><hi rend="sc">Juvisiaco</hi> (Rogerius de)</rs>, <ref target="#NDCH-EG_0024" n="I. 108">NDCH-EG 24</ref>.</item>
 <item xml:id="SMAG-01_rs_1307"><rs><hi rend="sc">Juvisy</hi>, <hi rend="i">Essonne, arrondissement de Palaiseau</hi>; — <hi rend="i">léproserie</hi>, Givisi</rs>, <ref n="46" target="#SMAG-01_0046">SMAG-01 46</ref>; <hi rend="i">prieur</hi>, <ref type="see" target="#SMAG-01_rs_2034" corresp="#SMAG-01_liste_R"><hi rend="i">voir</hi><hi rend="sc">Robert</hi></ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="K" xml:id="index_personne_liste_K">
-          <head>K</head>
           <list type="index">
+            <head>K</head>
 <item xml:id="SMPA-AB-03_rs_2014"><rs><hi rend="sc">Kaer (Guillaume de)</hi></rs>, <hi rend="i">docteur en décret, curé de Saint-Nicolas des Champs</hi>, <ref target="#SMPA-AB-03_346" n="346">SMPA-AB-03 346</ref>, <!-- doublon meme acte SMPA-AB-03_346: <ref target="#SMPA-AB-03_346" n="346-748">346</ref> --> <hi rend="i">note 2</hi>.</item>
 <item xml:id="SMAG-01_rs_1308"><rs>Kala</rs>, <ref type="see" target="#SMAG-01_rs_0525" corresp="#SMAG-01_liste_C"><hi rend="i">voir</hi><hi rend="sc">Chelles</hi></ref>.</item>
 <item xml:id="HDPAR_rs_3696"><rs><hi rend="sc">Kala</hi></rs><!--, <ref n="546">546</ref>-->. — <hi rend="sc">Abbatia</hi><!--, <ref n="37">37</ref>--><!--, <ref n="670">670</ref>--><!--, <ref n="676">676</ref>-->.</item>
@@ -19755,10 +19732,8 @@
 <item xml:id="SMPA-AB-02_rs_1637"><rs><hi rend="sc">Kiférien</hi>, (<hi rend="i">saint</hi>), Caferiam, Ciferien</rs><!--, <ref n="353"><hi rend="b">[353]</hi></ref>-->, <ref target="#SMPA-AB-02_353" n="353-554">SMPA-AB-02 353</ref>. <!-- doublon meme acte SMPA-AB-02_353: <ref n="353-558" target="#SMPA-AB-02_353">353</ref> --><!--, <ref n="353-558">558 <hi rend="i">note 1</hi></ref>--></item>
 <item xml:id="SMPA-AB-03_rs_2019"><rs><hi rend="sc">Knolles (Robert)</hi></rs>, <ref target="#SMPA-AB-03_356" n="356">SMPA-AB-03 356</ref>, <!-- doublon meme acte SMPA-AB-03_356: <ref target="#SMPA-AB-03_356" n="356-770">356</ref> --> <hi rend="i">note 1</hi>.</item>
 </list>
-        </div>
-        <div type="index-section" n="L" xml:id="index_personne_liste_L">
-          <head>L</head>
           <list type="index">
+            <head>L</head>
 <item xml:id="SMPA-EG_rs_1162"><rs><hi rend="sc">L'Alemant (Henri)</hi></rs><!--, <ref>175</ref>--><!--, <ref>185</ref>--><!--, <ref>205</ref>--><!--, <ref>228</ref>--><!--, <ref>236</ref>--><!--, <ref>243</ref>-->.</item>
 <item xml:id="SMPA-EG_rs_1163"><rs><hi rend="sc">L'Alemant (Renaud)</hi></rs><!--, <ref>174</ref>-->.</item>
 <item xml:id="SMPA-EG_rs_1164"><rs><hi rend="sc">L'Alemant (Thierry)</hi></rs><!--, <ref>174</ref>--><!--, <ref>198</ref>-->.</item>
@@ -21486,10 +21461,8 @@
 <item xml:id="NDPA-EG-04_rs_4158"><rs><hi rend="sc">Lyssoart (Johannes)</hi>, canonicus S. Thomæ de Lupara</rs>. <ref n="783" target="#NDPA-EG-02_0783">NDPA-EG-02 783</ref>.</item>
 <item xml:id="NDVC-AB_rs_2659"><rs>prior Belli Prati</rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>.</item>
 </list>
-        </div>
-        <div type="index-section" n="M" xml:id="index_personne_liste_M">
-          <head>M</head>
           <list type="index">
+            <head>M</head>
 <item xml:id="SAPC-AB_rs_1469"><rs><hi rend="i">d'Etampes</hi></rs>, <ref target="#SAPC-AB_0119" n="119">SAPC-AB 119</ref>.</item>
 <item xml:id="SAPC-AB_rs_1467"><rs><hi rend="i">de Châtillon</hi></rs>, <ref target="#SAPC-AB_0325" n="325">SAPC-AB 325</ref>, <ref target="#SAPC-AB_0326" n="326">SAPC-AB 326</ref>.</item>
 <item xml:id="SAPC-AB_rs_1465">
@@ -24812,10 +24785,8 @@
             <rs><hi rend="sc">Mylar</hi>, <hi rend="sc">Mélor</hi>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-02_rs_1998" corresp="#index_personne_liste_M"><hi rend="sc">Meloir.</hi></ref></rs>
           </item>
         </list>
-        </div>
-        <div type="index-section" n="N" xml:id="index_personne_liste_N">
-          <head>N</head>
           <list type="index">
+            <head>N</head>
 <item xml:id="NDVC-AB_rs_3287"><rs><hi rend="sc">Auverniaus</hi>, (Johannes d')</rs>, <abbr>p.</abbr>, <ref n="13" target="#NDVC-AB_0013">NDVC-AB 13</ref>.</item>
 <item xml:id="HDPAR_rs_4484"><rs><hi rend="sc">N.</hi>, cantor Parisiensis</rs><!--, <ref n="207">207</ref>--><!--, <ref n="208">208</ref>--><!--, <ref n="223">223</ref>--><!--, <ref n="277">277</ref>--><!--, C <ref n="480" type="censier">480</ref>-->.</item>
 <item xml:id="HDPAR_rs_4485"><rs><hi rend="sc">N.</hi>, decanus Parisiensis et cardinalis</rs><!--, C <ref n="495" type="censier">495</ref>-->.</item>
@@ -25562,10 +25533,8 @@
           <item xml:id="SMPA-AB-03_rs_2635"><rs><hi rend="sc">Nuz (Robin)</hi></rs><!--, <ref n="74"><hi rend="b">74</hi></ref>-->, <ref n="74" target="#SMPA-AB-03_74">SMPA-AB-03 74</ref><!--, <ref n="74-158">158</ref>-->.</item>
           <item xml:id="NDVC-AB_rs_3252"><rs>presbiter, <hi rend="i">vid.</hi> <hi rend="sc">Nealpha</hi> (Nivardus de)</rs>. </item>
         </list>
-        </div>
-        <div type="index-section" n="O" xml:id="index_personne_liste_O">
-          <head>O</head>
           <list type="index">
+            <head>O</head>
 <item xml:id="SCOR-EG_rs_2056"><rs><hi rend="sc">Œlardus</hi>, archipresbiter</rs>, <abbr>p.</abbr> <ref target="#SCOR-EG_0009" n="20">SCOR-EG 9</ref>.</item>
 <item xml:id="HDPAR_rs_4638"><rs><hi rend="sc">O.</hi>, diaconus cardinalis Sancti Adriani</rs><!--, <ref n="987">987</ref>-->.</item>
 <item xml:id="NDVC-AB_rs_3295"><rs><hi rend="sc">Obergenvilla</hi> (Simon de)</rs>, <abbr>p.</abbr>, <ref n="110" target="#NDVC-AB_0110">NDVC-AB 110</ref>.</item>
@@ -26136,10 +26105,8 @@
 <item xml:id="NDPA-EG-04_rs_5172"><rs><hi rend="sc">Ovidius (Tebaldus)</hi>, archidiaconus Parisiensis</rs>. <ref n="99" target="#NDPA-EG-02_0099">NDPA-EG-02 99</ref> ; <ref n="440" target="#NDPA-EG-03_440">NDPA-EG-03 440</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_5173"><rs><hi rend="sc">Oyselet (Richardus)</hi></rs>. <ref n="470" target="#NDPA-EG-03_470">NDPA-EG-03 470</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="P" xml:id="index_personne_liste_P">
-          <head>P</head>
           <list type="index">
+            <head>P</head>
 <item xml:id="SMPA-AB-03_rs_2708"><hi rend="i">Abbayes</hi>, <seg><hi rend="i">voir</hi> <ref type="see"><hi rend="sc">Saint-Antoine</hi></ref>, <ref type="see"><hi rend="sc">Saint-Germain-des-Prés</hi></ref>, <ref type="see" target="#SMPA-AB-03_rs_3356" corresp="#index_personne_liste_S"><hi rend="sc">Saint-Magloire</hi></ref>, <ref type="see" target="#SMPA-AB-03_rs_3433" corresp="#index_personne_liste_S"><hi rend="sc">Saint-Victor</hi></ref>, <ref type="see"><hi rend="sc">Sainte-Geneviève</hi></ref></seg>.</item>
 <item xml:id="SMPA-AB-03_rs_2710"><hi rend="i">Archevêque</hi>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-03_rs_0281" corresp="#index_personne_liste_B"><hi rend="sc">Christophe de Beaumont</hi></ref>.</item>
 <item xml:id="SMPA-AB-03_rs_2711"><hi rend="i">Archidiaconés</hi>, <ref target="#SMPA-AB-03_123" n="123">SMPA-AB-03 123</ref><!-- doublon meme acte SMPA-AB-03_123: <ref target="#SMPA-AB-03_123" n="123-263">123</ref> -->
@@ -29236,10 +29203,8 @@
                   <item><hi rend="i">notaire</hi>, <hi rend="i">voir</hi> <hi rend="sc">Jean <ref type="see" target="#SMPA-AB-03_rs_1119" corresp="#index_personne_liste_C">Coustel</ref></hi>.</item>
                 </list></item>
         </list>
-        </div>
-        <div type="index-section" n="Q" xml:id="index_personne_liste_Q">
-          <head>Q</head>
           <list type="index">
+            <head>Q</head>
 <item xml:id="NDPA-EG-04_rs_5803"><rs><hi rend="sc">Quabarel (Reginaldus)</hi></rs>. <ref n="163" target="#NDPA-EG-03_0163">NDPA-EG-03 163</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_5804"><rs><hi rend="sc">Quadrata (Avelina)</hi></rs>. <ref n="465" target="#NDPA-EG-03_465">NDPA-EG-03 465</ref>.</item>
 <item xml:id="SMAG-01_rs_1934"><rs>Quadrigaria (Johanna)</rs>, <ref n="215" target="#SMAG-01_0215">SMAG-01 215</ref>.</item>
@@ -29358,10 +29323,8 @@
           </item>
 <item xml:id="SMPA-AB-03_rs_3067"><rs><hi rend="sc">Quotart</hi></rs>, <seg><hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-03_rs_1088" corresp="#index_personne_liste_C"><hi rend="sc">Cotart</hi></ref></seg>.</item>
 </list>
-        </div>
-        <div type="index-section" n="R" xml:id="index_personne_liste_R">
-          <head>R</head>
           <list type="index">
+            <head>R</head>
 <item xml:id="NDVC-AB_rs_3958"><rs><hi rend="sc">Aubourc</hi>, (Guillaume)</rs>, <abbr>p.</abbr>, <ref n="549" target="#NDVC-AB_0549">NDVC-AB 549</ref>.</item>
 <item xml:id="STEP-AB_rs_0640"><rs><hi rend="i">Le râtelage des pres</hi>, <hi rend="i">Rastalagium, </hi></rs>, <ref target="#STEP-AB_0032b" n="33.">STEP-AB 32</ref></item>
 <item xml:id="HDPAR_rs_5675"><rs><hi rend="sc">R.</hi>, abbas Moriniacensis</rs><!--, <ref n="221">221</ref>-->.</item>
@@ -31616,10 +31579,8 @@
           <item xml:id="NDPA-EG-04_rs_6168"><rs><hi rend="sc">Ryomo (Stephanus de)</hi>, S. Germani Autissiodorensis canonicus</rs>. <ref n="216" target="#NDPA-EG-01_0216">NDPA-EG-01 216</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_6169"><rs><hi rend="sc">Ryvery</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_5977" corresp="#index_personne_liste_R">Riveri</ref></note>.</item>
         </list>
-        </div>
-        <div type="index-section" n="S" xml:id="index_personne_liste_S">
-          <head>S</head>
           <list type="index">
+            <head>S</head>
 <item xml:id="STEP-AB_rs_0078"><rs><hi rend="sc">Barth?lemy</hi>, sous-doyen de Chartres</rs>, <ref target="#STEP-AB_0011" n="18">STEP-AB 11.</ref></item>
 <item xml:id="HDPAR_rs_6260"><rs><hi rend="sc">Beate Marie de Campis (Monasterium)</hi>, juxta Parisius</rs><!--, <ref n="37">37</ref>--><!--, <ref n="273">273</ref>--><!--, <ref n="663">663</ref>--><!--, <ref n="729">729</ref>--><!--, <ref n="1003">1003</ref>-->.</item>
 <item xml:id="HDPAR_rs_6223"><rs><hi rend="sc">Beati Dyonisii in Francia (Abbatia)</hi></rs><!--, <ref n="576">576</ref>--><!--, <ref n="651">651</ref>--><!--, <ref n="692">692</ref>-->.</item>
@@ -34220,10 +34181,8 @@
           <item xml:id="NDPA-EG-04_rs_6730"><rs><hi rend="sc">Symore (Petrus de)</hi></rs>. <ref n="164" target="#NDPA-EG-03_0164">NDPA-EG-03 164</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_6722"><rs><hi rend="sc">Syrenis (Agnes de)</hi></rs>. <ref n="136" target="#NDPA-EG-03_0136">NDPA-EG-03 136</ref>, <ref n="145" target="#NDPA-EG-03_0145">NDPA-EG-03 145</ref>.</item>
         </list>
-        </div>
-        <div type="index-section" n="T" xml:id="index_personne_liste_T">
-          <head>T</head>
           <list type="index">
+            <head>T</head>
 <item xml:id="NDVC-AB_rs_4469"><rs><hi rend="sc">Alneto</hi>, (Robertus de)</rs>, <abbr>p.</abbr>, <ref n="53" target="#NDVC-AB_0053">NDVC-AB 53</ref><!--, <ref n="87">87</ref>-->.</item>
 <item xml:id="STEP-AB_rs_0716"><rs><hi rend="sc">Le Teil</hi>, à Hermeray</rs>, <ref target="#STEP-AB_0127" n="124.">STEP-AB 127.</ref></item>
 <item xml:id="HDPAR_rs_6614"><rs><hi rend="sc">T. (?)</hi>, abbas Vallium Sarnaii</rs><!--, <ref n="174">174</ref>-->.</item>
@@ -35429,10 +35388,8 @@
 <item xml:id="NDVC-AB_rs_4467"><rs><hi rend="sc">Ulmeto</hi>, (Rerricus de)</rs>, <abbr>p.</abbr>, <ref n="62" target="#NDVC-AB_0062">NDVC-AB 62</ref>.</item>
 <item xml:id="NDVC-AB_rs_4468"><rs><hi rend="sc">Ulmeto</hi>, (Rerricus de), filius Rerrici</rs>, <abbr>p.</abbr>, <ref n="61" target="#NDVC-AB_0061">NDVC-AB 61</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="U" xml:id="index_personne_liste_U">
-          <head>U</head>
           <list type="index">
+            <head>U</head>
 <item xml:id="SMAG-01_rs_2489"><rs><hi rend="sc">Ubeline</hi>, <hi rend="i">femme de Nivard de Septeuil</hi></rs>, <ref type="see" target="#SMAG-01_rs_2348" corresp="#SMAG-01_liste_IV_Personnel_de_l_Abbaye"><hi rend="i">voir</hi><hi rend="sc">Septeuil</hi></ref>.</item>
 <item xml:id="SMPA-AB-03_rs_3717"><rs><hi rend="sc">Ucel</hi></rs> (<hi rend="i">famille d’</hi>), <hi rend="i">seigneur du fief de Garges</hi>, <ref target="#SMPA-AB-03_99" n="99">SMPA-AB-03 99</ref>, <!-- doublon meme acte SMPA-AB-03_99: <ref target="#SMPA-AB-03_99" n="99-209">99</ref> --> <hi rend="i">note 1</hi>.</item>
 <item xml:id="HDPAR_rs_6850"><rs><hi rend="sc">Ugue</hi></rs>. Vide <ref type="see"><hi rend="sc">Hugo</hi></ref>, <ref type="see"><hi rend="sc">Hugues</hi></ref>.</item>
@@ -35519,10 +35476,8 @@
 <item xml:id="NDMA-AB_rs_741"><rs><hi rend="sc">Utric sous-prieur</hi></rs>.</item>
 <item xml:id="STEP-AB_rs_0726"><rs><hi rend="sc">Utric sous-prieur</hi></rs>, <ref target="#STEP-AB_0007" n="15.">STEP-AB 7.</ref></item>
 </list>
-        </div>
-        <div type="index-section" n="V" xml:id="index_personne_liste_V">
-          <head>V</head>
           <list type="index">
+            <head>V</head>
 <item xml:id="NDPA-EG-04_rs_7198" ana="missplaced"><rs><hi rend="sc">Hermesendis</hi>, uxor ejus</rs>, <ref n="85" target="#NDPA-EG-01_0085">NDPA-EG-01 85</ref>.</item>
 <item xml:id="HDPAR_rs_7004"><rs><hi rend="sc">Nova Villa (Matheus de)</hi></rs><!--, <ref n="36">36</ref>-->.</item>
 <item xml:id="HDPAR_rs_7005"><rs><hi rend="sc">Nova Villa (Richildis de)</hi></rs><!--, <ref n="36">36</ref>-->.</item>
@@ -36648,10 +36603,8 @@
           <item xml:id="SCOR-EG_rs_2900"><rs><hi rend="sc">Vunnenolio. archidiaconus [Bituricensis]</hi></rs>, <abbr>p.</abbr> <ref target="#SCOR-EG_0062" n="122">SCOR-EG 62</ref>.</item>
           <item xml:id="SMPA-AB-03_rs_3904"><rs>Vy (dominus Otho de)</rs>, presbiter, <ref target="#SMPA-AB-03_244" n="244">SMPA-AB-03 244</ref>. <!-- doublon meme acte SMPA-AB-03_244: <ref target="#SMPA-AB-03_244" n="244-534">244</ref> --></item>
         </list>
-        </div>
-        <div type="index-section" n="W" xml:id="index_personne_liste_W">
-          <head>W</head>
           <list type="index">
+            <head>W</head>
 <item xml:id="SMPA-AB-02_rs_3349"><rs><hi rend="sc">Wacquemoulin (Jeannot de)</hi>, Jehannot de Waquemoulin</rs>, <ref target="#SMPA-AB-02_319" n="319">SMPA-AB-02 319</ref>. <!-- doublon meme acte SMPA-AB-02_319: <ref target="#SMPA-AB-02_319" n="319-471">319</ref> --></item>
 <item xml:id="SCHA-PR_rs_550"><rs><hi rend="sc">Walcot</hi>, abbé</rs>, <ref target="#SCHA-PR_0003" n="6">SCHA-PR 3</ref>.</item>
 <item xml:id="SMAG-01_rs_2589"><rs>Walderius, miles</rs>, <ref n="16" target="#SMAG-01_0016">SMAG-01 16</ref>.</item>
@@ -36884,10 +36837,8 @@
 <item xml:id="NDPA-EG-04_rs_7479"><rs><hi rend="sc">Wlgrinus</hi>, archidiaconus Parisiensis</rs>. <ref n="416" target="#NDPA-EG-01_0416">NDPA-EG-01 416</ref>, <ref n="434" target="#NDPA-EG-01_0434">NDPA-EG-01 434</ref>, <ref n="485" target="#NDPA-EG-01_0485">NDPA-EG-01 485</ref>, <ref n="486" target="#NDPA-EG-01_0486">NDPA-EG-01 486</ref> ; <ref n="317" target="#NDPA-EG-04_0317">NDPA-EG-04 317</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_7480"><rs><hi rend="sc">Wlgrinus</hi>, cancellarius ecclesiæ Parisiensis</rs>. <ref n="391" target="#NDPA-EG-01_0391">NDPA-EG-01 391</ref>, <ref n="418" target="#NDPA-EG-01_0418">NDPA-EG-01 418</ref> ; <ref n="16" target="#NDPA-EG-02_0016">NDPA-EG-02 16</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="Y" xml:id="index_personne_liste_Y">
-          <head>Y</head>
           <list type="index">
+            <head>Y</head>
 <item xml:id="SMAG-01_rs_2632"><rs>Y[marus], Tusculanus episcopus</rs>, <ref n="38" target="#SMAG-01_0038">SMAG-01 38</ref>.</item>
 <item xml:id="HDPAR_rs_7115"><rs><hi rend="sc">Ybernali (Abbatia de)</hi></rs><!--, <ref n="631">631</ref>-->. — <hi rend="sc">Yvernali (Ecclesia de)</hi><!--, <ref n="458">458</ref>-->. — <hi rend="sc">Yvernoi (Monachi d’)</hi><!--, C <ref n="487" type="censier">487</ref>-->. — <hi rend="sc">Yvernolio (Abbatia de)</hi><!--, <ref n="445">445</ref>-->. — <hi rend="i">Hiverneau : Seine-et-Marne, arr. Melun, cant. Brie-Comte-Robert, comm. Lésigny.</hi></item>
 <item xml:id="SMPA-AB-02_rs_3354">
@@ -37052,17 +37003,39 @@
 <item xml:id="HDPAR_rs_7162"><rs><hi rend="sc">Yvriaco (Odo de)</hi></rs><!--, <ref n="775">775</ref>-->. — <hi rend="i">Ivry : Seine, chef-lieu de canton.</hi></item>
 <item xml:id="NDCH-EG_rs_6677"><rs><hi rend="sc">Yys</hi> (Hugues des)</rs>, <ref target="#NDCH-EG_0137" n="I. 257">NDCH-EG 137</ref>; <ref target="#NDCH-EG_0245" n="II. 103">NDCH-EG 245</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="Z" xml:id="index_personne_liste_Z">
-          <head>Z</head>
           <list type="index">
+            <head>Z</head>
 <item xml:id="NDCH-EG_rs_6678"><rs><hi rend="sc">Zacharias</hi>, decanus Carnotensis</rs>, <ref target="#NDCH-EG_0038" n="I. 126">NDCH-EG 38</ref>, <ref target="#NDCH-EG_0046" n="I. 138">NDCH-EG 46</ref>, <ref target="#NDCH-EG_0048" n="I. 141">NDCH-EG 48</ref>, <!-- doublon meme acte NDCH-EG_0048: <ref target="#NDCH-EG_0048" n="I. 142">48</ref> --><ref target="#NDCH-EG_0050" n="I. 144">NDCH-EG 50</ref>, <!-- doublon meme acte NDCH-EG_0050: <ref target="#NDCH-EG_0050" n="I. 145">50</ref> --><ref target="#NDCH-EG_0051" n="I. 148">NDCH-EG 51</ref><!--; <ref>III. 22</ref>-->.</item>
 <item xml:id="SMAG-01_rs_2639"><rs>Zacharias, propheta; — <hi rend="i">ses reliques</hi></rs>, <ref n="30" target="#SMAG-01_0030">SMAG-01 30</ref>.</item>
 <item xml:id="SCOR-EG_rs_2950"><rs><hi rend="sc">Zacharias</hi>, subdecanus Aurelianensis</rs>, <abbr>pp.</abbr> <ref target="#SCOR-EG_0008" n="18">SCOR-EG 8</ref>, <ref target="#SCOR-EG_0011" n="21">SCOR-EG 11</ref>, <!-- doublon meme acte SCOR-EG_0011: <ref target="#SCOR-EG_0011" n="24">11</ref> --> <ref target="#SCOR-EG_0072" n="142">SCOR-EG 72</ref>, <ref target="#SCOR-EG_0073" n="144">SCOR-EG 73</ref>, <ref target="#SCOR-EG_0074" n="145">SCOR-EG 74</ref>, <ref target="#SCOR-EG_0075" n="147">SCOR-EG 75</ref>.</item>
 <item xml:id="SMPA-AB-02_rs_3377"><rs><hi rend="sc">Zacharie (saint)</hi>, le prophète</rs>, <ref target="#SMPA-AB-02_353" n="353">SMPA-AB-02 353</ref>. <!-- doublon meme acte SMPA-AB-02_353: <ref target="#SMPA-AB-02_353" n="353-556">353</ref> --></item>
 <item xml:id="SMAG-01_rs_2640"><rs><hi rend="sc">Zelans (Gautier)</hi>, Walterus Selans, <hi rend="i">peut-être Gautier l’Ardent</hi></rs>, <ref n="5" target="#SMAG-01_0005">SMAG-01 5</ref>.</item>
 </list>
-        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
       </div>
     </body>
   </text>

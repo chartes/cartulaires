@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INDEX-LIEUX">
   <teiHeader>
@@ -16,22 +16,19 @@
     </fileDesc>
     <encodingDesc>
       <refsDecl>
-        <citeStructure unit="index" match="/TEI[1]" use="@xml:id">
-          <citeData property="dct:title" use="teiHeader/fileDesc/titleStmt/title"/>
-          <citeStructure unit="index-section" match="text/body/div[@type='index']/div[@type='index-section']" use="@xml:id">
-            <citeData property="dct:title" use="head"/>
-          </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text/body/div/list" use="dots">
+          <citeData property="dct:title" use="head"/>
+          <citeData use="head" property="schema:name"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
     <body>
-      <div type="index">
+      <div> 
         <head>Index des lieux</head>
-        <div type="index-section" n="A" xml:id="index_lieu_liste_A">
-          <head>A</head>
           <list type="index">
+            <head>A</head>
 <item xml:id="SMPO-AB_rs_1564"><rs><hi rend="sc">Abbecourt</hi> (Orgeval) (Yvelines)</rs> <hi rend="i">Habicurt, Haulbecurlh</hi>.<!--<ref n="9">9</ref>--><!--, <ref n="157">157</ref>-->.</item>
 <item xml:id="SMAG-01_rs_0007"><rs><hi rend="sc">Abbecourt</hi><hi rend="i">ou</hi><hi rend="sc">Aubecour</hi> (<hi rend="i">abbaye d’</hi>), <hi rend="i">O. Prem., Yvelines, arrondissement de Saint-Germain-en-Laye, canton de Poissy-Sud, commune d’Orgeval</hi>; — <hi rend="i">chapelle</hi></rs>, <ref n="49" target="#SMAG-01_0049">SMAG-01 49</ref>.</item>
 <item xml:id="SMPO-AB_rs_1565"><rs><hi rend="sc">Abbeville</hi> (Somme)</rs> <hi rend="i">Abbatisvilla</hi>.<!--<ref n="483">483</ref>-->.</item>
@@ -355,10 +352,8 @@
 <item xml:id="SMPA-AB-03_rs_0202"><rs><hi rend="sc">Aytte</hi></rs>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-03_rs_1940" corresp="#index_lieu_liste_I"><hi rend="sc">Ithe</hi></ref>.</item>
 <item xml:id="SMPA-AB-03_rs_0203"><rs><hi rend="sc">Azincourt</hi></rs>, <hi rend="i">Pas-de-Calais, arr. d’Arras, cant. du Parcq</hi></item><item xml:id="SMPA-AB-03_rs_0203_1"><rs>Azincourt <hi rend="i">bataille</hi></rs>, <ref target="#SMPA-AB-03_272" n="272">SMPA-AB-03 272</ref>,  <hi rend="i">note 1</hi>.</item><item xml:id="NDCH-EG_rs_0009"><rs><hi rend="sc">Æqualina</hi></rs> silva, <ref target="#NDCH-EG_0003" n="I. 70">NDCH-EG 3</ref>. <desc>La forêt d'<hi rend="i">Yveline</hi>, ancien nom de la forêt de Rambouillet.</desc></item>
 </list>
-        </div>
-        <div type="index-section" n="B" xml:id="index_lieu_liste_B">
-          <head>B</head>
           <list type="index">
+            <head>B</head>
 <item xml:id="SMPO-AB_rs_1625"><rs><hi rend="sc">B</hi> uri</rs><!--<ref n="74">74</ref>--><!--, <ref n="95">95</ref>--><!--, <ref n="106">106</ref>--><!--, <ref n="127">127</ref>--><!--, <ref n="128">128</ref>--><!--, <ref n="480">480</ref>-->.</item>
 <item xml:id="SMPA-AB-02_rs_0203">
             <rs><hi rend="sc">Baalli</hi>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-02_rs_0211" corresp="#index_lieu_liste_B"><hi rend="sc">Bailly.</hi></ref></rs>
@@ -1003,10 +998,8 @@
           <item xml:id="NDPA-EG-04_rs_1112"><rs><hi rend="sc">Byèvre</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_0699" corresp="#index_lieu_liste_B">Bevra</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_0702"><rs><hi rend="sc">Byèvre (vicus de) Parisiensis</hi></rs>. <ref n="171" target="#NDPA-EG-02_0171">NDPA-EG-02 171</ref> ; <!-- doublon meme acte NDPA-EG-02_0170: <ref n="III-10" target="#NDPA-EG-02_0170">170</ref> --> <ref n="260" target="#NDPA-EG-04_0260">NDPA-EG-04 260</ref>.</item>
         </list>
-        </div>
-        <div type="index-section" n="C" xml:id="index_lieu_liste_C">
-          <head>C</head>
           <list type="index">
+            <head>C</head>
 <item xml:id="NDPA-EG-04_rs_1114"><rs><hi rend="sc">Caan</hi></rs>. <note>Vide Cadomum</note>.</item>
 <item xml:id="SMPA-EG_rs_0343"><rs><hi rend="sc">Caballi (vinea)</hi></rs>, <ref target="#SMPA-EG_0023" n="128">SMPA-EG 23</ref><!--, <ref>216</ref>-->.</item>
 <item xml:id="NDPA-EG-04_rs_1117"><rs><hi rend="sc">Cabiosæ (villa)</hi></rs>. <ref n="433" target="#NDPA-EG-01_0433">NDPA-EG-01 433</ref>. <!-- doublon meme acte NDPA-EG-01_0433: <ref n="I-327" target="#NDPA-EG-01_0433">433</ref> --></item>
@@ -1968,10 +1961,8 @@
           <item xml:id="NDPA-EG-04_rs_2141"><rs><hi rend="sc">Cytharæ (domus)</hi></rs>. <ref n="118" target="#NDPA-EG-04_0118">NDPA-EG-04 118</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2142"><rs><hi rend="sc">Cytharæ (vicus) Parisiis</hi></rs>. <ref n="726" target="#NDPA-EG-02_0726">NDPA-EG-02 726</ref>, <ref n="851" target="#NDPA-EG-02_0851">NDPA-EG-02 851</ref> ; <ref n="62" target="#NDPA-EG-03_0062">NDPA-EG-03 62</ref>, <ref n="279" target="#NDPA-EG-03_0279">NDPA-EG-03 279</ref>, <ref n="454" target="#NDPA-EG-03_454">NDPA-EG-03 454</ref> ; <ref n="86" target="#NDPA-EG-04_0086">NDPA-EG-04 86</ref>.</item>
         </list>
-        </div>
-        <div type="index-section" n="D" xml:id="index_lieu_liste_D">
-          <head>D</head>
           <list type="index">
+            <head>D</head>
 <item xml:id="SAPC-AB_rs_0283"><rs type="place"><hi rend="sc">Da Verni</hi></rs>: <ref target="#SAPC-AB_0020" n="23">SAPC-AB 20</ref>.</item>
 <item xml:id="SMPA-AB-03_rs_1172"><rs><hi rend="sc">Dace</hi></rs> (<hi rend="i">collège de</hi>), <hi rend="i">ou de Dasc, rue de la Montagne Sainte-Geneviève, puis rue Galande</hi>, <ref target="#SMPA-AB-03_153" n="153">SMPA-AB-03 153</ref>, <!-- doublon meme acte SMPA-AB-03_153: <ref target="#SMPA-AB-03_153" n="153-348">153</ref> --> <hi rend="i">note 4</hi>.</item>
 <item xml:id="NDPA-EG-04_rs_2150"><rs><hi rend="sc">Daiacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3820" corresp="#index_lieu_liste_L">Laiacum</ref></note>.</item>
@@ -2156,10 +2147,8 @@
 <item xml:id="NDPA-EG-04_rs_2329"><rs><hi rend="sc">Dyonysii (altar S.)</hi>, in ecclesia Parisiensi</rs>. <ref n="534" target="#NDPA-EG-01_0534">NDPA-EG-01 534</ref>.</item>
 <item xml:id="STEP-AB_rs_0226"><rs><hi rend="sc">Le Déluge</hi>, bois</rs>, <ref target="#STEP-AB_0037" n="37.">STEP-AB 37.</ref></item>
 </list>
-        </div>
-        <div type="index-section" n="E" xml:id="index_lieu_liste_E">
-          <head>E</head>
           <list type="index">
+            <head>E</head>
 <item xml:id="SMPO-AB_rs_1695"><rs><hi rend="sc">Eaubonne</hi> (Val-d'Oise)</rs> <hi rend="i">Aquabona, Aquaputa</hi>.<!--<ref n="112">112</ref>--><!--, <ref n="130">130</ref>-->.</item>
 <item xml:id="SMPA-AB-03_rs_1277"><rs><hi rend="sc">Eaue (de l’)</hi></rs>, <hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_2951" corresp="INDEX-PERSONNES.xml#index_personne_liste_P"><hi rend="sc">Pontoit</hi></ref>.</item>
 <item xml:id="NDCH-EG_rs_0715"><rs><hi rend="sc">Eause</hi></rs>, <ref target="#NDCH-EG_0001" n="I. 67">NDCH-EG 1</ref>. <desc>chef-lieu de canton, arrondissement de Condom (Gers).</desc></item>
@@ -2339,10 +2328,8 @@
 <item xml:id="SMPA-AB-03_rs_1371"><rs><hi rend="sc">Ez</hi></rs> (<hi rend="i">prieuré</hi> <hi rend="sc">Saint-Martin d’</hi>), <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_0910" corresp="INDEX-PERSONNES.xml#index_personne_liste_C"><hi rend="sc">Chaumont-en-Vexin</hi></ref></seg>.</item>
 <item xml:id="SMPO-AB_rs_1705"><rs><hi rend="sc">Ezanville</hi> (Val-d'Oise)</rs> <hi rend="i">Hesenvilla</hi>.<!--<ref n="162">162</ref>-->.</item>
 </list>
-        </div>
-        <div type="index-section" n="F" xml:id="index_lieu_liste_F">
-          <head>F</head>
           <list type="index">
+            <head>F</head>
 <item xml:id="NDPA-EG-04_rs_2506"><rs><hi rend="sc">Fabarum (vicus)</hi></rs>. <ref n="198" target="#NDPA-EG-04_0198">NDPA-EG-04 198</ref>.</item>
 <item xml:id="NDCH-EG_rs_0749"><rs><hi rend="sc">Fadainvilla</hi></rs>; <rs><hi rend="sc">Fadeville</hi></rs>, <ref target="#NDCH-EG_0196" n="II. 49">NDCH-EG 196</ref><!--, <ref>II. 347</ref>--><!--, <ref>II. 348</ref>--><!--; <ref>III. 14</ref>-->. <desc><hi rend="i">Fadainville</hi>, hameau, commune de Serazereux, canton de Châteauneuf, arrondissement de Dreux; chef-lieu d'une des mairies du Chapitre de Chartres.</desc></item>
 <item xml:id="NDCH-EG_rs_0750"><rs><hi rend="sc">Faigarmont</hi></rs>, <ref target="#NDCH-EG_0216" n="II. 75">NDCH-EG 216</ref>. <desc><hi rend="i">Le Plessis</hi>, village, commune de Dampierre-sur-Avre, canton de Brezolles, arrondissement de Dreux.</desc></item>
@@ -2619,10 +2606,8 @@
 <item xml:id="NDPA-EG-04_rs_2747"><rs><hi rend="sc">Furseii (ecclesia S.)</hi>, in decanatu Latiniacensi</rs>. <ref n="6" target="#NDPA-EG-01_0006">NDPA-EG-01 6</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_2749"><rs><hi rend="sc">Fussum</hi></rs>. <ref n="284" target="#NDPA-EG-01_0284">NDPA-EG-01 284</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="G" xml:id="index_lieu_liste_G">
-          <head>G</head>
           <list type="index">
+            <head>G</head>
 <item xml:id="SMPA-AB-03_rs_1651"><rs><hi rend="sc">Cisors</hi></rs>, <hi rend="i">Eure, arr. des Andelys</hi>, <ref target="#SMPA-AB-03_11" n="153">SMPA-AB-03 11</ref>, <!-- doublon meme acte SMPA-AB-03_11: <ref target="#SMPA-AB-03_11" n="153-349">11</ref> --> <hi rend="i">note 5</hi>.</item>
 <item xml:id="SMPA-EG_rs_0610"><rs><hi rend="sc">G. de Adenvilla</hi></rs><!--, <ref>201</ref>-->.</item>
 <item xml:id="NDPA-EG-04_rs_2751"><rs><hi rend="sc">Gaatins</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2863" corresp="#index_lieu_liste_G">Gastinii</ref></note>.</item>
@@ -3015,10 +3000,8 @@
           <item xml:id="NDCH-EG_rs_0958"><rs><hi rend="sc">Gurzeæ</hi></rs>; <rs><hi rend="sc">Gurzeziæ</hi></rs>, <ref target="#NDCH-EG_0018" n="I. 96">NDCH-EG 18</ref>, <ref target="#NDCH-EG_0030" n="I. 115">NDCH-EG 30</ref>. <desc><hi rend="i">Gourdez</hi>, hameau, commune de Morancez, canton de Chartres-Sud.</desc></item>
           <item xml:id="NDPA-EG-04_rs_3294"><rs><hi rend="sc">Guyemum</hi></rs>. <note>Vide Gienmum</note>.</item>
         </list>
-        </div>
-        <div type="index-section" n="H" xml:id="index_lieu_liste_H">
-          <head>H</head>
           <list type="index">
+            <head>H</head>
 <item xml:id="NDCH-EG_rs_0959"><rs><hi rend="sc">Hacheviler</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_0068" corresp="#index_lieu_liste_A"><hi rend="sc">Archevillare</hi></ref>.</item>
 <item xml:id="SMPO-AB_rs_1751"><rs><hi rend="sc">Hadancourt-Le-Haut-Clocher</hi> (Oise)</rs> <hi rend="i">Hadencuria</hi>.<!--<ref n="128">128</ref>-->.</item>
 <item xml:id="NDCH-EG_rs_4167"><rs><hi rend="sc">Hadebertus</hi></rs>, <ref target="#NDCH-EG_0005" n="I. 71">NDCH-EG 5</ref><!--, <ref n="I. 72">5</ref>-->.</item>
@@ -3188,10 +3171,8 @@
 <item xml:id="NDCH-EG_rs_1027"><rs><hi rend="sc">Hymonvilla</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_1034" corresp="#index_lieu_liste_I"><hi rend="sc">Immonis-Villa</hi></ref>.</item>
 <item xml:id="NDPR-AB_rs_0367"><rs><hi rend="sc">Iveline</hi>, grange de l'</rs>, <ref target="#NDPR-AB_0269" n="256">NDPR-AB 269</ref>, <ref target="#NDPR-AB_0334" n="326">NDPR-AB 334</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="I" xml:id="index_lieu_liste_I">
-          <head>I</head>
           <list type="index">
+            <head>I</head>
 <item xml:id="SMPA-AB-03_rs_1911"><rs>I <hi rend="i">ou</hi> Y <hi rend="sc">Grégeois</hi> (<hi rend="i">maison de l’</hi>)</rs>, <hi rend="i">rue aux Ours</hi>, Y Grigos, Y Grygois, <ref target="#SMPA-AB-03_126" n="126">SMPA-AB-03 126</ref>, <!-- doublon meme acte SMPA-AB-03_126: <ref target="#SMPA-AB-03_126" n="126-274">126</ref> --> <hi rend="i">note 2</hi>, <ref target="#SMPA-AB-03_134" n="134">SMPA-AB-03 134</ref>, <!-- doublon meme acte SMPA-AB-03_134: <ref target="#SMPA-AB-03_134" n="134-292">134</ref> --> <hi rend="i">n. dors.</hi>, <hi rend="i">note 1</hi>, <ref target="#SMPA-AB-03_269" n="269">SMPA-AB-03 269</ref>, <!-- doublon meme acte SMPA-AB-03_269: <ref target="#SMPA-AB-03_269" n="269-605">269</ref> --> <hi rend="i">n. dors.</hi>, <hi rend="i">note 1</hi>.</item>
 <item xml:id="SAPC-AB_rs_1421">
             <rs><hi rend="sc">Ibernagium</hi>: <seg>v. <ref type="see" target="#SAPC-AB_rs_1413" corresp="#index_lieu_liste_H">hibernagium</ref>.</seg></rs>
@@ -3277,10 +3258,8 @@
           <item xml:id="NDPA-EG-04_rs_3616"><rs><hi rend="sc">Ivriaci (ecclesia et capella)</hi></rs>. <ref n="6" target="#NDPA-EG-01_0006">NDPA-EG-01 6</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3615"><rs><hi rend="sc">Ivriacum</hi></rs>. <ref n="47" target="#NDPA-EG-01_0047">NDPA-EG-01 47</ref><!--, <ref n="I-48">I. 48</ref>--> <ref n="377" target="#NDPA-EG-01_0377">NDPA-EG-01 377</ref>, <ref n="377" target="#NDPA-EG-01_0377">NDPA-EG-01 377</ref>, <ref n="417" target="#NDPA-EG-01_0417">NDPA-EG-01 417</ref>, <ref n="475" target="#NDPA-EG-01_0475">NDPA-EG-01 475</ref><!--, <ref n="I-385">I. 385</ref>--> <ref n="508" target="#NDPA-EG-01_0508">NDPA-EG-01 508</ref>, <ref n="564" target="#NDPA-EG-01_0564">NDPA-EG-01 564</ref> ; <ref n="52" target="#NDPA-EG-02_0052">NDPA-EG-02 52</ref>, <ref n="65" target="#NDPA-EG-02_0065">NDPA-EG-02 65</ref>, <!-- doublon meme acte NDPA-EG-02_0034: <ref n="II-44" target="#NDPA-EG-02_0034">34</ref> --> <ref n="75" target="#NDPA-EG-02_0075">NDPA-EG-02 75</ref><!--, <ref n="II-52">II. 52</ref>--><!--, <ref n="II-64">II. 64</ref>--><!--, <ref n="II-69">II. 69</ref>--><!--, <ref n="II-70">II. 70</ref>--><!--, <ref n="II-71">II. 71</ref>--> <ref n="107" target="#NDPA-EG-02_0107">NDPA-EG-02 107</ref>, <ref n="133" target="#NDPA-EG-02_0133">NDPA-EG-02 133</ref>, <ref n="133" target="#NDPA-EG-02_0133">NDPA-EG-02 133</ref><!--, <ref n="II-104">II. 104</ref>--><!--, <ref n="II-106">II. 106</ref>--><!--, <ref n="II-107">II. 107</ref>--> <ref n="319" target="#NDPA-EG-02_0319">NDPA-EG-02 319</ref>, <ref n="654" target="#NDPA-EG-02_0654">NDPA-EG-02 654</ref>, <ref n="723" target="#NDPA-EG-02_0723">NDPA-EG-02 723</ref>, <ref n="844" target="#NDPA-EG-02_0844">NDPA-EG-02 844</ref>, <ref n="909" target="#NDPA-EG-02_0909">NDPA-EG-02 909</ref>, <ref n="909" target="#NDPA-EG-02_0909">NDPA-EG-02 909</ref> ; <ref n="621" target="#NDPA-EG-03_621">NDPA-EG-03 621</ref> ; <ref n="13" target="#NDPA-EG-04_0013">NDPA-EG-04 13</ref><!--, <ref n="IV-11">IV. 11</ref>--><!--, <ref n="IV-17">IV. 17</ref>--><!--, <ref n="IV-104">IV. 104</ref>--> <ref n="184" target="#NDPA-EG-04_0184">NDPA-EG-04 184</ref>, <ref n="242" target="#NDPA-EG-04_0242">NDPA-EG-04 242</ref><!--, <ref n="IV-153">IV. 153</ref>--><!--, <ref n="IV-167">IV. 167</ref>--><!--, <ref n="IV-168">IV. 168</ref>--><!--, <ref n="IV-191">IV. 191</ref>--><!--, <ref n="IV-192">IV. 192</ref>--><!--, <ref n="IV-194">IV. 194</ref>--> <ref n="339" target="#NDPA-EG-04_0339">NDPA-EG-04 339</ref><!--, <ref n="IV-199">IV. 199</ref>--><!--, <ref n="IV-201">IV. 201</ref>--><!--, <ref n="IV-202">IV. 202</ref>-->.</item>
           <item xml:id="SMPA-AB-03_rs_1943"><rs><hi rend="sc">Ivry</hi></rs>, <hi rend="i">auj.</hi> <hi rend="sc">Ivry-sur-Seine</hi>, <hi rend="i">Val de Marne, arr. de Créteil</hi>, <ref target="#SMPA-AB-03_264" n="264">SMPA-AB-03 264</ref>,  <hi rend="i">note 3</hi></item><item xml:id="SMPA-AB-03_rs_1943_1"><rs>Ivry <hi rend="i">ferme de Millepas, appartenant à Saint-Magloire</hi>, Milepoiz</rs>, <ref target="#SMPA-AB-03_120" n="120">SMPA-AB-03 120</ref>,  <hi rend="i">note 1</hi></item><item xml:id="SMPA-AB-03_rs_1943_2"><rs>Ivry <hi rend="i">pressoir</hi>.</rs></item><item xml:id="SMPA-AB-02_rs_1538"><rs><hi rend="sc">Ivry-sur-Seine</hi>, <hi rend="i">Seine, arr. de Sceaux, ch. l. de cant.</hi>, Yvri</rs>, <ref target="#SMPA-AB-02_88" n="88">SMPA-AB-02 88</ref>  ; <hi rend="i">lieux-dits</hi>, <seg><hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-02_rs_1053" corresp="#index_lieu_liste_F">Farfaigne</ref>, <ref type="see" target="#SMPA-AB-02_rs_1288" corresp="#index_lieu_liste_G">Grant Ajou</ref>, <ref type="see" target="#SMPA-AB-02_rs_1288" corresp="#index_lieu_liste_G">Petit Ajou</ref></seg></item><item xml:id="SMPA-AB-02_rs_1538_1"><rs>Ivry-sur-Seine <hi rend="i">curé</hi>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-02_rs_1037" corresp="INDEX-PERSONNES.xml#index_personne_liste_E">Jehan</ref>, personne d’Yvri</seg></rs></item><item xml:id="SMPA-AB-02_rs_1538_2"><rs>Ivry-sur-Seine <hi rend="i">ferme de Saint-Magloire</hi>, <hi rend="i">voir</hi></rs> <ref type="see" target="#SMPA-AB-02_rs_2052" corresp="#index_lieu_liste_M"><hi rend="sc">Millepas</hi></ref></item><item xml:id="SMPA-AB-02_rs_1538_3"><rs>Ivry-sur-Seine <hi rend="i">prévôt de la confrérie</hi>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-02_rs_1796" corresp="INDEX-PERSONNES.xml#index_personne_liste_L">Symon Luiseite</ref></seg>.</rs></item></list>
-        </div>
-        <div type="index-section" n="J" xml:id="index_lieu_liste_J">
-          <head>J</head>
           <list type="index">
+            <head>J</head>
 <item xml:id="NDPA-EG-04_rs_3620"><rs><hi rend="sc">Jaagniacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2899" corresp="#index_lieu_liste_G">Gehenniacum</ref></note>.</item>
 <item xml:id="NDPA-EG-04_rs_3630"><rs><hi rend="sc">Jacobi (capella S.) fratrum prædicatorum Paris</hi></rs>. <ref n="665" target="#NDPA-EG-02_0665">NDPA-EG-02 665</ref>.</item>
 <item xml:id="NDPA-EG-04_rs_3631"><rs><hi rend="sc">Jacobi (ecclesia S.) Parisiensis</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3635" corresp="#index_lieu_liste_J">Jacobi in Carnificeria (ecclesia S.)</ref></note>.</item>
@@ -3380,10 +3359,9 @@
 <item xml:id="NDPR-AB_rs_0393"><rs><hi rend="i">Juxta viam, vinea</hi>, à Sèvres</rs>, <ref target="#NDPR-AB_0151" n="150">NDPR-AB 151</ref>.</item>
 <item xml:id="SMPO-AB_rs_1774"><rs><hi rend="sc">Juz1E1ts</hi></rs> <hi rend="i">(Yvelines). Gisetius</hi>.<!--<ref n="43">43</ref>--><!--, <ref n="479">479</ref>-->.</item>
 </list>
-        </div>
-        <div type="index-section" n="K" xml:id="index_lieu_liste_K">
-          <head>K</head>
-          <list type="index"><item xml:id="NDCH-EG_rs_1059"><rs><hi rend="sc">Kaelennes</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_0465" corresp="#index_lieu_liste_C"><hi rend="sc">Chalennæ</hi></ref>.</item>
+          <list type="index">
+            <head>K</head>
+            <item xml:id="NDCH-EG_rs_1059"><rs><hi rend="sc">Kaelennes</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_0465" corresp="#index_lieu_liste_C"><hi rend="sc">Chalennæ</hi></ref>.</item>
           <item xml:id="SMPA-AB-02_rs_1633"><rs><hi rend="sc">Kallemaine</hi></rs><!--, <ref n="397"><hi rend="b">[397]</hi></ref>-->, <ref n="397" target="#SMPA-AB-02_397">SMPA-AB-02 397</ref><!--, <ref n="397-608">608</ref>-->.</item>
           <item xml:id="SAPC-AB_rs_0670">
             <rs type="place"><hi rend="sc">Karcassonensis</hi>: <hi rend="i">Carcassonne, Aude-, </hi><hi rend="i">v.</hi><seg>v. <ref type="see" target="INDEX-PERSONNES.xml#SAPC-AB_rs_1158" corresp="INDEX-PERSONNES.xml#index_personne_liste_S">Symon</ref>.</seg></rs>
@@ -3396,10 +3374,8 @@
           <item xml:id="NDCH-EG_rs_1061"><rs><hi rend="sc">Karrochia</hi></rs>. Voir <hi rend="sc">Carrogiæ</hi>.</item>
           <item xml:id="NDPA-EG-04_rs_3806"><rs><hi rend="sc">Karus Locus</hi></rs>. <note>Vide Carus Locus</note>.</item>
         </list>
-        </div>
-        <div type="index-section" n="L" xml:id="index_lieu_liste_L">
-          <head>L</head>
           <list type="index">
+            <head>L</head>
 <item xml:id="SMPA-EG_rs_1174"><rs><hi rend="sc">L'Angevin (rue Geoffroy-)</hi></rs>, Voy. Geoffroy-l'Angevin (rue).</item>
 <item xml:id="SMPA-EG_rs_1151"><rs><hi rend="sc">La Ferronnerie (rue de)</hi></rs><!--, <ref>198</ref>-->.</item>
 <item xml:id="NDPA-EG-04_rs_3819"><rs><hi rend="sc">La Honsaire</hi>, locus apud Castanetum</rs>. <ref n="225" target="#NDPA-EG-04_0225">NDPA-EG-04 225</ref>.</item>
@@ -3696,10 +3672,8 @@
 <item xml:id="NDPA-EG-04_rs_4004"><rs><hi rend="sc">Lyon (hôtel du)</hi></rs>. <ref n="260" target="#NDPA-EG-04_0260">NDPA-EG-04 260</ref>.</item>
 <item xml:id="SMPO-AB_rs_1793"><rs><hi rend="sc">Lyons-La-Foret</hi> (Eure</rs><!--<ref n="480">480</ref>-->.</item>
 </list>
-        </div>
-        <div type="index-section" n="M" xml:id="index_lieu_liste_M">
-          <head>M</head>
           <list type="index">
+            <head>M</head>
 <item xml:id="STEP-AB_rs_0553"><rs><hi rend="sc">Les Moulin aux prieuré</hi></rs>, <ref target="#STEP-AB_0095" n="16.">STEP-AB 95.</ref></item>
 <item xml:id="SMPO-AB_rs_1794"><rs><hi rend="sc">Maanth</hi>, MANTA (Plessis-Bouchard) (Val-d'Oise</rs><!--<ref n="107">107</ref>--><!--, <ref n="135">135</ref>-->.</item>
 <item xml:id="NDCH-EG_rs_1136"><rs><hi rend="sc">Macelinum</hi></rs>; <rs><hi rend="sc">Locellæ</hi></rs>; <rs><hi rend="sc">Loncellæ</hi></rs>; <rs><hi rend="sc">Louceles</hi></rs>, <ref target="#NDCH-EG_0168" n="II. 26">NDCH-EG 168</ref><!--, <ref>II. 364</ref>--><!--; <ref>III. 6</ref>--><!--, <ref>III. 213</ref>-->. <desc><hi rend="i">Masselin</hi>, aujourd'hui moulin, autrefois hameau, commune de Courville, arrondiss. de Chartres; chef-lieu d'une mairie du Chapitre de Chartres.</desc></item>
@@ -4514,10 +4488,8 @@
             <rs><hi rend="sc">Mybray</hi>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-02_rs_2036" corresp="#index_lieu_liste_M"><hi rend="sc">Mibray</hi></ref>, <ref type="see" target="#SMPA-AB-02_rs_2514" corresp="#index_lieu_liste_P"><hi rend="sc">Planches de Mibray.</hi></ref></rs>
           </item>
         </list>
-        </div>
-        <div type="index-section" n="N" xml:id="index_lieu_liste_N">
-          <head>N</head>
           <list type="index">
+            <head>N</head>
 <item xml:id="SMPA-AB-03_rs_2566"><rs><hi rend="sc">Nace</hi></rs>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_2571" corresp="INDEX-PERSONNES.xml#index_personne_liste_N"><hi rend="sc">Nasse</hi></ref></seg>.</item>
 <item xml:id="SAPC-AB_rs_0805">
             <rs type="place"><hi rend="sc">Nagiacum</hi>: <hi rend="i">Noisy (plusieurs localités de ce nom autour de Paris).</hi></rs>
@@ -4661,10 +4633,8 @@
 <item xml:id="HDPAR_rs_4635"><rs><hi rend="sc">Nulleyum super Marne</hi></rs><!--, <ref n="827">827</ref>-->. — <hi rend="i">Neuilly-sur-Marne : Seine-et-Oise, arr. Pontoise, cant. Gonesse.</hi></item>
 <item xml:id="SMAG-01_rs_1669"><rs>Nulliacum (super stallos de)</rs>, <ref n="263" target="#SMAG-01_0263">SMAG-01 263</ref>.</item>
 </list>
-        </div>
-        <div type="index-section" n="O" xml:id="index_lieu_liste_O">
-          <head>O</head>
           <list type="index">
+            <head>O</head>
 <item xml:id="SMPO-AB_rs_1860"><rs><hi rend="sc">O</hi> ony</rs><!--<ref n="17">17</ref>--><!--, <ref n="19">19</ref>--><!--, <ref n="21">21</ref>--><!--, <ref n="35">35</ref>--><!--, <ref n="38">38</ref>--><!--, <ref n="62">62</ref>--><!--, <ref n="65">65</ref>--><!--, <ref n="67">67</ref>--><!--, <ref n="94">94</ref>--><!--, <ref n="97">97</ref>--><!--, <ref n="113">113</ref>--><!--, <ref n="142">142</ref>--><!--, <ref n="161">161</ref>--><!--, <ref n="168">168</ref>-->.</item>
 <item xml:id="NDPA-EG-04_rs_5077"><rs><hi rend="sc">Obergenvilla</hi></rs>. <note>Vide <ref type="see" target="INDEX-PERSONNES.xml#NDPA-EG-04_rs_0359" corresp="INDEX-PERSONNES.xml#index_personne_liste_A">Aubergenvilla</ref></note>.</item>
 <item xml:id="NDCH-EG_rs_1420"><rs><hi rend="sc">Obsevefort</hi></rs>, <ref target="#NDCH-EG_0317" n="II. 160">NDCH-EG 317</ref>. <desc><hi rend="i">Oxford</hi>, ville d'Angleterre, capitale du comté du même nom.</desc></item>
@@ -4776,10 +4746,8 @@
             <rs><hi rend="sc">Oysi</hi>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-02_rs_2245" corresp="INDEX-PERSONNES.xml#index_personne_liste_O"><hi rend="sc">Oisy.</hi></ref></seg></rs>
           </item>
 </list>
-        </div>
-        <div type="index-section" n="P" xml:id="index_lieu_liste_P">
-          <head>P</head>
           <list type="index">
+            <head>P</head>
 <item xml:id="NDCH-EG_rs_5492"><rs><hi rend="sc">Pabuerius</hi>, carpentarius</rs>, <ref target="#NDCH-EG_0302" n="II. 146">NDCH-EG 302</ref>.</item>
 <item xml:id="SCOR-EG_rs_2058"><rs><hi rend="i">Pabuli</hi> (<hi rend="i">villa</hi>)</rs>, <abbr>pp.</abbr><!--<ref><hi rend="i">XCVI</hi></ref>--> <ref target="#SCOR-EG_0039" n="82">SCOR-EG 39</ref><!--, <ref>[86]</ref>-->.</item>
 <item xml:id="HDPAR_rs_4786"><rs><hi rend="sc">Pacciacum</hi></rs><!--, <ref n="342">342</ref>-->.</item>
@@ -5442,10 +5410,8 @@
           <item xml:id="NDCH-EG_rs_1634"><rs><hi rend="sc">Putheolum</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_1623" corresp="#index_lieu_liste_P"><hi rend="sc">Puisatum</hi></ref>.</item>
           <item xml:id="NDCH-EG_rs_1636"><rs><hi rend="sc">Putholi</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_1628" corresp="#index_lieu_liste_P"><hi rend="sc">Puteolus</hi></ref>.</item>
         </list>
-        </div>
-        <div type="index-section" n="Q" xml:id="index_lieu_liste_Q">
-          <head>Q</head>
           <list type="index">
+            <head>Q</head>
 <item xml:id="SMPA-AB-03_rs_3042"><rs><hi rend="sc">Qoquille</hi></rs>, <hi rend="sc">Quoquille</hi>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_1058" corresp="INDEX-PERSONNES.xml#index_personne_liste_C"><hi rend="sc">Coquille</hi></ref></seg>.</item>
 <item xml:id="NDCH-EG_rs_1640"><rs><hi rend="sc">Quarellum-Senterii-de-Noviaco</hi></rs>, <ref target="#NDCH-EG_0321" n="II. 164">NDCH-EG 321</ref>. <desc>champtier, à Villeau, canton de Voves, arrondissement de Chartres.</desc></item>
 <item xml:id="SMPA-AB-02_rs_2610">
@@ -5481,10 +5447,8 @@
 <item xml:id="NDPA-EG-04_rs_5836"><rs><hi rend="sc">Quoque Horon</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_1908" corresp="#index_lieu_liste_C">Coque Horon</ref></note>.</item>
 <item xml:id="SMPA-AB-03_rs_3066"><rs><hi rend="sc">Quoquille (ostel de la)</hi></rs>, <seg><hi rend="i">voir</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_1058" corresp="INDEX-PERSONNES.xml#index_personne_liste_C"><hi rend="sc">Coquille</hi></ref></seg>.</item>
 </list>
-        </div>
-        <div type="index-section" n="R" xml:id="index_lieu_liste_R">
-          <head>R</head>
           <list type="index">
+            <head>R</head>
 <item xml:id="NDPA-EG-04_rs_5838"><rs><hi rend="sc">Rabiey (molendinum de)</hi></rs>. <ref n="210" target="#NDPA-EG-03_0210">NDPA-EG-03 210</ref>.</item>
 <item xml:id="NDCH-EG_rs_1652"><rs><hi rend="sc">Rachinetum</hi></rs>; <rs><hi rend="sc">Rachignetum</hi></rs>; <rs><hi rend="sc">Raschine</hi></rs>, <ref target="#NDCH-EG_0104" n="I. 213">NDCH-EG 104</ref><!--; <ref>II. 291</ref>--><!--, <ref>II. 418</ref>--><!--, <ref>II. 419</ref>--><!--, <ref>II. 426</ref>--><!--; <ref>III. 3</ref>--><!--, <ref>III. 49</ref>--><!--, <ref>III. 137</ref>-->. <desc><hi rend="i">Rachigny</hi>, vallée, commune de Chartres.</desc></item>
 <item xml:id="NDPA-EG-04_rs_5839"><rs><hi rend="sc">Radepont</hi></rs>. <note>Vide Rigidus Pons</note>.</item>
@@ -5712,10 +5676,8 @@
 <item xml:id="SMPO-AB_rs_1898"><rs><hi rend="sc">Ruuillis</hi></rs><!--<ref n="74">74</ref>-->.</item>
 <item xml:id="SMPO-AB_rs_1899"><rs><hi rend="sc">Ruvigny</hi> (Aube)</rs> <hi rend="i">Ruvin!</hi>.<!--<ref n="1">1</ref>--><!--, <ref n="85">85</ref>-->.</item>
 </list>
-        </div>
-        <div type="index-section" n="S" xml:id="index_lieu_liste_S">
-          <head>S</head>
           <list type="index">
+            <head>S</head>
 <item xml:id="SMPA-AB-03_rs_3365"><hi rend="i">Activité de la communauté</hi>
                 <list type="-">
                   <item><hi rend="i">administration directe de quelques domaines</hi><!--, <ref n="XLVII">XLVII</ref>--></item>
@@ -6477,10 +6439,8 @@
           <item xml:id="NDPA-EG-04_rs_6734"><rs><hi rend="sc">Syvart</hi>, locus apud Combisvillam</rs>. <ref n="210" target="#NDPA-EG-03_0210">NDPA-EG-03 210</ref>.</item>
           <item xml:id="NDCH-EG_rs_1907"><rs><hi rend="sc">Syverium</hi></rs>, <ref target="#NDCH-EG_0335" n="II. 175">NDCH-EG 335</ref>. <desc><hi rend="i">Civry</hi>, chef-lieu de commune, canton de Châteaudun; chef-lieu d'une prêtrière du Chapitre de Chartres.</desc></item>
         </list>
-        </div>
-        <div type="index-section" n="T" xml:id="index_lieu_liste_T">
-          <head>T</head>
           <list type="index">
+            <head>T</head>
 <item xml:id="NDPA-EG-04_rs_6738"><rs><hi rend="sc">Taberniacum</hi>, prioratus</rs>. <ref n="9" target="#NDPA-EG-01_0009">NDPA-EG-01 9</ref> ; <ref n="249" target="#NDPA-EG-03_0249">NDPA-EG-03 249</ref>, <ref n="286" target="#NDPA-EG-03_0286">NDPA-EG-03 286</ref>, <ref n="411" target="#NDPA-EG-03_411">NDPA-EG-03 411</ref>.</item>
 <item xml:id="SMPA-AB-03_rs_3590"><rs><hi rend="sc">Tableterie</hi></rs> (<hi rend="i">rue de la</hi>), <hi rend="i">ancienne rue de Paris, absorbée par la rue des Halles</hi>, <ref target="#SMPA-AB-03_272" n="272">SMPA-AB-03 272</ref><!-- doublon meme acte SMPA-AB-03_272: <ref target="#SMPA-AB-03_272" n="272-613">272</ref> -->; <seg><hi rend="i">voir aussi</hi> <ref type="see" target="INDEX-PERSONNES.xml#SMPA-AB-03_rs_1819" corresp="INDEX-PERSONNES.xml#index_personne_liste_H"><hi rend="sc">Hanterie</hi></ref></seg>.</item>
 <item xml:id="NDPA-EG-04_rs_6740"><rs><hi rend="sc">Taborel</hi>, lieu sis à Créteil</rs>. <ref n="356" target="#NDPA-EG-04_0356">NDPA-EG-04 356</ref>.</item>
@@ -6737,10 +6697,8 @@
 <item xml:id="NDCH-EG_rs_1988"><rs><hi rend="sc">Tyronium</hi></rs>. Voir <ref type="see" target="#NDCH-EG_rs_1939" corresp="#index_lieu_liste_T"><hi rend="sc">Tiro</hi></ref>.</item>
 <item xml:id="NDCH-EG_rs_1989"><rs><hi rend="sc">Tyvilla</hi></rs>; <rs><hi rend="sc">Tievilla</hi></rs>; <rs><hi rend="sc">Tuvilla</hi></rs>, <ref target="#NDCH-EG_0047" n="I. 140">NDCH-EG 47</ref>; <ref target="#NDCH-EG_0172" n="II. 31">NDCH-EG 172</ref>, <!-- doublon meme acte NDCH-EG_0172: <ref target="#NDCH-EG_0172" n="II. 32">172</ref> --><ref target="#NDCH-EG_0177" n="II. 37">NDCH-EG 177</ref>, <ref target="#NDCH-EG_0226" n="II. 87">NDCH-EG 226</ref><!--, <ref>II. 315</ref>--><!--, <ref>II. 392</ref>--><!--, <ref>II. 397</ref>-->. <desc><hi rend="i">Thiville</hi>, chef-lieu de commune, canton de Châteaudun; chef-lieu d'une prébende du Chapitre de Chartres, connue sous le nom de <hi rend="i">prébende de Dunois, seconde portion</hi>. Elle comprenait les prêtrières de Thiville, Bapaume, Beaumont-lès-Cloyes, Civry, Donnemain, Conie, Eteauville, Pareau, Saint-Christophe, Saint-Laurent-des-Bois, Varize et Vaudrenet.</desc></item>
 </list>
-        </div>
-        <div type="index-section" n="U" xml:id="index_lieu_liste_U">
-          <head>U</head>
           <list type="index">
+            <head>U</head>
 <item xml:id="SMPA-AB-02_rs_3213">
             <rs><hi rend="sc">Ubi coquntur anseres (vicus)</hi>, <hi rend="i">voir</hi> <hi rend="sc">Ours</hi> (<ref type="see" target="#SMPA-AB-02_rs_2288" corresp="#index_lieu_liste_O"><hi rend="i">rue aux</hi></ref>).</rs>
           </item>
@@ -6775,10 +6733,8 @@
 <item xml:id="SMPA-AB-03_rs_3725"><rs><hi rend="sc">Uvelinne</hi></rs>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-03_rs_3921" corresp="#index_lieu_liste_Y"><hi rend="sc">Yveline</hi></ref>.</item>
 <item xml:id="SCOR-EG_rs_2795"><rs><hi rend="i">Uxantia</hi>. <num>V.</num><hi rend="i">Cens</hi> (<hi rend="i">le</hi>)</rs>. </item>
 </list>
-        </div>
-        <div type="index-section" n="V" xml:id="index_lieu_liste_V">
-          <head>V</head>
           <list type="index">
+            <head>V</head>
 <item xml:id="NDCH-EG_rs_2019"><rs><hi rend="sc">Vada</hi></rs>, <ref target="#NDCH-EG_0216" n="II. 75">NDCH-EG 216</ref>. <desc><hi rend="i">Les Gués</hi>, hameau, commune de Boissy-le-Sec, canton de la Ferté-Vidame, arrondissement de Dreux.</desc></item>
 <item xml:id="SSCO-AB_rs_890"><rs><hi rend="sc">Vadum Petrosum</hi>, <hi rend="i">Guipéreux (Seine-et-Oise, commune de Longpont)</hi></rs>, <ref target="#SSCO-AB_0104" n="109">SSCO-AB 104</ref><!--, <ref>150</ref>--><!--, <ref>151</ref>--><!--, <ref>153</ref>--><!--, <ref>156</ref>--><!--, <ref>159</ref>--><!--, <ref>171</ref>-->.</item>
 <item xml:id="SMPA-AB-02_rs_3221">
@@ -7263,10 +7219,8 @@
             <rs><hi rend="sc">Vyacum</hi>, <hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-02_rs_3289" corresp="#index_lieu_liste_V"><hi rend="sc">Vicq.</hi></ref></rs>
           </item>
         </list>
-        </div>
-        <div type="index-section" n="W" xml:id="index_lieu_liste_W">
-          <head>W</head>
           <list type="index">
+            <head>W</head>
 <item xml:id="SCHA-PR_rs_549"><rs><hi rend="sc">Waleran</hi>, fondateur du prieuré</rs>, <ref target="#SCHA-PR_0002" n="2">SCHA-PR 2</ref>, <ref target="#SCHA-PR_0001" n="1">SCHA-PR 1</ref><!--, <ref><hi rend="sc">vi</hi></ref>-->, <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="1">1</ref> --> <!-- doublon meme acte SCHA-PR_0002: <ref target="#SCHA-PR_0002" n="3">2</ref> --> <!-- doublon meme acte SCHA-PR_0001: <ref target="#SCHA-PR_0001" n="4">1</ref> --><!--, <ref>5</ref>-->.</item>
 <item xml:id="SMPO-AB_rs_1963"><rs><hi rend="sc">Warwick</hi> (Angleterre)</rs> <hi rend="i">Warewic</hi>.<!--<ref n="145">145</ref>-->.</item>
 <item xml:id="NDPA-EG-04_rs_7475"><rs><hi rend="sc">Waujoi</hi></rs>. <note>Vide <ref type="see" target="INDEX-PERSONNES.xml#NDPA-EG-04_rs_7092" corresp="INDEX-PERSONNES.xml#index_personne_liste_V">Vallis Joth</ref></note>.</item>
@@ -7276,10 +7230,8 @@
             <rs type="place"><hi rend="sc">Wuilliacum</hi>: <hi rend="i">Villy-le-Maréchal, Aube, arr. Troyes, eant. Bouilly, </hi><seg>v. <ref type="see" target="INDEX-PERSONNES.xml#SAPC-AB_rs_0467" corresp="INDEX-PERSONNES.xml#index_personne_liste_G">Guillelmus</ref>.</seg></rs>
           </item>
 </list>
-        </div>
-        <div type="index-section" n="Y" xml:id="index_lieu_liste_Y">
-          <head>Y</head>
           <list type="index">
+            <head>Y</head>
 <item xml:id="SMPO-AB_rs_1768"><rs><hi rend="sc">Y</hi> breus</rs><!--<ref n="50">50</ref>--><!--, <ref n="53">53</ref>--><!--, <ref n="54">54</ref>--><!--, <ref n="55">55</ref>--><!--, <ref n="56">56</ref>--><!--, <ref n="66">66</ref>--><!--, <ref n="158">158</ref>--><!--, <ref n="479">479</ref>-->.</item>
 <item xml:id="SMPA-AB-03_rs_3911"><rs><hi rend="sc">Y Grégeois</hi></rs>, <seg><hi rend="i">voir</hi> <ref type="see" target="#SMPA-AB-03_rs_1911" corresp="#index_lieu_liste_I"><hi rend="sc">I Grégeois</hi></ref></seg>.</item>
 <item xml:id="SMPA-AB-02_rs_3353">
@@ -7312,7 +7264,6 @@
 <item xml:id="NDPA-EG-04_rs_7504"><rs><hi rend="sc">Yvriacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3615" corresp="#index_lieu_liste_I">Ivriacum</ref></note>.</item>
 <item xml:id="NDCH-EG_rs_2180"><rs><hi rend="sc">Yys (Les)</hi></rs>, <ref target="#NDCH-EG_0137" n="I. 257">NDCH-EG 137</ref>; <ref target="#NDCH-EG_0245" n="II. 103">NDCH-EG 245</ref>. <desc>hameau, commune des Corvées, canton de la Loupe, arrondissement de Nogent-le-Rotrou.</desc></item>
 </list>
-        </div>
       </div>
     </body>
   </text>
