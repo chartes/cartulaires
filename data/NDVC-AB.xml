@@ -99,7 +99,7 @@
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k5455505p"><title>Cartulaire de l'abbaye de Notre-Dame des Vaux de Cernay </title> publié par
             <author>Luc Merlet </author> et <author>Auguste Moutié</author>,
-            Paris:<publisher>Plon</publisher>,<date type="publication">1857-1858</date>, 3 vol</bibl>
+            Paris:<publisher>Plon</publisher>,<date>1857-1858</date>, 3 vol</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -138,15 +138,21 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1857" notAfter="1858">1857/1858</date>
+        <date>1857/1858</date>
       </creation>
-      <date type="coverage" notBefore="1118" notAfter="1635">1118/1635</date>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1118/1635</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-07" who="#FG">Mise en écran</change>
       <change when="2010-04" who="#MBC">Indexation diplomatique</change>
