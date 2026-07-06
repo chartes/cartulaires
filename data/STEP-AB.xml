@@ -78,7 +78,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date type="publication">1878</date></bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date>1878</date></bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -120,14 +120,21 @@
     <profileDesc>
       <creation>
         <date>1878</date>
-      <date type="coverage" notBefore="1052" notAfter="1745">1052/1745</date></creation>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fra">fra</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1052/1745</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-10" who="NR">Encodage de l'introduction</change>
       <change when="2010-09" who="CD">Tableau de la tradition</change>
@@ -715,8 +722,7 @@
                 <p>Cette charte, dit-il, très-curieuse à tous égards, est datée d'Étampes de la 21°
                   année du roi Henri, indiction VI. Cette date convient à l'année 1052. L'indiction
                   n'est pas exacte, c'était en 1052 l'indiction V.</p>
-                <pb n="6" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f16/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
-                <p>Gaignères indique la même disposition des signatures et figure le monogramme
+                <p><pb n="6" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f16/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/> Gaignères indique la même disposition des signatures et figure le monogramme
                   royal dont le fac-simile se trouve également dans le vidimus de 1323. Ces trois
                   copies concordantes ne laissent aucune difficulté de lecture. Henri I étant monté
                   sur le trône le 20 juillet 1031, sa vingt et unième année commence le 20 juillet
@@ -8429,7 +8435,7 @@
           <item xml:id="STEP-AB_rs_0164"><rs><hi rend="sc">Champgaudin</hi></rs>, <ref target="#STEP-AB_0003" n="3">3</ref> <ref target="#STEP-AB_0037" n="37">37</ref> <ref target="#STEP-AB_0058" n="58">58.</ref></item>
           <item xml:id="STEP-AB_rs_0165"><rs><hi rend="sc">Champrond (Michel de)</hi></rs>, <ref target="#STEP-AB_0105" n="105">105.</ref></item>
           <item xml:id="STEP-AB_rs_0166"><rs><hi rend="sc">Changé</hi>, près Saint-Piat</rs>, <ref target="#STEP-AB_0101" n="101">101.</ref></item>
-          <item xml:id="STEP-AB_rs_0167"><rs><hi rend="i"><hi rend="i">Caugeto</hi>, Caugeio, Changeto</hi> (Amaury de)</rs>, <ref target="#STEP-AB_0030" n="30">30</ref> — Payen<!-- doublon meme acte STEP-AB_0030: <ref target="#STEP-AB_0030" n="138">30.</ref> -->.</item>
+          <item xml:id="STEP-AB_rs_0167"><rs><hi rend="i">Caugeto, Caugeio, Changeto</hi> (Amaury de)</rs>, <ref target="#STEP-AB_0030" n="30">30</ref> — Payen<!-- doublon meme acte STEP-AB_0030: <ref target="#STEP-AB_0030" n="138">30.</ref> -->.</item>
           <item xml:id="STEP-AB_rs_0169"><rs><hi rend="sc">Chantry</hi></rs>, <ref target="#STEP-AB_0105" n="105">105.</ref></item>
           <item xml:id="STEP-AB_rs_0170"><rs><hi rend="sc">Chaous (Aubert)</hi></rs>, <ref target="#STEP-AB_0057" n="57">57.</ref></item>
           <item xml:id="STEP-AB_rs_0171"><rs><hi rend="sc">Charbonel (Phil.)</hi></rs>, <ref target="#STEP-AB_0006" n="6">6.</ref></item>
@@ -8630,7 +8636,7 @@
           <item xml:id="STEP-AB_rs_0350"><rs><hi rend="sc">Guiard (Germain)</hi></rs>, <ref target="#STEP-AB_0127" n="127">127.</ref></item>
           <item xml:id="STEP-AB_rs_0351"><rs><hi rend="sc">Guillaume</hi>, prieur d'Epernon</rs>, <ref target="#STEP-AB_2b" n="2bis">2bis</ref> <ref target="#STEP-AB_103b" n="103bis">103bis</ref> <ref target="#STEP-AB_0010" n="10">10</ref> <ref target="#STEP-AB_0014" n="14">14</ref> <!-- doublon meme acte STEP-AB_0014: <ref target="#STEP-AB_0014" n="21,">14</ref> --> <!--<ref>132</ref>.--></item>
           <item xml:id="STEP-AB_rs_0354"><rs><hi rend="sc">Guillemet</hi></rs>, <ref target="#STEP-AB_0079" n="79">79.</ref></item>
-          <item xml:id="STEP-AB_rs_0355"><rs><hi rend="i">Guiperreux <hi rend="i">Vadum petrosum</hi></hi></rs>, <ref target="#STEP-AB_0043" n="43">43</ref> <ref target="#STEP-AB_0060" n="60">60</ref> <!-- doublon meme acte STEP-AB_0043: <ref target="#STEP-AB_0043" n="87">43.</ref> --></item>
+          <item xml:id="STEP-AB_rs_0355"><rs><hi rend="i">Guiperreux Vadum petrosum</hi></rs>, <ref target="#STEP-AB_0043" n="43">43</ref> <ref target="#STEP-AB_0060" n="60">60</ref> <!-- doublon meme acte STEP-AB_0043: <ref target="#STEP-AB_0043" n="87">43.</ref> --></item>
           <item xml:id="STEP-AB_rs_0357"><rs><hi rend="sc">Guiscelin</hi>, notaire d'Henri I</rs>, <ref target="#STEP-AB_0001" n="1">1.</ref></item>
           <item xml:id="STEP-AB_rs_0358"><rs><hi rend="sc">Gyver (Antoine de)</hi></rs>, <ref target="#STEP-AB_0097" n="97">97.</ref></item>
           <item xml:id="STEP-AB_rs_0405"><rs><hi rend="sc">Guill</hi></rs>, <ref target="#STEP-AB_0065" n="65">65.</ref></item>
@@ -8764,7 +8770,7 @@
           <!--<item xml:id="STEP-AB_rs_0256"><rs><hi rend="sc">Epernon</hi>, moulin</rs>, <ref>179</ref></item>-->
           <item xml:id="STEP-AB_rs_0377"><rs><hi rend="sc">Haute-Bruy?re</hi>, maison ? Epernon</rs>, <ref target="#STEP-AB_0040" n="40">40</ref> <!-- doublon meme acte STEP-AB_0040: <ref target="#STEP-AB_0040" n="42.">40.</ref> --></item>
           <item xml:id="STEP-AB_rs_0401"><rs><hi rend="sc">Houdan</hi>, murailles</rs>, <ref target="#STEP-AB_0014" n="14">14.</ref></item>
-          <item xml:id="STEP-AB_rs_0409"><rs><hi rend="i"><hi rend="i">Mainbodus</hi></hi></rs>, <ref target="#STEP-AB_0002" n="2">2</ref> <ref target="#STEP-AB_2b" n="2bis">2bis</ref></item>
+          <item xml:id="STEP-AB_rs_0409"><rs><hi rend="i">Mainbodus</hi></rs>, <ref target="#STEP-AB_0002" n="2">2</ref> <ref target="#STEP-AB_2b" n="2bis">2bis</ref></item>
           <!--<item xml:id="STEP-AB_rs_0470"><rs><hi rend="i">Macoardus</hi></rs>, <ref>138.</ref></item>-->
           <item xml:id="STEP-AB_rs_0471">Mâcon, l'évêque de. V. Castagnet.</item>
           <item xml:id="STEP-AB_rs_0472"><rs><hi rend="sc">Maillard (Pasquier)</hi></rs>, <ref target="#STEP-AB_0107" n="107">107.</ref></item>

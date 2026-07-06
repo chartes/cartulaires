@@ -85,7 +85,7 @@
       <sourceDesc facs="https://iiif.archive.org/iiif/cartulairedesain00orl/manifest.json">
         <bibl><title>Cartulaire de Sainte-Croix d'Orléans (814-1300)</title> par <author>Joseph
             Thillier</author> et <author>Eugène Jarry</author>, Paris, <publisher>éd. Alphonse
-            Picard et fils éditeurs</publisher>, <date type="publication">1906</date>.</bibl>
+            Picard et fils éditeurs</publisher>, <date>1906</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -124,7 +124,6 @@
     <profileDesc>
       <creation>
         <date>1906</date>
-        <date type="coverage" notBefore="814" notAfter="1321">814/1321</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -132,7 +131,14 @@
         <language ident="fro">Ancien français</language>
         <language ident="grc">Grec ancien</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>814/1321</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2011-07" who="#CD">Encodage des dates de lieu</change>
       <change when="2010-05" who="#NR">Indexation diplomatique</change>

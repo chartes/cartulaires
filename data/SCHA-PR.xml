@@ -86,7 +86,7 @@
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486066q"><title>Cartulaire du prieuré de Saint-Christophe-en-Halatte</title> publié par
             <author>M. l'abbé A. Vattier</author>. Senlis, in: Memoires de la Société de l'Histoire
-          de Paris et d'Île de France , tome 18, pp.101-271, <date type="publication">1876</date>, 8°.</bibl>
+          de Paris et d'Île de France , tome 18, pp.101-271, <date>1876</date>, 8°.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -121,15 +121,21 @@
     <profileDesc>
       <creation>
         <date>1876</date>
-        <date type="coverage" notBefore="1060" notAfter="1712">1060/1712</date>
-      </creation>
+        </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fra">fra</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1060/1712</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-09" who="CD">Tableau de la tradition</change>
       <change when="2010" who="??">Vérification index</change>
