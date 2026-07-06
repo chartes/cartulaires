@@ -453,6 +453,6 @@ L'objectif est d'assurer que le balisage distingue les seuls mots de la langue, 
     </rng:element>
   </rng:define>
   
-  <rng:include href="http://localhost:8080/dots/schema/acte.rng"/>
-<!--  <rng:include href="https://dev.chartes.psl.eu/dots/schema/acte.rng"/>-->
+<!--  <rng:include href="http://localhost:8080/dots/schema/acte.rng"/>-->
+  <rng:include href="https://dev.chartes.psl.eu/dots/schema/acte.rng"/>
 </rng:grammar>
