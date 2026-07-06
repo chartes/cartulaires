@@ -51,7 +51,7 @@
       </seriesStmt>
       <sourceDesc>
           <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k165334g https://gallica.bnf.fr/ark:/12148/bpt6k1653723">
-            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, <date type="publication">1909-1932</date>.
+            <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, <date>1909-1932</date>.
           </bibl>
       </sourceDesc>
     </fileDesc>
@@ -100,13 +100,20 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1909" notAfter="1932">1909-1932</date>
-      <date type="coverage" notBefore="556" notAfter="1250">556/1250</date></creation>
+        <date >1909-1932</date>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>556/1250</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change who="#PP" when="2024-12">Conversion en TEI</change>
     </revisionDesc>

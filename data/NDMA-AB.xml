@@ -81,7 +81,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date type="publication">1878</date></bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date>1878</date></bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -122,13 +122,20 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date when="1878">1878</date>
-      <date type="coverage" notBefore="1120" notAfter="1260">1120/1260</date></creation>
+        <date>1878</date>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1120/1260</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-10" who="NR">Encodage de l'introduction</change>
       <change when="2010-07" who="FG">Première mise en écran</change>

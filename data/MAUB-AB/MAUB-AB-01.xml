@@ -84,7 +84,7 @@
         <idno type="vol">1</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k992853w"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par <author ref="https://www.idref.fr/095012664 https://data.bnf.fr/fr/ark:/12148/cb12814042x">Adolphe Dutilleux</author> et <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>, Pontoise : <publisher>Typographie Lucien Paris</publisher>, <date type="publication">1890</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k992853w"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par <author>Adolphe Dutilleux</author> et <author>Joseph Depoin</author>, Pontoise : <publisher>Typographie Lucien Paris</publisher>, <date>1890</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -108,13 +108,19 @@
     <profileDesc>
       <creation>
         <date>1890</date>
-        <date type="coverage" notBefore="1204" notAfter="1715">1204/1715</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1204/1715</date>
+          </term>
+        </keywords>
+      </textClass>
     </profileDesc>
     <revisionDesc>
       <change when="2026-06-18" who="#COD">Conversion initiale.</change>
@@ -1173,9 +1179,10 @@
               <div type="transcription" xml:lang="lat"><p/></div></body>
           </text>
           <text xml:id="MAUB-AB-01_0027" n="27" subtype="article">
+            <pb n="20"/>
             <front>
               <docDate>
-                <date when="1260-07-19"><pb n="20"/>19 Juillet 1260</date>
+                <date when="1260-07-19">19 Juillet 1260</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -1601,9 +1608,10 @@
             </body>
           </text>
           <text xml:id="MAUB-AB-01_0039" n="39" subtype="article">
+            <pb n="27"/>
             <front>
               <docDate>
-                <date when="1273-03-04"><pb n="27"/>4 Mars 1273</date>
+                <date when="1273-03-04">4 Mars 1273</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -4148,9 +4156,10 @@
             </body>
           </text>
           <text xml:id="MAUB-AB-01_0082" n="82" subtype="article">
+            <pb n="82"/>
             <front>
               <docDate>
-                <date when="1341-02-02"><pb n="82"/>2 Février 1341 n. st.</date>
+                <date when="1341-02-02">2 Février 1341 n. st.</date>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -5691,9 +5700,9 @@
           <text xml:id="MAUB-AB-01_0137" n="149-155" subtype="article">
             <front>
               <docDate>
-                <date when="1256" scope="circa">Novembre 1256<note><p>Ces pièces
+                <date when="1256" scope="circa">Novembre 1256</date><note><p>Ces pièces
                   sont réservées pour être reproduites dans une publication d’anciens textes concernant
-                  <hi rend="i">Auvers-sur-Oise</hi>.</p></note></date>
+                  <hi rend="i">Auvers-sur-Oise</hi>.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>

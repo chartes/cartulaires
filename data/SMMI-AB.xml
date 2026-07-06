@@ -58,7 +58,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><author>Marie-Marguerite Lemarignier</author>, <title>Les cartulaires de Saint-Mesmin de Micy. Étude critique et essai de restitution</title>, thèse pour le dipl. d’archiviste paléographe, <date type="publication">1937</date>, 3 t., dactyl. ; AD Loiret, bibliothèque, M 1231.</bibl>
+        <bibl><author>Marie-Marguerite Lemarignier</author>, <title>Les cartulaires de Saint-Mesmin de Micy. Étude critique et essai de restitution</title>, thèse pour le dipl. d’archiviste paléographe, <date>1937</date>, 3 t., dactyl. ; AD Loiret, bibliothèque, M 1231.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -83,12 +83,19 @@
     <profileDesc>
       <creation>
         <date>1937</date>
-      <date type="coverage" notBefore="481" notAfter="1271">481/1271</date></creation>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
       </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>481/1271</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="PP">Encodage</change>
     </revisionDesc>

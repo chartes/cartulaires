@@ -51,7 +51,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><author>Sandrine Delaforge-Marchand</author>, <title>Édition du chartrier de l’abbaye de Saint-Antoine-des-Champs (1191-1256)</title>, thèse pour le dipl. d’archiviste paléographe, <date type="publication">1994</date>, multigr.</bibl>
+        <bibl><author>Sandrine Delaforge-Marchand</author>, <title>Édition du chartrier de l’abbaye de Saint-Antoine-des-Champs (1191-1256)</title>, thèse pour le dipl. d’archiviste paléographe, <date>1994</date>, multigr.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -84,13 +84,20 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date when="1994">1994</date>
-      <date type="coverage" notBefore="1191" notAfter="1267">1191/1267</date></creation>
+        <date>1994</date>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1191/1267</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change who="#PP" when="2024-12">Conversion en TEI</change>
     </revisionDesc>
