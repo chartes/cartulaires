@@ -46,7 +46,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k131971r/manifest.json" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k131971r/manifest.json">
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k131971r" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k131971r/manifest.json"><author>Henri Omont</author>, « Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle) », dans <title>Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</title>, t. 30, <date type="publication">1903</date>, p. 127-174 ; tiré à part Paris, <date type="publication">1904</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k131971r" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k131971r/manifest.json"><author>Henri Omont</author>, « Cartulaire de l’hôpital de l’abbaye du Val-Notre-Dame au diocèse de Paris (XIII<hi rend="sup">e</hi> siècle) », dans <title>Mémoires de la Société de l’histoire de Paris et de l’Île-de-France</title>, t. 30, <date>1903</date>, p. 127-174 ; tiré à part Paris, <date>1904</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -70,13 +70,20 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1903" notAfter="1904">1903-1904</date>
-      <date type="coverage" notBefore="1214" notAfter="1265">1214/1265</date></creation>
+        <date>1903-1904</date>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1214/1265</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change who="#PP" when="2024-12">Conversion en TEI</change>
     </revisionDesc>

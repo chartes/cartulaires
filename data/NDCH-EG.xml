@@ -82,7 +82,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc facs="https://cartulaires-2fe77c.gitpages.huma-num.fr/collection/collection_NDCH-EG.json">
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486069v https://gallica.bnf.fr/ark:/12148/bpt6k486070s https://gallica.bnf.fr/ark:/12148/bpt6k4860715"><title>Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres originaux</title>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique d’Eure-et-Loir, <date type="publication">1862-1865</date>, 3 vol. in-4, CCLII-263-431-443 p.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486069v https://gallica.bnf.fr/ark:/12148/bpt6k486070s https://gallica.bnf.fr/ark:/12148/bpt6k4860715"><title>Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres originaux</title>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique d’Eure-et-Loir, <date>1862-1865</date>, 3 vol. in-4, CCLII-263-431-443 p.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -122,15 +122,21 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1862" notAfter="1865">1862/1865</date>
-        <date type="coverage" notBefore="573" notAfter="1391">573/1391</date>
+        <date>1862/1865</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>573/1391</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-07" who="#FG">Première mise en écran</change>
       <change when="2009-12" who="#CD">Index, conversion des liens</change>

@@ -83,7 +83,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k914156"><title>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</title>, P. Marchegay (éd.). Les Roches-Baritaud: <date type="publication">1879</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k914156"><title>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</title>, P. Marchegay (éd.). Les Roches-Baritaud: <date>1879</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -117,14 +117,20 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date when="1879">1879</date>
-        <date type="coverage" notBefore="866" notAfter="1172">866/1172</date>
+        <date>1879</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>866/1172</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2010-10" who="#NR">Encodage de l'introduction</change>
       <change when="2010-09" who="#CD">Tableau de la tradition</change>
