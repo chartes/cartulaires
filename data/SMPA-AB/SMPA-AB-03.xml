@@ -61,7 +61,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, <date type="publication">1966-1998</date> (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12)</bibl>
+        <bibl><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, <date>1966-1998</date> (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12)</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -92,15 +92,21 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date notBefore="1966" notAfter="1998">1966-1998</date>
-        <date type="coverage" notBefore="1330" notAfter="1436">1330/1436</date>
+        <date>1966-1998</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1330/1436</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2024-12" who="PP">Encodage</change>
     </revisionDesc>
