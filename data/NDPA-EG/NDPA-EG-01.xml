@@ -13,6 +13,7 @@
           <resp>Suivi technique (2024–…)</resp>
         </respStmt>
       </titleStmt>
+      <extent/>
       <publicationStmt>
         <date>2024</date>
         <idno>http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-01</idno>
@@ -45,7 +46,7 @@
       </seriesStmt>
       <sourceDesc>
         <bibl xml:id="guerard1" source="https://gallica.bnf.fr/ark:/12148/bpt6k6534939f">
-          <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 1, Paris, <date type="publication">1850</date>.
+          <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 1, Paris, <date>1850</date>.
         </bibl>
       </sourceDesc>
     </fileDesc>
@@ -67,11 +68,18 @@
     <profileDesc>
       <creation>
         <date>1850</date>
-      <date type="coverage" notBefore="528" notAfter="1692">528/1692</date></creation>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
       </langUsage>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>528/1692</date>
+          </term>
+        </keywords>
+      </textClass>
     </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="#PP">Encodage</change>
@@ -2251,7 +2259,8 @@
               <docDate>
                 <date when="1194">1194.</date>
               </docDate>
-            <index><term type="nature" key="tbd"/></index><head>XLVIII</head></front>
+            <index><term type="nature" key="tbd"/></index><head>XLVIII</head>
+            </front>
             <body>
               <div type="transcription" xml:lang="lat">
                 <head>
