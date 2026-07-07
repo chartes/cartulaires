@@ -83,7 +83,7 @@
         <idno type="vol">1</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k58296915"><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I, 827-1216</title>, publié par <author ref="https://data.bnf.fr/fr/documents-by-rdt/12442952/te/page1">Émile Morel</author>, Compiègne : <publisher>Société historique de Compiègne</publisher>, <date type="publication">1904</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k58296915"><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I, 827-1216</title>, publié par <author>Émile Morel</author>, Compiègne : <publisher>Société historique de Compiègne</publisher>, <date>1904</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -107,13 +107,19 @@
     <profileDesc>
       <creation>
         <date>1904</date>
-        <date type="coverage" notBefore="827" notAfter="1216">827/1216</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>827/1216</date>
+          </term>
+        </keywords>
+      </textClass>
     </profileDesc>
     <revisionDesc>
       <change when="2026-06-18" who="#COD">Conversion initiale.</change>

@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I : fin du Xe siècle-1280</title>
+        <title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I</title>
         <title type="short">Saint-Magloire</title>
         <author ref="https://www.wikidata.org/wiki/Q36369211 https://data.bnf.fr/fr/ark:/12148/cb11926235x https://www.idref.fr/027157679">Anne Terroine</author>
         <author ref="https://www.wikidata.org/wiki/Q36198380 https://data.bnf.fr/fr/ark:/12148/cb11903181p https://www.idref.fr/02687007X">Lucie Fossier</author>
@@ -67,7 +67,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1998_cat_12_1"><title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I, Fin du Xe siècle-1280</title>, <author ref="https://www.wikidata.org/wiki/Q36369211 https://data.bnf.fr/fr/ark:/12148/cb11926235x https://www.idref.fr/027157679">Anne Terroine</author> et <author ref="https://www.wikidata.org/wiki/Q36198380 https://data.bnf.fr/fr/ark:/12148/cb11903181p https://www.idref.fr/02687007X">Lucie Fossier</author>, avec le concours d’<editor ref="https://data.bnf.fr/fr/ark:/12148/cb12626623n">Yvonne de Montenon</editor>, Aubervilliers : <publisher>Institut de recherche et d’histoire des textes</publisher>, <date type="publication">1998</date>.</bibl>
+        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1998_cat_12_1"><title>Chartes et documents de l’abbaye de Saint-Magloire. Tome I, Fin du Xe siècle-1280</title>, <author>Anne Terroine</author> et <author>Lucie Fossier</author>, avec le concours d’<author>Yvonne de Montenon</author>, Aubervilliers : <publisher>Institut de recherche et d’histoire des textes</publisher>, <date>1998</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -96,7 +96,6 @@
     <profileDesc>
       <creation>
         <date>1998</date>
-        <date type="coverage" notBefore="0990" notAfter="1280">fin du Xe siècle/1280</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
@@ -105,7 +104,8 @@
       </langUsage>
       <textClass>
         <keywords>
-          <term type="temporalCoverage"><date notBefore="0990" notAfter="1280">fin du Xe siècle/1280</date></term>
+          <term type="temporalCoverage">
+            <date>0975~/1280</date></term>
         </keywords>
       </textClass>
     </profileDesc>
@@ -1377,9 +1377,9 @@
             <front>
               <docDate>
                 <date when="0979-03-08">[979, 8 juin – 986,
-                  2 mars<note n="1_1"><p>Ainsi que le disent les éditeurs, l’acte est
-                  postérieur au couronnement de Louis V (8 juin 979) et antérieur à la mort de Lothaire (2 mars
-                  986).</p></note>].</date>
+                  2 mars].</date><note n="1_1"><p>Ainsi que le disent les éditeurs, l’acte est
+                    postérieur au couronnement de Louis V (8 juin 979) et antérieur à la mort de Lothaire (2 mars
+                    986).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -1568,8 +1568,7 @@
             <pb n="58"/>
             <front>
               <docDate>
-                <date when="0988-12-30">[988, 30 décembre – 989,
-                  29 décembre<note n="2_1" xml:id="SMPA-AB-01_note_2_1"><p>Ces quatre souscripteurs, que l’on
+                <date when="0988-12-30">[988, 30 décembre – 989, 29 décembre].</date><note n="2_1" xml:id="SMPA-AB-01_note_2_1"><p>Ces quatre souscripteurs, que l’on
                   retrouve n° 4, p. 62 sont Bouchard de Vendôme, comte royal de Paris, Hugues de Beauvais, le
                   précepteur de Robert, qui devait être assassiné en 1008 (R.-H. Bautier,
                   <hi rend="i">Helgaud</hi>, p. 86, note 3), Ansoud (le Riche de Paris), Hugues de Meulan.
@@ -1579,7 +1578,7 @@
                   pour lui, « le roi ne se réserve pas une partie du royaume en cédant l’autre à son associé.
                   Les deux rois règnent simultanément sur le royaume entier ; les diplômes sont expédiés en
                   leur nom commun. » L’historien se contredit puisqu’il date bien de 989 l’acte dont il est ici
-                  question, sans en contester l’authenticité.</p></note>].</date>
+                  question, sans en contester l’authenticité.</p></note>
                 <placeName>Paris.</placeName>
               </docDate>
               <index>
@@ -1660,7 +1659,7 @@
             <pb n="61"/>
             <front>
               <docDate>
-                <date when="0989" scope="circa">[989-996<note n="3_1"><p>Eudes,
+                <date when="0989" scope="circa">[989-996].</date><note n="3_1"><p>Eudes,
                   évêque de Chartres, a exercé ses fonctions de 968 environ à 1004. Mais on peut aisément
                   resserrer la fourchette : Robert le Pieux fut associé à son père dès 987, mais fait donation
                   des terres de Méré en 989 (voir n° 2, p. 58) ; d’autre part, l’acte est antérieur à 996, date
@@ -1675,7 +1674,7 @@
                   de Bretagne au roi, soit avant 1008 (R. Merlet, « Les origines de Saint-Magloire », p. 270) ;
                   Junan, son prédécesseur, premier abbé de Saint-Magloire de Paris, serait mort vers l’an 1000,
                   mais cette date est contestable (voir Appendice I, p. 512), et Harduin a pu exercer ses
-                  fonctions dès la fin du <num>x</num><hi rend="sup">e</hi> siècle.</p></note>].</date>
+                  fonctions dès la fin du <num>x</num><hi rend="sup">e</hi> siècle.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -1717,12 +1716,12 @@
           <text xml:id="SMPA-AB-01_0004" n="4" subtype="article">
             <front>
               <docDate>
-                <date when="0997-05">[997-998<note n="4_1"><p>Robert épousa Berthe en
+                <date when="0997-05">[997-998].</date><note n="4_1"><p>Robert épousa Berthe en
                   997 ; Adelaïde mourut en 1003, date à laquelle d’ailleurs, Robert, après avoir répudié
                   Berthe, épousa Constance (C. Pfister, <hi rend="i">Le règne de Robert le Pieux</hi>, p. 64).
                   Mais le futur évêque de Beauvais, Roger, qui souscrit cet acte, fut remplacé par Francon au
                   plus tard en 998 (O. Guyotjeannin, <hi rend="i">Episcopus et Comes</hi>, p. 23, note
-                  99).</p></note>].</date>
+                  99).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -1925,17 +1924,16 @@
             <pb n="68"/>
             <front>
               <docDate>
-                <date when="0996-02-24">[996, 24 octobre – 1007,
-                  26 février<note n="5_1"><p>Bouchard, comte de Corbeil, de Melun et
-                  de Vendôme, qui souscrit l’acte, étant mort le 26 février 1007, l’acte ne peut être
-                  postérieur à cette date. Pfister, s’appuyant sur le fait qu’Adelaïde ne figure pas parmi les
-                  souscripteurs, le daterait d’après 1003 (<hi rend="i">op. cit.</hi>, p. XLVIII) ; cet
-                  argument ne nous semble pas irréfutable. Les quatre souscripteurs du présent acte
-                  apparaissent dans l’acte du jeune Robert de 989 (voir n° 2, p. 58) et, bien que la titulature
-                  de Robert nous laisse penser qu’il est maintenant seul roi, son entourage ne s’est pas encore
-                  modifié, ce qui semblerait indiquer que l’acte est de peu postérieur à 996. Il faut cependant
-                  signaler que le moulin de Senlis ne figure pas dans la liste des biens confirmés par Robert
-                  (n° 4), ce qui le placerait après 997.</p></note>].</date>
+                <date when="0996-02-24">[996, 24 octobre – 1007, 26 février].</date><note n="5_1"><p>Bouchard, comte de Corbeil, de Melun et
+                    de Vendôme, qui souscrit l’acte, étant mort le 26 février 1007, l’acte ne peut être
+                    postérieur à cette date. Pfister, s’appuyant sur le fait qu’Adelaïde ne figure pas parmi les
+                    souscripteurs, le daterait d’après 1003 (<hi rend="i">op. cit.</hi>, p. XLVIII) ; cet
+                    argument ne nous semble pas irréfutable. Les quatre souscripteurs du présent acte
+                    apparaissent dans l’acte du jeune Robert de 989 (voir n° 2, p. 58) et, bien que la titulature
+                    de Robert nous laisse penser qu’il est maintenant seul roi, son entourage ne s’est pas encore
+                    modifié, ce qui semblerait indiquer que l’acte est de peu postérieur à 996. Il faut cependant
+                    signaler que le moulin de Senlis ne figure pas dans la liste des biens confirmés par Robert
+                    (n° 4), ce qui le placerait après 997.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2066,8 +2064,8 @@
             <front>
               <docDate>
                 <date when="1033-07-20">1033, avant le
-                  20 juillet<note n="7_1" xml:id="SMPA-AB-01_note_7_1"><p>C’est au 20 juillet que commence l’année
-                  III du souverain.</p></note>.</date>
+                  20 juillet.</date><note n="7_1" xml:id="SMPA-AB-01_note_7_1"><p>C’est au 20 juillet que commence l’année
+                    III du souverain.</p></note>
                 <placeName>Paris.</placeName>
               </docDate>
               <index>
@@ -2141,12 +2139,12 @@
             <pb n="74"/>
             <front>
               <docDate>
-                <date when="1031">[1031-1042<note n="8_1"><p>Le successeur de Renaud
+                <date when="1031">[1031-1042].</date><note n="8_1"><p>Le successeur de Renaud
                   à l’abbatiat, Robert, est attesté pour la première fois en 1042
                   (<hi rend="i">Gallia Christiana</hi>, t. 7, col. 310). Lasteyrie
                   (<hi rend="i">op. cit.</hi>, p. 115, note 1), quant à lui, date cet acte d’environ 1033, à
                   cause de la similitude de formules avec l’acte relatif à la donation d’Aubry de Millepas
-                  (n° 7, p. 72), cette hypothèse étant cependant contestée par Soehnée.</p></note>].</date>
+                  (n° 7, p. 72), cette hypothèse étant cependant contestée par Soehnée.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2258,10 +2256,10 @@
             <pb n="77"/>
             <front>
               <docDate>
-                <date when="1059-05-20">1059<note n="9_1"><p>La vingt-neuvième année
+                <date when="1059-05-20">1059.</date><note n="9_1"><p>La vingt-neuvième année
                   du règne commence le 20 juillet 1059, mais, d’après F. Soehnée (<hi rend="i">op. cit.</hi>,
                   p. 125), il n’était pas rare que l’on anticipe à partir du commencement de l’année
-                  dominicale.</p></note>.</date>
+                  dominicale.</p></note>
                 <placeName>Melun</placeName>
               </docDate>
               <index>
@@ -2325,8 +2323,8 @@
             <pb n="79"/>
             <front>
               <docDate>
-                <date when="1031">[1031-1060]<note n="10_1"><p>Dates du règne
-                  d’Henri I<hi rend="sup">er</hi>.</p></note>.</date>
+                <date when="1031">[1031-1060].</date><note n="10_1"><p>Dates du règne
+                  d’Henri I<hi rend="sup">er</hi>.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2446,10 +2444,10 @@
             <pb n="82"/>
             <front>
               <docDate>
-                <date when="1055">[1055-1067<note n="12_1"><p>Maurilius, archevêque
+                <date when="1055">[1055-1067].</date><note n="12_1"><p>Maurilius, archevêque
                   de Tours, exerça ses fonctions de 1055 à 1067, Hugues, évêque de Lisieux, de 1049 à 1077,
                   Guillaume, évêque d’Évreux, de 1040 à 1068, Jean, abbé de Fécamp, de 1028 à 1079. Guillaume
-                  le Conquérant, quant à lui, vécut de 1035 à 1087.</p></note>].</date>
+                  le Conquérant, quant à lui, vécut de 1035 à 1087.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2511,9 +2509,9 @@
             <pb n="83"/>
             <front>
               <docDate>
-                <date when="1072-05-23">1072, [après le 23 mai<note n="13_1"><p>Pour
+                <date when="1072-05-23">1072, [après le 23 mai].</date><note n="13_1"><p>Pour
                   la datation de l’acte, voir M. Prou, <hi rend="i">op. cit.</hi>, p. 163, note
-                  1.</p></note>].</date>
+                  1.</p></note>
                 <placeName>Paris, dans la cour du roi.</placeName>
               </docDate>
               <index>
@@ -2617,10 +2615,10 @@
             <pb n="86"/>
             <front>
               <docDate>
-                <date when="1075">1075<note n="14_1"><p>Le style utilisé à la
+                <date when="1075">1075.</date><note n="14_1"><p>Le style utilisé à la
                   chancellerie royale étant encore assez flottant (M. Prou, <hi rend="i">op. cit.</hi>,
                   pp. CLXVIII-CLXXIX), et la date du règne ne figurant pas, on ne peut préciser davantage la
-                  date de l’acte.</p></note>.</date>
+                  date de l’acte.</p></note>
                 <placeName>Paris.</placeName>
               </docDate>
               <index>
@@ -2668,8 +2666,8 @@
             <pb n="87"/>
             <front>
               <docDate>
-                <date when="1078">1078<note n="15_1"><p>Voir, pour la datation,
-                  l’acte précédent.</p></note>.</date>
+                <date when="1078">1078.</date><note n="15_1"><p>Voir, pour la datation,
+                  l’acte précédent.</p></note>
                 <placeName>Dreux.</placeName>
               </docDate>
               <index>
@@ -2730,19 +2728,19 @@
           <text xml:id="SMPA-AB-01_0016" n="16" subtype="article">
             <front>
               <docDate>
-                <date when="1075" scope="circa">[1075-1090<note n="16_1"><p>L’abbatiat
+                <date when="1075" scope="circa">[1075-1090].</date><note n="16_1"><p>L’abbatiat
                   d’Haimon se place entre environ 1072 et 1093 date, à laquelle
                   Philippe I<hi rend="sup">er</hi>, jugeant sa gestion déplorable, mit Saint-Magloire sous la
                   dépendance de Marmoutier (voir Note liminaire, p. 41). L’évêque de Paris, Geoffroy [de
                   Boulogne], quant à lui, régna de 1061 à 1095. En se référant au décanat de Jean [I de
                   Magnoponte], que nous voyons apparaître en 1083 (<hi rend="i">Gallia
-                  Christiana</hi>, t. 7, col. 194), on parvient à réduire cette fourchette, d’autant que
+                    Christiana</hi>, t. 7, col. 194), on parvient à réduire cette fourchette, d’autant que
                   le successeur de Jean, Foulques, est mentionné en 1090. Mais il faut remarquer que le
                   prédécesseur de Jean, Milon, est, d’après B. Guérard, mort vers 1075 (B. Guérard,
                   <hi rend="i">Cartulaire de N.-D. de Paris, Obituaire</hi>, t. 4, p. 23). Il nous semble donc
                   préférable de choisir la fourchette 1075-1090 pour dater cet acte. La présence constante des
                   autres signataires de la première colonne dans les années 60-70 nous confirme dans ce
-                  choix.</p></note>].</date>
+                  choix.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2810,7 +2808,7 @@
             <pb n="90"/>
             <front>
               <docDate>
-                <date when="1072-05">[1072-1093<note n="17_1"><p>Deux abbés de
+                <date when="1072-05">[1072-1093].</date><note n="17_1"><p>Deux abbés de
                   Saint-Magloire portent un nom commençant par H. : Haimon, qui gouverna l’abbaye de 1072 à
                   1093, Hélie qui fut abbé de 1174 à 1190. Le sire de Poissy dont l’initiale est G. pourrait
                   être Gace V, qui vivait encore en 1182, mais aussi Geoffroy, mort en 1073 (J. Depoin,
@@ -2820,7 +2818,7 @@
                   ne connaissons pas de prieur du nom d’Évrard. Les caractères un peu archaïques que présente
                   l’acte (notice d’un latin gauche, vocabulaire désuet
                   (<hi rend="i">chirographum</hi>)) nous font opter pour Haimon,
-                  sans être assuré de ne pas faire une erreur d’un siècle.</p></note>].</date>
+                  sans être assuré de ne pas faire une erreur d’un siècle.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -2863,8 +2861,8 @@
             <front>
               <docDate>
                 <date when="1112-04-18">1112, [avant le
-                  18 avril<note n="18_1"><p>Pour cette datation, voir J. Dufour,
-                  <hi rend="i">op. cit.</hi>, t. 1, p. 137, note 1.</p></note>].</date>
+                  18 avril].</date><note n="18_1"><p>Pour cette datation, voir J. Dufour,
+                    <hi rend="i">op. cit.</hi>, t. 1, p. 137, note 1.</p></note>
                 <placeName>Paris, au palais royal.</placeName>
               </docDate>
               <index>
@@ -2938,9 +2936,7 @@
             <pb n="93"/>
             <front>
               <docDate>
-                <date when="1112-04-02">1112, [fin avril –
-                  2 août<note n="19_1"><p>Pour cette datation, voir J. Dufour,
-                  <hi rend="i">op. cit.</hi>, p. 140, note 1.</p></note>].</date>
+                <date when="1112-04-02">1112, [fin avril – 2 août].</date><note n="19_1"><p>Pour cette datation, voir J. Dufour, <hi rend="i">op. cit.</hi>, p. 140, note 1.</p></note>
                 <placeName>Paris, au palais royal.</placeName>
               </docDate>
               <index>
@@ -3001,9 +2997,8 @@
           <text xml:id="SMPA-AB-01_0020" n="20" subtype="article">
             <front>
               <docDate>
-                <date when="1047">[1047-1071] ou
-                  [1104-1117]<note n="20_1"><p>Abbatiats d’Ulric I ou d’Ulric
-                  II.</p></note>.</date>
+                <date when="1047">[1047-1071] ou [1104-1117].</date><note n="20_1"><p>Abbatiats d’Ulric I ou d’Ulric
+                  II.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -3129,9 +3124,8 @@
           <text xml:id="SMPA-AB-01_0022" n="22" subtype="article">
             <front>
               <docDate>
-                <date when="1117-03-15">1117, [mars/avril –
-                  15 mai<note n="22_1"><p>Pour cette datation, voir J. Dufour,
-                  <hi rend="i">op. cit.</hi>, note 1.</p></note>].</date>
+                <date when="1117-03-15">1117, [mars/avril – 15 mai].</date><note n="22_1"><p>Pour cette datation, voir J. Dufour,
+                  <hi rend="i">op. cit.</hi>, note 1.</p></note>
                 <placeName>Paris, au chapitre de Saint-Magloire.</placeName>
               </docDate>
               <index>
@@ -3241,8 +3235,7 @@
           <text xml:id="SMPA-AB-01_0023" n="23" subtype="article">
             <front>
               <docDate>
-                <date when="1123-04-03">1123 (daté par erreur
-                  1133<note n="23_1"><p>Dans l’analyse de cet acte, M. Rhein, en
+                <date when="1123-04-03">1123 (daté par erreur 1133).</date><note n="23_1"><p>Dans l’analyse de cet acte, M. Rhein, en
                   accord avec A. de Dion, conteste la date de 1133, également donnée par les cartulaires et
                   retranscrite dans le vidimus et les copies de Baluze et de Clairembault. Les deux auteurs
                   font valoir que la quinzième année du règne de Louis VI s’établit entre le 3 août 1122 et le
@@ -3250,7 +3243,7 @@
                   ne pouvant être XXXII, comme le dit l’acte, mais XXII ; Pâques tombant le 15 avril en 1123,
                   l’acte en question ne peut être daté qu’entre le 15 avril et le 2 août de cette même année
                   (A. Rhein, <hi rend="i">op. cit.</hi>, p. 127, note 6 ; A. de Dion, <hi rend="i">op.
-                  cit.</hi>, p. 35).</p></note>).</date>
+                    cit.</hi>, p. 35).</p></note>
                 <placeName>Saint-Léger-en-Yvelines.</placeName>
               </docDate>
               <index>
@@ -3414,11 +3407,11 @@
             <pb n="104"/>
             <front>
               <docDate>
-                <date when="1124-04-03">1124, [avant le 3 août<note n="24_1"><p>Le
+                <date when="1124-04-03">1124, [avant le 3 août].</date><note n="24_1"><p>Le
                   3 août marque le changement d’année du règne de Louis VI, la date de l’acte indiquant qu’il
                   est passé la <num>xvi</num><hi rend="sup">e</hi> année de ce règne. On peut suggérer que le
                   comte de Montfort, suivant très probablement les usages de la chancellerie royale, utilisait
-                  le style de Pâques, ce qui situerait l’acte entre le 6 avril et le 3 août.</p></note>].</date>
+                  le style de Pâques, ce qui situerait l’acte entre le 6 avril et le 3 août.</p></note>
                 <placeName>Montfort-l’Amaury.</placeName>
               </docDate>
               <index>
@@ -3606,9 +3599,9 @@
             <pb n="109"/>
             <front>
               <docDate>
-                <date when="1123">[1123-1129<note n="25_1"><p>Ces dates sont celles
+                <date when="1123">[1123-1129].</date><note n="25_1"><p>Ces dates sont celles
                   que nous fournit la <hi rend="i">Gallia</hi> (t. 7, col. 311) pour l’abbatiat de
-                  Wismond.</p></note>].</date>
+                  Wismond.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -3674,11 +3667,10 @@
           <text xml:id="SMPA-AB-01_0026" n="26" subtype="article">
             <front>
               <docDate>
-                <date when="1129-04-14">1129, [14 avril] –
-                  2 août<note n="26_1"><p>C’est le 14 avril, date du couronnement du
+                <date when="1129-04-14">1129, [14 avril] – 2 août.</date><note n="26_1"><p>C’est le 14 avril, date du couronnement du
                   jeune prince Philippe, qui marque le <hi rend="i">terminus a quo</hi> de cet acte (J. Dufour,
                   <hi rend="i">op. cit.</hi>, p. 124, note 1), le 2 août indiquant le terme de l’année XXI du
-                  règne.</p></note>.</date>
+                  règne.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -3743,15 +3735,14 @@
             <pb n="112"/>
             <front>
               <docDate>
-                <date when="1131-08-13">1131, [après le
-                  13 octobre<note n="27_1"><p>Le 13 octobre 1131 est la date du
+                <date when="1131-08-13">1131, [après le 13 octobre].</date><note n="27_1"><p>Le 13 octobre 1131 est la date du
                   décès de Philippe, fils aîné du roi, dont l’acte précise qu’il vient de mourir. Ainsi que le
                   fait remarquer Jean Dufour, il est singulier que ne soit pas mentionné dans l’acte le second
                   fils du roi, cependant couronné dès le 25 octobre, à moins que notre acte se situe
                   précisément entre le 13 et le 25 octobre. Ajoutons que les éléments de la datation ne
                   correspondent pas avec le fait que nous venons de citer, car ils indiquent que l’acte est
                   antérieur au 3 août (date à laquelle commence la <num>xxiv</num><hi rend="sup">e</hi> année
-                  du règne).</p></note>].</date>
+                  du règne).</p></note>
                 <placeName>Paris, au palais royal.</placeName>
               </docDate>
               <index>
@@ -3925,11 +3916,10 @@
           <text xml:id="SMPA-AB-01_0030" n="30" subtype="article">
             <front>
               <docDate>
-                <date when="0518">[<num>xii</num><hi rend="sup">e</hi> s., avant
-                  1138<note n="30_1"><p>1138 est la date présumée du transfert de
+                <date when="0518">[<num>xii</num><hi rend="sup">e</hi> s., avant 1138].</date><note n="30_1"><p>1138 est la date présumée du transfert de
                   l’abbaye Saint-Magloire sur la rive droite, près du cimetière et de la chapelle Saint-Georges
                   (voir Appendice I, p. 518). La dernière phrase de notre texte prouve que ce transfert n’a pas
-                  encore eu lieu lorsque cet inventaire a été dressé.</p></note>].</date>
+                  encore eu lieu lorsque cet inventaire a été dressé.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -4009,16 +3999,16 @@
             <front>
               <docDate>
                 <date when="1139-04-15">1139,
-                  1<hi rend="sup">er</hi> août<note n="31_1"><p>En raison de
-                  l’indication du règne, selon le mode de calcul suivi le plus fréquemment par la chancellerie
-                  du roi (mode D de Luchaire). Précisons à ce sujet que M. Nortier pense, et espère en donner
-                  des preuves dans son édition des actes de Louis VII, que le début de l’année du règne dans ce
-                  mode D n’est pas en réalité le 1er août, date de la mort de Louis VI, mais une date nettement
-                  antérieure qui se situerait au plus tard le 15 mai et correspondrait au moment où Louis VI
-                  aurait pris la décision de laisser le gouvernement du royaume à son fils, avant que celui-ci
-                  ne parte pour l’Aquitaine épouser Aliénor. Tout en remerciant M. Nortier de la remarque dont
-                  il a bien voulu nous faire part, nous conservons pour l’instant la date admise
-                  jusqu’ici.</p></note> – 1140, 6 avril.</date>
+                  1<hi rend="sup">er</hi> août – 1140, 6 avril.</date><note n="31_1"><p>En raison de
+                    l’indication du règne, selon le mode de calcul suivi le plus fréquemment par la chancellerie
+                    du roi (mode D de Luchaire). Précisons à ce sujet que M. Nortier pense, et espère en donner
+                    des preuves dans son édition des actes de Louis VII, que le début de l’année du règne dans ce
+                    mode D n’est pas en réalité le 1er août, date de la mort de Louis VI, mais une date nettement
+                    antérieure qui se situerait au plus tard le 15 mai et correspondrait au moment où Louis VI
+                    aurait pris la décision de laisser le gouvernement du royaume à son fils, avant que celui-ci
+                    ne parte pour l’Aquitaine épouser Aliénor. Tout en remerciant M. Nortier de la remarque dont
+                    il a bien voulu nous faire part, nous conservons pour l’instant la date admise
+                    jusqu’ici.</p></note>
                 <placeName>Paris, au palais royal.</placeName>
               </docDate>
               <index>
@@ -4267,13 +4257,13 @@
           <text xml:id="SMPA-AB-01_0034" n="34" subtype="article">
             <front>
               <docDate>
-                <date when="1147-05">1147<note n="34_1"><p>La date indiquée par
+                <date when="1147-05">1147.</date><note n="34_1"><p>La date indiquée par
                   l’acte est 1167, mais elle est erronée : le successeur de Baudouin, Pierre II, est attesté en
                   1152 (voir n° 36, p. 127). On le trouve encore en 1164 ; son successeur, Hélie, n’apparaît,
                   il est vrai de façon certaine qu’en 1181, la date de 1174 avancée par la
                   <hi rend="i">Gallia</hi> étant fausse (<hi rend="i">Gallia
-                  Christiana</hi>, t. 7, col. 314). On notera que la copie du <hi rend="i">Grand
-                  Cartulaire</hi> porte la date rectifiée de 1147.</p></note>.</date>
+                    Christiana</hi>, t. 7, col. 314). On notera que la copie du <hi rend="i">Grand
+                      Cartulaire</hi> porte la date rectifiée de 1147.</p></note>
                 <placeName>Au chapitre de Saint-Magloire.</placeName>
               </docDate>
               <index>
@@ -4331,7 +4321,7 @@
             <pb n="126"/>
             <front>
               <docDate>
-                <date when="1150-03-20">[1150<note n="35_1"><p>C’est en 1152 que
+                <date when="1150-03-20">[1150].</date><note n="35_1"><p>C’est en 1152 que
                   l’on voit mentionné pour la première fois l’abbé de Saint-Magloire, Pierre [II].
                   (<hi rend="i">Gallia Christiana</hi>, t. 7, col. 312), mais son
                   prédécesseur, Baudouin, n’apparaît plus après 1150. Le <hi rend="i">terminus ad quem</hi> ne
@@ -4341,11 +4331,11 @@
                   col. 1141-1142), Goslein, archidiacre de Pincerais, n’apparaît que jusqu’à 1151, Hamelin,
                   chantre depuis 1147, disparaît avant 1152, et surtout Robert dit Ragan, archidiacre de
                   Vendôme, meurt le 20 mars 1150 (L. et R. Merlet, <hi rend="i">Dignitaires de l’Église de
-                  Chartres</hi>, XXI, n. 6). C’est donc de cette année qu’il nous semble devoir dater l’acte.
+                    Chartres</hi>, XXI, n. 6). C’est donc de cette année qu’il nous semble devoir dater l’acte.
                   Cependant, sans indiquer de références, A. Molinier (<hi rend="i">Obituaires de la Province
-                  de Sens</hi>, t. 2, <hi rend="i">Diocèse de Chartres</hi>, p. 49<hi rend="sup">E</hi> et
+                    de Sens</hi>, t. 2, <hi rend="i">Diocèse de Chartres</hi>, p. 49<hi rend="sup">E</hi> et
                   n. 3) situe Robert Ragan à une époque antérieure, indiquant qu’il est mort après
-                  1101.</p></note>].</date>
+                  1101.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -4399,10 +4389,10 @@
             <pb n="127"/>
             <front>
               <docDate>
-                <date when="1152-04-14">1152, [14 octobre<note n="36_1"><p>D’après
+                <date when="1152-04-14">1152, [14 octobre] – 1153, 18 avril.</date><note n="36_1"><p>D’après
                   R. de Lasteyrie, cet acte serait postérieur au 14 octobre, car il ne mentionne pas, parmi les
                   grands officiers de la couronne, Raoul de Vermandois, qui paraît être mort à cette date
-                  (<hi rend="i">loc. cit.</hi>, note 1).</p></note>] – 1153, 18 avril.</date>
+                  (<hi rend="i">loc. cit.</hi>, note 1).</p></note>
                 <placeName>Paris.</placeName>
               </docDate>
               <index>
@@ -4763,10 +4753,10 @@
             <pb n="135"/>
             <front>
               <docDate>
-                <date when="1159-03-26">1159, [décembre<note n="39_1"><p>Le
+                <date when="1159-03-26">1159, [décembre] – 1160, 26 mars.</date><note n="39_1"><p>Le
                   <hi rend="i">terminus a quo</hi> correspond, ainsi que l’indique R. de Lasteyrie
                   (<hi rend="i">op. cit.</hi>, note 1) à la rentrée en grâce, fin 1159, de Thibaud V, qui
-                  figure parmi les souscripteurs de cet acte.</p></note>] – 1160, 26 mars.</date>
+                  figure parmi les souscripteurs de cet acte.</p></note>
                 <placeName>Paris.</placeName>
               </docDate>
               <index>
@@ -4926,12 +4916,12 @@
             <pb n="140"/>
             <front>
               <docDate>
-                <date when="1156-05">[1156-1164<note n="40_1"><p>Les dates indiquées
+                <date when="1156-05">[1156-1164].</date><note n="40_1"><p>Les dates indiquées
                   sont celles de l’épiscopat de Robert III, évêque de Chartres. L’abbé de Saint-Magloire,
                   Pierre [II], est attesté en 1152 pour la première fois, en 1159 pour la dernière ; mais le
                   premier acte de son successeur, Hélie, étant de 1174, l’abbatiat de Pierre a pu se prolonger
                   au-delà de 1159, et nous ne pouvons resserrer davantage la fourchette
-                  indiquée.</p></note>].</date>
+                  indiquée.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -5066,7 +5056,7 @@
           <text xml:id="SMPA-AB-01_0042" n="42" subtype="article">
             <front>
               <docDate>
-                <date when="1159-05-03">[1159-1181], 3 août<note n="42_1"><p>Cet
+                <date when="1159-05-03">[1159-1181], 3 août.</date><note n="42_1"><p>Cet
                   acte ne porte pas l’indication de l’année de sa confection. Il peut bien entendu se situer
                   entre 1159 et 1181, dates extrêmes du pontificat d’Alexandre III. Il n’est pas possible de
                   resserrer la fourchette en se fondant sur les dates de l’abbatiat d’Hécelin, qui ne nous est
@@ -5079,7 +5069,7 @@
                   sollicitation royale, à la bulle pontificale. On pourrait également dire qu’Alexandre III
                   semble n’avoir résidé au mois d’août au Latran qu’en 1166 et en 1179, mais il ne s’agit pas
                   d’une certitude. Il nous semble donc plus sûr de retenir la fourchette
-                  1159-1181.</p></note>.</date>
+                  1159-1181.</p></note>
                 <placeName>Le Latran.</placeName>
               </docDate>
               <index>
@@ -5175,14 +5165,14 @@
             <pb n="146"/>
             <front>
               <docDate>
-                <date when="1181-05">[1181<note n="43_1" xml:id="SMPA-AB-01_note_43_1"><p>Cette lettre d’Hélie a
+                <date when="1181-05">[1181].</date><note n="43_1" xml:id="SMPA-AB-01_note_43_1"><p>Cette lettre d’Hélie a
                   été effectivement expédiée en 1181 à Hervé – ce qui permet de dater de 1181 l’acte ci-dessus
                   –, et on la retrouve dans les copies des titres de Marmoutier effectuées par dom Martène
                   (Bibl. nat., lat. 12879, <hi rend="i">Recueil de titres relatifs à l’abbaye de
-                  Marmoutier</hi>, t. 2, fol. 173), ainsi que dans celles de Gaignières (Bibl. nat.,
+                    Marmoutier</hi>, t. 2, fol. 173), ainsi que dans celles de Gaignières (Bibl. nat.,
                   lat. 5441<hi rend="sup">3</hi>, p. 251). La même année, Hélie informait l’évêque de
                   Saint-Malo de l’échange effectué « <hi rend="i">de voluntate et de consilio domini regis
-                  Francorum</hi> », les obédiences acquises par les Magloriens se trouvant dans le domaine
+                    Francorum</hi> », les obédiences acquises par les Magloriens se trouvant dans le domaine
                   royal (<hi rend="i">ibid.</hi>, p. 173 et p. 250). Les mêmes recueils nous permettent, mieux
                   que le fonds de Saint-Magloire, de suivre l’affaire dans ses détails : portée devant le pape,
                   elle fut confiée par ce dernier à trois juges délégués, Barthélemy, archevêque de Tours,
@@ -5209,7 +5199,7 @@
                   Fouéré-Macé, <hi rend="i">op. cit.</hi>, p. 317). La sage gestion du successeur de Durand,
                   Geoffroy de Courseul-qui devait succéder à Hervé à l’abbatiat de Marmoutier en 1187 –,
                   rétablit la prospérité de Léhon (Fouéré-Macé, <hi rend="i">op. cit.</hi>,
-                  <hi rend="i">passim</hi>).</p></note>].</date>
+                  <hi rend="i">passim</hi>).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -5258,9 +5248,8 @@
             <pb n="148"/>
             <front>
               <docDate>
-                <date when="1182-03-28">1182, 28 mars –
-                  31 octobre<note n="44_1"><p>C’est le 31 octobre que s’achève la
-                  troisième année du règne.</p></note>.</date>
+                <date when="1182-03-28">1182, 28 mars – 31 octobre.</date><note n="44_1"><p>C’est le 31 octobre que s’achève la
+                  troisième année du règne.</p></note>
                 <placeName>Saint-Germain-en-Laye.</placeName>
               </docDate>
               <index>
@@ -5797,7 +5786,7 @@
             <pb n="161"/>
             <front>
               <docDate>
-                <date when="1183-02-21">[1183-1188]<note n="50_1"><p>Le prédécesseur
+                <date when="1183-02-21">[1183-1188].</date><note n="50_1"><p>Le prédécesseur
                   de Renaud, Pierre [I], mourut le 10 des calendes de mars 1182, soit le 21 février. Deux
                   évêques furent alors élus : Philippe, chantre du chapitre, et Renaud de Mousson, fils de
                   Renaud II, comte de Bar ; mais ce dernier l’emporta et obtint confirmation de son élection
@@ -5805,7 +5794,7 @@
                   d’<hi rend="i">electus</hi> jusqu’en 1187, le premier acte connu où il porte le titre
                   d’évêque étant une bulle d’Urbain III du XIII des calendes de mars (18 février) de cette
                   année (E. de Lépinois et L. Merlet, <hi rend="i">Cartulaire de N.-D. de Chartres</hi>, t. 1,
-                  p. 13).</p></note>.</date>
+                  p. 13).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6032,13 +6021,13 @@
             <pb n="167"/>
             <front>
               <docDate>
-                <date when="1181">[1181-1190<note n="52_1"><p>La date de 1174 donnée
+                <date when="1181">[1181-1190].</date><note n="52_1"><p>La date de 1174 donnée
                   par la <hi rend="i">Gallia</hi> est erronée, une confusion ayant été faite avec celle du
                   vidimus (1274). Le <hi rend="i">terminus a quo</hi> doit donc être reporté à 1181, date à
                   laquelle nous voyons apparaître Hélie pour la première fois
                   (<hi rend="i">Gallia Christiana</hi>, t. 7, col. 314). Le dernier
                   acte connu de l’abbé est de 1190 (<hi rend="i">ibid.</hi>, col. 314). Le prieur Erfroi
-                  apparaît dans un acte de 1182 (voir n° 46, p. 151).</p></note>].</date>
+                  apparaît dans un acte de 1182 (voir n° 46, p. 151).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6216,13 +6205,13 @@
             <pb n="171"/>
             <front>
               <docDate>
-                <date when="1190">[1190-1192]<note n="55_1"><p>La donation de
+                <date when="1190">[1190-1192].</date><note n="55_1"><p>La donation de
                   Guillaume Louvel est de 1190 (voir n° 53, p. 168) ; ainsi que le montre le texte, l’évêque de
                   Chartres, parti pour la Croisade, a confirmé l’acte de Guillaume Louvel après son retour, qui
                   coïncide peut-être avec celui du roi, à la Noël 1191. En tous cas, l’évêque était rentré en
                   1192 (<hi rend="i">Gallia Christiana</hi>, t. 8, col. 1153), et il
                   y a de fortes chances pour qu’il ait confirmé sitôt rentré l’acte de ses
-                  officiaux.</p></note>.</date>
+                  officiaux.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -6610,9 +6599,9 @@
           <text xml:id="SMPA-AB-01_0061" n="61" subtype="article">
             <front>
               <docDate>
-                <date when="1198-03-02">[1198, 2 mars – 1199<note n="61_1" xml:id="SMPA-AB-01_note_61_1"><p>Le
+                <date when="1198-03-02">[1198, 2 mars – 1199].</date><note n="61_1" xml:id="SMPA-AB-01_note_61_1"><p>Le
                   mandement pontifical aux trois juges délégués est du 2 mars 1198. La sentence prononcée par
-                  ces derniers après la déposition des témoins, publiée ici, est de 1199.</p></note>].</date>
+                  ces derniers après la déposition des témoins, publiée ici, est de 1199.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7100,8 +7089,8 @@
           <text xml:id="SMPA-AB-01_0066" n="66" subtype="article">
             <front>
               <docDate>
-                <date when="1195">[1195-1207]<note n="66_1"><p>Les dates indiquées
-                  sont celles de l’abbatiat de Gébert.</p></note>.</date>
+                <date when="1195">[1195-1207].</date><note n="66_1"><p>Les dates indiquées
+                  sont celles de l’abbatiat de Gébert.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7152,8 +7141,8 @@
             <pb n="194"/>
             <front>
               <docDate>
-                <date when="1195">[1195-1207]<note n="67_1"><p>Pour la date, voir
-                  numéro précédent.</p></note>.</date>
+                <date when="1195">[1195-1207].</date><note n="67_1"><p>Pour la date, voir
+                  numéro précédent.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -7229,10 +7218,9 @@
           <text xml:id="SMPA-AB-01_0069" n="69" subtype="article">
             <front>
               <docDate>
-                <date when="1209-03-29">1209, [29 mars –
-                  juillet<note n="69_1"><p>Cet acte est antérieur à la confirmation
+                <date when="1209-03-29">1209, [29 mars – juillet].</date><note n="69_1"><p>Cet acte est antérieur à la confirmation
                   qu’en donne l’évêque de Paris au mois de juillet de la même année (voir n° 71,
-                  p. 198).</p></note>].</date>
+                  p. 198).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -8037,9 +8025,9 @@
           <text xml:id="SMPA-AB-01_0085" n="85" subtype="article">
             <front>
               <docDate>
-                <date when="1218-04">1218, avril<note n="85_1"><p>Cet acte est
+                <date when="1218-04">1218, avril.</date><note n="85_1"><p>Cet acte est
                   confirmé durant l’année 1218 (voir n° 87, p. 216), ce qui implique qu’il faut le dater de
-                  1218 et non de 1219 (n. st.).</p></note>.</date>
+                  1218 et non de 1219 (n. st.).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -8478,13 +8466,13 @@
           <text xml:id="SMPA-AB-01_0093" n="93" subtype="article">
             <front>
               <docDate>
-                <date when="1223-05">1223<note n="93_1"><p>L’acte correspondant daté
+                <date when="1223-05">1223.</date><note n="93_1"><p>L’acte correspondant daté
                   d’octobre 1223 remis par l’abbé Louis à Marmoutier est conservé aux Archives départementales
                   d’Eure-et-Loir. Il est presque identique à celui que nous publions et a été édité par A.
                   Moutié et A. de Dion, <hi rend="i">Cartulaires de Saint-Thomas d’Épernon et de N.-D. de
-                  Maintenon</hi>, t. 4, n° 32, p. 32. La <hi rend="i">Gallia</hi> le signale peut-être, mais le
+                    Maintenon</hi>, t. 4, n° 32, p. 32. La <hi rend="i">Gallia</hi> le signale peut-être, mais le
                   date faussement d’octobre 1224 (<hi rend="i">Gallia
-                  Christiana</hi>, t. 7, col. 315).</p></note>.</date>
+                    Christiana</hi>, t. 7, col. 315).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -9288,9 +9276,9 @@
             <front>
               <docDate>
                 <date when="1229-04-30">1229, 15-30 avril – 1230 (n. st.), 1-2 avril.</date>
-                <placeName>Au chapitre de Saint-Magloire<note n="106_1"><p>Cet acte
+                <placeName>Au chapitre de Saint-Magloire</placeName><note n="106_1"><p>Cet acte
                   pourrait dater de 1230 (n. st.), 1-6 avril. Mais il est nécessairement antérieur à l’acte
-                  d’Amicie du 2 avril 1230 (n. st.) ou passé le même jour.</p></note></placeName>
+                  d’Amicie du 2 avril 1230 (n. st.) ou passé le même jour.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -9649,9 +9637,8 @@
             <pb n="251"/>
             <front>
               <docDate>
-                <date when="1232-03-22">1232 (n. st.),
-                  [22-31] mars<note n="113_1" xml:id="SMPA-AB-01_note_113_1"><p>L’acte d’Adam Harenc est du
-                  22 mars 1232 (voir ci-dessus, n° 112).</p></note>.</date>
+                <date when="1232-03-22">1232 (n. st.), [22-31] mars.</date><note n="113_1" xml:id="SMPA-AB-01_note_113_1"><p>L’acte d’Adam Harenc est du
+                  22 mars 1232 (voir ci-dessus, n° 112).</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -10186,9 +10173,9 @@
           <text xml:id="SMPA-AB-01_0123" n="122" subtype="article">
             <front>
               <docDate>
-                <date when="1235-05">1235 [décembre]<note n="122_1" xml:id="SMPA-AB-01_note_122_1"><p>La mention
+                <date when="1235-05">1235 [décembre].</date><note n="122_1" xml:id="SMPA-AB-01_note_122_1"><p>La mention
                   du mois manque, mais une note dorsale porte « décembre 1235 ». La copie <hi rend="i">C</hi>
-                  porte la date erronée de 1234.</p></note>.</date>
+                  porte la date erronée de 1234.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -12100,14 +12087,14 @@
             <front>
               <docDate>
                 <date when="1245" scope="circa">1245,
-                  16-30 avril<note n="152_1"><p>En réalité, cet acte pourrait
-                  également être daté du 1<hi rend="sup">er</hi> au 7 avril 1246 (n. st.), mais il paraît peu
-                  probable que, dans ce cas, l’Official ne se soit pas référé à la fête de Pâques pour dater sa
-                  sentence. Celle-ci est donc plus vraisemblablement de 1245, d’autant plus que Jean de
-                  Versailles, n’ayant pas obéi aux injonctions de l’Official, se vit excommunié par le pape,
-                  puis absous, le 1<hi rend="sup">er</hi> juin 1246 (voir n° 158, p. 318). Il a sans doute
-                  fallu un laps de temps d’une année pour que tous ces faits se soient
-                  déroulés.</p></note>.</date>
+                  16-30 avril.</date><note n="152_1"><p>En réalité, cet acte pourrait
+                    également être daté du 1<hi rend="sup">er</hi> au 7 avril 1246 (n. st.), mais il paraît peu
+                    probable que, dans ce cas, l’Official ne se soit pas référé à la fête de Pâques pour dater sa
+                    sentence. Celle-ci est donc plus vraisemblablement de 1245, d’autant plus que Jean de
+                    Versailles, n’ayant pas obéi aux injonctions de l’Official, se vit excommunié par le pape,
+                    puis absous, le 1<hi rend="sup">er</hi> juin 1246 (voir n° 158, p. 318). Il a sans doute
+                    fallu un laps de temps d’une année pour que tous ces faits se soient
+                    déroulés.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -12418,9 +12405,9 @@
             <front>
               <docDate>
                 <date when="1246-04-30">1246, 30 avril.</date>
-                <placeName>Melchbourn<note n="157_1"><p>Melchbourn,
+                <placeName>Melchbourn.</placeName><note n="157_1"><p>Melchbourn,
                   Grande-Bretagne, comté de Bedford. Les Hospitaliers y possédaient une
-                  commanderie.</p></note>.</placeName>
+                  commanderie.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -19075,8 +19062,8 @@
             <pb n="483"/>
             <front>
               <docDate>
-                <date when="1260-06">[1260-1276<note n="265_1"><p>Ce sont les dates
-                  extrêmes de l’épiscopat de Pierre de Mincy.</p></note>], juin.</date>
+                <date when="1260-06">[1260-1276], juin.</date><note n="265_1"><p>Ce sont les dates
+                  extrêmes de l’épiscopat de Pierre de Mincy.</p></note>
               </docDate>
               <index>
                 <term type="nature" key="act"/>
@@ -19983,9 +19970,11 @@
           <head>APPENDICES</head>
           <group type="chapter" xml:id="SMPA-AB-01_app1"><pb n="509"/>
             <head>APPENDICE I</head>
+            <div>
             <head>L’abbaye de Saint-Magloire<note n="1"><p>Cet aperçu
               n’a d’autre prétention que de fournir au lecteur, pour sa commodité, de brèves indications sur
-              l’histoire de l’abbaye.</p></note> :<lb/>Aperçu de son histoire</head><p>C’est au cours du <num>x</num><hi rend="sup">e</hi> siècle, qu’à l’instar de nombreux moines de
+              l’histoire de l’abbaye.</p></note> :<lb/>Aperçu de son histoire</head>
+            <p>C’est au cours du <num>x</num><hi rend="sup">e</hi> siècle, qu’à l’instar de nombreux moines de
               l’époque, fuyant les ravages normands avec leurs précieuses reliques, Junan, abbé d’une petite
               communauté fondée un siècle et demi auparavant dans le village de Léhon, se présenta à Paris
               devant Hugues le Grand, selon les uns, Hugues Capet selon les autres, porteur du corps d’un saint
@@ -20008,8 +19997,12 @@
               Nord</hi>, tome IV, 2<hi rend="sup">e</hi> série, 2<hi rend="sup">e</hi> livraison), nous donne
               l’essentiel de cet ensemble de textes. Le récit en vers de Geoffroy des Nés a été plus récemment
               publié par A.J. Denomy et J. Brückmann, <hi rend="i">An old french poetic version of the life and
-              miracles of saint Magloire</hi>, Medieval Studies, vol. XXI, 1959.</p></note>.</p><pb n="510"/>
-<head>La fondation de Saint-Magloire</head><p>La première question que l’on se pose donc en abordant l’étude de l’abbaye de Saint-Magloire est
+              miracles of saint Magloire</hi>, Medieval Studies, vol. XXI, 1959.</p></note>.</p>
+            </div>
+            <div>
+            <pb n="510"/>
+<head>La fondation de Saint-Magloire</head>
+            <p>La première question que l’on se pose donc en abordant l’étude de l’abbaye de Saint-Magloire est
               celle de sa fondation. Or, cette fondation a soulevé bien des controverses et, quelle que soit
               l’ingéniosité déployée par les érudits qui se sont penchés sur ce problème, une solution vraiment
               définitive n’a pu se dégager. Nous ne reviendrons pas ici sur les détails d’un débat dont nous
@@ -20212,7 +20205,10 @@
               réfutation sans appel (<hi rend="i">L’église Saint-Barthélemy</hi>, p. 81 ; « Le Palais de la
               Cité », t. 1, p. 125). Ajoutons que, dès le <num>xi</num><hi rend="sup">e</hi> siècle, les
               religieux semblaient porter à saint Barthélemy une vénération égale à celle qu’ils vouaient à
-              leur saint patron (voir p. 522, note 60).</p></note>.</p><head>L’installation dans la Cité</head><p>Les moines bretons furent donc installés dans l’ancienne chapelle palatine de Saint-Barthélemy,
+              leur saint patron (voir p. 522, note 60).</p></note>.</p>
+            </div>
+            <div>
+            <head>L’installation dans la Cité</head><p>Les moines bretons furent donc installés dans l’ancienne chapelle palatine de Saint-Barthélemy,
               située près du Palais. La <hi rend="i">Translatio sancti Maglorii</hi> est le seul document que
               nous possédions où il soit question d’une communauté de chanoines qui aurait précédé les
               Magloriens dans la Cité : fut-elle, après l’arrivée des moines, comme le dit Du Breul (sans citer
@@ -20293,7 +20289,10 @@
               don d’une somme de douze marcs pour réargenter la châsse contenant les reliques du saint
               patron<note n="39"><p>Voir n° 22, p. 97.</p></note>. C’était chose
               faite vers 1130-1140, et c’est un établissement déjà solide qui se transporte sur la rive
-              droite.</p><pb n="518"/>
+              droite.</p>
+            </div>
+            <div>
+            <pb n="518"/>
 <head>L’installation rue Saint-Denis</head><p>Les Magloriens restèrent environ deux siècles dans le monastère de la Cité. D’après Jean
               Guerout<note n="40"><p>J. Guerout, « Le Palais de la Cité », t. 1,
               p. 137.</p></note>, le percement de la rue « Devant la Cour le Roy », peu avant 1114, suivant de
@@ -20338,7 +20337,11 @@
               jusqu’en 1617, tout comme l’avait été la chapelle
               Saint-Gilles<note n="48"><p>Soit bien après le départ des Magloriens
               au faubourg Saint-Jacques (M. Vimont, <hi rend="i">L’Église Saint-Leu-Saint-Gilles à Paris</hi>,
-              p. 29 ; Friedmann, <hi rend="i">op. cit.</hi>, p. 282 et note 1).</p></note>.</p><head>Les bâtiments de la rue Saint-Denis</head><p>Le monastère de la rue Saint-Denis (fig. 3) occupait un vaste emplacement situé à l’intersection
+              p. 29 ; Friedmann, <hi rend="i">op. cit.</hi>, p. 282 et note 1).</p></note>.</p>
+            </div>
+            <div>
+            <head>Les bâtiments de la rue Saint-Denis</head>
+            <p>Le monastère de la rue Saint-Denis (fig. 3) occupait un vaste emplacement situé à l’intersection
               de l’actuel boulevard de Sébastopol et de la rue Rambuteau : cette localisation contemporaine
               donne tout de suite la raison pour laquelle aucune trace antérieure aux travaux d’Haussmann ne
               nous en a été conservée<note n="49"><p>Déclarés biens nationaux le 5
@@ -20348,7 +20351,11 @@
               Sébastopol, ouvert sur l’emplacement de l’aile orientale des bâtiments claustraux, mettait en
               péril les derniers vestiges de l’abbaye, la ruelle Saint-Magloire et les pans de murs de l’église
               qui subsistaient ; ils disparurent quelques années plus tard (Ch. Braibant, <hi rend="i">Le
-              temporel urbain de Saint-Magloire de Paris</hi>, thèse, p. 106).</p></note>.</p><head>L’église</head><p>Les anciens plans nous montrent que l’église était surmontée d’une tour gothique carrée, élevée,
+              temporel urbain de Saint-Magloire de Paris</hi>, thèse, p. 106).</p></note>.</p>
+            </div>
+            <div>
+            <head>L’église</head>
+            <p>Les anciens plans nous montrent que l’église était surmontée d’une tour gothique carrée, élevée,
               sans grand caractère<note n="50"><p>Bibl. nat., département des cartes
               et plans, A 24500.</p></note>. Sans doute les Magloriens furent-ils amenés à démolir la chapelle
               Saint-Georges qu’Henri le Lorrain avait contribué à réparer vingt années auparavant, bien que
@@ -20373,7 +20380,11 @@
               <num>xv</num><hi rend="sup">e</hi>, six du <num>xvi</num><hi rend="sup">e</hi>, trois du
               <num>xvii</num><hi rend="sup">e</hi>, deux non
               datées<note n="53"><p>Hélène Verlet, <hi rend="i">Épitaphier du Vieux
-              Paris</hi>, t. 8, pp. 141-180.</p></note>.</p><head>Les bâtiments claustraux</head><p>Les bâtiments du monastère occupaient une superficie importante, puisqu’ils étaient assez vastes
+              Paris</hi>, t. 8, pp. 141-180.</p></note>.</p>
+            </div>
+            <div>
+            <head>Les bâtiments claustraux</head>
+            <p>Les bâtiments du monastère occupaient une superficie importante, puisqu’ils étaient assez vastes
               pour recevoir en 1572, après le départ des moines, les Filles Pénitentes qui comptaient au moins
               soixante religieuses professes jouissant chacune d’une cellule particulière, alors que les moines
               n’avaient disposé que d’un dortoir<note n="54"><p>Félibien,
@@ -20407,7 +20418,10 @@
               p. 64 <hi rend="i">sq.</hi></p></note>. Les communs (granges, écuries), la basse-cour, les
               prisons se situaient au nord de l’abbatiale, dans l’angle formé par le cul de sac de Beaufort et
               la rue Salle-au-Comte<note n="58"><p>Félibien, <hi rend="i">op.
-              cit.</hi></p></note>.</p><head>Chartrier, bibliothèque</head><p>On aurait aimé savoir s’il existait un scriptorium, tout au moins où se trouvaient entreposés
+              cit.</hi></p></note>.</p>
+            </div>
+            <div>
+            <head>Chartrier, bibliothèque</head><p>On aurait aimé savoir s’il existait un scriptorium, tout au moins où se trouvaient entreposés
               archives et manuscrits, mais là encore l’information est maigre : on sait, par le
               <hi rend="i">Grand Cartulaire</hi>, rédigé en 1330 par le prévôt de l’abbaye, Jean de Rozay, que
               les titres étaient placés dans des coffres, des « arches », dix cités par le religieux, mais
@@ -20436,8 +20450,12 @@
               section de codicologie de l’IRHT. D’autre part, ainsi que nous l’avons indiqué dans notre
               présentation, l’histoire des archives de Saint-Magloire dans son ensemble sera traitée dans un
               article à paraître en 1998 dans la <hi rend="i">Revue Mabillon</hi> (Nouvelle série, 9 [t. 70],
-              1997).</p></note>.</p><pb n="522"/>
-<head>La vie à l’abbaye</head><p>L’abbaye connaît dès son installation rue Saint-Denis une période de prospérité que les trois
+              1997).</p></note>.</p>
+            </div>
+            <div>
+            <pb n="522"/>
+<head>La vie à l’abbaye</head>
+            <p>L’abbaye connaît dès son installation rue Saint-Denis une période de prospérité que les trois
               tomes de notre publication nous permettent d’étudier en
               détail<note n="61"><p>Voir Avant-Propos, pp. 9-10 et A. Terroine et L.
               Fossier, <hi rend="i">Chartes et documents de Saint-Magloire</hi>, t. 2 et t. 3.</p></note>.
@@ -20498,8 +20516,11 @@
               n’étant probablement pas entretenue<note n="71"><p>L. Tanon,
               <hi rend="i">Histoire des justices des anciennes églises et communautés monastiques de
               Paris…</hi>, Paris, 1883, p. 184.</p></note>. Et c’est sur ce fait que se termine l’histoire
-              propre de l’abbaye de Saint-Magloire.</p><head>L’installation à Saint-Jacques du Haut-Pas.<lb/>La suppression progressive de
-              l’abbaye de Saint-Magloire</head><p>En effet, en 1564, Catherine de Médicis, voulant compenser la perte occasionnée à l’évêque de
+              propre de l’abbaye de Saint-Magloire.</p>
+            </div>
+            <div>
+            <head>L’installation à Saint-Jacques du Haut-Pas.<lb/>La suppression progressive de l’abbaye de Saint-Magloire</head>
+            <p>En effet, en 1564, Catherine de Médicis, voulant compenser la perte occasionnée à l’évêque de
               Paris par l’échange de sa baronnie de Levroux contre le monastère de Saint-Maur, réuni à l’Évêché
               en 1533, obtient la réunion du monastère de Saint-Magloire, dont l’abbé vient de mourir, à la
               mense épiscopale. <pb n="524"/>Ce temporel est estimé à 317 florins d’or. Pie IV confirme
@@ -20571,12 +20592,26 @@
               ajoute, antique souvenir, la prébende de Notre-Dame, affectée au prieur claustral. Où allèrent
               les moines ainsi dispersés, on ne sait. Le dernier d’entre eux, le chambrier dom le Royer, mourut
               en 1669<note n="81"><p>C. Chastelain, <hi rend="i">Martyrologe
-              universel</hi>, p. 815.</p></note>.</p></group><group type="chapter"><pb n="527"/>
-<head>APPENDICE II</head><head>Documents étrangers au fonds de Saint-Magloire</head><text xml:id="SMPA-AB-01_0281" n="1" subtype="article"><front><docDate><date when="1094-02-14">1094, 14 février.</date><placeName>Paris<note n="1_1"><p>On a reproduit ici, pour la
-                    commodité du lecteur, l’analyse et le texte de l’acte tels qu’ils figurent dans l’édition
-                    de M. Prou.</p></note>.</placeName></docDate><index><term type="nature" key="act"/></index><argument><p>« Philippe I<hi rend="sup">er</hi>, voulant remédier aux désordres qui s’étaient
+              universel</hi>, p. 815.</p></note>.</p>
+          </div>
+          </group>
+          <group type="chapter"><pb n="527"/>
+<head>APPENDICE II</head>
+            <head>Documents étrangers au fonds de Saint-Magloire</head>
+            <text xml:id="SMPA-AB-01_0281" n="1" subtype="article">
+              <front>
+                <docDate>
+                  <date when="1094-02-14">1094, 14 février.</date>
+                  <placeName>Paris.</placeName><note n="1_1"><p>On a reproduit ici, pour la commodité du lecteur, l’analyse et le texte de l’acte tels qu’ils figurent dans l’édition de M. Prou.</p></note>
+                </docDate>
+                <index>
+                  <term type="nature" key="act"/>
+                </index>
+                <argument><p>« Philippe I<hi rend="sup">er</hi>, voulant remédier aux désordres qui s’étaient
                     introduits dans l’administration de Saint-Magloire de Paris, soumet cette église à l’abbaye
-                    de Marmoutier. »</p></argument><div type="tradition"><listWit type="édition"><witness n="a">M. Prou, <hi rend="i">Actes de
+                    de Marmoutier. »</p>
+                </argument>
+                <div type="tradition"><listWit type="édition"><witness n="a">M. Prou, <hi rend="i">Actes de
                       Philippe I<hi rend="sup">er</hi></hi>, n° 132,
                       p. 333<note n="1_2"><p>Ainsi que nous l’avons dit
                       précédemment, (Introduction, p. V, note 4), cet acte n’a jamais appartenu au fonds de

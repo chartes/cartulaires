@@ -16,9 +16,13 @@
     </fileDesc>
     <encodingDesc>
       <refsDecl>
-        <citeStructure unit="index" match="/TEI[1]/text[1]/body[1]/div[1]/list[@type='index']" use="@xml:id">
+        <citeStructure match="/TEI[1]/text[1]/body[1]/div[1]" use="dots">
           <citeData property="dct:title" use="head"/>
           <citeData use="head" property="schema:name"/>
+          <citeStructure unit="index" match="list[@type='index']" use="@xml:id">
+            <citeData property="dct:title" use="head"/>
+            <citeData use="head" property="schema:name"/>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>

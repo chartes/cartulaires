@@ -66,7 +66,7 @@
       </seriesStmt>
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k6534844d">
-          <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 2, Paris, <date type="publication">1850</date>.
+          <title>Cartulaire de l’église Notre-Dame de Paris</title>, éd. Benjamin Guérard, t. 2, Paris, <date>1850</date>.
         </bibl>
       </sourceDesc>
     </fileDesc>
@@ -88,12 +88,19 @@
     <profileDesc>
       <creation>
         <date>1850</date>
-      <date type="coverage" notBefore="1072" notAfter="1528">1072/1528</date></creation>
+      </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         </langUsage>
-      </profileDesc>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1072/1528</date>
+          </term>
+        </keywords>
+      </textClass>
+    </profileDesc>
     <revisionDesc>
       <change when="2025-02" who="PP">Encodage</change>
     </revisionDesc>

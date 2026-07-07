@@ -84,7 +84,7 @@
         <idno type="vol">3</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III, 1261-1383</title>, texte établi par <author ref="https://data.bnf.fr/fr/documents-by-rdt/12442952/te/page1">Émile Morel</author>, publié par les soins de <editor ref="https://www.idref.fr/026767880 https://data.bnf.fr/fr/ark:/12148/cb11895241w">Louis Carolus-Barré</editor>, Paris : <publisher>Nouvelles Éditions latines</publisher>, <date type="publication">1977</date>.</bibl>
+        <bibl><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III, 1261-1383</title>, texte établi par <author>Émile Morel</author>, publié par les soins de <author>Louis Carolus-Barré</author>, Paris : <publisher>Nouvelles Éditions latines</publisher>, <date>1977</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -108,13 +108,19 @@
     <profileDesc>
       <creation>
         <date>1977</date>
-        <date type="coverage" notBefore="1261" notAfter="1383">1261/1383</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
         <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
+      <textClass>
+        <keywords>
+          <term type="temporalCoverage">
+            <date>1261/1383</date>
+          </term>
+        </keywords>
+      </textClass>
     </profileDesc>
     <revisionDesc>
       <change when="2026-06-18" who="#COD">Conversion initiale.</change>
@@ -14199,7 +14205,7 @@
           <text xml:id="SCCO-AB-03_0195" n="DCCCLXV" subtype="article">
             <front>
               <docDate>
-                <placeName>Loches<note n="865_1"><p>Indre-et-Loire.</p></note></placeName>
+                <placeName>Loches</placeName><note n="865_1"><p>Indre-et-Loire.</p></note>
                 <date when="1305-08">Août 1305.</date>
               </docDate>
               <index>
@@ -17611,8 +17617,7 @@
             <front>
               <docDate>
                 <placeName>Germigny-l’Evêque ou
-                  Germigny-sur-Marne<note n="903_1"><p>Canton de Meaux,
-                  Seine-et-Marne.</p></note></placeName>
+                  Germigny-sur-Marne</placeName><note n="903_1"><p>Canton de Meaux, Seine-et-Marne.</p></note>
                 <date when="1319-09">Septembre 1319</date>
               </docDate>
               <index>
@@ -18412,8 +18417,7 @@
           <text xml:id="SCCO-AB-03_0238" n="CMVIII" subtype="article">
             <front>
               <docDate>
-                <placeName>Abbaye du Loroux<note n="908_1"><p>Paroisse de
-                  Vernantes, Maine-et-Loire.</p></note> ou de l’Oratoire en Anjou</placeName>
+                <placeName>Abbaye du Loroux ou de l’Oratoire en Anjou</placeName><note n="908_1"><p>Paroisse de Vernantes, Maine-et-Loire.</p></note>
                 <date when="1323-10">Octobre 1323.</date>
               </docDate>
               <index>
@@ -18552,7 +18556,7 @@
           <text xml:id="SCCO-AB-03_0240" n="CMX" subtype="article">
             <front>
               <docDate>
-                <placeName>Mainneville<note n="910_1"><p>Eure.</p></note></placeName>
+                <placeName>Mainneville</placeName><note n="910_1"><p>Eure.</p></note>
                 <date when="1327-06">Juin 1327.</date>
               </docDate>
               <index>
