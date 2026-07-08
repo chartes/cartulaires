@@ -11,29 +11,8 @@
         <editor ref="https://www.wikidata.org/wiki/Q3056903 https://data.bnf.fr/fr/ark:/12148/cb12138647g https://www.idref.fr/069210934">Ernest Coyecque</editor>
         <principal xml:id="OC" ref="https://www.wikidata.org/wiki/Q41431010 https://data.bnf.fr/fr/ark:/12148/cb178392047 https://www.idref.fr/101839839">Olivier Canteaut</principal>
         <respStmt>
-          <name xml:id="FG">Frédéric Glorieux (École des chartes)
-            <email>frederic.glorieux@enc.sorbonne.fr</email></name>
-          <resp>Suivi technique (2007–…)</resp>
-        </respStmt>
-        <respStmt>
           <name xml:id="MP">Maxime Popineau</name>
-          <resp>Suivi technique (2026)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JC">Joana Casenave (École des chartes)</name>
-          <resp>Édition électronique (2011)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="CD">Camille Desenclos (École des chartes)</name>
-          <resp>Édition électronique (2010)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="NR">Naomi Russo (École des chartes)</name>
-          <resp>Indexation diplomatique (2009)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="EG">Elise Girold (École des chartes)</name>
-          <resp>Indexation (2009)</resp>
+          <resp>Conversion, normalisation TEI et enrichissement du teiHeader (2026)</resp>
         </respStmt>
       </titleStmt>
       <extent />
@@ -66,20 +45,41 @@
         <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
-          <citeData property="dct:title" use="head[1]" />
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="head"/>
+          <citeData property="schema:name" use="head"/>
+          <citeStructure match="div/div" use="@xml:id" unit="partie">
+            <citeData property="dct:title" use="head"/>
+            <citeData property="schema:name" use="head"/>
+          </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI[1]/text[1]//text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n" />
-          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter" />
-          <citeData property="dct:type" use="front/index/term/@key" />
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang" />
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']" />
+        
+        <citeStructure match="/TEI[1]/text[1]/group[1]" use="@xml:id">
+          <citeData property="dct:title" use="head"/>
+          <citeData property="schema:name" use="head"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
         </citeStructure>
-        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div[@type='index']" use="default">
-          <citeData property="dct:title" use="head[1]" />
-          <citeStructure match="list[@type='index']" use="@xml:id">
-            <citeData property="dct:title" use="head[1]" />
+        
+        <citeStructure unit="Index" match="/TEI[1]/text[1]/back[1]" use="@xml:id">
+          <citeData property="dct:title" use="head"/>
+          <citeData property="schema:name" use="head"/>
+          <citeStructure match="div[1]" use="@xml:id">
+            <citeData property="dct:title" use="head"/>
+            <citeData property="schema:name" use="head"/>
+          </citeStructure>
+          <citeStructure match="div[2]/list[@type='index']" use="@xml:id" unit="index">
+            <citeData property="dct:title" use="head"/>
+            <citeData property="schema:name" use="head"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -107,7 +107,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="HDPAR-HD_front">
       <head>Archives de l’Hôtel-Dieu de Paris (1157-1300)</head>
       <argument><p>Notice paléographique et critique de E. Coyecque sur les trois cartulaires de l’Hôtel-Dieu de Paris (cartulaires A, B et registre C, XIII<hi rend="sup">e</hi> s.).</p></argument>
       <div type="preface" xml:id="HDPAR-HD_notice">
@@ -182,8 +182,6 @@
           <p>Le registre C a été exécuté dans le cours de l’année 1296 ; il a été vraisemblablement commencé avant le 13 juillet ; mais, à cette date, il n’était certainement pas encore achevé, le n° 272 étant précisément du 13 juillet.</p>
           <p>Si l’on étudie les textes conservés dans les cartulaires, pour s’assurer dans quelle mesure ces copies constituent une transcription fidèle des originaux, si on les examine tant au point de vue de la correction littéraire qu’au point de vue de l’exactitude diplomatique, collationnant, quand le fait est possible, la copie sur l’original, ou comparant les diverses copies du même acte, on voit se multiplier à l’infini les variantes, les transpositions de mots, les incorrections, les erreurs et les omissions ; et l’on constate, en dernière analyse, une égale négligence dans l’établissement des trois registres.</p>
           <p>Voici quelques exemples à l’appui :</p>
-        </div>
-        <div xml:id="HDPAR-HD_notice_critique">
           <p><hi rend="b">Variantes.</hi> — A *82 : <q xml:lang="lat">paciencia</q>, B 118 : <q xml:lang="lat">potentia</q>. — A **93 : <q xml:lang="lat">cum duobus aliis</q>, A **83 : <q xml:lang="lat">cum tribus aliis</q>. — A 50 : <q xml:lang="lat">Petrus… universis</q>, B *96 : <q xml:lang="lat">Universis… Petrus</q>. — A 70 : <q xml:lang="lat">minister humilis</q>, B *77 : <q xml:lang="lat">humilis minister</q>. — A *26 : <q xml:lang="lat">Symon de Pissiaco, vir nobilis</q>, C 95 : <q xml:lang="lat">Symon, vir nobilis, de Pissiaco</q>. — A *86 : <q xml:lang="lat">Petrus, Dei gratia, abbas</q>, B 891 : <q xml:lang="lat">Petrus, dictus abbas, Dei gratia</q>. — Les noms des témoins ne se suivent pas dans le même ordre dans A *133 et dans B 411.</p>
           <p>B 373 : <q xml:lang="lat">Renaudus Vaccarius</q>, B *427 : <q xml:lang="lat">Beraudus Vaccarius</q> ; le nom véritable est Renaudus, qu'on lit, d'ailleurs, dans B **497. — Le même copiste (b), transcrivant deux fois la même charte, écrit dans une copie (B 538) : <q xml:lang="lat">officialis archidiaconi</q>, et dans l'autre (B *516) : <q xml:lang="lat">officialis curie archidiaconi</q>. — L'expression <q xml:lang="lat">in nostra presencia</q> de B 446 est remplacée dans B *481 par celle-ci : <q xml:lang="lat">coram nobis</q>. — On lit dans B *13 : <q xml:lang="lat">divina miseratione in nostra constituti presentia</q>, et dans B 69 : <q xml:lang="lat">Dei gratia… in presentia nostra constituti</q>. — Dans un vidimus (B **139), le copiste substitue à la date de l'original : <q xml:lang="lat">Datum anno Domini m° cc° quinquagesimo secundo, mense aprili</q>, la formule : <q xml:lang="lat">Datum anno et mense predictis</q>, qui se réfère à la date du vidimus. — Au lieu de : <q xml:lang="lat">Guido, humilis prior ecclesie Longi Pontis, et totus ejusdem loci conventus, salutem in Domino. Universitati vestre notum facimus</q>, qu'on lit dans la transcription de l'acte original (B **768), le vidimus (B 764) donne : <q xml:lang="lat">Guido, prior Longi Pontis, totusque ejusdem loci conventus, salutem in Domino. Noverit universitas vestra quod</q>.</p>
           <p><hi rend="b">Incorrections et omissions.</hi> — On lit dans A *137 : <q xml:lang="lat">in perpetuum (lire in perpetuam) elemosinam concessimus</q> ; dans le même acte, <q xml:lang="lat">nostrarum</q> a été omis entre les mots : <q xml:lang="lat">animarum pauperibus</q>. — A *110 : <q xml:lang="lat">sigilio (lire sigilli) nostri munimine roborari</q>. — A 149 : <q xml:lang="lat">omnibus presentes [litteras] inspecturis</q>.</p>
@@ -208,6 +206,7 @@
                Source : images BookReader archive.org leaf20–leaf151.
                 = copie non utilisée par l'éditeur ;  = acte absent des Archives, publié dans l'Appendice.
                » = absent du cartulaire concerné. Notes de bas de page encodées en <note> dans la cellule concernée. -->
+          <head>Tableaux analytiques</head>
           <table rend="tableau_A">
             <head>Cartulaire A</head>
             <pb n="X" />
@@ -1504,7 +1503,7 @@
         </div>
       </div>
     </front>
-    <group>
+    <group xml:id="HDPAR-HD_group">
       <head>Hotel-Dieu de Paris</head>
       <text xml:id="HDPAR-HD_0001" n="1" subtype="article">
         <pb n="1" />
@@ -37062,11 +37061,11 @@
              transcrite ci-dessous, pour validation de la maquette avant
              de poursuivre les ~29 pages restantes (p. 566 sq.). <<<
          ================================================================ -->
-    <back>
-      <div type="index" n="1">
+    <back xml:id="HDPAR-HD_back">
         <head>Index</head>
-        <div type="preface">
-          <!-- Préambule de l'index, imprimé p. 563-564, signé E. C. (Ernest Coyecque), août 1893. La p. 562 est blanche. -->
+      <div type="preface" xml:id="HDPAR-HD_back-1">
+        <head>Préambule</head>  
+        <!-- Préambule de l'index, imprimé p. 563-564, signé E. C. (Ernest Coyecque), août 1893. La p. 562 est blanche. -->
           <pb n="563" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0658.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" />
           <p>On trouvera dans le présent index le relevé de tous les noms de lieux et de tous les noms de personnes qui sont mentionnés dans les <hi rend="i">Archives</hi> ; les noms de personnes figurent à la fois au nom proprement dit et au surnom. Des différentes formes d'un même nom, nous avons négligé celles qui nous ont paru n'offrir qu'un intérêt fort secondaire, comme <hi rend="i">Cristolium</hi> au lieu de <hi rend="i">Christolium</hi>, <hi rend="i">Willelmus</hi> au lieu de <hi rend="i">Guillelmus</hi>, formes que nous avions une première fois déjà rencontrées ; nous avons, d'autre part, rangé sous la forme la plus fréquente de chaque nom les variantes que nous avons cru devoir en relever. Un certain nombre d'articles se terminent par un renvoi à d'autres articles antérieurs et postérieurs (<hi rend="sc">Aurricus</hi>. Vide <hi rend="sc">Arricus</hi>, <hi rend="sc">Ericus</hi>, <hi rend="sc">Horricus</hi>, <hi rend="sc">Ulricus</hi>) : il n'en faut pas toujours conclure que nous considérions toutes les formes citées de la sorte comme autant de variantes du même mot ; il est des renvois que nous avons insérés seulement à titre de rapprochement, notamment quand la correction de certaines formes nous paraissait douteuse. Les numéros qui suivent chaque article de l'index renvoient le lecteur, non à la page, mais à l'acte même ; toutefois, pour le Censier de 1294 (pages 473 à 495), nous avons été obligés de renvoyer à la page, faisant précéder le numéro de la page de la lettre C. C'est à l'article <hi rend="sc">Parisius</hi> qu'on trouvera la mention de toutes les rues, maisons, etc., comprises dans l'enceinte de Philippe Auguste. Dans l'identification des noms de lieux, nous avons indiqué, pour les localités du département de la Seine, les subdivisions administratives telles que les a établies la loi du 12 avril 1893.</p>
           <p>Nous devons, d'autre part, signaler, en les expliquant, les différences nombreuses, et souvent très sensibles, qu'on peut relever entre les indications fournies par l'index et le texte imprimé des documents ; c'est que nous nous sommes efforcés, notamment en comparant les diverses copies du même acte, d'apporter aux <hi rend="i">Archives</hi>, par la voie de l'index, un grand nombre de corrections. Voici quelques exemples. Au n° 59, au lieu de : « Petrus Alardus et Andreas, … Hildeborch Bertinus, … viricus », il faut lire : « Petrus, Alardus, [Tiboldus] et Andreas, … Hildeborch, Bertinus, … Urricus » ; — au n° 183, au lieu de : « Radulpho naviculario », « Randulo » ; — au n° 486, au lieu de : « Guillelmi, militis, de Brie », « Guillelmi, militis, de Buc » ; — au n° 840, au lieu de : « Johannis dicti Defuerat », « Johannis dicti Fiuat » ; — au n° 238, au lieu de : « Nicholaus, canonicus <pb n="564" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0659.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" />Ebroicensis », « Nicholaus, canonicus Eboracensis », leçon que fournit bien, du reste, B 126, comme l'original, A. P., 432¹, n° 2051 ; — au n° 947, « Borregni » est une mauvaise leçon de B 681, corrigée par B 681 en : « Britigni » ; il s'agit, dans cet acte, des curés de Brétigny et du Plessis-Pâté, et non, comme l'indique l'analyse, des « prêtres Bargny et du Plessis » ; — au n° 362, il faut lire : « Girardi, camerarii Senonensis [et Felisii, presbiteri Sancte Columbe de Quadruvio Senonensis] » ; — on ne trouve pas à l'index de renvoi au n° 662, constitué par l'analyse d'un acte publié antérieurement sous le n° 663, et qui, d'ailleurs, n'est ni de décembre 1253, ni de septembre 1258, mais de septembre 1253 ; — au n° 581, « novum monasterium » doit être lu comme ici, sans majuscules. Ces exemples, pris au hasard, suffisent à donner une idée des modifications introduites dans l'index par suite de ces corrections ; nous avons, du reste, pris soin de renvoyer le lecteur de la forme inexacte : <hi rend="sc">Bric (Guillelmus de)</hi>, par exemple, à la forme exacte : <hi rend="sc">Buc (G. de)</hi>.</p>
@@ -44558,7 +44557,6 @@
           <!-- FIN DE L'INDEX (dernière entrée du texte imprimé, p. 633). -->
         </list>
         </div>
-      </div>
     </back>
   </text>
 </TEI>

@@ -5,38 +5,13 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Seconde partie : contrats</title>
-        <title type="short">Maubuisson</title>
+        <title>Cartulaire de l’abbaye de Maubuisson, seconde partie</title>
+        <title type="short">Maubuisson 02</title>
         <author ref="https://www.idref.fr/095012664 https://data.bnf.fr/fr/ark:/12148/cb12814042x">Adolphe Dutilleux</author>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
-        <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
+        <principal xml:id="OC" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
         <respStmt>
-          <name xml:id="OC">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
-          <resp>Direction éditoriale</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="FG">Frédéric Glorieux (École des chartes)
-            <email>frederic.glorieux@enc.sorbonne.fr</email></name>
-          <resp>Suivi technique (2007–…)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JC">Joana Casenave (École des chartes)</name>
-          <resp>Édition électronique (2011)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="CD">Camille Desenclos (École des chartes)</name>
-          <resp>Édition électronique (2010)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="NR">Naomi Russo (École des chartes)</name>
-          <resp>Indexation diplomatique (2009)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="EG">Elise Girold (École des chartes)</name>
-          <resp>Indexation (2009)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="COD">Codex</name>
+          <name xml:id="MP">Maxime Popineau</name>
           <resp>Conversion, normalisation TEI et enrichissement du teiHeader (2026)</resp>
         </respStmt>
       </titleStmt>
@@ -46,14 +21,13 @@
         <idno>MAUB-AB-02</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
-          <addrLine>19, rue de la Sorbonne</addrLine>
-          <addrLine>75005 Paris</addrLine>
+          <addrLine>65, rue de Richelieu</addrLine>
+          <addrLine>75002 Paris</addrLine>
           <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
-          <addrLine>http://enc.sorbonne.fr/</addrLine>
-          <addrLine>recherche@enc.sorbonne.fr</addrLine>
+          <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc/3.0/fr/">© École nationale des chartes - PSL (CC BY-NC 3.0)</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC-BY-NC-SA 4.0)</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
             (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -81,7 +55,7 @@
       <seriesStmt>
         <title>Éditions en ligne de l'École des Chartes</title>
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
-        <idno type="vol">2</idno>
+        <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc>
         <bibl><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Seconde partie, Contrats (titres III à XIV du cartulaire)</title>, publié par <author>Adolphe Dutilleux</author> et <author>Joseph Depoin</author>, Pontoise : <publisher>Société historique de Pontoise</publisher>, <date>1913</date>.</bibl>
@@ -93,7 +67,7 @@
           corpus existant.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]/div/div" use="@xml:id">
+        <citeStructure match="/TEI[1]/text[1]/front[1]/div[1]/div" use="@xml:id" unit="partie">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
           <citeStructure match="div" use="@xml:id">
@@ -109,7 +83,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
       <textClass>
@@ -121,13 +95,13 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-06-18" who="#COD">Conversion initiale.</change>
-      <change when="2026-06-18" who="#COD">Enrichissement bibliographique du teiHeader : auteurs/éditeurs, contributeurs, identifiants d'autorité et liens de source.</change>
+      <change when="2026-06-18" who="#MP">Conversion initiale.</change>
+      <change when="2026-06-18" who="#MP">Enrichissement bibliographique du teiHeader : auteurs/éditeurs, contributeurs, identifiants d'autorité et liens de source.</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <front>
-      <head>CARTULAIRE<lb/>DE<lb/>L’ABBAYE DE MAUBUISSON</head>
+      <head>CARTULAIRE <lb/>DE <lb/>L’ABBAYE DE MAUBUISSON</head>
       <argument>
         <p>
           <!-- TODO -->
@@ -137,6 +111,7 @@
         <!-- TODO -->
       </byline>
       <div type="souspartie" xml:id="MAUB-AB-02_front_0001" subtype="article">
+        <label></label>
         <div xml:id="MAUB-AB-02_analyse">
           <pb n="229"/>
           <head>ANALYSE DU CARTULAIRE</head>

@@ -73,24 +73,92 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI/text/front" use="dots">
+        <citeStructure unit="paratexte" match="/TEI/text/front" use="@xml:id">
           <citeData property="dct:title" use="head"/>
-          <citeStructure unit="partie" match="div" use="dots">
+          <citeData property="schema:name" use="head"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head"/>
+            <citeData property="schema:name" use="head"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI/text//text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="front/docDate/date/node()[not(name() = 'note' )]"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head"/>
+          <citeData property="schema:name" use="head"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure match="group" use="@xml:id">
+              <citeData property="dct:title" use="head"/>
+              <citeData property="schema:name" use="head[1]"/>
+              <citeStructure match="group" use="@xml:id" unit="part">
+                <citeData property="dct:title" use="head"/>
+                <citeData property="schema:name" use="head[1]"/>
+                <citeStructure match="group" use="@xml:id">
+                  <citeData property="dct:title" use="head"/>
+                  <citeData property="schema:name" use="head[1]"/>
+                </citeStructure>  
+                <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                  <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                  <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                  <citeData property="dct:type" use="front/index/term/@key"/>
+                  <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                  <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                </citeStructure>
+              </citeStructure>
+              <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                <citeData property="dct:type" use="front/index/term/@key"/>
+                <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              </citeStructure>
+            </citeStructure>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
+          </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="dots" unit="Index">
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="@xml:id" unit="partie">
           <citeData use="head" property="dct:title"/>
-          <citeStructure match="list[@type='index']" use="@xml:id">
+          <citeData use="head" property="schema:name"/>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="@xml:id" unit="Index">
+          <citeData use="head" property="dct:title"/>
+          <citeData use="head" property="schema:name"/>
+          <citeStructure match="list[@type='index']" use="@xml:id" unit="index">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[3]" use="@xml:id" unit="partie">
+          <citeData use="head" property="dct:title"/>
+          <citeData use="head" property="schema:name"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -100,7 +168,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -116,7 +184,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SMPA-AB-02_front">
       <head>Chartes et documents de l’abbaye de Saint-Magloire, tome II</head>
       <!--<head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. II, Paris, 1966.</head>-->
       <argument>
@@ -467,7 +535,7 @@
       </div>
     </front>
     <group>
-      <group>
+      <group xml:id="SMPA-AB-02_group1">
         <pb n="XIII" facs="SMPA-AB-02_0015.jpg"/>
         <head>PREMIÈRE PARTIE <lb/>ACTES PASSÉS DE 1280 À 1330</head>
         <text subtype="article" xml:id="SMPA-AB-02_1" n="1">
@@ -24089,7 +24157,7 @@
           </body>
         </text>
       </group>
-      <group>
+      <group xml:id="SMPA-AB-02_group2">
         <head><pb n="533" facs="SMPA-AB-02_0549.jpg"/> DEUXIÈME PARTIE<lb/> COMPTES ET DOCUMENTS DIVERS RELATIFS À LA VIE DE
           L’ABBAYE</head>
         <argument>
@@ -24246,11 +24314,11 @@
             </row>
           </table>
         </argument>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-1">
           <head><pb n="535" facs="SMPA-AB-02_0551.jpg"/> I. L’ORGANISATION DE L’ABBAYE</head>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-1-1">
             <head>1. LE RECRUTEMENT</head>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-1-1-1">
               <head>I. Les Moines</head>
               <text subtype="article" xml:id="SMPA-AB-02_341" n="341">
                 <!-- <idalt>1</idalt> -->
@@ -24457,9 +24525,9 @@
                   </div>
                 </body>
               </text>
-              <pb n="540" facs="SMPA-AB-02_0556.jpg"/>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-1-1-2">
+              <pb n="540" facs="SMPA-AB-02_0556.jpg"/>
               <head>II. Donats et oblats</head>
               <text subtype="article" xml:id="SMPA-AB-02_344" n="344">
                 <!-- <idalt>1</idalt> -->
@@ -24696,9 +24764,9 @@
                 </body>
               </text>
             </group>
-            <pb n="545" facs="SMPA-AB-02_0561.jpg"/>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-1-2">
+            <pb n="545" facs="SMPA-AB-02_0561.jpg"/>
             <head>2. LA VIE MATÉRIELLE</head>
             <text subtype="article" xml:id="SMPA-AB-02_348" n="348">
               <!-- <idalt>1</idalt> -->
@@ -25031,7 +25099,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-1-3">
             <head>3. LA VIE INTELLECTUELLE ET LA VIE SPIRITUELLE</head>
             <text subtype="article" xml:id="SMPA-AB-02_351" n="351">
               <!-- <idalt>1</idalt> -->
@@ -25780,11 +25848,11 @@
               </body>
             </text>
           </group>
-          <pb n="567" facs="SMPA-AB-02_0583.jpg"/>
         </group>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-2">
+          <pb n="567" facs="SMPA-AB-02_0583.jpg"/>
           <head>II. LE TEMPOREL DE L’ABBAYE</head>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-2-1">
             <head>1. INVENTAIRE DES BIENS MEUBLES DE CERTAINS PRIEURÉS ET OFFICES CLAUSTRAUX</head>
             <text subtype="article" xml:id="SMPA-AB-02_355" n="355">
               <!-- <idalt>1</idalt> -->
@@ -26107,9 +26175,9 @@
                 </div>
               </body>
             </text>
-            <pb n="573" facs="SMPA-AB-02_0589.jpg"/>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-2-2">
+            <pb n="573" facs="SMPA-AB-02_0589.jpg"/>
             <head>2. LES FIEFS</head>
             <text subtype="article" xml:id="SMPA-AB-02_359" n="359">
               <!-- <idalt>1</idalt> -->
@@ -26383,11 +26451,11 @@
                 </div>
               </body>
             </text>
-            <pb n="577" facs="SMPA-AB-02_0593.jpg"/>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-2-3">
+            <pb n="577" facs="SMPA-AB-02_0593.jpg"/>
             <head>3. LES DROITS SPIRITUELS</head>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-2-3-1">
               <head>I. Les Provisions de Bénéfices</head>
               <text subtype="article" xml:id="SMPA-AB-02_365" n="365">
                 <!-- <idalt>1</idalt> -->
@@ -26676,9 +26744,9 @@
                   </div>
                 </body>
               </text>
-              <pb n="583" facs="SMPA-AB-02_0599.jpg"/>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-2-3-2">
+              <pb n="583" facs="SMPA-AB-02_0599.jpg"/>
               <head>II. La Présentation aux Bénéfices</head>
               <text subtype="article" xml:id="SMPA-AB-02_370" n="370">
                 <!-- <idalt>1</idalt> -->
@@ -26918,7 +26986,7 @@
                 </body>
               </text>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-2-3-3">
               <head>III. Les petites Écoles de Montfort-l’Amaury</head>
               <text subtype="article" xml:id="SMPA-AB-02_375" n="375">
                 <!-- <idalt>1</idalt> -->
@@ -27210,7 +27278,7 @@
                 </body>
               </text>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-2-3-4">
               <head>IV. La vie des curés relevant de l’abbaye</head>
               <text subtype="article" xml:id="SMPA-AB-02_381" n="381">
                 <!-- <idalt>1</idalt> -->
@@ -27339,13 +27407,13 @@
               </text>
             </group>
           </group>
-          <pb n="595" facs="SMPA-AB-02_0611.jpg"/>
         </group>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-3">
+          <pb n="595" facs="SMPA-AB-02_0611.jpg"/>
           <head>III. LA GESTION DU TEMPOREL</head>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-3-1">
             <head>1. LES RECETTES</head>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-3-1-1">
               <head>I. Revenus des domaines et des offices claustraux</head>
               <text subtype="article" xml:id="SMPA-AB-02_384" n="384">
                 <!-- <idalt>1</idalt> -->
@@ -27598,7 +27666,7 @@
                 </body>
               </text>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-3-1-2">
               <head>II. Revenus des impôts</head>
               <text subtype="article" xml:id="SMPA-AB-02_388" n="388">
                 <!-- <idalt>1</idalt> -->
@@ -27729,11 +27797,11 @@
                 </body>
               </text>
             </group>
-            <pb n="602" facs="SMPA-AB-02_0618.jpg"/>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-3-2">
+            <pb n="602" facs="SMPA-AB-02_0618.jpg"/>
             <head>2. LES DÉPENSES</head>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-3-2-1">
               <head>I. Les impôts royaux</head>
               <text subtype="article" xml:id="SMPA-AB-02_391" n="391">
                 <!-- <idalt>1</idalt> -->
@@ -27864,7 +27932,7 @@
                 </body>
               </text>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-3-2-2">
               <head>II. Charges diverses pesant sur le temporel</head>
               <text subtype="article" xml:id="SMPA-AB-02_394" n="394">
                 <!-- <idalt>1</idalt> -->
@@ -27987,7 +28055,7 @@
                 </body>
               </text>
             </group>
-            <group>
+            <group xml:id="SMPA-AB-02_group2-3-2-3">
               <head>III. Les dépenses d’entretien</head>
               <text subtype="article" xml:id="SMPA-AB-02_397" n="397">
                 <!-- <idalt>1</idalt> -->
@@ -28152,7 +28220,7 @@
               </text>
             </group>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-3-3">
             <head>3. LES PLACEMENTS</head>
             <text subtype="article" xml:id="SMPA-AB-02_399" n="399">
               <!-- <idalt>1</idalt> -->
@@ -28195,12 +28263,12 @@
               </body>
             </text>
           </group>
-          <pb n="611" facs="SMPA-AB-02_0627.jpg"/>
         </group>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-4">
+          <pb n="611" facs="SMPA-AB-02_0627.jpg"/>
           <head>IV. LES RAPPORTS DE L’ABBAYE AVEC LE MONDE LAÏQUE ET LA SOCIÉTÉ
             ECCLÉSIASTIQUE</head>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-4-1">
             <head>1. L’ABBAYE ET LE ROI</head>
             <text subtype="article" xml:id="SMPA-AB-02_400" n="400">
               <!-- <idalt>1</idalt> -->
@@ -28325,7 +28393,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-4-2">
             <head>2. L’ABBAYE ET LE PAPE</head>
             <text subtype="article" xml:id="SMPA-AB-02_402" n="402">
               <!-- <idalt>1</idalt> -->
@@ -28524,7 +28592,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="SMPA-AB-02_group2-4-3">
             <head>3. L’ABBAYE ET LA COMMUNAUTÉ BÉNÉDICTINE</head>
             <text subtype="article" xml:id="SMPA-AB-02_407" n="407">
               <front>
@@ -28597,9 +28665,9 @@
               </body>
             </text>
           </group>
-          <pb n="619" facs="SMPA-AB-02_0635.jpg"/>
         </group>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-5">
+          <pb n="619" facs="SMPA-AB-02_0635.jpg"/>
           <head>V. NOTES DIVERSES</head>
           <text subtype="article" xml:id="SMPA-AB-02_408" n="408">
             <!-- <idalt>1</idalt> -->
@@ -28739,9 +28807,9 @@
               </div>
             </body>
           </text>
-          <pb n="621" facs="SMPA-AB-02_0637.jpg"/>
         </group>
-        <group>
+        <group xml:id="SMPA-AB-02_group2-6">
+          <pb n="621" facs="SMPA-AB-02_0637.jpg"/>
           <head>VI. DOCUMENTS ÉTRANGERS AU FONDS DE SAINT-MAGLOIRE</head>
           <text subtype="article" xml:id="SMPA-AB-02_412" n="412">
             <!-- <idalt>1</idalt> -->
@@ -29017,8 +29085,8 @@
         </group>
       </group>
     </group>
-    <back>
-      <div>
+    <back xml:id="SMPA-AB-02_back">
+      <div xml:id="SMPA-AB-02_back-1">
         <head><pb n="627" facs="SMPA-AB-02_0643.jpg"/> TABLE CHRONOLOGIQUE DES DOCUMENTS PUBLIÉS OU ANALYSÉS DANS LA DEUXIÈME
           PARTIE</head>
         <table>
@@ -29628,7 +29696,7 @@
           </row>
         </table>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-02_back-2">
         <head><pb n="633" facs="SMPA-AB-02_0649.jpg"/> INDEX ALPHABÉTIQUE DES NOMS DE PERSONNES ET DES NOMS DE LIEUX</head>
         <list type="1">
           <item> <p>Les noms de personnes sont classés au patronyme et sans tenir compte de l’article (l’, le, la, les, du, des).</p> </item>
@@ -32968,7 +33036,7 @@
  <item xml:id="SMPA-AB-02_rs_3377"><rs><hi rend="sc">Zacharie (saint)</hi>, le prophète</rs>, <ref target="#SMPA-AB-02_353" n="353">353</ref>. <!-- doublon meme acte SMPA-AB-02_353: <ref target="#SMPA-AB-02_353" n="353-556">353</ref> --></item>
  </list>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-02_back-3">
         <head><pb n="713" facs="SMPA-AB-02_0729.jpg"/> TABLE DES MATIÈRES</head>
         <table>
           <row>
