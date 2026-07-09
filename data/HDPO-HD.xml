@@ -168,7 +168,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="HDPO-HD_front">
       <head>Cartulaire de l’Hôtel-Dieu de Pontoise</head>
       <!--<head><hi rend="i">Cartulaire de l’Hôtel-Dieu de Pontoise, publié avec des notes, d’après les
         originaux</hi> par Joseph Depoin, Pontoise : Société historique du Vexin, 1886, in-4°,
@@ -186,7 +186,7 @@
       <byline>Notice rédigée par Jean-François Moufflet (juin 2006).</byline>
       <div xml:id="HDPO-HD_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div>
+        <div xml:id="HDPO-HD_etablissement-1">
           <head>Historique</head>
           <p>La figure emblématique d’un Saint Louis généreux fondateur et protecteur a longtemps
             éclipsé les véritables origines de l’Hôtel-Dieu de Pontoise.</p>
@@ -234,7 +234,7 @@
             ainsi que l’établissement furent détruits en juin 1940, en même temps que les archives.
             À son emplacement se trouve aujourd’hui la piscine municipale.</p>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>L’édition de Joseph Depoin, qui couvre la période allant de 1190 jusqu’en 1328, montre
             que davantage que des rentes, l’Hôtel-Dieu a fait beaucoup d’acquisitions immobilières.
@@ -269,7 +269,7 @@
             et dans une moindre mesure à Saint-Leu et Taverny (terres, cens et maisons : n° <ref n="2" target="#hotelpontoise_0002">II</ref>, <ref n="67" target="#hotelpontoise_0067">LXVII</ref>,
               <ref n="71" target="#hotelpontoise_0071">LXXI</ref>, <ref n="74" target="#hotelpontoise_0074">LXXIV</ref>, <ref n="140" target="#hotelpontoise_0140">CXL</ref>), et à Épiais (n° <ref n="150" target="#hotelpontoise_0150">CL</ref>).</p>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>Tout au long du recueil, on remarque une intervention assez marquée des rois, en toute
             logique Louis <num>IX</num>, mais aussi Philippe le Bel. Dans son diplôme daté d’entre
@@ -300,7 +300,7 @@
       </div>
       <div xml:id="HDPO-HD_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div>
+        <div xml:id="HDPO-HD_archives-1">
           <head>Le chartrier</head>
           <p>Comme il a été de règle, les archives médiévales et modernes de l’Hôtel-Dieu, enrichies
             des fonds des établissements rattachés, échappèrent aux institutions archivistiques
@@ -320,7 +320,7 @@
             titres de l’Hôtel-Dieu sur des moulins de 1200 à 1712, a survécu pour avoir été
             distraite du chartrier.</p>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_archives-2">
           <head>Les cartulaires</head>
           <p>Il est difficile de dire, faute d’un pointage complet avec l’inventaire de Félix
             Rocquain, si Joseph Depoin a entièrement dépouillé le fonds. Toujours est-il que, même
@@ -334,7 +334,7 @@
             10-13). Une table liminaire inachevée du<hi rend="sup">e</hi> siècle a enfin été mise en
             tête du manuscrit (9 feuillets papier).</p>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_archives-3">
           <head>Autres sources</head>
           <p>En dehors des sources produites par l’administration royale (actes royaux enregistrés,
             contrôle des legs aux hôpitaux…), une mention spéciale doit être faite de :</p>
@@ -347,7 +347,7 @@
               Desnoyers).</bibl>
           </listBibl>
         </div>
-        <div n="1.5" type="souspartie">
+        <div xml:id="HDPO-HD_archives-4" n="1.5" type="souspartie">
           <head>Orientation bibliographique</head>
           <p>La description la plus précise de l’histoire de l’Hôtel-Dieu reste l’article de :</p>
           <listBibl>
@@ -372,7 +372,7 @@
       </div>
       <div xml:id="HDPO-HD_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="HDPO-HD_edition-1">
           <head>L’éditeur : éléments biographiques</head>
           <p>Joseph Depoin (1855-1924) était le fils d’un avocat de Pontoise. Membre fondateur puis
             secrétaire général de la Société historique du Vexin pendant quarante-sept ans, il fut
@@ -392,7 +392,7 @@
                 <abbr>t.</abbr> 83, 2000, <abbr>p.</abbr> 260.</bibl>
           </listBibl>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_edition-2">
           <head>Conception et contenu de l’édition</head>
           <p>Joseph Depoin avait à l’origine prévu une publication plus ample que le présent
             ouvrage, consacré à l’édition des actes de 1190 à 1328 : il devait être le premier
@@ -503,7 +503,7 @@
             </row>
           </table>
         </div>
-        <div>
+        <div xml:id="HDPO-HD_edition-3">
           <head>Qualité de l’édition</head>
           <p>Le recueil présente la plupart des caractéristiques des éditions procurées par Joseph
             Depoin : sa connaissance des lieux et son appétence pour les reconstitutions
@@ -522,7 +522,7 @@
     </front>
     <group>
       <head>Hôtel-Dieu de Pontoise</head>
-      <group>
+      <group xml:id="HDPO-HD_group1">
         <head>Cartulaire</head>
         <!--  [EG]: attention, ce premier acte ne correspond pas à la version numérisée en mode image de l'édition! -->
         <!--
@@ -10584,7 +10584,7 @@
           </body>
 </text>
       </group>
-      <group>
+      <group xml:id="HDPO-HD_group2">
         <head>Additions au cartulaire</head>
         <text xml:id="HDPO-HD_1001" n="I bis" subtype="article">
           <pb n="121" facs="https://iiif.archive.org/image/iiif/3/cartulairedelhot00depo%2Fcartulairedelhot00depo_jp2.zip%2Fcartulairedelhot00depo_jp2%2Fcartulairedelhot00depo_0137.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedelhot00depo/manifest.json"/>
