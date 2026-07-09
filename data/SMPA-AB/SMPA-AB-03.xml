@@ -131,14 +131,14 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SMPA-AB-03_front">
       <head>Chartes et documents de l’abbaye de Saint-Magloire, tome III</head>
       <!--<head><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, t. III, Paris, 1976.</head>-->
       <argument>
         <p><!-- TODO --></p>
       </argument>
       <byline><!-- TODO --></byline>
-      <div>
+      <div xml:id="SMPA-AB-03_introduction">
         <head><pb n="I" facs="SMPA-AB-03_introduction_0001.jpg"/> INTRODUCTION</head>
         <p>Pandémies, guerres, effondrement démographique et économique suivi d’une stabilisation mais à un niveau bien inférieur à celui atteint vers 1290, tel est le tableau qu’offre la région parisienne au <hi rend="sc">xiv</hi><hi rend="sup">e</hi> siècle. A cette crise qui frappe plus les campagnes que la capitale où la présence du roi, des princes et des cours souveraines continue à alimenter le commerce de luxe et de fructueux trafics, les diverses maisons de l’ordre bénédictin, dont la faveur publique s’était détournée depuis l’apparition des ordres mendiants, répondent chacune à sa manière. Saint-Magloire, à cet égard, jouit d’atouts non négligeables. Solidement installée dans le quadrilatère formé par les rues Quincampoix, Aubry-le-Boucher, Saint-Denis et la rue aux Ours, bien à l’abri derrière le rempart de Philippe Auguste, puis l’enceinte de Charles V, l’abbaye échappe aux ravages qui désolent les monastères des campagnes et ceux de la périphérie des villes. Paradoxalement joue aussi, en sa faveur, l’extraordinaire dispersion de son temporel composé de droits et de terres, le plus souvent très petites, situées dans la Brie, le Vexin, le Hurepoix, le Montfortois, l’Orléanais et la grande banlieue. Cette circonstance qui, en temps normal, en rendait la collecte et l’exploitation onéreuses et malaisées, lui évita, à une époque de pillages, de voir tarir brusquement tous ses revenus à la fois. La médiocrité de ses ressources, enfin, la met à l’abri des convoitises cardinalices comme de celles des créatures royales, tandis qu’elle réussit à se ménager dans le milieu des hommes de loi un appui discret et moins encombrant. Quant à l’intrusion de la papauté dans son recrutement, ses élections et la nomination à ses bénéfices, Saint-Magloire paraît avoir réussi, en jouant de la faiblesse de ses revenus et de la médiocrité de son renom, à la limiter au plus juste.</p>
         <p/>
@@ -255,7 +255,7 @@
         <p>Fruit d’une étroite collaboration, ce travail a rencontré partout les concours les plus empressés, tant aux Archives nationales qu’auprès de nos confrères de province. Parmi eux, nous sommes particulièrement redevables à M. Marcel Delafosse, directeur des services d’archives du département des <pb n="LIX" facs="SMPA-AB-03_introduction_0059.jpg"/>Yvelines et de l’ancien département de Seine-et-Oise, qui s’est dépensé pour nous sans compter. Aux Archives de l’Assistance Publique, M. Marcel Candille nous a toujours réservé le meilleur accueil. L’annotation ne serait pas ce qu’elle est sans l’aide du personnel de l’Institut de recherche et d’histoire des textes<note n="intro_567"><p>Nous remercions en particulier M<hi rend="sup">lles</hi> Élisabeth Pellegrin, chef de la section latine, et Marie-Thérèse d’Alverny, directeur de recherche au C.N.R.S., qui ont bien voulu, l’une identifier à notre intention les livres de la bibliothèque de Gérard de Montaigu, l’autre éclairer notre lanterne sur les écrits théologiques de Richard Guernon.</p></note>. Spécialiste des notaires du Paris médiéval, M. François Maillard nous a très libéralement dispensé ses connaissances. La collaboration de M<hi rend="sup">me</hi> Geneviève Contamine a rendu moins ingrate la rédaction de la table. Nous devons également beaucoup à l’érudition de M. Henri Martin, du Centre d’études d’histoire juridique. M<hi rend="sup">me</hi> Josette Metman nous a fait l’amitié de lire le manuscrit et son aide, tout ensemble critique et chaleureuse, nous a soutenue tout au long de notre effort. Aussi est-il juste qu’elle figure à la place qui lui revient, la première, parmi ceux à qui nous avons le plaisir de témoigner ici notre gratitude.</p>
         <p><hi rend="sc">A. Terroine</hi>.</p>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-03_edition">
         <head><pb n="LXI" facs="SMPA-AB-03_introduction_0061.jpg"/> L’ABBAYE DE SAINT-MAGLOIRE
           <lb/>AU XIV<hi rend="sup">e</hi> ET AU COMMENCEMENT DU XV<hi rend="sup">e</hi> SIÈCLES</head>
         <table>
@@ -279,7 +279,7 @@
           <row><cell>Liste des ouvrages le plus souvent cités</cell><cell>LXIII-LXX</cell></row>
         </table>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-03_biblio">
         <head><pb n="LXIII" facs="SMPA-AB-03_introduction_0063.jpg"/> LISTE DES OUVRAGES LE PLUS SOUVENT CITÉS</head>
         <p>On trouvera ici, avec leurs références bibliographiques complètes, les ouvrages cités au moins plusieurs fois dans ce volume, et que nous avons désignés, pour plus de commodité, sous des formes abrégées bien qu’aisément déchiffrables.</p>
         <p>Il va de soi, que comme celle publiée dans le t. 2, cette énumération de livres et d’articles disparates, mentionnés au hasard des digressions qu’entraînent des notes traitant de sujets très divers, n’a aucune prétention à tenir lieu de bibliographie.</p>
@@ -402,9 +402,9 @@
         </listBibl>
       </div>
     </front>
-    <group>
+    <group xml:id="SMPA-AB-03_group">
       <pb n="1" facs="SMPA-AB-03_0001.jpg"/>
-      <head><x>ACTES</x></head>
+      <head>ACTES</head>
       <text subtype="article" xml:id="SMPA-AB-03_1" n="1">
         <front>
           <docDate>
@@ -10493,8 +10493,8 @@
         </body>
       </text>
     </group>
-    <back>
-      <div>
+    <back xml:id="SMPA-AB-03_back">
+      <div xml:id="SMPA-AB-03_back-1">
         <head><pb n="811" facs="SMPA-AB-03_0811.jpg"/> ADDITIONS ET CORRECTIONS</head>
         <p>N° 23, p. 41.</p>
         <p>Ajouter à l’apparat critique <hi rend="i">B</hi> : Copie de 1331, dans le <hi rend="i">Grand Cartulaire</hi> de Saint-Magloire, Bibl. nat., lat. 5413, n° 274, fol. 187. Dans la copie de Jean de Rozay, le texte de la condamnation est meilleur : « Et nous iceus despens et tout ce qui faisoit à veoir quant pour les diz despens tauxer ».</p>
@@ -10526,7 +10526,7 @@
         <p>N° 284, p. 636, n. 1.</p>
         <p>En fait, Jean de Gonesse était en charge depuis onze ans, soit depuis 1363. C’est ce qu’il nous dit lui-même dans la préface d’un Inventaire analytique des chartes des Blancs-Manteaux, qu’à l’instar de beaucoup d’administrateurs soucieux de la bonne gestion de leur maison, il rédigea en septembre 1377 après avoir mis en ordre son chartrier. Malheureusement il ne nous reste aujourd’hui de ce travail que sept feuillets retrouvés par hasard dans des reliures de manuscrits (L. Delisle, <hi rend="i">Note sur un censier de l’abbaye de Sainte-Geneviève de Paris de l’année 1276</hi>, dans le <hi rend="i">Bulletin de la Société de l’histoire de Paris</hi>, t. 23, 1896, p. 37, et Bibl. nat., nouv. acq. lat., 2374, fol. 23, Registre du prieuré des Blancs-Manteaux rédigé par le prieur Jean de Gonesse).</p>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-03_back-2">
         <head><pb n="815" facs="SMPA-AB-03_0815.jpg"/> INDEX ALPHABÉTIQUE DES NOMS DE PERSONNE
           <lb/>ET DES NOMS DE LIEU</head>
         <list type="1">
@@ -14460,7 +14460,7 @@
           <item xml:id="SMPA-AB-03_rs_3924"><rs><hi rend="sc">Yvon (J.)</hi></rs>, <ref target="#SMPA-AB-03_195" n="195">195</ref>. <!-- doublon meme acte SMPA-AB-03_195: <ref target="#SMPA-AB-03_195" n="195-438">195</ref> --></item>
         </list>
       </div>
-      <div>
+      <div xml:id="SMPA-AB-03_back-3">
         <head><pb n="915" facs="SMPA-AB-03_0984.jpg"/> TABLE DES MATIÈRES</head>
         <table>
           <head/>
