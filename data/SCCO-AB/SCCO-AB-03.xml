@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III : 1261-1383</title>
+        <title ref="https://www.persee.fr/doc/bec_0373-6237_1979_num_137_1_450158_t1_0115_0000_3">Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III : 1261-1383</title>
         <title type="short">Saint-Corneille de Compiègne, tome III</title>
         <author ref="https://data.bnf.fr/fr/documents-by-rdt/12442952/te/page1">Émile Morel</author>
         <author ref="https://www.idref.fr/026767880 https://data.bnf.fr/fr/ark:/12148/cb11895241w">Louis Carolus-Barré</author>
@@ -18,7 +18,7 @@
       <extent/>
       <publicationStmt>
         <date>2026</date>
-        <idno>SCCO-AB-03</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/SCCO-AB-03</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -57,8 +57,11 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">Olivier Canteaut (éd.), Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III : 1261-1383, École nationale des chartes – PSL, 2026.</note>
+      </notesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III, 1261-1383</title>, texte établi par <author>Émile Morel</author>, publié par les soins de <author>Louis Carolus-Barré</author>, Paris : <publisher>Nouvelles Éditions latines</publisher>, <date>1977</date>.</bibl>
+        <bibl source="https://www.persee.fr/doc/bec_0373-6237_1979_num_137_1_450158_t1_0115_0000_3"><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome III, 1261-1383</title>, texte établi par <author>Émile Morel</author>, publié par les soins de <author>Louis Carolus-Barré</author>, Paris : <publisher>Nouvelles Éditions latines</publisher>, <date>1977</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -86,7 +89,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="la">Latin</language>
+        <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
       <textClass>
