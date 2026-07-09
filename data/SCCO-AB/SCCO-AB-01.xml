@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I : 827-1216</title>
+        <title ref="https://gallica.bnf.fr/ark:/12148/bpt6k58296915">Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I : 827-1216</title>
         <title type="short">Saint-Corneille de Compiègne, tome I</title>
         <author ref="https://data.bnf.fr/fr/documents-by-rdt/12442952/te/page1">Émile Morel</author>
         <principal xml:id="OC" ref="https://www.idref.fr/101839839 https://data.bnf.fr/fr/ark:/12148/cb178392047">Olivier Canteaut</principal>
@@ -17,7 +17,7 @@
       <extent/>
       <publicationStmt>
         <date>2026</date>
-        <idno>SCCO-AB-01</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/SCCO-AB-01</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -56,6 +56,9 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">Olivier Canteaut (éd.), Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I : 827-1216, École nationale des chartes – PSL, 2026.</note>
+      </notesStmt>
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k58296915"><title>Cartulaire de l’abbaye de Saint-Corneille de Compiègne. Tome I, 827-1216</title>, publié par <author>Émile Morel</author>, Compiègne : <publisher>Société historique de Compiègne</publisher>, <date>1904</date>.</bibl>
       </sourceDesc>
@@ -84,7 +87,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="la">Latin</language>
+        <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
       <textClass>
