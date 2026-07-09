@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire de l’abbaye de Maubuisson, seconde partie</title>
+        <title ref="https://gallica.bnf.fr/ark:/12148/bpt6k992853w">Cartulaire de l’abbaye de Maubuisson, seconde partie</title>
         <title type="short">Maubuisson 02</title>
         <author ref="https://www.idref.fr/095012664 https://data.bnf.fr/fr/ark:/12148/cb12814042x">Adolphe Dutilleux</author>
         <author ref="https://www.idref.fr/070992479 https://data.bnf.fr/fr/ark:/12148/cb12040305t">Joseph Depoin</author>
@@ -18,7 +18,7 @@
       <extent/>
       <publicationStmt>
         <date>2026</date>
-        <idno>MAUB-AB-02</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/MAUB-AB-02</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -57,8 +57,11 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">Olivier Canteaut (éd.), Cartulaire de l’abbaye de Maubuisson, seconde partie, École nationale des chartes – PSL, 2026.</note>
+      </notesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Seconde partie, Contrats (titres III à XIV du cartulaire)</title>, publié par <author>Adolphe Dutilleux</author> et <author>Joseph Depoin</author>, Pontoise : <publisher>Société historique de Pontoise</publisher>, <date>1913</date>.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k992853w"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Seconde partie, Contrats (titres III à XIV du cartulaire)</title>, publié par <author>Adolphe Dutilleux</author> et <author>Joseph Depoin</author>, Pontoise : <publisher>Société historique de Pontoise</publisher>, <date>1913</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -83,7 +86,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="la">Latin</language>
+        <language ident="lat">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
       <textClass>
