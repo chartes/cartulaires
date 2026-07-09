@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Archives de l’Hôtel-Dieu de Paris (1157-1300)</title>
+        <title ref="https://data.bnf.fr/fr/ark:/12148/cb12320690t">Archives de l’Hôtel-Dieu de Paris (1157-1300)</title>
         <title type="short">Hôtel-Dieu de Paris</title>
         <author ref="https://www.wikidata.org/wiki/Q34478746 https://data.bnf.fr/fr/ark:/12148/cb13013820b https://www.idref.fr/033808937">Léon Brièle</author>
         <editor ref="https://www.wikidata.org/wiki/Q3056903 https://data.bnf.fr/fr/ark:/12148/cb12138647g https://www.idref.fr/069210934">Ernest Coyecque</editor>
@@ -15,10 +15,10 @@
           <resp>Conversion, normalisation TEI et enrichissement du teiHeader (2026)</resp>
         </respStmt>
       </titleStmt>
-      <extent />
+      <extent/>
       <publicationStmt>
         <date>2026</date>
-        <idno>HDPAR-HD</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/HDPAR-HD</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -27,7 +27,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC BY-NC-SA 4.0)</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC-BY-NC-SA 4.0)</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique structurée selon les termes de la licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.</p>
         </availability>
       </publicationStmt>
@@ -36,6 +36,9 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">Ernest Coyecque, Olivier Canteaut (éd.), Archives de l’Hôtel-Dieu de Paris (1157-1300), École nationale des chartes – PSL, 2026.</note>
+      </notesStmt>
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k3202407z"><title>Archives de l’Hôtel-Dieu de Paris : 1157-1300</title>, publié par <author>Léon Brièle</author>, avec notice, appendice et table par <author>Ernest Coyecque</author>, Paris : <publisher>Imprimerie nationale</publisher>, <date>1894</date>.</bibl>
       </sourceDesc>

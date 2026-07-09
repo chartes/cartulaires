@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Cartulaire et censier de Saint-Merry de Paris</title>
+        <title ref="https://elec.enc.sorbonne.fr/cartulaires/html/Paris-S-Merri.html">Cartulaire et censier de Saint-Merry de Paris</title>
         <title type="short">Saint-Merry de Paris</title>
         <author ref="https://www.idref.fr/035134119 https://data.bnf.fr/ark:/12148/cb13169428n">Camille Couderc</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
@@ -55,17 +55,16 @@
       <extent/>
       <publicationStmt>
         <date>2009</date>
-        <idno>http://elec.enc.sorbonne.fr/cartulaires/Paris-S-Merri/</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/SMPA-EG</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
-          <addrLine>19, rue de la Sorbonne</addrLine>
-          <addrLine>75005 Paris</addrLine>
+          <addrLine>65, rue de Richelieu</addrLine>
+          <addrLine>75002 Paris</addrLine>
           <addrLine>tél.: +33 (0)1 55 42 75 00</addrLine>
-          <addrLine>http://enc.sorbonne.fr/</addrLine>
-          <addrLine>recherche@enc.sorbonne.fr</addrLine>
+          <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc/3.0/fr/">© École nationale des chartes - PSL (CC BY-NC 3.0)</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC-BY-NC-SA 4.0)</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique
             structurée, protégée par le code de la propriété intellectuelle sur les bases de données
               (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
@@ -100,8 +99,11 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">John Perry Archer, Olivier Guyotjeannin (éd.), Cartulaire et censier de Saint-Merry de Paris, École nationale des chartes – PSL, 2009.</note>
+      </notesStmt>
       <sourceDesc>
-        <bibl><title>Cartulaire et censier de Saint-Merry de Paris</title> publié par
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k111131d"><title>Cartulaire et censier de Saint-Merry de Paris</title> publié par
             <author>Camille Couderc</author> et <author>Léon Cadier</author> Paris, in: Memoires de
           la Société de l'Histoire de Paris et d'Île de France , tome 18, pp.101-271,
             <date>1891</date>, 8°</bibl>
