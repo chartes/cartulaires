@@ -22,7 +22,7 @@
       <publicationStmt>
         <date>2024</date>
         <!-- idno à revoir avec l'identifiant du cartulaire -->
-        <idno>http://elec.enc.sorbonne.fr/cartulaires/SGDP/</idno>
+        <idno>http://elec.enc.sorbonne.fr/cartulaires/SGDP-AB</idno>
         <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes – PSL</publisher>
         <address>
           <addrLine>65, rue de Richelieu</addrLine>
@@ -31,7 +31,7 @@
           <addrLine>https://www.chartes.psl.eu/</addrLine>
         </address>
         <availability status="restricted">
-          <licence target="https://creativecommons.org/licenses/by-nc/3.0/fr/">© École nationale des chartes - PSL (CC BY-NC 3.0)</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">© École nationale des chartes - PSL (CC-BY-NC-SA 4.0)</licence>
           <p>L'École nationale des chartes met à disposition cette ressource électronique structurée, protégée par le code de la propriété intellectuelle sur les bases de données (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>), selon les termes de la licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas d'Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
           <p><ident>Pas d'Utilisation Commerciale</ident> — Nous souhaitons encourager l'utilisation et l'amélioration de nos ressources électroniques, pour les intérêts de l'enseignement et de la recherche. Toute autorisation au-delà du champ de cette licence doit être obtenue auprès de nous.</p>
           <p><ident>Pas de Modification</ident> — Afin de mieux servir la communauté scientifique, nous nous engageons à conserver et à toujours offrir publiquement la version la plus à jour de nos ressources électroniques par une URI pérenne. Nous nous engageons à les corriger et à les améliorer, à intégrer les contributions qui lui sont soumises (après validation par un comité scientifique), et à référencer l'origine de ces contributions. Toute modification de la ressource qui ne serait pas reversée à la version de référence sous notre autorité éditoriale doit faire l'objet d'un accord, afin de ne pas disperser les contributions et de permettre les meilleures conditions possibles de collaboration scientifique.</p>
@@ -49,6 +49,9 @@
         <idno type="URI">http://elec.enc.sorbonne.fr</idno>
         <idno type="vol">11</idno>
       </seriesStmt>
+      <notesStmt>
+        <note type="citation">Olivier Canteaut (éd.), Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIIIe siècle, École nationale des chartes – PSL, 2024.</note>
+      </notesStmt>
       <sourceDesc>
           <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k165334g https://gallica.bnf.fr/ark:/12148/bpt6k1653723">
             <title>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés des origines au début du XIII<hi rend="sup">e</hi> siècle</title>, éd. René Poupardin, t. I et II, Paris, <date>1909-1932</date>.
@@ -100,7 +103,7 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date >1909-1932</date>
+        <date>1909-1932</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
