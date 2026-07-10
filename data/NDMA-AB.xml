@@ -1,6 +1,4 @@
-﻿<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMA-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDMA-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -92,32 +90,39 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-        </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]" use="dots" unit="Index">
-          <citeData use="head" property="dct:title"/>
-          <citeStructure match="div[1]" use="dots">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
-          <citeStructure match="div[2]" use="dots">
-            <citeData use="head" property="dct:title"/>
-            <citeStructure match="list[@type='index']" use="dots">
-              <citeData use="head" property="dct:title"/>
-            </citeStructure>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]" use="@xml:id" unit="Index">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure match="div[@type = 'index' or @type = 'table']" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -128,7 +133,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -150,7 +155,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="NDMA-AB_front">
       <head>Cartulaire de Notre-Dame de Maintenon</head>
       <!--<head><hi rend="i">Cartulaire de Saint-Thomas d’Épernon et de Notre-Dame de Maintenon…</hi>,
         éd. Auguste Moutié et Adolphe de Dion, Rambouillet, De Raynal, 1878, <num>vi</num>-188
@@ -164,16 +169,16 @@
       <byline>Notice préparée par Mathilde Koskas (juin 2006).</byline>
       <div xml:id="NDMA-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div type="historique" xml:id="NDMA-AB_historique">
           <head>Historique </head>
           <p>Le prieuré de Notre-Dame de Maintenon est fondé vers 1120 par Mainier de Maintenon et sa femme Élisabeth, qui donnent à Marmoutier l’église Sainte-Marie de Maintenon avec des terres et des dîmes (voir charte de fondation, acte n<hi rend="sup">o</hi> I, p. 137). </p>
           <p/>
         </div>
-        <div type="localisation">
+        <div type="localisation" xml:id="NDMA-AB_localisation">
           <head>Localisation du patrimoine à grands traits </head>
           <p>Le prieuré de Notre-Dame de Maintenon est doté à sa fondation de l’église et du cimetière d’Ouerre, des dîmes d’Ouerre, Prémont, Fontenelles, Prés, Sougny, Maintenon. Les dons qui s’y ajoutent par la suite sont également situés dans la région.</p>
         </div>
-        <div type="bienfaiteurs">
+        <div type="bienfaiteurs" xml:id="NDMA-AB_bienfaiteurs">
           <head>Réseaux de bienfaiteurs</head>
           <p>Mainier de Maintenon et sa femme Élisabeth, puis leurs descendants, dont Amaury de Maintenon, sont les principaux bienfaiteurs du prieuré de Notre-Dame de Maintenon.</p>
         </div>
@@ -189,14 +194,14 @@
       </div>
       <div xml:id="NDMA-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div type="editeurs">
+        <div type="editeurs" xml:id="NDMA-AB_editeurs">
           <head> Les éditeurs : éléments biographiques</head>
           <p>Auguste Moutié (1812-1886) appartient à la bourgeoisie de Rambouillet. Il s'intéresse à l'histoire naturelle et à la géologie, collectionne livres, chinoiseries, faïences et objets archéologiques, mais s'intéresse surtout à l'histoire locale. Membre fondateur et animateur de la Société Archéologique de Rambouillet (1836), et président de cette société pendant 17 ans (1868-1886), il est l'auteur d'études sur la région, en particulier <hi rend="i">Chevreuse. Recherches historiques, archéologiques et généalogiques</hi> (1876), qui lui vaut la médaille d'or au concours des antiquités nationales, et édite divers cartulaires (Notre-Dame des Vaux-de Cernay, Notre-Dame des Moulineaux et châtellenie de Poigny, Notre-Dame de La Roche). Il est membre de nombreuses sociétés savantes, parmi lesquelles le Comité des travaux historiques, la Société des Antiquaires de France, la Commission des Antiquités et Arts de Seine-et-Oise, la Société des Sciences morales, Lettres et Arts de Versailles.</p>
           <p>Sources : nécrologie par Adolphe de Dion, « Notice sur Auguste Moutié », t. à p. de <emph>Mémoires de la Société archéologique de Rambouillet</emph>, t. 8 (1887-1888) ; éloge funèbre par Antoine Héron de Villefosse, dans <hi rend="i">Bulletin de la Société nationale des antiquaires de France</hi>, 1888, p. 87-88.</p> 
           <p>Adophe de Dion. Chercheur régional, le comte Adolphe de Dion (1823-1909) s’était particulièrement attaché à l’histoire médiévale de l’ancien département de Seine-et-Oise. Ce notable, maire de Montfort-l’Amaury, inspecteur général de la Société française d’archéologie, anima la Société archéologique de l’arrondissement de Rambouillet et la Société des antiquités et arts de Seine-et-Oise. Ses travaux ont porté sur l’archéologie, la castellologie, la numismatique, le monachisme et la noblesse dans l’ouest de l’Île-de-France. Son appétence pour l’édition de sources documentaires est évidente : il avait ainsi publié le cartulaire de Notre-Dame de Porrois. Il a consacré deux articles à Saint-Thomas d’Épernon : « L’église du prieuré Saint-Thomas d’Épernon », dans <emph>Mémoires de la Société archéologique de Rambouillet</emph>, t. 11 (1896), et « Chapiteaux de Saint-Thomas d’Épernon », dans <hi rend="i">Congrès archéologique de France</hi>, 98<hi rend="sup">e</hi> session, 1872.</p>
           <p>Sources : nécrologie et documents annexes par Lorin, « Notice sur le comte de Dion », dans <emph>Mémoires de la Société archéologique de Rambouillet</emph>, t. 21 (1910), p. 405-439. </p>
         </div>
-        <div type="conception">
+        <div type="conception" xml:id="NDMA-AB_conception">
           <head>Conception et contenu du volume</head>
           <p>L’édition est faite en premier lieu d’après les documents originaux issus du chartrier ancien de Marmoutier, concernant les prieurés d’Épernon et Maintenon. Ces documents étaient passés, avec ceux des prieurés de Léthuin et Saint-Martin de Brethaucourt, lors de la Révolution, aux Archives départementales d’Indre-et-Loire, dont l’archiviste les envoya à celles d’Eure-et-Loir au début du XIX<hi rend="sup">e</hi> siècle. Les éditeurs ont complété ce corpus par des pièces tirées des collections de Gaignières (lat. 5441) et Moreau, à la Bibliothèque nationale, et des archives du domaine de Rambouillet et du château de Maintenon. Dans le chartrier de Marmoutier, les documents sont classés méthodiquement, avec la mention « de Spernone » et un titre synthétique au dos. Aucun n’a conservé de sceau. Moutié et de Dion ont choisi de les présenter chronologiquement dans leur édition, en gardant le titre. Gaignières, qui reproduit parfois les sceaux, leur fournit des précisions sur ce sujet.</p> 
           <p>Les actes 1 à 85 de ce chartrier concernent Épernon ; 17 pièces manquent (n<hi rend="sup">o</hi> 1, 2, 4, 12, 14, 16, 19, 20, 29, 36, 43-45, 75-77 et 84), et il y a des numéros multiples : en tout, 107 pièces, correspondant aux cotes H 2320 à 2338 des            Archives départementales de l'Eure-et-Loir. Pour le prieuré de Maintenon, il s’agit de            32 numéros, 45 pièces, correspondant aux cotes H 2339 à 2349. </p>          
@@ -252,7 +257,7 @@
           </table>
           <p>Le volume comprend un index par noms de personne et de lieu (p. 181-188), un index sigillographique, par noms de personne (p. 181), des listes des prieurs connus d’Épernon (p. 132-135) et de Maintenon (p. 180), et des listes des visites de l’abbé de Marmoutier à ces deux prieurés (p. 129-131 et p. 180, avec une copie du procès-verbal de la visite du 29 septembre 1321 à Maintenon).</p>
         </div>
-        <div type="qualite">
+        <div type="qualite" xml:id="NDMA-AB_qualite">
           <head>Qualité de l’édition</head>
           <p>Les éditeurs pratiquent des coupes dans le formulaire des actes, éliminent certains actes, mais en citent d’autres qui, sans se rapporter directement aux prieurés d’Épernon et de Maintenon, leur semblent intéressants pour l’histoire locale. À côté de ces éliminations, confrontés à un chirographe dont les deux parties comportent des variantes l’une par rapport à l’autre, ils choisissent d’éditer les deux parties, alors qu’on privilégierait sans doute aujourd’hui une édition des variantes en notes. Les abréviations de noms propres sont résolues en notes, et les mots manquants rendus par des points, ce qui peut entraîner une confusion avec les mots que les éditeurs ont choisi de ne pas éditer. Certains actes, dont le texte est contenu dans un acte suivant, ne sont pas édités (les n<hi rend="sup">o</hi> LXVII-LXIX d’Épernon renvoient au n<hi rend="sup">o</hi> LXX), mais, pour d’autres, les éditeurs créent des actes en les extrayant d’autres (les n LXXII-LXXV sont des citations du n LXXIX).</p> 
           <p>L’index sigillographique a simplement des entrées aux surnoms et patronymes (et pas aux noms personnels), et ne comporte aucun renvoi, mais sa brièveté lui permet de rester d’usage commode. La table des noms de personne et de lieu est traitée de même, ce qui vu sa longueur est plus gênant. C’est le manque de rigueur qui est le principal inconvénient : certains personnages sont seulement à leur surnom, d’autres seulement à leur nom, plusieurs personnages portant le même nom ont une entrée commune, ce qui peut prêter à confusion, les renvois sont très peu nombreux et pas uniformisés. On regrette également que n’aient pas été prévues quelques entrées à des titres et qualificatifs comme « connétable », « clerc » ou « prieur ». La traduction et l’identification des noms latins est intégrée à cette table, et non au fil de l’édition.</p>
@@ -262,7 +267,7 @@
     </front>
     <group>
       <head>Notre-Dame de Maintenon</head>
-      <group>
+      <group xml:id="NDMA-AB_group">
         <head>Cartulaire</head>
         <text subtype="article" xml:id="NDMA-AB_0001" n="I">
           <pb n="137" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f147/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
@@ -2814,9 +2819,9 @@
         </text>
       </group>
     </group>
-<back>
+    <back xml:id="NDMA-AB_back">
   <head>Index</head>
-      <div type="index">
+      <div type="index" xml:id="NDMA-AB_back-1">
       <pb n="181" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f191/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
       <head>Index sigillographique</head>
         <list type="index">
@@ -2853,7 +2858,7 @@
       <item xml:id="NDMA-AB_rs_031"><rs><hi rend="sc">Vacheresses (Jean de)</hi></rs>, <ref target="#NDMA-AB_0016" n="16">16</ref>.</item>
       </list>
       </div>
-      <div type="table">
+      <div type="table" xml:id="NDMA-AB_back-2">
         <pb n="181" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f191/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
         <head>Table générale des noms d'hommes et de lieux</head>
         <list type="index">

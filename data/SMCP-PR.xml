@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMCP-PR">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMCP-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -115,34 +112,50 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group[@type='tome']" use="dots">
           <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="section" match="group" use="dots">
             <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="sous-section" match="group" use="dots">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                 <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-                <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-                <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-                <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+                <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                <citeData property="dct:type" use="front/index/term/@key"/>
+                <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              </citeStructure>
             </citeStructure>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-              <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -153,7 +166,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
       </langUsage>
       <textClass>
@@ -178,7 +191,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SMCP-PR_front">
       <head>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs, monastère parisien</head>
       <!--<head>Joseph Depoin, <hi rend="i">Recueil des chartes et documents de l’abbaye de Saint-Martin
         des Champs, monastère parisien</hi>, Ligugé, 1913-1921, 5 vol. (<hi rend="i">Archives de
@@ -198,7 +211,7 @@
         Wenz (mai 2006, mise à jour juillet 2006).</byline>
       <div xml:id="SMCP-PR_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div type="historique" xml:id="SMCP-PR_etablissement-1">
           <head>Historique</head>
           <p>Une basilique funéraire mérovingienne des VI<hi rend="sup">e</hi>-VII<hi rend="sup">e</hi> siècles, réaménagée au temps des Carolingiens, précéda Saint-Martin des
             Champs. Elle est mentionnée par Grégoire de Tours et se trouve plus ou moins au même
@@ -265,7 +278,7 @@
             Conservatoire des Arts et Métiers, […] un dépôt de machines, modèles, outils, dessins,
             descriptions et livres dans tous les genres d’arts et métiers ». </p>
         </div>
-        <div>
+        <div xml:id="SMCP-PR_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>S’il dominait comme seigneur justicier et censuel le bourg né autour de lui, le prieuré
             de Saint-Martin des Champs possédait aussi un important temporel localisé
@@ -288,7 +301,7 @@
             prieuré de Marolles-en-Brie et les seigneuries de Limoges-Fourches et de
             Fontaine-le-Port, sur la Seine. </p>
         </div>
-        <div>
+        <div xml:id="SMCP-PR_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p> Outre les fondateurs capétiens, ce sont surtout des membres de l’aristocratie
             d’Ile-de-France qui sont à l’origine des principales dotations temporelles. Les plus
@@ -299,7 +312,7 @@
       </div>
       <div xml:id="SMCP-PR_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div type="chartrier">
+        <div type="chartrier" xml:id="SMCP-PR_archives-1">
           <head>Le chartrier</head>
           <p> Le chartrier confisqué à la Révolution, en dépit de quelques destructions symboliques
             d’authentiques de reliques et de lettres pontificales, continue à former une masse
@@ -311,7 +324,7 @@
             3612-3624), partie des plans (série N, <hi rend="i">passim</hi>), documents judiciaires
             modernes (Z2 3702-3748). </p>
         </div>
-        <div type="cartulaires">
+        <div type="cartulaires" xml:id="SMCP-PR_archives-2">
           <head>Les cartulaires</head>
           <p> On a compilé à Saint-Martin des cartulaires de tout temps et de toutes sortes, qui
             attendent encore une étude approfondie. </p>
@@ -344,7 +357,7 @@
           <p> Il est enfin délicat de décider si d’autres mentions et extraits de cartulaires (Stein
             2979-2981) renvoient toujours à ceux-ci. </p>
         </div>
-        <div type="necrologie">
+        <div type="necrologie" xml:id="SMCP-PR_archives-3">
           <head>Documents nécrologiques</head>
           <p>La documentation nécrologique n’est pas moins riche (Lemaitre, Répertoire, t. I, nos
             1308-1310), et s’organise autour de deux compilations du XII<hi rend="sup">e</hi> et du
@@ -367,7 +380,7 @@
       </div>
       <div xml:id="SMCP-PR_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="SMCP-PR_edition-1">
           <head>L'éditeur : éléments biographiques</head>
           <p>Joseph Depoin (1855-1924) était le fils d’un avocat de Pontoise. Membre fondateur puis
             secrétaire général de la Société historique du Vexin pendant quarante-sept ans, il fut
@@ -384,7 +397,7 @@
             1102, et dans Mémoires de la société historique et archéologique de Pontoise, du Val
             d’Oise et du Vexin, t. 83, 2000, p. 260. </p>
         </div>
-        <div>
+        <div xml:id="SMCP-PR_edition-2">
           <head>Conception et contenu de l’édition</head>
           <p> Il est assez difficile de se prononcer sur le projet exact de l’éditeur et sur la
             liste précise des sources dépouillées en l’absence d’introduction au recueil : une
@@ -582,7 +595,7 @@
             </row>
           </table>
         </div>
-        <div>
+        <div xml:id="SMCP-PR_edition-3">
           <head>Qualité de l’édition</head>
           <p> Malgré l’absence d’explication et d’introduction, on observe une grande régularité
             dans les normes d’édition. La tradition des actes est précisément décrite, à la suite de
@@ -600,9 +613,7 @@
             par renvoi à des ouvrages antérieurs, et par des renvois internes lorsqu’il y a lieu.
           </p>
         </div>
-      </div>
-      <div type="presentation">
-        <div type="edition">
+        <div type="edition" xml:id="SMCP-PR_edition-4">
           <head>Édition</head>
           <p>La présente édition recouvre la part la plus ancienne mais aussi la plus modeste du
             chartrier de Saint-Martin-des-Champs, dont Joseph Depoin lança plus tard une édition

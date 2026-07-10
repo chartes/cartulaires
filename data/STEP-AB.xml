@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEP-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="STEP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -89,33 +86,36 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]" use="dots" unit="Index">
-          <citeData use="head" property="dct:title"/>
-          <citeStructure match="div[1]" use="dots">
-            <citeData use="head" property="dct:title"/>
-          </citeStructure>
-          <citeStructure match="div[2]" use="dots">
-            <citeData use="head" property="dct:title"/>
-            <citeStructure match="list[@type='index']" use="@xml:id">
-              <citeData use="head" property="dct:title"/>
-            </citeStructure>
-          </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -125,8 +125,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
-        <language ident="fra">fra</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -148,7 +147,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="STEP-AB_front">
       <head>Cartulaire de Saint-Thomas d’Épernon</head>
       <!--<head><hi rend="i">Cartulaire de Saint-Thomas d’Épernon et de Notre-Dame de Maintenon…</hi>,
         éd. Auguste Moutié et Adolphe de Dion, Rambouillet, De Raynal, 1878, <num>vi</num>-188
@@ -165,7 +164,7 @@
       <byline>Notice préparée par Mathilde Koskas (juin 2006).</byline>
       <div xml:id="STEP-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div type="historique" xml:id="STEP-AB_etablissement-1">
           <head>Historique</head>
           <p>Le prieuré de Saint-Thomas d’Épernon est fondé par Amaury de Montfort (acte n<hi rend="sup">o</hi> I de l’édition, 1052 ou 1053), qui fait don du monastère de la
             Trinité de Seincourt à l’abbé Albert de Marmoutier. Cette donation est confirmée par une
@@ -183,7 +182,7 @@
             Aujourd’hui, le seul vestige encore visible au prieuré est la façade de l’ancienne
             église de la Trinité de Seincourt.</p>
         </div>
-        <div type="localisation">
+        <div type="localisation" xml:id="STEP-AB_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Le prieuré est constitué d’environ 10 hectares de jardins, terres, parcs, pièces d’eau
             et garenne, et prés. Ses autres biens, situés dans les paroisses environnantes,
@@ -193,7 +192,7 @@
             toutes leurs possessions. Le prieuré est dans le ressort du bailliage de Montfort, puis,
             à partir de 1304, de celui de Mantes. </p>
         </div>
-        <div type="bienfaiteurs">
+        <div type="bienfaiteurs" xml:id="STEP-AB_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>Saint-Thomas d’Épernon est protégé par les comtes de Montfort (voir les actes d’Amaury,
             Simon et Jean dans le cartulaire). Les seigneurs de Gazeran et de Montorgueil, auxquels
@@ -217,7 +216,7 @@
       </div>
       <div xml:id="STEP-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div type="editeurs">
+        <div type="editeurs" xml:id="STEP-AB_edition-1">
           <head> Les éditeurs : éléments biographiques </head>
           <p>Auguste Moutié (1812-1886) appartient à la bourgeoisie de Rambouillet. Il s'intéresse à
             l'histoire naturelle et à la géologie, collectionne livres, chinoiseries, faïences et
@@ -251,7 +250,7 @@
             dans <emph>Mémoires de la Société archéologique de Rambouillet</emph>, t. 21 (1910),
             p. 405-439. </p>
         </div>
-        <div type="conception">
+        <div type="conception" xml:id="STEP-AB_edition-2">
           <head>Conception et contenu du volume</head>
           <p>L’édition est faite en premier lieu d’après les documents originaux issus du chartrier
             ancien de Marmoutier, concernant les prieurés d’Épernon et Maintenon. Ces documents
@@ -497,7 +496,7 @@
             à ces deux prieurés (p. 129-131 et p. 180, avec une copie du procès-verbal de la visite
             du 29 septembre 1321 à Maintenon).</p>
         </div>
-        <div type="qualite">
+        <div type="qualite" xml:id="STEP-AB_edition-3">
           <head>Qualité de l’édition</head>
           <p>Les éditeurs pratiquent des coupes dans le formulaire des actes, éliminent certains
             actes, mais en citent d’autres qui, sans se rapporter directement aux prieurés d’Épernon
@@ -527,7 +526,7 @@
     </front>
     <group>
       <head>Saint-Thomas d'Epernon</head>
-      <group>
+      <group xml:id="STEP-AB_group">
         <head>Cartulaire</head>
         <text subtype="article" xml:id="STEP-AB_0001" n="I">
           <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f11/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
@@ -8255,7 +8254,7 @@
     </group>
     <back>
       <head>Index</head>
-      <div type="index">
+      <div type="index" xml:id="STEP-AB_back-1">
         <pb n="181" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f191/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/> 
         <head>Index sigillographique</head>
         <list type="index">
@@ -8288,7 +8287,7 @@
           <!--<item xml:id="STEP-AB_rs_0028"><rs><hi rend="sc">Vacheresses (Jean de)</hi></rs>, <ref>157.</ref></item>-->
         </list>
       </div>
-      <div type="table">
+      <div type="table" xml:id="STEP-AB_back-2">
         <pb n="181" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f191/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
         <head>Table générale des noms d'hommes et de lieux</head>
         <list type="index" xml:id="STEP-AB_liste_A">

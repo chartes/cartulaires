@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDCH-EG">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDCH-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -143,7 +140,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -13089,7 +13086,7 @@
           
         </text>
       </group>
-      <group xml:id="NDCH-EG_group2-1">
+      <group xml:id="NDCH-EG_group2-2">
         <head>Tome deuxième</head>
         <text subtype="article" xml:id="NDCH-EG_0143" n="CXLIII">
           <pb n="t2_p001" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/f3/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/manifest.json"/>

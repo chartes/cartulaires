@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SLES-PR">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SLES-PR">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -89,7 +86,7 @@
       </notesStmt>
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k406267s"><title>Le prieuré de Saint-Leu d'Esserent - Cartulaire (1080-1538)</title>, E. Müller
-          (éd). Pontoise: <date type="publication">1901</date>.</bibl>
+          (éd). Pontoise: <date>1901</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -98,26 +95,36 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-        </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="@xml:id">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="@xml:id" unit="index">
+          <citeData property="dct:title" use="head[1]/text()"/>
+          <citeData property="schema:name" use="head[1]/text()"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -127,7 +134,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         <language ident="grc">Grec ancien</language>
       </langUsage>
@@ -153,7 +160,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SLES-PR_front">
       <head>Cartulaire du prieuré de Saint-Leu d’Esserent</head>
       <!--<head><hi rend="i">Cartulaire du prieuré de Saint-Leu d’Esserent (1080-1538)</hi>, éd. Eugène
         Müller, Pontoise, Société historique du Vexin, 1900-1901, 210 pages.</head>-->
@@ -169,7 +176,7 @@
       <byline>Notice préparée par Pauline Gendry (juin 2010).</byline>
       <div xml:id="SLES-PR_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div type="historique" xml:id="SLES-PR_etablissement-1">
           <head>Historique</head>
           <p>Le prieuré de Saint-Leu d’Esserent est un ancien prieuré clunisien situé sur les bords
             de l’Oise, à une dizaine de kilomètres de Senlis. Ce fut l’un des plus gros prieurés de
@@ -219,7 +226,7 @@
             classée aux Monuments Historiques en 1840 ainsi que l’ensemble des vestiges su prieuré
             en 1862. Des restaurations furent entreprises par des élèves de Viollet-le-Duc.</p>
         </div>
-        <div type="localisation">
+        <div type="localisation" xml:id="SLES-PR_etablissement-2">
           <head>Localisation du patrimoine</head>
           <div type="extension">
             <head>Historique de l’extension foncière</head>
@@ -342,7 +349,7 @@
             <p>Gisors, Eure, arr. Les Andelys, ch.-l.cant. (1368)</p>
           </div>
         </div>
-        <div type="bienfaiteurs">
+        <div type="bienfaiteurs" xml:id="SLES-PR_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>On trouve d’abord quelques grandes familles puissantes d’Ile-de-France qui sont de
             généreux donateurs sur plusieurs générations tels les Dammartin (20% des donations au
@@ -475,7 +482,7 @@
       </div>
       <div xml:id="SLES-PR_edition" subtype="article">
         <head>L’édition</head>
-        <div type="editeur">
+        <div type="editeur" xml:id="SLES-PR_edition-1">
           <head>L’éditeur</head>
           <p>L’abbé Eugène Müller (1834-1918) est un polygraphe : bibliothécaire à l’Arsenal, ami de
             Léopold Delisle, il a une véritable production érudite sur le plan local, en Picardie.
@@ -499,7 +506,7 @@
               fondateur du monastère de la présentation de Notre-Dame, extrait des chroniques dudit
               monastère et annotations</hi>, Beauvais, impr. D. Père, 1886, in-8<hi rend="sup">o</hi>, 63p.</p>
         </div>
-        <div type="conception">
+        <div type="conception" xml:id="SLES-PR_edition-2">
           <head>Conception et contenu de l’ouvrage</head>
           <p>Comme on l’a vu, l’éditeur a composé un cartulaire factice, dans l’ordre chronologique,
             sur la base des actes (originaux et copies) du chartrier, augmenté de quelques pièces
@@ -744,7 +751,7 @@
             une table chronologique des prieurs (p. 174), une table chronologique des chartes et
             bulles (p. 178) et un index des noms de lieu et de personne (p. 189).</p>
         </div>
-        <div type="qualite">
+        <div type="qualite" xml:id="SLES-PR_edition-3">
           <head>Qualité de l’édition</head>
           <p>L’abbé Müller, dans sa préface, n’est pas très clair sur la manière dont il a constitué
             le recueil.</p>
@@ -764,7 +771,7 @@
     </front>
     <group>
       <head>Esserent</head>
-      <group>
+      <group xml:id="SLES-PR_group">
         <head>Cartulaire</head>
         <text subtype="article" xml:id="SLES-PR_0001" n="I">
           <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/f8/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/manifest.json"/>
@@ -14553,7 +14560,7 @@
       </group>
     </group>
 <back>
-      <div type="notes">
+  <div type="notes" xml:id="SLES-PR_back-1">
         <note xml:id="note_0480" n="480">
           <p>Cette remarque de Baluze sur la similitude des armoiries de Dammartin avec celles de
             Simon de Ponthieu, s'explique aisément. Ce qu'il dit des verrières qui décoraient les
@@ -14572,7 +14579,7 @@
         
                 </div>
       
-    <div type="index">
+  <div type="index" xml:id="SLES-PR_back-2">
         <head><pb n="189" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/f196/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k406267s/manifest.json"/> Index des noms de personnes et de lieux<note n="616" target="#note_0616">Les chiffres se réfèrent aux numéros des chartes.</note></head>
  <list type="index" xml:id="SLES-PR_liste_A">
  <head>A</head>
