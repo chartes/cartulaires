@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-04">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -72,22 +69,37 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>  
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/back[1]/div" use="dots" unit="Index">
-          <citeData use="head" property="dct:title"/>
-          <citeStructure match="list" use="dots">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[2]/text" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure match="body/div/list" use="@xml:id" unit="partie">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
         </citeStructure>
-        <!--<citeStructure match="/TEI/text/group/group[3]/text/list" use="default">
-          <citeData use="./ancestor::group/head" property="dct:title"/>
-        </citeStructure>-->
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[3]" use="@xml:id" unit="partie">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[4]" use="@xml:id" unit="partie">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+        </citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -96,7 +108,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -124,10 +136,8 @@
       </byline>
     </front>
     <group>
-      <group>
+      <group xml:id="NDPA-EG-04_group-1">
         <head><pb n="3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/> OBITUARIUM<lb/> ECCLESIÆ PARISIENSIS.</head>
-        <group>
-          <head>Cartulaire. Tome 4</head>
           <text xml:id="NDPA-EG-04_0001" subtype="article" n="I">
             <front>
               <docDate>
@@ -6859,15 +6869,17 @@
             <item>72. Claudius Tudert, 14 nov. 1769-1780.</item>
             <item>73. Flotardus de Montagu, 17 jan. 1780-22 nov. 1790.</item>
           </list>
-        </group>
       </group>
-      <back>
-      <div type="index">
-        <pb n="217" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
+      <group xml:id="NDPA-EG-04_group-2">
+        <text xml:id="NDPA-EG-04_index" subtype="article">
         <head>INDEX GENERALIS.</head>
+        <body>
+          <div type="index">
+        <pb n="217" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
+        
         <p>(Reges, reginæ, episcopi, decani, abbates nominibus, alii vero cognominibus sunt quærendi.)</p>
         
-        <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-A">
           <head>A</head>
           <item xml:id="NDPA-EG-04_rs_0001"><rs><hi rend="sc">Aalips</hi>, abbatissa S. Antonii prope Parisios</rs>. <ref n="336" target="#NDPA-EG-03_0336">336</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_0002"><rs><hi rend="sc">Abat-Rosée (Robertus)</hi></rs>. <ref n="181" target="#NDPA-EG-03_0181">181</ref>.</item>
@@ -7236,7 +7248,7 @@
           <item xml:id="NDPA-EG-04_rs_0428"><rs><hi rend="sc">Aymericus</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_0164">Amalricus</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_0429"><rs><hi rend="sc">Ayulphus</hi>, canonicus Parisiensis</rs>. <ref n="440" target="#NDPA-EG-01_0440">440</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-B">
           <head>B</head>
           <item xml:id="NDPA-EG-04_rs_0430"><rs><hi rend="sc">Baalai (ecclesia de)</hi></rs>. <ref n="6" target="#NDPA-EG-01_0006">6</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_0431"><rs><hi rend="sc">Baalei (Petrus de)</hi></rs>. <ref n="550" target="#NDPA-EG-01_0550">550</ref> </item><item xml:id="NDPA-EG-04_rs_0431_1"><rs>Baalei</rs> <ref n="871" target="#NDPA-EG-02_0871">871</ref>.</item><item xml:id="NDPA-EG-04_rs_0432"><rs><hi rend="sc">Baalli (Simon de)</hi></rs>. <ref n="345" target="#NDPA-EG-02_0345">345</ref>.</item>
@@ -7795,7 +7807,7 @@
           <item xml:id="NDPA-EG-04_rs_1112"><rs><hi rend="sc">Byèvre</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_0699">Bevra</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_1113"><rs><hi rend="sc"><x>Bouchers de Paris</x> (maître des)</hi></rs>. <ref n="88" target="#NDPA-EG-03_0088">88</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-C">
           <head>C</head>
           <item xml:id="NDPA-EG-04_rs_1114"><rs><hi rend="sc">Caan</hi></rs>. <note>Vide Cadomum</note>.</item>
           <item xml:id="NDPA-EG-04_rs_1115"><rs><hi rend="sc">Cabeul (Henricus)</hi></rs>. <ref n="170" target="#NDPA-EG-04_0170">170</ref>.</item>
@@ -8645,7 +8657,7 @@
           <item xml:id="NDPA-EG-04_rs_2144"><rs><hi rend="sc"><x>Claro</x> (Robertus de S.)</hi></rs>. <ref n="209" target="#NDPA-EG-01_0209">209</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2145"><rs><hi rend="sc"><x>Cartarum</x> redditus</hi></rs>. <ref n="813" target="#NDPA-EG-02_0813">813</ref> </item><item xml:id="NDPA-EG-04_rs_2145_1"><rs>Cartarum</rs> <ref n="7" target="#NDPA-EG-04_0007">7</ref>, <ref n="71" target="#NDPA-EG-04_0071">71</ref>, <ref n="208" target="#NDPA-EG-04_0208">208</ref>.</item><item xml:id="NDPA-EG-04_rs_2146"><rs><hi rend="sc"><x>Cercellis</x> (Robertus de)</hi></rs>. <ref n="52" target="#NDPA-EG-03_0052">52</ref><!--, <ref n="III-45">III. 45</ref>-->.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-D">
           <head>D</head>
           <item xml:id="NDPA-EG-04_rs_2147"><rs><hi rend="sc">Dacus (Martinus)</hi>, canonicus Parisiensis</rs>. <ref n="878" target="#NDPA-EG-02_0878">878</ref> </item><item xml:id="NDPA-EG-04_rs_2147_1"><rs>Dacus</rs> <ref n="240" target="#NDPA-EG-04_0240">240</ref>.</item><item xml:id="NDPA-EG-04_rs_2148"><rs><hi rend="sc">Dacus (Nicolaus)</hi></rs>. <ref n="246" target="#NDPA-EG-01_0246">246</ref>, <ref n="263" target="#NDPA-EG-01_0263">263</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2149"><rs><hi rend="sc">Dagu (Michael)</hi></rs>. <ref n="114" target="#NDPA-EG-03_0114">114</ref>.</item>
@@ -8811,7 +8823,7 @@
           <item xml:id="NDPA-EG-04_rs_2331"><rs><hi rend="sc">Dyonisii (magnus vicus S.)</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_4209">Magnus Vicus Parisiensis</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_2332"><rs><hi rend="sc">Dyonisii (porta S.)</hi></rs>. <ref n="828" target="#NDPA-EG-02_0828">828</ref> </item><item xml:id="NDPA-EG-04_rs_2332_1"><rs>Dyonisii</rs> <ref n="64" target="#NDPA-EG-03_0064">64</ref>, <ref n="107" target="#NDPA-EG-03_0107">107</ref>.</item><item xml:id="NDPA-EG-04_rs_2333"><rs><hi rend="sc">Dyonisii de Carcere (ecclesia et prioratus S.)</hi></rs>. <ref n="6" target="#NDPA-EG-01_0006">6</ref>, <!-- doublon meme acte NDPA-EG-01_0006: <ref n="I-16" target="#NDPA-EG-01_0006">6</ref> --> <!-- doublon meme acte NDPA-EG-01_0006: <ref n="I-19" target="#NDPA-EG-01_0006">6</ref> --> <ref n="10" target="#NDPA-EG-01_0010">10</ref>, <ref n="194" target="#NDPA-EG-01_0194">194</ref>, <ref n="400" target="#NDPA-EG-01_0400">400</ref>, <ref n="555" target="#NDPA-EG-01_0555">555</ref> </item><item xml:id="NDPA-EG-04_rs_2333_1"><rs>Dyonisii</rs> <ref n="180" target="#NDPA-EG-02_0180">180</ref>, <ref n="868" target="#NDPA-EG-02_0868">868</ref>, <ref n="883" target="#NDPA-EG-02_0883">883</ref><!-- ; <ref n="III-53">III. 53</ref>--><!--, <ref n="III-362">III. 362</ref>-->.</item><item xml:id="NDPA-EG-04_rs_2334"><rs><hi rend="sc">Dyonisii de Carcere (vicaria S.)</hi>, in ecclesia Beatæ Mariæ Parisiensis</rs>. <ref n="180" target="#NDPA-EG-02_0180">180</ref> </item><item xml:id="NDPA-EG-04_rs_2334_1"><rs>Dyonisii</rs> <ref n="74" target="#NDPA-EG-04_0074">74</ref>.</item><item xml:id="NDPA-EG-04_rs_2335"><rs><hi rend="sc">Dyonisii de Passu (ecclesia S.)</hi>, Parisiis</rs>. <ref n="404" target="#NDPA-EG-01_0404">404</ref>, <ref n="464" target="#NDPA-EG-01_0464">464</ref>, <!-- doublon meme acte NDPA-EG-01_0464: <ref n="I-358" target="#NDPA-EG-01_0464">464</ref> --> <ref n="514" target="#NDPA-EG-01_0514">514</ref><!--, <ref n="I-402">I. 402</ref>--> <ref n="518" target="#NDPA-EG-01_0518">518</ref>, <ref n="520" target="#NDPA-EG-01_0520">520</ref>, <ref n="523" target="#NDPA-EG-01_0523">523</ref>, <ref n="518" target="#NDPA-EG-01_0518">518</ref>, <ref n="596" target="#NDPA-EG-01_0596">596</ref> </item><item xml:id="NDPA-EG-04_rs_2335_1"><rs>Dyonisii</rs> <ref n="199" target="#NDPA-EG-02_0199">199</ref>, <ref n="686" target="#NDPA-EG-02_0686">686</ref>, <!-- doublon meme acte NDPA-EG-02_0681: <ref n="II-408" target="#NDPA-EG-02_0681">681</ref> --> <ref n="775" target="#NDPA-EG-02_0775">775</ref>, <ref n="806" target="#NDPA-EG-02_0806">806</ref>, <!-- doublon meme acte NDPA-EG-02_0806: <ref n="II-487" target="#NDPA-EG-02_0806">806</ref> --> <ref n="828" target="#NDPA-EG-02_0828">828</ref>, <!-- doublon meme acte NDPA-EG-02_0828: <ref n="II-502" target="#NDPA-EG-02_0828">828</ref> --> <ref n="807" target="#NDPA-EG-02_0807">807</ref>, <ref n="843" target="#NDPA-EG-02_0843">843</ref>, <ref n="849" target="#NDPA-EG-02_0849">849</ref>, <ref n="901" target="#NDPA-EG-02_0901">901</ref></item><item xml:id="NDPA-EG-04_rs_2335_2"><rs>Dyonisii <!-- doublon meme acte NDPA-EG-02_0901: <ref n="II-534" target="#NDPA-EG-02_0901">901</ref> --></rs> <ref n="458" target="#NDPA-EG-03_458">458</ref>, <ref n="531" target="#NDPA-EG-03_531">531</ref>, <ref n="545" target="#NDPA-EG-03_545">545</ref>, <ref n="529" target="#NDPA-EG-03_529">529</ref>, <ref n="571" target="#NDPA-EG-03_571">571</ref>, <!-- doublon meme acte NDPA-EG-03_571: <ref n="III-443" target="#NDPA-EG-03_571">571</ref> --> <ref n="599" target="#NDPA-EG-03_599">599</ref>, <ref n="609" target="#NDPA-EG-03_609">609</ref>, <ref n="613" target="#NDPA-EG-03_613">613</ref>, <ref n="620" target="#NDPA-EG-03_620">620</ref>, <!-- doublon meme acte NDPA-EG-03_620: <ref n="III-459" target="#NDPA-EG-03_620">620</ref> --><!--, <ref n="III-460">III. 460</ref>--> <ref n="621" target="#NDPA-EG-03_621">621</ref>, <!-- doublon meme acte NDPA-EG-03_621: <ref n="III-462" target="#NDPA-EG-03_621">621</ref> --> <ref n="625" target="#NDPA-EG-03_625">625</ref> </item><item xml:id="NDPA-EG-04_rs_2335_3"><rs>Dyonisii</rs> <ref n="13" target="#NDPA-EG-04_0013">13</ref>, <ref n="13" target="#NDPA-EG-04_0013">13</ref>, <ref n="20" target="#NDPA-EG-04_0020">20</ref><!--, <ref n="IV-13">IV. 13</ref>--><!--, <ref n="IV-18">IV. 18</ref>--> <ref n="69" target="#NDPA-EG-04_0069">69</ref>, <ref n="55" target="#NDPA-EG-04_0055">55</ref>, <ref n="84" target="#NDPA-EG-04_0084">84</ref>, <ref n="113" target="#NDPA-EG-04_0113">113</ref>, <ref n="116" target="#NDPA-EG-04_0116">116</ref>, <ref n="145" target="#NDPA-EG-04_0145">145</ref>, <ref n="118" target="#NDPA-EG-04_0118">118</ref>, <ref n="164" target="#NDPA-EG-04_0164">164</ref>, <ref n="144" target="#NDPA-EG-04_0144">144</ref>, <ref n="194" target="#NDPA-EG-04_0194">194</ref>, <ref n="211" target="#NDPA-EG-04_0211">211</ref>, <ref n="256" target="#NDPA-EG-04_0256">256</ref>, <ref n="243" target="#NDPA-EG-04_0243">243</ref>, <ref n="266" target="#NDPA-EG-04_0266">266</ref>, <ref n="287" target="#NDPA-EG-04_0287">287</ref>, <ref n="291" target="#NDPA-EG-04_0291">291</ref>, <ref n="294" target="#NDPA-EG-04_0294">294</ref>, <!-- doublon meme acte NDPA-EG-04_0291: <ref n="IV-176" target="#NDPA-EG-04_0291">291</ref> --> <ref n="316" target="#NDPA-EG-04_0316">316</ref>, <ref n="317" target="#NDPA-EG-04_0317">317</ref>, <ref n="322" target="#NDPA-EG-04_0322">322</ref>, <ref n="342" target="#NDPA-EG-04_0342">342</ref><!--, <ref n="IV-199">IV. 199</ref>--> <ref n="350" target="#NDPA-EG-04_0350">350</ref>, <ref n="330" target="#NDPA-EG-04_0330">330</ref>.</item><item xml:id="NDPA-EG-04_rs_2336"><rs><hi rend="sc"><x>Deschargeour</x> (Adam le)</hi></rs>. <ref n="470" target="#NDPA-EG-03_470">470</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-E">
           <head>E</head>
           <item xml:id="NDPA-EG-04_rs_2337"><rs><hi rend="sc">Ebbo</hi>, archiepiscopus Remensis</rs>. <ref n="428" target="#NDPA-EG-01_0428">428</ref><!--, <ref n="I-323">I. 323</ref>-->.</item>
           <item xml:id="NDPA-EG-04_rs_2338"><rs><hi rend="sc">Eble</hi></rs>. <ref n="421" target="#NDPA-EG-02_0421">421</ref>.</item>
@@ -8959,7 +8971,7 @@
           <item xml:id="NDPA-EG-04_rs_2503"><rs><hi rend="sc">Exuperii de Corboilo (claustrum S.)</hi></rs>. <ref n="174" target="#NDPA-EG-03_0174">174</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2504"><rs><hi rend="sc">Exuperii de Corboilo (ecclesia S.)</hi></rs>. <ref n="43" target="#NDPA-EG-01_0043">43</ref>, <!-- doublon meme acte NDPA-EG-01_0043: <ref n="I-45" target="#NDPA-EG-01_0043">43</ref> --> <ref n="159" target="#NDPA-EG-01_0159">159</ref> </item><item xml:id="NDPA-EG-04_rs_2504_1"><rs>Exuperii</rs> <ref n="174" target="#NDPA-EG-03_0174">174</ref>.</item><item xml:id="NDPA-EG-04_rs_2505"><rs><hi rend="sc"><x>Écoliers</x> de Cluny (rue aux)</hi></rs>. <ref n="454" target="#NDPA-EG-03_454">454</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-F">
           <head>F</head>
           <item xml:id="NDPA-EG-04_rs_2506"><rs><hi rend="sc">Fabarum (vicus)</hi></rs>. <ref n="198" target="#NDPA-EG-04_0198">198</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2507"><rs><hi rend="sc">Faber</hi></rs>. <ref n="479" target="#NDPA-EG-01_0479">479</ref>, <ref n="505" target="#NDPA-EG-01_0505">505</ref> </item><item xml:id="NDPA-EG-04_rs_2507_1"><rs>Faber</rs> <ref n="13" target="#NDPA-EG-02_0013">13</ref>, <ref n="54" target="#NDPA-EG-02_0054">54</ref>, <ref n="267" target="#NDPA-EG-02_0267">267</ref>, <ref n="639" target="#NDPA-EG-02_0639">639</ref><!--, <ref n="II-487">II. 487</ref>--> </item><item xml:id="NDPA-EG-04_rs_2507_2"><rs>Faber</rs> <ref n="165" target="#NDPA-EG-03_0165">165</ref>, <ref n="215" target="#NDPA-EG-03_0215">215</ref>, <ref n="217" target="#NDPA-EG-03_0217">217</ref>, <ref n="372" target="#NDPA-EG-03_372">372</ref> </item><item xml:id="NDPA-EG-04_rs_2507_3"><rs>Faber</rs> <ref n="107" target="#NDPA-EG-04_0107">107</ref>, <ref n="268" target="#NDPA-EG-04_0268">268</ref>.</item><item xml:id="NDPA-EG-04_rs_2508"><rs><hi rend="sc">Faber (Eustachius)</hi></rs>. <ref n="76" target="#NDPA-EG-03_0076">76</ref>.</item>
@@ -9176,7 +9188,7 @@
           <item xml:id="NDPA-EG-04_rs_2749"><rs><hi rend="sc">Fussum</hi></rs>. <ref n="284" target="#NDPA-EG-01_0284">284</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_2750"><rs><hi rend="sc"><x>Foire aux lards</x></hi></rs>. <ref n="369" target="#NDPA-EG-03_369">369</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-G">
           <head>G</head>
           <item xml:id="NDPA-EG-04_rs_2751"><rs><hi rend="sc">Gaatins</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2863">Gastinii</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_2752"><rs><hi rend="sc">Gaberel (Radulphus) canonicus Parisiensis</hi></rs>. <ref n="58" target="#NDPA-EG-04_0058">58</ref>.</item>
@@ -9619,7 +9631,7 @@
           <item xml:id="NDPA-EG-04_rs_3297"><rs><hi rend="sc">Gysulphus</hi>, præpositus Papiensis</rs>. <ref n="898" target="#NDPA-EG-02_0898">898</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3298"><rs><hi rend="sc"><x>Garde des foires de Champagne</x></hi></rs>. <ref n="27" target="#NDPA-EG-03_0027">27</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-H">
           <head>H</head>
           <item xml:id="NDPA-EG-04_rs_3299"><rs><hi rend="sc"><x>Haute-Maison</x> (Arnoul de la)</hi></rs>. <ref n="87" target="#NDPA-EG-03_0087">87</ref>, <ref n="142" target="#NDPA-EG-03_0142">142</ref>, <ref n="311" target="#NDPA-EG-03_0311">311</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3300"><rs><hi rend="sc"><x>Herbleio</x> (Johannes de)</hi>, dictus de Furno</rs>. <ref n="273" target="#NDPA-EG-02_0273">273</ref>.</item>
@@ -9829,7 +9841,7 @@
           <item xml:id="NDPA-EG-04_rs_3545"><rs><hi rend="sc">Hylarius</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3440">Hilarius</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_3546"><rs><hi rend="sc"><x>Horatorio</x> (Milo de)</hi></rs>. <ref n="172" target="#NDPA-EG-03_0172">172</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-I">
           <head>I</head>
           <item xml:id="NDPA-EG-04_rs_3547"><rs><hi rend="sc">Ierre</hi>, ruisseau</rs>. <ref n="210" target="#NDPA-EG-03_0210">210</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3548"><rs><hi rend="sc">Igniacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3567">Iniacum</ref></note>.</item>
@@ -9889,7 +9901,7 @@
           <item xml:id="NDPA-EG-04_rs_3618"><rs><hi rend="sc">Ivri (Henricus de)</hi></rs>. <ref n="497" target="#NDPA-EG-01_0497">497</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3619"><rs><hi rend="sc">Ivri (Theobaldus de)</hi></rs>. <ref n="47" target="#NDPA-EG-01_0047">47</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-J">
           <head>J</head>
           <item xml:id="NDPA-EG-04_rs_3620"><rs><hi rend="sc">Jaagniacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2899">Gehenniacum</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_3621"><rs><hi rend="sc">Jabelignes (Guillelmus de)</hi>, rector ecclesiæ Mesnilii Dominæ Ranciæ</rs>. <ref n="584" target="#NDPA-EG-02_0584">584</ref>.</item>
@@ -10038,7 +10050,7 @@
           <item xml:id="NDPA-EG-04_rs_3796"><rs><hi rend="sc">Juvenis (Petrus)</hi></rs>, <ref n="222" target="#NDPA-EG-02_0222">222</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3797"><rs><hi rend="sc">Jeune (Henri le)</hi>, notaire au Châtelet</rs>. <ref n="238" target="#NDPA-EG-02_0238">238</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3798"><rs><hi rend="sc">Juvenis (Petrus)</hi>, canonicus Parisiensis</rs>. <ref n="567" target="#NDPA-EG-01_0567">567</ref>, <ref n="610" target="#NDPA-EG-01_0610">610</ref> </item><item xml:id="NDPA-EG-04_rs_3798_1"><rs>Juvenis</rs> <ref n="98" target="#NDPA-EG-02_0098">98</ref>, <!-- doublon meme acte NDPA-EG-02_0097: <ref n="II-68" target="#NDPA-EG-02_0097">97</ref> --> <ref n="102" target="#NDPA-EG-02_0102">102</ref>, <ref n="688" target="#NDPA-EG-02_0688">688</ref>, <ref n="736" target="#NDPA-EG-02_0736">736</ref>, <ref n="761" target="#NDPA-EG-02_0761">761</ref>, <ref n="848" target="#NDPA-EG-02_0848">848</ref> </item><item xml:id="NDPA-EG-04_rs_3798_2"><rs>Juvenis</rs> <ref n="36" target="#NDPA-EG-04_0036">36</ref><!--, <ref n="IV-31">IV. 31</ref>--> <ref n="80" target="#NDPA-EG-04_0080">80</ref>. <!-- doublon meme acte NDPA-EG-04_0080: <ref n="IV-46" target="#NDPA-EG-04_0080">80</ref> --></item></list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-K">
           <head>K</head>
           <item xml:id="NDPA-EG-04_rs_3799"><rs><hi rend="sc"><x>Karitate</x> (Petrus de)</hi>, cantor Parisiensis</rs>. <ref n="156" target="#NDPA-EG-04_0156">156</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_3800"><rs><hi rend="sc">Kala</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_1131">Cala</ref></note>.</item>
@@ -10051,7 +10063,7 @@
           <item xml:id="NDPA-EG-04_rs_3807"><rs><hi rend="sc">Katerina</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_1421">Catharina</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_3808"><rs><hi rend="sc">Kerræ</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3805">Karræ</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-L">
           <head>L</head>
           <item xml:id="NDPA-EG-04_rs_3809"><rs><hi rend="sc">Labretèche</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_0938">Breteschia</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_3810"><rs><hi rend="sc">Labugue S. Dionysii</hi></rs>. <ref n="110" target="#NDPA-EG-01_0110">110</ref>.</item>
@@ -10347,7 +10359,7 @@
           <item xml:id="NDPA-EG-04_rs_4157"><rs><hi rend="sc">Lyons</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_4121">Lugdunum</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_4158"><rs><hi rend="sc">Lyssoart (Johannes)</hi>, canonicus S. Thomæ de Lupara</rs>. <ref n="783" target="#NDPA-EG-02_0783">783</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-M">
           <head>M</head>
           <item xml:id="NDPA-EG-04_rs_4159"><rs><hi rend="sc"><x>Monte Calvo</x> (Maria de)</hi></rs>. <ref n="190" target="#NDPA-EG-01_0190">190</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_4160"><rs><hi rend="sc"><x>Mesuns</x> (Hugo et Maria de)</hi></rs>. <ref n="127" target="#NDPA-EG-01_0127">127</ref>.</item>
@@ -10951,7 +10963,7 @@
           <item xml:id="NDPA-EG-04_rs_4915"><rs><hi rend="sc">Muto (Johannes)</hi></rs>. <ref n="93" target="#NDPA-EG-02_0093">93</ref> </item><item xml:id="NDPA-EG-04_rs_4915_1"><rs>Muto</rs> <ref n="55" target="#NDPA-EG-03_0055">55</ref>.</item><item xml:id="NDPA-EG-04_rs_4916"><rs><hi rend="sc">Mouton (Petrus)</hi></rs>. <ref n="221" target="#NDPA-EG-01_0221">221</ref> </item><item xml:id="NDPA-EG-04_rs_4916_1"><rs>Mouton</rs> <ref n="63" target="#NDPA-EG-03_0063">63</ref>, <!-- doublon meme acte NDPA-EG-03_0063: <ref n="III-58" target="#NDPA-EG-03_0063">63</ref> --> <ref n="93" target="#NDPA-EG-03_0093">93</ref>.</item><item xml:id="NDPA-EG-04_rs_4917"><rs><hi rend="sc">Moutonne (Jeanne la)</hi></rs>. <ref n="278" target="#NDPA-EG-03_0278">278</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_4918"><rs><hi rend="sc">Mybray</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_4607">Mibrai</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-N">
           <head>N</head>
           <item xml:id="NDPA-EG-04_rs_4919"><rs><hi rend="sc"><x>Nostræ Dominæ</x> (nemora)</hi>, apud Cellas</rs>. <ref n="343" target="#NDPA-EG-02_0343">343</ref>, <ref n="353" target="#NDPA-EG-02_0353">NDPA-EG-02 353</ref> </item><item xml:id="NDPA-EG-04_rs_4919_1"><rs>Nostræ</rs> <ref n="298" target="#NDPA-EG-04_0298">298</ref>, <ref n="347" target="#NDPA-EG-04_0347">347</ref>.</item><item xml:id="NDPA-EG-04_rs_4920"><rs><hi rend="sc"><x>Notre-Dame des Champs</x> (porte)</hi></rs>. <ref n="369" target="#NDPA-EG-03_369">369</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_4921"><rs><hi rend="sc"><x>Notre-Dame</x> (le pont)</hi></rs>. <ref n="260" target="#NDPA-EG-04_0260">260</ref>.</item>
@@ -11078,7 +11090,7 @@
           <!--<item xml:id="NDPA-EG-04_rs_5074"><rs><hi rend="sc">Nummus chartæ appensus</hi></rs>. <ref n="II-525" target="#ERREUR_API">II. 525</ref>.</item>-->
           <item xml:id="NDPA-EG-04_rs_5075"><rs><hi rend="sc">Nundinæ</hi></rs>. <ref n="180" target="#NDPA-EG-01_0180">180</ref>, <ref n="410" target="#NDPA-EG-01_0410">410</ref> </item><item xml:id="NDPA-EG-04_rs_5075_1"><rs>Nundinæ</rs> <ref n="27" target="#NDPA-EG-03_0027">27</ref>, <ref n="409" target="#NDPA-EG-03_409">409</ref>.</item><item xml:id="NDPA-EG-04_rs_5076"><rs><hi rend="sc">Nundinæ Campaniæ et Briæ</hi></rs>. <ref n="27" target="#NDPA-EG-03_0027">27</ref><!--, <ref n="III-19">III. 19</ref>-->.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-O">
           <head>O</head>
           <item xml:id="NDPA-EG-04_rs_5077"><rs><hi rend="sc">Obergenvilla</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_0359">Aubergenvilla</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_5078"><rs><hi rend="sc">Oblita</hi></rs>. <ref n="50" target="#NDPA-EG-01_0050">50</ref>, <ref n="608" target="#NDPA-EG-01_0608">608</ref> </item><item xml:id="NDPA-EG-04_rs_5078_1"><rs>Oblita</rs> <ref n="334" target="#NDPA-EG-02_0334">334</ref> </item><item xml:id="NDPA-EG-04_rs_5078_2"><rs>Oblita</rs> <ref n="111" target="#NDPA-EG-04_0111">111</ref>, <ref n="223" target="#NDPA-EG-04_0223">223</ref>, <ref n="233" target="#NDPA-EG-04_0233">233</ref>.</item><item xml:id="NDPA-EG-04_rs_5079"><rs><hi rend="sc">Oboli penthecostales</hi></rs>. <ref n="330" target="#NDPA-EG-03_0330">330</ref>.</item>
@@ -11164,7 +11176,7 @@
           <item xml:id="NDPA-EG-04_rs_5171"><rs><hi rend="sc">Oviato (Reginaldus de)</hi></rs>. <ref n="339" target="#NDPA-EG-02_0339">339</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5172"><rs><hi rend="sc">Ovidius (Tebaldus)</hi>, archidiaconus Parisiensis</rs>. <ref n="99" target="#NDPA-EG-02_0099">99</ref> </item><item xml:id="NDPA-EG-04_rs_5172_1"><rs>Ovidius</rs> <ref n="440" target="#NDPA-EG-03_440">440</ref>.</item><item xml:id="NDPA-EG-04_rs_5173"><rs><hi rend="sc">Oyselet (Richardus)</hi></rs>. <ref n="470" target="#NDPA-EG-03_470">470</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-P">
           <head>P</head>
           <item xml:id="NDPA-EG-04_rs_5174"><rs><hi rend="sc">Paage (le)</hi></rs>. <ref n="354" target="#NDPA-EG-02_0354">354</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5175"><rs><hi rend="sc">Paalée (Johannes)</hi></rs>. <ref n="178" target="#NDPA-EG-01_0178">178</ref> </item><item xml:id="NDPA-EG-04_rs_5175_1"><rs>Paalée</rs> <ref n="39" target="#NDPA-EG-03_0039">39</ref>.</item><item xml:id="NDPA-EG-04_rs_5176"><rs><hi rend="sc">Paalée (Theobaldus)</hi></rs>. <ref n="39" target="#NDPA-EG-03_0039">39</ref>.</item>
@@ -11680,7 +11692,7 @@
           <item xml:id="NDPA-EG-04_rs_5801"><rs><hi rend="sc">Puteus Vallis</hi>, locus apud Suciacum</rs>. <ref n="154" target="#NDPA-EG-04_0154">154</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5802"><rs><hi rend="sc">Puteus Villæ</hi></rs>. <ref n="639" target="#NDPA-EG-02_0639">639</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-Q">
           <head>Q</head>
           <item xml:id="NDPA-EG-04_rs_5803"><rs><hi rend="sc">Quabarel (Reginaldus)</hi></rs>. <ref n="163" target="#NDPA-EG-03_0163">163</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5804"><rs><hi rend="sc">Quadrata (Avelina)</hi></rs>. <ref n="465" target="#NDPA-EG-03_465">465</ref>.</item>
@@ -11716,7 +11728,7 @@
           <item xml:id="NDPA-EG-04_rs_5835"><rs><hi rend="sc">Quoquart (Radulphus)</hi></rs>. <ref n="75" target="#NDPA-EG-03_0075">75</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5836"><rs><hi rend="sc">Quoque Horon</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_1908">Coque Horon</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-R">
           <head>R</head>
           <item xml:id="NDPA-EG-04_rs_5837"><rs><hi rend="sc">Rabi (Gaufridus)</hi></rs>. <ref n="202" target="#NDPA-EG-03_0202">202</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_5838"><rs><hi rend="sc">Rabiey (molendinum de)</hi></rs>. <ref n="210" target="#NDPA-EG-03_0210">210</ref>.</item>
@@ -12010,7 +12022,7 @@
           <item xml:id="NDPA-EG-04_rs_6168"><rs><hi rend="sc">Ryomo (Stephanus de)</hi>, S. Germani Autissiodorensis canonicus</rs>. <ref n="216" target="#NDPA-EG-01_0216">216</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_6169"><rs><hi rend="sc">Ryvery</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_5977">Riveri</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-S">
           <head>S</head>
           <item xml:id="NDPA-EG-04_rs_6170"><rs><hi rend="sc">Saait (Johannes)</hi>, abbas Latiniacensis</rs>. <ref n="140" target="#NDPA-EG-01_0140">140</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_6171"><rs><hi rend="sc">Saana</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_6444">Secana</ref></note>.</item>
@@ -12455,7 +12467,7 @@
           <item xml:id="NDPA-EG-04_rs_6732"><rs><hi rend="sc">Synodaticum</hi></rs>. <ref n="68" target="#NDPA-EG-01_0068">68</ref><!--, <ref n="I-357">I. 357</ref>--> </item><item xml:id="NDPA-EG-04_rs_6732_1"><rs>Synodaticum</rs> <ref n="272" target="#NDPA-EG-03_0272">272</ref><!--, <ref n="III-216">III. 216</ref>--> <ref n="386" target="#NDPA-EG-03_386">386</ref>.</item><item xml:id="NDPA-EG-04_rs_6733"><rs><hi rend="sc">Syrenæ</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_6718">Surisnæ</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_6734"><rs><hi rend="sc">Syvart</hi>, locus apud Combisvillam</rs>. <ref n="210" target="#NDPA-EG-03_0210">210</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-T">
           <head>T</head>
           <item xml:id="NDPA-EG-04_rs_6735"><rs><hi rend="sc">Tabernarius</hi></rs>. <ref n="46" target="#NDPA-EG-01_0046">46</ref>, <ref n="89" target="#NDPA-EG-01_0089">89</ref> </item><item xml:id="NDPA-EG-04_rs_6735_1"><rs>Tabernarius</rs> <ref n="639" target="#NDPA-EG-02_0639">639</ref> </item><item xml:id="NDPA-EG-04_rs_6735_2"><rs>Tabernarius</rs> <ref n="99" target="#NDPA-EG-03_0099">99</ref>.</item><item xml:id="NDPA-EG-04_rs_6736"><rs><hi rend="sc">Taverniacum</hi></rs>. <ref n="840" target="#NDPA-EG-02_0840">840</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_6737"><rs><hi rend="sc">Taverni (ecclesia de)</hi></rs>. <ref n="6" target="#NDPA-EG-01_0006">6</ref>.</item>
@@ -12698,7 +12710,7 @@
           <item xml:id="NDPA-EG-04_rs_7021"><rs><hi rend="sc">Tyronii (abbatia)</hi></rs>. <ref n="481" target="#NDPA-EG-01_0481">481</ref> </item><item xml:id="NDPA-EG-04_rs_7021_1"><rs>Tyronii</rs> <ref n="670" target="#NDPA-EG-02_0670">670</ref>, <ref n="770" target="#NDPA-EG-02_0770">770</ref> </item><item xml:id="NDPA-EG-04_rs_7021_2"><rs>Tyronii</rs> <ref n="220" target="#NDPA-EG-03_0220">220</ref><!--, <ref n="III-181">III. 181</ref>--><!--, <ref n="III-187">III. 187</ref>-->.</item><item xml:id="NDPA-EG-04_rs_7022"><rs><hi rend="sc">Tyron (terra de)</hi></rs>. <ref n="567" target="#NDPA-EG-01_0567">567</ref> </item><item xml:id="NDPA-EG-04_rs_7022_1"><rs>Tyron</rs> <ref n="317" target="#NDPA-EG-04_0317">317</ref>.</item><item xml:id="NDPA-EG-04_rs_7023"><rs><hi rend="sc">Tironnello (prioratus de)</hi></rs>. <ref n="249" target="#NDPA-EG-03_0249">249</ref>, <ref n="224" target="#NDPA-EG-03_0224">224</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7024"><rs><hi rend="sc">Tyrouer</hi></rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_6876">Tirouer</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-U">
           <head>U</head>
           <item xml:id="NDPA-EG-04_rs_7025"><rs><hi rend="sc">Ulmeia</hi></rs>. <ref n="566" target="#NDPA-EG-01_0566">566</ref> </item><item xml:id="NDPA-EG-04_rs_7025_1"><rs>Ulmeia</rs> <ref n="492" target="#NDPA-EG-02_0492">492</ref> </item><item xml:id="NDPA-EG-04_rs_7025_2"><rs>Ulmeia</rs> <ref n="10" target="#NDPA-EG-04_0010">10</ref>, <ref n="134" target="#NDPA-EG-04_0134">134</ref>.</item><item xml:id="NDPA-EG-04_rs_7026"><rs><hi rend="sc">Ulmeium</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_7025">Ulmeia</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_7027"><rs><hi rend="sc">Ulmayo (Johannes de)</hi>, dominus de Villaribus</rs>. <ref n="226" target="#NDPA-EG-02_0226">226</ref>, <!-- doublon meme acte NDPA-EG-02_0226: <ref n="II-140" target="#NDPA-EG-02_0226">226</ref> --> <ref n="634" target="#NDPA-EG-02_0634">634</ref>.</item>
@@ -12722,7 +12734,7 @@
           <item xml:id="NDPA-EG-04_rs_7047"><rs><hi rend="sc">Ursinis (Jacobus Juvenalis de)</hi>, sigillifer Remensis</rs>. <ref n="364" target="#NDPA-EG-04_0364">364</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7048"><rs><hi rend="sc">Ursinis (Johannes Juvenalis de)</hi>, dominus de Triangulo</rs>. <ref n="163" target="#NDPA-EG-04_0163">163</ref>, <ref n="364" target="#NDPA-EG-04_0364">364</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-V">
           <head>V</head>
           <item xml:id="NDPA-EG-04_rs_7049"><rs><hi rend="sc">Vaalins (Garnerus)</hi></rs>. <ref n="46" target="#NDPA-EG-01_0046">46</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7050"><rs><hi rend="sc">Vaccarius</hi>, vacher</rs>. <ref n="103" target="#NDPA-EG-03_0103">103</ref>.</item>
@@ -13090,7 +13102,7 @@
           <item xml:id="NDPA-EG-04_rs_7467"><rs><hi rend="sc">Voves</hi>, locus</rs>. <ref n="42" target="#NDPA-EG-04_0042">42</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7468"><rs><hi rend="sc">Vuinchelse</hi>, Vuichelsoy, Vuingessem</rs>. <note>Voyez <ref type="see" target="#NDPA-EG-04_rs_7482">Winchelse</ref></note>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-W">
           <head>W</head>
           <item xml:id="NDPA-EG-04_rs_7469"><rs><hi rend="sc">Wallo</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2771">Galo</ref></note>.</item>
           <item xml:id="NDPA-EG-04_rs_7470"><rs><hi rend="sc">Walterus</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_2775">Galterus</ref></note>.</item>
@@ -13107,7 +13119,7 @@
           <item xml:id="NDPA-EG-04_rs_7483"><rs><hi rend="sc">Winaili (capella S.)</hi></rs>. <ref n="6" target="#NDPA-EG-01_0006">6</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7484"><rs><hi rend="sc">Wirmes (Petrus de)</hi>, canonicus Parisiensis</rs>. <ref n="165" target="#NDPA-EG-04_0165">165</ref>.</item>
         </list>
-          <list type="index">
+            <list type="index" xml:id="NDPA-EG-04_list-Y">
           <head>Y</head>
           <item xml:id="NDPA-EG-04_rs_7485"><rs><hi rend="sc">Yenvilla (Robertus de)</hi></rs>. <ref n="297" target="#NDPA-EG-04_0297">297</ref>.</item>
           <item xml:id="NDPA-EG-04_rs_7486"><rs><hi rend="sc">Ygniacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3567">Iniacum</ref></note>.</item>
@@ -13128,12 +13140,12 @@
           <item xml:id="NDPA-EG-04_rs_7503"><rs><hi rend="sc">Yvona</hi>, Yonia, Ionia, Iona, Junia, Yunia</rs>. <ref n="362" target="#NDPA-EG-01_0362">362</ref>, <ref n="392" target="#NDPA-EG-01_0392">392</ref><!--, <ref n="I-281">I. 281</ref>-->.</item>
           <item xml:id="NDPA-EG-04_rs_7504"><rs><hi rend="sc">Yvriacum</hi></rs>. <note>Vide <ref type="see" target="#NDPA-EG-04_rs_3615">Ivriacum</ref></note>.</item>
         </list>
-        </div>
-      </back>
-      <group>
+        </div></body></text>
+      </group>
+      <group xml:id="NDPA-EG-04_group-3">
         <pb n="436" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f450/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
         <head>POULIER<lb/> DES BÉNEFFICES DU DIOCÈSE DE PARIS.<lb/> [<hi rend="sc">ex cod. ms. bibliothecæ reipublicæ n°</hi> 5199, <hi rend="sc">exarato circa a</hi>. 1534.]</head>
-        <text>
+        <text subtype="article">
           <body>
             <div>
               <p>[ARCHIDIACONATUS PARISIENSIS.]</p>
@@ -14715,12 +14727,11 @@
           <p>Cantoria et canonicatus et prebendæ dictæ ecclesiæ.</p></div></body>
         </text>
       </group>
-      <group>
+      <group xml:id="NDPA-EG-04_group-4">
         <pb n="452" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f466/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
         <head>POUILLÉ<lb/> DU DIOCÈSE DE PARIS,<lb/> AU XVIII<hi rend="sup">e</hi> SIÈCLE,<lb/> <hi rend="sc">d’après le pouillé historique et topographique publié par l. denis, en</hi> 1767.</head>
-        <text>
-          <div>
-            <body>
+        <text subtype="article">
+          <body>
               <div><p>Le diocèse de Paris comprenait trois archidiaconés, séparés les uns des autres par la Seine et la Marne. Sur la rive droite de la Seine, l’archidiaconé de Paris ; sur la rive gauche, celui de Josas ; et dans l’angle formé par la Seine et la Marne, celui de Brie. Ces trois archidiaconés se subdivisaient en doyennés ruraux. Le doyenné de Champeaux, enclavé dans le diocèse de Sens, était en dehors de ces divisions ; il relevait du chapitre de Champeaux, et non d’un archidiacre.</p>
           <p>Le gouvernement de tout le diocèse se divisait aussi en deux archiprêtrés ; celui de la Madeleine au nord de la Seine, et celui de Saint-Séverin au midi. Le premier comprenait l’archidiaconé de Paris, le second les archidiaconés de Josas et de Brie.</p>
           <p>Nous conservons les subdivisions ecclésiastiques telles qu’elles sont dans le pouillé de L. Denis. On trouvera d’abord le nom français des paroisses, avec les hameaux, châteaux, écarts et fermes qui en dépendent ; puis le nom latin, suivant l’usage commun, avec les principales variantes tirées de nos textes ; ensuite le saint auquel l’église paroissiale est dédiée, la date de l’érection de la paroisse, le patron ou collateur.</p>
@@ -20192,8 +20203,7 @@
             </row>
           </table></div>
           </div>
-            </body>
-          </div>
+          </body>
         </text>
       </group>
     </group>

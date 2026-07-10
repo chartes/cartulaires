@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDVC-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -110,30 +107,43 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="dots">
+        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="section" match="group" use="dots">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="section" match="group" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-              <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="dots">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure match="list[@type='index']" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -144,7 +154,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -169,7 +179,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="NDVC-AB_front">
       <head>Cartulaire des Vaux-de-Cernay</head>
       <!--<head><hi rend="i">Cartulaire de l’abbaye Notre-Dame des Vaux-de-Cernay, de l’ordre de
         Cîteaux, au diocèse de Paris, composé d’après les chartes originales conservées aux
@@ -192,7 +202,7 @@
       <byline>Notice rédigée par Clotilde Angleys et Vanessa Szollosi (juin 2006).</byline>
       <div xml:id="NDVC-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div>
+        <div xml:id="NDVC-AB_etablissement-1">
           <head>Historique</head>
           <p>L’abbaye des Vaux-de-Cernay fut fondée en 1118 par Simon, seigneur de Neauphle, et sa
             femme Ève, qui donnèrent la terre du Val du Bric-Essart aux moines de Savigny (Manche)
@@ -239,7 +249,7 @@
             1926 et le site lui-même en 1941 ; on peut consulter un dossier très complet sur les
             différentes bases du ministère de la Culture, notamment <ref target="http://www.culture.gouv.fr/culture/inventai/patrimoine/">Mérimée</ref>.</p>
         </div>
-        <div>
+        <div xml:id="NDVC-AB_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Le patrimoine des Vaux-de-Cernay se concentre autour de deux pôles : l’abbaye
             elle-même (dons en Ile-de-France, surtout dans les Yvelines, mais pas seulement, car on
@@ -260,7 +270,7 @@
             seigneurie à la fin du XVIII<hi rend="sup">e</hi> siècle, A 356 : carte du fonds
             Cernay).</p>
         </div>
-        <div>
+        <div xml:id="NDVC-AB_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>Les premiers et les plus importants donateurs de l’abbaye sont les membres des grandes
             familles des actuelles Yvelines : Montfort, Marly (et leurs parents Montmorency),
@@ -353,7 +363,7 @@
       </div>
       <div xml:id="NDVC-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="NDVC-AB_edition-1">
           <head>Les éditeurs : éléments biographiques</head>
           <p>Auguste Moutié (1812-1886) est issu d’une famille de la bourgeoisie de Rambouillet,
             ville dont il fut maire et où il fut le fondateur et l’inlassable animateur d’une
@@ -391,7 +401,7 @@
           <p>Source : nécrologie et bibliographie dans <bibl><title>Bibliothèque de l’École des
                 chartes</title>, <abbr>t.</abbr> 60 (1899), p. 267-280.</bibl></p>
         </div>
-        <div>
+        <div xml:id="NDVC-AB_edition-2">
           <head>Conception et contenu de l’édition</head>
           <p>Les éditeurs, dominé par le poids de l’édition des cartulaires médiévaux chez leurs
             contemporains, plaident en introduction pour l’organisation de leur travail, qui les
@@ -641,7 +651,7 @@
             </row>
           </table>
         </div>
-        <div>
+        <div xml:id="NDVC-AB_edition-3">
           <head>Qualité de l’édition</head>
           <p>L’édition est de bonne venue et accompagnée d’un riche ensemble d’outils
             d’interprétation et d’accès. Dans quelques cas, les formulaires sont abrégés et quelques
@@ -655,9 +665,9 @@
     </front>
     <group>
       <head>Vaux-de-Cernay</head>
-      <group>
+      <group xml:id="NDVC-AB_group-1">
         <head>Tome premier 1118-1250</head>
-        <group>
+        <group xml:id="NDVC-AB_group-1-1">
           <head>Première moitié XII<hi rend="sup">e</hi> siècle</head>
           <text xml:id="NDVC-AB_0001" n="I. — II" subtype="article">
             <pb n="1_0002"/>
@@ -1290,7 +1300,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-1-2">
           <head>Seconde moitié XII<hi rend="sup">e</hi> siècle</head>
           <text xml:id="NDVC-AB_0009" n="IX" subtype="article">
             <pb n="1_0011" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006766_00021/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006766/manifest"/>
@@ -8860,7 +8870,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-1-3">
           <head>Première moitié XIII<hi rend="sup">e</hi> siècle</head>
           <text xml:id="NDVC-AB_0115" n="CXV" subtype="article">
             <pb n="1_0131" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006766_00141/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006766/manifest"/>
@@ -31095,9 +31105,9 @@
           </text>
         </group>
       </group>
-      <group>
+      <group xml:id="NDVC-AB_group-2">
         <head>Tome premier (2e partie) 1251-1300</head>
-        <group>
+        <group xml:id="NDVC-AB_group-2-1">
           <head>1251-1260</head>
           <text xml:id="NDVC-AB_0513" n="DXIII" subtype="article">
             <pb n="1_0472" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006766_00482/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006766/manifest"/>
@@ -36990,7 +37000,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-2-2">
           <head>1261-1270</head>
           <text xml:id="NDVC-AB_0609" n="DCIX" subtype="article">
             <pb n="2_0564" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00128/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>
@@ -43430,7 +43440,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-2-3">
           <head>1271-1280</head>
           <text xml:id="NDVC-AB_0715" n="DCCXV" subtype="article">
             <pb n="2_0671" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00235/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>
@@ -47848,7 +47858,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-2-4">
           <head>1281-1290</head>
           <text xml:id="NDVC-AB_0787" n="DCCLXXXVII" subtype="article">
             <pb n="2_0742" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00306/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>
@@ -55573,7 +55583,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-2-5">
           <head>1291-1300</head>
           <text xml:id="NDVC-AB_0908" n="DCCCCVIII" subtype="article">
             <pb n="2_0872" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00436/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>
@@ -63069,9 +63079,9 @@
           </text>
         </group>
       </group>
-      <group>
+      <group xml:id="NDVC-AB_group-3">
         <head>Tome second</head>
-        <group>
+        <group xml:id="NDVC-AB_group-3-1">
           <head>Première moitié XIV<hi rend="sup">e</hi> siècle</head>
           <text xml:id="NDVC-AB_0992" n="DCCCCXCII" subtype="article">
             <pb n="2_0982" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006767_00548/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006767/manifest"/>
@@ -68505,7 +68515,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-3-2">
           <head>Seconde moitié XIV<hi rend="sup">e</hi> siècle</head>
           <text xml:id="NDVC-AB_1061" n="MLXI" subtype="article">
             <pb n="3_0088" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006768_00096/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006768/manifest"/>
@@ -69180,7 +69190,7 @@
             
           </text>
         </group>
-        <group>
+        <group xml:id="NDVC-AB_group-3-3">
           <head>XV<hi rend="sup">e</hi> siècle et suivants</head>
           <text xml:id="NDVC-AB_1071" n="MLXXI" subtype="article">
             <pb n="3_0100" facs="https://api.digitale-sammlungen.de/iiif/image/v2/bsb10006768_00108/full/full/0/default.jpg" corresp="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb10006768/manifest"/>
@@ -69963,9 +69973,10 @@
         </group>
       </group>
     </group>
-  <back>
- <div type="index" n="1">
-          <list type="index">
+    <back xml:id="NDVC-AB_back">
+      <div type="index" n="1" xml:id="NDVC-AB_back-1">
+        <head>Index</head>
+        <list type="index" xml:id="NDVC-AB_index_A">
             <head>A</head>
             <!--<item xml:id="NDVC-AB_rs_0001"><rs><hi rend="sc">A.</hi>, abbatissa Sancti Corentini, <abbr>p.</abbr></rs>, <ref n="258">258</ref>. </item>-->
             <item xml:id="NDVC-AB_rs_0002"><rs><hi rend="sc">Aalicia</hi>, <hi rend="i">vid.</hi> <hi rend="sc">Aalis</hi></rs>. </item>
@@ -70308,7 +70319,7 @@
             <!--<item xml:id="NDVC-AB_rs_0351"><rs><hi rend="sc">Avranches</hi>, (Richard Goz, comte d'), <abbr>p.</abbr></rs>, <ref n="701">701</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_0352"><rs><hi rend="sc">Azzo</hi>, <abbr>p.</abbr></rs>, <ref n="665">665</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_B">
             <head>B</head>
             <item xml:id="NDVC-AB_rs_0353"><rs><hi rend="sc">Baali</hi> (Godefridus de)</rs>, <abbr>p.</abbr><!--, <ref n="37">37</ref>-->, <ref n="25" target="#NDVC-AB_0025">25</ref>.</item>
             <item xml:id="NDVC-AB_rs_0354"><rs><hi rend="sc">Baalle</hi> (Gauterius de)</rs>, <abbr>p.</abbr>, <ref n="143" target="#NDVC-AB_0143">143</ref>.</item>
@@ -70809,7 +70820,7 @@
             <item xml:id="NDVC-AB_rs_0857"><rs><hi rend="sc">Buxeria</hi>, (Rogerius de)</rs>, <abbr>p.</abbr>, <ref n="1" target="#NDVC-AB_0001">1</ref>.</item>
             <!--<item xml:id="NDVC-AB_rs_0858"><rs><hi rend="sc">Buxeria</hi>, (Ulricus de), <abbr>p.</abbr></rs>, <ref n="625">625</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_C">
             <head>C</head>
             <item xml:id="NDVC-AB_rs_0859"><rs><hi rend="sc">Cabrosia</hi> (de), <hi rend="i">vid.</hi> <hi rend="sc">Caprosia</hi> (de)</rs>. </item>
             <item xml:id="NDVC-AB_rs_0860"><rs><hi rend="sc">Cadaver</hi> (Simon)</rs>, <abbr>p.</abbr>, <ref n="61" target="#NDVC-AB_0061">61</ref>.</item>
@@ -71285,7 +71296,7 @@
             <!--<item xml:id="NDVC-AB_rs_1342"><rs><hi rend="sc">Curvavilla</hi> (Yvonetus de), <abbr>p.</abbr></rs>, <ref n="135">135</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_1343"><rs><hi rend="sc">Curvavilla</hi>, <abbr>p.</abbr></rs>, <ref n="308">308</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_D">
             <head>D</head>
             <!--<item xml:id="NDVC-AB_rs_1344"><rs><hi rend="sc">Dablais</hi>, notaire apostolique, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr></rs>, <ref n="161">161</ref>, <ref n="162">162</ref>, <ref n="163">163</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_1345"><rs><hi rend="sc">Daguet</hi> (Guillelmus)</rs>, <abbr>p.</abbr><!--, <ref n="816">816</ref>--><!--, <ref n="817">817</ref>--><!--, <ref n="823">823</ref>--></item><item xml:id="NDVC-AB_rs_1345_1"><rs>Daguet <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr></rs> <ref n="19" target="#NDVC-AB_0019">19</ref>.</item><!--<item xml:id="NDVC-AB_rs_1346"><rs><hi rend="sc">Danet</hi> (Simon), <abbr>p.</abbr></rs>, <ref n="145">145</ref>.</item>-->
@@ -71405,7 +71416,7 @@
             <item xml:id="NDVC-AB_rs_1460"><rs><hi rend="sc">Elisabeth</hi>, uxor Philippi (<hi rend="sc">ii</hi>), regis Francorum, <hi rend="i">vid.</hi> <hi rend="sc">Hainaut</hi> (?lisabeth de)</rs>. </item>
             <!--<item xml:id="NDVC-AB_rs_1461"><rs><hi rend="sc">Emelina</hi>, mater Guillelmi (<hi rend="sc">i</hi>) de Carnoto, <abbr>p.</abbr></rs>, <ref n="510">510</ref>.</item>-->
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_E">
             <head>E</head>
             <item xml:id="NDVC-AB_rs_1462"><rs><hi rend="sc">Erembertus</hi>, sacerdos de Caprosia</rs>, <abbr>p.</abbr>, <ref n="111" target="#NDVC-AB_0111">111</ref>.</item>
             <!--<item xml:id="NDVC-AB_rs_1463"><rs><hi rend="sc">Eremburgis</hi>, abbatissa Portus-Regalis, <abbr>p.</abbr></rs>, <ref n="358">358</ref>.</item>-->
@@ -71533,7 +71544,7 @@
             <item xml:id="NDVC-AB_rs_1586"><rs><hi rend="sc">Épouville</hi> (Jean d')</rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>, <ref n="28" target="#NDVC-AB_0028">28</ref>.</item>
           <!--<item xml:id="NDVC-AB_rs_1587"><rs><hi rend="sc">Évreux</hi> (Blanche d'), <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr></rs>, <ref n="92">92</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_F">
             <head>F</head>
             <!--<item xml:id="NDVC-AB_rs_1588"><rs><hi rend="sc">Faber</hi> (Gauterius), <abbr>p.</abbr></rs>, <ref n="626">626</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_1589"><rs><hi rend="sc">Faber</hi>, (Jaquetus), <abbr>p.</abbr></rs>, <ref n="898">898</ref>.</item>-->
@@ -71685,7 +71696,7 @@
             <item xml:id="NDVC-AB_rs_1738"><rs><hi rend="sc">Furrer</hi>, (Simon)</rs>, <abbr>p.</abbr><!--, <ref n="37">37</ref>-->, <ref n="25" target="#NDVC-AB_0025">25</ref>. <!-- doublon meme acte NDVC-AB_0025: <ref n="44" target="#NDVC-AB_0025">25</ref> --></item>
             <item xml:id="NDVC-AB_rs_1739"><rs><hi rend="sc">Fusci</hi> (Robertus de)</rs>, <abbr>p.</abbr>, <ref n="57" target="#NDVC-AB_0057">57</ref>.</item>
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_G">
             <head>G</head>
             <item xml:id="NDVC-AB_rs_1740"><rs><hi rend="sc">G.</hi>, presbiter de Valle Sancti Germani</rs>, <abbr>p.</abbr>.</item>
             <!--<item xml:id="NDVC-AB_rs_1741"><rs><hi rend="sc">Gaablier</hi> (Robertus le), <abbr>p.</abbr></rs>, <ref n="970">970</ref>.</item>-->
@@ -72045,7 +72056,7 @@
             <!--<item xml:id="NDVC-AB_rs_2105"><rs><hi rend="sc">Guyenne</hi> (Éléonore de), <abbr>p.</abbr></rs>, <ref n="13">13</ref>.</item>-->
           <item xml:id="NDVC-AB_rs_2106"><rs><hi rend="sc">Guillelmus</hi></rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>, <ref n="27" target="#NDVC-AB_0027">27</ref>.</item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_H">
             <head>H</head>
             <!--<item xml:id="NDVC-AB_rs_2107"><rs><hi rend="sc">H.</hi>, abbas de Trappa, <abbr>p.</abbr></rs>, <ref n="721">721</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_2108"><rs><hi rend="sc">Haguenons</hi> (Radulphus)</rs>, <abbr>p.</abbr>, <ref n="228" target="#NDVC-AB_0228">228</ref>.</item>
@@ -72227,7 +72238,7 @@
             <!--<item xml:id="NDVC-AB_rs_2287"><rs><hi rend="sc">Husso</hi> (Paganus de), <abbr>p.</abbr></rs>, <ref n="480">480</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_2288"><rs><hi rend="sc">Husso</hi>, (Raginaldus de)</rs>, <abbr>p.</abbr>, <ref n="363" target="#NDVC-AB_0363">363</ref>, <!-- doublon meme acte NDVC-AB_0363: <ref n="333" target="#NDVC-AB_0363">363</ref> --><!--, <ref n="334">334</ref>--> <ref n="455" target="#NDVC-AB_0455">455</ref><!--, <ref n="480">480</ref>-->.</item>
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_I">
             <head>I</head>
             <item xml:id="NDVC-AB_rs_2289"><rs><hi rend="sc">Ibreio</hi> (Rogerius de)</rs>, <abbr>p.</abbr>, <ref n="120" target="#NDVC-AB_0120">120</ref><!--, <ref n="143">143</ref>-->.</item>
             <item xml:id="NDVC-AB_rs_2290"><rs><hi rend="sc">Igni</hi> (Gauterius de)</rs>, <abbr>p.</abbr>, <ref n="37" target="#NDVC-AB_0037">37</ref>.</item>
@@ -72296,7 +72307,7 @@
             <!--<item xml:id="NDVC-AB_rs_2353"><rs><hi rend="sc">Johanna</hi>, uxor Ferrici Paste, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr></rs>, <ref n="73">73</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_2354"><rs><hi rend="sc">Johanna</hi>, uxor Guidonis (<hi rend="sc">v</hi>) de Caprosia</rs>, <abbr>p.</abbr><!--, <ref n="879">879</ref>--></item><item xml:id="NDVC-AB_rs_2354_1"><rs>Johanna <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr></rs> <ref n="1" target="#NDVC-AB_0001">1</ref><!--, <ref n="11">11</ref>-->.</item><item xml:id="NDVC-AB_rs_2355"><rs><hi rend="sc">Johanna</hi>, uxor Guillelmi de Guillervilla</rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>, <ref n="24" target="#NDVC-AB_0024">24</ref>.</item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_J">
             <head>J</head>
             <item xml:id="NDVC-AB_rs_2356"><rs><hi rend="sc">Johannes</hi>, abbas Bomportus</rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>, <ref n="1017" target="#NDVC-AB_1017">1017</ref>.</item>
             <item xml:id="NDVC-AB_rs_2357"><rs><hi rend="sc">Johannes</hi>, abbas Cisterciensis</rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr>, <ref n="331" target="#NDVC-AB_0331">331</ref>.</item>
@@ -72400,11 +72411,11 @@
             <!--<item xml:id="NDVC-AB_rs_2455"><rs><hi rend="sc">Johanna</hi>, uxor Hugonis Faiel, <abbr>p.</abbr></rs>, <ref n="202">202</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_2456"><rs><hi rend="sc">Johanna</hi>, uxor Johannis de Basnevilla, <hi rend="i">vid.</hi></rs></item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_K">
             <head>K</head>
           <item xml:id="NDVC-AB_rs_2457"><rs><hi rend="sc">Katerina</hi>, <hi rend="i">vid.</hi> <hi rend="sc">Catherina</hi></rs>. </item>
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_L">
             <head>L</head>
             <!--<item xml:id="NDVC-AB_rs_2458"><rs><hi rend="sc">Laceron</hi> (Guillelmus) <abbr>p.</abbr></rs>, <ref n="641">641</ref>, <ref n="663">663</ref>, <ref n="664">664</ref>; <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr> <ref n="75">75</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_2459"><rs><hi rend="sc">Lambergi</hi> (Robertus), <abbr>p.</abbr></rs>, <ref n="623">623</ref>, <ref n="624">624</ref>.</item>-->
@@ -72612,7 +72623,7 @@
             <item xml:id="NDVC-AB_rs_2669"><rs><hi rend="sc">Lupicinarum</hi> (Martinus)</rs>, <abbr>p.</abbr>, <ref n="39" target="#NDVC-AB_0039">39</ref>.</item>
             <!--<item xml:id="NDVC-AB_rs_2670"><rs><hi rend="sc">Lupus</hi> (Radulphus), <abbr>p.</abbr></rs>, <ref n="246">246</ref>, <ref n="877">877</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_M">
             <head>M</head>
             <!--<item xml:id="NDVC-AB_rs_2671"><rs><hi rend="sc">Maadan</hi> (Pierre de), <abbr>p.</abbr></rs>, <ref n="719">719</ref>, <ref n="732">732</ref>, <ref n="771">771</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_2672"><rs><hi rend="sc">Maalin</hi> (Guillelmus de), <hi rend="i">vid.</hi> <hi rend="sc">Guillelmus</hi>, præceptor militiæ Templi</rs>. </item>
@@ -73101,7 +73112,7 @@
             <!--<item xml:id="NDVC-AB_rs_3171"><rs><hi rend="sc">Musi</hi>, (Reginaldus de), <abbr>p.</abbr></rs>, <ref n="723">723</ref>, <ref n="727">727</ref>, <ref n="728">728</ref>, <ref n="796">796</ref>.</item>-->
           <!--<item xml:id="NDVC-AB_rs_3172"><rs><hi rend="sc">Maria</hi>, <abbr>p.</abbr></rs>, <ref n="ref">507</ref>.</item>-->
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_N">
             <head>N</head>
             <item xml:id="NDVC-AB_rs_3173"><rs><hi rend="sc">Nacart</hi> (Arnulphus)</rs>, <abbr>p.</abbr>, <ref n="487" target="#NDVC-AB_0487">487</ref><!--, <ref n="947">947</ref>--><!--, <ref n="970">970</ref>-->.</item>
             <!--<item xml:id="NDVC-AB_rs_3174"><rs><hi rend="sc">Nacart</hi>, (Godefridus), <abbr>p.</abbr></rs>, <ref n="947">947</ref>.</item>-->
@@ -73222,7 +73233,7 @@
             <!--<item xml:id="NDVC-AB_rs_3293"><rs><hi rend="sc">Nemore</hi>, (Robertus de), <abbr>p.</abbr></rs>, <ref n="968">968</ref>, <ref n="976">976</ref>; <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr> <ref n="8">8</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_3294"><rs><hi rend="sc">Nicholaus</hi></rs>, <abbr>t.</abbr><hi rend="sc">ii</hi>, <abbr>p.</abbr><!--, <ref n="4">4</ref>-->, <ref n="396" target="#NDVC-AB_0396">396</ref>.</item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_O">
      <head>O</head>
             <item xml:id="NDVC-AB_rs_3295"><rs><hi rend="sc">Obergenvilla</hi> (Simon de)</rs>, <abbr>p.</abbr>, <ref n="110" target="#NDVC-AB_0110">110</ref>.</item>
             <!--<item xml:id="NDVC-AB_rs_3296"><rs><hi rend="sc">Octavianus</hi>, episcopus Ostiensis, <abbr>p.</abbr></rs>, <ref n="132">132</ref>.</item>-->
@@ -73307,7 +73318,7 @@
             <item xml:id="NDVC-AB_rs_3375"><rs><hi rend="sc">Osmundus</hi></rs>, <abbr>p.</abbr>, <ref n="13" target="#NDVC-AB_0013">13</ref>.</item>
             <item xml:id="NDVC-AB_rs_3376"><rs><hi rend="sc">Osmundus</hi>, pellifex</rs>, <abbr>p.</abbr>, <ref n="122" target="#NDVC-AB_0122">122</ref>.</item>
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_P">
             <head>P</head>
             <!--<item xml:id="NDVC-AB_rs_3377"><rs><hi rend="sc">P.</hi>, presbiter cardinalis, <abbr>p.</abbr></rs>, <ref n="132">132</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_3378"><rs><hi rend="sc">G.</hi>, presbiter de Valle Sancti Germani, <abbr>p.</abbr></rs>, <ref n="277">277</ref>.</item>-->
@@ -73692,7 +73703,7 @@
             <!--<item xml:id="NDVC-AB_rs_3765"><rs><hi rend="sc">Ponciaus</hi>, uxor Simonis Espenrier, <abbr>p.</abbr></rs>, <ref n="554">554</ref>, <ref n="555">555</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_3766"><rs><hi rend="sc">Ponciaus</hi>, uxor Simonis de Puteo, <abbr>p.</abbr></rs>, <ref n="873">873</ref>, <ref n="880">880</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_Q">
             <head>Q</head>
           <!--<item xml:id="NDVC-AB_rs_3767"><rs><hi rend="sc">Quarre</hi> (Petrus), <abbr>p.</abbr></rs>, <ref n="615">615</ref>, <ref n="684">684</ref>, <ref n="685">685</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_3768"><rs><hi rend="sc">Quaruel</hi> (Eremburgis), <abbr>p.</abbr></rs>, <ref n="852">852</ref>, <ref n="853">853</ref>.</item>-->
@@ -73715,7 +73726,7 @@
             <!--<item xml:id="NDVC-AB_rs_3785"><rs><hi rend="sc">Quociens</hi> (Jean), <abbr>p.</abbr></rs>, <ref n="962">962</ref>, <ref n="963">963</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_3786"><rs><hi rend="sc">Quoquerel</hi> (Gillebertus), <abbr>p.</abbr></rs>, <ref n="565">565</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_R">
             <head>R</head>
             <!--<item xml:id="NDVC-AB_rs_3787"><rs><hi rend="sc">R.</hi>, decanus Rothomagensis, <abbr>p.</abbr></rs>, <ref n="145">145</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_3788"><rs><hi rend="sc">Rabonel</hi> (Guillelmus), <abbr>p.</abbr></rs>, <ref n="776">776</ref>, <ref n="778">778</ref>.</item>-->
@@ -73957,7 +73968,7 @@
             <item xml:id="NDVC-AB_rs_4026"><rs><hi rend="sc">Rupeforti</hi>, (Simon de)</rs>, <abbr>p.</abbr>, <ref n="48" target="#NDVC-AB_0048">48</ref>. <!-- doublon meme acte NDVC-AB_0047: <ref n="65" target="#NDVC-AB_0047">47</ref> --><!--, <ref n="73">73</ref>--></item>
             <item xml:id="NDVC-AB_rs_4027"><rs><hi rend="sc">Rupeforti</hi> (Simon de), <hi rend="i">vid.</hi> <hi rend="sc">Simon</hi>, abbas Vallium Sarnaii</rs>. </item>
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_S">
             <head>S</head>
             <item xml:id="NDVC-AB_rs_4028"><rs><hi rend="sc">Sablon</hi> (Colin du)</rs>, <abbr>p.</abbr>, <ref n="474" target="#NDVC-AB_0474">474</ref>.</item>
             <item xml:id="NDVC-AB_rs_4029"><rs><hi rend="sc">Saccus</hi> (Lambertus)</rs>, <abbr>p.</abbr>, <ref n="79" target="#NDVC-AB_0079">79</ref>.</item>
@@ -74220,7 +74231,7 @@
             <!--<item xml:id="NDVC-AB_rs_4291"><rs><hi rend="sc">Sutor</hi> (Laurentius), <abbr>p.</abbr></rs>, <ref n="648">648</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_4292"><rs><hi rend="sc">Sutor</hi>, (Rogerius), <abbr>p.</abbr></rs>, <ref n="537">537</ref>, <ref n="706">706</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_T">
             <head>T</head>
             <!--<item xml:id="NDVC-AB_rs_4293"><rs><hi rend="sc">Tabernarius</hi> (Andræas), <abbr>p.</abbr></rs>, <ref n="608">608</ref>, <ref n="610">610</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_4294"><rs><hi rend="sc">Tabernarius</hi>, (Robertus), <abbr>p.</abbr></rs>, <ref n="608">608</ref>, <ref n="610">610</ref>.</item>-->
@@ -74394,7 +74405,7 @@
             <item xml:id="NDVC-AB_rs_4468"><rs><hi rend="sc">Ulmeto</hi>, (Rerricus de), filius Rerrici</rs>, <abbr>p.</abbr>, <ref n="61" target="#NDVC-AB_0061">61</ref>.</item>
             <item xml:id="NDVC-AB_rs_4469"><rs><hi rend="sc">Alneto</hi>, (Robertus de)</rs>, <abbr>p.</abbr>, <ref n="53" target="#NDVC-AB_0053">53</ref><!--, <ref n="87">87</ref>-->.</item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_U">
             <head>U</head>
           <item xml:id="NDVC-AB_rs_4470"><rs><hi rend="sc">Uisier</hi>(Robert l'), <hi rend="i">vid.</hi> <hi rend="sc">Hostiarius</hi> (Robertus)</rs>. </item>
             <!--<item xml:id="NDVC-AB_rs_4471"><rs><hi rend="sc">Ulmeio</hi> (Remigius de), <abbr>p.</abbr></rs>, <ref n="685">685</ref>.</item>-->
@@ -74405,7 +74416,7 @@
             <item xml:id="NDVC-AB_rs_4476"><rs><hi rend="sc">Urmeio</hi> (de), <hi rend="i">vid.</hi> <hi rend="sc">Ulmeto</hi> (de)</rs>. </item>
             <!--<item xml:id="NDVC-AB_rs_4477"><rs><hi rend="sc">Urmeio</hi>, (Johannes de), <abbr>p.</abbr></rs>, <ref n="592">592</ref>, <ref n="672">672</ref>, <ref n="674">674</ref>.</item>-->
           </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_V">
             <head>V</head>
             <!--<item xml:id="NDVC-AB_rs_4478"><rs><hi rend="sc">Vache</hi> (Christianus la), <abbr>p.</abbr></rs>, <ref n="942">942</ref>.</item>-->
             <!--<item xml:id="NDVC-AB_rs_4479"><rs><hi rend="sc">Vacher</hi> (Robertus le), <abbr>p.</abbr></rs>, <ref n="648">648</ref>.</item>-->
@@ -74572,7 +74583,7 @@
             <item xml:id="NDVC-AB_rs_4644"><rs><hi rend="sc">Voisins</hi> (de), <hi rend="i">vid.</hi> <hi rend="sc">Vicinis</hi> (de)</rs>. </item>
             <item xml:id="NDVC-AB_rs_4645"><rs><hi rend="sc">Vordis</hi> (Alexander de)</rs>, <abbr>p.</abbr>, <ref n="332" target="#NDVC-AB_0332">332</ref>.</item>
             </list>
-   <list type="index">
+        <list type="index" xml:id="NDVC-AB_index_W">
             <head>W</head>
           <!--<item xml:id="NDVC-AB_rs_4646"><rs><hi rend="sc">Waignart</hi> (Petrus), <abbr>p.</abbr></rs>, <ref n="880">880</ref>.</item>-->
             <item xml:id="NDVC-AB_rs_4647"><rs><hi rend="sc">Warena</hi> (de), <hi rend="i">vid.</hi> <hi rend="sc">Garenna</hi> (de)</rs>. </item>

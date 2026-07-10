@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SSCO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -112,28 +109,36 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="dots">
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-            <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="dots">
-            <citeData use="head" property="dct:title"/>
-          </citeStructure>
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -143,7 +148,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -169,7 +174,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SSCO-AB_front">
       <head>Cartulaire de Saint-Spire de Corbeil</head>
       <!--<head><hi rend="i">Cartulaire de Saint-Spire de Corbeil</hi>, édité par Émile Coüard-Luys,
         Rambouillet : Imprimerie A. Douchin, 1882, LI-241 pages, tirage à part de <hi rend="i">Mémoires et documents publiés par la Société archéologique de Rambouillet</hi>, t. 6,
@@ -187,7 +192,7 @@
       <byline>Notice rédigée par Olivier Guyotjeannin avec l’aide d’Anastasia Iline (janvier 2006)</byline>
       <div xml:id="SSCO-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div>
+        <div xml:id="SSCO-AB_etablissement-1">
           <head>Historique</head>
           <p>Saint-Spire présente les traits les plus typés de la collégiale castrale fondée et
             soutenue par une dynastie de petits comtes d’Ile-de-France autour de reliques (ici
@@ -217,7 +222,7 @@
             le douaire d’une reine (comme pour Adèle, épouse de Philippe Auguste) ne voient bien sûr
             aucun changement de fond au statut et à la dépendance de la collégiale.</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>On peut avoir une idée assez précise de l’implantation foncière de l’établissement à la
             fin du XII<hi rend="sup">e</hi> siècle grâce à une bulle de Célestin <num>III</num> de
@@ -234,7 +239,7 @@
             Ermenonville [-la-Grande ou -la-Petite, Eure-et-Loire, cant. Illiers-Combray] et Arpajon
             [Essonne, ch.-l. cant.].</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>La concentration du patrimoine semble montrer que les jeux étaient largement faits
             quand les Capétiens devinrent maîtres de Corbeil. Les actes, de fait, ne font guère
@@ -243,7 +248,7 @@
       </div>
       <div xml:id="SSCO-AB_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div>
+        <div xml:id="SSCO-AB_archives-1">
           <head>Le chartrier</head>
           <p>— Le chartrier de Saint-Spire était encore conservé sur place en 1882 : la collégiale
             était devenue paroisse et la fabrique détenait ses archives anciennes, mêlées du reste à
@@ -256,20 +261,20 @@
             G 239, G 240, G 243 à G 246, G 254 à G 256, G 261, G 1085, G 1087, G 1089, G 1090,
             G 1093, G 1094, G 1096 à G 1098, G 1100.</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_archives-2">
           <head>Les cartulaires</head>
           <p>— Le cartulaire qui est à la source de l’édition Coüard resta plus longtemps dans les
             archives de la fabrique, et c’est là encore qu’il fut consulté par Henri Stein (<hi rend="i">Bibliographie des cartulaires français</hi>, n° 1048). Ce manuscrit du
               XIII<hi rend="sup">e</hi> siècle, avec additions du XIV<hi rend="sup">e</hi>, est
             aujourd’hui conservé à la Bibliothèque municipale de Corbeil-Essonnes (ms 105).</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_archives-3">
           <head>L'obituaire</head>
           <p>— L’obituaire joint au cartulaire a été édité par Auguste Molinier, <hi rend="i">Obituaires de la province de Sens</hi>, <abbr>t.</abbr> I-1 (1902),
             <abbr>p.</abbr> 393-410 (indiqué Lemaitre, <hi rend="i">Répertoire des documents
               nécrologiques</hi>, <abbr>t.</abbr> I, n° 1377, <abbr>p.</abbr> 614-615).</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_archives-4">
           <head>Orientation bibliographique</head>
           <listBibl>
             <bibl><author>François de Guilhermy</author>, <title>Monographie de l’église Saint-Spire
@@ -279,7 +284,7 @@
       </div>
       <div xml:id="SSCO-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="SSCO-AB_edition-1">
           <head>L’éditeur : éléments biographiques</head>
           <p>La présente édition est directement tirée de la thèse d’École des chartes soutenue en
             1880 par Émile Coüard ou Coüard-Luys. Né et mort à Versailles (1855-1929), ce dernier
@@ -291,7 +296,7 @@
               <title>Dictionnaire de biographie française</title>, <abbr>t.</abbr> IX (1961),
             col. 860-861.</p>
         </div>
-        <div>
+        <div xml:id="SSCO-AB_edition-2">
           <head>Conception et contenu de l’édition</head>
           <p>— L’introduction comprend une présentation d’ensemble (p. V-VI), une présentation du
             cartulaire et de l’édition (p. VII-XIV), un historique de l’établissement
@@ -440,7 +445,7 @@
             </row>
           </table>
         </div>
-        <div n="2.3" type="souspartie">
+        <div n="2.3" type="souspartie" xml:id="SSCO-AB_edition-3">
           <head>Qualité de l’édition</head>
           <p>Selon un usage fréquent, l’éditeur reprend en regeste les rubriques du cartulaire.</p>
           <p>Seule est donnée la transcription du cartulaire, même si un original est repéré (et
@@ -456,9 +461,9 @@
         </div>
       </div>
     </front>
-    <group>
+    <group xml:id="SSCO-AB_group">
       <head>Saint-Spire de Corbeil</head>
-      <group>
+      <group xml:id="SSCO-AB_group-1">
         <head>Cartulaire</head>
         <text xml:id="SSCO-AB_0001" n="I" subtype="article">
           <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f61/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"/>
@@ -7686,7 +7691,7 @@
           
         </text>
       </group>
-      <group>
+      <group xml:id="SSCO-AB_group-2">
         <head>Appendix</head>
         <text xml:id="SSCO-AB_a01" n="I" subtype="article">
           <pb n="174" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f234/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"/>
@@ -9322,10 +9327,8 @@
       </group>
     </group>
 <back>
-      <div type="indexnominum" n="1">
-        <head>
-          <pb n="209" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f269/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"/>
-        </head>
+  <div type="indexnominum" n="1" xml:id="SSCO-AB_back">
+    <head><pb n="209" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f269/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"/> Index des principaux Noms de Personnes et de Lieux</head>
         <list type="index">
           <head>A</head>
           <!--<item xml:id="SSCO-AB_rs_141"><rs><hi rend="sc">Aalesis</hi>, mater Reginaldi episcopi Parisiensis</rs>, <ref>171</ref>.</item>-->
