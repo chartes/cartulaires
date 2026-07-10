@@ -1,4 +1,7 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPA-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -112,7 +115,7 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
+        <citeStructure match="/TEI[1]/text[1]/front[1]" use="@xml:id" unit="part">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="partie" match="div" use="@xml:id">
@@ -124,9 +127,7 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
-          <citeData property="dct:title" use="head[1]"/>
-          <citeData property="schema:name" use="head[1]"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id" unit="part">
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -139,9 +140,9 @@
             <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="index">
-          <citeData property="dct:title" use="head[1]/text()"/>
-          <citeData property="schema:name" use="head[1]/text()"/>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="partie">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -151,7 +152,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="la">Latin</language>
+        <language ident="lat">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -4759,11 +4760,10 @@
     </group>
 
   <back>
-    <div type="indexnominum" n="1" xml:id="SMPA-EG_back">
-      <head>Index de noms</head>
-      <p>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
+    <div type="indexnominum" n="1" xml:id="SMPA-EG_index">
+      <head>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
         Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé <pb n="249"/>
-        </p>
+        </head>
         <list type="index" xml:id="SMPA-EG_liste_A">
           <head>A</head>
           <item xml:id="SMPA-EG_rs_0001"><rs><hi rend="sc">Aales</hi></rs>, Voy. Alix.</item>
