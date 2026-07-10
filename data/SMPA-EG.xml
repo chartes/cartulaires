@@ -128,6 +128,8 @@
           </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -4761,9 +4763,10 @@
 
   <back>
     <div type="indexnominum" n="1" xml:id="SMPA-EG_index">
-      <head>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné
+      <head>Index de noms</head>
+      <p>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné.
         Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé <pb n="249"/>
-        </head>
+        </p>
         <list type="index" xml:id="SMPA-EG_liste_A">
           <head>A</head>
           <item xml:id="SMPA-EG_rs_0001"><rs><hi rend="sc">Aales</hi></rs>, Voy. Alix.</item>
