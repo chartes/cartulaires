@@ -1,6 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-01">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-01">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -59,12 +57,24 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -74,7 +84,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
       </langUsage>
       <textClass>
         <keywords>
@@ -99,11 +109,11 @@
     </front>
     <group type="tome">
       <head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>
-      <group n="1">
+      <group n="1" xml:id="NDPA-EG-01_group-1">
         <head>PARS PRIMA<lb/>
           <hi rend="sc">sive</hi>
           <lb/>CHARTULARIUM EPISCOPI</head>
-        <group n="1">
+        <group n="1" xml:id="NDPA-EG-01_group-1-1">
           <head>
             <pb n="I. 3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>PRÆVIA.</head>
           <text xml:id="NDPA-EG-01_0001" subtype="article" n="I">
@@ -1423,7 +1433,7 @@
             </body>
           </text>
         </group>
-        <group n="2">
+        <group n="2" xml:id="NDPA-EG-01_group-1-2">
           <head>
             <pb n="I. 23" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f37/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>CHARTULARIUM EPISCOPI.</head>
           <text xml:id="NDPA-EG-01_0011" subtype="article" n="I">
@@ -6602,12 +6612,12 @@
           </text>
         </group>
       </group>
-      <group n="2">
+      <group n="2" xml:id="NDPA-EG-01_group-2">
         <head>
           <pb n="I. 215" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f229/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>PARS SECUNDA<lb/>
           <hi rend="sc">sive</hi>
           <lb/>PARVUM PASTORALE</head>
-        <group n="1">
+        <group n="1" xml:id="NDPA-EG-01_group-2-1">
           <head>
             <pb n="I. 216" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f230/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER PRIMUS.<lb/>APOSTOLICORUM.</head>
           <text xml:id="NDPA-EG-01_0329" subtype="article" n="I">
@@ -7071,7 +7081,7 @@
             </body>
           </text>
         </group>
-        <group n="2">
+        <group n="2" xml:id="NDPA-EG-01_group-2-2">
           <head>
             <pb n="I. 240" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f494/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER SECUNDUS.<lb/>REGUM.</head>
           <text xml:id="NDPA-EG-01_0356" subtype="article" n="I">
@@ -7812,7 +7822,7 @@
             </body>
           </text>
         </group>
-        <group n="3">
+        <group n="3" xml:id="NDPA-EG-01_group-2-3">
           <head>
             <pb n="I. 288" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f542/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER TERTIUS.<lb/>COMITUM.</head>
           <text xml:id="NDPA-EG-01_0398" subtype="article" n="I">
@@ -8107,7 +8117,7 @@
             </body>
           </text>
         </group>
-        <group n="4">
+        <group n="4" xml:id="NDPA-EG-01_group-2-4">
           <head>
             <pb n="I. 305" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f559/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER QUARTUS.<lb/>EPISCOPORUM.</head>
           <text xml:id="NDPA-EG-01_0415" subtype="article" n="I">
@@ -9047,7 +9057,7 @@
             </body>
           </text>
         </group>
-        <group n="5">
+        <group n="5" xml:id="NDPA-EG-01_group-2-5">
           <head>
             <pb n="I. 362" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f616/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER QUINTUS.<lb/>ABBATUM.</head>
           <text xml:id="NDPA-EG-01_0470" subtype="article" n="I">
@@ -9308,7 +9318,7 @@
             </body>
           </text>
         </group>
-        <group n="6">
+        <group n="6" xml:id="NDPA-EG-01_group-2-6">
           <head>
             <pb n="I. 372" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f626/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER SEXTUS.<lb/>DECANORUM.</head>
           <text xml:id="NDPA-EG-01_0485" subtype="article" n="I">
@@ -10051,7 +10061,7 @@
             </body>
           </text>
         </group>
-        <group n="7">
+        <group n="7" xml:id="NDPA-EG-01_group-2-7">
           <head>
             <pb n="I. 415" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f669/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER SEPTIMUS.<lb/>FRATRUM.</head>
           <text xml:id="NDPA-EG-01_0530" subtype="article" n="I">
@@ -10154,7 +10164,7 @@
             </body>
           </text>
         </group>
-        <group n="8">
+        <group n="8" xml:id="NDPA-EG-01_group-2-8">
           <head>
             <pb n="I. 422" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f676/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER OCTAVUS.<lb/>OFFICIALIUM.</head>
           <text xml:id="NDPA-EG-01_0536" subtype="article" n="I">
@@ -10671,7 +10681,7 @@
             </body>
           </text>
         </group>
-        <group n="9">
+        <group n="9" xml:id="NDPA-EG-01_group-2-9">
           <head>
             <pb n="I. 447" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/f701/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534939f/manifest.json"/>LIBER NONUS.<lb/>LITTERÆ<note>
               <p>Quæ sequuntur transcripsit manus paulo recentior.</p>

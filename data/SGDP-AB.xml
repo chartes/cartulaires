@@ -1,6 +1,4 @@
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP-AB">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGDP-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -63,38 +61,59 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div" use="dots">
-            <citeData property="dct:title" use="head[1]"/>
-          </citeStructure>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]" use="dots">
+        
+       
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-            <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-          <citeStructure unit="sous-section" match="group" use="dots">
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
+          
+          <citeStructure unit="part" match="group" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-              <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-            <citeStructure unit="sous-section" match="group" use="dots">
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
+            
+            <citeStructure unit="part" match="group" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
-              <citeStructure unit="sous-section" match="group" use="dots">
+              <citeData property="schema:name" use="head[1]"/>
+              <citeStructure unit="part" match="group" use="@xml:id">
                 <citeData property="dct:title" use="head[1]"/>
+                <citeData property="schema:name" use="head[1]"/>
                 <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                   <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-                  <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-                  <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-                  <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-                <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+                  <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                  <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+                  <citeData property="dct:type" use="front/index/term/@key"/>
+                  <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                  <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                </citeStructure>
               </citeStructure>
             </citeStructure>
           </citeStructure>
@@ -107,7 +126,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -122,12 +141,12 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SGDP-AB_front">
       <head>Recueil des chartes de l'abbaye de Saint-Germain-des-Prés</head>
       <argument>
         <p/>
       </argument>
-      <div>
+      <div xml:id="SGDP-AB_intro">
         <p>L’introduction et la table du Recueil des chartes de Saint-Germain-des-Prés paraîtront avec le second volume ; l’introduction devra être reliée en tête du premier. Voici, à titre provisoire, l’indication des sigles sous lesquels les divers recueils utilisés ont été désignés dans la présente édition, la lettre <hi rend="i">A</hi> étant réservée aux originaux ou prétendus originaux.</p>
         <p><hi rend="i">B.</hi> Cartulaire ††† (fin du <hi rend="sc">xii</hi><hi rend="sup">e</hi> s.), Arch. Nat. LL. 1024.</p>
         <p><hi rend="i">C.</hi> Cartulaire AB (<hi rend="sc">xiii</hi>
@@ -161,7 +180,7 @@
         <p>Sauf indication contraire, les documents cités d’après une simple cote, sans mention du dépôt dans lequel ils sont conservés, se trouvent aux Archives nationales.</p>
       </div>
     </front>
-    <group>
+    <group xml:id="SGDP-AB_group">
       <head>Cartulaire de l’abbaye de Saint-Germain-des-Prés</head>
         <text subtype="article" xml:id="SGDP-AB_0001" n="I">
           <pb n="I. 1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k165334g/f5/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k165334g/manifest.json"/>
@@ -16445,7 +16464,7 @@
             </div>
           </body>
 </text>
-        <group>
+      <group xml:id="SGDP-AB_group-1">
           <head>
             <pb n="II. 229" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/f232/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/manifest.json"/>ACTES OMIS</head>
           <text xml:id="SGDP-AB_0440" n="XXXVIIIbis" subtype="article">
@@ -16630,15 +16649,15 @@
             </body>
           </text>
         </group>
-        <group>
+      <group xml:id="SGDP-AB_group-2">
           <head><pb n="II. 237" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/f240/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/manifest.json"/>APPENDICE</head>
-          <group>
+        <group xml:id="SGDP-AB_group-2-1">
             <head>ACTES D’ASSOCIATIONS</head>
             <argument>
               <p>Nous reproduisons ici un certain nombre d’actes concernant des associations spirituelles conclues par l’abbaye de Saint-Germain-des-Prés avec d’autres monastères, actes transcrits dans les marges et sur les feuillets de garde des deux plus anciens obituaires de l’abbaye, aujourd’hui conservés à la Bibliothèque nationale sous les numéros 13 882 (que nous désignons par le sigle O) et 12 833 (que nous désignons par le sigle P) du fonds latin. Ces actes viendront compléter certains textes de même nature, dont les copies se trouvent aussi parfois dans ces mêmes obituaires, et qui ont été publiés plus haut, à la place que leur assignait l’ordre chronologique. Nous avons cru devoir joindre à ces documents les notices qui figurent dans l’obituaire et mentionnent la décision prise d’associer tel ou tel personnage aux prières des moines, notices dont quelques-unes seulement ont été reproduites au tome I des <hi rend="i">Obituaires de la province de Sens</hi>, et qui fournissent parfois d’utiles renseignements sur les dignitaires de l’abbaye.</p>
               <p>Aucun de ces actes ne comporte d’indications chronologiques. Nous avons donc cru devoir les grouper simplement par abbatiats, en plaçant en tête de chaque série les notices d’associations avec diverses communautés, et à la suite, les notices relatives à des particuliers, classées autant que possible selon l’ordre alphabétique des noms. Plusieurs noms ont été, dans les mss., soigneusement grattés. Il suffit d’avertir une fois pour toutes le lecteur que nous remplaçons par des points ceux qui sont devenus complètement illisibles et que nous suppléons entre crochets certaines syllabes effacées ou disparues lors de la reliure des manuscrits.</p>
             </argument>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-1">
               <head>
                 <hi rend="sc">Thibaut</hi> (1155-1162)</head>
               <text xml:id="SGDP-AB_0446" n="I" subtype="article">
@@ -16662,7 +16681,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-2">
               <head>
                 <hi rend="sc">Gilon</hi> (1145-1146)</head>
               <text xml:id="SGDP-AB_0447" n="I" subtype="article">
@@ -16704,7 +16723,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-3">
               <head>
                 <hi rend="sc">Geoffroi</hi> (1152-1155)</head>
               <text xml:id="SGDP-AB_0449" n="I" subtype="article">
@@ -16728,7 +16747,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-4">
               <head>
                 <hi rend="sc">Hugues</hi> (1162-1182)</head>
               <text xml:id="SGDP-AB_0450" n="I" subtype="article">
@@ -16902,7 +16921,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-5">
               <head>
                 <hi rend="sc">Foulques</hi> (1182-1192)</head>
               <text xml:id="SGDP-AB_0458" n="I" subtype="article">
@@ -17092,7 +17111,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-6">
               <head>
                 <hi rend="sc">Robert</hi> (1192-1204)</head>
               <text xml:id="SGDP-AB_0467" n="I" subtype="article">
@@ -17181,7 +17200,7 @@
                 </body>
               </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-7">
               <head>
                 <pb n="II. 251" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/f254/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1653723/manifest.json"/>
                 <hi rend="sc">Jean</hi> (1204-1216)</head>
@@ -17250,7 +17269,7 @@
                 </body>
 </text>
             </group>
-            <group>
+          <group xml:id="SGDP-AB_group-2-1-8">
               <head>
                 <hi rend="sc">Abbatiats indéterminés</hi>
               </head>

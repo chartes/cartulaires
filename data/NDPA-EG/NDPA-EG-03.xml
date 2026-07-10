@@ -1,6 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-03">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-03">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -79,13 +77,38 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>            
+          </citeStructure>
         </citeStructure>
+        
+        
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -94,7 +117,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -118,7 +141,7 @@
     </front>
     <group type="tome">
       <head>Cartulaire. Tome 3</head>
-        <group type="book">
+      <group xml:id="NDPA-EG-03_group-1">
           <head><pb n="3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/f19/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/manifest.json"/> MAGNUM CHARTULARIUM.</head>
           <text xml:id="NDPA-EG-03_0001" subtype="article" n="I">
               <front>
@@ -2767,7 +2790,7 @@
                 </div>
               </body>
             </text>
-          <group type="section">
+        <group xml:id="NDPA-EG-03_group-1-1">
               <head>LITTERE DE SANCTO CLODOALDO ET DE MARNA.</head>
               <text xml:id="NDPA-EG-03_0136" subtype="article" n="CXXXVI">
                 <front>
@@ -4136,7 +4159,7 @@
                 </body>
               </text>
             </group>
-          <group type="section">
+        <group xml:id="NDPA-EG-03_group-1-2">
               <head>LITTERE DE MOISSIACO ET COMBISVILLA, DE CANTU LUPI,<lb/>DE GRISIACO ET DE PRIMAYO.</head>
               <text xml:id="NDPA-EG-03_0208" subtype="article" n="CCVIII">
                 <front>
@@ -7404,7 +7427,7 @@
               </text>
             </group>
         </group>
-        <group type="book">
+      <group xml:id="NDPA-EG-03_group-2">
           <head><pb n="263" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/f279/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/manifest.json"/>PARS QUARTA<lb/><hi rend="sc">sive</hi><lb/>PARVUM CHARTULARIUM</head>  
           <text xml:id="NDPA-EG-03_0992" subtype="article" n="I">
               <front>
@@ -8873,10 +8896,10 @@
             </text>
         </group>
       
-      <group type="book">
+      <group xml:id="NDPA-EG-03_group-3">
             <head>
               <pb n="349" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/f365/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348808/manifest.json"/>APPENDIX.</head>
-            <group type="section">
+        <group xml:id="NDPA-EG-03_group-3-1">
               <head>EXCERPTA EX LIBRO NIGRO.</head>
               <text xml:id="NDPA-EG-03_435" subtype="article" n="I">
                 <front>
@@ -9821,7 +9844,7 @@
                 </body>
               </text>
             </group>
-        <group type="section">
+        <group xml:id="NDPA-EG-03_group-3-2">
               <head>EXCERPTA EX CHARTULARIO OFFICII MANDETI ECCLESIÆ PARISIENSIS<note>
                   <p>Vide institutionem mandeti supra, t. I, p. 439, cap. <hi rend="sc">xxxii</hi>.</p>
                 </note>.</head>
@@ -10719,7 +10742,7 @@
                 </body>
               </text>
             </group>
-        <group type="section">
+        <group xml:id="NDPA-EG-03_group-3-3">
               <head>LIBER SACRAMENTORUM ECCLESIÆ PARISIENSIS.</head>
               <text xml:id="NDPA-EG-03_525" subtype="article" n="XCI">
                 <front>

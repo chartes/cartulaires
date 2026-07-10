@@ -1,6 +1,4 @@
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-02">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDPA-EG-02">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -79,12 +77,24 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="acte" match="/TEI/text//text[@subtype='article']" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-          <citeData property="dct:type" use="front/index/term/@key"/>
-          <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]/group" use="@xml:id" unit="par">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/> 
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -94,7 +104,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         </langUsage>
       <textClass>
         <keywords>
@@ -118,13 +128,13 @@
       <byline><!-- TODO --></byline>
     </front>
     <group>
-      <group type="tome">
+      <group type="tome" xml:id="NDPA-EG-02_group">
         <head>Cartulaire. Tome 2</head>
-        <group>
+        <group xml:id="NDPA-EG-02_group-1">
           <head>PARS TERTIA<lb/>
             <hi rend="sc">sive</hi>
             <lb/>MAGNUM PASTORALE</head>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-1">
             <head>
               <pb n="3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER PRIMUS.<lb/>ORLIACUM.</head>
             <text xml:id="NDPA-EG-02_0001" subtype="article" n="I">
@@ -1100,7 +1110,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-2">
             <head>
               <pb n="31" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER SECUNDUS.<lb/>CIVILIACUM, LAIACUM, VITRIACUM, CHOSIACUM, YVRIACUM, RONGIACUM, ISSIACUM, VIRIACUM PROPE GEVESIACUM, MACIACUM, FRAXINE, BURGUS REGINE, LEUDEVILLA, LANORVILLA, VILLA JUDEA, MONCEVRIACUM, VILLA CERERIS, PALATIOLUM.</head>
             <text xml:id="NDPA-EG-02_0053" subtype="article" n="I">
@@ -3336,7 +3346,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-3">
             <head>
               <pb n="108" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER TERTIUS.<lb/>VILLA DE BALNEOLIS ET DE CASTANETO, DE CASTELLIONE, DE CIAUX ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0172" subtype="article" n="I">
@@ -4677,7 +4687,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-4">
             <head>
               <pb n="153" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f167/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER QUARTUS.<lb/>DE ANDRISIACO, CONFLUENTIO, MONTE MORENCIACO, VALLE JOIACI ET ERBLEIO ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0243" subtype="article" n="I">
@@ -5375,7 +5385,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-5">
             <head>
               <pb n="171" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER QUINTUS.<lb/>DE SUCCIACO, CHRISTOLIO, BRI, NOISIELLO PROPE SUCCIACUM, MONSTEROLIO, ET DE DOMIBUS AC LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0280" subtype="article" n="I">
@@ -6288,7 +6298,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-6">
             <head>
               <pb n="197" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f211/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER SEXTUS.<lb/>GONNESSIA, SARCELLE, VILLARE SICCUM, BONOLIUM, GONSANVILLA ET LOCA VICINA.</head>
             <text xml:id="NDPA-EG-02_0327" subtype="article" n="I">
@@ -6548,7 +6558,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-7">
             <head>
               <pb n="210" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f224/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER SEPTIMUS.<lb/>DE VERNOTO, MACHOLIO, THAVERS, CELLE, MONSTEROLIUM IN FURDEONE CUM LOCIS VICINIS, ITEM CROSILLES.</head>
             <text xml:id="NDPA-EG-02_0340" subtype="article" n="I">
@@ -7812,7 +7822,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-8">
             <head>
               <pb n="248" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f262/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER OCTAVUS.<lb/>BRAYA, CICONELLE, ESGUERNOLIUM, VIRZIACUM, VETUS RUSCHA, MERROLIE, FAVENCIN, BRIA.</head>
             <text xml:id="NDPA-EG-02_0406" subtype="article" n="I">
@@ -8364,7 +8374,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-9">
             <head>
               <pb n="265" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f279/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER NONUS.<lb/>ROSETUM, VENULA, VODAIUM ET LOCA VICINA.</head>
             <text xml:id="NDPA-EG-02_0435" subtype="article" n="I">
@@ -9246,7 +9256,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-10">
             <head>
               <pb n="290" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f304/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS.<lb/>DE LIRICANTU, NEMOSIO ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0482" subtype="article" n="I">
@@ -9780,7 +9790,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-11">
             <head>
               <pb n="307" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f321/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER UNDECIMUS.<lb/>CORBOROSA, ALTUM VILLARE ET LOCA VICINA.</head>
             <text xml:id="NDPA-EG-02_0510" subtype="article" n="I">
@@ -10292,7 +10302,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-12">
             <head>
               <pb n="321" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f335/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DUODECIMUS.<lb/>DE CHEVRIGNIACO ET DE BARRA, DE GUIDONIS CURIA, BUC ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0537" subtype="article" n="I">
@@ -10334,7 +10344,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-13">
             <head>
               <pb n="323" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f337/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS TERTIUS.<lb/>DE VIRIACO IN VIROMANDIA.</head>
             <text xml:id="NDPA-EG-02_0539" subtype="article" n="I">
@@ -10847,7 +10857,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-14">
             <head>
               <pb n="337" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f351/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS QUARTUS.<lb/>MINTRIACUM, MORIACUM, COMPENS, SOLLIACUM, TREMBLEIUM, ESPIERS, MESNILLIUM DOMINE RENTIE ET LOCA VICINA.</head>
             <text xml:id="NDPA-EG-02_0565" subtype="article" n="I">
@@ -11605,7 +11615,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-15">
             <head>
               <pb n="355" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f369/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS QUINTUS.<lb/>DE SPEDONA, MACERIIS ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0605" subtype="article" n="I">
@@ -11894,7 +11904,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-16">
             <head>
               <pb n="364" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f378/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS SEXTUS.<lb/>DE THEOVILLA ET LOCIS VICINIS.</head>
             <text xml:id="NDPA-EG-02_0619" subtype="article" n="I">
@@ -12232,7 +12242,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-17">
             <head>
               <pb n="375" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f389/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS SEPTIMUS.<lb/>SINGULARES MANUMISSIONES.</head>
             <text xml:id="NDPA-EG-02_0637" subtype="article" n="I">
@@ -12476,7 +12486,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-18">
             <head>
               <pb n="384" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f398/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS OCTAVUS.<lb/>DE VILLA JUDEA, DE VITRIACO.</head>
             <text xml:id="NDPA-EG-02_0647" subtype="article" n="I">
@@ -12650,7 +12660,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-19">
             <head>
               <pb n="387" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f401/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER DECIMUS NONUS.<lb/>INDULGENTIE SPECIALES ROMANORUM PONTIFICUM ET REGUM.</head>
             <text xml:id="NDPA-EG-02_0655" subtype="article" n="I">
@@ -13159,7 +13169,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-20">
             <head>
               <pb n="404" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f418/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER VIGESIMUS.<lb/>STATUTA ET ORDINATIONES ECCLESIE PARISIENSIS ET ANNIVERSARIA MULTORUM. ITEM, INSTRUMENTA DE QUIBUSDAM REBUS PARISIUS ET ALIBI SITIS.</head>
             <text xml:id="NDPA-EG-02_0681" subtype="article" n="I">
@@ -16076,7 +16086,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-21">
             <head>
               <pb n="504" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f518/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER VIGESIMUS PRIMUS.<lb/>EMPTIONES ET ALIA PERTINENCIA AD ECCLESIAM PARISIENSEM, DE HIIS QUE SUNT PARISIUS, ET IN TERRITORIO VEL PROPE.</head>
             <text xml:id="NDPA-EG-02_0831" subtype="article" n="I">
@@ -16404,7 +16414,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-22">
             <head>
               <pb n="513" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f527/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER VIGESIMUS SECUNDUS.<lb/>LITTERE TAM ANNIVERSARIORUM QUAM ALIARUM RERUM.</head>
             <text xml:id="NDPA-EG-02_0848" subtype="article" n="I">
@@ -17043,7 +17053,7 @@
               </body>
             </text>
           </group>
-          <group>
+          <group xml:id="NDPA-EG-02_group-1-23">
             <head>
               <pb n="525" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/f539/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6534844d/manifest.json"/>LIBER VIGESIMUS TERTIUS.<lb/>EMPTIONES ET ALIA PERTINENTIA AD ECCLESIAM PARISIENSEM, DE HIIS QUE SUNT PARISIUS ET IN TERRITORIO VEL PROPE.</head>
             <text xml:id="NDPA-EG-02_0883" subtype="article" n="I">

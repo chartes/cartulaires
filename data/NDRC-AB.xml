@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDRC-AB">
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NDRC-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -119,29 +116,39 @@
           effectués par Jean-Charles Martin et Gautier Poupeau.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group" use="dots">
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-            <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div/div" use="dots" unit="Index">
-          <citeData use="head" property="dct:title"/>
-          <citeStructure match="list[@type='index']" use="dots">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/back[1]" use="@xml:id" unit="Index">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure match="div" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -152,7 +159,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -175,7 +182,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="NDRC-AB_front">
       <head>Cartulaire de l’abbaye de Notre-Dame de la Roche</head>
       <!--<head><hi rend="i">Cartulaire de l’abbaye de Notre-Dame de la Roche de l’ordre de
         Saint-Augustin au diocèse de Paris, d’après le manuscrit original de la Bibliothèque
@@ -198,7 +205,7 @@
         juillet 2005</byline>
       <div xml:id="NDRC-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div>
+        <div xml:id="NDRC-AB_etablissement-1">
           <head>Historique</head>
           <p>Le lieu de la Roche se situe à l’extrême bord de la plaine du Mesnil-Saint-Denis (ainsi
             nommée d’après la grande abbaye, qui possédait un vaste domaine à Beaurain et Trappes), à moins de deux kilomètres de Lévis-Saint-Nom et à une petite dizaine de kilomètres de
@@ -258,13 +265,13 @@
           <p/>
           <p>Les vestiges de l’abbaye ont été classés Monuments historiques en 1926 (<ref target="http://www.culture.gouv.fr/documentation/merimee/accueil.htm">http://www.culture.gouv.fr/documentation/merimee/accueil.htm</ref>).</p>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Pour autant qu’il transparaisse des notations morcelées des chartes, le patrimoine
             s’est constitué par bribes et sans forte unité aux alentours de l’abbaye, au sud-ouest
             de Paris, avec une pointe dans le diocèse de Chartres.</p>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>La piété des seigneurs voisins procure de nombreux biens et dîmes aux frères de la
             Roche. Leur maison bénéficie en tout premier lieu de la protection de la famille de ses
@@ -274,7 +281,7 @@
       </div>
       <div xml:id="NDRC-AB_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div>
+        <div xml:id="NDRC-AB_archives-1">
           <head>Le chartrier</head>
           <p>Aucune trace ne subsiste du chartrier médiéval de la maison, qui a dû se disperser
             assez tôt. Les Archives départementales des Yvelines (8 H) ne conservent plus qu’un bail
@@ -282,7 +289,7 @@
           <p>Des sources cartographiques de provenance diverse pallient sous certains aspects ces
             lacunes, et certaines sont accessibles sur le site de cette institution (<ref target="http://www.yvelines.fr/archives">http://www.yvelines.fr/archives</ref>).</p>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_archives-2">
           <head>Cartulaire</head>
           <p>Le cartulaire, lui aussi détourné, fut retrouvé en 1730 au château du Mesnil, dont le
             nouveau propriétaire, le comte de Fargis, le remit à cette date au supérieur de la
@@ -294,7 +301,7 @@
             premières transcriptions (p. 1-103), récapitulées dans une table (p. 107-[116]). Les
             trois ajouts, les deux premiers précoces (nos 96, 97 et [98], <abbr>p.</abbr> 103-106), ont par contre reçu des regestes au XVII<hi rend="sup">e</hi> siècle. Au XVIII<hi rend="sup">e</hi> siècle a été confectionnée une table des noms propres.</p>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_archives-3">
           <head>Documents nécrologiques</head>
           <p>Bibl. nat. de Fr., fr. 20219, fol. 35. Extraits du <q>mortologe</q> de Notre-Dame de la
             Roche.</p>
@@ -315,7 +322,7 @@
       </div>
       <div xml:id="NDRC-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="NDRC-AB_edition-1">
           <head>L’éditeur : éléments biographiques</head>
           <p>Auguste Moutié (1812-1886) est issu d’une famille de la bourgeoisie de Rambouillet, ville dont il fut maire et où il fut le fondateur et l’inlassable animateur d’une
             société savante qui connut, de son vivant même, des heures plus ou moins fastes. La
@@ -340,7 +347,7 @@
             conservés aux Archives départementales des Yvelines, 13 F 1-12 [13 F 7 pour la
             préparation des éditions des Vaux-de-Cernay et de Notre-Dame de la Roche.]</p>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_edition-2">
           <head>Conception et contenu du volume</head>
           <p>Peu après son acquisition par la Bibliothèque royale, un premier inventaire du
             cartulaire de Notre-Dame de la Roche avait été donné par Benjamin Guérard dans les
@@ -573,7 +580,7 @@
             </table>
           </div>
         </div>
-        <div>
+        <div xml:id="NDRC-AB_edition-3">
           <head>Qualité de l’édition</head>
           <p>Une rapide lecture montre les qualités de l’édition, que la perte du reste du chartrier
             rend exhaustive. Les index sont soignés et précis ; on prendra naturellement garde au
@@ -581,9 +588,9 @@
         </div>
       </div>
     </front>
-    <group>
+    <group xml:id="NDRC-AB_group">
       <head>Notre-Dame de la Roche</head>
-      <group>
+      <group xml:id="NDRC-AB_group-1">
         <head>Chartularium Abbatiæ Beatæ Mariæ de Roscha</head>
         <text xml:id="NDRC-AB_0001" n="I" subtype="article">
           <pb n="1" facs="https://iiif.archive.org/image/iiif/3/cartulairedelabb00lv%2Fcartulairedelabb00lv_jp2.zip%2Fcartulairedelabb00lv_jp2%2Fcartulairedelabb00lv_0041.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedelabb00lv/manifest.json"/>
@@ -6432,7 +6439,7 @@
           
         </text>
       </group>
-      <group>
+      <group xml:id="NDRC-AB_group-2">
         <head>Appendice</head>
         <text xml:id="NDRC-AB_0100" n="appendice" subtype="article">
           <pb n="105" facs="https://iiif.archive.org/image/iiif/3/cartulairedelabb00lv%2Fcartulairedelabb00lv_jp2.zip%2Fcartulairedelabb00lv_jp2%2Fcartulairedelabb00lv_0147.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedelabb00lv/manifest.json"/>
@@ -6548,7 +6555,7 @@
           
         </text>
       </group>
-      <group>
+      <group xml:id="NDRC-AB_group-3">
         <head>Pièces Justificatives</head>
         <text xml:id="NDRC-AB_1001" n="1" subtype="article">
           <pb n="105" facs="https://iiif.archive.org/image/iiif/3/cartulairedelabb00lv%2Fcartulairedelabb00lv_jp2.zip%2Fcartulairedelabb00lv_jp2%2Fcartulairedelabb00lv_0147.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedelabb00lv/manifest.json"/>
@@ -8651,7 +8658,8 @@
         </text>
       </group>
     </group>
-    <back>
+    <back xml:id="NDRC-AB_back">
+      <head>Index</head>
       <!-- [FG] n'apporte rien 
       <div type="table_chronologique" n="1">
         <pb n="107"/>
@@ -8762,8 +8770,7 @@
       </div>
       -->
       <!-- -->
-      <div>
-        <div>
+        <div xml:id="NDRC-AB_back-1">
           <head>Index nominum</head>
           <list type="index">
           <head>A</head>
@@ -8953,7 +8960,7 @@
             <item xml:id="NDRC-AB_rs_200"><rs><hi rend="sc">Yssiaco</hi>, (Ferricus de)</rs>, <ref target="#NDRC-AB_0049" n="49">49</ref>, <!-- doublon meme acte NDRC-AB_0049: <ref target="#NDRC-AB_0049" n="XLIX">49</ref> -->note 2. — (Guillelmus de), miles et Sedilia, uxor ejus<!--, <ref>XLIX</ref>-->, note 3.</item>
           </list>
         </div>
-        <div>
+      <div xml:id="NDRC-AB_back-2">
           <head>Index geographicus</head>
           <list type="index">
           <head>A</head>
@@ -9484,7 +9491,6 @@
           </list>
         </div>
         -->
-      </div>
       <!-- [FG] pour le papier seulement
       <div type="table" n="4">
         <pb n="471"/>

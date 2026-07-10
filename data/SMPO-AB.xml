@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SMPO-AB">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -11,45 +8,8 @@
         <author ref="https://www.wikidata.org/wiki/Q42304441 https://data.bnf.fr/fr/ark:/12148/cb16169151r https://www.idref.fr/131043935">Hélène Becquet</author>
         <principal xml:id="OC" ref="https://www.wikidata.org/wiki/Q41431010 https://data.bnf.fr/fr/ark:/12148/cb178392047 https://www.idref.fr/101839839">Olivier Canteaut</principal>
         <respStmt>
-          <name xml:id="OGJ" ref="https://www.wikidata.org/wiki/Q3351082 https://data.bnf.fr/fr/ark:/12148/cb11906612z https://www.idref.fr/026911337">Olivier Guyotjeannin</name>
-        </respStmt>
-        <respStmt>
-          <name xml:id="FG">Frédéric Glorieux (École des chartes)
-            <email>frederic.glorieux@enc.sorbonne.fr</email></name>
-          <resp>Suivi technique (2007–…)</resp>
-        </respStmt>
-        <respStmt>
           <name xml:id="MP">Maxime Popineau</name>
-          <resp>Suivi technique (2026)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JC">Joana Casenave (École des chartes)</name>
-          <resp>Édition électronique (2011)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="CD">Camille Desenclos (École des chartes)</name>
-          <resp>Édition électronique (2010)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="NR">Naomi Russo (École des chartes)</name>
-          <resp>Indexation diplomatique (2009)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="EG">Elise Girold (École des chartes)</name>
-          <resp>Indexation (2009)</resp>
-        </respStmt>
-        
-        <respStmt>
-          <name xml:id="GP">Gautier Poupeau (École des chartes)</name>
-          <resp>première édition électronique (2006)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JCM">Jean-Charles Martin (École des chartes)</name>
-          <resp>première édition électronique (2006)</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="RM">Romain Morvillez (École des chartes)</name>
-          <resp>première édition électronique (2006)</resp>
+          <resp>Conversion, normalisation TEI et enrichissement du teiHeader (2026)</resp>
         </respStmt>
       </titleStmt>
       <extent/>
@@ -87,42 +47,51 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="dots">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="section" match="/TEI[1]/text[1]/group[1]/group[1]" use="dots">
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
           <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-            <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
-          <citeStructure unit="sous-section" match="group" use="dots">
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure>
+          <citeStructure match="group" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-              <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
-          
         </citeStructure>
-        <citeStructure unit="index-personnes" match="/TEI[1]/text[1]/back[1]/div[@xml:id='SMPO-AB_index_personnes']" use="@xml:id">
+        <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-        </citeStructure>
-        <citeStructure unit="index-lieux" match="/TEI[1]/text[1]/back[1]/div[@xml:id='SMPO-AB_index_lieux']" use="@xml:id">
-          <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="index-section" match="list[@xml:id and not(@xml:id = preceding-sibling::list/@xml:id)]" use="@xml:id">
-            <citeData property="dct:title" use="head[1]"/>
-          </citeStructure>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -132,7 +101,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         </langUsage>
       <textClass>
@@ -157,7 +126,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SMPO-AB_front">
       <head>Cartulaire de l’abbaye de Saint-Martin de Pontoise</head>
       <!--<head><hi rend="i">Cartulaire de l’abbaye de Saint-Martin de Pontoise</hi>, publié d’après les
         documents inédits par Joseph Depoin, Pontoise : Société historique du Vexin, 1895-1909,
@@ -175,7 +144,7 @@
         à jour juillet 2006.</byline>
       <div xml:id="SMPO-AB_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div>
+        <div xml:id="SMPO-AB_etablissement-1">
           <head>Historique</head>
           <p>Dans la première moitié du XIe siècle, un groupe de moines s’installe dans les murs de
             la ville de Pontoise, autour d’une chapelle dédiée à Saint-Germain. On sait peu de
@@ -218,7 +187,7 @@
             partie la floraison de travaux érudits sur son histoire. Elle a disparu mais il reste
             encore un peu de son souvenir dans le parc des expositions Saint-Martin.</p>
         </div>
-        <div>
+        <div xml:id="SMPO-AB_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Les biens de l’abbaye étaient tous situés au nord de Paris, une majorité d’entre eux
             dans le Vexin français. Ici, ils se concentraient à Pontoise et alentours (Osny,
@@ -263,7 +232,7 @@
             XIIe siècle, les biens de l’abbaye forment un ensemble cohérent dont la physionomie ne
             se modifiera plus guère.</p>
         </div>
-        <div>
+        <div xml:id="SMPO-AB_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>Une partie des donateurs appartient à cette noblesse d’Ile-de-France liée aux premiers
             Capétiens (eux-mêmes donateurs sous Philippe Ier et Louis VI), souvent pourvue de
@@ -294,7 +263,7 @@
       </div>
       <div xml:id="SMPO-AB_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div>
+        <div xml:id="SMPO-AB_archives-1">
           <head>Sources</head>
           <div>
             <head>Le chartrier</head>
@@ -324,7 +293,7 @@
             </p>
           </div>
         </div>
-        <div>
+        <div xml:id="SMPO-AB_archives-2">
           <head>Sources extérieures</head>
           <p>Nombre d’érudits se sont intéressés aux sources de l’histoire de Saint-Martin. Le
             recueil le plus généreux est celui de Dom Estiennot, Historia monasterii Sancti Martini
@@ -371,7 +340,7 @@
       </div>
       <div xml:id="SMPO-AB_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="SMPO-AB_edition-1">
           <head>L’éditeur : éléments biographiques</head>
           <p>Joseph Depoin (1855-1924) était le fils d’un avocat de Pontoise. Membre fondateur puis
             secrétaire général de la Société historique du Vexin pendant quarante-sept ans, il fut
@@ -395,7 +364,7 @@
                 d’Oise et du Vexin</title>, <abbr>t.</abbr> 83, 2000, <abbr>p.</abbr> 260.</bibl>
           </listBibl>
         </div>
-        <div>
+        <div xml:id="SMPO-AB_edition-2">
           <head>Conception et contenu de l’édition</head>
           <p>Joseph Depoin visait avant tout à reconstituer le cartulaire primitif de l’abbaye. Il a
             abondamment utilisé les extraits des érudits modernes, mais cite aussi des actes
@@ -475,7 +444,7 @@
             </row>
           </table>
         </div>
-        <div>
+        <div xml:id="SMPO-AB_edition-3">
           <head>Qualité de l’édition</head>
           <p>L’édition accuse quelques faiblesses et, surtout, incommodités d’emploi assez générales
             dans les publications, par ailleurs bien informées, de Joseph Depoin.</p>
@@ -499,7 +468,7 @@
     </front>
     <group>
       <head>Saint-Martin de Pontoise</head>
-      <group>
+      <group xml:id="SMPO-AB_group">
         <head>Recueil des chartes</head>
         <text xml:id="SMPO-AB_0001" n="I" subtype="article">
           <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/f18/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k56748842/manifest.json"/>
@@ -6155,7 +6124,7 @@
             </div>
           </body>
 </text>
-        <group>
+        <group xml:id="SMPO-AB_group-1">
           <head>Libéralités attribuées par Dom Estiennot au gouvernement de Thibaut <num>I.</num>
             (1099-1124)</head>
           <text xml:id="SMPO-AB_0064" n="LXIV." subtype="article">

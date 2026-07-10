@@ -1,7 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCOR-EG">
+<?xml-stylesheet href="../transform/cartulaires_html.xsl" type="text/xsl"?><?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SCOR-EG">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -100,26 +97,36 @@
           Gautier Poupeau.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="default">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div" use="default">
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="part" match="div[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
+              <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="acte" match="/TEI[1]/text[1]/group[1]/group[1]/text[@xml:id]" use="@xml:id">
-          <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-          <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
-          <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-          <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-        <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-        </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/back[1]/div[1]" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="dots">
-            <citeData use="head" property="dct:title"/>
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>
+        </citeStructure>
+        <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -129,7 +136,7 @@
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
-        <language ident="lat">Latin</language>
+        <language ident="la">Latin</language>
         <language ident="fro">Ancien français</language>
         <language ident="grc">Grec ancien</language>
         </langUsage>
@@ -154,7 +161,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="SCOR-EG_front">
       <head>Cartulaire de Sainte-Croix d’Orléans</head>
       <!--<head><hi rend="i">Cartulaire de Sainte-Croix d’Orléans (814-1300), contenant le
         « Chartularium ecclesiae Aurelianensis vetus », suivi d’un appendice et d’un
@@ -172,7 +179,7 @@
         Duchesne (juillet 2006).</byline>
       <div xml:id="SCOR-EG_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div type="historique" xml:id="SCOR-EG_etablissement-1">
           <head>Historique</head>
           <p>Le chapitre de la cathédrale d’Orléans est mentionné pour la première fois dans un
             texte de 550. Les clercs réguliers qui le composent se soumettent à une règle, d’abord
@@ -198,7 +205,7 @@
             délégués au temporel rural et dotés de fonctions judiciaires : en effet, le chapitre a
             droit de haute, moyenne et basse justice sur ses terres.</p>
         </div>
-        <div>
+        <div xml:id="SCOR-EG_etablissement-2">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Déjà bien connues grâce à une riche série de confirmations royales des Carolingiens aux
             premiers Capétiens (carte de situation), les possessions du chapitre sont
@@ -210,7 +217,7 @@
             dernier peut ajouter à sa sphère d’influence certaines possessions en Provence, en
             Artois et en Mâconnais. </p>
         </div>
-        <div>
+        <div xml:id="SCOR-EG_etablissement-3">
           <head>Réseaux de bienfaiteurs</head>
           <p>Comme dans toute la ville, les Robertiens puis Capétiens figurent parmi les principaux
             bienfaiteurs mais dominent aussi et aimantent les réseaux de donateurs. Parmi les
@@ -223,7 +230,7 @@
 
       <div xml:id="SCOR-EG_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div type="chartrier">
+        <div type="chartrier" xml:id="SCOR-EG_archives-1">
           <head>Le chartrier</head>
           <p> Le chartrier du chapitre cathédral est tout naturellement passé aux Archives
             départementales du Loiret, où il occupait les cotes G 163-G 492. Comme le reste du
@@ -232,7 +239,7 @@
                 archives du Loiret, fonds antérieurs à 1940</title>, Orléans, 1982, <abbr>p.</abbr>
               128-131</bibl>). </p>
         </div>
-        <div type="cartulaires">
+        <div type="cartulaires" xml:id="SCOR-EG_archives-2">
           <head>Les cartulaires</head>
           <p>On a connaissance de trois, voire quatre, cartulaires médiévaux du chapitre, tous
             perdus à l’heure actuelle.</p>
@@ -255,7 +262,7 @@
           <p> (d) Des extraits d’un cartulaire, inconnus de Stein, sont conservés à la Bibliothèque
             Sainte-Geneviève, ms 347, et ont été microfilmés par l’I.R.H.T. <ref target="http://www.irht.cnrs.fr">(http://www.irht.cnrs.fr)</ref>. </p>
         </div>
-        <div type="necrologie">
+        <div type="necrologie" xml:id="SCOR-EG_archives-3">
           <head>Documents nécrologiques</head>
           <p> Deux documents principaux, du XIII<hi rend="sup">e</hi> et du XIV<hi rend="sup">e</hi>
             siècle, complètent utilement le chartrier et ont déjà attiré les éditeurs du recueil des
@@ -280,7 +287,7 @@
       </div>
       <div xml:id="SCOR-EG_edition" subtype="article">
         <head>L’édition</head>
-        <div>
+        <div xml:id="SCOR-EG_edition-1">
           <head>Les éditeurs : éléments biographiques</head>
           <p>La Société archéologique et historique de l’Orléanais, dans sa séance du 9 juin 1899,
             votait les conclusions du rapport présenté par M. Thillier, proposant au nom de la
@@ -306,7 +313,7 @@
               dans <title>Bibliothèque de l’École des chartes</title>, <abbr>t.</abbr> 102, 1941,
                 <abbr>p.</abbr> 363-365. </bibl></p>
         </div>
-        <div>
+        <div xml:id="SCOR-EG_edition-2">
           <head>Conception et contenu de l’édition</head>
           <div>
             <p> Après l’avant-propos présentant la genèse du volume (p. I-III), Eugène Jarry a
@@ -581,7 +588,7 @@
             </table>
           </div>
         </div>
-        <div>
+        <div xml:id="SCOR-EG_edition-3">
           <head>Qualité de l’édition</head>
           <p> L’édition, dans sa conception et dans sa réalisation, est d’excellente venue et
             reflète bien les améliorations apportées, autour des années 1890, aux techniques
@@ -28366,8 +28373,8 @@
       </group>
     </group>
     
-      <back>
-      <div type="table" n="1">
+    <back xml:id="SCOR-EG_back">
+      <div type="table" n="1" xml:id="SCOR-EG_back-1">
         <head>
           <pb n="545" facs="https://iiif.archive.org/image/iiif/3/cartulairedesain00orl%2Fcartulairedesain00orl_jp2.zip%2Fcartulairedesain00orl_jp2%2Fcartulairedesain00orl_0683.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedesain00orl/manifest.json"/>
           <hi rend="b">Table alphabétique</hi>
@@ -31380,7 +31387,7 @@
           <item xml:id="SCOR-EG_rs_2950"><rs><hi rend="sc">Zacharias</hi>, subdecanus Aurelianensis</rs>, <abbr>pp.</abbr> <ref target="#SCOR-EG_0008" n="8">8</ref>, <ref target="#SCOR-EG_0011" n="11">11</ref>, <!-- doublon meme acte SCOR-EG_0011: <ref target="#SCOR-EG_0011" n="24">11</ref> --> <ref target="#SCOR-EG_0072" n="72">72</ref>, <ref target="#SCOR-EG_0073" n="73">73</ref>, <ref target="#SCOR-EG_0074" n="74">74</ref>, <ref target="#SCOR-EG_0075" n="75">75</ref>.</item>
         </list>
       </div>
-      <div type="table" n="2">
+      <div type="table" n="2" xml:id="SCOR-EG_back-2">
         <head>
           <pb n="610" facs="https://iiif.archive.org/image/iiif/3/cartulairedesain00orl%2Fcartulairedesain00orl_jp2.zip%2Fcartulairedesain00orl_jp2%2Fcartulairedesain00orl_0748.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedesain00orl/manifest.json"/>
           <hi rend="b">Table des matières</hi>
