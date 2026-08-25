@@ -90,4 +90,91 @@
    </xsl:choose>
 </xsl:template>
 
-   </xsl:transform>
+  <!--
+    Convention propre aux Cartulaires : les notes dont @n est une lettre
+    minuscule appartiennent a l'apparat critique ; les autres notes
+    identifiees appartiennent aux notes. La generique decide quand appeler
+    ce template (tei:text ou dts:wrapper), afin de ne pas doubler la sortie.
+  -->
+  <xsl:template name="cart-note-num">
+    <xsl:choose>
+      <xsl:when test="normalize-space(@n) != '' and translate(@n, 'abcdefghijklmnopqrstuvwxyz', '') = ''">
+        <xsl:number level="any" format="a"
+          from="*[local-name() = 'wrapper']"
+          count="tei:note[normalize-space(@n) != '' and translate(@n, 'abcdefghijklmnopqrstuvwxyz', '') = '']"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:number level="any"
+          from="*[local-name() = 'wrapper']"
+          count="tei:note[(@n or @xml:id) and not(normalize-space(@n) != '' and translate(@n, 'abcdefghijklmnopqrstuvwxyz', '') = '')]"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="cart-note-key">
+    <xsl:choose>
+      <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"/></xsl:when>
+      <xsl:otherwise><xsl:call-template name="cart-note-num"/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="tei:note" priority="20">
+    <xsl:choose>
+      <xsl:when test="@place = 'margin'">
+        <span class="marginalia"><xsl:apply-templates/></span>
+      </xsl:when>
+      <xsl:when test="@n or @xml:id">
+        <xsl:variable name="key"><xsl:call-template name="cart-note-key"/></xsl:variable>
+        <a class="noteref" id="a{$key}" href="#n{$key}"><sup><xsl:call-template name="cart-note-num"/></sup></a>
+      </xsl:when>
+      <xsl:when test="tei:p or tei:div"><div class="note note-inline"><xsl:apply-templates/></div></xsl:when>
+      <xsl:otherwise><span class="note note-inline"><xsl:apply-templates/></span></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="noteback">
+    <xsl:param name="class">noteback</xsl:param>
+    <xsl:variable name="key"><xsl:call-template name="cart-note-key"/></xsl:variable>
+    <a class="{$class}" href="#a{$key}">
+      <xsl:call-template name="cart-note-num"/>
+      <xsl:if test="$class = 'noteback'"><xsl:text>. </xsl:text></xsl:if>
+    </a>
+  </xsl:template>
+
+  <xsl:template name="note">
+    <xsl:variable name="key"><xsl:call-template name="cart-note-key"/></xsl:variable>
+    <aside class="note" id="n{$key}">
+      <xsl:call-template name="noteback"/>
+      <xsl:apply-templates/>
+    </aside>
+  </xsl:template>
+
+  <!-- Une note reperee a, b, c... est un apparat continu, comme un tei:app
+       dans la feuille generique : pas de rubrique particuliere. -->
+  <xsl:template name="cart-apparatus">
+    <xsl:variable name="key"><xsl:call-template name="cart-note-key"/></xsl:variable>
+    <span class="note" id="n{$key}">
+      <a class="note" href="#a{$key}"><xsl:call-template name="cart-note-num"/></a>
+      <xsl:text>&#160;</xsl:text>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+
+  <xsl:template name="footnotes">
+    <xsl:param name="cont" select="*"/>
+    <xsl:variable name="eligible" select="$cont//tei:note[@n or @xml:id][not(@place = 'margin')][not(parent::tei:app)]"/>
+    <xsl:variable name="apparatus" select="$eligible[normalize-space(@n) != '' and translate(@n, 'abcdefghijklmnopqrstuvwxyz', '') = '']"/>
+    <xsl:variable name="notes" select="$eligible[not(normalize-space(@n) != '' and translate(@n, 'abcdefghijklmnopqrstuvwxyz', '') = '')]"/>
+    <xsl:if test="$notes or $apparatus">
+      <section class="footnotes">
+        <xsl:if test="$apparatus">
+          <p class="apparatus">
+            <xsl:for-each select="$apparatus"><xsl:call-template name="cart-apparatus"/><xsl:text>. </xsl:text></xsl:for-each>
+          </p>
+        </xsl:if>
+        <xsl:for-each select="$notes"><xsl:call-template name="note"/></xsl:for-each>
+      </section>
+    </xsl:if>
+  </xsl:template>
+
+</xsl:transform>
