@@ -61,7 +61,7 @@
         <note type="citation">Olivier Canteaut (éd.), Chartes et documents de l’abbaye de Saint-Magloire, tome III, École nationale des chartes – PSL, 2024.</note>
       </notesStmt>
       <sourceDesc>
-        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1976_cat_12_3"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, <date>1966-1998</date> (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12)</bibl>
+        <bibl source="https://www.persee.fr/doc/dirht_0073-8212_1976_cat_12_3"><title>Chartes et documents de l’abbaye de Saint-Magloire</title>, éd. Anne Terroine et Lucie Fossier, 3 t., Paris / Turnhout : Centre national de la recherche scientifique / Brepols, <date>1966/1998</date> (Documents, études et répertoires de l’Institut de recherche et d’histoire des textes, 12)</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -83,8 +83,8 @@
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
             <citeData property="dct:type" use="front/index/term/@key"/>
             <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
             <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
@@ -111,7 +111,7 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>1966-1998</date>
+        <date>1966/1998</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>

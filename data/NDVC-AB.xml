@@ -96,7 +96,7 @@
       <sourceDesc>
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k5455505p"><title>Cartulaire de l'abbaye de Notre-Dame des Vaux de Cernay </title> publié par
             <author>Luc Merlet </author> et <author>Auguste Moutié</author>,
-            Paris:<publisher>Plon</publisher>,<date type="publication">1857-1858</date>, 3 vol</bibl>
+            Paris:<publisher>Plon</publisher>,<date type="publication">1857/1858</date>, 3 vol</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -120,7 +120,7 @@
             <citeData property="dct:title" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
+              <citeData property="dct:date" use="if (front[1]/docDate[1]/date[1]/@when) then string(front[1]/docDate[1]/date[1]/@when) else if (front[1]/docDate[1]/date[1]/@notBefore or front[1]/docDate[1]/date[1]/@notAfter) then concat((front[1]/docDate[1]/date[1]/@notBefore, '..')[1], '/', (front[1]/docDate[1]/date[1]/@notAfter, '..')[1]) else ()"/>
               <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
               <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
             <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>

@@ -127,8 +127,8 @@
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then front/docDate/date/@when else if (front/docDate/date/@notBefore) then concat(front/docDate/date/@notBefore, '–', front/docDate/date/@notAfter) else front/docDate/date/@notAfter"/>
+            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
             <citeData property="dct:type" use="front/index/term/@key"/>
             <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
             <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
@@ -7697,7 +7697,7 @@
           <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c1"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7719,7 +7719,7 @@
           <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c2"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7741,7 +7741,7 @@
           <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c3"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7824,7 +7824,7 @@
           <pb n="115" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p115_c4"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7851,7 +7851,7 @@
           <pb n="115" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p115_c5"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7907,7 +7907,7 @@
           <pb n="117" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f177/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p117_c6"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -7988,7 +7988,7 @@
           <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c7"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8013,7 +8013,7 @@
           <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c8"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8041,7 +8041,7 @@
           <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c9"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8069,7 +8069,7 @@
           <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c10"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8093,7 +8093,7 @@
           <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c11"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8118,7 +8118,7 @@
           <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c12"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8149,7 +8149,7 @@
           <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c13"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8174,7 +8174,7 @@
           <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c14"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8230,7 +8230,7 @@
           <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c15"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8267,7 +8267,7 @@
           <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c16"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8291,7 +8291,7 @@
           <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c17"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8315,7 +8315,7 @@
           <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c18"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8337,7 +8337,7 @@
           <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c19"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8371,7 +8371,7 @@
           <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c20"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8398,7 +8398,7 @@
           <pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c21"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8424,7 +8424,7 @@
           <pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c22"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8451,7 +8451,7 @@
           <pb n="125" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p125_c23"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8484,7 +8484,7 @@
           <pb n="126" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p126_c24"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8510,7 +8510,7 @@
           <pb n="126" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p126_c25"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8567,7 +8567,7 @@
           <pb n="128" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f188/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p128_c26"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8644,7 +8644,7 @@
           <pb n="130" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f190/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p130_c27"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8719,7 +8719,7 @@
           <pb n="132" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f192/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p132_c28"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8753,7 +8753,7 @@
           <pb n="133" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f193/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p133_c29"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8875,7 +8875,7 @@
           <pb n="136" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f196/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p136_c30"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8919,7 +8919,7 @@
           <pb n="137" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f197/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p137_c31"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8958,7 +8958,7 @@
           <pb n="141" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f201/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p141_c32"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -8990,7 +8990,7 @@
           <pb n="143" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f203/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p143_c33"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -9021,7 +9021,7 @@
           <pb n="145" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p145_c34"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
@@ -9047,7 +9047,7 @@
           <pb n="145" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p145_c35"/>
           <front>
             <docDate>
-              <date>1252-1256</date>
+              <date notBefore="1252" notAfter="1256">1252-1256</date>
             </docDate>
             <index>
               <term type="nature" key="cens">cens</term>
