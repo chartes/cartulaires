@@ -79,7 +79,7 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <sourceDesc facs="https://cartulaires-2fe77c.gitpages.huma-num.fr/collection/collection_NDCH-EG.json">
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486069v https://gallica.bnf.fr/ark:/12148/bpt6k486070s https://gallica.bnf.fr/ark:/12148/bpt6k4860715"><title>Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres originaux</title>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique d’Eure-et-Loir, <date type="publication">1862-1865</date>, 3 vol. in-4, CCLII-263-431-443 p.</bibl>
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486069v https://gallica.bnf.fr/ark:/12148/bpt6k486070s https://gallica.bnf.fr/ark:/12148/bpt6k4860715"><title>Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres originaux</title>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique d’Eure-et-Loir, <date type="publication">1862/1865</date>, 3 vol. in-4, CCLII-263-431-443 p.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -101,7 +101,7 @@
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="front[1]/docDate[1]/date[1]"/>
+            <citeData property="dct:date" use="if (front[1]/docDate[1]/date[1]/@when) then string(front[1]/docDate[1]/date[1]/@when) else if (front[1]/docDate[1]/date[1]/@notBefore or front[1]/docDate[1]/date[1]/@notAfter) then concat((front[1]/docDate[1]/date[1]/@notBefore, '..')[1], '/', (front[1]/docDate[1]/date[1]/@notAfter, '..')[1]) else ()"/>
             <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
             <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
             <citeData property="dots:resourceIIIFManifest" use="front/div/listWit/witness/@corresp"/>
@@ -120,7 +120,7 @@
     <profileDesc>
       <creation>
         <date notBefore="1862" notAfter="1865">1862/1865</date>
-        <date type="coverage" notBefore="573" notAfter="1391">573/1391</date>
+        <date type="coverage" notBefore="573" notAfter="1391">0573/1391</date>
       </creation>
       <langUsage>
         <language ident="fr">Français</language>
