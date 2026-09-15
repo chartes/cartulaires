@@ -8,6 +8,7 @@
         <title ref="https://elec.enc.sorbonne.fr/cartulaires/html/Paris-S-Merri.html">Cartulaire et censier de Saint-Merry de Paris</title>
         <title type="short">Saint-Merry de Paris</title>
         <author ref="https://www.idref.fr/035134119 https://data.bnf.fr/ark:/12148/cb13169428n">Camille Couderc</author>
+        <author>Léon Cadier</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
         <editor ref="https://www.idref.fr/223482927">John Perry Archer</editor>
         
@@ -103,7 +104,7 @@
         <note type="citation">John Perry Archer, Olivier Guyotjeannin (éd.), Cartulaire et censier de Saint-Merry de Paris, École nationale des chartes – PSL, 2009.</note>
       </notesStmt>
       <sourceDesc>
-        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k111131d"><title>Cartulaire et censier de Saint-Merry de Paris</title> publié par
+        <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k6255880d/f109.item"><title>Cartulaire et censier de Saint-Merry de Paris</title> publié par
             <author>Camille Couderc</author> et <author>Léon Cadier</author> Paris, in: Memoires de
           la Société de l'Histoire de Paris et d'Île de France , tome 18, pp.101-271,
             <date>1891</date>, 8°</bibl>
@@ -178,7 +179,7 @@
   </teiHeader>
   <text>
     <front xml:id="SMPA-EG_front">
-      <head>Cartulaire et censier de Saint-Merry de Paris</head>
+      <head>Notice introductive</head>
       <!--<head><hi rend="i">Cartulaire et censier de Saint-Merry de Paris</hi>, par Léon Cadier et
         Camille Couderc, Nogent-le-Rotrou, 1891, 173 pages, tiré à part de <hi rend="i">Mémoires de
           la Société de l’histoire de Paris</hi>, t. 18, 1891, p. 101-271.</head>-->
@@ -273,21 +274,21 @@
         <p>. L 605. Titres, 1363-1764. — LL 476-486. Registres capitulaires, 1666-1790. — LL 487.
           Procès avec le chapitre cathédral, 1523.</p>
         <p>. S 910-921. Titres, fin XII<hi rend="sup">e</hi> siècle-1790.</p>
-        <div n="1.5" type="souspartie">
-          <head>Orientation bibliographique</head>
-          <listBibl>
-            <bibl><author>Abbé Baloche</author>, <title>Église Saint-Merry de Paris : histoire de la
-                paroisse et de la collégiale (700-1310)</title>, Paris, 1911, 2 vol.</bibl>
-            <bibl><author>Élisabeth Châtel</author>, <title>Saint-Merry</title>, dans May
-              Vieillard-Troiekouroff et al., <title>Les anciennes églises suburbaines de Paris,
-                    <num>IV<hi rend="sup">e</hi></num>-<num>X<hi rend="sup">e</hi></num> siècle</title>, dans <title>Paris et Ile-de-France, Mémoires</title>,
-                <abbr>t.</abbr> 11 (1960), <abbr>p.</abbr> 17-282, aux
-              <abbr>p.</abbr> 205-208.</bibl>
-            <bibl><author>Robert-Henri Bautier</author>, <title>L’abbaye de Saint-Pierre et
-                Saint-Merry de Paris du <num>VIII<hi rend="sup">e</hi></num> au <num>XII<hi rend="sup">e</hi></num> siècle</title>, dans <title>Bibliothèque de l’École des
-                chartes</title>, 1960, <abbr>p.</abbr> 5-19.</bibl>
-          </listBibl>
-        </div>
+      </div>
+      <div xml:id="SMPA-EG_biblio" subtype="article">
+        <head>Orientation bibliographique</head>
+        <listBibl>
+          <bibl><author>Abbé Baloche</author>, <title>Église Saint-Merry de Paris : histoire de la
+              paroisse et de la collégiale (700-1310)</title>, Paris, 1911, 2 vol.</bibl>
+          <bibl><author>Élisabeth Châtel</author>, <title>Saint-Merry</title>, dans May
+            Vieillard-Troiekouroff et al., <title>Les anciennes églises suburbaines de Paris,
+                  <num>IV<hi rend="sup">e</hi></num>-<num>X<hi rend="sup">e</hi></num> siècle</title>, dans <title>Paris et Ile-de-France, Mémoires</title>,
+              <abbr>t.</abbr> 11 (1960), <abbr>p.</abbr> 17-282, aux
+            <abbr>p.</abbr> 205-208.</bibl>
+          <bibl><author>Robert-Henri Bautier</author>, <title>L’abbaye de Saint-Pierre et
+              Saint-Merry de Paris du <num>VIII<hi rend="sup">e</hi></num> au <num>XII<hi rend="sup">e</hi></num> siècle</title>, dans <title>Bibliothèque de l’École des
+              chartes</title>, 1960, <abbr>p.</abbr> 5-19.</bibl>
+        </listBibl>
       </div>
       <div xml:id="SMPA-EG_edition" subtype="article">
         <head>L’édition</head>
@@ -420,7 +421,7 @@
     <group>
       <head>Saint-Merry de Paris</head>
       <group xml:id="SMPA-EG_group">
-        <head>Cartulaire</head>
+        <head>Cartulaire de Saint-Merry de Paris</head>
         <text xml:id="SMPA-EG_0001" n="I" subtype="article">
           <pb n=""/>
           <front>
@@ -449,7 +450,7 @@
             <argument>
               <p>Prescription faite par Maurice de Sully, évêque de Paris, de célébrer, dans
                 l'église de Saint-Merry, l'anniversaire de maître Gautier, chanoine, qui a donné à
-                cette église le clos de Maúcart, et celui de Thibaut, chevalier, et de sa femme,
+                cette église le clos de Maucart, et celui de Thibaut, chevalier, et de sa femme,
                 seigneur dudit lieu, qui ont consenti à cette donation.<pb n="37" ed="B" facs="https://digi.vatlib.it/iiif/MSS_Reg.lat.907/res/img0080" corresp="https://digi.vatlib.it/iiif/MSS_Reg.lat.907/manifest.json"/></p>
             </argument>
             <div type="tradition">
@@ -459,7 +460,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 37-106.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 37-106.</witness>
               </listWit>
             </div>
           </front>
@@ -559,7 +560,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 106-38.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 106-38.</witness>
               </listWit>
             </div>
           </front>
@@ -649,7 +650,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 107-108.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 107-108.</witness>
               </listWit>
             </div>
           </front>
@@ -705,7 +706,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 108-110.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 108-110.</witness>
               </listWit>
             </div>
           </front>
@@ -810,7 +811,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 110-41v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 110-41v.</witness>
               </listWit>
             </div>
           </front>
@@ -896,7 +897,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 111-112.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 111-112.</witness>
               </listWit>
             </div>
           </front>
@@ -962,7 +963,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 112-113.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 112-113.</witness>
               </listWit>
             </div>
           </front>
@@ -1008,7 +1009,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 113-114.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 113-114.</witness>
               </listWit>
             </div>
           </front>
@@ -1089,7 +1090,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 114-116.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 114-116.</witness>
               </listWit>
             </div>
           </front>
@@ -1177,7 +1178,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116.</witness>
               </listWit>
             </div>
           </front>
@@ -1234,7 +1235,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116-44.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116-44.</witness>
               </listWit>
             </div>
           </front>
@@ -1302,7 +1303,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 116.</witness>
               </listWit>
             </div>
           </front>
@@ -1360,7 +1361,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 117-45.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 117-45.</witness>
               </listWit>
             </div>
           </front>
@@ -1451,7 +1452,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 120.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 120.</witness>
               </listWit>
             </div>
           </front>
@@ -1508,7 +1509,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 120-45v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 120-45v.</witness>
               </listWit>
             </div>
           </front>
@@ -1570,7 +1571,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 121-122.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 121-122.</witness>
               </listWit>
             </div>
           </front>
@@ -1629,7 +1630,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 122-45bis.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 122-45bis.</witness>
               </listWit>
             </div>
           </front>
@@ -1708,7 +1709,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 123-45bisv.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 123-45bisv.</witness>
               </listWit>
             </div>
           </front>
@@ -1782,7 +1783,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 124-125.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 124-125.</witness>
               </listWit>
             </div>
           </front>
@@ -1847,7 +1848,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 125-46.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 125-46.</witness>
               </listWit>
             </div>
           </front>
@@ -1923,7 +1924,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 126.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 126.</witness>
               </listWit>
             </div>
           </front>
@@ -1983,7 +1984,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 127-46v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 127-46v.</witness>
               </listWit>
             </div>
           </front>
@@ -2039,7 +2040,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 128-129.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 128-129.</witness>
               </listWit>
             </div>
           </front>
@@ -2103,7 +2104,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 129.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 129.</witness>
               </listWit>
             </div>
           </front>
@@ -2165,7 +2166,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 129-48.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 129-48.</witness>
               </listWit>
             </div>
           </front>
@@ -2304,7 +2305,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 132-133.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 132-133.</witness>
               </listWit>
             </div>
           </front>
@@ -2357,7 +2358,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 133-134.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 133-134.</witness>
               </listWit>
             </div>
           </front>
@@ -2413,7 +2414,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 134-49.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 134-49.</witness>
               </listWit>
             </div>
           </front>
@@ -2497,7 +2498,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 135-136.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 135-136.</witness>
               </listWit>
             </div>
           </front>
@@ -2566,7 +2567,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 136-137.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 136-137.</witness>
               </listWit>
             </div>
           </front>
@@ -2643,7 +2644,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 137-50.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 137-50.</witness>
               </listWit>
             </div>
           </front>
@@ -2722,7 +2723,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 138-140.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 138-140.</witness>
               </listWit>
             </div>
           </front>
@@ -2803,7 +2804,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 140-141.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 140-141.</witness>
               </listWit>
             </div>
           </front>
@@ -2881,7 +2882,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 141-142.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 141-142.</witness>
               </listWit>
             </div>
           </front>
@@ -2955,7 +2956,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 142-143.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 142-143.</witness>
               </listWit>
             </div>
           </front>
@@ -3005,7 +3006,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 143-52v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 143-52v.</witness>
               </listWit>
             </div>
           </front>
@@ -3096,7 +3097,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 144-145.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 144-145.</witness>
               </listWit>
             </div>
           </front>
@@ -3154,7 +3155,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 145-146.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 145-146.</witness>
               </listWit>
             </div>
           </front>
@@ -3182,8 +3183,8 @@
                     <persName>Guillelmus</persName> et <persName>Auxendis</persName> super predictis
                   duobus solidis<pb n="146"/> predictam ecclesiam de cetero inquietare.</s>
                 <s>Dictus vero <persName>B[artholomeus]</persName> dedit dictis
-                    <persName>Guillelmo</persName> et <persName>Auxendi</persName>
-                  <num>v</num> solidos, de bonis ecclesie memorate, et pallium reddidit obligatum
+                    <persName>Guillelmo</persName> et <persName>Auxendi</persName> <num>v</num>
+                  solidos, de bonis ecclesie memorate, et pallium reddidit obligatum
                   eisdem pro censu anni preteriti.</s>
                 <s>Actum <date>anno gratie <num>Mº CCº XIº</num>, mense februarii</date>.</s>
               </p>
@@ -3219,7 +3220,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 146.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 146.</witness>
               </listWit>
             </div>
           </front>
@@ -3276,7 +3277,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 146-53v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 146-53v.</witness>
               </listWit>
             </div>
           </front>
@@ -3324,7 +3325,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147.</witness>
               </listWit>
             </div>
           </front>
@@ -3378,7 +3379,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147.</witness>
               </listWit>
             </div>
           </front>
@@ -3433,7 +3434,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147-149.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 147-149.</witness>
               </listWit>
             </div>
           </front>
@@ -3498,7 +3499,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 149-54v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 149-54v.</witness>
               </listWit>
             </div>
           </front>
@@ -3565,7 +3566,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 150-55.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 150-55.</witness>
               </listWit>
             </div>
           </front>
@@ -3644,7 +3645,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 151-55v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 151-55v.</witness>
               </listWit>
             </div>
           </front>
@@ -3730,7 +3731,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 153-154.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 153-154.</witness>
               </listWit>
             </div>
           </front>
@@ -3787,7 +3788,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 154-56.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 154-56.</witness>
               </listWit>
             </div>
           </front>
@@ -3847,7 +3848,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 154-56v.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 154-56v.</witness>
               </listWit>
             </div>
           </front>
@@ -3903,7 +3904,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 155-156.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 155-156.</witness>
               </listWit>
             </div>
           </front>
@@ -3967,7 +3968,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 156-57.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 156-57.</witness>
               </listWit>
             </div>
           </front>
@@ -4050,7 +4051,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 157-160.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 157-160.</witness>
               </listWit>
             </div>
           </front>
@@ -4176,7 +4177,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 160-163.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 160-163.</witness>
               </listWit>
             </div>
           </front>
@@ -4366,7 +4367,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 163-165.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 163-165.</witness>
               </listWit>
             </div>
           </front>
@@ -4495,7 +4496,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 165-61r.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 165-61r.</witness>
               </listWit>
             </div>
           </front>
@@ -4590,7 +4591,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 166-168.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 166-168.</witness>
               </listWit>
             </div>
           </front>
@@ -4708,7 +4709,7 @@
                   siècle.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 169-271.</witness>
+                <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, éd. Léon Cadier et Camille Couderc, Paris, 1891, p. 169-271.</witness>
               </listWit>
             </div>
           </front>
@@ -4771,7 +4772,7 @@
           <head>CENSIER DE SAINT-MERRY.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171.</witness>
             </listWit>
           </div>
         </front>
@@ -4793,7 +4794,7 @@
           <head>I. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — PREMIÈRE SÉRIE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171-173.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171-173.</witness>
             </listWit>
           </div>
         </front>
@@ -4842,7 +4843,7 @@
           <head>2. — En le rue Seint Martin, hors de le porte Seint Merri, jusques à le fonteine Maubué.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 173.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 173.</witness>
             </listWit>
           </div>
         </front>
@@ -4865,7 +4866,7 @@
           <head>3. — En Rue Neuve, jusques au kairefourc du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 173-174.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 173-174.</witness>
             </listWit>
           </div>
         </front>
@@ -4893,7 +4894,7 @@
           <head>4. — En le rue du Temple, desus le bot de le rue Symo Franc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 174-175.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 174-175.</witness>
             </listWit>
           </div>
         </front>
@@ -4921,7 +4922,7 @@
           <head>5. — En le rue Gieffroi l'Angevin, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 175-176.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 175-176.</witness>
             </listWit>
           </div>
         </front>
@@ -4951,7 +4952,7 @@
           <head>6. — En Biaubourc, jusques au Petit Cul de Sac.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 176-177.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 176-177.</witness>
             </listWit>
           </div>
         </front>
@@ -4984,7 +4985,7 @@
           <head>7. — En Petit Cul de Sac, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 177-178.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 177-178.</witness>
             </listWit>
           </div>
         </front>
@@ -5015,7 +5016,7 @@
           <head>8. — En le rue Symon Franc, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 178-179.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 178-179.</witness>
             </listWit>
           </div>
         </front>
@@ -5048,7 +5049,7 @@
           <head>9. — En le rue Pierre Aulart et en le rue Espaulart.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 179.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 179.</witness>
             </listWit>
           </div>
         </front>
@@ -5071,7 +5072,7 @@
           <head>10. — En le rue Lambert de Chielle, devant le meison Pierre Gencien.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 179-180.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 179-180.</witness>
             </listWit>
           </div>
         </front>
@@ -5097,7 +5098,7 @@
           <head>11. — En le Verrerie, par dessa le rue du karreforc du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 180.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 180.</witness>
             </listWit>
           </div>
         </front>
@@ -5120,7 +5121,7 @@
           <head>12. — En le rue des Arssiz, des Seint Merri jusques à le meison Robert aus Gans.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 180-181.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 180-181.</witness>
             </listWit>
           </div>
         </front>
@@ -5149,7 +5150,7 @@
           <head>13. — En le Petite Boucherie, ou coing de le ruelle de l’Escorcherie.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181.</witness>
             </listWit>
           </div>
         </front>
@@ -5172,7 +5173,7 @@
           <head>14. — En le rue Seint Denis, devant le fonteine des Ynnocens par dessa.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181.</witness>
             </listWit>
           </div>
         </front>
@@ -5195,7 +5196,7 @@
           <head>15. — En l’eglise de Seint Merri, le comunité et les beneficiez.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181-182.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 181-182.</witness>
             </listWit>
           </div>
         </front>
@@ -5225,7 +5226,7 @@
           <head>16. — A Seint Germain l’Auceurres.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 182-183.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 182-183.</witness>
             </listWit>
           </div>
         </front>
@@ -5254,7 +5255,7 @@
           <head>II. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — DEUXIÈME SÉRIE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 183.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 183.</witness>
             </listWit>
           </div>
         </front>
@@ -5276,7 +5277,7 @@
           <head>1. — Ce sunt les devant dites rentes et censives que les ditz chanoines ont et prenent, au terme de le Seint Remi, dedens Paris ès lieuez devant diz, premierement en leur...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 183-184.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 183-184.</witness>
             </listWit>
           </div>
         </front>
@@ -5315,7 +5316,7 @@
           <head>2. — En le rue Seint Martin, hors de le porte Seint Merri jusques à le fonteine Maubué.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
             </listWit>
           </div>
         </front>
@@ -5338,7 +5339,7 @@
           <head>3. — En Rue Neuve, jusques au cairefort du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
             </listWit>
           </div>
         </front>
@@ -5365,7 +5366,7 @@
           <head>4. — En le rue du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184.</witness>
             </listWit>
           </div>
         </front>
@@ -5390,7 +5391,7 @@
           <head>5. — En le rue Gieffre l’Angevin.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184-185.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 184-185.</witness>
             </listWit>
           </div>
         </front>
@@ -5420,7 +5421,7 @@
           <head>6. — En Biauborc, jusques à le posterne Nicholaus Hydellon.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185.</witness>
             </listWit>
           </div>
         </front>
@@ -5445,7 +5446,7 @@
           <head>7. — En Petit Cul de Sac, d’une part et d’autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185.</witness>
             </listWit>
           </div>
         </front>
@@ -5470,7 +5471,7 @@
           <head>8. — En le rue Symo Franc, d’une part et d’autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185-186.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 185-186.</witness>
             </listWit>
           </div>
         </front>
@@ -5505,7 +5506,7 @@
           <head>9. — En le rue Pierre Aulart, ou Guillaume Espaulart.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
             </listWit>
           </div>
         </front>
@@ -5528,7 +5529,7 @@
           <head>10. — En le rue Lambert de Chielle.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
             </listWit>
           </div>
         </front>
@@ -5551,7 +5552,7 @@
           <head>11. — En le rue des Arssitz.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
             </listWit>
           </div>
         </front>
@@ -5579,7 +5580,7 @@
           <head>12. — En le Petite Boucherie, ou coing de l’Escorcherie.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186.</witness>
             </listWit>
           </div>
         </front>
@@ -5602,7 +5603,7 @@
           <head>13. — En le rue Seint Denis, devant le fonteine des Ynnocents.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186-187.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 186-187.</witness>
             </listWit>
           </div>
         </front>
@@ -5640,7 +5641,7 @@
           <head>III. — TERME DE LA SAINT-REMI. — RENTES PERÇUES HORS PARIS. — PREMIÈRE SÉRIE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 187-191.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 187-191.</witness>
             </listWit>
           </div>
         </front>
@@ -5697,7 +5698,7 @@
           <head>IV. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — TROISIÈME SÉRIE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 191.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 191.</witness>
             </listWit>
           </div>
         </front>
@@ -5719,7 +5720,7 @@
           <head>1. — [Fol. 11.] Ce sont les menutz cens qui sunt deuz aus chanoines de Seint Merri de Paris, chascun an, au terme de le Seint Remi, pour les meisons et pour les censives de...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 191-195.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 191-195.</witness>
             </listWit>
           </div>
         </front>
@@ -5775,7 +5776,7 @@
           <head>2. — Ce est le fons de terre des meisons, hors de le porte Seint Merri, en le rue Seint Martin.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 195-196.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 195-196.</witness>
             </listWit>
           </div>
         </front>
@@ -5806,7 +5807,7 @@
           <head>3. — [Fol. 13.] En Rue Neuve, d'une part et d'autre, jusques au kairefour du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 196-200.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 196-200.</witness>
             </listWit>
           </div>
         </front>
@@ -5862,7 +5863,7 @@
           <head>4. — Ce est le fons de terre des meisons de l'autre part de celle rue meesme, à commencier au bout, devers le rue Seint Martin.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 200-203.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 200-203.</witness>
             </listWit>
           </div>
         </front>
@@ -5912,7 +5913,7 @@
           <head>5. — En Buef et Houe, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 203-204.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 203-204.</witness>
             </listWit>
           </div>
         </front>
@@ -5939,7 +5940,7 @@
           <head>6. — En Rue Neuve et en le rue du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 204.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 204.</witness>
             </listWit>
           </div>
         </front>
@@ -5962,7 +5963,7 @@
           <head>7. — En le rue du Temple, ou coing de le rue Gieffre l'Angevin, et dedans le dite rue, d'une part et d'autre, jusques en Biaubourc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 204-205.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 204-205.</witness>
             </listWit>
           </div>
         </front>
@@ -5989,7 +5990,7 @@
           <head>8. — En le rue Symon Franc, jusques au kairefort du Temple, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 205-206.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 205-206.</witness>
             </listWit>
           </div>
         </front>
@@ -6014,7 +6015,7 @@
           <head>9. — En le rue de le Petite Bouckarie et en le rue Pierre Aulart, jusques en Rue Neuve.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 206-207.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 206-207.</witness>
             </listWit>
           </div>
         </front>
@@ -6050,7 +6051,7 @@
           <head>10. — En Bailla Hoe, devant le meison que feut Gautier Taupin¹.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 208.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 208.</witness>
             </listWit>
           </div>
         </front>
@@ -6075,7 +6076,7 @@
           <head>11. — En le rue de le Court Robert de Paris, d'un cousté et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 208.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 208.</witness>
             </listWit>
           </div>
         </front>
@@ -6102,7 +6103,7 @@
           <head>12. — [Fol. 18.] En le rue Lambert de Chielle, devant le meison de feu sire Pierre Gencien, jusques au mieulueuc le dite rue, au Chief de lueu de pierre escrit en le paret.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 209.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 209.</witness>
             </listWit>
           </div>
         </front>
@@ -6131,7 +6132,7 @@
           <head>13. — En le rue du Temple, devant le Barre de le meison de l'ebbaye du Bec, et en le Verrerie, et par toute le Grant Rue Seint Merri, jusques au coing de l'Encloistre, devant...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 209-211.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 209-211.</witness>
             </listWit>
           </div>
         </front>
@@ -6173,7 +6174,7 @@
           <head>14. — En le rue des Arssitz, ou cousté devers Marivaus.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
             </listWit>
           </div>
         </front>
@@ -6197,7 +6198,7 @@
           <head>15. — [Fol. 19 v°.] En le rue Jehan Pain Mollet, devant le Grant Archier, une meison tant seulement.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
             </listWit>
           </div>
         </front>
@@ -6220,7 +6221,7 @@
           <head>16. — Devant le Chief du mostier Jaque, tres meisons tant seulement.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212.</witness>
             </listWit>
           </div>
         </front>
@@ -6243,7 +6244,7 @@
           <head>17. — En le Grant Rue, devant Seint Jaque, du coing de le Tanerie devers Saine, jusques à le petite ruelle de le Boucherie, exceptées le meison Symon Paien et le meison que fut...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212-213.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 212-213.</witness>
             </listWit>
           </div>
         </front>
@@ -6270,7 +6271,7 @@
           <head>18. — En le Petite Boucherie, sus trois meisons tant seulement.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 213.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 213.</witness>
             </listWit>
           </div>
         </front>
@@ -6295,7 +6296,7 @@
           <head>19. — En le Tanerie, une meison tant seulement, devant le petite ruelle que c’en va à Saine.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 213-214.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 213-214.</witness>
             </listWit>
           </div>
         </front>
@@ -6318,7 +6319,7 @@
           <head>20. — En le Grant Rue Seint Denis, devant le fonteine des Ynnocens.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 214.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 214.</witness>
             </listWit>
           </div>
         </front>
@@ -6343,7 +6344,7 @@
           <head>V. — TERME DE LA SAINT-REMI. — RENTES PERÇUES HORS PARIS. — DEUXIÈME SÉRIE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 214-223.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 214-223.</witness>
             </listWit>
           </div>
         </front>
@@ -6431,7 +6432,7 @@
           <head>VI. — TERME DE LA SAINT-REMI. — RENTES PAYÉES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 223-224.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 223-224.</witness>
             </listWit>
           </div>
         </front>
@@ -6466,7 +6467,7 @@
           <head>VII. — TERME DE LA NOEL. — RENTES PERÇUES HORS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 224-225.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 224-225.</witness>
             </listWit>
           </div>
         </front>
@@ -6498,7 +6499,7 @@
           <head>VIII. — TERME DE LA NOEL. — RENTES PERÇUES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 225.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 225.</witness>
             </listWit>
           </div>
         </front>
@@ -6520,7 +6521,7 @@
           <head>1. — [Fol. 25 vo.] Ce² sont les censives et les rentes et les loyers des meisons que les ditz chanoines ont, chascun an, au terme de Noel, et premierement en l'Encloistre,...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 225-226.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 225-226.</witness>
             </listWit>
           </div>
         </front>
@@ -6559,7 +6560,7 @@
           <head>2. — [Fol. 26.] Ce sont les fons de terre des meisons ci desouz nomées, assizes en le rue Seint Martin et en le rue Symon Franc, devant le fonteine Maubué, u cousté par dessa,...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 226-227.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 226-227.</witness>
             </listWit>
           </div>
         </front>
@@ -6593,7 +6594,7 @@
           <head>3. — [Fol. 26 vo.] Ce sont les censives en Rue Nueuve, d'une part et d'autre, jusques au kaireforc du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227.</witness>
             </listWit>
           </div>
         </front>
@@ -6623,7 +6624,7 @@
           <head>4. — Ce sont les censives en le rue du Temple, u cousté par dessa.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227.</witness>
             </listWit>
           </div>
         </front>
@@ -6648,7 +6649,7 @@
           <head>5. — Ce sont les censives en le rue Gyeffre l'Angevin, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227-228.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 227-228.</witness>
             </listWit>
           </div>
         </front>
@@ -6678,7 +6679,7 @@
           <head>6. — Ce sont les censives en Biaubourc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228.</witness>
             </listWit>
           </div>
         </front>
@@ -6704,7 +6705,7 @@
           <head>7. — Ce sont les censives u Petit Cul de Sac, d'un cousté et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228.</witness>
             </listWit>
           </div>
         </front>
@@ -6730,7 +6731,7 @@
           <head>8. — En la rue Palée².</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228-229.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 228-229.</witness>
             </listWit>
           </div>
         </front>
@@ -6759,7 +6760,7 @@
           <head>9. — Ce sont les censives en le rue Symon Franc, d'un cousté et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229.</witness>
             </listWit>
           </div>
         </front>
@@ -6791,7 +6792,7 @@
           <head>10. — [Fol. 27 vo.] Ce est le cens en le rue Guilleume Espaulart, au bot de le rue Pierre Aulart.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229.</witness>
             </listWit>
           </div>
         </front>
@@ -6814,7 +6815,7 @@
           <head>11. — Ce est le cens en le rue Lambert de Chielle, devant le meison Pierre Gencien.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229-230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 229-230.</witness>
             </listWit>
           </div>
         </front>
@@ -6840,7 +6841,7 @@
           <head>12. — Ce est le cens en le Verrerie, ou cousté par dessa.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
             </listWit>
           </div>
         </front>
@@ -6863,7 +6864,7 @@
           <head>13. — Ce est le cens en le rue des Arssitz, en cousté par della, devers Marivaus.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
             </listWit>
           </div>
         </front>
@@ -6887,7 +6888,7 @@
           <head>14. — Ce est le cens devant le Chief du moustier Seint Jaque.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
             </listWit>
           </div>
         </front>
@@ -6913,7 +6914,7 @@
           <head>15. — Ce est le cens en le Petite Boucherie, sus le meison du coing de l'Escorcherie de le ruelle.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
             </listWit>
           </div>
         </front>
@@ -6936,7 +6937,7 @@
           <head>16. — Ce sont les censives en le Grant Rue Saint Denis, devant le fonteine Seints Innocents, ou cousté par deça.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 230.</witness>
             </listWit>
           </div>
         </front>
@@ -6965,7 +6966,7 @@
           <head>17. — Ce sont les censives que le communité et les beneficiez de Seint Merri devent pour les amortissemens.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 231.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 231.</witness>
             </listWit>
           </div>
         </front>
@@ -6996,7 +6997,7 @@
           <head>IX. — TERME DE LA NOEL. — RENTES PAYÉES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 231-232.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 231-232.</witness>
             </listWit>
           </div>
         </front>
@@ -7034,7 +7035,7 @@
           <head>X. — RENTES PERÇUES A LA MI-CARÊME.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 232-233.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 232-233.</witness>
             </listWit>
           </div>
         </front>
@@ -7071,7 +7072,7 @@
           <head>XI. — RENTES PERÇUES LE DIMANCHE DES RAMEAUX.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
             </listWit>
           </div>
         </front>
@@ -7096,7 +7097,7 @@
           <head>XII. — TERME DE PAQUES. — RENTES PERÇUES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
             </listWit>
           </div>
         </front>
@@ -7118,7 +7119,7 @@
           <head>1. — Le terme de Pasches. — Ce sunt les censives et les rentes que les dits chanoines ont et prenent, chascun an, au terme de Pasches et comencent premierement en leur...</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234-235.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234-235.</witness>
             </listWit>
           </div>
         </front>
@@ -7156,7 +7157,7 @@
           <head>2. — Ce est le cens en le rue Seint Martin.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 235.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 235.</witness>
             </listWit>
           </div>
         </front>
@@ -7179,7 +7180,7 @@
           <head>3. — Ce sont les censives en Rue Nueuve, d'une part et d'autre, jusques au kairefourc du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 235-236.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 235-236.</witness>
             </listWit>
           </div>
         </front>
@@ -7208,7 +7209,7 @@
           <head>4. — Ce sont les censives en le rue du Temple, jusques à la porte ou cousté par dessa.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236.</witness>
             </listWit>
           </div>
         </front>
@@ -7232,7 +7233,7 @@
           <head>5. — Ce sont les censives en le rue Gieffrey l'Angevin, jusques en Biaubourc, d'un cousté et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236.</witness>
             </listWit>
           </div>
         </front>
@@ -7260,7 +7261,7 @@
           <head>6. — Ce sont les censives en Biaubourc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236-237.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 236-237.</witness>
             </listWit>
           </div>
         </front>
@@ -7288,7 +7289,7 @@
           <head>7. — Ce sont les censives u Petit Cul de Sac.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
             </listWit>
           </div>
         </front>
@@ -7313,7 +7314,7 @@
           <head>8. — Ce sont les censives en le rue Symon Franc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
             </listWit>
           </div>
         </front>
@@ -7343,7 +7344,7 @@
           <head>9. — Ce est le cens en le rue Guilleume Espaulart.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 237.</witness>
             </listWit>
           </div>
         </front>
@@ -7367,7 +7368,7 @@
           <head>10. — Ce est le fons de terre de le meison du Bec Alaoy¹, en le rue du Temple à le Barre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7390,7 +7391,7 @@
           <head>11. — [Fol. 31.] Ce est le cens en le rue Lambert de Chielle.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7413,7 +7414,7 @@
           <head>12. — Ce est le cens en le Verrerie.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7436,7 +7437,7 @@
           <head>13. — Ce est le cens en le rue des Arssitz.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7460,7 +7461,7 @@
           <head>14. — Ce est le cens devant le Chief du moustier Seint Jaque.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7486,7 +7487,7 @@
           <head>15. — Ce est le cens en le Petite Boucherie.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 238.</witness>
             </listWit>
           </div>
         </front>
@@ -7513,7 +7514,7 @@
           <head>16. — Ce est le cens en le Grant Rue Seint Denis, devant le fonteine.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
             </listWit>
           </div>
         </front>
@@ -7536,7 +7537,7 @@
           <head>17. — Ce sont les censives que le comunité et les beneficiez de Seint Merri devent aus ditz chanoines.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
             </listWit>
           </div>
         </front>
@@ -7564,7 +7565,7 @@
           <head>18. — A Seint Germain l'Auceurres.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239.</witness>
             </listWit>
           </div>
         </front>
@@ -7591,7 +7592,7 @@
           <head>XIII. — TERME DE PAQUES. — RENTES PAYÉES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239-240.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239-240.</witness>
             </listWit>
           </div>
         </front>
@@ -7628,7 +7629,7 @@
           <head>XIV. — RENTES PERÇUES A LA PENTECÔTE.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 240-241.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 240-241.</witness>
             </listWit>
           </div>
         </front>
@@ -7660,7 +7661,7 @@
           <head>XV. — TERME DE LA SAINT-JEAN. — RENTES PERÇUES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 241.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 241.</witness>
             </listWit>
           </div>
         </front>
@@ -7682,7 +7683,7 @@
           <head>1. — Ce sont les censives et les rentes que les ditz chanoines ont et prenent, chascun an, au terme de le Seint Jehan et comencent premierement en l'Encloistre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 241-242.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 241-242.</witness>
             </listWit>
           </div>
         </front>
@@ -7720,7 +7721,7 @@
           <head>2. — En le rue Seint Martin, hors de le porte Seint Merri, jusques à le fonteine Maubué.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 242.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 242.</witness>
             </listWit>
           </div>
         </front>
@@ -7744,7 +7745,7 @@
           <head>3. — [Fol. 33.] En Rue Nueuve, jusques au kairefourc du Temple.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 242-243.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 242-243.</witness>
             </listWit>
           </div>
         </front>
@@ -7776,7 +7777,7 @@
           <head>4. — En le rue du Temple, par dessa, ou cousté desus le bot de le rue Symon Franc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243.</witness>
             </listWit>
           </div>
         </front>
@@ -7801,7 +7802,7 @@
           <head>5. — En le rue Gieffre l'Angevin, d'une part et d'autre, jusques en Bieuborc.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243.</witness>
             </listWit>
           </div>
         </front>
@@ -7829,7 +7830,7 @@
           <head>6. — [Fol. 33 v°.] En Biaubourc, jusques au Petit Cul de Sac.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243-244.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 243-244.</witness>
             </listWit>
           </div>
         </front>
@@ -7858,7 +7859,7 @@
           <head>7. — En Petit Cul de Sac, d'une part et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 244.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 244.</witness>
             </listWit>
           </div>
         </front>
@@ -7885,7 +7886,7 @@
           <head>8. — En le rue Symon Franc, d'un cousté et d'autre.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 244.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 244.</witness>
             </listWit>
           </div>
         </front>
@@ -7920,7 +7921,7 @@
           <head>9. — [Fol. 34.] En le rue Guilleume Espaulart, au bot de le rue Pierre Aulart.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
             </listWit>
           </div>
         </front>
@@ -7943,7 +7944,7 @@
           <head>10. — En le rue Lambert de Chielle, devant le meison Pierre Gencien.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
             </listWit>
           </div>
         </front>
@@ -7967,7 +7968,7 @@
           <head>11. — En le Verrerie, ou cousté par dessa.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
             </listWit>
           </div>
         </front>
@@ -7990,7 +7991,7 @@
           <head>12. — En le rue des Arssiz, desouz Seint Merri.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
             </listWit>
           </div>
         </front>
@@ -8014,7 +8015,7 @@
           <head>13. — Devant le Chief du moustier Seint Jaque.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245.</witness>
             </listWit>
           </div>
         </front>
@@ -8039,7 +8040,7 @@
           <head>14. — En le petite Boucherie, sus le meison que feit le coing de l'Escorcherie.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245-246.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 245-246.</witness>
             </listWit>
           </div>
         </front>
@@ -8066,7 +8067,7 @@
           <head>15. — En le Grant Rue Seint Denis, devant le fonteine des Ynnocens.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
             </listWit>
           </div>
         </front>
@@ -8090,7 +8091,7 @@
           <head>16. — En l'Eglise Seint Merri, sus le beneficiez et sus le communité.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
             </listWit>
           </div>
         </front>
@@ -8118,7 +8119,7 @@
           <head>17. — A Seint Germain l'Auceurres sus les chanoines.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246.</witness>
             </listWit>
           </div>
         </front>
@@ -8142,7 +8143,7 @@
           <head>18. — Ou Chastellet de Paris pour le haute joustice de leur terre que le rois achete.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246-247.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 246-247.</witness>
             </listWit>
           </div>
         </front>
@@ -8173,7 +8174,7 @@
           <head>19. — De Seint Merry de Paris⁶.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 247.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 247.</witness>
             </listWit>
           </div>
         </front>
@@ -8202,7 +8203,7 @@
           <head>XVI. — TERME DE LA SAINT-JEAN. — RENTES PAYÉES DANS PARIS.</head>
           <div type="tradition">
             <listWit type="édition">
-              <witness n="a" ana="edited">Cartulaire et censier de Saint-Merry de Paris, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 248.</witness>
+              <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 248.</witness>
             </listWit>
           </div>
         </front>
@@ -8234,9 +8235,7 @@
   <back>
     <div type="indexnominum" n="1" xml:id="SMPA-EG_index">
       <head>Index de noms</head>
-      <p>Index de noms avec renvois à la page, ne permettant pas de trancher sur l'acte concerné.
-        Au delà de la page 170, l'index renvoit au censier qui n'est pas numérisé <pb n="249"/>
-        </p>
+      <p><pb n="249"/></p>
         <list type="index" xml:id="SMPA-EG_liste_A">
           <head>A</head>
           <item xml:id="SMPA-EG_rs_0001"><rs><hi rend="sc">Aales</hi></rs>, Voy. Alix.</item>
