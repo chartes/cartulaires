@@ -127,19 +127,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group[1]" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -183,7 +187,7 @@
           arr. ; diocèse ancien Paris). — Maison fondée par Robert le Pieux, rattachée au milieu du
             XI<hi rend="i">e</hi> siècle à l’abbaye de Coulombs (Eure-et-Loir, cant. Nogent-le-Roi,
           anc. dioc. Chartres) comme simple prieuré.</p>
-        <p>Carte de situation (Atlas de Cassini)</p>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.094190,48.897800&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
         <p>Type d’édition : édition partielle (abrégée ou sous forme de regestes pour certains des
           actes tardifs) du cartulaire du prieuré (Arch. nat., T* 671<hi rend="sup">6</hi>).</p>
         <p>Total des actes édités ou analysés : 27 (1 du XI<hi rend="sup">e</hi> siècle, 14 du
@@ -426,12 +430,12 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Saint-Germain-en-Laye</head>
+    <group xml:id="SGLY-PR_edition-group">
+      <head>Édition</head>
       <group xml:id="SGLY-PR_group">
         <head>Cartulaire</head>
         <text xml:id="SGLY-PR_0001" n="I" subtype="article">
-          <pb n=""/>
+          <pb n="" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f110/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1073" notAfter="1073">1073</date>
@@ -449,7 +453,7 @@
               </listWit>
               <listWit type="édition">
                 <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
-                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 14.</witness>
+                    cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 13.</witness>
               </listWit>
             </div>
           </front>
@@ -472,7 +476,7 @@
                     <placeName>Gallie</placeName> rexit imperium, concessit omnibus que ille
                   dederat, plura tribuendo locum amplificavit.</s>
               </p>
-              <pb n="14"/>
+              <pb n="14" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
               <p>
                 <s>Ego igitur, ut essem particeps tanti beneficii, supradicto monasterio, et
                   monachis <placeName>Columbensibus</placeName>, eodem in loco Deo famulantibus,
@@ -579,7 +583,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0002" n="II" subtype="article">
-          <pb n="14"/>
+          <pb n="14" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1122" notAfter="1122">1122</date>
@@ -641,7 +645,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0003" n="III" subtype="article">
-          <pb n="14"/>
+          <pb n="14" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1124-08-13" notAfter="1125-03-29">13 août 1124 — 29 mars 1125</date>
@@ -677,7 +681,7 @@
                     noster</rs>, contulerunt, vel in posterum quilibet concessuri vel donaturi sunt,
                   et nos bona voluntate et utili concedimus et firmamus.</s>
               </p>
-              <pb n="15"/>
+              <pb n="15" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f112/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
               <p>
                 <s>In primis totam villam predicte ecclesie adjacentem omnino liberam et quitam, cum
                   sanguine et latrone et omnibus forisfactis in corpore ville factis, sive omnibus
@@ -746,7 +750,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0004" n="IV" subtype="article">
-          <pb n="16"/>
+          <pb n="16" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f113/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1131">1125-1131</date>
@@ -790,7 +794,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0005" n="V" subtype="article">
-          <pb n="16"/>
+          <pb n="16" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f113/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1131">1125-1131</date>
@@ -843,7 +847,7 @@
                   redimere poterit de denariis alterius vel pecuniis nisi de propriis.</s>
                 <s>Concessit similiter hoc donum <rs type="person"><persName>Galterius</persName>
                     filius <persName>Grugerii</persName>, gener <persName>Joscelini</persName></rs>,
-                  cum <rs type="person">filia ipsius<pb n="17"/>
+                  cum <rs type="person">filia ipsius<pb n="17" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f114/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
                     <persName>Aeles</persName></rs>.</s>
                 <s>Inter monachos autem et <persName>Willelmum</persName> et filiam, <rs type="person">rex <persName>Ludovicus</persName></rs> et <rs type="person"><persName>Stephanus</persName> dapifer</rs>, fidejussores existunt.</s>
                 <s>Testes vero <persName>Minardus<note n="1" xml:id="a01a">Il faut apparemment lire <hi rend="i">Nivardus</hi> (<hi rend="i">Nivard de Poissy</hi>). Ce texte, comme plusieurs
@@ -858,7 +862,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0006" n="VI" subtype="article">
-          <pb n="18"/>
+          <pb n="18" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f115/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1131">1125-1131</date>
@@ -904,7 +908,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0007" n="VII" subtype="article">
-          <pb n="18"/>
+          <pb n="18" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f115/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1131">1125-1131</date>
@@ -943,7 +947,7 @@
                     <persName>Galterius</persName>, <rs type="person"><persName>Albertus</persName>
                     clericus</rs>, <rs type="person"><persName>Godefredis</persName> cementarius de
                       <placeName>Villa poror</placeName></rs>.</s>
-                <s>Hoc etiam do<pb n="19"/> num misit ipse <persName>Adam</persName> in manu <rs type="person"><persName>Radulphi</persName> decani</rs> apud
+                <s>Hoc etiam do<pb n="19" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/> num misit ipse <persName>Adam</persName> in manu <rs type="person"><persName>Radulphi</persName> decani</rs> apud
                     <placeName>Pissiacum</placeName> ante ecclesiam <placeName><abbr>S.</abbr>
                     Marie</placeName>, de quo idem decanus, assensu episcopi, nos eadem hora
                   revestivit.</s>
@@ -977,7 +981,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0008" n="VIII" subtype="article">
-          <pb n="19"/>
+          <pb n="19" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1131">Entre 1125 et 1131</date>
@@ -1024,7 +1028,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0009" n="IX" subtype="article">
-          <pb n="19"/>
+          <pb n="19" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1125" notAfter="1143">1125-1143</date>
@@ -1094,7 +1098,7 @@
                   majoris, et ipse major, quod pro revestitura habere debet, habebit, et
                   quantumcumque prior voluerit, jussu suo submonebit.</s>
               </p>
-              <pb n="20"/>
+              <pb n="20" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f117/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
               <p>
                 <s>Predictus siquidem <persName>Racherius</persName> in eodem capitulo quando de
                   majoratu isto eum Abbas rivestivit, suus homo ligius devenit et omnia que sunt
@@ -1120,7 +1124,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0010" n="X" subtype="article">
-          <pb n="21"/>
+          <pb n="21" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f118/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1143-08-01" notAfter="1144-03-26">Ier août 1143 — 26 mars 1144</date>
@@ -1188,7 +1192,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0011" n="XI" subtype="article">
-          <pb n="21"/>
+          <pb n="21" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f118/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1161" notAfter="1161">1161</date>
@@ -1215,7 +1219,7 @@
               <p>
                 <s><seg type="theo">In nomine Sancte et Individue Trinitatis</seg>.</s>
                 <s><rs type="person">Ego <persName>Ludovicus</persName>
-                    <pb n="22"/><seg type="theo">Dei gratia</seg>
+                    <pb n="22" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f119/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/><seg type="theo">Dei gratia</seg>
                     <persName>Francorum</persName> rex</rs>.</s>
                 <s>In regia administratione summa extitit providentia intendere paci ecclesiarum et
                   illud precavere, ne aliqua negligencia sive alia occasione, illi qui Deo serviunt
@@ -1276,7 +1280,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0012" n="XII-XIII" subtype="article">
-          <pb n="22"/>
+          <pb n="22" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f119/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1161" notAfter="1186">1161-1186</date>
@@ -1304,7 +1308,7 @@
               <p>
                 <s>Litterarum assertione ab antiquis signanda, posteris servanda, communitum.</s>
               </p>
-              <pb n="23"/>
+              <pb n="23" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f120/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
               <p>
                 <s>Ego <persName>Guistopho de Pissiaco</persName>, multis precibus a venerabili
                   abbate <persName>Columbensi Gumberto</persName> obtinui ut cappellam de
@@ -1357,7 +1361,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0014" n="XIV" subtype="article">
-          <pb n="23"/>
+          <pb n="23" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f120/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1161" notAfter="1186">1161-1186</date>
@@ -1396,7 +1400,7 @@
                   que est de feodo <persName>Hugonis Sanzaver<note n="1" xml:id="a01f"><hi rend="i">Hugues Sans-Avoir</hi>, de la
                 famille de <hi rend="i">Gautier Sans-Avoir</hi>.</note></persName>
                   <placeName>Sancti Germani</placeName> ; et altera medietas presbyteri.</s>
-                <s><pb n="24"/><rs type="place">Pomarium</rs> quod est in atrio
+                <s><pb n="24" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f121/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/><rs type="place">Pomarium</rs> quod est in atrio
                     <placeName>Ordevallis</placeName> et movet de feodo <persName>Letherici de
                       Trinsencurt<note n="1" xml:id="a01g">Tessancourt.</note></persName>,
                   in dominio <placeName><abbr>S.</abbr> Germani</placeName>.</s>
@@ -1405,7 +1409,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0015" n="XV" subtype="article">
-          <pb n="24"/>
+          <pb n="24" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f121/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1161" notAfter="1186">1161-1186</date>
@@ -1472,7 +1476,7 @@
                     Haubercurt</persName>, <persName>Gauterus de Basemonte</persName> ; hii sunt
                   milites.</s>
                 <s><rs type="person"><persName>Garinus</persName>,
-                      <placeName>Latiniacensis</placeName> ecclesie quondam<pb n="25"/> abbas</rs> ;
+                      <placeName>Latiniacensis</placeName> ecclesie quondam<pb n="25" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/> abbas</rs> ;
                     <rs type="person"><persName>Geruagerius</persName>
                     <placeName>Neaflensis</placeName> monachus</rs> ; <rs type="person"><persName>Gaufredus</persName> prior <placeName>Altebruerie<note n="1" xml:id="a01h">Haute-Bruyère, comme toutes les fondations
                 relevant de Fontevrault, comprenait une double communauté d'hommes et de femmes
@@ -1491,7 +1495,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0016" n="XVI" subtype="article">
-          <pb n="25"/>
+          <pb n="25" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1186" notAfter="1217">entre 1186 et 1217</date>
@@ -1545,7 +1549,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0017" n="XVII" subtype="article">
-          <pb n="25"/>
+          <pb n="25" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1217" notAfter="1261">1217-1261</date>
@@ -1574,7 +1578,7 @@
                   <rs type="person"><persName>Ludovicus</persName> Dei <abbr>gr.</abbr>
                     <persName>Francorum</persName> rex</rs>.</s>
               </p>
-              <pb n="26"/>
+              <pb n="26" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
               <p>
                 <s>Noverint universi <abbr>p. p.</abbr> et <abbr>f.</abbr> quod cum
                     <persName>Renoldus Arcuarius</persName> quondam serviens noster pro anima
@@ -1601,7 +1605,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0018" n="XVIII" subtype="article">
-          <pb n="26"/>
+          <pb n="26" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1261" notAfter="1261">1261</date>
@@ -1648,7 +1652,7 @@
           </body>
 </text>
         <text xml:id="SGLY-PR_0019" n="XIX" subtype="article">
-          <pb n="26"/>
+          <pb n="26" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1300" notAfter="1300">1300</date>
@@ -1677,7 +1681,7 @@
                 <s>Cum <rs type="person">prior <placeName><abbr>S.</abbr> Germani in
                       Laya</placeName></rs> proponens quod <rs type="person">predecessores nostri
                       <persName>Francorum</persName> reges</rs>, dicto prioratui concesserunt omnem
-                  decimam vini et annone que attinent ad cellarium vel<pb n="27"/> granarium
+                  decimam vini et annone que attinent ad cellarium vel<pb n="27" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/> granarium
                     <placeName>Pissiaci</placeName> de territoriis de <placeName>Triel</placeName>,
                   de <placeName>Charlavana</placeName> et de <placeName>Pissiaco</placeName>,
                   eidemque, ex eo quod monasterium <placeName><abbr>B.</abbr> Ludovici</placeName>
@@ -1705,7 +1709,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0020" n="XX" subtype="article">
-          <pb n="27"/>
+          <pb n="27" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date notBefore="1314" notAfter="1314">13l4</date>
@@ -1756,7 +1760,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0021" n="XXI" subtype="article">
-          <pb n="27"/>
+          <pb n="27" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1428-05-24">24 mai 1428</date>
@@ -1784,7 +1788,7 @@
               <p>
                 <s><rs type="person"><persName>Henry</persName>
                     <seg type="theo">par la grâce de Dieu</seg> roy de <placeName>France</placeName>
-                    et d'<placeName>Angleterre</placeName></rs>,<pb n="28"/> à noz amez et féaulx
+                    et d'<placeName>Angleterre</placeName></rs>,<pb n="28" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/> à noz amez et féaulx
                   gens de noz comptes et tresoriers à <placeName>Paris</placeName>, salut et
                   dilection.</s>
               </p>
@@ -1819,7 +1823,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0022" n="XXII" subtype="article">
-          <pb n="28"/>
+          <pb n="28" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1428-06-23">23 juin 1428</date>
@@ -1847,7 +1851,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0023" n="XXIII" subtype="article">
-          <pb n="28"/>
+          <pb n="28" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1465-05-15">15 mai 1465</date>
@@ -1878,7 +1882,7 @@
                   pareillement un autre religieux commis par le prieur au gouvernement du monastère,
                   et durant leur détention ont fait inventorier les biens et fait la visite du
                   prieuré, exercé sa juridiction spirituelle, donné benediction et toutes autres
-                  choses comme s'il eust été en son<pb n="29"/> evesché, en troublant et empeschant
+                  choses comme s'il eust été en son<pb n="29" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/> evesché, en troublant et empeschant
                   les religieux en leurs possessions et saisines, à tort, sans cause, induement et
                   de nouvel »</s>
               </p>
@@ -1886,7 +1890,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0024" n="XXIV" subtype="article">
-          <pb n="29"/>
+          <pb n="29" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1473-03-30">30 mars 1473, <abbr>a. s.</abbr></date>
@@ -1924,7 +1928,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0026" n="XXVI" subtype="article">
-          <pb n="29"/>
+          <pb n="29" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1473-08-05">5 août 1473</date>
@@ -1973,7 +1977,7 @@
                   par devers luy les dessus dits <persName>Jehan</persName> et
                     <persName>Jehan</persName>, les eust avisé <abbr>dud.</abbr> cas, afin d'en
                   savoir la vérité ; lesquels en déclinant la court et jurisdiction, se fussent
-                  advoués clercs, et à ce estoit present religieuse perssonne et honneste le <rs type="person">prieur de <placeName>Saint-Germain</placeName></rs><pb n="30"/>
+                  advoués clercs, et à ce estoit present religieuse perssonne et honneste le <rs type="person">prieur de <placeName>Saint-Germain</placeName></rs><pb n="30" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
                   qui d'iceulx requist avoir remission et qu'ils luy fussent remis comme ses
                   subgectz et justiciables en juridiction espirituelle, disant que aud. lieu de
                     <placeName>Saint-Germain</placeName> il y avoit telle juridiction espirituelle
@@ -1998,7 +2002,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0028" n="XXVIII" subtype="article">
-          <pb n="30"/>
+          <pb n="30" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1499-08">Lyon, août 1499</date>
@@ -2030,7 +2034,7 @@
           </body>
         </text>
         <text xml:id="SGLY-PR_0029" n="XXIX" subtype="article">
-          <pb n="30"/>
+          <pb n="30" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
             <docDate>
               <date when="1539-02-08">8 février 1539, <abbr>n. st.</abbr></date>

@@ -7,6 +7,12 @@
   exclude-result-prefixes="tei dts"
 >
   <xsl:import href="../hteiml/xsl/tei2html.xsl"/>
+  <!-- 2026-09-21 : identifiant de la ressource servie. dots/webapp/restxq/routes.xqm l. 273 le
+       passe deja a la feuille : xslt:transform($result, doc($style),
+       map {"static_path": $G:static_path, "resource": $resource}). Sans declaration, XSLT
+       l'ignore silencieusement. Il sert a fabriquer les liens du tableau des actes vers la page
+       de chaque acte (voir cartulaires-acte-href). -->
+  <xsl:param name="resource" select="''"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
   <!-- Diple relativement à ici pour CSS et js par défaut
   <xsl:param name="dipleHref">
@@ -127,6 +133,20 @@
      </xsl:when>
      <xsl:when test="$corrige">
        <a href="{$corrige/@href}">
+         <xsl:apply-templates/>
+       </a>
+     </xsl:when>
+     <!-- 2026-09-21 : URL ABSOLUE. Sans cette branche, un <ref target="http(s)://..."> tombait
+          dans le <xsl:otherwise> ci-dessous, ou substring-after(@target,'#') rend une chaine
+          vide : la feuille fabriquait le lien interne mort « /cartulaires/document/?refId= ».
+          Releve du 2026-09-21 sur data/ : 566 <ref> a URL absolue (459 http, 107 https), AUCUN
+          ne porte @type, et AUCUN n'a d'entree dans cartulaires-refs.xml — le side-car ne les
+          rattrapait donc pas. Parmi eux, les liens « Carte de situation » vers la couche
+          Cassini de cartes.gouv.fr, ajoutes dans 13 cartulaires.
+          La branche est placee APRES le side-car (qui doit pouvoir corriger une URL) et AVANT
+          @type='see' (aucun ref a URL absolue n'est de ce type : ce cas reste intact). -->
+     <xsl:when test="starts-with(@target, 'http://') or starts-with(@target, 'https://')">
+       <a href="{@target}" target="_blank" rel="noopener noreferrer">
          <xsl:apply-templates/>
        </a>
      </xsl:when>
@@ -589,5 +609,283 @@
   </xsl:template>
 
   <!-- ==== V5-PRESENTATION-FIN ==== -->
+
+
+  <!-- ==== W1-TABLEAU-DEBUT (2026-09-21) : LISTE DES ACTES EN TABLEAU TRIABLE ==========
+
+       Demande d'Olivier Canteaut : « la presentation de la liste des actes, avec numero (en
+       romain) et dates est un peu indigeste. Peut-on tenter soit de remplacer les parentheses
+       par une virgule [...] ou mieux, peut-on essayer de faire 2 colonnes, une avec le n°,
+       l'autre avec la date ? On pourrait meme imaginer de trier, ce qui serait super ! »
+
+       CE QUI EST FAIT ICI : un tableau a deux colonnes (n° | date) place en tete de chaque
+       <group> d'actes, TRIABLE par numero et par date, dans les deux sens, SANS <script>.
+
+       CE QUI N'EST PAS FAIT, ET POURQUOI : l'etiquette « I (13 avril-31 juillet 1175) » du
+       sommaire de gauche ne vient PAS d'ici. Elle est stockee dans le registre de fragments de
+       BaseX (dots:fragment/dct:title), rempli a l'ingestion. Remplacer sa parenthese par une
+       virgule demande une reingestion : ce n'est pas du ressort d'une feuille XSL.
+
+       MECANISME DU TRI, SANS SCRIPT (repris de l'index du manuscrit de Bellelay,
+       bellelay.xsl l. 349 et suivantes + bellelay.customCss.css l. 905 et suivantes) :
+       DoTS-vue compile le fragment comme un gabarit Vue et n'execute aucun <script>, mais il
+       laisse passer intacts les <input type="radio">, les <label> et les attributs. Bellelay
+       s'en sert pour paginer ; on s'en sert ici pour TRIER :
+         1. quatre boutons radio (n° croissant / decroissant, date croissante / decroissante),
+            caches, chacun enferme dans son <label> — cliquer le label coche la radio, sans
+            script et sans avoir a apparier des id ;
+         2. chaque ligne porte DEUX rangs precalcules par cette feuille, en proprietes
+            personnalisees CSS (donc prefixees de deux tirets) : ord-n (rang dans l'ordre des
+            numeros) et ord-d (rang dans
+            l'ordre des dates) ;
+         3. le <tbody> est une boite flex en colonne, et la feuille de style choisit, selon la
+            radio cochee, `order: var(ord-n)` ou `order: calc(0 - var(ord-d))`, etc.
+            Mesure du 2026-09-21 dans le navigateur de ce poste (Chrome 153) :
+            `order: var(x)` et `order: calc(0 - var(x))` fonctionnent, `:has()` aussi.
+       Quatre regles CSS suffisent donc pour n'importe quel nombre d'actes — contrairement a la
+       pagination de Bellelay, qui demande une regle par page.
+
+       OU CE TABLEAU APPARAIT, ET POURQUOI PAS AILLEURS (mesure du 2026-09-21) :
+       DoTS-vue demande les pages de PARTIE avec `excludeFragments=true`
+       (dots-vue/src/components/Document.vue l. 279-283, parce que le citeType « part » des
+       groupes n'est pas dans editByCiteType de cartulaires.conf.json). Le module
+       repo/resolver/utils.xqm (fonction utils:excludeFragments, l. 603) retire alors du XML
+       TOUS les enfants qui sont eux-memes des fragments enregistres — c'est-a-dire tous les
+       <text> d'actes — AVANT d'appeler cette feuille, et il ne sert meme pas l'element <group>
+       (seulement ses enfants restants). Sur la page d'une partie, la feuille ne recoit donc
+       qu'un <head> : ni acte, ni date, ni identifiant de groupe. Le tableau ne peut pas y etre
+       engendre. Il l'est sur la PAGE DE LA RESSOURCE (ex. /cartulaires/document/NDRC-AB), la
+       seule ou DoTS-vue demande le document entier (Document.vue l. 264-266) et ou la feuille
+       voit donc les <group> avec leurs <text>.
+
+       CLE DE TRI DES DATES : @when, sinon @notBefore, sinon @notAfter, dans cet ordre de
+       preference (et non par ordre d'apparition des attributs). Releve du 2026-09-21 sur les
+       39 ressources servies : @when dans la majorite des cas, @notBefore/@notAfter pour les
+       dates approchees (177 des 194 actes de Montmartre), aucun attribut pour 119 des 176
+       textes de Saint-Merry. Les actes sans aucune date machine sont rejetes en fin de tri
+       chronologique (premiere cle de tri), au lieu d'etre melanges aux plus anciens.
+       Tout est en XSLT 1.0 : cette feuille est declaree version="1.1".
+  -->
+
+  <!-- Libelle affiche dans la colonne « Date » : le contenu du premier <date> du <docDate>,
+       notes de bas de page exclues (elles y sont frequentes : SMPA-EG_0001, NDRC-AB_0001...). -->
+  <xsl:template name="cartulaires-date-libelle">
+    <xsl:variable name="lib">
+      <xsl:choose>
+        <xsl:when test="tei:front/tei:docDate/tei:date[1]">
+          <xsl:for-each select="tei:front/tei:docDate/tei:date[1]/node()[not(self::tei:note)]">
+            <xsl:value-of select="."/>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:when test="tei:front/tei:docDate">
+          <xsl:for-each select="tei:front/tei:docDate/node()[not(self::tei:note)]">
+            <xsl:value-of select="."/>
+          </xsl:for-each>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="normalize-space($lib) != ''">
+        <xsl:value-of select="normalize-space($lib)"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- jamais d'element vide : la sortie est serialisee en HTML, un <td/> serait lu comme
+             une balise ouvrante (meme piege que les <span/> de Bellelay). -->
+        <xsl:text>[sans date]</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Lien d'une ligne du tableau vers l'acte. Sur la page du groupe (ou les actes ne sont pas
+       rendus, voir plus bas) une ancre « #id » ne menerait nulle part : on sort donc la route de
+       l'acte des que $resource est connu, et on retombe sur l'ancre interne sinon. -->
+  <xsl:template name="cartulaires-acte-href">
+    <!-- 2026-09-21 : quand le texte des actes est rendu sur la meme page que le
+         tableau, la ligne doit y conduire par une ancre et non ouvrir la page de
+         l'acte : sinon on quitte la partie qu'on est en train de lire. -->
+    <xsl:param name="meme-page" select="false()"/>
+    <xsl:choose>
+      <xsl:when test="$meme-page and @xml:id">
+        <xsl:value-of select="concat('#', @xml:id)"/>
+      </xsl:when>
+      <xsl:when test="normalize-space($resource) != ''">
+        <xsl:value-of select="concat('/cartulaires/document/', $resource, '?refId=', @xml:id)"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="concat('#', @xml:id)"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Le tableau lui-meme. Appele avec le <group> pour noeud courant. -->
+  <xsl:template name="cartulaires-table-actes">
+    <xsl:param name="meme-page" select="false()"/>
+    <xsl:variable name="gid" select="generate-id()"/>
+    <section class="cartu-actes" id="cartu-actes-{$gid}">
+      <h2 class="cartu-actes-titre">
+        <xsl:text>Liste des actes </xsl:text>
+        <span class="cartu-actes-nb">
+          <xsl:text>(</xsl:text><xsl:value-of select="count(tei:text)"/><xsl:text>)</xsl:text>
+        </span>
+      </h2>
+      <table class="cartu-actes-table">
+        <thead>
+          <tr class="cartu-actes-entete">
+            <th class="cartu-c-num" scope="col">
+              <span class="cartu-th-nom">N<sup>o</sup></span>
+              <span class="cartu-tri">
+                <label class="cartu-tri-b cartu-tri-asc" title="Trier par numero, du premier au dernier">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="num-asc" checked="checked"/>
+                  <span class="cartu-fleche">&#x25B2;</span>
+                </label>
+                <label class="cartu-tri-b cartu-tri-desc" title="Trier par numero, du dernier au premier">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="num-desc"/>
+                  <span class="cartu-fleche">&#x25BC;</span>
+                </label>
+              </span>
+            </th>
+            <th class="cartu-c-date" scope="col">
+              <span class="cartu-th-nom">Date</span>
+              <span class="cartu-tri">
+                <label class="cartu-tri-b cartu-tri-asc" title="Trier par date, de la plus ancienne a la plus recente">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="date-asc"/>
+                  <span class="cartu-fleche">&#x25B2;</span>
+                </label>
+                <label class="cartu-tri-b cartu-tri-desc" title="Trier par date, de la plus recente a la plus ancienne">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="date-desc"/>
+                  <span class="cartu-fleche">&#x25BC;</span>
+                </label>
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les lignes sont emises dans l'ordre CHRONOLOGIQUE : position() y donne
+               directement ord-d. Le rang par numero (ord-n) se lit, lui, sur l'arbre
+               source : count(preceding-sibling::tei:text) — pas besoin d'une seconde passe
+               triee, impossible a garder en XSLT 1.0. L'ordre affiche par defaut reste celui
+               des numeros (regle CSS `order: var(ord-n)`). -->
+          <xsl:for-each select="tei:text">
+            <xsl:sort data-type="number" order="ascending"
+                      select="number(not(tei:front/tei:docDate/tei:date[1]/@when) and not(tei:front/tei:docDate/tei:date[1]/@notBefore) and not(tei:front/tei:docDate/tei:date[1]/@notAfter))"/>
+            <xsl:sort data-type="text" order="ascending"
+                      select="substring(concat(substring(tei:front/tei:docDate/tei:date[1]/@when, 1, 10), substring(tei:front/tei:docDate/tei:date[1]/@notBefore, 1, 10 * number(not(tei:front/tei:docDate/tei:date[1]/@when))), substring(tei:front/tei:docDate/tei:date[1]/@notAfter, 1, 10 * number(not(tei:front/tei:docDate/tei:date[1]/@when) and not(tei:front/tei:docDate/tei:date[1]/@notBefore))), '----------'), 1, 10)"/>
+            <tr class="cartu-acte">
+              <xsl:attribute name="style">
+                <xsl:text>--ord-n:</xsl:text>
+                <xsl:value-of select="count(preceding-sibling::tei:text) + 1"/>
+                <xsl:text>;--ord-d:</xsl:text>
+                <xsl:value-of select="position()"/>
+              </xsl:attribute>
+              <td class="cartu-c-num">
+                <xsl:choose>
+                  <xsl:when test="@xml:id">
+                    <a class="cartu-acte-lien">
+                      <xsl:attribute name="href"><xsl:call-template name="cartulaires-acte-href"><xsl:with-param name="meme-page" select="$meme-page"/></xsl:call-template></xsl:attribute>
+                      <xsl:choose>
+                        <xsl:when test="normalize-space(@n) != ''"><xsl:value-of select="normalize-space(@n)"/></xsl:when>
+                        <xsl:otherwise><xsl:text>&#x2014;</xsl:text></xsl:otherwise>
+                      </xsl:choose>
+                    </a>
+                  </xsl:when>
+                  <xsl:when test="normalize-space(@n) != ''"><xsl:value-of select="normalize-space(@n)"/></xsl:when>
+                  <xsl:otherwise><xsl:text>&#x2014;</xsl:text></xsl:otherwise>
+                </xsl:choose>
+              </td>
+              <td class="cartu-c-date">
+                <xsl:choose>
+                  <xsl:when test="@xml:id">
+                    <a class="cartu-acte-lien">
+                      <xsl:attribute name="href"><xsl:call-template name="cartulaires-acte-href"><xsl:with-param name="meme-page" select="$meme-page"/></xsl:call-template></xsl:attribute>
+                      <xsl:call-template name="cartulaires-date-libelle"/>
+                    </a>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:call-template name="cartulaires-date-libelle"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </tbody>
+      </table>
+    </section>
+  </xsl:template>
+
+  <!-- Accroche 1 : groupe d'actes AVEC titre — le tableau se place juste apres le <h1> du
+       groupe, sans toucher au modele de groupe de hteiml (apply-imports). -->
+  <xsl:template match="tei:group[tei:text][tei:head]/tei:head" priority="16">
+    <xsl:apply-imports/>
+    <xsl:for-each select="..">
+      <xsl:call-template name="cartulaires-table-actes"/>
+    </xsl:for-each>
+  </xsl:template>
+
+  <!-- Accroche 2 : groupe d'actes SANS titre — le tableau ouvre le groupe. -->
+  <xsl:template match="tei:group[tei:text][not(tei:head)]" priority="16">
+    <xsl:call-template name="cartulaires-table-actes"/>
+    <xsl:apply-imports/>
+  </xsl:template>
+
+  <!-- Accroche 3 : LA PAGE DU GROUPE ELLE-MEME (priorite la plus haute).
+       Quand DoTS-vue demande l'unite d'un groupe, l'API sert <TEI><dts:wrapper><group>...
+       — le groupe est alors fils DIRECT du wrapper, ce qui n'arrive ni dans le document entier
+       (il y est sous <text><body>) ni sur la page d'un acte (le wrapper y porte un <text>).
+       On y rend les titres et les tableaux, et RIEN d'autre.
+
+       Pourquoi : sans cela la feuille engendrait la page entiere, soit 52,1 Mo pour
+       Saint-Martin de Pontoise et 16,6 Mo pour le Magnum pastorale de Notre-Dame de Paris
+       (mesures du 2026-09-21) — la page ne s'affichait plus. Ce sont les octets ENGENDRES par
+       la feuille : ne pas les produire ramene la page a quelques dizaines de kilo-octets.
+       Les actes restent lisibles un a un, par leur propre page, ou le tableau conduit.
+
+       Le test porte sur .//tei:text et NON sur tei:text : dans la moitie du corpus les actes ne
+       sont pas les enfants directs du groupe demande mais d'un sous-groupe (Notre-Dame de Paris
+       t. 1 a 3, Saint-Maur-des-Fosses t. 2 — jusqu'a TROIS niveaux de <group> imbriques,
+       releve du 2026-09-21). D'ou le modele recursif ci-dessous, qui descend jusqu'au niveau
+       qui porte reellement les <text> et y pose un tableau. « wrapper » est teste par
+       local-name(), comme ailleurs dans cette feuille. -->
+  <xsl:template match="tei:group[parent::*[local-name() = 'wrapper']][.//tei:text]" priority="20">
+    <div class="cartu-groupe-seul">
+      <xsl:call-template name="cartulaires-groupe-resume"/>
+    </div>
+  </xsl:template>
+
+  <!-- Un groupe : son titre, son argument s'il en a un (les sommaires imprimes de
+       Saint-Maur-des-Fosses), son tableau s'il porte des actes, puis ses sous-groupes. -->
+  <xsl:template name="cartulaires-groupe-resume">
+    <xsl:param name="niveau" select="1"/>
+    <div class="group">
+      <xsl:if test="@xml:id">
+        <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
+      </xsl:if>
+      <xsl:if test="tei:head">
+        <xsl:choose>
+          <xsl:when test="$niveau &lt;= 1">
+            <h1 class="head"><xsl:apply-templates select="tei:head/node()"/></h1>
+          </xsl:when>
+          <xsl:when test="$niveau = 2">
+            <h2 class="head"><xsl:apply-templates select="tei:head/node()"/></h2>
+          </xsl:when>
+          <xsl:otherwise>
+            <h3 class="head"><xsl:apply-templates select="tei:head/node()"/></h3>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
+      <xsl:apply-templates select="tei:argument"/>
+      <xsl:if test="tei:text">
+        <xsl:call-template name="cartulaires-table-actes">
+          <xsl:with-param name="meme-page" select="false()"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:for-each select="tei:group[.//tei:text]">
+        <xsl:call-template name="cartulaires-groupe-resume">
+          <xsl:with-param name="niveau" select="$niveau + 1"/>
+        </xsl:call-template>
+      </xsl:for-each>
+    </div>
+  </xsl:template>
+
+  <!-- ==== W1-TABLEAU-FIN ==== -->
 
 </xsl:transform>

@@ -124,15 +124,30 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group[@type='tome']" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="section" match="group" use="dots">
+          <citeStructure unit="tome" match="group[@type='tome']" use="dots">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-            <citeStructure unit="sous-section" match="group" use="dots">
+            <citeStructure unit="section" match="group" use="dots">
               <citeData property="dct:title" use="head[1]"/>
               <citeData property="schema:name" use="head[1]"/>
+              <citeStructure unit="sous-section" match="group" use="dots">
+                <citeData property="dct:title" use="head[1]"/>
+                <citeData property="schema:name" use="head[1]"/>
+                <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                  <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                  <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                  <citeData property="dct:type" use="front/index/term/@key"/>
+                  <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                  <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                  <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                </citeStructure>
+              </citeStructure>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                 <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
                 <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
@@ -144,17 +159,6 @@
                 <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
                 <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
               </citeStructure>
-            </citeStructure>
-            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-              <citeData property="dct:type" use="front/index/term/@key"/>
-              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
             </citeStructure>
           </citeStructure>
         </citeStructure>
@@ -201,7 +205,7 @@
         <p>Établissement : Saint-Martin-des-Champs à Paris. – Collégiale fondée par le roi de France
           Henri I<hi rend="sup">er</hi> (confirmation de 1059), rattachée à Cluny comme prieuré par
           le roi de France Philippe I<hi rend="sup">er</hi> en 1079.</p>
-        <p><ref target="SMCP-PR">Carte de situation (Plan de Truschet-Hoyau, 1553)</ref></p>
+        <p><graphic url="/images/cartulaires/Paris-S-Martin-des-Champs.png"><desc>Carte de situation (Plan de Truschet-Hoyau, 1553)</desc></graphic></p>
         <p>Type d’édition : édition dans l’ordre chronologique des actes du chartrier jusqu’au début
           de 1285, tous modes de tradition confondus, sélectivement complétés d’autres sources.</p>
         <p>Total des actes édités : 1298 pièces (1 texte du VIII<hi rend="sup">e</hi> siècle, 1 acte
@@ -628,11 +632,11 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Saint-Martin-des-Champs</head>
-      <group type="tome">
+    <group xml:id="SMCP-PR_edition-group">
+      <head>Édition</head>
+      <group xml:id="r6901657" type="tome">
         <head>Tome 1</head>
-        <group>
+        <group xml:id="r6901663">
           <head>I. — Documents concernant l'église primitive de Saint-Martin</head>
           <text xml:id="SMCP-PR_0001" n="1" subtype="article">
             <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f4/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>
@@ -868,7 +872,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6902330">
           <head>II. — Actes concernant des établissements religieux unis plus tard à
             Saint-Martin</head>
           <text xml:id="SMCP-PR_0003" n="3" subtype="article">
@@ -1238,11 +1242,11 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6903437">
           <head>III. — Chronique versifiée ou Livre des privilèges de St-Martin-des-Champs</head>
           <!-- texte perdu ? <item>6. — Diplôme de fondation et de sauvegarde par le roi Henri I<hi rend="sup">er</hi> au monastère de Saint-Martin-des-Champs (1059-1060).<ref n="14">14</ref></item> <item>7. — Milon (Le Riche de Paris) renonce à ses protestations contre la décision royale qui l'avait dépouillé de sa terre des Champs, l'abbé Engelard ayant transigé avec lui.<ref n="23">23</ref></item> -->
         </group>
-        <group>
+        <group xml:id="r6903445">
           <head>IV — Actes concernant la collégiale de Saint-Martin de Paris</head>
           <text xml:id="SMCP-PR_0008" n="8" subtype="article">
             <pb n="11" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f14/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>
@@ -2591,7 +2595,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6908250">
           <head>V. — Actes concernant Saint-Martin-des-Champs prieuré de Cluny, sous le règne de
             Philippe I<hi rend="sup">er</hi></head>
           <text xml:id="SMCP-PR_0019" n="19" subtype="article">
@@ -3517,7 +3521,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r6911774">
             <head>Actes concernant l'acquisition par Saint-Martin de diverses propriétés à Clamart,
               et l'abandon par Gui [le Rouge] de Montlhéry de tous les droits qu'il pouvait exercer
               sur ce territoire</head>
@@ -4322,7 +4326,7 @@
                     22, col. 2.</witness>
                   <witness n="c"> Migne, <title>Patrologia latina</title>, <abbr>t.</abbr> 151,
                       <abbr>p.</abbr> 291, nº 9.</witness>
-                  <witness n="a" ana="edited">Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs, monastère parisien, éd. Joseph Depoin, Ligugé, 1913-1921, p. 57-58.</witness>
+                  <witness n="a" ana="edited"><title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs, monastère parisien</title>, éd. Joseph Depoin, Ligugé, 1913-1921, p. 57-58.</witness>
                 </listWit>
                 <listWit type="indiqué">
                   <witness> Jaffé-Wattenbach, <title>Regesta Pontificum Romanorum</title>,
@@ -7665,7 +7669,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r6925502">
             <head>Actes concernant l'obtention par Cluny, puis par Saint-Martin des Champs, de
               bénéfices qui entrèrent dans la dotation du prieuré de Gournay-sur-Marne.</head>
             <text xml:id="SMCP-PR_0060" n="60" subtype="article">
@@ -16285,7 +16289,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6954696">
           <head>VI. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis <num>VI</num>
             le Gros</head>
           <text xml:id="SMCP-PR_0124" n="124" subtype="article">
@@ -25306,9 +25310,9 @@
 </text>
         </group>
       </group>
-      <group type="tome">
+      <group xml:id="r6983457" type="tome">
         <head>Tome 2</head>
-        <group>
+        <group xml:id="r6983463">
           <head>VII. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis VI le Gros,
             de 1126 à 1137 </head>
           <text xml:id="SMCP-PR_0191" n="191" subtype="article">
@@ -28469,7 +28473,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6994772">
           <head>VIII. — Donations à Saint-Martin non suivies d'effet sous le règne de Louis
             VI</head>
           <text xml:id="SMCP-PR_0218" n="218" subtype="article">
@@ -29383,7 +29387,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6997724">
           <head>IX. — Diplômes supposés ou suspects de Louis VI (1119-1128) </head>
           <text xml:id="SMCP-PR_0225" n="225" subtype="article">
             <pb n="63" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/f66/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/manifest.json"/>
@@ -29775,7 +29779,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r6998969">
           <head>X. — Actes concernant les fondations anglaises dépendant de Saint-Martin sous Henry
             Ier (1108-1135)</head>
           <text xml:id="SMCP-PR_0228" n="228" subtype="article">
@@ -30577,7 +30581,7 @@
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r7001883">
           <head>XI. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis VII
             (1137-1180) </head>
           <text xml:id="SMCP-PR_0235" n="235" subtype="article">
@@ -34746,7 +34750,7 @@
                     preuves, <abbr>pp.</abbr> 45-46 (extrait.).</witness>
                   <witness n="d"> Tardif, <title>Mon. hist.</title>, nº 467, <abbr>p.</abbr>
                     254.</witness>
-                  <witness n="a" ana="edited">Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs, monastère parisien, éd. Joseph Depoin, Ligugé, 1913-1921, p. 139.</witness>
+                  <witness n="a" ana="edited"><title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs, monastère parisien</title>, éd. Joseph Depoin, Ligugé, 1913-1921, p. 139.</witness>
                 </listWit>
                 <listWit type="indiqué">
                   <witness><title>Table des diplômes</title>, <abbr>t.</abbr> III, <abbr>p.</abbr>
@@ -53466,14 +53470,14 @@
 </text>
         </group>
       </group>
-      <group type="tome">
+      <group xml:id="r7081193" type="tome">
         <head>Tome 3</head>
-        <group>
+        <group xml:id="r7081199">
           <head>XII. — Mémorial chronologique des défunts commémorés à Saint-Martin-des-Champs, de
             1096 à 1183.</head>
           <!-- <text> <body> <list> <item>I. - Prière pour les morts.</item> <item>II. - Prieurs et grands personnages.</item> <item>III. - Bienfaiteurs et bienfaitrices.</item> <item>IV. - Frères et Associés décédés à Saint-Martin-des-Champs.</item> </list> </body> </text> -->
         </group>
-        <group>
+        <group xml:id="r7081207">
           <head>XIII. — Actes concernant Saint-Martin-des-Champs sous le règne de Philippe-Auguste
             (1180-1223).</head>
           <text xml:id="SMCP-PR_0453" n="453" subtype="article">
@@ -61416,7 +61420,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r7107908">
             <!-- 533-535 bis. -->
             <head>Documents concernant la prébende de St-Martin dans l'abbaye de Sainte-Geneviève du
               Mont (1174-1193).</head>
@@ -62247,7 +62251,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r7110445">
             <!-- 542-546. -->
             <head>(1173 - 16 septembre 1196) Chartes de Maurice, évêque de Paris, intéressant
               Saint-Martin-des-Champs.</head>
@@ -63681,7 +63685,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r7115056">
             <!-- 557-558. -->
             <head>(1146-1198) Actes pontificaux et épiscopaux concernant le prieuré d'Encre.</head>
             <text xml:id="SMCP-PR_0557" n="557" subtype="article">
@@ -64559,7 +64563,7 @@
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r7117865">
             <head>567-576. — Chartes du prieur Robert, non datées (1176-7 janvier 1201). Essai d'une
               chronologie de ces actes. Obit du prieur Robert, inhumé à Saint-Martin.</head>
             <argument>
@@ -66155,7 +66159,7 @@
               </div>
             </body>
         </text>
-          <group>
+          <group xml:id="r7122559">
             <!-- 585-596. -->
             <head>(1140-1202) Documents concernant les bénéfices compris dans le diocèse de Châlons,
               concédés en 1140 à Saint-Martin par l'évêque Geofroi I<hi rend="sup">er</hi>, et
@@ -76017,7 +76021,7 @@ chevalier, et l'hôpital
               </div>
             </body>
 </text>
-          <group>
+          <group xml:id="r7151338">
             <!-- 710-711. -->
             <head>Chartes de Mathieu <num>II</num> de Montmorency et de Pierre <num>II</num>, évêque
               de Paris, concernant des fondations religieuses à Piscop<note><p>Ces deux chartes ont
@@ -79609,7 +79613,7 @@ chevalier, et l'hôpital
                 </listWit>
                 <listWit type="édition">
                   <witness n="a"><title>Gallia christiana nova, VII, Instrumenta</title>, col. 91,
-                    sans indication de source<ref target="#smchamps_0763_"/>.</witness>
+                    sans indication de source<ref target="#SMCP-PR_0763"/>.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
                       monastère parisien</title>, éd. Joseph Depoin, Ligugé, 1913-1921, p. 359-361.</witness>
@@ -82421,9 +82425,9 @@ chevalier, et l'hôpital
 </text>
         </group>
       </group>
-      <group type="tome">
+      <group xml:id="r7169340" type="tome">
         <head>Tome 4</head>
-        <group>
+        <group xml:id="r7169346">
           <head>XIV. —Actes concernant Saint-Martin-des-Champs pendant le règne de Louis VIII
             (1223-1226)</head>
           <text xml:id="SMCP-PR_0810" n="810" subtype="article">
@@ -82804,7 +82808,7 @@ chevalier, et l'hôpital
                     <abbr>s.</abbr>, non collationnée, Arch. nat., S 1392, nº 8.</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a">Marrier, Monasterii Sancti Martini... historia, p. 33.</witness>
+                  <witness n="a">Marrier, <title>Monasterii Sancti Martini... historia</title>, p. 33.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
                       monastère parisien</title>, éd. Joseph Depoin, Ligugé, 1913-1921, p. 4_0005-4_0006.</witness>
@@ -83725,7 +83729,7 @@ chevalier, et l'hôpital
                       <abbr>ms. lat.</abbr> 9171, nº 373.</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a">Chan. Morel, Cartulaire de Saint-Corneille de Compiègne, nº 363, t.
+                  <witness n="a">Chan. Morel, <title>Cartulaire de Saint-Corneille de Compiègne</title>, nº 363, t.
                     II, p. 45.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
@@ -84080,7 +84084,7 @@ chevalier, et l'hôpital
                     101, <title>Cartulaire B</title>, 676.</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a"> Brièle et Coyecque, Archives de l'Hôtel-Dieu de Paris, nº 904, p.
+                  <witness n="a"> Brièle et Coyecque, <title>Archives de l'Hôtel-Dieu de Paris</title>, nº 904, p.
                     507.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
@@ -84853,7 +84857,7 @@ chevalier, et l'hôpital
                     <abbr>s.</abbr>, <abbr>ms. lat.</abbr> 9974, <abbr>fol.</abbr> 17'.</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a">Douët d'Arcq, Rech. sur les comtes de Beaumont-sur-Oise, p.
+                  <witness n="a">Douët d'Arcq, <title>Rech. sur les comtes de Beaumont-sur-Oise</title>, p.
                     135.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
@@ -85469,7 +85473,7 @@ chevalier, et l'hôpital
             </body>
 </text>
         </group>
-        <group>
+        <group xml:id="r7178171">
           <head>XV. — <pb n="4_0042" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255715c/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255715c/manifest.json"/>Actes concernant Saint-Martin-des-Champs sous le règne de saint Louis
             (1226-1270)</head>
           <text xml:id="SMCP-PR_0856" n="856" subtype="article">
@@ -86595,7 +86599,7 @@ chevalier, et l'hôpital
                       <abbr>fol.</abbr> cxxx (iii').</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a"> Douët d'Arcq, Rech. sur les comtes de Beaumont-sur-Oise, p.
+                  <witness n="a"> Douët d'Arcq, <title>Rech. sur les comtes de Beaumont-sur-Oise</title>, p.
                     31.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
@@ -99987,9 +99991,9 @@ chevalier, et l'hôpital
 </text>
         </group>
       </group>
-      <group type="tome">
+      <group xml:id="r7219799" type="tome">
         <head>Tome 5</head>
-        <group>
+        <group xml:id="r7219805">
           <head>XVI. — Actes concernant Saint-Martin-des-Champs sous le règne de saint Louis
             (1253-1270)</head>
           <text xml:id="SMCP-PR_1111" n="1111" subtype="article">
@@ -103143,8 +103147,8 @@ chevalier, et l'hôpital
                         Poissy, du don du chevet Saint-Jacques</mentioned> »</mentioned>.</witness>
                 </listWit>
                 <listWit type="édition">
-                  <witness n="a"> [Villain], Essai d'une histoire de la paroisse
-                    Saint-Jacques-de-la-Boucherie, <abbr>p.</abbr> 262.</witness>
+                  <witness n="a"> [Villain], <title>Essai d'une histoire de la paroisse
+                    Saint-Jacques-de-la-Boucherie</title>, <abbr>p.</abbr> 262.</witness>
                   <witness n="b" ana="edited">
                     <title>Recueil des chartes et documents de l’abbaye de Saint-Martin des Champs,
                       monastère parisien</title>, éd. Joseph Depoin, Ligugé, 1913-1921, p. 38-39.</witness>
@@ -107215,7 +107219,7 @@ chevalier, et l'hôpital
             </body>
           </text>
         </group>
-        <group>
+        <group xml:id="r7241851">
           <head>XVII. — Actes concernant Saint-Martin-des-Champs sous le règne de Philippe le Hardi
             (1270-1285)</head>
           <text xml:id="SMCP-PR_1229" n="1229" subtype="article">

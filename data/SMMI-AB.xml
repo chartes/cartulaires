@@ -79,19 +79,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure> 
-        <citeStructure match="/TEI[1]/text[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
       </refsDecl>
@@ -1202,7 +1206,9 @@
         <p>Ces actes faux, joints à d’autres actes authentiques, ont été recueillis par les compilateurs des cartulaires de 1257 et de 1270.</p>
       </div>
     </front>
-    <group xml:id="SMMI-AB_group">
+    <group xml:id="SMMI-AB_edition-group">
+      <head>Édition</head>
+      <group xml:id="SMMI-AB_group">
       <head>Cartulaire de Micy</head>
       <text subtype="article" xml:id="SMMI-AB_0001" n="I">
         <pb n="1"/>
@@ -7364,6 +7370,7 @@
           <p><pb n="843"/>Universis praesentes litteras inspecturis, frater Adam, monasterii sancti Maximini Miciacensis humilis abbas, totusque ejusdem loci conventus, salutem in Domino. Noverint universi quod, cum contentio verteretur inter nos, ex una parte, et Adam de Puteolis ballivum Reverendi patris R., Dei gratia Aurelianensis episcopi, ex altera, super quadam domo, quae vocatur Bromillole, sita prope villam quae vocatur Bromille et pertinentiis ipsius domus, videlicet vineis, terris arabilibus et aliis pertinentiis dictae domus, quae domus cum pertinentiis fuit defuncti Adae de Megiers, avunculi dicti Adae, qui nobis et monasterio nostro contulit se et sua, quam domum cum pertinentiis dicebat dictus Adam nos detinere minus juste in ejus prejudicium et gravamen, ea videlicet ratione quod, si dictus Adam Avunculus suus nobis et monasterio nostro contulit se et sua, collationis tamen tempore, non erat compos mentis, unde non valuit collatio seu concessio praedicta. Item, cum dictus avunculus suus et mater dicti Adae de Puteolis, qui erant frater et soror, haberent inter se bona sua communia, nec unquam dividerent inter se bona et, durante communitate seu societate praedicta, dictus avunculus suus dictam domum cum <pb n="844"/>pertinentiis partim acquisierat titulo emptionis, propter quod dicta domus cum pertinentiis, post mortem dicti Adae avunculi sui, ad matrem dicti Adae de Puteolis, quae adhuc vivit, quasi ad proximum haeredem dicti avunculi sui debent devenire, non obstante collatione praedicta, vel si valuit collatio praedicta, saltem medietas, dicta domus et pertinentiarum, ejusdem ratione societatis sive communitatis praedictae, pertinet de usu et consuetudine patriae in consimilibus casis observatis, ad dictam matrem dictae Adae de Puteoleis, quae mater dicti Adae, prout ipse Adam asserebat constanter, quicquid juris habebat et habere poterat in dicta domo et pertinentiis, donationis titulo, transtulerat in eundem. Tandem, obtentu dilecti nostri magistri Thomae Grossim, canonici Aurelianensis, qui nobis et praedecessoribus nostris patricinando nobis et praedecessoribus nostris in causis monasterii nostri diu servivit fideliter et devote, nobis cum instantia supplicantis ad omnem litis occasionem et materiam imputandam super contentione praedicta, talis inter nos et dictum Adam amicabilis compositio intervenit, videlicet quod dictus Adam de Puteolis nobis 200 <pb n="845"/>libras turonensium daret et solveret in pecunia numerata, et nos dictam domum cum pertinentiis eidem Adae trademus, dimittemus et liberabimus ab ipso et ejus haredibus et successoribus in perpetuum pacifice possidendam, et quidquid juris habemus in dicta domo et pertinentiis, in dictum Adam et ejus haeredes et successores totaliter transferemus et, quod in dicta domo et pertinentiis quaedam movent de feodo, quaedam tenentur ad censum annuum, dictus Adam ea quae movent de feodo, quia feodum admortificavimus, in parte contra dominos feodales, a nobis similiter tenebit in feodum ligium et ea similiter de domo et pertinentiis praedictis, quae movent de feodo, quae non adhuc admortificata, tenebit in feodum a nobis si ea sibi possumus garentire et defendere contra dominos feodales. Alioquin habebit de non admortificatis recursa ad dominos feodales, et non admortificata tenebit ab eisdem. Ea vero de dicta domo et pertinentiis, quae tenentur ad censum, tenebit a dominis censualibus secundum quod in talibus fieri consuevit. Nos vero abbas et conventus et dictus Adam, similiter praedictae compositioni consentimus specialiter et expresse et eam ratam et firmam habemus ac etiam approbamus, promittentes nos <pb n="846"/>abbas et conventus bona fide et dictus Adam per fidem suam nos contra dictam compositionem amicabilem non venturos aliqua ratione vel causa in posterum. Imo dictam domum cum pertinentiis ex nunc dicto Adae tradimus, dimittimus et concedimus et quidquid habemus in dicta domo et pertinentiis in dictum Adam et haeredes et successores ipsius totaliter transferimus, nihil juris in dicta domo et pertinentiis nobis et monasterio nostro retinentes, partire conquestus quos nos adquisivimus et quos acquisierunt dicti Adam des Mergiers et defuncta Aelipdis quondam uxor sua, constante matrimonio, inter ipsos sitos apud les Mergiers, et circa quos nobis et monasterio nostro retinemus et expresse praeter blada quae isto anno seminari fecimus, et alia mobilia in dicta domo et pertinentiis existentia, quae nobis similiter retinuimus et adhuc etiam retinemus. Conquestus vero a dictis Adam et Aelipdi factos, circa domum de Bromillole sitos, eidem Adae et successoribus suis dimittimus et quittamus, praeter quod dictus Adam dictam domum cum pertinentiis a nobis tenet in feodum ligium et intuit homagium nostrum et nos dictam domum cum pertinentiis tenemur <pb n="847"/>dicto Adae et ejus haeredibus et successoribus defendere, garentire ad usus et consuetudines patriae, contra omnes renuntiamus etiam quantum ad praedictam, exceptioni doli mali et in fori et ne possimus dicere nos esse circunventos vel monasterium nostrum esse in aliquo in compositione praedicta et specialiter beneficio restitutionis in integrum et quod dicta pecunia in utilitatem monasterii nostri non sit conversa, et omni alii exceptioni quae contra dictam compositionem posset objici sive duci. Confitemur etiam dictum Adam nobis de dictis 200 libris turonensium satisfecisse totaliter in pecunia numerata, et tenemus nos pro pagatis de dictis 200 libris turonensium et eundem Adam super ipsa pecunia penitus absolvimus et quittamus et sic omnes controversiae et querelae inter nos et dictum Adam retro habitatae sunt sopitae. In cujus rei memoriam et testimonium praesentes litteras praedicto Adae dedimus sigillorum nostrorum munimine roboratas. Actum et datum in capitulo nostro anno Domini 1270, die Jovis ante Cineres.</p>
         </div></body>
       </text>
+      </group>
     </group>
   </text>
 </TEI>

@@ -107,19 +107,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group[1]" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
@@ -164,7 +168,7 @@
         <p>Établissement : Saint-Christophe-en-Halatte (Oise, cant. Pont-Sainte-Maxence, comm.
           Fleurines ; ancien diocèse de Senlis). – Prieuré clunisien dépendant de La
           Charité-sur-Loire. </p>
-        <p>Carte de situation (Atlas de Cassini)</p>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.597700,49.260300&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
         <p>Cartulaire factice, compilé à partir des copies XVIII<hi rend="sup">e</hi> siècle du
           chanoine Afforty.</p>
         <p>Total des actes édités : 56 (3 du XI<hi rend="sup">e</hi> siècle, 1 du XII<hi rend="sup">e</hi> siècle, 52 du XIII<hi rend="sup">e</hi> siècle).</p>
@@ -372,8 +376,8 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Halatte</head>
+    <group xml:id="SCHA-PR_edition-group">
+      <head>Édition</head>
       <group xml:id="SCHA-PR_group">
         <head>Cartulaire</head>
         <text subtype="article" xml:id="SCHA-PR_0001" n="1">

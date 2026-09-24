@@ -70,18 +70,6 @@
         <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-          </citeStructure>
-          
           <citeStructure unit="part" match="group" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
@@ -96,23 +84,39 @@
               <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
               <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
             </citeStructure>
-            
+          
             <citeStructure unit="part" match="group" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
               <citeData property="schema:name" use="head[1]"/>
+              <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                <citeData property="dct:type" use="front/index/term/@key"/>
+                <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              </citeStructure>
+            
               <citeStructure unit="part" match="group" use="@xml:id">
                 <citeData property="dct:title" use="head[1]"/>
                 <citeData property="schema:name" use="head[1]"/>
-                <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-                  <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-                  <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-                  <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-                  <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-                  <citeData property="dct:type" use="front/index/term/@key"/>
-                  <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-                  <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-                  <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-                  <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                <citeStructure unit="part" match="group" use="@xml:id">
+                  <citeData property="dct:title" use="head[1]"/>
+                  <citeData property="schema:name" use="head[1]"/>
+                  <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+                    <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                    <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                    <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                    <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+                    <citeData property="dct:type" use="front/index/term/@key"/>
+                    <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+                    <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+                    <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                    <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+                  </citeStructure>
                 </citeStructure>
               </citeStructure>
             </citeStructure>
@@ -180,7 +184,9 @@
         <p>Sauf indication contraire, les documents cités d’après une simple cote, sans mention du dépôt dans lequel ils sont conservés, se trouvent aux Archives nationales.</p>
       </div>
     </front>
-    <group xml:id="SGDP-AB_group">
+    <group xml:id="SGDP-AB_edition-group">
+      <head>Édition</head>
+      <group xml:id="SGDP-AB_group">
       <head>Cartulaire de l’abbaye de Saint-Germain-des-Prés</head>
         <text subtype="article" xml:id="SGDP-AB_0001" n="I">
           <pb n="I. 1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k165334g/f5/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k165334g/manifest.json"/>
@@ -17397,6 +17403,7 @@
             </group>
           </group>
         </group>
+      </group>
     </group>
   </text>
 </TEI>

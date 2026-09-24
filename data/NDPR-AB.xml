@@ -121,19 +121,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]" use="@xml:id" unit="Index">
@@ -188,7 +192,7 @@
           (Yvelines, cant. Chevreuse, comm. Magny-lès-Hameaux ; diocèse ancien Paris). — Moniales.
           Maison fondée en 1204, abbaye à partir de 1214-1215, définitivement affiliée en 1225 à
           l’ordre de Cîteaux, dépendant de l’abbaye des Vaux-de-Cernay (filiation de Clairvaux).</p>
-        <p>Carte de situation (Atlas de Cassini)</p>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.015773,48.745076&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
         <p>Type d’édition : édition des actes antérieurs à 1281 et d’un censier (vers 1260) contenus
           dans les deux cartulaires conservés du XIII<hi rend="sup">e</hi> siècle (Bibl. nat. de
           Fr., lat. 10997-10998), reclassés dans l’ordre chronologique et sélectivement complétés
@@ -528,8 +532,8 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Port-Royal</head>
+    <group xml:id="NDPR-AB_edition-group">
+      <head>Édition</head>
       <!--
       <text>
         <body>
@@ -16950,7 +16954,7 @@
     </group>
  
     <back xml:id="NDPR-AB_back">
-      <div type="indexnominum" n="1"  xml:id="NDPR-AB_back-1">
+      <div type="indexnominum" n="1" xml:id="NDPR-AB_back-1">
         <pb n="329" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f351/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
       <list type="index">
           <head>A</head>

@@ -121,19 +121,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group[1]" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
@@ -182,7 +186,7 @@
       <argument>
         <p>Établissement : Saint-Spire (<hi rend="i">Sanctus Exuperius</hi>) de Corbeil (auj.
           Corbeil-Essonnes, Essonne, ch.-l. cant. ; anc. diocèse de Paris). — Collégiale.</p>
-        <p>Carte de situation (Atlas de Cassini)</p>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.482667,48.611861&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
         <p>Type d’édition : Édition dans un ordre méthodique des actes du cartulaire médiéval dans
           son état primitif (jusqu’en 1259), enrichie de quelques pièces non transcrites au
           cartulaire, et suivie de l’édition des deux censiers et de l’obituaire associés au
@@ -274,13 +278,13 @@
             <abbr>p.</abbr> 393-410 (indiqué Lemaitre, <hi rend="i">Répertoire des documents
               nécrologiques</hi>, <abbr>t.</abbr> I, n° 1377, <abbr>p.</abbr> 614-615).</p>
         </div>
-        <div xml:id="SSCO-AB_archives-4">
-          <head>Orientation bibliographique</head>
-          <listBibl>
-            <bibl><author>François de Guilhermy</author>, <title>Monographie de l’église Saint-Spire
-                de Corbeil</title>, Corbeil, 1901.</bibl>
-          </listBibl>
-        </div>
+      </div>
+      <div xml:id="SSCO-AB_biblio" subtype="article">
+        <head>Orientation bibliographique</head>
+        <listBibl>
+          <bibl><author>François de Guilhermy</author>, <title>Monographie de l’église Saint-Spire
+              de Corbeil</title>, Corbeil, 1901.</bibl>
+        </listBibl>
       </div>
       <div xml:id="SSCO-AB_edition" subtype="article">
         <head>L’édition</head>
@@ -462,7 +466,7 @@
       </div>
     </front>
     <group xml:id="SSCO-AB_group">
-      <head>Saint-Spire de Corbeil</head>
+      <head>Édition</head>
       <group xml:id="SSCO-AB_group-1">
         <head>Cartulaire</head>
         <text xml:id="SSCO-AB_0001" n="I" subtype="article">
@@ -11696,7 +11700,7 @@
           <item xml:id="SSCO-AB_rs_005">§ 3. <hi rend="sc">Personnel</hi>. — L'abbé, sa nomination, ses droits et ses devoirs, — le chantre, — le chevecier, — le prévôt, le chambrier et les distributeurs, — les chanoines, — les prébendiers étrangers à Saint-Spire, — le prieur de Notre-Dame-des-Champs, — l'abbaye de Saint-Victor de Paris, — les chapelains, — les vicaires<ref n="XIX">XIX</ref>.</item>
           <item xml:id="SSCO-AB_rs_006">§ 4. <hi rend="sc">Temporel</hi>. — La fabrique, — les annates, — le cloître, — les distributions, — les obits, — les foires, — les mesures, — prix des bois, des prés et des vignes<ref n="XLIV">XLIV</ref>.</item>
         </list>
-      </div>--><div type="table" n="1">
+      </div>--><div xml:id="r7987684" type="table" n="1">
         <pb n="235" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f295/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"/>
         <head>CARTULAIRE</head>
         <note xml:id="note61" n="61">Le chiffre romain indique le folio du manuscrit ; le chiffre arabe indique la page de notre édition.</note>

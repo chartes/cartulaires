@@ -98,19 +98,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group[1]" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
@@ -156,7 +160,7 @@
         <p>Établissements : Saint-Thomas d’Épernon (Eure-et-Loir, cant. Maintenon ; ancien diocèse
           de Chartres) ; Notre-Dame de Maintenon (Eure-et-Loir, ch.-l. cant. ; ancien diocèse de
           Chartres). – Bénédictins, prieurés de Marmoutier. </p>
-        <p>Carte de situation (Atlas de Cassini)</p>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=1.672500,48.609444&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
         <p>Édition ou regeste, dans l’ordre chronologique, des originaux et copies modernes.</p>
         <p>Total des actes édités ou mentionnés : 178, dont 136 pour Épernon et 42 pour Maintenon (1
           du XI<hi rend="sup">e</hi> siècle, 8 du XII<hi rend="sup">e</hi> siècle, 102 du XIII<hi rend="sup">e</hi> siècle, 27 du XIV<hi rend="sup">e</hi> siècle, 17 du XV<hi rend="sup">e</hi> siècle, 15 du XVI<hi rend="sup">e</hi> siècle, 6 du XVII<hi rend="sup">e</hi> siècle, 2 du XVIII<hi rend="sup">e</hi> siècle).</p>
@@ -524,8 +528,8 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Saint-Thomas d'Epernon</head>
+    <group xml:id="STEP-AB_edition-group">
+      <head>Édition</head>
       <group xml:id="STEP-AB_group">
         <head>Cartulaire</head>
         <text subtype="article" xml:id="STEP-AB_0001" n="I">
@@ -1041,7 +1045,7 @@
                   cote : n° 51 ter de la liasse). </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 12.</witness>
+                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 12.</witness>
               </listWit>
             </div>
           </front>
@@ -3501,7 +3505,7 @@
                 <witness n="B">N° 47 bis de la liasse. Double queue de parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 50-51.</witness>
+                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 50-51.</witness>
               </listWit>
             </div>
           </front>
@@ -8105,7 +8109,7 @@
             </argument>
             <div type="tradition">
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 122.<note xml:id="p122_fn1">Archives d'Eure-et-Loir.</note></witness>
+                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 122.<note xml:id="p122_fn1">Archives d'Eure-et-Loir.</note></witness>
               </listWit>
             </div>
           </front>
@@ -8426,7 +8430,7 @@
             </argument>
             <div type="tradition">
               <listWit type="édition">
-                <witness n="a" ana="edited">Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 127-181.</witness>
+                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon, prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 127-181.</witness>
               </listWit>
             </div>
           </front>

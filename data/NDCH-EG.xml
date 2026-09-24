@@ -97,15 +97,19 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="tome" match="/TEI[1]/text[1]/group[1]/group" use="dots">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front[1]/docDate[1]/date[1]/@when) then string(front[1]/docDate[1]/date[1]/@when) else if (front[1]/docDate[1]/date[1]/@notBefore or front[1]/docDate[1]/date[1]/@notAfter) then concat((front[1]/docDate[1]/date[1]/@notBefore, '..')[1], '/', (front[1]/docDate[1]/date[1]/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
-            <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dots:resourceIIIFManifest" use="front/div/listWit/witness/@corresp"/>
-          <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+          <citeData property="schema:name" use="head[1]"/>
+          <citeStructure unit="tome" match="group" use="dots">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front[1]/docDate[1]/date[1]/@when) then string(front[1]/docDate[1]/date[1]/@when) else if (front[1]/docDate[1]/date[1]/@notBefore or front[1]/docDate[1]/date[1]/@notAfter) then concat((front[1]/docDate[1]/date[1]/@notBefore, '..')[1], '/', (front[1]/docDate[1]/date[1]/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front[1]/index[1]/term/@key"/>
+              <citeData property="dct:language" use="body[1]/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dots:resourceIIIFManifest" use="front/div/listWit/witness/@corresp"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/></citeStructure>
+          </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]" use="dots" unit="Index">
           <citeStructure match="div[@type = 'index' or @type = 'table']" use="@xml:id">
@@ -136,7 +140,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="r5194666">
       <head>Notice introductive</head>
       <!--<head><hi rend="i">Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres
         originaux</hi>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique
@@ -150,7 +154,7 @@
       <byline>Notice préparée par Damien Berné et Camille Le Fauconnier (mai 2007).</byline>
       <div xml:id="NDCH-EG_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div xml:id="r5194727" type="historique">
           <head>Historique</head>
           <p>Le diocèse de Chartres est l’un des plus anciens et des plus importants de la Gaule à
             la fin de l’Empire romain. La légende veut que dans la forêt des Carnutes, des druides
@@ -216,7 +220,7 @@
             de Notre-Dame de Chartres a acquise et conserve tout au long du Moyen Âge, et même
             au-delà.</p>
         </div>
-        <div type="localisation_patrimoine">
+        <div xml:id="r5194811" type="localisation_patrimoine">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Le diocèse de Chartres est l’un des plus importants de la Gaule chrétienne, le second
             après celui de Sens. Il s’étend sur 200 km de long et 60 de large. Il comprend la
@@ -227,7 +231,7 @@
                 <title>Chartres et ses campagnes…</title>, carte des « Exploitations du chapitre
               N.-D. de Chartres en 1300 », p. 185.</bibl></p>
         </div>
-        <div type="bienfaiteurs">
+        <div xml:id="r5194835" type="bienfaiteurs">
           <head>Réseaux de bienfaiteurs</head>
           <p>Comme on l’a déjà esquissé, le chapitre de Notre-Dame de Chartres bénéficie des
             largesses des chanoines et des évêques issus des plus hauts lignages (Fulbert, Guillaume
@@ -245,7 +249,7 @@
       </div>
       <div xml:id="NDCH-EG_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div type="chartrier">
+        <div xml:id="r5194857" type="chartrier">
           <head>Le chartrier</head>
           <p>Les fonds de l’évêché et du chapitre cathédral de Chartres ne sont, à de rares
             exceptions près, pas antérieurs à l’incendie qui a détruit la cathédrale en 1194. Ils
@@ -273,14 +277,14 @@
             actuelle, mais l’usage de l’<bibl><title>Inventaire du chapitre</title> en 6 volumes de
               1780</bibl> permet de s’y retrouver assez rapidement.</p>
         </div>
-        <div type="cartulaires">
+        <div xml:id="r5194887" type="cartulaires">
           <head>Les cartulaires</head>
           <p>Plusieurs compilations médiévales et modernes ont été exploitées par les éditeurs
             (Stein n<hi rend="sup">o</hi> 882-886), qui ont ignoré un manuscrit conservé à Toulouse
             (Stein n<hi rend="sup">o</hi> 886). </p>
           <p/>
         </div>
-        <div type="necrologie">
+        <div xml:id="r5194907" type="necrologie">
           <head>Documents nécrologiques</head>
           <p>Lépinois et Merlet ont joint à leur cartulaire un nécrologe dressé par leurs soins à
             partir d’un ensemble de documents nécrologiques alors conservés pour l’essentiel à la
@@ -302,7 +306,7 @@
                 <bibl><title>Répertoire des documents nécrologiques…</title> de <author>Jean-Loup
                 Lemaitre</author>, t. I, n<hi rend="sup">o</hi> 899-915</bibl>.</p>
         </div>
-        <div type="sources_exterieures">
+        <div xml:id="r5195009" type="sources_exterieures">
           <head>Sources extérieures</head>
           <p>Une partie des pièces réunies par Lépinois et Merlet ne sont pas des actes, mais de
             petits traités reliés :</p>
@@ -396,7 +400,7 @@
       </div>
       <div xml:id="NDCH-EG_edition" subtype="article">
         <head>L’édition</head>
-        <div type="editeurs">
+        <div xml:id="r5195270" type="editeurs">
           <head>Les éditeurs : éléments biographiques</head>
           <p>Lucien Victor Claude Merlet (1827-1898), né à Vannes, licencié en lettres et en droit,
             est ancien élève de l’École des chartes et de l’École nationale d’administration.
@@ -444,7 +448,7 @@
             également intéressé à la peinture, et a publié des notices d’artistes et des catalogues
             d’expositions dans des revues normandes. </p>
         </div>
-        <div type="conception_edition">
+        <div xml:id="r5195380" type="conception_edition">
           <head>Conception et contenu de l’édition</head>
           <p>Les deux érudits entendaient compenser une lacune historiographique importante, tout en
             s’inscrivant dans la vogue des éditions de cartulaires, type documentaire considéré
@@ -752,7 +756,7 @@
             des questions incidentes telleS que l’origine de l’église de Chartres ou les limites du
             diocèse.</p>
         </div>
-        <div type="qualite">
+        <div xml:id="r5196186" type="qualite">
           <head>Qualité de l’édition</head>
           <p>De manière générale, le lecteur est amené à déplorer l’extrême parcimonie des
             indications qui permettraient de reconstituer la démarche des deux auteurs. La dimension
@@ -812,9 +816,9 @@
         </div>
       </div>
     </front>
-    <group>
-      <head>Notre-Dame de Chartres</head>
-      <group>
+    <group xml:id="NDCH-EG_edition-group">
+      <head>Édition</head>
+      <group xml:id="r5196252">
         <head>Tome premier</head>
         <text subtype="article" xml:id="NDCH-EG_0001" n="I">
           <pb n="t1_p067" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/f317/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486069v/manifest.json"/>
@@ -13233,7 +13237,7 @@
           
         </text>
       </group>
-      <group>
+      <group xml:id="r5230513">
         <head>Tome deuxième</head>
         <text subtype="article" xml:id="NDCH-EG_0143" n="CXLIII">
           <pb n="t2_p001" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/f3/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486070s/manifest.json"/>
@@ -31968,9 +31972,9 @@
         <!-- <back> <div type="table"> <pb n="429" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/f431/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/manifest.json"/> <head>Table du deuxième volume.</head> <list> <item>Chartes et documents (1200 à <ref>1391)</ref> 1</item> <item>Polyptique de l'église de Chartres <ref>279</ref></item> </list> </div> </back> -->
       </group>
     </group>
-    <back>
+    <back xml:id="r5276069">
       
-         <div type="index">
+         <div xml:id="r5276071" type="index">
         <head><pb n="229" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/manifest.json"/> Dictionnaire topographique et index géographique.</head>
         <list type="index" xml:id="NDCH-EG_liste_A">
           <head>A</head>
@@ -34225,7 +34229,7 @@
           <item xml:id="NDCH-EG_rs_2180"><rs><hi rend="sc">Yys (Les)</hi></rs>, <ref target="#NDCH-EG_0137" n="I. 257">137</ref>; <ref target="#NDCH-EG_0245" n="II. 103">245</ref>. <desc>hameau, commune des Corvées, canton de la Loupe, arrondissement de Nogent-le-Rotrou.</desc></item>
         </list>
       </div>
-      <div type="table">
+      <div xml:id="r5310021" type="table">
     <pb n="321" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/f323/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860715/manifest.json"/>
     <head>Table des noms</head>
     <list type="index" xml:id="NDCH-EG_liste_A_2">

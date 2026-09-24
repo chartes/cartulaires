@@ -71,19 +71,23 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-            <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-            <citeData property="dct:type" use="front/index/term/@key"/>
-            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
-            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          <citeStructure match="group" use="@xml:id" unit="part">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+            <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:type" use="front/index/term/@key"/>
+              <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+              <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+              <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            </citeStructure>
           </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
@@ -663,7 +667,9 @@
         </div>
       </div>
     </front>
-    <group xml:id="SAPC-AB_group">
+    <group xml:id="SAPC-AB_edition-group">
+      <head>Édition</head>
+      <group xml:id="SAPC-AB_group">
       <head>
         <pb n="46"/> ÉDITION DU CHARTIER DE L'ABBAYE DE SAINT-ANTOINE-DES-CHAMPS (1191 – 1256)</head>
       <text xml:id="SAPC-AB_0001" n="1" subtype="article">
@@ -11008,7 +11014,7 @@
               <witness n="A">Original, parchemin, 260 x 295 mm, repli 35 mm, scellé de cire verte sur lacs de soie verts et rouges, Arch. nat., S 4364A n° 6.</witness>
             </listWit>
             <listWit type="édition">
-              <witness n="a">Gallia Christiana ... , Paris, l. VII [Diocèse de Paris], 1744, instr. col. 107.</witness>
+              <witness n="a"><title>Gallia Christiana</title> ... , Paris, l. VII [Diocèse de Paris], 1744, instr. col. 107.</witness>
               <witness n="b" ana="edited">Sandrine <hi rend="sc">Delaforge-Marchand</hi>, <title>Saint-Antoine-des-Champs (1191-1256)</title>, thèse pour le dipl. d’archiviste paléographe, 1994, p. 479-480.</witness>
             </listWit>
             <listWit type="indiqué">
@@ -12297,6 +12303,7 @@
           </div>
         </body>
       </text>
+      </group>
     </group>
     <back xml:id="SAPC-AB_back">
       <div type="annexes" xml:id="SAPC-AB_back-1">
