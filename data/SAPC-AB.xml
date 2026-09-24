@@ -93,7 +93,11 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure match="list[@type='index']" use="@xml:id">
+          <citeStructure match="div/div/list[@type='index']" use="@xml:id" unit="index">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeData property="schema:name" use="head[1]"/>
+          </citeStructure>
+          <citeStructure match="div/div/div/list[@type='index']" use="@xml:id" unit="index">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
