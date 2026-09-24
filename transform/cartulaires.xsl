@@ -117,25 +117,20 @@
     </section>
   </xsl:template>
 
- <!-- 2026-09-11 (autopilote, B8b 5) : cibles de <ref> que DoTS-vue ne sait pas ouvrir telles quelles (anciens noms
-      de cartulaire « hotelpontoise_… », « smchamps_…_A » (témoin → acte), zéros « _0434 » → « _434 », renvois « voir »
-      sans @corresp valable → unité de l'index + ancre, NON_TROUVE et cibles absentes → texte sans lien).
-      Table générée depuis les TEI et la navigation DTS : dots-autopilot/scripts/cartulaires_refs_sidecar.py
-      → cartulaires-refs.xml (relancer le script si les TEI changent, puis toucher ce fichier). Sauvegarde *.bak_b8b5_20260911. -->
- <xsl:variable name="cartulaires-refs" select="document('cartulaires-refs.xml')/cibles"/>
- <xsl:key name="cartulaires-ref" match="c" use="@t"/>
+ <!-- 2026-09-24 : le side-car cartulaires-refs.xml est RETIRÉ (variable $cartulaires-refs, clé
+      cartulaires-ref et les deux branches qui les consommaient). Motifs, relevés sur data/ au
+      commit 103b46b :
+      — sur ses 1 521 entrées, 1 061 pointaient vers des identifiants BaseX volatils (refId=rXXXXXX)
+        qui n'existent plus : elles fabriquaient 1 521 liens morts ;
+      — 435 entrées (anciens noms « hotelpontoise_… », zéros « _0434 » → « _434 ») étaient devenues
+        sans objet : plus aucun <ref> de data/ ne porte ces @target, les sources ayant été corrigées ;
+      — placées avant le gabarit @type='see', ces branches masquaient 1 525 renvois qui portent
+        désormais un @corresp correct dans les sources ;
+      — ses 26 entrées à href vide ne servaient qu'à rendre 100 renvois en texte brut. Ces renvois
+        redeviennent des liens morts : c'est assumé, ce sont des défauts qui doivent rester visibles. -->
 
  <xsl:template match="tei:ref[@target]">
-   <xsl:variable name="corrige" select="key('cartulaires-ref', string(@target), $cartulaires-refs)[1]"/>
    <xsl:choose>
-     <xsl:when test="$corrige and normalize-space($corrige/@href) = ''">
-       <span class="ref-sans-cible"><xsl:apply-templates/>&#x200c;</span>
-     </xsl:when>
-     <xsl:when test="$corrige">
-       <a href="{$corrige/@href}">
-         <xsl:apply-templates/>
-       </a>
-     </xsl:when>
      <!-- 2026-09-21 : URL ABSOLUE. Sans cette branche, un <ref target="http(s)://..."> tombait
           dans le <xsl:otherwise> ci-dessous, ou substring-after(@target,'#') rend une chaine
           vide : la feuille fabriquait le lien interne mort « /cartulaires/document/?refId= ».
@@ -143,8 +138,8 @@
           ne porte @type, et AUCUN n'a d'entree dans cartulaires-refs.xml — le side-car ne les
           rattrapait donc pas. Parmi eux, les liens « Carte de situation » vers la couche
           Cassini de cartes.gouv.fr, ajoutes dans 13 cartulaires.
-          La branche est placee APRES le side-car (qui doit pouvoir corriger une URL) et AVANT
-          @type='see' (aucun ref a URL absolue n'est de ce type : ce cas reste intact). -->
+          Depuis le retrait du side-car (2026-09-24) cette branche est la premiere du choose ;
+          elle reste AVANT @type='see' (aucun ref a URL absolue n'est de ce type : cas intact). -->
      <xsl:when test="starts-with(@target, 'http://') or starts-with(@target, 'https://')">
        <a href="{@target}" target="_blank" rel="noopener noreferrer">
          <xsl:apply-templates/>
