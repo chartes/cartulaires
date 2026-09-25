@@ -129,7 +129,21 @@
       — ses 26 entrées à href vide ne servaient qu'à rendre 100 renvois en texte brut. Ces renvois
         redeviennent des liens morts : c'est assumé, ce sont des défauts qui doivent rester visibles. -->
 
- <xsl:template match="tei:ref[@target]">
+ <!-- Renvois dont la cible n'existe nulle part : rendus en TEXTE, pas en lien mort.
+       Retablit le comportement du side-car cartulaires-refs.xml, supprime le
+       2026-09-25, qui les laissait deliberement sans lien. Trois familles, toutes
+       des sequelles de la conversion d'origine, 158 renvois au total :
+         #NON_TROUVE                                      123  marqueur explicite
+         #NDPA-EG-03_0365|_1095|_1096|_1722|_1723          28  numeros hors du tome 3 (635 unites)
+         #page195|#page197|#page204|#page209                7  identifiants inexistants
+       XSLT 1.0 : pas de sequence, on teste par concat/contains. -->
+  <xsl:template match="tei:ref[@target][contains(
+        '|#NON_TROUVE|#NDPA-EG-03_0365|#NDPA-EG-03_1095|#NDPA-EG-03_1096|#NDPA-EG-03_1722|#NDPA-EG-03_1723|#page195|#page197|#page204|#page209|',
+        concat('|', normalize-space(@target), '|'))]" priority="30">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="tei:ref[@target]">
    <xsl:choose>
      <!-- 2026-09-21 : URL ABSOLUE. Sans cette branche, un <ref target="http(s)://..."> tombait
           dans le <xsl:otherwise> ci-dessous, ou substring-after(@target,'#') rend une chaine
