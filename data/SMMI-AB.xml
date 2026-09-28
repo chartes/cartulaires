@@ -88,8 +88,8 @@
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
-              <citeData property="dct:date" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
-              <citeData property="schema:dateCreated" use="if (front/docDate/date/@when) then string(front/docDate/date/@when) else if (front/docDate/date/@notBefore or front/docDate/date/@notAfter) then concat((front/docDate/date/@notBefore, '..')[1], '/', (front/docDate/date/@notAfter, '..')[1]) else ()"/>
+              <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
+              <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="dct:type" use="front/index/term/@key"/>
               <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
               <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
@@ -2339,7 +2339,7 @@
         <pb n="208"/>
         <front>
           <docDate>
-            <date when="1117-16-03">1117, 16 Mars — Bénévent.</date>
+            <date when="1117-03-16">1117, 16 Mars — Bénévent.</date>
           </docDate>
 <index><term type="nature" key="act"/></index>
           <argument><p><hi rend="i">Le Pape Pascal II prend l’abbaye de Micy sous sa protection et confirme ses possessions, à la demande de l’abbé Etienne.</hi></p></argument>
@@ -2496,7 +2496,7 @@
         <pb n="233"/>
         <front>
           <docDate>
-            <date notBefore="1139-04-23" notAfter="1139-31-07">1139, du 23 Avril au 31 Juillet, Orléans.</date>
+            <date notBefore="1139-04-23" notAfter="1139-07-31">1139, du 23 Avril au 31 Juillet, Orléans.</date>
           </docDate>
 <index><term type="nature" key="act"/></index>
           <argument><p><hi rend="i">Louis VII à la prière de Hugues, abbé de Saint Mesmin, confirme à l’abbaye la donation d’une tenure par Robert de Bourgneuf, Godelinde sa femme et Amauri de Maintenon.</hi></p></argument>
