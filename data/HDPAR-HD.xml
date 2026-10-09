@@ -58,7 +58,7 @@
           <citeData property="dct:title" use="head"/>
           <citeData property="schema:name" use="head"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
             <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -67,7 +67,17 @@
             <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
             <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
             <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
-          </citeStructure>
+          </citeStructure><citeStructure match="group" use="@xml:id" unit="part"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/><citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
+            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
+            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
+            <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
+            <citeData property="dct:type" use="front/index/term/@key"/>
+            <citeData property="dct:language" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="schema:inLanguage" use="body/div[@type='transcription']/@xml:lang"/>
+            <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+            <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
+          </citeStructure></citeStructure>
         </citeStructure>
         <citeStructure unit="Index" match="/TEI[1]/text[1]/back[1]" use="@xml:id">
           <citeData property="dct:title" use="head"/>
@@ -6542,7 +6552,7 @@
           </argument>
           <div type="tradition">
             <listWit type="copie">
-              <witness n="B">Cart. B, n° 625. Voir aussi n° 652.</witness>
+              <witness n="B">Cart. B, n° 625. Voir aussi <ref target="#HDPAR-HD_0652">n° 652</ref>.</witness>
             </listWit>
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 51.</witness>
@@ -6946,7 +6956,7 @@
           </argument>
           <div type="tradition">
             <listWit type="copie">
-              <witness n="B">Cart. B, n° 654. Voir aussi n° 456.</witness>
+              <witness n="B">Cart. B, n° 654. Voir aussi <ref target="#HDPAR-HD_0456">n° 456</ref>.</witness>
             </listWit>
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 55.</witness>
@@ -7054,7 +7064,7 @@
           </argument>
           <div type="tradition">
             <listWit type="copie">
-              <witness n="B">Cart. B, n° 388. Voir aussi n° 439.</witness>
+              <witness n="B">Cart. B, n° 388. Voir aussi <ref target="#HDPAR-HD_0439">n° 439</ref>.</witness>
             </listWit>
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 56.</witness>
@@ -7601,7 +7611,7 @@
           </argument>
           <div type="tradition">
             <listWit type="copie">
-              <witness n="B">Cart. C, n° 8. Voir aussi n° 9.</witness>
+              <witness n="B">Cart. C, n° 8. Voir aussi <ref target="#HDPAR-HD_0009">n° 9</ref>.</witness>
             </listWit>
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 62.</witness>
@@ -7736,7 +7746,7 @@
           </argument>
           <div type="tradition">
             <listWit type="copie">
-              <witness n="B">Cart. B, n° 609. Voir aussi n° 644.</witness>
+              <witness n="B">Cart. B, n° 609. Voir aussi <ref target="#HDPAR-HD_0644">n° 644</ref>.</witness>
             </listWit>
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 63.</witness>
@@ -40284,7 +40294,7 @@
       <!-- BEGIN HDPAR CENSIER AND APPENDIX -->
       <!-- Releve de travail issu d'une OCR par colonnes et a reprendre manuellement sur fac-simile avant publication. -->
       <!-- CENSIER RESTRUCTURE EN 94 UNITES TEXTUELLES; les ref/@target de l’index restent inchangés -->
-      <text xml:id="HDPAR-HD_censier_0001" n="HII SUNT REDDITUS QUOS HABET DOMUS DEI PARISIENSIS APUD PARISIUS IN FUNDI TERRE CENSIBUS AUGMENTATIS, ET LOCATIONIBUS DOMORUM, IN VILLA PARISIENSI, ANNO DOMINI M° CC° NONAGESIMO QUARTO." subtype="article">
+      <group xml:id="HDPAR-HD_censier"><head>Censier de l’Hôtel-Dieu (1294)</head><text xml:id="HDPAR-HD_censier_0001" n="HII SUNT REDDITUS QUOS HABET DOMUS DEI PARISIENSIS APUD PARISIUS IN FUNDI TERRE CENSIBUS AUGMENTATIS, ET LOCATIONIBUS DOMORUM, IN VILLA PARISIENSI, ANNO DOMINI M° CC° NONAGESIMO QUARTO." subtype="article">
         <pb n="473" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0557.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p473"/>
         <front>
           <docDate>
@@ -40293,7 +40303,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>HII SUNT REDDITUS QUOS HABET DOMUS DEI PARISIENSIS APUD PARISIUS IN FUNDI TERRE CENSIBUS AUGMENTATIS, ET LOCATIONIBUS DOMORUM, IN VILLA PARISIENSI, ANNO DOMINI M° CC° NONAGESIMO QUARTO.</head>
+          <head>Hii sunt redditus quos habet domus Dei Parisiensis apud Parisius in fundi terre censibus augmentatis, et locationibus domorum, in villa Parisiensi, anno domini m° CC° nonagesimo quarto.</head>
           <argument>
             <p>État des cens, revenus et locations de maisons de l’Hôtel-Dieu à Paris en 1294.</p>
           </argument>
@@ -40309,15 +40319,15 @@
             <p>1294.</p>
             <p>Petrus de Autissiodoro, pro domo que quondam fuit Theobaldi de Asneriis, in vico Novo Beate Marie, supra viculum quo itur ad Sanctum Christoforum a vico Novo . . . ii den.</p>
             <p>Petrus Sigillator, pro domo sua in predicto vico, pro parte anteriori . . . ii den. ob.</p>
-            <p>Aubertus Sigillator senior, pro domo contigua¹ . . . ii den. ob.</p>
+            <p>Aubertus Sigillator senior, pro domo contigua<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0857">857</ref>.</note> . . . ii den. ob.</p>
             <p>Curatus ecclesie Sancte Genovefe Parve, pro domo sua in vico Columborum . . . iiii den.</p>
             <p>Capitulum Beate Marie Parisiensis, pro domo Aniani librarii, in predicto vico . . . ii den. ob.</p>
             <p>Et sciendum est quod dominus Gervasius de Chameliaco, miles, dedit predicte Domui predictum censum et alium, situm supra domos in eodem vico, quas tradidimus ad vitam.</p>
-            <p>Item alium censum ante Sanctum Christoforum et circa Sanctum Landericum, quem permutavimus abbati de Sancto Germano de Pratis, dictus vero miles dedit anno Domini m° cc° xxii°².</p>
+            <p>Item alium censum ante Sanctum Christoforum et circa Sanctum Landericum, quem permutavimus abbati de Sancto Germano de Pratis, dictus vero miles dedit anno Domini m° cc° xxii°<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0168">168</ref>.</note>.</p>
             <p>Prior Sancti Juliani Pauperis xii den. quolibet anno, in festo beati Remigii.</p>
             <p>Henricus Boute Roe, pro domo contigua domui de cuneo ante Sanctum Christoforum, in vico Sancti Petri ad Boves . . . xii den.</p>
-            <p>Relicta Garneri de Sancto Lazaro, pro l solidis, quos percipit supra domum in vico Columbe³ . . . xii den.</p>
-            <p>Egidius Malescot, pro domo ante fenestras de domo curati ecclesie Sancti Landerici, per convencionem factam cum ascensavimus predictam domum⁴ . . . xii den.</p>
+            <p>Relicta Garneri de Sancto Lazaro, pro l solidis, quos percipit supra domum in vico Columbe<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0847">847</ref>.</note> . . . xii den.</p>
+            <p>Egidius Malescot, pro domo ante fenestras de domo curati ecclesie Sancti Landerici, per convencionem factam cum ascensavimus predictam domum<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0819">819</ref>.</note> . . . xii den.</p>
             <p>Archipresbiter ecclesie Beate Magdalene pro domo sua, in vico Sine Capite, juxta Sanctum Landericum . . . ix den.</p>
           </div>
         </body>
@@ -40346,14 +40356,14 @@
             <p>Fratres domus dei Sancti Gervasii debent pro l solidis, sitis supra domum quam ascensavimus Petro Borellario, pro vigenti octo solidis . . . ii den.</p>
             <p>Petrus Borrellarius, pro domo quam ad presens inhabitat . . . iii den. ob.</p>
             <p>Johannes de Domonte, pro domo sua, juxta domum ad Aquilam . . .</p>
-            <p>¹ Cart. n° 857. — ² Ibid. n° 168. — ³ Ibid. n° 847. — ⁴ Ibid. n° 819.</p>
+            
             <pb n="474" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0558.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p474"/>
             <p>Firminus de Acquila, pro domo ad Aquilam . . . iii ob.</p>
             <p>Paridan pro domo sua, in vico Frogerii Asinarii . . . vii den.</p>
             <p>Johannes de Clere, pro domo sua . . . iii den.</p>
             <p>Michael Doret, pro domo sua . . . iii den.</p>
             <p>Theobaldus le Champenois, pro domo sua in vico Frogerii Asinarii . . . iii den. ob.</p>
-            <p>Relicta Droconis Colon, pro domo sua in vico predicto¹ . . . iii ob.</p>
+            <p>Relicta Droconis Colon, pro domo sua in vico predicto<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0801">801</ref>.</note> . . . iii ob.</p>
           </div>
         </body>
       </text>
@@ -40365,7 +40375,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>HII SUNT REDDITUS IN CENSIBUS AUGMENTATIS ET LOCATIONIBUS DOMORUM, IN CIVITATE PARISIENSI.</head>
+          <head>Hii sunt redditus in censibus augmentatis et locationibus domorum, in civitate Parisiensi.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 474.</witness>
@@ -40502,9 +40512,9 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Item in eodem vico habemus aliam domum, que</p>
-            <p>¹ Cart. n° 801.</p>
+            
             <pb n="475" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0559.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p475"/>
-            <p>facit cuneum viculi quo itur ad Sanctum Christoforum, a vico Novo, quam tenet dominus Richardus, canonicus Sancti Dyonisii¹ de Passu, nichil pro ea reddit, et est nostra a tempore a quo non exstat memoria, et est in censiva nostra; tamen non tenet ipsam nisi ad vitam suam.</p>
+            <p>facit cuneum viculi quo itur ad Sanctum Christoforum, a vico Novo, quam tenet dominus Richardus, canonicus Sancti Dyonisii<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0750">750</ref>.</note> de Passu, nichil pro ea reddit, et est nostra a tempore a quo non exstat memoria, et est in censiva nostra; tamen non tenet ipsam nisi ad vitam suam.</p>
           </div>
         </body>
       </text>
@@ -40570,7 +40580,7 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum relicte Martini a Lescurel habemus xviii libras annui census, quam domum predicta relicta ad vitam suam tenet tantummodo.</p>
-            <p>Ante ecclesiam Sancte Genovefe Parve habemus unam domum, contiguam domui predicte, in qua sunt ad presens tria stagia locagii xxviii librarum, videlicet primum stagium locagii ix librarum, vel circa, contiguum domui predicte. Aliud stagium inferius x librarum. Domus superior ix librarum vel circa, quam domum totam tenuit Nicholaus Lombardus² pro xxxii libris, et sunt iste due domus in censiva ecclesie Sancte Genovefe in Monte, onerate in xvii denariis capitalis census; et in x solidis annui redditus, solvendis ad festum beati Remigii, pro amortizatione dictarum duarum domorum anno Domini m° cc° lxxviii°.</p>
+            <p>Ante ecclesiam Sancte Genovefe Parve habemus unam domum, contiguam domui predicte, in qua sunt ad presens tria stagia locagii xxviii librarum, videlicet primum stagium locagii ix librarum, vel circa, contiguum domui predicte. Aliud stagium inferius x librarum. Domus superior ix librarum vel circa, quam domum totam tenuit Nicholaus Lombardus<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0553">553</ref>, <ref target="#HDPAR-HD_0650">650</ref>.</note> pro xxxii libris, et sunt iste due domus in censiva ecclesie Sancte Genovefe in Monte, onerate in xvii denariis capitalis census; et in x solidis annui redditus, solvendis ad festum beati Remigii, pro amortizatione dictarum duarum domorum anno Domini m° cc° lxxviii°.</p>
             <p>Supra domum Johannis de Sancto Petro ad Boves, pro quodam parvo solario, super introitum domus sue, intra duas domos predictas, que fuit de domo ante ecclesiam, ascensatur dicto Johanni pro quinque solidis annui census, ad festum beati Johannis Baptiste.</p>
           </div>
         </body>
@@ -40614,7 +40624,7 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum que facit cuneum vici Sabuli, super Parvum Pontem x libras annui redditus.</p>
-            <p>Supra domum magistri Ernaudi Petragorensis contiguam predicte domui, vi libras annui redditus, que due domus predicte date nobis fuerunt a Beatrice Begaude³, in censiva domini Regis, que censiva solebat esse monachorum Sancti Germani de Pratis, et amortizantur ab abbate et conventu pro xx solidis annui redditus, solvendis ad festum beati Remigii, anno Domini m° cc° xxiiii°.</p>
+            <p>Supra domum magistri Ernaudi Petragorensis contiguam predicte domui, vi libras annui redditus, que due domus predicte date nobis fuerunt a Beatrice Begaude<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0194">194</ref>.</note>, in censiva domini Regis, que censiva solebat esse monachorum Sancti Germani de Pratis, et amortizantur ab abbate et conventu pro xx solidis annui redditus, solvendis ad festum beati Remigii, anno Domini m° cc° xxiiii°.</p>
           </div>
         </body>
       </text>
@@ -40636,7 +40646,7 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>In vico Sabuli habemus duo stagia precii lxxii solidorum vel circa, et sunt in censiva nostra per escambium seu permutationem, factam inter nos et abbatem et monachos Sancti Germani de Pratis, de ipsis stagiis cum aliis quatuor domibus in vico, acquisitis ad opus nostrum per regem Ludovicum, pro alio censu capitali contento in litteris super hoc confectis, quem habebamus in Civitate.</p>
-            <p>¹ Cart. n° 750. — ² Ibid. n° 553, 650. — ³ Ibid. n° 194.</p>
+            
           </div>
         </body>
       </text>
@@ -40659,10 +40669,10 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum Henrici Boute Roe xvi libras annui redditus, quam domum ascensavimus dicto Henrico, de qua emimus capitalem censum, videlicet v denarios a Petro Paon, civi Parisiensi, pro xliii libris, anno Domini m° cc° tricesimo primo, quam domum habuimus ex dono venerabilis viri Stephani, archidiaconi Parisiensis, et debentur nobis xii denarii pro fundo terre annui census, et hoc ascensata fuit.</p>
-            <p>Item, in eodem vico habemus aliam domum, una interposita inter istam et aliam predictam, que est locagii c solidorum, que empta fuit a domino Federico de Gentiliaco¹, milite, cum omni dominio, retentis dicto militi et ejus heredibus sex denariis, anno Domini m° cc° nono.</p>
+            <p>Item, in eodem vico habemus aliam domum, una interposita inter istam et aliam predictam, que est locagii c solidorum, que empta fuit a domino Federico de Gentiliaco<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0100">100</ref>.</note>, milite, cum omni dominio, retentis dicto militi et ejus heredibus sex denariis, anno Domini m° cc° nono.</p>
             <p>In eodem vico, ab oppositis predicte domus, habemus aliam domum, contiguam domui curati ecclesie Sancti Petri ad Boves, quam tenet dominus Henricus de Succiaco, vicarius in ecclesia Parisiensi, ad vitam suam, pro xii libris annui census, in censiva prioratus Sancti Eligii Parisiensis, oneratam in octo denariis capitalis census, et est in manu nostra a tempore a quo non exstat memoria.</p>
             <p>Ante ecclesiam Sancti Petri habemus aliam domum, quam tenet magister Johannes de Brisiaco, pro xv libris annui redditus, ad vitam suam, oneratam in xvi denariis capitalis census, debitis priori Sancti Eligii, amortizatam a dicto priore anno Domini m° c° lxxviii°, que fuit Fustani Garneri.</p>
-            <p>In cuneo vici predicti et vici Sancte Marine habemus aliam domum, locagii ix librarum, in censiva Sancti Eligii predicti, oneratam in novem denariis capitalis census, et in xl solidis annui redditus, pro amortizatione facta anno Domini millesimo cc° sexagesimo quinto, que domus obvenit nobis ratione septem librarum, datarum nobis a Guillelmo de Mitriaco², clerico, anno Domini m° cc° xxxvii°.</p>
+            <p>In cuneo vici predicti et vici Sancte Marine habemus aliam domum, locagii ix librarum, in censiva Sancti Eligii predicti, oneratam in novem denariis capitalis census, et in xl solidis annui redditus, pro amortizatione facta anno Domini millesimo cc° sexagesimo quinto, que domus obvenit nobis ratione septem librarum, datarum nobis a Guillelmo de Mitriaco<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0376">376</ref>.</note>, clerico, anno Domini m° cc° xxxvii°.</p>
             <p>Supra domum in vico dicto curia Federici, Parisius, que quondam fuit Gilonis de Stampis, ascensatam Johanni de Abrincis, apothecario domini Regis, pro vi libris annui redditus, et est in censiva nostra et quita et libera.</p>
             <p>Domus contigua, que quondam fuit defuncti Natalis Camerarii, est nostra, et est locagii c solidorum et sunt iste due domus nostre a tempore a quo non exstat memoria.</p>
           </div>
@@ -40685,7 +40695,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>In vico de Charrori habemus aliam domum, locagii lx solidorum, contiguam domui ruelle, quam dedit nobis dominus Johannes de Popona³, miles, retentis sibi et heredibus suis iii denariis, cum quadam platea retro, ascensata magistro Nicholao de . . ., pro viii solidis annui redditus; data fuit anno Domini m° c° lxxxvii.</p>
+            <p>In vico de Charrori habemus aliam domum, locagii lx solidorum, contiguam domui ruelle, quam dedit nobis dominus Johannes de Popona<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0097">97</ref>.</note>, miles, retentis sibi et heredibus suis iii denariis, cum quadam platea retro, ascensata magistro Nicholao de . . ., pro viii solidis annui redditus; data fuit anno Domini m° c° lxxxvii.</p>
           </div>
         </body>
       </text>
@@ -40708,7 +40718,7 @@
           <div type="transcription" xml:lang="lat">
             <p>Supra domum quam ad presens tenet Maturinus Pastillarius, que facit cuneum vici quo descenditur a vico Marmosetorum ad Sanctum Dyonisium de Carcere, x solidos annui redditus, solvendos ad festum beati Remigii, ex dono Reginaldi Conversi, amortizatur a Petro Paon anno Domini m° cc° xvii°.</p>
             <p>In eodem vico habemus aliam domum ante domum Marmosetorum, locagii vii librarum, que quondam fuit Guidonis de Corbolio, fratris istius domus, in censiva nostra, prout invenitur in aliis scriptis antiquis.</p>
-            <p>Supra domum Milonis Barberii⁴, quam tenet ad vitam suam, xvi libras annui redditus, juxta portam claustri, que domus quondam fuit Barbedauri, decani Parisiensis⁵, quam emimus a Galtero Barbedauro⁶ et ab ejus filio, anno Domini m° c° nonagesimo quarto, et debemus pro ipsa prioratui Sancti Eligii viii denarios capitalis census, et x solidos pro amortizatione.</p>
+            <p>Supra domum Milonis Barberii<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0804">804</ref>.</note>, quam tenet ad vitam suam, xvi libras annui redditus, juxta portam claustri, que domus quondam fuit Barbedauri, decani Parisiensis<note n="5" place="foot">Ibid. n° <ref target="#HDPAR-HD_0003">3</ref>.</note>, quam emimus a Galtero Barbedauro<note n="6" place="foot">Ibid. n° <ref target="#HDPAR-HD_0044">44</ref>.</note> et ab ejus filio, anno Domini m° c° nonagesimo quarto, et debemus pro ipsa prioratui Sancti Eligii viii denarios capitalis census, et x solidos pro amortizatione.</p>
           </div>
         </body>
       </text>
@@ -40729,13 +40739,13 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum in vico Columbe, ascensatam magistro Guerardo Mulot, ad vitam suam et fratris sui, habemus xvi libras annui redditus, quam emimus ab executoribus Hugonis Deimbert⁷ clerici, pro ducentis libris, anno Domini m° cc° xxxvii°, et est in censiva nostra ad xii denarios capitalis census, quos</p>
-            <p>¹ Cart. n° 100. — ² Ibid. n° 376. — ³ Ibid. n° 97. — ⁴ Ibid. n° 804. — ⁵ Ibid. n° 3. — ⁶ Ibid. n° 44. — ⁷ Ibid. n° 361.</p>
+            <p>Supra domum in vico Columbe, ascensatam magistro Guerardo Mulot, ad vitam suam et fratris sui, habemus xvi libras annui redditus, quam emimus ab executoribus Hugonis Deimbert<note n="7" place="foot">Ibid. n° <ref target="#HDPAR-HD_0361">361</ref>.</note> clerici, pro ducentis libris, anno Domini m° cc° xxxvii°, et est in censiva nostra ad xii denarios capitalis census, quos</p>
+            
             <pb n="477" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0561.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p477"/>
             <p>solvit relicta Garneri de Sancto Lazaro, pro l solidis, quos percipit supra predictam domum annuatim ad festum beati Remigii.</p>
             <p>Supra domum quam tenet magister Petrus de Feucheriis, ad vitam suam, pro vii libris annui redditus, oneratam in sexaginta solidis, debitis predicte relicte, solvendis ad Pascha et ad festum beati Remigii, et debentur nobis vi denarii pro ipsis ad festum predictum.</p>
             <p>Domus contigua a parte inferiori est nostra, et est locagii xii librarum, et debemus pro ipsis duabus domibus, contiguis thesaurario monasterii Sancti Germani de Pratis, vi solidos pro fundo terre, et pro amortizatione lx solidos, anno Domini m° cc° lxiii°, ex dono magistri Raymundi de Claromonte.</p>
-            <p>Supra domum Radulphi Flamingi, ad portum Nostre Domine, habemus l solidos annui redditus, percipiendos in mediate post centum solidos in censiva capituli Parisiensis, ex dono Bartholomei Passatoris et Adipidis, uxoris ejus¹, anno Domini m° cc° xlviii°.</p>
+            <p>Supra domum Radulphi Flamingi, ad portum Nostre Domine, habemus l solidos annui redditus, percipiendos in mediate post centum solidos in censiva capituli Parisiensis, ex dono Bartholomei Passatoris et Adipidis, uxoris ejus<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0545">545</ref>.</note>, anno Domini m° cc° xlviii°.</p>
           </div>
         </body>
       </text>
@@ -40756,11 +40766,11 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum Egidii Malescot², ante fenestras curati Sancti Landerici Parisiensis, iiii° libras annui redditus, quam domum ascensavimus predicto Egidio, in predictis iiii° libris et xii denariis, pro censu capitali, prout in littera continetur, et solebat esse in censiva monachorum ecclesie Sancti Germani Autissiodorensis, et amortizatur ab ipsis, de quo habemus litteras Mauricii episcopi Parisiensis, de anno Domini m° c° octogesimo, que domus fuit Luciane.</p>
+            <p>Supra domum Egidii Malescot<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0819">819</ref>.</note>, ante fenestras curati Sancti Landerici Parisiensis, iiii° libras annui redditus, quam domum ascensavimus predicto Egidio, in predictis iiii° libris et xii denariis, pro censu capitali, prout in littera continetur, et solebat esse in censiva monachorum ecclesie Sancti Germani Autissiodorensis, et amortizatur ab ipsis, de quo habemus litteras Mauricii episcopi Parisiensis, de anno Domini m° c° octogesimo, que domus fuit Luciane.</p>
             <p>In vico Sine Capite, retro capucium ecclesie Sancti Landerici, habemus unam domum, in qua sunt duo stagia; stagium inferius est locagii l solidorum, et superius est locagii c solidorum, et est in nostra censiva a tempore a quo non exstat memoria.</p>
             <p>In vico subtus vicum de Marmoset, que dicitur vicus ad Ymaginem Beate Katherinae, habemus unam domum, quam tenet magister Adam de Andeliaco, ad vitam suam, et ad vitam cujusdam sororis sue, pro octo libris annui redditus, que dicitur fuisse Baldoini Bordon, et esse in censiva nostra a tempore a quo non exstat memoria, nec debemus aliquid pro ea.</p>
-            <p>In eodem vico habemus aliam domum locagii vii librarum, vel octo, que creditur fuisse Petri Marescalli³ et est in censiva nostra (a tempore) a quo non exstat memoria.</p>
-            <p>Supra domum quam ascensavimus magistro Guillelmo de Ultramare habemus vi libras annui redditus, que creditur nobis obvenisse ex dono domine Eve de Capi⁴, anno Domini m° cc° xc° tertio, nec debemus pro ea aliquid.</p>
+            <p>In eodem vico habemus aliam domum locagii vii librarum, vel octo, que creditur fuisse Petri Marescalli<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0133">133</ref>.</note> et est in censiva nostra (a tempore) a quo non exstat memoria.</p>
+            <p>Supra domum quam ascensavimus magistro Guillelmo de Ultramare habemus vi libras annui redditus, que creditur nobis obvenisse ex dono domine Eve de Capi<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0042">42</ref>.</note>, anno Domini m° cc° xc° tertio, nec debemus pro ea aliquid.</p>
           </div>
         </body>
       </text>
@@ -40783,7 +40793,7 @@
           <div type="transcription" xml:lang="lat">
             <p>Supra domum quam tenet relicta Symonis le Begue ad vitam suam cx solidos, in censiva domini episcopi Parisiensis, adjudicatam nobis ratione cujusdam doni nobis facti anno Domini m° cc° septimo decimo.</p>
             <p>In eodem vico habemus duas domos contiguas, de tribus quas solebamus habere in eodem vico, in censiva domus Sancti Lazari Parisiensis, quarum una fuit magistri Osmundi, onerata in uno denario census capitalis. Alia fuit ante onerata in quatuor denariis capitalis census, et tertia fuit Gileberti le Toellier, onerata in x solidis, solvendis ad festum Pasche, et ad festum beati Andree, in censiva et dominio domus Sancti Lazari Parisiensis, et amortizantur per litteras prioris dicte domus, anno Domini m° cc° nono, et sciendum est quod nos unam de tribus domibus predictis permutavimus magistro Egidio Quamelin, decano Meldensi, pro iiii° libris annui redditus, de quibus quatuor libris assignavit nobis xl solidos annui redditus supra duas domos, in eodem vico contiguas, quarum una habet exitum super riperiam Sequane, que sunt ad presens magistri Clementis, canonici Sancti Marcelli, percipiendos post tres denarios capitalis census, debitos domino Regi, et pro aliis xl solidis tradidit nobis xl libras in pecunia, et fuit facta predicta permutatio anno Domini m° cc° octogesimo septimo, vel circa.</p>
-            <p>¹ Cart. n° 545. — ² Ibid. n° 819. — ³ Ibid. n° 133. — ⁴ Ibid. n° 42.</p>
+            
             <pb n="478" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0562.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p478"/>
             <p>Supra domum ascensatam Lamberto Laguete a nobis habemus c solidos annui redditus, et vocabatur tempore ascensacionis Platea Vacua, et est nostra a tempore a quo non exstat memoria, nec debemus aliquid pro ea.</p>
           </div>
@@ -40806,8 +40816,8 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum relicte Richardi Blondel¹, ante Sanctum Dyonisium de Carcere, habemus xii libras annui redditus, racione ascensacionis dicte domus, Richardo predicto a nobis facte, et debemus pro ipsa capitulo Parisiensi xvi denarios capitalis census et domino Regi incrementi census xx solidos, solvendos x solidos ad Natale Domini, et x solidos ad festum beati Johannis Baptiste.</p>
-            <p>Supra domum magistri Guillelmi de Sancto Queso, ascensatam a nobis, habemus quatuor libras et x solidos annui redditus, et debemus domino Regi, pro ipsa domo, viii solidos et octo denarios, solvendos ad Natale Domini et ad festum beati Johannis Baptiste, et sciendum est quod Adam², civis Novionensis, clericus domini Regis, dedit nobis has duas domos anno Domini m° c° xc° nono.</p>
+            <p>Supra domum relicte Richardi Blondel<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0781">781</ref>.</note>, ante Sanctum Dyonisium de Carcere, habemus xii libras annui redditus, racione ascensacionis dicte domus, Richardo predicto a nobis facte, et debemus pro ipsa capitulo Parisiensi xvi denarios capitalis census et domino Regi incrementi census xx solidos, solvendos x solidos ad Natale Domini, et x solidos ad festum beati Johannis Baptiste.</p>
+            <p>Supra domum magistri Guillelmi de Sancto Queso, ascensatam a nobis, habemus quatuor libras et x solidos annui redditus, et debemus domino Regi, pro ipsa domo, viii solidos et octo denarios, solvendos ad Natale Domini et ad festum beati Johannis Baptiste, et sciendum est quod Adam<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0040">40</ref>.</note>, civis Novionensis, clericus domini Regis, dedit nobis has duas domos anno Domini m° c° xc° nono.</p>
           </div>
         </body>
       </text>
@@ -40828,7 +40838,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum Mathei Alardi, ante ecclesiam Sancti Petri des Arsiz, habemus c solidos annui redditus, percipiendos ad iiii° terminos, in mediate post iii denarios capitalis census, quos reddimus priori Sancti Eligii, in cujus censiva dicta domus est sita. Et amortizantur ab abbate et conventu Sancti Mauri Fossatensis, de anno Domini m° cc° xxvii°, quos centum solidos dedit nobis Philippus Hamelini, civis Parisiensis³. Et sciendum quod debemus domino Regi annualim xx solidos, solvendos ad Natale Domini x solidos, ad festum beati Johannis Baptiste x solidos, prout in littera amortizationis continetur.</p>
+            <p>Supra domum Mathei Alardi, ante ecclesiam Sancti Petri des Arsiz, habemus c solidos annui redditus, percipiendos ad iiii° terminos, in mediate post iii denarios capitalis census, quos reddimus priori Sancti Eligii, in cujus censiva dicta domus est sita. Et amortizantur ab abbate et conventu Sancti Mauri Fossatensis, de anno Domini m° cc° xxvii°, quos centum solidos dedit nobis Philippus Hamelini, civis Parisiensis<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0113">113</ref>, <ref target="#HDPAR-HD_0118">118</ref>.</note>. Et sciendum quod debemus domino Regi annualim xx solidos, solvendos ad Natale Domini x solidos, ad festum beati Johannis Baptiste x solidos, prout in littera amortizationis continetur.</p>
             <p>Supra domum Ade Chaucon, in vico Furni Sancti Eligii, que facit cuneum Draperie, habemus vi libras annui redditus, solvendas videlicet ad Natale Domini lx solidos, et ad festum beati Johannis Baptiste lx solidos, et debemus pro ipsis iii denarios capitalis census prioratui Sancti Eligii, in cujus censiva domus predicta sita est, et xx solidos solvendos ad Natale Domini, et ad festum beati Johannis Baptiste, pro amortizatione domus predicte, a nobis post ascensate, quam habuimus ex dono defuncte Comitisse, anno Domini m° cc° vicesimo primo.</p>
           </div>
         </body>
@@ -40850,7 +40860,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum quam tenet ad presens Johannes de Abrincis, apothecarius domini Regis, que quondam fuit Radulphi Sagitarii, in vico Sancti Germani Veleris, habemus xl solidos annui redditus, solvendos xx solidos ad Natale Domini, et ad festum beati Johannis Baptiste xx solidos, quos habuimus per Hellonem de Meulento⁴, pro quodam legato de xxv libris, et hoc fuit anno Domini m° cc° xv°.</p>
+            <p>Supra domum quam tenet ad presens Johannes de Abrincis, apothecarius domini Regis, que quondam fuit Radulphi Sagitarii, in vico Sancti Germani Veleris, habemus xl solidos annui redditus, solvendos xx solidos ad Natale Domini, et ad festum beati Johannis Baptiste xx solidos, quos habuimus per Hellonem de Meulento<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0119">119</ref>.</note>, pro quodam legato de xxv libris, et hoc fuit anno Domini m° cc° xv°.</p>
             <p>In vico Judearie, prope cuneum de Marche Palu, habemus unam domum, locagii vii librarum, oneratam in xl solidis annui redditus, debitis priori Sancti Martini de Campis, Parisius, et est in manu nostra a tempore a quo non exstat memoria.</p>
             <p>In vico Curie Federici, Parisius, habemus vi solidos annui redditus, solvendos ad iiii° terminos supra domum ad Serpentem, quam ad presens tenet Ranulphus de Abricensis, clericus, quos vi solidos habuimus ex dono Agnesote Biberon, famule quondam istius domus, anno Domini m° cc° septuagesimo.</p>
           </div>
@@ -40873,9 +40883,9 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum Roberti Matricularii, in vico Kalendre, contiguam ruelle qua descenditur a Kalandra ad Orberiam, a nobis ipsi ascensatam pro c solidis, de quibus tenemur solvere cuidam censuario xv solidos, annui census, ad festum beati Remigii, que domus obvenit nobis ex dono Guillelmi Pictavensis⁵, anno Domini m° cc° liii°.</p>
+            <p>Supra domum Roberti Matricularii, in vico Kalendre, contiguam ruelle qua descenditur a Kalandra ad Orberiam, a nobis ipsi ascensatam pro c solidis, de quibus tenemur solvere cuidam censuario xv solidos, annui census, ad festum beati Remigii, que domus obvenit nobis ex dono Guillelmi Pictavensis<note n="5" place="foot">Ibid. n° <ref target="#HDPAR-HD_0577">577</ref>, <ref target="#HDPAR-HD_0601">601</ref>.</note>, anno Domini m° cc° liii°.</p>
             <p>In eodem vico habemus quamdam aliam domum, locagii xx librarum, contiguam domui predicti Roberti, oneratam in x solidis debitis ad festum beati Remigii, et in iiii° denariis capitalis census, debitis heredibus domini Petri de Monsterolio, a quo Petro amortizata et quitata fuit anno Domini</p>
-            <p>¹ Cart. n° 781. — ² Ibid. n° 40. — ³ Ibid. n° 113, 118. — ⁴ Ibid. n° 119. — ⁵ Ibid. n° 577, 601.</p>
+            
             <pb n="479" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0563.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p479"/>
             <p>m° cc° xxii°, et sciendum quod pro eadem domo, pro posteriori parte, in vico Orberie, debemus prioratui Sancti Eligii xii denarios capitalis census, et amortizatur abbatisse Sancti Mauri, cum domo defuncte comitisse predicte.</p>
           </div>
@@ -40910,7 +40920,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>HII SUNT REDDITUS QUOS HABEMUS ULTRA PARVUM PONTEM, TAM IN CENSIBUS AUGMENTATIS ET LOCATIONIBUS DOMORUM IN VICO BUCHERIE, ULTRA PARVUM PONTEM.</head>
+          <head>Hii sunt redditus quos habemus ultra parvum pontem, tam in censibus augmentatis et locationibus domorum in vico Bûcherie, ultra parvum pontem.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 479-480.</witness>
@@ -40923,10 +40933,10 @@
             <p>In eodem vico habemus tres domos contiguas, in censiva domini Regis, quarum una sita est desuper archeto ruelle que descenditur a dicto vico ad Sequanam, et est locagii c solidorum, vel circiter.</p>
             <p>Secunda domus est in qua vel super quam quedam capellania fuit fondata, et est locagii inferius lv solidorum et superius vii librarum et x solidorum, vel circiter.</p>
             <p>Tercia domus est in qua magister dictus Donedeu moratur, et est locagii inferius l solidorum, et superius vi librarum x solidorum.</p>
-            <p>Habemus duas alias domos in eodem vico, contiguas predictis domibus in censiva capellanie de Savigniaco, juxta Alnetum, quarum una, videlicet que est juxta illam domum in qua dictus magister Donedeu moratur, est locagii iiii° librarum xiii solidorum, et alia domus est locagii c solidorum, et sciendum quod nos habuimus istas quatuor domos ex legato defuncte Beatricis, quondam uxoris Nicholai Lumbardi, anno Domini m° cc° lii°, et alia que est contigua archeto predicto, super cujus ovencionibus seu redditibus fundaverat dictus Nicholaus¹ quondam capellaniam, remissa seu conversa fuit ab episcopo, racione l solidorum annui redditus, quos habebamus super predictam domum, et debemus pro ipsis domibus abbatisse de Monte Martirum xxxii solidos, et Jacobo Boucelli xl solidos annui redditus, solvendos ad quatuor terminos.</p>
+            <p>Habemus duas alias domos in eodem vico, contiguas predictis domibus in censiva capellanie de Savigniaco, juxta Alnetum, quarum una, videlicet que est juxta illam domum in qua dictus magister Donedeu moratur, est locagii iiii° librarum xiii solidorum, et alia domus est locagii c solidorum, et sciendum quod nos habuimus istas quatuor domos ex legato defuncte Beatricis, quondam uxoris Nicholai Lumbardi, anno Domini m° cc° lii°, et alia que est contigua archeto predicto, super cujus ovencionibus seu redditibus fundaverat dictus Nicholaus<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0636">636</ref>, <ref target="#HDPAR-HD_0641">641</ref>, <ref target="#HDPAR-HD_0646">646</ref>, <ref target="#HDPAR-HD_0667">667</ref>.</note> quondam capellaniam, remissa seu conversa fuit ab episcopo, racione l solidorum annui redditus, quos habebamus super predictam domum, et debemus pro ipsis domibus abbatisse de Monte Martirum xxxii solidos, et Jacobo Boucelli xl solidos annui redditus, solvendos ad quatuor terminos.</p>
             <p>Supra domum relicte Stephani de Limovicis habemus xiii libras annui redditus, et quatuor solidos ex dono predicte Beatricis, in censiva domini Regis et capituli Parisiensis, videlicet granchia et pratellum dicte domus situantur in censiva capituli, et recipit dictum capitulum xl solidos annui redditus, de xvi libris quas habebamus ex dono predicte Beatrice, pro amortizatione xiii librarum iiii solidorum.</p>
             <p>In eodem vico habemus unam domum dictam ad Clavem, contiguam domui que facit cuneum vici Plasterie, que est locagii xx librarum, in censiva domini Regis, et debemus pro ipsa domino Regi x solidos, solvendos ad Natale Domini, quam do-</p>
-            <p>¹ Cart. n° 636, 641, 646, 667.</p>
+            
             <pb n="480" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0564.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p480"/>
             <p>mum emimus a Bernardo de Balneolio, anno Domini m° cc° vicesimo.</p>
           </div>
@@ -41013,7 +41023,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra tertiam domum a cimiterio Sancti Benedicti, quam tenet Guillelmus de Sancto Benedicto a fratribus Sancti Maturini, in censiva nostra, habemus xl solidos annui redditus, solvendos ad Natale Domini et ad festum beati Johannis Baptiste, que domus quondam fuit magistri Rogerii de Gisiers, et quam domum dedit nobis Garinus de Gisiers¹, archidiaconus Baiocensis, anno Domini m° cc° xxxv°, de qua domo emimus capitalem censum, videlicet quinque solidos a domina Johanna, nobili muliere, relicta Galteri Pootel, pro quatuor libris, anno Domini m° cc° lxii°.</p>
+            <p>Supra tertiam domum a cimiterio Sancti Benedicti, quam tenet Guillelmus de Sancto Benedicto a fratribus Sancti Maturini, in censiva nostra, habemus xl solidos annui redditus, solvendos ad Natale Domini et ad festum beati Johannis Baptiste, que domus quondam fuit magistri Rogerii de Gisiers, et quam domum dedit nobis Garinus de Gisiers<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0336">336</ref>.</note>, archidiaconus Baiocensis, anno Domini m° cc° xxxv°, de qua domo emimus capitalem censum, videlicet quinque solidos a domina Johanna, nobili muliere, relicta Galteri Pootel, pro quatuor libris, anno Domini m° cc° lxii°.</p>
             <p>Supra manerium fratrum Sancti Maturini, pro quadam domo in qua ad presens est dormitorium dictorum fratrum, que erat in vico de Servonde incluso ad presens in predicto manerio, quam domum tenuit a nobis ad vitam suam Ennelina la Potiere, et habuit litteras capituli, de anno Domini m° cc° xvi°, viginti solidos, et solvuntur predicti xx solidi annuatim ad Natale Domini, et ad festum beati Johannis.</p>
             <p>Supra manerium Fratrum Predicatorum, Parisius, habemus xx solidos annui redditus, solvendos ad quatuor terminos, pro quadam domo que quondam fuit defuncti Hugonis dicti Canis, quondam canonici ecclesie Sancti Johannis Rotondi, et sunt in manu nostra a longo, ut apparet per quasdam litteras de anno Domini m° cc° lvii°.</p>
           </div>
@@ -41036,8 +41046,8 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra manerium monachorum de Cluniaco, inter vicum dictum ad Poretas, et manerium dictorum Predicatorum habemus xxi libras viii solidos vi denarios annuatim, seu perpetui redditus, solvendos ad iiii° terminos, pro duabus domibus quas ascensavimus abbati et conventui Cluniacensi, pro predicto redditu, anno Domini m° cc° sexagesimo nono, quarum unam dedit nobis Jacobus Brito², quondam clericus domini Regis, in censiva et dominio monasterii Sancte Genovefe in Monte, oneratam in xxv solidis annui redditus, solvendis annuatim ad</p>
-            <p>¹ Cart. n° 336. — ² Ibid. n° 334.</p>
+            <p>Supra manerium monachorum de Cluniaco, inter vicum dictum ad Poretas, et manerium dictorum Predicatorum habemus xxi libras viii solidos vi denarios annuatim, seu perpetui redditus, solvendos ad iiii° terminos, pro duabus domibus quas ascensavimus abbati et conventui Cluniacensi, pro predicto redditu, anno Domini m° cc° sexagesimo nono, quarum unam dedit nobis Jacobus Brito<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0334">334</ref>.</note>, quondam clericus domini Regis, in censiva et dominio monasterii Sancte Genovefe in Monte, oneratam in xxv solidis annui redditus, solvendis annuatim ad</p>
+            
             <pb n="481" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0565.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p481"/>
             <p>festum beati Remigii, et sciendum quod monachi predicti loci habuerunt centum libras pro amortizatione predicte domus. Item pro alia domo, que est in censiva burgensium Parisiensium, debemus ipsis burgensibus III solidos VI denarios, ad festum beati Remigii, quos solvimus dictis burgensibus, et XXV solidos monachis Sancte Genovefe, data fuit nobis a predicto Jacobo anno Domini M° CC° tricesimo quarto.</p>
           </div>
@@ -41051,7 +41061,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>De IIII° solidis super censivam Sororum Minorum, ultra portam Sancti Jacobi.</head>
+          <head>De iiii° solidis super censivam Sororum Minorum, ultra portam Sancti Jacobi.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 481.</witness>
@@ -41081,7 +41091,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Ante ecclesiam Sancti Hylarii habemus unam domum locagii VII librarum vel circiter, oneratam in quinque solidis capitalis census, debitis capitulo Sancti Marcelli juxta Parisius, cum LX solidis annui redditus, pro amortizatione predicte domus, solvendis ad IIII° terminos, que domus obvenit nobis ex dono Theobaldi Britonis¹ supra domum Henrici le Quarrier², anglici, contiguam domui que facit cuneum vici Jude, in vico Sancti Hylarii, habemus XXX solidos annui redditus, quam domum ipsi Henrico ascensavimus pro dictis XXX solidis, in censiva et dominio capituli Sancti Marcelli predicti, oneratam in XVIII denariis capitalis census et in VIII solidis pro amortizatione, quam domum habuimus ex dono Theobaldi Britonis predicti.</p>
+            <p>Ante ecclesiam Sancti Hylarii habemus unam domum locagii VII librarum vel circiter, oneratam in quinque solidis capitalis census, debitis capitulo Sancti Marcelli juxta Parisius, cum LX solidis annui redditus, pro amortizatione predicte domus, solvendis ad IIII° terminos, que domus obvenit nobis ex dono Theobaldi Britonis<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0714">714</ref>, <ref target="#HDPAR-HD_0715">715</ref>, <ref target="#HDPAR-HD_0730">730</ref>, <ref target="#HDPAR-HD_0733">733</ref>, <ref target="#HDPAR-HD_0735">735</ref>, <ref target="#HDPAR-HD_0740">740</ref>.</note> supra domum Henrici le Quarrier<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0846">846</ref>.</note>, anglici, contiguam domui que facit cuneum vici Jude, in vico Sancti Hylarii, habemus XXX solidos annui redditus, quam domum ipsi Henrico ascensavimus pro dictis XXX solidis, in censiva et dominio capituli Sancti Marcelli predicti, oneratam in XVIII denariis capitalis census et in VIII solidis pro amortizatione, quam domum habuimus ex dono Theobaldi Britonis predicti.</p>
             <p>In eodem vico Sancti Hylarii, juxta vicum Nucum, habemus III domos contiguas, in censiva et dominio domini episcopi, et sunt locagii XXIIII librarum vel circiter.</p>
             <p>Supra domum Agathe Pastillarie, que facit cuneum predicti vici et Nucum, quam ad presens tenet Gaufridus de Naunes, habemus LXX solidos annui redditus, solvendos ad IIII° terminos, percipiendos in mediate post capitalem censum.</p>
             <p>Supra domum que quondam fuit Roberti Noncii, que ad presens obvenit nobis ex dono Theobaldi Britonis, IIII° libras annui redditus, que omnia, videlicet tres domos in vico Sancti Hylarii, et LXX solidos annui redditus, cum IIII° libris, dedit nobis dominus Hugo de Viriaco, quondam canonicus Parisiensis, et capellanus episcopi Parisiensis, et sunt res predicte, videlicet tres domos (sic) et census predictus in censiva domini episcopi Parisiensis, onerate in sexdecim solidis pro censu capitali, et in XXIIII solidis annui redditus, solvendis dicto episcopo ad festum beati Remigii, pro amortizatione predictorum.</p>
@@ -41097,7 +41107,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>De VI libris annui et X solidis in vico Bevrie, et de XIIII solidis in vico Boni Putei.</head>
+          <head>De VI libris annui et X solidis in vico Bevrie, et de xiiii solidis in vico Boni Putei.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 481-482.</witness>
@@ -41107,11 +41117,11 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>In vico Bevrie supra domum ad Scuphas, ascensatam Dyonisio, tonnelario, per magistrum Guillelmum de Argentolio, cantorem, VI denarios, quam domum vendidimus, compulsi ad hoc, predicto magistro, pro LX libris, quas non habuimus, set tamen ipse magister Guillelmus dedit nobis VI libras X solidos, pro quibus sex libris ipse ascensavit dictam domum cum pertinenciis contiguam rivulo Bevrie, et debentur de ipsis sex libris et X solidis, quos tenemus sub nomine magistri, V solidi capitalis census debiti Sancte Genovefe in Monte, ad festum beati Remigii, nec amortizatur.</p>
-            <p>Supra domum Richardi de Bannaburi³, anglici, in vico Boni Putei, quam ipsi ascensavimus pro XX solidis, habemus XX solidos annui redditus, de quibus debentur VI solidi capitalis census monasterio Sancte Genovefe in Monte, in cujus censiva dicta domus sita est.</p>
+            <p>Supra domum Richardi de Bannaburi<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0778">778</ref>.</note>, anglici, in vico Boni Putei, quam ipsi ascensavimus pro XX solidis, habemus XX solidos annui redditus, de quibus debentur VI solidi capitalis census monasterio Sancte Genovefe in Monte, in cujus censiva dicta domus sita est.</p>
             <p>Item supra domum contiguam predicte domui,</p>
-            <p>Notes : ¹ Cart. n° 714, 715, 730, 733, 735, 740. ² Ibid. n° 846. ³ Ibid. n° 778.</p>
+            
             <pb n="482" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0566.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p482"/>
-            <p>in censiva monachorum de Tyron, quam domum predictus Richardus tenet, habemus X solidos annui redditus, que domus obvenerunt nobis ex dono Osanne Converse¹, familiaris istius Domus, anno Domini M° CC° LXVIII°.</p>
+            <p>in censiva monachorum de Tyron, quam domum predictus Richardus tenet, habemus X solidos annui redditus, que domus obvenerunt nobis ex dono Osanne Converse<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0743">743</ref>.</note>, familiaris istius Domus, anno Domini M° CC° LXVIII°.</p>
           </div>
         </body>
       </text>
@@ -41132,7 +41142,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>In vico Anglorum habemus tres domos contiguas, quarum una facit cuneum vici Plastarie, et sunt in censiva et dominio canonicorum Sancti Aniani, ecclesie Beate Marie Parisiensis, quibus canonicis debemus pro amortizatione predictarum domorum XXX solidos annui redditus, solvendos ad festum beati Remigii, pro quo habemus litteram capituli de una, cujus medietas obvenit ex dono Arrondi, cementarii, et aliam medietatem emimus a Symone le Charron² anno Domini M° CC° XLII°, et sciendum quod Tyerricus Almanus³, famulus scolarium theutonicorum, tenet duas trium predictarum domorum ad vitam suam, uxoris sue et unius heredum suorum, ab ipsis procreando (sic), pro C et X solidis, et alia est locagii LXIIII solidorum.</p>
+            <p>In vico Anglorum habemus tres domos contiguas, quarum una facit cuneum vici Plastarie, et sunt in censiva et dominio canonicorum Sancti Aniani, ecclesie Beate Marie Parisiensis, quibus canonicis debemus pro amortizatione predictarum domorum XXX solidos annui redditus, solvendos ad festum beati Remigii, pro quo habemus litteram capituli de una, cujus medietas obvenit ex dono Arrondi, cementarii, et aliam medietatem emimus a Symone le Charron<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0461">461</ref>.</note> anno Domini M° CC° XLII°, et sciendum quod Tyerricus Almanus<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0790">790</ref>.</note>, famulus scolarium theutonicorum, tenet duas trium predictarum domorum ad vitam suam, uxoris sue et unius heredum suorum, ab ipsis procreando (sic), pro C et X solidis, et alia est locagii LXIIII solidorum.</p>
           </div>
         </body>
       </text>
@@ -41153,11 +41163,11 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>In vico de la Huchete habemus unam domum, que facit cuneum vici predicti et Sacalie, in censiva et dominio domini Regis, quam emimus ab executoribus testamenti Juliane⁴, uxoris quondam Theobaldi Britonis, anno Domini M° CC° octogesimo nono, que solet locari XIII libras XII solidos et debentur pro ipsa VI libre annui redditus.</p>
+            <p>In vico de la Huchete habemus unam domum, que facit cuneum vici predicti et Sacalie, in censiva et dominio domini Regis, quam emimus ab executoribus testamenti Juliane<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0833">833</ref>.</note>, uxoris quondam Theobaldi Britonis, anno Domini M° CC° octogesimo nono, que solet locari XIII libras XII solidos et debentur pro ipsa VI libre annui redditus.</p>
             <p>In vico Guiardi ad Tabulas habemus aliam domum, que solet locari VII libras, vel circiter, in censiva et dominio monasterii Sancti Germani de Pratis, oneratam in X solidis, pro amortizatione solvendis ad festum beati Remigii predicto monasterio, et in VIII solidis debitis Ade de Meulento, solvendis ad predictum festum, quam domum dedit nobis Herveus Summelarius, anno Domini M° CC° V°.</p>
             <p>Supra domum Andree Anglici, in vico Sacalie, que facit cuneum predicti vici, in censiva domini Regis, habemus LIX solidos annui redditus, ad IIII° terminos solvendos, quos dedit nobis soror Emelina, filia Guillelmi Savore, soror istius Domus, anno Domini M° CC° nonagesimo tertio.</p>
-            <p>Supra duas domos quas tenent Robertus Olearius, et Thomas Tartarin, que domus faciunt alium cuneum Sacalie, ab oppositis predicte domus habemus C et X solidos annui redditus, solvendos ad IIII° terminos, in mediate post XXIII solidos, quos C et X solidos dedit nobis Genovefa Lagorie⁵, civis Parisiensis, anno Domini M° CC° septuagesimo quinto.</p>
-            <p>Supra domum quam ascensavimus Thome Laurencii⁶, in vico Reginaldi le Harpeeur, seu Parva Boucheria, in censiva burgensium, habemus XXVIII solidos annui census, solvendos ad IIII° terminos, et debemus dictis burgensibus III solidos et VI denarios, solvendos ad festum beati Remigii, que domus est nostra a tempore a quo non exstat memoria.</p>
+            <p>Supra duas domos quas tenent Robertus Olearius, et Thomas Tartarin, que domus faciunt alium cuneum Sacalie, ab oppositis predicte domus habemus C et X solidos annui redditus, solvendos ad IIII° terminos, in mediate post XXIII solidos, quos C et X solidos dedit nobis Genovefa Lagorie<note n="5" place="foot">Ibid. n° <ref target="#HDPAR-HD_0753">753</ref>.</note>, civis Parisiensis, anno Domini M° CC° septuagesimo quinto.</p>
+            <p>Supra domum quam ascensavimus Thome Laurencii<note n="6" place="foot">Ibid. n° <ref target="#HDPAR-HD_0851">851</ref>.</note>, in vico Reginaldi le Harpeeur, seu Parva Boucheria, in censiva burgensium, habemus XXVIII solidos annui census, solvendos ad IIII° terminos, et debemus dictis burgensibus III solidos et VI denarios, solvendos ad festum beati Remigii, que domus est nostra a tempore a quo non exstat memoria.</p>
           </div>
         </body>
       </text>
@@ -41178,11 +41188,11 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum in vico Cithare, que facit cuneum vici Poupe, quam ascensavimus Nicholao de Euvroic, cervisiario, anglico, habemus XI libras annui redditus, que domus quitata fuit nobis a Johanne Dencre, tutore Philippoti, filii Richardi de Castel-leto, racione novem librarum annui redditus, percipiendarum in mediate post capitalem censum, quas novem libras dederunt nobis Millo Barberius⁷, et Margareta, ejus uxor, cum acceperunt domum quam ad presens inhabitant a nobis, pro XVI libris annui redditus ab ipsis conjugibus solvendis ad vitam suam, et pro predictis novem libris annui redditus nobis datis ab ipsis conjugibus ex tunc in perpetuum, anno Domini M° CC° octogesimo tertio.</p>
+            <p>Supra domum in vico Cithare, que facit cuneum vici Poupe, quam ascensavimus Nicholao de Euvroic, cervisiario, anglico, habemus XI libras annui redditus, que domus quitata fuit nobis a Johanne Dencre, tutore Philippoti, filii Richardi de Castel-leto, racione novem librarum annui redditus, percipiendarum in mediate post capitalem censum, quas novem libras dederunt nobis Millo Barberius<note n="7" place="foot">Ibid. n° <ref target="#HDPAR-HD_0804">804</ref>.</note>, et Margareta, ejus uxor, cum acceperunt domum quam ad presens inhabitant a nobis, pro XVI libris annui redditus ab ipsis conjugibus solvendis ad vitam suam, et pro predictis novem libris annui redditus nobis datis ab ipsis conjugibus ex tunc in perpetuum, anno Domini M° CC° octogesimo tertio.</p>
             <p>Supra domum episcopi Claromontensis in Alvernia, in vico Sanctorum Cosme et Damiani, habemus XX solidos annui redditus, solvendos ad quatuor terminos.</p>
             <p>Supra domum archidiaconi Saturiacensis, contiguam domui predicte habemus XLII solidos annui redditus solvendos, ad Natale Domini XXI solidos et ad Natale beati Johannis Baptiste XXI solidos.</p>
             <p>Supra domum Marie Cousturarie, contiguam do-</p>
-            <p>Notes : ¹ Cart. n° 743. ² Ibid. n° 461. ³ Ibid. n° 790. ⁴ Ibid. n° 833. ⁵ Ibid. n° 753. ⁶ Ibid. n° 851. ⁷ Ibid. n° 804.</p>
+            
             <pb n="483" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0567.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p483"/>
             <p>mibus predictis, habemus XXI solidos annui redditus solvendos ad tres terminos, ad festum beati Johannis Baptiste, sancti Remigii, et ad Natale Domini, quolibet termino X solidos.</p>
             <p>Supra domum relicte domini Dyonisii de Paroi, militis, contiguam domui predicte, habemus XXI solidos annui redditus, solvendos ad festum beati Remigii.</p>
@@ -41207,9 +41217,9 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum ante portam cimiterii Sancti Andree de Arcubus, quam domum tenet magister Thomas Rosemode ad vitam suam, habemus LXXII solidos annui redditus, quam domum dedit nobis Margareta de Asso¹, relicta Radulphi Pelliparii, in censiva et dominio monasterii Sancti Germani de Pratis, amortizatam a dicto loco anno Domini M° CC° XXXIII°, et debemus pro amortizatione XII solidos annui redditus.</p>
-            <p>Supra domum Guiardi ad Pietas, quam ascensavimus Guillelmo Anglico², et Adipdi ejus uxori, habemus XL solidos annui redditus, solvendos ad IIII° terminos, quam domum habuimus ex dono sororis Johanne la Patue, sororis istius Domus, recepte anno Domini M° CC° octogesimo quarto, que domus est in censiva Burgensium.</p>
-            <p>Supra granchiam, que quondam fuit Jordani de Salicibus³, retro ecclesiam Sancti Andree de Arcubus, in censiva Sancti Germani de Pratis, quam granchiam tenet Johannes de Ulmis, bucherius, et Guillelmus de Clamart, ad vitam dicti Johannis, habemus L solidos annui census, solvendos ad quatuor terminos, quos quinquaginta solidos dedit nobis Jordanus de Salicibus, anno Domini M° CC° octogesimo quinto, et debemus pro ipsis V solidos annui census.</p>
+            <p>Supra domum ante portam cimiterii Sancti Andree de Arcubus, quam domum tenet magister Thomas Rosemode ad vitam suam, habemus LXXII solidos annui redditus, quam domum dedit nobis Margareta de Asso<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0820">820</ref>.</note>, relicta Radulphi Pelliparii, in censiva et dominio monasterii Sancti Germani de Pratis, amortizatam a dicto loco anno Domini M° CC° XXXIII°, et debemus pro amortizatione XII solidos annui redditus.</p>
+            <p>Supra domum Guiardi ad Pietas, quam ascensavimus Guillelmo Anglico<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0216">216</ref> et 219.</note>, et Adipdi ejus uxori, habemus XL solidos annui redditus, solvendos ad IIII° terminos, quam domum habuimus ex dono sororis Johanne la Patue, sororis istius Domus, recepte anno Domini M° CC° octogesimo quarto, que domus est in censiva Burgensium.</p>
+            <p>Supra granchiam, que quondam fuit Jordani de Salicibus<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0859">859</ref>.</note>, retro ecclesiam Sancti Andree de Arcubus, in censiva Sancti Germani de Pratis, quam granchiam tenet Johannes de Ulmis, bucherius, et Guillelmus de Clamart, ad vitam dicti Johannis, habemus L solidos annui census, solvendos ad quatuor terminos, quos quinquaginta solidos dedit nobis Jordanus de Salicibus, anno Domini M° CC° octogesimo quinto, et debemus pro ipsis V solidos annui census.</p>
             <p>Item supra domum relicte Stephani de Limoviciis supradictam, habemus II solidos annui census, solvendos ad festum beati Remigii, quos habuimus ex dono seu legato magistri Ade de Corbolio, canonici ecclesie Sancti Marcelli juxta Parisius.</p>
           </div>
         </body>
@@ -41222,7 +41232,7 @@
           <index>
             <term type="nature" key="cens"/>
           </index>
-          <head>HII SUNT REDITUS QUOS HABEMUS IN CENSIBUS AUGMENTATIS ET IN LOCATIONIBUS DOMORUM ULTRA MAGNUM PONTEM.</head>
+          <head>Hii sunt reditus quos habemus in censibus augmentatis et in locationibus domorum ultra magnum pontem.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Archives de l’Hôtel-Dieu de Paris</title>, L. Brièle (éd.). Paris : Imprimerie nationale, 1894, p. 483.</witness>
@@ -41232,7 +41242,7 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum que quondam fuit Johannis Brebiz, quam tenet ad presens Gilebertus le Borssier, subtus Castelletum, ab oppositis du Palloier Burgensium, habemus X solidos annui redditus, solvendos ad IIII° terminos, et sunt in manu nostra a tempore a quo non exstat memoria.</p>
-            <p>Supra domum relicte Ade Troterel, in Salneria, subtus Castelletum, que domus facit cuneum ruelle Guicheti Magni Pontis, in censiva domini Regis, habemus XL solidos annui redditus, percipiendos in mediate post XL solidos annui redditus, quos XL solidos dedit nobis Johanna la Blondele⁴, quondam mater magistri Johannis dicti Blondel, anno Domini M° CC° septuagesimo tercio.</p>
+            <p>Supra domum relicte Ade Troterel, in Salneria, subtus Castelletum, que domus facit cuneum ruelle Guicheti Magni Pontis, in censiva domini Regis, habemus XL solidos annui redditus, percipiendos in mediate post XL solidos annui redditus, quos XL solidos dedit nobis Johanna la Blondele<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0810">810</ref>.</note>, quondam mater magistri Johannis dicti Blondel, anno Domini M° CC° septuagesimo tercio.</p>
             <p>Supra le Palloer Burgensium habemus in festo beati Remigii XL solidos annui redditus.</p>
           </div>
         </body>
@@ -41255,9 +41265,9 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum quam tenet ad presens Petrus Cordubanarius, que domus facit cuneum vici Haumerie et Veteris Monetarie, in censiva episcopi Parisiensis, habemus C solidos annui redditus, solvendos ad IIII° terminos, percipiendos in mediate post capitalem censum.</p>
-            <p>Notes : ¹ Cart. n° 820. ² Ibid. n° 216 et 219. ³ Ibid. n° 859. ⁴ Ibid. n° 810.</p>
+            
             <pb n="484" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0568.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p484"/>
-            <p>Supra domum contiguam predicte domui, quam tenet ad presens Johannes ad Cagiam, in censiva predicta, habemus IIII° libras annui redditus, solvendos ut prius, percipiendas in mediate post capitalem censum, has duas domos contiguas in Veteri Monetaria et Haumeria, ut predictum est, dedit nobis Godefridus Golart, et Alesis ejus uxor, quas domos ascensavimus pro novem libris annui redditus, et amortizantur ab episcopo in cujus censiva dicte domus site sunt, cum quinquaginta solidis sitis super domos, videlicet domum Thome Carpentarii, domum Roberti, et domum Johannis Galerne¹, super quas percipimus ad presens X libras ultra portam Sancti Honorati, et debemus pro amortizatione predictorum IX librarum et L solidorum dicto episcopo XX solidos annui redditus, solvendos ad festum beati Remigii, et amortizati fuerunt anno Domini M° CC° vicesimo septimo.</p>
+            <p>Supra domum contiguam predicte domui, quam tenet ad presens Johannes ad Cagiam, in censiva predicta, habemus IIII° libras annui redditus, solvendos ut prius, percipiendas in mediate post capitalem censum, has duas domos contiguas in Veteri Monetaria et Haumeria, ut predictum est, dedit nobis Godefridus Golart, et Alesis ejus uxor, quas domos ascensavimus pro novem libris annui redditus, et amortizantur ab episcopo in cujus censiva dicte domus site sunt, cum quinquaginta solidis sitis super domos, videlicet domum Thome Carpentarii, domum Roberti, et domum Johannis Galerne<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0763">763</ref>.</note>, super quas percipimus ad presens X libras ultra portam Sancti Honorati, et debemus pro amortizatione predictorum IX librarum et L solidorum dicto episcopo XX solidos annui redditus, solvendos ad festum beati Remigii, et amortizati fuerunt anno Domini M° CC° vicesimo septimo.</p>
           </div>
         </body>
       </text>
@@ -41278,7 +41288,7 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum ad Planchiam de Mibrai, quam tenet ad presens Gilo de Sancto Germano, et quam quondam ascensavimus Philippo Boucel, habemus VI libras et X solidos annui redditus, solvendos ad IIII° terminos, que domus contigua est domui que facit cuneum viculi quo itur a dicto vico ad Sanctum Bonitum, et debemus pro ipsa domo heredibus domini Ade Haranc² II solidos capitalis census, in cujus censiva dicta domus sita est, quam domum ipse Adam, miles, tanquam primus dominus et dominus Hugo de Villa Picta, tanquam secundus dominus, amortizaverunt nobis anno Domini M° CC° XXX° secundo.</p>
+            <p>Supra domum ad Planchiam de Mibrai, quam tenet ad presens Gilo de Sancto Germano, et quam quondam ascensavimus Philippo Boucel, habemus VI libras et X solidos annui redditus, solvendos ad IIII° terminos, que domus contigua est domui que facit cuneum viculi quo itur a dicto vico ad Sanctum Bonitum, et debemus pro ipsa domo heredibus domini Ade Haranc<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0754">754</ref>.</note> II solidos capitalis census, in cujus censiva dicta domus sita est, quam domum ipse Adam, miles, tanquam primus dominus et dominus Hugo de Villa Picta, tanquam secundus dominus, amortizaverunt nobis anno Domini M° CC° XXX° secundo.</p>
           </div>
         </body>
       </text>
@@ -41300,7 +41310,7 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum Stephani Crespin, filii domine de Dangu, in vico Verrerarie, habemus VIII solidos annui redditus, solvendos ad festum beati Remigii.</p>
-            <p>Supra domum Baldoini Boucel, que quondam fuit Theophanie la Commine³, contiguam predicte domui habemus VI solidos annui census, solvendos ad festum beati Remigii.</p>
+            <p>Supra domum Baldoini Boucel, que quondam fuit Theophanie la Commine<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0293">293</ref>.</note>, contiguam predicte domui habemus VI solidos annui census, solvendos ad festum beati Remigii.</p>
             <p>Supra domum contiguam porte predicte domus, quam ad presens tenet . . . . , habemus XVI solidos annui redditus, solvendos ad festum beati Remigii.</p>
             <p>Supra domum Emeline de Edera, in vico Novo Sancti Mederici, habemus VI solidos annui redditus, solvendos ad festum beati Remigii annuatim.</p>
             <p>Supra domum Roberti Matricularii VI solidos annui redditus, solvendos ut prius, et sciendum quod predicti census amortizantur a canonicis Sancti Mederici, in cujus censiva situantur, pro qua amortizatione habent VI solidos annui redditus supra domum Durandi presbiteri, ab oppositis ecclesie Sancti Mederici, prout continetur in littera sigillata sigillo capituli Parisiensis, quam habemus.</p>
@@ -41329,7 +41339,7 @@
             <p>Supra domum Johannis de Vernon, que quondam fuit Richardi Hucherii in Veteri Texanderia, in cuneo quo descenditur a dicto vico in Graviam, habemus V solidos annui redditus, solvendos ad festum beati Remigii, et sunt in manu nostra a tempore a quo non exstat memoria.</p>
             <p>Supra domum contiguam domui que facit cuneum de traverse Sancti Johannis, in Veteri Texanderia, que domus quondam fuit Auberee la Tonnelleresse, habemus IIII° libras et X solidos annui redditus, solvendos ad IIII° terminos, in censiva domini Regis, percipiendos in mediate post XL solidos quos emimus anno Domini M° CC° septuagesimo octavo.</p>
             <p>Supra domum relicte Radulphi le Buef, in Moncello Sancti Gervasii, in censiva prepositure de Moncello, habemus XIX solidos annui redditus, ex dono Radulphi Fabri, qui dedit nobis medietatem pre-</p>
-            <p>Notes : ¹ Cart. n° 763. ² Ibid. n° 754. ³ Ibid. n° 293.</p>
+            
             <pb n="485" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0569.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p485"/>
             <p>dicte domus anno Domini M° CC° septuagesimo octavo, quam medietatem ascensavimus.</p>
           </div>
@@ -41353,8 +41363,8 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>Supra domum que quondam fuit Rogeri Straminis, quam ad presens tenet Guillelmus Auganz, in Moncello Sancti Gervasii, habemus LX solidos annui census, solvendos ad IIII° terminos, que domus sita est in predicto Moncello, ante ecclesiam Gervasii, in censiva domini Regis, percipiendos post capitalem censum, quos LX solidos dedit nobis Thomas Thegularius, et sunt amortizati per litteras domini Regis de anno Domini M° CC° LX° septimo.</p>
-            <p>Supra domum quam ascensavimus Johanni Scriptori, que domus obvenit nobis racione quatuor librarum XVI denariorum nobis datarum a magistro Hamone¹, quondam officiali archidiaconi Parisiensis, et que domus contigua est platee Johannis de Paciaco, habemus sex libras annui redditus, percipiendas post IIII° libras, que domus, prout dictum est, obvenit ex dono predicti Hamonis, ad opus capellanie altaris Sancti Leonardi, anno Domini M° CC° LX° VII°.</p>
-            <p>Supra domum que fuit quondam Droconis Lenches², quam ad presens tenet Philippus Hostiarius, contiguam domui presbiteri Sancti Johannis in Gravia, ante ulmum Sancti Gervasii, habemus X solidos annui census, percipiendos in mediate post IIII° libras III solidos annui census, quos X solidos dedit nobis defuncta Maria, dicta de Barris³, mater magistri Johannis de Barris, quondam canonici Parisiensis, et solvendi sunt dicti X solidi die anniversarii predicte Marie, videlicet in die festi beati Mathe apostoli, quos dedit nobis anno Domini M° CC° XXX° VI°.</p>
+            <p>Supra domum quam ascensavimus Johanni Scriptori, que domus obvenit nobis racione quatuor librarum XVI denariorum nobis datarum a magistro Hamone<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0674">674</ref>.</note>, quondam officiali archidiaconi Parisiensis, et que domus contigua est platee Johannis de Paciaco, habemus sex libras annui redditus, percipiendas post IIII° libras, que domus, prout dictum est, obvenit ex dono predicti Hamonis, ad opus capellanie altaris Sancti Leonardi, anno Domini M° CC° LX° VII°.</p>
+            <p>Supra domum que fuit quondam Droconis Lenches<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0875">875</ref>.</note>, quam ad presens tenet Philippus Hostiarius, contiguam domui presbiteri Sancti Johannis in Gravia, ante ulmum Sancti Gervasii, habemus X solidos annui census, percipiendos in mediate post IIII° libras III solidos annui census, quos X solidos dedit nobis defuncta Maria, dicta de Barris<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0378">378</ref>.</note>, mater magistri Johannis de Barris, quondam canonici Parisiensis, et solvendi sunt dicti X solidi die anniversarii predicte Marie, videlicet in die festi beati Mathe apostoli, quos dedit nobis anno Domini M° CC° XXX° VI°.</p>
           </div>
         </body>
       </text>
@@ -41375,8 +41385,8 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum quam ad presens tenet Galterus Coqus, anglicus, ad portam Balderiam, in censiva domini Regis, habemus XXX solidos annui redditus, ex dono Haoysis Barberie⁴.</p>
-            <p>Supra domum que facit cuneum viculi quo itur ad vetus cimiterium Sancti Johannis in Gravia, quam domum ascensavimus Johanni Scriptori⁵, et est contigua alii domui quam idem Johannes tenet a nobis pro X libris, habemus LX solidos annui redditus, percipiendos in mediate post centum et X solidos annui redditus, que domus obvenit nobis racione L solidorum annui redditus, quos emimus, quam eciam nobis quitatam pro predictis L solidis ascensavimus Johanni Scriptori pro sexaginta solidis, percipiendis in mediate post centum et X solidos, in quibus dicta domus antea erat onerata. Et sciendum est quod predictus Johannes, pro duabus domibus antedictis quas ipsi ascensavimus, solvit nobis annuatim novem libras ad IIII° terminos.</p>
+            <p>Supra domum quam ad presens tenet Galterus Coqus, anglicus, ad portam Balderiam, in censiva domini Regis, habemus XXX solidos annui redditus, ex dono Haoysis Barberie<note n="4" place="foot">Ibid. n° <ref target="#HDPAR-HD_0631">631</ref>.</note>.</p>
+            <p>Supra domum que facit cuneum viculi quo itur ad vetus cimiterium Sancti Johannis in Gravia, quam domum ascensavimus Johanni Scriptori<note n="5" place="foot">Ibid. n° <ref target="#HDPAR-HD_0762">762</ref>.</note>, et est contigua alii domui quam idem Johannes tenet a nobis pro X libris, habemus LX solidos annui redditus, percipiendos in mediate post centum et X solidos annui redditus, que domus obvenit nobis racione L solidorum annui redditus, quos emimus, quam eciam nobis quitatam pro predictis L solidis ascensavimus Johanni Scriptori pro sexaginta solidis, percipiendis in mediate post centum et X solidos, in quibus dicta domus antea erat onerata. Et sciendum est quod predictus Johannes, pro duabus domibus antedictis quas ipsi ascensavimus, solvit nobis annuatim novem libras ad IIII° terminos.</p>
           </div>
         </body>
       </text>
@@ -41421,9 +41431,9 @@
         <body>
           <div type="transcription" xml:lang="lat">
             <p>In vico de Barris, retro cimiterium Sancti Gervasii, habemus unam domum que solet conduci vel locari X libris, que est onerata in C solidis annui redditus, quam eciam domum acquisivit seu emit</p>
-            <p>Notes : ¹ Cart. n° 674. ² Ibid. n° 875. ³ Ibid. n° 378. ⁴ Ibid. n° 631. ⁵ Ibid. n° 762.</p>
+            
             <pb n="486" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0570.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p486"/>
-            <p>magister Petrus de Joyniaco, canonicus Parisiensis, ad opus istius Domus, ab executoribus testamenti Arnulphi Cervisiarii¹, pro XLV libris anno Domini M° CC° octogesimo sexto.</p>
+            <p>magister Petrus de Joyniaco, canonicus Parisiensis, ad opus istius Domus, ab executoribus testamenti Arnulphi Cervisiarii<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0817">817</ref>.</note>, pro XLV libris anno Domini M° CC° octogesimo sexto.</p>
           </div>
         </body>
       </text>
@@ -41448,14 +41458,14 @@
             <p>Item super quadam alia domo magna, contigua alteri lateri dicte domus Theobaldi de Capella, et super tota ruella ibi sita, continente viginti novem hostisias, prout protenditur a dicta domo usque ad domum que quondam fuit Guillelmi de Andegavis.</p>
             <p>Item et super quodam jardine magno cum mensa lapidea, retro dictas domos et ruellam sito.</p>
             <p>Item super duabus domibus a parte posteriori in vico Frogerii Asinarii sitis, inter domum que quondam fuit Philippi de Metis, et domum Azonis Sellarii, que omnia predicta sunt in censiva domini Regis, videlicet prepositure de Moncello, que Theophania dedit predictas XX libras super predicta loca situatas domui isti, in modum qui sequitur : videlicet de XX libris dedit et voluit quod bursa perciperet IIII° libras annui redditus, in recompensationem IIII° librarum quas ipsa olim dederat nobis, ad opus capellani pro ipsa qualibet die celebrantis, super quadam domo sita Parisius in Salneria, dicta domus Gochin, alias sexdecim libras dedit sub modo et conditionibus infrascriptis : videlicet quod soror custos camere dicte vulgariter la Poillerie tradat priorisse XL solidos quolibet anno, pro telis emendis, item C et IIII° solidos anno quolibet in perpetuum septimanariis dicte Domus, que pro tempore fuerint, distribuendos per easdem in modum infrascriptum : scilicet duos solidos qualibet septimana, infirmis cujuslibet aule VI denarios, item quadraginta puellis istius Domus, in die anniversarii sui X solidos, cuilibet III denarios, item capellano celebranti missam pro dicto anniversario VI denarios, item duobus capellanis et IIII° clericis qui intererunt XVIII denarios, cuilibet III denarios, item pro uno sexario vini fratribus dicte Domus in festo beate Margarete sexdecim denarios, item pro herba et luminari querendis in festo beate Marie Magdalene et Margarete VIII denarios, item pro cereis, vino et pane emendis in die anniversarii, quolibet anno, II solidos, item Theophanie, nepti sue, sorori dicte (Domus) et Margarete dicte La Menete, familiari dicte Domus, IIII° libras quolibet anno, quamdiu vixerint solum modo, cuilibet earum XL solidos, pro suis necessariis querendis, ita quod post decessum primitus decedentis in quatuor libras (sic) ad earum superstitem revertatur, et post decessum ambarum revertantur ad bursam.</p>
-            <p>Supra domum Johannis Touse, tincturarii, in vico Michaelis Doret, prope vicum Garneri desuper Aquam, habemus XLV solidos annui redditus, solvendos ad IIII° terminos, et sunt in censiva et dominio domus Dei Sancti Gervasii, et amortizantur pro IIII° solidis annui redditus, quos XIII solidos dicta domus Dei Sancti Gervasii percipit de LIX solidis quos dedit nobis Genovefa Lagorie², anno Domini M° CC° LXX° V°, et habemus litteras de amortizatione predicta, videlicet litteras domini episcopi.</p>
-            <p>Supra domum in vico Porte Balderie, quam ad presens tenet Guerinus Pastillarius, ab oppositis Veteris Vici Templi, que domus est in censiva et dominio istius Domus Dei, habemus XXX solidos annui redditus, solvendos ad Natale Domini et ad festum beati Johannis, de quibus XXX solidis emimus XX solidos, videlicet X a Matheo dicto Monacho et X solidos a Hugone Monacho³, alios autem X solidos habuimus ex dono magistri Hamonis predicti, ad opus capellanie altaris Sancti Leonardi supradicti, primos autem XX solidos emimus anno Domini M° CC° XXXI°.</p>
-            <p>Notes : ¹ Cart. n° 817. ² Ibid. n° 753. ³ Ibid. n° 378.</p>
+            <p>Supra domum Johannis Touse, tincturarii, in vico Michaelis Doret, prope vicum Garneri desuper Aquam, habemus XLV solidos annui redditus, solvendos ad IIII° terminos, et sunt in censiva et dominio domus Dei Sancti Gervasii, et amortizantur pro IIII° solidis annui redditus, quos XIII solidos dicta domus Dei Sancti Gervasii percipit de LIX solidis quos dedit nobis Genovefa Lagorie<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0753">753</ref>.</note>, anno Domini M° CC° LXX° V°, et habemus litteras de amortizatione predicta, videlicet litteras domini episcopi.</p>
+            <p>Supra domum in vico Porte Balderie, quam ad presens tenet Guerinus Pastillarius, ab oppositis Veteris Vici Templi, que domus est in censiva et dominio istius Domus Dei, habemus XXX solidos annui redditus, solvendos ad Natale Domini et ad festum beati Johannis, de quibus XXX solidis emimus XX solidos, videlicet X a Matheo dicto Monacho et X solidos a Hugone Monacho<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0378">378</ref>.</note>, alios autem X solidos habuimus ex dono magistri Hamonis predicti, ad opus capellanie altaris Sancti Leonardi supradicti, primos autem XX solidos emimus anno Domini M° CC° XXXI°.</p>
+            
             <pb n="487" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0571.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p487"/>
             <p>Supra duabus domibus contiguis predicte domui habemus XVI solidos annui redditus, solvendos ad festum beati Johannis Baptiste, et ad Natale Domini, pro amortizatione quadraginta et octo solidorum annui census monachis de nemore Vicenarum, juxta Parisius, que amortizatio fuit facta anno Domini M° CC° XXXV°.</p>
-            <p>Supra domum Thome Philippi, que domus quondam Philippi de Limoi, habemus VI libras annui redditus, solvendas ad IIII° terminos, quas emimus a Henrico de Limoi¹ et Thiecia, ejus uxore, anno Domini M° CC° quinquagesimo septimo.</p>
-            <p>Supra domum Petri Cordubanarii, contiguam domui quam ascensavimus Petro Borrellario², habemus V solidos annui census, solvendos ad festum beati Remigii, que domus est in censiva nostra et dominio nostro.</p>
-            <p>Supra domum quam ascensavimus Petro Borrellario pro IIII° libris X solidis annui census, oneratam in LXII solidis annui redditus, debitis : videlicet domui Dei Sancti Gervasii L solidis, de quibus L solidis habemus X solidos annui census pro amortizatione XL solidorum restantium, et debentur Galerano Britoni XII solidi, habemus XXVIII solidos annui redditus percipiendos in mediate post LXXII solidos supradictos, quam domum dedit nobis Thierricus Alamannus³, et est in censiva nostra.</p>
+            <p>Supra domum Thome Philippi, que domus quondam Philippi de Limoi, habemus VI libras annui redditus, solvendas ad IIII° terminos, quas emimus a Henrico de Limoi<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0649">649</ref>.</note> et Thiecia, ejus uxore, anno Domini M° CC° quinquagesimo septimo.</p>
+            <p>Supra domum Petri Cordubanarii, contiguam domui quam ascensavimus Petro Borrellario<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0815">815</ref>.</note>, habemus V solidos annui census, solvendos ad festum beati Remigii, que domus est in censiva nostra et dominio nostro.</p>
+            <p>Supra domum quam ascensavimus Petro Borrellario pro IIII° libris X solidis annui census, oneratam in LXII solidis annui redditus, debitis : videlicet domui Dei Sancti Gervasii L solidis, de quibus L solidis habemus X solidos annui census pro amortizatione XL solidorum restantium, et debentur Galerano Britoni XII solidi, habemus XXVIII solidos annui redditus percipiendos in mediate post LXXII solidos supradictos, quam domum dedit nobis Thierricus Alamannus<note n="3" place="foot">Ibid. n° <ref target="#HDPAR-HD_0790">790</ref>.</note>, et est in censiva nostra.</p>
             <p>Supra domum que quondam fuit Radulphi Ansces, quam eciam ad presens tenet Johannes Forbitonsor, anglicus, habemus L solidos annui census in mediate percipiendos post capitalem censum, et est dicta domus in censiva et dominio nostro.</p>
             <p>Supra manerium monachorum Ursi Campi, ordinis Cisterciensis, et supra quamdam domum sitam inter duas domos supradictas, habemus IX libras annui redditus, solvendas ad IIII° terminos, videlicet IIII° libras X solidos pro amortizatione predictorum, facta anno Domini M° CC° octogesimo primo, debentur eciam nobis III denarii cum obolo pro fundo terre, et habemus totam justiciam in dicto loco.</p>
             <p>Supra domum quam ascensavimus Petro Borrellario, quam inhabitat ad presens, contiguam ex utraque parte predicto manerio monachorum predictorum, habemus VIII libras et V solidos annui census, solvendos ad IIII° terminos, que domus est in censiva nostra.</p>
@@ -41484,7 +41494,7 @@
             <p>Supra domum que quondam fuit Johannis Medici, quam ad presens tenet Johannes Niger, in vico de Joyaco, XVII solidi ad IIII° terminos.</p>
             <p>Supra duas domos contiguas, in vico Perforato, videlicet domum Haoysis Lesgarce, et supra domum Johannis de Bosco habemus XV solidos, et sciendum quod de L et uno solidis quos habuimus ex dono facto anno Domini M° CC° LX° nono, assignavimus Jacobo Boucelli et ejus sororibus XXXVI solidos annui redditus, pro XXXIII solidis quos dicebant se habere supra domum contiguam platee Johannis de Paciaco, quam ascensavimus Johanni Scriptori supradicto.</p>
             <p>Supra domum in vico Rosariorum, in censiva</p>
-            <p>Notes : ¹ Cart. n° 649. ² Ibid. n° 815. ³ Ibid. n° 790.</p>
+            
             <pb n="488" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0572.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p488"/>
             <p>domini Regis, que domus quondam fuit Johanne la Sauniere, habemus X solidos annui redditus, solvendos ad IIII° terminos, ex dono Haoysis Barberie.</p>
             <p>Supra domum dictam ad . . . ., habemus X solidos annui redditus, solvendos ad festum beati Remigii, pro amortizatione dicte domus, facta abbati et conventui Sancti Mauri Fossatensis, anno Domini M° CC° XXII°.</p>
@@ -41571,10 +41581,10 @@
         </front>
         <body>
           <div type="transcription" xml:lang="lat">
-            <p>Supra domum ante fores Sanctorum Innocentium, quam ascensavimus Johanni Cheevel¹ pro XL solidis nobis solvendis, de quibus XL solidis restituimus quibusdam XXVIII solidos annui census, per sententiam contra nos in Castelletto datam, de qua domo dedit nobis medietatem oneratam in C solidis annui census, que domus est in censiva et dominio domus Dei Sancte Katerine, et amortizatur nobis dicta medietas seu census, videlicet XII solidi de XL solidis restantibus a predicta domo, per litteras episcopi de anno Domini M° CC° LXII° ; ex dono Baldoini de Blaqueia habuimus dictam medietatem.</p>
-            <p>Supra domum Ade le Blont, ab oppositis cimiterii Sanctorum Innocentium, que quondam fuit Heberti le Cordier, habemus XXX solidos annui census, solvendos ad IIII° terminos, quos XXX solidos dedit nobis seu legavit magister Stephanus Berout², decanus Laudunensis, de XIII libris annui redditus in mediate percipiendis post capitalem censum, quos habebat super predicta domo dictus decanus, de quibus legavit nobis XL solidos annui redditus, in censiva et dominio domus Dei Sancte Katerine, de quibus eciam XL solidis nobis datis habet dicta domus X solidos annui redditus, pro amortizatione aliorum XXX solidorum, et sciendum quod de XII denariis in quibus dicta domus est onerata, debemus solvere II denarios, prout continetur in littera sigillata executorum testamenti dicti decani, de anno Domini M° CC° XLIII° ; litteras episcopi habemus super amortizatione.</p>
+            <p>Supra domum ante fores Sanctorum Innocentium, quam ascensavimus Johanni Cheevel<note n="1" place="foot">Cart. n° <ref target="#HDPAR-HD_0803">803</ref>.</note> pro XL solidis nobis solvendis, de quibus XL solidis restituimus quibusdam XXVIII solidos annui census, per sententiam contra nos in Castelletto datam, de qua domo dedit nobis medietatem oneratam in C solidis annui census, que domus est in censiva et dominio domus Dei Sancte Katerine, et amortizatur nobis dicta medietas seu census, videlicet XII solidi de XL solidis restantibus a predicta domo, per litteras episcopi de anno Domini M° CC° LXII° ; ex dono Baldoini de Blaqueia habuimus dictam medietatem.</p>
+            <p>Supra domum Ade le Blont, ab oppositis cimiterii Sanctorum Innocentium, que quondam fuit Heberti le Cordier, habemus XXX solidos annui census, solvendos ad IIII° terminos, quos XXX solidos dedit nobis seu legavit magister Stephanus Berout<note n="2" place="foot">Ibid. n° <ref target="#HDPAR-HD_0489">489</ref>.</note>, decanus Laudunensis, de XIII libris annui redditus in mediate percipiendis post capitalem censum, quos habebat super predicta domo dictus decanus, de quibus legavit nobis XL solidos annui redditus, in censiva et dominio domus Dei Sancte Katerine, de quibus eciam XL solidis nobis datis habet dicta domus X solidos annui redditus, pro amortizatione aliorum XXX solidorum, et sciendum quod de XII denariis in quibus dicta domus est onerata, debemus solvere II denarios, prout continetur in littera sigillata executorum testamenti dicti decani, de anno Domini M° CC° XLIII° ; litteras episcopi habemus super amortizatione.</p>
             <p>Supra domum in Charroneria, que quondam fuit Bernardi le Mercier ad presens Guillelmi le Char-</p>
-            <p>Notes : ¹ Cart. n° 803. ² Ibid. n° 489.</p>
+            
             <pb n="489" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0573.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p489"/>
             <p>ron, habemus vi solidos iii denarios annui redditus, solvendos ad iii&lt;sup&gt;or&lt;/sup&gt; terminos, in censiva domini Regis, percipiendos in mediate post capitalem censum, quos habuimus ex dono magistri Ade de Corbolio, canonici ecclesie Sancti Marcelli.</p>
             <p>Supra domum in eodem vico, ante puteum, que quondam fuit Thome Borrellarii, quam ad presens tenet Gaufridus Borrellarius, habemus v solidos annui redditus, solvendos ad iii&lt;sup&gt;or&lt;/sup&gt; terminos in censiva domini Regis, quos habuimus ex dono prime uxoris predicti Thome Borrellarii, circa annum Domini m&lt;sup&gt;o&lt;/sup&gt; cc&lt;sup&gt;o&lt;/sup&gt; septuagesimum.</p>
@@ -42463,7 +42473,7 @@
             <p>Renvois : 1. Cart. n° 750, 810. 2. Ibid. n° 865.</p>
           </div>
         </body>
-      </text>
+      </text></group>
       <text xml:id="HDPAR-HD_appendix_notice" n="Appendice" subtype="article">
         <pb n="497" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0581.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json"/>
         <front>

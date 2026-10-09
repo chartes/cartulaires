@@ -109,7 +109,7 @@
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -124,10 +124,10 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]" use="@xml:id" unit="Index">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure match="div[@type = 'index' or @type = 'table']" use="@xml:id">
+          <citeStructure match="div[@type = 'index' or @type = 'table']" use="@xml:id" unit="index-complet">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-          </citeStructure>
+          <citeStructure unit="lettre" match="list[@type='index'][@xml:id]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -189,7 +189,7 @@
       </div>
       <div xml:id="NDMA-AB_archives" subtype="article">
         <head>Orientation archivistique globale</head>
-        <p>Tout comme pour Saint-Thomas, d’Épernon, il existe peu de documents concernant Notre-Dame de Maintenon, excepté le registre de visites de l’abbé de Marmoutier (voir p. 180).</p>
+        <p>Tout comme pour Saint-Thomas, d’Épernon, il existe peu de documents concernant Notre-Dame de Maintenon, excepté le registre de visites de l’abbé de Marmoutier (voir <ref target="#NDMA-AB_0041">p. 180</ref>).</p>
       </div>
       <div xml:id="NDMA-AB_biblio" subtype="article">
         <head>Orientation bibliographique</head>
@@ -2942,7 +2942,7 @@
       <div type="table" xml:id="NDMA-AB_back-2">
         <pb n="181" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f191/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
         <head>Table générale des noms d'hommes et de lieux</head>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_A">
           <head>A</head>
           <item xml:id="NDMA-AB_rs_032"><rs><hi rend="sc">Adainville</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_033"><rs><hi rend="sc">Agnès</hi>, femme de Simon de Merrolles</rs>, <ref target="#NDMA-AB_0007" n="7">7</ref>.</item>
@@ -2991,7 +2991,7 @@
           <item xml:id="NDMA-AB_rs_077"><rs><hi rend="sc">Aymes (Guill.)</hi>, prieur</rs>.</item>
         <item xml:id="NDMA-AB_rs_078"><rs><hi rend="sc">Agnès</hi>, dame de Gallardon</rs>, <ref target="#NDMA-AB_0013" n="13">13</ref>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_B">
           <head>B</head>
           <item xml:id="NDMA-AB_rs_079"><rs><hi rend="sc">Baignoir-aux-Moines (le)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_080"><rs><hi rend="sc">Baligan (S.)</hi></rs>.</item>
@@ -3072,7 +3072,7 @@
           <item xml:id="NDMA-AB_rs_156"><rs><hi rend="sc">Butte (La)</hi>, à Rambouillet</rs>.</item>
         <item xml:id="NDMA-AB_rs_157"><rs><hi rend="sc">Boulehart (Phil. de)</hi>, S. de Gazeran</rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_C">
           <head>C</head>
           <item xml:id="NDMA-AB_rs_158"><rs><hi rend="sc">Cadit</hi>, près Epernon</rs>.</item>
           <item xml:id="NDMA-AB_rs_159"><rs><hi rend="sc">Cadou (Jean)</hi></rs>.</item>
@@ -3145,7 +3145,7 @@
           <item xml:id="NDMA-AB_rs_226"><rs><hi rend="sc">Coudray à Hermeray (Le)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_227"><rs><hi rend="sc">Couture (La)</hi></rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_D">
           <head>D</head>
           <item xml:id="NDMA-AB_rs_034"><rs><hi rend="sc">D'Aubert Chaous (Agnès)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_228"><rs><hi rend="sc">Denis</hi>, curé de Hanches</rs>.</item>
@@ -3172,7 +3172,7 @@
           <item xml:id="NDMA-AB_rs_249"><rs><hi rend="sc">Delaubueste (Etienne)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_250"><rs><hi rend="sc">Déluge (Le)</hi>, bois</rs>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_E">
           <head>E</head>
           <item xml:id="NDMA-AB_rs_251"><rs><hi rend="sc">Ecrônes (Garin d')</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_252"><rs><hi rend="sc">Eglancourt</hi></rs>.</item>
@@ -3207,7 +3207,7 @@
           <item xml:id="NDMA-AB_rs_282"><rs><hi rend="sc">Epinette (L')</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_283"><rs><hi rend="sc">Eure (L')</hi></rs>, <ref target="#NDMA-AB_0005" n="5">5</ref>, <!-- doublon meme acte NDMA-AB_0005: <ref target="#NDMA-AB_0005" n="172">5</ref> --> <ref target="#NDMA-AB_0034" n="34">34</ref>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_F">
           <head>F</head>
           <item xml:id="NDMA-AB_rs_284"><rs><hi rend="sc">Febvrier (François)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_285"><rs><hi rend="sc">Fleivia</hi>, femme de Simon Novel</rs>.</item>
@@ -3221,7 +3221,7 @@
           <item xml:id="NDMA-AB_rs_293"><rs><hi rend="sc">Fulbert</hi></rs>, <ref target="#NDMA-AB_0001" n="1">1</ref>.</item>
           <item xml:id="NDMA-AB_rs_294"><rs><hi rend="sc">Fait à Hermeray (Le)</hi></rs>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_G">
           <head>G</head>
           <item xml:id="NDMA-AB_rs_295"><rs><hi rend="sc">Galice</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_296"><rs><hi rend="sc">Galot (Macé)</hi></rs>.</item>
@@ -3291,7 +3291,7 @@
           <item xml:id="NDMA-AB_rs_361"><rs><hi rend="sc">Gallardon (dame de), Marguerite la Roillée</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_362"><rs><hi rend="sc">Gallardon (Adam de)</hi></rs>, <ref target="#NDMA-AB_0014" n="14">14</ref>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_H">
           <head>H</head>
           <item xml:id="NDMA-AB_rs_363"><rs><hi rend="sc">Haimoin de Breteucourt</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_364"><rs><hi rend="sc">Hamo</hi>, <hi rend="i">sacrista</hi></rs>.</item>
@@ -3351,7 +3351,7 @@
           <item xml:id="NDMA-AB_rs_418"><rs><hi rend="sc">Haie de Blairon (La)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_419"><rs><hi rend="sc">Hauteville (La)</hi></rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_I">
           <head>I</head>
           <item xml:id="NDMA-AB_rs_420"><rs><hi rend="sc">Ile</hi></rs>, <ref target="#NDMA-AB_0027" n="27">27</ref>.</item>
           <item xml:id="NDMA-AB_rs_421"><rs><hi rend="sc">Ile</hi>, Amaury de l' —</rs>.</item>
@@ -3364,7 +3364,7 @@
           <item xml:id="NDMA-AB_rs_428"><rs><hi rend="sc">Ivry</hi>, prévôté d'Ivry</rs>, <ref target="#NDMA-AB_0005" n="5">5</ref>. <!-- doublon meme acte NDMA-AB_0004: <ref target="#NDMA-AB_0004" n="142">4</ref> --></item>
           <item xml:id="NDMA-AB_rs_429"><rs><hi rend="sc">Ivry (Robert d')</hi></rs>, <ref target="#NDMA-AB_0004" n="4">4</ref>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_J">
           <head>J</head>
           <item xml:id="NDMA-AB_rs_430"><rs><hi rend="sc">Jaqueline</hi>, femme de Dreux de Raizeux</rs>.</item>
           <item xml:id="NDMA-AB_rs_431"><rs><hi rend="sc">Jean</hi>, cellerier</rs>.</item>
@@ -3381,7 +3381,7 @@
           <item xml:id="NDMA-AB_rs_442"><rs><hi rend="sc">Juglet (R.)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_443"><rs><hi rend="sc">Justice baronniale</hi></rs>, <ref target="#NDMA-AB_0009" n="9">9</ref>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_L">
           <head>L</head>
           <item xml:id="NDMA-AB_rs_444"><rs><hi rend="sc">Laidet (Pierre)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_445"><rs><hi rend="i">Landricus famulus prioris</hi></rs>.</item>
@@ -3412,7 +3412,7 @@
           <item xml:id="NDMA-AB_rs_470"><rs><hi rend="sc">Louis VII</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_471"><rs><hi rend="sc">Luxovill (Guill de)</hi></rs>, <ref target="#NDMA-AB_0001" n="1">1</ref>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_M">
           <head>M</head>
           <item xml:id="NDMA-AB_rs_472"><rs><hi rend="i">Macoardus</hi></rs>, <ref target="#NDMA-AB_0001" n="1">1</ref>.</item>
           <item xml:id="NDMA-AB_rs_473"><rs><hi rend="sc">Mâcon</hi>, l'évêque de</rs>. Castagnet.</item>
@@ -3508,7 +3508,7 @@
           <item xml:id="NDMA-AB_rs_563"><rs><hi rend="sc">Moulin aux prieuré (Les)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_564"><rs><hi rend="sc">Musse (La)</hi></rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_N">
           <head>N</head>
           <item xml:id="NDMA-AB_rs_565"><rs><hi rend="sc">Néau (Jean)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_566"><rs><hi rend="sc">Neaufle (Hilgant de)</hi></rs>.</item>
@@ -3523,7 +3523,7 @@
           <item xml:id="NDMA-AB_rs_576"><rs><hi rend="sc">Nicolas</hi>, fils de Galeran</rs>, <ref target="#NDMA-AB_0018" n="18">18</ref>.</item>
           <item xml:id="NDMA-AB_rs_577"><rs><hi rend="sc">Néron (Isanie de)</hi></rs>, <ref target="#NDMA-AB_0020" n="20">20</ref>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_P">
           <head>P</head>
           <item xml:id="NDMA-AB_rs_578"><rs><hi rend="sc">Penthièvre (le duc de)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_579"><rs><hi rend="sc">Perche Geofroy</hi></rs>, du).</item>
@@ -3588,11 +3588,11 @@
           <item xml:id="NDMA-AB_rs_638"><rs><hi rend="sc">Pré (Le)</hi>, à Ouerre</rs>, <ref target="#NDMA-AB_0001" n="1">1</ref>, <ref target="#NDMA-AB_0009" n="9">9</ref>.</item>
           <item xml:id="NDMA-AB_rs_639"><rs><hi rend="sc">Prouais (Michel de)</hi></rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_Q">
           <head>Q</head>
         <item xml:id="NDMA-AB_rs_640"><rs><hi rend="sc">Queue (Amaury de la)</hi></rs>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_R">
           <head>R</head>
           <item xml:id="NDMA-AB_rs_641"><rs><hi rend="i">Raimbaldus archidiaconus, </hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_642"><rs><hi rend="sc">Raizeux (Dreux de)</hi></rs>, <ref target="#NON_TROUVE" n="35">35</ref>, <ref target="#NON_TROUVE" n="36">36</ref>.</item>
@@ -3637,7 +3637,7 @@
           <item xml:id="NDMA-AB_rs_681"><rs><hi rend="sc">râtelage des pres (Le)</hi>, <hi rend="i">Rastalagium, </hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_682"><rs><hi rend="sc">Rieux (de)</hi></rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_S">
           <head>S</head>
           <item xml:id="NDMA-AB_rs_683"><rs><hi rend="sc">Saint-Chéron</hi>, l'abbé de Saint-Chéron</rs>.</item>
           <item xml:id="NDMA-AB_rs_684"><rs><hi rend="i">Sancto Curto, Gilo de</hi> —</rs>. C.f. Seincourt.</item>
@@ -3690,7 +3690,7 @@
           <item xml:id="NDMA-AB_rs_728"><rs><hi rend="sc">Stallis (R. de)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_729"><rs><hi rend="sc">Stanno (de)</hi></rs>. Etang.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_T">
           <head>T</head>
           <item xml:id="NDMA-AB_rs_730"><rs><hi rend="sc">Tennerer</hi>, moulin</rs>.</item>
           <item xml:id="NDMA-AB_rs_731"><rs><hi rend="sc">Tertre (Etienne du)</hi></rs>.</item>
@@ -3704,13 +3704,13 @@
           <item xml:id="NDMA-AB_rs_739"><rs><hi rend="sc">Tassin (Pierre)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_740"><rs><hi rend="sc">Teil (Le)</hi>, à Hermeray</rs>.</item>
         </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_U">
           <head>U</head>
         <item xml:id="NDMA-AB_rs_741"><rs><hi rend="sc">Utric sous-prieur</hi></rs>.</item>
         <item xml:id="NDMA-AB_rs_742"><rs><hi rend="i">Ulmetum.</hi></rs>. Ormoy.</item>
           <item xml:id="NDMA-AB_rs_743"><rs><hi rend="i">Unfredus, </hi> curé de Rambouillet</rs>.</item>
           </list>
-        <list type="index">
+        <list type="index" xml:id="NDMA-AB_back-2_V">
           <head>V</head>
           <item xml:id="NDMA-AB_rs_744"><rs><hi rend="sc">Vacheresses (Raoul de)</hi></rs>.</item>
           <item xml:id="NDMA-AB_rs_745"><rs><hi rend="sc">Vacheresses</hi>, Jean</rs>, <ref target="#NDMA-AB_0017" n="17">17</ref>.</item>

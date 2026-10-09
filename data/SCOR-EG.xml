@@ -116,7 +116,7 @@
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -131,7 +131,7 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="Index">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-        </citeStructure>
+        <citeStructure unit="lettre" match="list[@type='index'][@xml:id]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -617,7 +617,7 @@
 
     <group xml:id="SCOR-EG_edition-group">
       <head>Édition</head>
-      <group>
+      <group xml:id="SCOR-EG_group-1">
         <head>Cartulaire</head>
         <text xml:id="SCOR-EG_0001" n="I" subtype="article">
           <pb n="1" facs="https://iiif.archive.org/image/iiif/3/cartulairedesain00orl%2Fcartulairedesain00orl_jp2.zip%2Fcartulairedesain00orl_jp2%2Fcartulairedesain00orl_0129.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairedesain00orl/manifest.json"/>
@@ -31400,245 +31400,245 @@
         <table>
           <row>
             <cell>814</cell>
-            <cell>XXXIV</cell>
+            <cell><ref target="#SCOR-EG_0034">XXXIV</ref></cell>
           </row>
           <row>
             <cell>[826]</cell>
-            <cell>XXXVIII</cell>
+            <cell><ref target="#SCOR-EG_0038">XXXVIII</ref></cell>
           </row>
           <row>
             <cell>[840-843]</cell>
-            <cell>XXXIII</cell>
+            <cell><ref target="#SCOR-EG_0033">XXXIII</ref></cell>
           </row>
           <row>
             <cell>851</cell>
-            <cell>XXXV</cell>
+            <cell><ref target="#SCOR-EG_0035">XXXV</ref></cell>
           </row>
           <row>
             <cell>881</cell>
-            <cell>XXXVII</cell>
+            <cell><ref target="#SCOR-EG_0037">XXXVII</ref></cell>
           </row>
           <row>
             <cell>883</cell>
-            <cell>XXXVI</cell>
+            <cell><ref target="#SCOR-EG_0036">XXXVI</ref></cell>
           </row>
           <row>
             <cell>938</cell>
-            <cell>XIX</cell>
+            <cell><ref target="#SCOR-EG_0019">XIX</ref></cell>
           </row>
           <row>
             <cell>[974-980]</cell>
-            <cell>XX</cell>
+            <cell><ref target="#SCOR-EG_0020">XX</ref></cell>
           </row>
           <row>
             <cell>990</cell>
-            <cell>XXXIX</cell>
+            <cell><ref target="#SCOR-EG_0039">XXXIX</ref></cell>
           </row>
           <row>
             <cell>991</cell>
-            <cell>XL</cell>
+            <cell><ref target="#SCOR-EG_0040">XL</ref></cell>
           </row>
           <row>
             <cell>1044</cell>
-            <cell>XLVIII</cell>
+            <cell><ref target="#SCOR-EG_0048">XLVIII</ref></cell>
           </row>
           <row>
             <cell>1057</cell>
-            <cell>XLIII</cell>
+            <cell><ref target="#SCOR-EG_0043">XLIII</ref></cell>
           </row>
           <row>
             <cell>1073</cell>
-            <cell>XXI</cell>
+            <cell><ref target="#SCOR-EG_0021">XXI</ref></cell>
           </row>
           <row>
             <cell>[1089]</cell>
-            <cell>XLVII</cell>
+            <cell><ref target="#SCOR-EG_0047">XLVII</ref></cell>
           </row>
           <row>
             <cell>1092</cell>
-            <cell>III</cell>
+            <cell><ref target="#SCOR-EG_0003">III</ref></cell>
           </row>
           <row>
             <cell>1112</cell>
-            <cell>XLIV</cell>
+            <cell><ref target="#SCOR-EG_0044">XLIV</ref></cell>
           </row>
           <row>
             <cell>1113</cell>
-            <cell>XLIX</cell>
+            <cell><ref target="#SCOR-EG_0049">XLIX</ref></cell>
           </row>
           <row>
             <cell>1114</cell>
-            <cell>XLV</cell>
+            <cell><ref target="#SCOR-EG_0045">XLV</ref></cell>
           </row>
           <row>
             <cell>1115</cell>
-            <cell>XII</cell>
+            <cell><ref target="#SCOR-EG_0012">XII</ref></cell>
           </row>
           <row>
             <cell>1116</cell>
-            <cell>XLVI</cell>
+            <cell><ref target="#SCOR-EG_0046">XLVI</ref></cell>
           </row>
           <row>
             <cell>[1121-1136]</cell>
-            <cell>XV</cell>
+            <cell><ref target="#SCOR-EG_0015">XV</ref></cell>
           </row>
           <row>
             <cell>1124</cell>
-            <cell>VII</cell>
+            <cell><ref target="#SCOR-EG_0007">VII</ref></cell>
           </row>
           <row>
             <cell>1124</cell>
-            <cell>LII</cell>
+            <cell><ref target="#SCOR-EG_0052">LII</ref></cell>
           </row>
           <row>
             <cell>1124</cell>
-            <cell>LVI</cell>
+            <cell><ref target="#SCOR-EG_0056">LVI</ref></cell>
           </row>
           <row>
             <cell>1127</cell>
-            <cell>II</cell>
+            <cell><ref target="#SCOR-EG_0002">II</ref></cell>
           </row>
           <row>
             <cell>1127</cell>
-            <cell>XLII</cell>
+            <cell><ref target="#SCOR-EG_0042">XLII</ref></cell>
           </row>
           <row>
             <cell>1129</cell>
-            <cell>I</cell>
+            <cell><ref target="#SCOR-EG_0001">I</ref></cell>
           </row>
           <row>
             <cell>1130</cell>
-            <cell>XLI</cell>
+            <cell><ref target="#SCOR-EG_0041">XLI</ref></cell>
           </row>
           <row>
             <cell>[1134]</cell>
-            <cell>XXIX</cell>
+            <cell><ref target="#SCOR-EG_0029">XXIX</ref></cell>
           </row>
           <row>
             <cell>1136</cell>
-            <cell>IX</cell>
+            <cell><ref target="#SCOR-EG_0009">IX</ref></cell>
           </row>
           <row>
             <cell>[1137-1145]</cell>
-            <cell>IV</cell>
+            <cell><ref target="#SCOR-EG_0004">IV</ref></cell>
           </row>
           <row>
             <cell>[1138]</cell>
-            <cell>XXIV</cell>
+            <cell><ref target="#SCOR-EG_0024">XXIV</ref></cell>
           </row>
           <row>
             <cell>[1143-1144]</cell>
-            <cell>LIV</cell>
+            <cell><ref target="#SCOR-EG_0054">LIV</ref></cell>
           </row>
           <row>
             <cell>[1143-1144]</cell>
-            <cell>LVII</cell>
+            <cell><ref target="#SCOR-EG_0057">LVII</ref></cell>
           </row>
           <row>
             <cell>1145</cell>
-            <cell>XVI</cell>
+            <cell><ref target="#SCOR-EG_0016">XVI</ref></cell>
           </row>
           <row>
             <cell>
               <hi rend="i">ou</hi>
             </cell>
-            <cell>L</cell>
+            <cell><ref target="#SCOR-EG_0050">L</ref></cell>
           </row>
           <row>
             <cell>[1146-1158. 1149 ?]</cell>
-            <cell>V</cell>
+            <cell><ref target="#SCOR-EG_0005">V</ref></cell>
           </row>
           <row>
             <cell>[1149-1155. 1150 ?]</cell>
-            <cell>LX</cell>
+            <cell><ref target="#SCOR-EG_0060">LX</ref></cell>
           </row>
           <row>
             <cell>1151</cell>
-            <cell>XXIII</cell>
+            <cell><ref target="#SCOR-EG_0023">XXIII</ref></cell>
           </row>
           <row>
             <cell>1151</cell>
-            <cell>XXII</cell>
+            <cell><ref target="#SCOR-EG_0022">XXII</ref></cell>
           </row>
           <row>
             <cell>1153</cell>
-            <cell>XI</cell>
+            <cell><ref target="#SCOR-EG_0011">XI</ref></cell>
           </row>
           <row>
             <cell>1154</cell>
-            <cell>XVII</cell>
+            <cell><ref target="#SCOR-EG_0017">XVII</ref></cell>
           </row>
           <row>
             <cell>[1154]</cell>
-            <cell>XXV</cell>
+            <cell><ref target="#SCOR-EG_0025">XXV</ref></cell>
           </row>
           <row>
             <cell>1155</cell>
-            <cell>VI</cell>
+            <cell><ref target="#SCOR-EG_0006">VI</ref></cell>
           </row>
           <row>
             <cell>[1155-1159]</cell>
-            <cell>VIII</cell>
+            <cell><ref target="#SCOR-EG_0008">VIII</ref></cell>
           </row>
           <row>
             <cell>1157</cell>
-            <cell>LI</cell>
+            <cell><ref target="#SCOR-EG_0051">LI</ref></cell>
           </row>
           <row>
             <cell>[1158-1159]</cell>
-            <cell>XXVI</cell>
+            <cell><ref target="#SCOR-EG_0026">XXVI</ref></cell>
           </row>
           <row>
             <cell>1159</cell>
-            <cell>X</cell>
+            <cell><ref target="#SCOR-EG_0010">X</ref></cell>
           </row>
           <row>
             <cell>[1164]</cell>
-            <cell>XXVIII</cell>
+            <cell><ref target="#SCOR-EG_0028">XXVIII</ref></cell>
           </row>
           <row>
             <cell>1164</cell>
-            <cell>LVIII</cell>
+            <cell><ref target="#SCOR-EG_0058">LVIII</ref></cell>
           </row>
           <row>
             <cell>1164</cell>
-            <cell>LIX</cell>
+            <cell><ref target="#SCOR-EG_0059">LIX</ref></cell>
           </row>
           <row>
             <cell>[1167-1169]</cell>
-            <cell>XXX</cell>
+            <cell><ref target="#SCOR-EG_0030">XXX</ref></cell>
           </row>
           <row>
             <cell>[1168 1169]</cell>
-            <cell>XXVII</cell>
+            <cell><ref target="#SCOR-EG_0027">XXVII</ref></cell>
           </row>
           <row>
             <cell>[1168-1177]</cell>
-            <cell>XXXII</cell>
+            <cell><ref target="#SCOR-EG_0032">XXXII</ref></cell>
           </row>
           <row>
             <cell>[1170]</cell>
-            <cell>XXXI</cell>
+            <cell><ref target="#SCOR-EG_0031">XXXI</ref></cell>
           </row>
           <row>
             <cell>1171</cell>
-            <cell>XIV</cell>
+            <cell><ref target="#SCOR-EG_0014">XIV</ref></cell>
           </row>
           <row>
             <cell>1171</cell>
-            <cell>XVIII</cell>
+            <cell><ref target="#SCOR-EG_0018">XVIII</ref></cell>
           </row>
           <row>
             <cell>[1171-1172]</cell>
-            <cell>LIII</cell>
+            <cell><ref target="#SCOR-EG_0053">LIII</ref></cell>
           </row>
           <row>
             <cell>[1171-1176]</cell>
-            <cell>XIII</cell>
+            <cell><ref target="#SCOR-EG_0013">XIII</ref></cell>
           </row>
           <row>
             <cell>1172</cell>
-            <cell>LXI</cell>
+            <cell><ref target="#SCOR-EG_0061">LXI</ref></cell>
           </row>
         </table>
           <list type="o">

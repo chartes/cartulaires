@@ -72,6 +72,8 @@
           <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
           <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+          <citeData property="schema:position" use="string(@n)"/>
+          <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
           <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
           <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
           <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -122,7 +124,7 @@
       <head>Saint-Corneille de Compiegne</head>
       <group type="tome" n="3">
         <group xml:id="SCCO-AB-03_group">
-          <head>CARTULARIUM <lb/>MONASTERII BEATAE MARIAE <lb/>BEATORUMQUE MARTYRUM CORNELII ET CYPRIANI COMPENDIENSIS</head>
+          <head>Cartularium <lb/>monasterii beatae Mariae <lb/>Beatorumque martyrum Cornelii et Cypriani Compendiensis</head>
           <text xml:id="SCCO-AB-03_0001" n="DCLXXVI" subtype="article">
             <pb n="1"/>
             <front>
@@ -132,7 +134,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE SAINT-CORNEILLE<lb/>À SAINT-GERMAIN-LÈS-VERBERIE</head>
+              <head>La maison de Saint-Corneille <lb/>à Saint-Germain-lès-Verberie</head>
               <argument>
                 <p>Les enfants de Jean de Goincourt et de feue Erembourg, en contestation avec Jean Boutier de
                   Verberie, au sujet des cens à eux dus sur une maison avec jardin que ce dernier vient de
@@ -199,7 +201,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE JEAN, MAIRE DE VILLERS-LÈS-ROYE</head>
+              <head>La maison de Jean, maire de Villers-lès-Roye</head>
               <argument>
                 <p>A. de Beauquesne, chanoine et official d’Amiens, notifie que Jean, maire de
                   Villers-lès-Roye<note n="677_1"><p>Canton de Roye,
@@ -264,7 +266,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTION DE DROITS ACCORDÉE<lb/>AUX DOMINICAINS</head>
+              <head>Exemption de droits accordée <lb/>aux Dominicains</head>
               <argument>
                 <p>Le roi Louis IX exempte à perpétuité les Frères Prêcheurs du tonlieu, du péage, du transit
                   et de tout autre droit dans toute l’étendue de son royaume, pour les denrées et marchandises
@@ -306,7 +308,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE JEAN DE SOUPIR VENDUE AUX<lb/>FRÈRES MINEURS</head>
+              <head>La maison de Jean de Soupir vendue aux <lb/>frères mineurs</head>
               <argument>
                 <p>Les Frères Mineurs, ayant acheté aux enfants de feu Jean de Soupir, bourgeois de Compiègne,
                   une maison sise à Compiègne entre leur couvent et la maison d’Etienne Cul-de-Félon, se font
@@ -351,7 +353,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE SEPT-VOIES</head>
+              <head>La maison de sept-voies</head>
               <argument>
                 <p>Pierre de Saint-Martin, official de Soissons, notifie que, devant son délégué, Pierre dit de
                   la Chaîne et Marie, sa femme, bourgeois de Compiègne, <pb n="6"/>ont vendu à l’abbaye
@@ -424,7 +426,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TERRES DE MONTGÉRAIN</head>
+              <head>Les terres de Montgérain</head>
               <argument>
                 <p>Gile, dame de Tricot, conclut avec l’abbaye de Saint-Corneille un arrangement au sujet des
                   terres dont ils jouissent en commun à
@@ -493,8 +495,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE MARIE, FILLE DE GOBERT ROUSSEL<lb/>D’ESTRAON — LOCATION À SIMON,<lb/>CURÉ
-                D’ESTRAON</head>
+              <head>La maison de Marie, fille de Gobert Roussel <lb/>d’Estraon — location à Simon, <lb/>curé
+                d’Estraon</head>
               <argument>
                 <p>Marie, fille de Gobert Roussel,
                   d’Estraon<note n="682_1"><p>Hameau d’Hary, Aisne.</p></note>,
@@ -560,7 +562,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA HAUTE JUSTICE À COMPIÈGNE ET MARGNY</head>
+              <head>La haute justice à Compiègne et Margny</head>
               <argument>
                 <p>Un meunier avait tué deux hommes près du gué, au-delà du pont de Compiègne. Il fut pris,
                   jugé et pendu par ordre du bailli. Le maire et les jurés de Compiègne protestent contre la
@@ -602,7 +604,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INDULGENCES À GAGNER À L’HÔTEL-DIEU</head>
+              <head>Indulgences à gagner à l’Hôtel-Dieu</head>
               <argument>
                 <p>Le pape Urbain IV, à la demande du roi Louis IX, accorde un an et quarante jours
                   d’indulgence aux fidèles qui, après s’être confessés, <pb n="11"/>visiteront en
@@ -662,8 +664,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>AUTORISATION DE CÉLÉBRER LES OFFICES<lb/>À VOIX BASSE À L’HÔTEL-DIEU<lb/>DURANT UN INTERDIT
-                GÉNÉRAL</head>
+              <head>Autorisation de célébrer les offices <lb/>à voix basse à l’Hôtel-Dieu <lb/>durant un interdit
+                général</head>
               <argument>
                 <p>Le pape Urbain IV autorise les religieux de l’Hôtel-Dieu de Compiègne, sur leur demande, à
                   célébrer les divins offices, les portes fermées, à voix basse, sans sonnerie de cloches, les
@@ -708,7 +710,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RUELLE DE LA VIGNE VITERON À JAULZY</head>
+              <head>La ruelle de la vigne Viteron à Jaulzy</head>
               <argument>
                 <p>Guy, doyen de la chrétienté de
                   Pierrefonds<note n="686_1"><p>Canton d’Attichy, Oise.</p></note>,
@@ -753,7 +755,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TROIS SOUS DE CENS ACQUIS<lb/>DE SAINT-JEAN-DES-VIGNES</head>
+              <head>Les trois sous de cens acquis <lb/>de Saint-Jean-des-vignes</head>
               <argument>
                 <p>Jean de Muret, abbé de Saint-Jean des Vignes-lès-Soissons, et son couvent cèdent, moyennant
                   soixante sous tournois, à l’abbé de Saint-Corneille, un cens annuel de trois sous parisis
@@ -804,7 +806,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DE ROBERT LE MOINE SUR LA<lb/>MONTAGNE DE JAULZY</head>
+              <head>La terre de Robert le moine sur la <lb/>montagne de Jaulzy</head>
               <argument>
                 <p>Maître P. de Saint-Martin, official de Soissons, fait savoir qu’en sa présence, Robert dit
                   le Moine, de Jaulzy, d’accord avec Marie, sa femme, et le clerc Adenet, leur fils, a vendu,
@@ -854,7 +856,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRÉ DES NOUES ET LA MANTE D’ISABELLE<lb/>À JAULZY</head>
+              <head>Le pré des noues et la Mante d’Isabelle <lb/>à Jaulzy</head>
               <argument>
                 <p>Guy, curé de Jaulzy et doyen de la chrétienté de Jaulzy, donne à l’abbaye de
                   Saint-Corneille, pour le salut de son âme et le repos de l’âme de ses parents, un pré sis à
@@ -896,8 +898,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON D’AMIS DE LA PORTE EN LA RUE<lb/>SAINT-PIERRE<lb/>CHARTE DE L’ABBÉ DE
-                SAINT-CORNEILLE</head>
+              <head>La maison d’amis de la porte en la rue <lb/>Saint-Pierre <lb/>charte de l’abbé de
+                Saint-Corneille</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, abandonne à Jacques de Saint-Pierre, clerc, et à
                   Helvide, sa femme, leur vie durant, la maison que leur ont léguée Amis de la Porte et Mahaut,
@@ -958,8 +960,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SUBSISTANCE ET HABITATION ASSURÉES À GUY,<lb/>CURÉ DE JAULZY,<lb/>ET À MARIE, SA MÈRE, LEUR
-                VIE DURANT</head>
+              <head>Subsistance et habitation assurées à Guy, <lb/>curé de Jaulzy, <lb/>et à Marie, sa mère, leur
+                vie durant</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, pour reconnaître les services que Guy, curé de
                   Jaulzy<note n="691_1"><p>Canton d’Attichy, Oise.</p></note>, a
@@ -1041,7 +1043,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PERMISSION DE PARLER, ACCORDÉE AUX<lb/>RELIGIEUX ÉTRANGERS ASTREINTS AU SILENCE</head>
+              <head>Permission de parler, accordée aux <lb/>religieux étrangers astreints au silence</head>
               <argument>
                 <p>A la prière de Jean de Méricourt, abbé de Saint-Corneille, le pape Urbain IV autorise les
                   religieux étrangers qui viennent séjourner à Saint-Corneille, à parler à table et dans
@@ -1089,7 +1091,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE JEAN CHARDAIGNEL</head>
+              <head>La maison de Jean Chardaignel</head>
               <argument>
                 <p>Jean dit Chardaignel (Chair d’Agneau) et Emmeline, sa femme, devant l’official de Soissons,
                   donnent en aumône aux religieux de Saint-Corneille, une maison sise à Compiègne, dans la
@@ -1141,8 +1143,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON D’AMIS DE LA PORTE EN LA RUE<lb/>SAINT-PIERRE<lb/>CHARTE DE L’OFFICIAL DE
-                SOISSONS</head>
+              <head>La maison d’amis de la porte en la rue <lb/>Saint-Pierre <lb/>charte de l’official de
+                Soissons</head>
               <argument>
                 <p>L’official de Soissons fait savoir qu’en présence de son délégué, Jacques de Saint-Pierre,
                   clerc anglais, et Helvide, sa femme, ont reconnu avoir reçu à vie de l’abbaye de
@@ -1209,8 +1211,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA GRANDE DÎME ET LES CHAMPARTS<lb/>DE DAVENESCOURT, DE FRESNOY-EN-CHAUSSÉE<lb/>ET DU
-                PLESSIER-ROZAINVILLERS</head>
+              <head>La grande dîme et les champarts <lb/>de Davenescourt, de Fresnoy-en-chaussée <lb/>et du
+                Plessier-Rozainvillers</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, fait savoir que pour éviter les charges
                   usuraires et se libérer de ses lourdes dettes, son abbaye a donné en emphytéose à Hugues de
@@ -1337,8 +1339,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MARIE, FILLE DE GOBERT<lb/>ROUSSEL D’ESTRAON<lb/>CESSION À L’ABBAYE DE
-                SAINT-CORNEILLE</head>
+              <head>Le manoir de Marie, fille de Gobert <lb/>Roussel d’Estraon <lb/>cession à l’abbaye de
+                Saint-Corneille</head>
               <argument>
                 <p>Marie, fille de Gobert Roussel, d’Estraon, — devant Williard, clerc, tabellion juré en la
                   cour épiscopale de Laon, mandataire de Jean de Donnemarie, chanoine et official de Laon, —
@@ -1430,7 +1432,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ORDONNANCE DE LOUIS IX<lb/>NOMINATION DES MAIRES — COMPTES DES VILLES</head>
+              <head>Ordonnance de Louis IX <lb/>nomination des maires — comptes des villes</head>
               <argument>
                 <p>Louis IX fait une ordonnance réglant l’élection des maires des villes qui possèdent une
                   charte de commune, la gestion de leurs intérêts et la reddition de leurs comptes. Le premier
@@ -1501,7 +1503,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ORDONNANCE DE LOUIS IX<lb/>NOMINATION DES MAIRES — COMPTES DES VILLES</head>
+              <head>Ordonnance de Louis IX <lb/>nomination des maires — comptes des villes</head>
               <argument>
                 <p>Voici le budget de la ville de Compiègne, à la Saint-Jean-Baptiste 1262, quand Jean
                   Prouvençal en devient maire :</p>
@@ -1649,7 +1651,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ORDONNANCE DE LOUIS IX<lb/>NOMINATION DES MAIRES — COMPTES DES VILLES</head>
+              <head>Ordonnance de Louis IX <lb/>nomination des maires — comptes des villes</head>
               <argument>
                 <p>Les finances de la ville s’étaient améliorées, car lorsque Jean
                   Chambaudon quitta la mairie le 23 juin 1260, la ville devait par suite d’emprunts 3205 l.</p>
@@ -1697,7 +1699,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE L’ABBAYE DE CHAALIS AU TOUR<lb/>DE LA RUE DU PONT</head>
+              <head>La maison de l’abbaye de Chaalis au tour <lb/>de la rue du pont</head>
               <argument>
                 <p>Jean le Vintre, de Verberie, prévôt de Compiègne, notifie que Foucaut le Chaussetier, dit de
                   Coudun, Pierre Poquez de Verberie, et Gilles Poquez, frères, ont renoncé à leurs prétentions
@@ -1772,7 +1774,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DU HAZOY</head>
+              <head>Le bois du Hazoy</head>
               <argument>
                 <p>Jérôme de Coucy, abbé de Saint-Médard de Soissons, fait savoir qu’ayant vu la possibilité
                   d’essarter et convertir en champs arables son bois du Hazoy <pb n="35"/>entre la
@@ -1825,7 +1827,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARRÊTS DU PARLEMENT RELATIFS AUX AMENDES<lb/>ET À L’EMPRISONNEMENT POUR DETTES</head>
+              <head>Arrêts du Parlement relatifs aux amendes <lb/>et à l’emprisonnement pour dettes</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, à raison de leur prévôté royale, entendaient prélever
                   soixante sous sur les soixante livres dues au roi pour le meurtre.</p>
@@ -1885,7 +1887,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONTRAT DU MARIAGE D’ALICE, FILLE D’EMMELINE<lb/>DE LA CROIX-SAINT-OUEN</head>
+              <head>Contrat du mariage d’Alice, fille d’Emmeline <lb/>de la Croix-Saint-Ouen</head>
               <argument>
                 <p>Pierre de Leschelle, prieur de la Croix-Saint-Ouen, Pierre, sire d’Hémévillers, Jean, sire
                   de Fayel et Etienne de Rivecourt notifient que devant eux à la Croix Saint-Ouen, Emmeline de
@@ -1963,7 +1965,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ALIÉNATIONS DES BIENS DE SAINT JEAN<lb/>DE LAON</head>
+              <head>Les aliénations des biens de Saint Jean <lb/>de Laon</head>
               <argument>
                 <p>Le pape Urbain IV donne au prieur de Saint-Pierre de Compiègne, la mission de faire rentrer
                   l’abbaye de Saint-Jean de Laon en possession de ses terres, maisons, biens, dîmes, droits,
@@ -2019,8 +2021,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DE MARTIN DE BOUILLIE<lb/>ET DE COLARD DE RHUIS<lb/>DERRIÈRE LE FOUR DE
-                SAINT-CORNEILLE</head>
+              <head>La terre de Martin de Bouillie <lb/>et de Colard de Rhuis <lb/>derrière le four de
+                Saint-Corneille</head>
               <argument>
                 <p>Martin de Boullie et Catherine, sa femme, Colard de Rhuis et Agathe, sa femme, — en présence
                   du mandataire de Mathieu de Chauny, chanoine <pb n="40"/>et official de Soissons, —
@@ -2102,7 +2104,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES QUARANTE JOURNAUX DE TERRE ACHETÉS<lb/>AU MAIRE D’ERCHES</head>
+              <head>Les quarante journaux de terre achetés <lb/>au maire d’Erches</head>
               <argument>
                 <p>Arnoul, maire d’Erches<note n="704_1"><p>Canton de Montdidier,
                   Somme.</p></note>, et Marie de Bains, sa femme, reconnaissent, devant l’official d’Amiens,
@@ -2141,7 +2143,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ALIÉNATIONS DES BIENS DE L’ABBAYE<lb/>DE SAINT-CORNEILLE</head>
+              <head>Les aliénations des biens de l’abbaye <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Le pape Urbain IV mande à l’abbé de Corbie de faire rentrer l’abbaye de Saint-Corneille en
                   possession des dîmes, maisons, manoirs, terres, jardins, prés, vignes, bois, juridictions,
@@ -2194,7 +2196,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLE DE SAINT NICOLAS PRÈS DE LA<lb/>PORTE DE CHOISY</head>
+              <head>La chapelle de Saint Nicolas près de la <lb/>porte de Choisy</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, autorise Pierre Olivier, bourgeois de Compiègne,
                   à rebâtir à ses frais la chapelle de Saint-Nicolas située à Compiègne, près de la porte de
@@ -2245,8 +2247,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ABUSIVE HOSPITALITÉ DEMANDÉE PAR<lb/>LES BARONS, LES NOBLES ET LES CHEVALIERS<lb/>DANS LES
-                MONASTÈRES</head>
+              <head>Abusive hospitalité demandée par <lb/>les barons, les nobles et les chevaliers <lb/>dans les
+                monastères</head>
               <argument>
                 <p>Le pape Urbain IV, informé par les gens d’église, principalement par les religieux, que les
                   barons, nobles et chevaliers, au grand détriment des moines obligés de les héberger, ne se
@@ -2301,7 +2303,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRES DE SAUVEGARDE ACCORDÉES<lb/>À L’HÔTEL-DIEU DE COMPIÈGNE</head>
+              <head>Lettres de sauvegarde accordées <lb/>à l’Hôtel-Dieu de Compiègne</head>
               <argument>
                 <p>Le pape Urbain IV, à la prière des religieux de l’Hôtel-Dieu de Compiègne, prend sous sa
                   protection leurs personnes, leur maison et les biens dont ils sont en légitime et pacifique
@@ -2349,7 +2351,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PRIVILÈGES DES CROISÉS</head>
+              <head>Les privilèges des croisés</head>
               <argument>
                 <p>Gilles, archevêque de Tyr en Phénicie, conseiller et chancelier du roi Louis IX, délégué du
                   Saint-Siège pour les affaires de la croisade, mande à l’évêque de Senlis, au nom du pape, de
@@ -2400,7 +2402,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LIBÉRATION DE DEUX SERFS DE SAINT-CORNEILLE,<lb/>DEVENUS BOURGEOIS DE CRÉPY-EN-VALOIS</head>
+              <head>Libération de deux serfs de Saint-Corneille, <lb/>devenus bourgeois de Crépy-en-Valois</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, déclare, en deux lettres différentes, qu’après
                   avoir traduit au for ecclésiastique deux bourgeois de Crépy-en-Valois, pour refus de
@@ -2452,8 +2454,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD ENTRE L’ABBAYE DE SAINT-CORNEILLE<lb/>ET CELLE DE CHAALIS, AU SUJET<lb/>DU CHAMPART
-                DES TERRES DE SACY-LE-PETIT</head>
+              <head>Accord entre l’abbaye de Saint-Corneille <lb/>et celle de Chaalis, au sujet <lb/>du champart
+                des terres de Sacy-le-petit</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, transige avec l’abbaye de Chaalis, 1° au sujet
                   de la dîme et du champart des terres possédées par les Cisterciens, au terroir de
@@ -2689,8 +2691,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CHAMPART, LA DÎME ET LA SERGENTERIE<lb/>DE SACY-LE-PETIT<lb/>COMPROMIS DU MAIRE
-                GILON</head>
+              <head>Le champart, la dîme et la sergenterie <lb/>de Sacy-le-petit <lb/>compromis du maire
+                Gilon</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, ayant donné à ferme aux religieux de Chaalis
                   tous les droits de champart et de dîme que son abbaye pouvait avoir sur leurs terres de
@@ -2764,8 +2766,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CHAMPART, LA DÎME ET LA SERGENTERIE<lb/>DE SACY-LE-PETIT — RATIFICATION<lb/>DU COMPROMIS
-                DE GILON PAR AGNÈS, SA FEMME</head>
+              <head>Le champart, la dîme et la sergenterie <lb/>de Sacy-le-petit — ratification <lb/>du compromis
+                de Gilon par Agnès, sa femme</head>
               <argument>
                 <p>Agnès, femme de Gilon, maire de
                   Sacy-le-Petit<note n="713_1"><p>Canton de Liancourt,
@@ -2834,7 +2836,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INVENTAIRE DU MOBILIER DE L’HÔTEL-DIEU<lb/>DE COMPIÈGNE</head>
+              <head>Inventaire du mobilier de l’Hôtel-Dieu <lb/>de Compiègne</head>
               <argument>
                 <p>Richard de
                   Villers-en-Tardenois<note n="714_1"><p>Villers-sur-Fère, canton
@@ -2943,7 +2945,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ANNIVERSAIRE DE JEAN DE MÉRICOURT,<lb/>ABBÉ DE SAINT-CORNEILLE</head>
+              <head>L’anniversaire de Jean de Méricourt, <lb/>abbé de Saint-Corneille</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, ayant réuni en chapitre tous les religieux de
                   son monastère de Compiègne, les prie de lui faire la grâce de chanter chaque année pendant sa
@@ -3065,7 +3067,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION D’UNE CHAPELLENIE<lb/>À SAINT-CORNEILLE-AU-BOIS</head>
+              <head>Fondation d’une chapellenie <lb/>à Saint-Corneille-au-bois</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, notifie les circonstances et conditions dans
                   lesquelles s’est faite la fondation d’une chapellenie à Saint-Corneille-au-Bois.</p>
@@ -3179,7 +3181,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LIBERTÉ ACCORDÉE À JEAN BOUQUE-DIEU<lb/>ET À SES FRÈRES</head>
+              <head>Liberté accordée à Jean Bouque-Dieu <lb/>et à ses frères</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, notifie l’accord conclu au sujet du servage
                   entre son monastère et les frères Jean Bouque-Dieu, ou Bourg-Dieu (CRv), Gobert et Arnoul, de
@@ -3242,8 +3244,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DONS DE THOMAS, CURÉ DE SAINT-JACQUES<lb/>DE COMPIÈGNE, À L’ABBAYE<lb/>DE
-                SAINT-CORNEILLE — SON REVENU VIAGER</head>
+              <head>Les dons de Thomas, curé de Saint-Jacques <lb/>de Compiègne, à l’abbaye <lb/>de
+                Saint-Corneille — son revenu viager</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille, notifie un échange fait par son monastère avec
                   Thomas, curé de Saint-Jacques de Compiègne.</p>
@@ -3413,7 +3415,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ABANDON DU DROIT PAROISSIAL<lb/>AUX DOMINICAINS</head>
+              <head>Abandon du droit paroissial <lb/>aux Dominicains</head>
               <argument>
                 <p>Jean de Méricourt, abbé de Saint-Corneille et Jean, curé de Saint-Antoine, reconnaissent
                   avoir reçu de Louis IX, roi de France, cent vingt livres parisis en compensation du droit
@@ -3458,7 +3460,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON D’EMMELINE DE LA CROIX-SAINT-OUEN<lb/>À L’HÔTEL-DIEU</head>
+              <head>Don d’Emmeline de la Croix-Saint-Ouen <lb/>à l’Hôtel-Dieu</head>
               <argument>
                 <p>Avec l’approbation du saint roi Louis IX, et le consentement de son fils Jean, Emeline de la
                   Croix-Saint-Ouen, fille de défunt Nicolas de la Croix, chevalier, donne en perpétuelle aumône
@@ -3549,8 +3551,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉTABLISSEMENT DES TRINITAIRES À L’HÔTEL-DIEU<lb/>DE COMPIÈGNE.<lb/>MISSION DONNÉE AU
-                CARDINAL SIMON DE BRION</head>
+              <head>Établissement des Trinitaires à l’Hôtel-Dieu <lb/>de Compiègne. <lb/>Mission donnée au
+                cardinal Simon de Brion</head>
               <argument>
                 <p>Le pape Clément IV, à la demande de Louis IX, charge son légat, Simon de Brion, cardinal du
                   titre de Sainte-Cécile, de trancher certaine difficulté relative à l’établissement des
@@ -3617,7 +3619,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TUTELLE CONFIÉE AUX TEMPLIERS</head>
+              <head>Tutelle confiée aux Templiers</head>
               <argument>
                 <p>Pierre de Braine, abbé de Saint-Corneille, confie aux Templiers la garde ou tutelle qu’a
                   exercée jusqu’ici Henri comte (de Champagne ?) sur Baudouin Hasger, Dreux et Hugues, ses
@@ -3666,8 +3668,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉTAT DES CHARTES ROYALES ET DES BULLES<lb/>PONTIFICALES RELATIVES AUX
-                PRIVILÈGES<lb/>OCTROYÉS AU COUVENT<lb/>DE SAINT-CORNEILLE DE COMPIÈGNE</head>
+              <head>État des chartes royales et des bulles <lb/>pontificales relatives aux
+                privilèges <lb/>octroyés au couvent <lb/>de Saint-Corneille de Compiègne</head>
               <argument>
                 <p>Les chartes royales accordant des faveurs au monastère de Saint-Corneille émanent, la
                   première de Charles le Chauve, 877 ; la seconde de Philippe I<hi rend="sup">er</hi>, 1092 ;
@@ -3770,7 +3772,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>MALFAITEURS QUI ENCOURENT<lb/>L’EXCOMMUNICATION</head>
+              <head>Malfaiteurs qui encourent <lb/>l’excommunication</head>
               <argument>
                 <p>Les excommuniés ne peuvent être absous que par le pape ou l’abbé de Saint-Corneille. Sont
                   soumis à la peine de l’excommunication :</p>
@@ -3844,7 +3846,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FORMULE DE L’EXCOMMUNICATION</head>
+              <head>Formule de l’excommunication</head>
               <argument>
                 <p>La sentence d’excommunication était prononcée en présence des religieux tenant à la main un
                   cierge allumé. Dès qu’elle était fulminée, on éteignait les cierges, puis on les jetait par
@@ -3902,7 +3904,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SERMENT DES ABBÉS DE SAINT-CORNEILLE</head>
+              <head>Serment des abbés de Saint-Corneille</head>
               <argument>
                 <p>Les abbés élus de Saint-Corneille, avant de prendre possession de leur dignité, devaient
                   prêter serment de ne pas aliéner ni engager les biens, les revenus ou les droits de la mense
@@ -3948,7 +3950,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA BÉNÉDICTION DU LECTEUR AVANT LE REPAS</head>
+              <head>La bénédiction du lecteur avant le repas</head>
               <argument>
                 <p>La bénédiction de la table avant les repas commençait par cette invitation adressée par
                   l’abbé aux religieux : « <hi rend="i">Benedicite</hi>, Bénissez ». Le couvent lui répondait :
@@ -3995,7 +3997,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CIMETIÈRE DE L’HÔTEL-DIEU DE COMPIÈGNE</head>
+              <head>Le cimetière de l’Hôtel-Dieu de Compiègne</head>
               <argument>
                 <p>Le pape Clément IV autorise les religieux de l’Hôtel-Dieu de Compiègne à établir auprès de
                   leur chapelle un cimetière, à leur usage exclusif, malgré l’opposition de l’abbé de
@@ -4051,7 +4053,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HÔTEL-DIEU DE COMPIÈGNE CONFIÉ<lb/>AUX TRINITAIRES</head>
+              <head>L’Hôtel-Dieu de Compiègne confié <lb/>aux Trinitaires</head>
               <argument>
                 <p>Le pape Clément IV, à la prière du roi Louis IX, invite le ministre provincial des
                   Trinitaires à se charger de l’Hôtel-Dieu Saint-Nicolas de Compiègne. Ce ministre provincial
@@ -4117,7 +4119,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTION DE DROITS ACCORDÉE AUX FRÈRES<lb/>MINEURS PAR SIMON DE SAINT-GERMAIN</head>
+              <head>Exemption de droits accordée aux frères <lb/>mineurs par Simon de Saint-Germain</head>
               <argument>
                 <p>Simon, fils d’Elie de Saint-Germain, autorise les Frères Mineurs de Compiègne à acquérir sur
                   son domaine, sans jamais lui fournir aucune finance, ni à lui ni à ses successeurs, toute la
@@ -4166,8 +4168,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RENTE ASSIGNÉE À L’ABBAYE DE CHAALIS<lb/>POUR ACHETER TOUS LES ANS QUATRE
-                MILLE<lb/>HARENGS PENDANT L’AVENT</head>
+              <head>La rente assignée à l’abbaye de Chaalis <lb/>pour acheter tous les ans quatre
+                mille <lb/>harengs pendant l’avent</head>
               <argument>
                 <p>Nicolas, fils de défunt Barthélemy de Compiègne, dit Aux-Dents, n’étant encore que novice en
                   l’abbaye de Chaalis, abandonne à sa mère, Mabilie, la part d’héritage qui lui vient de son
@@ -4227,7 +4229,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME PAPALE</head>
+              <head>La dîme papale</head>
               <argument>
                 <p>Le Cardinal Simon de Brion, légat du pape Clément IV, fait droit aux réclamations que lui
                   ont adressées divers abbés, prieurs et personnages ecclésiastiques, de la province de Reims,
@@ -4291,8 +4293,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE TERRE ENTRE MICHEL BOURDIS<lb/>DE FRESNOY ET BÉATRICE SA FEMME ET
-                L’ABBAYE<lb/>DE CHAALIS DANS LE DOMAINE DU TRANLOY</head>
+              <head>Échange de terre entre Michel Bourdis <lb/>de Fresnoy et Béatrice sa femme et
+                l’abbaye <lb/>de Chaalis dans le domaine du Tranloy</head>
               <argument>
                 <p>Michel Bourdis de Fresnoy-en-Beauvaisis<note n="733_1"><p>Le
                   Grand-Fresnoy, canton d’Estrées-Saint-Denis, Oise.</p></note>, et Béatrice, sa femme,
@@ -4369,7 +4371,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CONSÉCRATION DE LA CHAPELLE ET LA<lb/>BÉNÉDICTION DU CIMETIÈRE DE L’HÔTEL-DIEU</head>
+              <head>La consécration de la chapelle et la <lb/>bénédiction du cimetière de l’Hôtel-Dieu</head>
               <argument>
                 <p>Le pape Clément IV charge l’évêque de Soissons de consacrer la chapelle nouvellement
                   construite dans l’hôpital de Compiègne et de bénir le cimetière de cette même maison, quand
@@ -4425,7 +4427,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONDAMNATION DU MAIRE ET DE LA COMMUNE<lb/>DE COMPIÈGNE, POUR ABUS DE POUVOIR.</head>
+              <head>Condamnation du maire et de la commune <lb/>de Compiègne, pour abus de pouvoir.</head>
               <argument>
                 <p>Un malheureux prêtre, jeté pour ses méfaits dans la prison de Saint-Corneille, parvint à
                   s’en échapper et à sortir de la ville. Le prévôt du monastère se mit à sa poursuite avec les
@@ -4484,7 +4486,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TOMBEAUX DES ROIS À SAINT CORNEILLE.<lb/>CHANGEMENTS FAITS PAR SAINT LOUIS.</head>
+              <head>Les tombeaux des rois à Saint Corneille. <lb/>Changements faits par Saint Louis.</head>
               <argument>
                 <p>Trois rois avaient au <num>xiii</num><hi rend="sup">e</hi> siècle leur sépulture à
                   Compiègne. C’étaient Louis II le Bègue, mort à Compiègne le 10 avril 879 ; Louis V, mort le
@@ -4611,7 +4613,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE GUIART DIT POISSONNIER DE VENETTE<lb/>À COMPIÈGNE. CHARTE DE LA COMMUNE.</head>
+              <head>Le fief de Guiart dit poissonnier de Venette <lb/>à Compiègne. charte de la commune.</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, auxquels Guiart, dit Poissonnier de Venette, écuyer,
                   cède tous les biens qu’il tient du roi entre la forêt et l’Oise, à l’exception du fief que le
@@ -4678,7 +4680,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE GUIART DIT POISSONNIER DE VENETTE<lb/>À COMPIÈGNE. CHARTE DE GUIART.</head>
+              <head>Le fief de Guiart dit poissonnier de Venette <lb/>à Compiègne. charte de Guiart.</head>
               <argument>
                 <p>Guiart, dit Poissonnier de Venette, écuyer, cède à la commune de Compiègne tous les cens,
                   rentes, droits de rouage, dîmes, justice et seigneurie qu’il tient du roi à Compiègne,
@@ -4742,7 +4744,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE GUIART DIT POISSONNIER DE VENETTE<lb/>À COMPIÈGNE. CHARTE DE LOUIS IX.</head>
+              <head>Le fief de Guiart dit poissonnier de Venette <lb/>à Compiègne. charte de Louis IX.</head>
               <argument>
                 <p>Le roi Louis IX approuve et ratifie l’échange que fait avec la ville de Compiègne Guiart,
                   dit Poissonnier de Venette, de tout ce qu’il tient de lui entre la forêt et l’Oise, contre
@@ -4781,7 +4783,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FORESTIL.</head>
+              <head>Le Forestil.</head>
               <argument>
                 <p>Warin de Boiteau et Emmeline, sa femme vendent à l’abbaye de Saint-Corneille un journal de
                   terre au terroir du Forestil<note n="740_1"><p>Dépendance de La
@@ -4821,7 +4823,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HÔTEL-DIEU CONFIÉ AUX TRINITAIRES<lb/>PAR LOUIS IX.</head>
+              <head>L’Hôtel-Dieu confié aux Trinitaires <lb/>par Louis IX.</head>
               <argument>
                 <p>Louis IX, ayant prié le Souverain Pontife de confier l’Hôtel-Dieu de Compiègne à l’ordre de
                   la Sainte-Trinité pour la rédemption des Captifs, fut autorisé par lui à y mettre autant de
@@ -4903,8 +4905,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON À L’HÔTEL-DIEU DE CENT VINGT-TROIS<lb/>ARPENTS D’ESSARTS AU HAZOY-SAINT-OUEN<lb/>PAR
-                LOUIS IX.</head>
+              <head>Don à l’Hôtel-Dieu de cent vingt-trois <lb/>arpents d’Essarts au Hazoy-Saint-Ouen <lb/>par
+                Louis IX.</head>
               <argument>
                 <p>Louis IX, ayant fait défricher et convertir en culture, en vertu de son droit de gruerie, le
                   bois du Hazoy-Saint-Ouen, sis près de la Croix, à raison de l’avantage qu’en doivent tirer
@@ -5035,7 +5037,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PROCÈS DES VOLEURS</head>
+              <head>Le procès des voleurs</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne obtiennent gain de cause devant le Parlement de Paris,
                   contre le bailli de Vermandois qui leur contestait le droit de juger et punir les voleurs. La
@@ -5077,7 +5079,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON CÉDÉE À PIERRE DE DAVENESCOURT<lb/>EN LA RUE SAINT-PIERRE.</head>
+              <head>La maison cédée à Pierre de Davenescourt <lb/>en la rue Saint-Pierre.</head>
               <argument>
                 <p>Pierre de Braine, abbé de Saint-Corneille, cède à son clerc, Pierre de Davenescourt, et à
                   ses héritiers à perpétuité une maison de son monastère, sise en la rue Saint-Pierre, avec
@@ -5167,7 +5169,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLENIE D’AMIS DE RAMERUE<lb/>À L’HÔTEL-DIEU.</head>
+              <head>La chapellenie d’amis de Ramerue <lb/>à l’Hôtel-Dieu.</head>
               <argument>
                 <p>Amis de Ramerue, voulant fonder et doter une chapellenie à l’Hôtel-Dieu de Compiègne, donna
                   en pure et perpétuelle aumône aux frères et sœurs de cette maison, quatorze mines de terre
@@ -5275,7 +5277,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ACQUISITION DES RELIGIEUSES DE SAINT-JEAN<lb/>DES VIGNES ENTRE VENETTE ET MARGNY.</head>
+              <head>L’acquisition des religieuses de Saint-Jean <lb/>des vignes entre Venette et Margny.</head>
               <argument>
                 <p>Agnès, femme de Gilles Gemmart, jadis bourgeois de Compiègne, vend à Agnès, abbesse de
                   Saint-Jean-des-Vignes-lès-Compiègne, trois mines et <pb n="111"/>demie et vingt-huit
@@ -5330,8 +5332,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROCÈS INTENTÉ PAR LA COMMUNE DE<lb/>COMPIÈGNE À L’ABBAYE DE SAINT-CORNEILLE.<lb/>SON
-                ABANDON.</head>
+              <head>Procès intenté par la commune de <lb/>Compiègne à l’abbaye de Saint-Corneille. <lb/>Son
+                abandon.</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, voulant contraindre l’abbaye de Saint-Corneille à se
                   dessaisir de ce qu’elle avait acquis sur ses propres censives, <pb n="112"/>mais dans
@@ -5369,7 +5371,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JUSTICE DU MEURTRE.</head>
+              <head>La justice du meurtre.</head>
               <argument>
                 <p>Ayant examiné les chartes de commune et de prévôté accordées par le roi, à perpétuité, aux
                   bourgeois de Compiègne, la cour de Parlement leur maintient la connaissance du meurtre,
@@ -5409,8 +5411,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT D’USAGE DANS LA FORÊT DE<lb/>COMPIÈGNE — LE BOIS DE CHAUFFAGE ET
-                DE<lb/>CHARPENTE</head>
+              <head>Le droit d’usage dans la forêt de <lb/>Compiègne — le bois de chauffage et
+                de <lb/>charpente</head>
               <argument>
                 <p>L’abbaye de Saint-Corneille est, de vieille date, autorisée par charte
                   royale<note n="749_1"><p>Voyez la charte de 1092,
@@ -5485,8 +5487,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT DE PANAGE DANS LA FORÊT DE<lb/>COMPIÈGNE CONTESTÉ À L’ABBAYE<lb/>DE
-                ROYAUMONT.</head>
+              <head>Le droit de panage dans la forêt de <lb/>Compiègne contesté à l’abbaye <lb/>de
+                Royaumont.</head>
               <argument>
                 <p>Des marchands, au nom de l’abbaye de Royaumont, avaient mis cinq cents porcs à la glandée
                   dans la forêt de Cuise. Pierre Lescripvain, bourgeois de Compiègne, qui détenait alors la
@@ -5535,7 +5537,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RENONCIATION D’ARNOUL MAIRE D’ATTIN<lb/>À SES PRÉTENTIONS SUR LE FOUR D’ATTIN</head>
+              <head>Renonciation d’Arnoul maire d’Attin <lb/>à ses prétentions sur le four d’Attin</head>
               <argument>
                 <p>Arnoul, maire de la terre de Saint-Corneille à
                   Attin<note n="751_1"><p>Canton d’Etaples,
@@ -5595,8 +5597,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DONATION D’UNE VIGNE AU TRÉSOR DE<lb/>SAINT CORNEILLE PAR BAUDOUIN DU PORT<lb/>ET BERTHE,
-                SA FEMME</head>
+              <head>Donation d’une vigne au trésor de <lb/>Saint Corneille par Baudouin du port <lb/>et Berthe,
+                sa femme</head>
               <argument>
                 <p>Jean d’Ayssenlis, chanoine et official de Soissons, notifie que par contrat passé devant
                   Jean, doyen de la chrétienté de Compiègne, délégué par lui à cet effet, Baudouin du Port de
@@ -5696,7 +5698,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT D’USAGE DANS LA FORÊT<lb/>DE COMPIÈGNE POUR LE MERRIEN ET LA PAISSON</head>
+              <head>Le droit d’usage dans la forêt <lb/>de Compiègne pour le merrien et la paisson</head>
               <argument>
                 <p>Depuis des siècles, en vertu d’une charte royale, les religieux de Saint-Corneille font dans
                   la forêt de Compiègne leur provision de bois de chauffage et de construction. Ils ont même
@@ -5757,7 +5759,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DEMANDE D’EXPULSION DES TRINITAIRES<lb/>ÉTABLIS À L’HÔTEL-DIEU</head>
+              <head>Demande d’expulsion des Trinitaires <lb/>établis à l’Hôtel-Dieu</head>
               <argument>
                 <p>L’abbaye de Saint-Corneille, qui a la juridiction spirituelle sur l’Hôtel-Dieu de Compiègne,
                   a demandé l’expulsion des religieux de l’ordre de la Sainte-Trinité, placés par Louis IX dans
@@ -5810,8 +5812,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PERMISSION DONNÉE AU CHAPELAIN<lb/>DE L’ERMITAGE DE METTRE DOUZE PORCS À LA<lb/>GLANDÉE
-                DANS LA FORÊT DE CUISE</head>
+              <head>Permission donnée au chapelain <lb/>de l’ermitage de mettre douze porcs à la <lb/>glandée
+                dans la forêt de Cuise</head>
               <argument>
                 <p>Philippe le Hardi autorise son chapelain de la chapelle de l’Ermitage à mettre, chaque
                   année, douze porcs à la glandée, dans la forêt de Cuise, sans payer aucun droit de panage.</p>
@@ -5850,7 +5852,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>VENTE D’UNE MAISON PAR PHILIPPE LARDES<lb/>À HENRI GEMMART</head>
+              <head>Vente d’une maison par Philippe Lardés <lb/>à Henri Gemmart</head>
               <argument>
                 <p>Philippe Lardes, bourgeois de Compiègne, et Jeanne, sa femme, reconnaissent, devant dom
                   Gautier de Soissons, prévôt de l’église de
@@ -5942,8 +5944,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFLIT DE JURIDICTION ENTRE L’ÉVÊQUE<lb/>DE SOISSONS ET L’ABBAYE DE SAINT-CORNEILLE<lb/>AU
-                SUJET DE SAINT-JEAN-LES-COMPIÈGNE</head>
+              <head>Conflit de juridiction entre l’évêque <lb/>de Soissons et l’abbaye de Saint-Corneille <lb/>au
+                sujet de Saint-Jean-les-Compiègne</head>
               <argument>
                 <p>L’évêque de Soissons, ayant fait dénoncer en cour de Rome par son procureur, le clerc Guy de
                   Saint-Quentin, les religieuses de Saint-Jean des Vignes-lès-Compiègne pour leur refus de
@@ -6005,7 +6007,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARRÊT DU PARLEMENT RELATIF À UN CLERC<lb/>PRIS EN FLAGRANT DÉLIT À COMPIÈGNE</head>
+              <head>Arrêt du Parlement relatif à un clerc <lb/>pris en flagrant délit à Compiègne</head>
               <argument>
                 <p>Un clerc fut pris en flagrant délit à Compiègne et jeté en prison par le bailli de
                   Vermandois. L’évêque de Soissons et l’abbé de Saint-Corneille le réclamèrent, chacun de son
@@ -6044,7 +6046,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JURIDICTION SUR LES CLERCS</head>
+              <head>La juridiction sur les clercs</head>
               <argument>
                 <p>L’abbé de Saint-Corneille et l’évêque de Soissons, ne pouvant s’entendre sur l’exercice de
                   la juridiction spirituelle dans la ville de Compiègne, à propos des clercs pris en flagrant
@@ -6087,7 +6089,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PETIT PRÉ DE RAOUL LÉRÉ</head>
+              <head>Le petit pré de Raoul Léré</head>
               <argument>
                 <p>Raoul Léré et Agnès, sa femme, bourgeois de Compiègne, ont donné à l’abbaye de
                   Saint-Corneille un petit pré, faisant autrefois partie de l’habitation de Jean d’Ambleny,
@@ -6130,7 +6132,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’UNION DE L’HÔTEL-DIEU DE COMPIÈGNE<lb/>À L’ORDRE DE LA SAINTE TRINITÉ</head>
+              <head>L’union de l’Hôtel-Dieu de Compiègne <lb/>à l’ordre de la Sainte Trinité</head>
               <argument>
                 <p>Le pape Jean XXI, à la prière du ministre général de l’ordre de la Sainte-Trinité pour la
                   Rédemption des captifs, ratifie l’union de l’Hôtel-Dieu de Compiègne, faite par Saint-Louis à
@@ -6188,7 +6190,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AUMÔNE D’ÈVE DE RAMERUE À L’HÔTEL-DIEU</head>
+              <head>L’aumône d’Ève de Ramerue à l’Hôtel-Dieu</head>
               <argument>
                 <p>Devant Robert Wuiderue, maire et prévôt de Compiègne, Eve de Ramerue, veuve d’Amis de
                   Ramerue, déclare tenir en douaire de son défunt mari sept mines de terre au mont de Margny,
@@ -6273,8 +6275,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT D’USAGE DANS LA FORÊT DE COMPIÈGNE<lb/>LE BOIS DE CHARPENTE POUR LES
-                NOUVELLES<lb/>ACQUISITIONS ET POUR LA MAISON DE VENETTE</head>
+              <head>Le droit d’usage dans la forêt de Compiègne <lb/>le bois de charpente pour les
+                Nouvelles <lb/>acquisitions et pour la maison de Venette</head>
               <argument>
                 <p>Le forestier royal de Cuise, ayant essayé une fois encore de restreindre le droit d’usage
                   concédé à l’abbaye de Saint-Corneille dans la forêt de Compiègne, <pb n="132"/>est
@@ -6334,7 +6336,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JURIDICTION SUR LES CLERCS SÉCULIERS<lb/>DE COMPIÈGNE — ENQUÊTE PRESCRITE</head>
+              <head>La juridiction sur les clercs séculiers <lb/>de Compiègne — enquête prescrite</head>
               <argument>
                 <p>Simon de Brion, cardinal du titre de Sainte Cécile et légat du Saint-Siège, fait savoir aux
                   religieux de Saint-Corneille qu’il vient de prescrire une enquête au sujet de la juridiction
@@ -6402,7 +6404,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉLECTION D’UN ABBÉ</head>
+              <head>Élection d’un abbé</head>
               <argument>
                 <p>Simon de Ribécourt, prieur de Saint-Corneille, au nom de son monastère, donne procuration à
                   Pierre de Pontpoint, prévôt d’Estraon, et à Pierre du Bois, trésorier du couvent, pour aller
@@ -6453,8 +6455,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>APPROBATION PAR LE SAINT-SIÈGE<lb/>DE L’ÉLECTION DE PIERRE DU BOIS,<lb/>ABBÉ DE
-                SAINT-CORNEILLE</head>
+              <head>Approbation par le Saint-siège <lb/>de l’élection de Pierre du bois, <lb/>abbé de
+                Saint-Corneille</head>
               <argument>
                 <p>Simon de Brion, cardinal prêtre du titre de Sainte-Cécile, approuve, en qualité de légat du
                   pape Nicolas III, le choix qu’ont fait de Pierre du Bois, trésorier de Saint-Corneille, pour
@@ -6525,7 +6527,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉDOMMAGEMENT DONNÉ À L’ABBAYE<lb/>DE ROYAUMONT</head>
+              <head>Dédommagement donné à l’abbaye <lb/>de Royaumont</head>
               <argument>
                 <p>Philippe III le Hardi assigne à l’abbaye de Royaumont trente livres parisis de rente
                   annuelle, à prendre à la Chandeleur, sur le Temple à Paris, pour tenir lieu de la permission
@@ -6576,7 +6578,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PLAIDS DE SACY-LE-PETIT</head>
+              <head>Les plaids de Sacy-le-petit</head>
               <argument>
                 <p>Raoul d’Estrées, sire du Bois de Lihus, maréchal de France, juge un différend survenu entre
                   son frère, l’abbé de Saint-Corneille, et Rufin de Sacy, maire de l’abbaye, relativement à
@@ -6635,7 +6637,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE PERRON BORDEL<lb/>ET LES CHAMBRES DE PERRON LE MAIEUR</head>
+              <head>Le manoir de Perron Bordel <lb/>et les chambres de Perron le maieur</head>
               <argument>
                 <p>Pierre des Dommeliers, écuyer, fils de feu Barthélemy des
                   Dommeliers<note n="769_1"><p>J’ai trouvé quelque part, dit D.
@@ -6706,8 +6708,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT D’USAGE DANS LA FORÊT DE<lb/>COMPIÈGNE POUR LES NOUVELLES ACQUISITIONS<lb/>DE
-                SAINT-CORNEILLE</head>
+              <head>Le droit d’usage dans la forêt de <lb/>Compiègne pour les Nouvelles acquisitions <lb/>de
+                Saint-Corneille</head>
               <argument>
                 <p>L’abbaye de Saint-Corneille, accusée d’envoyer ses hôtes chercher du bois dans la forêt de
                   Compiègne, fait connaître au Parlement que, d’après <pb n="141"/>un jugement antérieur
@@ -6747,7 +6749,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TESTAMENT DE RAOUL D’ESTRÉES</head>
+              <head>Testament de Raoul d’Estrées</head>
               <argument>
                 <p>Raoul d’Estrées, chevalier, maréchal de France, sire du Bois de Lihus, pour son salut et le
                   salut d’Ade sa femme, et en vue de réparer ses torts comme aussi d’avoir part aux bonnes
@@ -6801,7 +6803,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JUSTICE DU DUEL</head>
+              <head>La justice du duel</head>
               <argument>
                 <p>Ne pouvant s’accorder sur la connaissance du duel, le bailli de Senlis, au nom du roi, le
                   maire et les jurés de Compiègne, au nom de la commune, portent le litige devant le Parlement.
@@ -6842,7 +6844,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HOMMAGE DU BOIS DE LIHUS</head>
+              <head>L’hommage du bois de Lihus</head>
               <argument>
                 <p>Arnoul d’Estrées, écuyer, et Philippe d’Estrées, chevalier, son oncle, s’accordent avec
                   l’abbé de Saint-Corneille, sur les devoirs féodaux incombants à leur fief du Bois de Lihus,
@@ -6933,7 +6935,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CHAMPART DE SAINT-GERMAIN</head>
+              <head>Le champart de Saint-Germain</head>
               <argument>
                 <p>Pierre de Dommeliers, écuyer, et Béatrice, sa femme, donnent en aumône aux pitanciers de
                   Saint-Corneille, les champarts dont ils jouissent sur quatre mines cinquante-sept verges de
@@ -6982,7 +6984,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JUSTICE DES CLERCS PRIS EN FLAGRANT DÉLIT</head>
+              <head>La justice des clercs pris en flagrant délit</head>
               <argument>
                 <p>Les religieux de Saint-Corneille, ayant à se plaindre du maire et des jurés de Compiègne
                   qui, au mépris des privilèges de leur abbaye, détenaient en leur prison les clercs pris en
@@ -7040,7 +7042,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION D’UNE MESSE QUOTIDIENNE<lb/>À SAINT-CORNEILLE PAR RAOUL D’ESTRÉES</head>
+              <head>Fondation d’une messe quotidienne <lb/>à Saint-Corneille par Raoul d’Estrées</head>
               <argument>
                 <p>Raoul d’Estrées, chevalier, sire du Bois de Lihus, maréchal de France, lègue vingt livrées
                   de terre, autrement dit une rente foncière de vingt livres parisis, à l’abbaye de
@@ -7097,8 +7099,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ÉVÊQUE DE SOISSONS MENACÉ<lb/>D’EXCOMMUNICATION — LETTRE ADRESSÉE<lb/>À L’ABBAYE DE
-                SAINT-MÉDARD DE SOISSONS</head>
+              <head>L’évêque de Soissons menacé <lb/>d’excommunication — lettre adressée <lb/>à l’abbaye de
+                Saint-Médard de Soissons</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, use des censures ecclésiastiques contre Milon de
                   Basoches, évêque de Soissons, qui, méconnaissant la juridiction du monastère sur les clercs
@@ -7195,8 +7197,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ÉVÊQUE DE SOISSONS EXCOMMUNIÉ<lb/>PROMULGATION DE LA SENTENCE DANS LES<lb/>DIOCÈSES DE
-                NOYON, SENLIS, BEAUVAIS<lb/>ET SOISSONS</head>
+              <head>L’évêque de Soissons excommunié <lb/>promulgation de la sentence dans les <lb/>diocèses de
+                Noyon, Senlis, Beauvais <lb/>et Soissons</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, par lettre circulaire envoyée dans les diocèses de
                   Noyon, Senlis, Beauvais et Soissons, invite les dignitaires du clergé régulier et séculier à
@@ -7250,7 +7252,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ÉVÊQUE DE SOISSONS EXCOMMUNIÉ<lb/>DÉFENSE D’AVOIR AUCUNE RELATION AVEC LUI</head>
+              <head>L’évêque de Soissons excommunié <lb/>défense d’avoir aucune relation avec lui</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, par lettre circulaire mande au prieur de Rivecourt,
                   au prieur, au sous prieur, au tiers prieur, au célerier
@@ -7334,7 +7336,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MESSE QUOTIDIENNE FONDÉE<lb/>À SAINT-CORNEILLE PAR RAOUL D’ESTRÉES</head>
+              <head>La messe quotidienne fondée <lb/>à Saint-Corneille par Raoul d’Estrées</head>
               <argument>
                 <p>Philippe le Hardi ratifie la fondation à Saint-Corneille, d’une messe quotidienne,
                   perpétuelle, chantée, et amortit les vingt livrées de terre léguées à cet effet par Raoul
@@ -7385,7 +7387,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RENTE DE DIX LIVRES SUR LE BOIS<lb/>DU CAISNOY À MAREUIL</head>
+              <head>La rente de DIX livres sur le bois <lb/>du Caisnoy à Mareuil</head>
               <argument>
                 <p>Wautier d’Antoing, chevalier, sire de Bellone et Catherine, dame de Bellone, sa femme, nièce
                   de Raoul d’Estrées, sire du Bois-de-Lihus et maréchal de France, pour remplir les dernières
@@ -7442,7 +7444,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>IMPOSITION POUR LA RÉFECTION DU PONT<lb/>DE L’ÎLE À COMPIÈGNE</head>
+              <head>Imposition pour la réfection du pont <lb/>de l’Île à Compiègne</head>
               <argument>
                 <p>Philippe le Hardi déclare que pour faciliter aux moines de Compiègne la réparation de leur
                   pont mettant la ville en communication avec l’île, il les a autorisés à percevoir à leur
@@ -7496,7 +7498,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BIENS DES TEMPLIERS À COMPIÈGNE,<lb/>VENETTE ET MARGNY</head>
+              <head>Les biens des Templiers à Compiègne, <lb/>Venette et Margny</head>
               <argument>
                 <p>Baudouin de Chiry, maître de la milice du Temple au bailliage de
                   Moissac<note n="783_1"><p>Tarn-et-Garonne.</p></note>, s’engage à
@@ -7551,7 +7553,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CHAMPART D’ALPHONSE DE ROUVROY<lb/>À MONTGÉRAIN</head>
+              <head>Le champart d’Alphonse de Rouvroy <lb/>à Montgérain</head>
               <argument>
                 <p>Alphonse de Rouvroy, chevalier, qui tenait de l’abbaye de Saint-Corneille la huitième partie
                   du champart et des droits de vente, justice et saisine de
@@ -7613,7 +7615,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA FONDATION D’UNE CHAPELLENIE<lb/>PAR RAOUL D’ESTRÉES</head>
+              <head>La fondation d’une chapellenie <lb/>par Raoul d’Estrées</head>
               <argument>
                 <p>Wautier d’Antoing, chevalier, sire de Bellone, et Catherine, dame de Bellone, sa femme,
                   nièce et héritière de Raoul d’Estrées, sire du Bois de
@@ -7684,7 +7686,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PÉLERINAGE DES FILS D’HERBERT LESCRIPVAIN<lb/>À SAINT JACQUES DE COMPOSTELLE</head>
+              <head>Le pélerinage des fils d’Herbert Lescripvain <lb/>à Saint Jacques de Compostelle</head>
               <argument>
                 <p>Girard le Boucher de Compiègne, ayant accusé Herbert Lescripvain et ses deux fils de l’avoir
                   injurié, leur a demandé une réparation. Des arbitres <pb n="161"/>ont été choisis pour
@@ -7734,7 +7736,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES FIEFS DE JEAN FROMONS ET DE JEAN<lb/>DU MAISNIL À CROUTOY ET À COULOISY</head>
+              <head>Les fiefs de Jean Fromons et de Jean <lb/>du Maisnil à Croutoy et à Couloisy</head>
               <argument>
                 <p>Guy de Courdemenche, chevalier, donne en aumône pour le salut de son âme à l’abbaye de
                   Saint-Corneille les droits seigneuriaux qu’il possède <pb n="162"/>à Croutoy et à
@@ -7793,8 +7795,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CHAMPARTS ET DROITS SEIGNEURIAUX<lb/>À CROUTOY, MARTIMONT, JAULZY, COURTIEUX<lb/>ET
-                COULOISY</head>
+              <head>Champarts et droits seigneuriaux <lb/>à Croutoy, Martimont, Jaulzy, Courtieux <lb/>et
+                Couloisy</head>
               <argument>
                 <p>Guy de Courdemenche, chevalier, ratifie la vente qu’a faite de tous ses biens à l’abbaye de
                   Saint-Corneille, son fils aîné Thomas. Il leur a cédé la moitié des champarts, les droits de
@@ -7889,8 +7891,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RÉPARATION DES DOMMAGES CAUSÉS<lb/>À SAINT-CORNEILLE PAR RAOUL D’ESTRÉES,<lb/>SIRE DU
-                BOIS DE LIHUS</head>
+              <head>La réparation des dommages causés <lb/>à Saint-Corneille par Raoul d’Estrées, <lb/>sire du
+                bois de Lihus</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, notifie l’accord conclu entre son monastère, d’une
                   part, et Wautier d’Antoing, chevalier, sire de Bellone et Catherine, sa femme, nièce de Raoul
@@ -8029,8 +8031,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD ENTRE WAUTIER D’ANTOING<lb/>ET PIERRE, ABBÉ DE SAINT-CORNEILLE, AU SUJET<lb/>DES
-                DOMMAGES CAUSÉS À L’ABBAYE<lb/>PAR RAOUL D’ESTRÉES</head>
+              <head>Accord entre Wautier d’Antoing <lb/>et Pierre, abbé de Saint-Corneille, au sujet <lb/>des
+                dommages causés à l’abbaye <lb/>par Raoul d’Estrées</head>
               <argument>
                 <p>Wautier d’Antoing, chevalier, sire de Bellone et Catherine, sa femme, nièce et héritière de
                   Raoul d’Estrées, sire du Bois de Lihus et maréchal de France, notifient les clauses d’un
@@ -8079,9 +8081,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARBITRAGE ENTRE MILON DE BASOCHES,<lb/>ÉVÊQUE DE SOISSONS, ET PIERRE DU BOIS, ABBÉ<lb/>DE
-                SAINT-CORNEILLE, AU SUJET DE LA<lb/>JURIDICTION, DES PRIVILÈGES ET DES DROITS<lb/>DE L’ABBAYE
-                DE SAINT-CORNEILLE</head>
+              <head>Arbitrage entre Milon de Basoches, <lb/>évêque de Soissons, et Pierre du bois, abbé <lb/>de
+                Saint-Corneille, au sujet de la <lb/>juridiction, des privilèges et des droits <lb/>de l’abbaye
+                de Saint-Corneille</head>
               <argument>
                 <p>Guillaume de Macon, évêque d’Amiens, notifie un arbitrage fait entre Milon de Basoches,
                   évêque de Soissons, en son nom et au nom de son chapitre, et Pierre du Bois, abbé de
@@ -8436,8 +8438,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RATIFICATION PAR MILON DE BASOCHES,<lb/>ÉVÊQUE DE SOISSONS, ET LE CHAPITRE DE
-                SA<lb/>CATHÉDRALE, DE L’ARBITRAGE FAIT PAR<lb/>GUILLAUME DE MACON, ÉVÊQUE D’AMIENS</head>
+              <head>Ratification par Milon de Basoches, <lb/>évêque de Soissons, et le chapitre de
+                sa <lb/>cathédrale, de l’arbitrage fait par <lb/>Guillaume de maçon, évêque d’Amiens</head>
               <argument>
                 <p>Milon de Basoches, évêque de Soissons, après avoir exposé comment, dans son conflit avec
                   l’abbaye de Saint-Corneille, il a accepté la médiation de Simon Matifard, archidiacre de
@@ -8526,7 +8528,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE ET LE BOIS D’ARNOUL DE VERBERIE</head>
+              <head>La terre et le bois d’Arnoul de Verberie</head>
               <argument>
                 <p>Philippe le Hardi accorde à Arnoul de Verberie la permission de vendre une pièce de terre et
                   un bois près de la forêt de Bolesmont, dit Hamnesart.</p>
@@ -8563,7 +8565,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INVENTAIRE DES TITRES ET DES PROPRIÉTÉS<lb/>DE L’HERMITAGE DE VIEUX-MOULIN</head>
+              <head>Inventaire des titres et des propriétés <lb/>de l’hermitage de vieux-moulin</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, fait l’inventaire des possessions et privilèges de
                   la chapelle de l’Hermite, en la forêt de Cuise.</p>
@@ -8654,7 +8656,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PORCHE ENTRE LES CONTREFORTS DE L’ÉGLISE<lb/>DE SAINT-CORNEILLE</head>
+              <head>Le porche entre les contreforts de l’église <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Mathieu, abbé de Saint-Denis, et Simon, seigneur de Nesle, lieutenants du roi, notifient
                   qu’un différend survenu entre l’abbaye de Saint-Corneille <pb n="184"/>et les maire et
@@ -8713,7 +8715,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ARRESTATION DES CLERCS EN FLAGRANT DÉLIT</head>
+              <head>L’arrestation des clercs en flagrant délit</head>
               <argument>
                 <p>La Cour de Parlement décide que le maire de Compiègne arrêtera à Compiègne les clercs
                   malfaiteurs, ou les laissera arrêter par le vicaire commun à l’évêque de Soissons et à l’abbé
@@ -8748,8 +8750,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE L’HERMITAGE DE VIEUX-MOULIN AUX<lb/>RELIGIEUSES AUGUSTINES<lb/>DE
-                SAINT-JEAN-DES-VIGNES-LÈS-COMPIÈGNE</head>
+              <head>Don de l’hermitage de vieux-moulin aux <lb/>religieuses Augustines <lb/>de
+                Saint-Jean-des-vignes-lès-Compiègne</head>
               <argument>
                 <p>Philippe le Bel rappelle d’abord que Louis IX, pour le salut des âmes de ses ancêtres,
                   Philippe-Auguste et Louis VIII, et de Blanche, sa mère, et <pb n="186"/>pour son
@@ -8815,8 +8817,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION PAR LE CARDINAL LÉGAT,<lb/>JEAN CHOLET, DE L’ARBITRAGE FAIT PAR
-                L’ÉVÊQUE<lb/>D’AMIENS</head>
+              <head>Confirmation par le cardinal légat, <lb/>Jean Cholet, de l’arbitrage fait par
+                l’évêque <lb/>d’Amiens</head>
               <argument>
                 <p>Jean Cholet, cardinal prêtre du titre de Sainte-Cécile, légat apostolique, répondant au
                   désir de l’abbé de Saint-Corneille, confirme la transaction passée entre Milon de Basoches,
@@ -8956,7 +8958,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉFENSE AUX LAÏCS DE PORTER LEURS CAUSES<lb/>DEVANT LE TRIBUNAL ECCLÉSIASTIQUE</head>
+              <head>Défense aux laïcs de porter leurs causes <lb/>devant le tribunal ecclésiastique</head>
               <argument>
                 <p>Conformément à l’arbitrage du 30 décembre 1284, l’évêque de Soissons et l’abbé de
                   Saint-Corneille nomment, à tour de rôle, un vicaire pour exercer, en leur nom, la justice
@@ -9000,7 +9002,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES QUATRE LIVRES DE CENS DUES<lb/>À LA TABLE-DIEU PAR GUILLAUME AMANT</head>
+              <head>Les quatre livres de cens dues <lb/>à la table-Dieu par Guillaume Amant</head>
               <argument>
                 <p>Herbert l’Escrivain, maire et prévôt de Compiègne, et les jurés de la ville accommodent un
                   différend entre les prévôts de la Table-Dieu, d’une part, et Guillaume Amant, d’autre part.
@@ -9067,8 +9069,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES LODS ET VENTES DES SEPT MAISONS<lb/>DE CHAALIS À COMPIÈGNE —
-                NOMINATION<lb/>D’ARBITRES</head>
+              <head>Les lods et ventes des sept maisons <lb/>de Chaalis à Compiègne —
+                nomination <lb/>d’arbitres</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, et l’abbé de Chaalis, désirant terminer le
                   différend qui existait entre eux, relativement aux droits de <pb n="193"/>ventes
@@ -9132,8 +9134,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES LODS ET VENTES DES SEPT MAISONS<lb/>DE CHAALIS À COMPIÈGNE — JUGEMENT
-                DES<lb/>ARBITRES</head>
+              <head>Les lods et ventes des sept maisons <lb/>de Chaalis à Compiègne — jugement
+                des <lb/>arbitres</head>
               <argument>
                 <p>Guy de Nanteuil, chevalier, seigneur de Néry, et Pierre de Pompoint, religieux de Compiègne,
                   arbitres choisis pour vider le différend survenu entre l’abbé de Saint-Corneille et l’abbé de
@@ -9240,7 +9242,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DISTRIBUTION HEBDOMADAIRE AUX VICAIRES<lb/>DE SAINT-MAURICE</head>
+              <head>La distribution hebdomadaire aux vicaires <lb/>de Saint-Maurice</head>
               <argument>
                 <p>Pour remédier à la négligence des chanoines de Saint-Maurice qui touchent les revenus de
                   leur église, sans plus se soucier des offices à y célébrer que de la résidence à y observer,
@@ -9313,7 +9315,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARBITRAGE ENTRE L’ABBAYE DE SAINT-CORNEILLE<lb/>ET WAUTIER D’ANTOING</head>
+              <head>Arbitrage entre l’abbaye de Saint-Corneille <lb/>et Wautier d’Antoing</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, et Wautier d’Antoing, chevalier, seigneur de
                   Bellone, soumettent à un conseil de prud’hommes diverses questions sur lesquelles ils sont en
@@ -9404,8 +9406,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INDULGENCE D’UN AN ET QUARANTE JOURS<lb/>ATTACHÉE À LA VISITE<lb/>DE L’ÉGLISE DE
-                SAINT-CORNEILLE</head>
+              <head>Indulgence d’un an et quarante jours <lb/>attachée à la visite <lb/>de l’église de
+                Saint-Corneille</head>
               <argument>
                 <p>Guy des Prés, évêque de Noyon, publie ou mieux vidime, au mois d’avril 1292, une bulle
                   d’indulgence de Nicolas IV, en faveur de l’abbaye de Saint-Corneille.</p>
@@ -9453,7 +9455,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAINMORTE À ECUEIL ET VILLAGES VOISINS</head>
+              <head>La mainmorte à Ecueil et villages voisins</head>
               <argument>
                 <p>L’abbé de Saint-Corneille et les receveurs royaux des droits de mainmorte soutenaient,
                   malgré les dénégations de Mahaut, veuve de Gilles de
@@ -9563,8 +9565,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES QUARANTE SOUS DE RENTE, VENDUS<lb/>À L’ABBAYE
-                DE<lb/>SAINT-JEAN-DES-VIGNES-LÈS-COMPIÈGNE</head>
+              <head>Les quarante sous de rente, vendus <lb/>à l’abbaye
+                de <lb/>Saint-Jean-des-vignes-lès-Compiègne</head>
               <argument>
                 <p>Philippe le Bel ratifie l’achat fait par le monastère de Saint-Jean-des-Vignes-lès-Compiègne
                   d’une rente annuelle et perpétuelle de soixante sous à percevoir sur le manoir des vendeurs,
@@ -9607,7 +9609,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROTECTION ACCORDÉE À L’ABBAYE<lb/>DE SAINT-VALERY-SUR-SOMME</head>
+              <head>Protection accordée à l’abbaye <lb/>de Saint-Valéry-sur-somme</head>
               <argument>
                 <p>Le pape Nicolas IV charge l’abbé de Saint-Corneille de prendre en main les intérêts de
                   l’abbaye de
@@ -9661,7 +9663,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE ROBERT VILAIN</head>
+              <head>La maison de Robert Vilain</head>
               <argument>
                 <p>Devant Jean Beusars, chanoine de Saint-Clément, Robins ou Robert Vilain déclare abandonner,
                   tant qu’il sera absent de Compiègne, au ministre et aux frères de la Sainte-Trinité, établis
@@ -9737,8 +9739,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE GRAND JUGEMENT ENTRE L’ABBAYE<lb/>DE SAINT-CORNEILLE<lb/>ET LA COMMUNE DE
-                COMPIÈGNE</head>
+              <head>Le grand jugement entre l’abbaye <lb/>de Saint-Corneille <lb/>et la commune de
+                Compiègne</head>
               <argument>
                 <p>Les précédents arrêts du Parlement n’ayant pu tarir la source des discordes entre l’abbaye
                   de Saint-Corneille et les maire et jurés de Compiègne, dix-huit sujets de plainte sont soumis
@@ -10116,7 +10118,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARBITRAGE ENTRE LES FRÈRES BUYRON DE REIMS<lb/>ET L’ABBAYE DE SAINT-CORNEILLE</head>
+              <head>Arbitrage entre les frères Buyron de Reims <lb/>et l’abbaye de Saint-Corneille</head>
               <argument>
                 <p>De nombreux sujets de discorde existaient de vieille date entre l’abbaye de Saint-Corneille
                   et deux frères, Pierre et Aubry Buyron, habitants de Reims. La cour de Parlement en fut
@@ -10155,7 +10157,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS SUR DEUX MAISONS RUE DES DOMELIERS</head>
+              <head>Droits sur deux maisons rue des Doméliers</head>
               <argument>
                 <p>Basile de Beniguehem, fille de feu Ennelart, chevalier, seigneur de Beniguehem, âgée de plus
                   de trente-huit ans, donne aux Frères Mineurs de Compiègne tous ses droits sur deux maisons en
@@ -10198,7 +10200,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>REMISE DE LA FINANCE DUE PAR L’HÔTEL-DIEU<lb/>POUR D’ANCIENNES ACQUISITIONS</head>
+              <head>Remise de la finance due par l’Hôtel-Dieu <lb/>pour d’anciennes acquisitions</head>
               <argument>
                 <p>Philippe le Bel ayant chargé Evrard Porions, chanoine et official de Soissons, et Lisiard le
                   Lardier, d’une enquête sur les acquêts qui ont eu lieu depuis quarante-six ans dans le
@@ -10264,7 +10266,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE JEAN MARQUIS</head>
+              <head>Le fief de Jean marquis</head>
               <argument>
                 <p>Jean dit Marquis, écuyer, reconnaît qu’il tient en fief de l’abbaye de Saint-Corneille, les
                   champarts d’environ trente-trois mines de terre, sises au Champ-Hardi, trois gerbes de
@@ -10337,8 +10339,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>NICOLAS DE SAINT-CRÉPIN INSTITUÉ<lb/>VICAIRE GÉNÉRAL DE L’ÉVÊQUE DE SOISSONS<lb/>ET DE
-                L’ABBÉ DE SAINT-CORNEILLE<lb/>À COMPIÈGNE</head>
+              <head>Nicolas de Saint-Crépin institué <lb/>vicaire général de l’évêque de Soissons <lb/>et de
+                l’abbé de Saint-Corneille <lb/>à Compiègne</head>
               <argument>
                 <p>Gérard de Montcornet, évêque de Soissons, présente à Pierre du Bois, abbé de
                   Saint-Corneille, Nicolas de Saint Crépin, chanoine de Saint-Vaast de Soissons et curé de
@@ -10488,7 +10490,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INTERPRÉTATION DU GRAND JUGEMENT DE 1291</head>
+              <head>Interprétation du grand jugement de 1291</head>
               <argument>
                 <p>Huit articles du grand jugement, rendu, au mois de juin 1291, entre l’abbaye de
                   Saint-Corneille et la ville de Compiègne, fournissaient matière à contestation. Les maire et
@@ -10589,8 +10591,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES QUATRE SOUS PARISIS DE CENS DONNÉS<lb/>À L’ABBAYE DE SAINT-CORNEILLE, À
-                VENETTE,<lb/>PAR MARIE, VEUVE DE GUYART POISSONNIER<lb/>DE VENETTE</head>
+              <head>Les quatre sous parisis de cens donnés <lb/>à l’abbaye de Saint-Corneille, à
+                Venette, <lb/>par Marie, veuve de Guyart poissonnier <lb/>de Venette</head>
               <argument>
                 <p>Marie, veuve de Guiart Poissonnier de Venette, écuyer, et Jean Poissonnier, son fils,
                   devaient annuellement à l’abbaye de Saint-Corneille un <pb n="229"/>droit de carion ou
@@ -10647,7 +10649,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DROITS DE VENTE ET DE BORNAGE<lb/>AU BOIS D’AGEUX</head>
+              <head>Les droits de vente et de bornage <lb/>au bois d’Ageux</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, fait avec les habitants de Verberie l’accord
                   suivant au sujet des terres sises au Bois
@@ -10752,7 +10754,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION DE LA CHARTE DE VERBERIE<lb/>PAR PHILIPPE-LE-BEL</head>
+              <head>Confirmation de la charte de Verberie <lb/>par Philippe-le-Bel</head>
               <argument>
                 <p>Le roi Philippe le Bel approuve l’accord fait par l’abbaye de Saint-Corneille avec les
                   habitants de Verberie, au sujet des droits de vente et de bornage à acquitter pour les terres
@@ -10819,8 +10821,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SENTENCE PRONONCÉE PAR PHILIPPE DE BEAUMANOIR<lb/>SUR UN DIFFÉREND ENTRE LA VILLE<lb/>DE
-                COMPIÈGNE ET SAINT-CORNEILLE</head>
+              <head>Sentence prononcée par Philippe de Beaumanoir <lb/>sur un différend entre la ville <lb/>de
+                Compiègne et Saint-Corneille</head>
               <argument>
                 <p>Philippe de Beaumanoir, chevalier, bailli de Senlis, à la suite d’un compromis passé entre
                   Pierre du Bois, abbé de Saint-Corneille, et les maire et jurés de Compiègne, règle leurs
@@ -11225,7 +11227,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAISIE DE LA TERRE DE MAREUIL</head>
+              <head>Saisie de la terre de Mareuil</head>
               <argument>
                 <p>Gautier Bardins, bailli de Vermandois, ayant reçu à la date du 20 mars 1293 (1294 n. st.)
                   l’ordre de procéder à une enquête sur la mouvance du fief de
@@ -11296,7 +11298,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MOUVANCE DE LA TERRE DE MAREUIL</head>
+              <head>La mouvance de la terre de Mareuil</head>
               <argument>
                 <p>Gautier Bardins<note n="822_1"><p>La tombe de Gautier Bardins,
                   mort le 30 mai 1305, est dans l’église de Pierrefonds. Cf. Bulletin de la Société historique
@@ -11351,8 +11353,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON FAIT À L’HÔTEL-DIEU DE COMPIÈGNE<lb/>PAR HERBERT L’ESCRIVAIN<lb/>AU HAZOY ET À L’ORMEAU
-                D’AIGUISY</head>
+              <head>Don fait à l’Hôtel-Dieu de Compiègne <lb/>par Herbert l’Escrivain <lb/>au Hazoy et à l’Ormeau
+                d’Aiguisy</head>
               <argument>
                 <p>Philippe le Bel ratifie les libéralités d’Herbert l’Escrivain envers l’Hôtel-Dieu de
                   Compiègne. Elles consistent en vingt mines de terre arable, tenues du roi à champart, dont
@@ -11412,8 +11414,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR ET LES TERRES DE MAREUIL<lb/>ÉCHANGE ENTRE GUY DU PLESSIER-DE-BRION<lb/>ET
-                SAINT-CORNEILLE</head>
+              <head>Le manoir et les terres de Mareuil <lb/>échange entre Guy du Plessier-de-Brion <lb/>et
+                Saint-Corneille</head>
               <argument>
                 <p>Pierre du Bois-de-Lihus, dit d’Estrées, abbé de Saint-Corneille, fait avec Guy du
                   Plessier-de-Brion, chevalier, et Catherine, dame de Moustiers, sa femme, l’accord suivant :
@@ -11514,8 +11516,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DONS DE PIERRE BIGUES<lb/>DE FRESNOY EN LA MOUVANCE DE L’ABBAYE<lb/>DE
-                SAINT-CORNEILLE</head>
+              <head>Les dons de Pierre Bigues <lb/>de Fresnoy en la mouvance de l’abbaye <lb/>de
+                Saint-Corneille</head>
               <argument>
                 <p>Devant Robert de Brière, clerc, tabellion juré, mandataire de l’official de Beauvais, Pierre
                   Bigues de Fresnoy et Marie, sa femme, donnent à l’abbaye de Chaalis, en perpétuelle et
@@ -11632,8 +11634,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR ET LES TERRES DE MAREUIL — SAISINE<lb/>PRISE PAR JEAN MAUFILASTRE AU NOM<lb/>DE
-                SAINT-CORNEILLE</head>
+              <head>Le manoir et les terres de Mareuil — saisine <lb/>prise par Jean Maufilastre au nom <lb/>de
+                Saint-Corneille</head>
               <argument>
                 <p>Guy du Plessier de Brion, chevalier et Catherine, sa femme, dame de Moustier, se
                   dessaisissent de tout ce qu’ils tiennent de l’abbaye de Saint-Corneille à
@@ -11695,8 +11697,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL — ÉCHANGE FAIT PAR<lb/>GUY DU PLESSIER DE BRION CONTRE<lb/>CENT LIVRES
-                PARISIS DE RENTE FONCIÈRE<lb/>À LUI DONNÉE PAR PIERRE DE CHAMBLY</head>
+              <head>Le manoir de Mareuil — échange fait par <lb/>Guy du Plessier de Brion contre <lb/>cent livres
+                parisis de rente foncière <lb/>à lui donnée par Pierre de Chambly</head>
               <argument>
                 <p>Pierre de Chambly, sire de Viarmes<note n="827_1"><p>Canton de
                   Luzarches, Seine-et-Oise.</p></note>, chambellan du roi, donne cent livres parisis de rente
@@ -11773,8 +11775,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL CÉDÉ CONTRE UNE<lb/>RENTE À PIERRE DE CHAMBLY — CONFIRMATION<lb/>DE
-                CET ÉCHANGE PAR PHILIPPE LE BEL</head>
+              <head>Le manoir de Mareuil cédé contre une <lb/>rente à Pierre de Chambly — confirmation <lb/>de
+                cet échange par Philippe le Bel</head>
               <argument>
                 <p>Philippe le Bel confirme l’échange que font Guy, chevalier, sire du Plessier de
                   Brion<note n="828_1"><p>Canton de Ribécourt, Oise.</p></note> et
@@ -11880,7 +11882,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFRÉRIE DE LA TABLE-DIEU DE COMPIÈGNE<lb/>MAISON SUR LE CHANGE</head>
+              <head>Confrérie de la table-Dieu de Compiègne <lb/>maison sur le changé</head>
               <argument>
                 <p>Etienne Lardés, prévôt et maire de Compiègne, d’accord avec les jurés de la ville, donne,
                   moyennant un cens annuel et perpétuel de dix livres parisis payables en deux termes à la
@@ -11939,7 +11941,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TERRES DE CHOISY VENDUES À L’ABBAYE<lb/>DE SAINT-JEAN-DES-VIGNES-LES-COMPIÈGNE</head>
+              <head>Terres de Choisy vendues à l’abbaye <lb/>de Saint-Jean-des-vignes-les-Compiègne</head>
               <argument>
                 <p>Jean le Convers et Marie, sa femme, habitants de Choisy, vendent à l’abbaye de Saint-Jean
                   des Vignes-lès-Compiègne des terres arables au terroir de Choisy. Philippe le Bel approuve le
@@ -11982,7 +11984,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL — LETTRES<lb/>D’AMORTISSEMENT</head>
+              <head>Le manoir de Mareuil — lettres <lb/>d’amortissement</head>
               <argument>
                 <p>Philippe le Bel accorde à Pierre de Chambly, seigneur de Viarmes, son chambellan, des
                   lettres d’amortissement pour sa maison de
@@ -12033,8 +12035,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR ET LES TERRES DE MAREUIL-LES-RESSONS<lb/>GARANTIE OFFERTE PAR CATHERINE,<lb/>DAME
-                DE MOUSTIERS, FEMME DE GUY<lb/>DU PLESSIER DE BRION</head>
+              <head>Le manoir et les terres de Mareuil-les-Ressons <lb/>garantie offerte par Catherine, <lb/>Dame
+                de Moustiers, femme de Guy <lb/>du Plessier de Brion</head>
               <argument>
                 <p>Guy, sire du Plessie de Brion chevalier, et Catherine, sa femme, dame de Moustiers, ont cédé
                   en échange à Pierre de Chambly, seigneur de Viarmes, chevalier, chambellan du roi, leur
@@ -12123,8 +12125,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR ET LES TERRES<lb/>DE MAREUIL-LES-RESSONS — COPIE AUTHENTIQUÉE<lb/>DU PREMIER
-                ÉCHANGE</head>
+              <head>Le manoir et les terres <lb/>de Mareuil-les-Ressons — Copie authentiquée <lb/>du premier
+                échange</head>
               <argument>
                 <p>Herman de Quierzy, sire de Muret, et Guillaume le Boutillier, sire de Chantilly, vidiment
                   l’échange fait entre Guy du Plessier de Brion et l’abbaye de Saint-Corneille aux terroirs de
@@ -12173,7 +12175,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN D’ESTRAON ET HARY</head>
+              <head>Le moulin d’Estraon et Hary</head>
               <argument>
                 <p>Gobers dit Sarrazins, châtelain du roi à Laon, notifie que Laurence d’Estraon, veuve de Jean
                   Parchemin, demeurant à Pierrepont a vendu à Berte de Lusci, moyennant vingt livres tournois,
@@ -12247,8 +12249,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL RENDU À L’ABBAYE<lb/>DE SAINT-CORNEILLE<lb/>LETTRES DE PIERRE DE
-                CHAMBLY</head>
+              <head>Le manoir de Mareuil rendu à l’abbaye <lb/>de Saint-Corneille <lb/>lettres de Pierre de
+                Chambly</head>
               <argument>
                 <p>Pierre de Chambly, chevalier, sire de Viarmes, et Jeanne, sa femme, ont donné en échange à
                   Guy du Plessier de Brion, chevalier, et Catherine, sa femme, dame de Moustiers, cent livres
@@ -12354,8 +12356,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES CENT LIVRES DE RENTE SUR LES TERRES<lb/>DE VIARMES, COURCELLES ET LIVRY<lb/>SAISINE EN
-                FAVEUR DE SAINT-CORNEILLE</head>
+              <head>Les cent livres de rente sur les terres <lb/>de Viarmes, Courcelles et Livry <lb/>saisine en
+                faveur de Saint-Corneille</head>
               <argument>
                 <p>Guy du Plessier de Brion, chevalier, et Catherine, sa femme, dame de Moustiers, se
                   dessaisissent en la main de Pierre de Moustiers de Chambli, bailli de Pierre de Chambli,
@@ -12409,8 +12411,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL RENDU À L’ABBAYE<lb/>DE SAINT-CORNEILLE<lb/>LETTRES DE GUY DU PLESSIER
-                DE BRION</head>
+              <head>Le manoir de Mareuil rendu à l’abbaye <lb/>de Saint-Corneille <lb/>lettres de Guy du Plessier
+                de Brion</head>
               <argument>
                 <p>Guy du Plessier de Brion, chevalier, et Catherine, sa femme, dame de Moustiers, — après
                   avoir cédé à l’abbaye de Saint-Corneille leur manoir de
@@ -12533,8 +12535,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL-LES-RESSONS<lb/>NOTIFICATION DE LA GARANTIE DONNÉE<lb/>À L’ABBAYE DE
-                SAINT-CORNEILLE</head>
+              <head>Le manoir de Mareuil-les-Ressons <lb/>notification de la garantie donnée <lb/>à l’abbaye de
+                Saint-Corneille</head>
               <argument>
                 <p>Henri le Fort et Robert Hariaux, gardes du sceau des prévôtés de Compiègne, de Choisy, de
                   Béthisy et de Verberie, notifient les échanges faits successivement par Guy du Plessier de
@@ -12589,7 +12591,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’INSTITUTION ET LA DESTITUTION DU MAÎTRE<lb/>DE LA LÉPROSERIE DE COMPIÈGNE</head>
+              <head>L’institution et la destitution du maître <lb/>de la léproserie de Compiègne</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, ayant revendiqué le droit de nommer et de révoquer le
                   maître de la léproserie, sont déboutés de leurs <pb n="274"/>prétentions par un arrêt
@@ -12651,8 +12653,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL-LES-RESSONS<lb/>LE MANOIR DU BOIS DE LIHUS OFFERT EN GARANTIE<lb/>À
-                L’ABBAYE DE SAINT-CORNEILLE</head>
+              <head>Le manoir de Mareuil-les-Ressons <lb/>le manoir du bois de Lihus offert en garantie <lb/>à
+                l’abbaye de Saint-Corneille</head>
               <argument>
                 <p>Henri le Fort et Robert Hariaus, gardes du sceau des prévôtés de Compiègne, Choisy, Béthisy
                   et Verberie délivrent un nouveau titre des échanges faits par Guy du Plessier de Brion et
@@ -12703,7 +12705,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL-LES-RESSONS<lb/>ÉCHANGES ET GARANTIE</head>
+              <head>Le manoir de Mareuil-les-Ressons <lb/>échanges et garantie</head>
               <argument>
                 <p>Henri le Fort et Robert Hariaus, gardes du sceau des prévôtés de Compiègne, Choisy, Béthisy
                   et Verberie, notifient les contrats d’échanges dont fut l’objet le manoir de
@@ -12758,8 +12760,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR DE MAREUIL-LES-RESSONS<lb/>NOUVELLE SAISINE PRISE PAR JEAN MAUFILASTRE<lb/>AU NOM
-                DE SAINT-CORNEILLE</head>
+              <head>Le manoir de Mareuil-les-Ressons <lb/>nouvelle saisine prise par Jean Maufilastre <lb/>au nom
+                de Saint-Corneille</head>
               <argument>
                 <p>Henri le Fort et Robert Hariaus notifient que Guy du Plessier de Brion et Catherine de
                   Moustiers, sa femme, se sont dessaisis de leur terre de Mareuil entre les mains de Jean
@@ -12807,7 +12809,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TRANSPORT DE VIN PAR LA RIVIÈRE D’OISE</head>
+              <head>Transport de vin par la rivière d’Oise</head>
               <argument>
                 <p>Philippe le Bel déclare que la permission qu’ont accordée le maire et les jurés de Compiègne
                   à Raoul de Clermont, seigneur de Nesle, connétable de France, de faire passer en franchise
@@ -12856,7 +12858,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ROYE-SUR-MATZ ET MANCEAU — VENTE<lb/>À SAINT-CORNEILLE</head>
+              <head>Roye-sur-Matz et Manceau — vente <lb/>à Saint-Corneille</head>
               <argument>
                 <p>Philippe le Bel, pour ôter à l’abbaye de Saint-Corneille toute matière à contestation, lui
                   vend moyennant cinq cents livres tournois, tout ce qui lui appartient au village de
@@ -12920,7 +12922,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES MALHEURS DE NOYON</head>
+              <head>Les malheurs de Noyon</head>
               <argument>
                 <p>Philippe le Bel, touché de l’état misérable des habitants de Noyon, ruinés par les ravages
                   d’un effrayant incendie, par la voracité des usuriers et par d’autres fléaux encore, charge
@@ -12981,8 +12983,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE TERRES ENTRE L’ABBAYE<lb/>DE SAINT-CORNEILLE ET CELLE DE CHAALIS,<lb/>AU
-                TRANLOY</head>
+              <head>Échange de terres entre l’abbaye <lb/>de Saint-Corneille et celle de Chaalis, <lb/>au
+                Tranloy</head>
               <argument>
                 <p>Pierre du Bois, abbé de Saint-Corneille, échange avec Renaud de Rocquemont, abbé de Chaalis,
                   des terres arables au Tranloy<note n="846_1"><p>Ecart de
@@ -13122,7 +13124,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXPLICATIONS DONNÉES PAR LE PARLEMENT<lb/>SUR UN PRÉCÉDENT ARRÊT</head>
+              <head>Explications données par le Parlement <lb/>sur un précédent arrêt</head>
               <argument>
                 <p>La Cour de Parlement n’ayant rien statué dans son arrêt du mois de mars 1293 relativement à
                   la saisie des meubles et cateux au tréfonds de Saint-Corneille pour défaut de payement de la
@@ -13210,7 +13212,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN DE CANLY</head>
+              <head>Le moulin de Canly</head>
               <argument>
                 <p>Raoul, sire de Fayel, renonce en faveur de l’abbaye de Saint-Corneille, à tous les droits
                   qu’il pouvait avoir sur le moulin de
@@ -13252,7 +13254,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MEURTRE DE JEAN DE CASTES<lb/>À ROYE-SUR-MATZ</head>
+              <head>Le meurtre de Jean de Castes <lb/>à Roye-sur-Matz</head>
               <argument>
                 <p>L’abbé de Saint-Corneille avait porté plainte au Parlement contre le bailli de Vermandois
                   qui l’empêchait de juger le meurtre de Jean de Castes, écuyer, commis à Roye-sur-Matz sur le
@@ -13300,7 +13302,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JURIDICTION TEMPORELLE</head>
+              <head>La juridiction temporelle</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, en désaccord une fois de plus avec l’abbaye de
                   Saint-Corneille, sur divers points de la juridiction temporelle, après avoir soumis leurs
@@ -13397,8 +13399,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PLEINS POUVOIRS DONNÉS PAR LA VILLE<lb/>DE COMPIÈGNE POUR PLAIDER DEVANT<lb/>LE PARLEMENT
-                CONTRE LES RELIGIEUX DE CHAALIS</head>
+              <head>Pleins pouvoirs donnés par la ville <lb/>de Compiègne pour plaider devant <lb/>le Parlement
+                contre les religieux de Chaalis</head>
               <argument>
                 <p>Le maire et les jurés de la ville de Compiègne constituent Henri Aucher, Jean le Changeur,
                   Jean de Paris, Simon le Colporteur, Jean de Gournay et Jean Locquet, leurs procureurs
@@ -13462,7 +13464,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA QUERELLE DU MINAGE — CHOIX DE JEAN<lb/>DE MONTIGNY POUR ARBITRE</head>
+              <head>La querelle du minage — choix de Jean <lb/>de Montigny pour arbitre</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne exposent le litige qui, depuis longtemps, existe entre
                   eux et les Cisterciens de Chaalis, au sujet du droit de minage. Ce litige, soumis par eux,
@@ -13540,7 +13542,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE LA VILLE DE COMPIÈGNE AVEC<lb/>L’ABBAYE DE CHAALIS POUR LE MINAGE</head>
+              <head>Accord de la ville de Compiègne avec <lb/>l’abbaye de Chaalis pour le minage</head>
               <argument>
                 <p>Le maire et les jurés de la ville de Compiègne font la paix avec l’abbaye de Chaalis
                   relativement au minage sur les bases suivantes :</p>
@@ -13634,7 +13636,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE LA VILLE DE COMPIÈGNE AVEC<lb/>L’ABBAYE DE CHAALIS POUR LE MINAGE</head>
+              <head>Accord de la ville de Compiègne avec <lb/>l’abbaye de Chaalis pour le minage</head>
               <argument>
                 <p>Un <hi rend="i">vidimus</hi> de l’accord a été délivré le 30 mars
                   de la même année. Il était scellé sur double queue de parchemin en cire brune d’un sceau
@@ -13679,7 +13681,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE LA VILLE DE COMPIÈGNE AVEC<lb/>L’ABBAYE DE CHAALIS POUR LE MINAGE</head>
+              <head>Accord de la ville de Compiègne avec <lb/>l’abbaye de Chaalis pour le minage</head>
               <argument>
                 <p>Il faut croire que les religieux de Chaalis rencontrèrent de l’opposition chez les minagers,
                   car à deux reprises, le 4 mars et le 13 juin 1303, le roi enjoignit au bailli de Senlis de
@@ -13717,7 +13719,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE LA VILLE DE COMPIÈGNE AVEC<lb/>L’ABBAYE DE CHAALIS POUR LE MINAGE</head>
+              <head>Accord de la ville de Compiègne avec <lb/>l’abbaye de Chaalis pour le minage</head>
               <argument>
                 <p>Il faut croire que les religieux de Chaalis rencontrèrent de l’opposition chez les minagers,
                   car à deux reprises, le 4 mars et le 13 juin 1303, le roi enjoignit au bailli de Senlis de
@@ -13763,8 +13765,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DÉPART DES TRINITAIRES DE L’HÔTEL-DIEU<lb/>DE COMPIÈGNE — LES TRENTE MUIDS<lb/>DE
-                MOUTURE QUE LEUR DONNE PHILIPPE LE BEL<lb/>SUR LES MOULINS DE VERBERIE</head>
+              <head>Le départ des Trinitaires de l’Hôtel-Dieu <lb/>de Compiègne — les trente muids <lb/>de
+                mouture que leur donné Philippe le Bel <lb/>sur les moulins de Verberie</head>
               <argument>
                 <p>Philippe le Bel ratifie le jugement prononcé par Etienne de Suisy, archidiacre de Bruges, au
                   diocèse de Tournay, dans la querelle existante entre l’abbaye de Saint-Corneille et les
@@ -13878,7 +13880,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION D’UN PRIEURÉ À ROYALLIEU</head>
+              <head>Fondation d’un prieuré à Royallieu</head>
               <argument>
                 <p>Philippe le Bel, voulant témoigner la grande estime qu’il a pour le saint ordre du Val des
                   Ecoliers, établit un couvent de vingt frères de cet ordre, sous l’autorité d’un prieur, dans
@@ -14008,7 +14010,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRES DE SAUVEGARDE À L’ABBÉ DE SAINT-CORNEILLE<lb/>CONTRE LES CENSURES PAPALES</head>
+              <head>Lettres de sauvegarde à l’abbé de Saint-Corneille <lb/>contre les censures papales</head>
               <argument>
                 <p>Philippe le Bel prend sous sa protection Pierre du Bois ou d’Estrées, abbé de
                   Saint-Corneille, les prélats et les barons de son royaume qui ont avec lui interjeté appel au
@@ -14128,7 +14130,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE GUILLAUME DE MOURET À JAUX</head>
+              <head>Le fief de Guillaume de Mouret à Jaux</head>
               <argument>
                 <p>Philippe le Bel approuve l’acquisition que viennent de faire les religieuses de Saint-Jean
                   des Vignes-lès-Compiègne du fief que Guillaume de <pb n="307"/>Mouret possédait à
@@ -14173,7 +14175,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ADHÉSION DE L’ABBAYE DE SAINT-CORNEILLE<lb/>À L’APPEL AU FUTUR CONCILE</head>
+              <head>Adhésion de l’abbaye de Saint-Corneille <lb/>à l’appel au futur concile</head>
               <argument>
                 <p>Le prieur et les religieux de Saint-Corneille réunis en Chapitre, après avoir entendu les
                   explications de Pierre de Laon, archidiacre de
@@ -14282,7 +14284,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ADHÉSION DE LA VILLE DE COMPIÈGNE<lb/>À L’APPEL AU FUTUR CONCILE</head>
+              <head>Adhésion de la ville de Compiègne <lb/>à l’appel au futur concile</head>
               <argument>
                 <p>A la suite de l’assemblée, tenue au Louvre le 15 juin 1303, en présence de Philippe le Bel,
                   le maire et les jurés de Compiègne, bouleversés par les violentes accusations lancées contre
@@ -14360,8 +14362,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ADHÉSION DES RELIGIEUSES AUGUSTINES<lb/>DE L’ABBAYE DE SAINT JEAN DES
-                VIGNES-LES-COMPIÈGNE<lb/>À L’APPEL AU FUTUR CONCILE</head>
+              <head>Adhésion des religieuses Augustines <lb/>de l’abbaye de Saint Jean des
+                vignes-les-Compiègne <lb/>à l’appel au futur concile</head>
               <argument>
                 <p>Le jeudi après la fête de Sainte Marie Madeleine, 25 juillet, Pierre de Laon, archidiacre de
                   Beaugency, se rendit de bon matin au couvent de Saint-Jean-Baptiste, hors des murs de
@@ -14412,8 +14414,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ADHÉSION DES FRÈRES MINEURS ET DES FRÈRES<lb/>PRÊCHEURS DE COMPIÈGNE<lb/>À L’APPEL AU FUTUR
-                CONCILE</head>
+              <head>Adhésion des frères mineurs et des frères <lb/>Prêcheurs de Compiègne <lb/>à l’appel au futur
+                concile</head>
               <argument>
                 <p>Jean, gardien des Frères Mineurs de Compiègne, et tous les religieux de son couvent, Gobert
                   de Rosoy, Pierre de Margival, Jean de Compiègne, Jean de Condé, Godefroy de Laon, Alard de
@@ -14489,8 +14491,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SUBSIDES OFFERTS PAR SAINT-CORNEILLE POUR<lb/>L’ARMÉE DE FLANDRE<lb/>GRATITUDE DE PHILIPPE
-                LE BEL</head>
+              <head>Subsides offerts par Saint-Corneille pour <lb/>l’armée de Flandre <lb/>gratitude de Philippe
+                le Bel</head>
               <argument>
                 <p>Philippe le Bel, pour témoigner sa reconnaissance aux religieux de Saint-Corneille qui lui
                   ont fourni des subsides pour son armée de Flandre et la défense de ses Etats, les autorise à
@@ -14570,7 +14572,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION DU PRIEURÉ DE ROYALLIEU<lb/>AGRANDISSEMENTS</head>
+              <head>Fondation du prieuré de Royallieu <lb/>agrandissements</head>
               <argument>
                 <p>Philippe le Bel mande au prévôt de Compiègne et à Pierre Viderue d’aller à la
                   Villeneuve-les-Compiègne, depuis appelée Royallieu, et d’y acheter les masures et terres
@@ -14617,7 +14619,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TABLE-DIEU — MAISONS DANS LA RUE<lb/>AUX CHARRONS</head>
+              <head>La table-Dieu — maisons dans la rue <lb/>aux charrons</head>
               <argument>
                 <p>Devant Robert de Saint-Omer, garde du sceau des prévôtés de Compiègne, Choisy, Béthisy et
                   Verberie, — Jacques Cornet, fils de feu Jean Cornet, bourgeois de Compiègne, vend moyennant
@@ -14700,8 +14702,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE DROITS DE CHAMPART ENTRE<lb/>LE PRIEURÉ DE ROYALLIEU<lb/>ET L’HÔTEL-DIEU DE
-                COMPIÈGNE</head>
+              <head>Échange de droits de champart entre <lb/>le prieuré de Royallieu <lb/>et l’Hôtel-Dieu de
+                Compiègne</head>
               <argument>
                 <p>Philippe le Bel vient d’obtenir du prieur, des frères et des sœurs de l’Hôtel-Dieu de
                   Compiègne l’abandon de leurs droits de champart sur huit mines et demie de terre avec la
@@ -14773,8 +14775,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TABLE-DIEU DE COMPIÈGNE<lb/>LES QUATRE LIVRES, DEUX SOUS, HUIT DENIERS<lb/>DE CENS,
-                DONNÉS PAR JEANNE LARDÉE</head>
+              <head>La table-Dieu de Compiègne <lb/>les quatre livres, deux sous, huit deniers <lb/>de cens,
+                donnés par Jeanne Lardée</head>
               <argument>
                 <p>Devant Robert de Saint Omer et Jean Roussel, notaire, Jeanne Lardée, béguine, fille de
                   défunt Ernoul Lardé, bourgeois de Compiègne, donne pour Dieu et en perpétuelle aumône à la
@@ -14871,8 +14873,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PASSAGE EN FRANCHISE DES BATEAUX<lb/>D’OURSCAMPS DEVANT COMPIÈGNE<lb/>LES PÂTURAGES DE
-                MAREST — ACCORD AVEC<lb/>SAINT-CORNEILLE</head>
+              <head>Le passage en franchise des bateaux <lb/>d’Ourscamps devant Compiègne <lb/>les pâturages de
+                Marest — accord avec <lb/>Saint-Corneille</head>
               <argument>
                 <p>Il a été convenu, en juin 1243, entre les bénédictins de Saint-Corneille et les cisterciens
                   d’Ourscamps, que ces derniers pourraient faire passer en franchise par la rivière d’Oise,
@@ -14997,7 +14999,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA VENTE DU VIN — DROITS À PERCEVOIR<lb/>PAR LA VILLE</head>
+              <head>La vente du vin — droits à percevoir <lb/>par la ville</head>
               <argument>
                 <p>Le maire et les jurés de la ville de Compiègne ayant obtenu du roi l’autorisation de
                   percevoir une maille parisis, pour chaque lot (environ 3 litres 1/2) de vin, vendu au détail
@@ -15044,7 +15046,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROCURATION DONNÉE PAR LA VILLE DE COMPIÈGNE<lb/>À SES DÉPUTÉS AUX ÉTATS DE TOURS</head>
+              <head>Procuration donnée par la ville de Compiègne <lb/>à ses députés aux états de Tours</head>
               <argument>
                 <p>Le maire, les jurés et toute la commune de Compiègne délèguent deux bourgeois de leur ville,
                   Jean, dit Davesnes, et Maître Jean, dit de Paris, pour les représenter à l’assemblée générale
@@ -15164,8 +15166,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROCURATION DONNÉE PAR GASSON D’ESTRÉES,<lb/>ABBÉ DE SAINT-CORNEILLE<lb/>À GARNIER DE LA
-                CHAUMETTE, DÉPUTÉ<lb/>AUX ÉTATS DE TOURS</head>
+              <head>Procuration donnée par Gasson d’Estrées, <lb/>abbé de Saint-Corneille <lb/>à Garnier de la
+                Chaumette, député <lb/>aux états de Tours</head>
               <argument>
                 <p>Gasson d’Estrées, abbé de Saint-Corneille, donne plein pouvoir à Garnier de la Chaumette,
                   moine et prévôt de son monastère, qu’il constitue son procureur et envoyé spécial auprès de
@@ -15245,8 +15247,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES REDEVANCES EN AVOINE ET EN ARGENT<lb/>DUES PAR LE PRIEURÉ DE ROYALLIEU À SIMON<lb/>DE
-                CONNEGIS, AUX RELIGIEUSES<lb/>DE SAINT-JEAN-DES-VIGNES ET À L’HÔTEL-DIEU<lb/>DE COMPIÈGNE</head>
+              <head>Les redevances en avoine et en argent <lb/>dues par le prieuré de Royallieu à Simon <lb/>de
+                Connegis, aux religieuses <lb/>de Saint-Jean-des-vignes et à l’Hôtel-Dieu <lb/>de Compiègne</head>
               <argument>
                 <p>Philippe IV le Bel vient de céder à perpétuité et sans charge aux religieux de l’ordre du
                   Val des Ecoliers, ses chapelains, établis à la Neuville-au-Bois (Royallieu), tout le produit
@@ -15317,7 +15319,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>VINS DÉCHARGÉS À COMPIÈGNE</head>
+              <head>Vins déchargés à Compiègne</head>
               <argument>
                 <p>Jean le Lorgne, bourgeois de Compiègne, et Vincent de Passy, reconnaissent devant Robert de
                   Saint-Omer, garde-scel, et Jean Roussel, notaire, que c’est avec l’autorisation de l’abbé de
@@ -15373,7 +15375,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES VIGNES DE GUILLAUME DE MOURET,<lb/>RÉGNIER DE MOURET ET JEAN DE MOURET À JAUX</head>
+              <head>Les vignes de Guillaume de Mouret, <lb/>Régnier de Mouret et Jean de Mouret à Jaux</head>
               <argument>
                 <p>Devant Robert de Saint-Omer, garde du sceau des prévôtés de Compiègne et de Choisy, et Jean
                   Roussel, notaire, Guillaume de Mouret, Régnier de Mouret et Jean de Mouret, frères, demeurant
@@ -15432,7 +15434,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE LA TABLE-DIEU<lb/>SISE EN LA RUE-NEUVE — BAIL À CENS</head>
+              <head>La maison de la table-Dieu <lb/>sise en la rue-Neuve — bail à cens</head>
               <argument>
                 <p>Devant Robert de Saint-Omer et Jean Roussel, Gilles le Camus, bourgeois de Compiègne, et
                   Marie, sa femme, reconnaissent avoir pris moyennant un cens annuel et perpétuel de quatre
@@ -15518,7 +15520,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONDAMNATION DE RAOUL DE FARNIERS POUR<lb/>INJURES ENVERS LE MAIRE DE COMPIÈGNE</head>
+              <head>Condamnation de Raoul de Farniers pour <lb/>injures envers le maire de Compiègne</head>
               <argument>
                 <p>Raoul de Farniers s’est rebellé contre le maire de Compiègne et l’a injurié parce que ce
                   magistrat, exerçant sa fonction de justicier, a fait saisir son cheval dans la ville de
@@ -15565,7 +15567,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES AMÉSURES ET LES AMENDES</head>
+              <head>Les amésures et les amendes</head>
               <argument>
                 <p>Les amésures des hôtes ou tenanciers de l’abbaye de Saint-Corneille ont été l’occasion de
                   plus d’un conflit entre les religieux et la ville.</p>
@@ -15629,7 +15631,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES EXACTIONS DU RECEVEUR DES TAXES<lb/>RAOUL DE FARNIERS</head>
+              <head>Les exactions du receveur des taxes <lb/>Raoul de Farniers</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne, avec nombre de gens de la prévôté du Beauvaisis et de
                   Compiègne, ont porté plainte au Parlement contre Raoul de Farniers, prévôt ou receveur des
@@ -15717,8 +15719,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PASSAGE EN FRANCHISE DES BATEAUX<lb/>D’OURSCAMPS DEVANT COMPIÈGNE — ACCORD<lb/>AVEC LA
-                COMMUNE</head>
+              <head>Le passage en franchise des bateaux <lb/>d’Ourscamps devant Compiègne — accord <lb/>avec la
+                commune</head>
               <argument>
                 <p>Michel Loutrans, maire et prévôt de Compiègne, voyant que l’abbaye d’Ourscamps, sans tenir
                   compte de ses réclamations, et sans payer aucun <pb n="342"/>droit, continuait à faire
@@ -15839,7 +15841,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE PIERRE DE CANLI À COMPIÈGNE</head>
+              <head>Le fief de Pierre de Canli à Compiègne</head>
               <argument>
                 <p>Raoul le Caron de Compiègne, ayant acquis le fief de Pierre de Canli, sis à Compiègne, tenu
                   du roi en foi et en hommage, en la mouvance du château de Pierrefonds, prétend que la justice
@@ -15962,7 +15964,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INJURE AU SERGENT ROYAL</head>
+              <head>Injure au sergent royal</head>
               <argument>
                 <p>Les maire et jurés de Compiègne sont par le bailli de Senlis traduits devant le Parlement,
                   pour avoir injurié et maltraité Jean de Fécamp, sergent du roi.</p>
@@ -16044,8 +16046,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DÎMES DE ROYALLIEU, LES OFFRANDES<lb/>DE LA CHAPELLE, LES LUMINAIRES ET
-                TENTURES<lb/>DES SERVICES FUNÈBRES</head>
+              <head>Les dîmes de Royallieu, les offrandes <lb/>de la chapelle, les luminaires et
+                tentures <lb/>des services funèbres</head>
               <argument>
                 <p>Gasson d’Estrées, abbé de Saint-Corneille, à la prière de Philippe le Bel, conclut avec les
                   chanoines réguliers du monastère du Val des Ecoliers, récemment fondé par le roi à la
@@ -16143,7 +16145,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>IMPÔT SUR LE VIN</head>
+              <head>Impôt sur le vin</head>
               <argument>
                 <p>Philippe-le-Bel a permis à la commune de Compiègne de percevoir, pendant deux ans, une obole
                   sur chaque lot de vin, vendu au broc, et deux sous parisis sur chaque tonneau de vin vendu en
@@ -16198,8 +16200,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COMMUNE DE COMPIÈGNE ET L’ABBAYE<lb/>DE SAINT-CORNEILLE DEVANT LE PARLEMENT<lb/>DU
-                CARÊME EN 1312<lb/>PLAINTES DE LA COMMUNE</head>
+              <head>La commune de Compiègne et l’abbaye <lb/>de Saint-Corneille devant le Parlement <lb/>du
+                carême en 1312 <lb/>plaintes de la commune</head>
               <argument>
                 <p>Malgré le grand jugement de juin 1291 et les interprétations de ce jugement données en mars
                   1293 et janvier 1300, la paix était loin de régner entre la commune de Compiègne et l’abbaye
@@ -16453,8 +16455,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COMMUNE DE COMPIÈGNE ET L’ABBAYE<lb/>DE SAINT-CORNEILLE DEVANT LE PARLEMENT<lb/>DU
-                CARÊME EN 1312<lb/>RÉCLAMATIONS DE L’ABBAYE</head>
+              <head>La commune de Compiègne et l’abbaye <lb/>de Saint-Corneille devant le Parlement <lb/>du
+                carême en 1312 <lb/>réclamations de l’abbaye</head>
               <argument>
                 <p>Le Parlement ayant invité les religieux de Saint-Corneille à répondre aux griefs de la
                   commune de Compiègne, entend les explications de l’abbaye et la réplique de la ville, puis
@@ -16686,7 +16688,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DE MAREUIL — DÉSISTEMENT DE WAUTIER<lb/>ET HUGUES D’ANTOING</head>
+              <head>La terre de Mareuil — désistement de Wautier <lb/>et Hugues d’Antoing</head>
               <argument>
                 <p>Wautier d’Antoing, sire du Bois de Lihus et de Bellonne, et Hugues d’Antoing, son frère,
                   renoncent à leurs prétentions sur le manoir et la terre de
@@ -16844,7 +16846,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES CINQ ÉTAUX DE LA TABLE-DIEU</head>
+              <head>Les cinq étaux de la table-Dieu</head>
               <argument>
                 <p>Jean des Granges, prieur de Royallieu, aumônier du roi, notifie un arrangement conclu par
                   son couvent avec la ville de Compiègne, au sujet de cinq étaux dont la ville s’est emparé, au
@@ -16944,7 +16946,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MANOIR D’ATTIN</head>
+              <head>Le manoir d’Attin</head>
               <argument>
                 <p>Jean de Recques en Boulonnais, écuyer, avait pris à ferme pour neuf ans, des religieux de
                   Saint-Corneille leur manoir d’Attin<note n="887_1"><p>Canton
@@ -17015,7 +17017,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TABLE DIEU — LE CENS DE DIX SOUS ASSIS<lb/>SUR LA MAISON DE MATHIEU DE PAS</head>
+              <head>La table Dieu — le cens de DIX sous assis <lb/>sur la maison de Mathieu de pas</head>
               <argument>
                 <p>Jean Davesnes, Thomas Réniers et Jean le Caron, prévôts de la Table-Dieu de Compiègne, ne
                   pouvant s’entendre avec Mathieu de Pas et Ysabeau, sa femme, au sujet de douze sous parisis
@@ -17089,7 +17091,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’OBIT DE MARIE POUILLETTE À L’HÔTEL-DIEU</head>
+              <head>L’obit de Marie Pouillette à l’Hôtel-Dieu</head>
               <argument>
                 <p>Marie Pouillette, béguine, fille de feu Jean Pouillet, bourgeois de Compiègne, voulant
                   montrer l’affection qu’elle porte au prieur et à la prieure, aux religieux et aux religieuses
@@ -17174,7 +17176,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DEUX ARPENTS DE TERRE À LA BRÉVIAIRE,<lb/>DONNÉS À L’HÔTEL-DIEU</head>
+              <head>Deux arpents de terre à la bréviaire, <lb/>donnés à l’Hôtel-Dieu</head>
               <argument>
                 <p>Louis X le Hutin a donné aux frères et sœurs de l’Hôtel-Dieu du Pont de Compiègne deux
                   arpents (1 hectare, 02
@@ -17242,8 +17244,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARTICLES AJOUTÉS À L’ACCORD FAIT PAR<lb/>LA VILLE DE COMPIÈGNE AVEC L’ABBAYE
-                DE<lb/>CHAALIS, AU SUJET DU MINAGE ET DES MESURES</head>
+              <head>Articles ajoutés à l’accord fait par <lb/>la ville de Compiègne avec l’abbaye
+                de <lb/>Chaalis, au sujet du minage et des mesures</head>
               <argument>
                 <p>Le maire, les jurés et la commune de Compiègne, n’ayant souscrit qu’à regret, en janvier
                   1302, à l’arrangement proposé par l’abbaye de Chaalis relativement au minage et aux mesures,
@@ -17339,7 +17341,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES SIX ARPENTS ET DEMI DE PRÉ ET MARAIS<lb/>À LA BUVRIÈRE</head>
+              <head>Les six arpents et demi de pré et marais <lb/>à la Buvrière</head>
               <argument>
                 <p>Philippe V le Long, pour avoir part aux bonnes œuvres des religieux de l’Hôtel-Dieu, leur
                   donne deux arpents et demi (1 hectare, 27
@@ -17390,7 +17392,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>APPEL AU PAPE</head>
+              <head>Appel au pape</head>
               <argument>
                 <p>Gasson d’Estrées, abbé de Saint-Corneille, devant Jean de Rouvillers, prieur, Pierre de
                   Nonnette, Adam de Séchelles, Guillaume de Saucourt, Jean Jacobin, Raoul de la Tournelle, Jean
@@ -17451,8 +17453,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RENTE DE DEUX CENT SOIXANTE LIVRES<lb/>DE CIRE CÉDÉE PAR LE ROI<lb/>À SON CUISINIER SUR
-                LA PRÉVÔTÉ DE MARGNY</head>
+              <head>La rente de deux cent soixante livres <lb/>de cire cédée par le roi <lb/>à son cuisinier sur
+                la prévôté de Margny</head>
               <argument>
                 <p>Philippe V le Long a donné par échange à son cuisinier, ou maître queux, Pierre de Matigny,
                   cent soixante douze livres quatre cinquièmes de cire qui lui étaient servies annuellement sur
@@ -17525,7 +17527,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE VINGT ARPENTS DE BRUYÈRES, MARAIS<lb/>ET AULNAIES À L’HÔTEL-DIEU</head>
+              <head>Don de vingt arpents de Bruyères, marais <lb/>et aulnaies à l’Hôtel-Dieu</head>
               <argument>
                 <p>Philippe V le Long, voulant pourvoir au salut de son âme, au salut des âmes de ses parents
                   et de sa femme, Jeanne de Bourgogne, donne aux prieur, frères et sœurs de l’Hôtel-Dieu, en
@@ -17589,7 +17591,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA VILLE DE COMPIÈGNE MISE EN RÉGIE<lb/>POUR DOUZE ANS</head>
+              <head>La ville de Compiègne mise en régie <lb/>pour douze ans</head>
               <argument>
                 <p>La ville de Compiègne, écrasée de dettes, par elle contractées au service du roi, pendant
                   les guerres, harcelée d’ailleurs par de nombreux créanciers, a supplié Philippe-le-Long de
@@ -17686,7 +17688,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES FIEFS DES DOMMELIERS ET DE BIENVILLE</head>
+              <head>Les fiefs des Dommeliers et de Bienville</head>
               <argument>
                 <p>Ansel de Morienval, doyen de Saint-Germain-l’Auxerrois à Paris, et Nicolas de Braye,
                   chanoine de Tournay, clercs du roi, ont reçu de Philippe V le Long, en janvier 1317 (1318 n.
@@ -17751,7 +17753,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RÉPARATION D’INSULTES FAITES AU MAIRE<lb/>DE COMPIÈGNE</head>
+              <head>Réparation d’insultes faites au maire <lb/>de Compiègne</head>
               <argument>
                 <p>Pierre d’Auxerre, nommé par le roi maire de la ville de Compiègne, s’est plaint au Parlement
                   de l’opposition qu’il a rencontrée, lorsqu’il s’est rendu à l’assemblée de la commune pour y
@@ -17870,7 +17872,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>IMPÔT SUR LE VIN</head>
+              <head>Impôt sur le vin</head>
               <argument>
                 <p>Le roi avait autorisé le maire et la commune de Compiègne à lever, pendant douze ans, sur
                   chaque tonneau de vin amené et vendu à Compiègne, un impôt de deux sous, sur chaque queue de
@@ -17924,7 +17926,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>VENTE DE BIENS À COMPIÈGNE PAR RAOUL HARPINS<lb/>À HERBERT LESCRIVAIN</head>
+              <head>Vente de biens à Compiègne par Raoul Harpins <lb/>à Herbert Lescrivain</head>
               <argument>
                 <p>Raoul Harpins, sire d’Erquery, chevalier, panetier de France et Saintisme de Saint-Aubin,
                   dame d’Erquery, sa femme, vendent, moyennant quatre cents livres tournois, à Herbert
@@ -18082,7 +18084,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAIRIE DE MAREUIL</head>
+              <head>La mairie de Mareuil</head>
               <argument>
                 <p>Isabelle de la Quièse, femme de Jean de la Quièse de Mareuil, devant Laurent de Criquetot,
                   clerc juré de la cour épiscopale de Beauvais, déclare abandonner, moyennant quarante livres
@@ -18147,7 +18149,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>AGRANDISSEMENT DE L’ABBAYE<lb/>DE SAINT-JEAN-DES-VIGNES-LES-COMPIÈGNE</head>
+              <head>Agrandissement de l’abbaye <lb/>de Saint-Jean-des-vignes-les-Compiègne</head>
               <argument>
                 <p>Philippe V le Long, touché de compassion à la vue de la pauvreté des religieuses de
                   Saint-Jean-Baptiste-lès-Compiègne et désireux d’assurer son salut et celui des âmes de ses
@@ -18200,7 +18202,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TRANSFORMATION DE LA COMMUNE DE COMPIÈGNE<lb/>EN PRÉVÔTÉ</head>
+              <head>Transformation de la commune de Compiègne <lb/>en prévôté</head>
               <argument>
                 <p>Philippe-le-Long, après la renonciation des habitants de Compiègne à leur charte de commune,
                   établit un prévôt pour gouverner leur ville et promulgue une ordonnance en quatorze
@@ -18371,7 +18373,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA GARDE DE LA VILLE, LA VENTE DES VINS<lb/>ET LA DRAPERIE</head>
+              <head>La garde de la ville, la vente des vins <lb/>et la Draperie</head>
               <argument>
                 <p>Le bailli de Senlis et le prévôt de Compiègne ont fait ensemble le règlement suivant, pour
                   la sûreté de la ville, la vente du vin et des étoffes :</p>
@@ -18465,7 +18467,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ARRÊT DU PARLEMENT RELATIF À DES SERFS<lb/>DE L’ABBAYE DE SAINT-CORNEILLE</head>
+              <head>Arrêt du Parlement relatif à des serfs <lb/>de l’abbaye de Saint-Corneille</head>
               <argument>
                 <p>Isabelle la Villaine, femme de Jean Courtray de
                   Couloisy<note n="905_1"><p>Canton d’Attichy, Oise.</p></note> et
@@ -18600,8 +18602,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE BIENS ENTRE JEAN DE RAMERU<lb/>ÉCHANSON DU ROI ET LES RELIGIEUSES<lb/>DE
-                SAINT-JEAN-DES-VIGNES-LES-COMPIÈGNE<lb/>LETTRES D’AMORTISSEMENT DE PHILIPPE-LE-LONG</head>
+              <head>Échange de biens entre Jean de Rameru <lb/>échanson du roi et les religieuses <lb/>de
+                Saint-Jean-des-vignes-les-Compiègne <lb/>lettres d’amortissement de Philippe-le-long</head>
               <argument>
                 <p>Jean de Rameru, échanson du roi, cède aux Augustines de Saint-Jean-des-Vignes-lès-Compiègne
                   vingt-quatre sous parisis de cens sur la vigne de Jean le Paon, dit l’Ermite, près des
@@ -18660,8 +18662,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ASSISE DE COMPIÈGNE TENUE PAR LE BAILLI<lb/>DE SENLIS — JUGEMENT ARBITRAL<lb/>ENTRE LA
-                VILLE ET SAINT-CORNEILLE</head>
+              <head>Assise de Compiègne tenue par le bailli <lb/>de Senlis — jugement arbitral <lb/>entre la
+                ville et Saint-Corneille</head>
               <argument>
                 <p>Gasses, abbé de Saint-Corneille, au nom de son abbaye, et les attournés de Compiègne, Henri
                   Lescrivain, Jacques Gaignemaille, Jean de Marchières le jeune, Pierre Paon, Gilles de la
@@ -19013,8 +19015,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RENTE DE DEUX CENT SOIXANTE LIVRES<lb/>DE CIRE DONNÉE AUX CHARTREUX<lb/>DU MONT-RENAUD
-                SUR LA PRÉVÔTÉ DE MARGNY</head>
+              <head>La rente de deux cent soixante livres <lb/>de cire donnée aux Chartreux <lb/>du Mont-Renaud
+                sur la prévôté de Margny</head>
               <argument>
                 <p>Charles IV le Bel, à qui son cuisinier ou maître-queux, Pierre de Matigny ou de Mathegny, a
                   légué par testament une rente de deux cent soixante livres de cire à percevoir annuellement
@@ -19103,7 +19105,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON D’ATTIN — ENGAGEMENT<lb/>DES FERMIERS</head>
+              <head>La maison d’Attin — engagement <lb/>des fermiers</head>
               <argument>
                 <p>André de Charelles, chevalier, bailli d’Amiens, notifie que devant Pierron le Cirier et
                   Jacquemon Comterel, bourgeois de Montreuil, gardes du sceau de la prévôté de Montreuil, au
@@ -19158,7 +19160,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA SONNERIE DES CLOCHES DU BEFFROI</head>
+              <head>La sonnerie des cloches du beffroi</head>
               <argument>
                 <p>Charles IV le Bel permet à la ville de Compiègne, quoiqu’elle ne soit plus gouvernée en
                   commune mais régie en prévôté, de sonner les cloches du beffroi en cas d’incendie ou de
@@ -19198,7 +19200,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ADMINISTRATION DE LA MALADRERIE<lb/>ARRÊT DU PARLEMENT</head>
+              <head>L’administration de la maladrerie <lb/>arrêt du Parlement</head>
               <argument>
                 <p>Le procureur du roi s’est immiscé dans l’administration de la Maladrerie de Compiègne. Il a
                   même saisi et mis en la main du roi les biens de cet établissement. Les religieux de
@@ -19248,7 +19250,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TABLE-DIEU — VENTE PAR JEANNE D’AUVILLERS<lb/>DE NEUF SOUS PARISIS DE CENS</head>
+              <head>La table-Dieu — vente par Jeanne d’Auvillers <lb/>de neuf sous parisis de cens</head>
               <argument>
                 <p>Jeanne d’Auvillers, veuve de Pierre Harel de Compiègne, demeurant à Sacy-le-Petit, et ses
                   enfants Adam, Marie, Jacqueline et Colaie, vendent à la Confrérie de la Table-Dieu de
@@ -19316,7 +19318,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE CINQUANTE-DEUX CHARRETÉES DE BOIS<lb/>À L’HÔPITAL FONDÉ PAR JEAN DE RAMERU</head>
+              <head>Don de cinquante-deux charretées de bois <lb/>à l’hôpital fondé par Jean de Rameru</head>
               <argument>
                 <p>Philippe-le-Long, par charte délivrée à Royallieu le premier août 1319, a donné à Jean de
                   Rameru, son échanson, pour le récompenser de ses bons services, l’autorisation de mettre, sa
@@ -19402,7 +19404,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON D’HERBERT L’ESCRIPVAIN POUR<lb/>L’AGRANDISSEMENT<lb/>DU CIMETIÈRE DE L’HÔTEL-DIEU</head>
+              <head>Don d’Herbert l’Escripvain pour <lb/>l’agrandissement <lb/>du cimetière de l’Hôtel-Dieu</head>
               <argument>
                 <p>Devant Robert de Saint-Ouen et Jean le Poulletier, gardes des sceaux de la prévôté de
                   Compiègne. Jacqueline l’Escripvain, femme de Jean de la Chaîne, Herbert l’Escripvain et son
@@ -19453,7 +19455,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉNOMBREMENT DU FIEF D’ATTIN<note n="915_1"><p>Canton d’Etaple,
+              <head>Dénombrement du fief D’Attin<note n="915_1"><p>Canton d’Etaple,
                 Pas-de-Calais.</p></note></head>
               <argument>
                 <p>Jean d’Attin donne à l’abbaye de Saint-Corneille le dénombrement de son fief qui
@@ -19538,7 +19540,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES HOSPITALIERS DE SAINT-JEAN<lb/>DE JÉRUSALEM</head>
+              <head>Les Hospitaliers de Saint-Jean <lb/>de Jérusalem</head>
               <argument>
                 <p>Les Hospitaliers de Saint Jean de Jérusalem, — à qui furent dévolus les biens de l’ordre des
                   Templiers de Compiègne, après l’abolition de cet Ordre au Concile de Vienne ouvert en 1311, —
@@ -19630,7 +19632,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES CENS, DÎMES, TERRAGES ET JUSTICE<lb/>DE GIROMESNIL — LE CHAMPART DE VENETTE</head>
+              <head>Les cens, dîmes, terrages et justice <lb/>de Giromesnil — le champart de Venette</head>
               <argument>
                 <p>Anséric, abbé de Saint-Corneille, fait un échange avec Pierre de Cuignières, seigneur de
                   Saintines<note n="917_1"><p>Canton de Crépy, Oise.</p></note> et
@@ -19775,8 +19777,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DON FAIT PAR ISABELLE D’AIGUISY À L’ABBAYE<lb/>DE SAINT-CORNEILLE RENDU À SES
-                NEVEUX</head>
+              <head>Le don fait par Isabelle d’Aiguisy à l’abbaye <lb/>de Saint-Corneille rendu à ses
+                neveux</head>
               <argument>
                 <p>Devant Pierre Espaignans et Jean le Poulletier, gardes des sceaux à Compiègne, Raoul,
                   Philippes et Jacques d’Aiguisy, frères, ratifient le don que leur tante Isabelle d’Aiguisy,
@@ -19825,7 +19827,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ADMINISTRATION SPIRITUELLE ET TEMPORELLE<lb/>DE L’HÔTEL-DIEU DE COMPIÈGNE</head>
+              <head>L’administration spirituelle et temporelle <lb/>de l’Hôtel-Dieu de Compiègne</head>
               <argument>
                 <p>Les religieux et les religieuses de l’Hôtel-Dieu de Compiègne se refusaient à reconnaître
                   l’abbé de Saint-Corneille comme leur supérieur spirituel et temporel et prétendaient ne
@@ -20035,8 +20037,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ARRANGEMENTS DE JEANNE LARDÉE AVEC<lb/>LA TABLE-DIEU DE COMPIÈGNE ET JEAN LE
-                CARON<lb/>DE CHEVRIÈRES</head>
+              <head>Les arrangements de Jeanne Lardée avec <lb/>la table-Dieu de Compiègne et Jean le
+                Caron <lb/>de Chevrières</head>
               <argument>
                 <p>Devant Pierre Moyn et Jean le Poulletier, gardes des sceaux en la prévôté de Compiègne,
                   Raoul Batliaue, Philippe de Coudun et Jacques <pb n="445"/>Chardecoc, prévôts de la
@@ -20100,8 +20102,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RATIFICATION PAR LE PARLEMENT D’UN ACCORD<lb/>ENTRE LES ATTOURNÉS DE LA<lb/>VILLE DE
-                COMPIÈGNE ET SAINT-CORNEILLE</head>
+              <head>Ratification par le Parlement d’un accord <lb/>entre les attournés de la <lb/>ville de
+                Compiègne et Saint-Corneille</head>
               <argument>
                 <p>Sept questions, qui mettaient aux prises la ville de Compiègne et l’abbaye de
                   Saint-Corneille, ont été tranchées à l’amiable. Le Parlement, devant lequel l’accord fut
@@ -20425,7 +20427,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE ROBERT HAREL POUR LA LAMPE<lb/>DU SAINT-SACREMENT</head>
+              <head>Don de Robert Harel pour la lampe <lb/>du Saint-sacrement</head>
               <argument>
                 <p>Devant Guillaume Gormont, chevalier, garde de la prévôté de Paris, Marie, veuve de Nicolas
                   Auchez, bourgeois de Paris, donne à son frère, dom Robert Harel, moine de Saint-Corneille, un
@@ -20479,8 +20481,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE RAOUL LE CARON — DÉSACCORD<lb/>ENTRE LA VILLE ET LES HÉRITIERS DE
-                RAOUL<lb/>NOMINATION D’ARBITRE</head>
+              <head>Le fief de Raoul le Caron — désaccord <lb/>entre la ville et les héritiers de
+                Raoul <lb/>nomination d’arbitre</head>
               <argument>
                 <p>Jean Thiessart, Jacques de Marchières l’aîné, Jean Loutrel et Jean Lelorgne, attournés et
                   gouverneurs de Compiègne, d’une part, et Herbert Lescripvain le jeune, Jeanne le Caron, sa
@@ -20607,7 +20609,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE RAOUL LE CARON<lb/>SENTENCE ARBITRALE DE JEAN PROUVENCEL</head>
+              <head>Le fief de Raoul le Caron <lb/>sentence arbitrale de Jean Prouvencel</head>
               <argument>
                 <p>Jean Prouvencel, choisi comme arbitre par les attournés de la ville de Compiègne et les
                   héritiers de Raoul le Caron, expose d’abord le différend :</p>
@@ -20856,7 +20858,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF DE RAOUL LE CARON — ACCEPTATION<lb/>DE L’ARBITRAGE AUX ASSISES DE COMPIÈGNE</head>
+              <head>Le fief de Raoul le Caron — acceptation <lb/>de l’arbitrage aux assises de Compiègne</head>
               <argument>
                 <p>Les attournés et les habitants de Compiègne représentés par Jean le Prince, leur procureur,
                   d’une part, et Herbert l’Ecripvain le jeune, à cause <pb n="465"/>de sa femme, Jeanne
@@ -20917,8 +20919,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ASSISES DE COMPIÈGNE — LES LODS ET VENTES<lb/>SURCENS ET AUTRES CHARGES<lb/>DUS À L’ABBAYE
-                DE CHAALIS SUR SEPT MAISONS<lb/>À COMPIÈGNE</head>
+              <head>Assises de Compiègne — les lods et ventes <lb/>surcens et autres chargés <lb/>dus à l’abbaye
+                de Chaalis sur sept maisons <lb/>à Compiègne</head>
               <argument>
                 <p>Au mois de Mai 1221, Renaud de Béthisy, bailli du roi, de concert avec Emmeline
                   d’Houdancourt, sa femme, a donné aux religieux de Chaalis six livres parisis de cens à
@@ -21009,7 +21011,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES FOIRES DE COMPIÈGNE</head>
+              <head>Les foires de Compiègne</head>
               <argument>
                 <p>Le roi Jean, apprenant des habitants de Compiègne que leurs foires de la Mi-Carême et de
                   l’Exaltation de la Sainte Croix perdent de leur importance, parce qu’on arrête arbitrairement
@@ -21066,8 +21068,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE WARNIER DE FRESNOY, SEIGNEUR<lb/>DE LA MOTTE.<lb/>AVEC L’ABBAYE DE
-                SAINT-CORNEILLE</head>
+              <head>Accord de Warnier de Fresnoy, seigneur <lb/>de la Motte. <lb/>Avec l’abbaye de
+                Saint-Corneille</head>
               <argument>
                 <p>Warnier de Fresnoy, écuyer, seigneur de la Motte en la paroisse de
                   Mareuil<note n="928_1"><p>Canton de Lassigny, Oise.</p></note>,
@@ -21192,7 +21194,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>UNE MÈRE ET SON FILS NOYÉS DANS L’OISE<lb/>À VENETTE</head>
+              <head>Une mère et son fils noyés dans l’Oise <lb/>à Venette</head>
               <argument>
                 <p>Jeanne la Sanourée ou Saunière, étant allée chercher son fils en nourrice à Venette, se
                   l’est attaché au moyen d’une ceinture. On les a trouvés noyés dans l’Oise.</p>
@@ -21272,7 +21274,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION DE LA CHAPELLE DE SAINT BLAISE<lb/>DE TILLARD</head>
+              <head>Fondation de la chapelle de Saint Blaise <lb/>de Tillard</head>
               <argument>
                 <p>Jean de Saint-Just, chanoine de Beauvais et conseiller du roi, a fondé en janvier 1339 (n.
                   st.) à Tillart<note n="930_1"><p>Paroisse de Silly, canton de
@@ -21362,8 +21364,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ASSOCIATION DES MONASTÈRES DE NOTRE-DAME<lb/>DE NOGENT-SOUS-COUCY ET DE
-                SAINT-CORNEILLE<lb/>ET SAINT-CYPRIEN DE COMPIÈGNE</head>
+              <head>Association des monastères de Notre-Dame <lb/>de Nogent-sous-Coucy et de
+                Saint-Corneille <lb/>et Saint-Cyprien de Compiègne</head>
               <argument>
                 <p>Jean, abbé de Nogent-sous-Coucy, notifie l’association formée entre son abbaye et celle de
                   Saint-Corneille de Compiègne.</p>
@@ -21426,8 +21428,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD DE L’ABBAYE DE SAINT-CORNEILLE<lb/>AVEC LES HABITANTS D’HOUDENCOURT<lb/>AU SUJET DES
-                PÂTURAGES</head>
+              <head>Accord de l’abbaye de Saint-Corneille <lb/>avec les habitants d’Houdencourt <lb/>au sujet des
+                pâturages</head>
               <argument>
                 <p>Quatorze habitants d’Houdencourt, Pierre Bibrenel, Jean de Sarron, Gilles Barbot, Jean
                   Hémart, Jean Sirates, Jean Bottée, Jean de Sarron, dit Vernis, Laurent Taon, Gilles Sain,
@@ -21517,7 +21519,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ASSISES DE CHÂTILLON-SUR-MARNE<lb/>LE BOIS DES MEUNIERS</head>
+              <head>Les assises de Châtillon-sur-Marne <lb/>le bois des Meuniers</head>
               <argument>
                 <p>Guiart de Bassoles, gruyer de Jeanne d’Evreux, reine de France et de Navarre, veuve de
                   Charles IV, dit le Bel, déclare injuste et annule une saisie de bois, chevaux et harnais
@@ -21598,7 +21600,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ASSISES DE CHÂTILLON-SUR-MARNE<lb/>LE BOIS DES MEUNIERS</head>
+              <head>Les assises de Châtillon-sur-Marne <lb/>le bois des Meuniers</head>
               <argument>
                 <p><hi rend="sc">Devant</hi> « Jehan le Tanneur, compaignon et lieutenant dou prévost de Laon
                   et commissaire dou Roy nossire » comparurent en jugement « Pierre Trousset, procureur de
@@ -21636,7 +21638,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES ASSISES DE CHÂTILLON-SUR-MARNE<lb/>LE BOIS DES MEUNIERS</head>
+              <head>Les assises de Châtillon-sur-Marne <lb/>le bois des Meuniers</head>
               <argument>
                 <p>Le 12 août 1374 « Jehan de Tenneur » attesta devant « Drouart de Hainnaut, conseiller du roy
                   no sire, et garde du seel de la baillie de Vermandois à Laon », que le sceau appendu à la
@@ -21666,8 +21668,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RENTES SUR DEUX MAISONS<lb/>DERRIÈRE LE BEFFROI<lb/>ACQUISES POUR LE PRIEURÉ
-                SAINT-PIERRE</head>
+              <head>Rentes sur deux maisons <lb/>derrière le beffroi <lb/>acquises pour le prieuré
+                Saint-Pierre</head>
               <argument>
                 <p>Mathieu Chardecot, demeurant à Compiègne, vend moyennant quatorze florins d’or, appelés
                   francs, à dom Nicaise Mahieu, moine de Saint-Corneille et prieur de Saint-Pierre, au profit
@@ -21747,7 +21749,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA FONDATION DE REGNAUD DE BEAUVAIS<lb/>INFIRMIER DE SAINT-CORNEILLE</head>
+              <head>La fondation de Regnaud de Beauvais <lb/>infirmier de Saint-Corneille</head>
               <argument>
                 <p>Dom Regnaud de Beauvais, moine et infirmier de Saint-Corneille, ayant acheté une place libre
                   à Compiègne, y a fait bâtir une maison. Il a acheté en même temps neuf livres de surcens
@@ -21834,7 +21836,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTION DE TOUTE RÉQUISITION<lb/>POUR L’HÔTEL-DIEU</head>
+              <head>Exemption de toute réquisition <lb/>pour l’Hôtel-Dieu</head>
               <argument>
                 <p>Charles VI défend sous des peines sévères de prendre à l’Hôtel-Dieu de Compiègne aucuns
                   vins, blés, avoines, foins, fourrage, chevaux, charrettes, poules, bestiaux, lits, draps,
@@ -21890,7 +21892,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉTAT DES BIENS ET<lb/>DES FIEFS DE SAINT-CORNEILLE</head>
+              <head>État des biens et <lb/>des fiefs de Saint-Corneille</head>
               <argument>
                 <p>Déclaration du temporel de l’abbaye de Saint-Corneille, dont les biens et les fiefs étaient
                   situés dans les trois bailliages de Senlis, de Vermandois et d’Amiens.</p>

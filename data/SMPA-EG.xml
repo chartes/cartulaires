@@ -132,7 +132,7 @@
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -147,7 +147,7 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="@xml:id" unit="partie">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-        </citeStructure>
+        <citeStructure unit="lettre" match="list[@type='index'][@xml:id]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>
@@ -4760,6 +4760,9 @@
             </div>
           </body>
 </text>
+      </group>
+      <group xml:id="SMPA-EG_censier">
+        <head>Censier de Saint-Merry (1307)</head>
       <!-- BEGIN SMPA-EG CENSIER WORKING COPY -->
       <text xml:id="SMPA-EG_censier_0001" n="C1" subtype="article">
         <pb n="171" facs="https://iiif.archive.org/image/iiif/3/mmoiresdelasoci15fragoog%2Fmmoiresdelasoci15fragoog_tif.zip%2Fmmoiresdelasoci15fragoog_tif%2Fmmoiresdelasoci15fragoog_0179.tif/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/mmoiresdelasoci15fragoog/manifest.json" xml:id="SMPA-EG_censier_p171_c1"/>
@@ -4770,7 +4773,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>CENSIER DE SAINT-MERRY.</head>
+          <head>Censier de Saint-Merry.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171.</witness>
@@ -4792,7 +4795,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>I. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — PREMIÈRE SÉRIE.</head>
+          <head>I. — Terme de la Saint-Remi. — rentes perçues dans Paris. — première série.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 171-173.</witness>
@@ -5253,7 +5256,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>II. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — DEUXIÈME SÉRIE.</head>
+          <head>II. — Terme de la Saint-Remi. — rentes perçues dans Paris. — deuxième série.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 183.</witness>
@@ -5639,7 +5642,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>III. — TERME DE LA SAINT-REMI. — RENTES PERÇUES HORS PARIS. — PREMIÈRE SÉRIE.</head>
+          <head>III. — Terme de la Saint-Remi. — rentes perçues hors Paris. — première série.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 187-191.</witness>
@@ -5696,7 +5699,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>IV. — TERME DE LA SAINT-REMI. — RENTES PERÇUES DANS PARIS. — TROISIÈME SÉRIE.</head>
+          <head>IV. — Terme de la Saint-Remi. — rentes perçues dans Paris. — troisième série.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 191.</witness>
@@ -6342,7 +6345,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>V. — TERME DE LA SAINT-REMI. — RENTES PERÇUES HORS PARIS. — DEUXIÈME SÉRIE.</head>
+          <head>V. — Terme de la Saint-Remi. — rentes perçues hors Paris. — deuxième série.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 214-223.</witness>
@@ -6430,7 +6433,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>VI. — TERME DE LA SAINT-REMI. — RENTES PAYÉES DANS PARIS.</head>
+          <head>VI. — Terme de la Saint-Remi. — rentes payées dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 223-224.</witness>
@@ -6465,7 +6468,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>VII. — TERME DE LA NOEL. — RENTES PERÇUES HORS PARIS.</head>
+          <head>VII. — Terme de la Noël. — rentes perçues hors Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 224-225.</witness>
@@ -6497,7 +6500,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>VIII. — TERME DE LA NOEL. — RENTES PERÇUES DANS PARIS.</head>
+          <head>VIII. — Terme de la Noël. — rentes perçues dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 225.</witness>
@@ -6995,7 +6998,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>IX. — TERME DE LA NOEL. — RENTES PAYÉES DANS PARIS.</head>
+          <head>IX. — Terme de la Noël. — rentes payées dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 231-232.</witness>
@@ -7033,7 +7036,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>X. — RENTES PERÇUES A LA MI-CARÊME.</head>
+          <head>X. — Rentes perçues à la MI-carême.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 232-233.</witness>
@@ -7070,7 +7073,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XI. — RENTES PERÇUES LE DIMANCHE DES RAMEAUX.</head>
+          <head>XI. — Rentes perçues le dimanche des Rameaux.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
@@ -7095,7 +7098,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XII. — TERME DE PAQUES. — RENTES PERÇUES DANS PARIS.</head>
+          <head>XII. — Terme de Pâques. — rentes perçues dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 234.</witness>
@@ -7590,7 +7593,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XIII. — TERME DE PAQUES. — RENTES PAYÉES DANS PARIS.</head>
+          <head>XIII. — Terme de Pâques. — rentes payées dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 239-240.</witness>
@@ -7627,7 +7630,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XIV. — RENTES PERÇUES A LA PENTECÔTE.</head>
+          <head>XIV. — Rentes perçues à la Pentecôte.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 240-241.</witness>
@@ -7659,7 +7662,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XV. — TERME DE LA SAINT-JEAN. — RENTES PERÇUES DANS PARIS.</head>
+          <head>XV. — Terme de la Saint-Jean. — rentes perçues dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 241.</witness>
@@ -8201,7 +8204,7 @@
           <index>
             <term type="nature" key="cens">cens</term>
           </index>
-          <head>XVI. — TERME DE LA SAINT-JEAN. — RENTES PAYÉES DANS PARIS.</head>
+          <head>XVI. — Terme de la Saint-Jean. — rentes payées dans Paris.</head>
           <div type="tradition">
             <listWit type="édition">
               <witness n="a" ana="edited"><title>Cartulaire et censier de Saint-Merry de Paris</title>, Camille Couderc et Léon Cadier (éd.), Mémoires de la Société de l'histoire de Paris et de l'Île-de-France, t. XVIII, 1891, p. 248.</witness>

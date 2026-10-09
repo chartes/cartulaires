@@ -130,6 +130,8 @@
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
               <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="schema:position" use="string(@n)"/>
+              <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -12330,7 +12332,7 @@
                 </row>
               </table>
               <table>
-                <head>CHARGES</head>
+                <head>Chargés</head>
                 <row>
                   <cell>Luminaire et ornements de la sacristie</cell>
                   <cell>
@@ -12536,7 +12538,7 @@
                 </row>
               </table>
               <table>
-                <head>RÉPARATIONS</head>
+                <head>Réparations</head>
                 <row>
                   <cell>Année commune</cell>
                   <cell>
@@ -12553,7 +12555,7 @@
               </table>
               <pb n="303" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f315/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
               <table>
-                <head> DETTES</head>
+                <head> Dettes</head>
                 <row>
                   <cell>Aux entrepreneurs et ouvriers pour réparations</cell>
                   <cell>
@@ -12599,7 +12601,7 @@
                 </row>
               </table>
               <table>
-                <head>IL EST DU A L'ABBAYE</head>
+                <head>Il est du à l'abbaye</head>
                 <row>
                   <cell>Pour legs non encore payés et pensions arriérées</cell>
                   <cell>
@@ -14199,7 +14201,7 @@
           <item xml:id="NDMT-AB_rs_0012"><rs><hi rend="sc">Aïmeric</hi>, cardinal et chaucelier du pape</rs>, <ref target="#NDMT-AB_0006" n="6">6</ref>.</item>
           <item xml:id="NDMT-AB_rs_0013"><rs><hi rend="sc">Albericus Ortolanus</hi></rs>, <ref target="#NDMT-AB_0001" n="1">1</ref>.</item>
           <item xml:id="NDMT-AB_rs_0014"><rs><hi rend="sc">Alexandre <num>III</num></hi>, pape</rs>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0015"><rs><hi rend="sc">Alexandrs <num>VI</num></hi></rs>, <ref target="230" n="230">230</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0015"><rs><hi rend="sc">Alexandrs <num>VI</num></hi></rs>, <ref target="#NDMT-AB_0131" n="230">230</ref>.</item>
           <item xml:id="NDMT-AB_rs_0016"><rs><hi rend="sc">Algrin</hi>, chancelier du roi</rs>, <ref target="#NDMT-AB_0007" n="7">7</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>.</item>
           <item xml:id="NDMT-AB_rs_0017"><rs><hi rend="sc">Alix</hi>, femme de Nevelon</rs>, <ref target="#NDMT-AB_0131" n="131">131</ref>.</item>
           <item xml:id="NDMT-AB_rs_0018"><rs><hi rend="sc">Allaire</hi>, Robert, notaire</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
@@ -14210,7 +14212,7 @@
           <item xml:id="NDMT-AB_rs_0023"><rs><hi rend="sc">Altisiodoro</hi> (Simon de)</rs>, <ref target="#NDMT-AB_0093" n="93">93</ref>.</item>
           <item xml:id="NDMT-AB_rs_0024"><rs><hi rend="sc">Altisiodoro</hi> (Simon de), (Marie de)</rs>, <ref target="#NDMT-AB_0093" n="93">93</ref>.</item>
           <item xml:id="NDMT-AB_rs_0025"><rs><hi rend="sc">Altisiodoro</hi> (Simon de), bourgeois de Paris</rs>, <ref target="#NDMT-AB_0093" n="93">93</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0026"><rs><hi rend="sc">Amboise</hi> (Cardinal d')</rs>, <ref target="231" n="231">231</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0026"><rs><hi rend="sc">Amboise</hi> (Cardinal d')</rs>, <ref target="#NDMT-AB_0132" n="231">231</ref>.</item>
           <item xml:id="NDMT-AB_rs_0027"><rs><hi rend="sc">Ameline</hi>, chantre de Montmartre</rs>, <ref target="#NDMT-AB_0018" n="18">18</ref>.</item>
           <item xml:id="NDMT-AB_rs_0028"><rs><hi rend="sc">Amiens (Thibaut, év. d')</hi></rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>, <ref target="#NDMT-AB_0040" n="40">40</ref>.</item>
           <item xml:id="NDMT-AB_rs_0029"><rs><hi rend="sc">Ancelin</hi>, Marie, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
@@ -14258,8 +14260,8 @@
           <item xml:id="NDMT-AB_rs_0065"><rs><hi rend="sc">Barbery</hi> (Renaud, laïc de)</rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0066"><rs><hi rend="sc">Barbery</hi> (Barthélemi de)</rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0067"><rs><hi rend="sc">Barbery</hi> (Chapelle Sainte - Luce à)</rs>, <ref target="#NDMT-AB_0143" n="143">143</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0068"><rs><hi rend="sc">Barbery</hi> (Terrier de)</rs>, <ref target="231" n="231">231</ref>, <ref target="#NDMT-AB_0134" n="134">134</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0069"><rs><hi rend="sc">Barbery</hi> (Fortifications de)</rs>, <ref target="239" n="239">239</ref>, <ref target="#NDMT-AB_0139" n="139">139</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0068"><rs><hi rend="sc">Barbery</hi> (Terrier de)</rs>, <ref target="#NDMT-AB_0134" n="231">231</ref>, <ref target="#NDMT-AB_0134" n="134">134</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0069"><rs><hi rend="sc">Barbery</hi> (Fortifications de)</rs>, <ref target="#NDMT-AB_0139" n="239">239</ref>, <ref target="#NDMT-AB_0139" n="139">139</ref>.</item>
           <item xml:id="NDMT-AB_rs_0070"><rs><hi rend="sc">Barberiacum (</hi></rs>Voir <ref type="see" target="#NDMT-AB_rs_0062" corresp="#NDMT-AB_liste_B">Barbery</ref>).</item>
           <item xml:id="NDMT-AB_rs_0071"><rs><hi rend="sc">Barbete (Etienne)</hi></rs>, <ref target="#NDMT-AB_0076" n="76">76</ref>.</item>
           <item xml:id="NDMT-AB_rs_0072"><rs><hi rend="sc">Barbier</hi>, Madeleine, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
@@ -14271,7 +14273,7 @@
           <item xml:id="NDMT-AB_rs_0078"><rs><hi rend="sc">Baussan</hi>, Eliz. célérière</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0079"><rs><hi rend="sc">Beaumont (Eléonore, comtesse de)</hi></rs>, <ref target="#NDMT-AB_0045" n="45">45</ref>.</item>
           <item xml:id="NDMT-AB_rs_0080"><rs><hi rend="sc">Beauvilliers (Anne de)</hi>, femme de</rs>, <abbr>P.</abbr> Foyer, <ref target="#NDMT-AB_0146" n="146">146</ref>, <!-- doublon meme acte NDMT-AB_0146: <ref target="#NDMT-AB_0146" n="250">146</ref> --> <!-- doublon meme acte NDMT-AB_0146: <ref target="#NDMT-AB_0146" n="253">146</ref> --> <!-- doublon meme acte NDMT-AB_0146: <ref target="#NDMT-AB_0146" n="254">146</ref> --> <ref target="#NDMT-AB_0148" n="148">148</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0081"><rs><hi rend="sc">Beine</hi>, seigneurie</rs>, <ref target="217" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0081"><rs><hi rend="sc">Beine</hi>, seigneurie</rs>, <ref target="#NDMT-AB_0124" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0082"><rs><hi rend="sc">Bellus</hi>, Mathieu</rs>, <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="#NDMT-AB_0097" n="97">97</ref>.</item>
           <item xml:id="NDMT-AB_rs_0083"><rs><hi rend="sc">Benoist</hi>, Marie, prieure du cloître aux Saints-Martyrs</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0084"><rs><hi rend="sc">Benoist</hi>, Françoise, sous-prieure aux Saints-Martyrs</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
@@ -14301,7 +14303,7 @@
           <item xml:id="NDMT-AB_rs_0106"><rs><hi rend="sc">Biaumes (Pons de)</hi></rs>, <ref target="#NDMT-AB_0187" n="187">187</ref>.</item>
           <item xml:id="NDMT-AB_rs_0107"><rs><hi rend="sc">Bien</hi>, Parfait, bourgeois de Paris</rs>, <ref target="#NDMT-AB_0107" n="107">107</ref>.</item>
           <item xml:id="NDMT-AB_rs_0108"><rs><hi rend="sc">Billancourt</hi>, lieu</rs>, <ref target="#NDMT-AB_0090" n="90">90</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0109"><rs><hi rend="sc">Blaise (Jean de)</hi>, maître des eaux-et-forêts</rs>, <ref target="211" n="211">211</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0109"><rs><hi rend="sc">Blaise (Jean de)</hi>, maître des eaux-et-forêts</rs>, <ref target="#NDMT-AB_0114" n="211">211</ref>.</item>
           <item xml:id="NDMT-AB_rs_0110"><rs><hi rend="sc">Blardel</hi>, Marie, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0111"><rs><hi rend="sc">Bois de l'Evêque (Le) près Paris</hi></rs>, <ref target="#NDMT-AB_0090" n="90">90</ref>.</item>
           <item xml:id="NDMT-AB_rs_0112"><rs><hi rend="sc">Boisdehaire</hi>, Adam</rs>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
@@ -14361,7 +14363,7 @@
  
  <rs><hi rend="sc">Camptembro</hi> (Renaud de)</rs>, <ref target="#NDMT-AB_0104" n="104">104</ref>.</item>
           <item xml:id="NDMT-AB_rs_0162"><rs><hi rend="sc">Camptembro</hi> (Robert de)</rs>, <ref target="#NDMT-AB_0104" n="104">104</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0163"><rs><hi rend="sc">Canis</hi>, Eustache, maître du Temple à Paris</rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>, <ref target="315" n="315">315</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0163"><rs><hi rend="sc">Canis</hi>, Eustache, maître du Temple à Paris</rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>, 315.</item>
           <item xml:id="NDMT-AB_rs_0164"><rs><hi rend="sc">Capella (Gaufridus, prévôt de)</hi></rs>, <ref target="#NDMT-AB_0029" n="29">29</ref>.</item>
           <item xml:id="NDMT-AB_rs_0165"><rs><hi rend="sc">Carbon</hi>, Madeleine, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0166"><rs><hi rend="sc">Carre</hi>, Eléonore, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
@@ -14373,7 +14375,7 @@
           <item xml:id="NDMT-AB_rs_0172"><rs><hi rend="sc">Cauz (Roger de)</hi></rs>, <ref target="#NDMT-AB_0090" n="90">90</ref>.</item>
           <item xml:id="NDMT-AB_rs_0173"><rs><hi rend="sc">Caverciaco (Pierre de)</hi></rs>, <ref target="#NDMT-AB_0131" n="131">131</ref>.</item>
           <item xml:id="NDMT-AB_rs_0174"><rs><hi rend="sc">Celsi</hi>, rue</rs>, <ref target="#NDMT-AB_0005" n="5">5</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0175"><rs><hi rend="sc">Challemart</hi>, Jean, procureur de l'abbaye</rs>, <ref target="207" n="207">207</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0175"><rs><hi rend="sc">Challemart</hi>, Jean, procureur de l'abbaye</rs>, <ref target="#NDMT-AB_0112" n="207">207</ref>.</item>
           <item xml:id="NDMT-AB_rs_0176"><rs><hi rend="sc">Chamissi</hi>, lieu</rs>, <ref target="#NDMT-AB_0112" n="112">112</ref>.</item>
           <item xml:id="NDMT-AB_rs_0177"><rs><hi rend="sc">Chamois</hi>, Hélène, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0178"><rs><hi rend="sc">Charenton (Pont de)</hi></rs>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
@@ -14381,7 +14383,7 @@
           <item xml:id="NDMT-AB_rs_0180"><rs><hi rend="sc">Charles</hi>, roi de Navarre</rs>, <ref target="#NDMT-AB_0106" n="106">106</ref>.</item>
           <item xml:id="NDMT-AB_rs_0181"><rs><hi rend="sc">Charpentier</hi>, Jean, procureur de la Grande Boucherie</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0182"><rs><hi rend="sc">Charz (Raoul de)</hi></rs>, <ref target="#NDMT-AB_0034" n="34">34</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0183"><rs><hi rend="sc">Chastel (Du)</hi>, Tanneguy, garde de la prévôté de Paris</rs>, <ref target="207" n="207">207</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0183"><rs><hi rend="sc">Chastel (Du)</hi>, Tanneguy, garde de la prévôté de Paris</rs>, <ref target="#NDMT-AB_0112" n="207">207</ref>.</item>
           <item xml:id="NDMT-AB_rs_0184"><rs><hi rend="sc">Chaulnes (De)</hi>, Charlotte, secrétaire du chapitre de l'abbaye</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>, <ref target="#NDMT-AB_0157" n="157">157</ref>.</item>
           <item xml:id="NDMT-AB_rs_0185"><rs><hi rend="sc">Chaumont</hi> (Pierre de)</rs>, <ref target="#NDMT-AB_0048" n="48">48</ref>.</item>
                     <item xml:id="NDMT-AB_rs_0186"><rs><hi rend="sc">Chaumont (Raoul)</hi></rs>, <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
@@ -14420,7 +14422,7 @@
           <item xml:id="NDMT-AB_rs_0219"><rs><hi rend="sc">Compiègne</hi> (Egide, mayeur de)</rs>, <ref target="#NDMT-AB_0071" n="71">71</ref>.</item>
           <item xml:id="NDMT-AB_rs_0220"><rs><hi rend="sc">Constance</hi>, comtesse de Toulouse</rs>, <ref target="#NDMT-AB_0032" n="32">32</ref>, <!-- doublon meme acte NDMT-AB_0032: <ref target="#NDMT-AB_0032" n="108">32</ref> --> <!-- doublon meme acte NDMT-AB_0032: <ref target="#NDMT-AB_0032" n="109">32</ref> --> <ref target="#NDMT-AB_0112" n="112">112</ref>, <ref target="#NDMT-AB_0123" n="123">123</ref>.</item>
           <item xml:id="NDMT-AB_rs_0221"><rs><hi rend="sc">Constantinople</hi>, ville</rs>, <ref target="#NDMT-AB_0068" n="68">68</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0222"><rs><hi rend="sc">Cornu</hi>, Alix Repont, veuve</rs>, <ref target="231" n="231">231</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0222"><rs><hi rend="sc">Cornu</hi>, Alix Repont, veuve</rs>, <ref target="#NDMT-AB_0132" n="231">231</ref>.</item>
           <item xml:id="NDMT-AB_rs_0223"><rs><hi rend="sc">Cornuty</hi>, Louise, prieure de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0224"><rs><hi rend="sc">Cornuty</hi>, Anne, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0225"><rs><hi rend="sc">Cortebronna (Goth de)</hi></rs>, <ref target="#NDMT-AB_0031" n="31">31</ref>.</item>
@@ -14433,14 +14435,14 @@
           <head>D</head>
           <item xml:id="NDMT-AB_rs_0230"><pb n="335" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f347/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
  
- <rs><hi rend="sc">Damien</hi>, Ph. bourgeois de Paris</rs>, <ref target="214" n="214">214</ref>.</item>
+ <rs><hi rend="sc">Damien</hi>, Ph. bourgeois de Paris</rs>, <ref target="#NDMT-AB_0116" n="214">214</ref>.</item>
           <item xml:id="NDMT-AB_rs_0231"><rs><hi rend="sc">Danemois (Gui de)</hi></rs>, <ref target="#NDMT-AB_0139" n="139">139</ref>.</item>
           <item xml:id="NDMT-AB_rs_0232"><rs><hi rend="sc">Daniel (Frère)</hi></rs>, <ref target="#NDMT-AB_0043" n="43">43</ref>.</item>
           <item xml:id="NDMT-AB_rs_0233"><rs><hi rend="sc">Dasche</hi>, Pétronille, relig</rs>, <ref target="#NDMT-AB_0098" n="98">98</ref>.</item>
           <item xml:id="NDMT-AB_rs_0234"><rs><hi rend="sc">Daumont</hi>, Louis</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0235"><rs><hi rend="sc">Daumont</hi>, Jean</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0236"><rs><hi rend="sc">Daurat</hi>, <abbr>J.</abbr>, tourière de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0237"><rs><hi rend="sc">Demahaut</hi>, notaire à Paris</rs>, <ref target="284" n="284">284</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0237"><rs><hi rend="sc">Demahaut</hi>, notaire à Paris</rs>, 284.</item>
           <item xml:id="NDMT-AB_rs_0238"><rs><hi rend="sc">Deu</hi>, Jean</rs>, <ref target="#NDMT-AB_0187" n="187">187</ref>.</item>
           <item xml:id="NDMT-AB_rs_0239"><rs><hi rend="sc">Dionis</hi>, notaire à Paris</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0240"><rs><hi rend="sc">Dives</hi>, Thomas, prévôt de Paris</rs>, <ref target="#NDMT-AB_0032" n="32">32</ref>.</item>
@@ -14466,11 +14468,11 @@
           <item xml:id="NDMT-AB_rs_0256"><rs><hi rend="sc">Elysabeth</hi></rs>, <ref target="#NDMT-AB_0032" n="32">32</ref>.</item>
           <item xml:id="NDMT-AB_rs_0257"><rs><hi rend="sc">Elysabeth</hi>, abbesse de Montmartre</rs>, <ref target="#NDMT-AB_0034" n="34">34</ref>, <ref target="#NDMT-AB_0041" n="41">41</ref>, <ref target="#NDMT-AB_0044" n="44">44</ref>, <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
           <item xml:id="NDMT-AB_rs_0258"><rs><hi rend="sc">Ermessende dite Canpanie</hi></rs>, <ref target="#NDMT-AB_0086" n="86">86</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0259"><rs><hi rend="sc">Ernoul (Frère)</hi></rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0259"><rs><hi rend="sc">Ernoul (Frère)</hi></rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0260"><rs><hi rend="sc">Ernoul</hi>, pécheur</rs>, <ref target="#NDMT-AB_0018" n="18">18</ref>.</item>
           <item xml:id="NDMT-AB_rs_0261"><rs><hi rend="sc">Espies (Agnes d')</hi></rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>.</item>
           <item xml:id="NDMT-AB_rs_0262"><rs><hi rend="sc">Essonne (Moulin sur 1')</hi></rs>, <ref target="#NDMT-AB_0192" n="192">192</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0263"><rs><hi rend="sc">Estouteville (Robert d')</hi>, garde de la prévôté de Paris</rs>, <ref target="217" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0263"><rs><hi rend="sc">Estouteville (Robert d')</hi>, garde de la prévôté de Paris</rs>, <ref target="#NDMT-AB_0124" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0264"><rs><hi rend="sc">Etampes</hi>, four</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0265"><rs><hi rend="sc">Etienne</hi>, chancelier du roi</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>.</item>
           <item xml:id="NDMT-AB_rs_0266"><rs><hi rend="sc">Eugène <num>III</num></hi></rs>, <ref target="#NDMT-AB_0078" n="78">78</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0141" n="141">141</ref>.</item>
@@ -14506,13 +14508,13 @@
           <item xml:id="NDMT-AB_rs_0286"><rs><hi rend="sc">Galerannus</hi></rs>, <ref target="#NDMT-AB_0004" n="4">4</ref>.</item>
           <item xml:id="NDMT-AB_rs_0287"><rs><hi rend="sc">Galemart</hi>, Emery</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0288"><rs><hi rend="sc">Galo</hi>, prêtre</rs>, <ref target="#NDMT-AB_0070" n="70">70</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0007" n="7">7</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0289"><rs><hi rend="sc">Garoul</hi>, Pierre, prêtre</rs>, <ref target="210" n="210">210</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0289"><rs><hi rend="sc">Garoul</hi>, Pierre, prêtre</rs>, <ref target="#NDMT-AB_0113" n="210">210</ref>.</item>
           <item xml:id="NDMT-AB_rs_0290"><rs><hi rend="sc">Garsilia</hi>, feudum</rs>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0291"><rs><hi rend="sc">Gastellarius</hi>, Renaldus</rs>, <ref target="#NDMT-AB_0041" n="41">41</ref>.</item>
           <item xml:id="NDMT-AB_rs_0292"><rs><hi rend="sc">Gastinensis</hi>, pagus</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0004" n="4">4</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0293"><rs><hi rend="sc">Gautier</hi>, chambrier du roi</rs>, <ref target="#NDMT-AB_0045" n="45">45</ref>, <ref target="#NDMT-AB_0064" n="64">64</ref>.</item>
           <item xml:id="NDMT-AB_rs_0294"><rs><hi rend="sc">Gautier</hi>, jeune, id</rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0295"><rs><hi rend="sc">Gaydeau</hi>, Louis, sergent à verge</rs>, <ref target="210" n="210">210</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0295"><rs><hi rend="sc">Gaydeau</hi>, Louis, sergent à verge</rs>, <ref target="#NDMT-AB_0113" n="210">210</ref>.</item>
           <item xml:id="NDMT-AB_rs_0296"><rs><hi rend="sc">Gentili</hi> (Ferri de)</rs>, <ref target="#NDMT-AB_0047" n="47">47</ref>.</item>
           <item xml:id="NDMT-AB_rs_0297"><rs><hi rend="sc">Gentili</hi>, Aveline, sa femme</rs>, <ref target="#NDMT-AB_0047" n="47">47</ref>.</item>
           <item xml:id="NDMT-AB_rs_0298"><rs><hi rend="sc">Gentili</hi>, lieu</rs>, <ref target="#NDMT-AB_0098" n="98">98</ref>.</item>
@@ -14533,7 +14535,7 @@
           <item xml:id="NDMT-AB_rs_0313"><rs><hi rend="sc">Gormont</hi>, Guillaume, garde de la prévôté de Paris</rs>, <ref target="#NDMT-AB_0100" n="100">100</ref>.</item>
           <item xml:id="NDMT-AB_rs_0314"><rs><hi rend="sc">Gorneio (Johannes de)</hi></rs>, <ref target="#NDMT-AB_0123" n="123">123</ref>.</item>
           <item xml:id="NDMT-AB_rs_0315"><rs><hi rend="sc">Gossuin</hi>, Louis, notaire</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0316"><rs><hi rend="sc">Goudin</hi>, notaire à Paris</rs>, <ref target="282" n="282">282</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0316"><rs><hi rend="sc">Goudin</hi>, notaire à Paris</rs>, 282.</item>
           <item xml:id="NDMT-AB_rs_0317"><rs><hi rend="sc">Gournay-sur-Marne</hi></rs>, <ref target="#NDMT-AB_0188" n="188">188</ref>.</item>
           <item xml:id="NDMT-AB_rs_0318"><rs><hi rend="sc">Gozon</hi></rs>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0319"><rs><hi rend="sc">Grandis Vallis</hi>, lieu</rs>, <ref target="#NDMT-AB_0067" n="67">67</ref>.</item>
@@ -14566,7 +14568,7 @@
           <item xml:id="NDMT-AB_rs_0341"><rs><hi rend="sc">Haubergue</hi>, Etienne, bourgeois de Paris</rs>, <ref target="#NDMT-AB_0189" n="189">189</ref>.</item>
           <item xml:id="NDMT-AB_rs_0342"><rs><hi rend="sc">Hauloy</hi>, maître Raoul</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0343"><rs><hi rend="sc">Henault</hi>, Geneviève, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0344"><rs><hi rend="sc">Henri <num>III</num></hi></rs>, <ref target="239" n="239">239</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0344"><rs><hi rend="sc">Henri <num>III</num></hi></rs>, <ref target="#NDMT-AB_0139" n="239">239</ref>.</item>
           <item xml:id="NDMT-AB_rs_0345"><rs><hi rend="sc">Henri <num>IV</num></hi></rs>, <ref target="#NDMT-AB_0140" n="140">140</ref>, <ref target="#NDMT-AB_0141" n="141">141</ref>.</item>
           <item xml:id="NDMT-AB_rs_0346"><rs><hi rend="sc">Henri</hi>, boucher</rs>, <ref target="#NDMT-AB_0048" n="48">48</ref>.</item>
           <item xml:id="NDMT-AB_rs_0347"><rs><hi rend="sc">Henri</hi>, prêtre</rs>, <ref target="#NDMT-AB_0034" n="34">34</ref>.</item>
@@ -14583,7 +14585,7 @@
           <item xml:id="NDMT-AB_rs_0358"><rs><hi rend="sc">Holdenehem (Gundemnus de)</hi></rs>, <ref target="#NDMT-AB_0030" n="30">30</ref>.</item>
           <item xml:id="NDMT-AB_rs_0359"><rs><hi rend="sc">Hormault (l'abbé de)</hi></rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0360"><rs><hi rend="sc">Hermier</hi>, <abbr>N.</abbr>, de Montmartrre</rs>, <ref target="#NDMT-AB_0102" n="102">102</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0361"><rs><hi rend="sc">Hesse (le sieur de)</hi></rs>, <ref target="393" n="393">393</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0361"><rs><hi rend="sc">Hesse (le sieur de)</hi></rs>, 393.</item>
           <item xml:id="NDMT-AB_rs_0362"><rs><hi rend="sc">Hilduin</hi>, chancelier du comte de Blois</rs>, <ref target="#NDMT-AB_0040" n="40">40</ref>.</item>
           <item xml:id="NDMT-AB_rs_0363"><rs><hi rend="sc">Hinard</hi>, Louis, entrepreneur des tapisseries de Beauvais</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0364"><rs><hi rend="sc">Hobo</hi>, Robert, sergent du Châtelet</rs>, <ref target="#NDMT-AB_0187" n="187">187</ref>.</item>
@@ -14594,7 +14596,7 @@
           <item xml:id="NDMT-AB_rs_0369"><rs><hi rend="sc">Hugo</hi>, chancelier</rs>, <ref target="#NDMT-AB_0004" n="4">4</ref>, <ref target="#NDMT-AB_0017" n="17">17</ref>, <ref target="#NDMT-AB_0019" n="19">19</ref>, <ref target="#NDMT-AB_0020" n="20">20</ref>, <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="#NDMT-AB_0037" n="37">37</ref>.</item>
           </list>
         <list type="index"><head>I</head><item xml:id="NDMT-AB_rs_0370"><rs><hi rend="sc">Innocent <num>II</num></hi></rs>, <ref target="#NDMT-AB_0067" n="67">67</ref>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0371"><rs><hi rend="sc">Ivry</hi>, baronnie</rs>, <ref target="217" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0371"><rs><hi rend="sc">Ivry</hi>, baronnie</rs>, <ref target="#NDMT-AB_0124" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           
         </list><list type="index" xml:id="NDMT-AB_liste_J">
           <head>J</head>
@@ -14610,13 +14612,13 @@
           <head>L</head>
           <item xml:id="NDMT-AB_rs_0377"><rs><hi rend="sc">La Bretesche (Pierre de)</hi></rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0378"><rs><hi rend="sc">La Brière</hi>, maison</rs>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0379"><rs><hi rend="sc">La Chievre</hi>, Guillaume</rs>, <ref target="311" n="311">311</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0380"><rs><hi rend="sc">La Commine</hi>, Thiephanie</rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0379"><rs><hi rend="sc">La Chievre</hi>, Guillaume</rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0380"><rs><hi rend="sc">La Commine</hi>, Thiephanie</rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0381"><rs><hi rend="sc">La Ferté</hi> (Baudouin de)</rs>, <ref target="#NDMT-AB_0004" n="4">4</ref>.</item>
           <item xml:id="NDMT-AB_rs_0382"><rs><hi rend="sc">La Ferté</hi> (Evrard de)</rs>, <ref target="#NDMT-AB_0004" n="4">4</ref>.</item>
           <item xml:id="NDMT-AB_rs_0383"><rs><hi rend="sc">La Forest (Marie de)</hi>, prieure du cloître de l'abbaye</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0384"><rs><hi rend="sc">La Lancette</hi>, moulin</rs>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0385"><rs><hi rend="sc">Lamarre</hi>, plâtrier à Clichy</rs>, <ref target="278" n="278">278</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0385"><rs><hi rend="sc">Lamarre</hi>, plâtrier à Clichy</rs>, <ref target="#NDMT-AB_0162" n="278">278</ref>.</item>
           <item xml:id="NDMT-AB_rs_0386"><rs><hi rend="sc">La Motte</hi> (Gui de), chev</rs>, <ref target="#NDMT-AB_0009" n="9">9</ref>. <!-- doublon meme acte NDMT-AB_0009: <ref target="#NDMT-AB_0009" n="74">9</ref> --></item>
           <item xml:id="NDMT-AB_rs_0387"><rs><hi rend="sc">La Motte</hi>, Béatrix, sa mère</rs>, <ref target="#NDMT-AB_0009" n="9">9</ref>. <!-- doublon meme acte NDMT-AB_0009: <ref target="#NDMT-AB_0009" n="74">9</ref> --></item>
                     <item xml:id="NDMT-AB_rs_0388"><rs><hi rend="sc">La Motte (Pierre de)</hi>, enfant</rs>, <ref target="#NDMT-AB_0009" n="9">9</ref>.</item>
@@ -14629,7 +14631,7 @@
           <item xml:id="NDMT-AB_rs_0395"><rs><hi rend="sc">Ladehors (Pierre de)</hi>, maître de la boucherie</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>. <!-- doublon meme acte NDMT-AB_0135: <ref target="#NDMT-AB_0135" n="233">135</ref> --></item>
           <item xml:id="NDMT-AB_rs_0396"><rs><hi rend="sc">Lai (Forcoins de)</hi></rs>, <ref target="#NDMT-AB_0043" n="43">43</ref>.</item>
           <item xml:id="NDMT-AB_rs_0397"><rs><hi rend="sc">Lambert</hi>, Antoinette, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0398"><rs><hi rend="sc">Langlois</hi>, Anceau, curé de Montmartre</rs>, <ref target="216" n="216">216</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0398"><rs><hi rend="sc">Langlois</hi>, Anceau, curé de Montmartre</rs>, <ref target="#NDMT-AB_0120" n="216">216</ref>.</item>
           <item xml:id="NDMT-AB_rs_0399"><rs><hi rend="sc">Langlois</hi>, maître Audry</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0400"><rs><hi rend="sc">Langlois</hi>, Marguerite, prieure de l'abbaye</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0401"><rs><hi rend="sc">Langlois</hi>, Marie, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
@@ -14644,8 +14646,8 @@
           <item xml:id="NDMT-AB_rs_0410"><rs><hi rend="sc">Le Bourget</hi></rs>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0411"><rs><hi rend="sc">Le Camus</hi>, Louis, notaire</rs>, <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0412"><rs><hi rend="sc">Le Camus</hi>, Madeleine, religieuse</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0413"><rs><hi rend="sc">Le Chartier</hi>, Michel</rs>, <ref target="197" n="197">197</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0414"><rs><hi rend="sc">Le Chacelier</hi>, Louis</rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0413"><rs><hi rend="sc">Le Chartier</hi>, Michel</rs>, <ref target="#NDMT-AB_0105" n="197">197</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0414"><rs><hi rend="sc">Le Chacelier</hi>, Louis</rs>, 311.</item>
           <item xml:id="NDMT-AB_rs_0415"><rs><hi rend="sc">Leclerc</hi>, Marguerite, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0416"><rs><hi rend="sc">Lecointe</hi>, Jean, orfèvre</rs>, <ref target="#NDMT-AB_0130" n="130">130</ref>.</item>
           <item xml:id="NDMT-AB_rs_0417"><rs><hi rend="sc">Lecoq</hi>, Elisabeth, portière de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
@@ -14659,7 +14661,7 @@
           <item xml:id="NDMT-AB_rs_0425"><rs><hi rend="sc">Ledoulx</hi>, Adam</rs>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0426"><rs><hi rend="sc">Le Flamenc</hi>, Geoffroy, receveur général</rs>, <ref target="#NDMT-AB_0103" n="103">103</ref>.</item>
           <item xml:id="NDMT-AB_rs_0427"><rs><hi rend="sc">Le For-aux-Dames</hi>, seigneurie</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0153" n="153">153</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0428"><rs><hi rend="sc">Le Fournier</hi>, Guérin</rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0428"><rs><hi rend="sc">Le Fournier</hi>, Guérin</rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0429"><rs><hi rend="sc">Le Franc</hi>, Jean, receveur de Normandie</rs>, <ref target="#NDMT-AB_0106" n="106">106</ref>.</item>
           <item xml:id="NDMT-AB_rs_0430"><rs><hi rend="sc">Legrand</hi>, Catherine, sous-prieure de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0431"><rs><hi rend="sc">Le Grand</hi>, Girard, gainier</rs>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
@@ -14679,40 +14681,40 @@
                     <item xml:id="NDMT-AB_rs_0443"><rs><hi rend="sc">Limousin (Isabelle)</hi>, relig.</rs>, <ref target="#NDMT-AB_0077" n="77">77</ref>, <!-- doublon meme acte NDMT-AB_0077: <ref target="#NDMT-AB_0077" n="159">77</ref> --> <ref target="#NDMT-AB_0085" n="85">85</ref>.</item>
           <item xml:id="NDMT-AB_rs_0444"><rs><hi rend="sc">Limousin (Adeline)</hi>, relig.</rs>, <ref target="#NDMT-AB_0158" n="158">158</ref>, <ref target="#NDMT-AB_0159" n="159">159</ref>, <ref target="#NDMT-AB_0167" n="167">167</ref>.</item>
           <item xml:id="NDMT-AB_rs_0445"><rs><hi rend="sc">Le Maistre</hi>, Jean</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0446"><rs><hi rend="sc">Lemercier</hi>, Elisabeth, maîtresse des pensionnaires</rs>, <ref target="366" n="366">366</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0446"><rs><hi rend="sc">Lemercier</hi>, Elisabeth, maîtresse des pensionnaires</rs>, 366.</item>
           <item xml:id="NDMT-AB_rs_0447"><rs><hi rend="sc">Le Merne</hi>, village</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>.</item>
           <item xml:id="NDMT-AB_rs_0448"><rs><hi rend="sc">Le Normand</hi>, <abbr>G.</abbr></rs>, <ref target="#NDMT-AB_0022" n="22">22</ref>, <ref target="#NDMT-AB_0038" n="38">38</ref>, <!-- doublon meme acte NDMT-AB_0038: <ref target="#NDMT-AB_0038" n="117">38</ref> --> <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0449"><rs><hi rend="sc">Le Platrier</hi>, Henri</rs>, <ref target="#NDMT-AB_0184" n="184">184</ref>.</item>
           <item xml:id="NDMT-AB_rs_0450"><rs><hi rend="sc">Le Riche</hi>, Robert, notaire</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0451"><rs><hi rend="sc">Le Roy</hi>, Nicolas, frippier</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0452"><rs><hi rend="sc">Le Sergent</hi>, Robert</rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0452"><rs><hi rend="sc">Le Sergent</hi>, Robert</rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0453"><rs><hi rend="sc">Lesueur</hi>, Jean, procureur</rs>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0454"><rs><hi rend="sc">Le Tailleur</hi>, Raoul</rs>, <ref target="#NDMT-AB_0093" n="93">93</ref>.</item>
           <item xml:id="NDMT-AB_rs_0455"><rs><hi rend="sc">Le Tellier</hi>, Cath. portière des <abbr>SS.</abbr> Martyrs</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0456"><rs><hi rend="sc">Le Tillier</hi>, Hilaire, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0457"><rs><hi rend="sc">Le Vallet</hi>, Clément</rs>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0457"><rs><hi rend="sc">Le Vallet</hi>, Clément</rs>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0458"><rs><hi rend="sc">Levesque</hi>, Gillette, secrétaire du chapitre à l'abbaye</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0459"><rs><hi rend="sc">Li Viautres. Galerennus</hi></rs>, <ref target="#NDMT-AB_0049" n="49">49</ref>.</item>
           <item xml:id="NDMT-AB_rs_0460"><rs><hi rend="sc">Livres (Pierre de)</hi>, maître de la boucherie</rs>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0461"><rs><hi rend="sc">Leschaut</hi>, Pierre</rs>, <ref target="#NDMT-AB_0041" n="41">41</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0462"><rs><hi rend="sc">Lesclat (Pierre de)</hi></rs>, <ref target="207" n="207">207</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0463"><rs><hi rend="sc">Lespinete</hi>, lieu</rs>, <ref target="000" n="000">0</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0464"><rs><hi rend="sc">Lomenie</hi>, secrétaire d'Etat</rs>, <ref target="256" n="256">256</ref>, <ref target="#NDMT-AB_0149" n="149">149</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0462"><rs><hi rend="sc">Lesclat (Pierre de)</hi></rs>, <ref target="#NDMT-AB_0112" n="207">207</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0463"><rs><hi rend="sc">Lespinete</hi>, lieu</rs>, 0.</item>
+          <item xml:id="NDMT-AB_rs_0464"><rs><hi rend="sc">Lomenie</hi>, secrétaire d'Etat</rs>, <ref target="#NDMT-AB_0147" n="256">256</ref>, <ref target="#NDMT-AB_0149" n="149">149</ref>.</item>
           <item xml:id="NDMT-AB_rs_0465"><rs><hi rend="sc">Longueville</hi>, Arnoul, notaire</rs>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
           <item xml:id="NDMT-AB_rs_0466"><rs><hi rend="sc">Lormier</hi>, Laurent, orfèvre</rs>, <ref target="#NDMT-AB_0130" n="130">130</ref>.</item>
           <item xml:id="NDMT-AB_rs_0467"><rs><hi rend="sc">Lorraine</hi> (Charles de), duc de Guise</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0468"><rs><hi rend="sc">Lorraine</hi> (Henriette de Joyeuse, veuve dudit)</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0469"><rs><hi rend="sc">Lorraine</hi> (Marie de)</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>, <ref target="288" n="288">288</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0469"><rs><hi rend="sc">Lorraine</hi> (Marie de)</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>, <ref target="#NDMT-AB_0168" n="288">288</ref>.</item>
           <item xml:id="NDMT-AB_rs_0470"><rs><hi rend="sc">Lorraine</hi> (Henriette de)</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0471"><rs><hi rend="sc">Lorraine</hi> (Henri de), duc de Guise</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0472"><rs><hi rend="sc">Lorraine</hi>, Marie de Bellefont</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>, <ref target="282" n="282">282</ref>, <ref target="284" n="284">284</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0472"><rs><hi rend="sc">Lorraine</hi>, Marie de Bellefont</rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>, <ref target="#NDMT-AB_0164" n="282">282</ref>, 284.</item>
           <item xml:id="NDMT-AB_rs_0473"><rs><hi rend="sc">Louis</hi>, roi</rs>, <ref target="#NDMT-AB_0002" n="2">2</ref>, <!-- doublon meme acte NDMT-AB_0002: <ref target="#NDMT-AB_0002" n="60">2</ref> --> <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0005" n="5">5</ref>, <ref target="#NDMT-AB_0067" n="67">67</ref>, <ref target="#NDMT-AB_0070" n="70">70</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0085" n="85">85</ref>, <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="#NDMT-AB_0098" n="98">98</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>, <ref target="#NDMT-AB_0141" n="141">141</ref>.</item>
           <item xml:id="NDMT-AB_rs_0474"><rs><hi rend="sc">Louis</hi>, fils du roi</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0005" n="5">5</ref>, <!-- doublon meme acte NDMT-AB_0005: <ref target="#NDMT-AB_0005" n="66">5</ref> --> <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0010" n="10">10</ref>, <ref target="#NDMT-AB_0002" n="2">2</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0085" n="85">85</ref>, <ref target="#NDMT-AB_0089" n="89">89</ref>, <ref target="#NDMT-AB_0019" n="19">19</ref>, <ref target="#NDMT-AB_0021" n="21">21</ref><!--, <ref>92</ref>-->, <ref target="#NDMT-AB_0023" n="23">23</ref><!--, <ref>94</ref>-->, <ref target="#NDMT-AB_0026" n="26">26</ref><!--, <ref>97</ref>-->, <ref target="#NDMT-AB_0028" n="28">28</ref><!--, <ref>101</ref>-->, <ref target="#NDMT-AB_0104" n="104">104</ref>, <ref target="#NDMT-AB_0033" n="33">33</ref>, <ref target="#NDMT-AB_0039" n="39">39</ref>, <ref target="#NDMT-AB_0073" n="73">73</ref>, <ref target="#NDMT-AB_0075" n="75">75</ref>, <ref target="#NDMT-AB_0135" n="135">135</ref>, <ref target="#NDMT-AB_0141" n="141">141</ref>.</item>
           <item xml:id="NDMT-AB_rs_0475"><rs><hi rend="sc">Louis <num>VIII</num></hi></rs>, <ref target="#NDMT-AB_0075" n="75">75</ref>.</item>
           <item xml:id="NDMT-AB_rs_0476"><rs><hi rend="sc">Louis <num>XI</num></hi></rs>, <ref target="#NDMT-AB_0126" n="126">126</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0477"><rs><hi rend="sc">Louis <num>XIII</num></hi></rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="256" n="256">256</ref>, <ref target="#NDMT-AB_0149" n="149">149</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0478"><rs><hi rend="sc">Louis <num>XIV</num></hi></rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="#NDMT-AB_0151" n="151">151</ref>, <ref target="#NDMT-AB_0154" n="154">154</ref>, <ref target="#NDMT-AB_0158" n="158">158</ref>, <ref target="282" n="282">282</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0479"><rs><hi rend="sc">Louis <num>XV</num></hi></rs>, <ref target="#NDMT-AB_0144" n="144">144</ref>, <ref target="282" n="282">282</ref>, <ref target="288" n="288">288</ref>, <ref target="#NDMT-AB_0168" n="168">168</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0477"><rs><hi rend="sc">Louis <num>XIII</num></hi></rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="#NDMT-AB_0147" n="256">256</ref>, <ref target="#NDMT-AB_0149" n="149">149</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0478"><rs><hi rend="sc">Louis <num>XIV</num></hi></rs>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="#NDMT-AB_0151" n="151">151</ref>, <ref target="#NDMT-AB_0154" n="154">154</ref>, <ref target="#NDMT-AB_0158" n="158">158</ref>, <ref target="#NDMT-AB_0164" n="282">282</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0479"><rs><hi rend="sc">Louis <num>XV</num></hi></rs>, <ref target="#NDMT-AB_0144" n="144">144</ref>, <ref target="#NDMT-AB_0164" n="282">282</ref>, <ref target="#NDMT-AB_0168" n="288">288</ref>, <ref target="#NDMT-AB_0168" n="168">168</ref>.</item>
           <item xml:id="NDMT-AB_rs_0480"><rs><hi rend="sc">Lubin</hi>, puer</rs>, <ref target="#NDMT-AB_0056" n="56">56</ref>.</item>
           <item xml:id="NDMT-AB_rs_0481"><rs><hi rend="sc">Lurcus</hi>, Hugues</rs>, <ref target="#NDMT-AB_0005" n="5">5</ref>.</item>
           <item xml:id="NDMT-AB_rs_0482"><rs><hi rend="sc">Luzarches</hi> (Pierre de)</rs>, <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
@@ -14737,14 +14739,14 @@
           <item xml:id="NDMT-AB_rs_0497"><rs><hi rend="sc">Marcadé</hi>, Catherine, boursière de l'abbaye</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>.</item>
           <item xml:id="NDMT-AB_rs_0498"><pb n="340" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f352/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
  
- <rs><hi rend="sc">Marchecon</hi>, Mathieu, seigneur de Passy</rs>, <ref target="239" n="239">239</ref>.</item>
+ <rs><hi rend="sc">Marchecon</hi>, Mathieu, seigneur de Passy</rs>, <ref target="#NDMT-AB_0138" n="239">239</ref>.</item>
           <item xml:id="NDMT-AB_rs_0499"><rs><hi rend="sc">Mareis</hi>, prés</rs>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0500"><rs><hi rend="sc">Maresio (Grangia de)</hi></rs>, <ref target="#NDMT-AB_0078" n="78">78</ref>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0501"><rs><hi rend="sc">Mariavale</hi>, Henriet</rs>, <ref target="#NDMT-AB_0117" n="117">117</ref>, <ref target="214" n="214">214</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0501"><rs><hi rend="sc">Mariavale</hi>, Henriet</rs>, <ref target="#NDMT-AB_0117" n="117">117</ref>, <ref target="#NDMT-AB_0117" n="214">214</ref>.</item>
           <item xml:id="NDMT-AB_rs_0502"><rs><hi rend="sc">Maci (Jean de)</hi></rs>, <ref target="#NDMT-AB_0047" n="47">47</ref>.</item>
           <item xml:id="NDMT-AB_rs_0503"><rs><hi rend="sc">Marin</hi>, Catherine, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0504"><rs><hi rend="sc">Marin</hi>, Marguerite, relig</rs>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0505"><rs><hi rend="sc">Marin</hi>, Marie, abbesse de <abbr>N.-D.</abbr> de la Blanche</rs>, <ref target="275" n="275">275</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0505"><rs><hi rend="sc">Marin</hi>, Marie, abbesse de <abbr>N.-D.</abbr> de la Blanche</rs>, <ref target="#NDMT-AB_0157" n="275">275</ref>.</item>
           <item xml:id="NDMT-AB_rs_0506"><rs><hi rend="sc">Mathie</hi>, village</rs>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0507"><rs><hi rend="sc">Matheus filius Manigoti</hi></rs>, <ref target="#NDMT-AB_0048" n="48">48</ref>.</item>
           <item xml:id="NDMT-AB_rs_0508"><rs><hi rend="sc">Mathieu</hi>, prieur de Montmartre</rs>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
@@ -14778,23 +14780,23 @@
           <item xml:id="NDMT-AB_rs_0536"><rs><hi rend="sc">Mons Desiderii</hi>, lieu</rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>, <ref target="#NDMT-AB_0040" n="40">40</ref>.</item>
           <item xml:id="NDMT-AB_rs_0537"><rs><hi rend="sc">Montreuil (Etienne de)</hi></rs>, <ref target="#NDMT-AB_0187" n="187">187</ref>.</item>
           <item xml:id="NDMT-AB_rs_0538"><rs><hi rend="sc">Montemirabili (Valesia de)</hi>, religieuse</rs>, <ref target="#NDMT-AB_0186" n="186">186</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0539"><rs><hi rend="sc">Montengny (Jean de)</hi>, garde de la prévôté de Paris</rs>, <ref target="000" n="000">0</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0539"><rs><hi rend="sc">Montengny (Jean de)</hi>, garde de la prévôté de Paris</rs>, 0.</item>
           <item xml:id="NDMT-AB_rs_0540"><rs><hi rend="sc">Montfort (Guillaume, curé de)</hi></rs>, <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0541"><rs><hi rend="sc">Montlhéry</hi> (Geoffroy, prévôt de)</rs>, <ref target="#NDMT-AB_0055" n="55">55</ref>.</item>
           <item xml:id="NDMT-AB_rs_0542"><rs><hi rend="sc">Montlhéry</hi>, chevallerii</rs>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0543"><rs><hi rend="sc">Montmartre (Hermer de)</hi>, écuyer du roi</rs>, <ref target="#NDMT-AB_0183" n="183">183</ref>, <ref target="315" n="315">315</ref>, <ref target="#NDMT-AB_0185" n="185">185</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0543"><rs><hi rend="sc">Montmartre (Hermer de)</hi>, écuyer du roi</rs>, <ref target="#NDMT-AB_0183" n="183">183</ref>, <ref target="#NDMT-AB_0184" n="315">315</ref>, <ref target="#NDMT-AB_0185" n="185">185</ref>.</item>
           <item xml:id="NDMT-AB_rs_0544"><rs><hi rend="sc">Montmartre (Pierre de)</hi></rs>, <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0545"><rs><hi rend="sc">Montmartre</hi>, Aalix, sous-prieure</rs>, <ref target="#NDMT-AB_0057" n="57">57</ref>.</item>
           <item xml:id="NDMT-AB_rs_0546"><rs><hi rend="sc">Montmartre</hi> (Ada de Miciaco, abbesse de)</rs>, <ref target="#NDMT-AB_0185" n="185">185</ref>. <!-- doublon meme acte NDMT-AB_0185: <ref target="#NDMT-AB_0185" n="324">185</ref> --></item>
           <item xml:id="NDMT-AB_rs_0547"><rs><hi rend="sc">Montmartre</hi> (Adélaïde, sous-prieure de)</rs>, <ref target="#NDMT-AB_0186" n="186">186</ref>.</item>
           <item xml:id="NDMT-AB_rs_0548"><rs><hi rend="sc">Montmartre</hi>, Alix, abbesse</rs>, <ref target="#NDMT-AB_0095" n="95">95</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0549"><rs><hi rend="sc">Montmartre</hi>, Anne de Lorraine, abbesse</rs>, <ref target="275" n="275">275</ref>, <ref target="#NDMT-AB_0136" n="136">136</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0549"><rs><hi rend="sc">Montmartre</hi>, Anne de Lorraine, abbesse</rs>, <ref target="#NDMT-AB_0157" n="275">275</ref>, <ref target="#NDMT-AB_0136" n="136">136</ref>.</item>
           <item xml:id="NDMT-AB_rs_0550"><rs><hi rend="sc">Montmartre</hi> (Arnoul de)</rs>, <ref target="#NDMT-AB_0043" n="43">43</ref>.</item>
           <item xml:id="NDMT-AB_rs_0551"><rs><hi rend="sc">Montmartre</hi>, Catherine de la Rochefoucaud, abbesse</rs>, <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0552"><rs><hi rend="sc">Montmartre</hi>, Edeline, abbesse</rs>, <ref target="#NDMT-AB_0068" n="68">68</ref>, <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0552"><rs><hi rend="sc">Montmartre</hi>, Edeline, abbesse</rs>, <ref target="#NDMT-AB_0068" n="68">68</ref>, <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0553"><rs><hi rend="sc">Montmartre</hi>, Elisabeth, abbesse</rs>, <ref target="#NDMT-AB_0069" n="69">69</ref>.</item>
           <item xml:id="NDMT-AB_rs_0554"><rs><hi rend="sc">Montmartre</hi>, Emmeline, abbesse</rs>, <ref target="#NDMT-AB_0094" n="94">94</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0555"><rs><hi rend="sc">Montmartre</hi>, Françoise de Lorraine, abbesse</rs>, <ref target="256" n="256">256</ref>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <!-- doublon meme acte NDMT-AB_0152: <ref target="#NDMT-AB_0152" n="268">152</ref> --> <ref target="#NDMT-AB_0155" n="155">155</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0555"><rs><hi rend="sc">Montmartre</hi>, Françoise de Lorraine, abbesse</rs>, <ref target="#NDMT-AB_0148" n="256">256</ref>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>, <!-- doublon meme acte NDMT-AB_0152: <ref target="#NDMT-AB_0152" n="268">152</ref> --> <ref target="#NDMT-AB_0155" n="155">155</ref>, <ref target="#NDMT-AB_0156" n="156">156</ref>.</item>
           <item xml:id="NDMT-AB_rs_0556"><rs><hi rend="sc">Montmartre</hi> (G. abbesse de)</rs>, <ref target="#NDMT-AB_0018" n="18">18</ref>, <ref target="#NDMT-AB_0034" n="34">34</ref>.</item>
           <item xml:id="NDMT-AB_rs_0557"><rs><hi rend="sc">Montmartre</hi>, Helissende, abbesse</rs>, <ref target="#NDMT-AB_0150" n="150">150</ref>, <ref target="#NDMT-AB_0134" n="134">134</ref>, <ref target="#NDMT-AB_0078" n="78">78</ref>.</item>
           <item xml:id="NDMT-AB_rs_0558"><rs><hi rend="sc">Montmartre</hi>, Helissendi, chantre</rs>, <ref target="#NDMT-AB_0057" n="57">57</ref>.</item>
@@ -14805,13 +14807,13 @@
           <item xml:id="NDMT-AB_rs_0561"><rs><hi rend="sc">Montmartre</hi>, Isabelle, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0106" n="106">106</ref>.</item>
           <item xml:id="NDMT-AB_rs_0562"><rs><hi rend="sc">Montmartre</hi>, Jeanne de Coudray, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0162" n="162">162</ref>, <ref target="#NDMT-AB_0186" n="186">186</ref>, <ref target="#NDMT-AB_0191" n="191">191</ref>.</item>
           <item xml:id="NDMT-AB_rs_0563"><rs><hi rend="sc">Montmartre</hi>, Jeanne de Valengoujart, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0193" n="193">193</ref>, <ref target="#NDMT-AB_0103" n="103">103</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0564"><rs><hi rend="sc">Montmartre</hi>, Louise de la Tour d'Auvergne, abbesse</rs>, <abbr>p.</abbr> <ref target="288" n="288">288</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0564"><rs><hi rend="sc">Montmartre</hi>, Louise de la Tour d'Auvergne, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0168" n="288">288</ref>.</item>
           <item xml:id="NDMT-AB_rs_0565"><rs><hi rend="sc">Montmartre</hi>, Marguerite, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
           <item xml:id="NDMT-AB_rs_0566"><rs><hi rend="sc">Montmartre</hi>, Marie de Beauvilliers, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0567"><rs><hi rend="sc">Montmartre</hi>, Montmorency, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0172" n="172">172</ref>.</item>
           <item xml:id="NDMT-AB_rs_0568"><rs><hi rend="sc">Montmartre</hi>, Pétronille, abbesse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0085" n="85">85</ref>, <ref target="#NDMT-AB_0086" n="86">86</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
           <item xml:id="NDMT-AB_rs_0569"><rs><hi rend="sc">Montmartre</hi> (Bail de la chasse de l'abbaye de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0126" n="126">126</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0570"><rs><hi rend="sc">Montmartre</hi> (Chapelains de)</rs>, <abbr>p.</abbr> <ref target="000" n="000">0</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0570"><rs><hi rend="sc">Montmartre</hi> (Chapelains de)</rs>, <abbr>p.</abbr> 0.</item>
           <item xml:id="NDMT-AB_rs_0571"><rs><hi rend="sc">Montmartre</hi> (Mabille, chantre de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0186" n="186">186</ref>.</item>
           <item xml:id="NDMT-AB_rs_0572"><rs><hi rend="sc">Montmartre</hi> (Maisons à)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0173" n="173">173</ref>.</item>
           <item xml:id="NDMT-AB_rs_0573"><rs><hi rend="sc">Montmartre</hi> (Louis Compagnon, curé de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0170" n="170">170</ref>.</item>
@@ -14821,7 +14823,7 @@
           <item xml:id="NDMT-AB_rs_0577"><rs><hi rend="sc">Morelli</hi>, cultura</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0578"><rs><hi rend="sc">Morellus (Nevelon dit)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0090" n="90">90</ref>.</item>
           <item xml:id="NDMT-AB_rs_0579"><rs><hi rend="sc">Morges (Louise de)</hi>, portière de l'abbaye</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0024" n="24">24</ref>, <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0580"><rs><hi rend="sc">Marhier</hi>, Simon, garde de la prévôté de Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0115" n="115">115</ref>, <ref target="214" n="214">214</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0580"><rs><hi rend="sc">Marhier</hi>, Simon, garde de la prévôté de Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0115" n="115">115</ref>, <ref target="#NDMT-AB_0117" n="214">214</ref>.</item>
           <item xml:id="NDMT-AB_rs_0581"><rs><hi rend="sc">Mosterolium</hi>, village</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0036" n="36">36</ref>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0582"><rs><hi rend="sc">Mosterolo (Berner, doyen de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0043" n="43">43</ref>.</item>
           <item xml:id="NDMT-AB_rs_0583"><rs><hi rend="sc">Mousnier</hi>, Bernard, notaire</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0150" n="150">150</ref>.</item>
@@ -14840,7 +14842,7 @@
           <item xml:id="NDMT-AB_rs_0592"><rs><hi rend="sc">Neuilly</hi> (Guillaume de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0034" n="34">34</ref>.</item>
           <item xml:id="NDMT-AB_rs_0593"><rs><hi rend="sc">Nevelo</hi>, frère du bouteiller</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0131" n="131">131</ref>.</item>
           <item xml:id="NDMT-AB_rs_0594"><rs><hi rend="sc">Nixart</hi>, domaine</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0004" n="4">4</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0595"><rs><hi rend="sc">Nogent (De)</hi>, Michel</rs>, <abbr>p.</abbr> <ref target="214" n="214">214</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0595"><rs><hi rend="sc">Nogent (De)</hi>, Michel</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0117" n="214">214</ref>.</item>
           <item xml:id="NDMT-AB_rs_0596"><rs><hi rend="sc">Noue</hi> (Claude de), religieuse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0597"><rs><hi rend="sc">Noue</hi>, Renée, religieuse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0598"><rs><hi rend="sc">Novy (Jean de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
@@ -14867,7 +14869,7 @@
           <item xml:id="NDMT-AB_rs_0610"><rs><hi rend="sc">Paon</hi>, Jean</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0098" n="98">98</ref>.</item>
           <item xml:id="NDMT-AB_rs_0611"><rs><hi rend="sc">Parfait</hi>, Elisabeth, relig</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
           <item xml:id="NDMT-AB_rs_0612"><rs><hi rend="sc">Parfait</hi>, Linois, bourgeois de Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0107" n="107">107</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0613"><rs><hi rend="sc">Paridan</hi>, Pierre</rs>, <abbr>p.</abbr> <ref target="311" n="311">311</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0613"><rs><hi rend="sc">Paridan</hi>, Pierre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0180" n="311">311</ref>.</item>
           <item xml:id="NDMT-AB_rs_0614"><rs><hi rend="sc">Paris</hi>, Ernulf</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0041" n="41">41</ref>.</item>
           <item xml:id="NDMT-AB_rs_0615"><rs><hi rend="sc">Paris</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0003" n="3">3</ref>.</item>
           <item xml:id="NDMT-AB_rs_0616"><rs><hi rend="sc">Paris</hi> (Four de l'abbaye à)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
@@ -14882,10 +14884,10 @@
           <item xml:id="NDMT-AB_rs_0625"><rs><hi rend="sc">Paris</hi> (Marché de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0134" n="134">134</ref>.</item>
           <item xml:id="NDMT-AB_rs_0626"><rs><hi rend="sc">Paris</hi> (Clément, doyen du chapitre de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0056" n="56">56</ref>. <!-- doublon meme acte NDMT-AB_0056: <ref target="#NDMT-AB_0056" n="136">56</ref> --></item>
           <item xml:id="NDMT-AB_rs_0627"><rs><hi rend="sc">Paris</hi> (Odon, év. de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0059" n="59">59</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0628"><rs><hi rend="sc">Paris</hi>, Le Châtelet</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0063" n="63">63</ref>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="#NDMT-AB_0143" n="143">143</ref>, <ref target="#NDMT-AB_0098" n="98">98</ref>, <ref target="#NDMT-AB_0105" n="105">105</ref>, <ref target="197" n="197">197</ref>, <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0628"><rs><hi rend="sc">Paris</hi>, Le Châtelet</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0063" n="63">63</ref>, <ref target="#NDMT-AB_0142" n="142">142</ref>, <ref target="#NDMT-AB_0143" n="143">143</ref>, <ref target="#NDMT-AB_0098" n="98">98</ref>, <ref target="#NDMT-AB_0105" n="105">105</ref>, <ref target="#NDMT-AB_0105" n="197">197</ref>, <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0629"><rs><hi rend="sc">Paris</hi> (Les bouchers de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0069" n="69">69</ref>, <!-- doublon meme acte NDMT-AB_0069: <ref target="#NDMT-AB_0069" n="147">69</ref> --> <ref target="#NDMT-AB_0128" n="128">128</ref>, <!-- doublon meme acte NDMT-AB_0128: <ref target="#NDMT-AB_0128" n="225">128</ref> --> <ref target="#NDMT-AB_0135" n="135">135</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
           <item xml:id="NDMT-AB_rs_0630"><rs><hi rend="sc">Paris</hi> (Rue Charrauri à)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0631"><rs><hi rend="sc">Paris</hi>, Le grand pont</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0083" n="83">83</ref>, <ref target="#NDMT-AB_0186" n="186">186</ref>, <ref target="216" n="216">216</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0631"><rs><hi rend="sc">Paris</hi>, Le grand pont</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0083" n="83">83</ref>, <ref target="#NDMT-AB_0186" n="186">186</ref>, <ref target="#NDMT-AB_0118" n="216">216</ref>.</item>
           <item xml:id="NDMT-AB_rs_0632"><rs><hi rend="sc">Paris</hi> (La Hauterie, four de l'abbaye à)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0083" n="83">83</ref>, <ref target="#NDMT-AB_0086" n="86">86</ref>. <!-- doublon meme acte NDMT-AB_0086: <ref target="#NDMT-AB_0086" n="169">86</ref> --></item>
           <item xml:id="NDMT-AB_rs_0633"><rs><hi rend="sc">Paris</hi> (Le cimetière <abbr>S.</abbr> Landric à), <num>d.</num></rs>, <ref target="#NDMT-AB_0091" n="91">91</ref>. <!-- doublon meme acte NDMT-AB_0091: <ref target="#NDMT-AB_0091" n="178">91</ref> --></item>
           <item xml:id="NDMT-AB_rs_0634"><rs><hi rend="sc">Paris</hi>, Rue Carus Amicus</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0091" n="91">91</ref>.</item>
@@ -14893,22 +14895,22 @@
           <item xml:id="NDMT-AB_rs_0636"><rs><hi rend="sc">Paris</hi>, Hôtel-Dieu</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0095" n="95">95</ref>.</item>
           <item xml:id="NDMT-AB_rs_0637"><rs><hi rend="sc">Paris</hi>, Rue Saint-Martin-aux-Champs</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0184" n="184">184</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
           <item xml:id="NDMT-AB_rs_0638"><rs><hi rend="sc">Paris</hi>, Rue des Petits-Champs</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0186" n="186">186</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0639"><rs><hi rend="sc">Paris</hi>, La voûte <abbr>S.</abbr> Eloy du Châtelet</rs>, <abbr>p.</abbr> <ref target="197" n="197">197</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0639"><rs><hi rend="sc">Paris</hi>, La voûte <abbr>S.</abbr> Eloy du Châtelet</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0105" n="197">197</ref>.</item>
           <item xml:id="NDMT-AB_rs_0640"><rs><hi rend="sc">Paris</hi>, Rue <abbr>S.</abbr> Mery</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0181" n="181">181</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0641"><rs><hi rend="sc">Paris</hi>, Chambre de l'abbaye au Châtelet</rs>, <abbr>p.</abbr> <ref target="210" n="210">210</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0642"><rs><hi rend="sc">Paris</hi>, Rue de la Heaumerci</rs>, <abbr>p.</abbr> <ref target="214" n="214">214</ref>, <ref target="#NDMT-AB_0140" n="140">140</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>, <ref target="#NDMT-AB_0189" n="189">189</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0643"><rs><hi rend="sc">Paris</hi> (Guillaume, év. de)</rs>, <abbr>p.</abbr> <ref target="217" n="217">217</ref>, <ref target="315" n="315">315</ref>, <ref target="#NDMT-AB_0184" n="184">184</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0644"><rs><hi rend="sc">Paris</hi> (Et. Poncher, év. de)</rs>, <abbr>p.</abbr> <ref target="231" n="231">231</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0641"><rs><hi rend="sc">Paris</hi>, Chambre de l'abbaye au Châtelet</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0113" n="210">210</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0642"><rs><hi rend="sc">Paris</hi>, Rue de la Heaumerci</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0116" n="214">214</ref>, <ref target="#NDMT-AB_0140" n="140">140</ref>, <ref target="#NDMT-AB_0171" n="171">171</ref>, <ref target="#NDMT-AB_0189" n="189">189</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0643"><rs><hi rend="sc">Paris</hi> (Guillaume, év. de)</rs>, <abbr>p.</abbr> 217, 315, <ref target="#NDMT-AB_0184" n="184">184</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0644"><rs><hi rend="sc">Paris</hi> (Et. Poncher, év. de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0132" n="231">231</ref>.</item>
           <item xml:id="NDMT-AB_rs_0645"><rs><hi rend="sc">Paris</hi> (Henri de Gondi, év. de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0646"><rs><hi rend="sc">Paris</hi> (Fr. de Harlay, archev. de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0155" n="155">155</ref>.</item>
           <item xml:id="NDMT-AB_rs_0647"><rs><hi rend="sc">Paris</hi> (Le Temple de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0186" n="186">186</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0648"><rs><hi rend="sc">Passy</hi>, village</rs>, <abbr>p.</abbr> <ref target="239" n="239">239</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0648"><rs><hi rend="sc">Passy</hi>, village</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0139" n="239">239</ref>.</item>
           <item xml:id="NDMT-AB_rs_0649"><rs><hi rend="sc">Penthièvre</hi> (<abbr>M<hi rend="sup">lle</hi> de</abbr>)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0171" n="171">171</ref>.</item>
           <item xml:id="NDMT-AB_rs_0650"><rs><hi rend="sc">Peché</hi>, Geneviève, relig</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0651"><rs><hi rend="sc">Pepin</hi>, Jean, escrinier</rs>, <abbr>p.</abbr> <ref target="197" n="197">197</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0651"><rs><hi rend="sc">Pepin</hi>, Jean, escrinier</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0105" n="197">197</ref>.</item>
           <item xml:id="NDMT-AB_rs_0652"><rs><hi rend="sc">Perruchei (Simon de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0036" n="36">36</ref>.</item>
           <item xml:id="NDMT-AB_rs_0653"><rs><hi rend="sc">Petrus</hi>, miles</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0654"><rs><hi rend="sc">Peveres (Helnard)</hi></rs>, <abbr>p.</abbr> <ref target="000" n="000">0</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0654"><rs><hi rend="sc">Peveres (Helnard)</hi></rs>, <abbr>p.</abbr> 0.</item>
           <item xml:id="NDMT-AB_rs_0655"><rs><hi rend="sc">Philippe</hi>, archidiacre de Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0030" n="30">30</ref>.</item>
           <item xml:id="NDMT-AB_rs_0656"><rs><hi rend="sc">Philippe</hi>, roi</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>, <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0657"><rs><hi rend="sc">Philippe-Auguste</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0112" n="112">112</ref>, <ref target="#NDMT-AB_0040" n="40">40</ref>, <ref target="#NDMT-AB_0045" n="45">45</ref>, <ref target="#NDMT-AB_0046" n="46">46</ref>, <ref target="#NDMT-AB_0139" n="139">139</ref>, <ref target="#NDMT-AB_0063" n="63">63</ref>, <ref target="#NDMT-AB_0069" n="69">69</ref>.</item>
@@ -14941,7 +14943,7 @@
           <item xml:id="NDMT-AB_rs_0682"><rs><hi rend="sc">Porcher</hi>, Marguerite, religieuse</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0150" n="150">150</ref>.</item>
           <item xml:id="NDMT-AB_rs_0683"><rs><hi rend="sc">Poncte</hi>, terre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0684"><rs><hi rend="sc">Ponier</hi>, notaire à Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0160" n="160">160</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0685"><rs><hi rend="sc">Pont la Reine</hi>, lieu</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="197" n="197">197</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0685"><rs><hi rend="sc">Pont la Reine</hi>, lieu</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="#NDMT-AB_0104" n="197">197</ref>.</item>
           <item xml:id="NDMT-AB_rs_0686"><rs><hi rend="sc">Pont la Reine</hi> (Valeran de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0112" n="112">112</ref>.</item>
           <item xml:id="NDMT-AB_rs_0687"><rs><hi rend="sc">Pont la Reine</hi> (Pierre de), son fils</rs>, <ref target="#NDMT-AB_0112" n="112">112</ref>.</item>
           <item xml:id="NDMT-AB_rs_0688"><rs><hi rend="sc">Pontibus (Galeran de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0040" n="40">40</ref>.</item>
@@ -14976,7 +14978,7 @@
           <item xml:id="NDMT-AB_rs_0713"><rs><hi rend="sc">Rembault</hi>, Theofonia, sa femme</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0067" n="67">67</ref>.</item>
           <item xml:id="NDMT-AB_rs_0714"><pb n="344" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f356/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
  
- <rs><hi rend="sc">Remis (Adeline de)</hi>, religieuse de Montmartre</rs>, <abbr>p.</abbr> <ref target="425" n="425">425</ref>.</item>
+ <rs><hi rend="sc">Remis (Adeline de)</hi>, religieuse de Montmartre</rs>, <abbr>p.</abbr> 425.</item>
           <item xml:id="NDMT-AB_rs_0715"><rs><hi rend="sc">Renaud</hi>, rémois</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0716"><rs><hi rend="sc">Reneriis</hi>, Barthélemi, chapelain de l'abbaye</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0057" n="57">57</ref>.</item>
           <item xml:id="NDMT-AB_rs_0717"><rs><hi rend="sc">Renier</hi>, cordonnier</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0048" n="48">48</ref>.</item>
@@ -15011,7 +15013,7 @@
         </list>
         <list type="index" xml:id="NDMT-AB_liste_S">
           <head>S</head>
-          <item xml:id="NDMT-AB_rs_0745"><rs><hi rend="sc">S. Andrieu</hi>, seigneurie</rs>, <abbr>p.</abbr> <ref target="217" n="217">217</ref>, <ref target="#NDMT-AB_0127" n="127">127</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0745"><rs><hi rend="sc">S. Andrieu</hi>, seigneurie</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0124" n="217">217</ref>, <ref target="#NDMT-AB_0127" n="127">127</ref>.</item>
           <item xml:id="NDMT-AB_rs_0746"><rs><hi rend="sc">S. Benoît (Pierre de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0093" n="93">93</ref>.</item>
           <item xml:id="NDMT-AB_rs_0747"><rs><hi rend="sc">S. Clodoaldo</hi> (Hudo de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>, <ref target="#NDMT-AB_0075" n="75">75</ref>.</item>
           <item xml:id="NDMT-AB_rs_0748"><rs><hi rend="sc">S. Clodoaldo</hi>, villa</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0003" n="3">3</ref>.</item>
@@ -15090,7 +15092,7 @@
           <item xml:id="NDMT-AB_rs_0819"><rs><hi rend="sc">Senlis</hi> (Robert; abbé de <abbr>S.</abbr> Vincent de)</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0161" n="161">161</ref>, <ref target="#NDMT-AB_0080" n="80">80</ref>.</item>
           <item xml:id="NDMT-AB_rs_0820"><rs><hi rend="sc">Sens (Pierre, archev. de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0067" n="67">67</ref>.</item>
           <item xml:id="NDMT-AB_rs_0821"><rs><hi rend="sc">Seve (Claude de)</hi>, boursière de l'abbaye</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0150" n="150">150</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0822"><rs><hi rend="sc">Sèvres</hi>, village</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0043" n="43">43</ref>, <!-- doublon meme acte NDMT-AB_0043: <ref target="#NDMT-AB_0043" n="125">43</ref> --> <ref target="#NDMT-AB_0134" n="134">134</ref>, <!-- doublon meme acte NDMT-AB_0043: <ref target="#NDMT-AB_0043" n="135">43</ref> --> <ref target="#NDMT-AB_0076" n="76">76</ref>, <ref target="#NDMT-AB_0055" n="55">55</ref>, <ref target="239" n="239">239</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0822"><rs><hi rend="sc">Sèvres</hi>, village</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0043" n="43">43</ref>, <!-- doublon meme acte NDMT-AB_0043: <ref target="#NDMT-AB_0043" n="125">43</ref> --> <ref target="#NDMT-AB_0134" n="134">134</ref>, <!-- doublon meme acte NDMT-AB_0043: <ref target="#NDMT-AB_0043" n="135">43</ref> --> <ref target="#NDMT-AB_0076" n="76">76</ref>, <ref target="#NDMT-AB_0055" n="55">55</ref>, <ref target="#NDMT-AB_0139" n="239">239</ref>.</item>
           <item xml:id="NDMT-AB_rs_0823"><rs><hi rend="sc">Silli (Hervé de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0039" n="39">39</ref>.</item>
           <item xml:id="NDMT-AB_rs_0824"><rs><hi rend="sc">Silvestre</hi>, prêtre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0084" n="84">84</ref>.</item>
           <item xml:id="NDMT-AB_rs_0825"><rs><hi rend="sc">Sircoquis (Hugues de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0031" n="31">31</ref>.</item>
@@ -15130,11 +15132,11 @@
           <item xml:id="NDMT-AB_rs_0853"><rs><hi rend="sc">Tresins (Constantin de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0004" n="4">4</ref>.</item>
           <item xml:id="NDMT-AB_rs_0854"><rs><hi rend="sc">Triault</hi>, maître Jean</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0135" n="135">135</ref>.</item>
           <item xml:id="NDMT-AB_rs_0855"><rs><hi rend="sc">Teudo</hi>, frater Warini</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0856"><rs><hi rend="sc">Touvenot</hi>, notaire à Paris</rs>, <abbr>p.</abbr> <ref target="291" n="291">291</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0856"><rs><hi rend="sc">Touvenot</hi>, notaire à Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0170" n="291">291</ref>.</item>
           <item xml:id="NDMT-AB_rs_0857"><rs><hi rend="sc">Tres-Luga (Philippe de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>.</item>
           <item xml:id="NDMT-AB_rs_0858"><rs><hi rend="sc">Trochart</hi>, Pierre, chev</rs>, <ref target="#NDMT-AB_0094" n="94">94</ref>.</item>
           <item xml:id="NDMT-AB_rs_0859"><rs><hi rend="sc">Tronson</hi>, Catherine, relig</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0152" n="152">152</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0860"><rs><hi rend="sc">Tuillerie (Robert de)</hi></rs>, <abbr>p.</abbr> <ref target="207" n="207">207</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0860"><rs><hi rend="sc">Tuillerie (Robert de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0112" n="207">207</ref>.</item>
           <item xml:id="NDMT-AB_rs_0861"><rs><hi rend="sc">Turonicus (Richard dit)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0090" n="90">90</ref>. <!-- doublon meme acte NDMT-AB_0090: <ref target="#NDMT-AB_0090" n="176">90</ref> --></item>
           <item xml:id="NDMT-AB_rs_0862"><rs><hi rend="sc">Turre (Raoul de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
           
@@ -15165,9 +15167,9 @@
           <item xml:id="NDMT-AB_rs_0880"><rs><hi rend="sc">Vilers (Herbert de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0001" n="1">1</ref>.</item>
           <item xml:id="NDMT-AB_rs_0881"><rs><hi rend="sc">Villers (Marie de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0163" n="163">163</ref>.</item>
           <item xml:id="NDMT-AB_rs_0882"><rs><hi rend="sc">Villiers seigneurie</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0883"><rs><hi rend="sc">Villeconte</hi>, seigneurie</rs>, <abbr>p.</abbr> <ref target="211" n="211">211</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0883"><rs><hi rend="sc">Villeconte</hi>, seigneurie</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0114" n="211">211</ref>.</item>
           <item xml:id="NDMT-AB_rs_0884"><rs><hi rend="sc">Ville-l'Evêque (La)</hi>, lieu</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0149" n="149">149</ref>.</item>
-          <item xml:id="NDMT-AB_rs_0885"><rs><hi rend="sc">Vincennes</hi>, bois</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0094" n="94">94</ref>. (Vid. Vulcenia), <abbr>p.</abbr> <ref target="#NDMT-AB_0108" n="108">108</ref>, <ref target="211" n="211">211</ref>.</item>
+          <item xml:id="NDMT-AB_rs_0885"><rs><hi rend="sc">Vincennes</hi>, bois</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0094" n="94">94</ref>. (Vid. Vulcenia), <abbr>p.</abbr> <ref target="#NDMT-AB_0108" n="108">108</ref>, <ref target="#NDMT-AB_0114" n="211">211</ref>.</item>
           <item xml:id="NDMT-AB_rs_0886"><rs><hi rend="sc">Viniaco (Adam de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0028" n="28">28</ref>.</item>
           <item xml:id="NDMT-AB_rs_0887"><rs><hi rend="sc">Vitry-sur-Seine</hi>, village</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0070" n="70">70</ref>, <ref target="#NDMT-AB_0015" n="15">15</ref>, <ref target="#NDMT-AB_0028" n="28">28</ref>, <ref target="#NDMT-AB_0108" n="108">108</ref>.</item>
           <item xml:id="NDMT-AB_rs_0888"><rs><hi rend="sc">Voirines (Gilon de)</hi></rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0038" n="38">38</ref>.</item>

@@ -74,6 +74,8 @@
           <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:position" use="string(@n)"/>
+            <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
             <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -137,7 +139,7 @@
     </front>
     <group>
       <group xml:id="NDPA-EG-04_group-1">
-        <head><pb n="3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/> OBITUARIUM<lb/> ECCLESIÆ PARISIENSIS.</head>
+        <head><pb n="3" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/> Obituarium <lb/> ecclesiæ Parisiensis.</head>
           <text xml:id="NDPA-EG-04_0001" subtype="article" n="I">
             <front>
               <docDate>
@@ -8614,7 +8616,7 @@
           </text>
     
           <list>
-            <head>DECANI.</head>
+            <head>Decani.</head>
             <item>1. Hilarius, circ. 994.</item>
             <item>2. Maldaguinus, circ. 1000.</item>
             <item>3. Garinus.</item>
@@ -8692,7 +8694,7 @@
       </group>
       <group xml:id="NDPA-EG-04_group-2">
         <text xml:id="NDPA-EG-04_index" subtype="article">
-        <head>INDEX GENERALIS.</head>
+        <head>Index generalis.</head>
         <body>
           <div type="index">
         <pb n="217" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
@@ -14964,7 +14966,7 @@
       </group>
       <group xml:id="NDPA-EG-04_group-3">
         <pb n="436" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f450/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
-        <head>POULIER<lb/> DES BÉNEFFICES DU DIOCÈSE DE PARIS.<lb/> [<hi rend="sc">ex cod. ms. bibliothecæ reipublicæ n°</hi> 5199, <hi rend="sc">exarato circa a</hi>. 1534.]</head>
+        <head>Poulier <lb/> des béneffices du diocèse de Paris. <lb/> [<hi rend="sc">ex cod. ms. bibliothecæ reipublicæ n°</hi> 5199, <hi rend="sc">exarato circa a</hi>. 1534.]</head>
         <text subtype="article">
           <body>
             <div>
@@ -15348,7 +15350,7 @@
             <hi rend="i">Abbatis Sancti Martini de Bosco Bellvacensi.</hi>
           </p>
           <p>Pri-curatus de Monte Gayo.</p>
-          <head><pb n="440" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f454/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>CURÆ ET CAPELLANIÆ IN ARCHIDIACONATU DE JOSAYO.</head>
+          <head><pb n="440" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f454/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>Curæ et capellaniæ in archidiaconatu de Josayo.</head>
           <head>
             <hi rend="sc">decanatus de castro forti</hi>.
           </head>
@@ -15623,7 +15625,7 @@
             <hi rend="i">Abbatis de Hermeriis.</hi>
           </p>
           <p>Pri-curatus de Rene Molendino.</p>
-          <head>CURÆ ET CAPELLANIÆ IN ARCHIDIACONATU DE JOSAYO.</head>
+          <head>Curæ et capellaniæ in archidiaconatu de Josayo.</head>
           <p><hi rend="sc">decanatus montis lerici</hi><note><p>Vocatur <hi rend="i">decanatus de Linais</hi> (<hi rend="i">Linas</hi>), supra, t. I, p. 13.</p></note>.</p>
           <p>Primo, <hi rend="i">domini episcopi.</hi></p>
           <p>Cura Sancti Germani de Vitriaco.</p>
@@ -15800,7 +15802,7 @@
           <p>Cura de Leudevilla.</p>
           <p>Cura de Maroliis.</p>
           <p>Cura de Monte Falconis.</p>
-          <head>CURATI ET CAPELLANI IN ARCHIDIACONATU BRIÆ.</head>
+          <head>Curati et capellani in archidiaconatu Briæ.</head>
           <p><hi rend="sc">decanatus de veteri corbolio</hi><note><p>Olim vocatus decanatus Mossiaci, et postea Praeriarum (vid. t. I, p. 17).</p></note>.</p>
           <p>Primo, <hi rend="i">episcopi</hi>.</p>
           <p>Cura de Moissiaco.</p>
@@ -15948,7 +15950,7 @@
             <hi rend="i">Episcopi.</hi>
           </p>
           <p>Capellania Beatæ Mariæ et Sancti Jacobi, in capella Sancti Jacobi, in parrochia de Veteri Corbolio.</p>
-          <head>CURÆ ET CAPELLANIÆ IN ARCHIDIACONATU BRIÆ.</head>
+          <head>Curæ et capellaniæ in archidiaconatu Briæ.</head>
           <head>
             <hi rend="sc">decanatus de latigniaco</hi>.
           </head>
@@ -16549,7 +16551,7 @@
       </group>
       <group xml:id="NDPA-EG-04_group-4">
         <pb n="452" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f466/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
-        <head>POUILLÉ<lb/> DU DIOCÈSE DE PARIS,<lb/> AU XVIII<hi rend="sup">e</hi> SIÈCLE,<lb/> <hi rend="sc">d’après le pouillé historique et topographique publié par l. denis, en</hi> 1767.</head>
+        <head>Pouillé <lb/> du diocèse de Paris, <lb/> au XVIII<hi rend="sup">e</hi> siècle, <lb/> <hi rend="sc">d’après le pouillé historique et topographique publié par l. denis, en</hi> 1767.</head>
         <text subtype="article">
           <body>
               <div><p>Le diocèse de Paris comprenait trois archidiaconés, séparés les uns des autres par la Seine et la Marne. Sur la rive droite de la Seine, l’archidiaconé de Paris ; sur la rive gauche, celui de Josas ; et dans l’angle formé par la Seine et la Marne, celui de Brie. Ces trois archidiaconés se subdivisaient en doyennés ruraux. Le doyenné de Champeaux, enclavé dans le diocèse de Sens, était en dehors de ces divisions ; il relevait du chapitre de Champeaux, et non d’un archidiacre.</p>
@@ -16557,10 +16559,10 @@
           <p>Nous conservons les subdivisions ecclésiastiques telles qu’elles sont dans le pouillé de L. Denis. On trouvera d’abord le nom français des paroisses, avec les hameaux, châteaux, écarts et fermes qui en dépendent ; puis le nom latin, suivant l’usage commun, avec les principales variantes tirées de nos textes ; ensuite le saint auquel l’église paroissiale est dédiée, la date de l’érection de la paroisse, le patron ou collateur.</p>
           <p>A la fin du pouillé, après la liste des abbayes et prieurés, nous donnons la table alphabétique de toutes les paroisses du diocèse, en notant la subdivision ecclésiastique dont elles relevaient, afin de faciliter les recherches.</p></div>
           <div>
-            <head>BANLIEUE ET VILLE DE PARIS,<lb/> <hi rend="sc">appartenant a deux archiprêtrés</hi><note><p>Cette division de Paris en deux archiprêtrés date au moins du <hi rend="sc">xiii</hi><hi rend="sup">e</hi> siècle ; mais alors l’archiprêtré de la Madelaine s’appelait simplement archiprêtré de Paris (<hi rend="i">V.</hi> I, 18). Le nouveau nom paraît déjà dans le pouillé du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle (<hi rend="i">V.</hi> ci-dessus, p. 446.)</p></note>.</head>
+            <head>Banlieue et ville de Paris, <lb/> <hi rend="sc">appartenant a deux archiprêtrés</hi><note><p>Cette division de Paris en deux archiprêtrés date au moins du <hi rend="sc">xiii</hi><hi rend="sup">e</hi> siècle ; mais alors l’archiprêtré de la Madelaine s’appelait simplement archiprêtré de Paris (<hi rend="i">V.</hi> I, 18). Le nouveau nom paraît déjà dans le pouillé du <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle (<hi rend="i">V.</hi> ci-dessus, p. 446.)</p></note>.</head>
           <p>La ville de <hi rend="sc">Paris</hi>, <hi rend="i">Lutetia Parisiorum</hi>, a pour patronne Notre-Dame, et saint Denis pour apôtre et premier évêque, vers le milieu du <hi rend="sc">iii</hi><hi rend="sup">e</hi> siècle.</p>
           </div>
-          <div><head>ARCHIPRÊTRÉ DE LA MADELAINE.</head>
+          <div><head>Archiprêtré de la Madelaine.</head>
           <table>
             <row>
               <cell>Paroisses.</cell>
@@ -17012,7 +17014,7 @@
           </table>
           </div>
           <div>
-              <head>ARCHIPRÊTRÉ DE SAINT-SÉVERIN.</head>
+              <head>Archiprêtré de Saint-Séverin.</head>
           <table>
             <row>
               <cell>Paroisses.</cell>
@@ -17223,7 +17225,7 @@
           </table>
           </div>
           <div>
-              <head>ARCHIDIACONÉ DE PARIS.</head>
+              <head>Archidiaconé de Paris.</head>
           <p><hi rend="sc">doyenné de chelles</hi><note><p>Il s’est appelé successivement doyenné de Montreuil, de Montfermeil et de Chelles, mais non pas doyenné de Gonesse, comme nous l’avons dit à tort ci-dessus, p. 353.</p></note>.</p>
           <table>
             <row>
@@ -18709,7 +18711,7 @@
           </table>
               </div>
           <div>
-            <head>ARCHIDIACONÉ DE JOSAS.</head>
+            <head>Archidiaconé de Josas.</head>
           <p><hi rend="sc">doyenné de chateaufort</hi><note><p>Appelé quelquefois doyenné de Massy, <hi rend="i">de Maciaco</hi>. Voy. I, 21.</p></note>.</p>
           <table>
             <row>
@@ -20365,7 +20367,7 @@
           </table>
           </div>
               <div>
-              <head>ARCHIDIACONÉ DE BRIE.</head>
+              <head>Archidiaconé de Brie.</head>
           <p><hi rend="sc">doyenné du vieux-corbeil</hi><note><p>Il est ainsi appelé au <hi rend="sc">xvi</hi><hi rend="sup">e</hi> siècle (voy. ci-dessus, p. 443) ; mais il avait été nommé antérieurement doyenné de Moissy-Cramayel et doyenné de Presles. (voy. I, 17 et 20.)</p></note>.</p>
           <table>
             <row>
@@ -21437,7 +21439,7 @@
           </table>
          </div>
              <div> 
-              <head>ABBAYES<note><p>Toutes les abbayes d’hommes et de femmes qui suivent étaient à la nomination du roi.</p></note> ET PRIEURÉS DU DIOCÈSE DE PARIS.</head>
+              <head>Abbayes<note><p>Toutes les abbayes d’hommes et de femmes qui suivent étaient à la nomination du roi.</p></note> et prieurés du diocèse de Paris.</head>
               <div> 
                <head>
             <hi rend="sc">abbayes d’hommes</hi>.

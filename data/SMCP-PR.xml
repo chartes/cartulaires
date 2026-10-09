@@ -127,17 +127,19 @@
         <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="tome" match="group[@type='tome']" use="dots">
+          <citeStructure unit="tome" match="group[@type='tome']" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-            <citeStructure unit="section" match="group" use="dots">
+            <citeStructure unit="section" match="group" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
               <citeData property="schema:name" use="head[1]"/>
-              <citeStructure unit="sous-section" match="group" use="dots">
+              <citeStructure unit="sous-section" match="group" use="@xml:id">
                 <citeData property="dct:title" use="head[1]"/>
                 <citeData property="schema:name" use="head[1]"/>
                 <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                   <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                  <citeData property="schema:position" use="string(@n)"/>
+                  <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
                   <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
                   <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
                   <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -150,6 +152,8 @@
               </citeStructure>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
                 <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+                <citeData property="schema:position" use="string(@n)"/>
+                <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
                 <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
                 <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
                 <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -634,9 +638,9 @@
     </front>
     <group xml:id="SMCP-PR_edition-group">
       <head>Édition</head>
-      <group xml:id="r6901657" type="tome">
+      <group xml:id="SMCP-PR_group-1" type="tome">
         <head>Tome 1</head>
-        <group xml:id="r6901663">
+        <group xml:id="SMCP-PR_group-1-1">
           <head>I. — Documents concernant l'église primitive de Saint-Martin</head>
           <text xml:id="SMCP-PR_0001" n="1" subtype="article">
             <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f4/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>
@@ -872,7 +876,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6902330">
+        <group xml:id="SMCP-PR_group-1-2">
           <head>II. — Actes concernant des établissements religieux unis plus tard à
             Saint-Martin</head>
           <text xml:id="SMCP-PR_0003" n="3" subtype="article">
@@ -1242,11 +1246,11 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6903437">
+        <group xml:id="SMCP-PR_group-1-3">
           <head>III. — Chronique versifiée ou Livre des privilèges de St-Martin-des-Champs</head>
           <!-- texte perdu ? <item>6. — Diplôme de fondation et de sauvegarde par le roi Henri I<hi rend="sup">er</hi> au monastère de Saint-Martin-des-Champs (1059-1060).<ref n="14">14</ref></item> <item>7. — Milon (Le Riche de Paris) renonce à ses protestations contre la décision royale qui l'avait dépouillé de sa terre des Champs, l'abbé Engelard ayant transigé avec lui.<ref n="23">23</ref></item> -->
         </group>
-        <group xml:id="r6903445">
+        <group xml:id="SMCP-PR_group-1-4">
           <head>IV — Actes concernant la collégiale de Saint-Martin de Paris</head>
           <text xml:id="SMCP-PR_0008" n="8" subtype="article">
             <pb n="11" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f14/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>
@@ -1897,7 +1901,7 @@
                   paticulièrement intéressante à dater, en raison de la quantité de témoins de
                   marque qui s'y trouvent associés. <hi rend="i">Un terminus ad quem</hi>
                   indiscutable est fourni par la mort de Josselin (3 novembre 1096), l'archidiacre
-                  de Josas qui fut un bienfaiteur insigne du prieuré (cf. nº 13 <hi rend="i">suprà</hi>, note 24). C'est aussi en en 1096-97 que la chanoine chancelier
+                  de Josas qui fut un bienfaiteur insigne du prieuré (cf. <ref target="#SMCP-PR_0013">nº 13</ref> <hi rend="i">suprà</hi>, note 24). C'est aussi en en 1096-97 que la chanoine chancelier
                   Vougrin devint archidiacre de Parisis au lieu et place de Dreux I<hi rend="sup">er</hi> de Mello. Toutefois il faut remarquer que le chanoine Sévin (le <hi rend="i">Sevinus Postellus</hi> qui figure en 1076 au nombre des <hi rend="i">testes clerici ex parte Sancte Marie</hi>, c'est-à-dire des clercs de
                   Notre-Dame (cf. Guérard, <title>Cartulaire de N-D. de Paris</title>, <num>I</num>,
                   280) n'apparaît dans aucune énumération des membres du chapitre à partir de 1087.
@@ -1976,7 +1980,7 @@
                   paticulièrement intéressante à dater, en raison de la quantité de témoins de
                   marque qui s'y trouvent associés. <hi rend="i">Un terminus ad quem</hi>
                   indiscutable est fourni par la mort de Josselin (3 novembre 1096), l'archidiacre
-                  de Josas qui fut un bienfaiteur insigne du prieuré (cf. nº 13 <hi rend="i">suprà</hi>, note 24). C'est aussi en en 1096-97 que la chanoine chancelier
+                  de Josas qui fut un bienfaiteur insigne du prieuré (cf. <ref target="#SMCP-PR_0013">nº 13</ref> <hi rend="i">suprà</hi>, note 24). C'est aussi en en 1096-97 que la chanoine chancelier
                   Vougrin devint archidiacre de Parisis au lieu et place de Dreux I<hi rend="sup">er</hi> de Mello. Toutefois il faut remarquer que le chanoine Sévin (le <hi rend="i">Sevinus Postellus</hi> qui figure en 1076 au nombre des <hi rend="i">testes clerici ex parte Sancte Marie</hi>, c'est-à-dire des clercs de
                   Notre-Dame (cf. Guérard, <title>Cartulaire de N-D. de Paris</title>, <num>I</num>,
                   280) n'apparaît dans aucune énumération des membres du chapitre à partir de 1087.
@@ -2595,7 +2599,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6908250">
+        <group xml:id="SMCP-PR_group-1-5">
           <head>V. — Actes concernant Saint-Martin-des-Champs prieuré de Cluny, sous le règne de
             Philippe I<hi rend="sup">er</hi></head>
           <text xml:id="SMCP-PR_0019" n="19" subtype="article">
@@ -3141,7 +3145,7 @@
                   intéressante à dater, en raison de la quantité de témoins de marque qui s'y
                   trouvent associés. Un <hi rend="i">terminus ad quem</hi> indiscutable est fourni
                   par la mort de Josselin (3 novembre 1096), l'archidiacre de Josas qui fut un
-                  bienfaiteur insigne du prieuré (cf. nº<hi rend="b">13</hi>
+                  bienfaiteur insigne du prieuré (cf. nº<hi rend="b"><ref target="#SMCP-PR_0013">13</ref></hi>
                   <hi rend="i">suprà</hi>, note 24). C'est aussi en 1096-97 que le
                   chanoine-chancelier Vougrin devint archidiacre de Parisis au lieu et place de
                   Dreux I<hi rend="sup">er</hi> de Mello. Toutefois il faut remarquer que le
@@ -3222,7 +3226,7 @@
                   intéressante à dater, en raison de la quantité de témoins de marque qui s'y
                   trouvent associés. <hi rend="i">Un terminus ad quem</hi> indiscutable est fourni
                   par la mort de Josselin (3 novembre 1096), l'archidiacre de Josas qui fut un
-                  bienfaiteur insigne du prieuré (cf. nº 13 <hi rend="i">suprà</hi>, note 24). C'est
+                  bienfaiteur insigne du prieuré (cf. <ref target="#SMCP-PR_0013">nº 13</ref> <hi rend="i">suprà</hi>, note 24). C'est
                   aussi en en 1096-97 que la chanoine chancelier Vougrin devint archidiacre de
                   Parisis au lieu et place de Dreux I<hi rend="sup">er</hi> de Mello. Toutefois il
                   faut remarquer que le chanoine Sévin (le <hi rend="i">Sevinus Postellus</hi> qui
@@ -3521,7 +3525,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r6911774">
+          <group xml:id="SMCP-PR_group-1-5-1">
             <head>Actes concernant l'acquisition par Saint-Martin de diverses propriétés à Clamart,
               et l'abandon par Gui [le Rouge] de Montlhéry de tous les droits qu'il pouvait exercer
               sur ce territoire</head>
@@ -6169,7 +6173,7 @@
                 <p>
                   <s><seg type="theo">Notum fieri volumus Xristi fidelibus</seg> quod
                       <persName>Warinus de Munciaco<note n="a" xml:id="aid134943"><hi rend="i">B Minciaco</hi>. —
-                  Peut-être Moussy-le-Neuf, ca. Dammartin, ar. Meaux. Voir nº<hi rend="b">59,</hi>
+                  Peut-être Moussy-le-Neuf, ca. Dammartin, ar. Meaux. Voir nº<hi rend="b"><ref target="#SMCP-PR_0059">59</ref>,</hi>
                   note 133 et <hi rend="b">79</hi><hi rend="i">b</hi>. <hi rend="i">Walterius de
                     Monci</hi> souscrit le diplôme de Philippe I<hi rend="sup">er</hi> pour
                   St-Vincent de Senlis.</note></persName> calumniam quam faciebat super servos et
@@ -6409,11 +6413,11 @@
                     villa que dicitur <placeName>Villaris<note n="111" xml:id="a1111a">Villiers-le-Bel, ca. Ecouen,
                   ar. Pontoise. Ce village a pris son nom de la famille <hi rend="i">Le Bel</hi>,
                   branche des Montmorency, dont le chef fut Raoul le Bel cité dans cette notice
-                  (Voir nº<hi rend="b">121</hi>, <hi rend="i">infrà</hi>).</note></placeName>, concedente <rs type="person"><persName>Willelmo</persName> fratre suo</rs>, unde <date>ad octabas
+                  (Voir nº<hi rend="b"><ref target="#SMCP-PR_0121">121</ref></hi>, <hi rend="i">infrà</hi>).</note></placeName>, concedente <rs type="person"><persName>Willelmo</persName> fratre suo</rs>, unde <date>ad octabas
                         <abbr>Sti</abbr> Dionisii</date> solvuntur <persName>Rodulfo Bello<note n="111" xml:id="a1111b">Villiers-le-Bel, ca. Ecouen,
                   ar. Pontoise. Ce village a pris son nom de la famille <hi rend="i">Le Bel</hi>,
                   branche des Montmorency, dont le chef fut Raoul le Bel cité dans cette notice
-                  (Voir nº<hi rend="b">121</hi>, <hi rend="i">infrà</hi>).</note></persName>
+                  (Voir nº<hi rend="b"><ref target="#SMCP-PR_0121">121</ref></hi>, <hi rend="i">infrà</hi>).</note></persName>
                     <num>xv</num> denarios.</s>
                   <s>Hujus rei testes sunt : <rs type="person"><persName>Rodulfus</persName> filius
                         <persName>Rosce</persName></rs>, <rs type="person"><persName>Odo
@@ -6897,7 +6901,7 @@
                       <persName>Hildegerius de Greva</persName> ; <persName>Balduinus Bellus<note n="111" xml:id="a1111c">Villiers-le-Bel, ca. Ecouen, ar.
                   Pontoise. Ce village a pris son nom de la famille <hi rend="i">Le Bel</hi>,
                   branche des Montmorency, dont le chef fut Raoul le Bel cité dans cette notice
-                  (Voir nº<hi rend="b">121</hi>, <hi rend="i">infrà</hi>).</note></persName>, <rs type="person"><persName>Henricus</persName> homo ejus</rs>.</s>
+                  (Voir nº<hi rend="b"><ref target="#SMCP-PR_0121">121</ref></hi>, <hi rend="i">infrà</hi>).</note></persName>, <rs type="person"><persName>Henricus</persName> homo ejus</rs>.</s>
                 </p>
                 <p>
                   <s><pb n="87" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/f90/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255713m/manifest.json"/>De servientibus æcclesiæ : <rs type="person"><persName>Walterius</persName> major</rs>, <rs type="person"><persName>Teudo</persName> frater ejus<note n="36" xml:id="a1036k">Gautier, frère aîné de Thion, maire
@@ -7669,7 +7673,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r6925502">
+          <group xml:id="SMCP-PR_group-1-5-2">
             <head>Actes concernant l'obtention par Cluny, puis par Saint-Martin des Champs, de
               bénéfices qui entrèrent dans la dotation du prieuré de Gournay-sur-Marne.</head>
             <text xml:id="SMCP-PR_0060" n="60" subtype="article">
@@ -8226,7 +8230,7 @@
                           Hivri<note n="155" xml:id="a1155a">Ivry-sur-Seine, ca. Villejuif, ar,
                   Sceaux (Seine). Cf. note 179.</note></persName></rs> et <rs type="person"><persName>Solia</persName> uxore
                         <persName>Ivonis de Bri<note n="279" xml:id="a1279a">Bry-sur-Marne, ca. Charenton, ar.
-                  Sceaux (Seine). — Cf. nº<hi rend="b">63,</hi>
+                  Sceaux (Seine). — Cf. nº<hi rend="b"><ref target="#SMCP-PR_0063">63</ref>,</hi>
                   <hi rend="i">suprà</hi>.</note></persName></rs>, et viris eorum, et <rs type="person"><persName>Drogone</persName> filio <persName>Ivonis</persName></rs>.</s>
                   <s>Hoc etiam concesserunt domini de quorum fedo hoc tenebat <persName>Paganus
                       Hericio</persName>, videlicet <persName>Nanterus de Montegaio<note n="241" xml:id="a1241f">
@@ -11826,7 +11830,7 @@
                   <s>Sed quia, patre defuncto, bonorum illius dimidium, pro commendatione
                       exigebat<note n="a" xml:id="aid161874">Ce prélèvement semble de prime
                   abord exorbitant. Mais il ne faut pas perdre de vue l'insécurité des temps causée
-                  par les guerres féodales (cf nº<hi rend="b">47</hi>). La <hi rend="i">commendatio</hi> onéreuse en cas de décès, constituait, durant la vie, une
+                  par les guerres féodales (cf nº<hi rend="b"><ref target="#SMCP-PR_0047">47</ref></hi>). La <hi rend="i">commendatio</hi> onéreuse en cas de décès, constituait, durant la vie, une
                   assurance contre le pillage des récoltes et la destruction des immeubles, et elle
                   était efficace : les atteintes à cette sauvegarde étaient poursuivies par celui
                   qui l'avait accordée, et les victimes indemnisées. On en relève des preuves, pour
@@ -13303,7 +13307,7 @@
                     nunquam amplius se calumniaturus reddidit.</s>
                   <s>Hujus rei testes sunt : <rs type="person"><persName>Milo</persName> filius
                         <persName>Hilduini</persName></rs>, <persName>Ivo de Bri<note n="279" xml:id="a1279b">Bry-sur-Marne, ca. Charenton, ar.
-                  Sceaux (Seine). — Cf. nº<hi rend="b">63,</hi>
+                  Sceaux (Seine). — Cf. nº<hi rend="b"><ref target="#SMCP-PR_0063">63</ref>,</hi>
                   <hi rend="i">suprà</hi>.</note></persName>, <rs type="person"><persName>Walterius</persName> major de <placeName>Nuisiaco<note n="272" xml:id="a1272b">
                   <p>Dans cet acte et les suivants, le maire de Noisy, Gautier, est accompagné de
                     plusieurs de ses enfants : Bertrand, Baudoin, Adam. L'aîné lui fut associé
@@ -16289,7 +16293,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6954696">
+        <group xml:id="SMCP-PR_group-1-6">
           <head>VI. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis <num>VI</num>
             le Gros</head>
           <text xml:id="SMCP-PR_0124" n="124" subtype="article">
@@ -20293,7 +20297,7 @@
                   donne lieu de croire qu'il s'agit de Puiseux-les-Louvres.</note></placeName> ; altare, æcclesiam, atrium et
                     decimam de <placeName>Escuem<note n="365" xml:id="a1365a">La seigneurie d'Ecouen (ar.
                   Pontoise), ayant toujours été incorporée à la baronnie de Montmorency, c'est à
-                  l'un des barons, Bouchard <num>IV</num> (cf. nº<hi rend="b">166</hi>), qu'il faut
+                  l'un des barons, Bouchard <num>IV</num> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0166">166</ref></hi>), qu'il faut
                   attribuer la donation de l'église, de l'aître et de la dîme. Cette libéralité est
                   antérieure sans doute à l'établissement du <title>Liber Testamentorum</title> où
                   fut inséré le document nº<hi rend="b">58,</hi> relatif à la succursale
@@ -20387,7 +20391,7 @@
                   de Coulommiers (S.-et-M.).</note> ;
                     decimam de <placeName>Attiliaco<note n="373" xml:id="a1373a">Il s'agit d'Attilly, éc. Férolles,
                   ca. Brie-Comte-Robert, ar. Melun (Seine-et-Marne), et non d'Attichy, ar. Compiègne
-                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b">159</hi> suivant</note></placeName> ; villam <placeName>Confluentiam<note n="208" xml:id="a1208e">En marge de <hi rend="i">B</hi> : <hi rend="i">Conflant</hi>. Conflans-l'Archevêque, éc. de
+                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b"><ref target="#SMCP-PR_0159">159</ref></hi> suivant</note></placeName> ; villam <placeName>Confluentiam<note n="208" xml:id="a1208e">En marge de <hi rend="i">B</hi> : <hi rend="i">Conflant</hi>. Conflans-l'Archevêque, éc. de
                   Charenton-le-Pont, ar. Sceaux. Nous ignorons quel fut l'auteur de la donation de
                   cette église aussi bien que de celles de Drancy, Châtenay et Louvres. Toutes ces
                   églises, dès 1096, appartenaient à St-Martin-des-Champs.</note></placeName> cum
@@ -20743,7 +20747,7 @@
                   Antichiaco.</note>
                     <placeName>Atichiaco<note n="373" xml:id="a1373b">Il s'agit d'Attilly, éc. Férolles,
                   ca. Brie-Comte-Robert, ar. Melun (Seine-et-Marne), et non d'Attichy, ar. Compiègne
-                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b">159</hi> suivant</note></placeName> dederunt et daturi sunt concedimus et<note n="b" xml:id="aid197871"><hi rend="i">C</hi> in.</note> auctoritate Majestatis nostre
+                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b"><ref target="#SMCP-PR_0159">159</ref></hi> suivant</note></placeName> dederunt et daturi sunt concedimus et<note n="b" xml:id="aid197871"><hi rend="i">C</hi> in.</note> auctoritate Majestatis nostre
                     confirmamus.</s>
                   <s>Quod ne valeat oblivione deleri, scripto commendavimus, et ne possit a posteris
                     infringi, sigilli nostri auctoritate<note n="c" xml:id="aid197886"><hi rend="i">C</hi>
@@ -20961,7 +20965,7 @@
                       <persName>Roberto</persName> etiam <placeName>comite de Mellento</placeName>
                     diligenter annuente<note n="373" xml:id="a1373c">Il s'agit d'Attilly, éc. Férolles,
                   ca. Brie-Comte-Robert, ar. Melun (Seine-et-Marne), et non d'Attichy, ar. Compiègne
-                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b">159</hi> suivant</note>,
+                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b"><ref target="#SMCP-PR_0159">159</ref></hi> suivant</note>,
                     qui fundum terre illius specialiter de feodo habebat episcopi, salvis quidem et
                     retentis consuetudinibus quas <placeName>Parisiensis</placeName> episcopus,
                     tempore predicti <persName>Gualeranni</persName>, in terram illam obtinuerat,
@@ -22110,7 +22114,7 @@
                     justum est, a laicali possessione, si tamen possessio dici potest, emancipare,
                     et Deo reddere que Dei sunt, decimam de <placeName>Atilleio<note n="373" xml:id="a1373d">Il s'agit d'Attilly, éc. Férolles,
                   ca. Brie-Comte-Robert, ar. Melun (Seine-et-Marne), et non d'Attichy, ar. Compiègne
-                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b">159</hi> suivant</note></placeName>, quam scilicet
+                  (Oise). Attilly est cité dans la bulle de Calixte <num>II</num> nº<hi rend="b">131</hi> Voir le nº<hi rend="b"><ref target="#SMCP-PR_0159">159</ref></hi> suivant</note></placeName>, quam scilicet
                       <persName>Milo</persName>, ejusdem dominus ville, assensu conjugis, filiorum
                     quoque et filiarum et heredum suorum, monasterio <placeName><abbr>Sti</abbr>
                       Martini de Campis</placeName>, factus ibidem monachus, reliquerat, Ego,
@@ -23424,7 +23428,7 @@
                   <num>IV</num>, <abbr>p.</abbr> 435).</note></placeName>, ecclesiam quoque de
                         <placeName>Escuen<note n="365" xml:id="a1365b">La seigneurie d'Ecouen (ar.
                   Pontoise), ayant toujours été incorporée à la baronnie de Montmorency, c'est à
-                  l'un des barons, Bouchard <num>IV</num> (cf. nº<hi rend="b">166</hi>), qu'il faut
+                  l'un des barons, Bouchard <num>IV</num> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0166">166</ref></hi>), qu'il faut
                   attribuer la donation de l'église, de l'aître et de la dîme. Cette libéralité est
                   antérieure sans doute à l'établissement du <title>Liber Testamentorum</title> où
                   fut inséré le document nº<hi rend="b">58,</hi> relatif à la succursale
@@ -25310,9 +25314,9 @@
 </text>
         </group>
       </group>
-      <group xml:id="r6983457" type="tome">
+      <group xml:id="SMCP-PR_group-2" type="tome">
         <head>Tome 2</head>
-        <group xml:id="r6983463">
+        <group xml:id="SMCP-PR_group-2-1">
           <head>VII. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis VI le Gros,
             de 1126 à 1137 </head>
           <text xml:id="SMCP-PR_0191" n="191" subtype="article">
@@ -26106,7 +26110,7 @@
                     in vineis sive in aliis bonis contingerant, annuente <rs type="person"><persName>Adelaide</persName> regina, uxore nostra</rs>, <rs type="person"><persName>Ludovico</persName> filio nostro</rs>, in regem sublimato anno
                     tertio, prorsus dimisimus et omnem querelam a transactis retro temporibus
                     habitam, ei in perpetuum condonavimus.</s>
-                  <s>Quod ne valeat — — (voir nº <num>198</num>) firmavimus.</s>
+                  <s>Quod ne valeat — — (voir nº <num><ref target="#SMCP-PR_0198">198</ref></num>) firmavimus.</s>
                 </p>
                 <p>
                   <s>Actum <placeName>Parisius</placeName> publice <date>anno Incarnali Verbi
@@ -28405,7 +28409,7 @@
                     abbate, Corbeiensibus præfectus est anno <num>1123.</num> — Huic Drogo, Corbeiæ
                     castellanus, dedit anno 1135 ecclesiam de Guagniaco, et Innocentius II bullam
                     concessit, qua confirmat, donatas a Warino, Ambianensi episcopo, et Theobaldo,
-                    priore Sti Martini a Campis, ecclesias de Vanneio. « (Voir nº 210.)</witness>
+                    priore Sti Martini a Campis, ecclesias de Vanneio. « (Voir <ref target="#SMCP-PR_0210">nº 210</ref>.)</witness>
                 </listWit>
               </div>
             </front>
@@ -28473,7 +28477,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6994772">
+        <group xml:id="SMCP-PR_group-2-2">
           <head>VIII. — Donations à Saint-Martin non suivies d'effet sous le règne de Louis
             VI</head>
           <text xml:id="SMCP-PR_0218" n="218" subtype="article">
@@ -29387,7 +29391,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6997724">
+        <group xml:id="SMCP-PR_group-2-3">
           <head>IX. — Diplômes supposés ou suspects de Louis VI (1119-1128) </head>
           <text xml:id="SMCP-PR_0225" n="225" subtype="article">
             <pb n="63" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/f66/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k2557140/manifest.json"/>
@@ -29779,7 +29783,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r6998969">
+        <group xml:id="SMCP-PR_group-2-4">
           <head>X. — Actes concernant les fondations anglaises dépendant de Saint-Martin sous Henry
             Ier (1108-1135)</head>
           <text xml:id="SMCP-PR_0228" n="228" subtype="article">
@@ -30581,7 +30585,7 @@
             </body>
 </text>
         </group>
-        <group xml:id="r7001883">
+        <group xml:id="SMCP-PR_group-2-5">
           <head>XI. — Actes concernant Saint-Martin-des-Champs sous le règne de Louis VII
             (1137-1180) </head>
           <text xml:id="SMCP-PR_0235" n="235" subtype="article">
@@ -35452,13 +35456,13 @@
                     (nº<hi rend="b">246</hi>).</note></placeName>.</p>
                 <p>Une prébende à <placeName>Notre-Dame d'Etampes<note n="244" target="#n0244b" xml:id="a2244a">La prébende d'Etampes n'est
                   pas comprise dans la bulle de 1143, sans doute en raison de l'opposition de
-                  Saint-Victor. Cf. nº<hi rend="b">266, 267</hi> et <hi rend="b">281.</hi> — Les
+                  Saint-Victor. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0266">266</ref>, 267</hi> et <hi rend="b">281.</hi> — Les
                   archives de St-Martin ne contiennent point l'acte de donation d'une prébende à
                   Sainte-Geneviève de Paris ; la première bulle qui en fasse mention est en 1147
                     (nº<hi rend="b">294</hi>).</note></placeName>.</p>
                 <p>Une prébende à <placeName>Sainte-Geneviève-du-Mont<note n="244" xml:id="a2244b">La prébende d'Etampes n'est
                   pas comprise dans la bulle de 1143, sans doute en raison de l'opposition de
-                  Saint-Victor. Cf. nº<hi rend="b">266, 267</hi> et <hi rend="b">281.</hi> — Les
+                  Saint-Victor. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0266">266</ref>, 267</hi> et <hi rend="b">281.</hi> — Les
                   archives de St-Martin ne contiennent point l'acte de donation d'une prébende à
                   Sainte-Geneviève de Paris ; la première bulle qui en fasse mention est en 1147
                     (nº<hi rend="b">294</hi>).</note></placeName>. — (Acte perdu.)</p>
@@ -35614,12 +35618,12 @@
                       <placeName>Sancte Marie de Stampis</placeName>, prebendam unam.</s>
                   <s>In ecclesia <placeName>Sancte Genevefe<note n="244" xml:id="a2244c">La prébende d'Etampes n'est
                   pas comprise dans la bulle de 1143, sans doute en raison de l'opposition de
-                  Saint-Victor. Cf. nº<hi rend="b">266, 267</hi> et <hi rend="b">281.</hi> — Les
+                  Saint-Victor. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0266">266</ref>, 267</hi> et <hi rend="b">281.</hi> — Les
                   archives de St-Martin ne contiennent point l'acte de donation d'une prébende à
                   Sainte-Geneviève de Paris ; la première bulle qui en fasse mention est en 1147
                     (nº<hi rend="b">294</hi>).</note></placeName>, prebendam unam<note n="244" xml:id="a2244d">La prébende d'Etampes n'est
                   pas comprise dans la bulle de 1143, sans doute en raison de l'opposition de
-                  Saint-Victor. Cf. nº<hi rend="b">266, 267</hi> et <hi rend="b">281.</hi> — Les
+                  Saint-Victor. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0266">266</ref>, 267</hi> et <hi rend="b">281.</hi> — Les
                   archives de St-Martin ne contiennent point l'acte de donation d'une prébende à
                   Sainte-Geneviève de Paris ; la première bulle qui en fasse mention est en 1147
                     (nº<hi rend="b">294</hi>).</note>.</s>
@@ -36368,7 +36372,7 @@
                   sénéchal, bienfaiteur du prieuré de Gournay-sur-Marne, fondé par son beau-père Gui
                   le Rouge (Appendices au <title>Cartulaire de St-Martin de Pontoise</title>,
                     <abbr>p.</abbr> 320). — Le « moûtier » donné est l'église de la Queue-en-Brie,
-                  ca. Boissy-Saint-Léger, ar. Corbeil. Cf. nº<hi rend="b">294.</hi></note></rs> omnibus baronibus, prepositis et
+                  ca. Boissy-Saint-Léger, ar. Corbeil. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0294">294</ref>.</hi></note></rs> omnibus baronibus, prepositis et
                     ministris et fidelibus suis de <placeName>Francia</placeName>, salutem.</s>
                   <s>Sciatis nos concessisse et confirmasse <placeName>Sancte Marie de
                       Gornaio</placeName> et monachis ejusdem ecclesie, monasterium de
@@ -36728,7 +36732,7 @@
 
               </div>
               <div type="dissertation">
-                <p>Suivant la remarque de Luchaire (<title>Actes de Louis VII</title>, nº 195, <abbr>p.</abbr> 262, note 1), cette lettre n'est datée que de 1137-1154 par la mention <hi rend="i">dux Aquitanoruni</hi>, mais elle doit se rapporter à la préparation de la Croisade de 1147 (cf. nº <hi rend="b">297</hi>) à laquelle participa le seigneur de Villeron.</p>
+                <p>Suivant la remarque de Luchaire (<title>Actes de Louis VII</title>, nº 195, <abbr>p.</abbr> 262, note 1), cette lettre n'est datée que de 1137-1154 par la mention <hi rend="i">dux Aquitanoruni</hi>, mais elle doit se rapporter à la préparation de la Croisade de 1147 (cf. nº <hi rend="b"><ref target="#SMCP-PR_0297">297</ref></hi>) à laquelle participa le seigneur de Villeron.</p>
                 <p>En 1148, Louis <num>VI</num> mande à Suger de prendre la défense des intérêts de ce chevalier dont il a pu éprouver le dévouement sur la terre étrange (Ib., nº 235, <abbr>p.</abbr> 174 ; Duchesne, <title>Hist. Fr</title>., <num>IV</num>, 520 ; Bouquet, <title>Rec. des Hist. de Fr.</title>, <num>XV</num>, <num>502.</num>) — Nous reproduisons la lettre du roi aux moines de Chaalis parce qu'elle explique et complète la précédente charte.</p>
               </div>
             </front>
@@ -37433,7 +37437,7 @@
                   <s>In ecclesia <placeName><abbr>Ste</abbr> Genovefe de monte</placeName>, unam
                       prebendam<note n="244" xml:id="a2244e">La prébende d'Etampes n'est pas
                   comprise dans la bulle de 1143, sans doute en raison de l'opposition de
-                  Saint-Victor. Cf. nº<hi rend="b">266, 267</hi> et <hi rend="b">281.</hi> — Les
+                  Saint-Victor. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0266">266</ref>, 267</hi> et <hi rend="b">281.</hi> — Les
                   archives de St-Martin ne contiennent point l'acte de donation d'une prébende à
                   Sainte-Geneviève de Paris ; la première bulle qui en fasse mention est en 1147
                     (nº<hi rend="b">294</hi>).</note>.</s>
@@ -38727,7 +38731,7 @@
                     habetis.</s>
                   <s>Terram de <placeName>Luabum<note n="286" xml:id="a2286a">Sur <hi rend="i">Luabum</hi>, cf.
                     <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></placeName>.</s>
                   <s>Campum quem dedit <persName>Garnerius de Curbetum<note n="186" xml:id="a2186c">Charonne, anc. commune englobée dans
                   l'agglomération parisienne. Le don de l'église est une adjonction aux bénéfices de
@@ -38907,7 +38911,7 @@
                       <rs type="person">ejus uxore <persName>Adhelaida</persName></rs>, atque <rs type="person"><persName>Anssello</persName> dapifero</rs>, assensu <rs type="person"><placeName>Parisiensis</placeName> episcopi</rs>, prefato
                     monasterio <placeName>Beati Martini</placeName> oblata est.</s>
                   <s>Terram de <placeName>Luabum<note n="286" xml:id="a2286b">Sur <hi rend="i">Luabum</hi>, cf. <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></placeName>.</s>
                   <s>Molendinum apud <placeName>Gornaium</placeName>.</s>
                   <s>Totam villam <placeName>Russiacum</placeName> et adherentem ei<note n="64" xml:id="a2064f">Roissy, Pontault, ca.
@@ -39008,9 +39012,9 @@
                         <placeName>Campos<note n="285" xml:id="a2285d">Champs-sur-Marne,
                   Ferrières, Torcy, ca. Lagny, ar. Meaux.</note></placeName>.</s>
                   <s>Apud <placeName>Luabum<note n="286" xml:id="a2286c">Sur <hi rend="i">Luabum</hi>, cf. <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></placeName> campum <persName>Garnerii de Curbeci<note n="286" xml:id="a2286d">Sur <hi rend="i">Luabum</hi>, cf. <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></persName> et terram
                       <persName>Huberti</persName> et <persName>Andree</persName>.</s>
                   <s>Apud <placeName>Ferrerias<note n="285" xml:id="a2285e">Champs-sur-Marne,
@@ -41304,7 +41308,7 @@
                   <s>Hujus rei testes sunt <rs type="person"><persName>Symon</persName> prior de
                         <placeName>Campis</placeName></rs>, <rs type="person"><persName>Odo</persName> senex<note n="327" xml:id="a2327">Il s'agit ici de l'ancien abbé Eudes
                   qui, bientôt après, quitta St-Martin-des-Champs, ne pouvant souffrir d'y vivre
-                  sous l'autorité d'un autre. Cf. nº<hi rend="b">311</hi>.</note></rs>, <rs type="person"><persName>Normannus</persName>
+                  sous l'autorité d'un autre. Cf. nº<hi rend="b"><ref target="#SMCP-PR_0311">311</ref></hi>.</note></rs>, <rs type="person"><persName>Normannus</persName>
                       prior de <placeName>Bellomonte</placeName></rs> ; <rs type="person"><persName>Matheus</persName> comes</rs>, <rs type="person"><persName>Hugo</persName> frater ejus</rs> ; <persName>Gaufredus de
                         Baerna<note n="328" xml:id="a2328a">Bernes, Bruyères, ca,
                   L'Isle-Adam, ar. Pontoise.</note></persName>, <persName>Rericus de Andilli<note n="299" xml:id="a2299f">Andilly, Groslay, ca. Montmorency,
@@ -43954,7 +43958,7 @@
                     videlicet ipsam ecclesiam cum clansuris et cum omni adjacente ambitu ; capellam
                     de <placeName>Gornaio</placeName>, terram de <placeName>Luabum<note n="286" xml:id="a2286e">Sur <hi rend="i">Luabum</hi>, cf.
                     <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></placeName>, molendinum apud
                       <placeName>Gornaium</placeName> ; villam<note n="b" xml:id="aid197935"> Russiacum</note>
                     <placeName>Russiacum<note n="64" target="#n2064i #n0064k" xml:id="a2064i">Roissy, Pontault, ca.
@@ -44072,7 +44076,7 @@
                   <s>In molendinis de <placeName>Duvera</placeName>, dimidium modium, medietatem
                     frumenti, medietatem multurengie, quam emerunt monachi a <rs type="person">filia
                           <persName>Ambasaci<note n="364" xml:id="a2364">Le texte comporte ici une omission qui
-                  dénature l'origine de propriété de la rente. Cf. n<hi rend="sup">os</hi><hi rend="b">351</hi> et <hi rend="b">352.</hi></note></persName></rs> per assensum comitis.</s>
+                  dénature l'origine de propriété de la rente. Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0351">351</ref></hi> et <hi rend="b">352.</hi></note></persName></rs> per assensum comitis.</s>
                   <s>Hec omnia ecclesie de <placeName>Gornaio</placeName> collata concessimus et
                     laudavimus, et ut omnino et in pace ea teneant et quiete, scripto et sigillo
                     regio muniri, et nominis nostri karactere precipimus.</s>
@@ -44912,14 +44916,14 @@
                     consuetudines in corveiis et in omnibus aliis, prout tempore patris mei<note n="b" xml:id="aid202202">La formule de
                   l'intitulé se retrouve dans un titre de Noël 1156 (<hi rend="i">Art de verifer les
                     dates</hi>, <num>II</num>, 619), elle est l'équivalent de « dapifer » ; Thibaud
-                    <num>V</num> occupait dès lors la sénéchaussée de France (cf. nº<hi rend="b">354</hi>). Il avait succédé à son père Thibaud <num>IV</num> le 10 janvier 1152
+                    <num>V</num> occupait dès lors la sénéchaussée de France (cf. nº<hi rend="b"><ref target="#SMCP-PR_0354">354</ref></hi>). Il avait succédé à son père Thibaud <num>IV</num> le 10 janvier 1152
                   et mourut le 16 janvier 1191 (Longnon, <hi rend="i">Obituaires de la prov. de
                     Sens</hi>, <abbr>t.</abbr>
                   <num>II</num>, <abbr>p.</abbr>
                   <num>xiii</num>-<num>xv</num>). En 1166 Thibaud <num>V</num> se qualifie
                   « senescallus Francie » ; on retrouve alors trois des souscripteurs de la présente
                   charte, mais la mairie de Béville-le-Comte (ca. Auneau) n'a plus le même titulaire
-                  (cf. nº<hi rend="b">394</hi>). — La date que nous proposons n'est en tout cas
+                  (cf. nº<hi rend="b"><ref target="#SMCP-PR_0394">394</ref></hi>). — La date que nous proposons n'est en tout cas
                   qu'approximative et pourrait être rappochée de <num>1166.</num></note> habuerunt.</s>
                   <s>Si quis autem contra hoc facere presumpserit, a justiciis meis coherceatur, et
                     sinon emendaverit, vel per pecuniam, vel per penam corporalem, vel per utrumque
@@ -44938,14 +44942,14 @@
                       Beevilla</persName> ; <persName>Clemens</persName>, <rs type="person"><persName>Stephanus</persName> frater ejus</rs> ; <rs type="person"><persName>Bernardus</persName> decanus</rs>, <rs type="person"><persName>Radulfus</persName> marescallus</rs>, <rs type="person"><persName>Harpinus</persName> carnifex</rs>, <rs type="person"><persName>Gofridus</persName> major <placeName>Beeville<note n="b" xml:id="aid202444">La formule de
                   l'intitulé se retrouve dans un titre de Noël 1156 (<hi rend="i">Art de verifer les
                     dates</hi>, <num>II</num>, 619), elle est l'équivalent de « dapifer » ; Thibaud
-                    <num>V</num> occupait dès lors la sénéchaussée de France (cf. nº<hi rend="b">354</hi>). Il avait succédé à son père Thibaud <num>IV</num> le 10 janvier 1152
+                    <num>V</num> occupait dès lors la sénéchaussée de France (cf. nº<hi rend="b"><ref target="#SMCP-PR_0354">354</ref></hi>). Il avait succédé à son père Thibaud <num>IV</num> le 10 janvier 1152
                   et mourut le 16 janvier 1191 (Longnon, <hi rend="i">Obituaires de la prov. de
                     Sens</hi>, <abbr>t.</abbr>
                   <num>II</num>, <abbr>p.</abbr>
                   <num>xiii</num>-<num>xv</num>). En 1166 Thibaud <num>V</num> se qualifie
                   « senescallus Francie » ; on retrouve alors trois des souscripteurs de la présente
                   charte, mais la mairie de Béville-le-Comte (ca. Auneau) n'a plus le même titulaire
-                  (cf. nº<hi rend="b">394</hi>). — La date que nous proposons n'est en tout cas
+                  (cf. nº<hi rend="b"><ref target="#SMCP-PR_0394">394</ref></hi>). — La date que nous proposons n'est en tout cas
                   qu'approximative et pourrait être rappochée de <num>1166.</num></note></placeName></rs>.</s>
                 </p>
               </div>
@@ -48301,7 +48305,7 @@
                     presentis annotatione, cum tocius capituli nostri assensu et sigilli nostri
                     impressione confirmavimus<note n="a" xml:id="aid220191">Cette charte a pour limites
                   approximatives la première date connue du priorat de Gautier à St-Martin et la
-                    8<hi rend="sup">e</hi> année du priorat de Foulques à Gournay (cf. nº<hi rend="b">402</hi>).</note>.</s>
+                    8<hi rend="sup">e</hi> année du priorat de Foulques à Gournay (cf. nº<hi rend="b"><ref target="#SMCP-PR_0402">402</ref></hi>).</note>.</s>
                 </p>
               </div>
             </body>
@@ -48838,7 +48842,7 @@
                   Yolende et leur fils Gautier <num>III</num> faisant une donation au prieuré de
                   Mauregard. Yolende n'étant point citée dans la présente charte, nous la regardons
                   comme antérieure au mariage de Guillaume I<hi rend="sup">er</hi> d'Aulnay et la
-                  datons, pour ce motif : « vers 1170 ». Cf. nº<hi rend="b">429.</hi></note></persName> omnibus litteras presentes inspicientibus,
+                  datons, pour ce motif : « vers 1170 ». Cf. nº<hi rend="b"><ref target="#SMCP-PR_0429">429</ref>.</hi></note></persName> omnibus litteras presentes inspicientibus,
                     testificor quod molendinum illud juxta <placeName>Villampictam<note n="432" xml:id="a2432a">Villepinte, ca. Gonesse, ar.
                   Pontoise (S.-et-O). - Le don de ce moulin est compris dans la confirmation
                   accordée par l'évêque Manassé <num>II</num> en <num>1140.</num></note></placeName> quod solet dici
@@ -51395,7 +51399,7 @@
                   Yolende et leur fils Gautier <num>III</num> faisant une donation au prieuré de
                   Mauregard. Yolende n'étant point citée dans la présente charte, nous la regardons
                   comme antérieure au mariage de Guillaume I<hi rend="sup">er</hi> d'Aulnay et la
-                  datons, pour ce motif : « vers 1170 ». Cf. nº<hi rend="b">429.</hi></note></persName>, <persName>Ancellus de
+                  datons, pour ce motif : « vers 1170 ». Cf. nº<hi rend="b"><ref target="#SMCP-PR_0429">429</ref>.</hi></note></persName>, <persName>Ancellus de
                       Garlandia</persName>, <persName>Hugo Taurus</persName>,
                       <persName>Ivo</persName>, <persName>Henricus de Lanniaco</persName>,
                       <persName>Hugo de Nemore</persName>, <rs type="person"><persName>Galterus</persName> frater ejus</rs>, <rs type="person"><persName>Robertus</persName> marescallus</rs>, <rs type="person"><persName>Willelmus</persName> prepositus de
@@ -52476,7 +52480,7 @@
                       <persName>Johannes</persName> et <persName>Rainaldus</persName>, filii
                       <persName>Rainaldi de Ponponia</persName>, decimam de <placeName>Luabum<note n="286" xml:id="a2286f">Sur <hi rend="i">Luabum</hi>, cf.
                     <abbr>t.</abbr>
-                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b">300</hi>) : Courbeton, comm. de St-Germain-Laval, ca.
+                  <num>I</num>, <abbr>p.</abbr> 257, note <num>380.</num> — <hi rend="i">Curbeci</hi> doit être corrigé en <hi rend="i">Curbetum</hi> (cf. nº<hi rend="b"><ref target="#SMCP-PR_0300">300</ref></hi>) : Courbeton, comm. de St-Germain-Laval, ca.
                   Montereau-faut-Yonne, ar. Fontainebleau.</note></placeName> quam
                       <persName>Matildis</persName> avia eorum per manum nostram ecclesie
                       <placeName>Beate Marie de Gornaio</placeName> antedonaverat, pro receptione
@@ -53470,14 +53474,14 @@
 </text>
         </group>
       </group>
-      <group xml:id="r7081193" type="tome">
+      <group xml:id="SMCP-PR_group-3" type="tome">
         <head>Tome 3</head>
-        <group xml:id="r7081199">
+        <group xml:id="SMCP-PR_group-3-1">
           <head>XII. — Mémorial chronologique des défunts commémorés à Saint-Martin-des-Champs, de
             1096 à 1183.</head>
           <!-- <text> <body> <list> <item>I. - Prière pour les morts.</item> <item>II. - Prieurs et grands personnages.</item> <item>III. - Bienfaiteurs et bienfaitrices.</item> <item>IV. - Frères et Associés décédés à Saint-Martin-des-Champs.</item> </list> </body> </text> -->
         </group>
-        <group xml:id="r7081207">
+        <group xml:id="SMCP-PR_group-3-2">
           <head>XIII. — Actes concernant Saint-Martin-des-Champs sous le règne de Philippe-Auguste
             (1180-1223).</head>
           <text xml:id="SMCP-PR_0453" n="453" subtype="article">
@@ -54460,7 +54464,7 @@
                   de l'acte se fit à un moment où Philippe, qui reçut le désistement de Henri
                   d'Airaines, n'était déjà plus en charge. Nous pensons que c'est lui qui fut appelé
                   en 1182 à remplacer comme <hi rend="i">armarius</hi>, à Saint-Martin-des-Champs,
-                  Simon qui l'était depuis l'année précédente. (Cf. nº 464). La charte est datée en
+                  Simon qui l'était depuis l'année précédente. (Cf. <ref target="#SMCP-PR_0464">nº 464</ref>). La charte est datée en
                   marge, d'une main moderne, 1172, c'est une erreur évidente. La charte précédente
                   de l'évêque Thibaud d'Heilly, qui porte cette date (nº<hi rend="b">413,</hi>
                   <abbr>t.</abbr>
@@ -58964,7 +58968,7 @@
                   tard comte de Beaumont-sur-Oise, sont les deux fils issus de la seconde union de
                   Mathieu <num>II</num> avec Aélis, dame de Luzarches. Mathieu de Luzarches, cité
                   ici comme vivant, mourut probablement le 8 novembre 1190 (ci-après, nº<hi rend="b">505</hi>). Aélis se qualifie « dame de Gournay » comme veuve de son second
-                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b">483</hi> et <hi rend="b">484</hi>).</note></rs>, dedit ecclesie
+                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0483">483</ref></hi> et <hi rend="b">484</hi>).</note></rs>, dedit ecclesie
                         <placeName><abbr>Bte</abbr> Marie de Gornaio</placeName> et monachis ibidem
                     Deo servientibus, pro salute anime sue et antecessorum suorum, dimidium arpentum
                     vinee que est in territorio <placeName>Canolii<note n="89" xml:id="a3089d">Pas-en-Artois, ar. Arras.</note></placeName>, quam emit a
@@ -58981,7 +58985,7 @@
                   (A. <abbr>N.</abbr> K 25umbellis, nº 30). C'est apparemment Agnès qui lui confia
                   la charge de sénéchal. En 1187 Anseau en était investi (ci-après, nº<hi rend="b">495</hi>).</note></persName>, <persName>Gervasius</persName>,
                       <persName>Morinus</persName>, <persName>Godardus<note n="165" xml:id="a3165">Ce sont ici sept religieux de Gournay.
-                  Le sous-prieur Richard était en charge sous le prieur Thibaud à Gournay (Cf. nº<hi rend="b">505</hi>). Heudier et Jean de Combault étaient moines du vivant
+                  Le sous-prieur Richard était en charge sous le prieur Thibaud à Gournay (Cf. nº<hi rend="b"><ref target="#SMCP-PR_0505">505</ref></hi>). Heudier et Jean de Combault étaient moines du vivant
                   d'Ançoul, prédécesseur de Thibaud.</note></persName>.</s>
                   <s>De laicis : <persName>Matheus</persName> et <persName>Johannes</persName>,
                     filii predicte comitisse<note n="166" xml:id="a3166b">Mathieu, seigneur de
@@ -58989,7 +58993,7 @@
                   tard comte de Beaumont-sur-Oise, sont les deux fils issus de la seconde union de
                   Mathieu <num>II</num> avec Aélis, dame de Luzarches. Mathieu de Luzarches, cité
                   ici comme vivant, mourut probablement le 8 novembre 1190 (ci-après, nº<hi rend="b">505</hi>). Aélis se qualifie « dame de Gournay » comme veuve de son second
-                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b">483</hi> et <hi rend="b">484</hi>).</note>, <persName>Guido de Pissecoc<note n="123" xml:id="a3123b">Piscop, ca. Ecouen, ar.
+                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0483">483</ref></hi> et <hi rend="b">484</hi>).</note>, <persName>Guido de Pissecoc<note n="123" xml:id="a3123b">Piscop, ca. Ecouen, ar.
                   Pontoise.</note></persName>, <persName>Radulfus de
                       Turre</persName>, <rs type="person"><persName>Simon</persName>
                     prepositus</rs>, <rs type="person"><persName>Garinus</persName>
@@ -59052,7 +59056,7 @@
                   Beaumont-sur-Oise, sont les deux fils issus de la seconde union de Mathieu
                     <num>II</num> avec Aélis, dame de Luzarches. Mathieu de Luzarches, cité ici
                   comme vivant, mourut probablement le 8 novembre 1190 (ci-après, nº<hi rend="b">505</hi>). Aélis se qualifie « dame de Gournay » comme veuve de son second
-                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b">483</hi> et <hi rend="b">484</hi>).</note></placeName></rs>,
+                  mari, Amauri <num>II</num> de Meulan (Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0483">483</ref></hi> et <hi rend="b">484</hi>).</note></placeName></rs>,
                     notum volo fieri <pb n="97" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f100/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>t. <abbr>f. q. p.</abbr> quod <rs type="person"><persName>Matheus</persName>, filius meus defunctus,
                         <placeName>Lusarchiarum</placeName> dominus</rs>, ecclesie <placeName>Beati
                       Leonorii de Bellomonte</placeName>
@@ -60555,7 +60559,7 @@
                   déchiffrer le texte original. Celui-ci portait apparemment : « magister Otto », et
                   nous serions en présence d'un doyen de Saint-Cloud témoin de bien d'autres actes
                   de l'évêque Maurice. En 1191 Otton était remplacé (Lebeuf, édit. Bournon,
-                    <num>III</num>, 26). Cf nº<hi rend="b">523</hi>.</note></persName>.</s>
+                    <num>III</num>, 26). Cf nº<hi rend="b"><ref target="#SMCP-PR_0523">523</ref></hi>.</note></persName>.</s>
                   <s>Ex parte monachorum : <rs type="person"><persName>Avoristus<note n="189" xml:id="a3189">La forme que revêt le nom de ce ce
                   « sacrista » est suspecte. Le copiste de <hi rend="i">C</hi> s'est peut-être
                   trouvé en face du vieux nom « Ausculfus » suffisamment oublié pour qu'il ait cru
@@ -60880,7 +60884,7 @@
                   Michel I<hi rend="sup">er</hi> de Corbeil (1169-1185) ou de Mathieu de Lisy
                   (1187-1202) qui se succédèrent comme doyens de Meaux (<title>Gallia</title>,
                     <num>VIII</num>, 1665). - Aubert devint chambrier après Jozon, postérieurement à
-                  1186 (Cf. n<hi rend="sup">os</hi><hi rend="b">488</hi> et <hi rend="b">524</hi>).</note></placeName></rs> societatem et beneficium istius domus et, post obitum,
+                  1186 (Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0488">488</ref></hi> et <hi rend="b">524</hi>).</note></placeName></rs> societatem et beneficium istius domus et, post obitum,
                     tricenarium unum cum prebenda integra.</s>
                 </p>
               </div>
@@ -60929,7 +60933,7 @@
                   Michel I<hi rend="sup">er</hi> de Corbeil (1169-1185) ou de Mathieu de Lisy
                   (1187-1202) qui se succédèrent comme doyens de Meaux (<title>Gallia</title>,
                     <num>VIII</num>, 1665). - Aubert devint chambrier après Jozon, postérieurement à
-                  1186 (Cf. n<hi rend="sup">os</hi><hi rend="b">488</hi> et <hi rend="b">524</hi>).</note> decanus
+                  1186 (Cf. n<hi rend="sup">os</hi><hi rend="b"><ref target="#SMCP-PR_0488">488</ref></hi> et <hi rend="b">524</hi>).</note> decanus
                       <placeName>Meldensis</placeName></rs>, notum facimus quod cum quedam
                     controversia in presentia nostra, auctoritate Apostolica, versaretur, inter
                     monachos <placeName><abbr>Sti</abbr> Martini de Campis</placeName> et
@@ -61420,7 +61424,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r7107908">
+          <group xml:id="SMCP-PR_group-3-2-1">
             <!-- 533-535 bis. -->
             <head>Documents concernant la prébende de St-Martin dans l'abbaye de Sainte-Geneviève du
               Mont (1174-1193).</head>
@@ -62251,7 +62255,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r7110445">
+          <group xml:id="SMCP-PR_group-3-2-2">
             <!-- 542-546. -->
             <head>(1173 - 16 septembre 1196) Chartes de Maurice, évêque de Paris, intéressant
               Saint-Martin-des-Champs.</head>
@@ -62822,8 +62826,8 @@
                 <p>
                   <s>« <persName>Lucius <num>III</num></persName>, <rs type="person"><persName>Roberto</persName> priori <placeName>Sancti
                       Martini</placeName></rs>, etc.</s>
-                  <s><note n="c" xml:id="aid159775">Voir nº<hi rend="b">471,</hi>
-                  <abbr>p.</abbr> 52 <hi rend="i">suprà</hi>.</note>.</s>
+                  <s><note n="c" xml:id="aid159775">Voir nº<hi rend="b"><ref target="#SMCP-PR_0471">471</ref>,</hi>
+                  <abbr>p.</abbr> <ref target="#SMCP-PR_0027">52</ref> <hi rend="i">suprà</hi>.</note>.</s>
                   <s>Ecclesiam de <placeName>Fonteneio</placeName> cum duabus partibus tertie partis
                     majoris decime et minoris. »</s>
                 </p>
@@ -63685,7 +63689,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r7115056">
+          <group xml:id="SMCP-PR_group-3-2-3">
             <!-- 557-558. -->
             <head>(1146-1198) Actes pontificaux et épiscopaux concernant le prieuré d'Encre.</head>
             <text xml:id="SMCP-PR_0557" n="557" subtype="article">
@@ -64563,7 +64567,7 @@
               </div>
             </body>
 </text>
-          <group xml:id="r7117865">
+          <group xml:id="SMCP-PR_group-3-2-4">
             <head>567-576. — Chartes du prieur Robert, non datées (1176-7 janvier 1201). Essai d'une
               chronologie de ces actes. Obit du prieur Robert, inhumé à Saint-Martin.</head>
             <argument>
@@ -64591,7 +64595,7 @@
               <p>En 1177, le chambrier Pierre reparaît ; André est devenu cellérier (t.
                   <num>II</num>, <abbr>p.</abbr> 361). A cette date, <num>D.</num> Marrier note
                 « Rolannus subcamerarius » (Arch. nat., LL 1372, fol. 37).</p>
-              <p>En 1181 Pierre est toujours chambrier, Jozon secrétain, André cellérier, <pb n="169" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f172/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>mais avec un nouveau sous-prieur, Simon <num>III</num> (dès 1180 ; cf. nº <hi rend="b">460</hi>) qui se distingue d'un homonyme, « Simon armarius » (nº <hi rend="b">464</hi>).</p>
+              <p>En 1181 Pierre est toujours chambrier, Jozon secrétain, André cellérier, <pb n="169" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f172/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>mais avec un nouveau sous-prieur, Simon <num>III</num> (dès 1180 ; cf. nº <hi rend="b"><ref target="#SMCP-PR_0460">460</ref></hi>) qui se distingue d'un homonyme, « Simon armarius » (nº <hi rend="b">464</hi>).</p>
               <p>En 1182 le chambrier Pierre est remplacé par Josselin, et le sous-prieur Simon
                   <num>III</num> par Jean ; Jozon reste secrétain (nº <hi rend="b">466</hi>). Le
                 cellérier André se retrouve dans un acte sans date, avec le sous-prieur Jean et le
@@ -65116,7 +65120,7 @@
                     <s>Notum fieri volumus omnibus ad quos presens scriptum pervenerit, quod
                       commutationem illam quam habuerunt inter se dilecti fratres nostri <rs type="person"><persName>A(dam</persName>) prior de <placeName>Bellomonte<note n="239" xml:id="a3239b">Il s'agit sans doute ici d'Adam de
                     Beaumont, prieur de Saint-Léonor dès 1184 (nº<hi rend="b">474</hi>). - Sur le
-                    cellérier Hugues, voir nº<hi rend="b">567.</hi></note></placeName></rs>
+                    cellérier Hugues, voir nº<hi rend="b"><ref target="#SMCP-PR_0567">567</ref>.</hi></note></placeName></rs>
                       et <rs type="person"><persName>H(ugo</persName> ?) cellarius <placeName>Sancti
                           Martini</placeName></rs>, concedimus ; et hanc eamdem commutationem in
                       hunc modum factam, videlicet quod prior de <placeName>Bellomonte</placeName>
@@ -65270,7 +65274,7 @@
                       donné par le document que nous publions, montre qu'il était docteur.</p>
                     <p>Le prieur de Gournay son contemporain, Simon I<hi rend="sup">er</hi>, est
                       resté en fonctions depuis 1189 (cf. note 10, <abbr>p.</abbr> 89) jusqu'après
-                      1194 ; il fut remplacé par Pierre (cf. nº <hi rend="b">518,</hi> note <hi rend="i">a</hi>, <abbr>p.</abbr> 112) puis Herbert, qui occupait cette
+                      1194 ; il fut remplacé par Pierre (cf. nº <hi rend="b"><ref target="#SMCP-PR_0518">518</ref>,</hi> note <hi rend="i">a</hi>, <abbr>p.</abbr> <ref target="#SMCP-PR_0069">112</ref>) puis Herbert, qui occupait cette
                       charge en janvier 1201.</p>
                     <p>Ces remarques amènent à rectifier la date de la charte <hi rend="b">518</hi>
                       par laquelle Mahaud de Garlande fonda l'anniversaire de son père Guillaume à
@@ -65860,8 +65864,8 @@
                   Chartres. - Pézy, ca. Voves, ar. Chartres. - Mazaugé, ca. Vendôme.</note></placeName> consanguinei nostri</rs>, <rs type="person"><persName>Roberti
                         de Beron<note n="257" xml:id="a3257a">Il existait une famille de
                   chevaliers du surnom de <hi rend="i">Scotus</hi> [Le Scot] en Senlisois, dès le
-                      <num>xii<hi rend="sup">e</hi></num> siècle (Cf. nº<hi rend="b">513,</hi>
-                  <abbr>p.</abbr> 104).</note></persName> socii nostri et canonici
+                      <num>xii<hi rend="sup">e</hi></num> siècle (Cf. nº<hi rend="b"><ref target="#SMCP-PR_0513">513</ref>,</hi>
+                  <abbr>p.</abbr> <ref target="#SMCP-PR_0064">104</ref>).</note></persName> socii nostri et canonici
                       <placeName>Carnotensis</placeName></rs>, <rs type="person"><persName>Guarnerii</persName> capellani nostri</rs>, <rs type="person"><persName>Willelmi</persName> camerarii nostri</rs>, <rs type="person"><persName>Nicolai de Fresgot<note n="251" xml:id="a3251">Bérou-la-Mulotière, ca. Brezolles. ar.
                   Dreux. - Le Frécot, éc. Thibouville, ca. Beaumont-le-Roger, ar. Bernay.</note></persName> socii nostri</rs>, et aliorum multorum.</s>
                   <s><date>Anno gratie millesimo ducentesimo, terciononas martii</date><note n="b" xml:id="aid174827">Il faut ponctuer ainsi,
@@ -66122,8 +66126,8 @@
                 <listWit type="copie">
                   <witness n="B"> Copie du <num>xiii<hi rend="sup">e</hi></num>
                     <abbr>s.</abbr>, <title>Cartulaire de Sainte-Geneviève</title>, Bibliothèque
-                    Sainte-Geneviève, ms. 356, fol. xxii<ref target="#SMCP-PR_0584"/>. - Cf. nº
-                    534.</witness>
+                    Sainte-Geneviève, ms. 356, fol. xxii<ref target="#SMCP-PR_0584"/>. - Cf. <ref target="#SMCP-PR_0534">nº
+                    534</ref>.</witness>
                 </listWit>
                 <listWit type="édition">
                   <witness n="a" ana="edited">
@@ -66159,7 +66163,7 @@
               </div>
             </body>
         </text>
-          <group xml:id="r7122559">
+          <group xml:id="SMCP-PR_group-3-2-5">
             <!-- 585-596. -->
             <head>(1140-1202) Documents concernant les bénéfices compris dans le diocèse de Châlons,
               concédés en 1140 à Saint-Martin par l'évêque Geofroi I<hi rend="sup">er</hi>, et
@@ -66249,8 +66253,8 @@
                     Saint-Martin-de-Pontoise</title>, <abbr>p.</abbr> 463).</note></persName> ; <abbr>S.</abbr>
                       <persName>Scoti</persName>, militum<note n="257" xml:id="a3257b">Il existait une famille de
                     chevaliers du surnom de <hi rend="i">Scotus</hi> [Le Scot] en Senlisois, dès le
-                        <num>xii<hi rend="sup">e</hi></num> siècle (Cf. nº<hi rend="b">513,</hi>
-                    <abbr>p.</abbr> 104).</note>.</s>
+                        <num>xii<hi rend="sup">e</hi></num> siècle (Cf. nº<hi rend="b"><ref target="#SMCP-PR_0513">513</ref>,</hi>
+                    <abbr>p.</abbr> <ref target="#SMCP-PR_0064">104</ref>).</note>.</s>
                   </p>
                   <p>
                     <s>Actum <placeName>Cathalaunis</placeName>
@@ -67373,7 +67377,7 @@
                   <s>Quod ut ratum permaneat, sigilli nostri impressione roboramus <date>anno
                       incarnati Verbi <num>M. CCII</num></date><note n="c" xml:id="aid181532">Cet acte serait du mois de
                   décembre, comme le précédent, mais il nous est parvenu par la voie d'un document
-                  faux (cf. nº<hi rend="b">668</hi>).</note>.</s>
+                  faux (cf. nº<hi rend="b"><ref target="#SMCP-PR_0668">668</ref></hi>).</note>.</s>
                 </p>
               </div>
             </body>
@@ -73939,7 +73943,7 @@ chevalier, et l'hôpital
                       <persName>Radulfus Palart<note n="g" xml:id="aid211375">Les limites de date pour cette
                   charte sont l'avènement de Geofroi (qui succéda à Henri, mort le 21 février 1185)
                   et l'automne de 1209, où fut terminé le <title>Cartulaire A</title> de
-                  Saint-Martin-des-Champs (voir nº<hi rend="b">689,</hi> note <hi rend="i">a</hi>).
+                  Saint-Martin-des-Champs (voir nº<hi rend="b"><ref target="#SMCP-PR_0689">689</ref>,</hi> note <hi rend="i">a</hi>).
                   Mais étant donnée l'association de Pierre à son père, dans un acte antérieur à
                   1169, la date probable se rapproche plutôt de la limite inférieure.</note></persName>.</s>
                 </p>
@@ -73998,7 +74002,7 @@ chevalier, et l'hôpital
                   circonscrite, d'un côté, par la substitution de Pierre <num>II</num> de Nemours à
                   Eudes de Sully, mort le 13 juillet 1208 ; de l'autre, par la terminaison du
                     <title>Cartulaire A</title> de Saint-Martin, où il se trouve reproduit (Voir
-                    nº<hi rend="b">689,</hi> note <hi rend="i">a</hi>). Le sous-chantre Pierre,
+                    nº<hi rend="b"><ref target="#SMCP-PR_0689">689</ref>,</hi> note <hi rend="i">a</hi>). Le sous-chantre Pierre,
                   alors curé de Saint-Jean, fit avec ses frères Thierri et Jean, dans l'église de
                   Champigny, la fondation relatée sous le nº<hi rend="b">603,</hi> qu'approuvèrent
                   Simon, leur frère, mari de Constance, et leurs sœurs Richeud et Sibille.</note></placeName></rs>, de consensu et voluntate presbiteri
@@ -75315,7 +75319,7 @@ chevalier, et l'hôpital
                       <persName>Odo de Sancto Mederico<note n="331" xml:id="a3331a">La famille Alabarbe est une
                   des plus anciennes de Paris. On la retrouve citée dans le <title>Cartulaire de
                     l'Hôtel-Dieu de Pontoise</title>, que nous avons publié. - Sur la famille de
-                  Saint-Merry, cf. nº<hi rend="b">456</hi>, note 6 ; nº<hi rend="b">603,</hi>
+                  Saint-Merry, cf. nº<hi rend="b"><ref target="#SMCP-PR_0456">456</ref></hi>, note 6 ; nº<hi rend="b">603,</hi>
                   <abbr>p.</abbr> 208.</note></persName> et <rs type="person"><persName>Jaquelina</persName>, uxor sua</rs>, in remedio animarum suarum
                     donaverunt et assignaverunt in perpetuam elemosinam capellanie <placeName>Beati
                       Jacobi</placeName> in ecclesia de <placeName>Campiniaco<note n="64" xml:id="a3064f">Saint-Pierre de Chaillot, compris
@@ -75324,7 +75328,7 @@ chevalier, et l'hôpital
                       <persName>Renaudi Ad-Barbam<note n="331" xml:id="a3331b">La famille Alabarbe est une
                   des plus anciennes de Paris. On la retrouve citée dans le <title>Cartulaire de
                     l'Hôtel-Dieu de Pontoise</title>, que nous avons publié. - Sur la famille de
-                  Saint-Merry, cf. nº<hi rend="b">456</hi>, note 6 ; nº<hi rend="b">603,</hi>
+                  Saint-Merry, cf. nº<hi rend="b"><ref target="#SMCP-PR_0456">456</ref></hi>, note 6 ; nº<hi rend="b">603,</hi>
                   <abbr>p.</abbr> 208.</note></persName>, ad duos terminos singulis annis capellano qui
                     eidem capellanie deserviet reddendos, videlicet <date>in Pasca</date>
                     <num>v<hi rend="sup">que</hi></num> solidos, <date>in festo <abbr>Sti</abbr>
@@ -76021,10 +76025,11 @@ chevalier, et l'hôpital
               </div>
             </body>
 </text>
-          <group xml:id="r7151338">
+          <group xml:id="SMCP-PR_group-3-2-6">
             <!-- 710-711. -->
             <head>Chartes de Mathieu <num>II</num> de Montmorency et de Pierre <num>II</num>, évêque
-              de Paris, concernant des fondations religieuses à Piscop<note><p>Ces deux chartes ont
+              de Paris, concernant des fondations religieuses à Piscop en juin 1211 et avril 1214.</head>
+            <note><p>Ces deux chartes ont
                   entre elles une telle connexion qu'il a paru préférable de les rapprocher. Elles
                   ont trait à la séparation de la paroisse de Piscop d'avec celle de Saint-Brice.
                   Elles nous sont parvenues à la faveur d'une tentative de rattachement généalogique
@@ -76035,7 +76040,7 @@ chevalier, et l'hôpital
                   évidemment tendancieuse. Il est superflu d'insister sur la profonde ignorance que
                   décèle cette intention naïve. La famille Braque, avant de s'arroger la particule,
                   était roturière et sans aucune attache avec la maison des chevaliers de Bray en
-                  Senlisois.</p></note> en juin 1211 et avril 1214.</head>
+                  Senlisois.</p></note>
             <text xml:id="SMCP-PR_0710" n="710" subtype="article">
               <pb n="313" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/f316/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k110141g/manifest.json"/>
               <front>
@@ -78668,7 +78673,7 @@ chevalier, et l'hôpital
                   dîme du lieu, et Foulques, prieur de Cannes, sont apparemment les neveux du prieur
                   de Saint-Martin Foulques I<hi rend="sup">er</hi> et les petits-fils de Guibert de
                   Canues et de Pernelle, par leur fils Pierre I<hi rend="sup">er</hi>, chevalier de
-                  Cannes. Voir nº<hi rend="b">706.</hi></note></persName> de cujus feodo erat.</s>
+                  Cannes. Voir nº<hi rend="b"><ref target="#SMCP-PR_0706">706</ref>.</hi></note></persName> de cujus feodo erat.</s>
                   <s>Ipse siquidem <persName>Guibertus</persName> pred. decimam in manu nostra
                     resignavit et nos investivimus venerabilem virum <persName>Fulconem</persName>,
                     ejusdem loci priorem, de eadem.</s>
@@ -82425,9 +82430,9 @@ chevalier, et l'hôpital
 </text>
         </group>
       </group>
-      <group xml:id="r7169340" type="tome">
+      <group xml:id="SMCP-PR_group-4" type="tome">
         <head>Tome 4</head>
-        <group xml:id="r7169346">
+        <group xml:id="SMCP-PR_group-4-1">
           <head>XIV. —Actes concernant Saint-Martin-des-Champs pendant le règne de Louis VIII
             (1223-1226)</head>
           <text xml:id="SMCP-PR_0810" n="810" subtype="article">
@@ -85473,7 +85478,7 @@ chevalier, et l'hôpital
             </body>
 </text>
         </group>
-        <group xml:id="r7178171">
+        <group xml:id="SMCP-PR_group-4-2">
           <head>XV. — <pb n="4_0042" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255715c/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k255715c/manifest.json"/>Actes concernant Saint-Martin-des-Champs sous le règne de saint Louis
             (1226-1270)</head>
           <text xml:id="SMCP-PR_0856" n="856" subtype="article">
@@ -95430,7 +95435,7 @@ chevalier, et l'hôpital
                 <p>
                   <s><abbr>U. p. l. i.</abbr> frater <abbr>L.</abbr><note n="a" xml:id="aid171597">Il faut corriger
                     « <abbr>L.</abbr> « en » <abbr>E.</abbr> « sur ce texte qui nous est parvenu par
-                  une copie non authentique. Le prieur Evrard était toujours en charge (Cf. nº<hi rend="b">1036</hi>).</note> humilis prior <placeName>Sancti
+                  une copie non authentique. Le prieur Evrard était toujours en charge (Cf. nº<hi rend="b"><ref target="#SMCP-PR_1036">1036</ref></hi>).</note> humilis prior <placeName>Sancti
                       Martini de Campis</placeName> — cum nos, divine pietatis intuitu, concessimus
                     religiosis viris fratribus de <placeName>Vicenis</placeName>,
                       <placeName>Grandimontensis</placeName> ordinis, quod in censiva nostra
@@ -96559,7 +96564,7 @@ chevalier, et l'hôpital
                   Barthélemi mourut la veille de l'Assomption, un 14 août. Il subsiste un acte de
                   juin 1239 où « <abbr>B.</abbr> humilis prior Sancte Marie de Gornaio « énonce un
                   accord avec Guillaume de Villeflix (original, Arch. nat., S 1417, nº
-                    <num>64.</num>) Voir ci-après, nº<hi rend="b">1069,</hi> note <hi rend="i">a</hi> ; ce dernier document montre que le successeur de Barthélemi à Gournay,
+                    <num>64.</num>) Voir ci-après, nº<hi rend="b"><ref target="#SMCP-PR_1069">1069</ref>,</hi> note <hi rend="i">a</hi> ; ce dernier document montre que le successeur de Barthélemi à Gournay,
                   Pierre, était en charge en septembre <num>1248.</num> La charte <hi rend="b">1048</hi> prouve que dès novembre 1245 Pierre faisait avec sa communauté une
                   convention qui semble avoir suivi de près son entrée en charge. La mort de
                   Barthélemi se place donc un 14 août, en 1239 au plus tôt, au plus tard en 1245,
@@ -99991,9 +99996,9 @@ chevalier, et l'hôpital
 </text>
         </group>
       </group>
-      <group xml:id="r7219799" type="tome">
+      <group xml:id="SMCP-PR_group-5" type="tome">
         <head>Tome 5</head>
-        <group xml:id="r7219805">
+        <group xml:id="SMCP-PR_group-5-1">
           <head>XVI. — Actes concernant Saint-Martin-des-Champs sous le règne de saint Louis
             (1253-1270)</head>
           <text xml:id="SMCP-PR_1111" n="1111" subtype="article">
@@ -107030,7 +107035,7 @@ chevalier, et l'hôpital
                         Witstan</persName></rs>, <persName>Johanne de Giltwayt</persName>, <rs type="person"><persName>Willelmo</persName> filio <persName>Lanne de
                         Waleswode</persName></rs> et alii<note n="a" xml:id="aid146237">Il s'agit ici de Normands
                   transplantés en Angleterre. Geofroi de Chevilly avait épousé Gonnor (<hi rend="i">Gonoria</hi>) prénom de la duchesse aïeule de Guillaume-le-Conquérant.
-                    <abbr>Cf.</abbr> nº<hi rend="b">1225,</hi> note a.</note>.</s>
+                    <abbr>Cf.</abbr> nº<hi rend="b"><ref target="#SMCP-PR_1225">1225</ref>,</hi> note a.</note>.</s>
                 </p>
               </div>
             </body>
@@ -107219,7 +107224,7 @@ chevalier, et l'hôpital
             </body>
           </text>
         </group>
-        <group xml:id="r7241851">
+        <group xml:id="SMCP-PR_group-5-2">
           <head>XVII. — Actes concernant Saint-Martin-des-Champs sous le règne de Philippe le Hardi
             (1270-1285)</head>
           <text xml:id="SMCP-PR_1229" n="1229" subtype="article">
@@ -110634,7 +110639,7 @@ chevalier, et l'hôpital
                   <s><abbr>U. p. l. i.</abbr> Officialis curie <placeName>Parisiensis</placeName>
                     <rs type="person"><persName>Lambertus de Barro</persName> miles<note n="a" xml:id="aid164428">Cette lecture résulte d'une <hi rend="i">correction</hi> évidente au parchemin dont le texte, effacé par
                   vétusté, a été rétabli inexactement. Lambert de Bar-sur-Aube était clerc, et non
-                  chevalier. <abbr>Cf.</abbr> nº<hi rend="b">1291</hi> ci-après.</note></rs> — — confessus est — —
+                  chevalier. <abbr>Cf.</abbr> nº<hi rend="b"><ref target="#SMCP-PR_1291">1291</ref></hi> ci-après.</note></rs> — — confessus est — —
                     se recipisse a — — <rs type="person">fratre <persName>Petro</persName> priore
                           <placeName><abbr>Sti</abbr> Martini de Campis Paris</placeName></rs>,
                     quandam grangiam sitam prope <placeName>Parisius</placeName> que

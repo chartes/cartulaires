@@ -135,7 +135,7 @@
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+              <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
               <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
               <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
               <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -2172,7 +2172,7 @@
                 diocèse de Carcassonne. (A. Duchesne, <abbr>p.</abbr>
                 <num>667.</num>) Entre autres chartes publiées dans le <hi rend="i">Cartulaire des
                   Vaux de Cernay</hi>, il est à remarquer que deux sont datées du mois de mai
-                  <num>1226.</num> Voir plus loin nº <num>LXXV</num>.</note>, in puram ac perpetuam elemosinam, super
+                  <num>1226.</num> Voir plus loin nº <num><ref target="#NDRC-AB_0075">LXXV</ref></num>.</note>, in puram ac perpetuam elemosinam, super
                     quintum<note n="3" xml:id="p28_fn2">« Le <hi rend="i">quint</hi> est ici la portion laissée à
                 la veuve par son mari ; les quatre autres <hi rend="i">quints</hi> étaient réservés
                 aux proches parents de celui-ci. « (B. Guérard.)</note> meum de tringinta libris
@@ -2227,7 +2227,7 @@
                 <note>(ut in charta <num>LXXV</num>).</note>
                 <s>Transcriptum autem litterarum istarum fecimus sub sigillo <rs type="place">curie
                       <placeName>Parisiensis</placeName></rs> in memoriam rei geste.</s>
-                <s>Datum anno et die predictis<note n="1" xml:id="p29_fn1"> Voir le nº <num>LXXV</num> et ses notes.</note>.</s>
+                <s>Datum anno et die predictis<note n="1" xml:id="p29_fn1"> Voir le nº <num><ref target="#NDRC-AB_0075">LXXV</ref></num> et ses notes.</note>.</s>
               </p>
             </div>
           </body>
@@ -2340,7 +2340,7 @@
                   apud <placeName>Doinviller</placeName>, sepedicte ecclesie in perpetuam elemosinam
                     contulerunt<note n="2" xml:id="p31_fn1"> Cette donation avait été faite en <num>1220.</num> Voir
                 les n<hi rend="sup">os</hi>
-                <num>XXXIX</num> et <num>XLVI</num>.</note>.</s>
+                <num><ref target="#NDRC-AB_0039">XXXIX</ref></num> et <num>XLVI</num>.</note>.</s>
                 <s>Volo etiam et concedo quod stannum supradicte ecclesie cursum aque sue scilicet
                     <placeName>Essevouir</placeName><note n="3" xml:id="p31_fn2"> C'est l'étang et le cours d'eau dont il s'agit dans la
                 pièce précédente. Il en sera encore question au nº <num>LXI</num>, où le cours d'eau
@@ -4467,7 +4467,7 @@
               <term type="nature" key="act"/>
             </index>
             <head xml:lang="lat">De dimidio arpento prati contigui orto nostro<note n="1" xml:id="p67_fn1">Voir les n<hi rend="sup">os</hi>
-                <num>LXI</num> et <num>LXV</num>.</note>.</head>
+                <num><ref target="#NDRC-AB_0061">LXI</ref></num> et <num>LXV</num>.</note>.</head>
             <div type="tradition">
               <listWit type="copie">
                 <witness n="B" source="https://gallica.bnf.fr/ark:/12148/btv1b100389713">Bib. nat. de Fr., ms. lat. 10996, cartulaire.</witness>
@@ -8898,7 +8898,7 @@
             <item xml:id="NDRC-AB_rs_034"><rs><hi rend="sc">Buc</hi> (Willelmus de)</rs><!-- <ref target="#NDRC-AB_0012">XVI</ref> -->.</item><item xml:id="NDRC-AB_rs_035"><rs><hi rend="sc">Buc</hi>, Willelmus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_036"><rs><hi rend="sc">Buc</hi>, Petrus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_037"><rs><hi rend="sc">Buc</hi>, Nicholaus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_038"><rs><hi rend="sc">Buc</hi>, Maria, uxor ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_039"><rs><hi rend="sc">Buc</hi>, Hugo, filius eorum</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_040"><rs><hi rend="sc">Buc</hi>, Adam, filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_041"><rs><hi rend="sc">Buc</hi>, Philippus, filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_042"><rs><hi rend="sc">Buc</hi>, Theob., filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_043"><rs><hi rend="sc">Buc</hi>, Johanna, filia ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_044"><rs><hi rend="sc">Buc</hi>, Mathildis, filia ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item></list>
           <list type="index">
           <head>C</head>
-            <item xml:id="NDRC-AB_rs_045"><rs><hi rend="sc">Capella</hi> (Petrus de), miles</rs>, <ref target="#NDRC-AB_0051" n="51">51</ref>, <ref target="#NDRC-AB_0051" n="53">53</ref></item><item xml:id="NDRC-AB_rs_045_1"><rs><hi rend="sc">Capella</hi> (Guillelmus de), frater ejus</rs>, <!-- doublon meme acte NDRC-AB_0051: <ref target="#NDRC-AB_0051" n="LI">51</ref> --></item><item xml:id="NDRC-AB_rs_045_2"><rs><hi rend="sc">Capella</hi> (Luciana), uxor Petri de</rs>, <!-- doublon meme acte NDRC-AB_0051: <ref target="#NDRC-AB_0051" n="LI">51</ref> --></item><item xml:id="NDRC-AB_rs_046"><rs><hi rend="sc">Caprosia</hi> (Guido <num>III</num>, dominus de)</rs>, <ref target="#NDRC-AB_0005" n="3">3</ref><!--; <ref>III</ref>-->, <ref target="#NDRC-AB_0004" n="4">4</ref>, <ref target="#NDRC-AB_0005" n="5">5</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0051" n="52">52</ref>, <!-- doublon meme acte NDRC-AB_0052: <ref target="#NDRC-AB_0052" n="LII">52</ref> --> <ref target="#NDRC-AB_0051" n="53">53</ref>, <ref target="#NDRC-AB_0052" n="54">54</ref> <ref target="#NDRC-AB_0054" n="54">54</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_104" corresp="#NDRC-AB_back-1">Helisendis</ref>.</item>
+            <item xml:id="NDRC-AB_rs_045"><rs><hi rend="sc">Capella</hi> (Petrus de), miles</rs>, <ref target="#NDRC-AB_0051" n="51">51</ref>, <ref target="#NDRC-AB_0051" n="53">53</ref></item><item xml:id="NDRC-AB_rs_045_1"><rs><hi rend="sc">Capella</hi> (Guillelmus de), frater ejus</rs>, <ref target="#NDRC-AB_0051" n="LI">51</ref></item><item xml:id="NDRC-AB_rs_045_2"><rs><hi rend="sc">Capella</hi> (Luciana), uxor Petri de</rs>, <ref target="#NDRC-AB_0051" n="LI">51</ref></item><item xml:id="NDRC-AB_rs_046"><rs><hi rend="sc">Caprosia</hi> (Guido <num>III</num>, dominus de)</rs>, <ref target="#NDRC-AB_0005" n="3">3</ref><!--; <ref>III</ref>-->, <ref target="#NDRC-AB_0004" n="4">4</ref>, <ref target="#NDRC-AB_0005" n="5">5</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0051" n="52">52</ref>, <!-- doublon meme acte NDRC-AB_0052: <ref target="#NDRC-AB_0052" n="LII">52</ref> --> <ref target="#NDRC-AB_0051" n="53">53</ref>, <ref target="#NDRC-AB_0052" n="54">54</ref> <ref target="#NDRC-AB_0054" n="54">54</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_104" corresp="#NDRC-AB_back-1">Helisendis</ref>.</item>
             <item xml:id="NDRC-AB_rs_047"><rs><hi rend="sc">Caprosia</hi> (Herveus de)</rs><!--, <ref>III</ref>-->, <ref target="#NDRC-AB_0004" n="3">3</ref>, <ref target="#NDRC-AB_0005" n="5">5</ref>.</item>
             <item xml:id="NDRC-AB_rs_048"><rs><hi rend="sc">Chartres</hi> (Isabelle, comtesse de), fille du comte Thibault</rs>, <ref target="#NDRC-AB_0026" n="26">26</ref>.</item>
             <item xml:id="NDRC-AB_rs_049"><rs><hi rend="sc">Chateaufort</hi> (Constance de), femme de Guillaume de la Ferté</rs>, <ref target="#NDRC-AB_0012" n="12">12</ref>. — (Mabille et Mathilde de), femmes de Mathieu et de Bouchard de Marly, <foreign>ibid.</foreign>, <ref target="#NDRC-AB_0026" n="26">26</ref>.</item>

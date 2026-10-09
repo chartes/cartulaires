@@ -72,6 +72,8 @@
           <citeData property="schema:name" use="head"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="schema:position" use="string(@n)"/>
+            <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
             <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
             <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -122,7 +124,7 @@
       <head>Maubuisson</head>
       <group type="tome" n="1">
         <group xml:id="MAUB-AB-01_titre_01">
-          <head>TITRE I</head>
+          <head>Titre I</head>
           <text xml:id="MAUB-AB-01_0001" n="1" subtype="article">
             <front>
               <docDate>
@@ -3346,7 +3348,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_02">
-          <head>TITRE II<lb/>TRAITÉ AVEC LE CURÉ DE SAINT-OUEN.<lb/>— FONDATION DES CHAPELLES (68 à 86).</head>
+          <head>Titre II <lb/>Traité avec le curé de Saint-Ouen. <lb/>— Fondation des chapelles (68 à 86).</head>
           <text xml:id="MAUB-AB-01_0068" n="68" subtype="article">
             <front>
               <docDate>
@@ -4620,8 +4622,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_03">
-          <head>TITRE III<lb/>ACTES DE DONATION OU D’ACQUISITION DE PROPRIÉTÉS<lb/>SITUÉES AUTOUR DU
-            MONASTÈRE<lb/>(N<hi rend="sup">os</hi> 87 à 110)</head>
+          <head>Titre III <lb/>Actes de donation ou d’acquisition de propriétés <lb/>situées autour du monastère <lb/>(N<hi rend="sup">os</hi> 87 à 110)</head>
           <text xml:id="MAUB-AB-01_0087" n="87" subtype="article">
             <front>
               <docDate>
@@ -5394,7 +5395,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_04">
-          <head>TITRE IV</head>
+          <head>Titre IV</head>
           <text xml:id="MAUB-AB-01_0111" n="111" subtype="article">
             <front>
               <docDate>
@@ -5493,7 +5494,7 @@
                 sols ts., lesquelles font 12 liv. ts. Item, dans la mesme forest, vers le Chesne... 60 acres...
                 qui font 12 liv. ts. Sommaire de toutes les acres susdites, 2060 acres et demy et 17 perches,
                 et des rentes susdites, 400 liv. et 11 den. ts.</p>
-                <p>(Cette analyse, donnée par le Cartulaire de 1668, est incomplète. Voir ci-après, n° <hi rend="b">329</hi>,
+                <p>(Cette analyse, donnée par le Cartulaire de 1668, est incomplète. Voir ci-après, n° <hi rend="b"><ref target="#MAUB-AB-01_0274">329</ref></hi>,
   le document original).</p>
               </div>
             </body>
@@ -5901,7 +5902,7 @@
                   « <hi rend="sc">Jehan le Berchier</hi> guarde en la chastelerie de <hi rend="i">Pontoise</hi>
                   de par madame la Reynne [<hi rend="sc">Marguerite de Provence</hi>, veuve de saint
                   <hi rend="sc">Louis</hi>] le juedi apres la Thyepheinne el mois de Jenvier » en 1272 n. st.
-                  Voir ci-après, n° <hi rend="b">287</hi>.</p>
+                  Voir ci-après, n° <hi rend="b"><ref target="#MAUB-AB-01_0232">287</ref></hi>.</p>
               </argument>
               <div type="tradition">
                 <listWit type="copie">
@@ -6155,7 +6156,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_05"><pb n="100" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/f18/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/manifest.json"/>
-<head>TITRE V</head><text xml:id="MAUB-AB-01_0138" n="156" subtype="article"><front><docDate><date when="1239-07">Juillet 1239</date></docDate><index><term type="nature" key="act"/></index><argument><p><hi rend="sc">Pierre de Malli</hi> (<hi rend="i">Marly</hi>, mal interprété
+<head>Titre V</head><text xml:id="MAUB-AB-01_0138" n="156" subtype="article"><front><docDate><date when="1239-07">Juillet 1239</date></docDate><index><term type="nature" key="act"/></index><argument><p><hi rend="sc">Pierre de Malli</hi> (<hi rend="i">Marly</hi>, mal interprété
                   <hi rend="i">Mailly</hi>), écuyer, du consentement de <hi rend="sc">Jeanne</hi> sa femme,
                   vend au roi <hi rend="sc">Louis IX</hi> toute sa dîme de <hi rend="i">Bailly</hi> valant 12
                   muids de blé, mesure de <hi rend="i">Poissy</hi>, laquelle « se lève sur les terres du
@@ -6244,7 +6245,7 @@
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 101.</witness>
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text></group>
         <group xml:id="MAUB-AB-01_titre_06"><pb n="102" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/f20/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/manifest.json"/>
-<head>TITRE VI</head><text xml:id="MAUB-AB-01_0146" n="164" subtype="article"><front><docDate><date when="1204-11">Novembre 1204</date></docDate><index><term type="nature" key="act"/></index><argument><p>Concession par <hi rend="sc">Gautier Tirel VII</hi> et <hi rend="sc">Avoie</hi>, sa
+<head>Titre VI</head><text xml:id="MAUB-AB-01_0146" n="164" subtype="article"><front><docDate><date when="1204-11">Novembre 1204</date></docDate><index><term type="nature" key="act"/></index><argument><p>Concession par <hi rend="sc">Gautier Tirel VII</hi> et <hi rend="sc">Avoie</hi>, sa
                   femme<note><p>Avoie, femme de Gautier Tirel VII, est citée en 1190
                   et 1203 (<hi rend="sc">J. Depoin</hi>, Appendices au <hi rend="i">Cartulaire de Saint-Martin
                   de Pontoise</hi>, p. 458)</p></note>, à <hi rend="sc">Renier du Four</hi>, de la masure qu’il
@@ -6330,7 +6331,7 @@
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text><text xml:id="MAUB-AB-01_0151" n="169" subtype="article"><front><docDate><date when="1240-06">Juin 1240</date></docDate><index><term type="nature" key="act"/></index><argument><p>Devant l’Official de <hi rend="i">Paris</hi>, <hi rend="sc">Gautier Roussel</hi>
                   (<hi rend="i">Galterus Rosselli</hi>) et sa femme <hi rend="i">Emeline</hi> vendent à la
                   <hi rend="i">Reine de France</hi> B., une masure et deux pièces de vigne à
-                  <hi rend="i">Bessancourt</hi> (voir n° <hi rend="b">166</hi>) moyennant 110 livres
+                  <hi rend="i">Bessancourt</hi> (voir n° <hi rend="b"><ref target="#MAUB-AB-01_0148">166</ref></hi>) moyennant 110 livres
                   parisis.</p></argument><div type="tradition"><listWit type="original"><witness>Original, avec sceau de l’Official. — Demay, n° 582.</witness></listWit>
   <listWit type="édition">
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 103.</witness>
@@ -6660,7 +6661,7 @@
                   predicta, in censiva predictarum Abbatisse et conventus, et heredum defuncti
                   <hi rend="sc">Radulfi de Frepellon</hi>, militis ». Approbation de <hi rend="sc">Jean</hi> et
                   <hi rend="sc">Simon</hi>, écuyers, frères de <hi rend="sc">Gui</hi>. Voir
-                  n° <hi rend="b">203</hi>.</p></argument><div type="tradition"><listWit type="original"><witness>Original, carton 10 ; sceau de l’Officialité avec contre-scel portant la date
+                  n° <hi rend="b"><ref target="#MAUB-AB-01_0183">203</ref></hi>.</p></argument><div type="tradition"><listWit type="original"><witness>Original, carton 10 ; sceau de l’Officialité avec contre-scel portant la date
                     M. CC. LIII.</witness></listWit>
   <listWit type="édition">
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 109.</witness>
@@ -6723,7 +6724,7 @@
                   <hi rend="i">Bercencuriam</hi> » que Gui, écuyer, fils de Simon, a vendue aux Religieuses, et
                   sur une masure proche dudit bois ; moyennant une somme de 24 livres tournois versée à ladite
                   <hi rend="sc">Mahaud</hi> et à son second époux <hi rend="sc">Raoul de
-                  Dammartin-en-Brie</hi>. Voir n° <hi rend="b">198</hi>.</p></argument><div type="tradition"><listWit type="original"><witness>Original, carton 10.</witness></listWit>
+                  Dammartin-en-Brie</hi>. Voir n° <hi rend="b"><ref target="#MAUB-AB-01_0178">198</ref></hi>.</p></argument><div type="tradition"><listWit type="original"><witness>Original, carton 10.</witness></listWit>
   <listWit type="édition">
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 110.</witness>
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text><text xml:id="MAUB-AB-01_0184" n="204" subtype="article"><front><docDate><date when="1271-12">Décembre 1271</date></docDate><index><term type="nature" key="act"/></index><argument><p>Devant l’Official de <hi rend="i">Paris</hi>, <hi rend="sc">Jacques Lombard</hi> de
@@ -6982,7 +6983,7 @@
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 114.</witness>
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text></group>
         <group xml:id="MAUB-AB-01_titre_07"><pb n="115" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/f33/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/manifest.json"/>
-<head>TITRE VII</head><text xml:id="MAUB-AB-01_0204" n="232" subtype="article"><front><docDate><date when="1273-03">Mars 1273, nouv. style</date></docDate><index><term type="nature" key="act"/></index><argument><p>Devant l’Official d’<hi rend="i">Evreux</hi>, <hi rend="sc">Robert</hi> dit
+<head>Titre VII</head><text xml:id="MAUB-AB-01_0204" n="232" subtype="article"><front><docDate><date when="1273-03">Mars 1273, nouv. style</date></docDate><index><term type="nature" key="act"/></index><argument><p>Devant l’Official d’<hi rend="i">Evreux</hi>, <hi rend="sc">Robert</hi> dit
                   <hi rend="sc">Boutin</hi> et <hi rend="sc">Emeline</hi>, sa femme, de la paroisse de
                   <hi rend="i">Ceres</hi><note><p>Cierry, comme
                   Boisset-les-Prévenches, cant. de Pacy-sur-Eure ; la Boissière, cant. de Saint-André, arr.
@@ -7130,7 +7131,7 @@
                 presentibus litteris nostrum fecimus apponi sigillum.</p><p>Actum apud <hi rend="i">Sanctum Germanum in Laya</hi>, anno Domini millesimo ducentesimo sexagesimo septimo,
   mense Januario.</p></div></body></text></group>
         <group xml:id="MAUB-AB-01_titre_08">
-          <head>TITRE VIII</head>
+          <head>Titre VIII</head>
           <text xml:id="MAUB-AB-01_0217" n="251 bis" subtype="article">
             <front>
               <docDate>
@@ -7243,7 +7244,7 @@
               <argument>
                 <p><hi rend="sc">Mahaud</hi>, <hi rend="i">dame de Marly</hi>, énonce les conditions de
                   l’échange fait avec son fils <hi rend="sc">Bouchard VII</hi> et prie le Roi de l’avoir pour
-                  agréable. Voir n° <hi rend="b">252</hi>.</p>
+                  agréable. Voir n° <hi rend="b"><ref target="#MAUB-AB-01_0218">252</ref></hi>.</p>
               </argument>
               <div type="tradition">
                 <listWit type="original">
@@ -7698,7 +7699,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_09">
-          <head>TITRE IX</head>
+          <head>Titre IX</head>
           <text xml:id="MAUB-AB-01_0232" n="287" subtype="article">
             <front>
               <docDate>
@@ -9239,7 +9240,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_10">
-          <head>TITRE X</head>
+          <head>Titre X</head>
           <text xml:id="MAUB-AB-01_0278" n="334" subtype="article">
             <front>
               <docDate>
@@ -9826,7 +9827,7 @@
                 <listWit type="original">
                   <witness>Original ; sceau à l’aigle, au vol abaissé ; légende : ... ELENORE DA[ME] [D]E
                     CHAVVERI. Demay, n° 573. — Ce sceau est bien celui de la femme du chevalier Pierre de
-                    Chauvry. Voir n° <hi rend="b">355</hi>.</witness>
+                    Chauvry. Voir n° <hi rend="b"><ref target="#MAUB-AB-01_0300">355</ref></hi>.</witness>
                 </listWit>
                 <listWit type="édition">
                   <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 136.</witness>
@@ -10610,7 +10611,7 @@
                   <hi rend="i">Gonesse</hi> acquis de <hi rend="sc">Robert Anfruie</hi>, et une masure à
                   <hi rend="i">Uny</hi>, à elle vendue par <hi rend="sc">Guillaume des Bouillons</hi>,
                   prêtre<note><p>Chapelain de <hi rend="i">Maubuisson</hi>,
-                  bienfaiteur de l’abbaye. Voir n<hi rend="sup">os</hi> <hi rend="b">162</hi> et
+                  bienfaiteur de l’abbaye. Voir n<hi rend="sup">os</hi> <hi rend="b"><ref target="#MAUB-AB-01_0144">162</ref></hi> et
                   <hi rend="b">314</hi>.</p></note>.</p>
               </argument>
               <div type="tradition">
@@ -10817,7 +10818,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_11"><pb n="141" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/f59/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k992855n/manifest.json"/>
-<head>TITRE XI</head><text xml:id="MAUB-AB-01_0333" n="462" subtype="article"><front><docDate><date when="1216-12">Décembre 1216</date></docDate><index><term type="nature" key="act"/></index><argument><p><hi rend="sc">Pierre</hi> et <hi rend="sc">Etienne d’Arthieul</hi> donnent aux chanoines de
+<head>Titre XI</head><text xml:id="MAUB-AB-01_0333" n="462" subtype="article"><front><docDate><date when="1216-12">Décembre 1216</date></docDate><index><term type="nature" key="act"/></index><argument><p><hi rend="sc">Pierre</hi> et <hi rend="sc">Etienne d’Arthieul</hi> donnent aux chanoines de
                   <hi rend="i">N.-D. de Magny</hi> un demi-muid de blé dans la dîme
                   d’<hi rend="i">Archemont</hi> ; témoins, sire <hi rend="sc">Jean
                   d’Estrées</hi><note><p>Archemont, Estrées, commune de
@@ -11163,7 +11164,7 @@
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text><text xml:id="MAUB-AB-01_0365" n="498" subtype="article"><front><docDate><date when="1320-12">Décembre 1320</date></docDate><index><term type="nature" key="act"/></index><argument><p><hi rend="sc">Mahaud</hi>, <hi rend="i">comtesse d’Artois</hi>, transfère à
                   <hi rend="i">Lens</hi> la rente de 40 livres tournois assignée sur le péage de
                   <hi rend="i">Bapaume</hi>, pour fonder l’anniversaire de son mari à
-                  <hi rend="i">Maubuisson</hi>. Voir n° <hi rend="b">161</hi>.</p></argument><div type="tradition"><listWit type="copie"><witness>Cartulaire de 1668.</witness></listWit>
+                  <hi rend="i">Maubuisson</hi>. Voir n° <hi rend="b"><ref target="#MAUB-AB-01_0143">161</ref></hi>.</p></argument><div type="tradition"><listWit type="copie"><witness>Cartulaire de 1668.</witness></listWit>
   <listWit type="édition">
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 147.</witness>
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text><text xml:id="MAUB-AB-01_0366" n="499" subtype="article"><front><docDate><date when="1323-12">Décembre 1323</date></docDate><index><term type="nature" key="act"/></index><argument><p>« Frère <hi rend="sc">St.</hi> prieur du prieuré de <hi rend="i">Saint Loup de
@@ -11277,7 +11278,7 @@
     <witness n="a" ana="edited"><title>Cartulaire de l’abbaye de Maubuisson (Notre-Dame-la-Royale). Première partie, Chartes concernant la fondation de l’abbaye et des chapelles (titres I et II du cartulaire)</title>, publié par Adolphe Dutilleux et Joseph Depoin, Pontoise : Typographie Lucien Paris, 1890, p. 149.</witness>
   </listWit></div></front><body><div type="transcription" xml:lang="lat"><p/></div></body></text></group>
         <group xml:id="MAUB-AB-01_titre_12">
-          <head>TITRE XII</head>
+          <head>Titre XII</head>
           <text xml:id="MAUB-AB-01_0375" n="509" subtype="article">
             <front>
               <docDate>
@@ -12318,7 +12319,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_13">
-          <head>TITRE XIII</head>
+          <head>Titre XIII</head>
           <text xml:id="MAUB-AB-01_0405" n="539" subtype="article">
             <front>
               <docDate>
@@ -13046,7 +13047,7 @@
           </text>
         </group>
         <group xml:id="MAUB-AB-01_titre_14">
-          <head>TITRE XIV</head>
+          <head>Titre XIV</head>
           <text xml:id="MAUB-AB-01_0430" n="588" subtype="article">
             <front>
               <docDate>
@@ -14033,7 +14034,7 @@
                   pour lui, que les Religieuses n’avoient aucune raison de faire sur ce aucune demande ». Par
                   transaction<note><p>Cette transaction prouve que la jurisprudence
                   n’accordait aucune valeur aux privilèges pontificaux invoqués précédemment (voir
-                  n° <hi rend="b">599</hi>) et dont le procureur des Dames ne parle même pas ; la coutume de
+                  n° <hi rend="b"><ref target="#MAUB-AB-01_0441">599</ref></hi>) et dont le procureur des Dames ne parle même pas ; la coutume de
                   Paris, exhérédant les membres des congrégations autorisées de toutes les successions pouvant
                   leur échoir après la profession monastique, en dehors de la dot assignée antérieurement à
                   l’entrée en religion, est formellement attestée par ce texte, dont l’original ne se retrouve

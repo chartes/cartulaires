@@ -70,6 +70,8 @@
           <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
           <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+          <citeData property="schema:position" use="string(@n)"/>
+          <citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
           <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
           <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
           <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
@@ -120,7 +122,7 @@
       <head>Saint-Corneille de Compiegne</head>
       <group type="tome" n="1">
         <group xml:id="SCCO-AB-01_group">
-          <head>CARTULARIUM <lb/>MONASTERII BEATAE MARIAE <lb/>BEATORUMQUE MARTYRUM CORNELII ET CYPRIANI COMPENDIENSIS</head>
+          <head>Cartularium <lb/>monasterii beatae Mariae <lb/>Beatorumque martyrum Cornelii et Cypriani Compendiensis</head>
           <text xml:id="SCCO-AB-01_0001" n="I" subtype="article">
             <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f18/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>
             <front>
@@ -131,7 +133,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION DU MONASTÈRE DE NOTRE-DAME DE COMPIÈGNE ET DÉDICACE DE SA BASILIQUE</head>
+              <head>Fondation du monastère de Notre-Dame de Compiègne et dédicace de sa basilique</head>
               <argument>
                 <p><hi rend="sc">L’empereur</hi> Charles le Chauve, désireux d’avoir en ses états une basilique
                   ou collégiale, semblable à celle que devait Aix-la-Chapelle à Charlemagne son aïeul, fonde en
@@ -499,7 +501,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>MARIAGE DE CHARLES III — DOT DE FRÉDÉRUNE, CORBENY ET PONTHION</head>
+              <head>Mariage de Charles III — dot de Frédérune, Corbeny et Ponthion</head>
               <argument>
                 <p>Charles III, dit le Simple, ayant épousé, le 16 avril 907, une fille de noble extraction,
                   nommée Frédérune, lui assigne en dot le domaine de
@@ -596,7 +598,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION ET DOTATION DE SAINT-CLÉMENT</head>
+              <head>Fondation et dotation de Saint-Clément</head>
               <argument>
                 <p>Charles le Simple, sur la proposition de ses fidèles, Ethbert et le comte Rodolphe, concède
                   à la reine Frédérune 80 carrés, ou arpents de terre, en son palais de Compiègne, pour y
@@ -677,7 +679,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FONDATION ET DOTATION DE SAINTE-WALBURGE D’ATTIGNY</head>
+              <head>Fondation et dotation de Sainte-Walburge d’Attigny</head>
               <argument>
                 <p>Charles le Simple fonde en son palais d’Attigny une église pour y déposer les reliques de la
                   vierge sainte Walburge et lui assigne comme dotation divers manses avec leurs serfs à
@@ -764,7 +766,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RENOUVELLEMENT DES TITRES BRÛLÉS — ATTIN,<lb/>NOÉ-SAINT-MARTIN, CANLY, VENETTE, ETC.</head>
+              <head>Renouvellement des titres brûlés — Attin, <lb/>Noé-Saint-Martin, Canly, Venette, etc.</head>
               <argument>
                 <p>Charles le Simple, à la prière des chanoines de Compiègne, qui avaient perdu la plupart de
                   leurs titres de propriété en deux incendies successifs de leur monastère, fait rédiger un
@@ -916,7 +918,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE LVI ARPENTS DE TERRE À SAINT-CLÉMENT</head>
+              <head>Don de LVI arpents de terre à Saint-Clément</head>
               <argument>
                 <p>Charles le Simple, voulant donner un gage de sa bienveillance aux chanoines de la collégiale
                   de Saint-Clément, fondée par la reine Frédérune au palais de Compiègne, leur concède 56
@@ -984,7 +986,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ANNIVERSAIRE DE FRÉDÉRUNE — PONTHION</head>
+              <head>Anniversaire de Frédérune — Ponthion</head>
               <argument>
                 <p>Charles le Simple, accomplissant les dernières volontés de la reine Frédérune, décédée le
                   10 février 917, confirme la donation faite par elle aux clercs de Saint-Corneille de
@@ -1109,8 +1111,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DEUX INCENDIES DE SAINT-CORNEILLE —<lb/>RENOUVELLEMENT DES TITRES BRÛLÉS — L’OISE
-                —<lb/>SAINT-GERMAIN — VENETTE</head>
+              <head>Les deux incendies de Saint-Corneille — <lb/>renouvellement des titres brûlés — l’Oise
+                — <lb/>Saint-Germain — Venette</head>
               <argument>
                 <p>Charles le Simple notifie, qu’après avoir rebâti deux fois le monastère de Saint-Corneille,
                   deux fois brûlé, il a donné aux clercs de nouveaux titres de propriété, pour remplacer ceux
@@ -1271,7 +1273,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PRÉBENDES D’ATTIGNY</head>
+              <head>Les prébendes d’Attigny</head>
               <argument>
                 <p>Charles le Simple, ayant fondé dans son palais
                   d’Attigny<note n="9_1"><p>Ardennes.</p></note> une église, pour y
@@ -1377,7 +1379,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DOTATION DE SAINT-CLÉMENT — VERBERIE<lb/>VENETTE</head>
+              <head>Dotation de Saint-Clément — Verberie <lb/>Venette</head>
               <argument>
                 <p>Charles le Simple complète la dotation de la collégiale de Saint-Clément, bâtie par la reine
                   Frédérune, pour la sépulture des étrangers et des pauvres. Il ratifie le legs d’un manse à
@@ -1584,7 +1586,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLE DE SAINTE-WALBURGE<lb/>SA DOTATION À VERBERIE ET À VENETTE</head>
+              <head>La chapelle de Sainte-Walburge <lb/>sa dotation à Verberie et à Venette</head>
               <argument>
                 <p>Charles le Simple, ayant autorisé le prêtre Hadeger, son conseiller et son justicier, à
                   fonder, de ses deniers, une chapelle dans le monastère de Saint-Corneille, pour y déposer les
@@ -1698,7 +1700,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DOTATION DE SAINT-CORNEILLE : MAREUIL,<lb/>ÉLINCOURT, L’OISE</head>
+              <head>Dotation de Saint-Corneille : Mareuil, <lb/>Élincourt, l’Oise</head>
               <argument>
                 <p>Charles le Simple, voulant augmenter avec magnificence la dotation du couvent de
                   Saint-Corneille, lui concède dans le Beauvaisis,
@@ -1760,7 +1762,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTIONS PRESCRITES — CANNY, GURY,<lb/>MAREUIL, MAREST, MARGNY, ÉLINCOURT, ETC.</head>
+              <head>Restitutions prescrites — Canny, Gury, <lb/>Mareuil, Marest, Margny, Élincourt, etc.</head>
               <argument>
                 <p>Louis IV d’Outre-Mer confirme les clercs de Compiègne dans les possessions et privilèges
                   qu’ils tenaient de ses prédécesseurs. Rothard, l’un des prévôts chargés de veiller à la
@@ -1950,7 +1952,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRÆDIUM DE VERBERIE, MORICOURT,<lb/>VENETTE</head>
+              <head>Le prædium de Verberie, Moricourt, <lb/>Venette</head>
               <argument>
                 <p>Le roi Robert et la reine Constance de Provence donnent au monastère de Notre-Dame et des
                   saints martyrs Corneille et Cyprien, pour le salut de leurs âmes et pour le repos de l’âme de
@@ -2049,7 +2051,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE LA PRÉVÔTÉ ROYALE DE COMPIÈGNE</head>
+              <head>Don de la prévôté royale de Compiègne</head>
               <argument>
                 <p>Le roi Henri I<hi rend="sup">er</hi>, fatigué des continuelles plaintes portées devant lui
                   contre les prévôts de Compiègne, qui se signalaient par leurs usurpations et leurs criantes
@@ -2137,7 +2139,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TESTAMENT DE GUI, COMTE DE PONTHIEU<lb/>— NOYELLES ET ATTIN</head>
+              <head>Testament de Gui, comte de Ponthieu <lb/>— Noyelles et Attin</head>
               <argument>
                 <p>Gui, comte de Ponthieu, gravement malade, manifeste son repentir d’avoir brûlé
                   Noyelles<note n="16_1"><p>Somme.</p></note> et rançonné
@@ -2200,7 +2202,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTION DE TOUTE JURIDICTION, MÊME<lb/>ÉPISCOPALE — CONCILE DE COMPIÈGNE</head>
+              <head>Exemption de toute juridiction, même <lb/>épiscopale — concile de Compiègne</head>
               <argument>
                 <p>Le roi Philippe I<hi rend="sup">er</hi> déclare que, désirant maintenir dans ses privilèges
                   l’église de Notre-Dame de Compiègne, fondée par Charles le Chauve, consacrée
@@ -2316,7 +2318,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DE CAPPY</head>
+              <head>Restitution de Cappy</head>
               <argument>
                 <p>Eudes, seigneur de Péronne, prince très chrétien, fils de Robert, fait savoir que, ne
                   pouvant s’expliquer comment diverses parties de son alleu s’appelaient de temps immémorial
@@ -2410,7 +2412,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉMOLITION D’UNE TOUR PRÉJUDICIABLE<lb/>À LA COLLÉGIALE</head>
+              <head>Démolition d’une tour préjudiciable <lb/>à la collégiale</head>
               <argument>
                 <p>Le roi Philippe I<hi rend="sup">er</hi> expose que des spoliateurs d’une rare audace n’ont
                   pas craint, malgré l’excommunication qui devait les frapper, non seulement d’envahir les
@@ -2498,8 +2500,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ANNIVERSAIRE DU ROI PHILIPPE I<hi rend="sup">er</hi><lb/>L’AUTEL DE SAINT-GERMAIN — LES SIX
-                MANSES<lb/>AU PORT-TADRIGNY</head>
+              <head>Anniversaire du roi Philippe I<hi rend="sup">er</hi> <lb/>l’autel de Saint-Germain — les six
+                manses <lb/>au port-Tadrigny</head>
               <argument>
                 <p>Philippe I<hi rend="sup">er</hi>, ayant obtenu de l’évêque et de l’archidiacre de Soissons
                   la cession de l’autel de Saint-Germain en faveur du monastère de Compiègne, prescrit que, sur
@@ -2568,8 +2570,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES VOIRIES DE LONGUEIL, SACY-LE-PETIT ET JAUX<lb/>LA FORÊT ET L’OISE<lb/>SAINT-GERMAIN ET
-                SAINT-CLÉMENT</head>
+              <head>Les voiries de Longueil, Sacy-le-petit et Jaux <lb/>la forêt et l’Oise <lb/>Saint-Germain et
+                Saint-Clément</head>
               <argument>
                 <p>Le roi Philippe I<hi rend="sup">er</hi> confirme les chanoines de Saint-Corneille, sur leur
                   demande, dans la possession des biens qu’ils devaient aux rois, ses prédécesseurs, savoir :
@@ -2698,8 +2700,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TRANSLATION DU SAINT SUAIRE<lb/>LA FÊTE DE LA MI-CARÊME ET LES TROIS JOURS<lb/>DE
-                PRÉVÔTÉ</head>
+              <head>La translation du Saint Suaire <lb/>la fête de la MI-carême et les trois jours <lb/>de
+                prévôté</head>
               <argument>
                 <p>Le roi Philippe I<hi rend="sup">er</hi>, à la prière de Mathilde ou Mahaud de Flandres,
                   reine d’Angleterre, — qui avait envoyé au monastère de Compiègne un reliquaire d’or,
@@ -2808,7 +2810,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>GOUSSANCOURT — CONCESSION DE DROITS</head>
+              <head>Goussancourt — concession de droits</head>
               <argument>
                 <p>Etienne, comte de Champagne, de Brie, de Blois et de Chartres, de concert avec Adèle, sa
                   femme, et Guillaume son fils, abandonne aux clercs ou chanoines de Compiègne, sur leur
@@ -2865,7 +2867,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DES SIX MANSES DU PORT-TADRIGNY</head>
+              <head>Restitution des six manses du port-Tadrigny</head>
               <argument>
                 <p>Louis le Gros prescrit l’exécution de l’ordonnance de son père, relativement à la
                   restitution des six manses du Port-Tadrigny qu’avaient sacrilègement usurpés les prévôts
@@ -2922,7 +2924,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>REMISE DU DROIT DE TRAVERS À VIGNACOURT<lb/>ET LONGUEAU</head>
+              <head>Remise du droit de travers à Vignacourt <lb/>et Longueau</head>
               <argument>
                 <p>Roger, doyen d’Amiens, notifie qu’Adélelme d’Amiens et ses enfants, s’étant emparés du
                   village d’<hi rend="i">Andicerum</hi><note n="25_1"><p>Serait-ce
@@ -2986,7 +2988,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES COLONS DE SAINT-CORNEILLE<lb/>SUR LE TERRITOIRE DU SEIGNEUR DE HAM</head>
+              <head>Les colons de Saint-Corneille <lb/>sur le territoire du seigneur de ham</head>
               <argument>
                 <p>Eudes de Ham<note n="26_1"><p>Somme.</p></note> fait savoir,
                   qu’ayant voulu garder dans son avouerie les deux filles de Renard, parce qu’elles demeuraient
@@ -3040,7 +3042,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PLAID DE SENLIS — LA COUTURE DE CHARLES<lb/>NÉVELON</head>
+              <head>Plaid de Senlis — la couture de Charles <lb/>Névelon</head>
               <argument>
                 <p>Le roi Philippe I<hi rend="sup">er</hi> confirme un jugement, rendu au plaid de Senlis entre
                   l’église de Compiègne et le seigneur Névelon, au sujet de la terre appelée
@@ -3142,7 +3144,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PLAID DE SENLIS</head>
+              <head>Plaid de Senlis</head>
               <argument>
                 <p>Louis le Gros, associé par son père à la royauté, confirme le jugement rendu en faveur des
                   clercs de Sainte-Marie au plaid de Senlis qu’il avait présidé. A ce plaid assistèrent Hubert,
@@ -3215,9 +3217,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DISPENSE AUX CHANOINES DE SAINT-CORNEILLE,<lb/>NOMMÉS À DIVERSES CURES DU
-                BEAUVAISIS,<lb/>DE L’OBLIGATION D’ALLER À BEAUVAIS TANT POUR<lb/>LE SYNODE QUE POUR
-                L’INSTITUTION CANONIQUE</head>
+              <head>Dispense aux chanoines de Saint-Corneille, <lb/>nommés à diverses curés du
+                Beauvaisis, <lb/>de l’obligation d’aller à Beauvais tant pour <lb/>le synode que pour
+                l’institution canonique</head>
               <argument>
                 <p>Geoffroy, évêque de Beauvais, au nom du chapitre de Saint-Pierre, dispense les chanoines de
                   Saint-Corneille, choisis par leur monastère comme titulaires ou curés des autels de Venette,
@@ -3308,7 +3310,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA RESTAURATION DU PONT DE COMPIÈGNE</head>
+              <head>La restauration du pont de Compiègne</head>
               <argument>
                 <p>Louis le Gros autorise les chanoines de Saint-Corneille à restaurer leur pont sur l’Oise et
                   leur en confirme la propriété. Ce pont, dont ils jouissaient depuis la fondation de leur
@@ -3393,7 +3395,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PERMISSION AUX SIMPLES CLERCS DE SE MARIER</head>
+              <head>Permission aux simples clercs de se marier</head>
               <argument>
                 <p>Le roi Louis VI confirme tous les privilèges, accordés au monastère de Saint-Corneille par
                   ses prédécesseurs. Il défend aux chanoines de changer leur traditionnel genre de vie et leur
@@ -3462,7 +3464,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA LÉPROSERIE DE COMPIÈGNE</head>
+              <head>La léproserie de Compiègne</head>
               <argument>
                 <p>Le roi Louis VI abandonne tous ses droits sur la maladrerie construite par les chanoines de
                   Compiègne, en dehors de la ville, mais sur le domaine royal, pour y recevoir les lépreux. Ces
@@ -3539,7 +3541,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE COLONS</head>
+              <head>Don de colons</head>
               <argument>
                 <p>L’abbaye de Ham<note n="33_1"><p>Somme.</p></note> cède aux
                   chanoines de Saint-Corneille ses droits sur trois frères, ses colons, Gauthier, Richard et
@@ -3592,7 +3594,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROIT SUR DES COLONS</head>
+              <head>Droit sur des colons</head>
               <argument>
                 <p>Adèle, comtesse de Vermandois, et ses fils, Raoul, Henri et Simon, renoncent à leurs
                   prétentions sur la femme d’Olric, ses fils et ses filles, et reconnaissent que ces personnes
@@ -3658,7 +3660,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DES AUTELS DE MESVILLERS,<lb/>FAVEROLLES ET PRONASTRE</head>
+              <head>Restitution des autels de Mesvillers, <lb/>Faverolles et Pronastre</head>
               <argument>
                 <p>Adèle, comtesse de Vermandois, veuve de Hugues le Grand et ses fils, le comte Raoul et
                   Henri, ratifient, comme seigneurs dominants, la restitution des autels, c’est-à-dire des
@@ -3718,7 +3720,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>AUTELS DE MESVILLERS, PRONASTRE ET ERCHES<lb/>CONFIRMATION DE RESTITUTION</head>
+              <head>Autels de Mesvillers, Pronastre et Erches <lb/>confirmation de restitution</head>
               <argument>
                 <p>Godefroy, évêque d’Amiens, en un synode plénier, tenu à Amiens, confirme la restitution, que
                   le chevalier Hélinand de Montdidier<note n="36_1"><p>Voir la
@@ -3815,7 +3817,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DE LA VICOMTÉ DE SACY-LE-PETIT</head>
+              <head>Restitution de la vicomté de Sacy-le-petit</head>
               <argument>
                 <p>Renaud, comte de Clermont, expose que deux frères, Baudouin et Raoul, voulant se maintenir
                   en possession de la vicomté de Sacy-le-Petit, usurpée par Aubert, leur père, sur les
@@ -3905,7 +3907,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON D’UNE PARTIE DE LA FORÊT DE LUVIS<lb/>AU MONASTÈRE DE CHEMINON</head>
+              <head>Don d’une partie de la forêt de Luvis <lb/>au monastère de Cheminon</head>
               <argument>
                 <p>Le doyen Eudes, le chantre Jean et les autres chanoines de Saint-Corneille abandonnent à
                   Alard et Aubry, chanoines de la Celle-Saint-Nicolas dans la forêt de Luvis, au-dessus de
@@ -3996,8 +3998,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE DE ROMIGNY<lb/>ACCORD ENTRE LES CHANOINES DE COMPIÈGNE<lb/>ET ROGER
-                GUENCHI</head>
+              <head>L’avouerie de Romigny <lb/>accord entre les chanoines de Compiègne <lb/>et Roger
+                Guenchi</head>
               <argument>
                 <p>Roger Guenchi, avoué de Romigny, après avoir été, comme ses prédécesseurs, excommunié pour
                   ses exactions, fait à titre d’amende honorable le dénombrement des redevances, qu’il a
@@ -4134,7 +4136,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SERFS DU ROI DEVENUS CHANOINES<lb/>LEUR AFFRANCHISSEMENT AU BOUT DE CINQ ANS</head>
+              <head>Serfs du roi devenus chanoines <lb/>leur affranchissement au bout de cinq ans</head>
               <argument>
                 <p>Louis VI, à la demande du chapitre de Saint-Corneille et pour prévenir tout différend,
                   déclare que tout chanoine, ayant résidé cinq ans dans <pb n="82" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f99/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>le monastère de
@@ -4207,8 +4209,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION PONTIFICALE DES POSSESSIONS<lb/>DE SAINT-CORNEILLE<lb/>DROIT D’EXCOMMUNICATION
-                — EXEMPTION<lb/>DE TOUTE JURIDICTION</head>
+              <head>Confirmation pontificale des possessions <lb/>de Saint-Corneille <lb/>droit d’excommunication
+                — exemption <lb/>de toute juridiction</head>
               <argument>
                 <p>Le pape Calixte II, dans une bulle adressée au doyen Eudes, confirme toutes les possessions
                   et tous les privilèges des chanoines de Compiègne, — leur accorde le pouvoir d’excommunier
@@ -4287,7 +4289,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LIBERTÉS, PRIVILÈGES ET IMMUNITÉS DE LA VILLE<lb/>DE COMPIÈGNE</head>
+              <head>Libertés, privilèges et immunités de la ville <lb/>de Compiègne</head>
               <argument>
                 <p>Louis le Gros 1° prend sous sa sauvegarde les habitants de Compiègne ;</p>
                 <p>2° Défend de les arrêter à moins de cinq lieues de la Ville, si ce n’est en cas de flagrant
@@ -4393,7 +4395,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MONNAIE DE COMPIÈGNE</head>
+              <head>La monnaie de Compiègne</head>
               <argument>
                 <p>Louis le Gros ayant donné à entendre qu’il ferait subir à la monnaie de Compiègne le même
                   affaiblissement, c’est-à-dire la même altération, qu’aux autres monnaies de ses États,
@@ -4513,7 +4515,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BESANT D’OR DU CHAPITRE DE CHÂLONS<lb/>RECONNAISSANCE</head>
+              <head>Le besant d’or du chapitre de Châlons <lb/>reconnaissance</head>
               <argument>
                 <p>Les chanoines de Saint-Étienne de
                   Châlons<note n="44_1"><p>Marne.</p></note> s’engagent à payer,
@@ -4564,7 +4566,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BESANT D’OR DU CHAPITRE DE CHÂLONS<lb/>CONFIRMATION DE L’ACCORD</head>
+              <head>Le besant d’or du chapitre de Châlons <lb/>confirmation de l’accord</head>
               <argument>
                 <p>Mathieu, cardinal, évêque d’Albano, légat du Saint-Siège, confirme un accord fait devant lui
                   et devant Renaud, archevêque de Reims, Henri, archevêque de Sens, et plusieurs évêques de ces
@@ -4622,7 +4624,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CAPPY — DON AU PRIEURÉ DE SAINT-MÉDARD</head>
+              <head>Cappy — don au prieuré de Saint-Médard</head>
               <argument>
                 <p>Gérard de Cappy, fils d’Ulger, qui tenait à cens une terre de Saint-Corneille à
                   Cappy<note n="46_1"><p>Somme.</p></note>, la résigne entre les
@@ -4740,7 +4742,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CAPPY — REMERCIEMENTS DU PRIEUR<lb/>DE SAINT-MARTIN-DES-CHAMPS</head>
+              <head>Cappy — remerciements du prieur <lb/>de Saint-Martin-des-Champs</head>
               <argument>
                 <p>Eudes, prieur de Saint-Martin-des-Champs, remercie les chanoines de Compiègne d’avoir
                   ratifié la donation faite par Gérard de
@@ -4790,7 +4792,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉLINCOURT-SAINTE-MARGUERITE — DÎME</head>
+              <head>Élincourt-Sainte-Marguerite — dîme</head>
               <argument>
                 <p>Geoffroy, doyen de Notre-Dame de Compiègne, cède aux religieux de Sainte-Marguerite
                   d’Élincourt, moyennant un cens annuel de douze deniers, payable à la Saint-Remy, la dîme
@@ -4958,7 +4960,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉLINCOURT-SAINTE-MARGUERITE — DROITS<lb/>DE SÉPULTURE ET OFFRANDES</head>
+              <head>Élincourt-Sainte-Marguerite — droits <lb/>de sépulture et offrandes</head>
               <argument>
                 <p>Mathieu, cardinal, évêque d’Albano, légat du Saint-Siège, notifie l’abandon, fait en sa
                   présence par les chanoines de Compiègne aux moines de Sainte-Marguerite, des droits de
@@ -5010,7 +5012,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DU LIEU APPELÉ TROIS-FONTAINES EN LA<lb/>FORÊT DE LUIZ AUX RELIGIEUX CISTERCIENS</head>
+              <head>Don du lieu appelé trois-Fontaines en la <lb/>forêt de Luiz aux religieux cisterciens</head>
               <argument>
                 <p>Geoffroy, doyen de Saint-Corneille, Jean, chantre, et tout le chapitre notifient qu’à la
                   demande du roi Louis le Gros, de la reine Adélaïde, du comte Thibaut de Champagne, des
@@ -5091,8 +5093,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE DE ROMIGNY — TAILLES INJUSTEMENT<lb/>LEVÉES — EXCOMMUNICATION D’HUGUES
-                CHOLET<lb/>INTERDIT SUR SES TERRES</head>
+              <head>L’avouerie de Romigny — tailles injustement <lb/>levées — excommunication d’Hugues
+                Cholet <lb/>interdit sur ses terres</head>
               <argument>
                 <p>Innocent II informe Renaud de Martigny (<hi rend="i">Reginaldus de Martigny sive a
                   Pratis</hi>) archevêque de Reims, Josselin de Vierzy, évêque de Soissons, Barthélemy de Vir,
@@ -5156,8 +5158,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE DE ROMIGNY<lb/>ACCORD ENTRE LES CHANOINES DE COMPIÈGNE<lb/>ET GUERMOND DE
-                CHÂTILLON</head>
+              <head>L’avouerie de Romigny <lb/>accord entre les chanoines de Compiègne <lb/>et Guermond de
+                Châtillon</head>
               <argument>
                 <p>Guermond de Châtillon<note n="52_2"><p>Châtillon-sur-Morin,
                   Marne.</p></note>, avoué de
@@ -5267,7 +5269,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DES AUTELS DE FAVEROLLES,<lb/>PRONASTRE ET MESVILLERS</head>
+              <head>Restitution des autels de Faverolles, <lb/>Pronastre et Mesvillers</head>
               <argument>
                 <p>Raoul, comte de Vermandois, notifie la restitution, faite aux chanoines de Compiègne, par
                   Raoul Maleterre et son fils Robert, des autels ou revenus ecclésiastiques de
@@ -5362,7 +5364,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DE L’AUTEL DE BOITEAU</head>
+              <head>Restitution de l’autel de Boiteau</head>
               <argument>
                 <p>Raoul, comte de Vermandois, et Adèle, sa femme, ratifient, comme seigneurs dominants, la
                   restitution que viennent de faire au monastère de Compiègne Jean Bougro et Duchesse, sa
@@ -5408,7 +5410,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DE L’AUTEL DE DOULAINCOURT</head>
+              <head>Restitution de l’autel de Doulaincourt</head>
               <argument>
                 <p>Guarin de Chastillon-Saint-Pol, évêque d’Amiens, fait rentrer l’église de Compiègne en
                   possession de l’autel de Doulaincourt<note n="55_1"><p>Paroisse
@@ -5471,7 +5473,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTITUTION DE LA DÎME DE DAVENESCOURT</head>
+              <head>Restitution de la dîme de Davenescourt</head>
               <argument>
                 <p>Guarin de Chastillon-Saint-Pol, évêque d’Amiens, remet l’église de Compiègne en possession
                   de la dîme de Davenescourt<note n="56_1"><p>Somme.</p></note>.
@@ -5530,7 +5532,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DU CLERC HAIMON AU CHEVET<lb/>DE SAINT-CLÉMENT À COMPIÈGNE</head>
+              <head>La maison du clerc Haimon au chevet <lb/>de Saint-Clément à Compiègne</head>
               <argument>
                 <p>Le roi Louis VII ratifie le don fait aux chanoines de Sainte-Marie de Compiègne, par la
                   reine Adélaïde, sa mère, de tous les droits qu’elle pouvait avoir sur la maison du clerc
@@ -5580,8 +5582,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE DE ROMIGNY — ACCORD ENTRE LES<lb/>CHANOINES DE COMPIÈGNE ET HUGUES DE
-                ROUCY</head>
+              <head>L’avouerie de Romigny — accord entre les <lb/>chanoines de Compiègne et Hugues de
+                Roucy</head>
               <argument>
                 <p>Samson, archevêque de Reims, Josselin, évêque de Soissons, et Barthélemy, évêque de Laon,
                   notifient un accord, fait entre le monastère de Saint-Corneille et Hugues, comte de Roucy.
@@ -5688,7 +5690,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE L’AUTEL DE BOUQUY À L’ABBAYE<lb/>DE SAINT-YVED DE BRAINE</head>
+              <head>Don de l’autel de Bouquy à l’abbaye <lb/>de Saint-Yved de Braine</head>
               <argument>
                 <p>Eudes, doyen de Saint-Corneille, et les chanoines de son monastère, à la prière de Raoul,
                   comte de Vermandois, et par amitié pour maître Aszon, abandonnent au chapitre de Saint-Yved
@@ -5739,7 +5741,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONCESSION SEPTENNALE DE LA FORÊT<lb/>DE ROYE-SUR-MATZ AU COMTE DE VERMANDOIS</head>
+              <head>Concession septennale de la forêt <lb/>de Roye-sur-Matz au comte de Vermandois</head>
               <argument>
                 <p>Raoul, comte de Vermandois, fait savoir qu’Eudes, doyen de Notre-Dame de Compiègne, d’accord
                   avec son chapitre, lui a concédé, moyennant trente livres, la forêt de Roye, du côté de
@@ -5780,8 +5782,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION PONTIFICALE DES POSSESSIONS<lb/>DE SAINT-CORNEILLE — DROIT
-                D’EXCOMMUNICATION<lb/>EXEMPTION DE TOUTE JURIDICTION</head>
+              <head>Confirmation pontificale des possessions <lb/>de Saint-Corneille — droit
+                d’excommunication <lb/>exemption de toute juridiction</head>
               <argument>
                 <p>Le pape Eugène III, dans une bulle, adressée au doyen Eudes, confirme toutes les possessions
                   et tous les privilèges des chanoines de Compiègne, dans les mêmes termes que l’avait fait
@@ -5859,7 +5861,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CROISADE — LA RÉFORME DU MONASTÈRE<lb/>DE SAINT-CORNEILLE</head>
+              <head>La croisade — la réforme du monastère <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Le pape Eugène III approuve le dessein qu’avait conçu Suger, abbé de Saint-Denys, de porter
                   secours à l’Église d’Orient, en péril, depuis le retour des armées françaises, et d’organiser
@@ -5936,7 +5938,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INVITATION À BÉNIR EUDES DE DEUIL<lb/>ABBÉ DE SAINT-CORNEILLE</head>
+              <head>Invitation à bénir Eudes de Deuil <lb/>abbé de Saint-Corneille</head>
               <argument>
                 <p>Suger, abbé de Saint-Denys, avertit Baudoin de Boulogne, évêque de Noyon, que pour se
                   conformer aux intentions du pape, il faut se hâter de détruire le <hi rend="i">camp du
@@ -6002,7 +6004,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA BÉNÉDICTION D’EUDES DE DEUIL<lb/>ABBÉ DE COMPIÈGNE</head>
+              <head>La bénédiction d’Eudes de Deuil <lb/>abbé de Compiègne</head>
               <argument>
                 <p>Baudoin de Boulogne, évêque de Noyon, répond à Suger, abbé de Saint-Denys, qu’il vient de
                   bénir l’abbé de Compiègne, Eudes de Deuil. Il l’invite en même temps à recourir au pape sans
@@ -6056,8 +6058,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SUPPRESSION DU COLLÈGE DES CHANOINES<lb/>À SAINT-CORNEILLE<lb/>INSTALLATION DES
-                BÉNÉDICTINS</head>
+              <head>Suppression du collège des chanoines <lb/>à Saint-Corneille <lb/>installation des
+                bénédictins</head>
               <argument>
                 <p>Louis VII, ayant informé le pape Eugène III de la vie scandaleuse des clercs ou chanoines de
                   Saint-Corneille, fut, par lui, prié de substituer à ce collège de chanoines l’ordre
@@ -6146,7 +6148,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PILLAGE DE L’ABBAYE DE SAINT-CORNEILLE<lb/>PAR LES CHANOINES</head>
+              <head>Pillage de l’abbaye de Saint-Corneille <lb/>par les chanoines</head>
               <argument>
                 <p>Suger raconte à Raoul, comte de Vermandois, la rentrée sacrilège des chanoines de
                   Saint-Corneille dans leur ancien monastère, transformé en abbaye. Philippe de France, frère
@@ -6230,7 +6232,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA SAISIE DES BIENS DES CHANOINES<lb/>DE SAINT-CORNEILLE</head>
+              <head>La saisie des biens des chanoines <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Raoul, comte de Vermandois, répond à Suger que les chanoines de Compiègne ont enlevé la plus
                   grande partie des denrées et des provisions qu’ils avaient en son comté, mais que néanmoins
@@ -6275,7 +6277,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RENDEZ-VOUS DONNÉ À COMPIÈGNE APRÈS LA FÊTE<lb/>DE SAINT-REMY</head>
+              <head>Rendez-vous donné à Compiègne après la fête <lb/>de Saint-Remy</head>
               <argument>
                 <p>Le roi Louis VII annonce à Suger, qu’après un voyage absolument nécessaire dans l’Orléanais,
                   où il restera jusqu’à la fête de Saint-Remy, il se <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f140/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>rendra dans le
@@ -6338,7 +6340,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>VOYAGE À ROME DU PREMIER ABBÉ<lb/>DE SAINT-CORNEILLE</head>
+              <head>Voyage à Rome du premier abbé <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Suger demande à Pierre le Vénérable, abbé de Cluny, et à saint Bernard, abbé de Clairvaux,
                   de vouloir bien écrire au souverain pontife, pour lui recommander l’abbé de Compiègne,
@@ -6389,8 +6391,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INSTALLATION DES BÉNÉDICTINS À SAINT-CORNEILLE<lb/>BÉNÉDICTION DE L’ABBÉ EUDES DE
-                DEUIL<lb/>RÉVOLTE DES CHANOINES</head>
+              <head>Installation des bénédictins à Saint-Corneille <lb/>bénédiction de l’abbé Eudes de
+                Deuil <lb/>révolte des chanoines</head>
               <argument>
                 <p>Baudoin, évêque de Noyon, raconte au pape Eugène III les difficultés que le roi Louis VII,
                   Suger, abbé de Saint-Denys, et lui, ont rencontrées dans l’installation des bénédictins à
@@ -6479,7 +6481,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>INSTALLATION DES BÉNÉDICTINS<lb/>À SAINT-CORNEILLE — RÉVOLTE DES CHANOINES</head>
+              <head>Installation des bénédictins <lb/>à Saint-Corneille — révolte des chanoines</head>
               <argument>
                 <p>Suger, abbé de Saint-Denys, chargé par le pape Eugène III de réformer les couvents de
                   Sainte-Geneviève, de Paris, et de Saint-Corneille, de Compiègne, rend compte à Sa Sainteté de
@@ -6589,7 +6591,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE DE SAUVEGARDE AU PREMIER ABBÉ DE<lb/>SAINT-CORNEILLE EUDES DE DEUIL</head>
+              <head>Bulle de sauvegarde au premier abbé de <lb/>Saint-Corneille Eudes de Deuil</head>
               <argument>
                 <p>Le pape Eugène III ratifie l’élection d’Eudes de Deuil, premier abbé de Saint-Corneille, et
                   usant de son autorité apostolique, lui confie le monastère de Compiègne, pour faire observer
@@ -6717,7 +6719,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉRECTION DE LA COMMUNE DE COMPIÈGNE</head>
+              <head>Érection de la commune de Compiègne</head>
               <argument>
                 <p>Les clercs, établis primitivement au monastère de Saint-Corneille, viennent d’y être, pour
                   leur inconduite, remplacés par des religieux bénédictins de l’ordre de Cluny. Cette mesure
@@ -7124,7 +7126,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CRÉATION DU VILLAGE DE ROYAL-LIEU</head>
+              <head>Création du village de royal-lieu</head>
               <argument>
                 <p>La reine Adélaïde, d’accord avec le roi Louis VII, son fils, voulant favoriser la formation
                   d’un nouveau village, entre la forêt de Cuise et le bourg de Compiègne, concède à ceux qui
@@ -7175,7 +7177,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRE DE RECOMMANDATION DU ROI<lb/>D’ANGLETERRE</head>
+              <head>Lettre de recommandation du roi <lb/>d’Angleterre</head>
               <argument>
                 <p>Henri II Plantagenet, roi d’Angleterre, duc de Normandie et d’Aquitaine et comte d’Anjou,
                   recommande à tous les dignitaires ecclésiastiques, archevêques, évêques, abbés, archidiacres,
@@ -7235,8 +7237,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAINT-CLÉMENT — LA CURE DU DOYENNÉ<lb/>SAINT-PIERRE<lb/>LES PRÉBENDES DES CHANOINES,
-                ETC.</head>
+              <head>Saint-Clément — la curé du doyenné <lb/>Saint-Pierre <lb/>les prébendes des chanoines,
+                etc.</head>
               <argument>
                 <p>Le pape Adrien IV confirme Guillaume de Flogny, abbé de Saint-Corneille, dans la possession
                   de la collégiale de Saint-Clément, appelée l’abbaye, de la cure du doyenné ou paroisse du
@@ -7292,7 +7294,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE DE SAUVEGARDE À GUILLAUME DE FLOGNY<lb/>DEUXIÈME ABBÉ DE SAINT-CORNEILLE</head>
+              <head>Bulle de sauvegarde à Guillaume de Flogny <lb/>deuxième abbé de Saint-Corneille</head>
               <argument>
                 <p>Le pape Adrien IV prend sous sa protection l’abbaye de Saint-Corneille et tous ses biens. Il
                   en confirme tous les privilèges dans les termes mêmes employés en 1150 par le pape
@@ -7406,8 +7408,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAINT-CLÉMENT — LA CURE DU DOYENNÉ<lb/>SAINT-PIERRE — LES PRÉBENDES DES
-                CHANOINES<lb/>L’HÔPITAL, ETC.</head>
+              <head>Saint-Clément — la curé du doyenné <lb/>Saint-Pierre — les prébendes des
+                chanoines <lb/>l’hôpital, etc.</head>
               <argument>
                 <p>Le pape Adrien IV renouvelle à Guillaume de Flogny, abbé de Saint-Corneille, et à ses
                   religieux, les lettres de sauvegarde qu’il leur a précédemment adressées pour la collégiale
@@ -7456,7 +7458,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME D’AULNAY-EN-TARDENOIS</head>
+              <head>La dîme d’Aulnay-en-Tardenois</head>
               <argument>
                 <p>Guillaume de Flogny, abbé de Saint-Corneille, abandonne au monastère de Saint-Maurice de
                   Reims, dépendant de l’abbaye de
@@ -7502,7 +7504,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE TRÉSOR DE SAINT-CORNEILLE AUX MAINS<lb/>DE PHILIPPE DE FRANCE</head>
+              <head>Le trésor de Saint-Corneille aux mains <lb/>de Philippe de France</head>
               <argument>
                 <p>Le pape Adrien IV recommande Ansout, abbé de Saint-Corneille, à l’évêque de Beauvais, Henri
                   de France. Il engage le prélat à user de tout son crédit auprès de Philippe de France, son
@@ -7552,7 +7554,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SOUMISSION DUE PAR LES CHANOINES À L’ABBÉ<lb/>DE SAINT-CORNEILLE</head>
+              <head>Soumission due par les chanoines à l’abbé <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Le pape Adrien IV prescrit aux clercs ou chanoines de Compiègne de se montrer respectueux et
                   obéissants envers Ansout, abbé de leur monastère, comme envers leur doyen. En outre, il leur
@@ -7607,7 +7609,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ABBÉ DE SAINT-CORNEILLE EN DISGRÂCE</head>
+              <head>L’abbé de Saint-Corneille en disgrâce</head>
               <argument>
                 <p>Le pape Adrien IV demande à Hugues de Chamfleury<note>Champfleury</note>,
                   chancelier de France, d’user de son crédit pour faire rentrer l’abbé de Saint-Corneille en
@@ -7681,8 +7683,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES AUTELS D’ERCHES, BOUCHOIR ET CROUTOY<lb/>LA DÎME DE REMY<lb/>LES PRÉBENDES ET LES
-                NOUVELLES ACQUISITIONS</head>
+              <head>Les autels d’Erches, Bouchoir et Croutoy <lb/>la dîme de Remy <lb/>les prébendes et les
+                Nouvelles acquisitions</head>
               <argument>
                 <p>Le pape Adrien IV, à la prière d’Ansout, abbé de Saint-Corneille, lui confirme, à lui et à
                   son abbaye, la possession des autels ou cures d’Erches,
@@ -7741,8 +7743,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CURE DE BOUQUY, LES DÎMES DE BIENVILLE<lb/>DU MEUX ET DE CHEVRIÈRES,<lb/>LA VIGNE DE
-                RIVECOURT, LA TERRE D’AIGUISY, ETC.<lb/>DONNÉES À SAINT-YVED DE BRAINE</head>
+              <head>La curé de Bouquy, les dîmes de Bienville <lb/>du Meux et de Chevrières, <lb/>la vigne de
+                Rivecourt, la terre d’Aiguisy, etc. <lb/>Données à Saint-Yved de Braine</head>
               <argument>
                 <p>Henri de France, évêque de Beauvais, notifie et confirme diverses libéralités faites au
                   chapitre de Saint-Yved de Braine :</p>
@@ -7846,7 +7848,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>IMMUNITÉ DU MONASTÈRE DE SAINT-CORNEILLE</head>
+              <head>Immunité du monastère de Saint-Corneille</head>
               <argument>
                 <p>Le pape, Adrien IV, à la demande d’Ansout, abbé de Saint-Corneille, dispense les religieux
                   de payer à qui que ce soit la dîme des fruits de leurs labeurs, sur le domaine du
@@ -7890,7 +7892,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DES NOVALES DE DAVENESCOURT</head>
+              <head>La dîme des novales de Davenescourt</head>
               <argument>
                 <p>Helgot, doyen de la collégiale de Saint-Florent de Roye, et Ansout, abbé de Saint-Corneille,
                   — en contestation au sujet de la dîme des novales d’un essart ou bois défriché, à
@@ -7953,7 +7955,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DE CHAALIS ENTRE ESTRÉES<lb/>ET SAINT-MARTIN-LONGUEAU</head>
+              <head>La terre de Chaalis entre Estrées <lb/>et Saint-Martin-Longueau</head>
               <argument>
                 <p>Ansout, abbé de Saint Corneille, de concert avec les chanoines Guy le Roux, Hugues, fils de
                   Deubert, et Eudes le Gros, ratifie le don, fait à l’abbaye de Chaalis, d’une culture ou
@@ -8010,8 +8012,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE,<lb/>DONNÉE PAR LE PAPE ALEXANDRE III À ANSOUT,<lb/>ABBÉ
-                DE SAINT-CORNEILLE</head>
+              <head>Bulle consistoriale de sauvegarde, <lb/>donnée par le pape Alexandre III à Ansout, <lb/>abbé
+                de Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III prend sous sa protection l’abbaye de Saint-Corneille, comme l’a fait
                   Eugène III en 1150, et pour préciser davantage la sauvegarde qu’il accorde au monastère, il
@@ -8123,7 +8125,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RECOMMANDATION PONTIFICALE</head>
+              <head>Recommandation pontificale</head>
               <argument>
                 <p>Le pape Alexandre III prie Louis VII de protéger Ansout, abbé de Saint-Corneille, et ses
                   moines qui doivent leur établissement au roi très chrétien autant qu’au pape Eugène III, et
@@ -8183,8 +8185,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES AUTELS D’ERCHES, BOUCHOIR ET CROUTOY<lb/>LA DÎME DE REMY<lb/>LES PRÉBENDES ET LES
-                NOUVELLES ACQUISITIONS</head>
+              <head>Les autels d’Erches, Bouchoir et Croutoy <lb/>la dîme de Remy <lb/>les prébendes et les
+                Nouvelles acquisitions</head>
               <argument>
                 <p>Le pape Alexandre III, à la demande d’Ansout, abbé de Saint-Corneille, confirme l’abbaye,
                   comme l’a déjà fait Adrien IV (n° LXXXIII) dans la possession des cures d’Erches, Bouchoir et
@@ -8244,8 +8246,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CURE DU DOYENNÉ<lb/>LA PRÉBENDE DE SAINT-PIERRE — LE BESANT D’OR<lb/>L’HÔPITAL<lb/>LES
-                MAISONS DU CLOÎTRE DES CHANOINES, ETC.</head>
+              <head>La curé du doyenné <lb/>la prébende de Saint-Pierre — le besant d’or <lb/>l’hôpital <lb/>les
+                maisons du cloître des chanoines, etc.</head>
               <argument>
                 <p>Le pape Alexandre III donne à Ansout, abbé de Saint-Corneille, des lettres de sauvegarde
                   pour la cure du doyenné ou du crucifix<note n="91_1"><p>Les
@@ -8306,8 +8308,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CURE D’ERCHES, LA DEMI-PRÉBENDE<lb/>DES ÉCOLES<lb/>ET LES PRÉBENDES DES CHANOINES
-                DÉFUNTS</head>
+              <head>La curé d’Erches, la demi-prébende <lb/>des écoles <lb/>et les prébendes des chanoines
+                défunts</head>
               <argument>
                 <p>Le pape Alexandre III, après avoir reçu à Tours la visite de quatre délégués de l’abbaye de
                   Saint-Corneille, Ansout, abbé du monastère, assisté d’un de ses religieux, et Warnier,
@@ -8400,7 +8402,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TERRES, LES BOIS ET LES HÔTES DE JONCHERY</head>
+              <head>Les terres, les bois et les hôtes de Jonchery</head>
               <argument>
                 <p>Henri de France, archevêque de Reims, notifie l’accord suivant fait entre Hilduin, son
                   diocésain, et l’abbaye de Saint-Corneille.</p>
@@ -8505,8 +8507,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE VILLAGE, LE MOULIN, LE VIVIER<lb/>ET LA CHAUSSÉE DE BECQUIGNY EN COMMUNAUTÉ<lb/>AVEC
-                AUBRY DE ROYE</head>
+              <head>Le village, le moulin, le vivier <lb/>et la chaussée de Becquigny en communauté <lb/>avec
+                Aubry de Roye</head>
               <argument>
                 <p>L’abbé de Saint-Corneille, se trouvant dans l’impossibilité d’établir un village en sa terre
                   de Becquigny<note n="94_1"><p>Somme.</p></note>, lieu désolé et
@@ -8596,8 +8598,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE VILLAGE, LE MOULIN, LE VIVIER<lb/>ET LA CHAUSSÉE DE BECQUIGNY EN COMMUNAUTÉ<lb/>AVEC
-                AUBRY DE ROYE<lb/>RATIFICATION<lb/>ET GARANTIE DU COMTE DE VERMANDOIS</head>
+              <head>Le village, le moulin, le vivier <lb/>et la chaussée de Becquigny en communauté <lb/>avec
+                Aubry de Roye <lb/>ratification <lb/>et garantie du comte de Vermandois</head>
               <argument>
                 <p>Raoul, comte de Vermandois, ratifie et garantit le contrat de pariage, fait entre l’abbaye
                   de Saint-Corneille et Aubry de Roye, relativement au village et au moulin de Becquigny. Sa
@@ -8683,7 +8685,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE COURTEAUX,<lb/>CESSION À L’ABBAYE D’IGNY</head>
+              <head>Le bois de Courteaux, <lb/>cession à l’abbaye d’Igny</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, abandonne par chirographe ou charte-partie à l’abbaye
                   d’Igny<note n="96_1"><p>Commune d’Arcis-le-Ponsart,
@@ -8740,7 +8742,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>REDEVANCE EN BLÉ À PERCEVOIR SUR LA DÎME<lb/>DE NANTEUIL-LES-MEAUX</head>
+              <head>Redevance en blé à percevoir sur la dîme <lb/>de Nanteuil-les-Meaux</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, notifie qu’un différend survenu jadis entre Etienne de la
                   Chapelle, évêque de Meaux, et le trésorier de Saint-Corneille, Philippe, frère du roi, au
@@ -8798,7 +8800,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE NANTEUIL-MEAUX</head>
+              <head>La dîme de Nanteuil-Meaux</head>
               <argument>
                 <p>Etienne de la Chapelle, évêque de Meaux, notifie l’accord fait entre le trésorier de
                   Saint-Corneille et lui relativement à la redevance en blé que l’abbaye de Compiègne percevait
@@ -8848,7 +8850,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>L’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Le pape Alexandre III prie Hugues de Champfleuri, évêque de Soissons, d’user de son crédit
                   auprès du roi Louis VII, pour le déterminer à laisser l’abbaye de Saint-Corneille jouir de
@@ -8905,7 +8907,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>L’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Le pape Alexandre III recommande au roi Louis VII de chérir, protéger et honorer l’abbaye de
                   Saint-Corneille et de défendre ses droits contre les entreprises des méchants.</p>
@@ -8980,7 +8982,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>L’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Le pape Alexandre III remercie le roi Louis VII d’une proposition, qu’il vient de lui faire
                   relativement à l’hôpital de Compiègne, et lui annonce que, sur sa demande, il va sans retard
@@ -9025,7 +9027,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ENQUÊTE RELATIVE À L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>Enquête relative à l’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Baudouin de Boulogne, évêque de Noyon, et Amaury, évêque de Senlis, chargés par le pape
                   Alexandre III de vérifier si l’hôpital de Compiègne dépendait de l’abbaye de Saint-Corneille,
@@ -9082,7 +9084,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ENVOI AU ROI LOUIS VII<lb/>DE L’ENQUÊTE RELATIVE À L’HÔPITAL<lb/>DE COMPIÈGNE</head>
+              <head>Envoi au roi Louis VII <lb/>de l’enquête relative à l’hôpital <lb/>de Compiègne</head>
               <argument>
                 <p>Le pape Alexandre III, transmet au roi Louis VII, l’enquête faite par Baudouin de Boulogne,
                   évêque de Noyon et Amaury, évêque de Senlis, au sujet des droits de l’abbaye de
@@ -9146,8 +9148,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RECONNAISSANCE DES DROITS DE L’ABBAYE<lb/>DE SAINT-CORNEILLE SUR L’HÔPITAL DE
-                COMPIÈGNE<lb/>DÉCLARATION DU ROI LOUIS VII</head>
+              <head>Reconnaissance des droits de l’abbaye <lb/>de Saint-Corneille sur l’hôpital de
+                Compiègne <lb/>déclaration du roi Louis VII</head>
               <argument>
                 <p>Le pape Alexandre III, après avoir félicité Louis VII de son zèle pour la prospérité des
                   églises de son royaume, et lui avoir souhaité d’obtenir au ciel la distinction qui convient à
@@ -9213,8 +9215,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION DE L’ABBAYE DE SAINT-CORNEILLE<lb/>DANS LA POSSESSION ET
-                L’ADMINISTRATION<lb/>DE L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>Confirmation de l’abbaye de Saint-Corneille <lb/>dans la possession et
+                l’administration <lb/>de l’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Le pape Alexandre III informe Ansout, abbé de Saint-Corneille, et ses religieux que
                   l’enquête faite sur son ordre et d’après l’avis du roi de France, par Baudouin de Boulogne,
@@ -9280,8 +9282,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRE DES RELIGIEUX DE SAINT-CORNEILLE<lb/>AU ROI LOUIS VII, POUR LE PRIER<lb/>DE LEUR
-                RESTITUER L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>Lettre des religieux de Saint-Corneille <lb/>au roi Louis VII, pour le prier <lb/>de leur
+                restituer l’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Les religieux de Saint-Corneille supplient Louis VII de leur rendre tous les biens de
                   l’hôpital de Compiègne, au jour anniversaire de la mort de son chambrier Adam, afin que si
@@ -9378,8 +9380,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>VOL DE CHASUBLES, DE LIVRES,<lb/>DE PRIVILÈGES ET D’AUTRES OBJETS PRÉCIEUX<lb/>À L’ABBAYE
-                DE SAINT-CORNEILLE</head>
+              <head>Vol de chasubles, de livres, <lb/>de privilèges et d’autres objets précieux <lb/>à l’abbaye
+                de Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III, informé que le clergé et le peuple de Compiègne se permettaient de
                   dérober sans scrupule au trésor de l’abbaye de Saint-Corneille, des chasubles, des livres,
@@ -9435,7 +9437,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE HUGUES MARTELOT À COMPIÈGNE</head>
+              <head>La maison de Hugues Martelot à Compiègne</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, met l’abbaye d’Ourscamps en possession et saisine d’une
                   maison sise à Compiègne sur les bords de l’Oise, à elle cédée à perpétuité par Hugues
@@ -9484,7 +9486,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS ET DEVOIRS DU MAIRE DE MESVILLERS</head>
+              <head>Droits et devoirs du maire de Mesvillers</head>
               <argument>
                 <p>Philippe d’Alsace, comte de Flandres et de Vermandois, d’accord avec Isabelle ou Elisabeth
                   de Vermandois, sa femme, fait savoir qu’Eudes, <pb n="187" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f204/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>maire de
@@ -9591,8 +9593,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE D’ESTRAON ET HARY<lb/>ACCORD ENTRE L’ABBAYE DE SAINT-CORNEILLE<lb/>ET RAOUL DE
-                COUCY</head>
+              <head>L’avouerie d’Estraon et Hary <lb/>accord entre l’abbaye de Saint-Corneille <lb/>et Raoul de
+                Coucy</head>
               <argument>
                 <p>Étienne de la Chapelle, évêque de Meaux, en vertu d’une délégation du pape Alexandre III,
                   règle de la manière suivante un différend survenu entre l’abbaye de Saint-Corneille et Raoul
@@ -9748,9 +9750,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉFENSE DES DROITS DE L’ABBAYE<lb/>DE SAINT-CORNEILLE CONTRE LES EMPIÈTEMENTS<lb/>DES
-                BOURGEOIS DE COMPIÈGNE, DES ABBÉS<lb/>DE SAINT-MEMMIE, CHERLIEU ET THENAILLES<lb/>ET DU SIRE DE
-                LA TOURNELLE</head>
+              <head>Défense des droits de l’abbaye <lb/>de Saint-Corneille contre les empiètements <lb/>des
+                bourgeois de Compiègne, des abbés <lb/>de Saint-Memmie, Cherlieu et Thenailles <lb/>et du sire de
+                la Tournelle</head>
               <argument>
                 <p>Le pape Alexandre III prie Henri de France, archevêque de Reims, de défendre les droits des
                   religieux de Saint-Corneille contre les empiètements de leurs propres sergents et des
@@ -9814,7 +9816,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAIRIE DE MARGNY</head>
+              <head>La mairie de Margny</head>
               <argument>
                 <p>Les religieux de Saint-Corneille et Manier, maire de Margny, règlent entre eux de la manière
                   suivante, devant le chapitre de Compiègne, un différend relatif au fief de la mairie de
@@ -9893,8 +9895,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROTECTION ACCORDÉE PAR LE SAINT-SIÈGE<lb/>AUX VILLAGES DE PRONASTRE, FAVEROLLES<lb/>ET
-                MESVILLERS</head>
+              <head>Protection accordée par le Saint-siège <lb/>aux villages de Pronastre, Faverolles <lb/>et
+                Mesvillers</head>
               <argument>
                 <p>Le pape Alexandre III demande à Henri de France, archevêque de Reims, de citer devant lui
                   Ansout, abbé de Saint-Corneille, Pierre de la Tournelle, avoué des villages de Pronastre,
@@ -9964,7 +9966,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROTECTION ACCORDÉE PAR LE SAINT-SIÈGE<lb/>AUX CHANOINES DE SAINT-CORNEILLE</head>
+              <head>Protection accordée par le Saint-siège <lb/>aux chanoines de Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III prie Henri de France, archevêque de Reims, de protéger et défendre les
                   chanoines de Saint-Corneille de Compiègne, comme les enfants privilégiés de l’église de Rome,
@@ -10016,8 +10018,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS RESPECTIFS<lb/>DE L’ABBAYE DE SAINT-CORNEILLE<lb/>ET DE L’AVOUÉ PIERRE DE LA
-                TOURNELLE<lb/>SUR LES VILLAGES<lb/>DE MESVILLERS, PRONASTRE ET FAVEROLLES</head>
+              <head>Droits respectifs <lb/>de l’abbaye de Saint-Corneille <lb/>et de l’avoué Pierre de la
+                Tournelle <lb/>sur les villages <lb/>de Mesvillers, Pronastre et Faverolles</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, d’une part, Pierre de la Tournelle, Havide, sa femme et
                   Rogues, leur fils, d’autre part, notifient diverses conventions faites entre eux,
@@ -10179,7 +10181,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLE DU PALAIS DE COMPIÈGNE</head>
+              <head>La chapelle du palais de Compiègne</head>
               <argument>
                 <p>Louis le Jeune donne à Marc, qu’il charge de desservir la chapelle de son palais de
                   Compiègne, et à ses successeurs une rente annuelle de cinquante sous parisis avec deux muids
@@ -10233,7 +10235,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PARTS DE SAINT-CORNEILLE<lb/>EN LA GRANGE DE ERCHES ET DE BOUCHOIR</head>
+              <head>Les parts de Saint-Corneille <lb/>en la grange de Erches et de Bouchoir</head>
               <argument>
                 <p>Alexandre III informe Henri de France, archevêque de Reims, que les bénédictins de
                   Saint-Corneille ont à se plaindre des mauvais procédés auxquels recourent les chanoines de
@@ -10294,7 +10296,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉFENSE AUX CHANOINES DE SAINT-CORNEILLE<lb/>D’USER DU SCEAU DE L’ABBAYE</head>
+              <head>Défense aux chanoines de Saint-Corneille <lb/>d’user du sceau de l’abbaye</head>
               <argument>
                 <p>Le pape Alexandre III prie Henri de France, archevêque de Reims, de défendre aux chanoines
                   de Saint-Corneille, sous peine d’excommunication, <pb n="205" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f222/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>de se servir du sceau
@@ -10353,7 +10355,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BOIS DÉFRICHÉS PAR LES RELIGIEUX<lb/>DE THÉNAILLES</head>
+              <head>Bois défrichés par les religieux <lb/>de Thénailles</head>
               <argument>
                 <p>Alexandre III mande à Henri de France, archevêque de Reims, de faire observer l’arrangement
                   à l’amiable, conclu devant son tribunal, entre <pb n="206" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f223/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>l’abbaye de
@@ -10410,7 +10412,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>OBÉISSANCE DUE PAR LE CLERGÉ DE COMPIÈGNE<lb/>À L’ABBÉ DE SAINT-CORNEILLE</head>
+              <head>Obéissance due par le clergé de Compiègne <lb/>à l’abbé de Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III prescrit à tout le clergé de Compiègne de se montrer respectueux et
                   obéissant envers l’abbé de Saint-Corneille, et de se soumettre à ses décisions dans tous les
@@ -10470,7 +10472,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAINT-CLÉMENT — LA CURE DU DOYENNÉ<lb/>SAINT-PIERRE — LES PRÉBENDES — L’HÔPITAL, ETC.</head>
+              <head>Saint-Clément — la curé du doyenné <lb/>Saint-Pierre — les prébendes — l’hôpital, etc.</head>
               <argument>
                 <p>Le pape Alexandre III donne à Ansout, abbé de Saint-Corneille, et à ses religieux des
                   lettres de sauvegarde semblables à celles qu’il leur avait déjà accordées le 7 novembre 1162
@@ -10536,8 +10538,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA NOMINATION DU CHAPELAIN DE SAINT-CLÉMENT<lb/>LES TITRES SOUSTRAITS<lb/>LE TRÉSOR DE
-                SAINT-CORNEILLE</head>
+              <head>La nomination du chapelain de Saint-Clément <lb/>les titres soustraits <lb/>le trésor de
+                Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III invite Henri de France, archevêque de Reims, à déposer le chapelain
                   installé par les chanoines de Saint-Corneille dans l’église de Saint-Clément, s’il est
@@ -10601,7 +10603,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DÎMES DE DAVENESCOURT<lb/>ET DE DOULAINCOURT<lb/>LES PRÉBENDES DES CHANOINES</head>
+              <head>Les dîmes de Davenescourt <lb/>et de Doulaincourt <lb/>les prébendes des chanoines</head>
               <argument>
                 <p>Le pape Alexandre III confirme Ansout, abbé de Saint-Corneille, et ses religieux dans la
                   possession des dîmes de Davenescourt et de
@@ -10659,7 +10661,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAINT-CLÉMENT</head>
+              <head>Saint-Clément</head>
               <argument>
                 <p>Le roi Louis VII, sur des renseignements erronés, s’était cru fondé à revendiquer l’église
                   de Saint-Clément. L’abbaye de Saint-Corneille, à qui appartenait cette église, protesta.
@@ -10721,7 +10723,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CESSION DE LA TERRE D’ESTRAON, À LA RÉSERVE<lb/>DE LA DÎME ET DU TERRAGE</head>
+              <head>Cession de la terre d’Estraon, à la réserve <lb/>de la dîme et du terrage</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, d’accord avec son chapitre dans lequel figurent Guillaume
                   prieur, Roger sous-prieur et chantre, Joisbert prévôt, Robert Abailard, Ives, Martin, moines
@@ -10769,7 +10771,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE D’ESTRAON ET CELLE DE BRANDIGNON</head>
+              <head>La terre d’Estraon et celle de Brandignon</head>
               <argument>
                 <p>Aufroy, abbé de Clairfontaine<note n="126_1"><p>Canton de la
                   Capelle (Aisne).</p></note> (ordre de Prémontré), et Engerbert, prieur de la chartreuse du
@@ -10816,7 +10818,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE FAVRESSE ET LA GRANGE DE NUISEMENT</head>
+              <head>La dîme de Favresse et la grange de Nuisement</head>
               <argument>
                 <p>Dans un différend, survenu au sujet de certaines dîmes, entre l’abbaye de Saint-Corneille et
                   les chanoines de Saint-Memmie de Châlons, Ansout, abbé de Compiègne, et Jean, abbé de
@@ -10903,7 +10905,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PRÉBENDES DES CHANOINES SÉCULIERS</head>
+              <head>Les prébendes des chanoines séculiers</head>
               <argument>
                 <p>Le pape Alexandre III, confirmant les rescrits d’Eugène III, déclare que les religieux de
                   Saint-Corneille doivent entrer sans conteste en possession des prébendes des chanoines
@@ -10961,7 +10963,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DE GANNES</head>
+              <head>La terre de Gannes</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, cède à Ascelin de Gannes une terre que l’abbaye possédait à
                   Gannes, moyennant un cens annuel de neuf mines <pb n="217" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f234/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>de froment et neuf mines
@@ -11010,8 +11012,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RECONNAISSANCE DONNÉE À L’ABBAYE<lb/>DE SAINT-CORNEILLE<lb/>PAR L’ABBAYE DE
-                TROIS-FONTAINES</head>
+              <head>Reconnaissance donnée à l’abbaye <lb/>de Saint-Corneille <lb/>par l’abbaye de
+                trois-Fontaines</head>
               <argument>
                 <p>Alard, abbé de Trois-Fontaines, passe devant Maurice de Sully, évêque de Paris, et Henri,
                   évêque de Senlis, reconnaissance des droits de l’abbaye de Saint-Corneille sur la forêt de
@@ -11066,7 +11068,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RECONNAISSANCE DONNÉE<lb/>À L’ABBAYE DE SAINT-CORNEILLE<lb/>PAR L’ABBAYE DE CHEMINON</head>
+              <head>Reconnaissance donnée <lb/>à l’abbaye de Saint-Corneille <lb/>par l’abbaye de Cheminon</head>
               <argument>
                 <p>Robert, abbé de Cheminon, passe devant Maurice de Sully, évêque de Paris, et Henri, évêque
                   de Senlis, reconnaissance des droits de l’abbaye de Saint-Corneille sur la forêt de Luiz,
@@ -11115,7 +11117,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN ET LE VIVIER DE ROYE</head>
+              <head>Le moulin et le vivier de Roye</head>
               <argument>
                 <p>Philippe, comte de Flandres et de Vermandois, et Elisabeth, sa femme, ayant, contre tout
                   droit, fait creuser un vivier et construire un moulin à Roye, abandonnent ce vivier et ce
@@ -11180,7 +11182,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COLLÉGIALE DE SAINT-CLÉMENT</head>
+              <head>La collégiale de Saint-Clément</head>
               <argument>
                 <p>Le pape Alexandre III confirme l’abbaye de Saint-Corneille dans la possession de la
                   collégiale de Saint-Clément et lui reconnaît toute autorité et toute juridiction en ce
@@ -11230,7 +11232,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’EXTINCTION DU COLLÈGE DES CHANOINES<lb/>DE SAINT-CORNEILLE</head>
+              <head>L’extinction du collège des chanoines <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Le pape Alexandre III rappelle à Ansout, abbé de Saint-Corneille, que pour arriver à
                   l’extinction du collège des chanoines dans son monastère, il doit, suivant les décisions des
@@ -11279,7 +11281,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA REDEVANCE DU PRIEURÉ<lb/>D’ÉLINCOURT-SAINTE-MARGUERITE<lb/>POUR LES BOIS DÉFRICHÉS</head>
+              <head>La redevance du prieuré <lb/>d’Élincourt-Sainte-Marguerite <lb/>pour les bois défrichés</head>
               <argument>
                 <p>Pierre, cardinal prêtre du titre de Saint-Chrysogone, légat du Saint-Siège, et Henri, évêque
                   de Senlis, mettent fin à une contestation entre l’abbaye de Saint-Corneille et le prieuré de
@@ -11338,8 +11340,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA REDEVANCE DU PRIEURÉ<lb/>D’ÉLINCOURT-SAINTE-MARGUERITE RATIFIÉE<lb/>PAR L’ABBÉ DE
-                CLUNY</head>
+              <head>La redevance du prieuré <lb/>d’Élincourt-Sainte-Marguerite ratifiée <lb/>par l’abbé de
+                Cluny</head>
               <argument>
                 <p>Gauthier de Châlons, abbé de Cluny, ratifie l’accord, fait entre Ansout, abbé de
                   Saint-Corneille, avec l’agrément de son couvent, et le prieuré de Sainte-Marguerite de Coudun
@@ -11393,7 +11395,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BUSSY ET TRÉMONVILLERS</head>
+              <head>Bussy et Trémonvillers</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, et André, abbé de Saint-Just, notifient l’arrangement
                   suivant, conclu entre leurs abbayes, au sujet de
@@ -11477,7 +11479,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BUSSY ET TRÉMONVILLERS</head>
+              <head>Bussy et Trémonvillers</head>
               <argument>
                 <p>Henri, évêque de Senlis, chargé par le pape Alexandre III de rétablir la concorde entre
                   l’abbaye de Saint-Corneille et celle de Saint-Just, relativement
@@ -11539,7 +11541,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE L’ABBAYE D’OURSCAMPS<lb/>À COMPIÈGNE</head>
+              <head>La maison de l’abbaye d’Ourscamps <lb/>à Compiègne</head>
               <argument>
                 <p>Les religieux d’Ourscamps avaient porté plainte au souverain pontife, contre l’abbé de
                   Saint-Corneille qui, au mépris des coutumes, exigeait d’eux plus de cinq sous de redevance,
@@ -11595,7 +11597,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE DE SAUVEGARDE À LA COLLÉGIALE<lb/>DE SAINT-CLÉMENT</head>
+              <head>Bulle de sauvegarde à la collégiale <lb/>de Saint-Clément</head>
               <argument>
                 <p>Le pape Alexandre III prend sous sa protection la collégiale de Saint-Clément de Compiègne,
                   avec tous les biens qui lui appartiennent et ceux qui pourraient lui être donnés à l’avenir.
@@ -11706,7 +11708,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE LAUCOURT</head>
+              <head>La dîme de Laucourt</head>
               <argument>
                 <p>Henri, évêque de Senlis, délégué par notre saint père le pape, tranche un différend qui
                   s’était élevé entre l’abbaye de Saint-Corneille et le prieuré de
@@ -11754,7 +11756,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS DE BUSSY ET DE TRÉMONVILLERS,<lb/>LES PRÉTENTIONS D’EUDES DE PLAINVAL</head>
+              <head>Les bois de Bussy et de Trémonvillers, <lb/>les prétentions d’Eudes de Plainval</head>
               <argument>
                 <p>Philippe de Dreux, évêque de Beauvais, règle un différend entre André, abbé de Saint-Just,
                   et Eudes de Plainval, relativement au bois de Bussy, sur lequel Eudes reconnaissait n’avoir
@@ -11831,7 +11833,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DROITS DE SAINT-CORNEILLE SUR L’ÉGLISE<lb/>DE SAINT-GERMAIN</head>
+              <head>Les droits de Saint-Corneille sur l’église <lb/>de Saint-Germain</head>
               <argument>
                 <p>Thibaud, évêque d’Amiens, délégué par le souverain pontife, tranche un différend relatif aux
                   coutumes abusives de l’église de Saint-Germain, dont le chapelain Gilon se constituait le
@@ -11900,8 +11902,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROTECTION DES HABITANTS<lb/>DE SARCY, JONQUERY, CUCHERY, BELVAL, POILLY,<lb/>GOUSSANCOURT,
-                VILLE-EN-TARDENOIS, ETC.,<lb/>PAR LE COMTE DE CHAMPAGNE</head>
+              <head>Protection des habitants <lb/>de Sarcy, Jonquery, Cuchery, Belval, Poilly, <lb/>Goussancourt,
+                ville-en-Tardenois, etc., <lb/>par le comte de Champagne</head>
               <argument>
                 <p>Henri, comte palatin de Troyes, s’engage à défendre contre les injustes exactions de leurs
                   avoués les tenanciers de Saint-Corneille, résidants à Sarcy, Jonquery, Cuchery, Belval,
@@ -11958,7 +11960,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DU PRÊTRE JEAN</head>
+              <head>La maison du prêtre Jean</head>
               <argument>
                 <p>Raoul, doyen de Reims, et F., écolâtre, chargés par le souverain pontife de mettre fin à un
                   différend entre l’abbaye de Saint-Corneille et le prêtre Jean au sujet d’une maison,
@@ -12002,8 +12004,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA PRÉVÔTÉ DE COMPIÈGNE — LE MINAGE<lb/>LES CENS DE ROYAL-LIEU<lb/>LES FORESTERIES DE
-                COMPIÈGNE<lb/>ET DE SAINT-SAUVEUR</head>
+              <head>La prévôté de Compiègne — le minage <lb/>les cens de royal-lieu <lb/>les foresteries de
+                Compiègne <lb/>et de Saint-Sauveur</head>
               <argument>
                 <p>Louis VII cède aux communiers de Compiègne :</p>
                 <list type="o">
@@ -12088,7 +12090,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE CUISLES</head>
+              <head>La dîme de Cuisles</head>
               <argument>
                 <p>Hugues, abbé de Longpont<note n="147_1"><p>Canton de
                   Villers-Cotterêts (Aisne).</p></note>, informe Guillaume de Champagne, dit aux Blanches
@@ -12141,7 +12143,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRE DE RECOMMANDATION D’ÉTIENNE,<lb/>ABBÉ DE SAINTE-GENEVIÈVE</head>
+              <head>Lettre de recommandation d’Étienne, <lb/>abbé de Sainte-Geneviève</head>
               <argument>
                 <p>Étienne, abbé de Sainte-Geneviève de Paris, à la prière de l’abbé de Saint-Corneille,
                   recommande à la bienveillance du pape les moines de Compiègne, qui vont se rendre auprès de
@@ -12197,9 +12199,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CURES DONT L’ABBAYE DE SAINT-CORNEILLE<lb/>À LA COLLATION<lb/>DANS LE DIOCÈSE DE
-                BEAUVAIS.<lb/>OBLIGATIONS DES PERSONNES OU CURÉS.<lb/>LE CENS DU PAR L’ÉGLISE DE
-                PRONLEROY.</head>
+              <head>Curés dont l’abbaye de Saint-Corneille <lb/>à la collation <lb/>dans le diocèse de
+                Beauvais. <lb/>Obligations des personnes ou curés. <lb/>Le cens du par l’église de
+                Pronleroy.</head>
               <argument>
                 <p>Philippe de Dreux, évêque de Beauvais, à l’exemple de Geoffroy, l’un de ses prédécesseurs,
                   dispense les religieux de Saint-Corneille, choisis, par leur abbaye, comme
@@ -12258,7 +12260,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES QUATRE MUIDS DE BLÉ DUS AU PRIEURÉ<lb/>DE SAINT-AMAND DE MACHEMONT</head>
+              <head>Les quatre muids de blé dus au prieuré <lb/>de Saint-Amand de Machemont</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, prend en emphytéose les revenus et les propriétés, que
                   possède à Compiègne le prieuré de Saint-Amand, dépendant de l’abbaye bénédictine de
@@ -12332,7 +12334,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SACY-LE-PETIT ET LE BOIS DE LIHUS</head>
+              <head>Sacy-le-petit et le bois de Lihus</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, notifie qu’il vient de terminer un différend survenu entre
                   ses religieux et ceux de Chaalis, relativement aux terres du domaine de son abbaye, sises à
@@ -12408,7 +12410,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DES FOURRAGES</head>
+              <head>La dîme des fourrages</head>
               <argument>
                 <p>Le pape Lucius III décrète que les religieux de Saint-Corneille ne doivent payer à personne
                   la dîme de la nourriture de leur bétail.</p>
@@ -12448,7 +12450,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TENANCIERS DE VERVINS</head>
+              <head>Les tenanciers de Vervins</head>
               <argument>
                 <p>Gobert, abbé de Thenailles<note n="153_1"><p>Aisne.</p></note>,
                   rend compte à l’évêque de Senlis d’une mission que ce dernier lui avait confiée. Un différend
@@ -12502,8 +12504,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE<lb/>DONNÉE PAR LUCIUS III<lb/>À ANSOUT, ABBÉ DE
-                SAINT-CORNEILLE</head>
+              <head>Bulle consistoriale de sauvegarde <lb/>donnée par Lucius III <lb/>à Ansout, abbé de
+                Saint-Corneille</head>
               <argument>
                 <p>Le pape Lucius III, à l’exemple de ses prédécesseurs Eugène III (Ch. LXXII), Adrien IV
                   (Ch. LXXVII) et Alexandre III (Ch. LXXXVIII), confirme tous les privilèges antérieurement
@@ -12628,7 +12630,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTION DU DROIT DE GUIONAGE SUR L’AISNE</head>
+              <head>Exemption du droit de guionage sur l’Aisne</head>
               <argument>
                 <p>Raoul, comte de Soissons, d’accord avec Adélaïde, sa femme, déclare renoncer à tout droit de
                   guionage, c’est-à-dire de conduite et de protection, pour toutes les denrées que le monastère
@@ -12689,7 +12691,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN DE ROGER DE VERBERIE AU PONT<lb/>DE COMPIÈGNE</head>
+              <head>Le moulin de Roger de Verberie au pont <lb/>de Compiègne</head>
               <argument>
                 <p>Pierre, maire de Compiègne, et les jurés de la commune donnent à Roger de Verberie et à ses
                   héritiers un moulin près du pont de Compiègne, moyennant un cens annuel de quatre muids de
@@ -12748,7 +12750,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>EXEMPTIONS DE L’ABBAYE D’OURSCAMP</head>
+              <head>Exemptions de l’abbaye d’Ourscamp</head>
               <argument>
                 <p>Philippe Auguste exempte l’abbaye d’Ourscamp du paiement du péage, du tonlieu et de toute
                   autre coutume, dans toute l’étendue du domaine royal.</p>
@@ -12790,7 +12792,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DES MEUNIERS. ACCORD AVEC NICOLAS<lb/>SEIGNEUR DE BAZOCHES</head>
+              <head>Le bois des Meuniers. accord avec Nicolas <lb/>seigneur de Bazoches</head>
               <argument>
                 <p>Raoul, doyen de l’église de Reims, et Raoul
                   d’Oulchy<note n="158_1"><p>Chef-lieu de canton,
@@ -12900,7 +12902,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DES MEUNIERS. RATIFICATION DE L’ACCORD<lb/>AVEC LE SEIGNEUR DE BAZOCHES</head>
+              <head>Le bois des Meuniers. ratification de l’accord <lb/>avec le seigneur de Bazoches</head>
               <argument>
                 <p>Henri, évêque de Senlis, délégué par le pape Lucius III pour régler un différend entre
                   l’abbaye de Saint-Corneille et Nicolas de Bazoches, au sujet du bois des Meuniers, ratifie,
@@ -12944,7 +12946,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA GRANGE DE LANDOUZY. — USURPATION DES<lb/>CISTERCIENS DE FOIGNY</head>
+              <head>La grange de Landouzy. — usurpation des <lb/>cisterciens de Foigny</head>
               <argument>
                 <p>Henri, évêque de Senlis, rend compte au pape Lucius III de l’impossibilité dans laquelle il
                   se trouve de rétablir l’accord entre les bénédictins de Compiègne et les cisterciens de
@@ -13018,8 +13020,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAUF-CONDUIT DONNÉ PAR PHILIPPE AUGUSTE<lb/>AUX MARCHANDS<lb/>POUR LA FOIRE DE LA
-                MI-CARÊME</head>
+              <head>Sauf-conduit donné par Philippe Auguste <lb/>aux marchands <lb/>pour la foire de la
+                MI-carême</head>
               <argument>
                 <p>Philippe Auguste fait savoir spécialement aux marchands de Flandre, de Ponthieu et de
                   Vermandois, qu’il prend sous sa protection tous les marchands qui viendront à Compiègne à la
@@ -13066,8 +13068,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LETTRES DE SAUF-CONDUIT ET DE RECOMMANDATION<lb/>DÉLIVRÉES PAR PHILIPPE AUGUSTE,<lb/>AUX
-                QUÊTEURS DE SAINT-CORNEILLE, QUI<lb/>VOYAGEAIENT AVEC LE SAINT-SUAIRE</head>
+              <head>Lettres de sauf-conduit et de recommandation <lb/>délivrées par Philippe Auguste, <lb/>aux
+                quêteurs de Saint-Corneille, qui <lb/>voyageaient avec le Saint-Suaire</head>
               <argument>
                 <p>Philippe Auguste notifie aux archevêques, évêques, abbés, etc., aux ducs, comtes,
                   châtelains, etc., en un mot à tous les dignitaires ecclésiastiques ou laïques de son royaume,
@@ -13125,7 +13127,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>SAINT-CLÉMENT DE COMPIÈGNE</head>
+              <head>Saint-Clément de Compiègne</head>
               <argument>
                 <p>Le pape Lucius III confirme les religieux de Saint-Corneille dans la possession paisible et
                   déjà ancienne de l’église de Saint-Clément.</p>
@@ -13180,7 +13182,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE COLONS AVEC NICOLAS, SEIGNEUR<lb/>DE BAZOCHES</head>
+              <head>Échange de colons avec Nicolas, seigneur <lb/>de Bazoches</head>
               <argument>
                 <p>Nicolas de Bazoches reconnaît avoir cédé à l’église de Compiègne la fille d’Haganon de
                   Sainte-Gemme<note n="164_1"><p>Canton de Châtillon-sur-Marne,
@@ -13226,8 +13228,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE SERVES ENTRE GAUTHIER DE BAZOCHES,<lb/>FRÈRE DE NICOLAS,<lb/>ET ANSOUT, ABBÉ DE
-                SAINT-CORNEILLE</head>
+              <head>Échange de serves entre Gauthier de Bazoches, <lb/>frère de Nicolas, <lb/>et Ansout, abbé de
+                Saint-Corneille</head>
               <argument>
                 <p>Nicolas de Bazoches notifie à l’abbé de Saint-Corneille, Ansout, qu’il confirme l’échange —
                   fait entre son frère Gauthier, prévôt de la terre de Reims et l’abbaye — de deux femmes de
@@ -13278,7 +13280,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE COLONS AVEC LE CHAPITRE DE SOISSONS</head>
+              <head>Échange de colons avec le chapitre de Soissons</head>
               <argument>
                 <p>Hugues prévôt, Guillaume doyen et tout le chapitre de l’église de Soissons, échangent une
                   femme de leur domaine, Marie, fille de Lantfroid et de <pb n="261" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f278/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>Berthe, de
@@ -13327,8 +13329,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA FOIRE DE LA MI-CARÊME. SA DURÉE PENDANT<lb/>QUINZE JOURS.<lb/>PARTAGE DES PRODUITS AVEC
-                LE ROI</head>
+              <head>La foire de la MI-carême. sa durée pendant <lb/>quinze jours. <lb/>Partage des produits avec
+                le roi</head>
               <argument>
                 <p>Philippe Auguste notifie, qu’en vertu d’un pariage ou contrat
                   d’associat<hi rend="i">i</hi>on passé entre lui et les religieux de Saint-Corneille, il aura
@@ -13402,9 +13404,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RATIFICATION DE LA COMMUNE DE COMPIÈGNE.<lb/>CONCESSION DU DROIT DE MINAGE DANS<lb/>LA
-                VILLE, DU DROIT DE CENS À ROYALLIEU,<lb/>DES FORESTERIES DE COMPIÈGNE ET DE GIROMÉNIL,<lb/>DE
-                LA PRÉVÔTÉ DE COMPIÈGNE<lb/>ET DE DIVERS AUTRES PRIVILÈGES</head>
+              <head>Ratification de la commune de Compiègne. <lb/>Concession du droit de minage dans <lb/>la
+                ville, du droit de cens à Royallieu, <lb/>des foresteries de Compiègne et de Giroménil, <lb/>de
+                la prévôté de Compiègne <lb/>et de divers autres privilèges</head>
               <argument>
                 <p>Philippe-Auguste confirme la charte de commune, octroyée par son père Louis VII, aux
                   habitants de Compiègne.</p>
@@ -13549,8 +13551,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE DONNÉE<lb/>PAR URBAIN III À ANSOUT<lb/>ABBÉ DE
-                SAINT-CORNEILLE</head>
+              <head>Bulle consistoriale de sauvegarde donnée <lb/>par Urbain III à Ansout <lb/>abbé de
+                Saint-Corneille</head>
               <argument>
                 <p>Le pape Urbain III, à l’instar de ses prédécesseurs, Eugène III (Charte <num>lxxii</num>),
                   Adrien IV (Ch. <num>lxxvii</num>), Alexandre III (Ch. <num>lxxxviii</num>) et Lucius III
@@ -13670,7 +13672,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DOMAINE DES TEMPLIERS À BELLICOURT</head>
+              <head>Le domaine des Templiers à Bellicourt</head>
               <argument>
                 <p>Ansout, abbé de Saint-Corneille, abandonne à Eustache, grand maître des chevaliers de la
                   milice du Temple, la terre, les friches et les bois de
@@ -13735,7 +13737,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE MAURUPT</head>
+              <head>La dîme de Maurupt</head>
               <argument>
                 <p>Gautier, abbé bénédictin d’Huiron<note n="171_1"><p>Canton de
                   Vitry-le-François, Marne.</p></note>, et Gérard, abbé prémontré de
@@ -13812,7 +13814,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE MAURUPT</head>
+              <head>La dîme de Maurupt</head>
               <argument>
                 <p>Guillaume de Champagne, dit aux Blanches Mains, archevêque de Reims, cardinal du titre de
                   Sainte-Sabine, fait savoir qu’il vient de terminer, en qualité de délégué du Saint-Siège, un
@@ -13873,7 +13875,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉFENSE DE CÉDER LES REVENUS DE L’ABBAYE</head>
+              <head>Défense de céder les revenus de l’abbaye</head>
               <argument>
                 <p>Le pape Urbain III, ayant appris que l’abbaye de Saint-Corneille, sur les instances de
                   grands personnages, mais aussi à son grand détriment, cédait parfois les revenus de ses
@@ -13922,7 +13924,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION PAR LE SAINT-SIÈGE DE L’ACCORD<lb/>CONCLU AVEC L’ABBAYE DE SAINT-JUST</head>
+              <head>Confirmation par le Saint-siège de l’accord <lb/>conclu avec l’abbaye de Saint-Just</head>
               <argument>
                 <p>Le pape Urbain III approuve l’accord fait entre l’abbé de Saint-Corneille et celui de
                   Saint-Just, en mai 1177 (Ch. <num>cxxxvi</num>), au sujet de
@@ -13971,7 +13973,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE RAIMBAUD À THIESCOURT</head>
+              <head>Le bois de Raimbaud à Thiescourt</head>
               <argument>
                 <p>Pierre, prieur de Compiègne, informe le chapitre de Noyon qu’il ratifie à l’avance tout ce
                   que fera le moine P. prévôt de Mareuil et le chevalier <pb n="274" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f291/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>Richard dans la
@@ -14014,7 +14016,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE SERVES AVEC L’ABBESSE<lb/>DE NOTRE-DAME DE SOISSONS</head>
+              <head>Échange de serves avec l’abbesse <lb/>de Notre-Dame de Soissons</head>
               <argument>
                 <p>Marguerite, abbesse de Notre-Dame de Soissons, d’accord avec son chapitre, fait avec
                   l’abbaye de Notre-Dame de Compiègne l’échange de deux femmes attachées à leurs domaines
@@ -14069,7 +14071,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RUCOURT</head>
+              <head>Rucourt</head>
               <argument>
                 <p>Girard, abbé de Saint-Corneille, fait connaître les arrangements qui ont eu lieu entre son
                   monastère et Gautier le Chastellain, au sujet des terres de
@@ -14162,7 +14164,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS UTILES À PERCEVOIR SUR LES HOMMES<lb/>DE SAINT-CORNEILLE DEMEURANTS À REIMS</head>
+              <head>Droits utiles à percevoir sur les hommes <lb/>de Saint-Corneille demeurants à Reims</head>
               <argument>
                 <p>Guillaume de Champagne, dit aux Blanches Mains, archevêque de Reims, cardinal du titre de
                   sainte Sabine, et légat du Saint-Siège, pour témoigner sa gratitude aux moines de
@@ -14211,7 +14213,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DÎMES DE CUISLES — RENONCIATION DU<lb/>CHEVALIER H. BALOEIR</head>
+              <head>Les dîmes de Cuisles — renonciation du <lb/>chevalier h. Baloeir</head>
               <argument>
                 <p>Guillaume de Champagne, cardinal, archevêque de Reims, fait savoir qu’en sa présence H. de
                   Baloeir, chevalier, M. sa femme et leurs enfants, en désaccord depuis longtemps avec l’abbaye
@@ -14265,7 +14267,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON D’UNE SERVE PAR LE SEIGNEUR DE BAZOCHES</head>
+              <head>Don d’une serve par le seigneur de Bazoches</head>
               <argument>
                 <p>Nicolas I<hi rend="sup">er</hi> de Bazoches déclare qu’il a, d’accord avec son fils Gautier,
                   sa mère Havoise et sa femme Agnès de Chérisy, donné en aumône, d’une manière absolue, à
@@ -14332,7 +14334,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON DE DEUX MUIDS DE BLÉ À L’HÔTEL-DIEU<lb/>DE SAINT-NICOLAS</head>
+              <head>Don de deux muids de blé à l’Hôtel-Dieu <lb/>de Saint-Nicolas</head>
               <argument>
                 <p>Le roi Philippe Auguste, pour le repos de l’âme de son père Louis VII, donne à l’hôtel-Dieu
                   de Saint-Nicolas de Compiègne deux muids de froment, mesure de Paris, à prendre chaque année
@@ -14392,7 +14394,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE SERVES</head>
+              <head>Échange de serves</head>
               <argument>
                 <p>Simon, abbé de Saint-Remy de Reims, cède à l’abbaye de Compiègne une femme de son domaine,
                   appelée Marie, domiciliée à Romigny<note n="182_1"><p>Canton de
@@ -14445,7 +14447,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE GANSOIVE PRÈS CANLY ET LES<lb/>TERRES VOISINES</head>
+              <head>Le bois de Gansoive près Canly et les <lb/>terres voisines</head>
               <argument>
                 <p>Girard, abbé de Saint-Corneille, après avoir pris l’avis de Gilbert, prieur, et d’autres
                   gens experts, fait avec Raynaud de Fayel la convention suivante, au sujet du bois de Geoselve
@@ -14522,7 +14524,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE SAINTE-MARIE ENTRE TRICOT<lb/>ET MONTGÉRAIN — LA MASURE DE MONTGÉRAIN</head>
+              <head>Le bois de Sainte-Marie entre Tricot <lb/>et Montgérain — la masure de Montgérain</head>
               <argument>
                 <p>Girard, abbé de Saint-Corneille, conclut un arrangement avec Pierre de Tricot, au sujet du
                   bois de Sainte-Marie, sis entre Tricot et
@@ -14608,7 +14610,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE SAINTE-MARIE ENTRE TRICOT ET<lb/>MONTGÉRAIN ET LE BOIS DU QUESNOY</head>
+              <head>Le bois de Sainte-Marie entre Tricot et <lb/>Montgérain et le bois du Quesnoy</head>
               <argument>
                 <p>Philippe de Dreux, évêque de Beauvais, notifie et confirme, à la demande de Pierre de
                   Tricot, Raoul de Flandre, leurs femmes et leurs enfants, l’accord fait entre eux et l’abbaye
@@ -14658,7 +14660,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE TRAVERS DE GOURNAY-SUR-ARONDE</head>
+              <head>Le travers de Gournay-sur-Aronde</head>
               <argument>
                 <p>Raoul, comte de Clermont, du consentement de la comtesse Adèle, sa femme, met fin aux
                   chicanes que ses sergents de
@@ -14715,7 +14717,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRIEURÉ DE SAINT-PIERRE DE COMPIÈGNE<lb/>ET LA DÎME DE CUISLES</head>
+              <head>Le prieuré de Saint-Pierre de Compiègne <lb/>et la dîme de Cuisles</head>
               <argument>
                 <p>Le pape Clément III confirme les religieux de Saint-Corneille dans la possession du prieuré
                   de Saint-Pierre de Compiègne et dans celle de la dîme <pb n="288" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f305/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>de
@@ -14773,7 +14775,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CÉLÉBRATION DES OFFICES À SAINT-CLÉMENT<lb/>ET À SAINT-MAURICE DE COMPIÈGNE</head>
+              <head>La célébration des offices à Saint-Clément <lb/>et à Saint-Maurice de Compiègne</head>
               <argument>
                 <p>Le pape Clément III, apprenant que les chanoines de Saint-Clément et ceux de Saint-Maurice
                   de Compiègne touchaient les revenus de ces églises sans y résider et sans se préoccuper de la
@@ -14829,7 +14831,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DÎMES RETIRÉES AUX LAÏQUES</head>
+              <head>Les dîmes retirées aux laïques</head>
               <argument>
                 <p>Le pape Clément III autorise l’abbé de Saint-Corneille à retirer des mains des laïques, sans
                   opposition possible de leur part, les dîmes des paroisses dépendantes de son monastère, soit
@@ -14877,7 +14879,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESTRICTIONS MISES AUX APPELS DES CLERCS</head>
+              <head>Restrictions mises aux appels des clercs</head>
               <argument>
                 <p>Le pape Clément III accorde à l’abbé de Saint-Corneille la faculté de limiter les appels
                   auxquels recourent trop souvent les clercs de sa juridiction, pour traîner leurs procès en
@@ -14926,7 +14928,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS DE BUSSY ET DE TRÉMONVILLERS</head>
+              <head>Les bois de Bussy et de Trémonvillers</head>
               <argument>
                 <p>Le pape Clément III confirme de son autorité apostolique l’accord fait entre l’abbaye de
                   Saint-Corneille et les chanoines prémontrés de Saint-Just-en-Chaussée, <pb n="291" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f308/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>au
@@ -14978,8 +14980,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE<lb/>DONNÉE PAR LE PAPE CLÉMENT III À GIRARD,<lb/>ABBÉ DE
-                SAINT-CORNEILLE.</head>
+              <head>Bulle consistoriale de sauvegarde <lb/>donnée par le pape Clément III à Girard, <lb/>abbé de
+                Saint-Corneille.</head>
               <argument>
                 <p>Le pape Clément III confirme l’abbaye de Saint-Corneille dans ses privilèges et dans ses
                   possessions. Sa bulle n’est pour ainsi dire que la reproduction de celle de Lucius III à
@@ -15123,8 +15125,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>NULLITÉ DE L’EXCOMMUNICATION PRONONCÉE PAR<lb/>L’ÉVÊQUE DE SOISSONS CONTRE<lb/>LES CURÉS
-                DÉPENDANTS DE SAINT-CORNEILLE</head>
+              <head>Nullité de l’excommunication prononcée par <lb/>l’évêque de Soissons contre <lb/>les curés
+                dépendants de Saint-Corneille</head>
               <argument>
                 <p>Le pape Célestin III, — informé que les religieux de Saint-Corneille avaient des motifs
                   sérieux de suspecter les jugements du tribunal ecclésiastique de Soissons, — leur donne la
@@ -15181,7 +15183,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS DE BUSSY ET DE TRÉMONVILLERS</head>
+              <head>Les bois de Bussy et de Trémonvillers</head>
               <argument>
                 <p>Le pape Célestin III renouvelle l’acte confirmatif délivré, quatre mois auparavant, par son
                   prédécesseur Clément III, à l’abbaye de Saint-Corneille, pour ses bois de
@@ -15229,7 +15231,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRIEURÉ DE SAINT-PIERRE DE COMPIÈGNE<lb/>ET LA DÎME DE CUISLES</head>
+              <head>Le prieuré de Saint-Pierre de Compiègne <lb/>et la dîme de Cuisles</head>
               <argument>
                 <p>Le pape Célestin III renouvelle les lettres confirmatives, accordées quatre mois auparavant,
                   par son prédécesseur Clément III à l’abbaye de Saint-Corneille, pour le prieuré de
@@ -15278,8 +15280,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CURE DE JAULZY ET LES ACQUISITIONS<lb/>DE SAINT-CORNEILLE<lb/>DANS LE DIOCÈSE DE
-                SOISSONS</head>
+              <head>La curé de Jaulzy et les acquisitions <lb/>de Saint-Corneille <lb/>dans le diocèse de
+                Soissons</head>
               <argument>
                 <p>Nivelon de Chérisy, évêque de Soissons, reconnaît qu’il a eu tort de contester aux religieux
                   de Saint-Corneille leurs droits sur le personnat ou cure de
@@ -15329,7 +15331,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA VILLETTE-LÈS-ROLLOT</head>
+              <head>La Villette-lès-Rollot</head>
               <argument>
                 <p>Girard, abbé de Saint-Corneille, met fin à un différend qui s’était élevé entre son abbaye
                   et Pierre de la Villette<note n="197_1"><p>La
@@ -15399,7 +15401,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAIRIE DE DOULAINCOURT</head>
+              <head>La mairie de Doulaincourt</head>
               <argument>
                 <p>Girard, abbé de Saint-Corneille, considérant que la terre de
                   Doulaincourt<note n="198_1"><p>Paroisse détruite auprès de
@@ -15473,7 +15475,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DU PLESSIER</head>
+              <head>La dîme du Plessier</head>
               <argument>
                 <p>Thibaut, évêque d’Amiens, confirme l’engagement pris par Richilde, mairesse
                   d’Erches<note n="199_1"><p>Somme.</p></note>, d’accord avec ses
@@ -15522,7 +15524,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DON PAR AGATHE DE PIERREFONDS D’UN JARDIN<lb/>À L’HÔTEL-DIEU DE COMPIÈGNE</head>
+              <head>Don par Agathe de Pierrefonds d’un jardin <lb/>à l’Hôtel-Dieu de Compiègne</head>
               <argument>
                 <p>Agathe, dame de Pierrefonds, pour le salut de son âme et des âmes de ses parents, donne à
                   l’Hôpital Saint Nicolas, un jardin contigu à sa maison de Compiègne. Sont présents à cette
@@ -15576,7 +15578,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN DE LA VIGNE PRÈS DE LA CHAUSSÉE<lb/>DE DAVENESCOURT</head>
+              <head>Le moulin de la vigne près de la chaussée <lb/>de Davenescourt</head>
               <argument>
                 <p>Philippe Auguste ratifie l’accord fait entre l’abbé de Saint-Corneille
                   <pb n="303" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f320/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>et Jean d’Hangest, relativement au moulin de la Vigne, près de la
@@ -15635,7 +15637,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA LÉPROSERIE DE COMPIÈGNE</head>
+              <head>La léproserie de Compiègne</head>
               <argument>
                 <p>Philippe Auguste enjoint au gardien de la léproserie de Compiègne de n’admettre en cette
                   maison que des lépreux originaires de la ville, à moins d’une autorisation spéciale du
@@ -15673,7 +15675,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>NOMINATION DE GIRARD, ABBÉ DE COMPIÈGNE,<lb/>À L’ABBAYE DE CORBIE</head>
+              <head>Nomination de Girard, abbé de Compiègne, <lb/>à l’abbaye de Corbie</head>
               <argument>
                 <p>Philippe Auguste notifie aux chevaliers, sergents et prévôts, relevant de l’abbaye de
                   Corbie<note n="203_1"><p>Somme.</p></note>, qu’il vient, avec
@@ -15732,7 +15734,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’AGEUX ET DE RARAY</head>
+              <head>Les bois d’Ageux et de Raray</head>
               <argument>
                 <p>Philippe Auguste notifie qu’Hugues Revetels, sa mère, ainsi que ses frères et sœurs ont
                   renoncé aux droits de surveillance, de chasse, d’avouerie et autres, qu’ils s’arrogeaient
@@ -15799,8 +15801,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE, DONNÉE<lb/>PAR LE PAPE CÉLESTIN III,<lb/>À PIERRE, ABBÉ
-                DE SAINT-CORNEILLE</head>
+              <head>Bulle consistoriale de sauvegarde, donnée <lb/>par le pape Célestin III, <lb/>à Pierre, abbé
+                de Saint-Corneille</head>
               <argument>
                 <p>Le pape Célestin III, pour confirmer les religieux de Saint-Corneille dans leurs privilèges
                   et leurs biens, reproduit sans changement appréciable la bulle de Clément III du 17 février
@@ -15930,8 +15932,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE DU PAPE CÉLESTIN III<lb/>ACCORDANT UNE INDULGENCE DE VINGT JOURS<lb/>À LA
-                MI-CARÊME</head>
+              <head>Bulle du pape Célestin III <lb/>accordant une indulgence de vingt jours <lb/>à la
+                MI-carême</head>
               <argument>
                 <p>Le pape Célestin III, pour exciter les fidèles à venir à la mi-carême visiter l’église de
                   Saint-Corneille, afin d’y adresser à Dieu de ferventes prières, d’y vénérer le saint Suaire
@@ -15982,9 +15984,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DÉFRICHEMENT DES BOIS, POSSÉDÉS EN COMMUN<lb/>PAR LES BÉNÉDICTINS DE COMPIÈGNE<lb/>ET
-                LES PRÉMONTRÉS DE SAINT-JUST — REDEVANCE<lb/>ANNUELLE À SERVIR À L’ABBAYE<lb/>DE
-                SAINT-CORNEILLE — SON DROIT D’USAGE DANS<lb/>LE BOIS DU FAY</head>
+              <head>Le défrichement des bois, possédés en commun <lb/>par les bénédictins de Compiègne <lb/>et
+                les prémontrés de Saint-Just — redevance <lb/>annuelle à servir à l’abbaye <lb/>de
+                Saint-Corneille — son droit d’usage dans <lb/>le bois du Fay</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, notifie son arbitrage dans un différend survenu entre l’abbaye
                   de Saint-Corneille et celle de Saint-Just, relativement à leurs bois. Suivant une première
@@ -16086,8 +16088,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DÉFRICHEMENT DES BOIS COMMUNS ENTRE L’ABBAYE<lb/>DE SAINT-CORNEILLE ET CELLE DE
-                SAINT-JUST<lb/>— REDEVANCE EN BLÉ ET EN AVOINE — DROIT<lb/>D’USAGE DANS LE BOIS DU FAY</head>
+              <head>Défrichement des bois communs entre l’abbaye <lb/>de Saint-Corneille et celle de
+                Saint-Just <lb/>— redevance en blé et en avoine — droit <lb/>d’usage dans le bois du Fay</head>
               <argument>
                 <p>Pierre, abbé de Saint-Corneille, et Pierre, abbé de Saint-Just, passent acte des
                   arrangements conclus entre leurs abbayes au sujet des bois qu’ils possèdent en commun. Les
@@ -16140,7 +16142,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS DES MAIRES ÉTABLIS SUR LES DOMAINES<lb/>DE SAINT-CORNEILLE</head>
+              <head>Droits des maires établis sur les domaines <lb/>de Saint-Corneille</head>
               <argument>
                 <p>Les maires percevront en mars douze deniers de rachat de chaque charrue ou labour de six
                   muids de terre et deux deniers de chaque setier ou labour d’un muid de terre. Dans chaque
@@ -16185,7 +16187,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACTE CAPITULAIRE RELATIF AUX RENTES<lb/>DU MOINE RICHARD</head>
+              <head>Acte capitulaire relatif aux rentes <lb/>du moine Richard</head>
               <argument>
                 <p>Pierre, abbé de Saint-Corneille et son chapitre font savoir que Richard, religieux de leur
                   monastère, vient d’acheter de ses épargnes quarante sous de rente sur la maison de Raoul
@@ -16243,7 +16245,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAMBRE DE MAURICE, FILS DE WILFRID,<lb/>PRÈS DU FOUR DE L’HÔTEL-DIEU</head>
+              <head>La chambre de Maurice, fils de Wilfrid, <lb/>près du four de l’Hôtel-Dieu</head>
               <argument>
                 <p>Pierre, abbé de Saint-Corneille, cède à perpétuité à Maurice, fils de Wilfrid le Fournier,
                   et à ses héritiers, une chambre située entre la maison de Gérard de Choisy et le four de
@@ -16279,7 +16281,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA BONNE MAISON</head>
+              <head>La bonne maison</head>
               <argument>
                 <p>Philippe Auguste ordonne au maire et à la commune de Compiègne de payer pour lui chaque
                   année à la Saint-Remy, aux frères de la Bonne Maison près
@@ -16324,7 +16326,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE FIEF-LIGE DE LA MAIRIE DE ROYE-SUR-MATZ</head>
+              <head>Le fief-lige de la mairie de Roye-sur-Matz</head>
               <argument>
                 <p>Pierre, abbé de Saint-Corneille, donne en fief-lige à Warin, maire de
                   Roye<note n="213_1"><p>Roye-sur-Matz, Oise.</p></note>, et à ses
@@ -16370,7 +16372,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DEVOIRS ET LES DROITS DES MAIRES<lb/>DE ROYE-SUR-MATZ</head>
+              <head>Les devoirs et les droits des maires <lb/>de Roye-sur-Matz</head>
               <argument>
                 <p>Pierre, abbé de Saint-Corneille, notifie l’arrangement qui vient d’être conclu entre son
                   abbaye et les maires de Roye<note n="214_1"><p>Roye-sur-Matz,
@@ -16500,7 +16502,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CHAPELAIN DE SAINT-CLÉMENT DE COMPIÈGNE</head>
+              <head>Le chapelain de Saint-Clément de Compiègne</head>
               <argument>
                 <p>Le pape Célestin III charge l’abbé de Sainte-Geneviève et le chantre de Paris de terminer un
                   différend entre l’abbé de Saint-Corneille et le chapelain de Saint-Clément, Hector, au sujet
@@ -16578,7 +16580,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TILLOLOY ET LE BOIS DE CASTEL</head>
+              <head>Tilloloy et le bois de Castel</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, au nom de son monastère, cède à Guy de Cramailles le bois
                   de Castel, moyennant un cens de cinquante-cinq sous parisis, payable annuellement à Roye à la
@@ -16666,7 +16668,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AUMÔNE D’ASCELIN DE GANNES À L’ABBAYE<lb/>DE FROIDMONT</head>
+              <head>L’aumône d’Ascelin de Gannes à l’abbaye <lb/>de Froidmont</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, à la prière d’Hugues de Gannes, ratifie la donation faite
                   à l’abbaye de Froidmont par Ascelin de Gannes, père d’Hugues, d’un bois que ce dernier tenait
@@ -16720,8 +16722,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CHAPELLE NOUVELLEMENT BÂTIE PAR LE<lb/>PRÉVÔT DE COMPIÈGNE, P. — DROIT DE
-                PATRONAGE<lb/>OFFERT À L’ÉVÊQUE DE SOISSONS</head>
+              <head>Chapelle nouvellement bâtie par le <lb/>prévôt de Compiègne, p. — droit de
+                patronage <lb/>offert à l’évêque de Soissons</head>
               <argument>
                 <p>Le pape Innocent III autorise l’évêque de Soissons à accepter l’offre que lui fait P.,
                   prévôt de Compiègne, du droit de patronage et de nomination à une chapelle récemment
@@ -16761,8 +16763,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLE DE P., PRÉVÔT DE COMPIÈGNE —<lb/>AUTORISATION CONDITIONNELLE D’EN FAIRE<lb/>LA
-                DÉDICACE</head>
+              <head>La chapelle de p., prévôt de Compiègne — <lb/>autorisation conditionnelle d’en faire <lb/>la
+                dédicace</head>
               <argument>
                 <p>Le pape Innocent III, informé que la ville de Compiègne n’a encore qu’une seule paroisse, —
                   quand l’accroissement de la population en demanderait trois, dont chacune offrirait des
@@ -16814,8 +16816,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA PAROISSE DU CASTRUM DE COMPIÈGNE —<lb/>LES PRÉTENDUS DROITS DE L’ÉVÊQUE DE
-                SOISSONS</head>
+              <head>La paroisse du castrum de Compiègne — <lb/>les prétendus droits de l’évêque de
+                Soissons</head>
               <argument>
                 <p>Le pape Innocent III charge l’évêque d’Arras de faire une enquête sur les droits que peut
                   avoir dans la paroisse de Compiègne l’évêque de Soissons. Au dire de ce dernier, le
@@ -16870,8 +16872,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA NOUVELLE CHAPELLE DE L’HÔPITAL DE<lb/>SAINT-NICOLAS — ENQUÊTE RELATIVE À
-                SA<lb/>DÉPENDANCE</head>
+              <head>La nouvelle chapelle de l’hôpital de <lb/>Saint-Nicolas — enquête relative à
+                sa <lb/>dépendance</head>
               <argument>
                 <p>Étienne de Nemours, évêque de Noyon, Raoul, abbé de Saint Barthélemy, et Engeran, écolâtre
                   de Noyon, délégués par le pape Innocent III, pour juger un différend entre l’abbé de
@@ -16929,7 +16931,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA JURIDICTION DE SAINT-CORNEILLE SUR<lb/>L’HÔPITAL DE SAINT-NICOLAS</head>
+              <head>La juridiction de Saint-Corneille sur <lb/>l’hôpital de Saint-Nicolas</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, donne le résultat de l’enquête faite, par ordre du pape
                   Innocent III, au sujet de la soumission que doit à son abbaye l’hôpital de Saint-Nicolas au
@@ -17002,8 +17004,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCORD ENTRE LES RELIGIEUX DE SAINT-CORNEILLE<lb/>ET LES CHANOINES<lb/>DE SAINT-CLÉMENT DE
-                COMPIÈGNE</head>
+              <head>Accord entre les religieux de Saint-Corneille <lb/>et les chanoines <lb/>de Saint-Clément de
+                Compiègne</head>
               <argument>
                 <p>Eudes de Sully, évêque de Paris, Hugues de Milan, abbé de Saint-Denis et maître Pierre de
                   Corbeil, chanoine de Paris, chargés par le souverain pontife de régler un différend entre les
@@ -17132,7 +17134,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>TRANSACTION DE L’ABBAYE DE SAINT-CORNEILLE<lb/>AVEC SAINT-CLÉMENT DE COMPIÈGNE</head>
+              <head>Transaction de l’abbaye de Saint-Corneille <lb/>avec Saint-Clément de Compiègne</head>
               <argument>
                 <p>Jean Burgar, doyen de la collégiale de Saint-Clément, approuve et notifie la charte dans
                   laquelle Eudes de Sully, évêque de Paris, Hugues de Milan, abbé de Saint-Denis, et maître
@@ -17180,7 +17182,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PIERREPONT</head>
+              <head>Pierrepont</head>
               <argument>
                 <p>Thibaud d’Heilly, évêque d’Amiens et Jean le Poëte, chanoine de Senlis, notifient que
                   diverses contestations relatives au village de
@@ -17262,7 +17264,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PIERREPONT</head>
+              <head>Pierrepont</head>
               <argument>
                 <p>Raoul de Préaux fait savoir comment s’est terminé son désaccord avec l’abbaye de
                   Saint-Corneille, relativement à Pierrepont, grâce à l’arbitrage de Thibaud d’Heilly, évêque
@@ -17310,7 +17312,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LANDOUZY-LA-COUR — CESSION À L’ABBAYE<lb/>DE FOIGNY</head>
+              <head>Landouzy-la-cour — cession à l’abbaye <lb/>de Foigny</head>
               <argument>
                 <p>Nicolas, abbé de Saint-Jean de Laon, informe Eudes de Sully, évêque de Paris, Hugues de
                   Milan, abbé de Saint-Denis, et maître Pierre de Corbeil, — délégués par le pape Innocent III,
@@ -17378,8 +17380,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LANDOUZY-LA-COUR — JUGEMENT EN FAVEUR<lb/>DE L’ABBAYE DE FOIGNY<lb/>CONTRE CELLE DE
-                COMPIÈGNE</head>
+              <head>Landouzy-la-cour — jugement en faveur <lb/>de l’abbaye de Foigny <lb/>contre celle de
+                Compiègne</head>
               <argument>
                 <p>Eudes de Sully, évêque de Paris, et maître Pierre de Corbeil, en l’absence d’Hugues de
                   Milan, abbé de Saint-Denis, délégué comme eux par le <pb n="339" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f356/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>pape Innocent III,
@@ -17442,7 +17444,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME ET LE TERRAGE DE WATTIGNY</head>
+              <head>La dîme et le terrage de Wattigny</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, fait savoir comment s’est terminé le différend, qui
                   longtemps subsista entre Hugues de la Porte de Vervins et Guiberge, sa femme, d’une part, et
@@ -17519,7 +17521,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ÉVÊQUE DE SENLIS CONSTITUÉ DÉFENSEUR<lb/>DES INTÉRÊTS DE SAINT-CORNEILLE</head>
+              <head>L’évêque de Senlis constitué défenseur <lb/>des intérêts de Saint-Corneille</head>
               <argument>
                 <p>Le pape Innocent III, en vue de protéger l’abbaye de Saint-Corneille contre les coupables
                   entreprises de gens audacieux, charge l’évêque de Senlis de contraindre, au moyen des
@@ -17568,7 +17570,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES FONCTIONS PONTIFICALES REMPLIES<lb/>À SAINT-CORNEILLE PAR L’ÉVÊQUE DE SENLIS</head>
+              <head>Les fonctions pontificales remplies <lb/>à Saint-Corneille par l’évêque de Senlis</head>
               <argument>
                 <p>Le pape Innocent III charge l’évêque de Senlis de remplir à Saint-Corneille, au nom du
                   Saint-Siège, toutes les fonctions pontificales, nécessaires à l’abbaye et demandées par elle,
@@ -17625,8 +17627,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>BULLE CONSISTORIALE DE SAUVEGARDE, DONNÉE<lb/>PAR LE PAPE INNOCENT III<lb/>À RICHARD, ABBÉ
-                DE SAINT-CORNEILLE</head>
+              <head>Bulle consistoriale de sauvegarde, donnée <lb/>par le pape Innocent III <lb/>à Richard, abbé
+                de Saint-Corneille</head>
               <argument>
                 <p>Le pape Innocent III, à l’exemple de ses prédécesseurs, confirme les religieux de
                   Saint-Corneille dans leurs privilèges et leurs biens. Sa bulle n’est guère que la
@@ -17709,8 +17711,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ÉVÊQUE DE SENLIS CHARGÉ DES INTÉRÊTS<lb/>DE SAINT-CORNEILLE<lb/>TANT AU SPIRITUEL QU’AU
-                TEMPOREL</head>
+              <head>L’évêque de Senlis chargé des intérêts <lb/>de Saint-Corneille <lb/>tant au spirituel qu’au
+                temporel</head>
               <argument>
                 <p>Le pape Innocent III informe l’abbé de Saint-Corneille qu’il a donné tout pouvoir à l’évêque
                   de Senlis, tant pour réprimer en son nom les injustices dont son abbaye aurait à se plaindre,
@@ -17769,8 +17771,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RESCRIT D’INNOCENT III À RICHARD,<lb/>ABBÉ DE SAINT-CORNEILLE, AU SUJET DE SON DROIT<lb/>DE
-                JURIDICTION SUR LES CLERCS<lb/>DE COMPIÈGNE</head>
+              <head>Rescrit d’Innocent III à Richard, <lb/>abbé de Saint-Corneille, au sujet de son droit <lb/>de
+                juridiction sur les clercs <lb/>de Compiègne</head>
               <argument>
                 <p>Le pape Innocent III confirme la juridiction, exercée jusqu’ici par l’abbé de
                   Saint-Corneille, sur les clercs de Compiègne.</p>
@@ -17824,8 +17826,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RICHARD, ABBÉ DE SAINT-CORNEILLE,<lb/>CONSTITUÉ DÉFENSEUR DES DROITS DE L’ABBAYE<lb/>DE
-                CORBIE</head>
+              <head>Richard, abbé de Saint-Corneille, <lb/>constitué défenseur des droits de l’abbaye <lb/>de
+                Corbie</head>
               <argument>
                 <p>Le pape Innocent III, informé par l’abbé de Corbie que l’évêque de Tournay veut soumettre à
                   sa juridiction l’église d’Huysse<note n="235_1"><p>Canton d’Eyne,
@@ -17969,7 +17971,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DIVISION DE LA VILLE DE COMPIÈGNE<lb/>EN TROIS PAROISSES</head>
+              <head>La division de la ville de Compiègne <lb/>en trois paroisses</head>
               <argument>
                 <p>Nivelon de Chérisy, évêque de Soissons, notifie l’accommodement qui vient d’avoir lieu entre
                   l’abbaye de Saint-Corneille et lui, au sujet de la division de la paroisse de
@@ -18053,7 +18055,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ESSARTEMENT DU BOIS DE RARAY PAR ROGER<lb/>DE VERBERIE</head>
+              <head>L’essartement du bois de Raray par Roger <lb/>de Verberie</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, au nom de son abbaye, donne à essarter à Roger de Verberie
                   et à ses héritiers le bois de Raray<note n="237_1"><p>Commune
@@ -18132,7 +18134,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DE CHEMINON</head>
+              <head>La dîme de Cheminon</head>
               <argument>
                 <p>Léon, doyen de l’église de Reims, fait savoir qu’Eudes de Sully, évêque de Paris, auquel le
                   Saint-Siège a confié le soin de régler un différend entre les bénédictins de Compiègne et les
@@ -18195,8 +18197,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACQUISITIONS DES RELIGIEUX PRÉMONTRÉS<lb/>DE PIEUMELLES<lb/>SUR LA SEIGNEURIE DE
-                SAINT-CORNEILLE À CANLY</head>
+              <head>Acquisitions des religieux prémontrés <lb/>de Pieumelles <lb/>sur la seigneurie de
+                Saint-Corneille à Canly</head>
               <argument>
                 <p>R., abbé de Valsery<note n="239_1"><p>Aisne.</p></note>, fait
                   savoir que l’abbaye de Saint-Corneille a ratifié toutes les acquisitions des religieux de
@@ -18272,7 +18274,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TERRES DE LA LÉPROSERIE DE SAINT-JUST<lb/>DON D’HUGUES DE PLAINVAL</head>
+              <head>Les terres de la léproserie de Saint-Just <lb/>don d’Hugues de Plainval</head>
               <argument>
                 <p>Philippe de Dreux, évêque de Beauvais, notifie qu’Hugues de Plainval, avec l’assentiment des
                   religieux de Saint-Corneille, a donné à la maladrerie de
@@ -18327,7 +18329,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TAILLES DE MESVILLERS, FAVEROLLES<lb/>ET PRONASTRE</head>
+              <head>Les tailles de Mesvillers, Faverolles <lb/>et Pronastre</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille et son chapitre, d’une part, et Rogues de la Tournelle,
                   avoué de Mesvillers,
@@ -18381,7 +18383,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DETTE DE SAINT-CORNEILLE ENVERS LES FILS<lb/>D’EUDES DE STAINS</head>
+              <head>La dette de Saint-Corneille envers les fils <lb/>d’Eudes de Stains</head>
               <argument>
                 <p>Hugues de Milan, abbé de Saint-Denis, notifie qu’Eugène, Pierre et Eudes, fils d’Eudes de
                   Stains<note n="242_1"><p>Seine.</p></note>, réclamaient en vain
@@ -18429,8 +18431,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE ET LA VICOMTÉ DE MESVILLERS,<lb/>FAVEROLLES ET LA VILLETTE-LÈS-ROLLOT<lb/>—
-                ROBERT DE LA TOURNELLE</head>
+              <head>L’avouerie et la vicomté de Mesvillers, <lb/>Faverolles et la Villette-lès-Rollot <lb/>—
+                Robert de la Tournelle</head>
               <argument>
                 <p>Robert, seigneur de la Tournelle, chevalier, et Marie, sa femme, en discussion avec le
                   monastère de Saint-Corneille, relativement à la justice de l’avouerie et de la vicomté qu’ils
@@ -18501,8 +18503,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’AVOUERIE ET LA VICOMTÉ DE MESVILLERS,<lb/>FAVEROLLES ET LA VILLETTE-LÈS-ROLLOT<lb/>—
-                L’ABBAYE DE SAINT-CORNEILLE ET ROBERT<lb/>DE LA TOURNELLE</head>
+              <head>L’avouerie et la vicomté de Mesvillers, <lb/>Faverolles et la Villette-lès-Rollot <lb/>—
+                l’abbaye de Saint-Corneille et Robert <lb/>de la Tournelle</head>
               <argument>
                 <p>L’abbé de Saint-Corneille et Robert de la Tournelle ont fait les conventions suivantes :</p>
                 <p>Tous les droits et toutes les amendes perçus sur le territoire des trois villages dont
@@ -18565,7 +18567,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COUR-LE-ROY — CHARTE DE L’ABBAYE</head>
+              <head>La cour-le-roy — charte de l’abbaye</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, notifie un accord fait en présence du roi, entre son
                   abbaye et la commune de Compiègne, au sujet d’une place <pb n="362" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f379/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>contiguë à
@@ -18628,7 +18630,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COUR-LE-ROY — CHARTE DE LA COMMUNE</head>
+              <head>La cour-le-roy — charte de la commune</head>
               <argument>
                 <p>Jean d’Estrées, maire, les jurés et la commune de Compiègne notifient l’accord fait, en
                   présence du roi, entre la ville et l’abbé de Saint-Corneille, au sujet des étaux et des
@@ -18685,7 +18687,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA COUR-LE-ROY — DIPLÔME ROYAL</head>
+              <head>La cour-le-roy — diplôme royal</head>
               <argument>
                 <p>Philippe-Auguste confirme l’arrangement conclu entre l’abbaye de Saint-Corneille et la
                   commune de Compiègne, au sujet des étaux et des boutiques de la Cour-le-Roy.</p>
@@ -18754,7 +18756,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS DE SAINTE-MARIE ENTRE BLINCOURT<lb/>ET OENCOURT</head>
+              <head>Le bois de Sainte-Marie entre Blincourt <lb/>et Oencourt</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, donne à essarter à Pierre de Pont, chevalier, et à ses
                   héritiers, un bois appartenant à son monastère, nommé le bois de Sainte-Marie, situé entre
@@ -18808,7 +18810,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PÂTURAGES USURPÉS PAR HUGUES D’ESTRÉELLES</head>
+              <head>Les pâturages usurpés par Hugues d’Estréelles</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, chargé par le souverain pontife des intérêts de l’abbaye de
                   Saint-Corneille, condamne Hugues
@@ -18872,7 +18874,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE MOULIN DE LA VIGNE À DAVENESCOURT</head>
+              <head>Le moulin de la vigne à Davenescourt</head>
               <argument>
                 <p>Thibaut d’Heilly, évêque d’Amiens, fait savoir que Richard, abbé de Saint-Corneille,
                   d’accord avec son chapitre, vient, à la demande d’Hélissende, mère de Florent-le-Jeune
@@ -18948,7 +18950,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS BATEIS À BRANDENCOURT</head>
+              <head>Les bois bateis à Brandencourt</head>
               <argument>
                 <p>Nicolas de Moreuil, chevalier, Aveline, sa femme, Bernard, fils de Nicolas, et Marguerite,
                   fille d’Aveline, notifient et approuvent divers arrangements conclus entre l’abbaye de
@@ -19021,7 +19023,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS DE GONDREMONT ET DE SABLUNIÈRES</head>
+              <head>Les bois de Gondremont et de Sablunières</head>
               <argument>
                 <p>Guillaume de Champagne, cardinal archevêque de Reims, notifie des conventions faites entre
                   Richard, abbé de Saint-Corneille, et Robert de Villers.</p>
@@ -19074,7 +19076,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES MAISONS DE BERTHE ET DE GAUTIER<lb/>LE PRÊTRE</head>
+              <head>Les maisons de Berthe et de Gautier <lb/>le prêtre</head>
               <argument>
                 <p>Arman, abbé de la Chaise-Dieu, fait la paix avec l’abbaye de Saint-Corneille, en renonçant
                   aux prétentions qu’il avait élevées, au nom du prieuré de Saint-Nicolas, dépendant de son
@@ -19118,7 +19120,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES OBLATIONS DE L’ÉGLISE SAINT-JACQUES<lb/>DE COMPIÈGNE</head>
+              <head>Les oblations de l’église Saint-Jacques <lb/>de Compiègne</head>
               <argument>
                 <p>Hugues doyen, H. archidiacre et P. chancelier de Paris, — délégués par lettres du pape
                   Innocent III, datées du palais de Latran, le 15 avril 1202, pour régler un différend entre le
@@ -19187,7 +19189,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES OBLATIONS DE L’ÉGLISE SAINT-ANTOINE<lb/>DE COMPIÈGNE</head>
+              <head>Les oblations de l’église Saint-Antoine <lb/>de Compiègne</head>
               <argument>
                 <p>Sur la demande d’Étienne de Nemours, évêque de Noyon, l’abbaye de Saint-Corneille abandonne
                   au clerc Laurent, nommé par elle curé de Saint-Antoine, les quatre cinquièmes du casuel de
@@ -19242,7 +19244,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE TRANSPORT DES VINS ET DES BLÉS DE L’ABBAYE</head>
+              <head>Le transport des vins et des blés de l’abbaye</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, règle ainsi les obligations des pêcheurs de Compiègne,
                   relativement au transport des vins et des blés de son monastère.</p>
@@ -19302,7 +19304,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES CHARROIS DUS PAR LES CHANOINES<lb/>DE VALFLEURY</head>
+              <head>Les charrois dus par les chanoines <lb/>de Valfleury</head>
               <argument>
                 <p>Baudouin, abbé d’Ourscamp, et Hervée, prieur de Sainte-Marguerite d’Élincourt, choisis comme
                   arbitres dans un différend relatif au droit de charriage que Richard, abbé de
@@ -19368,7 +19370,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS D’AGEUX ET LE BOIS DU PETIT-RARAY</head>
+              <head>Le bois d’Ageux et le bois du petit-Raray</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, notifie diverses conventions, faites entre son monastère,
                   d’une part, Hugues Révetel, Roger de Verberie et Renaud de Béthisy, d’autre part.</p>
@@ -19503,7 +19505,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>MARTIN FEUTRIER, BOURGEOIS DE REIMS,<lb/>HOMME DE L’ABBAYE DE SAINT-CORNEILLE</head>
+              <head>Martin Feutrier, bourgeois de Reims, <lb/>homme de l’abbaye de Saint-Corneille</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, chargé par le Saint-Siège de défendre les intérêts de
                   Saint-Corneille, notifie l’aveu qu’il vient d’arracher à Martin Feutrier, bourgeois de Reims.
@@ -19550,7 +19552,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ABBAYE DE SAINT-CORNEILLE DISPENSÉE DE<lb/>SE CONFORMER À L’INTERDIT GÉNÉRAL</head>
+              <head>L’abbaye de Saint-Corneille dispensée de <lb/>se conformer à l’interdit général</head>
               <argument>
                 <p>Le pape Innocent III autorise les religieux de Saint-Corneille, en cas d’interdit général, à
                   célébrer les divins offices, les portes de leur église fermées, sans sonnerie de cloches et
@@ -19596,7 +19598,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>L’ABBÉ DE SAINT-CORNEILLE AUTORISÉ À PORTER<lb/>LA MITRE ET LA CROSSE</head>
+              <head>L’abbé de Saint-Corneille autorisé à porter <lb/>la mitré et la crosse</head>
               <argument>
                 <p>Le pape Innocent III accorde à Richard, abbé de Saint-Corneille, l’usage personnel de la
                   mitre et de la crosse.</p>
@@ -19640,7 +19642,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE DE<lb/>JULIENNE DE BANCIGNY</head>
+              <head>Les bois d’Estraon — charte de <lb/>Julienne de Bancigny</head>
               <argument>
                 <p>Julienne, dame de Bancigny<note n="262_1"><p>Canton de Vervins,
                   Aisne.</p></note>, fait savoir qu’à la demande de Richard, abbé de Saint-Corneille, elle
@@ -19702,7 +19704,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE DE ROGER DE ROZOY,<lb/>FILS DE JULIENNE DE BANCIGNY</head>
+              <head>Les bois d’Estraon — charte de Roger de Rozoy, <lb/>fils de Julienne de Bancigny</head>
               <argument>
                 <p>Roger, seigneur de Rozoy<note n="263_1"><p>Rozoy-sur-Serre,
                   Aisne.</p></note>, fait savoir qu’il approuve l’abandon que sa mère Julienne et son frère
@@ -19751,7 +19753,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE DE NICOLAS,<lb/>FILS DE JULIENNE DE BANCIGNY</head>
+              <head>Les bois d’Estraon — charte de Nicolas, <lb/>fils de Julienne de Bancigny</head>
               <argument>
                 <p>Nicolas, frère de Roger de Rozoy, renonce au droit de garde et à tout autre droit qui lui
                   devait revenir sur les bois d’Estraon, du chef de sa mère, Julienne, dame de Bancigny, et
@@ -19807,7 +19809,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE D’ENGERAN<lb/>DE COUCY</head>
+              <head>Les bois d’Estraon — charte d’Engeran <lb/>de Coucy</head>
               <argument>
                 <p>Engeran de Coucy, comte du Perche, fait savoir qu’à la demande de Richard, abbé de
                   Saint-Corneille, il a résigné en faveur des religieux son droit de garde et tout autre droit
@@ -19868,7 +19870,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE DE THOMAS<lb/>DE VERVINS</head>
+              <head>Les bois d’Estraon — charte de Thomas <lb/>de Vervins</head>
               <argument>
                 <p>Thomas, seigneur de Vervins, approuve la cession qu’a faite à l’abbaye de Saint-Corneille,
                   son frère Engeran de Coucy, comte du Perche, de tous ses droits sur les bois d’Estraon et
@@ -19918,7 +19920,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS D’ESTRAON — CHARTE DE JEAN,<lb/>DOYEN DE VERVINS</head>
+              <head>Les bois d’Estraon — charte de Jean, <lb/>doyen de Vervins</head>
               <argument>
                 <p>Jean, doyen de Vervins, notifie que Julienne, dame de Bancigny, a vendu à Richard, abbé de
                   Saint-Corneille, tous les droits de douaire qu’elle pouvait avoir sur les bois d’Estraon et
@@ -19962,7 +19964,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES MOULINS DE VENETTE</head>
+              <head>Les moulins de Venette</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, cède à perpétuité à Renaud de Béthisy et à ses héritiers,
                   deux aires ou emplacements pour construire deux moulins contre l’orme de Venette, moyennant
@@ -20017,7 +20019,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>FRESNES</head>
+              <head>Fresnes</head>
               <argument>
                 <p>Étienne de Nemours, évêque de Noyon, fait savoir qu’en sa présence Eustache
                   d’Ablaincourt<note n="269_1"><p>Canton de Chaulnes,
@@ -20072,7 +20074,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME DU PETIT-RARAY PRÈS DU BOIS D’AGEUX</head>
+              <head>La dîme du petit-Raray près du bois d’Ageux</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, fait connaître comment s’est terminée la querelle suscitée à
                   l’abbaye de Saint-Corneille par Jean de Bez, à propos de la dîme des novales de Renaud de
@@ -20163,7 +20165,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT DE RIVAGE</head>
+              <head>Le droit de rivage</head>
               <argument>
                 <p>Le maire et les jurés de Compiègne notifient l’accord fait entre eux et l’abbaye de
                   Saint-Corneille, relativement au droit de rivage. Les religieux exigeaient ce droit de toutes
@@ -20227,7 +20229,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DROITS EXIGIBLES SUR LES TERRES DE L’ABBAYE</head>
+              <head>Droits exigibles sur les terres de l’abbaye</head>
               <argument>
                 <p><hi rend="i">Forage.</hi> Le tonneau de vin vendu en détail doit deux setiers de vin ; vendu
                   en gros, un setier.</p>
@@ -20313,7 +20315,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA GRANGE D’ATTIN — CHARTE DE PIERRE,<lb/>PRÉVÔT D’AMIENS</head>
+              <head>La grange d’Attin — charte de Pierre, <lb/>prévôt d’Amiens</head>
               <argument>
                 <p>Pierre, prévôt d’Amiens, fait savoir qu’en sa présence Arnoul, prévôt
                   d’Attin<note n="273_1"><p>Canton d’Etaples,
@@ -20384,7 +20386,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA GRANGE D’ATTIN — CHARTE DE RICHARD,<lb/>ÉVÊQUE D’AMIENS</head>
+              <head>La grange d’Attin — charte de Richard, <lb/>évêque d’Amiens</head>
               <argument>
                 <p>Richard de Gerberoy, évêque d’Amiens, notifie l’accord fait en sa présence et en celle du
                   prévôt d’Amiens, entre le prévôt d’Attin et l’abbaye de Saint-Corneille. C’est la répétition
@@ -20431,7 +20433,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE DROIT DE PAST EN LA GRANGE<lb/>DE VILLERS-LÈS-ROYE</head>
+              <head>Le droit de past en la grange <lb/>de Villers-lès-Roye</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, fait savoir comment s’est terminé un différend, survenu
                   entre son monastère et Jean, son maire de Villers-lès-Roye. Jean et sa femme prétendaient
@@ -20489,7 +20491,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES VINGT-HUIT SOUS DE CENS, DONNÉS<lb/>AU MOINE SIMON</head>
+              <head>Les vingt-huit sous de cens, donnés <lb/>au moine Simon</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, notifie que Roger de Verberie, chevalier, vassal du
                   monastère, d’accord avec ses enfants, laisse à son fils Simon, moine de Saint-Corneille, sa
@@ -20537,8 +20539,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>CONFIRMATION PAR LE PAPE INNOCENT III<lb/>DE LA DIVISION DE LA PAROISSE<lb/>DE
-                SAINT-GERMAIN EN TROIS PAROISSES</head>
+              <head>Confirmation par le pape Innocent III <lb/>de la division de la paroisse <lb/>de
+                Saint-Germain en trois paroisses</head>
               <argument>
                 <p>Le pape Innocent III confirme de son autorité apostolique l’accord fait en 1199, entre
                   l’abbé de Saint-Corneille et Nivelon, évêque de Soissons, au sujet de la division de la
@@ -20599,7 +20601,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA HALLE DE LA COMMUNE DE COMPIÈGNE</head>
+              <head>La halle de la commune de Compiègne</head>
               <argument>
                 <p>Le maire, Jean d’Estrées, et les jurés de Compiègne notifient l’accord fait entre eux et
                   l’abbaye de Saint-Corneille au sujet de la halle qu’ils viennent de faire construire. Ils
@@ -20664,7 +20666,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES MAISONS OCCUPÉES PAR EUDES, ROBERT<lb/>ET MAINARD, À COMPIÈGNE</head>
+              <head>Les maisons occupées par Eudes, Robert <lb/>et Mainard, à Compiègne</head>
               <argument>
                 <p>Étienne de Nemours, évêque de Noyon, Baudouin, abbé, et Raoul, prieur d’Ourscamp, règlent,
                   au nom du Saint-Siège, un différend entre l’abbaye de Saint-Corneille et trois frères,
@@ -20713,7 +20715,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES TROIS MUIDS DE BLÉ DE RENTE, DONNÉS<lb/>PAR HENRI DE GUYENCOURT</head>
+              <head>Les trois muids de blé de rente, donnés <lb/>par Henri de Guyencourt</head>
               <argument>
                 <p>Étienne de Nemours, évêque de Noyon, notifie que Marguerite de Guyencourt, veuve d’Henri,
                   ratifie la donation faite à Saint-Corneille par son mari défunt, dont la tombe est dans le
@@ -20763,7 +20765,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA DÎME D’ASSAINVILLERS</head>
+              <head>La dîme d’Assainvillers</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, fait savoir qu’il vient de remettre l’abbaye de Saint-Corneille
                   en possession de la dîme d’Assainvillers<note n="281_1"><p>Canton
@@ -20814,7 +20816,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES PROPRIÉTÉS DE SAINT-CORNEILLE À JAUX</head>
+              <head>Les propriétés de Saint-Corneille à Jaux</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, atteste qu’Aubert de Fayel, cité à comparaître devant lui, à la
                   demande des religieux de Saint-Corneille, pour se justifier de ses entreprises sur diverses
@@ -20864,7 +20866,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA PRÉVÔTÉ DE MARGNY</head>
+              <head>La prévôté de Margny</head>
               <argument>
                 <p>Philippe-Auguste baille à perpétuité aux maire et jurés de Compiègne tout ce qui lui
                   appartient à Margny en redevances, produits et droits de justice, <pb n="404" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f421/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>les
@@ -20960,7 +20962,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DE RAOUL DU PORT À COMPIÈGNE</head>
+              <head>La maison de Raoul du port à Compiègne</head>
               <argument>
                 <p>Raoul du Port, chevalier, a vendu aux Cisterciens d’Ourscamp une maison à Compiègne,
                   moyennant douze livres parisis, l’a résignée aux mains de Pierre de Raduez et de Gilbert,
@@ -21013,7 +21015,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE BOIS D’AGEUX ET LE BOIS DU PETIT-RARAY</head>
+              <head>Le bois d’Ageux et le bois du petit-Raray</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, renouvelle les conventions faites en 1203 (ch. CCLVIII)
                   avec Hugues Révetel, pour le Bois d’Ageux et pour le défrichement du Petit-Raray, sauf en ce
@@ -21052,7 +21054,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES AUNAIES DE MAREST</head>
+              <head>Les aunaies de Marest</head>
               <argument>
                 <p>Jean, seigneur de Coudun, après s’être opposé à ce que son parent et ami, R. archidiacre de
                   Soissons, vendît au nom de l’abbaye de Saint-Corneille, quelques aunaies à
@@ -21097,7 +21099,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>COMPROMIS ENTRE L’ABBAYE DE SAINT-CORNEILLE<lb/>ET LE CHAPITRE DE SOISSONS</head>
+              <head>Compromis entre l’abbaye de Saint-Corneille <lb/>et le chapitre de Soissons</head>
               <argument>
                 <p>Haimard évêque de Soissons, Simon prévôt, Guy doyen du chapitre de Soissons, d’une part, et
                   l’abbé de Saint-Corneille, d’autre part, en désaccord sur diverses questions d’intérêt,
@@ -21157,7 +21159,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAIRIE DE VENETTE</head>
+              <head>La mairie de Venette</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, notifie divers actes relatifs à la mairie de Venette.</p>
                 <p>Pendant de nombreuses années et contre tout droit, Claron de Venette a joui à Venette d’une
@@ -21238,7 +21240,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES LIBÉRALITÉS DE BARTHÉLEMY D’ATTIN</head>
+              <head>Les libéralités de Barthélemy d’Attin</head>
               <argument>
                 <p>Hugues, abbé de Longvillers<note n="289_1"><p>Canton d’Etaples,
                   Pas-de-Calais.</p></note>, met fin à un désaccord survenu entre l’abbaye de Saint-Corneille
@@ -21298,7 +21300,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CURE DE RUCOURT</head>
+              <head>La curé de Rucourt</head>
               <argument>
                 <p>Geoffroy, évêque de Senlis, chargé par le Souverain Pontife de défendre les intérêts de
                   l’abbaye de Saint-Corneille, oblige Claire de Fayel et ses fils à rendre au monastère la cure
@@ -21342,7 +21344,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOTTES DUES PAR L’ABBAYE D’IGNY</head>
+              <head>Les bottes dues par l’abbaye d’Igny</head>
               <argument>
                 <p>Nicolas, abbé d’Igny<note n="291_1"><p>Notre-Dame d’Igny, abbaye
                   cistercienne, près Arcis le-Ponsard, canton de Fismes, Marne.</p></note>, fait savoir que
@@ -21390,7 +21392,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS ET LES PRÉS DU BOIS D’AGEUX</head>
+              <head>Les bois et les prés du bois d’Ageux</head>
               <argument>
                 <p>Gilon de Verseilles, chevalier, et Renaud de Béthisy, baillis royaux, font savoir comment a
                   été réglé un différend entre l’abbaye de Saint-Corneille et les habitants de Verberie, au
@@ -21470,7 +21472,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE CENS DE GARNIER DE BIENVILLE</head>
+              <head>Le cens de Garnier de Bienville</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, fait savoir que Garnier de Bienville, chevalier, et Raoul
                   Gisars, son beau-frère, ont donné à son abbaye deux muids de terre arable qu’ils ont acquis
@@ -21519,7 +21521,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DONNÉE PAR HÉMERY DE LONGUEIL<lb/>À SAINT-CORNEILLE</head>
+              <head>La maison donnée par Hémery de Longueil <lb/>à Saint-Corneille</head>
               <argument>
                 <p>Laurent, doyen de la chrétienté de Coudun, fait savoir que Hémery de
                   Longueil<note n="294_1"><p>Canton d’Estrées-St-Denis,
@@ -21564,7 +21566,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON D’HÉMERY DE LONGUEIL ET LE DOUAIRE<lb/>DE SA FEMME SAINTISME.</head>
+              <head>La maison d’Hémery de Longueil et le douaire <lb/>de sa femme Saintisme.</head>
               <argument>
                 <p>Laurent, doyen de la chrétienté de Coudun, certifie qu’à la suite du don fait à l’abbaye de
                   Saint-Corneille, par Hémery de Longueil, d’une maison <pb n="417" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f434/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>sise à Compiègne
@@ -21606,7 +21608,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON D’IVES DE PONT À NOÉ-SAINT-REMY</head>
+              <head>La maison d’Ives de pont à Noé-Saint-Remy</head>
               <argument>
                 <p>Ives de Pont, comme il nous l’apprend lui-même, a vendu à l’abbé de Saint-Corneille, à
                   Noé-Saint-Remy<note n="296_1"><p>Roberval, canton de
@@ -21660,9 +21662,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRÉ D’AGATHE DE PIERREFONDS DEVANT LE PONT<lb/>DE COMPIÈGNE, DONNÉ À CENS À LA
-                COMMUNE<lb/>DE COMPIÈGNE PAR LE GRAND MAÎTRE DES TEMPLIERS<lb/>— CHARTE D’ANDRÉ DE
-                COULOURS</head>
+              <head>Le pré d’Agathe de Pierrefonds devant le pont <lb/>de Compiègne, donné à cens à la
+                commune <lb/>de Compiègne par le grand maître des Templiers <lb/>— charte d’André de
+                Coulours</head>
               <argument>
                 <p>André de Coulours, grand maître de la milice du Temple en France, donne à cens perpétuel au
                   maire et à la commune de Compiègne un pré devant le pont de Compiègne, que son ordre tenait
@@ -21719,8 +21721,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE PRÉ D’AGATHE DE PIERREFONDS DEVANT<lb/>LE PONT DE COMPIÈGNE, DONNÉ À CENS<lb/>À LA
-                COMMUNE DE COMPIÈGNE. — DIPLÔME<lb/>DE PHILIPPE-AUGUSTE</head>
+              <head>Le pré d’Agathe de Pierrefonds devant <lb/>le pont de Compiègne, donné à cens <lb/>à la
+                commune de Compiègne. — diplôme <lb/>de Philippe-Auguste</head>
               <argument>
                 <p>Philippe Auguste ratifie l’accensement d’un pré devant le pont de Compiègne, fait au maire
                   et à la commune de Compiègne, par les Templiers, moyennant vingt livres parisis de redevance
@@ -21778,8 +21780,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>COMMISSION D’ENQUÊTE NOMMÉE PAR LE PAPE<lb/>INNOCENT III, POUR RECHERCHER<lb/>LES DROITS ET
-                PRIVILÈGES DE SAINT-CORNEILLE<lb/>ET RECONSTITUER LES TITRES DÉTRUITS<lb/>DU MONASTÈRE</head>
+              <head>Commission d’enquête nommée par le pape <lb/>Innocent III, pour rechercher <lb/>les droits et
+                privilèges de Saint-Corneille <lb/>et reconstituer les titres détruits <lb/>du monastère</head>
               <argument>
                 <p>Le pape Innocent III charge Jean Britel, abbé de Saint-Pierre de Lagny, Adam, abbé de
                   Chaalis, et Robert, doyen de Senlis, de faire une enquête <pb n="421" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f438/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>sur les droits
@@ -21836,8 +21838,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES VENTES, LES CULTURES ET LES GARDES<lb/>MESSIERS DE MESVILLERS, FAVEROLLES<lb/>ET LA
-                VILLETTE-LES-ROLLOT</head>
+              <head>Les ventes, les cultures et les gardes <lb/>messiers de Mesvillers, Faverolles <lb/>et la
+                Villette-les-Rollot</head>
               <argument>
                 <p>Robert de la Tournelle, chevalier, se refusait à acquitter les droits de vente pour une de
                   ses terres, sur laquelle l’abbaye de Saint-Corneille percevait <pb n="422" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f439/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>la dîme et
@@ -21896,7 +21898,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PAYEMENT DE LA CRÉANCE DE GUILLAUME VACQUE<lb/>ET D’ODELINE SA FEMME.</head>
+              <head>Payement de la créance de Guillaume Vacque <lb/>et d’Odeline sa femme.</head>
               <argument>
                 <p>Guillaume Vacque avait traduit devant la cour d’Amiens Henri de Doulaincourt, chevalier, et
                   Raoul, maire de Roye<note n="301_1"><p>Somme.</p></note> pour
@@ -21960,7 +21962,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES FRANCHISES D’ORESMIEUX PRÈS<lb/>SAINT-JUST-EN-CHAUSSÉE.</head>
+              <head>Les franchises d’Oresmieux près <lb/>Saint-Just-en-chaussée.</head>
               <argument>
                 <p>L’abbé de Saint-Corneille et son chapitre, Jean, doyen de Beauvais, et son chapitre baillent
                   à cens aux habitants de Saint-Just une terre qu’ils possèdent près du bourg de
@@ -22019,8 +22021,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ENQUÊTE RELATIVE AUX DROITS ET JURIDICTION<lb/>DE L’ABBÉ DE SAINT-CORNEILLE<lb/>SUR LA
-                VILLE ET LES PAROISSES DE COMPIÈGNE</head>
+              <head>Enquête relative aux droits et juridiction <lb/>de l’abbé de Saint-Corneille <lb/>sur la
+                ville et les paroisses de Compiègne</head>
               <argument>
                 <p>Hugues, évêque d’Ostie et de Vellétri, Guala, cardinal prêtre du titre de saint Martin, et
                   Guy, cardinal diacre du titre de saint Nicolas, en la prison Tullienne, promulguent, au nom
@@ -22178,7 +22180,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON DES TEMPLIERS — LA SAISIE DE<lb/>LEUR VIN — LES DROITS RESTÉS À LEUR CHARGE</head>
+              <head>La maison des Templiers — la saisie de <lb/>leur vin — les droits restés à leur charge</head>
               <argument>
                 <p>Un long procès, intenté à André de Coulours, grand maître des Templiers en France, par
                   l’abbé de Saint-Corneille, s’est ainsi terminé à l’amiable.</p>
@@ -22253,8 +22255,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>PROCURATION DONNÉE À SIMON PAR LES<lb/>TEMPLIERS, POUR ALLER RECEVOIR LA VALEUR<lb/>DE LEUR
-                VIN SAISI</head>
+              <head>Procuration donnée à Simon par les <lb/>Templiers, pour aller recevoir la valeur <lb/>de leur
+                vin saisi</head>
               <argument>
                 <p>André de Coulours, grand maître de la milice du Temple en France, fait savoir à Richard,
                   abbé de Saint-Corneille, qu’il vient de constituer Simon son procureur, pour aller estimer
@@ -22303,7 +22305,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA TERRE DONNÉE À SAINT-CORNEILLE PAR<lb/>ENGERRAN L’EMPEREUR AU TERRITOIRE D’ERCHES</head>
+              <head>La terre donnée à Saint-Corneille par <lb/>Engerran l’empereur au territoire d’Erches</head>
               <argument>
                 <p>Engobrand Brandars, en querelle avec l’abbaye de Saint-Corneille, au sujet d’une terre que
                   son père Engerran l’Empereur avait donnée aux religieux, au territoire d’Erches, reconnaît
@@ -22353,8 +22355,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DROITS D’USAGE DES HABITANTS DE<lb/>RIVECOURT DANS LES PÂTURAGES DE LONGUEIL<lb/>CHARTE
-                DE PHILIPPE DE FAYEL</head>
+              <head>Les droits d’usage des habitants de <lb/>Rivecourt dans les pâturages de Longueil <lb/>charte
+                de Philippe de Fayel</head>
               <argument>
                 <p>Philippe de Fayel notifie le rétablissement de la paix, entre l’abbaye de Saint-Corneille et
                   les habitants de Rivecourt, au sujet des droits d’usage auxquels prétendaient ces derniers
@@ -22402,8 +22404,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES DROITS D’USAGE DES HABITANTS DE RIVECOURT<lb/>DANS LES PRAIRIES DE LONGUEIL —
-                CHARTE<lb/>DU PRÉVÔT ROYAL</head>
+              <head>Les droits d’usage des habitants de Rivecourt <lb/>dans les prairies de Longueil —
+                charte <lb/>du prévôt royal</head>
               <argument>
                 <p>Pierre Paumarz, prévot royal, notifie le rétablissement de la paix entre l’abbaye de
                   Saint-Corneille et les habitants de Rivecourt, au sujet des droits d’usage que ces derniers
@@ -22454,8 +22456,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>NOÉ-SAINT-MARTIN. — DROITS RESPECTIFS<lb/>DU BOUTEILLER DE SENLIS ET DE L’ABBAYE<lb/>DE
-                SAINT-CORNEILLE</head>
+              <head>Noé-Saint-Martin. — droits respectifs <lb/>du bouteiller de Senlis et de l’abbaye <lb/>de
+                Saint-Corneille</head>
               <argument>
                 <p>Un différend survenu entre Guy, bouteiller de Senlis, d’une part, l’abbaye de
                   Saint-Corneille et les habitants de Noé-Saint-Martin, d’autre part, s’est ainsi terminé à la
@@ -22528,7 +22530,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA SEIGNEURIE ET LA JUSTICE DE MAREST<lb/>ACCORD AVEC JEAN DE COUDUN</head>
+              <head>La seigneurie et la justice de Marest <lb/>accord avec Jean de Coudun</head>
               <argument>
                 <p>Aubert de Hangest et Richard Hédoul, chevaliers, choisis comme arbitres dans une
                   contestation entre les religieux de Saint-Corneille, d’une part, Jean de Coudun, chevalier,
@@ -22599,8 +22601,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA SEIGNEURIE ET LA JUSTICE DE MAREST<lb/>CONFIRMATION PAR LES BAILLIS ROYAUX
-                DE<lb/>L’ACCORD FAIT ENTRE SAINT-CORNEILLE<lb/>ET JEAN DE COUDUN</head>
+              <head>La seigneurie et la justice de Marest <lb/>confirmation par les baillis royaux
+                de <lb/>l’accord fait entre Saint-Corneille <lb/>et Jean de Coudun</head>
               <argument>
                 <p>Guillaume Pasté, Gilon de Verseilles et Renaud de Béthisy, chevaliers, baillis royaux,
                   confirment le jugement, prononcé au sujet de la haute justice de
@@ -22659,7 +22661,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA MAISON ET LE JARDIN DE SAINTE DE MAREUIL</head>
+              <head>La maison et le jardin de Sainte de Mareuil</head>
               <argument>
                 <p>R., prieur de Saint-Mard-lès-Roye, maître Abbas (?), et H. de Doullens, chanoine de Roye,
                   agissant au nom du souverain pontife, font savoir qu’une femme de Mareuil, nommée Sainte, en
@@ -22705,7 +22707,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ÉCHANGE DE SERVES ENTRE GAUTIER DE NANTEUIL<lb/>ET L’ABBAYE DE SAINT-CORNEILLE</head>
+              <head>Échange de serves entre Gautier de Nanteuil <lb/>et l’abbaye de Saint-Corneille</head>
               <argument>
                 <p>Gautier de Nanteuil-les-Meaux et Alice, sa femme, vraisemblablement à la suite d’un
                   formariage, donnent à l’abbaye de Saint-Corneille deux femmes qu’ils ont à
@@ -22745,7 +22747,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>DIVISION DE LA PAROISSE DE JAUX — CRÉATION<lb/>DE LA PAROISSE D’ARMANCOURT</head>
+              <head>Division de la paroisse de Jaux — création <lb/>de la paroisse d’Armancourt</head>
               <argument>
                 <p>Philippe de Dreux, évêque de Beauvais, d’accord avec l’abbaye de Saint-Corneille et Jean du
                   Mont, curé de Jaux<note n="314_1"><p>Canton de Compiègne,
@@ -22794,8 +22796,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCENSEMENT À LA COMMUNE DE COMPIÈGNE<lb/>DE TOUT CE QUE LES BÉNÉDICTINES<lb/>DE MONTMARTRE
-                AVAIENT À COMPIÈGNE<lb/>CHARTE DE L’ABBESSE</head>
+              <head>Accensement à la commune de Compiègne <lb/>de tout ce que les bénédictines <lb/>de Montmartre
+                avaient à Compiègne <lb/>charte de l’abbesse</head>
               <argument>
                 <p>Hélisende, abbesse de Montmartre, cède à la commune de Compiègne tout ce que son monastère
                   possédait, tant à Compiègne qu’au dehors, entre la forêt et l’Oise, avec toute la justice et
@@ -22845,8 +22847,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>ACCENSEMENT À LA COMMUNE DE COMPIÈGNE<lb/>DE LA TERRE DES BÉNÉDICTINES DE<lb/>MONTMARTRE À
-                COMPIÈGNE — RECONNAISSANCE<lb/>DU MAIRE DE COMPIÈGNE</head>
+              <head>Accensement à la commune de Compiègne <lb/>de la terre des bénédictines de <lb/>Montmartre à
+                Compiègne — reconnaissance <lb/>du maire de Compiègne</head>
               <argument>
                 <p>Gilles, maire de Compiègne, et tous les jurés de la commune reconnaissent devoir aux
                   bénédictines de Montmartre dix livres parisis de cens annuel et perpétuel, payable à
@@ -22886,7 +22888,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES REDEVANCES À PAYER PAR JEAN,<lb/>MAIRE DE VILLERS</head>
+              <head>Les redevances à payer par Jean, <lb/>maire de Villers</head>
               <argument>
                 <p>Guillaume, chanoine de Beauvais, Mennessier de Mello, chevalier, son frère, Simon de
                   Dargies, chevalier, et Elisabeth, fille de Renaud de Mello, <pb n="444" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/f461/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k58296915/manifest.json"/>en désaccord
@@ -22961,8 +22963,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>NOUVEAU COMPROMIS RELATIF AUX DIFFÉRENDS<lb/>ENTRE L’ÉVÊQUE DE SOISSONS<lb/>ET L’ABBÉ DE
-                SAINT-CORNEILLE.</head>
+              <head>Nouveau compromis relatif aux différends <lb/>entre l’évêque de Soissons <lb/>et l’abbé de
+                Saint-Corneille.</head>
               <argument>
                 <p>Aubry Humbert de Hautvillers, archevêque de Reims, et Evrard, évêque d’Amiens, font savoir
                   que le procureur de l’évêque de Soissons, celui des curés et chapelains de Compiègne et celui
@@ -23069,8 +23071,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE RESPECT DU AUX SENTENCES D’EXCOMMUNICATION<lb/>ET D’INTERDIT, PRONONCÉES<lb/>PAR L’ABBÉ
-                DE SAINT-CORNEILLE — AVIS<lb/>AU CLERGÉ DE COMPIÈGNE</head>
+              <head>Le respect du aux sentences d’excommunication <lb/>et d’interdit, prononcées <lb/>par l’abbé
+                de Saint-Corneille — avis <lb/>au clergé de Compiègne</head>
               <argument>
                 <p>Le pape Innocent III rappelle aux curés, prêtres et clercs de Compiègne, que le Saint-Siège
                   a donné à l’abbaye de Saint-Corneille et à son monastère le pouvoir d’user des censures
@@ -23139,9 +23141,9 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LE RESPECT DU AUX SENTENCES D’EXCOMMUNICATION<lb/>ET D’INTERDIT,
-                PRONONCÉES PAR<lb/>L’ABBÉ DE SAINT-CORNEILLE — MANDEMENT<lb/>À L’ABBÉ DE SAINT-ÉLOI,<lb/>À
-                L’ARCHIDIACRE ET AU CHANTRE DE NOYON</head>
+              <head>Le respect du aux sentences d’excommunication <lb/>et d’interdit,
+                prononcées par <lb/>l’abbé de Saint-Corneille — mandement <lb/>à l’abbé de Saint-Éloi, <lb/>à
+                l’archidiacre et au chantre de Noyon</head>
               <argument>
                 <p>Le pape Innocent III mande à l’abbé de Saint-Éloi de Noyon, à l’archidiacre et au chantre de
                   Noyon de contraindre le clergé de Compiègne à respecter les sentences d’excommunication et
@@ -23186,8 +23188,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>RATIFICATION PAR LE PRÉVÔT ET LE DOYEN<lb/>DE SOISSONS DU COMPROMIS FAIT<lb/>PAR LE
-                PROCUREUR DE L’ÉVÊQUE DE SOISSONS<lb/>ET CELUI DE L’ABBÉ DE SAINT-CORNEILLE</head>
+              <head>Ratification par le prévôt et le doyen <lb/>de Soissons du compromis fait <lb/>par le
+                procureur de l’évêque de Soissons <lb/>et celui de l’abbé de Saint-Corneille</head>
               <argument>
                 <p>Simon d’Epineuses, prévôt, et Guy de Chésy, doyen de Soissons, font savoir qu’ils approuvent
                   le compromis fait en cour de Rome par le procureur d’Haimard évêque de Soissons et celui du
@@ -23228,7 +23230,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CHAPELLE DU ROI À COMPIÈGNE</head>
+              <head>La chapelle du roi à Compiègne</head>
               <argument>
                 <p>Philippe Auguste donne au chapelain de sa chapelle de Compiègne, pour le luminaire en cire
                   et huile de cette chapelle, une rente annuelle de quarante sous à prendre à la Saint-Remy sur
@@ -23276,8 +23278,8 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LA CESSATION DES OFFICES À SAINT-CLÉMENT<lb/>L’EXCOMMUNICATION<lb/>DES SPOLIATEURS DE LA
-                COLLÉGIALE</head>
+              <head>La cessation des offices à Saint-Clément <lb/>l’excommunication <lb/>des spoliateurs de la
+                collégiale</head>
               <argument>
                 <p>H., doyen de Saint-Clément de Compiègne, déclare que si l’évêque de Soissons vient à
                   interdire les offices dans la ville, son église en cessera la célébration, comme les églises
@@ -23330,7 +23332,7 @@
               <index>
                 <term type="nature" key="act"/>
               </index>
-              <head>LES BOIS DE SOYERMON À ROYE-SUR-MATZ</head>
+              <head>Les bois de Soyermon à Roye-sur-Matz</head>
               <argument>
                 <p>Richard, abbé de Saint-Corneille, accédant aux désirs des habitants de Roye-sur-Matz, leur
                   confie la garde des bois de Soyermon aux conditions suivantes.</p>
