@@ -4,15 +4,29 @@
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:dts="https://w3id.org/dts/api#"
-  exclude-result-prefixes="tei dts"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:edt="urn:cartu-edition"
+  xmlns:cartu="urn:cartu"
+  exclude-result-prefixes="tei dts xs edt cartu"
 >
-  <xsl:import href="../hteiml/xsl/tei2html.xsl"/>
+  <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
+  <!-- 2026-10-08 : modules par chantier (un fichier par chantier, travaux en parallèle) -->
+  <xsl:include href="cartulaires-ordinaux.xsl"/>
+  <xsl:include href="cartulaires-edition.xsl"/>
+  <xsl:include href="garde.xsl"/><!-- 2026-10-08 : garde commune à tous les projets (remplace cartulaires-garde.xsl) -->
+  <xsl:include href="cartulaires-tableaux.xsl"/>
+  <xsl:include href="bibliographie.xsl"/><!-- 2026-10-08 : bibliographie commune à tous les projets -->
+  <xsl:include href="cartulaires-biblio.xsl"/>
   <!-- 2026-09-21 : identifiant de la ressource servie. dots/webapp/restxq/routes.xqm l. 273 le
        passe deja a la feuille : xslt:transform($result, doc($style),
        map {"static_path": $G:static_path, "resource": $resource}). Sans declaration, XSLT
        l'ignore silencieusement. Il sert a fabriquer les liens du tableau des actes vers la page
        de chaque acte (voir cartulaires-acte-href). -->
   <xsl:param name="resource" select="''"/>
+  <!-- 2026-10-02 : début des liens internes. Le front dev est monté sous /elec/ : sans ce
+       préfixe, les renvois de l'index et les liens vers les actes sortaient de l'application.
+       La copie servie en local (dots-clean) remplace cette valeur par '/cartulaires/document/'. -->
+  <xsl:variable name="document-base" select="'/elec/cartulaires/document/'"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
   <!-- Diple relativement à ici pour CSS et js par défaut
   <xsl:param name="dipleHref">
@@ -20,6 +34,458 @@
     <xsl:text>../../diple/</xsl:text>
   </xsl:param>
   -->
+  <!-- 2026-10-06 : index, description de l'entrée repliée. La ligne garde la vedette et les
+       numéros d'actes ; la description (identification du lieu, de la personne) s'ouvre par
+       une pastille « + » en fin de ligne, comme les occurrences du glossaire de Montferrand.
+       Le contenu reste rendu par hteiml (apply-imports : div.desc).
+       Servie en excludeFragments=true (forme demandée par le front), la page de lettre perd
+       son <list> : les <item> sont alors enfants directs du dts:wrapper. -->
+  <xsl:template match="tei:item[parent::tei:list[@type = 'index'] or parent::*[local-name() = 'wrapper']]/tei:desc" priority="20">
+    <!-- 2026-10-07 : plus de pastille « + » (« overkill ») : la description s'affiche directement,
+         à sa place, sous la ligne de l'entrée. -->
+    <div class="cartu-desc"><xsl:apply-imports/></div>
+  </xsl:template>
+  <!-- 2026-10-06 : index, changements de page (pb, vignette Gallica) tombant DANS une
+       entrée (après un numéro d'acte, dans la description) : la vignette sortait au milieu
+       de la ligne, ou disparaissait avec la description repliée. Tous les pb de l'entrée
+       sont remontés en tête (CSS : une ligne à eux, au-dessus du mot) ; le blanc qu'ils
+       laissaient avant la ponctuation (« 363 . ») est retiré. -->
+  <!-- 2026-10-06 : toute entrée d'index (et toute sous-entrée d'une sous-liste « - », « o », « 1 »)
+       passe par ce modèle : repères de page en tête (ci-dessous), puis le contenu. -->
+  <xsl:template match="tei:item[parent::tei:list[@type = 'index'] or parent::*[local-name() = 'wrapper'] or parent::tei:list[@type = ('-', 'o', '1')][ancestor::tei:item]]" priority="20" version="3.0">
+    <li>
+      <xsl:call-template name="atts"/>
+      <!-- 2026-10-06 : saut de page posé ENTRE deux entrées (SMPA-AB-02 : </item><pb/><item>) :
+           il sortait en vignette au milieu de la liste, un trou de 53 px et un retour à la
+           ligne. Il est rattaché à l'entrée qui suit, comme ceux qui sont dedans. -->
+      <xsl:variable name="pb-avant" select="preceding-sibling::tei:pb[following-sibling::tei:item[1] is current()]"/>
+      <xsl:apply-templates select="$pb-avant | .//tei:pb">
+        <xsl:with-param name="pb-en-tete" tunnel="yes" select="true()"/>
+      </xsl:apply-templates>
+      <!-- 2026-10-06 : repères de page sans image Gallica (fac-similé local ou absent :
+           SMPA-AB, HDPAR, SAPC, SCOR, SSCO, SLES, 513 entrées). Ils sortaient en
+           « {p. 823} » collé devant le mot, parfois en série (« {p. 614}{p. 615}…{p. 622} »).
+           Une seule étiquette discrète, placée dans la marge par la CSS : « p. 823 »,
+           « p. 614–622 ». -->
+      <!-- Vignettes : Gallica seulement (DoTS-vue n'en fait que pour Gallica ; les images
+           d'archive.org de HDPAR-HD restaient en « {p. 570} »). Ailleurs, l'étiquette mène à
+           l'image du premier repère quand il en a une (adresse http). -->
+      <xsl:variable name="pbs" select="($pb-avant | .//tei:pb)[not(contains(@facs, 'gallica.bnf.fr'))][normalize-space(@n)]"/>
+      <xsl:variable name="pages" select="$pbs/normalize-space(@n)"/>
+      <xsl:if test="exists($pages)">
+        <xsl:variable name="etiquette" select="concat('p.&#160;', $pages[1], if (count($pages) > 1) then concat('–', $pages[last()]) else '')"/>
+        <xsl:choose>
+          <xsl:when test="starts-with($pbs[1]/@facs, 'http')">
+            <a class="cartu-pb-marge" href="{$pbs[1]/@facs}" target="_blank" rel="noopener" title="Page de l’index imprimé">
+              <xsl:value-of select="$etiquette"/>
+            </a>
+          </xsl:when>
+          <xsl:otherwise><span class="cartu-pb-marge"><xsl:value-of select="$etiquette"/></span></xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </li>
+  </xsl:template>
+  <!-- 2026-10-08 : ressources dont l'index tient sur une seule page, lettres repliables (seuil :
+       jusqu'à SLES-PR, 1 341 entrées). Les entrées restent des lignes, numéros d'actes visibles
+       (fiches par entrée essayées puis retirées : « pas besoin de devoir déplier »). -->
+  <xsl:variable name="cartu-fiches" select="('SCHA-PR', 'SLES-PR', 'SGGO-PR', 'SSCO-AB', 'NDMA-AB', 'STEP-AB', 'NDRC-AB', 'NDPR-AB', 'NDMT-AB')"/>
+  <!-- renvois « voir » : ressources dont les lettres sont des unités citables sous UNE unité
+       index-complet, et cette unité (même ordre). Ailleurs le renvoi garde sa cible : soit la page
+       est déjà entière (STEP, NDRC, NDPR, NDMT), soit le front redirige la lettre vers sa page
+       d'index (SGGO, deux index). -->
+  <xsl:variable name="cartu-renvoi-res" select="('SCHA-PR', 'SLES-PR', 'SSCO-AB', 'NDMA-AB')"/>
+  <xsl:variable name="cartu-index-unite" select="('SCHA-PR_index', 'SLES-PR_back-2', 'SSCO-AB_back', 'NDMA-AB_back-2')"/>
+  <!-- 2026-10-08 : page d'index sur le modèle de Delescluze (index-personnes) : tout l'index sur
+       une seule adresse, chaque lettre repliable avec son nombre d'entrées, les entrées dedans. -->
+  <xsl:template match="tei:list[@type = 'index'][tei:head][not(ancestor::tei:item)][$resource = $cartu-fiches]" priority="21" version="3.0">
+    <details class="cartu-lettre">
+      <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
+      <summary>
+        <h2 class="cartu-lettre-titre">
+          <xsl:value-of select="normalize-space(string-join(tei:head[1]//text(), ''))"/>
+          <span class="cartu-lettre-nb"><xsl:value-of select="concat(' (', count(tei:item), ')')"/></span>
+        </h2>
+      </summary>
+      <ul class="cartu-lettre-entrees">
+        <xsl:apply-templates select="node() except tei:head"/>
+      </ul>
+    </details>
+  </xsl:template>
+  <xsl:template match="tei:item//tei:pb | tei:pb[following-sibling::tei:item][parent::tei:list[@type = 'index'] or parent::*[local-name() = 'wrapper']]" priority="30" version="3.0">
+    <xsl:param name="pb-en-tete" tunnel="yes" select="false()"/>
+    <xsl:if test="$pb-en-tete and contains(@facs, 'gallica.bnf.fr')"><xsl:next-match/></xsl:if>
+  </xsl:template>
+
+  <!-- 2026-10-06 : index, typographie française. Espace insécable avant ; : ? ! (le texte
+       de l'index imprimé, converti, n'en a pas : « Campus-Faunus; Campus-Folii »).
+       À l'affichage seulement ; le TEI n'est pas touché. -->
+  <xsl:template match="tei:item[parent::tei:list[@type = 'index'] or parent::*[local-name() = 'wrapper']]//text()" priority="25">
+    <!-- Blanc final ôté quand le texte suivant (par-delà les commentaires de la conversion)
+         commence par une ponctuation : « Jehan Berte <!-\- doublon -\-> ; » donnait « Berte  ; ». -->
+    <!-- Le texte suivant, dans l'ordre du document et dans la même entrée : le blanc peut être
+         au bout d'un élément (« <hi>Abbaye du Loir </hi>; »). -->
+    <xsl:variable name="entree" select="ancestor::tei:item[1]"/>
+    <xsl:variable name="suivi" select="exists((following::text()[normalize-space()])[1][ancestor::tei:item[1] is $entree][matches(., '^\s*[;:,.]')])"/>
+    <xsl:if test="not($suivi and normalize-space(.) = '')">
+      <xsl:call-template name="cartu-insecables"><xsl:with-param name="t" select="if ($suivi) then replace(., '\s+$', '') else string(.)"/></xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+  <!-- 2026-10-06 : <x> est un reste de la conversion, étranger au TEI (98 dans SMPA-AB-03, dans les
+       actes comme dans l'index) : le HTEIML, qui ne le connaît pas, l'affichait avec ses balises
+       (« <x>voir</x> », « Brice (De Ployart<x>)</x> »). Le contenu compte, la balise non. -->
+  <xsl:template match="tei:x" priority="10"><xsl:apply-templates/></xsl:template>
+
+  <!-- 2026-10-06 : « note N » et « n. dors. » de l'index (SMPA-AB-03 : 2 494 et 392 renvois).
+       Le livre numérote ses notes PAR PAGE, tous actes confondus : « 278, note 3 », c'est la
+       3e note chiffrée de la page 625, que le TEI appelle 278_7 et que l'acte affiche « 7 »
+       (numérotation suivie, voir note-n). « n. dors. » : la mention portée au dos de l'acte,
+       paragraphes « Au dos, d'une main… » (ancre cartu-dos, plus bas).
+       - L'acte : le renvoi (ref) qui précède, ou, s'il n'y en a pas, celui que la conversion a mis
+         en commentaire (« doublon meme acte »).
+       - La page : le @n « acte-page » du renvoi ou de son commentaire (« 278-625 »). Si elle
+         manque ou ne colle pas, la seule page de l'acte où la note N est bien dans cet acte.
+       - Sinon (ambigu, ou aucun acte) : le texte reste tel quel.
+       Un seul lien : « 278, note 7 » mène à la note (le numéro d'acte seul n'apprend rien de
+       plus) ; la précision qui suit le même renvoi (« note 3, note 1 ») a son propre lien.
+       L'index ne voit pas les actes : on lit le cartulaire entier, comme Montferrand
+       (montferrand.xml) — posé à côté de la feuille une fois déployé, ../data/ dans le dépôt.
+       Pas l'API : interblocage (voir comptes.xsl). -->
+  <xsl:variable name="cartu-tome" version="3.0"
+    select="if ($resource = '') then () else document((for $u in (concat($resource, '.xml'),
+              concat('../data/', replace($resource, '-\d+$', ''), '/', $resource, '.xml'),
+              concat('../data/', $resource, '.xml'))
+            return resolve-uri($u, static-base-uri()))[doc-available(.)][1])"/>
+  <!-- notes chiffrées (« acte_N ») par page imprimée, dans l'ordre du livre -->
+  <xsl:key name="cartu-note-page" version="3.0"
+    match="tei:note[matches(normalize-space(@n), '^[^_\s]+_\d+$')]"
+    use="string(preceding::tei:pb[1]/@n)"/>
+
+  <!-- précision de l'index : « note N » ou « n. dors. » -->
+  <xsl:function name="cartu:precision" as="xs:boolean" version="3.0"
+    xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="e" as="node()?"/>
+    <xsl:sequence select="exists($e[self::tei:hi[@rend = 'i'][matches(normalize-space(.), '^(note\s+\d+|n\.\s*dors\.)$')][ancestor::tei:item]])"/>
+  </xsl:function>
+
+  <!-- l'élément visé dans le tome (tei:note, ou tei:p « Au dos ») et son acte -->
+  <xsl:function name="cartu:cible" as="element()*" version="3.0"
+    xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="hi" as="element()"/>
+    <xsl:variable name="borne" select="$hi/preceding-sibling::*[not(cartu:precision(.))][1]"/>
+    <xsl:variable name="ref" select="$borne[self::tei:ref[@target]]"/>
+    <!-- commentaires entre la borne et la précision, le plus proche d'abord ; leurs <ref …> -->
+    <xsl:variable name="refs-com" as="xs:string*"
+      select="for $c in reverse($hi/preceding-sibling::comment()[empty($borne) or . &gt;&gt; $borne])
+              return (for $r in tokenize(string($c), '&lt;ref ')[position() gt 1]
+                      return substring-before(concat($r, '&gt;'), '&gt;'))"/>
+    <xsl:variable name="cible-com" select="($refs-com[contains(., 'target=&quot;#')][matches(., 'n=&quot;')]
+        [empty($ref) or contains(., concat('target=&quot;', $ref/@target, '&quot;'))])[1]"/>
+    <!-- 2026-10-07 : l'acte vient d'un VRAI renvoi, jamais d'un commentaire « doublon » (le
+         renvoi mis en commentaire peut désigner le mauvais acte : 13 cas prouvés, D1). Les
+         commentaires ne servent plus qu'à lire la page imprimée du même acte. -->
+    <xsl:variable name="acte" select="if ($ref) then substring-after($ref/@target, '#') else ''"/>
+    <xsl:variable name="n-ref" select="if (matches($ref/@n, '^\d+-\S+$')) then string($ref/@n)
+        else replace($cible-com, '^.*n=&quot;([^&quot;]+)&quot;.*$', '$1', 's')"/>
+    <xsl:variable name="page" select="if (contains($n-ref, '-')) then substring-after($n-ref, '-') else ''"/>
+    <xsl:variable name="texte-acte" select="if (exists($cartu-tome) and $acte != '') then id($acte, $cartu-tome) else ()"/>
+    <xsl:variable name="brut" as="element()*">
+    <xsl:choose>
+      <xsl:when test="empty($texte-acte)"/>
+      <xsl:when test="starts-with(normalize-space($hi), 'n.')">
+        <xsl:sequence select="($texte-acte//tei:p[starts-with(normalize-space(tei:hi[1]), 'Au dos')])[1]"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="n" select="xs:integer(replace(normalize-space($hi), '\D', ''))"/>
+        <xsl:variable name="sur-la-page" select="key('cartu-note-page', $page, $cartu-tome)[$n]"/>
+        <xsl:choose>
+          <xsl:when test="$page != '' and $sur-la-page/ancestor::tei:text[@xml:id][1]/@xml:id = $acte">
+            <xsl:sequence select="$sur-la-page"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="dans-l-acte" select="$texte-acte//tei:note[matches(normalize-space(@n), '^[^_\s]+_\d+$')]"/>
+            <xsl:variable name="candidates" select="for $p in distinct-values($dans-l-acte/string(preceding::tei:pb[1]/@n))
+                return key('cartu-note-page', $p, $cartu-tome)[$n][ancestor::tei:text[@xml:id][1]/@xml:id = $acte]"/>
+            <xsl:sequence select="if (count($candidates) = 1) then $candidates else ()"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+    </xsl:variable>
+    <!-- 2026-10-07 : on ne lie que si la cible nomme l'entrée (un nom de la vedette ou de la
+         sous-entrée qui porte la précision) ; sinon pas de lien vers la note : le numéro d'acte
+         garde son lien vers l'acte, « note N » reste du texte, comme dans le livre. Sur SMPA-AB-03,
+         ~150 liens sur ~1 900 visaient une note qui ne nomme pas l'entrée. -->
+    <xsl:sequence select="$brut[cartu:nomme(., $hi)]"/>
+  </xsl:function>
+
+  <!-- texte aplati : minuscules, sans accents, apostrophes en blancs -->
+  <xsl:function name="cartu:plat" as="xs:string" version="3.0"
+    xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="s" as="xs:string?"/>
+    <xsl:sequence select="replace(replace(normalize-unicode(lower-case(string($s)), 'NFD'), '\p{Mn}', ''), '[’'']', ' ')"/>
+  </xsl:function>
+  <!-- la cible (note, ou mention au dos et ses paragraphes suivants) nomme-t-elle l'entrée ?
+       Noms = mots à majuscule de 4 lettres et plus de la vedette et de la sous-entrée, comparés
+       sur leurs 5 premières lettres (graphies : Jehanne / Jeanne). -->
+  <xsl:function name="cartu:nomme" as="xs:boolean" version="3.0"
+    xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="c" as="element()"/>
+    <xsl:param name="hi" as="element()"/>
+    <xsl:variable name="item" select="$hi/ancestor::tei:item[1]"/>
+    <xsl:variable name="vedette" select="string(($item/tei:rs, $item/node())[1])"/>
+    <xsl:variable name="avant" select="string-join($hi/preceding-sibling::node()[not(self::comment())] ! string(.), '')"/>
+    <xsl:variable name="sous" select="tokenize($avant, ';[\s&#160;]*—')[last()]"/>
+    <xsl:variable name="vides" select="('saint', 'sainte', 'notre', 'paris', 'eglise', 'famille', 'voir', 'note', 'femme', 'veuve', 'fille', 'frere')"/>
+    <xsl:variable name="mots" select="distinct-values(
+        for $w in tokenize(concat($vedette, ' ', $sous), '[^\p{L}]+')[matches(., '^\p{Lu}')][string-length(.) ge 4]
+        return substring(cartu:plat($w), 1, 5))[not(. = $vides)]"/>
+    <xsl:variable name="texte" select="cartu:plat(string-join(($c, $c[self::tei:p]/following-sibling::tei:p) ! string(.), ' '))"/>
+    <xsl:sequence select="some $m in $mots satisfies matches($texte, concat('(^|[^\p{L}])', $m))"/>
+  </xsl:function>
+
+  <!-- la précision qui suit immédiatement un renvoi visible (« 278, note 3 ») et qui se
+       résout : le renvoi et elle ne font plus qu'un lien -->
+  <xsl:function name="cartu:fondue" as="xs:boolean" version="3.0"
+    xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="hi" as="element()?"/>
+    <xsl:sequence select="cartu:precision($hi)
+      and exists($hi/preceding-sibling::*[1][self::tei:ref[@target]])
+      and (every $t in $hi/preceding-sibling::text()[. &gt;&gt; $hi/preceding-sibling::*[1]] satisfies matches($t, '^[\s,]*$'))
+      and exists(cartu:cible($hi))"/>
+  </xsl:function>
+
+  <xsl:template name="cartu-lien-precision" version="3.0" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu">
+    <xsl:param name="hi" as="element()"/>
+    <xsl:param name="numero" as="item()*"/>
+    <xsl:variable name="c" select="cartu:cible($hi)"/>
+    <xsl:variable name="texte-acte" select="$c/ancestor::tei:text[@xml:id][1]"/>
+    <xsl:variable name="dos" select="exists($c/self::tei:p)"/>
+    <xsl:variable name="numero-en-ligne"><xsl:for-each select="$c[self::tei:note]"><xsl:call-template name="note-n"/></xsl:for-each></xsl:variable>
+    <a class="cartu-renvoi{if ($dos) then ' cartu-renvoi-dos' else ' cartu-renvoi-note'}"
+       href="{concat($document-base, $resource, '?refId=', $texte-acte/@xml:id, '#',
+              if ($dos) then 'au-dos' else concat('note', normalize-space($c/@n)))}"
+       title="{if ($dos) then concat('Acte ', $texte-acte/@n, ' : note dorsale (mention au dos de l’acte)')
+               else concat('Acte ', $texte-acte/@n, ' — dans le livre : page ', $c/preceding::tei:pb[1]/@n, ', note ',
+                 replace(normalize-space($hi), '\D', ''), ' (notes numérotées par page) ; ici : note ', $numero-en-ligne)}">
+      <xsl:if test="exists($numero)">
+        <span class="cartu-renvoi-acte"><xsl:sequence select="$numero"/></span>
+        <xsl:text> </xsl:text>
+      </xsl:if>
+      <span class="cartu-renvoi-precision">
+        <xsl:choose>
+          <xsl:when test="$dos"><xsl:value-of select="normalize-space($hi)"/></xsl:when>
+          <xsl:otherwise>
+            <xsl:text>note&#160;</xsl:text>
+            <xsl:value-of select="$numero-en-ligne"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </span>
+    </a>
+  </xsl:template>
+
+  <!-- renvoi suivi de sa précision : un seul lien -->
+  <xsl:template match="tei:ref[@target][ancestor::tei:item][cartu:fondue(following-sibling::*[1])]"
+    priority="30" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:call-template name="cartu-lien-precision">
+      <xsl:with-param name="hi" select="following-sibling::*[1]"/>
+      <xsl:with-param name="numero"><xsl:apply-templates/></xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
+  <!-- la virgule entre les deux disparaît avec eux -->
+  <xsl:template match="text()[ancestor::tei:item][matches(., '^[\s,]*$')][preceding-sibling::*[1][self::tei:ref[@target]]][cartu:fondue(following-sibling::*[1])]"
+    priority="30" version="3.0" xmlns:cartu="urn:cartu"/>
+  <xsl:template match="tei:hi[cartu:precision(.)]" priority="26" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:choose>
+      <xsl:when test="cartu:fondue(.)"/>
+      <xsl:when test="exists(cartu:cible(.))">
+        <!-- sans renvoi visible devant (il n'existe qu'en commentaire, « doublon meme acte »),
+             le lien porte le numéro de l'acte : « au dos » seul ne dirait pas où il mène -->
+        <xsl:call-template name="cartu-lien-precision">
+          <xsl:with-param name="hi" select="."/>
+          <xsl:with-param name="numero" select="if (preceding-sibling::*[not(cartu:precision(.))][1][self::tei:ref[@target]]) then ()
+              else string(cartu:cible(.)[1]/ancestor::tei:text[@xml:id][1]/@n)"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- 2026-10-06 : renvois internes des notes d'actes (Saint-Magloire) : « voir plus haut, n° 153,
+       p. 348, n. 6 », « n° 230, p. 509 ». Texte brut dans le TEI. Lien vers la note (la Z-ième
+       note chiffrée de la page Y, comme pour l'index) ou, sans « n. Z » ou si la note ne se
+       retrouve pas, vers l'acte. Un renvoi n'est lié que si l'acte X de CE tome couvre la page Y :
+       les références bibliographiques (« Tuetey, n° 90, p. 6 », « op. cit., t. 2, n° 304,
+       p. 444 ») restent du texte. SMPA-AB-03 : 140 notes + 427 actes ; SMPA-AB-01 : 179 actes. -->
+  <xsl:key name="cartu-acte-n" match="tei:text[@xml:id][@n]" use="string(@n)" version="3.0"/>
+  <xsl:variable name="cartu-renvoi-rx" select="'n°[\s&#160;]*(\d+)[\s&#160;]*,[\s&#160;]*pp?\.[\s&#160;]*(\d+)([\s&#160;]*[-–][\s&#160;]*\d+)?([\s&#160;]*,[\s&#160;]*n\.[\s&#160;]*(\d+))?'" version="3.0"/>
+  <xsl:template match="text()[ancestor::tei:note][not(ancestor::tei:item)][matches(., 'n°[\s&#160;]*\d+[\s&#160;]*,[\s&#160;]*pp?\.[\s&#160;]*\d+')]" priority="22" version="3.0">
+    <xsl:choose>
+      <xsl:when test="empty($cartu-tome)"><xsl:value-of select="."/></xsl:when>
+      <xsl:otherwise>
+        <xsl:analyze-string select="." regex="{$cartu-renvoi-rx}">
+          <xsl:matching-substring>
+            <xsl:variable name="x" select="regex-group(1)"/>
+            <xsl:variable name="y" select="regex-group(2)"/>
+            <xsl:variable name="z" select="regex-group(5)"/>
+            <xsl:variable name="acte" select="key('cartu-acte-n', $x, $cartu-tome)[1]"/>
+            <xsl:variable name="pages" select="($acte/preceding::tei:pb[1]/@n, $acte//tei:pb/@n) ! string(.)"/>
+            <xsl:choose>
+              <xsl:when test="exists($acte) and $y = $pages">
+                <xsl:variable name="note" select="if ($z != '') then key('cartu-note-page', $y, $cartu-tome)[xs:integer($z)][ancestor::tei:text[@xml:id][1] is $acte] else ()"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+                <xsl:variable name="numero-en-ligne"><xsl:for-each select="$note"><xsl:call-template name="note-n"/></xsl:for-each></xsl:variable>
+                <a class="cartu-renvoi-interne"
+                   href="{concat($document-base, $resource, '?refId=', $acte/@xml:id, if ($note) then concat('#note', normalize-space($note/@n)) else '')}"
+                   title="{if ($note) then concat('Acte ', $x, ' — dans le livre : page ', $y, ', note ', $z, ' (notes numérotées par page) ; ici : note ', $numero-en-ligne)
+                           else concat('Acte ', $x)}">
+                  <xsl:value-of select="."/>
+                </a>
+              </xsl:when>
+              <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+            </xsl:choose>
+          </xsl:matching-substring>
+          <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+        </xsl:analyze-string>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- 2026-10-06 : défauts de conversion des index (SMPA-AB-02 surtout), corrigés à l'affichage.
+       1. Vedette collée à sa parenthèse : « Adam(Adam, Adan) », « Agathe(Agate) » (104). -->
+  <xsl:template match="tei:item//text()[starts-with(., '(')][preceding-sibling::node()[1][self::tei:hi]]" priority="27" version="3.0">
+    <xsl:text> </xsl:text>
+    <xsl:next-match/>
+  </xsl:template>
+  <!-- 2. Point final pris dans le renvoi : « voir Lorteil. » soulignait le point avec le nom (729).
+       Le point sort du lien. -->
+  <xsl:template match="tei:ref[@type = 'see'][ancestor::tei:item][ends-with(normalize-space(.), '.')][not(following-sibling::node()[1][self::text()][matches(., '^[\s&#160;]*\.')])]" priority="27" version="3.0">
+    <xsl:next-match/>
+    <xsl:text>.</xsl:text>
+  </xsl:template>
+  <xsl:template match="tei:ref[@type = 'see'][ancestor::tei:item]//text()[ends-with(normalize-space(.), '.')]
+      [. is (ancestor::tei:ref[@type = 'see'][1]//text()[normalize-space()])[last()]]" priority="27" version="3.0">
+    <xsl:value-of select="replace(., '\.[\s&#160;]*$', '')"/>
+  </xsl:template>
+
+  <!-- ================================================================
+       2026-10-07 : censier de l'Hôtel-Dieu (HDPAR-HD), notes et exposants, SANS compagnon.
+       La conversion n'a pas balisé les notes du censier : l'appel est un chiffre en exposant
+       Unicode dans le texte (« contigua¹ »), la note un paragraphe en bas de page imprimée
+       (« ¹ Cart. n° 857. — ² Ibid. n° 168. » ou « Notes : ¹ … ² … »). Dans l'entrée servie :
+       - un paragraphe de notes devient des notes séparées, avec retour ; « n° 857 » mène à l'acte ;
+       - un appel dont la note est dans la même entrée (le premier paragraphe de notes qui suit et
+         porte ce chiffre) devient un lien vers elle ; sinon (note en bas de page, dans l'entrée
+         voisine) il reste un simple exposant ;
+       - « ° » après un chiffre romain ou arabe (IIII°, m° cc°) : un o en exposant.
+       Le rattachement complet (appel → note de l'entrée voisine) relève du TEI. -->
+  <xsl:variable name="cartu-exposants" select="'¹²³⁴⁵⁶⁷⁸⁹'" version="3.0"/>
+  <xsl:function name="cartu:est-notes" as="xs:boolean" version="3.0" xmlns:cartu="urn:cartu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="p" as="element()?"/>
+    <xsl:sequence select="exists($p) and matches(normalize-space($p), '^(Notes\s*:\s*)?[¹²³⁴⁵⁶⁷⁸⁹]')"/>
+  </xsl:function>
+
+  <!-- texte : appels et ° -->
+  <xsl:template match="tei:p[not(cartu:est-notes(.))]//text()[matches(., '[¹²³⁴⁵⁶⁷⁸⁹]|[ivxlcdmIVXLCDM0-9]°')][$resource = 'HDPAR-HD']" priority="28" version="3.0" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu">
+    <xsl:variable name="p" select="ancestor::tei:p[1]"/>
+    <xsl:analyze-string select="." regex="[¹²³⁴⁵⁶⁷⁸⁹]|(([ivxlcdmIVXLCDM0-9])°)">
+      <xsl:matching-substring>
+        <xsl:choose>
+          <xsl:when test="regex-group(1) != ''"><xsl:value-of select="regex-group(2)"/><sup class="cartu-o">o</sup></xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="n" select="string(string-length(substring-before($cartu-exposants, .)) + 1)"/>
+            <xsl:variable name="np" select="$p/following::tei:p[cartu:est-notes(.)][contains(., current())][1]"/>
+            <xsl:choose>
+              <xsl:when test="$np">
+                <a class="noteref" href="#cn{generate-id($np)}-{$n}" id="cn{generate-id($np)}-{$n}_"><sup><xsl:value-of select="$n"/></sup></a>
+              </xsl:when>
+              <xsl:otherwise><sup class="cartu-appel"><xsl:value-of select="$n"/></sup></xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
+  <!-- paragraphe de notes : des notes séparées -->
+  <xsl:template match="tei:p[cartu:est-notes(.)][$resource = 'HDPAR-HD']" priority="28" version="3.0" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu">
+    <xsl:variable name="np" select="."/>
+    <div class="cartu-notes-page">
+      <xsl:analyze-string select="replace(normalize-space(.), '^Notes\s*:\s*', '')" regex="([¹²³⁴⁵⁶⁷⁸⁹])\s*([^¹²³⁴⁵⁶⁷⁸⁹]*)">
+        <xsl:matching-substring>
+          <xsl:variable name="n" select="string(string-length(substring-before($cartu-exposants, regex-group(1))) + 1)"/>
+          <!-- l'appel est-il dans cette entrée ? (un paragraphe qui précède et porte ce chiffre,
+               dont ce paragraphe de notes est le premier à le porter ensuite) -->
+          <xsl:variable name="appel" select="$np/preceding::tei:p[not(cartu:est-notes(.))][contains(., regex-group(1))][following::tei:p[cartu:est-notes(.)][contains(., regex-group(1))][1] is $np][1]"/>
+          <div class="note" id="cn{generate-id($np)}-{$n}">
+            <xsl:choose>
+              <xsl:when test="$appel"><a class="noteback" href="#cn{generate-id($np)}-{$n}_"><xsl:value-of select="$n"/>. </a></xsl:when>
+              <xsl:otherwise><span class="noteback"><xsl:value-of select="$n"/>. </span></xsl:otherwise>
+            </xsl:choose>
+            <!-- « n° 857, 860 » : chaque numéro mène à l'acte du cartulaire -->
+            <xsl:analyze-string select="replace(regex-group(2), '\s*—\s*$', '')" regex="(n°\s*)((\d+)(\s*,\s*\d+)*)">
+              <xsl:matching-substring>
+                <xsl:value-of select="regex-group(1)"/>
+                <xsl:analyze-string select="regex-group(2)" regex="\d+">
+                  <xsl:matching-substring>
+                    <a href="{concat($document-base, 'HDPAR-HD?refId=HDPAR-HD_', format-number(number(.), '0000'))}"><xsl:value-of select="."/></a>
+                  </xsl:matching-substring>
+                  <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+                </xsl:analyze-string>
+              </xsl:matching-substring>
+              <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+            </xsl:analyze-string>
+          </div>
+        </xsl:matching-substring>
+      </xsl:analyze-string>
+    </div>
+  </xsl:template>
+
+  <!-- acte : ancre de la mention au dos (premier paragraphe « Au dos… »), cible des « n. dors. » -->
+  <xsl:template match="tei:p[starts-with(normalize-space(tei:hi[1]), 'Au dos')]
+      [not(preceding::tei:p[starts-with(normalize-space(tei:hi[1]), 'Au dos')]
+        [ancestor::*[self::tei:text[@xml:id] or local-name() = 'wrapper'][1] is current()/ancestor::*[self::tei:text[@xml:id] or local-name() = 'wrapper'][1]])]"
+    priority="20" version="3.0">
+    <!-- id simple : la page d'un acte n'en montre qu'un (dans le fragment servi, l'acte n'a plus
+         son tei:text, donc plus son xml:id) -->
+    <div class="cartu-dos" id="au-dos">
+      <xsl:next-match/>
+    </div>
+  </xsl:template>
+
+  <!-- 2026-10-06 (suite) : espacements de l'index converti, toujours à l'affichage seulement.
+       1. une espace ordinaire collée à une insécable est fondue avec elle (« Campi  : ») ;
+       2. « ( ?) » devient « (?) » ;
+       3. pas de blanc avant une virgule ou un point (« 376 , 36 », « hybemagium . »), sauf
+          devant des points de suspension (« Braya (..... de) ») ; XPath n'a pas de regard en
+          avant, d'où le caractère suivant capturé ;
+       4. typographie française (insécable avant ; : ? !) ;
+       5. une sous-entrée par ligne : « ; — » devient « ; », un retour à la ligne, « — » ; la
+          CSS met les lignes suivantes en retrait (« Berte (famille) … ; — (Florent) … »). Les
+          « . — » de HDPAR-HD, qui séparent des formes du nom, restent sur la ligne. -->
+  <xsl:template name="cartu-insecables" version="3.0">
+    <xsl:param name="t"/>
+    <xsl:variable name="e1" select="replace($t, '[ \t\r\n]*&#160;[ \t\r\n]*', '&#160;')"/>
+    <xsl:variable name="e2" select="replace($e1, '\([\s&#160;]*\?[\s&#160;]*\)', '(?)')"/>
+    <xsl:variable name="e3" select="replace(replace(replace(replace($e2, '([^\s&#160;])\s+,', '$1,'), '^\s+,', ','), '^[\s&#160;]+\.([^.]|$)', '.$1'), '([^\s&#160;.])\s+\.([^.]|$)', '$1.$2')"/>
+    <xsl:variable name="e4" select="replace(replace($e3, '^\s*([;:?!])', '&#160;$1'), '([^\s&#160;(])\s*([;:?!])', '$1&#160;$2')"/>
+    <xsl:analyze-string select="$e4" regex=";[\s&#160;]*—">
+      <xsl:matching-substring><xsl:text>;</xsl:text><br class="cartu-sous"/><xsl:text>—</xsl:text></xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
+  <!-- 2026-10-06 : index, séparateur entre deux numéros d'actes. L'index imprimé mettait
+       « , » dans un même tome et « ; » au changement de tome (I. 170 ; II. 245) ; on n'affiche
+       que le numéro d'acte, sans le tome : le « ; » paraissait arbitraire. Toujours « , » ici
+       (le TEI garde « ; » et le tome dans ref/@n). Le « ; » entre les formes du nom reste. -->
+  <!-- 2026-10-07 : sauf quand le « ; » sépare deux tomes (index de NDPA-EG-04 : « I, 249 ; III, 71 ») -->
+  <xsl:template match="tei:item/text()[normalize-space(.) = ';'][preceding-sibling::*[1][self::tei:ref]][following-sibling::*[1][self::tei:ref]]
+      [substring-before(substring-after(preceding-sibling::*[1]/@target, '#'), '_') = substring-before(substring-after(following-sibling::*[1]/@target, '#'), '_')]" priority="30">
+    <xsl:text>, </xsl:text>
+  </xsl:template>
+
   <!-- Passer à travers les unclear (pour la démo) -->
   <xsl:template match="tei:unclear">
     <xsl:apply-templates/>
@@ -34,6 +500,14 @@
   <!-- Pas de second bloc si le rendu en contient déjà un (ex. NDCH-EG r109063). Dans ce bloc, hteiml donne à la note l'id
        de l'appel (note1 ↔ appel href="#note1" id="note1_") mais un retour vers un autre id (#p3229_fn1) : le retour est
        réécrit en #<id de la note>_ (id de l'appel chez hteiml). -->
+  <!-- 2026-10-06 : le conteneur dts:wrapper de DoTS est traversé ICI, dans la feuille du corpus,
+       et non plus seulement par le HTEIML : la copie locale du HTEIML (dots-clean) a cette règle,
+       celle du serveur dev (/dots/xsl/) ne l'a pas, et marquait le wrapper comme élément inconnu
+       (« <dts:wrapper> » en rouge en tête de chaque acte). Les pages sans <text> (index, parties)
+       ont leur propre modèle, ci-dessous (priorité supérieure). -->
+  <xsl:template match="*[local-name() = 'wrapper']" priority="5">
+    <xsl:apply-templates/>
+  </xsl:template>
   <xsl:template match="*[local-name() = 'wrapper'][not(.//tei:text)]" priority="20">
     <xsl:variable name="rendu">
       <xsl:apply-imports/>
@@ -64,9 +538,6 @@
       <xsl:attribute name="href" select="concat('#', ancestor::*[@id][contains(@class, 'note')][1]/@id, '_')"/>
       <xsl:apply-templates mode="cartu-notes"/>
     </xsl:copy>
-  </xsl:template>
-  <xsl:template match="text() | comment()" mode="cartu-notes">
-    <xsl:copy/>
   </xsl:template>
   <!-- ne pas sortir les pages -->
   <xsl:template match="tei:pb"/>
@@ -137,11 +608,115 @@
          #NDPA-EG-03_0365|_1095|_1096|_1722|_1723          28  numeros hors du tome 3 (635 unites)
          #page195|#page197|#page204|#page209                7  identifiants inexistants
        XSLT 1.0 : pas de sequence, on teste par concat/contains. -->
+  <!-- 2026-10-07 : « voir » à plusieurs cibles (SMPA-AB-01 : 113, target="#a #b …", sans
+       @corresp). Le lien unique était cassé (« ?refId=#…_rs_1370 #…_rs_2504 ») et couvrait toute
+       la liste. Un lien par nom, vers LA cible dont la vedette porte ce nom ; s'il y a un doute
+       (homonymes : « Simon » → 7 entrées) ou aucune cible, le nom reste du texte. La page d'index de la cible (refId) est sa
+       liste, lue dans le tome (cartu-tome). -->
+  <xsl:template match="tei:ref[@type = 'see'][normalize-space(@target)][contains(normalize-space(@target), ' ') or not(@corresp)][exists($cartu-tome)]" priority="31" version="3.0" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu">
+    <xsl:variable name="cibles" select="for $t in tokenize(normalize-space(@target), ' ') return id(substring-after($t, '#'), $cartu-tome)"/>
+    <xsl:variable name="texte" select="normalize-space(string(.))"/>
+    <xsl:variable name="voir" select="if (matches($texte, '^[Vv]oir( aussi)?')) then replace($texte, '^([Vv]oir( aussi)?).*$', '$1', 's') else ''"/>
+    <xsl:variable name="noms" select="tokenize(replace(substring($texte, string-length($voir) + 1), '^[\s:]+|[\s.]+$', ''), '\s*,\s*')[. != '']"/>
+    <xsl:variable name="sc" select="exists(.//tei:hi[@rend = 'sc'])"/>
+    <xsl:if test="$voir != ''">
+      <i><xsl:value-of select="$voir"/></i>
+      <xsl:text> </xsl:text>
+    </xsl:if>
+    <xsl:for-each select="$noms">
+      <xsl:variable name="nom" select="."/>
+      <!-- premier mot entier du nom (« saint-denis », pas « saint » : Saint-Denis et Saint-Laurent
+           dans le même renvoi se confondraient) -->
+      <xsl:variable name="cle" select="cartu:plat(tokenize($nom, '[\s(,]+')[. != ''][1])"/>
+      <xsl:variable name="cle-rx" select="replace($cle, '([.\[\]()*+?^$|\\{}])', '\\$1')"/>
+      <xsl:variable name="candidates" select="$cibles[matches(normalize-space(cartu:plat(string((tei:rs, .)[1]))), concat('^', $cle-rx, '([^\p{L}-]|$)'))]"/>
+      <!-- une seule cible porte ce nom : lien ; plusieurs (homonymes) ou aucune : texte -->
+      <xsl:variable name="cible" select="if (count($candidates) = 1) then $candidates else ()"/>
+      <xsl:if test="position() gt 1"><xsl:text>, </xsl:text></xsl:if>
+      <xsl:choose>
+        <xsl:when test="$cible and $cle != ''">
+          <!-- 2026-10-08 : la liste de LETTRE (la plus haute), pas une sous-liste rangée dans une entrée
+               (SMPA-AB-01 : « IV. Personnel de l'Abbaye » dans l'entrée Saint-Magloire), qui n'est pas une page -->
+          <xsl:variable name="liste" select="if ($resource = $cartu-listes-hors-nav) then cartu:unite-de($cible) else ($cible/ancestor::*[contains(@xml:id, '_liste')][not(ancestor::tei:item)])[last()]/@xml:id"/>
+          <a href="{concat($document-base, $resource, '?refId=', $liste, '#', $cible/@xml:id)}">
+            <xsl:choose>
+              <xsl:when test="$sc"><span class="sc"><xsl:value-of select="$nom"/></span></xsl:when>
+              <xsl:otherwise><xsl:value-of select="$nom"/></xsl:otherwise>
+            </xsl:choose>
+          </a>
+        </xsl:when>
+        <xsl:otherwise><xsl:value-of select="$nom"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:template>
+
+  <!-- 2026-10-07 : index de NDPA-EG-04 (cartulaire de Notre-Dame de Paris) : il renvoie aux
+       quatre tomes (12 953 renvois vers les tomes 1-3). Le lien menait au bon tome, mais l'écran
+       ne montrait que le numéro d'acte (« 336 ») : impossible de savoir dans quel tome. Le tome
+       (celui que le lien ouvre, lu dans la cible : NDPA-EG-03 → III) précède le numéro quand il
+       change dans l'entrée : « III, 336, 340 ; II, 605 ». -->
+  <xsl:template match="tei:ref[@target][not(@type = 'see')][ancestor::tei:item][matches(@target, '^#NDPA-EG-0\d_')]" priority="29" version="3.0">
+    <xsl:variable name="tome" select="substring(@target, 11, 1)"/>
+    <xsl:variable name="avant" select="preceding-sibling::tei:ref[@target][not(@type = 'see')][1]"/>
+    <xsl:if test="empty($avant) or substring($avant/@target, 11, 1) != $tome">
+      <span class="cartu-tome">
+        <xsl:value-of select="('I', 'II', 'III', 'IV')[xs:integer($tome)]" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      </span>
+      <xsl:text>, </xsl:text>
+    </xsl:if>
+    <xsl:next-match/>
+  </xsl:template>
+
+  <!-- 2026-10-07 : index de NDVC-AB (cartulaire des Vaux-de-Cernay) : le livre renvoie aux
+       PAGES (« p. 77 »), la conversion a relié chaque page à son acte et affiche le numéro d'acte.
+       Comme dans les autres cartulaires on montre le numéro d'acte (le lien), puis la page du livre,
+       gardée dans @n : « 61 (p. 77) ». Le « p. » du livre est en commentaire dans le TEI. -->
+  <xsl:template match="tei:ref[@target][not(@type = 'see')][ancestor::tei:item][starts-with(@target, '#NDVC-AB_')][matches(@n, '^\d+$')]" priority="29">
+    <xsl:next-match/>
+    <xsl:text> </xsl:text>
+    <span class="cartu-page">(p.&#160;<xsl:value-of select="@n"/>)</span>
+  </xsl:template>
+
   <xsl:template match="tei:ref[@target][contains(
         '|#NON_TROUVE|#NDPA-EG-03_0365|#NDPA-EG-03_1095|#NDPA-EG-03_1096|#NDPA-EG-03_1722|#NDPA-EG-03_1723|#page195|#page197|#page204|#page209|',
         concat('|', normalize-space(@target), '|'))]" priority="30">
     <xsl:apply-templates/>
   </xsl:template>
+
+  <!-- 2026-10-08 (chantier liens) : résolution des cibles internes ref/@target, sans appel à l'API
+       (le TEI complet du cartulaire est lu par edt:compagnon, cartulaires-edition.xsl).
+       - Ancre de page (tei:pb, ex. HDPAR-HD_censier_p483, SMPA-EG_censier_p236_c81_6) : une page n'est
+         pas une unité de navigation. Le lien va à l'unité qui contient la page, puis #ancre (la page est
+         rendue avec cet id).
+       - Cible numérique sans « # » (INDEX-LIEUX, INDEX-PERSONNES : 190 cas) : pas de lien, le texte reste.
+         (2026-10-09 : NDMT-AB porte désormais ses cibles vérifiées dans le TEI ; plus de calcul page → acte.)
+       Résultat : () = non résolu (le lien existant est gardé) ; '' = pas de lien ; sinon l'adresse. -->
+  <xsl:variable name="cartu-listes-hors-nav" select="('NDMT-AB', 'STEP-AB')" as="xs:string+"/>
+  <xsl:function name="cartu:unite-de" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="e" as="element()?"/>
+    <!-- unité = l'ancêtre-ou-soi le plus proche qui est un texte, une division ou un groupe porteur d'@xml:id -->
+    <xsl:sequence select="$e/ancestor-or-self::*[self::tei:text or self::tei:div or self::tei:group][@xml:id][1]/@xml:id/string()"/>
+  </xsl:function>
+  <xsl:function name="cartu:cible-tei" as="element()?" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="id" as="xs:string"/>
+    <xsl:sequence select="if ($resource = '' or $id = '') then () else (for $d in edt:compagnon() return id($id, $d))[1]"/>
+  </xsl:function>
+  <xsl:function name="cartu:href-cible" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="r" as="element()"/>
+    <xsl:variable name="cible" select="normalize-space(string($r/@target))"/>
+    <xsl:choose>
+      <xsl:when test="$resource = ''"/>
+      <xsl:when test="starts-with($cible, '#')">
+        <xsl:variable name="el" select="cartu:cible-tei(substring($cible, 2))"/>
+        <xsl:variable name="unite" select="cartu:unite-de($el)"/>
+        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $resource, '?refId=', $unite, '#', $el/@xml:id) else ()"/>
+      </xsl:when>
+      <xsl:when test="matches($cible, '^\d+$')">
+        <xsl:sequence select="''"/>
+      </xsl:when>
+      <xsl:otherwise/>
+    </xsl:choose>
+  </xsl:function>
 
   <xsl:template match="tei:ref[@target]">
    <xsl:choose>
@@ -162,8 +737,14 @@
      <xsl:when test="@type = 'see'">
        <xsl:variable name="target" select="./@target"/>
        <xsl:variable name="idDoc"  select="translate(substring-before($target, '_'), '#', '')"/>
-       <xsl:variable name="refId" select="translate(./@corresp, '#', '')"/>
-       <xsl:variable name="url" select="concat('/cartulaires/document/', $idDoc, '?refId=', $refId, $target)"/>
+       <!-- 2026-10-08 : index sur une seule page (index-complet) : le renvoi vise la page de
+            l'index, sur l'entrée, et non plus la page de la lettre (la redirection du front
+            perdait l'ancre de l'entrée et arrivait en tête de lettre). -->
+       <!-- 2026-10-08 (chantier liens) : NDMT-AB, STEP-AB : les listes de lettres ne sont pas des unités ;
+            l'unité qui contient la cible (division de back) remplace le corresp. -->
+       <xsl:variable name="unite-hors-nav" select="if ($resource = $cartu-listes-hors-nav) then cartu:unite-de(cartu:cible-tei(substring-after(normalize-space($target), '#'))) else ()"/>
+       <xsl:variable name="refId" select="if ($idDoc = $cartu-renvoi-res) then $cartu-index-unite[index-of($cartu-renvoi-res, $idDoc)[1]] else if (exists($unite-hors-nav)) then $unite-hors-nav else translate(./@corresp, '#', '')"/>
+       <xsl:variable name="url" select="concat($document-base, $idDoc, '?refId=', $refId, $target)"/>
       
        <a href="{$url}">
         <xsl:apply-templates/>
@@ -172,10 +753,20 @@
      <xsl:otherwise>
        <xsl:variable name="idActe" select="substring-after(@target, '#')"/>
     <xsl:variable name="idDoc"  select="substring-before($idActe, '_')"/>
-    <xsl:variable name="url" select="concat('/cartulaires/document/', $idDoc, '?refId=', $idActe)"/>
-    <a href="{$url}">
-        <xsl:apply-templates/>
-    </a>
+    <xsl:variable name="url" select="concat($document-base, $idDoc, '?refId=', $idActe)"/>
+    <!-- 2026-10-08 (chantier liens) : cible résolue (ancre de page -> unité#ancre ; numéro de page -> acte) -->
+    <xsl:variable name="resolue" select="cartu:href-cible(.)"/>
+    <xsl:choose>
+      <xsl:when test="exists($resolue) and $resolue = ''"><xsl:apply-templates/></xsl:when>
+      <xsl:when test="exists($resolue)">
+        <a href="{$resolue}"><xsl:apply-templates/></a>
+      </xsl:when>
+      <xsl:otherwise>
+        <a href="{$url}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:otherwise>
+    </xsl:choose>
      </xsl:otherwise>
    </xsl:choose>
 </xsl:template>
@@ -200,6 +791,48 @@
     <xsl:call-template name="note-inline"/>
   </xsl:template>
 
+  <!-- 2026-10-06 : SMPA-AB, SCCO-AB (et quelques notes de SAPC, SGDP) numérotent leurs notes
+       « acte_note » (n="270_4", n="270_a"), pour qu'elles soient uniques dans le volume. Le
+       HTEIML affichait ce @n tel quel (« 270_4 ») : on n'affiche que la partie après le
+       préfixe… non : comme le dev (« ça marche super »), toutes les notes de l'acte sont
+       numérotées à la suite, lettres comprises (270 : 1 à 8). Copie de note-n (tei2html.xsl) avec ce seul cas
+       en plus : un modèle nommé ne peut pas appeler celui qu'il remplace. -->
+  <xsl:template name="note-n">
+    <xsl:variable name="resp" select="@resp"/>
+    <xsl:variable name="hasformat" select="@rend != '' and boolean(translate(substring-before(concat(@rend, ' '), ' '), '1AaIi', '') = '')"/>
+    <xsl:choose>
+      <xsl:when test="matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')">
+        <xsl:number count="tei:note[matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')]" level="any" from="tei:group/tei:text | *[local-name() = 'wrapper']"/>
+      </xsl:when>
+      <xsl:when test="@n">
+        <xsl:value-of select="@n"/>
+      </xsl:when>
+      <xsl:when test="self::tei:ref[@type='note']">
+        <xsl:for-each select="key('id', substring-after(@target, '#'))[1]">
+          <xsl:call-template name="n"/>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:when test="self::tei:app">
+        <xsl:number count="tei:app" format="a" level="any" from="*[local-name() = 'wrapper']"/>
+      </xsl:when>
+      <xsl:when test="$hasformat">
+        <xsl:number count="tei:note[@rend=$hasformat]" format="{@rend}" level="any" from="/"/>
+      </xsl:when>
+      <xsl:when test="@type='app'">
+        <xsl:number count="tei:note[@type='app']" format="a" level="any" from="/"/>
+      </xsl:when>
+      <xsl:when test="@resp='editor'">
+        <xsl:number count="tei:note[@resp=$resp]" format="I" level="any" from="/"/>
+      </xsl:when>
+      <xsl:when test="@resp">
+        <xsl:number count="tei:note[@resp=$resp]" level="any" from="/"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:number count="tei:note[not(@resp) and not(@rend) and not(parent::tei:div) and not(parent::tei:notesStmt)]" level="any" from="/"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <!-- D5-DEBUT (autopilote 2026-09-12) : liens vers les anciens sites ELEC -->
   <!-- hteiml fait un lien de tout tei:idno commencant par « http » (tei2html.xsl l. 1805),
        du tei:title voisin d'un idno[@type='URI'] (l. 1796) et de tei:ref/@target (l. 1456).
@@ -210,78 +843,35 @@
   <xsl:template match="tei:title[../tei:idno[@type = 'URI'][normalize-space(.) = 'http://elec.enc.sorbonne.fr' or normalize-space(.) = 'http://elec.enc.sorbonne.fr/']]" priority="14">
     <a class="title d5-local" href="/"><xsl:apply-templates/></a>
   </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/Maintenon/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDMA-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/Morienval/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDMV-AB"><xsl:apply-templates/></a>
-  </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-01']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDPA-EG-01"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}NDPA-EG-01"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-02']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDPA-EG-02"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}NDPA-EG-02"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-03']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDPA-EG-03"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}NDPA-EG-03"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-04']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDPA-EG-04"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/Orleans-S-Croix/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SCOR-EG"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/Paris-S-Merri/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMPA-EG"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}NDPA-EG-04"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SAPC-AB']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SAPC-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SGDP/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SGDP-AB"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}SAPC-AB"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMMI-AB']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMMI-AB"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}SMMI-AB"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMPA-AB-02']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMPA-AB-02"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}SMPA-AB-02"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMPA-AB-03']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMPA-AB-03"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}SMPA-AB-03"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/VNDP-AB']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/VNDP-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/hotelpontoise/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/HDPO-HD"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/laroche/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDRC-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/mtmartre/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDMT-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/pontoise/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMPO-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/porrois/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDPR-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/sgelaye/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SGLY-PR"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/smchamps/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SMCP-PR"><xsl:apply-templates/></a>
-  </xsl:template>
-  <!-- adresse commune a 4 TEI (SCHA-PR, SGGO-PR, SLES-PR, STEP-AB) -->
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/smerry/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/sspire/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/SSCO-AB"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}VNDP-AB"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/vauxcernay/']" priority="14">
-    <a class="idno d5-local" href="/cartulaires/document/NDVC-AB"><xsl:apply-templates/></a>
+    <a class="idno d5-local" href="{$document-base}NDVC-AB"><xsl:apply-templates/></a>
   </xsl:template>
   <!-- D5-FIN -->
 
@@ -440,21 +1030,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:div[@type='transcription']/tei:figure[count(*) = 1 and tei:graphic[@source and @url and (contains(@source, 'nakala.fr') or contains(@url, 'nakala.fr'))]]" priority="20">
-    <xsl:variable name="previousGraphic" select="preceding-sibling::tei:figure[tei:graphic[@source and @url and (contains(@source, 'nakala.fr') or contains(@url, 'nakala.fr'))]]"/>
-    <xsl:if test="not($previousGraphic) and not(ancestor::tei:text[1]//tei:pb)">
-      <a class="pb facs" id="pbmanuscrit">
-        <xsl:attribute name="href"><xsl:value-of select="tei:graphic[1]/@url"/></xsl:attribute>
-        <xsl:attribute name="data-source">
-          <xsl:call-template name="cartulaires-image-source">
-            <xsl:with-param name="source" select="tei:graphic[1]/@source"/>
-            <xsl:with-param name="image" select="tei:graphic[1]/@url"/>
-          </xsl:call-template>
-        </xsl:attribute>
-      </a>
-    </xsl:if>
-  </xsl:template>
-
   <!-- Image du manuscrit témoin : même contrat HTML que les <pb facs>. -->
   <xsl:template match="tei:witness[@facs]" priority="10">
     <xsl:variable name="firstFacs" select="substring-before(concat(normalize-space(@facs), ' '), ' ')"/>
@@ -593,29 +1168,6 @@
       </xsl:choose>
     </li>
   </xsl:template>
-  <!-- Titres de parties (demande d'Olivier Canteaut)
-       « pour l'heure, on a des titres disparates. Pour Saint-Merry, on a "cartulaire", je
-       preciserais "Cartulaire de Saint-Merry de Paris". Pour la Roche, [...] "Pieces
-       justificatives", que je remplacerais par un long titre. »
-
-       ATTENTION : le libelle affiche dans le SOMMAIRE ne vient pas d'ici mais du registre de
-       fragments de BaseX (cartulaires > dots/fragments_register.xml, element dct:title), rempli
-       a l'ingestion depuis le <head> du TEI. Les deux regles ci-dessous ne corrigent donc que le
-       titre affiche DANS LA PAGE. La correction definitive, qui aligne page et sommaire, est de
-       changer le <head> du TEI puis de reconstruire le registre ; ces deux regles deviendront
-       alors sans effet d'elles-memes (elles ne filtrent plus).
-
-       Le mot « Cartulaire » seul sert de tete de partie dans 12 cartulaires : on discrimine
-       Saint-Merry par la tete du groupe parent. « Pieces Justificatives » n'existe que dans
-       NDRC-AB (groupe r670999). -->
-  <xsl:template priority="15"
-      match="tei:group/tei:head[normalize-space(.) = 'Cartulaire'][../../tei:head[normalize-space(.) = 'Saint-Merry de Paris']]/text()">
-    <xsl:text>Cartulaire de Saint-Merry de Paris</xsl:text>
-  </xsl:template>
-  <xsl:template priority="15"
-      match="tei:group[@xml:id = 'r670999']/tei:head/text()">
-    <xsl:text>Pièces justificatives à l'histoire de l'abbaye de la Roche et de la famille de Lévis</xsl:text>
-  </xsl:template>
 
   <!-- ==== V5-PRESENTATION-FIN ==== -->
 
@@ -718,12 +1270,138 @@
         <xsl:value-of select="concat('#', @xml:id)"/>
       </xsl:when>
       <xsl:when test="normalize-space($resource) != ''">
-        <xsl:value-of select="concat('/cartulaires/document/', $resource, '?refId=', @xml:id)"/>
+        <xsl:value-of select="concat($document-base, $resource, '?refId=', @xml:id)"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:value-of select="concat('#', @xml:id)"/>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- 2026-10-07 : SSCO-AB, « Table du cartulaire » : la liste du livre (« 1o Privilegium … (1071)
+       VI recto 1. ») devient un tableau N° | Pièce | Date | Folio | Page, en trois parties comme dans
+       le livre (cartulaire, cens, appendice). Le folio et la page viennent de @n du renvoi
+       (« VI recto 1 », « deest 14 ») ; la pièce et la page mènent à l'unité visée quand le TEI
+       porte la cible, sinon pas de lien. -->
+  <xsl:function name="cartu:ssco-href" as="xs:string" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cartu="urn:cartu">
+    <xsl:param name="r" as="element()"/>
+    <xsl:sequence select="if (normalize-space($resource)) then concat($document-base, $resource, '?refId=', substring-after($r/@target, '#')) else string($r/@target)"/>
+  </xsl:function>
+  <xsl:template match="tei:list[@type = 'gloss'][tei:item[tei:ref[starts-with(@target, '#SSCO-AB_')]]]" priority="20" version="3.0"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu xs">
+    <xsl:variable name="appendice" select="tei:item[starts-with(normalize-space(string-join(text(), '')), 'Appendix')][1]"/>
+    <!-- 2026-10-08 : triable au clic sur N° et Date, même mécanisme que la page Édition
+         (cartulaires-edition.xsl : $edt-tri-js, data-ord / data-num / data-date). -->
+    <table class="cartu-table-matieres cartu-edition">
+      <thead>
+        <tr><th scope="col" class="cartu-tm-n cartu-tri-col" data-cle="num" aria-sort="ascending" title="Trier par numéro" onclick="{$edt-tri-js}">N<sup>o</sup></th><th scope="col">Pièce</th><th scope="col" class="cartu-tm-date cartu-tri-col" data-cle="date" title="Trier par date" onclick="{$edt-tri-js}">Date</th><th scope="col" class="cartu-tm-fol">Folio</th><th scope="col" class="cartu-tm-p">Page</th></tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="tei:item">
+          <xsl:variable name="refs" select="tei:ref"/>
+          <!-- libellé : ce qui précède le premier renvoi, sans les sauts de page -->
+          <xsl:variable name="avant" select="normalize-space(string-join($refs[1]/preceding-sibling::node()[not(self::tei:pb)] ! string(.), ''))"/>
+          <xsl:variable name="ordinal" select="if (matches($avant, '^\d+o\s')) then replace($avant, '^(\d+)o\s.*$', '$1')
+                                               else if (matches($avant, '^(Appendix\s+)?[IVX]+\s')) then replace($avant, '^(Appendix\s+)?([IVX]+)\s.*$', '$2') else ''"/>
+          <xsl:variable name="reste" select="if ($ordinal) then replace($avant, '^(Appendix\s+)?\S+\s+', '') else $avant"/>
+          <xsl:variable name="date" select="if (matches($reste, '\(([^()]*)\)$')) then replace($reste, '^.*\(([^()]*)\)$', '$1') else ''"/>
+          <xsl:variable name="titre" select="normalize-space(if ($date) then replace($reste, '\s*\([^()]*\)$', '') else $reste)"/>
+          <xsl:variable name="folio" select="normalize-space(replace($refs[1]/@n, '\s*\d+$', ''))"/>
+          <xsl:if test="position() = 1 or (not($ordinal) and preceding-sibling::tei:item[1][matches(normalize-space(string-join(text(), '')), '^\d+')]) or . is $appendice">
+            <tr class="cartu-tm-partie" data-ord="{position() - 0.5}">
+              <th colspan="5" scope="rowgroup">
+                <xsl:choose>
+                  <xsl:when test="position() = 1">Cartulaire</xsl:when>
+                  <xsl:when test=". is $appendice">Appendice</xsl:when>
+                  <xsl:otherwise>Cens et revenus</xsl:otherwise>
+                </xsl:choose>
+              </th>
+            </tr>
+          </xsl:if>
+          <tr data-ord="{position()}" data-num="{if (matches($ordinal, '^\d+$')) then $ordinal else position()}"
+              data-date="{if (matches($date, '\d{3,4}')) then format-number(number(replace($date, '^\D*(\d{3,4}).*$', '$1')), '0000') else ''}">
+            <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
+            <td class="cartu-tm-n"><xsl:value-of select="$ordinal"/></td>
+            <td class="cartu-tm-titre">
+              <xsl:choose>
+                <xsl:when test="$refs[1]/@target"><a href="{cartu:ssco-href($refs[1])}"><xsl:value-of select="$titre"/></a></xsl:when>
+                <xsl:otherwise><xsl:value-of select="$titre"/></xsl:otherwise>
+              </xsl:choose>
+            </td>
+            <td class="cartu-tm-date"><xsl:value-of select="$date"/></td>
+            <td class="cartu-tm-fol">
+              <xsl:choose>
+                <xsl:when test="$folio = 'deest'"><span class="cartu-tm-deest" title="pièce absente du manuscrit">deest</span></xsl:when>
+                <xsl:otherwise><xsl:value-of select="$folio"/></xsl:otherwise>
+              </xsl:choose>
+            </td>
+            <td class="cartu-tm-p">
+              <xsl:for-each select="$refs">
+                <xsl:if test="position() gt 1"><xsl:text>, </xsl:text></xsl:if>
+                <xsl:variable name="p" select="replace(@n, '^.*?(\d+)$', '$1')"/>
+                <xsl:choose>
+                  <xsl:when test="@target"><a href="{cartu:ssco-href(.)}"><xsl:value-of select="$p"/></a></xsl:when>
+                  <xsl:otherwise><xsl:value-of select="$p"/></xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+            </td>
+          </tr>
+        </xsl:for-each>
+      </tbody>
+    </table>
+  </xsl:template>
+
+  <!-- 2026-10-07 : SCOR-EG, « Table des matières » (fin du volume) : la concordance date → acte
+       du livre (une date, un numéro d'acte en chiffres romains, relié à l'acte dans le TEI) devient
+       un vrai tableau, triable comme la liste des actes (mêmes classes, même tri en CSS) : par
+       date (ordre du livre, par défaut) ou par numéro d'acte. -->
+  <xsl:template match="tei:table[tei:row][every $r in tei:row satisfies (count($r/tei:cell) = 2 and $r/tei:cell[2]/tei:ref[starts-with(@target, '#SCOR-EG_')])]" priority="20" version="3.0">
+    <xsl:variable name="gid" select="generate-id()"/>
+    <xsl:variable name="rangs" select="tei:row ! xs:integer(replace(tei:cell[2]/tei:ref/@target, '\D', ''))" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <section class="cartu-actes cartu-concordance" id="cartu-actes-{$gid}">
+      <table class="cartu-actes-table">
+        <thead>
+          <tr class="cartu-actes-entete">
+            <th class="cartu-c-date" scope="col">
+              <span class="cartu-th-nom">Date</span>
+              <span class="cartu-tri">
+                <label class="cartu-tri-b cartu-tri-asc" title="Trier par date, de la plus ancienne a la plus recente">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="date-asc" checked="checked"/>
+                  <span class="cartu-fleche">&#x25B2;</span>
+                </label>
+                <label class="cartu-tri-b cartu-tri-desc" title="Trier par date, de la plus recente a la plus ancienne">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="date-desc"/>
+                  <span class="cartu-fleche">&#x25BC;</span>
+                </label>
+              </span>
+            </th>
+            <th class="cartu-c-num" scope="col">
+              <span class="cartu-th-nom">Acte</span>
+              <span class="cartu-tri">
+                <label class="cartu-tri-b cartu-tri-asc" title="Trier par numero, du premier au dernier">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="num-asc"/>
+                  <span class="cartu-fleche">&#x25B2;</span>
+                </label>
+                <label class="cartu-tri-b cartu-tri-desc" title="Trier par numero, du dernier au premier">
+                  <input type="radio" class="cartu-tri-radio" name="cartu-tri-{$gid}" value="num-desc"/>
+                  <span class="cartu-fleche">&#x25BC;</span>
+                </label>
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <xsl:for-each select="tei:row">
+            <xsl:variable name="i" select="position()"/>
+            <xsl:variable name="moi" select="$rangs[$i]"/>
+            <tr class="cartu-acte" style="--ord-n:{count($rangs[. lt $moi]) + count($rangs[position() lt $i][. eq $moi]) + 1};--ord-d:{$i}">
+              <td class="cartu-c-date"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
+              <td class="cartu-c-num"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
+            </tr>
+          </xsl:for-each>
+        </tbody>
+      </table>
+    </section>
   </xsl:template>
 
   <!-- Le tableau lui-meme. Appele avec le <group> pour noeud courant. -->
@@ -835,6 +1513,18 @@
     <xsl:call-template name="cartulaires-table-actes"/>
     <xsl:apply-imports/>
   </xsl:template>
+
+  <!-- Filtre de la liste, lance par le bouton « Filtrer » ou la touche Entree dans un champ
+       (DoTS-vue n'execute pas les <script>, mais garde les attributs onclick / onkeydown ; meme
+       mecanique que la bibliographie de Montferrand). Trois criteres, cumules :
+       - N° : romain (« XII », compare au n° affiche) ou arabe (« 12 », compare a data-num, tire
+         de l'identifiant) ; l'acte exact ;
+       - tome (liste, seulement si la partie en compte plusieurs) : data-tome, tire de la
+         reference bibliographique du citeStructure (« … t. I, p. 67-68 ») ;
+       - intervalle de dates : la periode de l'acte (data-debut, data-fin, tirees de la date
+         normalisee du citeStructure) doit recouper l'intervalle (« 1090-1101 » reste pour
+         1100-1150). Un champ vide ne filtre pas. -->
+  <xsl:variable name="cartu-filtre-js">var c=this.closest('.cartu-actes'),g=function(s){var e=c.querySelector(s);return e?e.value.trim():'';},n=g('.cartu-num').toUpperCase(),t=g('.cartu-tome'),a=parseInt(g('.cartu-du'),10),b=parseInt(g('.cartu-au'),10),k=0;c.querySelectorAll('tr.cartu-acte').forEach(function(r){var d=parseInt(r.getAttribute('data-debut'),10),f=parseInt(r.getAttribute('data-fin'),10);var v=(!n||(/^[0-9]+$/.test(n)?r.getAttribute('data-num')===String(parseInt(n,10)):r.cells[0].textContent.trim().toUpperCase()===n))&amp;&amp;(!t||r.getAttribute('data-tome')===t)&amp;&amp;((isNaN(a)&amp;&amp;isNaN(b))||(!isNaN(d)&amp;&amp;(isNaN(a)||f&gt;=a)&amp;&amp;(isNaN(b)||d&lt;=b)));r.hidden=!v;if(v){k++;}});c.querySelector('.cartu-actes-vis').textContent=k;</xsl:variable>
 
   <!-- Accroche 3 : LA PAGE DU GROUPE ELLE-MEME (priorite la plus haute).
        Quand DoTS-vue demande l'unite d'un groupe, l'API sert <TEI><dts:wrapper><group>...
