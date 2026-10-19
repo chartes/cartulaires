@@ -254,6 +254,13 @@
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
 
+  <!-- 2026-10-19 : page « Notice introductive » sans le bloc de présentation (Établissement, carte de
+       situation, type d'édition, total des actes, « Notice préparée/rédigée par… ») : décision de Maxime,
+       ces informations sont ailleurs. Seulement au front de la notice (pas celui d'un acte), et seulement
+       ce bloc ou un bloc vide (TODO) : la notice paléographique de HDPAR-HD reste. -->
+  <xsl:template priority="15" match="tei:front[not(parent::tei:text[@xml:id][parent::tei:group or parent::*[local-name() = 'wrapper']])]/tei:argument[not(normalize-space()) or starts-with(normalize-space(tei:p[1]), 'Établissement')]"/>
+  <xsl:template priority="15" match="tei:front[not(parent::tei:text[@xml:id][parent::tei:group or parent::*[local-name() = 'wrapper']])]/tei:byline[not(normalize-space()) or matches(normalize-space(), '^Notice (préparée|rédigée)')]"/>
+
   <!-- 2026-10-06 : index, description de l'entrée repliée. La ligne garde la vedette et les
        numéros d'actes ; la description (identification du lieu, de la personne) s'ouvre par
        une pastille « + » en fin de ligne, comme les occurrences du glossaire de Montferrand.
