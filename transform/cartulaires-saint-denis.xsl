@@ -277,17 +277,7 @@
 
   <xsl:template match="tei:front/tei:docDate" priority="12">
     <p class="tei-docDate"><xsl:apply-templates/></p>
-    <xsl:variable name="acte" select="string(ancestor::tei:text[@xml:id][1]/@xml:id)"/>
-    <xsl:if test="contains($acte, '-acte') and not(following-sibling::tei:docDate)">
-      <div class="tei-summary-refurl">
-        <span class="refurl-label"><b>URL de cette page : </b></span>
-        <span class="sd-permalien">
-          <xsl:text>&lt;</xsl:text>
-          <xsl:value-of select="concat($elec-base, '/cartulaires/document/', substring-before($acte, '-acte'), '?refId=', $acte)"/>
-          <xsl:text>&gt;</xsl:text>
-        </span>
-      </div>
-    </xsl:if>
+    <!-- 2026-10-19 (cartulaires) : ligne « URL de cette page » du site Pleade retirée, comme dans les autres cartulaires. -->
   </xsl:template>
 
   <xsl:template match="tei:front/tei:docDate/tei:placeName" priority="12">
