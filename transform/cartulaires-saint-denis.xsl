@@ -59,9 +59,22 @@
 
   <!-- Structure d'un acte, comme Pleade : en-tête (titre, date, analyse), puis tradition,
        commentaire et transcription, séparés par un filet. -->
+  <!-- 2026-10-19 (cartulaires seulement, écart à saint-denis.xsl) : en-tête de l'acte présenté comme les
+       autres cartulaires : <header class="front"> (cadre de hteiml) qui réunit n°, date, analyse ET tableau
+       de la tradition, celui-ci n'étant plus répété dans le corps. -->
   <xsl:template match="tei:text/tei:front" priority="12">
-    <div class="front"><xsl:apply-templates/></div>
+    <header class="front">
+      <xsl:apply-templates/>
+      <xsl:apply-templates select="../tei:body/tei:div[@type = 'tradition']" mode="sd-entete"/>
+    </header>
   </xsl:template>
+  <xsl:template match="tei:div[@type = 'tradition']" mode="sd-entete">
+    <div class="tei-tradition">
+      <xsl:if test="@xml:lang"><xsl:attribute name="lang" select="@xml:lang"/></xsl:if>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  <xsl:template match="tei:body/tei:div[@type = 'tradition'][../../tei:front]" priority="13"/>
 
   <!-- Sigle d'un témoin (A, B, a…) : en italique chez Pleade. -->
   <xsl:template match="tei:witness/tei:label" priority="12">
