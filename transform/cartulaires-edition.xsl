@@ -30,6 +30,8 @@
            contient pas le back : on lit le TEI complet posé dans compagnons/ (pas l'API). -->
       <xsl:variable name="table-propre" select="edt:table-propre(.)"/>
       <xsl:choose>
+        <!-- 2026-10-19 : un groupe sans acte direct (page Édition qui ne contient que des parties) garde le sommaire de DoTS, sans tableau ; le tableau filtrable est au niveau qui contient les actes. -->
+        <xsl:when test="empty(tei:text)"/>
         <xsl:when test="exists($table-propre)">
           <xsl:apply-templates select="$table-propre"/>
         </xsl:when>
@@ -84,6 +86,7 @@
           <xsl:apply-templates select="$g/tei:argument"/>
           <xsl:variable name="table-propre" select="edt:table-propre($g)"/>
           <xsl:choose>
+            <xsl:when test="empty($g/tei:text)"/>  <!-- voir plus haut : sommaire de DoTS -->
             <xsl:when test="exists($table-propre)"><xsl:apply-templates select="$table-propre"/></xsl:when>
             <xsl:otherwise><xsl:for-each select="$g"><xsl:call-template name="edt-tableau"/></xsl:for-each></xsl:otherwise>
           </xsl:choose>
@@ -107,6 +110,7 @@
           <xsl:apply-templates select="$g/tei:argument"/>
           <xsl:variable name="table-propre" select="edt:table-propre($g)"/>
           <xsl:choose>
+            <xsl:when test="empty($g/tei:text)"/>  <!-- voir plus haut : sommaire de DoTS -->
             <xsl:when test="exists($table-propre)"><xsl:apply-templates select="$table-propre"/></xsl:when>
             <xsl:otherwise><xsl:for-each select="$g"><xsl:call-template name="edt-tableau"/></xsl:for-each></xsl:otherwise>
           </xsl:choose>
