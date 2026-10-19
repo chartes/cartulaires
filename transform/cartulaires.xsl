@@ -177,12 +177,20 @@
          rend les notes par le modèle nommé « note », qu'on ne peut pas surcharger sans le recopier. -->
     <xsl:variable name="doublons" select="for $n in .//tei:note[@n][@xml:id] return (if (exists(cartu:note-premiere($n))) then string($n/@xml:id) else ())" xmlns:cartu="urn:cartu"/>
     <xsl:choose>
-      <xsl:when test="empty($doublons)"><xsl:apply-templates/></xsl:when>
+      <xsl:when test="not(.//tei:note)"><xsl:apply-templates/></xsl:when>
       <xsl:otherwise>
         <xsl:variable name="rendu"><xsl:apply-templates/></xsl:variable>
-        <xsl:apply-templates select="$rendu/node()" mode="cartu-sans-doublon">
-          <xsl:with-param name="doublons" select="$doublons" tunnel="yes"/>
-        </xsl:apply-templates>
+        <!-- et toute note rendue deux fois sous le même identifiant (hteiml : avant le premier saut de
+             page et sur sa page, NDVC-AB_0712) -->
+        <xsl:variable name="ids" select="$rendu//*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note']/@id/string()"/>
+        <xsl:choose>
+          <xsl:when test="empty($doublons) and count($ids) = count(distinct-values($ids))"><xsl:sequence select="$rendu/node()"/></xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="$rendu/node()" mode="cartu-sans-doublon">
+              <xsl:with-param name="doublons" select="$doublons" tunnel="yes"/>
+            </xsl:apply-templates>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -191,7 +199,8 @@
   </xsl:template>
   <xsl:template match="*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id]" mode="cartu-sans-doublon">
     <xsl:param name="doublons" tunnel="yes" as="xs:string*"/>
-    <xsl:if test="not(@id = $doublons)"><xsl:next-match/></xsl:if>
+    <xsl:variable name="id" select="string(@id)"/>
+    <xsl:if test="not($id = $doublons) and not(preceding::*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id = $id])"><xsl:next-match/></xsl:if>
   </xsl:template>
   <xsl:template match="*[local-name() = 'wrapper'][not(.//tei:text)]" priority="20">
     <!-- 2026-10-19 : apply-templates et non apply-imports : le hteiml du serveur n'a pas de règle pour
