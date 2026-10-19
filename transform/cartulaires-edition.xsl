@@ -3,8 +3,9 @@
      PAGE ÉDITION (unité group servie entière : « part » dans editByCiteType) : la liste des actes
      prend la forme de la « Table du cartulaire » de SSCO-AB (r7987684, modèle validé par Maxime) :
      mêmes classes (table.cartu-table-matieres), mêmes colonnes N° | Pièce | Date | Folio | Page,
-     une ligne d'intertitre par partie (sous-groupe). Ajout demandé : le tri, par N° ou par date,
-     au clic sur l'en-tête de colonne (attribut onclick ; DoTS-vue n'exécute pas les <script>).
+     2026-10-19 : tableau triable et filtrable du module commun (constructeur cartu-tf du module
+     tableaux, classes tf-*, comportement dans le JS générique de l'ÉLEC) ; la partie (sous-groupe),
+     autrefois en ligne d'intertitre, est une colonne filtrable (décision de Maxime).
      Folio : premier pb portant @ed (témoin manuscrit) ; Page : page de l'édition où l'acte
      commence. Une colonne vide pour tous les actes n'est pas affichée.
      Version précédente (filtre, 50 premiers actes) : scratchpad\chantier\edition\*.avant_ssco. -->
@@ -16,10 +17,6 @@
   xmlns:edt="urn:cartu-edition"
   exclude-result-prefixes="tei dts edt">
 
-  <!-- tri : ordre du livre (data-ord) ; une colonne de texte (th[data-texte], ex. Lieu des appendices) se trie par ordre alphabétique ; / numéro (data-num) / date (data-date, AAAA-MM-JJ ; sans date = fin).
-       Trié par date, les intertitres de parties n'ont plus de sens : masqués ; retour à l'ordre du
-       livre en recliquant sur N°. -->
-  <xsl:variable name="edt-tri-js">var t=this.closest('table'),b=t.tBodies[0],k=this.getAttribute('data-cle'),tx=this.hasAttribute('data-texte'),s=this.getAttribute('aria-sort')==='ascending'?-1:1;t.querySelectorAll('th[data-cle]').forEach(function(h){h.removeAttribute('aria-sort');});this.setAttribute('aria-sort',s===1?'ascending':'descending');var r=Array.prototype.slice.call(b.rows),v=function(x){var a=x.getAttribute('data-'+k)||'';return k==='date'?(a||(s===1?'9999':'0000')):parseFloat(a)||0;};r.sort(function(x,y){if(k==='num'&amp;&amp;s===1){return (parseFloat(x.getAttribute('data-ord'))||0)-(parseFloat(y.getAttribute('data-ord'))||0);}if(tx){var ea=!(x.getAttribute('data-'+k)),eb=!(y.getAttribute('data-'+k));if(ea!==eb){return ea?1:-1;}return (x.getAttribute('data-'+k)||'').localeCompare(y.getAttribute('data-'+k)||'','fr',{sensitivity:'base'})*s||(parseFloat(x.getAttribute('data-ord'))-parseFloat(y.getAttribute('data-ord')));}var p=v(x),q=v(y);return (p&lt;q?-1:p&gt;q?1:0)*s;});r.forEach(function(x){b.appendChild(x);});b.querySelectorAll('tr.cartu-tm-partie').forEach(function(x){x.hidden=!(k==='num'&amp;&amp;s===1);});</xsl:variable>
 
   <xsl:template match="tei:group[parent::*[local-name() = 'wrapper']][.//tei:text]" priority="30">
     <div class="group">
@@ -30,7 +27,7 @@
            folios du manuscrit) : c'est elle qui sert de tableau à la page Édition (Maxime : « réutiliser
            la table du cartulaire au niveau édition, supprimer le doublon »). Le fragment du groupe ne
            contient pas le back : on lit le TEI complet posé dans compagnons/ (pas l'API). -->
-      <xsl:variable name="table-propre" select="edt:table-propre()"/>
+      <xsl:variable name="table-propre" select="edt:table-propre(.)"/>
       <xsl:choose>
         <xsl:when test="exists($table-propre)">
           <xsl:apply-templates select="$table-propre"/>
@@ -42,8 +39,13 @@
     </div>
   </xsl:template>
 
+  <!-- 2026-10-19 : la table du livre ne vaut que pour la page Édition entière (groupe de premier niveau) ;
+       les sous-groupes (censier, parties) gardent la liste de leurs actes. -->
   <xsl:function name="edt:table-propre" as="element()*">
-    <xsl:sequence select="if ($resource = 'SSCO-AB') then edt:compagnon()//tei:back//tei:div[@type = 'table']//tei:list[@type = 'gloss'] else ()"/>
+    <xsl:param name="g" as="element()?"/>
+    <!-- le fragment servi n'a pas d'ancêtres : on regarde la place du groupe dans le TEI complet -->
+    <xsl:variable name="place" select="if (exists($g/@xml:id)) then (edt:compagnon()//tei:group[@xml:id = $g/@xml:id])[1] else ()"/>
+    <xsl:sequence select="if ($resource = 'SSCO-AB' and exists($place) and empty($place/ancestor::tei:group)) then edt:compagnon()//tei:back//tei:div[@type = 'table']//tei:list[@type = 'gloss'] else ()"/>
   </xsl:function>
 
   <!-- 2026-10-08 : TEI COMPLET du cartulaire servi. Localement, compagnons/ est une jonction vers
@@ -79,7 +81,30 @@
           <xsl:if test="$g/@xml:id"><xsl:attribute name="id" select="$g/@xml:id"/></xsl:if>
           <h1 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h1>
           <xsl:apply-templates select="$g/tei:argument"/>
-          <xsl:variable name="table-propre" select="edt:table-propre()"/>
+          <xsl:variable name="table-propre" select="edt:table-propre($g)"/>
+          <xsl:choose>
+            <xsl:when test="exists($table-propre)"><xsl:apply-templates select="$table-propre"/></xsl:when>
+            <xsl:otherwise><xsl:for-each select="$g"><xsl:call-template name="edt-tableau"/></xsl:for-each></xsl:otherwise>
+          </xsl:choose>
+        </div>
+      </xsl:when>
+      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- 2026-10-19 : même page, forme de DoTS dev (0fb0c43) : servie sans ses actes, elle GARDE son élément
+       group (wrapper > group, titre dans le group). Le groupe est retrouvé dans le TEI complet (compagnon)
+       par son identifiant. -->
+  <xsl:template match="tei:group[parent::*[local-name() = 'wrapper']][not(.//tei:text)]" priority="30">
+    <xsl:variable name="id" select="string(@xml:id)"/>
+    <xsl:variable name="g" select="if ($id = '') then () else (edt:compagnon()//tei:group[@xml:id = $id][.//tei:text[@xml:id]])[1]"/>
+    <xsl:choose>
+      <xsl:when test="exists($g)">
+        <div class="group">
+          <xsl:attribute name="id" select="$id"/>
+          <xsl:if test="tei:head"><h1 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h1></xsl:if>
+          <xsl:apply-templates select="$g/tei:argument"/>
+          <xsl:variable name="table-propre" select="edt:table-propre($g)"/>
           <xsl:choose>
             <xsl:when test="exists($table-propre)"><xsl:apply-templates select="$table-propre"/></xsl:when>
             <xsl:otherwise><xsl:for-each select="$g"><xsl:call-template name="edt-tableau"/></xsl:for-each></xsl:otherwise>
@@ -91,40 +116,38 @@
   </xsl:template>
 
   <xsl:template name="edt-tableau">
+      <xsl:variable name="groupe" select="."/>
       <xsl:variable name="actes" select=".//tei:text[@xml:id]"/>
       <xsl:variable name="avec-folio" select="exists($actes[edt:folio(.) != ''])"/>
       <xsl:variable name="avec-page" select="exists($actes[edt:page(.) != ''])"/>
-      <xsl:variable name="nb-col" select="3 + (if ($avec-folio) then 1 else 0) + (if ($avec-page) then 1 else 0)"/>
-      <table class="cartu-table-matieres cartu-edition">
-        <thead>
-          <tr>
-            <th scope="col" class="cartu-tm-n cartu-tri-col" data-cle="num" aria-sort="ascending" title="Trier par numéro" onclick="{$edt-tri-js}">N<sup>o</sup></th>
-            <th scope="col">Pièce</th>
-            <th scope="col" class="cartu-tm-date cartu-tri-col" data-cle="date" title="Trier par date" onclick="{$edt-tri-js}">Date</th>
-            <xsl:if test="$avec-folio"><th scope="col" class="cartu-tm-fol">Folio</th></xsl:if>
-            <xsl:if test="$avec-page"><th scope="col" class="cartu-tm-p">Page</th></xsl:if>
-          </tr>
-        </thead>
-        <tbody>
-          <xsl:for-each select="descendant-or-self::tei:group[tei:text[@xml:id]]">
-            <xsl:if test="not(. is current()) and tei:head">
-              <tr class="cartu-tm-partie" data-ord="{count(preceding::tei:text) + 0.5}">
-                <th colspan="{$nb-col}" scope="rowgroup"><xsl:apply-templates select="tei:head/node()"/></th>
-              </tr>
-            </xsl:if>
-            <xsl:for-each select="tei:text[@xml:id]">
-              <xsl:variable name="href" select="concat($document-base, $resource, '?refId=', @xml:id)"/>
-              <tr data-ord="{count(preceding::tei:text) + 1}" data-num="{edt:num(.)}" data-date="{edt:date-tri(.)}">
-                <td class="cartu-tm-n"><xsl:value-of select="@n"/></td>
-                <td class="cartu-tm-titre"><xsl:variable name="piece" select="edt:piece(.)"/><a href="{$href}"><xsl:if test="string-length($piece) gt 120"><xsl:attribute name="title" select="$piece"/></xsl:if><xsl:value-of select="edt:piece-courte($piece)"/></a></td>
-                <td class="cartu-tm-date"><xsl:value-of select="edt:date(.)"/></td>
-                <xsl:if test="$avec-folio"><td class="cartu-tm-fol"><xsl:value-of select="edt:folio(.)"/></td></xsl:if>
-                <xsl:if test="$avec-page"><td class="cartu-tm-p"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page(.)"/></a></xsl:if></td></xsl:if>
-              </tr>
-            </xsl:for-each>
+      <xsl:variable name="avec-partie" select="exists(.//tei:group[tei:head][tei:text[@xml:id]] except .)"/>
+      <xsl:call-template name="cartu-tf">
+        <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition'"/>
+        <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-actes')"/>
+        <xsl:with-param name="unite" select="'actes'"/>
+        <xsl:with-param name="colonnes" select="(
+          map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
+          map { 'libelle': 'Pièce', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' },
+          map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
+          if ($avec-partie) then map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tm-partie-col' } else (),
+          if ($avec-folio) then map { 'libelle': 'Folio', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-fol' } else (),
+          if ($avec-page) then map { 'libelle': 'Page', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-p' } else ())"/>
+        <xsl:with-param name="lignes" as="element()*">
+          <xsl:for-each select="$actes">
+            <xsl:variable name="href" select="concat($document-base, $resource, '?refId=', @xml:id)"/>
+            <xsl:variable name="piece" select="edt:piece(.)"/>
+            <xsl:variable name="partie" select="(ancestor::tei:group[tei:head] except $groupe/ancestor-or-self::tei:group)[last()]"/>
+            <tr>
+              <td data-sort="{edt:num(.)}" data-f="{edt:num(.)}"><xsl:value-of select="@n"/></td>
+              <td><a href="{$href}"><xsl:if test="string-length($piece) gt 120"><xsl:attribute name="title" select="$piece"/></xsl:if><xsl:value-of select="edt:piece-courte($piece)"/></a></td>
+              <td data-sort="{edt:date-tri(.)}"><xsl:value-of select="edt:date(.)"/></td>
+              <xsl:if test="$avec-partie"><td><xsl:value-of select="edt:titre($partie)"/></td></xsl:if>
+              <xsl:if test="$avec-folio"><td><xsl:value-of select="edt:folio(.)"/></td></xsl:if>
+              <xsl:if test="$avec-page"><td data-sort="{replace(edt:page(.), '\D', '')}"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page(.)"/></a></xsl:if></td></xsl:if>
+            </tr>
           </xsl:for-each>
-        </tbody>
-      </table>
+        </xsl:with-param>
+      </xsl:call-template>
   </xsl:template>
 
   <!-- texte visible d'un élément, sans les notes -->
