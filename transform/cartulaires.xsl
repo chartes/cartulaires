@@ -309,8 +309,9 @@
       [following-sibling::*[1][self::tei:date or self::tei:placeName or self::tei:name]]
       [not(following-sibling::node()[1][self::text()][normalize-space()])]">
     <xsl:next-match/>
-    <xsl:text>,</xsl:text>
-    <xsl:if test="not(following-sibling::node()[1][self::text()])"><xsl:text> </xsl:text></xsl:if>
+    <!-- « 21 avril. Paris » : déjà ponctué, une espace seulement -->
+    <xsl:if test="not(matches(normalize-space(.), '[.,;:]$'))"><xsl:text>,</xsl:text></xsl:if>
+    <xsl:text> </xsl:text>
   </xsl:template>
 
   <!-- 2026-10-19 : bloc de présentation ou signature vides (<p><!- - TODO - -></p>, SAPC-AB, SMPA-AB-03, SMMI-AB…) :
@@ -1234,7 +1235,8 @@
       </xsl:if>
       <xsl:apply-templates/>
       <!-- mention « D'apres <temoin edite> », comme chez hteiml -->
-      <xsl:apply-templates select=".//tei:witness[@ana='edited']" mode="according"/>
+      <!-- 2026-10-19 : un seul « D'après » : le premier témoin suivi (B, puis l'édition a, SMPA-AB-03) -->
+      <xsl:apply-templates select="(.//tei:witness[@ana='edited'])[1]" mode="according"/>
     </xsl:element>
   </xsl:template>
 
