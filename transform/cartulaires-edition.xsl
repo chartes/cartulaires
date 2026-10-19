@@ -15,7 +15,8 @@
   xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:dts="https://w3id.org/dts/api#"
   xmlns:edt="urn:cartu-edition"
-  exclude-result-prefixes="tei dts edt">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="tei dts edt xs">
 
 
   <xsl:template match="tei:group[parent::*[local-name() = 'wrapper']][.//tei:text]" priority="30">
@@ -145,7 +146,7 @@
               <xsl:if test="$avec-folio"><td><xsl:value-of select="edt:folio(.)"/></td></xsl:if>
               <xsl:if test="$avec-page">
                 <xsl:variable name="tp" select="edt:tome-page(edt:page(.))"/>
-                <td data-sort="{if ($tp[2] castable as xs:integer) then xs:integer(($tp[1][. castable as xs:integer], '0')[1]) * 100000 + xs:integer($tp[2]) else 0}" data-f="{$tp[2][. castable as xs:integer] ! xs:integer(.)}" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page-libelle($tp)"/></a></xsl:if></td>
+                <td data-sort="{if ($tp[2] castable as xs:integer) then xs:integer(($tp[1][. castable as xs:integer], '0')[1]) * 100000 + xs:integer($tp[2]) else 0}" data-f="{$tp[2][. castable as xs:integer] ! xs:integer(.)}"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page-libelle($tp)"/></a></xsl:if></td>
               </xsl:if>
             </tr>
           </xsl:for-each>

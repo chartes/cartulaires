@@ -108,6 +108,27 @@
   </xsl:template>
 
   <!-- ==== 2. BLOCS HTEIML GÉNÉRIQUES : enveloppe dts:wrapper et notes, numérotation des notes, noms ==== -->
+  <!-- 2026-10-19 : APPELS D'APPARAT. Les notes d'apparat des cartulaires sont des notes à lettre
+       (@n="a", Saint-Martin-des-Champs, Orléans…) : hteiml leur donne la même classe qu'aux notes savantes.
+       L'appel affiché en lettre reçoit en plus la classe app-ref, que la CSS met en italique (modèle :
+       Montferrand, a.apparatus-call). Le rendu de hteiml est gardé tel quel (next-match). -->
+  <xsl:template match="tei:note" priority="40">
+    <xsl:variable name="n"><xsl:call-template name="note-n"/></xsl:variable>
+    <xsl:choose>
+      <xsl:when test="matches(normalize-space($n), '^[a-z]{1,2}$')">
+        <xsl:variable name="rendu"><xsl:next-match/></xsl:variable>
+        <xsl:apply-templates select="$rendu/node()" mode="cartu-app-ref"/>
+      </xsl:when>
+      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="@* | node()" mode="cartu-app-ref">
+    <xsl:copy><xsl:apply-templates select="@* | node()" mode="cartu-app-ref"/></xsl:copy>
+  </xsl:template>
+  <xsl:template match="*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteref']/@class" mode="cartu-app-ref">
+    <xsl:attribute name="class" select="concat(., ' app-ref')"/>
+  </xsl:template>
+
   <!-- 2026-10-19 : ESPACES PERDUS ENTRE DEUX ÉLÉMENTS. Un retour à la ligne du TEI entre deux éléments
        en ligne (« <placeName>Bernuzum</placeName>⏎<sic>(sic)</sic> », SMPA-EG n° I) passe tel quel dans
        le HTML ; dots-vue compile la page en gabarit Vue (mode condense), qui SUPPRIME un blanc entre deux
