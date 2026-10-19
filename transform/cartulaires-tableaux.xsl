@@ -269,7 +269,7 @@
       <xsl:with-param name="unite" select="'actes'"/>
       <xsl:with-param name="colonnes" select="(
         map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
+        map { 'libelle': 'Date et lieu', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
         map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' })"/>
       <xsl:with-param name="lignes" as="element()*">
         <xsl:for-each select="tei:item[matches(normalize-space(.), '^([IVXLCDM]+(\s+à\s+[IVXLCDM]+)?[.,]?\s*(—|\d)|\[\d)')]">  <!-- les actes ; pas le titre « Table des matières. » encodé en entrée -->
@@ -284,7 +284,9 @@
                 <xsl:otherwise><xsl:value-of select="$num"/></xsl:otherwise>
               </xsl:choose>
             </td>
-            <td data-sort="{if ($acte) then edt:date-tri($acte) else ''}"><xsl:value-of select="if ($acte) then edt:date($acte) else ''"/></td>
+            <!-- date et lieu tels que la table les donne (« 1129. Orléans ») ; à défaut, la date de l'acte ; tri sur la date de l'acte -->
+            <xsl:variable name="prefixe" select="if ($complet) then normalize-space(replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*(.+?)\s—\s.*$', '$1', 's')) else ''"/>
+            <td data-sort="{if ($acte) then edt:date-tri($acte) else ''}"><xsl:value-of select="if ($prefixe != '') then replace($prefixe, '\.$', '') else if ($acte) then edt:date($acte) else ''"/></td>
             <td>
               <xsl:value-of select="if ($complet) then replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s*', '', 's') else replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*', '', 's')"/>
               <xsl:apply-templates select="node() except $t0"/>
