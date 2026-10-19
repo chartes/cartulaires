@@ -112,12 +112,26 @@
        (@n="a", Saint-Martin-des-Champs, Orléans…) : hteiml leur donne la même classe qu'aux notes savantes.
        L'appel affiché en lettre reçoit en plus la classe app-ref, que la CSS met en italique (modèle :
        Montferrand, a.apparatus-call). Le rendu de hteiml est gardé tel quel (next-match). -->
+  <!-- 2026-10-19 : NOTE RÉPÉTÉE. Une note identique à une note précédente de même numéro, dans le même
+       acte (SMPO-AB_1b : deux notes 3 « Amaury de Pontoise… », une par appel) n'est pas répétée en pied de
+       page ; son appel renvoie à la première. -->
+  <xsl:function name="cartu:note-premiere" as="element()?" xmlns:cartu="urn:cartu">
+    <xsl:param name="n" as="element()"/>
+    <xsl:sequence select="($n/preceding::tei:note[@n = $n/@n][@xml:id][normalize-space(.) = normalize-space($n)][let $a := ancestor::tei:text[1], $b := $n/ancestor::tei:text[1] return (empty($a) and empty($b)) or ($a is $b)])[1]"/>  <!-- le pied de page travaille sur une copie des notes, sans acte parent -->
+  </xsl:function>
+  <xsl:template match="tei:note[@n][exists(cartu:note-premiere(.))]" mode="fn" priority="40" xmlns:cartu="urn:cartu"/>
+
   <xsl:template match="tei:note" priority="40">
     <xsl:variable name="n"><xsl:call-template name="note-n"/></xsl:variable>
+    <xsl:variable name="lettre" select="matches(normalize-space($n), '^[a-z]{1,2}$')"/>
+    <xsl:variable name="premiere" select="if (@n) then cartu:note-premiere(.) else ()" xmlns:cartu="urn:cartu"/>
     <xsl:choose>
-      <xsl:when test="matches(normalize-space($n), '^[a-z]{1,2}$')">
+      <xsl:when test="$lettre or exists($premiere)">
         <xsl:variable name="rendu"><xsl:next-match/></xsl:variable>
-        <xsl:apply-templates select="$rendu/node()" mode="cartu-app-ref"/>
+        <xsl:apply-templates select="$rendu/node()" mode="cartu-app-ref">
+          <xsl:with-param name="lettre" select="$lettre" tunnel="yes"/>
+          <xsl:with-param name="cible" select="string($premiere/@xml:id)" tunnel="yes"/>
+        </xsl:apply-templates>
       </xsl:when>
       <xsl:otherwise><xsl:next-match/></xsl:otherwise>
     </xsl:choose>
@@ -125,8 +139,13 @@
   <xsl:template match="@* | node()" mode="cartu-app-ref">
     <xsl:copy><xsl:apply-templates select="@* | node()" mode="cartu-app-ref"/></xsl:copy>
   </xsl:template>
+  <xsl:template match="*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteref']/@href" mode="cartu-app-ref">
+    <xsl:param name="cible" tunnel="yes" select="''"/>
+    <xsl:attribute name="href" select="if ($cible != '') then concat('#', $cible) else ."/>
+  </xsl:template>
   <xsl:template match="*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteref']/@class" mode="cartu-app-ref">
-    <xsl:attribute name="class" select="concat(., ' app-ref')"/>
+    <xsl:param name="lettre" tunnel="yes" select="false()"/>
+    <xsl:attribute name="class" select="if ($lettre) then concat(., ' app-ref') else ."/>
   </xsl:template>
 
   <!-- 2026-10-19 : ESPACES PERDUS ENTRE DEUX ÉLÉMENTS. Un retour à la ligne du TEI entre deux éléments
@@ -154,7 +173,25 @@
        (« <dts:wrapper> » en rouge en tête de chaque acte). Les pages sans <text> (index, parties)
        ont leur propre modèle, ci-dessous (priorité supérieure). -->
   <xsl:template match="*[local-name() = 'wrapper']" priority="5">
-    <xsl:apply-templates/>
+    <!-- 2026-10-19 : notes répétées (voir « NOTE RÉPÉTÉE », bloc 3) retirées du pied de page : hteiml y
+         rend les notes par le modèle nommé « note », qu'on ne peut pas surcharger sans le recopier. -->
+    <xsl:variable name="doublons" select="for $n in .//tei:note[@n][@xml:id] return (if (exists(cartu:note-premiere($n))) then string($n/@xml:id) else ())" xmlns:cartu="urn:cartu"/>
+    <xsl:choose>
+      <xsl:when test="empty($doublons)"><xsl:apply-templates/></xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="rendu"><xsl:apply-templates/></xsl:variable>
+        <xsl:apply-templates select="$rendu/node()" mode="cartu-sans-doublon">
+          <xsl:with-param name="doublons" select="$doublons" tunnel="yes"/>
+        </xsl:apply-templates>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="@* | node()" mode="cartu-sans-doublon">
+    <xsl:copy><xsl:apply-templates select="@* | node()" mode="cartu-sans-doublon"/></xsl:copy>
+  </xsl:template>
+  <xsl:template match="*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id]" mode="cartu-sans-doublon">
+    <xsl:param name="doublons" tunnel="yes" as="xs:string*"/>
+    <xsl:if test="not(@id = $doublons)"><xsl:next-match/></xsl:if>
   </xsl:template>
   <xsl:template match="*[local-name() = 'wrapper'][not(.//tei:text)]" priority="20">
     <!-- 2026-10-19 : apply-templates et non apply-imports : le hteiml du serveur n'a pas de règle pour
