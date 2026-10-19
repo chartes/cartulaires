@@ -26,7 +26,8 @@
   xmlns:chr="urn:cartu-tableaux"
   xmlns:cartu-app="urn:cartu-appendice"
   xmlns:h="http://www.w3.org/1999/xhtml"
-  exclude-result-prefixes="tei dts xs tf chr cartu-app h">
+  xmlns:edt="urn:cartu-edition"
+  exclude-result-prefixes="tei dts xs tf chr cartu-app h edt">
 
   <!-- ==================================================================================================
        Constructeur commun : un tableau triable et filtrable (module tableau-filtrable.xsl).
@@ -250,6 +251,44 @@
             <td data-sort="{count($partie/preceding-sibling::tei:row)}"><xsl:apply-templates select="$partie/tei:cell/node()"/></td>
             <td data-sort="{normalize-space(tei:cell[1])}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
             <td data-sort="{position()}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
+          </tr>
+        </xsl:for-each>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
+
+  <!-- 2026-10-19 : SCOR-EG, « Table des matières » (fin du volume) : après la concordance (tableau), la table proprement
+       dite est une liste de 388 entrées « N° — date. lieu. — analyse ». En tableau filtrable : N° (lien vers l'acte),
+       Date (celle de l'acte, lue dans le TEI complet, triable), Analyse (balisage gardé, préfixe « N° — date — » retiré
+       quand il est dans le premier texte). -->
+  <xsl:template match="tei:list[$resource = 'SCOR-EG'][parent::*[@xml:id = 'SCOR-EG_back-2']][tei:item]" priority="40">
+    <xsl:variable name="tei" select="edt:compagnon()"/>
+    <xsl:call-template name="cartu-tf">
+      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition'"/>
+      <xsl:with-param name="nom" select="'cartulaires-SCOR-EG-table-des-matieres'"/>
+      <xsl:with-param name="unite" select="'actes'"/>
+      <xsl:with-param name="colonnes" select="(
+        map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
+        map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
+        map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' })"/>
+      <xsl:with-param name="lignes" as="element()*">
+        <xsl:for-each select="tei:item[matches(string(node()[1][self::text()]), '^\s*[IVXLCDM]+\.?\s*—')]">  <!-- les actes ; pas le titre « Table des matières. » encodé en entrée -->
+          <xsl:variable name="t0" select="node()[1][self::text()]"/>
+          <xsl:variable name="num" select="if (matches(string($t0), '^\s*[IVXLCDM]+\.?\s*—')) then replace(string($t0), '^\s*([IVXLCDM]+).*$', '$1', 's') else ''"/>
+          <xsl:variable name="acte" select="if ($num != '') then ($tei//tei:text[@n = $num][@xml:id])[1] else ()"/>
+          <xsl:variable name="complet" select="matches(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s', 's')"/>
+          <tr>
+            <td data-sort="{if ($acte) then edt:num($acte) else 0}" data-f="{if ($acte) then edt:num($acte) else ''}">
+              <xsl:choose>
+                <xsl:when test="$acte"><a href="{concat($document-base, $resource, '?refId=', $acte/@xml:id)}"><xsl:value-of select="$num"/></a></xsl:when>
+                <xsl:otherwise><xsl:value-of select="$num"/></xsl:otherwise>
+              </xsl:choose>
+            </td>
+            <td data-sort="{if ($acte) then edt:date-tri($acte) else ''}"><xsl:value-of select="if ($acte) then edt:date($acte) else ''"/></td>
+            <td>
+              <xsl:value-of select="if ($complet) then replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s*', '', 's') else replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*', '', 's')"/>
+              <xsl:apply-templates select="node() except $t0"/>
+            </td>
           </tr>
         </xsl:for-each>
       </xsl:with-param>
