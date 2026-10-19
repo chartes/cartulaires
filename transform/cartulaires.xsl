@@ -1021,7 +1021,7 @@
        les deux cas (`pb` avec et sans `@facs`). Elle est laissée en place, intacte.
        Sauvegarde avant portage : cartulaires.xsl.bak_c2temoins_20260912. -->
 
-  <xsl:template name="cartulaires-pb-label">
+  <xsl:template name="cartulaires-pb-label" version="3.0">
     <xsl:variable name="norm" select="normalize-space(@n)"/>
     <xsl:choose>
       <xsl:when test="starts-with(@ed, 'frantext')"/>
@@ -1031,6 +1031,8 @@
       </xsl:when>
       <xsl:when test="@ana">[<xsl:value-of select="@ana"/>]</xsl:when>
       <xsl:when test="@ed">[<xsl:value-of select="@n"/>]</xsl:when>
+      <!-- 2026-10-19 : notation tome + page (« 3_0101 », « t1_p067 », « I. 9 ») : « t. III, p. 101 », comme la colonne Page -->
+      <xsl:when test="matches($norm, '^(t?\d+_p?\d+|[IVX]+\.\s*\d+)$')">{<xsl:value-of select="replace(edt:page-libelle(edt:tome-page($norm)), ' ', '&#160;')"/>}</xsl:when>
       <xsl:when test="@n != '' and contains('0123456789IVXDCM', substring(@n,1,1))">{p.&#160;<xsl:value-of select="@n"/>}</xsl:when>
       <xsl:otherwise>[<xsl:value-of select="@n"/>]</xsl:otherwise>
     </xsl:choose>
