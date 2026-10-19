@@ -300,6 +300,10 @@
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
 
+  <!-- 2026-10-19 : bloc de présentation ou signature vides (<p><!- - TODO - -></p>, SAPC-AB, SMPA-AB-03, SMMI-AB…) :
+       rien, au lieu d'un cadre vide ; la page garde alors le sommaire de ses sous-parties (CSS). -->
+  <xsl:template match="tei:front/tei:argument[not(normalize-space())] | tei:front/tei:byline[not(normalize-space())]" priority="16"/>
+
   <!-- 2026-10-19 : BIBLIOGRAPHIES NON ENCODÉES EN listBibl, passées au module commun (une ligne par
        référence) : une liste dont chaque item porte un <bibl> (NDCH-EG), et dans une page « Orientation
        bibliographique », « Bibliographie » ou « Sources imprimées », les paragraphes qui ont la forme d'une
