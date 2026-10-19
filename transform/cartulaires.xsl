@@ -37,7 +37,7 @@
        défaut, $resource restait vide (liens du tableau des actes, compagnon de la page Édition, noms des
        fichiers CSV). Par défaut, le code de la ressource est lu sur les identifiants du document servi,
        qui commencent tous par lui (« SMPA-EG_0001 », « SMPA-AB-01_front_0003 »). -->
-  <xsl:param name="resource" select="(for $i in (//@xml:id)[matches(., '^[A-Z]{4}-[A-Z]{2}(-\d+)?_')][1] return replace($i, '^([A-Z]{4}-[A-Z]{2}(-\d+)?)_.*$', '$1'), '')[1]"/>
+  <xsl:param name="resource" select="(for $i in (//@xml:id)[matches(., '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')][1] return replace($i, '^([A-Z]{4,5}-[A-Z]{2}(-\d+)?)_.*$', '$1'), '')[1]"/>
   <!-- 2026-10-02 : début des liens internes. Le front dev est monté sous /elec/ : sans ce
        préfixe, les renvois de l'index et les liens vers les actes sortaient de l'application.
        La copie servie en local (dots-clean) remplace cette valeur par '/cartulaires/document/'. -->

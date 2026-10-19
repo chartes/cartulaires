@@ -189,6 +189,48 @@
   </xsl:template>
 
   <!-- Tableau simple (non triable) : lignes et cellules, fusions comprises ; lignes de titre en th. -->
+  <!-- 2026-10-19 : HDPAR-HD, « Tableaux analytiques » (Cartulaire A) : deux lignes de titre (« Cartulaires »
+       sur A, B, C), lignes de cahier (« Cah. 1, fol. 1-2 ») et de catégorie (« Rois. ») sur toute la largeur.
+       Comme les autres tableaux : un tableau filtrable, les lignes intercalaires devenues colonnes
+       (Catégorie, Cahier), les sauts de page dans la première cellule de la ligne qui suit. -->
+  <xsl:template match="tei:table[$resource = 'HDPAR-HD'][tei:row[1]/tei:cell[normalize-space(.) = 'Suscripteurs']]" priority="40">
+    <xsl:variable name="donnees" select="tei:row[not(@role = 'label')][count(tei:cell) = 6]"/>
+    <xsl:call-template name="cartu-tf">
+      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-table-analytique'"/>
+      <xsl:with-param name="nom" select="'cartulaires-HDPAR-HD-tableaux-analytiques'"/>
+      <xsl:with-param name="unite" select="'actes'"/>
+      <xsl:with-param name="titre" as="node()*"><xsl:apply-templates select="tei:head/node()"/></xsl:with-param>
+      <xsl:with-param name="colonnes" select="(
+        map { 'libelle': 'Catégorie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
+        map { 'libelle': 'Cahier', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
+        map { 'libelle': 'A', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
+        map { 'libelle': 'B', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
+        map { 'libelle': 'C', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
+        map { 'libelle': 'Suscripteurs', 'num': false(), 'filtre': 'texte', 'classe': '' },
+        map { 'libelle': 'Dates', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
+        map { 'libelle': 'Cotes des Archives', 'num': false(), 'filtre': 'texte', 'classe': '' })"/>
+      <xsl:with-param name="lignes" as="element()*">
+        <xsl:for-each select="$donnees">
+          <xsl:variable name="r" select="."/>
+          <xsl:variable name="prec" select="preceding-sibling::tei:row[not(@role = 'label')][count(tei:cell) = 6][1]"/>
+          <xsl:variable name="cat" select="preceding-sibling::tei:row[count(tei:cell) = 1][not(starts-with(normalize-space(.), 'Cah.'))][1]"/>
+          <xsl:variable name="cah" select="preceding-sibling::tei:row[count(tei:cell) = 1][starts-with(normalize-space(.), 'Cah.')][1]"/>
+          <xsl:variable name="pb" select="preceding-sibling::tei:pb[empty($prec) or . &gt;&gt; $prec]"/>
+          <tr>
+            <td data-sort="{normalize-space($cat)}"><xsl:apply-templates select="$cat/tei:cell/node()"/></td>
+            <td data-sort="{normalize-space($cah)}"><xsl:apply-templates select="$cah/tei:cell/node()"/></td>
+            <xsl:for-each select="tei:cell">
+              <td data-sort="{if (position() = 5) then chr:date-tri(string(.)) else normalize-space(.)}">
+                <xsl:if test="position() = 1"><xsl:apply-templates select="$pb"/></xsl:if>
+                <xsl:apply-templates/>
+              </td>
+            </xsl:for-each>
+          </tr>
+        </xsl:for-each>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
+
   <xsl:template match="tei:row" mode="tableau-simple">
     <tr>
       <xsl:if test="@role = 'label' and preceding-sibling::tei:row[not(@role = 'label')]">
