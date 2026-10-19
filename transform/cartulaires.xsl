@@ -384,13 +384,16 @@
   <!-- 2026-10-08 : ressources dont l'index tient sur une seule page, lettres repliables (seuil :
        jusqu'à SLES-PR, 1 341 entrées). Les entrées restent des lignes, numéros d'actes visibles
        (fiches par entrée essayées puis retirées : « pas besoin de devoir déplier »). -->
-  <xsl:variable name="cartu-fiches" select="('SCHA-PR', 'SLES-PR', 'SGGO-PR', 'SSCO-AB', 'NDMA-AB', 'STEP-AB', 'NDRC-AB', 'NDPR-AB', 'NDMT-AB')"/>
+  <!-- 2026-10-19 : retour à une page par lettre (comme les autres cartulaires) pour SCHA, SLES, SGGO, SSCO, NDMA,
+       dont les lettres sont des unités du sommaire (index-complet n'est plus éditable dans la conf) ; restent
+       sur une page les index dont les lettres ne sont pas des unités. -->
+  <xsl:variable name="cartu-fiches" select="('STEP-AB', 'NDRC-AB', 'NDPR-AB', 'NDMT-AB')"/>
   <!-- renvois « voir » : ressources dont les lettres sont des unités citables sous UNE unité
        index-complet, et cette unité (même ordre). Ailleurs le renvoi garde sa cible : soit la page
        est déjà entière (STEP, NDRC, NDPR, NDMT), soit le front redirige la lettre vers sa page
        d'index (SGGO, deux index). -->
-  <xsl:variable name="cartu-renvoi-res" select="('SCHA-PR', 'SLES-PR', 'SSCO-AB', 'NDMA-AB')"/>
-  <xsl:variable name="cartu-index-unite" select="('SCHA-PR_index', 'SLES-PR_back-2', 'SSCO-AB_back', 'NDMA-AB_back-2')"/>
+  <xsl:variable name="cartu-renvoi-res" select="()" as="xs:string*"/>  <!-- 2026-10-19 : vide, les renvois visent leur lettre (@corresp) -->
+  <xsl:variable name="cartu-index-unite" select="()" as="xs:string*"/>
   <!-- 2026-10-08 : page d'index sur le modèle de Delescluze (index-personnes) : tout l'index sur
        une seule adresse, chaque lettre repliable avec son nombre d'entrées, les entrées dedans. -->
   <xsl:template match="tei:list[@type = 'index'][tei:head][not(ancestor::tei:item)][$resource = $cartu-fiches]" priority="21" version="3.0">
