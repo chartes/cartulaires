@@ -115,13 +115,13 @@
   <!-- 2026-10-19 : NOTE RÉPÉTÉE. Une note identique à une note précédente de même numéro, dans le même
        acte (SMPO-AB_1b : deux notes 3 « Amaury de Pontoise… », une par appel) n'est pas répétée en pied de
        page ; son appel renvoie à la première. -->
-  <xsl:function name="cartu:note-premiere" as="element()?" xmlns:cartu="urn:cartu">
+  <xsl:function name="cartu:note-premiere" as="element()?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="n" as="element()"/>
     <xsl:sequence select="($n/preceding::tei:note[@n = $n/@n][@xml:id][normalize-space(.) = normalize-space($n)][let $a := ancestor::tei:text[1], $b := $n/ancestor::tei:text[1] return (empty($a) and empty($b)) or ($a is $b)])[1]"/>  <!-- le pied de page travaille sur une copie des notes, sans acte parent -->
   </xsl:function>
   <xsl:template match="tei:note[@n][exists(cartu:note-premiere(.))]" mode="fn" priority="40" xmlns:cartu="urn:cartu"/>
 
-  <xsl:template match="tei:note" priority="40">
+  <xsl:template match="tei:note" priority="40" version="3.0">
     <xsl:variable name="n"><xsl:call-template name="note-n"/></xsl:variable>
     <xsl:variable name="lettre" select="matches(normalize-space($n), '^[a-z]{1,2}$')"/>
     <xsl:variable name="premiere" select="if (@n) then cartu:note-premiere(.) else ()" xmlns:cartu="urn:cartu"/>
@@ -172,7 +172,7 @@
        celle du serveur dev (/dots/xsl/) ne l'a pas, et marquait le wrapper comme élément inconnu
        (« <dts:wrapper> » en rouge en tête de chaque acte). Les pages sans <text> (index, parties)
        ont leur propre modèle, ci-dessous (priorité supérieure). -->
-  <xsl:template match="*[local-name() = 'wrapper']" priority="5">
+  <xsl:template match="*[local-name() = 'wrapper']" priority="5" version="3.0">
     <!-- 2026-10-19 : notes répétées (voir « NOTE RÉPÉTÉE », bloc 3) retirées du pied de page : hteiml y
          rend les notes par le modèle nommé « note », qu'on ne peut pas surcharger sans le recopier. -->
     <xsl:variable name="doublons" select="for $n in .//tei:note[@n][@xml:id] return (if (exists(cartu:note-premiere($n))) then string($n/@xml:id) else ())" xmlns:cartu="urn:cartu"/>
@@ -299,6 +299,35 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
+
+  <!-- 2026-10-19 : BIBLIOGRAPHIES NON ENCODÉES EN listBibl, passées au module commun (une ligne par
+       référence) : une liste dont chaque item porte un <bibl> (NDCH-EG), et dans une page « Orientation
+       bibliographique », « Bibliographie » ou « Sources imprimées », les paragraphes qui ont la forme d'une
+       référence (nom d'auteur en tête, ou titre en italique ; SMMI-AB, STEP-AB, SLES-PR…). La prose reste
+       de la prose. Les données ne changent pas : le listBibl est fabriqué à la volée. -->
+  <xsl:function name="cartu:page-biblio" as="xs:boolean" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="d" as="element()?"/>
+    <xsl:sequence select="exists($d/tei:head[matches(normalize-space(.), 'bibliograph|sources imprim', 'i')]) and empty($d//tei:listBibl)"/>
+  </xsl:function>
+  <xsl:function name="cartu:p-reference" as="xs:boolean" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="p" as="element()"/>
+    <xsl:variable name="t" select="normalize-space($p)"/>
+    <xsl:sequence select="matches($t, '^([A-ZÉÈ][\w’''\-]+( [A-ZÉ][\w’''\-]+)? \(|[A-ZÉ]{3,}|[A-ZÉ][a-zé]+ [A-ZÉ][\w’''\-]+,|[A-Z]\.(-[A-Z]\.)? [A-ZÉ]{2,})')
+                          or exists($p/node()[self::* or normalize-space()][1][self::tei:hi[@rend = ('i', 'italic')]])"/>
+  </xsl:function>
+  <xsl:template match="tei:list[tei:item][every $i in tei:item satisfies exists($i/tei:bibl)]" priority="15" version="3.0">
+    <xsl:variable name="lb"><tei:listBibl><xsl:copy-of select="tei:item/tei:bibl"/></tei:listBibl></xsl:variable>
+    <xsl:apply-templates select="$lb/tei:listBibl"/>
+  </xsl:template>
+  <xsl:template match="tei:p[cartu:page-biblio(..)][cartu:p-reference(.)]" priority="15" version="3.0" xmlns:cartu="urn:cartu">
+    <!-- première référence d'une suite : toute la suite en une liste ; les suivantes sont déjà rendues -->
+    <xsl:if test="not(preceding-sibling::*[not(self::tei:pb)][1][self::tei:p][cartu:p-reference(.)])">
+      <xsl:variable name="fin" select="following-sibling::*[not(self::tei:pb)][not(self::tei:p and cartu:p-reference(.))][1]"/>
+      <xsl:variable name="run" select="(., following-sibling::tei:p[cartu:p-reference(.)][empty($fin) or . &lt;&lt; $fin])"/>
+      <xsl:variable name="lb"><tei:listBibl><xsl:for-each select="$run"><tei:bibl><xsl:copy-of select="node()"/></tei:bibl></xsl:for-each></tei:listBibl></xsl:variable>
+      <xsl:apply-templates select="$lb/tei:listBibl"/>
+    </xsl:if>
+  </xsl:template>
 
   <!-- 2026-10-06 : index, description de l'entrée repliée. La ligne garde la vedette et les
        numéros d'actes ; la description (identification du lieu, de la personne) s'ouvre par
