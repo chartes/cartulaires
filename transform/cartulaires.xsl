@@ -300,6 +300,14 @@
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
 
+  <!-- 2026-10-19 : intertitre de page des notes (« p. 3_0102 ») pour une notation tome + page : « t. III, p. 102 ». -->
+  <xsl:template match="tei:pb[matches(normalize-space(@n), '^(t?\d+_p?\d+|[IVX]+\.\s*\d+)$')]" mode="a" priority="5" version="3.0">
+    <a>
+      <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
+      <xsl:value-of select="edt:page-libelle(edt:tome-page(normalize-space(@n)))"/>
+    </a>
+  </xsl:template>
+
   <!-- 2026-10-19 : en-tête d'acte. Un <head> qui ne fait que répéter le numéro de l'acte (« I », NDPA-EG, HDPAR-HD :
        2 619 actes) n'est pas répété sous le numéro. -->
   <xsl:template match="tei:text[@n]/tei:front/tei:head[replace(normalize-space(.), '[\s.]', '') = replace(normalize-space(../../@n), '[\s.]', '')]" priority="16" version="3.0"/>
