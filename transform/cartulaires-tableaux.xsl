@@ -231,6 +231,31 @@
     </xsl:call-template>
   </xsl:template>
 
+  <!-- 2026-10-19 : SMPA-AB-03, page « Édition » de l'introduction : table des matières sans ligne de titre (sujet |
+       pages), avec des lignes de partie sur toute la largeur. En tableau filtrable : Partie, Sujet, Pages. -->
+  <xsl:template match="tei:table[$resource = 'SMPA-AB-03'][ancestor-or-self::*[@xml:id = 'SMPA-AB-03_edition']]
+      [every $r in tei:row satisfies count($r/tei:cell) le 2][tei:row[count(tei:cell) = 1]]" priority="40">
+    <xsl:call-template name="cartu-tf">
+      <xsl:with-param name="classe" select="'cartu-table-matieres'"/>
+      <xsl:with-param name="nom" select="'cartulaires-SMPA-AB-03-edition'"/>
+      <xsl:with-param name="unite" select="'entrées'"/>
+      <xsl:with-param name="colonnes" select="(
+        map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
+        map { 'libelle': 'Sujet', 'num': false(), 'filtre': 'texte', 'classe': '' },
+        map { 'libelle': 'Pages', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-p' })"/>
+      <xsl:with-param name="lignes" as="element()*">
+        <xsl:for-each select="tei:row[count(tei:cell) = 2]">
+          <xsl:variable name="partie" select="preceding-sibling::tei:row[count(tei:cell) = 1][1]"/>
+          <tr>
+            <td data-sort="{count($partie/preceding-sibling::tei:row)}"><xsl:apply-templates select="$partie/tei:cell/node()"/></td>
+            <td data-sort="{normalize-space(tei:cell[1])}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
+            <td data-sort="{position()}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
+          </tr>
+        </xsl:for-each>
+      </xsl:with-param>
+    </xsl:call-template>
+  </xsl:template>
+
   <xsl:template match="tei:row" mode="tableau-simple">
     <tr>
       <xsl:if test="@role = 'label' and preceding-sibling::tei:row[not(@role = 'label')]">
