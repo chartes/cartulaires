@@ -272,9 +272,9 @@
         map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
         map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' })"/>
       <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="tei:item[matches(string(node()[1][self::text()]), '^\s*[IVXLCDM]+\.?\s*—')]">  <!-- les actes ; pas le titre « Table des matières. » encodé en entrée -->
+        <xsl:for-each select="tei:item[matches(normalize-space(.), '^([IVXLCDM]+(\s+à\s+[IVXLCDM]+)?[.,]?\s*(—|\d)|\[\d)')]">  <!-- les actes ; pas le titre « Table des matières. » encodé en entrée -->
           <xsl:variable name="t0" select="node()[1][self::text()]"/>
-          <xsl:variable name="num" select="if (matches(string($t0), '^\s*[IVXLCDM]+\.?\s*—')) then replace(string($t0), '^\s*([IVXLCDM]+).*$', '$1', 's') else ''"/>
+          <xsl:variable name="num" select="if (matches(normalize-space(.), '^[IVXLCDM]+')) then replace(normalize-space(.), '^([IVXLCDM]+).*$', '$1') else ''"/>
           <xsl:variable name="acte" select="if ($num != '') then ($tei//tei:text[@n = $num][@xml:id])[1] else ()"/>
           <xsl:variable name="complet" select="matches(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s', 's')"/>
           <tr>
