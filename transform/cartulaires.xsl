@@ -300,6 +300,19 @@
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
 
+  <!-- 2026-10-19 : en-tête d'acte. Un <head> qui ne fait que répéter le numéro de l'acte (« I », NDPA-EG, HDPAR-HD :
+       2 619 actes) n'est pas répété sous le numéro. -->
+  <xsl:template match="tei:text[@n]/tei:front/tei:head[replace(normalize-space(.), '[\s.]', '') = replace(normalize-space(../../@n), '[\s.]', '')]" priority="16" version="3.0"/>
+  <!-- 2026-10-19 : date d'acte, lieu et date qui se suivent sans ponctuation (« Compiègne5 mai 877 », « octobre 1245Maubuisson ») :
+       une virgule entre les deux ; une ponctuation déjà présente est gardée. -->
+  <xsl:template priority="16" version="3.0" match="tei:front/tei:docDate/*[self::tei:date or self::tei:placeName or self::tei:name]
+      [following-sibling::*[1][self::tei:date or self::tei:placeName or self::tei:name]]
+      [not(following-sibling::node()[1][self::text()][normalize-space()])]">
+    <xsl:next-match/>
+    <xsl:text>,</xsl:text>
+    <xsl:if test="not(following-sibling::node()[1][self::text()])"><xsl:text> </xsl:text></xsl:if>
+  </xsl:template>
+
   <!-- 2026-10-19 : bloc de présentation ou signature vides (<p><!- - TODO - -></p>, SAPC-AB, SMPA-AB-03, SMMI-AB…) :
        rien, au lieu d'un cadre vide ; la page garde alors le sommaire de ses sous-parties (CSS). -->
   <xsl:template match="tei:front/tei:argument[not(normalize-space())] | tei:front/tei:byline[not(normalize-space())]" priority="16"/>
