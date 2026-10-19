@@ -106,6 +106,9 @@
     </xsl:if>
     <span>
       <xsl:call-template name="atts"/>
+      <!-- 2026-10-19 (cartulaires) : lemme qui n'est qu'un blanc du manuscrit (<lem><space/></lem>, Dugny 13) :
+           classe lem-blanc, que la CSS cache dans l'apparat du pied de page (sinon « ] » isolé). -->
+      <xsl:if test="not(normalize-space(.)) and tei:space"><xsl:attribute name="class" select="'lem lem-blanc'"/></xsl:if>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
@@ -313,8 +316,24 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- 2026-10-19 (cartulaires) : numéro d'acte en chiffres romains, sans le nom du chapitre, comme dans les
+       autres cartulaires (« Dugny 13 » → « XIII », « Beaurain 58a » → « LVIIIa », « Rueil 1. Acte faux » →
+       « I. Acte faux »). Un titre d'une autre forme est rendu tel quel. -->
   <xsl:template match="tei:front/tei:titlePart" priority="12">
-    <h1 class="tei-doc-title"><xsl:apply-templates/></h1>
+    <xsl:variable name="t" select="normalize-space(.)"/>
+    <h1 class="tei-doc-title">
+      <xsl:choose>
+        <xsl:when test="matches($t, '^\S.*?\s(\d+)([a-z]?)(.*)$') and ancestor::tei:text[contains(@xml:id, '-acte')]">
+          <xsl:analyze-string select="$t" regex="^\S.*?\s(\d+)([a-z]?)(.*)$">
+            <xsl:matching-substring>
+              <xsl:number value="xs:integer(regex-group(1))" format="I" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <xsl:value-of select="concat(regex-group(2), regex-group(3))"/>
+            </xsl:matching-substring>
+          </xsl:analyze-string>
+        </xsl:when>
+        <xsl:otherwise><xsl:apply-templates/></xsl:otherwise>
+      </xsl:choose>
+    </h1>
   </xsl:template>
 
   <xsl:template match="tei:front/tei:docDate/tei:date" priority="12">
