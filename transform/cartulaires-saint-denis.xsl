@@ -1014,6 +1014,14 @@
 
   <xsl:template match="tei:ref[not(@type = 'note')][starts-with(@target, '#sd-')][not(key('id', substring-after(@target, '#')))]" priority="14">
     <xsl:variable name="id" select="substring-after(@target, '#')"/>
+    <!-- 2026-10-19 : les pages consacrées au Cartulaire blanc sont passées dans la ressource
+         cartulaire-blanc du projet cartulaires (une page = une partie) : page cible = la page dont
+         l'identifiant est le plus long préfixe de la cible. -->
+    <xsl:variable name="cb-pages" select="('sd-les-textes--cartulaire-blanc--introduction', 'sd-les-textes--cartulaire-blanc--presentation', 'sd-les-textes--cartulaire-blanc--parcourir', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-chapitres', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-actes', 'sd-recherche-cartulaire', 'sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees', 'sd-les-images--images-cb', 'sd-scientifique-cartulaire')"/>
+    <xsl:variable name="cb-page" select="if ($id = 'sd-cartulaire-blanc') then $cb-pages[1]
+        else if (starts-with($id, 'sd-index-auteurs-cartulaire')) then $cb-pages[3]
+        else if (starts-with($id, 'sd-le-projet--aspects-scientifiques--cartulaire-blanc') and $id != 'sd-le-projet--aspects-scientifiques--cartulaire-blanc--etat-d-avancement') then $cb-pages[9]
+        else $cb-pages[$id = . or starts-with($id, concat(., '--'))][last()]"/>  <!-- liste rangée du plus court au plus long préfixe -->
     <xsl:variable name="rub">
       <xsl:choose>
         <xsl:when test="$id = 'sd-les-images--accueil'
@@ -1041,6 +1049,11 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:choose>
+      <xsl:when test="exists($cb-page)">
+        <a class="sd-internal sd-site-page" href="{$sd-vers-chapitres}cartulaire-blanc?refId={$cb-page}{if ($id != $cb-page) then concat('#', $id) else ''}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
       <xsl:when test="$rub != '' and $rub != $id">
         <a class="sd-internal sd-site-page" href="{$sd-vers-sd}saint-denis-site?refId={$rub}#{$id}">
           <xsl:apply-templates/>
