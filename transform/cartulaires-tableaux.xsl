@@ -225,7 +225,7 @@
         map { 'libelle': 'Rang', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-rang' },
         map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
         map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' },
-        map { 'libelle': 'Page', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-p' })"/>
+        map { 'libelle': 'Page', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-p' })"/>
       <xsl:with-param name="lignes" as="element()*">
         <xsl:for-each select="tei:row">
           <xsl:variable name="n" select="chr:acte(tei:cell[4], count(preceding-sibling::tei:row) + 1)"/>
@@ -237,7 +237,7 @@
             <td data-sort="{replace(string(tei:cell[1]), '\D', '')}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
             <td data-sort="{chr:date-tri(string(tei:cell[2]))}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
             <td><xsl:apply-templates select="tei:cell[3]/node()"/></td>
-            <td data-sort="{replace(string(tei:cell[5]), '\D', '')}"><xsl:apply-templates select="tei:cell[5]/node()"/></td>
+            <td data-sort="{replace(string(tei:cell[5]), '\D', '')}" data-f="{replace(string(tei:cell[5]), '\D', '')}"><xsl:apply-templates select="tei:cell[5]/node()"/></td>
           </tr>
         </xsl:for-each>
       </xsl:with-param>

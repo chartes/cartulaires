@@ -1186,7 +1186,7 @@
         map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
         map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tm-partie-col' },
         map { 'libelle': 'Folio', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-fol' },
-        map { 'libelle': 'Page', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-p' })"/>
+        map { 'libelle': 'Page', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-p' })"/>
       <xsl:with-param name="lignes" as="element()*">
         <xsl:for-each select="$items">
           <xsl:variable name="refs" select="tei:ref"/>
@@ -1220,7 +1220,7 @@
                 <xsl:otherwise><xsl:value-of select="$folio"/></xsl:otherwise>
               </xsl:choose>
             </td>
-            <td data-sort="{replace($refs[1]/@n, '^.*?(\d+)$', '$1')}">
+            <td data-sort="{replace($refs[1]/@n, '^.*?(\d+)$', '$1')}" data-f="{replace($refs[1]/@n, '^.*?(\d+)$', '$1')}">
               <xsl:for-each select="$refs">
                 <xsl:if test="position() gt 1"><xsl:text>, </xsl:text></xsl:if>
                 <xsl:variable name="p" select="replace(@n, '^.*?(\d+)$', '$1')"/>

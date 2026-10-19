@@ -131,7 +131,7 @@
           map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
           if ($avec-partie) then map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tm-partie-col' } else (),
           if ($avec-folio) then map { 'libelle': 'Folio', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-fol' } else (),
-          if ($avec-page) then map { 'libelle': 'Page', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-p' } else ())"/>
+          if ($avec-page) then map { 'libelle': 'Page', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-p' } else ())"/>
         <xsl:with-param name="lignes" as="element()*">
           <xsl:for-each select="$actes">
             <xsl:variable name="href" select="concat($document-base, $resource, '?refId=', @xml:id)"/>
@@ -143,7 +143,10 @@
               <td data-sort="{edt:date-tri(.)}"><xsl:value-of select="edt:date(.)"/></td>
               <xsl:if test="$avec-partie"><td><xsl:value-of select="edt:titre($partie)"/></td></xsl:if>
               <xsl:if test="$avec-folio"><td><xsl:value-of select="edt:folio(.)"/></td></xsl:if>
-              <xsl:if test="$avec-page"><td data-sort="{replace(edt:page(.), '\D', '')}"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page(.)"/></a></xsl:if></td></xsl:if>
+              <xsl:if test="$avec-page">
+                <xsl:variable name="tp" select="edt:tome-page(edt:page(.))"/>
+                <td data-sort="{if ($tp[2] castable as xs:integer) then xs:integer(($tp[1][. castable as xs:integer], '0')[1]) * 100000 + xs:integer($tp[2]) else 0}" data-f="{$tp[2][. castable as xs:integer] ! xs:integer(.)}" xmlns:xs="http://www.w3.org/2001/XMLSchema"><xsl:if test="edt:page(.) != ''"><a href="{$href}"><xsl:value-of select="edt:page-libelle($tp)"/></a></xsl:if></td>
+              </xsl:if>
             </tr>
           </xsl:for-each>
         </xsl:with-param>
@@ -194,5 +197,22 @@
   <xsl:function name="edt:page" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xsl:param name="t" as="element()"/>
     <xsl:sequence select="normalize-space(($t/preceding::tei:pb[not(@ed)][normalize-space(@n)][1], ($t//tei:pb[not(@ed)][normalize-space(@n)])[1])[1]/@n)"/>
+  </xsl:function>
+  <!-- 2026-10-19 : page de l'édition, sous ses différentes notations (« 67 », « page 67 », « t1_p067 » NDCH,
+       « 1_0003 » NDVC et SMCP, « I. 9 » NDPA-EG-01 et SGDP) → (tome en chiffres arabes ou '', page). -->
+  <xsl:function name="edt:tome-page" as="xs:string*" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="n" as="xs:string"/>
+    <xsl:variable name="romains" select="('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X')"/>
+    <xsl:analyze-string select="normalize-space($n)" regex="^(?:t?(\d+)_p?|([IVX]+)\.\s*|page\s+)?0*(\d+)$">
+      <xsl:matching-substring>
+        <xsl:sequence select="(if (regex-group(1) != '') then string(number(regex-group(1))) else if (regex-group(2) != '') then string(index-of($romains, regex-group(2))[1]) else '', regex-group(3))"/>
+      </xsl:matching-substring>
+      <xsl:non-matching-substring><xsl:sequence select="('', .)"/></xsl:non-matching-substring>
+    </xsl:analyze-string>
+  </xsl:function>
+  <xsl:function name="edt:page-libelle" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xsl:param name="tp" as="xs:string*"/>
+    <xsl:variable name="romains" select="('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X')"/>
+    <xsl:sequence select="if ($tp[1] != '' and $tp[2] castable as xs:integer) then concat('t. ', $romains[xs:integer($tp[1])], ', p. ', $tp[2]) else if ($tp[2] castable as xs:integer) then concat('p. ', $tp[2]) else string($tp[2])"/>
   </xsl:function>
 </xsl:stylesheet>
