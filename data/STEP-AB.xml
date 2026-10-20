@@ -120,7 +120,7 @@
         <citeStructure unit="index" match="/TEI[1]/text[1]/back[1]/div" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-        </citeStructure>
+        <citeStructure unit="lettre" match="list[@type='index'][head]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
       </refsDecl>
     </encodingDesc>
     <profileDesc>

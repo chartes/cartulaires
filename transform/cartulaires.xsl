@@ -413,7 +413,9 @@
   <!-- 2026-10-19 : retour à une page par lettre (comme les autres cartulaires) pour SCHA, SLES, SGGO, SSCO, NDMA,
        dont les lettres sont des unités du sommaire (index-complet n'est plus éditable dans la conf) ; restent
        sur une page les index dont les lettres ne sont pas des unités. -->
-  <xsl:variable name="cartu-fiches" select="('STEP-AB', 'NDRC-AB', 'NDPR-AB', 'NDMT-AB')"/>
+  <!-- 2026-10-20 : STEP, NDRC, NDPR, NDMT aussi (lettres devenues unités dans le TEI) : plus aucun index sur une page,
+       tous les cartulaires ont une page par lettre (uniformisation demandée par Maxime). -->
+  <xsl:variable name="cartu-fiches" select="()" as="xs:string*"/>
   <!-- renvois « voir » : ressources dont les lettres sont des unités citables sous UNE unité
        index-complet, et cette unité (même ordre). Ailleurs le renvoi garde sa cible : soit la page
        est déjà entière (STEP, NDRC, NDPR, NDMT), soit le front redirige la lettre vers sa page
@@ -912,7 +914,11 @@
        - Cible numérique sans « # » (INDEX-LIEUX, INDEX-PERSONNES : 190 cas) : pas de lien, le texte reste.
          (2026-10-09 : NDMT-AB porte désormais ses cibles vérifiées dans le TEI ; plus de calcul page → acte.)
        Résultat : () = non résolu (le lien existant est gardé) ; '' = pas de lien ; sinon l'adresse. -->
-  <xsl:variable name="cartu-listes-hors-nav" select="('NDMT-AB', 'STEP-AB')" as="xs:string+"/>
+  <!-- 2026-10-20 : vide, les lettres de NDMT et STEP sont désormais des unités (liste de lettre = page, cas général) -->
+  <xsl:variable name="cartu-listes-hors-nav" select="()" as="xs:string*"/>
+  <!-- 2026-10-20 : index passés à une page par lettre dont le renvoi « voir » ne nomme pas la lettre (@corresp = la
+       division, NDRC) : la lettre est lue dans le TEI complet, autour de la cible. -->
+  <xsl:variable name="cartu-renvoi-lettre" select="('NDRC-AB', 'NDPR-AB', 'NDMT-AB', 'STEP-AB')" as="xs:string*"/>
   <xsl:function name="cartu:unite-de" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="e" as="element()?"/>
     <!-- unité = l'ancêtre-ou-soi le plus proche qui est un texte, une division ou un groupe porteur d'@xml:id -->
@@ -963,7 +969,9 @@
             perdait l'ancre de l'entrée et arrivait en tête de lettre). -->
        <!-- 2026-10-08 (chantier liens) : NDMT-AB, STEP-AB : les listes de lettres ne sont pas des unités ;
             l'unité qui contient la cible (division de back) remplace le corresp. -->
-       <xsl:variable name="unite-hors-nav" select="if ($resource = $cartu-listes-hors-nav) then cartu:unite-de(cartu:cible-tei(substring-after(normalize-space($target), '#'))) else ()"/>
+       <xsl:variable name="unite-hors-nav" select="if ($resource = $cartu-listes-hors-nav) then cartu:unite-de(cartu:cible-tei(substring-after(normalize-space($target), '#')))
+           else if ($resource = $cartu-renvoi-lettre) then (cartu:cible-tei(substring-after(normalize-space($target), '#'))/ancestor::*[contains(@xml:id, '_liste')][not(ancestor::tei:item)])[last()]/@xml:id/string()
+           else ()"/>
        <xsl:variable name="refId" select="if ($idDoc = $cartu-renvoi-res) then $cartu-index-unite[index-of($cartu-renvoi-res, $idDoc)[1]] else if (exists($unite-hors-nav)) then $unite-hors-nav else translate(./@corresp, '#', '')"/>
        <xsl:variable name="url" select="concat($document-base, $idDoc, '?refId=', $refId, $target)"/>
       

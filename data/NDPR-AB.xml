@@ -148,7 +148,7 @@
           <citeStructure match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-          </citeStructure>
+          <citeStructure unit="lettre" match="list[@type='index'][head]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -16958,7 +16958,7 @@
     <back xml:id="NDPR-AB_back">
       <div type="indexnominum" n="1" xml:id="NDPR-AB_back-1">
         <pb n="329" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/f351/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k132483k/manifest.json"/>
-      <list type="index">
+      <list xml:id="NDPR-AB_liste_A" type="index">
           <head>A</head>
           <!--<item xml:id="NDPR-AB_rs_0001"><rs><hi rend="sc">Abbatia (Thomas de)</hi></rs>, <ref>157</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0002"><rs><hi rend="sc">Abbecourt</hi>, abbaye</rs>, <ref target="#NDPR-AB_0081" n="81">81</ref>, <ref target="#NDPR-AB_0260" n="260">260</ref>.</item>
@@ -17013,7 +17013,7 @@
           <item xml:id="NDPR-AB_rs_0051"><rs><hi rend="sc">Alphonse-Bouchard</hi>, Béatrix</rs>, <ref target="#NDPR-AB_0279" n="279">279</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0052"><rs><hi rend="sc">Alphonse-Bouchard</hi>, Isabelle</rs>, <ref>254</ref>.</item>-->
           </list>
-      <list type="index">
+      <list xml:id="NDPR-AB_liste_B" type="index">
           <head>B</head>
           <!--<item xml:id="NDPR-AB_rs_0053"><rs><hi rend="sc">Bachival (Mathilde de)</hi></rs>, <ref>16</ref></item>-->
           <item xml:id="NDPR-AB_rs_0054"><rs><hi rend="sc">Bachival</hi>, Robert</rs>, <ref target="#NDPR-AB_0251" n="251">251</ref>.</item>
@@ -17106,7 +17106,7 @@
           <item xml:id="NDPR-AB_rs_0141"><rs><hi rend="sc">Busseiam</hi>, Buxeiam</rs>, <ref target="#NDPR-AB_0300" n="300">300</ref>.</item>
         <!--<item xml:id="NDPR-AB_rs_0142"><rs><hi rend="sc">Ballenvilliers (Thomas de)</hi></rs>, <ref>216</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_C" type="index">
           <head>C</head>
           <!--<item xml:id="NDPR-AB_rs_0143"><rs><hi rend="sc">Carmes (Terre des)</hi></rs>, <ref>23</ref>.</item>-->
           <!--<item xml:id="NDPR-AB_rs_0144"><rs><hi rend="i">Carnifex, Arnulfus</hi>, de Monthléry</rs>, <ref>18</ref>.</item>-->
@@ -17212,7 +17212,7 @@
           <!--<item xml:id="NDPR-AB_rs_0244"><rs><hi rend="sc">Cuvel (Terre de)</hi></rs>, <ref>242</ref>.</item>-->
         <item xml:id="NDPR-AB_rs_0245"><rs><hi rend="sc">Chartres (Frères mineurs de)</hi></rs>, <ref target="#NDPR-AB_0331" n="331">331</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_D" type="index">
           <head>D</head>
           <item xml:id="NDPR-AB_rs_0246"><rs><hi rend="sc">Darency</hi>, Drancy (Emmeline de)</rs>, <ref target="#NDPR-AB_0042" n="42">42</ref>, <ref target="#NDPR-AB_0048" n="48">48</ref>.</item>
           <item xml:id="NDPR-AB_rs_0247"><rs><hi rend="sc">Darency</hi>, Adam et Guill.</rs>, <ref target="#NDPR-AB_0048" n="48">48</ref>.</item>
@@ -17225,7 +17225,7 @@
           <!--<item xml:id="NDPR-AB_rs_0254"><rs><hi rend="sc">Droiture</hi>, impôt</rs>, <ref>19</ref>, <ref>22</ref>.</item>-->
           <!--<item xml:id="NDPR-AB_rs_0255"><rs><hi rend="sc">Duvergier de Hauranne</hi>, abbé de Saint-Cyran</rs>, <ref>X</ref>, <ref>4</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_E" type="index">
           <head>E</head>
           <!--<item xml:id="NDPR-AB_rs_0256"><rs><hi rend="sc">Espinée (l')</hi></rs>, <ref>250</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0257"><rs><hi rend="sc">Esquier (Jean)</hi></rs>, <ref target="#NDPR-AB_0141" n="141">141</ref>.</item>
@@ -17247,7 +17247,7 @@
           <item xml:id="NDPR-AB_rs_0273"><rs><hi rend="sc">Escrones</hi></rs>, <ref target="#NDPR-AB_0224" n="224">224</ref>.</item>
           <item xml:id="NDPR-AB_rs_0274"><rs><hi rend="sc">Escrones (Pierre Gautier d')</hi></rs>, <ref target="#NDPR-AB_0165" n="165">165</ref>, <ref target="#NDPR-AB_0225" n="225">225</ref>.</item>
         </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_F" type="index">
           <head>F</head>
           <item xml:id="NDPR-AB_rs_0275"><rs><hi rend="sc">Favereux (Pierre de)</hi></rs>, <ref target="#NDPR-AB_0023" n="23">23</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0276"><rs><hi rend="sc">Favereux</hi>, Cécile</rs>, <ref>47</ref>.</item>-->
@@ -17268,7 +17268,7 @@
           <!--<item xml:id="NDPR-AB_rs_0291"><rs><hi rend="sc">Froid bÅ“uf (le)</hi></rs>, <ref>143</ref>.</item>-->
         <!--<item xml:id="NDPR-AB_rs_0292"><rs><hi rend="sc">Frères de la Ste-Trinité</hi></rs>, <ref>273</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_G" type="index">
           <head>G</head>
           <!--<item xml:id="NDPR-AB_rs_0293"><rs><hi rend="sc">Gachonville (Jeanne de)</hi></rs>, <ref>163</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0294"><rs><hi rend="sc">Gagny</hi></rs>, <ref target="#NDPR-AB_0243" n="243">243</ref>.</item>
@@ -17328,7 +17328,7 @@
           <!--<item xml:id="NDPR-AB_rs_0348"><rs><hi rend="sc">Giry (Pétronille de)</hi></rs>, <ref>21</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0349"><rs><hi rend="sc">G</hi>. de Monceaux</rs>, <ref target="#NDPR-AB_0133" n="133">133</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_H" type="index">
           <head>H</head>
           <item xml:id="NDPR-AB_rs_0350"><rs><hi rend="sc">Hautebruyères</hi></rs>, <ref target="#NDPR-AB_0093" n="93">93</ref>, <ref target="#NDPR-AB_0260" n="260">260</ref>.</item>
           <item xml:id="NDPR-AB_rs_0351"><rs><hi rend="sc">Hécart de Ledeville</hi></rs>, <ref target="#NDPR-AB_0247" n="247">247</ref>.</item>
@@ -17351,7 +17351,7 @@
           <!--<item xml:id="NDPR-AB_rs_0368"><rs><hi rend="sc">Hanches</hi></rs>, <ref>117</ref></item>-->
           <item xml:id="NDPR-AB_rs_0369"><rs><hi rend="sc">Hanches (Dreux de)</hi></rs>, <ref target="#NDPR-AB_0261" n="261">261</ref>.</item>
         </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_I" type="index">
           <head>I</head>
         <!--<item xml:id="NDPR-AB_rs_0370"><rs><hi rend="sc">Ingorant et Odeline</hi></rs>, <ref>107</ref>.</item>-->
           <!--<item xml:id="NDPR-AB_rs_0371"><rs><hi rend="sc">Innocent <num>III</num></hi>, pape</rs>, <ref>39</ref>.</item>-->
@@ -17362,7 +17362,7 @@
           <item xml:id="NDPR-AB_rs_0376"><rs><hi rend="sc">Ivry</hi>, église</rs>, <ref target="#NDPR-AB_0259" n="259">259</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0377"><rs><hi rend="sc">Ivry</hi>, léproserie</rs>, <ref>244</ref>.</item>-->
         </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_J" type="index">
           <head>J</head>
           <!--<item xml:id="NDPR-AB_rs_0378"><rs><hi rend="sc">Jacob Pecorari</hi>, légat</rs>, <ref>192</ref></item>-->
           <item xml:id="NDPR-AB_rs_0379"><rs><hi rend="sc">Jacob Pecorari</hi>, Jacques, abbé de Cîteaux</rs>, <ref target="#NDPR-AB_0305" n="305">305</ref>.</item>
@@ -17382,7 +17382,7 @@
           <item xml:id="NDPR-AB_rs_0393"><rs><hi rend="i">Juxta viam, vinea</hi>, à Sèvres</rs>, <ref target="#NDPR-AB_0151" n="151">151</ref>.</item>
         <item xml:id="NDPR-AB_rs_0394"><rs><hi rend="sc">Jouy (Hugues de)</hi>, dit du Moulin</rs>, <ref target="#NDPR-AB_0079" n="79">79</ref>, <ref target="#NDPR-AB_0080" n="80">80</ref>, <ref target="#NDPR-AB_0249" n="249">249</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_L" type="index">
           <head>L</head>
           <item xml:id="NDPR-AB_rs_0395"><rs><hi rend="sc">Labrosse</hi>, Odeline</rs>, <ref target="#NDPR-AB_0332" n="332">332</ref>.</item>
           <item xml:id="NDPR-AB_rs_0396"><rs><hi rend="sc">Lagny</hi> (Jean de), Agnès et Marie</rs>, <ref target="#NDPR-AB_0305" n="305">305</ref>, <ref target="#NDPR-AB_0311" n="311">311</ref>.</item>
@@ -17416,7 +17416,7 @@
           <!--<item xml:id="NDPR-AB_rs_0424"><rs><hi rend="sc">Luynes (Duc de)</hi></rs>, <ref>10</ref>, <ref>11</ref>.</item>-->
         <item xml:id="NDPR-AB_rs_0425"><rs><hi rend="sc">Limous (Robert de)</hi></rs>, <ref target="#NDPR-AB_0228" n="228">228</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_M" type="index">
           <head>M</head>
           <item xml:id="NDPR-AB_rs_0426"><rs><hi rend="sc">Mafliers</hi>, Meynel, prieuré</rs>, <ref target="#NDPR-AB_0259" n="259">259</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0427"><rs><hi rend="sc">Magny</hi>, paroisse</rs>, <ref>VII</ref>; </item>-->
@@ -17540,7 +17540,7 @@
           <!--<item xml:id="NDPR-AB_rs_0545"><rs><hi rend="sc">Marly (S. de)</hi>, Rouchard</rs>, <ref>130</ref>; </item>-->
           <!--<item xml:id="NDPR-AB_rs_0546"><rs><hi rend="sc">Marly (S. de)</hi>, Mathieu connétable</rs>, <ref>136</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_N" type="index">
           <head>N</head>
           <item xml:id="NDPR-AB_rs_0547"><rs><hi rend="sc">Nanteuil (Jean de)</hi></rs>, <ref target="#NDPR-AB_0315" n="315">315</ref>.</item>
           <item xml:id="NDPR-AB_rs_0548"><rs><hi rend="sc">Narbonne (Aimery de)</hi></rs>, <ref target="#NDPR-AB_0149" n="149">149</ref>, <ref target="#NDPR-AB_0215" n="215">215</ref>.</item>
@@ -17570,7 +17570,7 @@
           <!--<item xml:id="NDPR-AB_rs_0572"><rs><hi rend="sc">Noisy (Eremburge de)</hi>, abbesse de Porrois</rs>, <ref>97</ref>; </item>-->
           <item xml:id="NDPR-AB_rs_0573"><rs><hi rend="sc">Normand (Le)</hi>, Jean</rs>, <ref target="#NDPR-AB_0332" n="332">332</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_O" type="index">
           <head>O</head>
           <item xml:id="NDPR-AB_rs_0574"><rs><hi rend="sc">Ors (Philippe d')</hi></rs>, <ref target="#NDPR-AB_0187" n="187">187</ref>.</item>
           <item xml:id="NDPR-AB_rs_0575"><rs><hi rend="sc">Orsigny (chemin d')</hi></rs>, <ref target="#NDPR-AB_0321" n="321">321</ref>.</item>
@@ -17592,7 +17592,7 @@
           <!--<item xml:id="NDPR-AB_rs_0591"><rs><hi rend="sc">Ormoy</hi></rs>, <ref>17</ref></item>-->
           <!--<item xml:id="NDPR-AB_rs_0592"><rs><hi rend="sc">Ormoy (Guillaume d')</hi></rs>, <ref>135</ref>.</item>-->
         </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_P" type="index">
           <head>P</head>
           <!--<item xml:id="NDPR-AB_rs_0593"><rs><hi rend="sc">Paale</hi>, Gilles</rs>, <ref>327</ref></item>-->
           <item xml:id="NDPR-AB_rs_0594"><rs><hi rend="sc">Paale</hi>, Jean</rs>, <ref target="#NDPR-AB_0202" n="202">202</ref>.</item>
@@ -17684,13 +17684,13 @@
           <item xml:id="NDPR-AB_rs_0680"><rs><hi rend="sc">Pierre</hi></rs>, <ref target="#NDPR-AB_0066" n="66">66</ref>, <ref target="#NDPR-AB_0080" n="80">80</ref>, <ref target="#NDPR-AB_0091" n="91">91</ref>, <ref target="#NDPR-AB_0154" n="154">154</ref>, <ref target="#NDPR-AB_0176" n="176">176</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0681"><rs><hi rend="sc">Perrier (Le)</hi>, vigne à Meudon</rs>, <ref>156</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_Q" type="index">
           <head>Q</head>
         <!--<item xml:id="NDPR-AB_rs_0682"><rs><hi rend="sc">Quarré</hi>, Colin</rs>, <ref>16</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0683"><rs><hi rend="sc">Quinée</hi></rs>, <ref target="#NDPR-AB_0300" n="300">300</ref>.</item>
           <item xml:id="NDPR-AB_rs_0684"><rs><hi rend="i">Quinque fratrum nemus</hi></rs>, <ref target="#NDPR-AB_0251" n="251">251</ref>.</item>
         </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_R" type="index">
           <head>R</head>
           <!--<item xml:id="NDPR-AB_rs_0685"><rs><hi rend="sc">Racine (Monument de)</hi>, à Port-Royal</rs>, <ref>XIII</ref>.</item>-->
           <!--<item xml:id="NDPR-AB_rs_0686"><rs><hi rend="sc">Raimond</hi>, architecte de Paris</rs>, <ref>182</ref>.</item>-->
@@ -17731,7 +17731,7 @@
           <item xml:id="NDPR-AB_rs_0721"><rs><hi rend="sc">Rotoirs (Les)</hi>, à Sainte-Escobille</rs>, <ref target="#NDPR-AB_0050" n="50">50</ref>, <ref target="#NDPR-AB_0050" n="50">50</ref>.</item>
           <item xml:id="NDPR-AB_rs_0722"><rs><hi rend="sc">Rouillé (Le)</hi>, Barthélemy et Guillaume</rs>, <ref target="#NDPR-AB_0162" n="162">162</ref>.</item>
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_S" type="index">
           <head>S</head>
           <item xml:id="NDPR-AB_rs_0723"><rs><hi rend="sc">Saclay</hi></rs>, <ref target="#NDPR-AB_0079" n="79">79</ref>, <ref target="#NDPR-AB_0150" n="150">150</ref>, <ref target="#NDPR-AB_0205" n="205">205</ref>.</item>
           <item xml:id="NDPR-AB_rs_0724"><rs><hi rend="sc">Sacrocella</hi></rs>
@@ -17793,7 +17793,7 @@
           <item xml:id="NDPR-AB_rs_0777"><rs><hi rend="sc">S. Hilarion (Hugues de)</hi></rs>, <ref target="#NDPR-AB_0115" n="115">115</ref>.</item>
           <!--<item xml:id="NDPR-AB_rs_0778"><rs><hi rend="sc">S.-Rémy des Landes (Jean de)</hi>, bailli de Montfort</rs>, <ref>525</ref>.</item>-->
           </list>
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_T" type="index">
           <head>T</head>
           <!--<item xml:id="NDPR-AB_rs_0779"><rs><hi rend="sc">Tenel (Ile de)</hi></rs>, <ref>41</ref>.</item>-->
           <item xml:id="NDPR-AB_rs_0780"><rs><hi rend="sc">Terre au-dessus de l'étang de Porrois</hi></rs>, <ref target="#NDPR-AB_0283" n="283">283</ref>.</item>
@@ -17829,7 +17829,7 @@
           <head>U</head>
         <item xml:id="NDPR-AB_rs_0808"><rs><hi rend="sc">Urcines (Pagen d')</hi></rs>, <ref>28</ref>.</item>
         </list>-->
-        <list type="index">
+        <list xml:id="NDPR-AB_liste_V" type="index">
           <head>V</head>
           <!--<item xml:id="NDPR-AB_rs_0809"><rs><hi rend="sc">Vacca bacata</hi></rs>, <ref>20</ref>.</item>-->
           <!--<item xml:id="NDPR-AB_rs_0810"><rs><hi rend="sc">Val de Meudon</hi></rs>, <ref>187</ref></item>-->

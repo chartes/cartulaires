@@ -149,7 +149,7 @@
           <citeStructure match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-          </citeStructure>
+          <citeStructure unit="lettre" match="list[@type='index'][head]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -14595,7 +14595,7 @@
           <item xml:id="NDMT-AB_rs_0368"><rs><hi rend="sc">Hugo</hi>, chambrier</rs>, <ref target="#NDMT-AB_0003" n="3">3</ref>, <ref target="#NDMT-AB_0007" n="7">7</ref>, <ref target="#NDMT-AB_0008" n="8">8</ref>.</item>
           <item xml:id="NDMT-AB_rs_0369"><rs><hi rend="sc">Hugo</hi>, chancelier</rs>, <ref target="#NDMT-AB_0004" n="4">4</ref>, <ref target="#NDMT-AB_0017" n="17">17</ref>, <ref target="#NDMT-AB_0019" n="19">19</ref>, <ref target="#NDMT-AB_0020" n="20">20</ref>, <ref target="#NDMT-AB_0026" n="26">26</ref>, <ref target="#NDMT-AB_0037" n="37">37</ref>.</item>
           </list>
-        <list type="index"><head>I</head><item xml:id="NDMT-AB_rs_0370"><rs><hi rend="sc">Innocent <num>II</num></hi></rs>, <ref target="#NDMT-AB_0067" n="67">67</ref>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
+        <list xml:id="NDMT-AB_liste_I" type="index"><head>I</head><item xml:id="NDMT-AB_rs_0370"><rs><hi rend="sc">Innocent <num>II</num></hi></rs>, <ref target="#NDMT-AB_0067" n="67">67</ref>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
           <item xml:id="NDMT-AB_rs_0371"><rs><hi rend="sc">Ivry</hi>, baronnie</rs>, <ref target="#NDMT-AB_0124" n="217">217</ref>, <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           
         </list><list type="index" xml:id="NDMT-AB_liste_J">
@@ -14605,7 +14605,7 @@
           <item xml:id="NDMT-AB_rs_0374"><rs><hi rend="sc">Jolly</hi>, Nicolas, notaire</rs>, <ref target="#NDMT-AB_0145" n="145">145</ref>.</item>
           <item xml:id="NDMT-AB_rs_0375"><rs><hi rend="sc">Jovin</hi>, maître des écoles d'Orléans</rs>, <ref target="#NDMT-AB_0115" n="115">115</ref>.</item>
           </list>
-        <list type="index"><head>K</head><item xml:id="NDMT-AB_rs_0376"><pb n="338" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f350/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
+        <list xml:id="NDMT-AB_liste_K" type="index"><head>K</head><item xml:id="NDMT-AB_rs_0376"><pb n="338" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/f350/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k6375736f/manifest.json"/>
  
  <rs><hi rend="sc">Kerisius</hi>, boucher</rs>, <ref target="#NDMT-AB_0048" n="48">48</ref>.</item>
           </list><list type="index" xml:id="NDMT-AB_liste_L">
@@ -14962,7 +14962,7 @@
           <item xml:id="NDMT-AB_rs_0701"><rs><hi rend="sc">Priault</hi>, Jean</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0128" n="128">128</ref>.</item>
           <item xml:id="NDMT-AB_rs_0702"><rs><hi rend="sc">Prieur</hi>, notaire à Paris</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0156" n="156">156</ref>.</item>
           </list>
-        <list type="index"><head>Q</head><item xml:id="NDMT-AB_rs_0703"><rs><hi rend="sc">Quarre</hi>, Thibaut, prêtre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
+        <list xml:id="NDMT-AB_liste_Q" type="index"><head>Q</head><item xml:id="NDMT-AB_rs_0703"><rs><hi rend="sc">Quarre</hi>, Thibaut, prêtre</rs>, <abbr>p.</abbr> <ref target="#NDMT-AB_0129" n="129">129</ref>.</item>
           
         </list><list type="index" xml:id="NDMT-AB_liste_R">
           <head>R</head>

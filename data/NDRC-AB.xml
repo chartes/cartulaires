@@ -153,7 +153,7 @@
           <citeStructure match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-          </citeStructure>
+          <citeStructure unit="lettre" match="list[@type='index'][head]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>
         </citeStructure>
       </refsDecl>
     </encodingDesc>
@@ -8872,7 +8872,7 @@
       <!-- -->
         <div xml:id="NDRC-AB_back-1">
           <head>Index nominum</head>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_A" type="index">
           <head>A</head>
             <item xml:id="NDRC-AB_rs_001"><rs><hi rend="sc">A</hi>., (presbiter Sancti Nonni)</rs>, <ref target="#NDRC-AB_0002" n="2">2</ref>.</item>
             <item xml:id="NDRC-AB_rs_002"><rs><hi rend="sc">Aalice</hi>, femme de Garin Ferrum-Asini</rs>, <ref target="#NDRC-AB_0001" n="1">1</ref>.</item>
@@ -8882,7 +8882,7 @@
             <item xml:id="NDRC-AB_rs_006"><rs><hi rend="sc">Argal</hi> (Richardus de)</rs>, <ref target="#NDRC-AB_0085" n="84">84</ref>, <ref target="#NDRC-AB_0084" n="84">84</ref> <ref target="#NDRC-AB_0084" n="86">86</ref>. — (Gui et Hersende, sa femme; Garin, Hugues, Ernold et Richard, leurs fils; Richilde, leur fille. — (Rainald et Robert de), <ref target="#NDRC-AB_0084" n="84">84</ref>note 1.</item>
             <item xml:id="NDRC-AB_rs_007"><rs><hi rend="sc">Atricart</hi> (Johannes), miles</rs>, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item><item xml:id="NDRC-AB_rs_008"><rs><hi rend="sc">Atricart</hi>, Isabellis, uxor ejus</rs>, <ref target="#NDRC-AB_0079" n="78">78</ref>.</item><item xml:id="NDRC-AB_rs_009"><rs><hi rend="sc">Aveline</hi> (femme de Gui, seigneur de Chevreuse)</rs>, <ref target="#NDRC-AB_0001" n="1">1, note 1</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_B" type="index">
           <head>B</head>
             <item xml:id="NDRC-AB_rs_010"><rs><hi rend="sc">Beaumont</hi> (Amicie de), comtesse de Leicester, dame de Montfort</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
             <item xml:id="NDRC-AB_rs_011"><rs><hi rend="sc">Bernard</hi>, </rs><ref target="#NDRC-AB_0100" n="100">100</ref>.</item>
@@ -8896,7 +8896,7 @@
           <item xml:id="NDRC-AB_rs_032"><rs><hi rend="sc">Broschart (Nicholaus)</hi>, miles</rs>, <ref target="#NDRC-AB_0059" n="59">59</ref>.</item>
             <item xml:id="NDRC-AB_rs_033"><rs><hi rend="sc">Bruyère</hi> (Mathias de la), lieutenant de la prévôté et vicomté de Paris</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <item xml:id="NDRC-AB_rs_034"><rs><hi rend="sc">Buc</hi> (Willelmus de)</rs><!-- <ref target="#NDRC-AB_0012">XVI</ref> -->.</item><item xml:id="NDRC-AB_rs_035"><rs><hi rend="sc">Buc</hi>, Willelmus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_036"><rs><hi rend="sc">Buc</hi>, Petrus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_037"><rs><hi rend="sc">Buc</hi>, Nicholaus, filius ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_038"><rs><hi rend="sc">Buc</hi>, Maria, uxor ejus</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_039"><rs><hi rend="sc">Buc</hi>, Hugo, filius eorum</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_040"><rs><hi rend="sc">Buc</hi>, Adam, filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_041"><rs><hi rend="sc">Buc</hi>, Philippus, filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_042"><rs><hi rend="sc">Buc</hi>, Theob., filius ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_043"><rs><hi rend="sc">Buc</hi>, Johanna, filia ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item><item xml:id="NDRC-AB_rs_044"><rs><hi rend="sc">Buc</hi>, Mathildis, filia ejusdem Willelmi</rs>, <ref target="#NDRC-AB_0016" n="16">16</ref>.</item></list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_C" type="index">
           <head>C</head>
             <item xml:id="NDRC-AB_rs_045"><rs><hi rend="sc">Capella</hi> (Petrus de), miles</rs>, <ref target="#NDRC-AB_0051" n="51">51</ref>, <ref target="#NDRC-AB_0051" n="53">53</ref></item><item xml:id="NDRC-AB_rs_045_1"><rs><hi rend="sc">Capella</hi> (Guillelmus de), frater ejus</rs>, <ref target="#NDRC-AB_0051" n="LI">51</ref></item><item xml:id="NDRC-AB_rs_045_2"><rs><hi rend="sc">Capella</hi> (Luciana), uxor Petri de</rs>, <ref target="#NDRC-AB_0051" n="LI">51</ref></item><item xml:id="NDRC-AB_rs_046"><rs><hi rend="sc">Caprosia</hi> (Guido <num>III</num>, dominus de)</rs>, <ref target="#NDRC-AB_0005" n="3">3</ref><!--; <ref>III</ref>-->, <ref target="#NDRC-AB_0004" n="4">4</ref>, <ref target="#NDRC-AB_0005" n="5">5</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0051" n="52">52</ref>, <!-- doublon meme acte NDRC-AB_0052: <ref target="#NDRC-AB_0052" n="LII">52</ref> --> <ref target="#NDRC-AB_0051" n="53">53</ref>, <ref target="#NDRC-AB_0052" n="54">54</ref> <ref target="#NDRC-AB_0054" n="54">54</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_104" corresp="#NDRC-AB_back-1">Helisendis</ref>.</item>
             <item xml:id="NDRC-AB_rs_047"><rs><hi rend="sc">Caprosia</hi> (Herveus de)</rs><!--, <ref>III</ref>-->, <ref target="#NDRC-AB_0004" n="3">3</ref>, <ref target="#NDRC-AB_0005" n="5">5</ref>.</item>
@@ -8911,11 +8911,11 @@
             <item xml:id="NDRC-AB_rs_065"><rs><hi rend="sc">Conrad</hi>, cardinal, légat du pape en Albigeois</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
             <item xml:id="NDRC-AB_rs_066"><rs><hi rend="sc">Cotanariis</hi> (Symon de)</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item><item xml:id="NDRC-AB_rs_067"><rs><hi rend="sc">Cotanariis</hi>, Petronilla, uxor ejus</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item><item xml:id="NDRC-AB_rs_068"><rs><hi rend="sc">Cotoneriis</hi> (Richardus presbiter de)</rs>, <ref target="#NDRC-AB_0043" n="43">43</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_D" type="index">
           <head>D</head>
             <item xml:id="NDRC-AB_rs_069"><rs><hi rend="sc">Dumesnil</hi> (Arnoul), archidiacre de Brie</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_E" type="index">
           <head>E</head>
             <item xml:id="NDRC-AB_rs_070"><rs><hi rend="sc">Elaencourt</hi> (Isabellis, domina de)</rs>, <ref target="#NDRC-AB_0062" n="62">62</ref>.</item>
             <item xml:id="NDRC-AB_rs_071"><rs><hi rend="sc">Emelina</hi>, uxor Guillelmi Laceron</rs>, <ref target="#NDRC-AB_0020" n="20">20</ref>.</item>
@@ -8924,7 +8924,7 @@
             <item xml:id="NDRC-AB_rs_074"><rs><hi rend="sc">Épernon</hi> (prieuré de Saint-Thomas d'), dépendant de Marmoutiers, fondé en 1153 par Amaury <num>II</num>, seigneur de Montfort, canton de Maintenon, arrondissement de Chartres</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref></item>
             <item xml:id="NDRC-AB_rs_075"><rs><hi rend="sc">Escorche-Botun</hi> (Raginaldus), miles</rs>, <ref target="#NDRC-AB_0051" n="51">51</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_F" type="index">
           <head>F</head>
             <item xml:id="NDRC-AB_rs_076"><rs><hi rend="sc">Fabius</hi>, archevêque de Nazareth</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <!--<item xml:id="NDRC-AB_rs_077"><rs><hi rend="sc">Fayel</hi> (Johanna) de Toussus; voyez</rs>, <ref target="#Toussus">Toussus</ref>.</item>-->
@@ -8935,7 +8935,7 @@
             <item xml:id="NDRC-AB_rs_084"><rs><hi rend="sc">Foix</hi> (Roger-Bernard, comte de)</rs>, <ref target="#NDRC-AB_0012" n="12">12</ref>.</item>
             <item xml:id="NDRC-AB_rs_085"><rs><hi rend="sc">Foulon</hi> (Joseph), abbé de Sainte-Geneviève-du-Mont, à Paris</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_G" type="index">
           <head>G</head>
             <item xml:id="NDRC-AB_rs_086"><rs><hi rend="sc">Galeranus</hi>, quondam maritus Ysabellæ, sororis Ebrardi de Levesvilla</rs>, <ref target="#NDRC-AB_0040" n="40">40</ref>.</item>
             <item xml:id="NDRC-AB_rs_087"><rs><hi rend="sc">Galterius</hi>, carpentarius</rs>, <ref target="#NDRC-AB_0022" n="22">22</ref>.</item><item xml:id="NDRC-AB_rs_088"><rs><hi rend="sc">Galterius</hi>, M., uxor ejus</rs>, <ref target="#NDRC-AB_0022" n="22">22</ref>.</item><item xml:id="NDRC-AB_rs_089"><rs><hi rend="sc">Garlande</hi> (Mahault de), femme de Bouchard de Montmorency, sire de Marly</rs>, <ref target="#NDRC-AB_0012" n="12">12</ref>; <ref target="#NDRC-AB_0026" n="26">26</ref>.</item><item xml:id="NDRC-AB_rs_090"><rs><hi rend="sc">Gif</hi> (Reginaldus de)</rs>, <ref target="#NDRC-AB_0041" n="41">41</ref>, <ref target="#NDRC-AB_0043" n="43">43</ref>. — (Isabelle de)<!--, <ref>XLI</ref>-->, note 2.</item>
@@ -8950,7 +8950,7 @@
             <item xml:id="NDRC-AB_rs_099"><rs><hi rend="sc">Guise</hi> (Louis, cardinal de)</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <item xml:id="NDRC-AB_rs_100"><rs><hi rend="sc">Gumbervilla</hi> (Aalidis de), Theodoricus, ejus filius</rs>, <ref target="#NDRC-AB_0021" n="21">21</ref>. — (Hugo de), <foreign>ibid.</foreign>, note 2.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_H" type="index">
           <head>H</head>
             <item xml:id="NDRC-AB_rs_101"><rs><hi rend="sc">Habert</hi> (Louis), conseiller du roi</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <item xml:id="NDRC-AB_rs_102"><rs><hi rend="sc">Haimericus</hi>, capellanus episcopi Parisiensis</rs>, <ref target="#NDRC-AB_0001" n="1">1</ref>.</item>
@@ -8958,15 +8958,15 @@
             <item xml:id="NDRC-AB_rs_104"><rs><hi rend="sc">Helisendis</hi> (uxor Guidonis de Caprosia)</rs>, <ref target="#NDRC-AB_0003" n="3">3</ref>, <ref target="#NDRC-AB_0004" n="4">4</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0051" n="51">51</ref>.</item>
             <item xml:id="NDRC-AB_rs_105"><rs><hi rend="sc">Herbertus</hi>, quondam maritus Ysabellæ, sororis Ebrardi de Levesvilla</rs>, <ref target="#NDRC-AB_0040" n="40">40</ref>.</item>
             <item xml:id="NDRC-AB_rs_106"><rs><hi rend="sc">Honeinvilla</hi> (Symon de)</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item><item xml:id="NDRC-AB_rs_107"><rs><hi rend="sc">Honeinvilla</hi>, Alauda, uxor ejus</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item><item xml:id="NDRC-AB_rs_108"><rs><hi rend="sc">Honeinvilla</hi>, Matheus, frater ejusdem</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item></list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_I" type="index">
           <head>I</head>
             <item xml:id="NDRC-AB_rs_109"><rs><hi rend="sc">Ingerannus</hi>, canonicus abbatiæ de Roscha</rs>, <ref target="#NDRC-AB_0089" n="89">89</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_J" type="index">
           <head>J</head>
             <item xml:id="NDRC-AB_rs_110"><rs><hi rend="sc">Jahaigniaco</hi> (Milo de), miles</rs>, <ref target="#NDRC-AB_0084" n="84">84</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_L" type="index">
           <head>L</head>
             <item xml:id="NDRC-AB_rs_111"><rs><hi rend="sc">Laceron</hi> (Guillelmus)</rs>, <ref target="#NDRC-AB_0020" n="18">18</ref>.</item><item xml:id="NDRC-AB_rs_112"><rs><hi rend="sc">Laceron</hi>, Emelina, uxor ejus</rs>, <ref target="#NDRC-AB_0020" n="20">20</ref>.</item><item xml:id="NDRC-AB_rs_113"><rs><hi rend="sc">Leroy</hi> (Jean), conseiller au parlement</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <item xml:id="NDRC-AB_rs_114"><rs><hi rend="sc">Levesvilla</hi> (Amalricus de), Aalis, uxor ejus</rs><!--, <ref>XXXIX</ref>-->. — Ebrardus, filius Almarici, <ref target="#NDRC-AB_0039" n="39">39</ref><!--, <ref>XXXIX</ref>--><!--, <ref>XL</ref>--></item><item xml:id="NDRC-AB_rs_114_1"><rs><hi rend="sc">Levesvilla</hi> (Katerina), uxor Ebrard</rs>, <!--i, <ref>XXXIX</ref>--></item><item xml:id="NDRC-AB_rs_114_2"><rs><hi rend="sc">Levesvilla</hi> (Ysabella), soror ejusdem. — Notes sur la famille de Levéville, note 1. — Girardus, filius Almarici de</rs>, <!--, <ref>XL</ref>--><!--, <ref>XXXIX</ref>-->, <ref target="#NDRC-AB_0039" n="39">39</ref>.</item><item xml:id="NDRC-AB_rs_115"><rs><hi rend="sc">Levies</hi> (Guido <num>I</num>, de), miles, mareschalus</rs>, <ref target="#NDRC-AB_0002" n="1">1 et note 1</ref>; <ref target="#NDRC-AB_0002" n="2">2</ref>, <ref target="#NDRC-AB_0010" n="10">10</ref>, <ref target="#NDRC-AB_0011" n="11">11</ref>, <ref target="#NDRC-AB_0012" n="12">12</ref>; <ref target="#NDRC-AB_0012" n="15">15</ref>, <ref target="#NDRC-AB_0019" n="19">19</ref>, <ref target="#NDRC-AB_0058" n="58">58</ref>. — Quondam mareschalus Albigensis, <ref target="#NDRC-AB_0028" n="28">28</ref><ref target="#NDRC-AB_0029" n="29">29</ref>, <ref target="#NDRC-AB_0069" n="69">69</ref>, <!-- doublon meme acte NDRC-AB_0069: <ref target="#NDRC-AB_0069" n="XCIV">69</ref> --> et note. — Vide <ref type="see" target="#NDRC-AB_rs_095" corresp="#NDRC-AB_back-1">Guiburgis, uxor ejus</ref>. — (Guido II), filius Guidonis <num>I</num>, miles<!--, <ref>X</ref>--> et note 2<!--; <ref>XI</ref>--><!--, <ref>LVIII</ref>--> et note 1. — Vide <ref type="see" target="#NDRC-AB_rs_123" corresp="#NDRC-AB_back-1">Philippus filius Guidonis <num>I</num></ref>.</item><item xml:id="NDRC-AB_rs_116"><rs><hi rend="sc">Levies</hi> (Isabellis de), mater Milonis et uxor Philippi de —</rs>, <ref target="#NDRC-AB_0025" n="25">25</ref>; <ref target="#NDRC-AB_0028" n="28">28</ref>.</item><item xml:id="NDRC-AB_rs_117"><rs><hi rend="sc">Levies</hi> (Isabellis de), uxor Galterii de Pissiaco</rs>, <ref target="#NDRC-AB_0035" n="35">35</ref>, <ref target="#NDRC-AB_0035" n="36">36</ref>, <ref target="#NDRC-AB_0035" n="35">35</ref> <!-- doublon meme acte NDRC-AB_0035: <ref target="#NDRC-AB_0035" n="XXXVIII">35</ref> --> et note 3; <ref target="#NDRC-AB_0095" n="95">95</ref>.</item><item xml:id="NDRC-AB_rs_118"><rs><hi rend="sc">Levies</hi> (Johannes de), miles, frater Isabellis, uxoris Galterii de Pissiaco</rs>, <ref target="#NDRC-AB_0038" n="38">38 et note</ref>; <ref target="#NDRC-AB_0095" n="95">95</ref>.</item><item xml:id="NDRC-AB_rs_119"><rs><hi rend="sc">Levies</hi> (Johannes de), miles, frater Isabellis, uxoris Galteri de Pissiaco</rs>, <ref target="#NDRC-AB_0035" n="35">35</ref>, <ref target="#NDRC-AB_0036" n="36">36</ref>, <ref target="#NDRC-AB_0038" n="38">38 et note</ref>; <ref target="#NDRC-AB_0095" n="95">95</ref>.</item><item xml:id="NDRC-AB_rs_120"><rs><hi rend="sc">Levies</hi> (mareschalla de)</rs>, <ref target="#NDRC-AB_0069" n="69">69</ref>.</item>
@@ -8979,7 +8979,7 @@
             <item xml:id="NDRC-AB_rs_129"><rs><hi rend="sc">Louis</hi>, <num>IX</num>, roi de France</rs>, <ref target="#NDRC-AB_0008" n="8">8</ref>.</item>
             <item xml:id="NDRC-AB_rs_130"><rs><hi rend="sc">Lusignan</hi> (Hugues de), comte de la Marche</rs>, <ref target="#NDRC-AB_0044" n="44">44</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_M" type="index">
           <head>M</head>
             <item xml:id="NDRC-AB_rs_131"><rs><hi rend="sc">Mabilia</hi>, uxor Symonis de Levies</rs>, <ref target="#NDRC-AB_0033" n="33">33</ref>.</item>
             <item xml:id="NDRC-AB_rs_132"><rs><hi rend="sc">Malo-Repastu</hi> (Guillelmus de)</rs>, <ref target="#NDRC-AB_93b" n="93bis">93bis</ref> (<foreign>bis</foreign>), note 2. — (Milo, castellanus de)<!--, <ref>XCIII</ref>--> (<foreign>bis</foreign>).</item>
@@ -8989,7 +8989,7 @@
             <item xml:id="NDRC-AB_rs_138"><rs><hi rend="sc">Monsterolio</hi> (Garinus de), miles</rs>, <ref target="#NDRC-AB_0094" n="94">94</ref>.</item><item xml:id="NDRC-AB_rs_139"><rs><hi rend="sc">Monsterolio</hi>, Sancelina, uxor ejus</rs>, <ref target="#NDRC-AB_0094" n="94">94</ref>.</item><item xml:id="NDRC-AB_rs_140"><rs><hi rend="sc">Monsterolio</hi>, Petrus, primogenitus</rs>, <ref target="#NDRC-AB_0094" n="94">94</ref>.</item><item xml:id="NDRC-AB_rs_140b"><rs><hi rend="sc">Monsterolio</hi> (Petrus de), miles</rs>, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item><item xml:id="NDRC-AB_rs_140c"><rs><hi rend="sc">Monsterolio</hi>, Beatrix, uxor ejus</rs>, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item><item xml:id="NDRC-AB_rs_140d"><rs><hi rend="sc">Monsterolio</hi> (Odo, presbiter de)</rs>, <ref target="#NDRC-AB_0087" n="87">87</ref>.</item><item xml:id="NDRC-AB_rs_141"><rs><hi rend="sc">Montisfortis</hi> (Almaricus <num>VI</num>, dominus de)</rs>, <ref target="#NDRC-AB_0007" n="6">6 et notes</ref>; <ref target="#NDRC-AB_0006" n="6">6</ref>; <ref target="#NDRC-AB_0029" n="29">29</ref>.</item><item xml:id="NDRC-AB_rs_141_1"><rs><hi rend="sc">Montisfortis</hi> Comes</rs>, <ref target="#NDRC-AB_0008" n="7">7</ref>, <ref target="#NDRC-AB_0008" n="8">8 et notes</ref></item><item xml:id="NDRC-AB_rs_141_2"><rs><hi rend="sc">Montisfortis</hi> Beatrix, uxor ejus<!--, <ref>VII</ref>--> et note 2. — (Guido de), frater Almarici, <foreign>vid.</foreign> Bigorrensis comes. — (Johannes <num>I</num> de), comes, et Johanna, uxor ejus</rs>, <ref target="#NDRC-AB_0058" n="58">58 et notes</ref>. — (Robertus IV), comes Drocarum et —, <ref target="#NDRC-AB_0007" n="7">7</ref>note 3. — (Pétronille de), dame de Rambouillet<!--, <ref>VII</ref>-->, note 6. — (Simon dominus de)<!--, <ref>VI</ref>-->, notes 3 ET 4</item><item xml:id="NDRC-AB_rs_142"><rs><hi rend="sc">Montmorency</hi> (Bouchard de), sire de Marly</rs>, <ref target="#NDRC-AB_0012" n="12">12</ref>. — (Alix de), uxor Simonis <num>IV</num> de Monteforti, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
             <item xml:id="NDRC-AB_rs_143"><rs><hi rend="sc">Mortuo-Mari</hi> (Milo de)</rs>, <ref target="#NDRC-AB_0079" n="79">79</ref>. — (Nicholaus de)<ref target="#NDRC-AB_0079" n="79">79</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_N" type="index">
           <head>N</head>
             <item xml:id="NDRC-AB_rs_144"><rs><hi rend="sc">Nantolio</hi> (Johannes de), miles, dominus de Levies</rs>, <ref target="#NDRC-AB_0028" n="28">28</ref>, <ref target="#NDRC-AB_0028" n="29">29</ref>, <ref target="#NDRC-AB_0029" n="30">30</ref>, <ref target="#NDRC-AB_0060" n="60">60</ref>, <ref target="#NDRC-AB_0061" n="61">61</ref>, <ref target="#NDRC-AB_0065" n="65">65</ref>, <ref target="#NDRC-AB_0066" n="66">66</ref>. <foreign>Vide</foreign> <ref type="see" target="#NDRC-AB_rs_121" corresp="#NDRC-AB_back-1">Levies</ref>. — (Margarita de), uxor ejus. — <foreign>Ibidem.</foreign> </item>
             <item xml:id="NDRC-AB_rs_145"><rs><hi rend="sc">Nealpha</hi> (Symon, castellanus de)</rs>, <ref target="#NDRC-AB_0063" n="63">63</ref>; <ref target="#NDRC-AB_0093" n="93">93</ref>. — Fennia, uxor ejus<!--, <ref>XCIII</ref>--> et note 1.</item><item xml:id="NDRC-AB_rs_146"><rs><hi rend="sc">Neauphle-le-Chateau</hi> (Geoffroy de)</rs>, <ref target="#NDRC-AB_0063" n="62">62</ref>.</item><item xml:id="NDRC-AB_rs_147"><rs><hi rend="sc">Neauphle-le-Chateau</hi> (Gui de)</rs>, <ref target="#NDRC-AB_0063" n="62">62</ref>.</item><item xml:id="NDRC-AB_rs_148"><rs><hi rend="sc">Neelfa</hi> (Milo de), miles, dominus de Stanno</rs>, <ref target="#NDRC-AB_0062" n="62">62 et notes</ref><!-- doublon meme acte NDRC-AB_0062: <ref target="#NDRC-AB_0062" n="LXIV">62</ref> -->.</item>
@@ -8998,12 +8998,12 @@
             <item xml:id="NDRC-AB_rs_151"><rs><hi rend="sc">Nisuta</hi> (Ancellus de), armiger, frater Milonis de Neelfa</rs>, <ref target="#NDRC-AB_0064" n="64">64</ref>.</item>
             <item xml:id="NDRC-AB_rs_152"><rs><hi rend="sc">Nova-Villa</hi> (Theobaldus de)</rs>, <ref target="#NDRC-AB_0045" n="45">45</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_O" type="index">
           <head>O</head>
             <item xml:id="NDRC-AB_rs_153"><rs><hi rend="sc">Ormoy</hi> (Jean, seigneur d')</rs>, <ref target="#NDRC-AB_0090" n="90">90</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_097" corresp="#NDRC-AB_back-1">Guillervilla</ref>.</item>
             <item xml:id="NDRC-AB_rs_154"><rs><hi rend="sc">Ossigniis</hi> (Adam de)</rs>, <ref target="#NDRC-AB_0047" n="47">47</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_P" type="index">
           <head>P</head>
             <item xml:id="NDRC-AB_rs_155"><rs><hi rend="sc">Palaciolo</hi> (Johanna de)</rs>, <ref target="#NDRC-AB_0066" n="66">66</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_029" corresp="#NDRC-AB_back-1">Briis (Johanna de)</ref>.</item>
             <item xml:id="NDRC-AB_rs_156"><rs><hi rend="sc">Parisienses</hi> (Archidiaconi), Guillelmus</rs>, <ref target="#NDRC-AB_0019" n="19">19</ref>. — <abbr>H.</abbr><!--, <ref>LXIII</ref>-->, <ref target="#NDRC-AB_0069" n="69">69</ref>. — <abbr>P.</abbr>, <ref target="#NDRC-AB_0068" n="68">68</ref>, <ref target="#NDRC-AB_0064" n="64">64</ref>, <ref target="#NDRC-AB_0082" n="82">82</ref>, <ref target="#NDRC-AB_0084" n="84">84</ref>, <ref target="#NDRC-AB_1023" n="1023">1023</ref>. — (Episcopi), Guillelmus, <ref target="#NDRC-AB_0049" n="47">47 et note</ref>; <ref target="#NDRC-AB_0049" n="49">49</ref>, <ref target="#NDRC-AB_0050" n="50">50</ref>. — Mauricius, <ref target="#NDRC-AB_0001" n="1">1</ref>. — Odo<ref target="#NDRC-AB_0001" n="1">1</ref>. — Petrus, <ref target="#NDRC-AB_0015" n="15">15</ref>, <ref target="#NDRC-AB_0016" n="16">16</ref> <ref target="#NDRC-AB_0017" n="17">17</ref>, <ref target="#NDRC-AB_0018" n="18">18</ref>, <ref target="#NDRC-AB_0019" n="19">19</ref><!--, <ref>XXII</ref>--> <ref target="#NDRC-AB_0025" n="25">25</ref>. <!-- doublon meme acte NDRC-AB_0019: <ref target="#NDRC-AB_0019" n="XLII">19</ref> --> — (Decanus capituli), <num>L.</num>, <ref target="#NDRC-AB_0093" n="93">93</ref>. — (Succentor), Petrus<!--, <ref>XXII</ref>-->.</item><item xml:id="NDRC-AB_rs_157"><rs><hi rend="sc">Petronilla</hi>, uxor Symonis de Levies</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>; <ref target="#NDRC-AB_0031" n="31">31</ref>, <ref target="#NDRC-AB_0032" n="33">33</ref>. <ref target="#NDRC-AB_0033" n="34">34</ref></item><item xml:id="NDRC-AB_rs_158"><rs><hi rend="sc">Philippe-Auguste</hi>, roi de France</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
@@ -9013,14 +9013,14 @@
             <item xml:id="NDRC-AB_rs_162"><rs><hi rend="sc">Pissiacensis Archidiaconus</hi> (Philippus de Levies), <foreign>vide</foreign> in</rs> <ref type="see" target="#NDRC-AB_rs_123" corresp="#NDRC-AB_back-1">Levies</ref>. — (Thomas), <ref target="#NDRC-AB_0057" n="57">57</ref>.</item>
             <item xml:id="NDRC-AB_rs_163"><rs><hi rend="sc">Poissiaco</hi> (Galterius de), miles</rs>, <ref target="#NDRC-AB_0035" n="35">35</ref>, <ref target="#NDRC-AB_0036" n="36">36</ref>, <ref target="#NDRC-AB_0036" n="37">37</ref><!--, <ref>XXXVIII</ref>--></item><item xml:id="NDRC-AB_rs_163_1"><rs><hi rend="sc">Poissiaco</hi> Isabella, uxor ejus, filia Simonis de Levies et Petronilla de <persName>Poiviller</persName>, <foreign>ibid</foreign>.</rs></item><item xml:id="NDRC-AB_rs_164"><rs><hi rend="sc">Port-Royal</hi> (Eremburge, abbesse de)</rs>, <ref target="#NDRC-AB_0051" n="51">51, notes</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_R" type="index">
           <head>R</head>
             <item xml:id="NDRC-AB_rs_165"><rs><hi rend="sc">Regnar</hi> (Florentin), conseiller du roi</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
             <item xml:id="NDRC-AB_rs_166"><rs><hi rend="sc">Roscha</hi> (Gilbertus, abbas de)</rs>, <ref target="#NDRC-AB_0087" n="87">87</ref>, <ref target="#NDRC-AB_0089" n="89">89</ref>. <foreign>Vide</foreign> <ref type="see" target="#NDRC-AB_rs_109" corresp="#NDRC-AB_back-1">Ingerannus</ref>.</item>
             <item xml:id="NDRC-AB_rs_167"><rs><hi rend="sc">Ructoria</hi></rs><!--, <ref target="#La Ruthoère">La Ruthoère</ref>--> (Egidius vel Gilo de), clericus, <ref target="#NDRC-AB_0063" n="63">63</ref>, <ref target="#NDRC-AB_0078" n="78">78</ref>, <ref target="#NDRC-AB_0080" n="80">80</ref>, <ref target="#NDRC-AB_0081" n="81">81</ref>. <ref target="#NDRC-AB_0078" n="78">78</ref> — (Johannes de), canonicus de Roscha<!--, <ref>LX</ref>-->. — (Isabella de), mater Egidii Milonis, Philippi et Symonis, <ref target="#NDRC-AB_0060" n="60">60</ref><!--, <ref>LXXVIII</ref>-->. — (Milo), miles, frater Egidii<!--, <ref>LX</ref>--><!--, <ref>LXXVIII</ref>-->. — (Philippus de), armiger, frater Egidii<!--, <ref>LX</ref>-->. — (Symon de), armiger, frater Egidii<!--, <ref>LX</ref>--><!--, <ref>LXXVIII</ref>-->. — (Symon de), nepos Egidii<!--, <ref>LX</ref>-->, note 2.</item>
             <item xml:id="NDRC-AB_rs_168"><rs><hi rend="sc">Ruelle</hi> (Pierre), conseiller au parlement</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_S" type="index">
           <head>S</head>
             <item xml:id="NDRC-AB_rs_169"><rs><hi rend="sc">Sancto-Nunnio</hi> (A., presbiter de)</rs>, <ref target="#NDRC-AB_0002" n="2">2</ref>.</item>
             <item xml:id="NDRC-AB_rs_170"><rs><hi rend="sc">Séguier</hi> (Louis), conseiller au parlement</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
@@ -9030,14 +9030,14 @@
             <item xml:id="NDRC-AB_rs_174"><rs><hi rend="sc">Stanno</hi> (Milo, dominus de)</rs>, <ref target="#NDRC-AB_0062" n="62">62</ref>.</item>
             <item xml:id="NDRC-AB_rs_175"><rs><hi rend="sc">Stephanus</hi>, de Montefermolio, eremita</rs>, <ref target="#NDRC-AB_0001" n="1">1</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_T" type="index">
           <head>T</head>
             <item xml:id="NDRC-AB_rs_176"><rs><hi rend="sc">Téfault</hi> (Jean), chanoine de Saint-Sernin de Toulouse</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>.</item>
             <item xml:id="NDRC-AB_rs_177"><rs><hi rend="sc">Tiverval</hi> (Galterus de)</rs>, <ref target="#NDRC-AB_0067" n="67">67</ref> et <ref target="#NDRC-AB_0068" n="68">68</ref>.</item><item xml:id="NDRC-AB_rs_178"><rs><hi rend="sc">Tiverval</hi>, Isabellis, uxor ejus</rs>, <ref target="#NDRC-AB_0067" n="67">67</ref> et <ref target="#NDRC-AB_0068" n="68">68</ref>.</item><item xml:id="NDRC-AB_rs_179"><rs><hi rend="sc">Toulouse</hi> (Raymond jeune, comte de)</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
             <item xml:id="NDRC-AB_rs_180"><rs><hi rend="sc">Toussus</hi> (Isabella de)</rs>, <ref target="#NDRC-AB_0054" n="54">54</ref><!--, <ref>LV</ref>-->. — (Johannes Faiel de), <ref target="#NDRC-AB_0020" n="20">20</ref>.</item>
             <item xml:id="NDRC-AB_rs_181"><rs><hi rend="sc">Toussus</hi> (Petrus, presbiter de)</rs>, <ref target="#NDRC-AB_0088" n="87">87</ref>, <ref target="#NDRC-AB_0087" n="89">89</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_V" type="index">
           <head>V</head>
             <item xml:id="NDRC-AB_rs_182"><rs><hi rend="sc">Vallium-Sarnaii</hi> (Theobaldus, abbas)</rs>, <ref target="#NDRC-AB_0034" n="34">34</ref>.</item>
             <item xml:id="NDRC-AB_rs_183"><rs><hi rend="sc">Veautres</hi> (Gervasius li)</rs>, <ref target="#NDRC-AB_0047" n="47">47</ref>. — (Bucardus et Theobaldus), milites, <foreign>ibid.</foreign>, note. — (Johannes li), miles, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item>
@@ -9053,7 +9053,7 @@
             <item xml:id="NDRC-AB_rs_196"><rs><hi rend="sc">Voisins</hi> (Agnes de), uxor Milonis de Stanno</rs>, <ref target="#NDRC-AB_0062" n="62">62</ref>.</item>
             <item xml:id="NDRC-AB_rs_197"><rs><hi rend="sc">Voisins</hi> (de)</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. </item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-1_liste_Y" type="index">
           <head>Y</head>
             <!--<item xml:id="NDRC-AB_rs_198"><rs><hi rend="sc">Ysabellis</hi>, uxor Philippi <num>I</num> de Levies, <foreign>vide</foreign></rs>, <ref target="#Levies">Levies</ref> (Isabellis de).</item>-->
             <item xml:id="NDRC-AB_rs_199"><rs><hi rend="sc">Ysabella</hi>, soror Ebrardi de Levesvilla</rs>, <ref target="#NDRC-AB_0040" n="40">40</ref>.</item>
@@ -9062,7 +9062,7 @@
         </div>
       <div xml:id="NDRC-AB_back-2">
           <head>Index geographicus</head>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_A" type="index">
           <head>A</head>
             <item xml:id="NDRC-AB_rs_201"><rs><hi rend="sc">Albigesium</hi>, l'Albigeois</rs>, <ref target="#NDRC-AB_0012" n="12">12</ref>, <ref target="#NDRC-AB_0029" n="29">29</ref>, <ref target="#NDRC-AB_0026" n="26">26</ref>, <ref target="#NDRC-AB_0045" n="45">45</ref>, <ref target="#NDRC-AB_0069" n="69">69</ref><!--, <ref>LXXI</ref>-->, <ref target="#NDRC-AB_0094" n="94">94</ref>.</item>
             <item xml:id="NDRC-AB_rs_202"><rs><hi rend="sc">Alta-brueria</hi>, Haute-Bruyère, prieuré de l'ordre de Fontevrault, fondé avant 1078 par Bertrade de Montfort, dans la commune de Saint-Remy-l'Honoré, canton de Chevreuse, arrondissement de Rambouillet, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
@@ -9072,7 +9072,7 @@
             <item xml:id="NDRC-AB_rs_207"><rs><hi rend="sc">Avagot</hi> (terre d')</rs>, <ref target="#NDRC-AB_0100" n="100">100</ref>. Aujourd'hui Lavagot dans la commune de Lévis-Saint-Nom.</item>
             <item xml:id="NDRC-AB_rs_208"><rs><hi rend="sc">Avignon</hi></rs>, <ref target="#NDRC-AB_0026" n="26">26, note <num>l.</num></ref></item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_B" type="index">
           <head>B</head>
             <item xml:id="NDRC-AB_rs_209"><rs><hi rend="sc">Baillol</hi>, nº</rs>, <ref target="#NDRC-AB_0044" n="44">44</ref>. <abbr>M.</abbr> Guérard a placé ce lieu à <placeName>Baillol</placeName>, hameau dépendant de la commune de Bruyère-le-Châtel; mais nous croyons que c'est par erreur, puisque cette commune faisait autrefois partie du diocèse de Paris. Une bulle du pape Adrien <num>IV</num>, de l'an 1158, confirmant les possessions de l'abbaye de Saint-Magloire de Paris dans le diocèse de Chartres, nomme parmi un grand nombre d'églises toutes situées dans le Pincerais, <placeName>ecclesiam Sancti-Cyrici de Baiolo</placeName>. Philippe de Lévis étant archidiacre de Pincerais, nous croyons que c'est dans son archidiaconé qu'il faut chercher le lieu de <placeName>Bailleau</placeName> ou de <placeName>Baillol</placeName>, mais nous ne trouvons dans le Pouillé chartrain du <num>viii<hi rend="sup">e</hi></num> siècle aucune église de ce nom située dans le Pincerais.</item><item xml:id="NDRC-AB_rs_210"><rs><hi rend="sc">Balneoli, Bagneux, commune de l'arrondissement, du canton et à 4 kilomètres de Sceaux, Seine, i</hi>.</rs></item>
             <item xml:id="NDRC-AB_rs_211"><rs><hi rend="sc">Bella-Penna</hi></rs><!--, <ref target="#Bele-Penne">Bele-Penne</ref>-->, <placeName>Belle-Panne</placeName>, ferme à l'est et tout près de l'abbaye de La Roche, dans la commune de Lévis, <ref target="#NDRC-AB_0003" n="3">3</ref>, <ref target="#NDRC-AB_0004" n="4">4</ref>, <ref target="#NDRC-AB_0005" n="13">13</ref>, <ref target="#NDRC-AB_0028" n="28">28</ref>, <ref target="#NDRC-AB_0095" n="95">95</ref>.</item>
@@ -9087,7 +9087,7 @@
             <item xml:id="NDRC-AB_rs_220"><rs><hi rend="sc">Buc</hi>, Buc, commune du canton sud de Versailles, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0017" n="16">16</ref>.</item>
             <item xml:id="NDRC-AB_rs_221"><rs><hi rend="sc">Byevra</hi>, Bièvres, commune du canton de Palaiseau, arrondissement de Versailles, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_C" type="index">
           <head>C</head>
             <item xml:id="NDRC-AB_rs_222"><rs><hi rend="sc">Capella juxta Caprosiam</hi>, La Chapelle, hameau de la commune de Milon-la-Chapelle, canton de Chevreuse</rs>, <ref target="#NDRC-AB_0049" n="49">49</ref>, <ref target="#NDRC-AB_0049" n="50">50</ref> à <ref target="#NDRC-AB_0049" n="53">53</ref>, <ref target="#NDRC-AB_0077" n="77">77</ref>.</item>
             <item xml:id="NDRC-AB_rs_223"><rs><hi rend="sc">Caprosia</hi>, Chevreuse, petite ville et chef-lieu de canton de l'arrondissement et à 18 kilomètres est de Rambouillet, à 15 kilomètres sud-ouest de Versailles, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0003" n="3">3</ref>, <!-- doublon meme acte NDRC-AB_0003: <ref target="#NDRC-AB_0003" n="IV">3</ref> --> <ref target="#NDRC-AB_0003" n="5">5</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0020" n="20">20</ref>, <ref target="#NDRC-AB_0049" n="49">49</ref>, <ref target="#NDRC-AB_0051" n="50">50</ref>, <ref target="#NDRC-AB_0051" n="51">51</ref>, <ref target="#NDRC-AB_0052" n="52">52</ref>, <!-- doublon meme acte NDRC-AB_0052: <ref target="#NDRC-AB_0052" n="LIII">52</ref> --> <ref target="#NDRC-AB_0054" n="54">54</ref>, <ref target="#NDRC-AB_0055" n="55">55</ref> <ref target="#NDRC-AB_0086" n="86">86</ref>, <ref target="#NDRC-AB_93b" n="97">97</ref>.</item>
@@ -9108,19 +9108,19 @@
             <item xml:id="NDRC-AB_rs_238"><rs><hi rend="sc">Craeria</hi></rs>, <ref target="#NDRC-AB_0067" n="67">67</ref><!--; <ref target="#La Craière">La Craière</ref>-->, <ref target="#NDRC-AB_0076" n="76">76</ref><!--, <ref target="#La Croière">La Croière</ref>--><!--, <ref>LXVII</ref>--><!--, <ref>LXVIII</ref>-->, chantier aux environs de Marly-le-Roi.</item>
             <item xml:id="NDRC-AB_rs_239"><rs><hi rend="sc">Crota de Marliaco</hi>, la Crote de Marly, chantier aux environs de Marly-le-Roi, probablement le même que la Craière. Crote, en effet, signifie Craie</rs>, <ref target="#NDRC-AB_0063" n="63">63</ref>, <ref target="#NDRC-AB_0078" n="78">78</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_D" type="index">
           <head>D</head>
             <item xml:id="NDRC-AB_rs_240"><rs><hi rend="sc">Doigviller</hi>, et</rs><!--, <ref target="#Doinviller">Doinviller</ref>--> <placeName>Doinvilliers</placeName>, hameau de la commune de Chevreuse, arrondissement de Rambouillet, Seine-et-Oise, <ref target="#NDRC-AB_0010" n="10">10</ref>, <ref target="#NDRC-AB_0046" n="46">46</ref>, <!-- doublon meme acte NDRC-AB_0010: <ref target="#NDRC-AB_0010" n="XII">10</ref> --> <ref target="#NDRC-AB_0029" n="29">29</ref>, <ref target="#NDRC-AB_0039" n="39">39</ref>. <ref target="#NDRC-AB_0046" n="46">46</ref></item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_E" type="index">
           <head>E</head>
             <item xml:id="NDRC-AB_rs_241"><rs><hi rend="sc">Essarta-Regis</hi>, les Essarts-le-Roi, commune du canton de Rambouillet, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0045" n="46">46 et notes</ref>.</item>
             <item xml:id="NDRC-AB_rs_242"><rs><hi rend="sc">Essevouir</hi></rs><!--, <ref target="#Essivouer">Essivouer</ref>-->, petit cours d'eau près de l'abbaye de La Roche, <ref target="#NDRC-AB_0029" n="29">29</ref>; <ref target="#NDRC-AB_0061" n="61">61</ref>.</item></list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_F" type="index">
           <head>F</head>
             <item xml:id="NDRC-AB_rs_243"><rs><hi rend="sc">Faïel</hi></rs><!--, <ref target="#Fayellum-Magnum">Fayellum-Magnum</ref>-->, -<!--<ref target="#Parvum">Parvum</ref>-->, <placeName>le Grand et le Petit-Fayel</placeName>, chantier dans la dîme des Loges. Voyez <ref type="see" target="#NDRC-AB_rs_269" corresp="#NDRC-AB_back-2">Logiæ</ref>. <ref target="#NDRC-AB_0022" n="22">22</ref>, <ref target="#NDRC-AB_0087" n="87">87</ref>, <ref target="#NDRC-AB_0020" n="20">20</ref><!--, <ref>LXXXIX</ref>-->, <ref target="#NDRC-AB_0096" n="96">96</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_G" type="index">
           <head>G</head>
             <item xml:id="NDRC-AB_rs_244"><rs><hi rend="sc">Gif</hi>, —</rs><!--, <ref target="#Villa">Villa</ref>-->, <placeName>Gif</placeName>, commune du canton de Palaiseau, arrondissement de Versailles, Seine-et-Oise, ancien diocèse de Paris, <ref target="#NDRC-AB_0041" n="41">41</ref>, <ref target="#NDRC-AB_0041" n="42">42</ref>, <ref target="#NDRC-AB_0087" n="87">87</ref>, <ref target="#NDRC-AB_0088" n="88">88</ref>, <ref target="#NDRC-AB_0089" n="89">89</ref>.</item>
             <item xml:id="NDRC-AB_rs_245"><rs><hi rend="sc">Girardo</hi> (vinea de), sur l'ancien territoire de la paroisse d'Issy, canton de Sceaux, Seine, diocèse de Paris</rs>, <ref target="#NDRC-AB_0079" n="79">79 et note</ref>.</item>
@@ -9132,22 +9132,22 @@
             <item xml:id="NDRC-AB_rs_251"><rs><hi rend="sc">Guillervilla</hi>, Guillerville, hameau de la commune de Linas, canton d'Arpajon, arrondissement de Corbeil, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0087" n="87">87</ref>.</item>
             <item xml:id="NDRC-AB_rs_252"><rs><hi rend="sc">Gumbervilla</hi>, Gomberville, hameau de la commune de Magny-les-Hameaux, canton de Chevreuse, Seine-et-Oise</rs>, <ref target="#NDRC-AB_0021" n="21">21</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_H" type="index">
           <head>H</head>
             <item xml:id="NDRC-AB_rs_253"><rs><hi rend="sc">Hargevilla</hi>, Hargeville, commune du canton de Houdan, arrondissement de Mantes, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0056" n="56">56</ref>.</item>
             <item xml:id="NDRC-AB_rs_254"><rs><hi rend="sc">Hautun</hi> (molendinum de), le moulin à Tan ou Guillier, dans la vallée de Cernay. Voyez</rs> <ref target="#NDRC-AB_0060" n="60">60</ref>, page <num>59.</num></item>
             <item xml:id="NDRC-AB_rs_255"><rs><hi rend="sc">Honeinvilla</hi>, Aunainville, hameau de la commune de la Chapelle-d'Aunainville, canton d'Auneau, arrondissement de Chartres, Eure-et-Loir</rs>, <ref target="#NDRC-AB_0009" n="9">9</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_I" type="index">
           <head>I</head>
             <item xml:id="NDRC-AB_rs_256"><rs><hi rend="sc">Iveta</hi>, l'Ivette, petite rivière dont la source principale est au hameau du même nom; une autre source est dans la vallée au-dessus de laquelle est l'abbaye de La Roche. L'Ivette est un affluent de l'Orge; elle traverse les communes de Lévis, Maincourt, Dampierre, Saint-Forget, Chevreuse, Saint-Remy, Gif, Bures, Orsay, Villebon, Champlan, Saulx-les-Chartreux, Longjumeau, Chilly, Epinay et Savigny-sur-Orge, où elle a son embouchure après un cours de 36 kilomètres</rs>, <ref target="#NDRC-AB_0082" n="82">82</ref>. <!-- doublon meme acte NDRC-AB_0082: <ref target="#NDRC-AB_0082" n="LXXXII">82</ref> --> <!-- doublon meme acte NDRC-AB_0082: <ref target="#NDRC-AB_0082" n="LXXXIII">82</ref> --></item>
             <item xml:id="NDRC-AB_rs_257"><rs><hi rend="sc">Ivete</hi> (prioratus), le prieuré d'Ivette, au hameau du même nom, dans la commune de Lévis, canton de Chevreuse; il dépendait de l'abbaye Saint-Maur-des-Fossés</rs>, <ref target="#NDRC-AB_0082" n="82">82</ref>. <!-- doublon meme acte NDRC-AB_0082: <ref target="#NDRC-AB_0082" n="LXXXIII">82</ref> --></item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_J" type="index">
           <head>J</head>
             <item xml:id="NDRC-AB_rs_258"><rs><hi rend="sc">Jehaigniacum</hi>, Jagny, hameau de la commune de Chevreuse, Seine-et-Oise</rs>, <ref target="#NDRC-AB_0084" n="84">84</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_L" type="index">
           <head>L</head>
             <item xml:id="NDRC-AB_rs_259"><rs><hi rend="sc">Landæ</hi>, les bois des Landes, voisins de l'abbaye de La Roche, au sud-ouest; </rs> <ref target="#NDRC-AB_0043" n="43">43</ref>.</item>
             <item xml:id="NDRC-AB_rs_260"><rs><hi rend="sc">Lacus</hi></rs>, <ref target="#NDRC-AB_0002" n="2">2</ref> Voyez <ref type="see" target="#NDRC-AB_rs_261" corresp="#NDRC-AB_back-2">Lais</ref>.</item>
@@ -9159,7 +9159,7 @@
             <item xml:id="NDRC-AB_rs_268"><rs><hi rend="sc">Livriacum</hi>, l'abbaye de Livry, habitée par des chanoines réguliers de Saint-Augustin, située à un kilomètre vers le sud du village de Livry-en-Launoy, commune du canton de Gonesse, arrondissement de Pontoise, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0097" n="97">97</ref>.</item>
             <item xml:id="NDRC-AB_rs_269"><rs><hi rend="sc">Logiæ</hi>, les Loges, commune du canton sud, arrondissement et à 5 kilomètres sud de Versailles, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0001" n="2">2</ref>, <ref target="#NDRC-AB_0014" n="14">14</ref>, <ref target="#NDRC-AB_0013" n="13">13</ref>, <ref target="#NDRC-AB_0016" n="16">16</ref> <ref target="#NDRC-AB_0017" n="17">17</ref>, <ref target="#NDRC-AB_0018" n="18">18</ref>, <ref target="#NDRC-AB_0019" n="19">19</ref>, <ref target="#NDRC-AB_0020" n="20">20</ref> <ref target="#NDRC-AB_0020" n="20">20</ref>, <!-- doublon meme acte NDRC-AB_0020: <ref target="#NDRC-AB_0020" n="XXII">20</ref> --> <ref target="#NDRC-AB_0048" n="48">48</ref>, <ref target="#NDRC-AB_0087" n="87">87</ref>, <ref target="#NDRC-AB_0087" n="87">87</ref> <ref target="#NDRC-AB_0096" n="96">96</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_M" type="index">
           <head>M</head>
             <!--<item xml:id="NDRC-AB_rs_270"><rs><hi rend="sc">Malliacum</hi>, voyez</rs>, <ref target="#Marli">Marli</ref>.</item>-->
             <item xml:id="NDRC-AB_rs_271"><rs><hi rend="sc">Malus-Repastus</hi>, Maurepas, ancienne châtellenie, commune du canton de Chevreuse, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_1007" n="1007">1007</ref>.</item>
@@ -9182,7 +9182,7 @@
             <item xml:id="NDRC-AB_rs_288"><rs><hi rend="sc">Motta</hi>, la Motte, hameau détruit et dont l'emplacement a été compris dans le parc de Marly-le-Roi</rs>, <ref target="#NDRC-AB_0063" n="63">63</ref>.</item>
             <item xml:id="NDRC-AB_rs_289"><rs><hi rend="sc">Moulineaux</hi> (prieuré des), de l'ordre de Grandmont, dans la commune de Poigny, canton de Rambouillet</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref></item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_N" type="index">
           <head>N</head>
             <item xml:id="NDRC-AB_rs_290"><rs><hi rend="sc">Nant</hi>, ancien nom de la commune de Saint-Luperce, canton de Courville, arrondissement de Chartres, Eure-et-Loir</rs>, <ref target="#NDRC-AB_0031" n="31">31</ref>; <ref target="#NDRC-AB_0032" n="32">32</ref>, <ref target="#NDRC-AB_0033" n="33">33</ref>, <ref target="#NDRC-AB_0033" n="34">34</ref>. <ref target="#NDRC-AB_0035" n="35">35</ref></item><item xml:id="NDRC-AB_rs_291"><rs><hi rend="sc">Nantolium</hi>, Nanteuil</rs>, <ref target="#NDRC-AB_0028" n="28">28</ref>, <ref target="#NDRC-AB_0028" n="29">29</ref>, <ref target="#NDRC-AB_0030" n="30">30</ref>, <ref target="#NDRC-AB_0060" n="60">60</ref>, <ref target="#NDRC-AB_0061" n="61">61</ref>, <ref target="#NDRC-AB_0065" n="65">65</ref>, <ref target="#NDRC-AB_0066" n="66">66</ref>.</item>
             <item xml:id="NDRC-AB_rs_292"><rs><hi rend="sc">Narbona</hi>, Narbonne, chef-lieu d'arrondissement du département de l'Aude, ancien duché</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref>.</item>
@@ -9194,11 +9194,11 @@
             <item xml:id="NDRC-AB_rs_298"><rs><hi rend="sc">Noa-Herbodi</hi>, dans la dîme des Loges</rs>, <ref target="#NDRC-AB_0022" n="22">22</ref>, <ref target="#NDRC-AB_0087" n="87">87</ref>, <!-- doublon meme acte NDRC-AB_0087: <ref target="#NDRC-AB_0087" n="LXXXVIII">87</ref> --> <ref target="#NDRC-AB_0096" n="96">96</ref>.</item>
             <item xml:id="NDRC-AB_rs_299"><rs><hi rend="sc">Nova-Villa</hi>, Neuville, château et ancienne seigneurie, dans la commune de Gambais, canton de Houdan, arrondissement de Mantes, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0045" n="45">45</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_O" type="index">
           <head>O</head>
             <item xml:id="NDRC-AB_rs_300"><rs><hi rend="sc">Ossigniæ</hi>, Orsigny, ferme de la commune de Saclé, canton de Palaiseau, arrondissement de Versailles, Seine-et-Oise</rs>, <ref target="#NDRC-AB_0047" n="47">47</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_P" type="index">
           <head>P</head>
             <item xml:id="NDRC-AB_rs_301"><rs><hi rend="sc">Parisiensis</hi> (Domus-Dei), l'Hôtel-Dieu de Paris</rs>, <ref target="#NDRC-AB_0092" n="92">92</ref>.</item>
             <item xml:id="NDRC-AB_rs_302"><rs><hi rend="sc">Parisii</hi>, Paris</rs>, <ref target="#NDRC-AB_0001" n="1">1</ref>, <ref target="#NDRC-AB_0001" n="2">2</ref> <ref target="#NDRC-AB_0015" n="15">15</ref>, <ref target="#NDRC-AB_0015" n="15">15</ref> <ref target="#NDRC-AB_0014" n="16">16</ref> <ref target="#NDRC-AB_0015" n="17">17</ref>, <ref target="#NDRC-AB_0018" n="18">18</ref>, <ref target="#NDRC-AB_0015" n="19">19</ref>, <ref target="#NDRC-AB_0018" n="20">20</ref>, <ref target="#NDRC-AB_0021" n="21">21</ref> <ref target="#NDRC-AB_0020" n="22">22</ref>, <ref target="#NDRC-AB_0020" n="23">23</ref><!--, <ref target="#???">XXIV</ref>-->, <ref target="#NDRC-AB_0022" n="25">25</ref>, <ref target="#NDRC-AB_0023" n="27">27</ref>, <ref target="#NDRC-AB_0035" n="35">35</ref>, <ref target="#NDRC-AB_0035" n="36">36</ref>, <ref target="#NDRC-AB_0042" n="42">42</ref>, <ref target="#NDRC-AB_0048" n="47">47</ref>, <ref target="#NDRC-AB_0048" n="48">48</ref>, <ref target="#NDRC-AB_0050" n="50">50</ref>, <ref target="#NDRC-AB_0050" n="51">51</ref> <ref target="#NDRC-AB_0061" n="59">59</ref>, <ref target="#NDRC-AB_0061" n="61">61</ref>, <ref target="#NDRC-AB_0062" n="62">62</ref>, <ref target="#NDRC-AB_0057" n="57">57</ref>, <ref target="#NDRC-AB_0064" n="64">64</ref>, <ref target="#NDRC-AB_0065" n="65">65</ref>, <ref target="#NDRC-AB_0066" n="66">66</ref> <ref target="#NDRC-AB_0068" n="68">68</ref>, <ref target="#NDRC-AB_0068" n="69">69</ref>, <ref target="#NDRC-AB_0068" n="69">69</ref> <ref target="#NDRC-AB_0092" n="79">79</ref>, <ref target="#NDRC-AB_0082" n="82">82</ref>, <ref target="#NDRC-AB_0084" n="84">84</ref>, <ref target="#NDRC-AB_0084" n="85">85</ref> <ref target="#NDRC-AB_0084" n="87">87</ref>, <ref target="#NDRC-AB_0088" n="88">88</ref> <ref target="#NDRC-AB_0087" n="89">89</ref>, <ref target="#NDRC-AB_0089" n="91">91</ref> <ref target="#NDRC-AB_0092" n="92">92</ref>. <ref target="#NDRC-AB_0092" n="96">96</ref></item>
@@ -9208,13 +9208,13 @@
             <item xml:id="NDRC-AB_rs_306"><rs><hi rend="sc">Pissiacum</hi>, et</rs><!--, <ref target="#Poissiacum">Poissiacum</ref>--> <placeName>Poissy</placeName>, siége d'un archidiaconé de l'ancien diocèse de Chartres, chef-lieu de canton de l'arrondissement de Versailles, Seine-et-Oise, <ref target="#NDRC-AB_0014" n="14">14</ref>, <ref target="#NDRC-AB_0015" n="15">15</ref>, <ref target="#NDRC-AB_0019" n="19">19</ref>, <ref target="#NDRC-AB_0035" n="35">35</ref><!--, <ref>XXXVI</ref>--><!--, <ref>XXXVII</ref>--><!--, <ref>XXXVIII</ref>-->, <ref target="#NDRC-AB_0044" n="44">44</ref>, <!-- doublon meme acte NDRC-AB_0044: <ref target="#NDRC-AB_0044" n="XLIV">44</ref> --> <ref target="#NDRC-AB_0056" n="56">56</ref>, <ref target="#NDRC-AB_0057" n="57">57</ref>.</item>
             <!--<item xml:id="NDRC-AB_rs_307"><rs><hi rend="sc">Poiviler</hi>; voyez</rs>, <ref target="#Paucus-Villaris">Paucus-Villaris</ref>.</item>-->
             <item xml:id="NDRC-AB_rs_308"><rs><hi rend="sc">Pommeret</hi>, le Pommeret, ferme dépendant autrefois et voisine de l'abbaye de La Roche, commune de Lévis, canton de Chevreuse</rs>, <ref target="#NDRC-AB_0002" n="2">2 et note</ref>; <ref target="#NDRC-AB_0029" n="29">29</ref>, <ref target="#NDRC-AB_0061" n="61">61</ref>, <ref target="#NDRC-AB_0065" n="65">65</ref>.</item><item xml:id="NDRC-AB_rs_309"><rs><hi rend="sc">Port-Royal</hi> (abbaye de)</rs>, <ref target="#NDRC-AB_0051" n="51">51</ref>; notes, <!-- doublon meme acte NDRC-AB_0051: <ref target="#NDRC-AB_0051" n="LI">51</ref> --></item></list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_R" type="index">
           <head>R</head>
             <item xml:id="NDRC-AB_rs_310"><rs><hi rend="sc">Rooduna</hi> (molendinum de), le moulin de Rodhon, dans la commune de Saint-Remi-lez-Chevreuse, canton de Chevreuse</rs>, <ref target="#NDRC-AB_0059" n="59">59</ref>.</item>
             <item xml:id="NDRC-AB_rs_311"><rs><hi rend="sc">Roscha</hi> (ecclesia beatæ Mariæ de), <placeName>l'Abbaye Notre-Dame de la Roche</placeName>, à l'extrémité occidentale de la commune de Lévis.</rs></item>
             <item xml:id="NDRC-AB_rs_312"><rs><hi rend="sc">Rouche</hi> (abbaye de la)</rs>, <ref target="#NDRC-AB_0098" n="98">98</ref>. Voyez <ref type="see" target="#NDRC-AB_rs_311" corresp="#NDRC-AB_back-2">Roscha</ref>. — Fief et terre des —; voyez <ref type="see" target="#NDRC-AB_rs_273" corresp="#NDRC-AB_back-2">Marescheriæ</ref>.</item><item xml:id="NDRC-AB_rs_313"><rs><hi rend="sc">Ructoria</hi>, et Ruthoere, l'Artoire, château et hameau de la commune des Essarts-le-Roi, canton de Rambouillet, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0060" n="60">60</ref>, <ref target="#NDRC-AB_0063" n="63">63</ref>, <ref target="#NDRC-AB_0081" n="78">78</ref>, <ref target="#NDRC-AB_0080" n="80">80</ref>, <ref target="#NDRC-AB_0081" n="81">81</ref>, <ref target="#NDRC-AB_0082" n="82">82</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_S" type="index">
           <head>S</head>
             <item xml:id="NDRC-AB_rs_314"><rs><hi rend="sc">Saint-Martin</hi>, château, au diocèse de Carcassonne</rs>, <ref target="#NDRC-AB_0026" n="26">26</ref></item>
             <item xml:id="NDRC-AB_rs_315"><rs><hi rend="sc">Saint-Martin-de-Bretheucourt</hi>, prieuré dépendant de Marmoutiers, dans la commune du même nom, canton sud de Dourdan, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0006" n="6">6</ref></item>
@@ -9230,7 +9230,7 @@
             <item xml:id="NDRC-AB_rs_327"><rs><hi rend="sc">Spedona</hi>, Épône, commune du canton et arrondissement de Mantes, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0057" n="57">57</ref>.</item>
             <item xml:id="NDRC-AB_rs_328"><rs><hi rend="sc">Stannum</hi>, l'Étang, hameau de la commune d'Elancourt, canton de Chevreuse, arrondissement de Rambouillet, Seine-et-Oise, ancien diocèse de Chartres. Voyez</rs> <ref target="#NDRC-AB_0062" n="62">62</ref></item>
             <item xml:id="NDRC-AB_rs_329"><rs><hi rend="sc">Stannum</hi>, l'Étang-la-Ville, commune du canton de Marly-le-Roi, arrondissement de Versailles, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0062" n="63">63</ref>; <ref target="#NDRC-AB_0063" n="64">64</ref>.</item></list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_T" type="index">
           <head>T</head>
             <item xml:id="NDRC-AB_rs_330"><rs><hi rend="sc">Talon</hi>, Talon, écart de la commune de Chevreuse, Seine-et-Oise</rs>, <ref target="#NDRC-AB_0053" n="53">53</ref> et <ref target="#NDRC-AB_0077" n="77">77</ref>.</item>
             <item xml:id="NDRC-AB_rs_331"><rs><hi rend="sc">Tiverval</hi>, Thiverval, commune du canton de Poissy, arrondissement de Versailles, Seine-et-Oise, ancien diocèse de Chartres</rs>, <ref target="#NDRC-AB_0067" n="67">67</ref>. <!-- doublon meme acte NDRC-AB_0067: <ref target="#NDRC-AB_0067" n="LXVIII">67</ref> --></item>
@@ -9239,11 +9239,11 @@
             <item xml:id="NDRC-AB_rs_334"><rs><hi rend="sc">Tranbleia</hi>, la Tremblaye, hameau de la commune de Bois-d'Arcy, canton ouest de Versailles</rs>, <ref target="#NDRC-AB_0084" n="84">84</ref>.</item>
             <item xml:id="NDRC-AB_rs_335"><rs><hi rend="sc">Turbis</hi> (molendinum), le moulin de la Tour?</rs>, <ref target="#NDRC-AB_0026" n="26">26</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_U" type="index">
           <head>U</head>
             <item xml:id="NDRC-AB_rs_336"><rs><hi rend="sc">Ulmus</hi>; voyez</rs> <ref target="#NDRC-AB_0056" n="56">56</ref></item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_V" type="index">
           <head>V</head>
             <item xml:id="NDRC-AB_rs_337"><rs><hi rend="sc">Vallis-Orselli</hi>; voyez</rs> <ref target="#NDRC-AB_0063" n="63">63</ref></item>
             <item xml:id="NDRC-AB_rs_338"><rs><hi rend="sc">Vallis de Sarnaio</hi>, Valles-Sarnaii, l'abbaye des Vaux de Cernay, de l'Ordre de Cîteaux, dans la commune de Cernay-la-Ville, canton de Chevreuse, arrondissement de Rambouillet, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0034" n="34">34</ref>, <ref target="#NDRC-AB_0058" n="58">58</ref>, <ref target="#NDRC-AB_0080" n="80">80</ref>.</item>
@@ -9260,7 +9260,7 @@
             <item xml:id="NDRC-AB_rs_349"><rs><hi rend="sc">Voisins</hi>, Voisins, hameau de la commune de Louveciennes, canton de Marly-le-Roi, Seine-et-Oise. Voyez</rs> <ref target="#NDRC-AB_0067" n="67">67</ref><ref target="#NDRC-AB_0067" n="67">67</ref>.</item>
             <item xml:id="NDRC-AB_rs_350"><rs><hi rend="sc">Voisins-le-Cuit</hi>, Voisins-le-Cuit ou le Thuit, hameau de la commune de Villiers-le-Bâcle, canton de Palaiseau, arrondissement de Versailles, Seine-et-Oise, ancien diocèse de Paris</rs>, <ref target="#NDRC-AB_0069" n="69">69</ref><!--, <ref>LXX</ref>--><ref target="#NDRC-AB_0069" n="69">69</ref>.</item>
           </list>
-          <list type="index">
+          <list xml:id="NDRC-AB_back-2_liste_Y" type="index">
           <head>Y</head>
             <item xml:id="NDRC-AB_rs_351"><rs><hi rend="sc">Yssiacum</hi>, Issy, commune de l'arrondissement de Sceaux, Seine</rs>, <ref target="#NDRC-AB_0049" n="49">49</ref>, <ref target="#NDRC-AB_0079" n="79">79</ref>.</item>
           </list>
