@@ -21,7 +21,7 @@
   <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
   <!-- Modules communs à tous les corpus (copies à côté de cette feuille) : tableaux triables et
        filtrables (classes tf-*, comportement dans le JS générique de l'ÉLEC) et bibliographies
-       (listBibl). La page de titre est servie à part (teiHeader2html.xsl + page-de-titre.xsl). -->
+       (listBibl). La page de titre est servie à part (teiHeader2html.xsl). -->
   <xsl:import href="tableau-filtrable.xsl"/>
   <xsl:import href="bibliographie.xsl"/>
   <!-- Modules propres aux cartulaires -->
