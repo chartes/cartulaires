@@ -380,16 +380,6 @@
     </article>
   </xsl:template>
 
-  <xsl:template match="tei:div[@type='part']" priority="12">
-    <section class="sd-part">
-      <xsl:if test="@xml:id">
-        <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
-      </xsl:if>
-      <h2 class="sd-part-title"><xsl:value-of select="tei:head[1]"/></h2>
-      <xsl:apply-templates select="node()[not(self::tei:head[1])]"/>
-    </section>
-  </xsl:template>
-
   <xsl:template match="tei:div[@type='subpart']" priority="12">
     <section class="sd-subpart">
       <xsl:if test="@xml:id">
@@ -421,10 +411,6 @@
     <h3 class="sd-legacy-h3"><xsl:apply-templates/></h3>
   </xsl:template>
 
-  <xsl:template match="tei:ab[@type = 'legacy-inline']" priority="12">
-    <xsl:apply-templates/>
-  </xsl:template>
-
   <xsl:template match="tei:trailer[@type = 'retour-debut']" priority="12">
     <xsl:variable name="prev" select="preceding-sibling::*[not(self::tei:pb)][1]"/>
     <p>
@@ -447,109 +433,6 @@
         moteur de recherche de l’application, alimenté par l’index dots-cli-es.</p>
       <p class="sd-search-go"><a class="sd-search-link" href="../search">Ouvrir la recherche plein texte</a></p>
     </section>
-  </xsl:template>
-
-  <xsl:template match="tei:div[@type = 'notice']" priority="14">
-    <article class="isd-notice" id="{@xml:id}">
-      <h3 class="isd-notice-head"><xsl:apply-templates select="tei:head[1]/node()"/></h3>
-      <xsl:apply-templates select="node() except tei:head[1]"/>
-    </article>
-  </xsl:template>
-
-  <xsl:template match="tei:div[@type = 'section']" priority="14">
-    <section class="isd-section" id="{@xml:id}">
-      <h2 class="isd-section-head"><xsl:apply-templates select="tei:head[1]/node()"/></h2>
-      <xsl:apply-templates select="node() except tei:head[1]"/>
-    </section>
-  </xsl:template>
-
-  <xsl:template match="tei:div[@type = 'notice']/tei:label[@type = 'section']" priority="14">
-    <xsl:if test="normalize-space(.) != ''">
-      <xsl:apply-templates select="tei:pb"/>
-      <p class="isd-rubrique">
-        <xsl:apply-templates select="node()[local-name() != 'pb']"/>
-      </p>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template match="tei:div[@type = 'notice']" mode="a" priority="14">
-    <xsl:param name="class"/>
-    <a>
-      <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
-      <xsl:if test="$class">
-        <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
-      </xsl:if>
-      <xsl:call-template name="isd-intitule"/>
-    </a>
-  </xsl:template>
-
-  <xsl:template name="isd-intitule">
-    <xsl:for-each select="tei:head[not(@type = 'sub')] | tei:label[@type = 'section'][not(following-sibling::*[1][self::tei:p[starts-with(@rend, 'note-')]])][not(normalize-space(.) = 'Références ajoutées par l’éditeur')]">
-      <xsl:choose>
-        <xsl:when test="self::tei:head"><xsl:apply-templates select="." mode="title"/></xsl:when>
-        <xsl:otherwise><xsl:value-of select="normalize-space(.)"/></xsl:otherwise>
-      </xsl:choose>
-      <xsl:if test="position() != last()">
-        <xsl:variable name="norm" select="normalize-space(.)"/>
-        <xsl:variable name="last" select="substring($norm, string-length($norm))"/>
-        <xsl:if test="translate($last, '.;:?!»', '') != ''">. </xsl:if>
-      </xsl:if>
-    </xsl:for-each>
-  </xsl:template>
-
-  <xsl:template match="tei:list[@type = 'gloss'][ancestor::tei:div[@type = 'notice']]" priority="14">
-    <dl class="isd-champs">
-      <xsl:for-each select="tei:label">
-        <dt><xsl:apply-templates/></dt>
-        <dd>
-          <xsl:choose>
-            <xsl:when test="normalize-space(.) = 'URL de cette page'">
-              <xsl:call-template name="isd-permalien">
-                <xsl:with-param name="brut" select="normalize-space(following-sibling::tei:item[1])"/>
-                <xsl:with-param name="secours" select="following-sibling::tei:item[1]/node()"/>
-              </xsl:call-template>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:apply-templates select="following-sibling::tei:item[1]/node()"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </dd>
-      </xsl:for-each>
-    </dl>
-  </xsl:template>
-
-  <xsl:template name="isd-permalien">
-    <xsl:param name="brut"/>
-    <xsl:param name="secours"/>
-    <xsl:variable name="chemin"
-                  select="substring-before(concat(substring-after($brut, '/inventaire/'), '&gt;'), '&gt;')"/>
-    <xsl:variable name="tome" select="substring-before($chemin, '/')"/>
-    <xsl:variable name="unite" select="substring-after($chemin, '/')"/>
-    <xsl:variable name="vol" select="concat('ISD-vol', substring-after($tome, 'tome'))"/>
-    <xsl:choose>
-      <xsl:when test="starts-with($tome, 'tome') and $unite != ''">
-        <span class="isd-permalien">
-          <xsl:text>&lt;</xsl:text>
-          <xsl:value-of select="concat($elec-base, '/saint-denis/document/', $vol, '?refId=', $vol, '_', $unite)"/>
-          <xsl:text>&gt;</xsl:text>
-        </span>
-      </xsl:when>
-      <xsl:otherwise><xsl:apply-templates select="$secours"/></xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="tei:div[@type = 'section']/tei:p[@rend]" priority="14">
-    <p class="isd-section-info"><span class="isd-libelle"><xsl:value-of select="@rend"/><xsl:text> : </xsl:text></span>
-      <xsl:choose>
-        <xsl:when test="@rend = 'URL de cette page'">
-          <xsl:call-template name="isd-permalien">
-            <xsl:with-param name="brut" select="normalize-space(.)"/>
-            <xsl:with-param name="secours" select="node()"/>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise><xsl:apply-templates/></xsl:otherwise>
-      </xsl:choose>
-    </p>
   </xsl:template>
 
   <xsl:template match="tei:graphic[starts-with(@url, 'legacy-source/assets/')]" priority="12">
