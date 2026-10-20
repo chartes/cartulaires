@@ -43,6 +43,17 @@
        La copie servie en local (dots-clean) remplace cette valeur par '/cartulaires/document/'. -->
   <xsl:variable name="document-base" select="'/elec/cartulaires/document/'"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
+  <!-- 2026-10-20 : chapitres du Cartulaire blanc de Saint-Denis (beaurain, dugny, pierrefitte, rueil, saint-martin,
+       tremblay, ully) et ses pages (cartulaire-blanc, sd-…) : rendus par cartulaires-saint-denis.xsl, appelée ici par
+       transform(), au lieu d'une feuille <ressource>.xsl par chapitre (routes.xqm). Repérés à leur premier identifiant. -->
+  <xsl:variable name="cartu-sd" as="xs:boolean"
+    select="matches(string((//@xml:id)[1]), '^((beaurain|dugny|pierrefitte|rueil|saint-martin|tremblay|ully|cartulaire-blanc)(-|$)|sd-)')"/>
+  <xsl:template match="document-node()[$cartu-sd]" priority="1000">
+    <xsl:sequence select="transform(map {
+        'stylesheet-location': resolve-uri('cartulaires-saint-denis.xsl', static-base-uri()),
+        'source-node': .,
+        'stylesheet-params': map { QName('', 'static_path'): $static_path } })?output"/>
+  </xsl:template>
   <!-- Diple relativement à ici pour CSS et js par défaut
   <xsl:param name="dipleHref">
     <xsl:value-of select="$xslBase"/>
