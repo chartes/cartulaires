@@ -25,7 +25,6 @@
   <xsl:import href="tableau-filtrable.xsl"/>
   <xsl:import href="bibliographie.xsl"/>
   <!-- Modules propres aux cartulaires -->
-  <xsl:include href="cartulaires-ordinaux.xsl"/>
   <xsl:include href="cartulaires-edition.xsl"/>
   <xsl:include href="cartulaires-tableaux.xsl"/>
   <!-- 2026-09-21 : identifiant de la ressource servie. dots/webapp/restxq/routes.xqm l. 273 le
