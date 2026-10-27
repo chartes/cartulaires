@@ -1370,6 +1370,9 @@
   </xsl:template>
   <!-- D5-FIN -->
 
+  <!-- 2026-10-27 : « Liste des actes » (table type="actes" dans l'argument d'un groupe, données anciennes) :
+       non rendue, la TOC de dots-vue donne déjà la liste des actes (décision de Maxime). -->
+  <xsl:template match="tei:group/tei:argument/tei:table[@type = 'actes']" priority="40"/>
   <!-- ==== Pages Édition et tableaux des cartulaires (anciens modules réintégrés) ==== -->
   <!-- (ancien module cartulaires-edition.xsl, réintégré le 2026-10-20) 2026-10-08 : module « edition », inclus par cartulaires.xsl.
      PAGE ÉDITION (unité group) : titre et présentation du groupe ; la liste des actes est le sommaire
