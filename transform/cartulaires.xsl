@@ -1318,94 +1318,7 @@
     <xsl:param name="r" as="element()"/>
     <xsl:sequence select="if (normalize-space($resource)) then concat($document-base, $resource, '?refId=', substring-after($r/@target, '#')) else string($r/@target)"/>
   </xsl:function>
-  <xsl:template match="tei:list[@type = 'gloss'][tei:item[tei:ref[starts-with(@target, '#SSCO-AB_')]]]" priority="20" version="3.0"
-      xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cartu="urn:cartu" exclude-result-prefixes="cartu xs">
-    <!-- 2026-10-19 : tableau triable et filtrable du module commun (constructeur cartu-tf) ; la partie
-         du livre (Cartulaire, Cens et revenus, Appendice), autrefois en intertitre, est une colonne. -->
-    <xsl:variable name="items" select="tei:item"/>
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition'"/>
-      <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-table-du-cartulaire')"/>
-      <xsl:with-param name="unite" select="'pièces'"/>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'Pièce', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' },
-        map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
-        map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tm-partie-col' },
-        map { 'libelle': 'Folio', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-fol' },
-        map { 'libelle': 'Page', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-p' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="$items">
-          <xsl:variable name="refs" select="tei:ref"/>
-          <!-- libellé : ce qui précède le premier renvoi, sans les sauts de page -->
-          <xsl:variable name="avant" select="normalize-space(string-join($refs[1]/preceding-sibling::node()[not(self::tei:pb)] ! string(.), ''))"/>
-          <xsl:variable name="ordinal" select="if (matches($avant, '^\d+o\s')) then replace($avant, '^(\d+)o\s.*$', '$1')
-                                               else if (matches($avant, '^(Appendix\s+)?[IVX]+\s')) then replace($avant, '^(Appendix\s+)?([IVX]+)\s.*$', '$2') else ''"/>
-          <xsl:variable name="reste" select="if ($ordinal) then replace($avant, '^(Appendix\s+)?\S+\s+', '') else $avant"/>
-          <xsl:variable name="date" select="if (matches($reste, '\(([^()]*)\)$')) then replace($reste, '^.*\(([^()]*)\)$', '$1') else ''"/>
-          <xsl:variable name="titre" select="normalize-space(if ($date) then replace($reste, '\s*\([^()]*\)$', '') else $reste)"/>
-          <xsl:variable name="folio" select="normalize-space(replace($refs[1]/@n, '\s*\d+$', ''))"/>
-          <!-- partie du livre : Cartulaire jusqu'au premier article sans numéro qui suit un article numéroté
-               (Cens et revenus), puis Appendice à partir de l'article « Appendix » -->
-          <xsl:variable name="debut-cens" select="($items[position() gt 1][not(matches(normalize-space(string-join(text(), '')), '^\d+'))][preceding-sibling::tei:item[1][matches(normalize-space(string-join(text(), '')), '^\d+')]])[1]"/>
-          <xsl:variable name="appendice" select="$items[starts-with(normalize-space(string-join(text(), '')), 'Appendix')][1]"/>
-          <xsl:variable name="partie" select="if (exists($appendice) and not(. &lt;&lt; $appendice)) then 'Appendice' else if (exists($debut-cens) and not(. &lt;&lt; $debut-cens)) then 'Cens et revenus' else 'Cartulaire'"/>
-          <tr>
-            <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
-            <td data-sort="{if (matches($ordinal, '^\d+$')) then $ordinal else position()}" data-f="{$ordinal}"><xsl:value-of select="$ordinal"/></td>
-            <td>
-              <xsl:choose>
-                <xsl:when test="$refs[1]/@target"><a href="{cartu:ssco-href($refs[1])}"><xsl:value-of select="$titre"/></a></xsl:when>
-                <xsl:otherwise><xsl:value-of select="$titre"/></xsl:otherwise>
-              </xsl:choose>
-            </td>
-            <td data-sort="{if (matches($date, '\d{3,4}')) then format-number(number(replace($date, '^\D*(\d{3,4}).*$', '$1')), '0000') else ''}"><xsl:value-of select="$date"/></td>
-            <td><xsl:value-of select="$partie"/></td>
-            <td>
-              <xsl:choose>
-                <xsl:when test="$folio = 'deest'"><span class="cartu-tm-deest" title="pièce absente du manuscrit">deest</span></xsl:when>
-                <xsl:otherwise><xsl:value-of select="$folio"/></xsl:otherwise>
-              </xsl:choose>
-            </td>
-            <td data-sort="{replace($refs[1]/@n, '^.*?(\d+)$', '$1')}" data-f="{replace($refs[1]/@n, '^.*?(\d+)$', '$1')}">
-              <xsl:for-each select="$refs">
-                <xsl:if test="position() gt 1"><xsl:text>, </xsl:text></xsl:if>
-                <xsl:variable name="p" select="replace(@n, '^.*?(\d+)$', '$1')"/>
-                <xsl:choose>
-                  <xsl:when test="@target"><a href="{cartu:ssco-href(.)}"><xsl:value-of select="$p"/></a></xsl:when>
-                  <xsl:otherwise><xsl:value-of select="$p"/></xsl:otherwise>
-                </xsl:choose>
-              </xsl:for-each>
-            </td>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
-  <!-- 2026-10-07 : SCOR-EG, « Table des matières » (fin du volume) : la concordance date → acte
-       du livre (une date, un numéro d'acte en chiffres romains, relié à l'acte dans le TEI) devient
-       un vrai tableau. 2026-10-19 : tri du module commun (constructeur cartu-tf, au lieu du tri en CSS
-       par boutons radio) : ordre du livre (Date) ou numéro d'acte. -->
-  <xsl:template match="tei:table[tei:row][every $r in tei:row satisfies (count($r/tei:cell) = 2 and $r/tei:cell[2]/tei:ref[starts-with(@target, '#SCOR-EG_')])]" priority="20" version="3.0">
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-concordance'"/>
-      <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-concordance')"/>
-      <xsl:with-param name="unite" select="'actes'"/>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'Date', 'num': true(), 'filtre': 'texte', 'classe': 'cartu-c-date' },
-        map { 'libelle': 'Acte', 'num': true(), 'filtre': 'texte', 'classe': 'cartu-c-num' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="tei:row">
-          <tr>
-            <!-- Date : ordre du livre (la table suit les dates) -->
-            <td data-sort="{position()}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
-            <td data-sort="{replace(tei:cell[2]/tei:ref/@target, '\D', '')}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
   <!-- 2026-10-19 : retirés, car morts (aucune page servie ne les produisait : le module Édition, de
        priorité 30, rend la page d'un groupe) et dépendants d'un tri en CSS par boutons radio et d'un
        filtre en JavaScript dans le HTML : le tableau « cartulaires-table-actes » (W1), ses gabarits
@@ -1676,183 +1589,25 @@
          « XIIe siècle | 7 » est un intertitre qui porte un total, pas un en-tête) -->
     <xsl:variable name="tete" select="$lignes[@role = 'label'][not(preceding-sibling::tei:row[not(@role = 'label')])][not(tei:cell[matches(normalize-space(.), '^\d+$')])]"/>
     <xsl:variable name="corps" select="$lignes except $tete"/>
-    <xsl:variable name="ncols" select="max((1, for $r in $corps[not(@role = 'label')] return count($r/tei:cell)))"/>
-    <xsl:variable name="repartition" select="matches(normalize-space(tei:head[1]), 'répartition chronologique', 'i') and $ncols = 2"/>
-    <xsl:choose>
-      <!-- Tableau simple (non triable) : pas d'en-tête (tableaux de comptes dans les actes, NDMT-AB 171),
-           cellules fusionnées dans le corps ou plusieurs lignes de titre (HDPAR-HD « Cartulaire A ») :
-           un tri casserait la structure. -->
-      <xsl:when test="not($tete or $repartition) or $corps/tei:cell[@cols or @rows] or count($tete) gt 1 or $corps[not(@role = 'label')][count(tei:cell) != $ncols]">
-        <table class="cartu-tableau cartu-tableau-simple">
-          <xsl:apply-templates select="tei:head"/>
-          <xsl:if test="$tete">
-            <thead><xsl:apply-templates select="$tete" mode="tableau-simple"/></thead>
-          </xsl:if>
-          <tbody>
-            <xsl:apply-templates select="$corps | tei:pb" mode="tableau-simple">
-              <xsl:with-param name="ncols" select="max((1, for $r in tei:row return sum(for $c in $r/tei:cell return if ($c/@cols) then xs:integer($c/@cols) else 1)))" tunnel="yes"/>
-            </xsl:apply-templates>
-          </tbody>
-        </table>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:variable name="intertitres" select="$corps[@role = 'label']"/>
-        <xsl:variable name="libelles" select="if ($tete) then (for $c in $tete/tei:cell return normalize-space($c)) else ('Période', 'Actes')"/>
-        <xsl:variable name="numeriques" select="for $i in 1 to $ncols return (every $c in $corps/tei:cell[$i][normalize-space()] satisfies matches(normalize-space($c), '^\d+$'))"/>
-        <xsl:variable name="colonnes" as="map(*)*">
-          <xsl:if test="$intertitres">
-            <xsl:sequence select="map { 'libelle': 'Section', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' }"/>
-          </xsl:if>
-          <xsl:for-each select="1 to $ncols">
-            <xsl:variable name="i" select="."/>
-            <xsl:sequence select="map { 'libelle': ($libelles[$i][. != ''], concat('Colonne ', $i))[1], 'num': $numeriques[$i], 'filtre': if ($numeriques[$i]) then '' else 'texte', 'classe': '' }"/>
-          </xsl:for-each>
-        </xsl:variable>
-        <!-- un saut de page logé dans une cellule d'en-tête (SMMI-AB front-5) : les en-têtes du module
-             sont des boutons de tri, en texte seul ; le repère de page est rendu juste avant le tableau -->
-        <xsl:apply-templates select="$tete//tei:pb"/>
-        <xsl:call-template name="cartu-tf">
-          <xsl:with-param name="classe" select="'cartu-table-matieres cartu-table-analytique'"/>
-          <xsl:with-param name="nom" select="string-join(('cartulaires', $resource[. != ''], 'tableau'), '-')"/>
-          <xsl:with-param name="unite" select="'lignes'"/>
-          <xsl:with-param name="titre" as="node()*"><xsl:apply-templates select="tei:head/node()"/></xsl:with-param>
-          <xsl:with-param name="colonnes" select="$colonnes"/>
-          <xsl:with-param name="lignes" as="element()*">
-            <xsl:for-each select="$corps">
-              <xsl:variable name="r" select="."/>
-              <tr>
-                <xsl:if test="@role = 'label'"><xsl:attribute name="class">cartu-tf-total</xsl:attribute></xsl:if>
-                <xsl:if test="$intertitres">
-                  <xsl:variable name="intertitre" select="if (@role = 'label') then . else preceding-sibling::tei:row[@role = 'label'][. intersect $intertitres][1]"/>
-                  <td data-sort="{count($intertitre/preceding-sibling::tei:row)}"><xsl:apply-templates select="$intertitre/tei:cell[1]/node()"/></td>
-                </xsl:if>
-                <xsl:for-each select="1 to $ncols">
-                  <xsl:variable name="i" select="."/>
-                  <xsl:variable name="c" select="$r/tei:cell[$i]"/>
-                  <td>
-                    <xsl:if test="$numeriques[$i]"><xsl:attribute name="data-sort" select="normalize-space($c)"/></xsl:if>
-                    <xsl:choose>
-                      <!-- une ligne d'intertitre devient une ligne « Total » de sa section -->
-                      <xsl:when test="$r/@role = 'label' and $i = 1">Total</xsl:when>
-                      <xsl:otherwise><xsl:apply-templates select="$c/node()"/></xsl:otherwise>
-                    </xsl:choose>
-                  </td>
-                </xsl:for-each>
-              </tr>
-            </xsl:for-each>
-          </xsl:with-param>
-        </xsl:call-template>
-      </xsl:otherwise>
-    </xsl:choose>
+    <!-- 2026-10-20 : tous les tableaux des introductions sont rendus en tableau simple (non triable),
+         comme le rendu de base de dots-vue ; plus de tableau filtrable (constructeur cartu-tf retiré
+         des appels). -->
+    <table class="cartu-tableau cartu-tableau-simple">
+      <xsl:apply-templates select="tei:head"/>
+      <xsl:if test="$tete">
+        <thead><xsl:apply-templates select="$tete" mode="tableau-simple"/></thead>
+      </xsl:if>
+      <tbody>
+        <xsl:apply-templates select="$corps | tei:pb" mode="tableau-simple">
+          <xsl:with-param name="ncols" select="max((1, for $r in tei:row return sum(for $c in $r/tei:cell return if ($c/@cols) then xs:integer($c/@cols) else 1)))" tunnel="yes"/>
+        </xsl:apply-templates>
+      </tbody>
+    </table>
   </xsl:template>
 
   <!-- Tableau simple (non triable) : lignes et cellules, fusions comprises ; lignes de titre en th. -->
-  <!-- 2026-10-19 : HDPAR-HD, « Tableaux analytiques » (Cartulaire A) : deux lignes de titre (« Cartulaires »
-       sur A, B, C), lignes de cahier (« Cah. 1, fol. 1-2 ») et de catégorie (« Rois. ») sur toute la largeur.
-       Comme les autres tableaux : un tableau filtrable, les lignes intercalaires devenues colonnes
-       (Catégorie, Cahier), les sauts de page dans la première cellule de la ligne qui suit. -->
-  <xsl:template version="3.0" match="tei:table[$resource = 'HDPAR-HD'][tei:row[1]/tei:cell[normalize-space(.) = 'Suscripteurs']]" priority="40">
-    <xsl:variable name="donnees" select="tei:row[not(@role = 'label')][count(tei:cell) = 6]"/>
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-table-analytique'"/>
-      <xsl:with-param name="nom" select="'cartulaires-HDPAR-HD-tableaux-analytiques'"/>
-      <xsl:with-param name="unite" select="'actes'"/>
-      <xsl:with-param name="titre" as="node()*"><xsl:apply-templates select="tei:head/node()"/></xsl:with-param>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'Catégorie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
-        map { 'libelle': 'Cahier', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
-        map { 'libelle': 'A', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'B', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'C', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'Suscripteurs', 'num': false(), 'filtre': 'texte', 'classe': '' },
-        map { 'libelle': 'Dates', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
-        map { 'libelle': 'Cotes des Archives', 'num': false(), 'filtre': 'texte', 'classe': '' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="$donnees">
-          <xsl:variable name="r" select="."/>
-          <xsl:variable name="prec" select="preceding-sibling::tei:row[not(@role = 'label')][count(tei:cell) = 6][1]"/>
-          <xsl:variable name="cat" select="preceding-sibling::tei:row[count(tei:cell) = 1][not(starts-with(normalize-space(.), 'Cah.'))][1]"/>
-          <xsl:variable name="cah" select="preceding-sibling::tei:row[count(tei:cell) = 1][starts-with(normalize-space(.), 'Cah.')][1]"/>
-          <xsl:variable name="pb" select="preceding-sibling::tei:pb[empty($prec) or . &gt;&gt; $prec]"/>
-          <tr>
-            <td data-sort="{normalize-space($cat)}"><xsl:apply-templates select="$cat/tei:cell/node()"/></td>
-            <td data-sort="{normalize-space($cah)}"><xsl:apply-templates select="$cah/tei:cell/node()"/></td>
-            <xsl:for-each select="tei:cell">
-              <td data-sort="{if (position() = 5) then chr:date-tri(string(.)) else normalize-space(.)}">
-                <xsl:if test="position() = 1"><xsl:apply-templates select="$pb"/></xsl:if>
-                <xsl:apply-templates/>
-              </td>
-            </xsl:for-each>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
-  <!-- 2026-10-19 : SMPA-AB-03, page « Édition » de l'introduction : table des matières sans ligne de titre (sujet |
-       pages), avec des lignes de partie sur toute la largeur. En tableau filtrable : Partie, Sujet, Pages. -->
-  <xsl:template version="3.0" match="tei:table[$resource = 'SMPA-AB-03'][ancestor-or-self::*[@xml:id = 'SMPA-AB-03_edition']]
-      [every $r in tei:row satisfies count($r/tei:cell) le 2][tei:row[count(tei:cell) = 1]]" priority="40">
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres'"/>
-      <xsl:with-param name="nom" select="'cartulaires-SMPA-AB-03-edition'"/>
-      <xsl:with-param name="unite" select="'entrées'"/>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'Partie', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-tf-section' },
-        map { 'libelle': 'Sujet', 'num': false(), 'filtre': 'texte', 'classe': '' },
-        map { 'libelle': 'Pages', 'num': false(), 'filtre': '', 'classe': 'cartu-tm-p' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="tei:row[count(tei:cell) = 2]">
-          <xsl:variable name="partie" select="preceding-sibling::tei:row[count(tei:cell) = 1][1]"/>
-          <tr>
-            <td data-sort="{count($partie/preceding-sibling::tei:row)}"><xsl:apply-templates select="$partie/tei:cell/node()"/></td>
-            <td data-sort="{normalize-space(tei:cell[1])}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
-            <td data-sort="{position()}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
-  <!-- 2026-10-19 : SCOR-EG, « Table des matières » (fin du volume) : après la concordance (tableau), la table proprement
-       dite est une liste de 388 entrées « N° — date. lieu. — analyse ». En tableau filtrable : N° (lien vers l'acte),
-       Date (celle de l'acte, lue dans le TEI complet, triable), Analyse (balisage gardé, préfixe « N° — date — » retiré
-       quand il est dans le premier texte). -->
-  <xsl:template version="3.0" match="tei:list[$resource = 'SCOR-EG'][parent::*[@xml:id = 'SCOR-EG_back-2']][tei:item]" priority="40">
-    <xsl:variable name="tei" select="edt:compagnon()"/>
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition'"/>
-      <xsl:with-param name="nom" select="'cartulaires-SCOR-EG-table-des-matieres'"/>
-      <xsl:with-param name="unite" select="'actes'"/>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'Date et lieu', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
-        map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="tei:item[matches(normalize-space(.), '^([IVXLCDM]+(\s+à\s+[IVXLCDM]+)?[.,]?\s*(—|\d)|\[\d)')]">  <!-- les actes ; pas le titre « Table des matières. » encodé en entrée -->
-          <xsl:variable name="t0" select="node()[1][self::text()]"/>
-          <xsl:variable name="num" select="if (matches(normalize-space(.), '^[IVXLCDM]+')) then replace(normalize-space(.), '^([IVXLCDM]+).*$', '$1') else ''"/>
-          <xsl:variable name="acte" select="if ($num != '') then ($tei//tei:text[@n = $num][@xml:id])[1] else ()"/>
-          <xsl:variable name="complet" select="matches(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s', 's')"/>
-          <tr>
-            <td data-sort="{if ($acte) then edt:num($acte) else 0}" data-f="{if ($acte) then edt:num($acte) else ''}">
-              <xsl:choose>
-                <xsl:when test="$acte"><a href="{concat($document-base, $resource, '?refId=', $acte/@xml:id)}"><xsl:value-of select="$num"/></a></xsl:when>
-                <xsl:otherwise><xsl:value-of select="$num"/></xsl:otherwise>
-              </xsl:choose>
-            </td>
-            <!-- date et lieu tels que la table les donne (« 1129. Orléans ») ; à défaut, la date de l'acte ; tri sur la date de l'acte -->
-            <xsl:variable name="prefixe" select="if ($complet) then normalize-space(replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*(.+?)\s—\s.*$', '$1', 's')) else ''"/>
-            <td data-sort="{if ($acte) then edt:date-tri($acte) else ''}"><xsl:value-of select="if ($prefixe != '') then replace($prefixe, '\.$', '') else if ($acte) then edt:date($acte) else ''"/></td>
-            <td>
-              <xsl:value-of select="if ($complet) then replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*.+?\s—\s*', '', 's') else replace(string($t0), '^\s*[IVXLCDM]+\.?\s*—\s*', '', 's')"/>
-              <xsl:apply-templates select="node() except $t0"/>
-            </td>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
   <xsl:template version="3.0" match="tei:row" mode="tableau-simple">
     <tr>
@@ -1876,38 +1631,6 @@
     </tr>
   </xsl:template>
 
-  <!-- ==================================================================================================
-       Table chronologique (back, ex. SMPA-AB-02_back-1) : lignes « (rang) | date | analyse | n° | page ».
-       ================================================================================================== -->
-  <xsl:template match="tei:table[not(ancestor::tei:text[parent::tei:group])][count(tei:row) gt 1][every $r in tei:row satisfies (count($r/tei:cell) = 5 and matches(string($r/tei:cell[1]), '^[\s\p{Zs}]*\(\d+\)[\s\p{Zs}]*$'))]" priority="6" version="3.0">
-    <xsl:call-template name="cartu-tf">
-      <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition'"/>
-      <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-table-chronologique')"/>
-      <xsl:with-param name="unite" select="'actes'"/>
-      <xsl:with-param name="titre" as="node()*"><xsl:apply-templates select="tei:head/node()"/></xsl:with-param>
-      <xsl:with-param name="colonnes" select="(
-        map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
-        map { 'libelle': 'Rang', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-rang' },
-        map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
-        map { 'libelle': 'Analyse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-titre' },
-        map { 'libelle': 'Page', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-p' })"/>
-      <xsl:with-param name="lignes" as="element()*">
-        <xsl:for-each select="tei:row">
-          <xsl:variable name="n" select="chr:acte(tei:cell[4], count(preceding-sibling::tei:row) + 1)"/>
-          <xsl:variable name="ligne" select="."/>
-          <!-- saut de page posé entre la ligne précédente et celle-ci -->
-          <xsl:variable name="pb" select="preceding-sibling::tei:pb[following-sibling::tei:row[1] is $ligne]"/>
-          <tr>
-            <td data-sort="{$n}" data-f="{$n}"><xsl:apply-templates select="$pb"/><xsl:apply-templates select="tei:cell[4]/node()"/></td>
-            <td data-sort="{replace(string(tei:cell[1]), '\D', '')}"><xsl:apply-templates select="tei:cell[1]/node()"/></td>
-            <td data-sort="{chr:date-tri(string(tei:cell[2]))}"><xsl:apply-templates select="tei:cell[2]/node()"/></td>
-            <td><xsl:apply-templates select="tei:cell[3]/node()"/></td>
-            <td data-sort="{replace(string(tei:cell[5]), '\D', '')}" data-f="{replace(string(tei:cell[5]), '\D', '')}"><xsl:apply-templates select="tei:cell[5]/node()"/></td>
-          </tr>
-        </xsl:for-each>
-      </xsl:with-param>
-    </xsl:call-template>
-  </xsl:template>
 
   <!-- n° de l'acte (cellule 4) ; à défaut, le rang -->
   <xsl:function version="3.0" name="chr:acte" as="xs:string">
@@ -1947,28 +1670,7 @@
     <section class="cartu-appendice">
       <xsl:if test="self::tei:div/@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
       <h1 class="head"><xsl:apply-templates select="tei:head[1]/node()[not(self::tei:pb)]"/></h1>
-      <xsl:call-template name="cartu-tf">
-        <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition cartu-appendice-table'"/>
-        <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-appendice')"/>
-        <xsl:with-param name="unite" select="'articles'"/>
-        <xsl:with-param name="colonnes" select="(
-          map { 'libelle': 'N°', 'num': true(), 'filtre': 'numeros', 'classe': 'cartu-tm-n' },
-          map { 'libelle': 'Rubrique', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-app-rubrique' },
-          map { 'libelle': 'Lieu', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-app-lieu' },
-          map { 'libelle': 'Article', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-app-article' })"/>
-        <xsl:with-param name="lignes" as="element()*">
-          <xsl:for-each select="$articles">
-            <xsl:variable name="i" select="position()"/>
-            <xsl:variable name="rubrique" select="normalize-space(replace(string-join(../tei:head[1]//text()[not(ancestor::tei:note)], ''), '^\s*([IVXLC]+)\..*$', '$1', 's'))"/>
-            <tr>
-              <td data-sort="{$i}" data-f="{$i}"><xsl:value-of select="$i"/></td>
-              <td data-sort="{chr:roman(replace($rubrique, '[^IVXLC]', ''))}" title="{normalize-space(string-join(../tei:head[1]//text()[not(ancestor::tei:note)], ''))}"><xsl:value-of select="$rubrique"/></td>
-              <td><xsl:value-of select="cartu-app:lieu(.)"/></td>
-              <td><xsl:apply-templates select="node()[not(self::tei:pb or self::tei:note)]"/><xsl:for-each select="tei:note"><span class="cartu-app-note"><xsl:value-of select="normalize-space(.)"/></span></xsl:for-each></td>
-            </tr>
-          </xsl:for-each>
-        </xsl:with-param>
-      </xsl:call-template>
+        <xsl:apply-templates select="tei:div"/>
     </section>
   </xsl:template>
 
@@ -2026,27 +1728,7 @@
   <xsl:template version="3.0" name="chr:annexes-liste">
     <section class="cartu-appendice cartu-annexes-liste">
       <h2 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h2>
-      <xsl:apply-templates select="tei:p[not(chr:liste-num(.))]"/>
-      <xsl:call-template name="cartu-tf">
-        <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition cartu-appendice-table cartu-annexes-table'"/>
-        <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-abbesses')"/>
-        <xsl:with-param name="unite" select="'entrées'"/>
-        <xsl:with-param name="colonnes" select="(
-          map { 'libelle': 'N°', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-n' },
-          map { 'libelle': 'Abbesse', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-app-nom' },
-          map { 'libelle': 'Dates', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' })"/>
-        <xsl:with-param name="lignes" as="element()*">
-          <xsl:for-each select="tei:p[chr:liste-num(.)]">
-            <xsl:variable name="t" select="normalize-space(.)"/>
-            <xsl:variable name="dates" select="replace($t, '^\d+\s+.+?,\s*(\d{3,4}\s*[–-]\s*\d{3,4})\.*$', '$1')"/>
-            <tr>
-              <td data-sort="{replace($t, '^(\d+)\s.*$', '$1')}"><xsl:value-of select="replace($t, '^(\d+)\s.*$', '$1')"/></td>
-              <td><xsl:value-of select="replace($t, '^\d+\s+(.+?),\s*\d{3,4}\s*[–-]\s*\d{3,4}\.*$', '$1')"/></td>
-              <td data-sort="{chr:date-tri($dates)}"><xsl:value-of select="$dates"/></td>
-            </tr>
-          </xsl:for-each>
-        </xsl:with-param>
-      </xsl:call-template>
+      <xsl:apply-templates select="tei:p"/>
     </section>
   </xsl:template>
 
@@ -2054,23 +1736,7 @@
     <section class="cartu-appendice cartu-annexes-sceaux">
       <h2 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h2>
       <xsl:apply-templates select="tei:p"/>
-      <xsl:call-template name="cartu-tf">
-        <xsl:with-param name="classe" select="'cartu-table-matieres cartu-edition cartu-appendice-table cartu-sceaux-table'"/>
-        <xsl:with-param name="nom" select="concat('cartulaires-', $resource, '-sceaux')"/>
-        <xsl:with-param name="unite" select="'sceaux'"/>
-        <xsl:with-param name="colonnes" select="(
-          map { 'libelle': 'N°', 'num': true(), 'filtre': '', 'classe': 'cartu-tm-n' },
-          map { 'libelle': 'Sigillant', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-app-nom' },
-          map { 'libelle': 'Date', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-tm-date' },
-          map { 'libelle': 'Rubrique', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-app-rubrique' },
-          map { 'libelle': 'Lieu', 'num': false(), 'filtre': 'liste', 'classe': 'cartu-app-lieu' },
-          map { 'libelle': 'Notice', 'num': false(), 'filtre': 'texte', 'classe': 'cartu-app-article' })"/>
-        <xsl:with-param name="lignes" as="element()*">
-          <xsl:for-each select=".//tei:div[not(tei:div)]">
-            <xsl:call-template name="chr:sceaux-feuille"/>
-          </xsl:for-each>
-        </xsl:with-param>
-      </xsl:call-template>
+      <xsl:apply-templates select="tei:div"/>
     </section>
   </xsl:template>
 
