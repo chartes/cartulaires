@@ -260,6 +260,10 @@
       <xsl:when test="matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')">
         <xsl:number count="tei:note[matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')]" level="any" from="tei:group/tei:text | *[local-name() = 'wrapper']"/>
       </xsl:when>
+      <!-- 2026-10-27 : Micy (SMMI-AB), variantes <note type="n1"> : lettres a, b, c… (appel et apparat) -->
+      <xsl:when test="self::tei:note[@type = 'n1'][not(@n)]">
+        <xsl:number count="tei:note[@type = 'n1'][not(@n)]" format="a" level="any" from="tei:group/tei:text | *[local-name() = 'wrapper']"/>
+      </xsl:when>
       <xsl:when test="@n">
         <xsl:value-of select="@n"/>
       </xsl:when>
@@ -284,10 +288,134 @@
         <xsl:number count="tei:note[@resp=$resp]" level="any" from="/"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:number count="tei:note[not(@resp) and not(@rend) and not(parent::tei:div) and not(parent::tei:notesStmt)]" level="any" from="/"/>
+        <xsl:number count="tei:note[not(@resp) and not(@rend) and not(parent::tei:div) and not(parent::tei:notesStmt)][not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))]" level="any" from="/"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <!-- 2026-10-27 : note sans numéro placée dans le front, hors du texte (« L'édition a été établie d'après B. »,
+       après la liste des témoins) : rendue à sa place, en paragraphe, et non en note de bas de page numérotée. -->
+  <xsl:template match="tei:note[(not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) )]" priority="45">
+    <p class="note-tradition"><xsl:apply-templates select="if (count(*) = 1 and tei:p and normalize-space(string-join(text(), '')) = '') then tei:p/node() else node()"/></p>
+  </xsl:template>
+  <!-- 2026-10-27 : Corpus sigillorum (annexes de SAPC-AB) : paragraphes plats dans la source ; une classe par sorte de
+       ligne pour la mise en retrait (CSS) : sigillant (« I. INNOCENTIUS III. »), lieu (« – Embrun. »), date et cote
+       (« 1 - 1207, 19 février. L 237 n° 58. »), description du sceau (le reste). -->
+  <xsl:template version="3.0" priority="35" match="tei:div[tei:head[matches(normalize-space(.), 'Corpus sigillorum', 'i')]]/tei:div//tei:p">
+    <xsl:variable name="s" select="normalize-space(string-join(.//text()[not(ancestor::tei:note)], ''))"/>
+    <xsl:variable name="sorte" select="if (*[1][self::tei:hi[@rend = 'b']] and normalize-space(string-join(text()[. &lt;&lt; current()/*[1]], '')) = '') then 'sceau-sigillant'
+      else if (matches($s, '^[–-]\s')) then 'sceau-lieu'
+      else if (matches($s, '^(\d+\s*[-–]\s*)?\d{4}')) then 'sceau-cote'
+      else 'sceau-description'"/>
+    <p class="p {$sorte}"><xsl:apply-templates/></p>
+  </xsl:template>
+  <!-- 2026-10-27 : APPARAT CRITIQUE DE SMMI-AB. Les variantes du Cartulaire de Micy sont des notes
+       <note type="n1"> (sans tei:app, sans @n) : hteiml les rendait en bas de page, mêlées aux notes
+       savantes (n2, notes sans type). Elles sortent désormais dans <p class="apparatus"> en tête de la
+       section des notes, comme l'apparat de chroniqueslatines ; leurs appels restent dans le texte.
+       Copie du modèle nommé « footnotes » de tei2html.xsl (un modèle nommé ne peut pas appeler celui qu'il
+       remplace) : seule différence, les notes n1 sont retirées des pages de notes et ajoutées à l'apparat.
+       Sans note n1 (tous les autres cartulaires), le résultat est celui de hteiml. -->
+  <xsl:template match="tei:note[@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) )]" mode="fn" priority="25"/>
+  <xsl:template name="footnotes" xmlns:epub="http://www.idpf.org/2007/ops">
+    <xsl:param name="cont" select="*"/>
+    <xsl:param name="pb" select="$cont//tei:pb[@n][not(@ed)]"/>
+    <xsl:variable name="notes">
+      <xsl:variable name="apparatus">
+        <xsl:for-each select="$cont//(tei:app | tei:note[@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n)))])">
+          <xsl:choose>
+            <!-- 2026-10-27 : variante de Micy : la lettre, puis le texte (sans la virgule de note-inline) -->
+            <xsl:when test="self::tei:note[@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n)))]">
+              <xsl:variable name="id"><xsl:call-template name="id"/></xsl:variable>
+              <span class="note" id="{$id}"><a class="" href="#{$id}_"><xsl:call-template name="note-n"/></a><xsl:text> </xsl:text><xsl:apply-templates select="if (count(*) = 1 and tei:p and normalize-space(string-join(text(), '')) = '') then tei:p/node() else node()"/></span>
+              <xsl:text> </xsl:text>
+            </xsl:when>
+            <xsl:otherwise><xsl:call-template name="note-inline"/></xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:if test="$apparatus != ''">
+        <p class="apparatus">
+          <xsl:copy-of select="$apparatus"/>
+        </p>
+      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="$pb">
+          <xsl:variable name="notes1" select="key('note-pb', '')[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))]"/>
+          <xsl:if test="$notes1">
+            <div class="page">
+              <xsl:for-each select="$notes1[@resp = 'author'][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+              <xsl:for-each select="$notes1[@resp = 'editor'][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+              <xsl:for-each select="$notes1[not(@resp) or (@resp != 'editor' and @resp != 'author')][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+            </div>
+          </xsl:if>
+          <xsl:for-each select="$pb">
+            <xsl:variable name="notes4page">
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][@resp = 'author'][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][@resp = 'editor'][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(@resp) or (@resp != 'editor' and @resp != 'author')][not(@place = 'margin')]">
+                <xsl:call-template name="note"/>
+              </xsl:for-each>
+            </xsl:variable>
+            <xsl:if test="$notes4page != ''">
+              <div class="page">
+                <div class="b note-page">
+                  <xsl:call-template name="a"/>
+                </div>
+                <xsl:copy-of select="$notes4page"/>
+              </div>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:when test="$cont">
+          <xsl:apply-templates select="$cont" mode="fn">
+            <xsl:with-param name="resp">author</xsl:with-param>
+          </xsl:apply-templates>
+          <xsl:apply-templates select="$cont" mode="fn">
+            <xsl:with-param name="resp">editor</xsl:with-param>
+          </xsl:apply-templates>
+          <xsl:apply-templates select="$cont" mode="fn"/>
+        </xsl:when>
+        <xsl:when test="key('id', 'note-footseq')">
+          <xsl:apply-templates select="*" mode="fn"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="*" mode="fn">
+            <xsl:with-param name="resp">author</xsl:with-param>
+          </xsl:apply-templates>
+          <xsl:apply-templates select="*" mode="fn">
+            <xsl:with-param name="resp">editor</xsl:with-param>
+          </xsl:apply-templates>
+          <xsl:apply-templates select="*" mode="fn"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="$notes != ''">
+      <xsl:variable name="el">
+        <xsl:choose>
+          <xsl:when test="$format = $epub2">div</xsl:when>
+          <xsl:otherwise>section</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:element name="{$el}" namespace="http://www.w3.org/1999/xhtml">
+        <xsl:attribute name="class">footnotes</xsl:attribute>
+        <xsl:if test="$format = $epub3">
+          <xsl:attribute name="epub:type">footnotes</xsl:attribute>
+        </xsl:if>
+        <xsl:copy-of select="$notes"/>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+
   <!-- 2026-09-14 — DU TEXTE DISPARAISSAIT DANS LES NOMS.
        La feuille commune `hteiml/xsl/teiHeader2html.xsl` l. 463 déclare
        `<xsl:template match="*[tei:surname]">` : un modèle écrit pour le teiHeader, mais SANS
@@ -1407,42 +1535,8 @@
     <xsl:sequence select="replace(replace(lower-case(normalize-unicode(edt:titre($e), 'NFD')), '\p{M}', ''), '[^\p{L}\p{N}]', '')"/>
   </xsl:function>
 
-  <!-- 2026-10-08 : page Édition servie SANS ses actes (excludeFragments=true : « part » n'est plus dans
-       editByCiteType, pour que chaque acte garde sa page). Le groupe est retrouvé dans le TEI complet par
-       son titre ; le tableau est fait à partir de lui. Toute autre page sans acte (chapitre d'introduction)
-       n'a pas de groupe de ce titre : next-match, rendu inchangé. -->
-  <xsl:template version="3.0" match="*[local-name() = 'wrapper'][not(.//tei:text)][tei:head]" priority="26">
-    <xsl:variable name="h" select="edt:cle(.)"/>
-    <xsl:variable name="g" select="(edt:compagnon()//tei:group[tei:head][.//tei:text[@xml:id]][edt:cle(.) = $h])[1]"/>
-    <xsl:choose>
-      <xsl:when test="exists($g)">
-        <div class="group">
-          <xsl:if test="$g/@xml:id"><xsl:attribute name="id" select="$g/@xml:id"/></xsl:if>
-          <h1 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h1>
-          <xsl:apply-templates select="$g/tei:argument"/>
-        </div>
-      </xsl:when>
-      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- 2026-10-19 : même page, forme de DoTS dev (0fb0c43) : servie sans ses actes, elle GARDE son élément
-       group (wrapper > group, titre dans le group). Le groupe est retrouvé dans le TEI complet (compagnon)
-       par son identifiant. -->
-  <xsl:template version="3.0" match="tei:group[parent::*[local-name() = 'wrapper']][not(.//tei:text)]" priority="30">
-    <xsl:variable name="id" select="string(@xml:id)"/>
-    <xsl:variable name="g" select="if ($id = '') then () else (edt:compagnon()//tei:group[@xml:id = $id][.//tei:text[@xml:id]])[1]"/>
-    <xsl:choose>
-      <xsl:when test="exists($g)">
-        <div class="group">
-          <xsl:attribute name="id" select="$id"/>
-          <xsl:if test="tei:head"><h1 class="head"><xsl:apply-templates select="tei:head[1]/node()"/></h1></xsl:if>
-          <xsl:apply-templates select="$g/tei:argument"/>
-        </div>
-      </xsl:when>
-      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+  <!-- 2026-10-27 : les pages de regroupement servies sans leurs actes ne sont plus recomposées à partir du
+       TEI complet (edt:compagnon) : rendu de base de ce que sert DoTS, et TOC de dots-vue (décision de Maxime). -->
 
 
   <!-- texte visible d'un élément, sans les notes -->

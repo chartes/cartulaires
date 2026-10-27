@@ -49,7 +49,7 @@
         <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head"/>
           <citeData property="schema:name" use="head"/>
-          <citeStructure match="div/div" use="@xml:id" unit="partie">
+          <citeStructure match="div/div/div" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head"/>
             <citeData property="schema:name" use="head"/>
           </citeStructure>
@@ -127,6 +127,7 @@
       <argument>
         <p>Notice paléographique et critique de E. Coyecque sur les trois cartulaires de l’Hôtel-Dieu de Paris (cartulaires A, B et registre C, XIII<hi rend="sup">e</hi> s.).</p>
       </argument>
+      <div type="introduction">
       <div type="preface" xml:id="HDPAR-HD_notice">
         <head>Notice sur les cartulaires de l’Hôtel-Dieu de Paris</head>
         <p>
@@ -1854,6 +1855,7 @@
             </row>
           </table>
         </div>
+      </div>
       </div>
     </front>
     <group xml:id="HDPAR-HD_group">

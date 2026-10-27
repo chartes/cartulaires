@@ -53,6 +53,8 @@
             <xsl:for-each select="current-group()">
               <li class="bibl">
                 <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
+                <!-- 2026-10-27 : ouvrage du même auteur que le précédent (« —— ») : un léger retrait (CSS) -->
+                <xsl:if test="matches(normalize-space(string(.)), '^(—|–|--)')"><xsl:attribute name="class" select="'bibl bibl-meme-auteur'"/></xsl:if>
                 <span class="bibl-texte"><xsl:apply-templates select="." mode="biblio-texte"/></span>
                 <xsl:variable name="annee" select="bib:annee(.)"/>
                 <xsl:if test="$annee">
