@@ -111,7 +111,7 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]/div[2]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure unit="index" match="div[2]/list[@type='index']" use="@xml:id">
+          <citeStructure unit="index" match="list[@type='index']" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
@@ -21493,7 +21493,7 @@
             (<hi rend="b">AP</hi>).</p><p>Les noms de personnes sont classés aux patronymes, si ces derniers figurent dans le texte. Les
             patronymes non attestés dans le texte sont mis entre crochets carrés et le classement s’effectue,
             en ce cas, aux prénoms.</p></div>
-        <div>
+        
           <list type="index" xml:id="SMPA-AB-01_liste_A">
           <head>A</head>
           <item xml:id="SMPA-AB-01_rs_0001"><rs>A la Peletere (<hi rend="i">fief dit</hi>), <hi rend="i">dans la paroisse de Galluis, relevant du comte de Montfort</hi></rs>, <ref n="266" target="#SMPA-AB-01_0266">266</ref>.</item>
@@ -23935,7 +23935,6 @@
           <item xml:id="SMPA-AB-01_rs_2639"><rs>Zacharias, propheta; — <hi rend="i">ses reliques</hi></rs>, <ref n="30" target="#SMPA-AB-01_0030">30</ref>.</item>
           <item xml:id="SMPA-AB-01_rs_2640"><rs><hi rend="sc">Zelans (Gautier)</hi>, Walterus Selans, <hi rend="i">peut-être Gautier l’Ardent</hi></rs>, <ref n="5" target="#SMPA-AB-01_0005">5</ref>.</item>
         </list>
-        </div>
         </div>
     </back>
   </text>

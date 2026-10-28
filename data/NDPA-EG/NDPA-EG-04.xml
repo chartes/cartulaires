@@ -86,10 +86,10 @@
             <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure>  
         </citeStructure>
-        <citeStructure match="/TEI[1]/text[1]/group[1]/group[2]/text" use="@xml:id" unit="part">
+        <citeStructure match="/TEI[1]/text[1]/group[1]/group[2]/text/body/div[@type='index']" use="@xml:id" unit="part">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure match="body/div/list" use="@xml:id" unit="partie">
+          <citeStructure match="list" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
@@ -8693,10 +8693,10 @@
           </list>
       </group>
       <group xml:id="NDPA-EG-04_group-2">
-        <text xml:id="NDPA-EG-04_index" subtype="article">
-        <head>Index generalis.</head>
+        <text subtype="article">
         <body>
-          <div type="index">
+        <div type="index" xml:id="NDPA-EG-04_index">
+          <head>Index generalis.</head>
         <pb n="217" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/f231/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k65348823/manifest.json"/>
         
         <p>(Reges, reginæ, episcopi, decani, abbates nominibus, alii vero cognominibus sunt quærendi.)</p>

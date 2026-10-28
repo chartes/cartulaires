@@ -86,7 +86,7 @@
             <citeData property="dct:title" use="head"/>
             <citeData property="schema:name" use="head"/>
           </citeStructure>
-          <citeStructure match="div[2]/list[@type='index']" use="@xml:id" unit="index">
+          <citeStructure match="list[@type='index']" use="@xml:id" unit="index">
             <citeData property="dct:title" use="head"/>
             <citeData property="schema:name" use="head"/>
           </citeStructure>
@@ -47548,7 +47548,7 @@
           <dateline>Août 1893.</dateline>
         </closer>
       </div>
-      <div>
+      
         <list type="index" xml:id="HDPAR-HD_liste_A">
           <head>A</head>
           <!-- Colonne 1 -->
@@ -55121,7 +55121,6 @@
           <item xml:id="HDPAR-HD_rs_7164"><rs><hi rend="sc">Yvriacum</hi></rs>. Vide <ref type="see" target="#HDPAR-HD_rs_1911" corresp="#HDPAR-HD_liste_E"><hi rend="sc">Evri</hi></ref>, <ref type="see" target="#HDPAR-HD_rs_3034" corresp="#HDPAR-HD_liste_H"><hi rend="sc">Hivreio</hi></ref>.</item>
           <!-- FIN DE L'INDEX (dernière entrée du texte imprimé, p. 633). -->
         </list>
-      </div>
     </back>
   </text>
 </TEI>
