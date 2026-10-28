@@ -183,6 +183,103 @@
        celle du serveur dev (/dots/xsl/) ne l'a pas, et marquait le wrapper comme élément inconnu
        (« <dts:wrapper> » en rouge en tête de chaque acte). Les pages sans <text> (index, parties)
        ont leur propre modèle, ci-dessous (priorité supérieure). -->
+  <!-- 2026-10-22, repris le 2026-10-28 (Maxime : « séparer apparat critique et notes », « 1 à n ») : PIED DE PAGE
+       EN DEUX SECTIONS. Dernière passe sur le rendu de toute page qui a des notes (acte, index, liste) :
+       - l'apparat (notes à lettre : @n="a", « 270_a ») rejoint le bloc p.apparatus (celui de Micy s'il existe),
+         au format de hteiml (span.note, lettre en lien de retour) : le bloc CSS commun « apparat » s'y applique ;
+       - les notes numérotées suivent, renumérotées 1 à n dans l'ordre de leur premier appel (le TEI garde
+         parfois le numéro de l'imprimé : « 271 », « 64 ») ; les notes sans appel viennent à la fin ;
+       - plus d'intertitre de page (« p. 207 », « t. I, p. 4 ») dans le pied de page. -->
+  <xsl:template match="*[local-name() = 'wrapper'][.//tei:note]" priority="30" version="3.0">
+    <xsl:variable name="rendu"><xsl:next-match/></xsl:variable>
+    <xsl:variable name="en-place" select="$rendu//*[local-name() = 'p'][tokenize(@class, '\s+') = 'note-place']/@data-note/string()"/>
+    <xsl:variable name="notes" select="$rendu//*[local-name() = 'section'][tokenize(@class, '\s+') = 'footnotes']//*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id][not(@id = $en-place)]"/>
+    <xsl:variable name="numerotees" select="$notes[not(cartu:pied-lettre(.))]/string(@id)"/>
+    <xsl:variable name="appels" select="distinct-values($rendu//*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteref']/substring-after(@href, '#'))"/>
+    <xsl:variable name="ordre" select="($appels[. = $numerotees], $numerotees[not(. = $appels)])"/>
+    <!-- une seule section de notes, la dernière : hteiml en ouvre une autre pour une note sans appel de
+         l'en-tête de l'acte, qui sortait avant les autres (NDVC-AB_0003) -->
+    <xsl:variable name="sections" select="$rendu//*[local-name() = 'section'][tokenize(@class, '\s+') = 'footnotes']"/>
+    <xsl:apply-templates select="$rendu/node()" mode="cartu-pied">
+      <xsl:with-param name="ordre" select="$ordre" tunnel="yes"/>
+      <xsl:with-param name="sections" select="$sections" tunnel="yes"/>
+      <xsl:with-param name="en-place" select="$en-place" tunnel="yes"/>
+    </xsl:apply-templates>
+  </xsl:template>
+  <xsl:function name="cartu:pied-lettre" as="xs:boolean" version="3.0">
+    <xsl:param name="note" as="element()"/>
+    <xsl:sequence select="matches(normalize-space(($note//*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteback'])[1]), '^[a-z]{1,2}\.?$')"/>
+  </xsl:function>
+  <xsl:template match="@* | node()" mode="cartu-pied">
+    <xsl:copy><xsl:apply-templates select="@* | node()" mode="cartu-pied"/></xsl:copy>
+  </xsl:template>
+  <!-- appel d'une note numérotée : nouveau numéro -->
+  <xsl:template match="*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteref']" mode="cartu-pied" version="3.0">
+    <xsl:param name="ordre" tunnel="yes" as="xs:string*"/>
+    <xsl:variable name="rang" select="index-of($ordre, substring-after(@href, '#'))[1]"/>
+    <xsl:choose>
+      <xsl:when test="exists($rang)">
+        <xsl:copy>
+          <xsl:copy-of select="@*"/>
+          <sup><xsl:value-of select="$rang"/></sup>
+        </xsl:copy>
+      </xsl:when>
+      <xsl:otherwise><xsl:next-match/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="*[local-name() = 'section'][tokenize(@class, '\s+') = 'footnotes']" mode="cartu-pied" version="3.0">
+    <xsl:param name="ordre" tunnel="yes" as="xs:string*"/>
+    <xsl:param name="sections" tunnel="yes" as="element()*"/>
+    <xsl:param name="en-place" tunnel="yes" as="xs:string*"/>
+    <xsl:variable name="tout" select="$sections//*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id]"/>
+    <xsl:variable name="notes" select="$tout[not(@id = $en-place)]"/>
+    <xsl:variable name="apparat" select="$notes[cartu:pied-lettre(.)]"/>
+    <xsl:variable name="micy" select="$sections/*[local-name() = 'p'][tokenize(@class, '\s+') = 'apparatus']"/>
+    <xsl:if test=". is $sections[last()] and (exists($notes) or exists($micy))">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <!-- ce qui n'est ni note, ni intertitre de page, ni apparat (rare) est gardé en tête -->
+      <xsl:apply-templates select="$sections/node()[not(self::*[local-name() = 'div'][tokenize(@class, '\s+') = 'page'])][not(. intersect ($tout, $micy))]" mode="cartu-pied"/>
+      <xsl:if test="exists($apparat) or exists($micy)">
+        <p class="apparatus">
+          <xsl:apply-templates select="$micy/node()" mode="cartu-pied"/>
+          <xsl:for-each select="$apparat">
+            <xsl:variable name="retour" select="(.//*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteback'])[1]"/>
+            <span class="note" id="{@id}">
+              <a class="" href="{$retour/@href}"><xsl:value-of select="replace(normalize-space($retour), '\.$', '')"/></a>
+              <xsl:text> </xsl:text>
+              <xsl:for-each select="node()[not(. is $retour)]">
+                <xsl:choose>
+                  <!-- note d'apparat en paragraphes : le contenu, sans le <p> (pas de bloc dans un span) -->
+                  <xsl:when test="self::*[local-name() = 'p']">
+                    <xsl:apply-templates select="node()[not(. is $retour)]" mode="cartu-pied"/>
+                    <xsl:text> </xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise><xsl:apply-templates select="." mode="cartu-pied"/></xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+            </span>
+            <xsl:text> </xsl:text>
+          </xsl:for-each>
+        </p>
+      </xsl:if>
+      <xsl:for-each select="$notes[not(cartu:pied-lettre(.))]">
+        <xsl:sort select="(index-of($ordre, string(@id)), 9999)[1]" data-type="number"/>
+        <xsl:apply-templates select="." mode="cartu-pied"/>
+      </xsl:for-each>
+    </xsl:copy>
+    </xsl:if>
+  </xsl:template>
+  <!-- numéro affiché dans la note -->
+  <xsl:template match="*[local-name() = 'a'][tokenize(@class, '\s+') = 'noteback']" mode="cartu-pied" version="3.0">
+    <xsl:param name="ordre" tunnel="yes" as="xs:string*"/>
+    <xsl:variable name="rang" select="index-of($ordre, string(ancestor::*[local-name() = ('aside', 'div')][tokenize(@class, '\s+') = 'note'][@id][1]/@id))[1]"/>
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <xsl:value-of select="if (exists($rang)) then concat($rang, '. ') else string(.)"/>
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template match="*[local-name() = 'wrapper']" priority="5" version="3.0">
     <!-- 2026-10-19 : notes répétées (voir « NOTE RÉPÉTÉE », bloc 3) retirées du pied de page : hteiml y
          rend les notes par le modèle nommé « note », qu'on ne peut pas surcharger sans le recopier. -->
@@ -257,8 +354,11 @@
     <xsl:variable name="resp" select="@resp"/>
     <xsl:variable name="hasformat" select="@rend != '' and boolean(translate(substring-before(concat(@rend, ' '), ' '), '1AaIi', '') = '')"/>
     <xsl:choose>
+      <!-- 2026-10-28 (Maxime, SMPA-AB-03_1 : « séparer apparat critique et notes ») : « 270_a » → « a »
+           (apparat), « 270_4 » → « 4 » ; le pied de page (« PIED DE PAGE », plus bas) renumérote les
+           chiffres de 1 à n. Remplace la numérotation à la suite, lettres comprises, du 2026-10-06. -->
       <xsl:when test="matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')">
-        <xsl:number count="tei:note[matches(normalize-space(@n), '^[^_\s]+_[^_\s]+$')]" level="any" from="tei:group/tei:text | *[local-name() = 'wrapper']"/>
+        <xsl:value-of select="replace(normalize-space(@n), '^[^_]+_', '')"/>
       </xsl:when>
       <!-- 2026-10-27 : Micy (SMMI-AB), variantes <note type="n1"> : lettres a, b, c… (appel et apparat) -->
       <xsl:when test="self::tei:note[@type = 'n1'][not(@n)]">
@@ -296,6 +396,22 @@
        après la liste des témoins) : rendue à sa place, en paragraphe, et non en note de bas de page numérotée. -->
   <xsl:template match="tei:note[(not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) )]" priority="45">
     <p class="note-tradition"><xsl:apply-templates select="if (count(*) = 1 and tei:p and normalize-space(string-join(text(), '')) = '') then tei:p/node() else node()"/></p>
+  </xsl:template>
+  <!-- 2026-10-28 (Maxime, SSCO-AB_a02 : « pourquoi j'ai un . à côté de ma note ») : NOTE SANS APPEL ENTRE DEUX
+       PARAGRAPHES. <note> nue, enfant d'une div du corps (« (Collacio fit) », « (Signa) », « (Monogramme) »,
+       courts commentaires de l'éditeur : 67 dans 12 cartulaires) : rendue à sa place, en petit paragraphe, et
+       non plus en note « 1. » sans appel. data-note porte l'id que hteiml lui donnerait en pied de page : la
+       passe « PIED DE PAGE » y retire cette note. -->
+  <xsl:template match="tei:note[not(@*)][parent::tei:div or parent::tei:body][ancestor::tei:body]" priority="45">
+    <xsl:variable name="id"><xsl:call-template name="id"/></xsl:variable>
+    <p class="note-place" data-note="{$id}"><xsl:apply-templates select="if (count(*) = 1 and tei:p and normalize-space(string-join(text(), '')) = '') then tei:p/node() else node()"/></p>
+  </xsl:template>
+  <!-- 2026-10-28 (Maxime, SMPA-EG_censier_0006 : « c'est des notes, ça ? ») : notes du censier de SMPA-EG converties
+       en paragraphes <p type="note">1. Troisième main.</p> (175), appels collés au texte (« Blont1] ») : 19 seulement
+       retrouvent un appel unique, 42 ont avalé l'article suivant ; reconversion à faire sur le fac-similé. En
+       attendant, rendues comme des notes (petites, sous un filet), et non comme des articles du censier. -->
+  <xsl:template match="tei:p[@type = 'note']" priority="35">
+    <p class="cartu-note-censier{if (preceding-sibling::*[1][self::tei:p[@type = 'note']]) then '' else ' premiere'}"><xsl:apply-templates/></p>
   </xsl:template>
   <!-- 2026-10-27 : Corpus sigillorum (annexes de SAPC-AB) : paragraphes plats dans la source ; une classe par sorte de
        ligne pour la mise en retrait (CSS) : sigillant (« I. INNOCENTIUS III. »), lieu (« – Embrun. »), date et cote
@@ -340,7 +456,7 @@
       </xsl:if>
       <xsl:choose>
         <xsl:when test="$pb">
-          <xsl:variable name="notes1" select="key('note-pb', '')[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))]"/>
+          <xsl:variable name="notes1" select="key('note-pb', '')[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(cartu:lettre-cachee(.))]"/>
           <xsl:if test="$notes1">
             <div class="page">
               <xsl:for-each select="$notes1[@resp = 'author'][not(@place = 'margin')]">
@@ -356,13 +472,13 @@
           </xsl:if>
           <xsl:for-each select="$pb">
             <xsl:variable name="notes4page">
-              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][@resp = 'author'][not(@place = 'margin')]">
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(cartu:lettre-cachee(.))][@resp = 'author'][not(@place = 'margin')]">
                 <xsl:call-template name="note"/>
               </xsl:for-each>
-              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][@resp = 'editor'][not(@place = 'margin')]">
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(cartu:lettre-cachee(.))][@resp = 'editor'][not(@place = 'margin')]">
                 <xsl:call-template name="note"/>
               </xsl:for-each>
-              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(@resp) or (@resp != 'editor' and @resp != 'author')][not(@place = 'margin')]">
+              <xsl:for-each select="key('note-pb', generate-id())[not(@type = 'n1' or (string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))) or (not(@n) and not(@type) and (parent::tei:front or parent::tei:div[ancestor::tei:front]) ))][not(cartu:lettre-cachee(.))][not(@resp) or (@resp != 'editor' and @resp != 'author')][not(@place = 'margin')]">
                 <xsl:call-template name="note"/>
               </xsl:for-each>
             </xsl:variable>
@@ -561,6 +677,18 @@
        d'index (SGGO, deux index). -->
   <xsl:variable name="cartu-renvoi-res" select="()" as="xs:string*"/>  <!-- 2026-10-19 : vide, les renvois visent leur lettre (@corresp) -->
   <xsl:variable name="cartu-index-unite" select="()" as="xs:string*"/>
+  <!-- 2026-10-28 (Maxime, SMPA-EG_index : « l'index des noms, faut pas charger tout, juste la toc de dots-vue
+       avec a b c d s'il y a pas de texte et pas d'autres index ; pour l'intégralité des cartulaires ») : une
+       lettre qui est une unité citable (list d'index avec head et xml:id) ne s'affiche que sur SA page, où elle
+       est enfant direct du dts:wrapper. Sur la page de l'index (citeType « partie », que le front demande
+       entière : editByCiteType), il ne reste que le titre et le texte éventuel ; les lettres sont au sommaire. -->
+  <xsl:template match="tei:list[@type = 'index'][tei:head][@xml:id][not(ancestor::tei:item)][not(parent::*[local-name() = 'wrapper'])]" priority="60"/>
+  <xsl:template match="tei:list[@type = 'index'][tei:head][@xml:id][not(ancestor::tei:item)][not(parent::*[local-name() = 'wrapper'])]" mode="fn" priority="60"/>
+  <!-- note d'une lettre masquée : hors du pied de page (document entier, notes rassemblées par page : footnotes) -->
+  <xsl:function name="cartu:lettre-cachee" as="xs:boolean" version="3.0">
+    <xsl:param name="n" as="element()"/>
+    <xsl:sequence select="exists($n/ancestor::tei:list[@type = 'index'][tei:head][@xml:id][not(ancestor::tei:item)][not(parent::*[local-name() = 'wrapper'])])"/>
+  </xsl:function>
   <!-- 2026-10-08 : page d'index sur le modèle de Delescluze (index-personnes) : tout l'index sur
        une seule adresse, chaque lettre repliable avec son nombre d'entrées, les entrées dedans. -->
   <xsl:template match="tei:list[@type = 'index'][tei:head][not(ancestor::tei:item)][$resource = $cartu-fiches]" priority="21" version="3.0">
@@ -726,7 +854,9 @@
     <xsl:variable name="c" select="cartu:cible($hi)"/>
     <xsl:variable name="texte-acte" select="$c/ancestor::tei:text[@xml:id][1]"/>
     <xsl:variable name="dos" select="exists($c/self::tei:p)"/>
-    <xsl:variable name="numero-en-ligne"><xsl:for-each select="$c[self::tei:note]"><xsl:call-template name="note-n"/></xsl:for-each></xsl:variable>
+    <!-- 2026-10-28 : numéro affiché dans l'acte = rang de la note chiffrée dans l'acte (pied de page : 1 à n,
+         lettres à part, notes répétées comptées une fois), et non plus note-n -->
+    <xsl:variable name="numero-en-ligne" select="if ($c[self::tei:note]) then 1 + count($c/preceding::tei:note[ancestor::tei:text[@xml:id][1] is $texte-acte][matches(normalize-space(@n), '^[^_\s]+_\d+$')][empty(cartu:note-premiere(.))]) else ''"/>
     <a class="cartu-renvoi{if ($dos) then ' cartu-renvoi-dos' else ' cartu-renvoi-note'}"
        href="{concat($document-base, $resource, '?refId=', $texte-acte/@xml:id, '#',
               if ($dos) then 'au-dos' else concat('note', normalize-space($c/@n)))}"
@@ -1032,12 +1162,10 @@
   <!-- 2026-10-07 : index de NDVC-AB (cartulaire des Vaux-de-Cernay) : le livre renvoie aux
        PAGES (« p. 77 »), la conversion a relié chaque page à son acte et affiche le numéro d'acte.
        Comme dans les autres cartulaires on montre le numéro d'acte (le lien), puis la page du livre,
-       gardée dans @n : « 61 (p. 77) ». Le « p. » du livre est en commentaire dans le TEI. -->
-  <xsl:template match="tei:ref[@target][not(@type = 'see')][ancestor::tei:item][starts-with(@target, '#NDVC-AB_')][matches(@n, '^\d+$')]" priority="29">
-    <xsl:next-match/>
-    <xsl:text> </xsl:text>
-    <span class="cartu-page">(p.&#160;<xsl:value-of select="@n"/>)</span>
-  </xsl:template>
+       gardée dans @n : « 61 (p. 77) ». Le « p. » du livre est en commentaire dans le TEI.
+       2026-10-28 (Maxime, NDVC-AB r5420590 : « juste afficher le numéro de l'acte, pas le numéro de la page ») :
+       modèle retiré, la page reste dans @n du TEI. -->
+
 
   <xsl:template match="tei:ref[@target][contains(
         '|#NON_TROUVE|#NDPA-EG-03_0365|#NDPA-EG-03_1095|#NDPA-EG-03_1096|#NDPA-EG-03_1722|#NDPA-EG-03_1723|#page195|#page197|#page204|#page209|',
@@ -1511,6 +1639,9 @@
       <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
       <xsl:if test="tei:head"><h1 class="head"><xsl:apply-templates select="tei:head/node()"/></h1></xsl:if>
       <xsl:apply-templates select="tei:argument"/>
+      <!-- 2026-10-28 (Maxime, NDPA-EG-04_group-4 : « les deux pouillés sont vides ») : texte du groupe qui n'est pas
+           une unité citable (text sans xml:id : pouillés de NDPA-EG-04) ; absent du sommaire, il s'affiche ici. -->
+      <xsl:apply-templates select="tei:text[not(@xml:id)]"/>
     </div>
   </xsl:template>
 
@@ -1715,6 +1846,10 @@
         <xsl:element name="{if (../@role = 'label' or @role = 'label') then 'th' else 'td'}" namespace="http://www.w3.org/1999/xhtml">
           <xsl:if test="@rows &gt; 1"><xsl:attribute name="rowspan" select="@rows"/></xsl:if>
           <xsl:if test="@cols &gt; 1"><xsl:attribute name="colspan" select="@cols"/></xsl:if>
+          <!-- 2026-10-28 (Maxime, SMPA-AB-02_back-1 : « on peut pas tout lire sur le tableau ») : seules les
+               cellules courtes (numéros, sigles, cotes) restent sur une ligne ; la CSS supposait que les trois
+               premières colonnes étaient des numéros, et l'analyse de SMPA-AB-02 ne revenait plus à la ligne. -->
+          <xsl:if test="not(@cols &gt; 1) and string-length(normalize-space(.)) le 14"><xsl:attribute name="class">cartu-court</xsl:attribute></xsl:if>
           <xsl:apply-templates/>
         </xsl:element>
       </xsl:for-each>

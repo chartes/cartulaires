@@ -24,6 +24,8 @@
        Version 1.1 gardée : plusieurs tests comparent une chaîne à un nombre (mode de
        compatibilité). -->
   <xsl:import href="../../renderers/hteiml/xsl/tei2html.xsl"/>
+  <!-- 2026-10-28 : tableau triable et filtrable (table des actes du Cartulaire blanc) -->
+  <xsl:import href="tableau-filtrable.xsl"/>
 
   <xsl:variable name="elec-base" select="'/elec'"/>
 
@@ -255,6 +257,99 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
+
+  <!-- 2026-10-28 (Maxime : « Titres cités de façon abrégée … ce sont des références biblio, on peut mettre un truc
+       générique ») : liste « sigle = référence » (hi rend="cite") rendue au format de la bibliographie commune
+       (bibliographie.xsl, bloc CSS « bibliographie ») : une ligne par titre, sigle en petites capitales, retrait
+       suspendu, année de parution à droite. -->
+  <xsl:template match="tei:list[tei:item[1]/*[1][self::tei:hi[@rend = 'cite']]]" priority="30" version="3.0">
+    <div class="biblio">
+      <ul class="listBibl biblio-liste">
+        <xsl:for-each select="tei:item">
+          <xsl:variable name="annee" select="(analyze-string(string(.), '1[0-9]{3}(-1[0-9]{3})?')//*:match)[last()]/string()"/>
+          <li class="bibl">
+            <span class="bibl-texte">
+              <xsl:for-each select="node()">
+                <xsl:choose>
+                  <xsl:when test="self::tei:hi[@rend = 'cite']"><span class="sigle"><xsl:apply-templates/></span></xsl:when>
+                  <xsl:otherwise><xsl:apply-templates select="."/></xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+            </span>
+            <xsl:if test="$annee"><span class="bibl-annee"><xsl:value-of select="$annee"/></span></xsl:if>
+          </li>
+        </xsl:for-each>
+      </ul>
+    </div>
+  </xsl:template>
+
+  <!-- 2026-10-28 (Maxime : « la table des actes, ça se défend d'en faire un tableau analytique, donc fais-le ») :
+       « Liste cumulative des actes édités » (512 actes, 7 colonnes) en tableau triable et filtrable (module commun
+       tableau-filtrable.xsl, comportement dans elec.customJs.js). Date : année en data-sort (le tableau est déjà
+       chronologique, l'ordre d'origine départage une même année), filtre de… à… ; Numéro : chapitre en data-f
+       (filtre par chapitre), tri chapitre puis numéro ; Langue : liste ; Auteur : texte avec suggestions. Les lignes
+       incomplètes (24, 5 ou 6 cellules) sont complétées de cellules vides. -->
+  <xsl:template match="tei:div[@xml:id = 'sd-les-textes--cartulaire-blanc--parcourir--table-des-actes']//tei:table" priority="30" version="3.0"
+      xmlns:tf="urn:elec:tableau-filtrable" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="tf xs">
+    <xsl:variable name="lignes" select="tei:row[position() gt 1]"/>
+    <xsl:variable name="chapitre" select="function($c) { replace(normalize-space(string($c)), '\s*\d.*$', '') }"/>
+    <xsl:variable name="annees" select="for $r in $lignes return xs:integer((analyze-string(string($r/tei:cell[1]), '\d{3,4}')//*:match)[1])"/>
+    <xsl:variable name="chapitres" select="sort(distinct-values(for $r in $lignes return $chapitre($r/tei:cell[2])[. != '']))"/>
+    <xsl:variable name="langues" select="distinct-values(for $r in $lignes return normalize-space($r/tei:cell[3])[. != ''])"/>
+    <xsl:variable name="auteurs" select="sort(distinct-values(for $r in $lignes return normalize-space($r/tei:cell[5])[. != '']))"/>
+    <xsl:variable name="entetes" select="for $c in tei:row[1]/tei:cell return normalize-space($c)"/>
+    <div class="tf-cadre">
+      <xsl:call-template name="tf-barre">
+        <xsl:with-param name="total" select="count($lignes)"/>
+        <xsl:with-param name="unite" select="'actes'"/>
+      </xsl:call-template>
+      <table class="tf-tableau" data-csv-nom="cartulaire-blanc-actes" data-csv-entetes="{string-join($entetes, '|')}">
+        <thead>
+          <tr>
+            <xsl:for-each select="$entetes">
+              <xsl:call-template name="tf-th">
+                <xsl:with-param name="libelle" select="."/>
+                <xsl:with-param name="numerique" select="position() = 1"/>
+              </xsl:call-template>
+            </xsl:for-each>
+          </tr>
+          <tr class="tf-filtres">
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="0"/><xsl:with-param name="libelle" select="'Date'"/><xsl:with-param name="type" select="'intervalle'"/><xsl:with-param name="min" select="min($annees)"/><xsl:with-param name="max" select="max($annees)"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="1"/><xsl:with-param name="libelle" select="'Chapitre'"/><xsl:with-param name="type" select="'liste'"/><xsl:with-param name="options" select="$chapitres"/><xsl:with-param name="tous" select="'Tous les chapitres'"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="2"/><xsl:with-param name="libelle" select="'Langue'"/><xsl:with-param name="type" select="'liste'"/><xsl:with-param name="options" select="$langues"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="3"/><xsl:with-param name="libelle" select="'Regeste'"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="4"/><xsl:with-param name="libelle" select="'Auteur de l’acte'"/><xsl:with-param name="suggestions" select="$auteurs"/><xsl:with-param name="liste" select="'cb-auteurs'"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="5"/><xsl:with-param name="libelle" select="'Pages'"/></xsl:call-template>
+            <xsl:call-template name="tf-filtre"><xsl:with-param name="col" select="6"/><xsl:with-param name="libelle" select="'Notice'"/></xsl:call-template>
+          </tr>
+        </thead>
+        <tbody>
+          <xsl:for-each select="$lignes">
+            <xsl:variable name="r" select="."/>
+            <xsl:variable name="i" select="position()"/>
+            <tr data-o="{$i}">
+              <xsl:for-each select="1 to 7">
+                <xsl:variable name="k" select="."/>
+                <xsl:variable name="c" select="$r/tei:cell[$k]"/>
+                <xsl:variable name="t" select="normalize-space(string($c))"/>
+                <td>
+                  <xsl:choose>
+                    <xsl:when test="$k = 1"><xsl:attribute name="data-sort" select="($annees[$i], '')[1]"/><xsl:attribute name="data-f" select="tf:plat($t)"/></xsl:when>
+                    <xsl:when test="$k = 2"><xsl:attribute name="data-sort" select="concat($chapitre($c), ' ', format-number(xs:integer((replace($t, '^\D*(\d+).*$', '$1')[matches(., '^\d+$')], 0)[1]), '0000'))"/><xsl:attribute name="data-f" select="tf:plat($chapitre($c))"/></xsl:when>
+                    <xsl:otherwise><xsl:attribute name="data-sort" select="$t"/><xsl:attribute name="data-f" select="tf:plat($t)"/></xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:choose>
+                    <xsl:when test="$t = '' and empty($c/*)"><span class="tf-vide">–</span></xsl:when>
+                    <xsl:otherwise><xsl:apply-templates select="$c/node()"/></xsl:otherwise>
+                  </xsl:choose>
+                </td>
+              </xsl:for-each>
+            </tr>
+          </xsl:for-each>
+        </tbody>
+      </table>
+    </div>
+  </xsl:template>
 
   <xsl:template match="tei:table[tei:row[1]/tei:cell[last()][normalize-space(.) = ('Nb. actes', 'Édition de la notice dans l’inventaire')]]/tei:row[1]/tei:cell" priority="5">
     <th scope="col">
