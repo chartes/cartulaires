@@ -81,7 +81,7 @@
       <notesStmt>
         <note type="citation">Olivier Guyotjeannin (éd.), Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire, École nationale des chartes – PSL, 2009.</note>
       </notesStmt>
-      <sourceDesc>
+      <sourceDesc facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json">
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k914156"><title>Cartulaire du prieuré bénédictin de Saint-Gondon sur Loire</title>, P. Marchegay (éd.). Les Roches-Baritaud: <date>1879</date>.</bibl>
       </sourceDesc>
     </fileDesc>
@@ -165,6 +165,7 @@
         <p>Établissement : Saint-Gondon (Loiret, cant. Gien ; diocèse ancien de
           Bourges).— Bénédictins, prieuré de Saint-Florent de Saumur.</p>
         <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.541389,47.698889&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
+        <p><graphic url="/images/cartulaires/SGGO-PR-cassini.png"><desc>Carte de situation (Atlas de Cassini)</desc></graphic></p>
         <p>Édition partielle des actes (originaux et copies médiévales) du fonds de Saint-Florent
           concernant son prieuré de Saint-Gondon.</p>
         <p>Total des actes édités : 35 (2 du IX<hi rend="sup">e</hi> siècle, 1 du X<hi rend="sup">e</hi> siècle, 12 du XI<hi rend="sup">e</hi> siècle, 20 du XII<hi rend="sup">e</hi> siècle).</p>
@@ -392,8 +393,90 @@
     </front>
     <group xml:id="SGGO-PR_edition-group">
       <head>Édition</head>
+      <argument>
+        <table type="actes">
+          <head>Liste des actes</head>
+          <row role="label"><cell>N°</cell><cell>Partie</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+          <row><cell><ref target="#SGGO-PR_0001">I</ref></cell><cell>Cartulaire</cell><cell><date when="0866-01-16">16 janvier 866</date></cell><cell>Diplôme de Charles le Chauve. Il confirme à Hecfrid, abbé de Saint-Florent du Mont-Glonne, un petit monastère dans lequel a été inhumé saint Gondon, nommé anciennement Nobiliacus et situé au bord de la Loire, en Berry. Le roi l'avait déjà donné à Didon, prédécesseur d'Hecfrid, pour y transférer les reliques de saint Florent et y établir, sous la règle de saint Benoît, le siége de son abbaye, qui venait d'être détruite par les Normands.</cell><cell>10</cell></row>
+          <row><cell><ref target="#SGGO-PR_0002">II</ref></cell><cell>Cartulaire</cell><cell><date when="0881-06-05">5 juin 881</date></cell><cell>Diplôme de Carloman. Après avoir confirmé à Raoul, abbé, et aux moines de Saint-Florent, pour y établir leur abbaye, le petit monastère où a été enseveli saint Gondon, à Nobiliacus en Berry, au bord de la Loire, le roi confère aux religieux le droit d'avoir quatre navires, naviguant par tout son royaume en pleine liberté et franchise. Il exempte aussi leurs biens et leurs sujets de tous droits de justice, leur fait remise des redevances perçues par le fisc et leur confère le droit de s'élire un abbé et de se choisir un avoué.</cell><cell>12</cell></row>
+          <row><cell><ref target="#SGGO-PR_0003">III</ref></cell><cell>Cartulaire</cell><cell><date when="0901-04">Avril 901</date></cell><cell>Charte de Gautier, abbé, et des religieux du monastère consacré à saints Jean, Florent et Gondon. Ils acensent à un nommé Amédée, à sa femme et à un de leurs héritiers, deux quartes de terre, avec la maison de laquelle elles dépendent ; le tout situé en Anjou, dans la viguerie de Doué.</cell><cell>16</cell></row>
+          <row><cell><ref target="#SGGO-PR_0004">IV</ref></cell><cell>Cartulaire</cell><cell><date when="1095-02-22">Janvier 1095 et février 1095</date></cell><cell>Transaction passée entre les abbés et religieux de Saint-Florent et de Vierzon, au sujet du monastère de Saint-Gondon.</cell><cell>17</cell></row>
+          <row><cell><ref target="#SGGO-PR_0005">V</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Récit détaillé des tentatives faites par les moines de Saint-Florent, pour amener ceux de Vierzon à leur payer deux onces d'or, en conséquence de l'acte par lequel Saint-Gondon leur a été abandonné. Le refus de ceux-ci constaté, l'abbé et les moines de Saint-Florent se décident à accepter l'offre, faite par Gilon de Sully, de leur livrer Saint-Gondon.</cell><cell>20</cell></row>
+          <row><cell><ref target="#SGGO-PR_0006">VI</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Gilon de Sully, reconnaissant l'antique droit de Saint-Florent sur le monastère de Saint-Gondon, le lui restitue avec ses dépendances, confirme gratuitement tout ce qui lui sera donné dans son fief, et promet, ainsi que sa femme, d'intervenir pour avoir l'approbation de l'archevêque de Bourges. Associé par le prieur et les religieux de Saint-Florent à leurs aumônes, jeûnes et prières, et assuré qu'à sa mort ils célébreront pour lui le même service que s'il était moine, Gilon les embrasse tous, avec serment de remplir à jamais ses promesses. Fait en la maison de Huon de la Tour.</cell><cell>21</cell></row>
+          <row><cell><ref target="#SGGO-PR_0007">VII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Autre rédaction de l'acte précédent, d'après laquelle la restitution faite par Gilon de Sully ne fut pas très-gratuite. Les moines de Saint-Florent lui donnent 1,000 sous, en monnaie de Blois, du change desquels, montant à 100 sous, il leur fait remise, et qu'il leur restituera s'ils viennent à perdre Saint-Gondon. N'acceptant pas, faute de les connaître, les cautions qu'il leur offre, le prieur et les cinq religieux se contentent du serment fait par Gilon, en qualité de chrétien, après les avoir embrassés et avoir été associé au bénéfice de leurs prières.</cell><cell>23</cell></row>
+          <row><cell><ref target="#SGGO-PR_0008">VIII</ref></cell><cell>Cartulaire</cell><cell><date when="1096-04-30">30 avril [1096]</date></cell><cell>Fidèle observateur de ses promesses, Gilon de Sully fait confirmer Saint-Gondon aux moines de Saint-Florent, non-seulement par sa femme Audeburge, fille du vicomte de Bourges, mais encore par son suzerain, Etienne, comte de Blois. Enfin il abandonne tous les droits qu'il pouvait avoir sur l'ancien domaine de l'abbaye angevine, en présence de dix témoins, notamment Geoffroi, comte de Gien, et Roger, frère de l'archevêque de Bourges.</cell><cell>25</cell></row>
+          <row><cell><ref target="#SGGO-PR_0009">IX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1097" notAfter="1098">1097-1098 ?</date></cell><cell>Pour mettre fin aux longs débats existant entre son monastère et celui de Vierzon, Guillaume, abbé de Saint-Florent, avait abandonné Saint-Gondon à des conditions qui ne furent pas remplies. Léger ayant succédé à l'archevêque Audebert, le nouvel abbé de Vierzon le prie, en plein synode, de citer devant lui l'abbé de Saint-Florent, qui avait dépouillé son monastère. Guillaume arrive à Bourges avec ses témoins, mais l'abbé de Vierzon refuse absolument de plaider ; et, vainqueur sans combat, Guillaume revient à Saumur, après avoir fait constater le défaut de son adversaire et reçu la bénédiction de l'archevêque.</cell><cell>26</cell></row>
+          <row><cell><ref target="#SGGO-PR_0010">X</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1098" notAfter="1101">1098-1101 ?</date></cell><cell>Après la mort de Gilon de Sully, le comte Etienne (de Blois), fils et héritier de Thibaut, confirme à Saint-Florent, Saint-Gondon et toutes ses dépendances, étant près d'Orléans, dans un champ situé au bord du chemin de Sully.</cell><cell>28</cell></row>
+          <row><cell><ref target="#SGGO-PR_0011">XI</ref></cell><cell>Cartulaire</cell><cell><date when="1104-04">Avril 1104</date></cell><cell>Charge de Richard, évêque d'Albano et légat du Saint-Siége. Elle contient le jugement prononcé par les archevêques de Tours et de Sens, ainsi que par les évêques d'Angers, d'Angoulême, de Chartres, d'Orléans, de Rennes et de Viviers, et confirmé par le concile de Troyes, au sujet du monastère de Saint-Gondon, qu'Herbert, abbé de Vierzon, disait avoir été enlevé injustement à son abbaye par les moines de Saint-Florent. Ceux-ci ayant prouvé que Vierzon n'a pas rempli les engagements stipulés par l'acte de janvier et février 1095, sont reconnus légitimes propriétaires de Saint-Gondon.</cell><cell>30</cell></row>
+          <row><cell><ref target="#SGGO-PR_0012">XII</ref></cell><cell>Cartulaire</cell><cell><date when="1104-10-05">5 octobre 1104</date></cell><cell>Bulle du pape Pascal II, adressée à l'abbé Guillaume ainsi qu'aux moines de Saint-Florent. Elle confirme le jugement rendu au Concile de Troyes, à l'égard de l'église de Saint-Gondon.</cell><cell>32</cell></row>
+          <row><cell><ref target="#SGGO-PR_0013">XIII</ref></cell><cell>Cartulaire</cell><cell><date when="1158-02-06">6 février 1158</date></cell><cell>Bulle d'Adrien IV, adressée à Philippe, abbé de Saint-Florent. Appelé à se prononcer sur le procès intenté par l'abbé de Vierzon, au sujet de Saint-Gondon, après avoir rappelé la transaction de 1095 et le jugement de 1104, il adjuge à perpétuité ladite église aux moines de Saumur.</cell><cell>33</cell></row>
+          <row><cell><ref target="#SGGO-PR_0014">XIV</ref></cell><cell>Cartulaire</cell><cell><date when="1095-10-14">14 octobre 1095</date></cell><cell>Hugue de Saint-Gondon, pour la rémission de ses péchés et de ceux de ses parents, surtout de sa femme Létice, donne à Sainte-Marie, à Saint-Gondon, à Saint-Florent et aux moines de celui-ci, la dîme de Curthualdo, tant des grains qu'autres objets décimables. Lorsque, avec ses trois fils Rainard, Geoffroi et Hugue, il confirma cette donation par le dépôt d'un bâton sur l'autel de Saint-Gondon, ils furent, ainsi que Létice, admis à perpétuité au bénéfice du monastère.</cell><cell>35</cell></row>
+          <row><cell><ref target="#SGGO-PR_0015">XV</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Geoffroi Gibouin, gravement malade et reçu moine à Saint-Gondon, donne aux religieux de Saint-Florent qui y demeurent trois masures de terre à Puy-Boson, à Petra Miracli, à Vigneau, etc., etc. Pour les deux dernières, ceux-ci traitent avec deux individus qui en réclamaient une partie.</cell><cell>36</cell></row>
+          <row><cell><ref target="#SGGO-PR_0016">XVI</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Elisabeth, sœur de Raoul de Saint-Gondon, étant au lit de mort, donne aux moines dudit lieu, pour la rémission de ses péchés, un arpent de terre près de leur grange. Avant sa maladie, elle leur avait donné un pré dans le Val [de Loire]. Le tout fut confirmé par son fils Robert, non encore chevalier, moyennant admission de sa mère et de lui-même au bénéfice des prières des moines. Le premier don fut confirmé dans le cloître de Saint-Gondon, en présence de Raoul, oncle de Robert, et d'autres.</cell><cell>37</cell></row>
+          <row><cell><ref target="#SGGO-PR_0017">XVII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Baronnet, cordonnier audit lieu, vend aux moines de Saint-Gondon, ayant alors Foulque pour prieur, un demi-arpent de vigne sis au bord de la Loire, près de la route qui va de Gien à Briare, moyennant un cheval estimé 40 sous, 20 s. en laine, plus 20 s. en monnaie de chaudière, comptés à Rainaud Bertois, auquel la vigne était engagée. Fait en la maison du vendeur, avec l'assentiment de sa femme, de ses sœurs et de son frère ; en présence de trois témoins, entre autres Hugue, cordonnier d'Orléans.</cell><cell>38</cell></row>
+          <row><cell><ref target="#SGGO-PR_0018">XVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Raoul de Saint-Gondon, atteint d'une grave maladie, inspiré par la crainte et l'amour de Dieu, et pour le salut de son âme et de celles de ses parents, donne aux moines toute sa part dans les combres de la rivière de Quiaulne, avec le consentement d'Aquilée, sa femme.</cell><cell>39</cell></row>
+          <row><cell><ref target="#SGGO-PR_0019">XIX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1100">Après 1100</date></cell><cell>Le même Raoul de Saint-Gondon, étant malade, envoie chercher, un jour de Pâques, Giraud prieur dudit lieu et ses quatre compagnons, les priant de le faire moine. Ayant reçu le froc, il leur donne pour le salut de son âme et de celle de ses parents : 1<hi rend="sup">o</hi> sa moitié en des terres situées au Val-de-Loire, à Travau, à Pierre Maru, dans la terre que cultivait Robert le Breton, plus une haste de terre à Vigneau ; 2<hi rend="sup">o</hi> le droit de faire pasnager tous leurs porcs dans ses forêts ; 3<hi rend="sup">o</hi> un nommé Thibaut Gomant, avec sa femme, sa sœur et leurs enfants, plus la femme de Thibaut fils de Gerberge ; 4<hi rend="sup">o</hi> six deniers [de rente] sur Girard fils d'Adelelme. Enfin il autorise les religieux à recevoir tout ce qui pourra leur être donné dans son fief. Achalée ou Aquilée, femme de Raoul, et leur fils Archambœud, confirment tout ce qui précède.</cell><cell>40</cell></row>
+          <row><cell><ref target="#SGGO-PR_0020">XX</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Jean Bouteloup donne au prieur Galon et à ses moines la somme de 5 sous, pour avoir le droit d'acheter à Gerbert, fils de Vidal, sa moitié dans la terre qu'il tenait du prieuré à Vigneau. L'autre moitié, appartenant audit Jean, est abandonnée par lui aux religieux, pour être exempté de tout droit de terrage. Fait en tête du pont des moines, près du château.</cell><cell>41</cell></row>
+          <row><cell><ref target="#SGGO-PR_0021">XXI</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Tesceline, femme de Foulque, fils de Gandebert, le jour où il fut enterré, ayant reçu depuis quelque temps l'habit monacal, donne au prieuré de Saint-Gondon un arpent de pré ; et dans son bois, chaque jour, la charge d'un ou deux ânes pour le chauffage des religieux, avec droit de pasnage pour tous leurs porcs, sans aucune redevance. Fait dans le cloître, avec l'assentiment d'Isucie, fille de Tesceline et d'Aurenus son premier mari.</cell><cell>42</cell></row>
+          <row><cell><ref target="#SGGO-PR_0022">XXII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1100">Après 1100</date></cell><cell>La même Tesceline, étant malade, règle comme il suit, avec l'assentiment de sa susdite fille, le droit de chauffage du prieuré dans son bois : six ânes une fois par semaine, trois ânes deux fois, deux ânes trois fois, ou une charretée par mois.</cell><cell>43</cell></row>
+          <row><cell><ref target="#SGGO-PR_0023">XXIII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1100">Après 1100</date></cell><cell>La même Tesceline, après la mort du susdit Foulque, veut aller à Jérusalem, pour l'amour de celui qui y vécut, mourut et ressuscita afin de sauver tous les hommes. Avant son départ, elle institua Dieu son héritier ; et elle donna notamment aux moines de Saint-Gondon, pour être associée à leurs prières, sa part dans les combres qu'ils possédaient en la rivière de Quiaulne.</cell><cell>44</cell></row>
+          <row><cell><ref target="#SGGO-PR_0024">XXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Donation au prieuré de Saint-Gondon et à l'abbaye de Saint-Florent de l'église de Saint-Etienne-de-Coullon, par Bernard dudit lieu, Guillaume de Bourges, son fils, et le prêtre Rainaud, son neveu : à condition que le prieur Galon et ses religieux donneront le froc à Bernard, instruiront et entretiendront Guillaume pour en faire un moine ou un prêtre, et conféreront à Rainaud l'office de chapelain de Saint-Gondon, avec plus d'avantages que n'en ont eu ses prédécesseurs. Ce don fut sanctionné par le dépôt du bréviaire des religieux sur l'autel de Sainte-Marie.</cell><cell>45</cell></row>
+          <row><cell><ref target="#SGGO-PR_0025">XXV</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Donation de la dîme du four de Saint-Gondon au prieur dudit lieu et à l'abbaye de Saint-Florent, par les trois propriétaires du four : Hugue et ses deux fils, Richilde et son fils, Rainard fils d'Etienne. Ce dernier, retenu par la guerre au château de Gien, avait fait ce don par l'entremise de son beau-frère Baudouin. Revenant de la cour du comte, il le confirme, à la sortie du château de Sancerre, entre les mains du prieur Galon.</cell><cell>47</cell></row>
+          <row><cell><ref target="#SGGO-PR_0026">XXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Hugue de La Tour renonce à toutes les prétentions qu'il avait élevées sur un moulin que les moines de Saint-Gondon possédaient dans son fief. Il promet même de leur en garantir la jouissance, envers et contre tous, moyennant un cadeau de 20 sous, en monnaie de Sancerre ; somme pour laquelle le prieur Galon lui donne son palefroi, qui valait beaucoup plus. Faites sur le chemin de Sully, près la maison de Girard du Puy, cette renonciation fut confirmée en la tour dudit lieu à la requête de Hugue, par sa nièce Constance, fille d'Aubry.</cell><cell>49</cell></row>
+          <row><cell><ref target="#SGGO-PR_0027">XXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Gravement malade, et pour être associé aux prières des moines de Saint-Florent qui habitent Saint-Gondon, Guillaume Guérin donne à leur prieur Galon, jadis évêque, un pré sis en marés près de Menetreau.</cell><cell>50</cell></row>
+          <row><cell><ref target="#SGGO-PR_0028">XXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1108">1108</date></cell><cell>Charte de Léger, archevêque de Bourges. Il donne à l'abbaye de Saint-Florent l'église de Saint-Etienne de Coullon, avec l'assentiment des chanoines de sa cathédrale et pour être associé au bénéfice du monastère. Fait dans le réfectoire de Saint-Etienne, où Gilbert, prieur de Saint-Gondon, reçut du prélat un gant, comme investiture de ladite église.</cell><cell>50</cell></row>
+          <row><cell><ref target="#SGGO-PR_0029">XXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1111-12-07">7 décembre 1111</date></cell><cell>Charte de Jean, évêque d'Orléans. Après avoir donné aux moines de Saumur les églises de Saint-Florent et de Léon, près Saint-Gondon, il en investit Galon, religieux dudit monastère et évêque de Saint-Paul-de-Léon, en Bretagne. Ayant autorisé lesdits moines à retirer ces églises des mains des laïques, le prélat n'y réserve que la prééminence de sa cathédrale.</cell><cell>52</cell></row>
+          <row><cell><ref target="#SGGO-PR_0030">XXX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1111">Après 1111 ?</date></cell><cell>Pour le salut de son âme, ainsi que de celles de son mari, Hugue Claretis, de son fils Timer et de tous ses parents, une dame, appelée Domna, fait donation à l'église de Saint-Gondon d'une partie de la terre qu'elle possède à la source de la Quiaulne.</cell><cell>53</cell></row>
+          <row><cell><ref target="#SGGO-PR_0031">XXXI</ref></cell><cell>Cartulaire</cell><cell><date when="1140" scope="circa">Vers 1140</date></cell><cell>Archambaud de Saint-Gondon, avec l'assentiment de sa femme Guiburge et de leur fils, ainsi que du seigneur de Sully, donne à Roger, prieur, et aux trois moines de Saint-Gondon, en pleine propriété, moyennant un cadeau de 60 sous, la terre de Pierre-Maru, défrichée dans sa forêt, avec celles de Coullon et de la Noue-Ernard.</cell><cell>54</cell></row>
+          <row><cell><ref target="#SGGO-PR_0032">XXXII</ref></cell><cell>Cartulaire</cell><cell><date when="1142">1142</date></cell><cell>Concession par Renard de Saint-Gondon, à Roger, prieur, et aux moines dudit lieu, du droit d'y faire un four pour leur usage, sans payer aucune redevance. Dans le cloître du prieuré, ce don fut confirmé par le comte Archambaud et par plusieurs personnes, entre autres les trois fils de Renard. Nariot, l'aîné, reçut du prieur 50 sous, et Henri, le second, 5 sous.</cell><cell>55</cell></row>
+          <row><cell><ref target="#SGGO-PR_0033">XXXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1170" scope="circa">Vers 1170</date></cell><cell>Gilon, seigneur de Sully, pour le salut de son âme et de celles de ses parents, confère à l'abbaye de Saint-Florent et à son prieuré de Saint-Gondon le droit d'y établir, le jour de la fête du saint (18 octobre), une foire qui sera tenue dans les mêmes conditions que celle ayant lieu en été. Fait dans le château dudit lieu, à la porte de l'église.</cell><cell>56</cell></row>
+          <row><cell><ref target="#SGGO-PR_0034">XXXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1172">1172</date></cell><cell>Gilon de Sully, étant en guerre contre Jean son frère, fait boucher le portail des moines existant dans le mur du château, près du pont. Pour maintenir un droit de passage existant depuis la construction dudit château, et remédier au dommage qu'ils éprouvent, le prieur Geoffroi et ses trois religieux recourent à Raoul, prieur de la Charité, frère de Gilon. Celui-ci leur accorde, à perpétuité, une entrée sur un autre point, à condition qu'en temps de guerre son prévôt en aura la clef, sauf à ouvrir, pendant le jour, la porte aux moines. Fait dans le cloître du prieuré.</cell><cell>57</cell></row>
+          <row><cell><ref target="#SGGO-PR_0035">XXXV</ref></cell><cell>Cartulaire</cell><cell><date when="1050" scope="circa">Vers 1050</date></cell><cell>Charte de Lisoy, seigneur de Chaumont sur Loire. Avec l'assentiment de sa femme ainsi que de ses fils, et pour le salut de leurs âmes, il affranchit de son droit de péage audit lieu tout ce qu'y font passer les moines de Saint-Florent, soit par terre, soit par eau. Ceux-ci, reconnaissants, lui donnent un cheval estimé 60 sous.</cell><cell>58</cell></row>
+        </table>
+      </argument>
       <group xml:id="SGGO-PR_group">
         <head>Cartulaire</head>
+        <argument>
+          <table type="actes">
+            <head>Liste des actes</head>
+            <row role="label"><cell>N°</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+            <row><cell><ref target="#SGGO-PR_0001">I</ref></cell><cell><date when="0866-01-16">16 janvier 866</date></cell><cell>Diplôme de Charles le Chauve. Il confirme à Hecfrid, abbé de Saint-Florent du Mont-Glonne, un petit monastère dans lequel a été inhumé saint Gondon, nommé anciennement Nobiliacus et situé au bord de la Loire, en Berry. Le roi l'avait déjà donné à Didon, prédécesseur d'Hecfrid, pour y transférer les reliques de saint Florent et y établir, sous la règle de saint Benoît, le siége de son abbaye, qui venait d'être détruite par les Normands.</cell><cell>10</cell></row>
+            <row><cell><ref target="#SGGO-PR_0002">II</ref></cell><cell><date when="0881-06-05">5 juin 881</date></cell><cell>Diplôme de Carloman. Après avoir confirmé à Raoul, abbé, et aux moines de Saint-Florent, pour y établir leur abbaye, le petit monastère où a été enseveli saint Gondon, à Nobiliacus en Berry, au bord de la Loire, le roi confère aux religieux le droit d'avoir quatre navires, naviguant par tout son royaume en pleine liberté et franchise. Il exempte aussi leurs biens et leurs sujets de tous droits de justice, leur fait remise des redevances perçues par le fisc et leur confère le droit de s'élire un abbé et de se choisir un avoué.</cell><cell>12</cell></row>
+            <row><cell><ref target="#SGGO-PR_0003">III</ref></cell><cell><date when="0901-04">Avril 901</date></cell><cell>Charte de Gautier, abbé, et des religieux du monastère consacré à saints Jean, Florent et Gondon. Ils acensent à un nommé Amédée, à sa femme et à un de leurs héritiers, deux quartes de terre, avec la maison de laquelle elles dépendent ; le tout situé en Anjou, dans la viguerie de Doué.</cell><cell>16</cell></row>
+            <row><cell><ref target="#SGGO-PR_0004">IV</ref></cell><cell><date when="1095-02-22">Janvier 1095 et février 1095</date></cell><cell>Transaction passée entre les abbés et religieux de Saint-Florent et de Vierzon, au sujet du monastère de Saint-Gondon.</cell><cell>17</cell></row>
+            <row><cell><ref target="#SGGO-PR_0005">V</ref></cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Récit détaillé des tentatives faites par les moines de Saint-Florent, pour amener ceux de Vierzon à leur payer deux onces d'or, en conséquence de l'acte par lequel Saint-Gondon leur a été abandonné. Le refus de ceux-ci constaté, l'abbé et les moines de Saint-Florent se décident à accepter l'offre, faite par Gilon de Sully, de leur livrer Saint-Gondon.</cell><cell>20</cell></row>
+            <row><cell><ref target="#SGGO-PR_0006">VI</ref></cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Gilon de Sully, reconnaissant l'antique droit de Saint-Florent sur le monastère de Saint-Gondon, le lui restitue avec ses dépendances, confirme gratuitement tout ce qui lui sera donné dans son fief, et promet, ainsi que sa femme, d'intervenir pour avoir l'approbation de l'archevêque de Bourges. Associé par le prieur et les religieux de Saint-Florent à leurs aumônes, jeûnes et prières, et assuré qu'à sa mort ils célébreront pour lui le même service que s'il était moine, Gilon les embrasse tous, avec serment de remplir à jamais ses promesses. Fait en la maison de Huon de la Tour.</cell><cell>21</cell></row>
+            <row><cell><ref target="#SGGO-PR_0007">VII</ref></cell><cell><date notBefore="1095-06-15" notAfter="1095-07">Fin de juin 1095 ou juillet 1095</date></cell><cell>Autre rédaction de l'acte précédent, d'après laquelle la restitution faite par Gilon de Sully ne fut pas très-gratuite. Les moines de Saint-Florent lui donnent 1,000 sous, en monnaie de Blois, du change desquels, montant à 100 sous, il leur fait remise, et qu'il leur restituera s'ils viennent à perdre Saint-Gondon. N'acceptant pas, faute de les connaître, les cautions qu'il leur offre, le prieur et les cinq religieux se contentent du serment fait par Gilon, en qualité de chrétien, après les avoir embrassés et avoir été associé au bénéfice de leurs prières.</cell><cell>23</cell></row>
+            <row><cell><ref target="#SGGO-PR_0008">VIII</ref></cell><cell><date when="1096-04-30">30 avril [1096]</date></cell><cell>Fidèle observateur de ses promesses, Gilon de Sully fait confirmer Saint-Gondon aux moines de Saint-Florent, non-seulement par sa femme Audeburge, fille du vicomte de Bourges, mais encore par son suzerain, Etienne, comte de Blois. Enfin il abandonne tous les droits qu'il pouvait avoir sur l'ancien domaine de l'abbaye angevine, en présence de dix témoins, notamment Geoffroi, comte de Gien, et Roger, frère de l'archevêque de Bourges.</cell><cell>25</cell></row>
+            <row><cell><ref target="#SGGO-PR_0009">IX</ref></cell><cell><date notBefore="1097" notAfter="1098">1097-1098 ?</date></cell><cell>Pour mettre fin aux longs débats existant entre son monastère et celui de Vierzon, Guillaume, abbé de Saint-Florent, avait abandonné Saint-Gondon à des conditions qui ne furent pas remplies. Léger ayant succédé à l'archevêque Audebert, le nouvel abbé de Vierzon le prie, en plein synode, de citer devant lui l'abbé de Saint-Florent, qui avait dépouillé son monastère. Guillaume arrive à Bourges avec ses témoins, mais l'abbé de Vierzon refuse absolument de plaider ; et, vainqueur sans combat, Guillaume revient à Saumur, après avoir fait constater le défaut de son adversaire et reçu la bénédiction de l'archevêque.</cell><cell>26</cell></row>
+            <row><cell><ref target="#SGGO-PR_0010">X</ref></cell><cell><date notBefore="1098" notAfter="1101">1098-1101 ?</date></cell><cell>Après la mort de Gilon de Sully, le comte Etienne (de Blois), fils et héritier de Thibaut, confirme à Saint-Florent, Saint-Gondon et toutes ses dépendances, étant près d'Orléans, dans un champ situé au bord du chemin de Sully.</cell><cell>28</cell></row>
+            <row><cell><ref target="#SGGO-PR_0011">XI</ref></cell><cell><date when="1104-04">Avril 1104</date></cell><cell>Charge de Richard, évêque d'Albano et légat du Saint-Siége. Elle contient le jugement prononcé par les archevêques de Tours et de Sens, ainsi que par les évêques d'Angers, d'Angoulême, de Chartres, d'Orléans, de Rennes et de Viviers, et confirmé par le concile de Troyes, au sujet du monastère de Saint-Gondon, qu'Herbert, abbé de Vierzon, disait avoir été enlevé injustement à son abbaye par les moines de Saint-Florent. Ceux-ci ayant prouvé que Vierzon n'a pas rempli les engagements stipulés par l'acte de janvier et février 1095, sont reconnus légitimes propriétaires de Saint-Gondon.</cell><cell>30</cell></row>
+            <row><cell><ref target="#SGGO-PR_0012">XII</ref></cell><cell><date when="1104-10-05">5 octobre 1104</date></cell><cell>Bulle du pape Pascal II, adressée à l'abbé Guillaume ainsi qu'aux moines de Saint-Florent. Elle confirme le jugement rendu au Concile de Troyes, à l'égard de l'église de Saint-Gondon.</cell><cell>32</cell></row>
+            <row><cell><ref target="#SGGO-PR_0013">XIII</ref></cell><cell><date when="1158-02-06">6 février 1158</date></cell><cell>Bulle d'Adrien IV, adressée à Philippe, abbé de Saint-Florent. Appelé à se prononcer sur le procès intenté par l'abbé de Vierzon, au sujet de Saint-Gondon, après avoir rappelé la transaction de 1095 et le jugement de 1104, il adjuge à perpétuité ladite église aux moines de Saumur.</cell><cell>33</cell></row>
+            <row><cell><ref target="#SGGO-PR_0014">XIV</ref></cell><cell><date when="1095-10-14">14 octobre 1095</date></cell><cell>Hugue de Saint-Gondon, pour la rémission de ses péchés et de ceux de ses parents, surtout de sa femme Létice, donne à Sainte-Marie, à Saint-Gondon, à Saint-Florent et aux moines de celui-ci, la dîme de Curthualdo, tant des grains qu'autres objets décimables. Lorsque, avec ses trois fils Rainard, Geoffroi et Hugue, il confirma cette donation par le dépôt d'un bâton sur l'autel de Saint-Gondon, ils furent, ainsi que Létice, admis à perpétuité au bénéfice du monastère.</cell><cell>35</cell></row>
+            <row><cell><ref target="#SGGO-PR_0015">XV</ref></cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Geoffroi Gibouin, gravement malade et reçu moine à Saint-Gondon, donne aux religieux de Saint-Florent qui y demeurent trois masures de terre à Puy-Boson, à Petra Miracli, à Vigneau, etc., etc. Pour les deux dernières, ceux-ci traitent avec deux individus qui en réclamaient une partie.</cell><cell>36</cell></row>
+            <row><cell><ref target="#SGGO-PR_0016">XVI</ref></cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Elisabeth, sœur de Raoul de Saint-Gondon, étant au lit de mort, donne aux moines dudit lieu, pour la rémission de ses péchés, un arpent de terre près de leur grange. Avant sa maladie, elle leur avait donné un pré dans le Val [de Loire]. Le tout fut confirmé par son fils Robert, non encore chevalier, moyennant admission de sa mère et de lui-même au bénéfice des prières des moines. Le premier don fut confirmé dans le cloître de Saint-Gondon, en présence de Raoul, oncle de Robert, et d'autres.</cell><cell>37</cell></row>
+            <row><cell><ref target="#SGGO-PR_0017">XVII</ref></cell><cell><date notBefore="1095" scope="circa" notAfter="1100">Vers 1095-1100</date></cell><cell>Baronnet, cordonnier audit lieu, vend aux moines de Saint-Gondon, ayant alors Foulque pour prieur, un demi-arpent de vigne sis au bord de la Loire, près de la route qui va de Gien à Briare, moyennant un cheval estimé 40 sous, 20 s. en laine, plus 20 s. en monnaie de chaudière, comptés à Rainaud Bertois, auquel la vigne était engagée. Fait en la maison du vendeur, avec l'assentiment de sa femme, de ses sœurs et de son frère ; en présence de trois témoins, entre autres Hugue, cordonnier d'Orléans.</cell><cell>38</cell></row>
+            <row><cell><ref target="#SGGO-PR_0018">XVIII</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Raoul de Saint-Gondon, atteint d'une grave maladie, inspiré par la crainte et l'amour de Dieu, et pour le salut de son âme et de celles de ses parents, donne aux moines toute sa part dans les combres de la rivière de Quiaulne, avec le consentement d'Aquilée, sa femme.</cell><cell>39</cell></row>
+            <row><cell><ref target="#SGGO-PR_0019">XIX</ref></cell><cell><date notBefore="1100">Après 1100</date></cell><cell>Le même Raoul de Saint-Gondon, étant malade, envoie chercher, un jour de Pâques, Giraud prieur dudit lieu et ses quatre compagnons, les priant de le faire moine. Ayant reçu le froc, il leur donne pour le salut de son âme et de celle de ses parents : 1<hi rend="sup">o</hi> sa moitié en des terres situées au Val-de-Loire, à Travau, à Pierre Maru, dans la terre que cultivait Robert le Breton, plus une haste de terre à Vigneau ; 2<hi rend="sup">o</hi> le droit de faire pasnager tous leurs porcs dans ses forêts ; 3<hi rend="sup">o</hi> un nommé Thibaut Gomant, avec sa femme, sa sœur et leurs enfants, plus la femme de Thibaut fils de Gerberge ; 4<hi rend="sup">o</hi> six deniers [de rente] sur Girard fils d'Adelelme. Enfin il autorise les religieux à recevoir tout ce qui pourra leur être donné dans son fief. Achalée ou Aquilée, femme de Raoul, et leur fils Archambœud, confirment tout ce qui précède.</cell><cell>40</cell></row>
+            <row><cell><ref target="#SGGO-PR_0020">XX</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Jean Bouteloup donne au prieur Galon et à ses moines la somme de 5 sous, pour avoir le droit d'acheter à Gerbert, fils de Vidal, sa moitié dans la terre qu'il tenait du prieuré à Vigneau. L'autre moitié, appartenant audit Jean, est abandonnée par lui aux religieux, pour être exempté de tout droit de terrage. Fait en tête du pont des moines, près du château.</cell><cell>41</cell></row>
+            <row><cell><ref target="#SGGO-PR_0021">XXI</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Tesceline, femme de Foulque, fils de Gandebert, le jour où il fut enterré, ayant reçu depuis quelque temps l'habit monacal, donne au prieuré de Saint-Gondon un arpent de pré ; et dans son bois, chaque jour, la charge d'un ou deux ânes pour le chauffage des religieux, avec droit de pasnage pour tous leurs porcs, sans aucune redevance. Fait dans le cloître, avec l'assentiment d'Isucie, fille de Tesceline et d'Aurenus son premier mari.</cell><cell>42</cell></row>
+            <row><cell><ref target="#SGGO-PR_0022">XXII</ref></cell><cell><date notBefore="1100">Après 1100</date></cell><cell>La même Tesceline, étant malade, règle comme il suit, avec l'assentiment de sa susdite fille, le droit de chauffage du prieuré dans son bois : six ânes une fois par semaine, trois ânes deux fois, deux ânes trois fois, ou une charretée par mois.</cell><cell>43</cell></row>
+            <row><cell><ref target="#SGGO-PR_0023">XXIII</ref></cell><cell><date notBefore="1100">Après 1100</date></cell><cell>La même Tesceline, après la mort du susdit Foulque, veut aller à Jérusalem, pour l'amour de celui qui y vécut, mourut et ressuscita afin de sauver tous les hommes. Avant son départ, elle institua Dieu son héritier ; et elle donna notamment aux moines de Saint-Gondon, pour être associée à leurs prières, sa part dans les combres qu'ils possédaient en la rivière de Quiaulne.</cell><cell>44</cell></row>
+            <row><cell><ref target="#SGGO-PR_0024">XXIV</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Donation au prieuré de Saint-Gondon et à l'abbaye de Saint-Florent de l'église de Saint-Etienne-de-Coullon, par Bernard dudit lieu, Guillaume de Bourges, son fils, et le prêtre Rainaud, son neveu : à condition que le prieur Galon et ses religieux donneront le froc à Bernard, instruiront et entretiendront Guillaume pour en faire un moine ou un prêtre, et conféreront à Rainaud l'office de chapelain de Saint-Gondon, avec plus d'avantages que n'en ont eu ses prédécesseurs. Ce don fut sanctionné par le dépôt du bréviaire des religieux sur l'autel de Sainte-Marie.</cell><cell>45</cell></row>
+            <row><cell><ref target="#SGGO-PR_0025">XXV</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Donation de la dîme du four de Saint-Gondon au prieur dudit lieu et à l'abbaye de Saint-Florent, par les trois propriétaires du four : Hugue et ses deux fils, Richilde et son fils, Rainard fils d'Etienne. Ce dernier, retenu par la guerre au château de Gien, avait fait ce don par l'entremise de son beau-frère Baudouin. Revenant de la cour du comte, il le confirme, à la sortie du château de Sancerre, entre les mains du prieur Galon.</cell><cell>47</cell></row>
+            <row><cell><ref target="#SGGO-PR_0026">XXVI</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Hugue de La Tour renonce à toutes les prétentions qu'il avait élevées sur un moulin que les moines de Saint-Gondon possédaient dans son fief. Il promet même de leur en garantir la jouissance, envers et contre tous, moyennant un cadeau de 20 sous, en monnaie de Sancerre ; somme pour laquelle le prieur Galon lui donne son palefroi, qui valait beaucoup plus. Faites sur le chemin de Sully, près la maison de Girard du Puy, cette renonciation fut confirmée en la tour dudit lieu à la requête de Hugue, par sa nièce Constance, fille d'Aubry.</cell><cell>49</cell></row>
+            <row><cell><ref target="#SGGO-PR_0027">XXVII</ref></cell><cell><date when="1100" scope="circa">Vers 1100</date></cell><cell>Gravement malade, et pour être associé aux prières des moines de Saint-Florent qui habitent Saint-Gondon, Guillaume Guérin donne à leur prieur Galon, jadis évêque, un pré sis en marés près de Menetreau.</cell><cell>50</cell></row>
+            <row><cell><ref target="#SGGO-PR_0028">XXVIII</ref></cell><cell><date when="1108">1108</date></cell><cell>Charte de Léger, archevêque de Bourges. Il donne à l'abbaye de Saint-Florent l'église de Saint-Etienne de Coullon, avec l'assentiment des chanoines de sa cathédrale et pour être associé au bénéfice du monastère. Fait dans le réfectoire de Saint-Etienne, où Gilbert, prieur de Saint-Gondon, reçut du prélat un gant, comme investiture de ladite église.</cell><cell>50</cell></row>
+            <row><cell><ref target="#SGGO-PR_0029">XXIX</ref></cell><cell><date when="1111-12-07">7 décembre 1111</date></cell><cell>Charte de Jean, évêque d'Orléans. Après avoir donné aux moines de Saumur les églises de Saint-Florent et de Léon, près Saint-Gondon, il en investit Galon, religieux dudit monastère et évêque de Saint-Paul-de-Léon, en Bretagne. Ayant autorisé lesdits moines à retirer ces églises des mains des laïques, le prélat n'y réserve que la prééminence de sa cathédrale.</cell><cell>52</cell></row>
+            <row><cell><ref target="#SGGO-PR_0030">XXX</ref></cell><cell><date notBefore="1111">Après 1111 ?</date></cell><cell>Pour le salut de son âme, ainsi que de celles de son mari, Hugue Claretis, de son fils Timer et de tous ses parents, une dame, appelée Domna, fait donation à l'église de Saint-Gondon d'une partie de la terre qu'elle possède à la source de la Quiaulne.</cell><cell>53</cell></row>
+            <row><cell><ref target="#SGGO-PR_0031">XXXI</ref></cell><cell><date when="1140" scope="circa">Vers 1140</date></cell><cell>Archambaud de Saint-Gondon, avec l'assentiment de sa femme Guiburge et de leur fils, ainsi que du seigneur de Sully, donne à Roger, prieur, et aux trois moines de Saint-Gondon, en pleine propriété, moyennant un cadeau de 60 sous, la terre de Pierre-Maru, défrichée dans sa forêt, avec celles de Coullon et de la Noue-Ernard.</cell><cell>54</cell></row>
+            <row><cell><ref target="#SGGO-PR_0032">XXXII</ref></cell><cell><date when="1142">1142</date></cell><cell>Concession par Renard de Saint-Gondon, à Roger, prieur, et aux moines dudit lieu, du droit d'y faire un four pour leur usage, sans payer aucune redevance. Dans le cloître du prieuré, ce don fut confirmé par le comte Archambaud et par plusieurs personnes, entre autres les trois fils de Renard. Nariot, l'aîné, reçut du prieur 50 sous, et Henri, le second, 5 sous.</cell><cell>55</cell></row>
+            <row><cell><ref target="#SGGO-PR_0033">XXXIII</ref></cell><cell><date when="1170" scope="circa">Vers 1170</date></cell><cell>Gilon, seigneur de Sully, pour le salut de son âme et de celles de ses parents, confère à l'abbaye de Saint-Florent et à son prieuré de Saint-Gondon le droit d'y établir, le jour de la fête du saint (18 octobre), une foire qui sera tenue dans les mêmes conditions que celle ayant lieu en été. Fait dans le château dudit lieu, à la porte de l'église.</cell><cell>56</cell></row>
+            <row><cell><ref target="#SGGO-PR_0034">XXXIV</ref></cell><cell><date when="1172">1172</date></cell><cell>Gilon de Sully, étant en guerre contre Jean son frère, fait boucher le portail des moines existant dans le mur du château, près du pont. Pour maintenir un droit de passage existant depuis la construction dudit château, et remédier au dommage qu'ils éprouvent, le prieur Geoffroi et ses trois religieux recourent à Raoul, prieur de la Charité, frère de Gilon. Celui-ci leur accorde, à perpétuité, une entrée sur un autre point, à condition qu'en temps de guerre son prévôt en aura la clef, sauf à ouvrir, pendant le jour, la porte aux moines. Fait dans le cloître du prieuré.</cell><cell>57</cell></row>
+            <row><cell><ref target="#SGGO-PR_0035">XXXV</ref></cell><cell><date when="1050" scope="circa">Vers 1050</date></cell><cell>Charte de Lisoy, seigneur de Chaumont sur Loire. Avec l'assentiment de sa femme ainsi que de ses fils, et pour le salut de leurs âmes, il affranchit de son droit de péage audit lieu tout ce qu'y font passer les moines de Saint-Florent, soit par terre, soit par eau. Ceux-ci, reconnaissants, lui donnent un cheval estimé 60 sous.</cell><cell>58</cell></row>
+          </table>
+        </argument>
         <text subtype="article" xml:id="SGGO-PR_0001" n="I">
           <pb n="10" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f12/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"/>
           <front>
@@ -422,7 +505,7 @@
                   3715: Livre Rouge , fol. 21.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f12/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f13/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f14/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 10-12.</witness>
               </listWit>
             </div>
@@ -529,7 +612,7 @@
                 <witness n="D">Arch. dép. Maine-et-Loire, H 3715: Livre Rouge, fol. 19.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f14/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f15/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f16/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 12-15.</witness>
               </listWit>
             </div>
@@ -666,7 +749,7 @@
                   59v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f18/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f19/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 16-17.</witness>
               </listWit>
             </div>
@@ -770,7 +853,7 @@
                   58v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f19/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f20/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f21/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f22/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 17-20.</witness>
               </listWit>
             </div>
@@ -861,7 +944,7 @@
                   56v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f22/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f23/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 20-21.</witness>
               </listWit>
             </div>
@@ -924,7 +1007,7 @@
                   la rubrique: De S. Gundulfo nova carta).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f23/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f24/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f25/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 21-23.</witness>
               </listWit>
             </div>
@@ -1000,7 +1083,7 @@
                   60v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f25/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f26/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f27/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 23-25.</witness>
               </listWit>
             </div>
@@ -1085,7 +1168,7 @@
                   60v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f27/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f28/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 25-26.</witness>
               </listWit>
             </div>
@@ -1152,7 +1235,7 @@
                   57.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f28/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f29/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f30/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 26-28.</witness>
               </listWit>
             </div>
@@ -1250,7 +1333,7 @@
                   du <num>XII<hi rend="sup">e</hi></num> siècle et contient treize pièces.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f30/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f31/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 28-29.</witness>
               </listWit>
             </div>
@@ -1330,7 +1413,7 @@
                   rubrique Privilegium Ricardi legati, de S. Gundulfo).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f32/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f33/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 30-31.</witness>
               </listWit>
             </div>
@@ -1427,7 +1510,7 @@
                   rubrique : Privilegium Pascalis papæ, de S. Gundulfo).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f34/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f35/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 32-33.</witness>
               </listWit>
             </div>
@@ -1495,7 +1578,7 @@
                   rubrique : Sentencia Adriani pape, de S. Gundulfo).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f35/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f36/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f37/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 33-35.</witness>
               </listWit>
             </div>
@@ -1583,7 +1666,7 @@
                   56v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f37/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f38/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 35-36.</witness>
               </listWit>
             </div>
@@ -1643,7 +1726,7 @@
                 <witness n="A">Pancarte originale n° 1.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f38/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f39/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 36-37.</witness>
               </listWit>
             </div>
@@ -1714,7 +1797,7 @@
                 <witness n="A">Pancarte originale, n° 2.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f39/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f40/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 37-38.</witness>
               </listWit>
             </div>
@@ -1760,7 +1843,7 @@
                 <witness n="A">Pancarte originale, n° 4.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f40/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f41/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 38-39.</witness>
               </listWit>
             </div>
@@ -1812,7 +1895,7 @@
                 <witness n="A">Pancarte originale, n° 6.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f41/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f42/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 39-40.</witness>
               </listWit>
             </div>
@@ -1866,7 +1949,7 @@
                 <witness n="A">Original (intitulé au dos Donum Radulfi de S. Gundulfo).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f42/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f43/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 40-41.</witness>
               </listWit>
             </div>
@@ -1935,7 +2018,7 @@
                 <witness n="A">Pancarte originale, n° 9.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f43/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f44/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 41-42.</witness>
               </listWit>
             </div>
@@ -1988,7 +2071,7 @@
                 <witness n="A">Pancarte originale, n° 3.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f44/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 42-43.</witness>
               </listWit>
             </div>
@@ -2039,7 +2122,7 @@
                 <witness n="A">Pancarte originale, n° 8.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 43.</witness>
               </listWit>
             </div>
@@ -2081,7 +2164,7 @@
                 <witness n="A">Pancarte originale, n° 12.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f46/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 44.</witness>
               </listWit>
             </div>
@@ -2136,7 +2219,7 @@
                 <witness n="A">Original (intitulé au dos De Colons).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f47/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f48/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f49/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 45-47.</witness>
               </listWit>
             </div>
@@ -2244,7 +2327,7 @@
                 <witness n="A">Pancarte originale, n° 7.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f49/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f50/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 47-48.</witness>
               </listWit>
             </div>
@@ -2306,7 +2389,7 @@
                 <witness n="A">Pancarte originale, n° 10.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f51/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 49.</witness>
               </listWit>
             </div>
@@ -2363,7 +2446,7 @@
                 <witness n="A">Pancarte originale, n° 11.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f52/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 50.</witness>
               </listWit>
             </div>
@@ -2412,7 +2495,7 @@
                   69v°.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f52/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f53/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 50-51.</witness>
               </listWit>
             </div>
@@ -2484,7 +2567,7 @@
                   Leon).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f54/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f55/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 52-53.</witness>
               </listWit>
             </div>
@@ -2551,7 +2634,7 @@
                 <witness n="A">Pancarte originale, n° 13.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f55/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 53.</witness>
               </listWit>
             </div>
@@ -2600,7 +2683,7 @@
                 <witness n="C">Arch. dép. Maine-et-Loire, H 3715: Livre Rouge, fol. 70.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f56/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f57/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 54-55.</witness>
               </listWit>
             </div>
@@ -2666,7 +2749,7 @@
                   la rubrique Hoc est cirographum de furno S. Gundulfi).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f57/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f58/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 55-56.</witness>
               </listWit>
             </div>
@@ -2721,7 +2804,7 @@
                 <witness n="A">Original jadis scellé (intitulé De feria S. Gundulfi).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f58/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f59/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 56-57.</witness>
               </listWit>
             </div>
@@ -2782,7 +2865,7 @@
                 <witness n="B">Arch. dép. Maine-et-Loire, H 3715: Livre Rouge, fol. 70.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f59/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f60/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 57-58.</witness>
               </listWit>
             </div>
@@ -2843,7 +2926,7 @@
                   rubrique Dimissio telonei de Calvo Monte).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire du prieuré bénédictin de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f60/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f61/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/f62/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k914156/manifest.json"><title>Cartulaire du prieuré bénédictin de
                     Saint-Gondon-sur-Loire</title>, éd. Paul Marchegay, Les Roches-Baritaud, 1879, p. 58-61.</witness>
               </listWit>
             </div>

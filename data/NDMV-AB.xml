@@ -79,7 +79,7 @@
       <notesStmt>
         <note type="citation">Olivier Guyotjeannin (éd.), Cartulaire de l'abbaye Notre-Dame de Morienval, École nationale des chartes – PSL, 2009.</note>
       </notesStmt>
-      <sourceDesc>
+      <sourceDesc facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json">
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k4860673"><title>Cartulaire de l'abbaye de Morienval</title> édité par <author>Achille Peigné-Delacourt</author>. Senlis, in: Memoires de la Société de l'Histoire de Paris et
           d'Île de France , tome 18, <date>1876</date>, 8°</bibl>
       </sourceDesc>
@@ -165,6 +165,7 @@
           Soissons).— Abbaye bénédictine, attestée depuis le milieu du IXᵉ siècle, d’abord peuplée
           de moines et de moniales, puis de moniales.</p>
         <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.922194,49.298167&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
+        <p><graphic url="/images/cartulaires/NDMV-AB-cassini.png"><desc>Carte de situation (Atlas de Cassini)</desc></graphic></p>
         <p>Édition du cartulaire médiéval (connu par copies), à laquelle l’éditeur a intégré 8
           autres chartes du chartrier (actes 4, 5, 17, 34, 47, 55, 73 et 74 de l’édition). Est
           ajoutée en annexe l’édition de vingt-deux chartes de l’abbaye de Lieu-Restauré, d’après le
@@ -602,8 +603,240 @@
     </front>
     <group xml:id="NDMV-AB_edition-group">
       <head>Édition</head>
+      <argument>
+        <table type="actes">
+          <head>Liste des actes</head>
+          <row role="label"><cell>N°</cell><cell>Partie</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+          <row><cell><ref target="#NDMV-AB_0001">I</ref></cell><cell>Cartulaire</cell><cell><date when="0920">an. 920</date></cell><cell>Lettres de la fondation de l'église de Céens.</cell><cell>1</cell></row>
+          <row><cell><ref target="#NDMV-AB_0002">II</ref></cell><cell>Cartulaire</cell><cell><date when="1111">An 1111</date></cell><cell>Lettres de l'evesque de Amiens pour l'autologe de Parviller</cell><cell>3</cell></row>
+          <row><cell><ref target="#NDMV-AB_0003">III</ref></cell><cell>Cartulaire</cell><cell><date when="1112" scope="circa">Vers l'an 1112</date></cell><cell>Accord de l'abbesse de Morienval avec Nivelon II.</cell><cell>3</cell></row>
+          <row><cell><ref target="#NDMV-AB_0004">IV</ref></cell><cell>Cartulaire</cell><cell><date when="1122" scope="circa">Vers l'an 1122</date></cell><cell>Augmentation victus.</cell><cell>4</cell></row>
+          <row><cell><ref target="#NDMV-AB_0005">V</ref></cell><cell>Cartulaire</cell><cell><date when="1127">an 1127</date></cell><cell>Lettres de l'évesque de Senlis la cure de Bettencourt.</cell><cell>5</cell></row>
+          <row><cell><ref target="#NDMV-AB_0006">VI</ref></cell><cell>Cartulaire</cell><cell><date when="1137">an 1137</date></cell><cell>Lettres de l'évesque de Senlis d'une provende qu'il souloit penre en ceste église.</cell><cell>5</cell></row>
+          <row><cell><ref target="#NDMV-AB_0007">VII</ref></cell><cell>Cartulaire</cell><cell><date when="1142">an 1142</date></cell><cell>Lettres de l'évesque de Noion sur la confirmation de la cure de Oysin..</cell><cell>6</cell></row>
+          <row><cell><ref target="#NDMV-AB_0008">VIII</ref></cell><cell>Cartulaire</cell><cell><date when="1148">an 1148</date></cell><cell>Lettres des dismes qui furent données à la cure de Oysni.</cell><cell>6</cell></row>
+          <row><cell><ref target="#NDMV-AB_0009">IX</ref></cell><cell>Cartulaire</cell><cell><date when="1159">1159</date></cell><cell>Lettre d'un accort entre l'église de Céens et l'église de Saint-Frambout de Senlis sur les dismes de Plailly.</cell><cell>7</cell></row>
+          <row><cell><ref target="#NDMV-AB_0010">X</ref></cell><cell>Cartulaire</cell><cell><date when="1161">an 1161</date></cell><cell>Lettres d'un accord entre l'église de Céens et l'église de Saint-Éloy pour les dismes de Fonches.</cell><cell>8</cell></row>
+          <row><cell><ref target="#NDMV-AB_0011">XI</ref></cell><cell>Cartulaire</cell><cell><date when="1161">an 1161</date></cell><cell>Lettres que nus clers ne puist empétrer sur l'église de Céens.</cell><cell>8</cell></row>
+          <row><cell><ref target="#NDMV-AB_0012">XII</ref></cell><cell>Cartulaire</cell><cell><date when="1168">an 1168</date></cell><cell>Lettre de XVIII essins de grain chascun an que on prent à Aile et XVIII essins seur le molin de Selvai.</cell><cell>9</cell></row>
+          <row><cell><ref target="#NDMV-AB_0013">XIII</ref></cell><cell>Cartulaire</cell><cell><date when="1145">an 1145</date></cell><cell>Lettres de quatre muis de blé chascun an seur le moulin de Fonches.</cell><cell>9</cell></row>
+          <row><cell><ref target="#NDMV-AB_0014">XIV</ref></cell><cell>Cartulaire</cell><cell><date when="1173">an 1173</date></cell><cell>Lettres de deux muis de vin achaté à Bettencourt.</cell><cell>10</cell></row>
+          <row><cell><ref target="#NDMV-AB_0015">XV</ref></cell><cell>Cartulaire</cell><cell><date when="1174">an 1174</date></cell><cell>La confirmation de biens (à Jaux). Richard, doyen, de Céans témoin.</cell><cell>11</cell></row>
+          <row><cell><ref target="#NDMV-AB_0016">XVI</ref></cell><cell>Cartulaire</cell><cell><date when="1176">an 1176</date></cell><cell>Lettres de la confirmation de la fondation de cette église.</cell><cell>11</cell></row>
+          <row><cell><ref target="#NDMV-AB_0017">XVII</ref></cell><cell>Cartulaire</cell><cell><date when="1176">an 1176</date></cell><cell>Lettres de l'abbesse de Hierre de grain que on prent à Bray.</cell><cell>13</cell></row>
+          <row><cell><ref target="#NDMV-AB_0018">XVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1176">an 1176</date></cell><cell>Sentence du doyen de Menus sur les dismes de Plailli.</cell><cell>13</cell></row>
+          <row><cell><ref target="#NDMV-AB_0019">XIX</ref></cell><cell>Cartulaire</cell><cell><date when="1182">an 1182</date></cell><cell>Lettres dou conte de Flandre de dix livres chascun au prins à Crépi.</cell><cell>14</cell></row>
+          <row><cell><ref target="#NDMV-AB_0020">XX</ref></cell><cell>Cartulaire</cell><cell><date when="1188">an 1188</date></cell><cell>Lettres d'un accort entre l'église de Céans et l'église de Saint-Rieul seur dismes de ceste rivière.</cell><cell>14</cell></row>
+          <row><cell><ref target="#NDMV-AB_0021">XXI</ref></cell><cell>Cartulaire</cell><cell><date when="1189">an 1189</date></cell><cell>Lettre dou roi de France seur la quittance d'un hostise séant à Plailli.</cell><cell>15</cell></row>
+          <row><cell><ref target="#NDMV-AB_0022">XXII</ref></cell><cell>Cartulaire</cell><cell><date when="1190">an 1190</date></cell><cell>Lettres dou seigneur de Hangest de ce qu'il avoit à Fransart.</cell><cell>15</cell></row>
+          <row><cell><ref target="#NDMV-AB_0023">XXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1190">an 1190</date></cell><cell>Lettres de l'evesque d'Amiens pour la disme de Castel.</cell><cell>16</cell></row>
+          <row><cell><ref target="#NDMV-AB_0024">XXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1192">an 1192</date></cell><cell>Lettres dou don de la terre de Jausi.</cell><cell>16</cell></row>
+          <row><cell><ref target="#NDMV-AB_0025">XXV</ref></cell><cell>Cartulaire</cell><cell><date when="1191">an. 1191</date></cell><cell>Lettres d'un accort entre l'église de Céens et l'église de Saint-Rieule de Senlis pour les dismes de cette rivière.</cell><cell>17</cell></row>
+          <row><cell><ref target="#NDMV-AB_0026">XXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1200">an 1200</date></cell><cell>Lettres de quittance de l'abbé de Hérivals sur terres qui sont au terrouer de Céens.</cell><cell>18</cell></row>
+          <row><cell><ref target="#NDMV-AB_0027">XXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1200">an 1200</date></cell><cell>Lettres de deux muis et six mines de blé et d'avoine et vingt-six solz des potez donnés à Bettencourt.</cell><cell>18</cell></row>
+          <row><cell><ref target="#NDMV-AB_0028">XXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1202">an 1202</date></cell><cell>Lettres de l'évesque de Noion que la collation de la cure de Oysni appartient à l'église de Céens.</cell><cell>19</cell></row>
+          <row><cell><ref target="#NDMV-AB_0029">XXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1204">an 1204</date></cell><cell>Lettres de la comtesse de Valois que il ne doit avoir en cette église que soissante nonais.</cell><cell>19</cell></row>
+          <row><cell><ref target="#NDMV-AB_0030">XXX</ref></cell><cell>Cartulaire</cell><cell><date when="1204">an 1204</date></cell><cell>Lettres de l'évesque d'Amiens que la collation de la cure de Parviller appartient à l'église de Céens.</cell><cell>20</cell></row>
+          <row><cell><ref target="#NDMV-AB_0031">XXXI</ref></cell><cell>Cartulaire</cell><cell><date when="1205">an 1205</date></cell><cell>Lettre d'un accort entre l'église de Céens et l'église du lieu restoré pour les dismes desseur Fresnoy.</cell><cell>20</cell></row>
+          <row><cell><ref target="#NDMV-AB_0032">XXXII</ref></cell><cell>Cartulaire</cell><cell><date when="1205">an 1205</date></cell><cell>Lettres de grains que l'église de Céens prent a lieu restoré.</cell><cell>21</cell></row>
+          <row><cell><ref target="#NDMV-AB_0033">XXXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1206">an 1206</date></cell><cell>Lettres de l'évesque de Soissons qu'il ne doit avoir que soixante nonnains.</cell><cell>23</cell></row>
+          <row><cell><ref target="#NDMV-AB_0034">XXXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1207">1207</date></cell><cell>Don à Lieu Restoré par l'abbesse de Céans.</cell><cell>23</cell></row>
+          <row><cell><ref target="#NDMV-AB_0035">XXXV</ref></cell><cell>Cartulaire</cell><cell><date when="1210">an 1210</date></cell><cell>Lettres de vint deniers donnés à Plailli.</cell><cell>24</cell></row>
+          <row><cell><ref target="#NDMV-AB_0036">XXXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1210">an 1210</date></cell><cell>Lettres dou chatelain de Roye seur la taille de Parviller.</cell><cell>24</cell></row>
+          <row><cell><ref target="#NDMV-AB_0037">XXXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1213">an 1213</date></cell><cell>Lettres dou seigneur de Hangert et d'un don fait à Fransart.</cell><cell>24</cell></row>
+          <row><cell><ref target="#NDMV-AB_0038">XXXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1213">an 1213</date></cell><cell>Lettres d'un accort de quatre muis de blé seur le molin.</cell><cell>25</cell></row>
+          <row><cell><ref target="#NDMV-AB_0039">XXXIX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1216" notAfter="1219">1216-1219</date></cell><cell>Lettres dou pape que il ne doit avoir en ceste église que soissante nonnains.</cell><cell>25</cell></row>
+          <row><cell><ref target="#NDMV-AB_0040">XL</ref></cell><cell>Cartulaire</cell><cell><date when="1219">an 1219</date></cell><cell>Lettres d'un courtil séant à Parviller.</cell><cell>26</cell></row>
+          <row><cell><ref target="#NDMV-AB_0041">XLI</ref></cell><cell>Cartulaire</cell><cell><date when="1220">an 1220</date></cell><cell>Lettres dou roy dou Breuil qui fu accensé à ceste église trente sols parisis chascun an.</cell><cell>26</cell></row>
+          <row><cell><ref target="#NDMV-AB_0042">XLII</ref></cell><cell>Cartulaire</cell><cell><date when="1220">an 1220</date></cell><cell>Lettres dou don des dismes de Roissi.</cell><cell>26</cell></row>
+          <row><cell><ref target="#NDMV-AB_0043">XLIII</ref></cell><cell>Cartulaire</cell><cell><date when="1222">an 1222</date></cell><cell>Lettres de terres vendues et données à ceste église qui appartiennent à l'Essart.</cell><cell>27</cell></row>
+          <row><cell><ref target="#NDMV-AB_0044">XLIV</ref></cell><cell>Cartulaire</cell><cell><date when="1222">an 1222</date></cell><cell>Lettres de l'achat de cabaret et des terres qui y appendent.</cell><cell>27</cell></row>
+          <row><cell><ref target="#NDMV-AB_0045">XLV</ref></cell><cell>Cartulaire</cell><cell><date when="1223">an 1223</date></cell><cell>Lettres de terres achatées et appartenant à l'Essart.</cell><cell>28</cell></row>
+          <row><cell><ref target="#NDMV-AB_0046">XLVI</ref></cell><cell>Cartulaire</cell><cell><date when="1223">an 1223</date></cell><cell>Lettres d'un accort entre l'église de Céens et messire Guidou Pellier pour les terres de l'Essart.</cell><cell>28</cell></row>
+          <row><cell><ref target="#NDMV-AB_0047">XLVII</ref></cell><cell>Cartulaire</cell><cell><date when="1234">An 1234</date></cell><cell>De vadiis Margnevallis.</cell><cell>29</cell></row>
+          <row><cell><ref target="#NDMV-AB_0048">XLVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1235">an 1235</date></cell><cell>Lettres que la maison Haymart le Pelletier et Luce Delacourt séans à Crespy sont de la cession de l'église de Céens.</cell><cell>30</cell></row>
+          <row><cell><ref target="#NDMV-AB_0049">XLIX</ref></cell><cell>Cartulaire</cell><cell><date when="1235">an 1235</date></cell><cell>Lettres dou roy de l'usage en la forest de Rest.</cell><cell>30</cell></row>
+          <row><cell><ref target="#NDMV-AB_0050">L</ref></cell><cell>Cartulaire</cell><cell><date when="1240">an 1240</date></cell><cell>Lettres de la chapellerie de Saint-Sauveur en l'église de Céens.</cell><cell>31</cell></row>
+          <row><cell><ref target="#NDMV-AB_0051">LI</ref></cell><cell>Cartulaire</cell><cell><date when="1245">an 1245</date></cell><cell>Lettres d'un accort entre l'église de Céens et messire Jean Elin pour la mairie de Bettencourt et pour la maison de la voute.</cell><cell>31</cell></row>
+          <row><cell><ref target="#NDMV-AB_0052">LII</ref></cell><cell>Cartulaire</cell><cell><date when="1246">an 1246</date></cell><cell>Lettres d'un échange fait à Robert le Majeur pour une maison séant à Fonches.</cell><cell>32</cell></row>
+          <row><cell><ref target="#NDMV-AB_0053">LIII</ref></cell><cell>Cartulaire</cell><cell><date when="1247">an 1247</date></cell><cell>Lettres de l'achat des terres qui appendent à l'Essart.</cell><cell>33</cell></row>
+          <row><cell><ref target="#NDMV-AB_0054">LIV</ref></cell><cell>Cartulaire</cell><cell><date when="1248">an 1248</date></cell><cell>Lettres de terres achatées séans de lez cabaret.</cell><cell>34</cell></row>
+          <row><cell><ref target="#NDMV-AB_0055">LV</ref></cell><cell>Cartulaire</cell><cell><date when="1248">An 1248</date></cell><cell>De quadam controversia de Morgnevalle.</cell><cell>35</cell></row>
+          <row><cell><ref target="#NDMV-AB_0056">LVI</ref></cell><cell>Cartulaire</cell><cell><date when="1248">An 1248</date></cell><cell>Lettres d'un accort entre l'église de Céens et le seigneur de Chaule pour Fonches.</cell><cell>35</cell></row>
+          <row><cell><ref target="#NDMV-AB_0057">LVII</ref></cell><cell>Cartulaire</cell><cell><date when="1249">an 1249</date></cell><cell>Lettres de quatorze setiers et un quarteron de blé donnés à Fonches.</cell><cell>37</cell></row>
+          <row><cell><ref target="#NDMV-AB_0058">LVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1249">an 1249</date></cell><cell>Lettres de terres appartenants à Lessart.</cell><cell>37</cell></row>
+          <row><cell><ref target="#NDMV-AB_0059">LIX</ref></cell><cell>Cartulaire</cell><cell><date when="1250">an 1250</date></cell><cell>Lettres de la courtille qui est dessous nostre église.</cell><cell>37</cell></row>
+          <row><cell><ref target="#NDMV-AB_0060">LX</ref></cell><cell>Cartulaire</cell><cell><date when="1250">an 1250</date></cell><cell>Lettres de deux muis de blé donnés à ceste église que on prent chacun an à Betizi.</cell><cell>38</cell></row>
+          <row><cell><ref target="#NDMV-AB_0061">LXI</ref></cell><cell>Cartulaire</cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de neuf journex de terre achatez à Parvillers.</cell><cell>38</cell></row>
+          <row><cell><ref target="#NDMV-AB_0062">LXII</ref></cell><cell>Cartulaire</cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de plusieurs choses que la prevosté de Parviller tient de Céens.</cell><cell>39</cell></row>
+          <row><cell><ref target="#NDMV-AB_0063">LXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de deux muis de blé donnés à ceste église que on prent chascun an à Betizi.</cell><cell>40</cell></row>
+          <row><cell><ref target="#NDMV-AB_0064">LXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1253">an 1253.</date></cell><cell>Lettres pour les biens des chapelains de ceste église et des hommes de corps qui sont mesel.</cell><cell>41</cell></row>
+          <row><cell><ref target="#NDMV-AB_0065">XLV</ref></cell><cell>Cartulaire</cell><cell><date when="1256">an 1256.</date></cell><cell>Lettres du roy à l'usage de la forest du Bos Sec Cheu.</cell><cell>41</cell></row>
+          <row><cell><ref target="#NDMV-AB_0066">LXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1257">an 1257.</date></cell><cell>Lettres d'un accort entre l'église de Céens et l'église de Longpont seur les dismes de Fransart.</cell><cell>42</cell></row>
+          <row><cell><ref target="#NDMV-AB_0067">LXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1257">an 1257</date></cell><cell>Lettres de trente sols parisis donnés à l'église de Céens que on devoit au roi pour le Brueil.</cell><cell>43</cell></row>
+          <row><cell><ref target="#NDMV-AB_0068">XLVII</ref></cell><cell>Cartulaire</cell><cell><date when="1258">an 1258</date></cell><cell>Lettres du roy de l'usage du Bos Mort Cheu.</cell><cell>44</cell></row>
+          <row><cell><ref target="#NDMV-AB_0069">LXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1262">an 1262</date></cell><cell>Lettres que damoiselle Agnes de Thiemer quitta son doaire sus terres qui appartiennent à l'Essart.</cell><cell>45</cell></row>
+          <row><cell><ref target="#NDMV-AB_0070">LXX</ref></cell><cell>Cartulaire</cell><cell><date when="1263">an 1263</date></cell><cell>Lettres d'un accort entre l'église de Céens et le prieur de Bretigny pour terres qui sont à Parviller.</cell><cell>48</cell></row>
+          <row><cell><ref target="#NDMV-AB_0071">LXXI</ref></cell><cell>Cartulaire</cell><cell><date when="1271">an 1271</date></cell><cell>Lettres de l'achat d'un mui que Pierre Bonnars prenoit chacun an à Bettencourt.</cell><cell>49</cell></row>
+          <row><cell><ref target="#NDMV-AB_0072">LXXII</ref></cell><cell>Cartulaire</cell><cell><date when="1273">an 1273</date></cell><cell>Lettres de l'achat d'un mui de blé que messire Pierre Bonnars avoit chacun an à Bettencourt.</cell><cell>49</cell></row>
+          <row><cell><ref target="#NDMV-AB_0073">LXXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1275-05-08">8 mai 1275</date></cell><cell>Droit d'élection revendiqué.</cell><cell>51</cell></row>
+          <row><cell><ref target="#NDMV-AB_0074">LXXIV</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1276" notAfter="1276">1276</date></cell><cell>Accort entre l'église de Morienval et Roger de Palasne.</cell><cell>51</cell></row>
+          <row><cell><ref target="#NDMV-AB_0075">LXXV</ref></cell><cell>Cartulaire</cell><cell><date when="1294">an 1294</date></cell><cell>Lettres de monseigneur de Valoys de l'amortissement de plusieurs héritages.</cell><cell>52</cell></row>
+          <row><cell><ref target="#NDMV-AB_0076">LXXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1308">an 1308</date></cell><cell>Lettres de l'achat d'une maison séant à Vatervoisin.</cell><cell>54</cell></row>
+          <row><cell><ref target="#NDMV-AB_0077">LXXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1308">an 1308.</date></cell><cell>Lettres dou roy que on puist mettre en la forest trente pourciaux.</cell><cell>56</cell></row>
+          <row><cell><ref target="#NDMV-AB_0078">LXXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1311">an 1311</date></cell><cell>Lettres de nuef mines de blé chascun an à Saint-Pierre à Aile.</cell><cell>57</cell></row>
+          <row><cell><ref target="#NDMV-AB_0079">LXXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1312">an 1312</date></cell><cell>Lettres dou bos sec et vert et dou bos sec qui est droiz.</cell><cell>59</cell></row>
+          <row><cell><ref target="#NDMV-AB_0080">LXXX</ref></cell><cell>Cartulaire</cell><cell><date when="1313">an 1313</date></cell><cell>Lettres de l'achat des dismes de Glaigne.</cell><cell>59</cell></row>
+          <row><cell><ref target="#NDMV-AB_0081">LXXXI</ref></cell><cell>Cartulaire</cell><cell><date when="1313">an 1313</date></cell><cell>Lettres de nuef essins de blé à chascun an à Saint-Pierre à Aile.</cell><cell>61</cell></row>
+          <row><cell><ref target="#NDMV-AB_0082">LXXXII</ref></cell><cell>Cartulaire</cell><cell><date when="1314">an 1314</date></cell><cell>Lettres de monseigneur de Valoys de l'amortissement de plusieurs hirétages.</cell><cell>62</cell></row>
+          <row><cell><ref target="#NDMV-AB_0083">LXXXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1319">an 1319</date></cell><cell>Lettres dou roy que on puist envoyer en la forest poulains, jumens, bues, vaches et veaulz.</cell><cell>63</cell></row>
+          <row><cell><ref target="#NDMV-AB_0084">LXXXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1320">an 1320</date></cell><cell>Lettres des amortissements des aquets faits en la baillie de Vermandois.</cell><cell>64</cell></row>
+          <row><cell><ref target="#NDMV-AB_0085">LXXXV</ref></cell><cell>Cartulaire</cell><cell><date when="1323">an 1323</date></cell><cell>Lettres de procuration par devers le roy pour empetrer grace de élire abeesse en ceste église.</cell><cell>64</cell></row>
+          <row><cell><ref target="#NDMV-AB_0086">LXXXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1323">an 1323</date></cell><cell>Lettres de procurations par devers monseigneur de Valosi pour empetrer grace de elirre abbesse.</cell><cell>65</cell></row>
+          <row><cell><ref target="#NDMV-AB_0087">LXXXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1323">an 1323</date></cell><cell>Lettres dou roy de grace de elire abbesse.</cell><cell>66</cell></row>
+          <row><cell><ref target="#NDMV-AB_0088">LXXXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1329">an 1329</date></cell><cell>Accesement fait par le couvent de Morievnal de terres sises au Val-Bourgon.</cell><cell>66</cell></row>
+          <row><cell><ref target="#NDMV-AB_0089">I</ref></cell><cell>Cartulaire</cell><cell><date when="1138">1138</date></cell><cell>Charte de Goslin, évêque de Soissons, qui confirme à Luc, abbé de Cuissy, et à ses successeurs une terre labourable au terroir de Bonneuil, laquelle Raoul, comte de Vermandois, avait léguée avec le terrage, de manière que si les paysans venaient à en cesser le labour, ladite terre repasserait aux Religieux. (Note de D. Grenier <hi rend="i">propriamanu</hi>.)</cell><cell>68</cell></row>
+          <row><cell><ref target="#NDMV-AB_0090">II</ref></cell><cell>Cartulaire</cell><cell><date when="1138">1138</date></cell><cell>Charte de Raoul, comte de Vermandois, par laquelle il gratifie l'abbaye de Notre-Dame du <hi rend="i">Lieu Restoré</hi>, des dîmes grosses et masure de Bargny, et d'une masure au même terrain pour y bâtir.</cell><cell>69</cell></row>
+          <row><cell><ref target="#NDMV-AB_0091">III</ref></cell><cell>Cartulaire</cell><cell><date when="1142">1142</date></cell><cell>Confirmation donnée, en 1257, par l'official de Soissons d'un accord qui s'était fait entre les abbés de Cisteaux et de Prémontré à cause de difficultés <hi rend="i">esmeucs</hi> par leurs Religieux. (D. Grenier).</cell><cell>70</cell></row>
+          <row><cell><ref target="#NDMV-AB_0092">IV</ref></cell><cell>Cartulaire</cell><cell><date when="1145">1145</date></cell><cell>Bulle du pape Eugène III. Confirmation des possessions du Lieu-Restoré adressée à l'abbé Haimon et à sa communauté. Des priviléges accordés à l'abbaye.</cell><cell>70</cell></row>
+          <row><cell><ref target="#NDMV-AB_0093">V</ref></cell><cell>Cartulaire</cell><cell><date when="1156">1156</date></cell><cell>Charte d'Amaury, évêque de Senlis, faisant mention de la fondation du Lieu-Restoré par Raoul, comte de Vermandois, et du don que ce comte lui avait fait de la dîme de Feigneux dont la sixième partie, qui appartenait à divers particuliers, fut remise à lui, évêque, pour en gratifier la même abbaye, ce qu'il fit par cette charte adressée à l'abbé Haimon et à sa communauté.</cell><cell>71</cell></row>
+          <row><cell><ref target="#NDMV-AB_0094">VI</ref></cell><cell>Cartulaire</cell><cell><date when="1162">1162</date></cell><cell>Donation par l'abbaye de Valsery d'un cens en bénéfice à Bonneuil en faveur de Haimon, abbé du Lieu-Restoré.</cell><cell>71</cell></row>
+          <row><cell><ref target="#NDMV-AB_0095">VII</ref></cell><cell>Cartulaire</cell><cell><date when="1166">1166</date></cell><cell>Accord entre l'abbaye du Lieu-Restoré et celle de St-Médard-lez-Soissons au sujet d'une petite forêt, à condition que les chanoines réguliers du Lieu-Restoré la défricheraient et la mettraient en nature de terre labourable.</cell><cell>72</cell></row>
+          <row><cell><ref target="#NDMV-AB_0096">VIII</ref></cell><cell>Cartulaire</cell><cell><date when="1179">1179</date></cell><cell>Charte d'Etienne, doyen de Saint-Rieul de Senlis, touchant l'abandon fait par son chapitre de l'abbaye à l'abbaye du Lieu-Restoré, d'une dîme au terroir de Feigneux, à la charge de rendre annuellement dix-sept muids de blé médiocre et huit muids d'avoine.</cell><cell>72</cell></row>
+          <row><cell><ref target="#NDMV-AB_0097">IX</ref></cell><cell>Cartulaire</cell><cell><date when="1185">1185</date></cell><cell>Charte de Mathieu, comte de Beaumont, et d'Eléonore de Vermandois, son épouse, comtesse et dame de Crespy, par laquelle ils donnent à l'abbaye du Lieu-Restoré quatre-vingts arpents de terre dans les bois de Bargny à la charge d'enrendre la neuvième gerbée.</cell><cell>72</cell></row>
+          <row><cell><ref target="#NDMV-AB_0098">X</ref></cell><cell>Cartulaire</cell><cell><date when="1192">1192</date></cell><cell>Accord entre l'église du Lieu-Restoré et le prieur de Saint-Amand au sujet de la dime de la grange dans les terres de Sommeval et du Bois-Robert.</cell><cell>73</cell></row>
+          <row><cell><ref target="#NDMV-AB_0099">XI</ref></cell><cell>Cartulaire</cell><cell><date when="1199">1199</date></cell><cell>Charte de Nivelon, évêque de Soissons, confirmant à l'abbaye du Lieu-Restoré deux muids de blé, mesure de Crépy, à prendre sur son terrage de Plessy-le-Bourg et plein usage dans les bois et pâturages du dit lieu, excepté dans le lieu de Praesle.</cell><cell>73</cell></row>
+          <row><cell><ref target="#NDMV-AB_0100">XII</ref></cell><cell>Cartulaire</cell><cell><date when="1200">1200</date></cell><cell>Aumône de six muids de bled faite à l'église du Lieu-Restoré par Thomas, prévôt de la Ferté-Milon, et Ermine, son épouse, à l'église du Lieu-Restoré, avec charge pour la dîme de Feigneux. Enguerrand de Liry, de qui dépendait ce fief, approuve.</cell><cell>73</cell></row>
+          <row><cell><ref target="#NDMV-AB_0101">XIII</ref></cell><cell>Cartulaire</cell><cell><date when="1201">1201</date></cell><cell>Charte d'Eléonore, comtesse de Saint-Quetin, et dame de Valois, confirmant à l'abbaye du Lieu-Restoré l'aleu de Bargny donné par Martin de la Chapelle, sous charge d'un censannuel d'un marc d'argent. Confirmation accordée sous condition que les Prémontrés y édifieront une chapelle de leur ordre.</cell><cell>74</cell></row>
+          <row><cell><ref target="#NDMV-AB_0102">XIV</ref></cell><cell>Cartulaire</cell><cell><date when="1202">1202</date></cell><cell>Charte d'Eléonore comtesse de Saint-Quentin, et dame de Valois, confirmant le don fait par Huger de Bargny, officier de sa maison, à l'église de Lieu-Restoré.</cell><cell>74</cell></row>
+          <row><cell><ref target="#NDMV-AB_0103">XV</ref></cell><cell>Cartulaire</cell><cell><date when="1202">1202</date></cell><cell>Charte de Mathilde, abbesse de Fontevraut, par laquelle du consentement de la prieure Eustachie et du prieur Gilbert et de la communauté de Colinance, elle abandonne à l'abbaye du Lieu-Restoré sept mines d'avoine de dime que le monastère de Colinance répétait au territoire de Bargny.</cell><cell>74</cell></row>
+          <row><cell><ref target="#NDMV-AB_0104">XVI</ref></cell><cell>Cartulaire</cell><cell><date when="1207">1207</date></cell><cell>Lettres de Fernand, commandant de l'ordre de Saint-Jacques au-deçà des Pyrénées, par lesquelles il confirme un traité fait et passé entre l'abbé et le couvent du Lieu-Restoré, et Roderic, prieur de l'Ordre en France, au sujet de Martin de la Chapelle à Bargny, à la charge d'une rente de 40 s. parisis à payer annuellement au commandeur de l'Ordre en France.</cell><cell>75</cell></row>
+          <row><cell><ref target="#NDMV-AB_0105">XVII</ref></cell><cell>Cartulaire</cell><cell><date when="1215">1215</date></cell><cell>Diplôme du roi Philippe-Auguste qui accorde aux chanoines réguliers du Lieu-Restoré, de prendre annuellement dans la forêt de Retz mille <hi rend="i">cordons</hi> de coudre et de charme pour faire des futailles, et soixante-dix cordons de bouleau pour faire des cuves et de grands tonneaux.</cell><cell>75</cell></row>
+          <row><cell><ref target="#NDMV-AB_0106">XVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1230">1230</date></cell><cell>Lettres de Jean de Rome, commandeur de l'ordre militaire de Saint-Jacques et de tous les frères de l'ordre, par lesquelles ils déclarent avoir vendu à l'abbaye du Lieu-Restoré une rente de 40 s. p qu'ils lui devaient pour certaines terres à Baigny. (Voyez la charte 120) Deux sceaux dont l'un porte une épée en pal, la pointe en bas...., accostée de deux fleurs de lys. — Légende : <hi rend="i">Jacobi in Gallia</hi>. De l'autre côté, une coquille renversée.</cell><cell>75</cell></row>
+          <row><cell><ref target="#NDMV-AB_0107">XIX</ref></cell><cell>Cartulaire</cell><cell><date when="1246">1246</date></cell><cell>L'official de Meaux constate la vente faite à l'abbaye du Lieu-Restore par Geoffroy de Nanteuil et Marie, son épouse, d'un muid de blé sur la grange d'Haudrival moyennant 35 l p.</cell><cell>76</cell></row>
+          <row><cell><ref target="#NDMV-AB_0108">XX</ref></cell><cell>Cartulaire</cell><cell><date when="1257">1257</date></cell><cell>Lettres du roi saint Louis par lesquelles ce prince fait remise aux Religieuses de Morienval de 30 s. parisis et du tiers d'un muid de vin de rente annuelle. Cette remise faite en faveur de l'anniversaire de la reine Blanche.</cell><cell>76</cell></row>
+          <row><cell><ref target="#NDMV-AB_0109">XXI</ref></cell><cell>Cartulaire</cell><cell><date when="1262">1262</date></cell><cell>Charte en français concernant le don fait par messire Renaut de Séri, chevalier à l'Eglise de Notre-Dame du Parc de l'ordre de Cîteaux, de terres à Rouville et champart sur terres à Haudrival.</cell><cell>76</cell></row>
+          <row><cell><ref target="#NDMV-AB_0110">XXII</ref></cell><cell>Cartulaire</cell><cell><date when="1298">1298</date></cell><cell>Lettres de Charles, fils du roi de France, par lesquelles il amortit une maison léguée par Giroux de Pisseleu à la Maladrerie de Pisseleu Cartul. sur papier de l'abbaye du Lieu-Restoré, f<hi rend="sup">o</hi> 532.</cell><cell>76</cell></row>
+        </table>
+      </argument>
       <group xml:id="NDMV-AB_group">
         <head>Cartulaire</head>
+        <argument>
+          <table type="actes">
+            <head>Liste des actes</head>
+            <row role="label"><cell>N°</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+            <row><cell><ref target="#NDMV-AB_0001">I</ref></cell><cell><date when="0920">an. 920</date></cell><cell>Lettres de la fondation de l'église de Céens.</cell><cell>1</cell></row>
+            <row><cell><ref target="#NDMV-AB_0002">II</ref></cell><cell><date when="1111">An 1111</date></cell><cell>Lettres de l'evesque de Amiens pour l'autologe de Parviller</cell><cell>3</cell></row>
+            <row><cell><ref target="#NDMV-AB_0003">III</ref></cell><cell><date when="1112" scope="circa">Vers l'an 1112</date></cell><cell>Accord de l'abbesse de Morienval avec Nivelon II.</cell><cell>3</cell></row>
+            <row><cell><ref target="#NDMV-AB_0004">IV</ref></cell><cell><date when="1122" scope="circa">Vers l'an 1122</date></cell><cell>Augmentation victus.</cell><cell>4</cell></row>
+            <row><cell><ref target="#NDMV-AB_0005">V</ref></cell><cell><date when="1127">an 1127</date></cell><cell>Lettres de l'évesque de Senlis la cure de Bettencourt.</cell><cell>5</cell></row>
+            <row><cell><ref target="#NDMV-AB_0006">VI</ref></cell><cell><date when="1137">an 1137</date></cell><cell>Lettres de l'évesque de Senlis d'une provende qu'il souloit penre en ceste église.</cell><cell>5</cell></row>
+            <row><cell><ref target="#NDMV-AB_0007">VII</ref></cell><cell><date when="1142">an 1142</date></cell><cell>Lettres de l'évesque de Noion sur la confirmation de la cure de Oysin..</cell><cell>6</cell></row>
+            <row><cell><ref target="#NDMV-AB_0008">VIII</ref></cell><cell><date when="1148">an 1148</date></cell><cell>Lettres des dismes qui furent données à la cure de Oysni.</cell><cell>6</cell></row>
+            <row><cell><ref target="#NDMV-AB_0009">IX</ref></cell><cell><date when="1159">1159</date></cell><cell>Lettre d'un accort entre l'église de Céens et l'église de Saint-Frambout de Senlis sur les dismes de Plailly.</cell><cell>7</cell></row>
+            <row><cell><ref target="#NDMV-AB_0010">X</ref></cell><cell><date when="1161">an 1161</date></cell><cell>Lettres d'un accord entre l'église de Céens et l'église de Saint-Éloy pour les dismes de Fonches.</cell><cell>8</cell></row>
+            <row><cell><ref target="#NDMV-AB_0011">XI</ref></cell><cell><date when="1161">an 1161</date></cell><cell>Lettres que nus clers ne puist empétrer sur l'église de Céens.</cell><cell>8</cell></row>
+            <row><cell><ref target="#NDMV-AB_0012">XII</ref></cell><cell><date when="1168">an 1168</date></cell><cell>Lettre de XVIII essins de grain chascun an que on prent à Aile et XVIII essins seur le molin de Selvai.</cell><cell>9</cell></row>
+            <row><cell><ref target="#NDMV-AB_0013">XIII</ref></cell><cell><date when="1145">an 1145</date></cell><cell>Lettres de quatre muis de blé chascun an seur le moulin de Fonches.</cell><cell>9</cell></row>
+            <row><cell><ref target="#NDMV-AB_0014">XIV</ref></cell><cell><date when="1173">an 1173</date></cell><cell>Lettres de deux muis de vin achaté à Bettencourt.</cell><cell>10</cell></row>
+            <row><cell><ref target="#NDMV-AB_0015">XV</ref></cell><cell><date when="1174">an 1174</date></cell><cell>La confirmation de biens (à Jaux). Richard, doyen, de Céans témoin.</cell><cell>11</cell></row>
+            <row><cell><ref target="#NDMV-AB_0016">XVI</ref></cell><cell><date when="1176">an 1176</date></cell><cell>Lettres de la confirmation de la fondation de cette église.</cell><cell>11</cell></row>
+            <row><cell><ref target="#NDMV-AB_0017">XVII</ref></cell><cell><date when="1176">an 1176</date></cell><cell>Lettres de l'abbesse de Hierre de grain que on prent à Bray.</cell><cell>13</cell></row>
+            <row><cell><ref target="#NDMV-AB_0018">XVIII</ref></cell><cell><date when="1176">an 1176</date></cell><cell>Sentence du doyen de Menus sur les dismes de Plailli.</cell><cell>13</cell></row>
+            <row><cell><ref target="#NDMV-AB_0019">XIX</ref></cell><cell><date when="1182">an 1182</date></cell><cell>Lettres dou conte de Flandre de dix livres chascun au prins à Crépi.</cell><cell>14</cell></row>
+            <row><cell><ref target="#NDMV-AB_0020">XX</ref></cell><cell><date when="1188">an 1188</date></cell><cell>Lettres d'un accort entre l'église de Céans et l'église de Saint-Rieul seur dismes de ceste rivière.</cell><cell>14</cell></row>
+            <row><cell><ref target="#NDMV-AB_0021">XXI</ref></cell><cell><date when="1189">an 1189</date></cell><cell>Lettre dou roi de France seur la quittance d'un hostise séant à Plailli.</cell><cell>15</cell></row>
+            <row><cell><ref target="#NDMV-AB_0022">XXII</ref></cell><cell><date when="1190">an 1190</date></cell><cell>Lettres dou seigneur de Hangest de ce qu'il avoit à Fransart.</cell><cell>15</cell></row>
+            <row><cell><ref target="#NDMV-AB_0023">XXIII</ref></cell><cell><date when="1190">an 1190</date></cell><cell>Lettres de l'evesque d'Amiens pour la disme de Castel.</cell><cell>16</cell></row>
+            <row><cell><ref target="#NDMV-AB_0024">XXIV</ref></cell><cell><date when="1192">an 1192</date></cell><cell>Lettres dou don de la terre de Jausi.</cell><cell>16</cell></row>
+            <row><cell><ref target="#NDMV-AB_0025">XXV</ref></cell><cell><date when="1191">an. 1191</date></cell><cell>Lettres d'un accort entre l'église de Céens et l'église de Saint-Rieule de Senlis pour les dismes de cette rivière.</cell><cell>17</cell></row>
+            <row><cell><ref target="#NDMV-AB_0026">XXVI</ref></cell><cell><date when="1200">an 1200</date></cell><cell>Lettres de quittance de l'abbé de Hérivals sur terres qui sont au terrouer de Céens.</cell><cell>18</cell></row>
+            <row><cell><ref target="#NDMV-AB_0027">XXVII</ref></cell><cell><date when="1200">an 1200</date></cell><cell>Lettres de deux muis et six mines de blé et d'avoine et vingt-six solz des potez donnés à Bettencourt.</cell><cell>18</cell></row>
+            <row><cell><ref target="#NDMV-AB_0028">XXVIII</ref></cell><cell><date when="1202">an 1202</date></cell><cell>Lettres de l'évesque de Noion que la collation de la cure de Oysni appartient à l'église de Céens.</cell><cell>19</cell></row>
+            <row><cell><ref target="#NDMV-AB_0029">XXIX</ref></cell><cell><date when="1204">an 1204</date></cell><cell>Lettres de la comtesse de Valois que il ne doit avoir en cette église que soissante nonais.</cell><cell>19</cell></row>
+            <row><cell><ref target="#NDMV-AB_0030">XXX</ref></cell><cell><date when="1204">an 1204</date></cell><cell>Lettres de l'évesque d'Amiens que la collation de la cure de Parviller appartient à l'église de Céens.</cell><cell>20</cell></row>
+            <row><cell><ref target="#NDMV-AB_0031">XXXI</ref></cell><cell><date when="1205">an 1205</date></cell><cell>Lettre d'un accort entre l'église de Céens et l'église du lieu restoré pour les dismes desseur Fresnoy.</cell><cell>20</cell></row>
+            <row><cell><ref target="#NDMV-AB_0032">XXXII</ref></cell><cell><date when="1205">an 1205</date></cell><cell>Lettres de grains que l'église de Céens prent a lieu restoré.</cell><cell>21</cell></row>
+            <row><cell><ref target="#NDMV-AB_0033">XXXIII</ref></cell><cell><date when="1206">an 1206</date></cell><cell>Lettres de l'évesque de Soissons qu'il ne doit avoir que soixante nonnains.</cell><cell>23</cell></row>
+            <row><cell><ref target="#NDMV-AB_0034">XXXIV</ref></cell><cell><date when="1207">1207</date></cell><cell>Don à Lieu Restoré par l'abbesse de Céans.</cell><cell>23</cell></row>
+            <row><cell><ref target="#NDMV-AB_0035">XXXV</ref></cell><cell><date when="1210">an 1210</date></cell><cell>Lettres de vint deniers donnés à Plailli.</cell><cell>24</cell></row>
+            <row><cell><ref target="#NDMV-AB_0036">XXXVI</ref></cell><cell><date when="1210">an 1210</date></cell><cell>Lettres dou chatelain de Roye seur la taille de Parviller.</cell><cell>24</cell></row>
+            <row><cell><ref target="#NDMV-AB_0037">XXXVII</ref></cell><cell><date when="1213">an 1213</date></cell><cell>Lettres dou seigneur de Hangert et d'un don fait à Fransart.</cell><cell>24</cell></row>
+            <row><cell><ref target="#NDMV-AB_0038">XXXVIII</ref></cell><cell><date when="1213">an 1213</date></cell><cell>Lettres d'un accort de quatre muis de blé seur le molin.</cell><cell>25</cell></row>
+            <row><cell><ref target="#NDMV-AB_0039">XXXIX</ref></cell><cell><date notBefore="1216" notAfter="1219">1216-1219</date></cell><cell>Lettres dou pape que il ne doit avoir en ceste église que soissante nonnains.</cell><cell>25</cell></row>
+            <row><cell><ref target="#NDMV-AB_0040">XL</ref></cell><cell><date when="1219">an 1219</date></cell><cell>Lettres d'un courtil séant à Parviller.</cell><cell>26</cell></row>
+            <row><cell><ref target="#NDMV-AB_0041">XLI</ref></cell><cell><date when="1220">an 1220</date></cell><cell>Lettres dou roy dou Breuil qui fu accensé à ceste église trente sols parisis chascun an.</cell><cell>26</cell></row>
+            <row><cell><ref target="#NDMV-AB_0042">XLII</ref></cell><cell><date when="1220">an 1220</date></cell><cell>Lettres dou don des dismes de Roissi.</cell><cell>26</cell></row>
+            <row><cell><ref target="#NDMV-AB_0043">XLIII</ref></cell><cell><date when="1222">an 1222</date></cell><cell>Lettres de terres vendues et données à ceste église qui appartiennent à l'Essart.</cell><cell>27</cell></row>
+            <row><cell><ref target="#NDMV-AB_0044">XLIV</ref></cell><cell><date when="1222">an 1222</date></cell><cell>Lettres de l'achat de cabaret et des terres qui y appendent.</cell><cell>27</cell></row>
+            <row><cell><ref target="#NDMV-AB_0045">XLV</ref></cell><cell><date when="1223">an 1223</date></cell><cell>Lettres de terres achatées et appartenant à l'Essart.</cell><cell>28</cell></row>
+            <row><cell><ref target="#NDMV-AB_0046">XLVI</ref></cell><cell><date when="1223">an 1223</date></cell><cell>Lettres d'un accort entre l'église de Céens et messire Guidou Pellier pour les terres de l'Essart.</cell><cell>28</cell></row>
+            <row><cell><ref target="#NDMV-AB_0047">XLVII</ref></cell><cell><date when="1234">An 1234</date></cell><cell>De vadiis Margnevallis.</cell><cell>29</cell></row>
+            <row><cell><ref target="#NDMV-AB_0048">XLVIII</ref></cell><cell><date when="1235">an 1235</date></cell><cell>Lettres que la maison Haymart le Pelletier et Luce Delacourt séans à Crespy sont de la cession de l'église de Céens.</cell><cell>30</cell></row>
+            <row><cell><ref target="#NDMV-AB_0049">XLIX</ref></cell><cell><date when="1235">an 1235</date></cell><cell>Lettres dou roy de l'usage en la forest de Rest.</cell><cell>30</cell></row>
+            <row><cell><ref target="#NDMV-AB_0050">L</ref></cell><cell><date when="1240">an 1240</date></cell><cell>Lettres de la chapellerie de Saint-Sauveur en l'église de Céens.</cell><cell>31</cell></row>
+            <row><cell><ref target="#NDMV-AB_0051">LI</ref></cell><cell><date when="1245">an 1245</date></cell><cell>Lettres d'un accort entre l'église de Céens et messire Jean Elin pour la mairie de Bettencourt et pour la maison de la voute.</cell><cell>31</cell></row>
+            <row><cell><ref target="#NDMV-AB_0052">LII</ref></cell><cell><date when="1246">an 1246</date></cell><cell>Lettres d'un échange fait à Robert le Majeur pour une maison séant à Fonches.</cell><cell>32</cell></row>
+            <row><cell><ref target="#NDMV-AB_0053">LIII</ref></cell><cell><date when="1247">an 1247</date></cell><cell>Lettres de l'achat des terres qui appendent à l'Essart.</cell><cell>33</cell></row>
+            <row><cell><ref target="#NDMV-AB_0054">LIV</ref></cell><cell><date when="1248">an 1248</date></cell><cell>Lettres de terres achatées séans de lez cabaret.</cell><cell>34</cell></row>
+            <row><cell><ref target="#NDMV-AB_0055">LV</ref></cell><cell><date when="1248">An 1248</date></cell><cell>De quadam controversia de Morgnevalle.</cell><cell>35</cell></row>
+            <row><cell><ref target="#NDMV-AB_0056">LVI</ref></cell><cell><date when="1248">An 1248</date></cell><cell>Lettres d'un accort entre l'église de Céens et le seigneur de Chaule pour Fonches.</cell><cell>35</cell></row>
+            <row><cell><ref target="#NDMV-AB_0057">LVII</ref></cell><cell><date when="1249">an 1249</date></cell><cell>Lettres de quatorze setiers et un quarteron de blé donnés à Fonches.</cell><cell>37</cell></row>
+            <row><cell><ref target="#NDMV-AB_0058">LVIII</ref></cell><cell><date when="1249">an 1249</date></cell><cell>Lettres de terres appartenants à Lessart.</cell><cell>37</cell></row>
+            <row><cell><ref target="#NDMV-AB_0059">LIX</ref></cell><cell><date when="1250">an 1250</date></cell><cell>Lettres de la courtille qui est dessous nostre église.</cell><cell>37</cell></row>
+            <row><cell><ref target="#NDMV-AB_0060">LX</ref></cell><cell><date when="1250">an 1250</date></cell><cell>Lettres de deux muis de blé donnés à ceste église que on prent chacun an à Betizi.</cell><cell>38</cell></row>
+            <row><cell><ref target="#NDMV-AB_0061">LXI</ref></cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de neuf journex de terre achatez à Parvillers.</cell><cell>38</cell></row>
+            <row><cell><ref target="#NDMV-AB_0062">LXII</ref></cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de plusieurs choses que la prevosté de Parviller tient de Céens.</cell><cell>39</cell></row>
+            <row><cell><ref target="#NDMV-AB_0063">LXIII</ref></cell><cell><date when="1252">an 1252</date></cell><cell>Lettres de deux muis de blé donnés à ceste église que on prent chascun an à Betizi.</cell><cell>40</cell></row>
+            <row><cell><ref target="#NDMV-AB_0064">LXIV</ref></cell><cell><date when="1253">an 1253.</date></cell><cell>Lettres pour les biens des chapelains de ceste église et des hommes de corps qui sont mesel.</cell><cell>41</cell></row>
+            <row><cell><ref target="#NDMV-AB_0065">XLV</ref></cell><cell><date when="1256">an 1256.</date></cell><cell>Lettres du roy à l'usage de la forest du Bos Sec Cheu.</cell><cell>41</cell></row>
+            <row><cell><ref target="#NDMV-AB_0066">LXVI</ref></cell><cell><date when="1257">an 1257.</date></cell><cell>Lettres d'un accort entre l'église de Céens et l'église de Longpont seur les dismes de Fransart.</cell><cell>42</cell></row>
+            <row><cell><ref target="#NDMV-AB_0067">LXVII</ref></cell><cell><date when="1257">an 1257</date></cell><cell>Lettres de trente sols parisis donnés à l'église de Céens que on devoit au roi pour le Brueil.</cell><cell>43</cell></row>
+            <row><cell><ref target="#NDMV-AB_0068">XLVII</ref></cell><cell><date when="1258">an 1258</date></cell><cell>Lettres du roy de l'usage du Bos Mort Cheu.</cell><cell>44</cell></row>
+            <row><cell><ref target="#NDMV-AB_0069">LXIX</ref></cell><cell><date when="1262">an 1262</date></cell><cell>Lettres que damoiselle Agnes de Thiemer quitta son doaire sus terres qui appartiennent à l'Essart.</cell><cell>45</cell></row>
+            <row><cell><ref target="#NDMV-AB_0070">LXX</ref></cell><cell><date when="1263">an 1263</date></cell><cell>Lettres d'un accort entre l'église de Céens et le prieur de Bretigny pour terres qui sont à Parviller.</cell><cell>48</cell></row>
+            <row><cell><ref target="#NDMV-AB_0071">LXXI</ref></cell><cell><date when="1271">an 1271</date></cell><cell>Lettres de l'achat d'un mui que Pierre Bonnars prenoit chacun an à Bettencourt.</cell><cell>49</cell></row>
+            <row><cell><ref target="#NDMV-AB_0072">LXXII</ref></cell><cell><date when="1273">an 1273</date></cell><cell>Lettres de l'achat d'un mui de blé que messire Pierre Bonnars avoit chacun an à Bettencourt.</cell><cell>49</cell></row>
+            <row><cell><ref target="#NDMV-AB_0073">LXXIII</ref></cell><cell><date when="1275-05-08">8 mai 1275</date></cell><cell>Droit d'élection revendiqué.</cell><cell>51</cell></row>
+            <row><cell><ref target="#NDMV-AB_0074">LXXIV</ref></cell><cell><date notBefore="1276" notAfter="1276">1276</date></cell><cell>Accort entre l'église de Morienval et Roger de Palasne.</cell><cell>51</cell></row>
+            <row><cell><ref target="#NDMV-AB_0075">LXXV</ref></cell><cell><date when="1294">an 1294</date></cell><cell>Lettres de monseigneur de Valoys de l'amortissement de plusieurs héritages.</cell><cell>52</cell></row>
+            <row><cell><ref target="#NDMV-AB_0076">LXXVI</ref></cell><cell><date when="1308">an 1308</date></cell><cell>Lettres de l'achat d'une maison séant à Vatervoisin.</cell><cell>54</cell></row>
+            <row><cell><ref target="#NDMV-AB_0077">LXXVII</ref></cell><cell><date when="1308">an 1308.</date></cell><cell>Lettres dou roy que on puist mettre en la forest trente pourciaux.</cell><cell>56</cell></row>
+            <row><cell><ref target="#NDMV-AB_0078">LXXVIII</ref></cell><cell><date when="1311">an 1311</date></cell><cell>Lettres de nuef mines de blé chascun an à Saint-Pierre à Aile.</cell><cell>57</cell></row>
+            <row><cell><ref target="#NDMV-AB_0079">LXXIX</ref></cell><cell><date when="1312">an 1312</date></cell><cell>Lettres dou bos sec et vert et dou bos sec qui est droiz.</cell><cell>59</cell></row>
+            <row><cell><ref target="#NDMV-AB_0080">LXXX</ref></cell><cell><date when="1313">an 1313</date></cell><cell>Lettres de l'achat des dismes de Glaigne.</cell><cell>59</cell></row>
+            <row><cell><ref target="#NDMV-AB_0081">LXXXI</ref></cell><cell><date when="1313">an 1313</date></cell><cell>Lettres de nuef essins de blé à chascun an à Saint-Pierre à Aile.</cell><cell>61</cell></row>
+            <row><cell><ref target="#NDMV-AB_0082">LXXXII</ref></cell><cell><date when="1314">an 1314</date></cell><cell>Lettres de monseigneur de Valoys de l'amortissement de plusieurs hirétages.</cell><cell>62</cell></row>
+            <row><cell><ref target="#NDMV-AB_0083">LXXXIII</ref></cell><cell><date when="1319">an 1319</date></cell><cell>Lettres dou roy que on puist envoyer en la forest poulains, jumens, bues, vaches et veaulz.</cell><cell>63</cell></row>
+            <row><cell><ref target="#NDMV-AB_0084">LXXXIV</ref></cell><cell><date when="1320">an 1320</date></cell><cell>Lettres des amortissements des aquets faits en la baillie de Vermandois.</cell><cell>64</cell></row>
+            <row><cell><ref target="#NDMV-AB_0085">LXXXV</ref></cell><cell><date when="1323">an 1323</date></cell><cell>Lettres de procuration par devers le roy pour empetrer grace de élire abeesse en ceste église.</cell><cell>64</cell></row>
+            <row><cell><ref target="#NDMV-AB_0086">LXXXVI</ref></cell><cell><date when="1323">an 1323</date></cell><cell>Lettres de procurations par devers monseigneur de Valosi pour empetrer grace de elirre abbesse.</cell><cell>65</cell></row>
+            <row><cell><ref target="#NDMV-AB_0087">LXXXVII</ref></cell><cell><date when="1323">an 1323</date></cell><cell>Lettres dou roy de grace de elire abbesse.</cell><cell>66</cell></row>
+            <row><cell><ref target="#NDMV-AB_0088">LXXXVIII</ref></cell><cell><date when="1329">an 1329</date></cell><cell>Accesement fait par le couvent de Morievnal de terres sises au Val-Bourgon.</cell><cell>66</cell></row>
+            <row><cell><ref target="#NDMV-AB_0089">I</ref></cell><cell><date when="1138">1138</date></cell><cell>Charte de Goslin, évêque de Soissons, qui confirme à Luc, abbé de Cuissy, et à ses successeurs une terre labourable au terroir de Bonneuil, laquelle Raoul, comte de Vermandois, avait léguée avec le terrage, de manière que si les paysans venaient à en cesser le labour, ladite terre repasserait aux Religieux. (Note de D. Grenier <hi rend="i">propriamanu</hi>.)</cell><cell>68</cell></row>
+            <row><cell><ref target="#NDMV-AB_0090">II</ref></cell><cell><date when="1138">1138</date></cell><cell>Charte de Raoul, comte de Vermandois, par laquelle il gratifie l'abbaye de Notre-Dame du <hi rend="i">Lieu Restoré</hi>, des dîmes grosses et masure de Bargny, et d'une masure au même terrain pour y bâtir.</cell><cell>69</cell></row>
+            <row><cell><ref target="#NDMV-AB_0091">III</ref></cell><cell><date when="1142">1142</date></cell><cell>Confirmation donnée, en 1257, par l'official de Soissons d'un accord qui s'était fait entre les abbés de Cisteaux et de Prémontré à cause de difficultés <hi rend="i">esmeucs</hi> par leurs Religieux. (D. Grenier).</cell><cell>70</cell></row>
+            <row><cell><ref target="#NDMV-AB_0092">IV</ref></cell><cell><date when="1145">1145</date></cell><cell>Bulle du pape Eugène III. Confirmation des possessions du Lieu-Restoré adressée à l'abbé Haimon et à sa communauté. Des priviléges accordés à l'abbaye.</cell><cell>70</cell></row>
+            <row><cell><ref target="#NDMV-AB_0093">V</ref></cell><cell><date when="1156">1156</date></cell><cell>Charte d'Amaury, évêque de Senlis, faisant mention de la fondation du Lieu-Restoré par Raoul, comte de Vermandois, et du don que ce comte lui avait fait de la dîme de Feigneux dont la sixième partie, qui appartenait à divers particuliers, fut remise à lui, évêque, pour en gratifier la même abbaye, ce qu'il fit par cette charte adressée à l'abbé Haimon et à sa communauté.</cell><cell>71</cell></row>
+            <row><cell><ref target="#NDMV-AB_0094">VI</ref></cell><cell><date when="1162">1162</date></cell><cell>Donation par l'abbaye de Valsery d'un cens en bénéfice à Bonneuil en faveur de Haimon, abbé du Lieu-Restoré.</cell><cell>71</cell></row>
+            <row><cell><ref target="#NDMV-AB_0095">VII</ref></cell><cell><date when="1166">1166</date></cell><cell>Accord entre l'abbaye du Lieu-Restoré et celle de St-Médard-lez-Soissons au sujet d'une petite forêt, à condition que les chanoines réguliers du Lieu-Restoré la défricheraient et la mettraient en nature de terre labourable.</cell><cell>72</cell></row>
+            <row><cell><ref target="#NDMV-AB_0096">VIII</ref></cell><cell><date when="1179">1179</date></cell><cell>Charte d'Etienne, doyen de Saint-Rieul de Senlis, touchant l'abandon fait par son chapitre de l'abbaye à l'abbaye du Lieu-Restoré, d'une dîme au terroir de Feigneux, à la charge de rendre annuellement dix-sept muids de blé médiocre et huit muids d'avoine.</cell><cell>72</cell></row>
+            <row><cell><ref target="#NDMV-AB_0097">IX</ref></cell><cell><date when="1185">1185</date></cell><cell>Charte de Mathieu, comte de Beaumont, et d'Eléonore de Vermandois, son épouse, comtesse et dame de Crespy, par laquelle ils donnent à l'abbaye du Lieu-Restoré quatre-vingts arpents de terre dans les bois de Bargny à la charge d'enrendre la neuvième gerbée.</cell><cell>72</cell></row>
+            <row><cell><ref target="#NDMV-AB_0098">X</ref></cell><cell><date when="1192">1192</date></cell><cell>Accord entre l'église du Lieu-Restoré et le prieur de Saint-Amand au sujet de la dime de la grange dans les terres de Sommeval et du Bois-Robert.</cell><cell>73</cell></row>
+            <row><cell><ref target="#NDMV-AB_0099">XI</ref></cell><cell><date when="1199">1199</date></cell><cell>Charte de Nivelon, évêque de Soissons, confirmant à l'abbaye du Lieu-Restoré deux muids de blé, mesure de Crépy, à prendre sur son terrage de Plessy-le-Bourg et plein usage dans les bois et pâturages du dit lieu, excepté dans le lieu de Praesle.</cell><cell>73</cell></row>
+            <row><cell><ref target="#NDMV-AB_0100">XII</ref></cell><cell><date when="1200">1200</date></cell><cell>Aumône de six muids de bled faite à l'église du Lieu-Restoré par Thomas, prévôt de la Ferté-Milon, et Ermine, son épouse, à l'église du Lieu-Restoré, avec charge pour la dîme de Feigneux. Enguerrand de Liry, de qui dépendait ce fief, approuve.</cell><cell>73</cell></row>
+            <row><cell><ref target="#NDMV-AB_0101">XIII</ref></cell><cell><date when="1201">1201</date></cell><cell>Charte d'Eléonore, comtesse de Saint-Quetin, et dame de Valois, confirmant à l'abbaye du Lieu-Restoré l'aleu de Bargny donné par Martin de la Chapelle, sous charge d'un censannuel d'un marc d'argent. Confirmation accordée sous condition que les Prémontrés y édifieront une chapelle de leur ordre.</cell><cell>74</cell></row>
+            <row><cell><ref target="#NDMV-AB_0102">XIV</ref></cell><cell><date when="1202">1202</date></cell><cell>Charte d'Eléonore comtesse de Saint-Quentin, et dame de Valois, confirmant le don fait par Huger de Bargny, officier de sa maison, à l'église de Lieu-Restoré.</cell><cell>74</cell></row>
+            <row><cell><ref target="#NDMV-AB_0103">XV</ref></cell><cell><date when="1202">1202</date></cell><cell>Charte de Mathilde, abbesse de Fontevraut, par laquelle du consentement de la prieure Eustachie et du prieur Gilbert et de la communauté de Colinance, elle abandonne à l'abbaye du Lieu-Restoré sept mines d'avoine de dime que le monastère de Colinance répétait au territoire de Bargny.</cell><cell>74</cell></row>
+            <row><cell><ref target="#NDMV-AB_0104">XVI</ref></cell><cell><date when="1207">1207</date></cell><cell>Lettres de Fernand, commandant de l'ordre de Saint-Jacques au-deçà des Pyrénées, par lesquelles il confirme un traité fait et passé entre l'abbé et le couvent du Lieu-Restoré, et Roderic, prieur de l'Ordre en France, au sujet de Martin de la Chapelle à Bargny, à la charge d'une rente de 40 s. parisis à payer annuellement au commandeur de l'Ordre en France.</cell><cell>75</cell></row>
+            <row><cell><ref target="#NDMV-AB_0105">XVII</ref></cell><cell><date when="1215">1215</date></cell><cell>Diplôme du roi Philippe-Auguste qui accorde aux chanoines réguliers du Lieu-Restoré, de prendre annuellement dans la forêt de Retz mille <hi rend="i">cordons</hi> de coudre et de charme pour faire des futailles, et soixante-dix cordons de bouleau pour faire des cuves et de grands tonneaux.</cell><cell>75</cell></row>
+            <row><cell><ref target="#NDMV-AB_0106">XVIII</ref></cell><cell><date when="1230">1230</date></cell><cell>Lettres de Jean de Rome, commandeur de l'ordre militaire de Saint-Jacques et de tous les frères de l'ordre, par lesquelles ils déclarent avoir vendu à l'abbaye du Lieu-Restoré une rente de 40 s. p qu'ils lui devaient pour certaines terres à Baigny. (Voyez la charte 120) Deux sceaux dont l'un porte une épée en pal, la pointe en bas...., accostée de deux fleurs de lys. — Légende : <hi rend="i">Jacobi in Gallia</hi>. De l'autre côté, une coquille renversée.</cell><cell>75</cell></row>
+            <row><cell><ref target="#NDMV-AB_0107">XIX</ref></cell><cell><date when="1246">1246</date></cell><cell>L'official de Meaux constate la vente faite à l'abbaye du Lieu-Restore par Geoffroy de Nanteuil et Marie, son épouse, d'un muid de blé sur la grange d'Haudrival moyennant 35 l p.</cell><cell>76</cell></row>
+            <row><cell><ref target="#NDMV-AB_0108">XX</ref></cell><cell><date when="1257">1257</date></cell><cell>Lettres du roi saint Louis par lesquelles ce prince fait remise aux Religieuses de Morienval de 30 s. parisis et du tiers d'un muid de vin de rente annuelle. Cette remise faite en faveur de l'anniversaire de la reine Blanche.</cell><cell>76</cell></row>
+            <row><cell><ref target="#NDMV-AB_0109">XXI</ref></cell><cell><date when="1262">1262</date></cell><cell>Charte en français concernant le don fait par messire Renaut de Séri, chevalier à l'Eglise de Notre-Dame du Parc de l'ordre de Cîteaux, de terres à Rouville et champart sur terres à Haudrival.</cell><cell>76</cell></row>
+            <row><cell><ref target="#NDMV-AB_0110">XXII</ref></cell><cell><date when="1298">1298</date></cell><cell>Lettres de Charles, fils du roi de France, par lesquelles il amortit une maison léguée par Giroux de Pisseleu à la Maladrerie de Pisseleu Cartul. sur papier de l'abbaye du Lieu-Restoré, f<hi rend="sup">o</hi> 532.</cell><cell>76</cell></row>
+          </table>
+        </argument>
         <text subtype="article" xml:id="NDMV-AB_0001" n="I">
           <pb n="1" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f2/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"/>
           <front>
@@ -623,7 +856,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 1, n° 1</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f2/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f3/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 1-2.</witness>
               </listWit>
             </div>
@@ -755,7 +988,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 37, n° 23.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f4/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 3.</witness>
               </listWit>
             </div>
@@ -826,7 +1059,7 @@
                   miniature représentant S. Mathieu (vers le milieu du Ms.)</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f4/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f5/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 3-4.</witness>
               </listWit>
             </div>
@@ -913,7 +1146,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 1.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f5/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f6/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 4-5.</witness>
               </listWit>
             </div>
@@ -1019,7 +1252,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 42, N. 28.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f6/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 5.</witness>
               </listWit>
             </div>
@@ -1086,7 +1319,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 43, n°30.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f6/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f7/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 5-6.</witness>
               </listWit>
             </div>
@@ -1166,7 +1399,7 @@
                 <witness n="B">Bibl. nat. de France, fol. 82, n°68.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f7/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 6.</witness>
               </listWit>
             </div>
@@ -1237,7 +1470,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 81, n°67.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f7/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f8/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 6-7.</witness>
               </listWit>
             </div>
@@ -1327,7 +1560,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, n°59.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f8/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f9/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 7-8.</witness>
               </listWit>
             </div>
@@ -1395,7 +1628,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 58v°, n°43.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f9/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 8.</witness>
               </listWit>
             </div>
@@ -1480,7 +1713,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 32, n°19.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f9/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f10/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 8-9.</witness>
               </listWit>
             </div>
@@ -1537,7 +1770,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 59, n°48.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f10/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 9.</witness>
               </listWit>
             </div>
@@ -1607,7 +1840,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 54, n°39.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f10/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f11/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 9-10.</witness>
               </listWit>
             </div>
@@ -1673,7 +1906,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 59, n°57.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f11/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 10.</witness>
               </listWit>
             </div>
@@ -1743,7 +1976,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 33, n°20.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f12/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 11.</witness>
               </listWit>
             </div>
@@ -1814,7 +2047,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 5, n°2.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f12/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f13/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f14/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 11-13.</witness>
               </listWit>
             </div>
@@ -1948,7 +2181,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 58, n°47.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f14/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 13.</witness>
               </listWit>
             </div>
@@ -2000,7 +2233,7 @@
             <div type="tradition">
               <listWit type="édition">
                 <witness n="a">Horty, t. 3, p. 1174</witness>
-                <witness n="b" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="b" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f14/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f15/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 13-14.</witness>
               </listWit>
             </div>
@@ -2069,7 +2302,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 86, n°76.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f15/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 14.</witness>
               </listWit>
             </div>
@@ -2139,7 +2372,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 35, n°21.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f15/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f16/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 14-page 15.</witness>
               </listWit>
             </div>
@@ -2215,7 +2448,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 84, n°73.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f16/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 15.</witness>
               </listWit>
             </div>
@@ -2269,7 +2502,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 58, n°46.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f16/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 15-16.</witness>
               </listWit>
             </div>
@@ -2309,7 +2542,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 43, n°29.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 16.</witness>
               </listWit>
             </div>
@@ -2364,7 +2597,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 45, n°32.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f17/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 16.</witness>
               </listWit>
             </div>
@@ -2414,7 +2647,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 46, n°33.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f18/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 17.</witness>
               </listWit>
             </div>
@@ -2498,7 +2731,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 84, n°72.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f19/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 18.</witness>
               </listWit>
             </div>
@@ -2551,7 +2784,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 36, n°22.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f19/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 18.</witness>
               </listWit>
             </div>
@@ -2612,7 +2845,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 83, n°69.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f20/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 19.</witness>
               </listWit>
             </div>
@@ -2659,7 +2892,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 87, n°77.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f20/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 19.</witness>
               </listWit>
             </div>
@@ -2717,7 +2950,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 72, n°58.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f21/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 20.</witness>
               </listWit>
             </div>
@@ -2787,7 +3020,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 79, n°66.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f21/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f22/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 20-21.</witness>
               </listWit>
             </div>
@@ -2872,7 +3105,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 5, n°4.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f22/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f23/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 21-22.</witness>
               </listWit>
             </div>
@@ -2984,7 +3217,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 76, n°63.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f24/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 23.</witness>
               </listWit>
             </div>
@@ -3034,7 +3267,7 @@
                 <witness n="A">Arch. dép. de l'Oise.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f24/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 23.</witness>
               </listWit>
             </div>
@@ -3091,7 +3324,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 83, n°71.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f25/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 24.</witness>
               </listWit>
             </div>
@@ -3128,7 +3361,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 44, n°31.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f25/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 24.</witness>
               </listWit>
             </div>
@@ -3193,7 +3426,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 85, n°75.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f25/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f26/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 24-25.</witness>
               </listWit>
             </div>
@@ -3244,7 +3477,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 87, n°78.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f26/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 25.</witness>
               </listWit>
             </div>
@@ -3297,7 +3530,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 5, n° 3.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f26/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f27/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 25-26.</witness>
               </listWit>
             </div>
@@ -3354,7 +3587,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 58, n°45.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f27/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 26.</witness>
               </listWit>
             </div>
@@ -3394,7 +3627,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 85, n°74.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f27/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 26.</witness>
               </listWit>
             </div>
@@ -3439,7 +3672,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 74, n°60.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f27/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f28/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 26-27.</witness>
               </listWit>
             </div>
@@ -3490,7 +3723,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 75, n°62.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f28/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 27.</witness>
               </listWit>
             </div>
@@ -3542,7 +3775,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 47, n°31.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f28/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 27.</witness>
               </listWit>
             </div>
@@ -3593,7 +3826,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 60, n°49.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f29/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 28.</witness>
               </listWit>
             </div>
@@ -3662,7 +3895,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 62, n°51.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f29/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f30/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 28-page 29.</witness>
               </listWit>
             </div>
@@ -3750,7 +3983,7 @@
             <div type="tradition">
               <listWit type="édition">
                 <witness n="a">Afforty, t. 2, p. 981.</witness>
-                <witness n="b" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="b" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f30/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f31/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 29-30.</witness>
               </listWit>
             </div>
@@ -3816,7 +4049,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 55, n°40.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f31/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 30.</witness>
               </listWit>
             </div>
@@ -3863,7 +4096,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 58, n°44.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f31/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 30.</witness>
               </listWit>
             </div>
@@ -3910,7 +4143,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 72, n°61.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f32/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 31.</witness>
               </listWit>
             </div>
@@ -3971,7 +4204,7 @@
                 <witness n="B">Bibl. nat. de France, fol. 69, n°67.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f32/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f33/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 31-32.</witness>
               </listWit>
             </div>
@@ -4062,7 +4295,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 77, n°64</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f33/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f34/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 32-33.</witness>
               </listWit>
             </div>
@@ -4144,7 +4377,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 49, n°36.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f34/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f35/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 33-34.</witness>
               </listWit>
             </div>
@@ -4224,7 +4457,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 55, n°11.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f35/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 34.</witness>
               </listWit>
             </div>
@@ -4281,7 +4514,7 @@
             <div type="tradition">
               <listWit type="édition">
                 <witness n="a">Afforty, t. II, p. 979</witness>
-                <witness n="b" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="b" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f36/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 35.</witness>
               </listWit>
             </div>
@@ -4361,7 +4594,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 63, n°52.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f36/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f37/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f38/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 35-37.</witness>
               </listWit>
             </div>
@@ -4470,7 +4703,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 84, n°70.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f38/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 37.</witness>
               </listWit>
             </div>
@@ -4516,7 +4749,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 88, n°79.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f38/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 37.</witness>
               </listWit>
             </div>
@@ -4572,7 +4805,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 67, n°54.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f38/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f39/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 37-page 38.</witness>
               </listWit>
             </div>
@@ -4629,7 +4862,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 25, n°10.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f39/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 38.</witness>
               </listWit>
             </div>
@@ -4686,7 +4919,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 61, n°50</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f39/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f40/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 38-page 39.</witness>
               </listWit>
             </div>
@@ -4750,7 +4983,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, n°35.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f40/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 39.</witness>
               </listWit>
             </div>
@@ -4823,7 +5056,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 24, n°10.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f41/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f42/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 40-41.</witness>
               </listWit>
             </div>
@@ -4921,7 +5154,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 78, n°65.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f42/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 41.</witness>
               </listWit>
             </div>
@@ -4979,7 +5212,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 26, n°13.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f42/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f43/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 41-42.</witness>
               </listWit>
             </div>
@@ -5037,7 +5270,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 7, n°5.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f43/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f44/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f45/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f46/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 42-page 45.</witness>
               </listWit>
             </div>
@@ -5291,7 +5524,7 @@
                 <witness n="B">Bibl. nat de France, lat. 9987, fol. 56, n°42.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f44/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 43.</witness>
               </listWit>
             </div>
@@ -5343,7 +5576,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 26, n°13.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f45/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 44.</witness>
               </listWit>
             </div>
@@ -5397,7 +5630,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 66, n° 53</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f46/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 45.</witness>
               </listWit>
             </div>
@@ -5483,7 +5716,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 68, n°55.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f49/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 48.</witness>
               </listWit>
             </div>
@@ -5568,7 +5801,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 50, n°37.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f50/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 49.</witness>
               </listWit>
             </div>
@@ -5643,7 +5876,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 52, n°38</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f50/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f51/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f52/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 49-51.</witness>
               </listWit>
             </div>
@@ -5736,7 +5969,7 @@
                   suivant.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f52/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 51.</witness>
               </listWit>
             </div>
@@ -5759,8 +5992,8 @@
                 <s>Datum <date>anno Domini <num>M<hi rend="sup">o</hi> CC<hi rend="sup">o</hi></num>
                     septuagesimo quinto die Martis ante festum beati Dyonisii</date>.</s>
               </p>
-              <note><figure/>Sceau de <rs type="person"><persName>Guibourde</persName>, abbesse de
-                    <placeName>Morienval</placeName></rs>.<figure/></note>
+              <note>Sceau de <rs type="person"><persName>Guibourde</persName>, abbesse de
+                    <placeName>Morienval</placeName></rs>.</note>
               <p>
                 <s>
                   <seg type="theo">AVE MARIA GRATIA PLENA.</seg>
@@ -5789,7 +6022,7 @@
                 <witness n="A">Arch. mun. d'Orléans F° 1276.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f52/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f53/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 51-page 52.</witness>
               </listWit>
             </div>
@@ -5864,7 +6097,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 29, n°17</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f53/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f54/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f55/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 52-54.</witness>
               </listWit>
             </div>
@@ -6161,7 +6394,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 18, n°8.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f55/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f56/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f57/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f58/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 54-page 57.</witness>
               </listWit>
             </div>
@@ -6323,7 +6556,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 27, n°14.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f57/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 56.</witness>
               </listWit>
             </div>
@@ -6377,7 +6610,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 13, n°6.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f58/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f59/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 57-58.</witness>
               </listWit>
             </div>
@@ -6482,7 +6715,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 28, n°15.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f60/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 59.</witness>
               </listWit>
             </div>
@@ -6534,7 +6767,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 22, n°9.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f60/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f61/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f62/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 59-61.</witness>
               </listWit>
             </div>
@@ -6649,7 +6882,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 15, n°7.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f62/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f63/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 61-62.</witness>
               </listWit>
             </div>
@@ -6750,7 +6983,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 31, n°18.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f63/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f64/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 62-63.</witness>
               </listWit>
             </div>
@@ -6904,7 +7137,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 28, n°16.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f64/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f65/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 63-page 64.</witness>
               </listWit>
             </div>
@@ -6959,7 +7192,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 38, n°24.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f65/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 64.</witness>
               </listWit>
             </div>
@@ -7028,7 +7261,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 39, n°25.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f65/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 64.</witness>
               </listWit>
             </div>
@@ -7096,7 +7329,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 40, n°26.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f66/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f67/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 65-66.</witness>
               </listWit>
             </div>
@@ -7161,7 +7394,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 41, n°27.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f67/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 66.</witness>
               </listWit>
             </div>
@@ -7215,7 +7448,7 @@
                 <witness n="B">Bibl. nat. de France, lat. 9987, fol. 89, n°80.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f67/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f68/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 66-67.</witness>
               </listWit>
             </div>
@@ -7316,7 +7549,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 58, n°23.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f69/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 68.</witness>
               </listWit>
             </div>
@@ -7382,7 +7615,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 58, n°19.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f70/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f71/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 69-70.</witness>
               </listWit>
             </div>
@@ -7434,7 +7667,7 @@
                 <witness n="A">Arch. dép. de l'Oise.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f71/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 70.</witness>
               </listWit>
             </div>
@@ -7552,7 +7785,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 66, n°2.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f71/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f72/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 70-71.</witness>
               </listWit>
             </div>
@@ -7637,7 +7870,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 68, n°93.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f72/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 71.</witness>
               </listWit>
             </div>
@@ -7715,7 +7948,7 @@
                 <witness n="A">Arch. dép. de l'Oise, chirographe original.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f72/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f73/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 71-page 72.</witness>
               </listWit>
             </div>
@@ -7766,7 +7999,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 74, p. 134.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f73/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 72.</witness>
               </listWit>
             </div>
@@ -7822,7 +8055,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 82, p. 236.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f73/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 72.</witness>
               </listWit>
             </div>
@@ -7882,7 +8115,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 88, p. 136.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f73/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f74/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 72-73.</witness>
               </listWit>
             </div>
@@ -7940,7 +8173,7 @@
                 <witness n="A">Original sur parchemin. Arch. dép. de l'Oise.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f74/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 73.</witness>
               </listWit>
             </div>
@@ -8004,7 +8237,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 100, p. 14</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f74/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 73.</witness>
               </listWit>
             </div>
@@ -8064,7 +8297,7 @@
                 <witness n="A">Arch. dép. de l'Oise.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f74/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f75/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 73-74.</witness>
               </listWit>
             </div>
@@ -8132,7 +8365,7 @@
                 <witness n="A">Original. Arch. dép. de l'Oise.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f75/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 74.</witness>
               </listWit>
             </div>
@@ -8187,7 +8420,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 101, p. 111.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f75/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 74.</witness>
               </listWit>
             </div>
@@ -8243,7 +8476,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 104, p. 78.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f75/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f76/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 74-75.</witness>
               </listWit>
             </div>
@@ -8291,7 +8524,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 110, p. 91.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f76/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 75.</witness>
               </listWit>
             </div>
@@ -8336,7 +8569,7 @@
                   (avec monogramme du Roi).</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f76/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 75.</witness>
               </listWit>
             </div>
@@ -8386,7 +8619,7 @@
             </argument>
             <div type="tradition">
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille Peigné-Delacourt, Senlis, 1876, p. 75.</witness>
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f76/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille Peigné-Delacourt, Senlis, 1876, p. 75.</witness>
               </listWit>
             </div>
           </front>
@@ -8438,7 +8671,7 @@
                 <witness n="B">Arch. dép. de l'Oise, cartulaire du Lieu Restoré.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f77/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 76.</witness>
               </listWit>
             </div>
@@ -8484,7 +8717,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 180, p. 42.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f77/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 76.</witness>
               </listWit>
             </div>
@@ -8531,7 +8764,7 @@
             </argument>
             <div type="tradition">
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f77/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 76.</witness>
               </listWit>
             </div>
@@ -8580,7 +8813,7 @@
                 <witness n="B">Bibl. nat. de France, Moreau 215, p. 143.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/f77/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k4860673/manifest.json"><title>Cartulaire de l'abbaye de Morienval</title>, éd. Achille
                   Peigné-Delacourt, Senlis, 1876, p. 76.</witness>
               </listWit>
             </div>

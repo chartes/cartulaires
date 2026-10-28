@@ -98,7 +98,7 @@
       <notesStmt>
         <note type="citation">Olivier Guyotjeannin (éd.), Le prieuré de Saint-Germain-en-Laye. Origines et cartulaire, École nationale des chartes – PSL, 2009.</note>
       </notesStmt>
-      <sourceDesc>
+      <sourceDesc facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json">
         <bibl source="http://elec.enc.sorbonne.fr/cartulaires/S-Germain-en-Laye/"><title>Le prieuré de Saint-Germain-en-Laye. Origines et cartulaire</title> par
             <author>J. Depoin</author>, Versailles, <publisher>Cerf et Cie, Imprimeurs de la
             préfecture</publisher>, <date>1895</date>
@@ -188,6 +188,7 @@
             XI<hi rend="i">e</hi> siècle à l’abbaye de Coulombs (Eure-et-Loir, cant. Nogent-le-Roi,
           anc. dioc. Chartres) comme simple prieuré.</p>
         <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.094190,48.897800&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
+        <p><graphic url="/images/cartulaires/SGLY-PR-cassini.png"><desc>Carte de situation (Atlas de Cassini)</desc></graphic></p>
         <p>Type d’édition : édition partielle (abrégée ou sous forme de regestes pour certains des
           actes tardifs) du cartulaire du prieuré (Arch. nat., T* 671<hi rend="sup">6</hi>).</p>
         <p>Total des actes édités ou analysés : 27 (1 du XI<hi rend="sup">e</hi> siècle, 14 du
@@ -432,8 +433,72 @@
     </front>
     <group xml:id="SGLY-PR_edition-group">
       <head>Édition</head>
+      <argument>
+        <table type="actes">
+          <head>Liste des actes</head>
+          <row role="label"><cell>N°</cell><cell>Partie</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+          <row><cell><ref target="#SGLY-PR_0001">I</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1073" notAfter="1073">1073</date></cell><cell>Diplôme de <persName>Philippe <num>I<hi rend="sup">er</hi></num></persName>.</cell><cell></cell></row>
+          <row><cell><ref target="#SGLY-PR_0002">II</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1122" notAfter="1122">1122</date></cell><cell>Le roi Louis <num>VI</num> renonce à élever un chateau-fort à Charlevanne.</cell><cell>14</cell></row>
+          <row><cell><ref target="#SGLY-PR_0003">III</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1124-08-13" notAfter="1125-03-29">13 août 1124 — 29 mars 1125</date></cell><cell>Confirmation par Louis <num>VI</num> des biens du Prieuré</cell><cell>14</cell></row>
+          <row><cell><ref target="#SGLY-PR_0004">IV</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Don de la moitié de l'île Garnier, par Aston du Pecq.</cell><cell>16</cell></row>
+          <row><cell><ref target="#SGLY-PR_0005">V</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Le chevalier Josselin se fait moine à Saint-Germain.</cell><cell>16</cell></row>
+          <row><cell><ref target="#SGLY-PR_0006">VI</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Geoffroi, évêque de Chartres, vient bénir la chapelle élevée par Gasce de Poissy, près de la tour d'Orgeval.</cell><cell>18</cell></row>
+          <row><cell><ref target="#SGLY-PR_0007">VII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>A cette occasion, Gasce de Poissy concède le don des menues dîmes d'Orgeval au Prieuré.</cell><cell>18</cell></row>
+          <row><cell><ref target="#SGLY-PR_0008">VIII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1131">Entre 1125 et 1131</date></cell><cell>Aston du Pecq donne au Prieuré un gourd dans la Seine, en présence du Roi.</cell><cell>19</cell></row>
+          <row><cell><ref target="#SGLY-PR_0009">IX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1125" notAfter="1143">1125-1143</date></cell><cell>Nomination du maire de Saint-Germain par Roger abbé de Coulombs.</cell><cell>19</cell></row>
+          <row><cell><ref target="#SGLY-PR_0010">X</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1143-08-01" notAfter="1144-03-26">I<hi rend="sup">er</hi> août 1143 — 26 mars 1144</date></cell><cell>Confirmation par Louis <num>VII</num> des biens du Prieuré.</cell><cell>21</cell></row>
+          <row><cell><ref target="#SGLY-PR_0011">XI</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1161" notAfter="1161">1161</date></cell><cell>Jugement de la Cour du Roi au sujet de l'étang de Feuillancourt.</cell><cell>21</cell></row>
+          <row><cell><ref target="#SGLY-PR_0012">XII-XIII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Entente entre les moines de Saint-Germain et ceux de Marcheroux au sujet de la chapelle d'Abbécourt.</cell><cell>22</cell></row>
+          <row><cell><ref target="#SGLY-PR_0014">XIV</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Notice relative aux dîmes d'Abbécourt.</cell><cell>23</cell></row>
+          <row><cell><ref target="#SGLY-PR_0015">XV</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Accord avec la prieure de Haute-Bruyère.</cell><cell>24</cell></row>
+          <row><cell><ref target="#SGLY-PR_0016">XVI</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1186" notAfter="1217">entre 1186 et 1217</date></cell><cell>Bail à métayage d'un vignoble, près Saint-Germain.</cell><cell>25</cell></row>
+          <row><cell><ref target="#SGLY-PR_0017">XVII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1217" notAfter="1261">1217-1261</date></cell><cell>Fondation d'une chapellenie dans l'Hôtel-Dieu de Saint-Germain, par Renaud L'Archer.</cell><cell>25</cell></row>
+          <row><cell><ref target="#SGLY-PR_0018">XVIII</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1261" notAfter="1261">1261</date></cell><cell>Le droit de fourches patibulaires est reconnu au prieur de Saint-Germain.</cell><cell>26</cell></row>
+          <row><cell><ref target="#SGLY-PR_0019">XIX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1300" notAfter="1300">1300</date></cell><cell>Le Roi accorde au Prieuré une compensation au sujet de la fondation du monastère de Poissy.</cell><cell>26</cell></row>
+          <row><cell><ref target="#SGLY-PR_0020">XX</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1314" notAfter="1314">13l4</date></cell><cell>L'abbaye de Saint-Magloire cède au Roi le patronage de l'église Saint-Léger, près Saint-Germain.</cell><cell>27</cell></row>
+          <row><cell><ref target="#SGLY-PR_0021">XXI</ref></cell><cell>Cartulaire</cell><cell><date when="1428-05-24">24 mai 1428</date></cell><cell>Lettres du roi d'Angleterre Henri <num>VI</num>, à l'effet d'indemniser le prieuré de la démolition d'édifices pour la fondation du château et basse-cour de Saint-Germain.</cell><cell>27</cell></row>
+          <row><cell><ref target="#SGLY-PR_0022">XXII</ref></cell><cell>Cartulaire</cell><cell><date when="1428-06-23">23 juin 1428</date></cell><cell>Quittance par frère <hi rend="sc">Jehan de Vy</hi>, prieur à <hi rend="sc">P. de Saint-Amand</hi>, recepveur de Paris, de 70 <abbr>s. p.</abbr> en déduction de celle de 14 liv. qui lui est due.</cell><cell>28</cell></row>
+          <row><cell><ref target="#SGLY-PR_0023">XXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1465-05-15">15 mai 1465</date></cell><cell>Arrêt du <placeName>Parlement</placeName> déclarant que l'évêque de <hi rend="i">Chartres</hi> n'a aucun droit de visite ni de juridiction sur le prieuré de <placeName><abbr>St.</abbr> Germain</placeName></cell><cell>28</cell></row>
+          <row><cell><ref target="#SGLY-PR_0024">XXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1473-03-30">30 mars 1473, <abbr>a. s.</abbr></date></cell><cell>Sentence de <rs type="person"><persName>Jehan de l'Espine</persName>, prévôt de <placeName>Poissy</placeName></rs>, a la requête de <rs type="person"><persName>Jehan Levesque</persName>, official du prieur de <placeName><abbr>S.</abbr> Germain</placeName></rs>, renvoyant devant sa juridiction <rs type="person"><persName>Jehan le Sieur</persName>, le jeune, clerc, prisonnier à <placeName>Poissy</placeName></rs>.</cell><cell>29</cell></row>
+          <row><cell><ref target="#SGLY-PR_0026">XXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1473-08-05">5 août 1473</date></cell><cell>Sentence du prévôt de Paris renvoyant devant le prieur de Saint-Germain les auteurs de méfaits commis dans la forêt.</cell><cell>29</cell></row>
+          <row><cell><ref target="#SGLY-PR_0028">XXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1499-08">Lyon, août 1499</date></cell><cell>Lettres du Roi, à la requête de « nostre amé et féal conseiller et maistre des requestes ordinaires de nostre hostel <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr> <persName>Jehan de Pierrepont</persName>, prieur de <placeName>Saint-Germain-en-Laye</placeName></rs>, » confirmant les droits et usages du couvent dans la forêt de <placeName>Saint-Germain</placeName>, reconnus par lettres du 10 juin 1417.</cell><cell>30</cell></row>
+          <row><cell><ref target="#SGLY-PR_0029">XXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1539-02-08">8 février 1539, <abbr>n. st.</abbr></date></cell><cell>Lettres de « <rs type="person"><persName>Jehan Raoulx</persName>, licencié en lois, conseiller du Roy et lieutenant en la prévosté de son hostel</rs>, » renvoyant sur sa requête devant l'Official de <placeName>Saint-Germain-en-Laye</placeName> « <rs type="person">maistre <persName>Anthoine Eschaume</persName>, prestre, clerc de chapelle de <rs type="person">Monseigneur le Dauphin</rs>, prisonnier es prisons de <placeName>Poissy</placeName></rs> », pour y être jugé.</cell><cell>30</cell></row>
+        </table>
+      </argument>
       <group xml:id="SGLY-PR_group">
         <head>Cartulaire</head>
+        <argument>
+          <table type="actes">
+            <head>Liste des actes</head>
+            <row role="label"><cell>N°</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+            <row><cell><ref target="#SGLY-PR_0001">I</ref></cell><cell><date notBefore="1073" notAfter="1073">1073</date></cell><cell>Diplôme de <persName>Philippe <num>I<hi rend="sup">er</hi></num></persName>.</cell><cell></cell></row>
+            <row><cell><ref target="#SGLY-PR_0002">II</ref></cell><cell><date notBefore="1122" notAfter="1122">1122</date></cell><cell>Le roi Louis <num>VI</num> renonce à élever un chateau-fort à Charlevanne.</cell><cell>14</cell></row>
+            <row><cell><ref target="#SGLY-PR_0003">III</ref></cell><cell><date notBefore="1124-08-13" notAfter="1125-03-29">13 août 1124 — 29 mars 1125</date></cell><cell>Confirmation par Louis <num>VI</num> des biens du Prieuré</cell><cell>14</cell></row>
+            <row><cell><ref target="#SGLY-PR_0004">IV</ref></cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Don de la moitié de l'île Garnier, par Aston du Pecq.</cell><cell>16</cell></row>
+            <row><cell><ref target="#SGLY-PR_0005">V</ref></cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Le chevalier Josselin se fait moine à Saint-Germain.</cell><cell>16</cell></row>
+            <row><cell><ref target="#SGLY-PR_0006">VI</ref></cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>Geoffroi, évêque de Chartres, vient bénir la chapelle élevée par Gasce de Poissy, près de la tour d'Orgeval.</cell><cell>18</cell></row>
+            <row><cell><ref target="#SGLY-PR_0007">VII</ref></cell><cell><date notBefore="1125" notAfter="1131">1125-1131</date></cell><cell>A cette occasion, Gasce de Poissy concède le don des menues dîmes d'Orgeval au Prieuré.</cell><cell>18</cell></row>
+            <row><cell><ref target="#SGLY-PR_0008">VIII</ref></cell><cell><date notBefore="1125" notAfter="1131">Entre 1125 et 1131</date></cell><cell>Aston du Pecq donne au Prieuré un gourd dans la Seine, en présence du Roi.</cell><cell>19</cell></row>
+            <row><cell><ref target="#SGLY-PR_0009">IX</ref></cell><cell><date notBefore="1125" notAfter="1143">1125-1143</date></cell><cell>Nomination du maire de Saint-Germain par Roger abbé de Coulombs.</cell><cell>19</cell></row>
+            <row><cell><ref target="#SGLY-PR_0010">X</ref></cell><cell><date notBefore="1143-08-01" notAfter="1144-03-26">I<hi rend="sup">er</hi> août 1143 — 26 mars 1144</date></cell><cell>Confirmation par Louis <num>VII</num> des biens du Prieuré.</cell><cell>21</cell></row>
+            <row><cell><ref target="#SGLY-PR_0011">XI</ref></cell><cell><date notBefore="1161" notAfter="1161">1161</date></cell><cell>Jugement de la Cour du Roi au sujet de l'étang de Feuillancourt.</cell><cell>21</cell></row>
+            <row><cell><ref target="#SGLY-PR_0012">XII-XIII</ref></cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Entente entre les moines de Saint-Germain et ceux de Marcheroux au sujet de la chapelle d'Abbécourt.</cell><cell>22</cell></row>
+            <row><cell><ref target="#SGLY-PR_0014">XIV</ref></cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Notice relative aux dîmes d'Abbécourt.</cell><cell>23</cell></row>
+            <row><cell><ref target="#SGLY-PR_0015">XV</ref></cell><cell><date notBefore="1161" notAfter="1186">1161-1186</date></cell><cell>Accord avec la prieure de Haute-Bruyère.</cell><cell>24</cell></row>
+            <row><cell><ref target="#SGLY-PR_0016">XVI</ref></cell><cell><date notBefore="1186" notAfter="1217">entre 1186 et 1217</date></cell><cell>Bail à métayage d'un vignoble, près Saint-Germain.</cell><cell>25</cell></row>
+            <row><cell><ref target="#SGLY-PR_0017">XVII</ref></cell><cell><date notBefore="1217" notAfter="1261">1217-1261</date></cell><cell>Fondation d'une chapellenie dans l'Hôtel-Dieu de Saint-Germain, par Renaud L'Archer.</cell><cell>25</cell></row>
+            <row><cell><ref target="#SGLY-PR_0018">XVIII</ref></cell><cell><date notBefore="1261" notAfter="1261">1261</date></cell><cell>Le droit de fourches patibulaires est reconnu au prieur de Saint-Germain.</cell><cell>26</cell></row>
+            <row><cell><ref target="#SGLY-PR_0019">XIX</ref></cell><cell><date notBefore="1300" notAfter="1300">1300</date></cell><cell>Le Roi accorde au Prieuré une compensation au sujet de la fondation du monastère de Poissy.</cell><cell>26</cell></row>
+            <row><cell><ref target="#SGLY-PR_0020">XX</ref></cell><cell><date notBefore="1314" notAfter="1314">13l4</date></cell><cell>L'abbaye de Saint-Magloire cède au Roi le patronage de l'église Saint-Léger, près Saint-Germain.</cell><cell>27</cell></row>
+            <row><cell><ref target="#SGLY-PR_0021">XXI</ref></cell><cell><date when="1428-05-24">24 mai 1428</date></cell><cell>Lettres du roi d'Angleterre Henri <num>VI</num>, à l'effet d'indemniser le prieuré de la démolition d'édifices pour la fondation du château et basse-cour de Saint-Germain.</cell><cell>27</cell></row>
+            <row><cell><ref target="#SGLY-PR_0022">XXII</ref></cell><cell><date when="1428-06-23">23 juin 1428</date></cell><cell>Quittance par frère <hi rend="sc">Jehan de Vy</hi>, prieur à <hi rend="sc">P. de Saint-Amand</hi>, recepveur de Paris, de 70 <abbr>s. p.</abbr> en déduction de celle de 14 liv. qui lui est due.</cell><cell>28</cell></row>
+            <row><cell><ref target="#SGLY-PR_0023">XXIII</ref></cell><cell><date when="1465-05-15">15 mai 1465</date></cell><cell>Arrêt du <placeName>Parlement</placeName> déclarant que l'évêque de <hi rend="i">Chartres</hi> n'a aucun droit de visite ni de juridiction sur le prieuré de <placeName><abbr>St.</abbr> Germain</placeName></cell><cell>28</cell></row>
+            <row><cell><ref target="#SGLY-PR_0024">XXIV</ref></cell><cell><date when="1473-03-30">30 mars 1473, <abbr>a. s.</abbr></date></cell><cell>Sentence de <rs type="person"><persName>Jehan de l'Espine</persName>, prévôt de <placeName>Poissy</placeName></rs>, a la requête de <rs type="person"><persName>Jehan Levesque</persName>, official du prieur de <placeName><abbr>S.</abbr> Germain</placeName></rs>, renvoyant devant sa juridiction <rs type="person"><persName>Jehan le Sieur</persName>, le jeune, clerc, prisonnier à <placeName>Poissy</placeName></rs>.</cell><cell>29</cell></row>
+            <row><cell><ref target="#SGLY-PR_0026">XXVI</ref></cell><cell><date when="1473-08-05">5 août 1473</date></cell><cell>Sentence du prévôt de Paris renvoyant devant le prieur de Saint-Germain les auteurs de méfaits commis dans la forêt.</cell><cell>29</cell></row>
+            <row><cell><ref target="#SGLY-PR_0028">XXVIII</ref></cell><cell><date when="1499-08">Lyon, août 1499</date></cell><cell>Lettres du Roi, à la requête de « nostre amé et féal conseiller et maistre des requestes ordinaires de nostre hostel <rs type="person"><abbr>M<hi rend="sup">re</hi></abbr> <persName>Jehan de Pierrepont</persName>, prieur de <placeName>Saint-Germain-en-Laye</placeName></rs>, » confirmant les droits et usages du couvent dans la forêt de <placeName>Saint-Germain</placeName>, reconnus par lettres du 10 juin 1417.</cell><cell>30</cell></row>
+            <row><cell><ref target="#SGLY-PR_0029">XXIX</ref></cell><cell><date when="1539-02-08">8 février 1539, <abbr>n. st.</abbr></date></cell><cell>Lettres de « <rs type="person"><persName>Jehan Raoulx</persName>, licencié en lois, conseiller du Roy et lieutenant en la prévosté de son hostel</rs>, » renvoyant sur sa requête devant l'Official de <placeName>Saint-Germain-en-Laye</placeName> « <rs type="person">maistre <persName>Anthoine Eschaume</persName>, prestre, clerc de chapelle de <rs type="person">Monseigneur le Dauphin</rs>, prisonnier es prisons de <placeName>Poissy</placeName></rs> », pour y être jugé.</cell><cell>30</cell></row>
+          </table>
+        </argument>
         <text xml:id="SGLY-PR_0001" n="I" subtype="article">
           <pb n="" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f110/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"/>
           <front>
@@ -452,7 +517,7 @@
                   75.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f110/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 13.</witness>
               </listWit>
             </div>
@@ -599,7 +664,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 79</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 14.</witness>
               </listWit>
             </div>
@@ -661,7 +726,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 6.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f111/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f112/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 14-15.</witness>
               </listWit>
             </div>
@@ -766,7 +831,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 80</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f113/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 16.</witness>
               </listWit>
             </div>
@@ -810,7 +875,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 83.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f113/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f114/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 16-17.</witness>
               </listWit>
             </div>
@@ -879,7 +944,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol 80.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f115/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 18.</witness>
               </listWit>
             </div>
@@ -926,7 +991,7 @@
                   80.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f115/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 18-19.</witness>
               </listWit>
             </div>
@@ -998,7 +1063,7 @@
                   81.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 19.</witness>
               </listWit>
             </div>
@@ -1044,7 +1109,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 77</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f116/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f117/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 19-20.</witness>
               </listWit>
             </div>
@@ -1140,7 +1205,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 7.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f118/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 21.</witness>
               </listWit>
             </div>
@@ -1209,7 +1274,7 @@
                   13.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f118/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f119/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 21-22.</witness>
               </listWit>
             </div>
@@ -1298,7 +1363,7 @@
                 <witness n="C">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 78.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f119/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f120/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 22-23.</witness>
               </listWit>
             </div>
@@ -1378,7 +1443,7 @@
                   84.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f120/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f121/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 23-24.</witness>
               </listWit>
             </div>
@@ -1425,7 +1490,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 7.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f121/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 24-25.</witness>
               </listWit>
             </div>
@@ -1511,7 +1576,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num> fol. 79.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 25.</witness>
               </listWit>
             </div>
@@ -1566,7 +1631,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol 4.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f122/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 25-26.</witness>
               </listWit>
             </div>
@@ -1621,7 +1686,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 85</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 26.</witness>
               </listWit>
             </div>
@@ -1670,7 +1735,7 @@
                   68.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f123/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 26-27.</witness>
               </listWit>
             </div>
@@ -1726,7 +1791,7 @@
                 <witness n="B">Bibl. nat. ms. lat. 5413, fol. 120.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 27.</witness>
               </listWit>
             </div>
@@ -1778,7 +1843,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 5.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f124/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 27-28.</witness>
               </listWit>
             </div>
@@ -1841,7 +1906,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 5.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 28.</witness>
               </listWit>
             </div>
@@ -1869,7 +1934,7 @@
                   27.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f125/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 28-29.</witness>
               </listWit>
             </div>
@@ -1911,7 +1976,7 @@
                   29.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 29.</witness>
               </listWit>
             </div>
@@ -1945,7 +2010,7 @@
                 <witness n="B">Arch. nat., <num>T* 671<hi rend="sup">6</hi></num>, fol. 2.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f126/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 29-30.</witness>
               </listWit>
             </div>
@@ -2024,7 +2089,7 @@
                   97.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 30.</witness>
               </listWit>
             </div>
@@ -2055,7 +2120,7 @@
                   98.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Le prieuré de Saint-Germain-en-Laye : origines et
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/f127/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k203376t/manifest.json"><title>Le prieuré de Saint-Germain-en-Laye : origines et
                     cartulaire</title>, éd. Joseph Depoin, Versailles, 1895, p. 30.</witness>
               </listWit>
             </div>

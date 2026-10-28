@@ -13,10 +13,10 @@
     </ns0:fileDesc>
     <ns0:encodingDesc>
       <ns0:refsDecl>
-        <ns0:citeStructure match="/TEI[1]/text[1]/body[1]/div[1]" use="dots">
+        <ns0:citeStructure match="/TEI[1]/text[1]/body[1]/div[1]" use="@xml:id" unit="part">
           <ns0:citeData property="dct:title" use="head"/>
           <ns0:citeData use="head" property="schema:name"/>
-          <ns0:citeStructure unit="index" match="list[@type='index']" use="@xml:id">
+          <ns0:citeStructure unit="partie" match="list[@type='index']" use="@xml:id">
             <ns0:citeData property="dct:title" use="head"/>
             <ns0:citeData use="head" property="schema:name"/>
           </ns0:citeStructure>

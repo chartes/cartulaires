@@ -13,10 +13,10 @@
     </ns0:fileDesc>
     <ns0:encodingDesc>
       <ns0:refsDecl>
-        <ns0:citeStructure match="/TEI[1]/text[1]/body[1]/div[1]" use="dots">
+        <ns0:citeStructure match="/TEI[1]/text[1]/body[1]/div[1]" use="@xml:id" unit="part">
           <ns0:citeData property="dct:title" use="head"/>
           <ns0:citeData use="head" property="schema:name"/>
-          <ns0:citeStructure unit="index" match="list[@type='index']" use="@xml:id">
+          <ns0:citeStructure unit="partie" match="list[@type='index']" use="@xml:id">
             <ns0:citeData property="dct:title" use="head"/>
             <ns0:citeData use="head" property="schema:name"/>
           </ns0:citeStructure>
@@ -2709,8 +2709,8 @@
           <ns0:item xml:id="NDCH-EG_rs_2527"><ns0:rs><ns0:hi rend="sc">Aymo</ns0:hi>, subdiaconus</ns0:rs>, <ns0:ref target="#NDCH-EG_0010" n="I. 85">Notre-Dame de Chartres, acte 10</ns0:ref>.</ns0:item>
           <ns0:item xml:id="NDPA-EG-04_rs_0429"><ns0:rs><ns0:hi rend="sc">Ayulphus</ns0:hi>, canonicus Parisiensis</ns0:rs>. <ns0:ref n="440" target="#NDPA-EG-01_0440">Notre-Dame de Paris, t. 1, acte 440</ns0:ref>.</ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_0204"><ns0:rs><ns0:hi rend="sc">Azzo</ns0:hi></ns0:rs>, <ns0:hi rend="i">glossateur</ns0:hi>, <ns0:ref n="44" target="#SMPA-AB-03_44">Saint-Magloire, tome III, acte 44</ns0:ref> <ns0:hi rend="i">note</ns0:hi> <ns0:hi rend="i">note 1</ns0:hi>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0431"><ns0:rs><ns0:hi rend="sc">Jean</ns0:hi>, abb? de Marmoutier</ns0:rs>, <ns0:ref target="#STEP-AB_0075" n="83">Saint-Thomas d'Epernon, acte 75</ns0:ref>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0589"><ns0:rs><ns0:hi rend="sc">Philippe</ns0:hi>, archev?que de Bourges</ns0:rs>, <ns0:ref target="#STEP-AB_0042" n="47.">Saint-Thomas d'Epernon, acte 42</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0431"><ns0:rs><ns0:hi rend="sc">Jean</ns0:hi>, abbé de Marmoutier</ns0:rs>, <ns0:ref target="#STEP-AB_0075" n="83">Saint-Thomas d'Epernon, acte 75</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0589"><ns0:rs><ns0:hi rend="sc">Philippe</ns0:hi>, archevêque de Bourges</ns0:rs>, <ns0:ref target="#STEP-AB_0042" n="47.">Saint-Thomas d'Epernon, acte 42</ns0:ref>.</ns0:item>
         </ns0:list>
           <ns0:list type="index" xml:id="index_personne_liste_B">
             <ns0:head>B</ns0:head>
@@ -9347,16 +9347,16 @@
                   <ns0:item><ns0:hi rend="i">église paroissiale</ns0:hi>, <ns0:seg><ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_1643" corresp="#index_personne_liste_G"><ns0:hi rend="sc">Gilles</ns0:hi></ns0:ref></ns0:seg></ns0:item>
                   <ns0:item><ns0:hi rend="i">prieuré</ns0:hi>, <ns0:seg><ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_2480" corresp="#index_personne_liste_M"><ns0:hi rend="sc">Montfort-l’Amaury</ns0:hi></ns0:ref></ns0:seg>.</ns0:item>
                 </ns0:list></ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0314"><ns0:rs><ns0:hi rend="sc">Gautier</ns0:hi>, cur? de Mittainville</ns0:rs>, <ns0:ref target="#STEP-AB_0053" n="56">Saint-Thomas d'Epernon, acte 53</ns0:ref>, <ns0:ref target="#STEP-AB_0054" n="57">Saint-Thomas d'Epernon, acte 54</ns0:ref>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0309"><ns0:rs><ns0:hi rend="sc">Gazeran</ns0:hi>, ch?teau</ns0:rs>, <ns0:ref target="#STEP-AB_103b" n="128, ">Saint-Thomas d'Epernon, acte 103bis</ns0:ref> </ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0310"><ns0:rs><ns0:hi rend="sc">Gazeran</ns0:hi>, ch?tellenie</ns0:rs>, <ns0:ref target="#STEP-AB_103b" n="105, ">Saint-Thomas d'Epernon, acte 103bis</ns0:ref>, <ns0:ref target="#STEP-AB_0109" n="109.">Saint-Thomas d'Epernon, acte 109</ns0:ref>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0353"><ns0:rs><ns0:hi rend="sc">Guillaume</ns0:hi>, cur? d'Epernon</ns0:rs>, <ns0:ref target="#STEP-AB_0010" n="17, ">Saint-Thomas d'Epernon, acte 10</ns0:ref> évêque de Paris, <ns0:ref target="#STEP-AB_0042" n="47, ">Saint-Thomas d'Epernon, acte 42</ns0:ref> archevêque de Sens.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0432"><ns0:rs><ns0:hi rend="sc">Jean</ns0:hi>, cur? de Rochefort</ns0:rs>, <ns0:ref target="#STEP-AB_0085" n="92">Saint-Thomas d'Epernon, acte 85</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0314"><ns0:rs><ns0:hi rend="sc">Gautier</ns0:hi>, curé de Mittainville</ns0:rs>, <ns0:ref target="#STEP-AB_0053" n="56">Saint-Thomas d'Epernon, acte 53</ns0:ref>, <ns0:ref target="#STEP-AB_0054" n="57">Saint-Thomas d'Epernon, acte 54</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0309"><ns0:rs><ns0:hi rend="sc">Gazeran</ns0:hi>, château</ns0:rs>, <ns0:ref target="#STEP-AB_103b" n="128, ">Saint-Thomas d'Epernon, acte 103bis</ns0:ref> </ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0310"><ns0:rs><ns0:hi rend="sc">Gazeran</ns0:hi>, châtellenie</ns0:rs>, <ns0:ref target="#STEP-AB_103b" n="105, ">Saint-Thomas d'Epernon, acte 103bis</ns0:ref>, <ns0:ref target="#STEP-AB_0109" n="109.">Saint-Thomas d'Epernon, acte 109</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0353"><ns0:rs><ns0:hi rend="sc">Guillaume</ns0:hi>, curé d'Epernon</ns0:rs>, <ns0:ref target="#STEP-AB_0010" n="17, ">Saint-Thomas d'Epernon, acte 10</ns0:ref> évêque de Paris, <ns0:ref target="#STEP-AB_0042" n="47, ">Saint-Thomas d'Epernon, acte 42</ns0:ref> archevêque de Sens.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0432"><ns0:rs><ns0:hi rend="sc">Jean</ns0:hi>, curé de Rochefort</ns0:rs>, <ns0:ref target="#STEP-AB_0085" n="92">Saint-Thomas d'Epernon, acte 85</ns0:ref>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0173"><ns0:rs><ns0:hi rend="sc">La Charmoie ou Hauteville</ns0:hi></ns0:rs>, <ns0:ref target="#STEP-AB_0063" n="71.">Saint-Thomas d'Epernon, acte 63</ns0:ref>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0210"><ns0:rs><ns0:hi rend="sc">La Couture</ns0:hi></ns0:rs>, <ns0:ref target="#STEP-AB_0122" n="120.">Saint-Thomas d'Epernon, acte 122</ns0:ref>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0206"><ns0:rs><ns0:hi rend="sc">Le Coudray à Hermeray</ns0:hi></ns0:rs>, <ns0:ref target="#STEP-AB_0035" n="35.">Saint-Thomas d'Epernon, acte 35</ns0:ref>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0515"><ns0:rs><ns0:hi rend="sc">Mathieu</ns0:hi>, chambrier</ns0:rs>, <ns0:ref target="#STEP-AB_0003" n="11, ">Saint-Thomas d'Epernon, acte 3</ns0:ref> clerc</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0516"><ns0:rs><ns0:hi rend="sc">Mathieu</ns0:hi>, conn?table</ns0:rs>, <ns0:ref target="#STEP-AB_0003" n="11.">Saint-Thomas d'Epernon, acte 3</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0516"><ns0:rs><ns0:hi rend="sc">Mathieu</ns0:hi>, connétable</ns0:rs>, <ns0:ref target="#STEP-AB_0003" n="11.">Saint-Thomas d'Epernon, acte 3</ns0:ref>.</ns0:item>
         </ns0:list>
           <ns0:list type="index" xml:id="index_personne_liste_D">
             <ns0:head>D</ns0:head>
@@ -10187,7 +10187,7 @@
 <ns0:item xml:id="HDPAR-HD_rs_1743"><ns0:rs><ns0:hi rend="sc">Dyonisius Vinetarius</ns0:hi></ns0:rs>.</ns0:item>
 <ns0:item xml:id="NDCH-EG_rs_3504"><ns0:rs><ns0:hi rend="sc">Dyoviller</ns0:hi> (Petrus)</ns0:rs>, <ns0:ref target="#NDCH-EG_0306" n="II. 150">Notre-Dame de Chartres, acte 306</ns0:ref>.</ns0:item>
 <ns0:item xml:id="NDVC-AB_rs_1459"><ns0:rs><ns0:hi rend="sc">Egidius</ns0:hi>, presbiter Sancti Andre? Carnotensis, <ns0:hi rend="i">vid.</ns0:hi> <ns0:hi rend="sc">Fort</ns0:hi>-<ns0:hi rend="sc">Anier</ns0:hi> (Gilo)</ns0:rs>. </ns0:item>
-<ns0:item xml:id="NDVC-AB_rs_1460"><ns0:rs><ns0:hi rend="sc">Elisabeth</ns0:hi>, uxor Philippi (<ns0:hi rend="sc">ii</ns0:hi>), regis Francorum, <ns0:hi rend="i">vid.</ns0:hi> <ns0:hi rend="sc">Hainaut</ns0:hi> (?lisabeth de)</ns0:rs>. </ns0:item>
+<ns0:item xml:id="NDVC-AB_rs_1460"><ns0:rs><ns0:hi rend="sc">Elisabeth</ns0:hi>, uxor Philippi (<ns0:hi rend="sc">ii</ns0:hi>), regis Francorum, <ns0:hi rend="i">vid.</ns0:hi> <ns0:hi rend="sc">Hainaut</ns0:hi> (Élisabeth de)</ns0:rs>. </ns0:item>
 <ns0:item xml:id="STEP-AB_rs_0273"><ns0:rs><ns0:hi rend="sc">Eudes</ns0:hi>, doyen de Mantes</ns0:rs>, <ns0:ref target="#STEP-AB_0050" n="53, ">Saint-Thomas d'Epernon, acte 50</ns0:ref>,  <ns0:ref target="#STEP-AB_0053" n="57.">Saint-Thomas d'Epernon, acte 53</ns0:ref>.</ns0:item>
 </ns0:list>
           <ns0:list type="index" xml:id="index_personne_liste_E">
@@ -10568,7 +10568,7 @@
 <ns0:item xml:id="NDMA-AB_rs_262"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, murailles</ns0:rs>.</ns0:item>
 <ns0:item xml:id="NDMA-AB_rs_258"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, Pierre</ns0:rs>.</ns0:item>
 <ns0:item xml:id="NDMA-AB_rs_259"><ns0:rs><ns0:hi rend="sc">Epernon, prévôt</ns0:hi></ns0:rs>.</ns0:item>
-<ns0:item xml:id="STEP-AB_rs_0257"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, ?tang</ns0:rs>, <ns0:ref target="#STEP-AB_0058" n="62, ">Saint-Thomas d'Epernon, acte 58</ns0:ref>, <ns0:ref target="#STEP-AB_0059" n="65">Saint-Thomas d'Epernon, acte 59</ns0:ref>.</ns0:item>
+<ns0:item xml:id="STEP-AB_rs_0257"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, étang</ns0:rs>, <ns0:ref target="#STEP-AB_0058" n="62, ">Saint-Thomas d'Epernon, acte 58</ns0:ref>, <ns0:ref target="#STEP-AB_0059" n="65">Saint-Thomas d'Epernon, acte 59</ns0:ref>.</ns0:item>
 <ns0:item xml:id="NDCH-EG_rs_3534"><ns0:rs><ns0:hi rend="sc">Epi-d'Avoine</ns0:hi> (Raoul)</ns0:rs>, <ns0:ref target="#NDCH-EG_0313" n="II. 154">Notre-Dame de Chartres, acte 313</ns0:ref>.</ns0:item>
 <ns0:item xml:id="NDVC-AB_rs_1585"><ns0:rs><ns0:hi rend="sc">Épicière</ns0:hi> (Jeanne l')</ns0:rs>, <ns0:abbr>t.</ns0:abbr><ns0:hi rend="sc">ii</ns0:hi>, <ns0:abbr>p.</ns0:abbr>.</ns0:item>
 <ns0:item xml:id="NDCH-EG_rs_3535"><ns0:rs><ns0:hi rend="sc">Epievent</ns0:hi> (Stephanus)</ns0:rs>, <ns0:ref target="#NDCH-EG_0385" n="II. 240">Notre-Dame de Chartres, acte 385</ns0:ref>.</ns0:item>
@@ -11275,7 +11275,7 @@
 </ns0:list>
           <ns0:list type="index" xml:id="index_personne_liste_F">
             <ns0:head>F</ns0:head>
-<ns0:item xml:id="STEP-AB_rs_0639"><ns0:rs><ns0:hi rend="sc">C. de Vermandois</ns0:hi>, fr?re de Fontevrault</ns0:rs>, <ns0:ref target="#STEP-AB_0041" n="43, ">Saint-Thomas d'Epernon, acte 41</ns0:ref> moin</ns0:item>
+<ns0:item xml:id="STEP-AB_rs_0639"><ns0:rs><ns0:hi rend="sc">C. de Vermandois</ns0:hi>, frère de Fontevrault</ns0:rs>, <ns0:ref target="#STEP-AB_0041" n="43, ">Saint-Thomas d'Epernon, acte 41</ns0:ref> moin</ns0:item>
 <ns0:item xml:id="HDPAR-HD_rs_1916"><ns0:rs><ns0:hi rend="sc">F.</ns0:hi>, decanus de Grisiaco</ns0:rs>.</ns0:item>
 <ns0:item xml:id="HDPAR-HD_rs_1917"><ns0:rs><ns0:hi rend="sc">Fabas (Aubertus ad)</ns0:hi></ns0:rs>.</ns0:item>
 <ns0:item xml:id="NDPA-EG-04_rs_2507"><ns0:rs><ns0:hi rend="sc">Faber</ns0:hi></ns0:rs>. <ns0:ref n="479" target="#NDPA-EG-01_0479">Notre-Dame de Paris, t. 1, acte 479</ns0:ref>, <ns0:ref n="505" target="#NDPA-EG-01_0505">Notre-Dame de Paris, t. 1, acte 505</ns0:ref> ; <ns0:ref n="13" target="#NDPA-EG-02_0013">Notre-Dame de Paris, t. 2, acte 13</ns0:ref>, <ns0:ref n="54" target="#NDPA-EG-02_0054">Notre-Dame de Paris, t. 2, acte 54</ns0:ref>, <ns0:ref n="267" target="#NDPA-EG-02_0267">Notre-Dame de Paris, t. 2, acte 267</ns0:ref>, <ns0:ref n="639" target="#NDPA-EG-02_0639">Notre-Dame de Paris, t. 2, acte 639</ns0:ref> ; <ns0:ref n="165" target="#NDPA-EG-03_0165">Notre-Dame de Paris, t. 3, acte 165</ns0:ref>, <ns0:ref n="215" target="#NDPA-EG-03_0215">Notre-Dame de Paris, t. 3, acte 215</ns0:ref>, <ns0:ref n="217" target="#NDPA-EG-03_0217">Notre-Dame de Paris, t. 3, acte 217</ns0:ref>, <ns0:ref n="372" target="#NDPA-EG-03_372">Notre-Dame de Paris, t. 3, acte 372</ns0:ref> ; <ns0:ref n="107" target="#NDPA-EG-04_0107">Notre-Dame de Paris, t. 4, acte 107</ns0:ref>, <ns0:ref n="268" target="#NDPA-EG-04_0268">Notre-Dame de Paris, t. 4, acte 268</ns0:ref>.</ns0:item>
@@ -27264,11 +27264,11 @@
           <ns0:item xml:id="SMPA-AB-03_rs_2712"><ns0:hi rend="i">Boucheries</ns0:hi>, <ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see"><ns0:hi rend="sc">Sainte-Geneviève</ns0:hi></ns0:ref>, <ns0:ref type="see"><ns0:hi rend="sc">Saint-Marcel</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_1708" corresp="#index_personne_liste_G"><ns0:hi rend="sc">Grande Boucherie</ns0:hi></ns0:ref>.</ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_2715"><ns0:hi rend="i">Cloîtres</ns0:hi>, <ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see"><ns0:hi rend="sc">Saint-Germain-l’Auxerrois</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_3448" corresp="#index_personne_liste_S"><ns0:hi rend="sc">Sainte-Opportune</ns0:hi></ns0:ref>.</ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_2717"><ns0:hi rend="i">Collégiales</ns0:hi>, <ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see"><ns0:hi rend="sc">Saint-Marcel</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_3430" corresp="#index_personne_liste_S"><ns0:hi rend="sc">Saint-Sépulcre</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_3448" corresp="#index_personne_liste_S"><ns0:hi rend="sc">Sainte-Opportune</ns0:hi></ns0:ref>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0252"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, pr?v?t d'</ns0:rs>, <ns0:ref target="#STEP-AB_0113" n="14">Saint-Thomas d'Epernon, acte 113</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0252"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, prévôt d'</ns0:rs>, <ns0:ref target="#STEP-AB_0113" n="14">Saint-Thomas d'Epernon, acte 113</ns0:ref>.</ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_2725"><ns0:hi rend="i">Fiefs</ns0:hi>, <ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_0999" corresp="#index_personne_liste_C"><ns0:hi rend="sc">Clos aux Halliers</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_1587" corresp="#index_personne_liste_G"><ns0:hi rend="sc">Garges</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_3625" corresp="#index_personne_liste_T"><ns0:hi rend="sc">Thérouanne</ns0:hi></ns0:ref>.</ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_2726"><ns0:hi rend="i">Généralité; contrôleur général du taillon</ns0:hi>, <ns0:seg><ns0:hi rend="i">voir</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_1598" corresp="#index_personne_liste_G"><ns0:hi rend="sc">Claude Gassion</ns0:hi></ns0:ref></ns0:seg>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0319"><ns0:rs><ns0:hi rend="sc">Geofroy</ns0:hi>, prieur d'Epernon</ns0:rs>, <ns0:ref target="#STEP-AB_0018" n="23, ">Saint-Thomas d'Epernon, acte 18</ns0:ref>, <ns0:ref target="#STEP-AB_0019" n="24, ">Saint-Thomas d'Epernon, acte 19</ns0:ref>,  <ns0:ref target="#STEP-AB_0021" n="133.">Saint-Thomas d'Epernon, acte 21</ns0:ref>.</ns0:item>
-          <ns0:item xml:id="STEP-AB_rs_0376"><ns0:rs><ns0:hi rend="sc">Haute-Bruy?re</ns0:hi>, prieur?</ns0:rs>, <ns0:ref target="#STEP-AB_0049" n="53">Saint-Thomas d'Epernon, acte 49</ns0:ref>.</ns0:item>
+          <ns0:item xml:id="STEP-AB_rs_0376"><ns0:rs><ns0:hi rend="sc">Haute-Bruyère</ns0:hi>, prieuré</ns0:rs>, <ns0:ref target="#STEP-AB_0049" n="53">Saint-Thomas d'Epernon, acte 49</ns0:ref>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0388"><ns0:rs><ns0:hi rend="sc">Henri I</ns0:hi>, prieur d'Epernon</ns0:rs>, <ns0:ref target="#STEP-AB_0001" n="49, ">Saint-Thomas d'Epernon, acte 1</ns0:ref> </ns0:item>
           <ns0:item xml:id="SMPA-AB-03_rs_2728"><ns0:hi rend="i">Hôtels et Palais</ns0:hi>, <ns0:seg><ns0:hi rend="i">voir hôtel des comtes</ns0:hi> d’<ns0:ref type="see" target="#SMPA-AB-03_rs_0121" corresp="#index_personne_liste_A"><ns0:hi rend="sc">Artois</ns0:hi></ns0:ref>, <ns0:hi rend="i">des abbés de</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_1096" corresp="#index_personne_liste_C"><ns0:hi rend="sc">Coulombs</ns0:hi></ns0:ref>, <ns0:hi rend="i">hôtel</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_1605" corresp="#index_personne_liste_G"><ns0:hi rend="sc">Gaucher</ns0:hi></ns0:ref>, de <ns0:ref type="see" target="#SMPA-AB-03_rs_2312" corresp="#index_personne_liste_M"><ns0:hi rend="sc">Marle</ns0:hi></ns0:ref>, <ns0:ref type="see" target="#SMPA-AB-03_rs_2688" corresp="#index_personne_liste_P"><ns0:hi rend="sc">Palais du Roi</ns0:hi></ns0:ref>, <ns0:hi rend="i">hôtel de l’archevêque de</ns0:hi> <ns0:ref type="see" target="#SMPA-AB-03_rs_3175" corresp="#index_personne_liste_R"><ns0:hi rend="sc">Rouen</ns0:hi></ns0:ref>, <ns0:hi rend="i">hôtel</ns0:hi> <ns0:ref type="see"><ns0:hi rend="sc">Saint-Paul</ns0:hi></ns0:ref>, <ns0:hi rend="i">hôtel des abbés du</ns0:hi> <ns0:ref type="see"><ns0:hi rend="sc">Val</ns0:hi></ns0:ref></ns0:seg>.</ns0:item>
           <ns0:item xml:id="STEP-AB_rs_0433"><ns0:rs><ns0:hi rend="sc">Jean</ns0:hi>, prieur d'Epernon</ns0:rs>, <ns0:ref target="#STEP-AB_0087" n="92, ">Saint-Thomas d'Epernon, acte 87</ns0:ref>, <ns0:ref target="#STEP-AB_0088" n="94, ">Saint-Thomas d'Epernon, acte 88</ns0:ref>,  <ns0:ref target="#STEP-AB_0088" n="96.">Saint-Thomas d'Epernon, acte 88</ns0:ref></ns0:item>
@@ -31582,10 +31582,10 @@
         </ns0:list>
           <ns0:list type="index" xml:id="index_personne_liste_S">
             <ns0:head>S</ns0:head>
-<ns0:item xml:id="STEP-AB_rs_0078"><ns0:rs><ns0:hi rend="sc">Barth?lemy</ns0:hi>, sous-doyen de Chartres</ns0:rs>, <ns0:ref target="#STEP-AB_0011" n="18">Saint-Thomas d'Epernon, acte 11</ns0:ref>.</ns0:item>
+<ns0:item xml:id="STEP-AB_rs_0078"><ns0:rs><ns0:hi rend="sc">Barthélemy</ns0:hi>, sous-doyen de Chartres</ns0:rs>, <ns0:ref target="#STEP-AB_0011" n="18">Saint-Thomas d'Epernon, acte 11</ns0:ref>.</ns0:item>
 <ns0:item xml:id="HDPAR-HD_rs_6260"><ns0:rs><ns0:hi rend="sc">Beate Marie de Campis (Monasterium)</ns0:hi>, juxta Parisius</ns0:rs>.</ns0:item>
 <ns0:item xml:id="HDPAR-HD_rs_6223"><ns0:rs><ns0:hi rend="sc">Beati Dyonisii in Francia (Abbatia)</ns0:hi></ns0:rs>.</ns0:item>
-<ns0:item xml:id="STEP-AB_rs_0258"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, sceau de la ch?tellenie</ns0:rs>, <ns0:ref target="#STEP-AB_0105" n="107.">Saint-Thomas d'Epernon, acte 105</ns0:ref>.</ns0:item>
+<ns0:item xml:id="STEP-AB_rs_0258"><ns0:rs><ns0:hi rend="sc">Epernon</ns0:hi>, sceau de la châtellenie</ns0:rs>, <ns0:ref target="#STEP-AB_0105" n="107.">Saint-Thomas d'Epernon, acte 105</ns0:ref>.</ns0:item>
 <ns0:item xml:id="STEP-AB_rs_0308"><ns0:rs><ns0:hi rend="sc">Gazeran</ns0:hi>, le seigneur de</ns0:rs>, <ns0:ref target="#STEP-AB_0087" n="94">Saint-Thomas d'Epernon, acte 87</ns0:ref>.</ns0:item>
 <ns0:item xml:id="SLES-PR_rs_1530"><ns0:rs><ns0:hi rend="sc">Marie</ns0:hi>, femme de Simon, comte de Ponthieu</ns0:rs>, <ns0:ref target="#SLES-PR_0118" n="122">Saint-Leu d’Esserent, acte 118</ns0:ref>, <ns0:ref target="#SLES-PR_0130" n="124">Saint-Leu d’Esserent, acte 130</ns0:ref>.</ns0:item>
 <ns0:item xml:id="HDPAR-HD_rs_6157"><ns0:rs><ns0:hi rend="sc">S.</ns0:hi>, rector Domus Dei</ns0:rs>.</ns0:item>

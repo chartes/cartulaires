@@ -80,7 +80,7 @@
       <notesStmt>
         <note type="citation">Olivier Guyotjeannin (éd.), Cartulaire de Notre-Dame de Maintenon, École nationale des chartes – PSL, 2009.</note>
       </notesStmt>
-      <sourceDesc>
+      <sourceDesc facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json">
         <bibl source="https://gallica.bnf.fr/ark:/12148/bpt6k486068g"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, A. Moutié et A. de Dion (éds.). Rambouillet: <date>1878</date></bibl>
       </sourceDesc>
     </fileDesc>
@@ -167,6 +167,7 @@
       <argument>
         <p>Établissements : Saint-Thomas d’Épernon (Eure-et-Loir, cant. Maintenon ; ancien diocèse de Chartres) ; Notre-Dame de Maintenon (Eure-et-Loir, ch.-l. cant. ; ancien diocèse de Chartres). – Bénédictins, prieurés de Marmoutier. </p>
         <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=1.576270,48.587600&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
+        <p><graphic url="/images/cartulaires/NDMA-AB-cassini.png"><desc>Carte de situation (Atlas de Cassini)</desc></graphic></p>
         <p>Édition ou regeste, dans l’ordre chronologique, des originaux et copies modernes.</p>
         <p>Total des actes édités ou mentionnés : 178, dont 136 pour Épernon et 42 pour Maintenon (1 du XI<hi rend="sup">e</hi> siècle, 8 du XII<hi rend="sup">e</hi> siècle, 102 du XIII<hi rend="sup">e</hi> siècle, 27 du XIV<hi rend="sup">e</hi> siècle, 17 du XV<hi rend="sup">e</hi> siècle, 15 du XVI<hi rend="sup">e</hi> siècle, 6 du XVII<hi rend="sup">e</hi> siècle, 2 du XVIII<hi rend="sup">e</hi> siècle).</p>
       </argument>
@@ -271,8 +272,104 @@
     </front>
     <group xml:id="NDMA-AB_edition-group">
       <head>Édition</head>
+      <argument>
+        <table type="actes">
+          <head>Liste des actes</head>
+          <row role="label"><cell>N°</cell><cell>Partie</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+          <row><cell><ref target="#NDMA-AB_0001">I</ref></cell><cell>Cartulaire</cell><cell><date when="1120" scope="circa">Vers 1120</date></cell><cell>« Mainerius, dominus de Metenone, filius Germundi filii Avesgoti, et Elisabeth, uxor ejus, abbatiœ Majoris Monasterii ecclesiam Sanctæ Mariæ de Metenone cum terra ad faciendas monachorum officinas transfert et quam plurima alia dona. »</cell><cell>137</cell></row>
+          <row><cell><ref target="#NDMA-AB_0002">II</ref></cell><cell>Cartulaire</cell><cell><date when="1150" scope="circa">Vers 1150</date></cell><cell>« De quinque solidis annui reditus à Guillelmo de Mestenone constitutis. »</cell><cell>139</cell></row>
+          <row><cell><ref target="#NDMA-AB_0003">III</ref></cell><cell>Cartulaire</cell><cell><date notBefore="1169" notAfter="1176">1169-1176</date></cell><cell>« Compositio facta, coram Senonensi archiepiscopo, inter monachos de Mestenone et presbiterum ecclesie Sancti Petri ejusdem loci, super minutis decimis et parrochagio Novæ villæ de Parco.</cell><cell>140</cell></row>
+          <row><cell><ref target="#NDMA-AB_0004">IV</ref></cell><cell>Cartulaire</cell><cell><date when="1210-08">Août 1210</date></cell><cell>« Amauricus, dominus de Mestenone, quinque solidos, annuatim persolvendos, a matre suà Agnete monachis beatœ Marie de Mestenone in elemosinam datos, confirmat. »</cell><cell>141</cell></row>
+          <row><cell><ref target="#NDMA-AB_0005">V</ref></cell><cell>Cartulaire</cell><cell><date when="1210-08">Août 1210</date></cell><cell>« Amauricus dominus de Mestenone monachis beatæ Mariæ quamdam partem aquæ pro damnis ab eo factis, et quinque sextarios bladi in elemosinam concedit, et dona matris sue confirmat. »</cell><cell>142</cell></row>
+          <row><cell><ref target="#NDMA-AB_0006">VI</ref></cell><cell>Cartulaire</cell><cell><date when="1212-02">Février 1212, <abbr>n. s.</abbr></date></cell><cell>« Amalricus, dominus de Motenone, altercationem inter ipsum et monachos de Beata-Maria ortam super quodam aquæ decursu compescit ; eisdem monachis dat unum sextarium bladi in molendino suo et plures alias concessiones facit. »</cell><cell>143</cell></row>
+          <row><cell><ref target="#NDMA-AB_6b">VI b</ref></cell><cell>Cartulaire</cell><cell><date when="1250">1250</date></cell><cell>« Earumdem litterarum transcriptio authentica ab Officiali curiæ Carnotensis facta est anno 1250. »</cell><cell>144</cell></row>
+          <row><cell><ref target="#NDMA-AB_0007">VII</ref></cell><cell>Cartulaire</cell><cell><date when="1222-04">Avril 1222</date></cell><cell>« Simon de Maieroliis, miles, confirmat dona patris sui, et donat monachis de Metenone unum modium vini in decima sua, percipiendum annuatim ad torcular de Metenone. »</cell><cell>145</cell></row>
+          <row><cell><ref target="#NDMA-AB_0008">VIII</ref></cell><cell>Cartulaire</cell><cell><date when="1223-07">Juillet 1223</date></cell><cell>Girard de Rus confirme le partage du fief de la Villeneuve de Maintenon fait entre Amaury de Maintenon et Julienne, veuve d'Etienne.</cell><cell>145</cell></row>
+          <row><cell><ref target="#NDMA-AB_0009">IX</ref></cell><cell>Cartulaire</cell><cell><date when="1224-05">Mai 1224</date></cell><cell>« Litteræ Theobaldi de Artia, militis, de compositione facta inter ipsum, ex una parte, et Abbatem Columbensem et priorem de Mestenone, ex altera, super justitia censuum villæ de Pratis. »</cell><cell>148</cell></row>
+          <row><cell><ref target="#NDMA-AB_0010">X</ref></cell><cell>Cartulaire</cell><cell><date when="1224-05">Mai 1224</date></cell><cell>« Amauricus de Probato-Monte, miles, compositionem inter monachos Columbenses, priorem de Mestenoue et Theobaldum de Artia factam, confirmat. »</cell><cell>149</cell></row>
+          <row><cell><ref target="#NDMA-AB_0011">XI</ref></cell><cell>Cartulaire</cell><cell><date when="1225">1225</date></cell><cell>« Litteræ Garnerii, Carnotensis episcopi, de compositione inter priorem de Maintenon et presbyterum de Horreia facta super decimis novalium parrochiæ de Horreia. »</cell><cell>152</cell></row>
+          <row><cell><ref target="#NDMA-AB_0012">XII</ref></cell><cell>Cartulaire</cell><cell><date when="1225-07-05">5 juillet 1225</date></cell><cell>« Quitatio 200 librarum turonensium abbati Majoris monasterii a Simone, domino Rupisfortis et Puiseti, data. »</cell><cell>153</cell></row>
+          <row><cell><ref target="#NDMA-AB_0013">XIII</ref></cell><cell>Cartulaire</cell><cell><date when="1235-01">Janvier 1235, <abbr>v. s.</abbr></date></cell><cell>« Contentio inter Symonem de Maerolis, et monachos de Metenone super altam justitiam hospitum de Petris pacificatur. »</cell><cell>153</cell></row>
+          <row><cell><ref target="#NDMA-AB_0014">XIV</ref></cell><cell>Cartulaire</cell><cell><date when="1236">1236</date></cell><cell><rs type="person"><persName><abbr>L.</abbr></persName>, official de l'archidiacre de <placeName>Chartres</placeName></rs>, confirme de son sceau l'accord qui précède. Les termes sont à peu près les mêmes, mais il mentionne en plus le consentement d'<rs type="person"><persName>Adam</persName>, seigneur de <placeName>Galardon</placeName>, mari d'<persName>Agnès de Merolles</persName></rs>. L'acte est daté de <num>1236.</num></cell><cell>154</cell></row>
+          <row><cell><ref target="#NDMA-AB_0015">XV</ref></cell><cell>Cartulaire</cell><cell><date when="1237-09">Septembre 1237</date></cell><cell>« Almaricus, dominus de Metenone, et Emelina uxor ejus, prioratui de Metenone, pro anniversario ipsorum, unum arpentum et dimidium prati largiuntur. »</cell><cell>155</cell></row>
+          <row><cell><ref target="#NDMA-AB_0016">XVI</ref></cell><cell>Cartulaire</cell><cell><date when="1243-12">Décembre 1243</date></cell><cell>« Joannes de Bosco, Johannes de Vachereces et Symon de Changeto, venditionem medietatis decime de Morlu, in parrochia de Petris, clericis chori ecclesie Carnotensis ab Garino, domino de Pediagio Roberti curie et duobus aliis factam, confirmant. »</cell><cell>156</cell></row>
+          <row><cell><ref target="#NDMA-AB_0017">XVII</ref></cell><cell>Cartulaire</cell><cell><date when="1243-12">Décembre 1243</date></cell><cell>« Officialis curie Carnotensis venditionem predictam decime de Morlu approbat. »</cell><cell>157</cell></row>
+          <row><cell><ref target="#NDMA-AB_0018">XVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1245-12">Décembre 1245</date></cell><cell>« Compositio inter priorem de Meintenone et Robinum de Grogneul, super duo sextaria bladi annui redditus in terra apud Petras sita. »</cell><cell>158</cell></row>
+          <row><cell><ref target="#NDMA-AB_0019">XIX</ref></cell><cell>Cartulaire</cell><cell><date when="1247-01-12">12 janvier 1247, <abbr>n. s.</abbr></date></cell><cell>« Quitatio clericorum chori ecclesiæ beatæ Mariæ Carnotensis de CX libris turon pro redemptione decimæ de Moullu, »</cell><cell>159</cell></row>
+          <row><cell><ref target="#NDMA-AB_0020">XX</ref></cell><cell>Cartulaire</cell><cell><date when="1247-10-29">29 octobre 1247</date></cell><cell>« Quitatio de septem libris, data a Galterio presbitero de Nerone. »</cell><cell>159</cell></row>
+          <row><cell><ref target="#NDMA-AB_0021">XXI</ref></cell><cell>Cartulaire</cell><cell><date when="1247">1247</date></cell><cell>« Johannes de Boscho et Eufemia, uxor ejus, tanquam domini Censuales, venditionem cujusdam domus apud Houvillam sitæ, monachis de Metenone a Roberto Brulart factam, approbant. »</cell><cell>160</cell></row>
+          <row><cell><ref target="#NDMA-AB_0022">XXII</ref></cell><cell>Cartulaire</cell><cell><date when="1247-11">Novembre 1247</date></cell><cell>« Quitatio de LV solidis a Garino Prodomme data priori de Mestenone. »</cell><cell>161</cell></row>
+          <row><cell><ref target="#NDMA-AB_0023">XXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1248-01-03">3 janvier 1248, <abbr>n. s.</abbr></date></cell><cell>« Christianus Cheverel, prepositus de Metenone, priori ejusdem loci quitationem dat de debitis et contentionibus omnibus inter cos existentibus. »</cell><cell>162</cell></row>
+          <row><cell><ref target="#NDMA-AB_0024">XXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1248-01-18">18 janvier 1248</date></cell><cell>« Quitatio de decem libris a Theobaldo Chaillou cive Carnotensis. »</cell><cell>162</cell></row>
+          <row><cell><ref target="#NDMA-AB_0025">XXV</ref></cell><cell>Cartulaire</cell><cell><date when="1248-02">Février 1248, <abbr>n. s.</abbr></date></cell><cell>« Arbitrium Officialis curiæ archidiaconi Carnotensis de contentione orta inter priorem beatæ Mariæ et presbyterum Sancti Petri de Metenone super decimis lanarum in villa de Sougni. »</cell><cell>163</cell></row>
+          <row><cell><ref target="#NDMA-AB_0026">XXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1248-07">Juillet 1248</date></cell><cell>« Johannes de Maeroliis duo sextaria bladi annui redditus in molendinis de Vado ab avo antea donata confirmat. »</cell><cell>164</cell></row>
+          <row><cell><ref target="#NDMA-AB_0027">XXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1248-07">Juillet 1248</date></cell><cell>« Johannes de Maeroliis tradit monachis de Metenone duas dozenas unius modii vini in pressorio suo de Insula, in excambium duorum solidorum Carnotensium annui redditus super quamdam domum de Insula. »</cell><cell>166</cell></row>
+          <row><cell><ref target="#NDMA-AB_0028">XXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1248-08">Août 1248</date></cell><cell>« Robertus, prior de Mestenone, venditionem cujusdam plateœ prope cimiterium sitæ, a Petro dicto Voisine ecclesiæ de Hovilla factam confirmat. »</cell><cell>166</cell></row>
+          <row><cell><ref target="#NDMA-AB_0029">XXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1248-09-30">30 septembre 1248</date></cell><cell>« Magistri Mathei Gasparini sententia arbitralis super decima lanarum parrochiæ de Houvilla, inter priorem de Metenone, et presbiterum de Houvilla litigata. »</cell><cell>167</cell></row>
+          <row><cell><ref target="#NDMA-AB_0030">XXX</ref></cell><cell>Cartulaire</cell><cell><date when="1249-05">Mai 1249</date></cell><cell>« Officialis curiæ Carnotensis de compositione facta inter clericos chori ecclesiæ Carnotensis et priorem de Mestenone super decima de Moullu. »</cell><cell>168</cell></row>
+          <row><cell><ref target="#NDMA-AB_0031">XXXI</ref></cell><cell>Cartulaire</cell><cell><date when="1249">1249</date></cell><cell>« Presbiter ecclesiæ de Petris promittit decimam de Moullu, tempore congruo, retrahere et redimere. »</cell><cell>169</cell></row>
+          <row><cell><ref target="#NDMA-AB_0032">XXXII</ref></cell><cell>Cartulaire</cell><cell><date when="1249-07">Juillet 1249</date></cell><cell>« Abbas Columbensis de contradictione possessionis decimarum, juxta nemus de Proermont sitarum, dimittit se et monasterium suum. »</cell><cell>170</cell></row>
+          <row><cell><ref target="#NDMA-AB_0033">XXXIII</ref></cell><cell>Cartulaire</cell><cell><date when="1250-10-22">22 octobre 1250</date></cell><cell>« Quitatio centum viginti et sex librarum, pro retractione decime de Moulu, priori de Melenone a procuratore clericorum chori ecclesie Carnotensis data. »</cell><cell>171</cell></row>
+          <row><cell><ref target="#NDMA-AB_0034">XXXIV</ref></cell><cell>Cartulaire</cell><cell><date when="1252-02-07">7 février 1252</date></cell><cell>« Compositio inter priorem de Metenone et Johannem Meunier de reparatione pontis Petri Alberici. »</cell><cell>171</cell></row>
+          <row><cell><ref target="#NDMA-AB_0035">XXXV</ref></cell><cell>Cartulaire</cell><cell><date when="1252-11">Novembre 1252</date></cell><cell>« Presbiter de Seharpont se dimittit a pretentione sua super decimis terrarum arabilium Guillelmi de Beu. »</cell><cell>172</cell></row>
+          <row><cell><ref target="#NDMA-AB_0036">XXXVI</ref></cell><cell>Cartulaire</cell><cell><date when="1254-01-12">12 janvier 1254, <abbr>n. s.</abbr></date></cell><cell>« Compositio inter priorem de Metenone et Johannem filium Abrahæ de Metenone, super sergenteria de Houvilla quam ille possidebat. »</cell><cell>173</cell></row>
+          <row><cell><ref target="#NDMA-AB_0037">XXXVII</ref></cell><cell>Cartulaire</cell><cell><date when="1256-12">Décembre 1256</date></cell><cell>« Guillelmus dictus Gronniet laudat et confirmat exeambium factum inter priorem de Metenone et Hemericum de Gronno io. »</cell><cell>175</cell></row>
+          <row><cell><ref target="#NDMA-AB_0038">XXXVIII</ref></cell><cell>Cartulaire</cell><cell><date when="1257-01">Janvier 1257, <abbr>n. s.</abbr></date></cell><cell>« Permutatio inter Hemericum de Grognolio et priorem de Metenone. »</cell><cell>176</cell></row>
+          <row><cell><ref target="#NDMA-AB_0039">XXXIX</ref></cell><cell>Cartulaire</cell><cell><date when="1257-01">Janvier 1257 <abbr>n. s.</abbr></date></cell><cell>« Permutationem predictam Almaricus de probato monte, miles, confirmat. »</cell><cell>177</cell></row>
+          <row><cell><ref target="#NDMA-AB_0040">XL</ref></cell><cell>Cartulaire</cell><cell><date when="1259-07">Juillet 1259</date></cell><cell>« Hugo de Mestenone, Amalrici filius, Monachis de Majori-monasterio et de Metenone donat aquam defluentem inter prata ipsorum monachorum et prata canonicorum beatæ Mariæ Carnotensis ecclesiæ, cum omni jure piscationis in eadem aqua ; ea conditione quod monachi faciant in ecclesia beate Mariæ de Metenone anniversarium Agnetis uxoris suæ, et ipsius quando morietur »</cell><cell>177</cell></row>
+          <row><cell><ref target="#NDMA-AB_0041">XLI</ref></cell><cell>Cartulaire</cell><cell><date when="1260-03">Mars 1260, <abbr>n. s.</abbr></date></cell><cell>« Johannes de Mestenone confirmat dona ab Amalrico, patre suo, facta pro anniversario ejus. »</cell><cell>179</cell></row>
+        </table>
+      </argument>
       <group xml:id="NDMA-AB_group">
         <head>Cartulaire</head>
+        <argument>
+          <table type="actes">
+            <head>Liste des actes</head>
+            <row role="label"><cell>N°</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
+            <row><cell><ref target="#NDMA-AB_0001">I</ref></cell><cell><date when="1120" scope="circa">Vers 1120</date></cell><cell>« Mainerius, dominus de Metenone, filius Germundi filii Avesgoti, et Elisabeth, uxor ejus, abbatiœ Majoris Monasterii ecclesiam Sanctæ Mariæ de Metenone cum terra ad faciendas monachorum officinas transfert et quam plurima alia dona. »</cell><cell>137</cell></row>
+            <row><cell><ref target="#NDMA-AB_0002">II</ref></cell><cell><date when="1150" scope="circa">Vers 1150</date></cell><cell>« De quinque solidis annui reditus à Guillelmo de Mestenone constitutis. »</cell><cell>139</cell></row>
+            <row><cell><ref target="#NDMA-AB_0003">III</ref></cell><cell><date notBefore="1169" notAfter="1176">1169-1176</date></cell><cell>« Compositio facta, coram Senonensi archiepiscopo, inter monachos de Mestenone et presbiterum ecclesie Sancti Petri ejusdem loci, super minutis decimis et parrochagio Novæ villæ de Parco.</cell><cell>140</cell></row>
+            <row><cell><ref target="#NDMA-AB_0004">IV</ref></cell><cell><date when="1210-08">Août 1210</date></cell><cell>« Amauricus, dominus de Mestenone, quinque solidos, annuatim persolvendos, a matre suà Agnete monachis beatœ Marie de Mestenone in elemosinam datos, confirmat. »</cell><cell>141</cell></row>
+            <row><cell><ref target="#NDMA-AB_0005">V</ref></cell><cell><date when="1210-08">Août 1210</date></cell><cell>« Amauricus dominus de Mestenone monachis beatæ Mariæ quamdam partem aquæ pro damnis ab eo factis, et quinque sextarios bladi in elemosinam concedit, et dona matris sue confirmat. »</cell><cell>142</cell></row>
+            <row><cell><ref target="#NDMA-AB_0006">VI</ref></cell><cell><date when="1212-02">Février 1212, <abbr>n. s.</abbr></date></cell><cell>« Amalricus, dominus de Motenone, altercationem inter ipsum et monachos de Beata-Maria ortam super quodam aquæ decursu compescit ; eisdem monachis dat unum sextarium bladi in molendino suo et plures alias concessiones facit. »</cell><cell>143</cell></row>
+            <row><cell><ref target="#NDMA-AB_6b">VI b</ref></cell><cell><date when="1250">1250</date></cell><cell>« Earumdem litterarum transcriptio authentica ab Officiali curiæ Carnotensis facta est anno 1250. »</cell><cell>144</cell></row>
+            <row><cell><ref target="#NDMA-AB_0007">VII</ref></cell><cell><date when="1222-04">Avril 1222</date></cell><cell>« Simon de Maieroliis, miles, confirmat dona patris sui, et donat monachis de Metenone unum modium vini in decima sua, percipiendum annuatim ad torcular de Metenone. »</cell><cell>145</cell></row>
+            <row><cell><ref target="#NDMA-AB_0008">VIII</ref></cell><cell><date when="1223-07">Juillet 1223</date></cell><cell>Girard de Rus confirme le partage du fief de la Villeneuve de Maintenon fait entre Amaury de Maintenon et Julienne, veuve d'Etienne.</cell><cell>145</cell></row>
+            <row><cell><ref target="#NDMA-AB_0009">IX</ref></cell><cell><date when="1224-05">Mai 1224</date></cell><cell>« Litteræ Theobaldi de Artia, militis, de compositione facta inter ipsum, ex una parte, et Abbatem Columbensem et priorem de Mestenone, ex altera, super justitia censuum villæ de Pratis. »</cell><cell>148</cell></row>
+            <row><cell><ref target="#NDMA-AB_0010">X</ref></cell><cell><date when="1224-05">Mai 1224</date></cell><cell>« Amauricus de Probato-Monte, miles, compositionem inter monachos Columbenses, priorem de Mestenoue et Theobaldum de Artia factam, confirmat. »</cell><cell>149</cell></row>
+            <row><cell><ref target="#NDMA-AB_0011">XI</ref></cell><cell><date when="1225">1225</date></cell><cell>« Litteræ Garnerii, Carnotensis episcopi, de compositione inter priorem de Maintenon et presbyterum de Horreia facta super decimis novalium parrochiæ de Horreia. »</cell><cell>152</cell></row>
+            <row><cell><ref target="#NDMA-AB_0012">XII</ref></cell><cell><date when="1225-07-05">5 juillet 1225</date></cell><cell>« Quitatio 200 librarum turonensium abbati Majoris monasterii a Simone, domino Rupisfortis et Puiseti, data. »</cell><cell>153</cell></row>
+            <row><cell><ref target="#NDMA-AB_0013">XIII</ref></cell><cell><date when="1235-01">Janvier 1235, <abbr>v. s.</abbr></date></cell><cell>« Contentio inter Symonem de Maerolis, et monachos de Metenone super altam justitiam hospitum de Petris pacificatur. »</cell><cell>153</cell></row>
+            <row><cell><ref target="#NDMA-AB_0014">XIV</ref></cell><cell><date when="1236">1236</date></cell><cell><rs type="person"><persName><abbr>L.</abbr></persName>, official de l'archidiacre de <placeName>Chartres</placeName></rs>, confirme de son sceau l'accord qui précède. Les termes sont à peu près les mêmes, mais il mentionne en plus le consentement d'<rs type="person"><persName>Adam</persName>, seigneur de <placeName>Galardon</placeName>, mari d'<persName>Agnès de Merolles</persName></rs>. L'acte est daté de <num>1236.</num></cell><cell>154</cell></row>
+            <row><cell><ref target="#NDMA-AB_0015">XV</ref></cell><cell><date when="1237-09">Septembre 1237</date></cell><cell>« Almaricus, dominus de Metenone, et Emelina uxor ejus, prioratui de Metenone, pro anniversario ipsorum, unum arpentum et dimidium prati largiuntur. »</cell><cell>155</cell></row>
+            <row><cell><ref target="#NDMA-AB_0016">XVI</ref></cell><cell><date when="1243-12">Décembre 1243</date></cell><cell>« Joannes de Bosco, Johannes de Vachereces et Symon de Changeto, venditionem medietatis decime de Morlu, in parrochia de Petris, clericis chori ecclesie Carnotensis ab Garino, domino de Pediagio Roberti curie et duobus aliis factam, confirmant. »</cell><cell>156</cell></row>
+            <row><cell><ref target="#NDMA-AB_0017">XVII</ref></cell><cell><date when="1243-12">Décembre 1243</date></cell><cell>« Officialis curie Carnotensis venditionem predictam decime de Morlu approbat. »</cell><cell>157</cell></row>
+            <row><cell><ref target="#NDMA-AB_0018">XVIII</ref></cell><cell><date when="1245-12">Décembre 1245</date></cell><cell>« Compositio inter priorem de Meintenone et Robinum de Grogneul, super duo sextaria bladi annui redditus in terra apud Petras sita. »</cell><cell>158</cell></row>
+            <row><cell><ref target="#NDMA-AB_0019">XIX</ref></cell><cell><date when="1247-01-12">12 janvier 1247, <abbr>n. s.</abbr></date></cell><cell>« Quitatio clericorum chori ecclesiæ beatæ Mariæ Carnotensis de CX libris turon pro redemptione decimæ de Moullu, »</cell><cell>159</cell></row>
+            <row><cell><ref target="#NDMA-AB_0020">XX</ref></cell><cell><date when="1247-10-29">29 octobre 1247</date></cell><cell>« Quitatio de septem libris, data a Galterio presbitero de Nerone. »</cell><cell>159</cell></row>
+            <row><cell><ref target="#NDMA-AB_0021">XXI</ref></cell><cell><date when="1247">1247</date></cell><cell>« Johannes de Boscho et Eufemia, uxor ejus, tanquam domini Censuales, venditionem cujusdam domus apud Houvillam sitæ, monachis de Metenone a Roberto Brulart factam, approbant. »</cell><cell>160</cell></row>
+            <row><cell><ref target="#NDMA-AB_0022">XXII</ref></cell><cell><date when="1247-11">Novembre 1247</date></cell><cell>« Quitatio de LV solidis a Garino Prodomme data priori de Mestenone. »</cell><cell>161</cell></row>
+            <row><cell><ref target="#NDMA-AB_0023">XXIII</ref></cell><cell><date when="1248-01-03">3 janvier 1248, <abbr>n. s.</abbr></date></cell><cell>« Christianus Cheverel, prepositus de Metenone, priori ejusdem loci quitationem dat de debitis et contentionibus omnibus inter cos existentibus. »</cell><cell>162</cell></row>
+            <row><cell><ref target="#NDMA-AB_0024">XXIV</ref></cell><cell><date when="1248-01-18">18 janvier 1248</date></cell><cell>« Quitatio de decem libris a Theobaldo Chaillou cive Carnotensis. »</cell><cell>162</cell></row>
+            <row><cell><ref target="#NDMA-AB_0025">XXV</ref></cell><cell><date when="1248-02">Février 1248, <abbr>n. s.</abbr></date></cell><cell>« Arbitrium Officialis curiæ archidiaconi Carnotensis de contentione orta inter priorem beatæ Mariæ et presbyterum Sancti Petri de Metenone super decimis lanarum in villa de Sougni. »</cell><cell>163</cell></row>
+            <row><cell><ref target="#NDMA-AB_0026">XXVI</ref></cell><cell><date when="1248-07">Juillet 1248</date></cell><cell>« Johannes de Maeroliis duo sextaria bladi annui redditus in molendinis de Vado ab avo antea donata confirmat. »</cell><cell>164</cell></row>
+            <row><cell><ref target="#NDMA-AB_0027">XXVII</ref></cell><cell><date when="1248-07">Juillet 1248</date></cell><cell>« Johannes de Maeroliis tradit monachis de Metenone duas dozenas unius modii vini in pressorio suo de Insula, in excambium duorum solidorum Carnotensium annui redditus super quamdam domum de Insula. »</cell><cell>166</cell></row>
+            <row><cell><ref target="#NDMA-AB_0028">XXVIII</ref></cell><cell><date when="1248-08">Août 1248</date></cell><cell>« Robertus, prior de Mestenone, venditionem cujusdam plateœ prope cimiterium sitæ, a Petro dicto Voisine ecclesiæ de Hovilla factam confirmat. »</cell><cell>166</cell></row>
+            <row><cell><ref target="#NDMA-AB_0029">XXIX</ref></cell><cell><date when="1248-09-30">30 septembre 1248</date></cell><cell>« Magistri Mathei Gasparini sententia arbitralis super decima lanarum parrochiæ de Houvilla, inter priorem de Metenone, et presbiterum de Houvilla litigata. »</cell><cell>167</cell></row>
+            <row><cell><ref target="#NDMA-AB_0030">XXX</ref></cell><cell><date when="1249-05">Mai 1249</date></cell><cell>« Officialis curiæ Carnotensis de compositione facta inter clericos chori ecclesiæ Carnotensis et priorem de Mestenone super decima de Moullu. »</cell><cell>168</cell></row>
+            <row><cell><ref target="#NDMA-AB_0031">XXXI</ref></cell><cell><date when="1249">1249</date></cell><cell>« Presbiter ecclesiæ de Petris promittit decimam de Moullu, tempore congruo, retrahere et redimere. »</cell><cell>169</cell></row>
+            <row><cell><ref target="#NDMA-AB_0032">XXXII</ref></cell><cell><date when="1249-07">Juillet 1249</date></cell><cell>« Abbas Columbensis de contradictione possessionis decimarum, juxta nemus de Proermont sitarum, dimittit se et monasterium suum. »</cell><cell>170</cell></row>
+            <row><cell><ref target="#NDMA-AB_0033">XXXIII</ref></cell><cell><date when="1250-10-22">22 octobre 1250</date></cell><cell>« Quitatio centum viginti et sex librarum, pro retractione decime de Moulu, priori de Melenone a procuratore clericorum chori ecclesie Carnotensis data. »</cell><cell>171</cell></row>
+            <row><cell><ref target="#NDMA-AB_0034">XXXIV</ref></cell><cell><date when="1252-02-07">7 février 1252</date></cell><cell>« Compositio inter priorem de Metenone et Johannem Meunier de reparatione pontis Petri Alberici. »</cell><cell>171</cell></row>
+            <row><cell><ref target="#NDMA-AB_0035">XXXV</ref></cell><cell><date when="1252-11">Novembre 1252</date></cell><cell>« Presbiter de Seharpont se dimittit a pretentione sua super decimis terrarum arabilium Guillelmi de Beu. »</cell><cell>172</cell></row>
+            <row><cell><ref target="#NDMA-AB_0036">XXXVI</ref></cell><cell><date when="1254-01-12">12 janvier 1254, <abbr>n. s.</abbr></date></cell><cell>« Compositio inter priorem de Metenone et Johannem filium Abrahæ de Metenone, super sergenteria de Houvilla quam ille possidebat. »</cell><cell>173</cell></row>
+            <row><cell><ref target="#NDMA-AB_0037">XXXVII</ref></cell><cell><date when="1256-12">Décembre 1256</date></cell><cell>« Guillelmus dictus Gronniet laudat et confirmat exeambium factum inter priorem de Metenone et Hemericum de Gronno io. »</cell><cell>175</cell></row>
+            <row><cell><ref target="#NDMA-AB_0038">XXXVIII</ref></cell><cell><date when="1257-01">Janvier 1257, <abbr>n. s.</abbr></date></cell><cell>« Permutatio inter Hemericum de Grognolio et priorem de Metenone. »</cell><cell>176</cell></row>
+            <row><cell><ref target="#NDMA-AB_0039">XXXIX</ref></cell><cell><date when="1257-01">Janvier 1257 <abbr>n. s.</abbr></date></cell><cell>« Permutationem predictam Almaricus de probato monte, miles, confirmat. »</cell><cell>177</cell></row>
+            <row><cell><ref target="#NDMA-AB_0040">XL</ref></cell><cell><date when="1259-07">Juillet 1259</date></cell><cell>« Hugo de Mestenone, Amalrici filius, Monachis de Majori-monasterio et de Metenone donat aquam defluentem inter prata ipsorum monachorum et prata canonicorum beatæ Mariæ Carnotensis ecclesiæ, cum omni jure piscationis in eadem aqua ; ea conditione quod monachi faciant in ecclesia beate Mariæ de Metenone anniversarium Agnetis uxoris suæ, et ipsius quando morietur »</cell><cell>177</cell></row>
+            <row><cell><ref target="#NDMA-AB_0041">XLI</ref></cell><cell><date when="1260-03">Mars 1260, <abbr>n. s.</abbr></date></cell><cell>« Johannes de Mestenone confirmat dona ab Amalrico, patre suo, facta pro anniversario ejus. »</cell><cell>179</cell></row>
+          </table>
+        </argument>
         <text subtype="article" xml:id="NDMA-AB_0001" n="I">
           <pb n="137" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f147/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"/>
           <front>
@@ -290,7 +387,7 @@
                 <witness n="A"> Original en parchemin. Arch. dép. Eure-et-Loir, H 2340.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 137-138.</witness>
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f147/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f148/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste Moutié et Adolphe de Dion, Rambouillet, 1878, p. 137-138.</witness>
               </listWit>
             </div>
           </front>
@@ -402,7 +499,7 @@
                   Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f149/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f150/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 139-140.</witness>
               </listWit>
@@ -452,7 +549,7 @@
                   Eure-et-Loir, H 2348.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f150/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f151/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 140-141.</witness>
               </listWit>
@@ -508,7 +605,7 @@
                 <witness n="A"> Original en parchemin. Arch. dép. Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f151/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 141.</witness>
               </listWit>
@@ -561,7 +658,7 @@
                 <witness n="A"> Original en parchemin. Arch. dép. Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f152/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 142.</witness>
               </listWit>
@@ -627,7 +724,7 @@
                 <witness n="A"> Original en parchemin. Arch. dép. Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f153/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f154/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 143-144.</witness>
               </listWit>
@@ -699,7 +796,7 @@
                 <witness n="A">Original en parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f154/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 144.</witness>
               </listWit>
@@ -740,7 +837,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2342.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f155/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 145.</witness>
               </listWit>
@@ -788,7 +885,7 @@
                   M. le duc de Noailles.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f155/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f156/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f157/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f158/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 145-148.</witness>
               </listWit>
@@ -910,7 +1007,7 @@
                   Arch. dép. Eure-et-Loir, H 2347.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f158/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 148.</witness>
               </listWit>
@@ -969,7 +1066,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2347.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f159/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f160/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f161/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 149-151.</witness>
               </listWit>
@@ -1105,7 +1202,7 @@
                   dép. Eure-et-Loir, H 2346.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f162/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f163/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 152-153.</witness>
               </listWit>
@@ -1167,7 +1264,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2343. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f163/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 153.</witness>
               </listWit>
@@ -1220,7 +1317,7 @@
                   dép. Eure-et-Loir, H 2347.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f163/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f164/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 153-154.</witness>
               </listWit>
@@ -1287,7 +1384,7 @@
                 <witness n="A">Original avec attaches de sceau en parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f164/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f165/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 154-155.</witness>
               </listWit>
@@ -1318,7 +1415,7 @@
                   Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f165/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f166/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 155-156.</witness>
               </listWit>
@@ -1381,7 +1478,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2346.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f166/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f167/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 156-157.</witness>
               </listWit>
@@ -1443,7 +1540,7 @@
                 <witness n="A">Original en parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f167/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f168/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 157-158.</witness>
               </listWit>
@@ -1511,7 +1608,7 @@
                   H 2345.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f168/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f169/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 158-159.</witness>
               </listWit>
@@ -1571,7 +1668,7 @@
                 <witness n="A">Original en parchemin, avec simple attache de sceau.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f169/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 159.</witness>
               </listWit>
@@ -1614,7 +1711,7 @@
                   une fleur de lis ; la légende manque. Arch. dép. Eure-et-Loir, H 2343. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f169/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f170/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 159-160.</witness>
               </listWit>
@@ -1660,7 +1757,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2343.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f170/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f171/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 160-161.</witness>
               </listWit>
@@ -1733,7 +1830,7 @@
                   représentant une fleur de lis. Arch. dép. Eure-et-Loir, H 2343. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f171/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 161.</witness>
               </listWit>
@@ -1781,7 +1878,7 @@
                   2347. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f172/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 162.</witness>
               </listWit>
@@ -1831,7 +1928,7 @@
               </listWit>
               
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f172/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 162-163.</witness>
               </listWit>
@@ -1880,7 +1977,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2346.Le sceau de Hugues de Maintenon attaché à la pièce qui précède était, d'après le dessin de Gaignères, rond et de près de six centimètres de diamètre. Un écu triangulaire portait un bandé ; la légende était : SIGILLV : HVGONIS. MILITIS : DE : MEITENON.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f173/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f174/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 163-164.</witness>
               </listWit>
@@ -1960,7 +2057,7 @@
                   Eure-et-Loir, H 2342.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f174/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 164-165.</witness>
               </listWit>
@@ -2026,7 +2123,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-loir, H 2342.Gaignères joint à cette charte le dessin d'un sceau rond portant un écu triangulaire bandé, et la légende qui suit : ( S : IOHIS : DE : MAEROLIS : CHEVALLER :</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f176/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 166.</witness>
               </listWit>
@@ -2078,7 +2175,7 @@
                   Eure-et-Loir, H 2343. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f176/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f177/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 166-167.</witness>
               </listWit>
@@ -2131,7 +2228,7 @@
                 <witness n="A">Original en parchemin, avec simple attache de sceau.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f177/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f178/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 167-168.</witness>
               </listWit>
@@ -2185,7 +2282,7 @@
                   Eure-et-Loir, H 2346.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f178/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 168-169.</witness>
               </listWit>
@@ -2250,7 +2347,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2346. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f179/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 169-170.</witness>
               </listWit>
@@ -2308,7 +2405,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2348.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f180/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f181/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 170-171.</witness>
               </listWit>
@@ -2364,7 +2461,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2346. </witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f181/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 171.</witness>
               </listWit>
@@ -2412,7 +2509,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2342.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f181/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 171-172.</witness>
               </listWit>
@@ -2478,7 +2575,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2348.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f182/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 172-173.</witness>
               </listWit>
@@ -2538,7 +2635,7 @@
                 <witness n="A">Original en parchemin. Arch. dép. Eure-et-Loir, H 2344.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f183/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f184/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 173-175.</witness>
               </listWit>
@@ -2623,7 +2720,7 @@
                   Eure-et-Loir, H 2345.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f185/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 175-176.</witness>
               </listWit>
@@ -2681,7 +2778,7 @@
                 <witness n="A">Original en parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f186/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f187/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 176-177.</witness>
               </listWit>
@@ -2739,7 +2836,7 @@
                 <witness n="A">Original en parchemin.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f187/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 177.</witness>
               </listWit>
@@ -2776,7 +2873,7 @@
                 <witness n="A"> Original en parchemin. Arch. dép. Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f187/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f188/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f189/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 177-179.</witness>
               </listWit>
@@ -2855,7 +2952,7 @@
                   Eure-et-Loir, H 2341.</witness>
               </listWit>
               <listWit type="édition">
-                <witness n="a" ana="edited"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
+                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f189/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/f190/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k486068g/manifest.json"><title>Cartulaires de Saint-Thomas d'Epernon et de Notre-Dame de
                   Maintenon prieurés dépendant de l'abbaye de Marmoutier</title>, éd. Auguste
                   Moutié et Adolphe de Dion, Rambouillet, 1878, p. 179-181.</witness>
               </listWit>
