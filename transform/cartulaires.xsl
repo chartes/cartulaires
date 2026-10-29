@@ -1219,7 +1219,11 @@
         <xsl:variable name="res" select="cartu:res-de(substring($cible, 2))"/>
         <xsl:variable name="el" select="cartu:cible-tei-de($res, substring($cible, 2))"/>
         <xsl:variable name="unite" select="cartu:unite-de($el)"/>
-        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id) else ()"/>
+        <!-- 2026-10-29 : renvoi au censier qui vise l'article (@n = page, ex. SMPA-EG « 206 » -> SMPA-EG_censier_0041,
+             article des p. 205-206) : ancre sur la page @n dans l'article, sinon on arrivait sur sa première page. -->
+        <xsl:variable name="page" select="if ($r/@type = 'censier' and $el/self::tei:text) then ($el//tei:pb[normalize-space(@n) = normalize-space($r/@n)][@xml:id])[1] else ()"/>
+        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id)
+            else if (exists($page)) then concat($document-base, $res, '?refId=', $el/@xml:id, '#', $page/@xml:id) else ()"/>
       </xsl:when>
       <xsl:when test="$resource = ''"/>
       <xsl:when test="matches($cible, '^\d+$')">
@@ -1371,10 +1375,13 @@
         <xsl:with-param name="witness" select="ancestor::tei:text[1]/tei:front//tei:witness[@corresp or contains(@source, '/manifests/')][1]"/>
       </xsl:call-template>
     </xsl:variable>
+    <!-- 2026-10-29 : l'ancre de la page (#HDPAR-HD_censier_p484, renvois des index au censier) sur un span vide
+         et non sur le lien : dots-vue remplace a.pb par sa vignette (PageBreak) et perdait l'id ; on arrivait
+         en tête de l'article, sur la page précédente. -->
+    <xsl:if test="$id != ''">
+      <span class="pb-ancre" id="{$id}"/>
+    </xsl:if>
     <a class="pb facs">
-      <xsl:if test="$id != ''">
-        <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
-      </xsl:if>
       <xsl:attribute name="href"><xsl:value-of select="@facs"/></xsl:attribute>
       <xsl:if test="@source or @facs">
         <xsl:attribute name="data-source">
