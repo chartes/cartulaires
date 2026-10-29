@@ -41,7 +41,9 @@
   <!-- 2026-10-02 : début des liens internes. Le front dev est monté sous /elec/ : sans ce
        préfixe, les renvois de l'index et les liens vers les actes sortaient de l'application.
        La copie servie en local (dots-clean) remplace cette valeur par '/cartulaires/document/'. -->
-  <xsl:variable name="document-base" select="'/elec/cartulaires/document/'"/>
+  <!-- 2026-10-28 : liens relatifs (« HDPAR-HD?refId=… »), justes sous /elec/ comme en local : dots-vue les
+       résout depuis /<projet>/document/<ressource>. -->
+  <xsl:variable name="document-base" select="''"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
   <!-- 2026-10-20 : chapitres du Cartulaire blanc de Saint-Denis (beaurain, dugny, pierrefitte, rueil, saint-martin,
        tremblay, ully) et ses pages (cartulaire-blanc, sd-…) : rendus par cartulaires-saint-denis.xsl, appelée ici par
@@ -1195,16 +1197,31 @@
     <xsl:param name="id" as="xs:string"/>
     <xsl:sequence select="if ($resource = '' or $id = '') then () else (for $d in edt:compagnon() return id($id, $d))[1]"/>
   </xsl:function>
+  <!-- 2026-10-28 : ressource d'une cible « #HDPAR-HD_censier_p484 » (index communs : la page mêle tous les
+       cartulaires, $resource ne vaut que pour le premier identifiant de la page) ; son TEI complet. -->
+  <xsl:function name="cartu:res-de" as="xs:string" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="id" as="xs:string"/>
+    <xsl:sequence select="if (matches($id, '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')) then replace($id, '^([A-Z]{4,5}-[A-Z]{2}(-\d+)?)_.*$', '$1') else $resource"/>
+  </xsl:function>
+  <xsl:function name="cartu:cible-tei-de" as="element()?" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="res" as="xs:string"/>
+    <xsl:param name="id" as="xs:string"/>
+    <xsl:variable name="base" select="replace($res, '-\d+$', '')"/>
+    <xsl:variable name="cands" select="for $u in (concat('compagnons/', $res, '.xml'), concat('compagnons/', $base, '/', $res, '.xml'),
+        concat('../data/', $res, '.xml'), concat('../data/', $base, '/', $res, '.xml')) return resolve-uri($u, static-base-uri())"/>
+    <xsl:sequence select="if ($res = '' or $id = '') then () else (for $u in $cands[doc-available(.)][1] return id($id, document($u)))[1]"/>
+  </xsl:function>
   <xsl:function name="cartu:href-cible" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="r" as="element()"/>
     <xsl:variable name="cible" select="normalize-space(string($r/@target))"/>
     <xsl:choose>
-      <xsl:when test="$resource = ''"/>
-      <xsl:when test="starts-with($cible, '#')">
-        <xsl:variable name="el" select="cartu:cible-tei(substring($cible, 2))"/>
+      <xsl:when test="starts-with($cible, '#') and cartu:res-de(substring($cible, 2)) != ''">
+        <xsl:variable name="res" select="cartu:res-de(substring($cible, 2))"/>
+        <xsl:variable name="el" select="cartu:cible-tei-de($res, substring($cible, 2))"/>
         <xsl:variable name="unite" select="cartu:unite-de($el)"/>
-        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $resource, '?refId=', $unite, '#', $el/@xml:id) else ()"/>
+        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id) else ()"/>
       </xsl:when>
+      <xsl:when test="$resource = ''"/>
       <xsl:when test="matches($cible, '^\d+$')">
         <xsl:sequence select="''"/>
       </xsl:when>
@@ -1511,9 +1528,32 @@
         <xsl:otherwise>div</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+    <!-- 2026-10-28 : page de début absente du fragment (le <pb> précède l'acte, ex. NDPA-EG-01_0001) :
+         on la reprend de la citation du témoin édité (« p. 3-7 ») et de sa première image. -->
+    <xsl:variable name="temoin-page" select="(.//tei:witness[@ana = 'edited'][starts-with(normalize-space(@facs), 'http')])[1]"/>
+    <xsl:variable name="page-debut" version="3.0"
+      select="if ($temoin-page) then replace(normalize-space(string-join($temoin-page//text(), '')), '^.*[\s,]p\.\s*([IVX]+\.\s*)?(\d+)[^\d]*?(-.*)?$', '$2') else ''"/>
+    <xsl:if test="../parent::dts:wrapper and not(../tei:pb[following-sibling::tei:front]) and matches($page-debut, '^\d+$')" version="3.0">
+      <xsl:variable name="image" select="substring-before(concat(normalize-space($temoin-page/@facs), ' '), ' ')"/>
+      <a class="pb facs" href="{$image}">
+        <xsl:attribute name="data-source">
+          <xsl:call-template name="cartulaires-image-source">
+            <xsl:with-param name="source" select="$temoin-page/@source"/>
+            <xsl:with-param name="image" select="$image"/>
+          </xsl:call-template>
+        </xsl:attribute>
+        <xsl:if test="$temoin-page/@corresp">
+          <xsl:attribute name="data-manifest" select="$temoin-page/@corresp"/>
+        </xsl:if>
+        <xsl:text>{p.&#160;</xsl:text>
+        <xsl:value-of select="$page-debut"/>
+        <xsl:text>}</xsl:text>
+      </a>
+    </xsl:if>
     <xsl:element name="{$el}" namespace="http://www.w3.org/1999/xhtml">
       <xsl:call-template name="atts"/>
-      <xsl:if test="normalize-space(../@n) != ''">
+      <!-- 2026-10-28 : censier de l'Hôtel-Dieu, @n = rang (exigé par le schéma) absent de l'édition Brièle : pas affiché -->
+      <xsl:if test="normalize-space(../@n) != '' and not(starts-with(../@xml:id, 'HDPAR-HD_censier_'))">
         <div class="docNum">
           <xsl:value-of select="normalize-space(../@n)"/>
         </div>

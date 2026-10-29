@@ -68,8 +68,8 @@
             <citeData property="dct:bibliographicCitation" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
             <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
           </citeStructure><citeStructure match="group" use="@xml:id" unit="part"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/><citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
-            <citeData property="dct:title" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
-            <citeData property="schema:name" use="let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
+            <citeData property="dct:title" use="if (../@xml:id = 'HDPAR-HD_censier') then normalize-space(string-join(front[1]/head[1]//text(), '')) else let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/><citeData property="schema:position" use="string(@n)"/><citeData property="schema:temporal" use="normalize-space(string-join((front[1]/docDate[1]/date[1], front[1]/docDate[1])[1]/node()[not(name() = 'note')], ''))"/>
+            <citeData property="schema:name" use="if (../@xml:id = 'HDPAR-HD_censier') then normalize-space(string-join(front[1]/head[1]//text(), '')) else let $date := normalize-space(string-join(front[1]/docDate[1]/date[1]/node()[not(name() = 'note')], '')) return if ($date) then concat(@n, ' (', $date, ')' ) else @n"/>
             <citeData property="dct:date" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
             <citeData property="schema:dateCreated" use="let $d := (front/docDate//date[normalize-space(@when) or normalize-space(@notBefore) or normalize-space(@notAfter)])[1], $u := if ($d/@scope = 'circa' or $d/@precision = ('low', 'medium')) then '~' else '', $q := if ($d/@cert = ('low', 'medium')) then (if ($u) then '%' else '?') else $u, $a := (normalize-space($d/@notBefore)[.], '..')[1], $b := (normalize-space($d/@notAfter)[.], '..')[1] return if (empty($d)) then () else if (normalize-space($d/@when)) then concat(normalize-space($d/@when), $q) else if ($a eq $b) then concat($a, $q) else concat($a, if ($a eq '..') then '' else $q, '/', $b, if ($b eq '..') then '' else $q)"/>
             <citeData property="dct:type" use="front/index/term/@key"/>
@@ -41555,7 +41555,7 @@
             <row><cell><ref target="#HDPAR-HD_censier_0093">De xii libris annui redditus, datis a magistro Odone de Sancto Dyonisio.</ref></cell><cell><date when="1294">1294</date></cell><cell>De xii libris annui redditus, datis a magistro Odone de Sancto Dyonisio.</cell><cell>495</cell></row>
             <row><cell><ref target="#HDPAR-HD_censier_0094">De l solidis datis a decano Parisiensi, apostolice sedis cardinali.</ref></cell><cell><date when="1294">1294</date></cell><cell>De l solidis datis a decano Parisiensi, apostolice sedis cardinali.</cell><cell>495</cell></row>
           </table>
-        </argument><text xml:id="HDPAR-HD_censier_0001" n="HII SUNT REDDITUS QUOS HABET DOMUS DEI PARISIENSIS APUD PARISIUS IN FUNDI TERRE CENSIBUS AUGMENTATIS, ET LOCATIONIBUS DOMORUM, IN VILLA PARISIENSI, ANNO DOMINI M° CC° NONAGESIMO QUARTO." subtype="article">
+        </argument><text xml:id="HDPAR-HD_censier_0001" n="1" subtype="article">
         <pb n="473" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0557.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p473"/>
         <front>
           <docDate>
@@ -41593,7 +41593,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0002" n="Census fundi terre de porta Balderii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0002" n="2" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41628,7 +41628,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0003" n="HII SUNT REDDITUS IN CENSIBUS AUGMENTATIS ET LOCATIONIBUS DOMORUM, IN CIVITATE PARISIENSI." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0003" n="3" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41649,7 +41649,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0004" n="De xxii libris x solidis supra domo ante Parvisium." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0004" n="4" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41671,7 +41671,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0005" n="De domo retro istam predictam domum, juxta Sanctum Christoforum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0005" n="5" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41692,7 +41692,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0006" n="De augmentatis censibus et locationibus domorum in vico Novo." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0006" n="6" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41713,7 +41713,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0007" n="De xx solidis annui census supra domum Petri Sigillatoris, et domum Auberti Sigillatoris." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0007" n="7" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41734,7 +41734,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0008" n="De xvi solidis supra predictam domum, et Auberti Sigillatoris contiguam." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0008" n="8" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41755,7 +41755,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0009" n="De domo que facit cuneum viculi quo itur ad Sanctum Christoforum de vico Novo." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0009" n="9" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41779,7 +41779,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0010" n="De xvii libris supra domum ascensatam Guillelmo Popot, in vico Novo." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0010" n="10" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41802,7 +41802,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0011" n="De duodecim denariis supra domum relicte Rogeri Sigillatoris." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0011" n="11" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41823,7 +41823,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0012" n="De domo Martini a Lescurel et de contigua, et de quinque solidis annui census." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0012" n="12" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41846,7 +41846,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0013" n="De iiii° libris annui redditus supra domum Herve Britonis, in vico predicto." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0013" n="13" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41867,7 +41867,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0014" n="De augmentato censu super Parvum Pontem." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0014" n="14" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41889,7 +41889,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0015" n="De stagiis in vico Sabuli." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0015" n="15" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41911,7 +41911,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0016" n="In vico Sancti Petri ad Boves." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0016" n="16" subtype="article">
         <pb n="476" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0560.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p476"/>
         <front>
           <docDate>
@@ -41939,7 +41939,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0017" n="In vico de Charrori." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0017" n="17" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41960,7 +41960,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0018" n="In vico Marmosetorum, de decem solidis et de quadam domo." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0018" n="18" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -41983,7 +41983,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0019" n="In vico Columbe, juxta portam Claustri." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0019" n="19" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42010,7 +42010,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0020" n="Circa Sanctum Landericum habemus domos et census infrascriptos." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0020" n="20" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42035,7 +42035,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0021" n="In vico de Glatigniaco habemus res infrascriptas." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0021" n="21" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42060,7 +42060,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0022" n="De xii libris ante Sanctum Dyonisium de Carcere, et de quatuor libris et x solidis in vico Gervasii le Lorren." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0022" n="22" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42082,7 +42082,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0023" n="De c solidis juxta ecclesiam Sancti Petri des Arsiz, et de vi libris in furno Sancti Eligii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0023" n="23" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42104,7 +42104,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0024" n="De xl solidis in vico Sancti Germani Veleris, et de domo in Judearia et vi solidis in curia Federici." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0024" n="24" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42127,7 +42127,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0025" n="De c solidis et de locagione domus de Kalandra pro xi libris." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0025" n="25" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42152,7 +42152,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0026" n="De iiii° libris annui redditus, datis a magistro Petro de Joigniaco." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0026" n="26" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42173,7 +42173,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0027" n="HII SUNT REDDITUS QUOS HABEMUS ULTRA PARVUM PONTEM, TAM IN CENSIBUS AUGMENTATIS ET LOCATIONIBUS DOMORUM IN VICO BUCHERIE, ULTRA PARVUM PONTEM." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0027" n="27" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42203,7 +42203,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0028" n="De domibus in vico Scriptorum et Eramburgis de Braya." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0028" n="28" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42224,7 +42224,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0029" n="De domo quam tenet Guillelmus Passemer ad vitam suam, in vico Scriptorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0029" n="29" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42246,7 +42246,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0030" n="De domo in vico Eramburgis de Braya et Feni." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0030" n="30" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42267,7 +42267,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0031" n="De xl solidis in vico Sancti Benedicti." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0031" n="31" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42290,7 +42290,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0032" n="De xxi libris viii solidorum vi denariorum de Cluniaco." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0032" n="32" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42314,7 +42314,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0033" n="De IIII° solidis super censivam Sororum Minorum, ultra portam Sancti Jacobi." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0033" n="33" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42335,7 +42335,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0034" n="De domo ante Sanctum Hylarium, et de domibus in vico Sancti Hilarii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0034" n="34" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42360,7 +42360,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0035" n="De VI libris annui et X solidis in vico Bevrie, et de XIIII solidis in vico Boni Putei." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0035" n="35" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42386,7 +42386,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0036" n="De domibus in vico Anglorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0036" n="36" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42407,7 +42407,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0037" n="De censu et domibus circa Sacaliam et in vico Parve Boucherie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0037" n="37" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42432,7 +42432,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0038" n="De censu in vico Cithare et in vico Sanctorum Cosme et Damiani." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0038" n="38" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42461,7 +42461,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0039" n="De censu circa ecclesiam Sancti Andree de Arcubus." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0039" n="39" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42485,7 +42485,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0040" n="HII SUNT REDITUS QUOS HABEMUS IN CENSIBUS AUGMENTATIS ET IN LOCATIONIBUS DOMORUM ULTRA MAGNUM PONTEM." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0040" n="40" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42508,7 +42508,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0041" n="De censu in Veteri Monetaria et ad Planchiam de Mibrai." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0041" n="41" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42532,7 +42532,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0042" n="De sex libris et X solidis ad Planchiam de Mibrai." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0042" n="42" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42553,7 +42553,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0043" n="De censu in terra et dominio ecclesie Sancti Mederici Parisiensis." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0043" n="43" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42580,7 +42580,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0044" n="De censu in Veteri Texanderia et ad portam Balderiam." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0044" n="44" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42606,7 +42606,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0045" n="Ad portam Balderiam." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0045" n="45" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42629,7 +42629,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0046" n="De censu Haoysis Barberie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0046" n="46" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42651,7 +42651,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0047" n="De LXX solidis supra domum Mathei Pastillarii, in cuneo vici de Barris." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0047" n="47" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42674,7 +42674,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0048" n="De domo in vico de Barris, retro cimiterium Sancti Gervasii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0048" n="48" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42698,7 +42698,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0049" n="De dono Theophanie la Commine, de XX libris in vico predicto de Barris." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0049" n="49" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42735,7 +42735,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0050" n="De XVII solidis in vico de Joyaco." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0050" n="50" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42762,7 +42762,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0051" n="De V solidis in vico Mortelerie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0051" n="51" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42783,7 +42783,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0052" n="In vico de la Hanterie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0052" n="52" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42804,7 +42804,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0053" n="De LX solidis in vico de Trossevache." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0053" n="53" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42825,7 +42825,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0054" n="De XL solidis ante fores Innocentium." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0054" n="54" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42854,7 +42854,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0055" n="De quadam domo in vico Sancte Oportune." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0055" n="55" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42875,7 +42875,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0056" n="De xl solidis in vico de Male Parole." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0056" n="56" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42896,7 +42896,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0057" n="De xl solidis super quadam domo in vico Perrini Gascelini." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0057" n="57" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42917,7 +42917,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0058" n="De sex libris super quadam domo in vico Theobaldi ad Decios." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0058" n="58" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42938,7 +42938,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0059" n="De xxv solidis in Veteri Platea Porcorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0059" n="59" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42959,7 +42959,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0060" n="De c solidis super quadam domo in vico Comitis de Pontiz." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0060" n="60" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -42980,7 +42980,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0061" n="De xl solidis super quadam domo en Tirechape." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0061" n="61" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43009,7 +43009,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0062" n="De xliii solidis vi denariis obolo in vico Tonnelarie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0062" n="62" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43032,7 +43032,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0063" n="De lxxii solidis in vico de Chastieu Festu." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0063" n="63" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43053,7 +43053,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0064" n="De ii solidis vi denariis in vico Presbiterorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0064" n="64" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43077,7 +43077,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0065" n="De xiiii solidis in vico juxta portam au Quoquillier." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0065" n="65" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43101,7 +43101,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0066" n="De xl solidis in vico Crucis du Tyroer." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0066" n="66" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43125,7 +43125,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0067" n="De xxiiii solidis super quadam domo, contigua domui que facit cuneum vici Furni." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0067" n="67" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43146,7 +43146,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0068" n="De iii solidis in vico de Daveron." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0068" n="68" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43169,7 +43169,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0069" n="De octo solidis in vico des Polies." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0069" n="69" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43190,7 +43190,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0070" n="De xii solidis ultra portam Sancti Honorati." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0070" n="70" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43216,7 +43216,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0071" n="De vi solidis in vico de Garneles." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0071" n="71" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43237,7 +43237,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0072" n="De xix solidis in vico de Biauvoir." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0072" n="72" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43258,7 +43258,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0073" n="De xvi solidis sitis versus Frigidum Mantellum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0073" n="73" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43279,7 +43279,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0074" n="De xii solidis super quadam domo ante ecclesiam Sancti Honorati." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0074" n="74" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43300,7 +43300,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0075" n="De vi solidis in vico de Frigido Mantello." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0075" n="75" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43321,7 +43321,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0076" n="De x solidis super thegularia Almarici Thegularii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0076" n="76" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43345,7 +43345,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0077" n="De l solidis super quadam domo retro ecclesiam Sancti Eustachii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0077" n="77" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43366,7 +43366,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0078" n="De viii solidis super quadam domo in Quozonneria." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0078" n="78" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43387,7 +43387,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0079" n="De lx solidis super quadam domo in vico Canaberiorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0079" n="79" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43408,7 +43408,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0080" n="De xxx solidis super quadam domo in vico Truanderie." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0080" n="80" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43429,7 +43429,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0081" n="De xii solidis et vi denariis super quadam domo in vico Cigni." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0081" n="81" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43450,7 +43450,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0082" n="De ii solidis super quadam domo in Magno Vico." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0082" n="82" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43471,7 +43471,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0083" n="De v solidis super quadam domo in predicto Vico Magno." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0083" n="83" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43492,7 +43492,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0084" n="De v solidis super quadam domo ultra portam Sancti Dyonisii." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0084" n="84" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43519,7 +43519,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0085" n="De xl solidis supra Cortillias Barbeti." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0085" n="85" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43541,7 +43541,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0086" n="De ix libris super domo Aceline Hucherie ante Parvisum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0086" n="86" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43562,7 +43562,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0087" n="De v solidis super quadam domo in vico de Frepeillon." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0087" n="87" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43583,7 +43583,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0088" n="De vi libris v solidis in vico Mortelarie et in Veteri Vico Templi." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0088" n="88" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43604,7 +43604,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0089" n="De duabus domibus que sunt in vico ad Ymaginem Sancte Katerine." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0089" n="89" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43625,7 +43625,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0090" n="De domibus in vico Agmidalorum." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0090" n="90" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43647,7 +43647,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0091" n="De duabus domibus, quarum una est in vico Novo et alia in vico de Charrauri." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0091" n="91" subtype="article">
         <pb n="495" facs="https://iiif.archive.org/image/iiif/3/archivesdelhte00htuoft%2Farchivesdelhte00htuoft_jp2.zip%2Farchivesdelhte00htuoft_jp2%2Farchivesdelhte00htuoft_0579.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/archivesdelhte00htuoft/manifest.json" xml:id="HDPAR-HD_censier_p495"/>
         <front>
           <docDate>
@@ -43669,7 +43669,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0092" n="De liiii libris et xiiii solidis annui redditus, datis a predicto domino Richardo de Passu." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0092" n="92" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43691,7 +43691,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0093" n="De xii libris annui redditus, datis a magistro Odone de Sancto Dyonisio." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0093" n="93" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
@@ -43712,7 +43712,7 @@
           </div>
         </body>
       </text>
-      <text xml:id="HDPAR-HD_censier_0094" n="De l solidis datis a decano Parisiensi, apostolice sedis cardinali." subtype="article">
+      <text xml:id="HDPAR-HD_censier_0094" n="94" subtype="article">
         <front>
           <docDate>
             <date when="1294">1294</date>
