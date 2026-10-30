@@ -46,10 +46,10 @@
         <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
+        <citeStructure unit="partie" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head"/>
           <citeData property="schema:name" use="head"/>
-          <citeStructure match="div/div/div" use="@xml:id" unit="partie">
+          <citeStructure match="div/div/div" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head"/>
             <citeData property="schema:name" use="head"/>
           </citeStructure>
