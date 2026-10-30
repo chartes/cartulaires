@@ -65,9 +65,30 @@
 
   <!-- ==== 1. HISTORIQUE : feuille de l'ÉLEC ==== -->
 
-  <!-- Passer à travers les unclear (pour la démo) -->
+  <!-- Passer à travers les unclear (pour la démo) ; 2026-10-30 : un unclear vide (10, lettres illisibles non
+       restituées : « debeb<unclear/>t ») ne laissait aucune trace : « [?] ». -->
   <xsl:template match="tei:unclear">
     <xsl:apply-templates/>
+  </xsl:template>
+  <xsl:template match="tei:unclear[not(node())]" priority="5">
+    <span class="unclear" title="lecture incertaine">[?]</span>
+  </xsl:template>
+  <!-- 2026-10-30 : monogramme (g rend="monogramme" vide, saint-martin acte 23) : n'apparaissait pas. -->
+  <xsl:template match="tei:g[@rend = 'monogramme'][not(node())]" priority="5">
+    <span class="monogramme">(monogramme)</span>
+  </xsl:template>
+  <!-- 2026-10-30 : infobulle d'un sigle de témoin : hteiml y mettait tout le texte du <witness>, notes entières et
+       leçons fautives comprises (« grossis trossis sic B pour trossis ») ; ici la seule description du témoin. -->
+  <xsl:template match="tei:witness" mode="a" priority="5">
+    <a class="wit">
+      <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
+      <xsl:attribute name="title" select="normalize-space(string-join(.//text()[not(ancestor::tei:note or ancestor::tei:del or ancestor::*[self::tei:sic or self::tei:orig][parent::tei:choice[tei:corr or tei:reg]])], ''))"/>
+      <xsl:choose>
+        <xsl:when test="tei:label"><xsl:apply-templates select="tei:label/node()"/></xsl:when>
+        <xsl:when test="@n"><xsl:value-of select="@n"/></xsl:when>
+        <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"/></xsl:when>
+      </xsl:choose>
+    </a>
   </xsl:template>
   <!-- ne pas sortir le back qui ne doit contenir que des index -->
   <xsl:template match="/tei:TEI/tei:text/tei:back"/>

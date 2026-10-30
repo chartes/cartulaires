@@ -257,6 +257,25 @@
   </xsl:template>
 
   <!-- ==== 3. PROPRE AU PROJET ==== -->
+  <!-- 2026-10-30 : infobulle d'un sigle de témoin : hteiml y mettait tout le texte du <witness>, notes comprises
+       (« …de Hyaudeport Sic B pour Byaudeport. ») ; ici la seule description du témoin (même modèle que cartulaires.xsl). -->
+  <xsl:template match="tei:witness" mode="a" priority="5">
+    <a class="wit">
+      <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
+      <xsl:attribute name="title"><xsl:value-of select="normalize-space(string-join(.//text()[not(ancestor::tei:note or ancestor::tei:del or ancestor::*[self::tei:sic or self::tei:orig][parent::tei:choice[tei:corr or tei:reg]])], ''))"/></xsl:attribute>
+      <xsl:choose>
+        <xsl:when test="tei:label"><xsl:apply-templates select="tei:label/node()"/></xsl:when>
+        <xsl:when test="@n"><xsl:value-of select="@n"/></xsl:when>
+        <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"/></xsl:when>
+      </xsl:choose>
+    </a>
+  </xsl:template>
+  <xsl:template match="tei:unclear[not(node())]" priority="5">
+    <span class="unclear" title="lecture incertaine">[?]</span>
+  </xsl:template>
+  <xsl:template match="tei:g[@rend = 'monogramme'][not(node())]" priority="5">
+    <span class="monogramme">(monogramme)</span>
+  </xsl:template>
 
   <!-- 2026-10-28 (Maxime : « Titres cités de façon abrégée … ce sont des références biblio, on peut mettre un truc
        générique ») : liste « sigle = référence » (hi rend="cite") rendue au format de la bibliographie commune
