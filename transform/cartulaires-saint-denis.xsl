@@ -270,9 +270,6 @@
       </xsl:choose>
     </a>
   </xsl:template>
-  <xsl:template match="tei:unclear[not(node())]" priority="5">
-    <span class="unclear" title="lecture incertaine">[?]</span>
-  </xsl:template>
   <xsl:template match="tei:g[@rend = 'monogramme'][not(node())]" priority="5">
     <span class="monogramme">(monogramme)</span>
   </xsl:template>

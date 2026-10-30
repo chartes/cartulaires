@@ -65,75 +65,17 @@
 
   <!-- ==== 1. HISTORIQUE : feuille de l'ÉLEC ==== -->
 
-  <!-- Passer à travers les unclear (pour la démo) ; 2026-10-30 : un unclear vide (10, lettres illisibles non
-       restituées : « debeb<unclear/>t ») ne laissait aucune trace : « [?] ». -->
-  <xsl:template match="tei:unclear">
-    <xsl:apply-templates/>
-  </xsl:template>
   <xsl:template match="tei:unclear[not(node())]" priority="5">
     <span class="unclear" title="lecture incertaine">[?]</span>
   </xsl:template>
-  <!-- 2026-10-30 : monogramme (g rend="monogramme" vide, saint-martin acte 23) : n'apparaissait pas. -->
-  <xsl:template match="tei:g[@rend = 'monogramme'][not(node())]" priority="5">
-    <span class="monogramme">(monogramme)</span>
-  </xsl:template>
-  <!-- 2026-10-30 : infobulle d'un sigle de témoin : hteiml y mettait tout le texte du <witness>, notes entières et
-       leçons fautives comprises (« grossis trossis sic B pour trossis ») ; ici la seule description du témoin. -->
-  <xsl:template match="tei:witness" mode="a" priority="5">
-    <a class="wit">
-      <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
-      <xsl:attribute name="title" select="normalize-space(string-join(.//text()[not(ancestor::tei:note or ancestor::tei:del or ancestor::*[self::tei:sic or self::tei:orig][parent::tei:choice[tei:corr or tei:reg]])], ''))"/>
-      <xsl:choose>
-        <xsl:when test="tei:label"><xsl:apply-templates select="tei:label/node()"/></xsl:when>
-        <xsl:when test="@n"><xsl:value-of select="@n"/></xsl:when>
-        <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"/></xsl:when>
-      </xsl:choose>
-    </a>
-  </xsl:template>
   <!-- ne pas sortir le back qui ne doit contenir que des index -->
   <xsl:template match="/tei:TEI/tei:text/tei:back"/>
-  <!-- ne pas sortir les pages -->
-  <xsl:template match="tei:pb"/>
   <!-- lien vers un dictionnaire -->
   <xsl:template match="@xml:lang[.='fro']">
     <!-- à corriger
     <xsl:attribute name="ondblclick">if (window.Win) Win.dmf()</xsl:attribute>
     -->
   </xsl:template>
-  <!-- Nom d'un acte -->
-  <xsl:template match="tei:group/tei:text" mode="a">
-    <a>
-      <xsl:attribute name="href">
-        <xsl:apply-templates select="." mode="href"/>
-      </xsl:attribute>
-      <xsl:attribute name="title">
-        <xsl:value-of select="normalize-space(tei:front/tei:docDate)"/>
-      </xsl:attribute>
-      <xsl:if test="@n">
-      <b>
-        <xsl:value-of select="@n"/>
-      </b>
-      </xsl:if>
-      <xsl:variable name="date">
-        <xsl:apply-templates select="tei:front/tei:docDate/tei:date[1]" mode="label"/>
-      </xsl:variable>
-      <xsl:if test="$date != ''">
-        <xsl:text> (</xsl:text>
-        <xsl:value-of select="$date"/>
-        <xsl:text>) </xsl:text>
-      </xsl:if>
-      <xsl:choose>
-        <xsl:when test="tei:front/tei:head">
-          <xsl:apply-templates select="tei:front/tei:head" mode="title"/>
-        </xsl:when>
-        <xsl:when test="tei:front/tei:argument/tei:head">
-          <xsl:apply-templates select="tei:front/tei:argument/tei:head" mode="title"/>
-        </xsl:when>
-      </xsl:choose>
-    </a>
-  </xsl:template>
-  <!-- Pas de table des matières à l'intérieur d'un acte -->
-  <xsl:template match="tei:group/tei:text" mode="ul" priority="2"/>
 
   <xsl:template match="//tei:front/tei:div[@type='dissertation']">
     <section class="div dissertation level2">
@@ -693,7 +635,6 @@
        sur une page les index dont les lettres ne sont pas des unités. -->
   <!-- 2026-10-20 : STEP, NDRC, NDPR, NDMT aussi (lettres devenues unités dans le TEI) : plus aucun index sur une page,
        tous les cartulaires ont une page par lettre (uniformisation demandée par Maxime). -->
-  <xsl:variable name="cartu-fiches" select="()" as="xs:string*"/>
   <!-- renvois « voir » : ressources dont les lettres sont des unités citables sous UNE unité
        index-complet, et cette unité (même ordre). Ailleurs le renvoi garde sa cible : soit la page
        est déjà entière (STEP, NDRC, NDPR, NDMT), soit le front redirige la lettre vers sa page
@@ -712,22 +653,6 @@
     <xsl:param name="n" as="element()"/>
     <xsl:sequence select="exists($n/ancestor::tei:list[@type = 'index'][tei:head][@xml:id][not(ancestor::tei:item)][not(parent::*[local-name() = 'wrapper'])])"/>
   </xsl:function>
-  <!-- 2026-10-08 : page d'index sur le modèle de Delescluze (index-personnes) : tout l'index sur
-       une seule adresse, chaque lettre repliable avec son nombre d'entrées, les entrées dedans. -->
-  <xsl:template match="tei:list[@type = 'index'][tei:head][not(ancestor::tei:item)][$resource = $cartu-fiches]" priority="21" version="3.0">
-    <details class="cartu-lettre">
-      <xsl:if test="@xml:id"><xsl:attribute name="id" select="@xml:id"/></xsl:if>
-      <summary>
-        <h2 class="cartu-lettre-titre">
-          <xsl:value-of select="normalize-space(string-join(tei:head[1]//text(), ''))"/>
-          <span class="cartu-lettre-nb"><xsl:value-of select="concat(' (', count(tei:item), ')')"/></span>
-        </h2>
-      </summary>
-      <ul class="cartu-lettre-entrees">
-        <xsl:apply-templates select="node() except tei:head"/>
-      </ul>
-    </details>
-  </xsl:template>
   <xsl:template match="tei:item//tei:pb | tei:pb[following-sibling::tei:item][parent::tei:list[@type = 'index'] or parent::*[local-name() = 'wrapper']]" priority="30" version="3.0">
     <xsl:param name="pb-en-tete" tunnel="yes" select="false()"/>
     <xsl:if test="$pb-en-tete and contains(@facs, 'gallica.bnf.fr')"><xsl:next-match/></xsl:if>
@@ -1322,12 +1247,6 @@
     <xsl:call-template name="noteref"/>
   </xsl:template>
 
-  <xsl:template
-    match="tei:note[string-length(normalize-space(@n)) = 1 and contains('abcdefghijklmnopqrstuvwxyz', normalize-space(@n))]"
-    mode="fn"
-    priority="20">
-    <xsl:call-template name="note-inline"/>
-  </xsl:template>
   <!-- ==== C2-TEMOINS-DEBUT (2026-09-12) : images des témoins et des folios (NDCH) ====
        Repris de la version complète de l'utilisateur (630 lignes, 2026-09-01 :
        `Downloads\chroniques_latines\elec-historical-comparison\poitou-mine\hteiml\Nouveau dossier\
@@ -1638,10 +1557,6 @@
        le livre (cartulaire, cens, appendice). Le folio et la page viennent de @n du renvoi
        (« VI recto 1 », « deest 14 ») ; la pièce et la page mènent à l'unité visée quand le TEI
        porte la cible, sinon pas de lien. -->
-  <xsl:function name="cartu:ssco-href" as="xs:string" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cartu="urn:cartu">
-    <xsl:param name="r" as="element()"/>
-    <xsl:sequence select="if (normalize-space($resource)) then concat($document-base, $resource, '?refId=', substring-after($r/@target, '#')) else string($r/@target)"/>
-  </xsl:function>
 
   <!-- 2026-10-19 : retirés, car morts (aucune page servie ne les produisait : le module Édition, de
        priorité 30, rend la page d'un groupe) et dépendants d'un tri en CSS par boutons radio et d'un
@@ -1658,10 +1573,6 @@
        Les anciens sites ELEC ferment : le TEXTE affiche est conserve mot pour mot (c'est
        l'identifiant de la publication d'origine), seule la cible devient la route locale.
        Table et bloc produits par dots-autopilot/scripts/d5_legacy_links_fix.py. -->
-  <!-- portail ELEC -->
-  <xsl:template match="tei:title[../tei:idno[@type = 'URI'][normalize-space(.) = 'http://elec.enc.sorbonne.fr' or normalize-space(.) = 'http://elec.enc.sorbonne.fr/']]" priority="14">
-    <a class="title d5-local" href="/"><xsl:apply-templates/></a>
-  </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-01']" priority="14">
     <a class="idno d5-local" href="{$document-base}NDPA-EG-01"><xsl:apply-templates/></a>
   </xsl:template>
@@ -1723,43 +1634,13 @@
         concat('../data/', $resource, '.xml'), concat('../data/', $base, '/', $resource, '.xml')) return resolve-uri($u, static-base-uri())"/>
     <xsl:sequence select="if ($resource = '') then () else (for $u in $cands[doc-available(.)][1] return document($u))"/>
   </xsl:function>
-  <xsl:function version="3.0" name="edt:titre" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="e" as="element()?"/>
-    <xsl:sequence select="normalize-space(string-join($e/tei:head[1]//text()[not(ancestor::tei:note)], ''))"/>
-  </xsl:function>
   <!-- clé de comparaison d'un titre : sans casse, accents, espaces ni ponctuation (le disque peut avoir
        des titres recassés pas encore réingérés : « LIBER NONUS.LITTERÆ » = « Liber nonus. Litteræ ») -->
-  <xsl:function version="3.0" name="edt:cle" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="e" as="element()?"/>
-    <xsl:sequence select="replace(replace(lower-case(normalize-unicode(edt:titre($e), 'NFD')), '\p{M}', ''), '[^\p{L}\p{N}]', '')"/>
-  </xsl:function>
 
   <!-- 2026-10-27 : les pages de regroupement servies sans leurs actes ne sont plus recomposées à partir du
        TEI complet (edt:compagnon) : rendu de base de ce que sert DoTS, et TOC de dots-vue (décision de Maxime). -->
 
 
-  <!-- texte visible d'un élément, sans les notes -->
-  <xsl:function version="3.0" name="edt:txt" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="e" as="node()*"/>
-    <!-- un <lb/> sépare deux mots (« DOYEN<lb/>DE ») : compté comme une espace -->
-    <xsl:sequence select="normalize-space(string-join($e//(text() | tei:lb)[not(ancestor::tei:note)] ! (if (self::tei:lb) then ' ' else string(.)), ''))"/>
-  </xsl:function>
-  <xsl:function version="3.0" name="edt:date" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="t" as="element()"/>
-    <!-- la date seule (comme la table de SSCO) : docDate contient souvent aussi le lieu (« Compiègne ») -->
-    <xsl:variable name="d" select="($t/tei:front/tei:docDate[1]//tei:date[edt:txt(.) != ''])[1]"/>
-    <xsl:sequence select="replace(if ($d) then edt:txt($d) else edt:txt($t/tei:front/tei:docDate[1]), '[\s.,;]+$', '')"/>
-  </xsl:function>
-  <xsl:function version="3.0" name="edt:date-tri" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="t" as="element()"/>
-    <xsl:variable name="d" select="($t/tei:front/tei:docDate//tei:date/(@when, @notBefore, @from)[matches(., '^\d{3,4}')])[1]"/>
-    <xsl:sequence select="if ($d) then format-number(number(substring-before(concat($d, '-'), '-')), '0000') || substring($d, string-length(substring-before(concat($d, '-'), '-')) + 1) else ''"/>
-  </xsl:function>
-  <xsl:function version="3.0" name="edt:num" as="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xsl:param name="t" as="element()"/>
-    <xsl:variable name="d" select="replace(string($t/@xml:id), '^.*_0*(\d+)[^_]*$', '$1')"/>
-    <xsl:sequence select="if (matches($d, '^\d+$')) then $d else string(count($t/preceding::tei:text) + 1)"/>
-  </xsl:function>
   <!-- 2026-10-19 : page de l'édition, sous ses différentes notations (« 67 », « page 67 », « t1_p067 » NDCH,
        « 1_0003 » NDVC et SMCP, « I. 9 » NDPA-EG-01 et SGDP) → (tome en chiffres arabes ou '', page). -->
   <xsl:function version="3.0" name="edt:tome-page" as="xs:string*" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -1795,86 +1676,6 @@
          d'intertitre en colonne « Section » ; un intertitre qui porte un total (« XIIe siècle | 7 »)
          reste une ligne « Total », pour ne rien perdre. Un tableau à cellules fusionnées dans le corps
          (HDPAR-HD) ne peut pas être trié : il reste un tableau simple. -->
-  <!-- ==================================================================================================
-       Constructeur commun : un tableau triable et filtrable (module tableau-filtrable.xsl).
-       $colonnes : maps { 'libelle', 'num' (tri numérique), 'filtre' ('texte' | 'liste' | 'numeros' | ''),
-                          'classe' (classe des cellules) }
-       $lignes   : éléments h:tr, chacun avec ses h:td ; chaque td porte @data-sort (clé de tri) et son
-                   contenu ; @data-f (valeur de filtre) est calculé ici depuis le texte de la cellule s'il
-                   manque. Les options d'un filtre en liste sont les valeurs distinctes de la colonne.
-       ================================================================================================== -->
-  <xsl:template version="3.0" name="cartu-tf">
-    <xsl:param name="classe" as="xs:string" select="''"/>
-    <xsl:param name="nom" as="xs:string"/>
-    <xsl:param name="unite" as="xs:string"/>
-    <xsl:param name="colonnes" as="map(*)*"/>
-    <xsl:param name="lignes" as="element()*"/>
-    <xsl:param name="titre" as="node()*" select="()"/>
-    <div class="tf-cadre cartu-tf">
-      <xsl:call-template name="tf-barre">
-        <xsl:with-param name="total" select="count($lignes)"/>
-        <xsl:with-param name="unite" select="$unite"/>
-      </xsl:call-template>
-      <table class="{normalize-space(concat('tf-tableau cartu-tableau ', $classe))}" data-csv-nom="{$nom}"
-             data-csv-entetes="{string-join($colonnes ! ?libelle, '|')}">
-        <xsl:if test="exists($titre)"><caption><xsl:copy-of select="$titre"/></caption></xsl:if>
-        <thead>
-          <tr>
-            <xsl:for-each select="$colonnes">
-              <xsl:call-template name="tf-th">
-                <xsl:with-param name="classe" select="string(?classe)"/>
-                <xsl:with-param name="libelle" select="?libelle"/>
-                <xsl:with-param name="numerique" select="?num = true()"/>
-              </xsl:call-template>
-            </xsl:for-each>
-          </tr>
-          <tr class="tf-filtres">
-            <xsl:for-each select="$colonnes">
-              <xsl:variable name="i" select="position()"/>
-              <xsl:choose>
-                <xsl:when test="?filtre = 'liste'">
-                  <xsl:call-template name="tf-filtre">
-                    <xsl:with-param name="col" select="$i - 1"/>
-                    <xsl:with-param name="libelle" select="?libelle"/>
-                    <xsl:with-param name="type" select="'liste'"/>
-                    <xsl:with-param name="options" select="distinct-values($lignes ! normalize-space(h:td[$i]))[. != '']"/>
-                  </xsl:call-template>
-                </xsl:when>
-                <xsl:when test="?filtre = ('texte', 'numeros')">
-                  <xsl:call-template name="tf-filtre">
-                    <xsl:with-param name="col" select="$i - 1"/>
-                    <xsl:with-param name="libelle" select="?libelle"/>
-                    <xsl:with-param name="type" select="string(?filtre)"/>
-                  </xsl:call-template>
-                </xsl:when>
-                <xsl:otherwise><td/></xsl:otherwise>
-              </xsl:choose>
-            </xsl:for-each>
-          </tr>
-        </thead>
-        <tbody>
-          <xsl:for-each select="$lignes">
-            <tr data-o="{position()}">
-              <xsl:copy-of select="@*"/>
-              <xsl:for-each select="h:td">
-                <xsl:variable name="i" select="position()"/>
-                <td>
-                  <xsl:if test="string($colonnes[$i]?classe) != ''"><xsl:attribute name="class" select="$colonnes[$i]?classe"/></xsl:if>
-                  <xsl:copy-of select="@*"/>
-                  <xsl:if test="not(@data-sort)"><xsl:attribute name="data-sort" select="normalize-space(.)"/></xsl:if>
-                  <xsl:if test="not(@data-f)"><xsl:attribute name="data-f" select="tf:plat(normalize-space(.))"/></xsl:if>
-                  <xsl:choose>
-                    <xsl:when test="normalize-space(.) = '' and not(*)"><span class="tf-vide">—</span></xsl:when>
-                    <xsl:otherwise><xsl:copy-of select="node()"/></xsl:otherwise>
-                  </xsl:choose>
-                </td>
-              </xsl:for-each>
-            </tr>
-          </xsl:for-each>
-        </tbody>
-      </table>
-    </div>
-  </xsl:template>
 
   <!-- ==================================================================================================
        Tableaux des introductions (hors des actes).
@@ -1932,32 +1733,10 @@
   </xsl:template>
 
 
-  <!-- n° de l'acte (cellule 4) ; à défaut, le rang -->
-  <xsl:function version="3.0" name="chr:acte" as="xs:string">
-    <xsl:param name="c" as="element()?"/>
-    <xsl:param name="rang" as="xs:integer"/>
-    <xsl:variable name="t" select="if (exists($c)) then replace(string($c), '[\s\p{Zs}]+', '') else ''"/>
-    <xsl:sequence select="if (matches($t, '^\d+$')) then $t else string($rang)"/>
-  </xsl:function>
 
   <!-- date de tri AAAA-MM-JJ : année (premier nombre de 3 ou 4 chiffres) ; mois et jour seulement s'ils suivent
        immédiatement « année, [jour] mois » ; date incomplète = 1er janvier ou 1er du mois de l'année ;
        « xive s. » = 1301-01-01 ; aucune année = '' (fin du tri). « (n. st.) » ignoré. -->
-  <xsl:function version="3.0" name="chr:date-tri" as="xs:string">
-    <xsl:param name="c" as="xs:string"/>
-    <xsl:variable name="s" select="replace(replace(lower-case(replace($c, '[\s\p{Zs}]+', ' ')), '\(\s*[nv]\.\s*st\.?\s*\)', ''), '\s*:\s*$', '')"/>
-    <xsl:variable name="reste" select="replace($s, '^[^0-9]*(\d{1,2}[^0-9]+)*\d{3,4}\s*,?\s*', '')"/>
-    <xsl:variable name="stems" select="('janv', 'f[ée]vr', 'mars', 'avr', 'mai', 'juin', 'juil', 'ao[uû]t', 'sept', 'oct', 'nov', 'd[ée]c')"/>
-    <xsl:variable name="mo" select="(for $i in 1 to 12 return if (matches($reste, concat('^(\d{1,2}(er)?\s+)?', $stems[$i]))) then $i else ())[1]"/>
-    <xsl:variable name="jour" select="if (exists($mo) and matches($reste, '^\d{1,2}(er)?\s')) then replace($reste, '^(\d{1,2})(er)?\s.*$', '$1') else ''"/>
-    <xsl:sequence select="
-      if (contains($s, 'xive')) then '1301-01-01'
-      else if (not(matches($s, '[0-9]{3,4}'))) then ''
-      else concat(
-        format-number(xs:integer(replace($s, '^[^0-9]*(\d{1,2}[^0-9]+)*(\d{3,4}).*$', '$2')), '0000'), '-',
-        format-number(if (exists($mo)) then $mo else 1, '00'), '-',
-        format-number(if ($jour != '') then xs:integer($jour) else 1, '00'))"/>
-  </xsl:function>
 
   <!-- ==================================================================================================
        Appendice en inventaire (VNDP-AB_back : rubriques « I. Iste sunt vinee… », articles « apud
@@ -1983,15 +1762,6 @@
         else ''"/>
   </xsl:function>
 
-  <!-- ligne d'intitulés (row[@role='label']) de tout tableau des actes (NDMT-AB_0171, NDPA-EG-04…) :
-       cellules en <th>, comme un en-tête. -->
-  <xsl:template version="3.0" match="tei:row[@role = 'label']/tei:cell[not(@role = 'data')] | tei:cell[@role = 'label']" priority="4">
-    <th>
-      <xsl:if test="@cols"><xsl:attribute name="colspan" select="@cols"/></xsl:if>
-      <xsl:if test="@rows"><xsl:attribute name="rowspan" select="@rows"/></xsl:if>
-      <xsl:apply-templates/>
-    </th>
-  </xsl:template>
 
   <!-- ==================================================================================================
        ANNEXES de SAPC-AB (back-1) : liste des abbesses et corpus des sceaux. La sous-rubrique d'un sceau
@@ -2015,15 +1785,7 @@
     </section>
   </xsl:template>
 
-  <!-- Même chose quand l'unité est servie seule (excludeFragments=true) : ses deux divisions arrivent sans
-       @type, sous le dts:wrapper dont le titre est « ANNEXES ». -->
-  <xsl:template match="tei:div[not(@type)][parent::*[local-name() = 'wrapper']][not(tei:div)][tei:p[chr:liste-num(.)]]" priority="28" version="3.0">
-    <xsl:call-template name="chr:annexes-liste"/>
-  </xsl:template>
 
-  <xsl:template match="tei:div[not(@type)][parent::*[local-name() = 'wrapper']][tei:div/tei:head[matches(normalize-space(.), 'SCEAUX', 'i')]]" priority="28" version="3.0">
-    <xsl:call-template name="chr:annexes-sceaux"/>
-  </xsl:template>
 
   <xsl:template version="3.0" name="chr:annexes-liste">
     <section class="cartu-appendice cartu-annexes-liste">
@@ -2040,69 +1802,10 @@
     </section>
   </xsl:template>
 
-  <!-- une sous-rubrique : une ligne par sceau ; sa rubrique (partie · sous-rubrique, plus les mentions qui
-       précèdent le premier sceau, hors lieu) passe dans la colonne Rubrique -->
-  <xsl:template version="3.0" name="chr:sceaux-feuille">
-    <xsl:variable name="leaf" select="."/>
-    <xsl:variable name="parent-head" select="normalize-space(string(../tei:head[1]))"/>
-    <xsl:variable name="premier" select="(tei:p[chr:entree(.)])[1]"/>
-    <xsl:variable name="avant" select="if (exists($premier)) then tei:p[. &lt;&lt; $premier] else tei:p"/>
-    <xsl:variable name="mentions" select="for $p in $avant[not(chr:lieu(.))] return normalize-space($p)"/>
-    <xsl:variable name="rubrique" select="string-join(($parent-head, normalize-space(string(tei:head[1])), $mentions)[. != ''], ' · ')"/>
-    <!-- repères de page des intitulés (celui de la partie avec sa première sous-rubrique seulement) et
-         des mentions qui précèdent le premier sceau : portés par le premier sceau de la sous-rubrique -->
-    <xsl:variable name="pb-rubrique" select="(if (preceding-sibling::tei:div) then () else ../tei:head[1]//tei:pb), tei:head[1]//tei:pb, $avant//tei:pb"/>
-    <xsl:for-each-group select="tei:p" group-starting-with="tei:p[chr:entree(.)]">
-      <xsl:if test="chr:entree(current-group()[1])">
-        <xsl:call-template name="chr:sceaux-entree">
-          <xsl:with-param name="groupe" select="current-group()"/>
-          <xsl:with-param name="feuille" select="$leaf"/>
-          <xsl:with-param name="rubrique" select="$rubrique"/>
-          <xsl:with-param name="pb-avant" select="if (current-group()[1] is $premier) then $pb-rubrique else ()"/>
-        </xsl:call-template>
-      </xsl:if>
-    </xsl:for-each-group>
-  </xsl:template>
 
-  <!-- un sceau : intitulé (premier paragraphe), date (premier paragraphe qui commence par une année),
-       notice (les autres paragraphes, sans la ligne de date déjà en colonne) -->
-  <xsl:template version="3.0" name="chr:sceaux-entree">
-    <xsl:param name="groupe" as="element()+"/>
-    <xsl:param name="feuille" as="element()"/>
-    <xsl:param name="rubrique" as="xs:string"/>
-    <xsl:param name="pb-avant" as="element()*" select="()"/>
-    <xsl:variable name="tete" select="$groupe[1]"/>
-    <xsl:variable name="texte" select="normalize-space(string($tete))"/>
-    <xsl:variable name="roman" select="replace($texte, '^([IVXLC]+)\..*$', '$1')"/>
-    <xsl:variable name="datep" select="($groupe[position() gt 1][chr:datep(.)])[1]"/>
-    <xsl:variable name="date" select="if (exists($datep)) then replace(normalize-space(string($datep)), '^[–-]\s*', '') else ''"/>
-    <xsl:variable name="lieu" select="replace(replace(normalize-space(string(($feuille//tei:p[. &lt;&lt; $tete][chr:lieu(.)])[last()])), '^[–-]\s*', ''), '[\s.,]+$', '')"/>
-    <tr>
-      <td data-sort="{chr:roman($roman)}"><xsl:apply-templates select="$pb-avant, $tete/tei:pb"/><xsl:value-of select="$roman"/></td>
-      <td><xsl:value-of select="replace($texte, '^[IVXLC]+\.\s*', '')"/></td>
-      <td data-sort="{chr:date-tri($date)}"><xsl:apply-templates select="$datep/tei:pb"/><xsl:value-of select="$date"/></td>
-      <td><xsl:value-of select="$rubrique"/></td>
-      <td><xsl:value-of select="$lieu"/></td>
-      <td><xsl:apply-templates select="$groupe[position() gt 1][not(. is $datep)]"/></td>
-    </tr>
-  </xsl:template>
 
-  <xsl:function version="3.0" name="chr:entree" as="xs:boolean">
-    <xsl:param name="p" as="element()"/>
-    <xsl:sequence select="matches(normalize-space(string($p)), '^[IVXLC]+\.\s+\p{Lu}')"/>
-  </xsl:function>
 
-  <!-- ligne de date d'un sceau : « 1216, avril… », « 1 – 1217, juin… », « – 1218 (n. st.)… » -->
-  <xsl:function version="3.0" name="chr:datep" as="xs:boolean">
-    <xsl:param name="p" as="element()"/>
-    <xsl:sequence select="matches(normalize-space(string($p)), '^(\d\s*[–-]\s*|[–-]\s*)?\d{4}([^0-9]|$)')"/>
-  </xsl:function>
 
-  <!-- lieu : « – Embrun. », « – Beaumont-en-Gâtinais, » (tiret puis majuscule, ni une date) -->
-  <xsl:function version="3.0" name="chr:lieu" as="xs:boolean">
-    <xsl:param name="p" as="element()"/>
-    <xsl:sequence select="matches(normalize-space(string($p)), '^[–-]\s*\p{Lu}')"/>
-  </xsl:function>
 
   <!-- abbesse : « 6 Jeanne 1ère, 1253-1254.. » -->
   <xsl:function version="3.0" name="chr:liste-num" as="xs:boolean">
@@ -2110,13 +1813,6 @@
     <xsl:sequence select="matches(normalize-space(string($p)), '^\d+\s+.+,\s*\d{3,4}\s*[–-]\s*\d{3,4}\.*$')"/>
   </xsl:function>
 
-  <!-- numéro romain -> entier (IV = 4 ; une coquille du TEI, XCXIX, est lue telle quelle = 109) -->
-  <xsl:function version="3.0" name="chr:roman" as="xs:integer">
-    <xsl:param name="r" as="xs:string"/>
-    <xsl:variable name="n" select="string-length($r)"/>
-    <xsl:variable name="v" select="for $i in 1 to $n return (1, 5, 10, 50, 100, 500, 1000)[index-of(('I', 'V', 'X', 'L', 'C', 'D', 'M'), substring($r, $i, 1))]"/>
-    <xsl:sequence select="xs:integer(sum(for $i in 1 to $n return if ($i lt $n and $v[$i] lt $v[$i + 1]) then -$v[$i] else $v[$i]))"/>
-  </xsl:function>
 
   <!-- Titre (group ou dts:wrapper) portant une note hors de tout tei:text : la collecte des notes de
        hteiml ne la voit pas ; le bloc de notes du titre est ajouté après le rendu, s'il n'y est pas déjà
