@@ -946,16 +946,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:ref[not(@type = 'note')][starts-with(@target, '#')][contains(@target, '-intro')][not(key('id', substring-after(@target, '#')))]" priority="13">
-    <xsl:variable name="chap" select="substring-before(substring-after(@target, '#'), '-intro')"/>
-    <xsl:choose>
-      <xsl:when test="contains($sd-chapitres, concat(' ', $chap, ' '))">
-        <a class="sd-internal" href="{$sd-vers-chapitres}{$chap}"><xsl:apply-templates/></a>
-      </xsl:when>
-      <xsl:otherwise><xsl:apply-imports/></xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
   <xsl:template match="tei:ref[starts-with(@target, 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/')]" priority="11">
     <xsl:variable name="path" select="substring-after(@target, 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/')"/>
     <xsl:variable name="chap" select="substring-before(concat($path, '/'), '/')"/>
