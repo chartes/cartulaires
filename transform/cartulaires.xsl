@@ -1753,15 +1753,6 @@
     </section>
   </xsl:template>
 
-  <!-- lieu d'un article : « apud X, » ; un article « item » reprend le lieu de l'article précédent -->
-  <xsl:function version="3.0" name="cartu-app:lieu" as="xs:string">
-    <xsl:param name="p" as="element()"/>
-    <xsl:variable name="t" select="normalize-space(string-join($p//text()[not(ancestor::tei:note)], ''))"/>
-    <xsl:sequence select="if (matches($t, '^(apud|juxta|in)\s+[^,;]+', 'i')) then replace(replace($t, '^(apud|juxta|in)\s+([^,;]+).*$', '$2', 'i'), '[\s&#160;]+$', '')
-        else if (matches($t, '^item([\s,.;:]|$)', 'i') and $p/preceding-sibling::tei:p) then cartu-app:lieu($p/preceding-sibling::tei:p[1])
-        else ''"/>
-  </xsl:function>
-
 
   <!-- ==================================================================================================
        ANNEXES de SAPC-AB (back-1) : liste des abbesses et corpus des sceaux. La sous-rubrique d'un sceau

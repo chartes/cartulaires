@@ -644,17 +644,22 @@
           <h3 class="sd-index-initiale"><xsl:value-of select="tei:head[1]"/></h3>
           <ul class="sd-index-termes">
             <xsl:for-each select="tei:item">
+              <!-- 2026-11-05 : présentation des index MH (vedette, puis « N occurrences » dépliable). -->
               <li class="sd-index-terme">
+                <span class="sd-index-libelle"><xsl:value-of select="tei:term"/></span>
                 <details class="sd-index-details">
                   <summary class="sd-index-sommaire">
-                    <span class="sd-index-libelle"><xsl:value-of select="tei:term"/></span>
-                    <span class="sd-index-nb"><xsl:value-of select="@n"/></span>
+                    <xsl:value-of select="@n"/>
+                    <xsl:choose>
+                      <xsl:when test="@n = '1'"> occurrence</xsl:when>
+                      <xsl:otherwise> occurrences</xsl:otherwise>
+                    </xsl:choose>
                   </summary>
-                  <div class="sd-index-renvois">
+                  <ul class="sd-index-renvois">
                     <xsl:for-each select="tei:ptr">
-                      <xsl:call-template name="sd-index-renvoi"/>
+                      <li><xsl:call-template name="sd-index-renvoi"/></li>
                     </xsl:for-each>
-                  </div>
+                  </ul>
                 </details>
               </li>
             </xsl:for-each>
