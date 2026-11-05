@@ -1822,4 +1822,17 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- 2026-11-05 (Maxime : « l'ancien site va être désactivé ») : anciens sites (*.enc.sorbonne.fr) fermés, plus aucun
+       lien vers eux ; le texte reste. Les réécritures vers dots-vue de cette feuille (priorité plus forte) passent avant. -->
+  <xsl:template match="tei:ref[matches(@target, '^https?://([a-z0-9-]+\.)*enc\.sorbonne\.fr')]
+                       | tei:ptr[matches(@target, '^https?://([a-z0-9-]+\.)*enc\.sorbonne\.fr')]" mode="#all" version="3.0" priority="1">
+    <xsl:choose>
+      <xsl:when test="normalize-space(.) != '' or *"><xsl:apply-templates mode="#current"/></xsl:when>
+      <xsl:otherwise><xsl:value-of select="@target"/></xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:template match="tei:idno[matches(normalize-space(.), '^https?://([a-z0-9-]+\.)*enc\.sorbonne\.fr')]" mode="#all" version="3.0" priority="1">
+    <span class="idno"><xsl:value-of select="normalize-space(.)"/></span>
+  </xsl:template>
+
 </xsl:transform>
