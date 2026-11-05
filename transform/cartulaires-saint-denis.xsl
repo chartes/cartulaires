@@ -64,32 +64,38 @@
   <!-- 2026-10-19 (cartulaires seulement, écart à saint-denis.xsl) : en-tête de l'acte présenté comme les
        autres cartulaires : <header class="front"> (cadre de hteiml) qui réunit n°, date, analyse ET tableau
        de la tradition, celui-ci n'étant plus répété dans le corps. -->
+  <!-- Rôle : En-tête de l'acte : <header class="front"> (cadre des autres cartulaires) avec n°, date, analyse, puis le tableau de la tradition. -->
   <xsl:template match="tei:text/tei:front" priority="12">
     <header class="front">
       <xsl:apply-templates/>
       <xsl:apply-templates select="../tei:body/tei:div[@type = 'tradition']" mode="sd-entete"/>
     </header>
   </xsl:template>
+  <!-- Rôle : Tradition reprise dans l'en-tête (appelée par le modèle précédent) : div.tei-tradition. -->
   <xsl:template match="tei:div[@type = 'tradition']" mode="sd-entete">
     <div class="tei-tradition">
       <xsl:if test="@xml:lang"><xsl:attribute name="lang" select="@xml:lang"/></xsl:if>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
+  <!-- Rôle : Tradition du corps : rien, elle est déjà affichée dans l'en-tête. -->
   <xsl:template match="tei:body/tei:div[@type = 'tradition'][../../tei:front]" priority="13"/>
 
   <!-- Sigle d'un témoin (A, B, a…) : en italique chez Pleade. -->
+  <!-- Rôle : Sigle d'un témoin (A, B, a…) : span.tei-label, en italique comme sur l'ancien site. -->
   <xsl:template match="tei:witness/tei:label" priority="12">
     <span class="tei-label"><xsl:apply-templates/></span>
   </xsl:template>
 
   <!-- Citations des anciens inventaires et rubriques : entre guillemets, comme Pleade. -->
+  <!-- Rôle : Citation d'un ancien inventaire ou d'une rubrique (quote summary/rubric) : entre guillemets français. -->
   <xsl:template match="tei:quote[@type = ('summary', 'rubric')]" priority="12">
     <span class="quote-{@type}">«&#160;<xsl:apply-templates/>&#160;»</span>
   </xsl:template>
 
   <!-- ==== 2. BLOCS HTEIML GÉNÉRIQUES : enveloppe dts:wrapper, notes, apparat critique, bibliographie (listBibl) ==== -->
 
+  <!-- Rôle : Apparat : lemme puis lettre d'appel (classe app-ref). hteiml donne le même affichage mais met le même id sur le span et l'appel (id en double) : gardé. -->
   <xsl:template match="tei:app" priority="12">
     <span class="app">
       <xsl:apply-templates select="tei:lem"/>
@@ -99,6 +105,7 @@
     </span>
   </xsl:template>
 
+  <!-- Rôle : Lemme : espace insécable avant lui quand il le faut (pas après une apostrophe ni un blanc) ; lemme qui n'est qu'un blanc du manuscrit classé lem-blanc. -->
   <xsl:template match="tei:lem">
     <xsl:variable name="prev" select="normalize-space(../preceding-sibling::node()[1])"/>
     <xsl:variable name="prevnode" select="../preceding-sibling::node()[not(self::comment())][1]"/>
@@ -115,14 +122,17 @@
     </span>
   </xsl:template>
 
+  <!-- Rôle : sic/corr dans un lemme : on montre la leçon fautive (em.sic), comme l'édition. -->
   <xsl:template match="tei:lem//tei:choice[tei:sic][tei:corr]" priority="12">
     <em class="sic"><xsl:apply-templates select="tei:sic/node()"/></em>
   </xsl:template>
 
+  <!-- Rôle : Tradition à plusieurs listes de témoins : enveloppe div.tei-tradition. -->
   <xsl:template match="tei:div[@type='tradition']/tei:listWit[tei:listWit]" priority="12">
     <div class="tei-tradition"><xsl:apply-templates select="tei:listWit"/></div>
   </xsl:template>
 
+  <!-- Rôle : Une liste de témoins (originaux, copies, éditions, indiqué) : libellé « Originaux : »…, témoins séparés par « — » ; « Indiqué » en bloc à part. -->
   <xsl:template match="tei:div[@type='tradition']/tei:listWit/tei:listWit" priority="12">
     <xsl:variable name="id" select="concat(@xml:id, '#')"/>
     <xsl:variable name="type">
@@ -172,10 +182,12 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Enveloppe dts:wrapper des fragments DTS : traversée sans rien produire (la copie locale de hteiml ne le fait pas encore). -->
   <xsl:template match="*[local-name() = 'wrapper']">
     <xsl:apply-templates/>
   </xsl:template>
 
+  <!-- Rôle : Appel de note : <ref type="note"> qui renvoie à une note rangée dans div type="notes" ; lien vers la note, numéro @n. hteiml ne relie pas cet encodage (lien cassé #ref1). -->
   <xsl:template match="tei:ref[@type='note']">
     <xsl:variable name="noteid" select="substring-after(@target, '#')"/>
     <xsl:variable name="rang" select="count(preceding::tei:ref[@type='note'][@target = current()/@target])"/>
@@ -194,12 +206,15 @@
     </a>
   </xsl:template>
 
+  <!-- Rôle : Note sans identifiant dans le texte : glose entre crochets, à sa place. -->
   <xsl:template match="tei:note[not(@xml:id) and not(parent::tei:div[@type = 'notes'])]" priority="8">
     <span class="gloss"> [<xsl:apply-templates/>]</span>
   </xsl:template>
 
+  <!-- Rôle : Note sans identifiant dans une citation : pas reprise au pied de page (déjà dans la ligne). -->
   <xsl:template match="tei:note[not(@xml:id)][parent::tei:quote]" mode="fn" priority="9"/>
 
+  <!-- Rôle : Appel de note dont la note n'existe pas : numéro seul, sans lien. -->
   <xsl:template match="tei:ref[@type='note'][not(key('sd-note-by-id', substring-after(@target, '#')))]" priority="9">
     <sup class="noteref-orphan">
       <xsl:choose>
@@ -209,8 +224,10 @@
     </sup>
   </xsl:template>
 
+  <!-- Rôle : Bloc des notes (div type="notes") : pas rendu à sa place, les notes vont au pied de page. -->
   <xsl:template match="tei:div[@type = 'notes' or @type = 'footnotes']" priority="30"/>
 
+  <!-- Rôle : Une note du bloc des notes, au pied de page : aside.note avec son numéro, lien de retour vers l'appel. -->
   <xsl:template match="tei:div[@type = 'notes' or @type = 'footnotes']//tei:note[@xml:id]" mode="fn" priority="20">
     <xsl:param name="resp"/>
     <xsl:if test="($resp = '' and not(@resp))
@@ -259,6 +276,7 @@
   <!-- ==== 3. PROPRE AU PROJET ==== -->
   <!-- 2026-10-30 : infobulle d'un sigle de témoin : hteiml y mettait tout le texte du <witness>, notes comprises
        (« …de Hyaudeport Sic B pour Byaudeport. ») ; ici la seule description du témoin (même modèle que cartulaires.xsl). -->
+  <!-- Rôle : Infobulle du sigle d'un témoin : la seule description du témoin, sans ses notes. -->
   <xsl:template match="tei:witness" mode="a" priority="5">
     <a class="wit">
       <xsl:attribute name="href"><xsl:call-template name="href"/></xsl:attribute>
@@ -270,6 +288,7 @@
       </xsl:choose>
     </a>
   </xsl:template>
+  <!-- Rôle : Monogramme sans texte : « (monogramme) ». -->
   <xsl:template match="tei:g[@rend = 'monogramme'][not(node())]" priority="5">
     <span class="monogramme">(monogramme)</span>
   </xsl:template>
@@ -278,6 +297,7 @@
        générique ») : liste « sigle = référence » (hi rend="cite") rendue au format de la bibliographie commune
        (bibliographie.xsl, bloc CSS « bibliographie ») : une ligne par titre, sigle en petites capitales, retrait
        suspendu, année de parution à droite. -->
+  <!-- Rôle : Liste « sigle = référence » (titres cités en abrégé) : rendue comme la bibliographie commune (sigle, retrait, année à droite). -->
   <xsl:template match="tei:list[tei:item[1]/*[1][self::tei:hi[@rend = 'cite']]]" priority="30" version="3.0">
     <div class="biblio">
       <ul class="listBibl biblio-liste">
@@ -305,6 +325,7 @@
        chronologique, l'ordre d'origine départage une même année), filtre de… à… ; Numéro : chapitre en data-f
        (filtre par chapitre), tri chapitre puis numéro ; Langue : liste ; Auteur : texte avec suggestions. Les lignes
        incomplètes (24, 5 ou 6 cellules) sont complétées de cellules vides. -->
+  <!-- Rôle : Table des actes du Cartulaire blanc : tableau triable et filtrable (module tableau-filtrable.xsl). -->
   <xsl:template match="tei:div[@xml:id = 'sd-les-textes--cartulaire-blanc--parcourir--table-des-actes']//tei:table" priority="30" version="3.0"
       xmlns:tf="urn:elec:tableau-filtrable" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="tf xs">
     <xsl:variable name="lignes" select="tei:row[position() gt 1]"/>
@@ -367,6 +388,7 @@
     </div>
   </xsl:template>
 
+  <!-- Rôle : Tableaux « Nb. actes » / « Édition de la notice » : première ligne en en-têtes de colonne (th). -->
   <xsl:template match="tei:table[tei:row[1]/tei:cell[last()][normalize-space(.) = ('Nb. actes', 'Édition de la notice dans l’inventaire')]]/tei:row[1]/tei:cell" priority="5">
     <th scope="col">
       <xsl:if test="@cols &gt; 1"><xsl:attribute name="colspan" select="@cols"/></xsl:if>
@@ -375,30 +397,37 @@
     </th>
   </xsl:template>
 
+  <!-- Rôle : tei:summary (non géré par hteiml) : div.summary. -->
   <xsl:template match="tei:summary" priority="20">
     <div class="summary"><xsl:apply-templates/></div>
   </xsl:template>
 
+  <!-- Rôle : tei:msName (non géré par hteiml) : span.msName. -->
   <xsl:template match="tei:msName" priority="20">
     <span class="msName"><xsl:apply-templates/></span>
   </xsl:template>
 
+  <!-- Rôle : tei:am, signe d'abréviation (non géré par hteiml) : span.am. -->
   <xsl:template match="tei:am" priority="20">
     <span class="am"><xsl:apply-templates/></span>
   </xsl:template>
 
+  <!-- Rôle : Auteur de l'acte (front/docAuthor) : non affiché, il figure dans l'index des auteurs. -->
   <xsl:template match="tei:front/tei:docAuthor" priority="12"/>
 
+  <!-- Rôle : Date de l'acte : p.tei-docDate (la ligne « URL de cette page » de l'ancien site est retirée). -->
   <xsl:template match="tei:front/tei:docDate" priority="12">
     <p class="tei-docDate"><xsl:apply-templates/></p>
     <!-- 2026-10-19 (cartulaires) : ligne « URL de cette page » du site Pleade retirée, comme dans les autres cartulaires. -->
   </xsl:template>
 
+  <!-- Rôle : Lieu de la date : précédé de « . — ». -->
   <xsl:template match="tei:front/tei:docDate/tei:placeName" priority="12">
     <xsl:text>. — </xsl:text>
     <xsl:apply-imports/>
   </xsl:template>
 
+  <!-- Rôle : Identifiant HTML d'un app ou d'une div sans xml:id : préfixé par l'id de l'acte (ancres stables d'un fragment à l'autre) ; sinon, celui de hteiml. -->
   <xsl:template name="id">
     <xsl:param name="prefix"/>
     <xsl:param name="suffix"/>
@@ -430,6 +459,7 @@
   <!-- 2026-10-19 (cartulaires) : numéro d'acte en chiffres romains, sans le nom du chapitre, comme dans les
        autres cartulaires (« Dugny 13 » → « XIII », « Beaurain 58a » → « LVIIIa », « Rueil 1. Acte faux » →
        « I. Acte faux »). Un titre d'une autre forme est rendu tel quel. -->
+  <!-- Rôle : Titre de l'acte : n° en chiffres romains, sans le nom du chapitre (« Dugny 13 » → « XIII »). -->
   <xsl:template match="tei:front/tei:titlePart" priority="12">
     <xsl:variable name="t" select="normalize-space(.)"/>
     <h1 class="tei-doc-title">
@@ -447,18 +477,22 @@
     </h1>
   </xsl:template>
 
+  <!-- Rôle : Date dans la ligne de date : span.tei-date. -->
   <xsl:template match="tei:front/tei:docDate/tei:date" priority="12">
     <span class="tei-date"><xsl:apply-templates/></span>
   </xsl:template>
 
+  <!-- Rôle : Analyse de l'acte : div.tei-summary. -->
   <xsl:template match="tei:front/tei:div[@type = 'summary']" priority="12">
     <div class="tei-summary"><xsl:apply-templates/></div>
   </xsl:template>
 
+  <!-- Rôle : Corps de l'acte : div.tei-doc-body. -->
   <xsl:template match="tei:text/tei:body" priority="12">
     <div class="tei-doc-body"><xsl:apply-templates/></div>
   </xsl:template>
 
+  <!-- Rôle : Commentaire et transcription (et tradition hors en-tête) : précédés d'un filet <hr/>. -->
   <xsl:template match="tei:body/tei:div[@type = ('tradition', 'comments', 'transcription')]" priority="12">
     <hr/>
     <div class="tei-{@type}">
@@ -467,8 +501,10 @@
     </div>
   </xsl:template>
 
+  <!-- Rôle : Groupe de textes à la racine du document : non rendu (les actes sont servis un par un). -->
   <xsl:template match="tei:TEI[tei:teiHeader]/tei:text/tei:group" priority="15"/>
 
+  <!-- Rôle : tei:text : modèle de hteiml repris, avec les notes au pied de chaque acte et sans regroupement par page. -->
   <xsl:template match="tei:text">
     <xsl:param name="level" select="count(ancestor::tei:group)"/>
     <article>
@@ -491,6 +527,7 @@
     </article>
   </xsl:template>
 
+  <!-- Rôle : Sous-partie d'une page de présentation : section.sd-subpart avec un titre h3. -->
   <xsl:template match="tei:div[@type='subpart']" priority="12">
     <section class="sd-subpart">
       <xsl:if test="@xml:id">
@@ -501,6 +538,7 @@
     </section>
   </xsl:template>
 
+  <!-- Rôle : Page de présentation (div type="page") : article.sd-static-page avec un titre h1. -->
   <xsl:template match="tei:div[@type='page']" priority="12">
     <article class="sd-static-page">
       <xsl:if test="@xml:id">
@@ -514,14 +552,17 @@
     </article>
   </xsl:template>
 
+  <!-- Rôle : Paragraphe-titre de niveau 2 de l'ancien site : h2.sd-legacy-h2. -->
   <xsl:template match="tei:p[starts-with(@rend,'heading-h2')]" priority="12">
     <h2 class="sd-legacy-h2"><xsl:apply-templates/></h2>
   </xsl:template>
 
+  <!-- Rôle : Paragraphe-titre de niveau 3 de l'ancien site : h3.sd-legacy-h3. -->
   <xsl:template match="tei:p[starts-with(@rend,'heading-h3')]" priority="12">
     <h3 class="sd-legacy-h3"><xsl:apply-templates/></h3>
   </xsl:template>
 
+  <!-- Rôle : « Retour au début » : paragraphe normal, ou sans alinéa selon ce qui précède. -->
   <xsl:template match="tei:trailer[@type = 'retour-debut']" priority="12">
     <xsl:variable name="prev" select="preceding-sibling::*[not(self::tei:pb)][1]"/>
     <p>
@@ -536,6 +577,7 @@
     </p>
   </xsl:template>
 
+  <!-- Rôle : Bloc de recherche : texte et lien vers la recherche plein texte de l'application. -->
   <xsl:template match="tei:div[@type='search']" priority="30">
     <section class="sd-search" id="sd-search">
       <h2>Rechercher dans les chartes éditées</h2>
@@ -546,10 +588,12 @@
     </section>
   </xsl:template>
 
+  <!-- Rôle : Image de l'ancien site (legacy-source/assets) : img.sd-graphic vers la copie locale. -->
   <xsl:template match="tei:graphic[starts-with(@url, 'legacy-source/assets/')]" priority="12">
     <img class="sd-graphic" loading="lazy" src="{$sd-images}assets/{substring-after(@url, 'legacy-source/assets/')}" alt="{normalize-space(@n)}"/>
   </xsl:template>
 
+  <!-- Rôle : Saut de page avec fac-similé : folio dépliable (« Cartulaire blanc, tome 1 (LL 1157), page N » puis l'image). -->
   <xsl:template match="tei:pb[@facs]" priority="20">
     <xsl:variable name="rel" select="substring-after(@facs, 'images/saint-denis/')"/>
     <xsl:variable name="fichier" select="tokenize($rel, '/')[last()]"/>
@@ -597,10 +641,12 @@
     </details>
   </xsl:template>
 
+  <!-- Rôle : Développement d'abréviation : sans les crochets que met hteiml. -->
   <xsl:template match="tei:expan" priority="20">
     <xsl:apply-templates/>
   </xsl:template>
 
+  <!-- Rôle : Lettres restituées : entre parenthèses (span.sd-ex). -->
   <xsl:template match="tei:ex" priority="20">
     <span class="sd-ex">
       <xsl:text>(</xsl:text>
@@ -609,13 +655,16 @@
     </span>
   </xsl:template>
 
+  <!-- Rôle : Liste des annexes sans titre : précédée de « Documents annexes ». -->
   <xsl:template match="tei:div[@type = 'appendices']/tei:list[not(tei:head)]" priority="12">
     <p class="sd-annexes-label">Documents annexes</p>
     <xsl:apply-imports/>
   </xsl:template>
 
+  <!-- Rôle : Résumé court : non affiché. -->
   <xsl:template match="tei:div[@type = 'short-summary']" priority="12"/>
 
+  <!-- Rôle : Index des auteurs d'actes : initiales, vedettes, « N occurrences » dépliable, renvois. -->
   <xsl:template match="tei:div[@type = 'index'][starts-with(@xml:id, 'sd-index-auteurs-')]"
                 priority="16">
     <xsl:variable name="cle" select="substring-after(@xml:id, 'sd-index-auteurs-')"/>
@@ -669,9 +718,11 @@
     </section>
   </xsl:template>
 
+  <!-- Rôle : Index des auteurs en mode li : rien (pas d'entrée de sommaire). -->
   <xsl:template match="tei:div[@type = 'index'][starts-with(@xml:id, 'sd-index-auteurs-')]"
                 mode="li" priority="16"/>
 
+  <!-- Rôle : Pages « Parcourir » (Cartulaire blanc, Inventaire) : article.sd-page-parcourir. -->
   <xsl:template match="tei:div[@type = 'page']
                               [@xml:id = 'sd-les-textes--cartulaire-blanc--parcourir'
                                or @xml:id = 'sd-les-textes--inventaire--parcourir']"
@@ -687,6 +738,7 @@
 
   <!-- ==== 4. MÉCANISMES COMMUNS : tableau filtrable (tf-*), liens vers l'ancien site (D5), liens internes entre fragments ==== -->
 
+  <!-- Rôle : Renvoi à une illustration : image dépliable, lien vers le PDF, ou mention de son absence. -->
   <xsl:template match="tei:ref[starts-with(@target, 'illustrations/')] | tei:ptr[starts-with(@target, 'illustrations/')]" priority="12">
     <xsl:variable name="file" select="substring-after(@target, 'illustrations/')"/>
     <xsl:variable name="jointe" select="substring-after(@facs, 'images/saint-denis/illustrations/')"/>
@@ -716,6 +768,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Renvoi à une page du cartulaire ou de l'inventaire (voir.html?ns=…) : folio dépliable avec l'image. -->
   <xsl:template match="tei:ref[contains(@target, 'images/cartulaireblanc/') or contains(@target, 'images/inventaire/')][contains(@target, 'ns=')]" priority="13">
     <xsl:variable name="serie" select="substring-before(substring-after(@target, 'images/'), '/voir.html')"/>
     <xsl:variable name="fichier" select="normalize-space(substring-after(@target, 'ns='))"/>
@@ -732,6 +785,7 @@
     </details>
   </xsl:template>
 
+  <!-- Rôle : Renvoi à la visionneuse de l'ancien site sans page précise : texte avec infobulle (pas d'équivalent ici). -->
   <xsl:template match="tei:ref[contains(@target, 'images/cartulaireblanc/') or contains(@target, 'images/inventaire/')]
                               [contains(@target, '/voir.html')][not(contains(@target, 'ns='))]"
                 priority="15">
@@ -755,6 +809,7 @@
     </span>
   </xsl:template>
 
+  <!-- Rôle : « acte(s) Beaurain 12 » dans le texte : le numéro devient un lien vers l'acte. -->
   <xsl:template priority="5"
       match="text()[not(ancestor::tei:ref)]
                    [ancestor::tei:p or ancestor::tei:note or ancestor::tei:item or ancestor::tei:witness]
@@ -772,6 +827,7 @@
     </xsl:analyze-string>
   </xsl:template>
 
+  <!-- Rôle : Même chose quand « n° » est écrit avec un o en exposant (<hi>o</hi>). -->
   <xsl:template priority="6"
       match="text()[not(ancestor::tei:ref)]
                    [preceding-sibling::node()[1][self::tei:hi][normalize-space() = 'o']]
@@ -803,6 +859,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Fabrique le lien vers un acte (appelé par les deux modèles précédents et par celui de l'Inventaire). -->
   <xsl:template name="sd-lien-acte">
     <xsl:param name="chapitre"/>
     <xsl:param name="numero"/>
@@ -813,6 +870,7 @@
     </a>
   </xsl:template>
 
+  <!-- Rôle : Témoin « indiqué » : « Inv. gén. II, n° 1234 » devient un lien vers la notice de l'Inventaire (sauf lacunes), les renvois aux actes aussi. -->
   <xsl:template priority="7"
       match="text()[not(ancestor::tei:ref)]
                    [ancestor::tei:witness[contains(@xml:id, '-indiqué-ig')]]
@@ -852,6 +910,7 @@
     </xsl:analyze-string>
   </xsl:template>
 
+  <!-- Rôle : Lien vers le Du Cange de l'ancien site : vers le Du Cange de l'ÉLEC. -->
   <xsl:template match="tei:ref[contains(@target, 'ducange.enc.sorbonne.fr/')]" priority="14">
     <xsl:variable name="cible" select="substring-after(@target, 'ducange.enc.sorbonne.fr/')"/>
     <xsl:variable name="brut" select="replace(replace(upper-case(substring-before(concat($cible, '#'), '#')), '%20', ''), ' ', '')"/>
@@ -862,6 +921,7 @@
     </a>
   </xsl:template>
 
+  <!-- Rôle : Téléchargement (.zip) de l'ancien site : copie locale. -->
   <xsl:template match="tei:ref[contains(@target, 'enc.sorbonne.fr')][ends-with(lower-case(@target), '.zip')]"
                 priority="16">
     <a class="sd-telechargement"
@@ -871,6 +931,7 @@
     </a>
   </xsl:template>
 
+  <!-- Rôle : Lien vers la recherche avancée de l'ancien site : recherche de l'application. -->
   <xsl:template match="tei:ref[contains(@target, 'enc.sorbonne.fr')][contains(@target, 'recherche-avancee.html')]"
                 priority="16">
     <a class="sd-recherche-locale" href="../search" title="Recherche dans la collection Saint-Denis.">
@@ -878,6 +939,7 @@
     </a>
   </xsl:template>
 
+  <!-- Rôle : Renvoi interne à un acte (#rueil-acte12) : lien vers l'acte dans son chapitre, avec correction des renvois faux de Rueil et d'Ully. -->
   <xsl:template
       match="tei:ref[starts-with(@target, '#')][contains(@target, '-acte')][not(@type='note')]"
       priority="12">
@@ -919,6 +981,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Renvoi vers un fichier (beaurain.xml#…) : lien vers le chapitre, l'acte ou la notice de l'Inventaire. -->
   <xsl:template match="tei:ref[not(@type = 'note')][contains(@target, '.xml')][not(contains(@target, ':'))]" priority="12">
     <xsl:variable name="file" select="substring-before(@target, '.xml')"/>
     <xsl:variable name="frag" select="substring-after(@target, '#')"/>
@@ -936,6 +999,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Renvoi vers un acte sans # (rueil-acte12) : lien vers l'acte. -->
   <xsl:template match="tei:ref[not(@type = 'note')][contains(@target, '-acte')][not(contains(@target, '#') or contains(@target, '/') or contains(@target, '.') or contains(@target, ':'))]" priority="12">
     <xsl:variable name="chap" select="substring-before(@target, '-acte')"/>
     <xsl:choose>
@@ -946,6 +1010,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Adresse de l'ancien site d'un chapitre ou d'un acte : lien local. -->
   <xsl:template match="tei:ref[starts-with(@target, 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/')]" priority="11">
     <xsl:variable name="path" select="substring-after(@target, 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/')"/>
     <xsl:variable name="chap" select="substring-before(concat($path, '/'), '/')"/>
@@ -965,42 +1030,27 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/']" priority="14">
-    <a class="idno d5-local" href="../../saint-denis/"><xsl:apply-templates/></a>
+  <!-- Rôle : Adresse de l'ancien site (racine ou chapitre) dans un idno : lien local (remplace huit modèles identiques, un par adresse). -->
+  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][starts-with(normalize-space(.), 'http://saint-denis.enc.sorbonne.fr/')]" priority="14">
+    <xsl:variable name="url" select="normalize-space(.)"/>
+    <xsl:variable name="chap" select="substring-before(substring-after($url, '/cartulaire/tome1/'), '/')"/>
+    <xsl:choose>
+      <xsl:when test="$url = 'http://saint-denis.enc.sorbonne.fr/'">
+        <a class="idno d5-local" href="../../saint-denis/"><xsl:apply-templates/></a>
+      </xsl:when>
+      <xsl:when test="contains($sd-chapitres, concat(' ', $chap, ' ')) and $url = concat('http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/', $chap, '/')">
+        <a class="idno d5-local" href="{$sd-vers-chapitres}{$chap}"><xsl:apply-templates/></a>
+      </xsl:when>
+      <xsl:otherwise><xsl:apply-imports/></xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/beaurain/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}beaurain"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/dugny/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}dugny"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/pierrefitte/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}pierrefitte"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/rueil/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}rueil"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/saint-martin/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}saint-martin"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/tremblay/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}tremblay"><xsl:apply-templates/></a>
-  </xsl:template>
-
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/ully/']" priority="14">
-    <a class="idno d5-local" href="{$sd-vers-chapitres}ully"><xsl:apply-templates/></a>
-  </xsl:template>
-
+  <!-- Rôle : Lien vers l'ancien site ÉLEC des cartulaires : page locale. -->
   <xsl:template match="tei:ref[@target = 'http://elec.enc.sorbonne.fr/cartulaires/']" priority="14">
     <a class="ref d5-local" href="{$elec-base}/cartulaires"><xsl:apply-templates/></a>
   </xsl:template>
 
+  <!-- Rôle : Renvoi à une page de l'ancien site (#sd-…) absente du document : page du Cartulaire blanc ou du site de Saint-Denis qui la contient. -->
   <xsl:template match="tei:ref[not(@type = 'note')][starts-with(@target, '#sd-')][not(key('id', substring-after(@target, '#')))]" priority="14">
     <xsl:variable name="id" select="substring-after(@target, '#')"/>
     <!-- 2026-10-19 : les pages consacrées au Cartulaire blanc sont passées dans la ressource
@@ -1057,6 +1107,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Adresse d'une notice de l'Inventaire sur l'ancien site : notice locale. -->
   <xsl:template match="tei:ref[contains(@target, 'saint-denis.enc.sorbonne.fr/inventaire/tome')]" priority="14">
     <xsl:variable name="apres" select="substring-after(@target, '/inventaire/tome')"/>
     <xsl:variable name="tome" select="substring-before($apres, '/')"/>
@@ -1074,6 +1125,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Fabrique le lien d'un renvoi de l'index des auteurs (acte ou notice de l'Inventaire). -->
   <xsl:template name="sd-index-renvoi">
     <xsl:variable name="file" select="substring-before(@target, '.xml')"/>
     <xsl:variable name="frag" select="substring-after(@target, '#')"/>
@@ -1093,6 +1145,7 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Rôle : Lien « index » de l'ancien site (navindex) : ancre vers l'index des auteurs, au bas de la page. -->
   <xsl:template match="tei:ref[contains(@target, 'enc.sorbonne.fr')]
                               [contains(@target, 'navindex.html')]"
                 priority="18">
