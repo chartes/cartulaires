@@ -71,6 +71,8 @@
       <xsl:call-template name="th-ligne">
         <xsl:with-param name="label">Édition électronique par </xsl:with-param>
         <xsl:with-param name="noms" select="$th-edition-electronique"/>
+        <!-- « et al. » : principal seul, si le titleStmt contient au moins un respStmt (pas pour les chapitres de Saint-Denis). -->
+        <xsl:with-param name="etal" select="not($th-sd) and exists($th-ts/tei:respStmt)"/>
       </xsl:call-template>
       <xsl:if test="$th-date != ''">
         <span class="date"><xsl:value-of select="$th-date"/></span>
@@ -81,6 +83,7 @@
   <xsl:template name="th-ligne">
     <xsl:param name="label"/>
     <xsl:param name="noms"/>
+    <xsl:param name="etal" select="false()"/>
     <xsl:variable name="liste" select="for $n in $noms return th:nom($n)"/>
     <xsl:if test="exists($liste[. != ''])">
       <p class="editors">
@@ -92,6 +95,7 @@
             <xsl:when test="position() &lt; last()">, </xsl:when>
           </xsl:choose>
         </xsl:for-each>
+        <xsl:if test="$etal"><xsl:text> et al.</xsl:text></xsl:if>
       </p>
     </xsl:if>
   </xsl:template>

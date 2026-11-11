@@ -7,11 +7,12 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:edt="urn:cartu-edition"
   xmlns:cartu="urn:cartu"
+  xmlns:map="http://www.w3.org/2005/xpath-functions/map"
   xmlns:tf="urn:elec:tableau-filtrable"
   xmlns:chr="urn:cartu-tableaux"
   xmlns:cartu-app="urn:cartu-appendice"
   xmlns:h="http://www.w3.org/1999/xhtml"
-  exclude-result-prefixes="tei dts xs edt cartu tf chr cartu-app h"
+  exclude-result-prefixes="tei dts xs edt cartu tf chr cartu-app h map"
 >
   <!-- Cartulaires — feuille en blocs (2026-10-19), comme les autres corpus :
        0. déclarations ; 1. historique ÉLEC ; 2. blocs hteiml génériques (enveloppe dts:wrapper,
@@ -37,7 +38,15 @@
        défaut, $resource restait vide (liens du tableau des actes, compagnon de la page Édition, noms des
        fichiers CSV). Par défaut, le code de la ressource est lu sur les identifiants du document servi,
        qui commencent tous par lui (« SMPA-EG_0001 », « SMPA-AB-01_front_0003 »). -->
-  <xsl:param name="resource" select="(for $i in (//@xml:id)[matches(., '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')][1] return replace($i, '^([A-Z]{4,5}-[A-Z]{2}(-\d+)?)_.*$', '$1'), '')[1]"/>
+  <!-- 2026-11-11 : cartulaires en tomes fusionnés (MAUB-AB, NDPA-EG, SCCO-AB, SMPA-AB) : une seule ressource par
+       cartulaire. Le suffixe de tome (« -01 ») n'est plus retiré de l'identifiant de ressource : il devient
+       cartu-volume (ci-dessous). « SMPA-AB-01_0001 » donne donc « SMPA-AB », comme « SMPA-EG_0001 ». -->
+  <xsl:param name="resource" select="(for $i in (//@xml:id)[matches(., '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')][1] return replace($i, '^([A-Z]{4,5}-[A-Z]{2})(-\d+)?_.*$', '$1'), '')[1]"/>
+  <!-- 2026-11-11 : tome courant (« SMPA-AB-01 », « NDPA-EG-03 ») lu sur le premier identifiant du document servi, quand
+       il porte un suffixe de tome ; '' pour un cartulaire sans tome (INDEX-LIEUX, SAPC-AB…). Sert à restreindre aux
+       notes et aux actes du tome les recherches qui, dans la ressource fusionnée, retrouveraient les numéros du tome voisin. -->
+  <!-- même premier identifiant que cartu:resource (une fragment peut citer un autre cartulaire plus loin : d'où ce choix) -->
+  <xsl:variable name="cartu-volume" select="(for $i in (//@xml:id)[matches(., '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')][1] return if (matches($i, '^[A-Z]{4,5}-[A-Z]{2}-\d+_')) then replace($i, '^([A-Z]{4,5}-[A-Z]{2}-\d+)_.*$', '$1') else (), '')[1]"/>
   <!-- 2026-10-02 : début des liens internes. Le front dev est monté sous /elec/ : sans ce
        préfixe, les renvois de l'index et les liens vers les actes sortaient de l'application.
        La copie servie en local (dots-clean) remplace cette valeur par '/cartulaires/document/'. -->
@@ -133,6 +142,18 @@
   <xsl:template match="text()[not(normalize-space())][contains(., '&#10;')][preceding-sibling::*][following-sibling::*[1][not(self::tei:note)]][../text()[normalize-space()]]" priority="2">
     <xsl:text> </xsl:text>
   </xsl:template>
+
+  <!-- 2026-11-11 : blanc entre un appel de note et la ponctuation qui suit (cartu:blanc-apres-note). Les textes de l'index
+       passent par leur propre typographie (priorité 25, plus haut), qui applique la même fonction. -->
+  <xsl:template match="text()[preceding-sibling::node()[1][self::tei:note]][matches(., '^[ \t\r\n]+[;:?!»,.)\]]')]" priority="6" version="3.0">
+    <xsl:value-of select="cartu:blanc-apres-note(string(.))"/>
+  </xsl:template>
+
+  <!-- 2026-11-11 : CARTE DE CASSINI NON RENDUE. Seize cartulaires portent une <graphic> vers /images/cartulaires/…-cassini.png, image
+       qui n'est déployée nulle part : hteiml la rend en lien cassé, à côté du <ref> vers le Géoportail, qui marche. On ne rend que
+       le <ref>. Le <p> qui ne contient que cette image est retiré aussi (sinon il laisse un blanc vide). Les autres <graphic> ne sont pas touchés. -->
+  <xsl:template match="tei:graphic[contains(@url, '-cassini.png')]" priority="10"/>
+  <xsl:template match="tei:p[not(text()[normalize-space()])][tei:graphic[contains(@url, '-cassini.png')]][not(*[not(self::tei:graphic[contains(@url, '-cassini.png')])])]" priority="10"/>
 
 
   <!-- 2026-09-11 (autopilote, B8b 8) : fragment sans tei:text (index, parties) servi dans un dts:wrapper : hteiml traverse
@@ -658,6 +679,17 @@
     <xsl:if test="$pb-en-tete and contains(@facs, 'gallica.bnf.fr')"><xsl:next-match/></xsl:if>
   </xsl:template>
 
+  <!-- 2026-11-11 : BLANC APRÈS UN APPEL DE NOTE. Le TEI met souvent un blanc entre </note> et la ponctuation qui suit
+       (« 1048.</note> ;⏎ », 83 cas dans NDCH-EG, surtout dans l'index). Typographie française : ce blanc devient une espace
+       insécable devant ; : ? ! » ; il disparaît devant , . ) ]. Le reste du texte n'est pas changé. Appelée par le modèle des
+       nœuds texte qui suivent une note (plus bas) et par la typographie de l'index (cartu-insecables). -->
+  <xsl:function name="cartu:blanc-apres-note" as="xs:string" version="3.0">
+    <xsl:param name="t" as="xs:string"/>
+    <xsl:sequence select="if (matches($t, '^[ \t\r\n]+[;:?!»]')) then replace($t, '^[ \t\r\n]+', '&#160;')
+      else if (matches($t, '^[ \t\r\n]+[,.)\]]')) then replace($t, '^[ \t\r\n]+', '')
+      else $t"/>
+  </xsl:function>
+
   <!-- 2026-10-06 : index, typographie française. Espace insécable avant ; : ? ! (le texte
        de l'index imprimé, converti, n'en a pas : « Campus-Faunus; Campus-Folii »).
        À l'affichage seulement ; le TEI n'est pas touché. -->
@@ -668,8 +700,10 @@
          au bout d'un élément (« <hi>Abbaye du Loir </hi>; »). -->
     <xsl:variable name="entree" select="ancestor::tei:item[1]"/>
     <xsl:variable name="suivi" select="exists((following::text()[normalize-space()])[1][ancestor::tei:item[1] is $entree][matches(., '^\s*[;:,.]')])"/>
+    <xsl:variable name="t0" select="if ($suivi) then replace(., '\s+$', '') else string(.)"/>
     <xsl:if test="not($suivi and normalize-space(.) = '')">
-      <xsl:call-template name="cartu-insecables"><xsl:with-param name="t" select="if ($suivi) then replace(., '\s+$', '') else string(.)"/></xsl:call-template>
+      <!-- 2026-11-11 : après un appel de note, le blanc initial devient une espace insécable ou disparaît (cartu:blanc-apres-note) -->
+      <xsl:call-template name="cartu-insecables"><xsl:with-param name="t" select="if (preceding-sibling::node()[1][self::tei:note]) then cartu:blanc-apres-note($t0) else $t0"/></xsl:call-template>
     </xsl:if>
   </xsl:template>
   <!-- 2026-10-06 : <x> est un reste de la conversion, étranger au TEI (98 dans SMPA-AB-03, dans les
@@ -692,11 +726,34 @@
        L'index ne voit pas les actes : on lit le cartulaire entier, comme Montferrand
        (montferrand.xml) — posé à côté de la feuille une fois déployé, ../data/ dans le dépôt.
        Pas l'API : interblocage (voir comptes.xsl). -->
+  <!-- 2026-11-11 : cartu-tome est l'ELEMENT du tome courant (id = cartu-volume) quand il y en a un, sinon le document.
+       Mesuré avec Saxon 10.9 : key(nom, valeur, élément) ne rend que le sous-arbre de cet élément (1 acte « 1 » dans
+       SMPA-AB-03, contre 4 sur le document) ; id(valeur, élément) reste à l'échelle du document (ids uniques).
+       cartu:du-tome (ci-dessous) garde le filtre explicite, qui couvre aussi le cas où cartu-tome est le document. -->
   <xsl:variable name="cartu-tome" version="3.0"
-    select="if ($resource = '') then () else document((for $u in (concat($resource, '.xml'),
-              concat('../data/', replace($resource, '-\d+$', ''), '/', $resource, '.xml'),
-              concat('../data/', $resource, '.xml'))
-            return resolve-uri($u, static-base-uri()))[doc-available(.)][1])"/>
+    select="if ($resource = '') then () else let $doc := document((resolve-uri(concat($resource, '.xml'), static-base-uri()), map:get($cartu-fichiers-tei, $resource), (for $u in (concat('../data/', replace($resource, '-\d+$', ''), '/', $resource, '.xml'), concat('../data/', $resource, '.xml')) return resolve-uri($u, static-base-uri())))[doc-available(.)][1])
+      return if (empty($doc)) then () else if ($cartu-volume = '') then $doc else (id($cartu-volume, $doc))[1]"/>
+  <!-- 2026-11-11 : les nœuds (notes, actes) de la ressource servie qui sont dans le tome courant ; tout le document si
+       cartu-tome est le document (cartulaire sans tome). -->
+  <xsl:function name="cartu:du-tome" as="node()*" version="3.0" xmlns:cartu="urn:cartu">
+    <xsl:param name="noeuds" as="node()*"/>
+    <xsl:sequence select="$noeuds[ancestor-or-self::node()[. is $cartu-tome]]"/>
+  </xsl:function>
+  <!-- 2026-11-11 : TEI COMPAGNONS PAR NOM DE FICHIER. Les cartulaires sont rangés par diocèse (data/diocese-chartres/NDCH-EG.xml,
+       data/diocese-paris/SMPA-AB/SMPA-AB-01.xml…) : les chemins fixes compagnons/<res>.xml et ../data/<res>.xml ne trouvent plus rien.
+       Une map « nom du fichier sans .xml → URI » est lue une fois, en récursif, dans compagnons/ et ../data/. Chaque lecture est protégée
+       (xsl:try) : un dossier absent ne fait pas planter la feuille. Les trois recherches (cartu-tome, cartu:cible-tei-de, edt:compagnon)
+       essaient d'abord « <res>.xml » à côté de la feuille, puis cette map, puis les anciens chemins en repli. -->
+  <xsl:variable name="cartu-fichiers-tei" as="map(xs:string, xs:anyURI)" version="3.0">
+    <xsl:variable name="collections" as="xs:anyURI*">
+      <xsl:for-each select="('compagnons/', '../data/')">
+        <xsl:try select="uri-collection(concat(resolve-uri(., static-base-uri()), '?select=*.xml;recurse=yes'))">
+          <xsl:catch select="()"/>
+        </xsl:try>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:sequence select="map:merge(for $u in $collections return map:entry(replace(tokenize(string($u), '/')[last()], '\.xml$', ''), $u), map {'duplicates': 'use-first'})"/>
+  </xsl:variable>
   <!-- notes chiffrées (« acte_N ») par page imprimée, dans l'ordre du livre -->
   <xsl:key name="cartu-note-page" version="3.0"
     match="tei:note[matches(normalize-space(@n), '^[^_\s]+_\d+$')]"
@@ -738,7 +795,8 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:variable name="n" select="xs:integer(replace(normalize-space($hi), '\D', ''))"/>
-        <xsl:variable name="sur-la-page" select="key('cartu-note-page', $page, $cartu-tome)[$n]"/>
+        <!-- 2026-11-11 : notes du tome courant seulement (cartu:du-tome), numérotées dans ce tome -->
+        <xsl:variable name="sur-la-page" select="cartu:du-tome(key('cartu-note-page', $page, $cartu-tome))[$n]"/>
         <xsl:choose>
           <xsl:when test="$page != '' and $sur-la-page/ancestor::tei:text[@xml:id][1]/@xml:id = $acte">
             <xsl:sequence select="$sur-la-page"/>
@@ -746,7 +804,7 @@
           <xsl:otherwise>
             <xsl:variable name="dans-l-acte" select="$texte-acte//tei:note[matches(normalize-space(@n), '^[^_\s]+_\d+$')]"/>
             <xsl:variable name="candidates" select="for $p in distinct-values($dans-l-acte/string(preceding::tei:pb[1]/@n))
-                return key('cartu-note-page', $p, $cartu-tome)[$n][ancestor::tei:text[@xml:id][1]/@xml:id = $acte]"/>
+                return cartu:du-tome(key('cartu-note-page', $p, $cartu-tome))[$n][ancestor::tei:text[@xml:id][1]/@xml:id = $acte]"/>
             <xsl:sequence select="if (count($candidates) = 1) then $candidates else ()"/>
           </xsl:otherwise>
         </xsl:choose>
@@ -871,11 +929,12 @@
             <xsl:variable name="x" select="regex-group(1)"/>
             <xsl:variable name="y" select="regex-group(2)"/>
             <xsl:variable name="z" select="regex-group(5)"/>
-            <xsl:variable name="acte" select="key('cartu-acte-n', $x, $cartu-tome)[1]"/>
+            <!-- 2026-11-11 : numéros d'actes recommencent à chaque tome : acte du tome courant seulement -->
+            <xsl:variable name="acte" select="cartu:du-tome(key('cartu-acte-n', $x, $cartu-tome))[1]"/>
             <xsl:variable name="pages" select="($acte/preceding::tei:pb[1]/@n, $acte//tei:pb/@n) ! string(.)"/>
             <xsl:choose>
               <xsl:when test="exists($acte) and $y = $pages">
-                <xsl:variable name="note" select="if ($z != '') then key('cartu-note-page', $y, $cartu-tome)[xs:integer($z)][ancestor::tei:text[@xml:id][1] is $acte] else ()"
+                <xsl:variable name="note" select="if ($z != '') then cartu:du-tome(key('cartu-note-page', $y, $cartu-tome))[xs:integer($z)][ancestor::tei:text[@xml:id][1] is $acte] else ()"
                   xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
                 <xsl:variable name="numero-en-ligne"><xsl:for-each select="$note"><xsl:call-template name="note-n"/></xsl:for-each></xsl:variable>
                 <a class="cartu-renvoi-interne"
@@ -1147,14 +1206,16 @@
        cartulaires, $resource ne vaut que pour le premier identifiant de la page) ; son TEI complet. -->
   <xsl:function name="cartu:res-de" as="xs:string" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="id" as="xs:string"/>
-    <xsl:sequence select="if (matches($id, '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')) then replace($id, '^([A-Z]{4,5}-[A-Z]{2}(-\d+)?)_.*$', '$1') else $resource"/>
+    <!-- 2026-11-11 : « #NDPA-EG-03_0219 » → NDPA-EG (la ressource fusionnée ; le tome reste dans l'identifiant de la cible) -->
+    <xsl:sequence select="if (matches($id, '^[A-Z]{4,5}-[A-Z]{2}(-\d+)?_')) then replace($id, '^([A-Z]{4,5}-[A-Z]{2})(-\d+)?_.*$', '$1') else $resource"/>
   </xsl:function>
   <xsl:function name="cartu:cible-tei-de" as="element()?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="res" as="xs:string"/>
     <xsl:param name="id" as="xs:string"/>
     <xsl:variable name="base" select="replace($res, '-\d+$', '')"/>
-    <xsl:variable name="cands" select="for $u in (concat('compagnons/', $res, '.xml'), concat('compagnons/', $base, '/', $res, '.xml'),
-        concat('../data/', $res, '.xml'), concat('../data/', $base, '/', $res, '.xml')) return resolve-uri($u, static-base-uri())"/>
+    <xsl:variable name="cands" select="(resolve-uri(concat($res, '.xml'), static-base-uri()), map:get($cartu-fichiers-tei, $res),
+        for $u in (concat('compagnons/', $res, '.xml'), concat('compagnons/', $base, '/', $res, '.xml'),
+        concat('../data/', $res, '.xml'), concat('../data/', $base, '/', $res, '.xml')) return resolve-uri($u, static-base-uri()))"/>
     <xsl:sequence select="if ($res = '' or $id = '') then () else (for $u in $cands[doc-available(.)][1] return id($id, document($u)))[1]"/>
   </xsl:function>
   <xsl:function name="cartu:href-cible" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
@@ -1197,7 +1258,8 @@
      </xsl:when>
      <xsl:when test="@type = 'see'">
        <xsl:variable name="target" select="./@target"/>
-       <xsl:variable name="idDoc"  select="translate(substring-before($target, '_'), '#', '')"/>
+       <!-- 2026-11-11 : « SMPA-AB-01_rs_0386 » → SMPA-AB (ressource fusionnée) ; un préfixe sans tome reste inchangé -->
+       <xsl:variable name="idDoc"  select="replace(translate(substring-before($target, '_'), '#', ''), '^([A-Z]{4,5}-[A-Z]{2})-\d+$', '$1')"/>
        <!-- 2026-10-08 : index sur une seule page (index-complet) : le renvoi vise la page de
             l'index, sur l'entrée, et non plus la page de la lettre (la redirection du front
             perdait l'ancre de l'entrée et arrivait en tête de lettre). -->
@@ -1215,7 +1277,8 @@
    </xsl:when>
      <xsl:otherwise>
        <xsl:variable name="idActe" select="substring-after(@target, '#')"/>
-    <xsl:variable name="idDoc"  select="substring-before($idActe, '_')"/>
+    <!-- 2026-11-11 : « SMPA-AB-01_0266 » → SMPA-AB (ressource fusionnée), l'identifiant d'acte reste celui du tome -->
+    <xsl:variable name="idDoc"  select="replace(substring-before($idActe, '_'), '^([A-Z]{4,5}-[A-Z]{2})-\d+$', '$1')"/>
     <xsl:variable name="url" select="concat($document-base, $idDoc, '?refId=', $idActe)"/>
     <!-- 2026-10-08 (chantier liens) : cible résolue (ancre de page -> unité#ancre ; numéro de page -> acte) -->
     <xsl:variable name="resolue" select="cartu:href-cible(.)"/>
@@ -1573,29 +1636,18 @@
        Les anciens sites ELEC ferment : le TEXTE affiche est conserve mot pour mot (c'est
        l'identifiant de la publication d'origine), seule la cible devient la route locale.
        Table et bloc produits par dots-autopilot/scripts/d5_legacy_links_fix.py. -->
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-01']" priority="14">
-    <a class="idno d5-local" href="{$document-base}NDPA-EG-01"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-02']" priority="14">
-    <a class="idno d5-local" href="{$document-base}NDPA-EG-02"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-03']" priority="14">
-    <a class="idno d5-local" href="{$document-base}NDPA-EG-03"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/NDPA-EG-04']" priority="14">
-    <a class="idno d5-local" href="{$document-base}NDPA-EG-04"><xsl:apply-templates/></a>
+  <!-- 2026-11-11 : cartulaires en tomes fusionnés. Un seul modèle pour la ressource (« …/cartulaires/NDPA-EG ») et, s'il
+       reste un identifiant de tome (« …/NDPA-EG-03 », « SMPA-AB-02 »), le lien vise la ressource et le tome :
+       {base}NDPA-EG?refId=NDPA-EG-03. Remplace les modèles par tome (NDPA-EG-01..04, SMPA-AB-02, SMPA-AB-03). -->
+  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][matches(normalize-space(.), '^http://elec\.enc\.sorbonne\.fr/cartulaires/(MAUB-AB|NDPA-EG|SCCO-AB|SMPA-AB)(-\d+)?$')]" priority="14">
+    <xsl:variable name="cible" select="substring-after(normalize-space(.), '/cartulaires/')"/>
+    <a class="idno d5-local" href="{$document-base}{replace($cible, '-\d+$', '')}{if (matches($cible, '-\d+$')) then concat('?refId=', $cible) else ''}"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SAPC-AB']" priority="14">
     <a class="idno d5-local" href="{$document-base}SAPC-AB"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMMI-AB']" priority="14">
     <a class="idno d5-local" href="{$document-base}SMMI-AB"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMPA-AB-02']" priority="14">
-    <a class="idno d5-local" href="{$document-base}SMPA-AB-02"><xsl:apply-templates/></a>
-  </xsl:template>
-  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/SMPA-AB-03']" priority="14">
-    <a class="idno d5-local" href="{$document-base}SMPA-AB-03"><xsl:apply-templates/></a>
   </xsl:template>
   <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://elec.enc.sorbonne.fr/cartulaires/VNDP-AB']" priority="14">
     <a class="idno d5-local" href="{$document-base}VNDP-AB"><xsl:apply-templates/></a>
@@ -1630,8 +1682,9 @@
        ../data/. Pas d'appel à l'API (interblocage de BaseX). -->
   <xsl:function version="3.0" name="edt:compagnon" as="document-node()?">
     <xsl:variable name="base" select="replace($resource, '-\d+$', '')"/>
-    <xsl:variable name="cands" select="for $u in (concat('compagnons/', $resource, '.xml'), concat('compagnons/', $base, '/', $resource, '.xml'),
-        concat('../data/', $resource, '.xml'), concat('../data/', $base, '/', $resource, '.xml')) return resolve-uri($u, static-base-uri())"/>
+    <xsl:variable name="cands" select="(resolve-uri(concat($resource, '.xml'), static-base-uri()), map:get($cartu-fichiers-tei, $resource),
+        for $u in (concat('compagnons/', $resource, '.xml'), concat('compagnons/', $base, '/', $resource, '.xml'),
+        concat('../data/', $resource, '.xml'), concat('../data/', $base, '/', $resource, '.xml')) return resolve-uri($u, static-base-uri()))"/>
     <xsl:sequence select="if ($resource = '') then () else (for $u in $cands[doc-available(.)][1] return document($u))"/>
   </xsl:function>
   <!-- clé de comparaison d'un titre : sans casse, accents, espaces ni ponctuation (le disque peut avoir
