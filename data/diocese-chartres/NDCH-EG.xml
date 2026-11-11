@@ -88,11 +88,11 @@
           cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="dots">
+        <citeStructure unit="paratexte" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeStructure unit="partie" match="div[@xml:id]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
-            <citeStructure unit="sous-partie" match="div[@type]" use="dots">
+            <citeStructure unit="sous-partie" match="div[@type]" use="@xml:id">
               <citeData property="dct:title" use="head[1]"/>
             </citeStructure>
           </citeStructure>
@@ -144,7 +144,7 @@
     </revisionDesc>
   </teiHeader>
   <text>
-    <front>
+    <front xml:id="r340358">
       <head>Notice introductive</head>
       <!--<head><hi rend="i">Cartulaire de Notre-Dame de Chartres d’après les cartulaires et titres
         originaux</hi>, éd. Eugène de Lépinois et Lucien Merlet, Chartres, Société archéologique
@@ -158,7 +158,7 @@
       <byline>Notice préparée par Damien Berné et Camille Le Fauconnier (mai 2007).</byline>
       <div xml:id="NDCH-EG_etablissement" subtype="article">
         <head>L’établissement</head>
-        <div type="historique">
+        <div xml:id="r340419" type="historique">
           <head>Historique</head>
           <p>Le diocèse de Chartres est l’un des plus anciens et des plus importants de la Gaule à
             la fin de l’Empire romain. La légende veut que dans la forêt des Carnutes, des druides
@@ -224,7 +224,7 @@
             de Notre-Dame de Chartres a acquise et conserve tout au long du Moyen Âge, et même
             au-delà.</p>
         </div>
-        <div type="localisation_patrimoine">
+        <div xml:id="r340503" type="localisation_patrimoine">
           <head>Localisation du patrimoine à grands traits</head>
           <p>Le diocèse de Chartres est l’un des plus importants de la Gaule chrétienne, le second
             après celui de Sens. Il s’étend sur 200 km de long et 60 de large. Il comprend la
@@ -235,7 +235,7 @@
                 <title>Chartres et ses campagnes…</title>, carte des « Exploitations du chapitre
               N.-D. de Chartres en 1300 », p. 185.</bibl></p>
         </div>
-        <div type="bienfaiteurs">
+        <div xml:id="r340527" type="bienfaiteurs">
           <head>Réseaux de bienfaiteurs</head>
           <p>Comme on l’a déjà esquissé, le chapitre de Notre-Dame de Chartres bénéficie des
             largesses des chanoines et des évêques issus des plus hauts lignages (Fulbert, Guillaume
@@ -253,7 +253,7 @@
       </div>
       <div xml:id="NDCH-EG_archives" subtype="article">
         <head>Orientation archivistique</head>
-        <div type="chartrier">
+        <div xml:id="r340549" type="chartrier">
           <head>Le chartrier</head>
           <p>Les fonds de l’évêché et du chapitre cathédral de Chartres ne sont, à de rares
             exceptions près, pas antérieurs à l’incendie qui a détruit la cathédrale en 1194. Ils
@@ -281,14 +281,14 @@
             actuelle, mais l’usage de l’<bibl><title>Inventaire du chapitre</title> en 6 volumes de
               1780</bibl> permet de s’y retrouver assez rapidement.</p>
         </div>
-        <div type="cartulaires">
+        <div xml:id="r340579" type="cartulaires">
           <head>Les cartulaires</head>
           <p>Plusieurs compilations médiévales et modernes ont été exploitées par les éditeurs
             (Stein n<hi rend="sup">o</hi> 882-886), qui ont ignoré un manuscrit conservé à Toulouse
             (Stein n<hi rend="sup">o</hi> 886). </p>
           <p/>
         </div>
-        <div type="necrologie">
+        <div xml:id="r340599" type="necrologie">
           <head>Documents nécrologiques</head>
           <p>Lépinois et Merlet ont joint à leur cartulaire un nécrologe dressé par leurs soins à
             partir d’un ensemble de documents nécrologiques alors conservés pour l’essentiel à la
@@ -310,7 +310,7 @@
                 <bibl><title>Répertoire des documents nécrologiques…</title> de <author>Jean-Loup
                 Lemaitre</author>, t. I, n<hi rend="sup">o</hi> 899-915</bibl>.</p>
         </div>
-        <div type="sources_exterieures">
+        <div xml:id="r340701" type="sources_exterieures">
           <head>Sources extérieures</head>
           <p>Une partie des pièces réunies par Lépinois et Merlet ne sont pas des actes, mais de
             petits traités reliés :</p>
@@ -404,7 +404,7 @@
       </div>
       <div xml:id="NDCH-EG_edition" subtype="article">
         <head>L’édition</head>
-        <div type="editeurs">
+        <div xml:id="r340962" type="editeurs">
           <head>Les éditeurs : éléments biographiques</head>
           <p>Lucien Victor Claude Merlet (1827-1898), né à Vannes, licencié en lettres et en droit,
             est ancien élève de l’École des chartes et de l’École nationale d’administration.
@@ -452,7 +452,7 @@
             également intéressé à la peinture, et a publié des notices d’artistes et des catalogues
             d’expositions dans des revues normandes. </p>
         </div>
-        <div type="conception_edition">
+        <div xml:id="r341072" type="conception_edition">
           <head>Conception et contenu de l’édition</head>
           <p>Les deux érudits entendaient compenser une lacune historiographique importante, tout en
             s’inscrivant dans la vogue des éditions de cartulaires, type documentaire considéré
@@ -760,7 +760,7 @@
             des questions incidentes telleS que l’origine de l’église de Chartres ou les limites du
             diocèse.</p>
         </div>
-        <div type="qualite">
+        <div xml:id="r341890" type="qualite">
           <head>Qualité de l’édition</head>
           <p>De manière générale, le lecteur est amené à déplorer l’extrême parcimonie des
             indications qui permettraient de reconstituer la démarche des deux auteurs. La dimension
