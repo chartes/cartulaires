@@ -1608,6 +1608,13 @@
             <xsl:attribute name="href"><xsl:value-of select="normalize-space(@source)"/></xsl:attribute>
             <xsl:apply-templates/>
           </a>
+          <!-- 2026-11-12 (Maxime) : manuscrit sur Gallica : lien vers son manifeste IIIF. Pas de folio par acte
+               dans les témoins (La Roche, ms. lat. 10996) : le lien mène au manuscrit, pas à la page de l'acte. -->
+          <xsl:if test="matches(normalize-space(@source), '^https?://gallica\.bnf\.fr/ark:/')">
+            <xsl:text> </xsl:text>
+            <a class="witness-manifest-link" target="_blank" rel="noopener" title="Manifeste IIIF du manuscrit numérisé"
+               href="{replace(normalize-space(@source), '^https?://gallica\.bnf\.fr/ark:/', 'https://gallica.bnf.fr/iiif/ark:/')}/manifest.json">[manifeste IIIF]</a>
+          </xsl:if>
         </xsl:when>
         <xsl:otherwise><xsl:apply-templates/></xsl:otherwise>
       </xsl:choose>
@@ -1673,6 +1680,9 @@
       <!-- 2026-10-28 (Maxime, NDPA-EG-04_group-4 : « les deux pouillés sont vides ») : texte du groupe qui n'est pas
            une unité citable (text sans xml:id : pouillés de NDPA-EG-04) ; absent du sommaire, il s'affiche ici. -->
       <xsl:apply-templates select="tei:text[not(@xml:id)]"/>
+      <!-- 2026-11-12 : censier de l'Hôtel-Dieu : ses articles ont un xml:id mais ne sont pas des actes (citeStructure
+           acte « not(../@xml:id='HDPAR-HD_censier') ») : la page du groupe est leur seule page. -->
+      <xsl:apply-templates select="self::tei:group[@xml:id = 'HDPAR-HD_censier']/tei:text[@xml:id]"/>
     </div>
   </xsl:template>
 

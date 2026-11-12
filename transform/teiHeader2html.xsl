@@ -36,6 +36,8 @@
 
   <!-- Date : l'année de publicationStmt/date. -->
   <xsl:variable name="th-date" select="replace(normalize-space((//tei:fileDesc/tei:publicationStmt/tei:date)[1]), '^\D*(\d{4}).*$', '$1')"/>
+  <!-- 2026-11-12 (Maxime, La Roche) : date de la première édition électronique (editionStmt) : « 2006-2009 ». -->
+  <xsl:variable name="th-date-premiere" select="replace(normalize-space((//tei:fileDesc/tei:editionStmt//tei:date)[1]), '^\D*(\d{4}).*$', '$1')"/>
 
   <!-- Nom affiché : prénom et nom quand ils sont balisés (persName avec rôle, affiliation…),
        sinon le texte. Accepte aussi des chaînes. -->
@@ -75,7 +77,7 @@
         <xsl:with-param name="etal" select="not($th-sd) and exists($th-ts/tei:respStmt)"/>
       </xsl:call-template>
       <xsl:if test="$th-date != ''">
-        <span class="date"><xsl:value-of select="$th-date"/></span>
+        <span class="date"><xsl:value-of select="if (matches($th-date-premiere, '^\d{4}$') and $th-date-premiere &lt; $th-date) then concat($th-date-premiere, '-', $th-date) else $th-date"/></span>
       </xsl:if>
     </div>
   </xsl:template>
