@@ -616,7 +616,15 @@
         <xsl:otherwise/>
       </xsl:choose>
     </xsl:variable>
+    <!-- 2026-11-12 : pages « Images du Cartulaire blanc » (une par tome) : la page quand un chapitre la cite,
+         sinon le numéro de la vue dans le nom du fichier des Archives nationales (0231R). -->
+    <xsl:variable name="galerie" select="exists(ancestor::tei:div[starts-with(@xml:id, 'sd-les-images--images-cb--')])"/>
+    <xsl:variable name="vue" select="replace($fichier, '^.*_(\d+[RV])_L\.jpg$', '$1')"/>
     <xsl:variable name="libelle">
+      <xsl:if test="$galerie">
+        <xsl:value-of select="if (normalize-space(@n) != '') then concat('page ', normalize-space(@n), ' (image ', $vue, ')') else concat('image ', $vue)"/>
+      </xsl:if>
+      <xsl:if test="not($galerie)">
       <xsl:value-of select="$ouvrage"/>
       <xsl:if test="$tome != ''">
         <xsl:text>, tome </xsl:text>
@@ -628,6 +636,7 @@
       <xsl:if test="normalize-space(@n) != ''">
         <xsl:text>, page </xsl:text>
         <xsl:value-of select="normalize-space(@n)"/>
+      </xsl:if>
       </xsl:if>
     </xsl:variable>
     <details class="sd-folio sd-pb">
@@ -1056,11 +1065,20 @@
     <!-- 2026-10-19 : les pages consacrées au Cartulaire blanc sont passées dans la ressource
          cartulaire-blanc du projet cartulaires (une page = une partie) : page cible = la page dont
          l'identifiant est le plus long préfixe de la cible. -->
-    <xsl:variable name="cb-pages" select="('sd-les-textes--cartulaire-blanc--introduction', 'sd-les-textes--cartulaire-blanc--presentation', 'sd-les-textes--cartulaire-blanc--parcourir', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-chapitres', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-actes', 'sd-recherche-cartulaire', 'sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees', 'sd-les-images--images-cb', 'sd-scientifique-cartulaire')"/>
+    <!-- 2026-11-12 (plan d'Olivier Canteaut) : ces pages sont réparties en quatre ressources : cartulaire-blanc
+         (introduction en tête, présentations, table des chapitres), cartulaire-blanc-actes (liste cumulative, dans
+         la sous-collection cartulaire-blanc-edition avec les chapitres), cartulaire-blanc-images (une page par tome),
+         cartulaire-blanc-index (recherche, choix d'indexation, index des auteurs). « Parcourir » (Édition électronique)
+         n'existe plus : renvoi à la sous-collection. -->
+    <xsl:variable name="cb-pages" select="('sd-les-textes--cartulaire-blanc--introduction', 'sd-les-textes--cartulaire-blanc--presentation', 'sd-les-textes--cartulaire-blanc--parcourir', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-chapitres', 'sd-les-textes--cartulaire-blanc--parcourir--table-des-actes', 'sd-recherche-cartulaire', 'sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees', 'sd-les-images--images-cb', 'sd-les-images--images-cb--tome1', 'sd-les-images--images-cb--tome2', 'sd-scientifique-cartulaire', 'sd-index-auteurs-cartulaire')"/>
     <xsl:variable name="cb-page" select="if ($id = 'sd-cartulaire-blanc') then $cb-pages[1]
-        else if (starts-with($id, 'sd-index-auteurs-cartulaire')) then $cb-pages[3]
-        else if (starts-with($id, 'sd-le-projet--aspects-scientifiques--cartulaire-blanc') and $id != 'sd-le-projet--aspects-scientifiques--cartulaire-blanc--etat-d-avancement') then $cb-pages[9]
+        else if (starts-with($id, 'sd-index-auteurs-cartulaire')) then $cb-pages[12]
+        else if (starts-with($id, 'sd-le-projet--aspects-scientifiques--cartulaire-blanc') and $id != 'sd-le-projet--aspects-scientifiques--cartulaire-blanc--etat-d-avancement') then $cb-pages[11]
         else $cb-pages[$id = . or starts-with($id, concat(., '--'))][last()]"/>  <!-- liste rangée du plus court au plus long préfixe -->
+    <xsl:variable name="cb-res" select="if ($cb-page = $cb-pages[5]) then 'cartulaire-blanc-actes'
+        else if (starts-with($cb-page, 'sd-les-images--images-cb')) then 'cartulaire-blanc-images'
+        else if ($cb-page = $cb-pages[position() = (6, 7, 12)]) then 'cartulaire-blanc-index'
+        else 'cartulaire-blanc'"/>
     <xsl:variable name="rub">
       <xsl:choose>
         <xsl:when test="$id = 'sd-les-images--accueil'
@@ -1088,8 +1106,13 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:choose>
+      <xsl:when test="$cb-page = $cb-pages[3]">
+        <a class="sd-internal sd-site-page" href="../../cartulaire-blanc-edition">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
       <xsl:when test="exists($cb-page)">
-        <a class="sd-internal sd-site-page" href="{$sd-vers-chapitres}cartulaire-blanc?refId={$cb-page}{if ($id != $cb-page) then concat('#', $id) else ''}">
+        <a class="sd-internal sd-site-page" href="{$sd-vers-chapitres}{$cb-res}?refId={$cb-page}{if ($id != $cb-page) then concat('#', $id) else ''}">
           <xsl:apply-templates/>
         </a>
       </xsl:when>

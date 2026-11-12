@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cartulaire-blanc-index" xml:lang="fre">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+                <title>Index et recherche</title>
+                <title type="short">Cartulaire blanc : index et recherche</title><funder ref="https://www.wikidata.org/wiki/Q273570 https://data.bnf.fr/fr/ark:/12148/cb118634749 https://www.idref.fr/026375052">École nationale des chartes</funder>
+                <principal ref="https://www.wikidata.org/wiki/Q3351082 https://data.bnf.fr/fr/ark:/12148/cb11906612z https://www.idref.fr/026911337" xml:id="OGJ"><forename>Olivier</forename><surname>Guyotjeannin</surname></principal>
+                <respStmt><resp>2011, collaborations à l’édition</resp><name>Hélène Coulaud</name><name>Romain Feeser</name><name>Amélie Foulet</name><name>Maximilien Girard</name><name>Léonore Gonzalez de Linares</name><name>Jeanne Mallet</name><name>Erwan Ramondenc</name><name>François Royal</name><name>Aude Seillan</name><name>Alexandre Tur</name><name>Pierre Vermander</name><name>Hélène Zettel</name></respStmt><respStmt><resp>2014, encodage</resp><name xml:id="LG">Laura Gili</name></respStmt><respStmt><resp>2014-2019, modélisation, relecture du fichier TEI, corrections et compléments, publication</resp><name xml:id="FC">Florence Clavaud</name></respStmt></titleStmt>
+      <publicationStmt>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
+        <date when="2026">2026</date>
+        <idno>http://saint-denis.enc.sorbonne.fr/</idno><availability>
+          <p>Reconstruction de migration à partir du site ÉLEC historique ; conserver les droits et licences des sources.</p>
+        <licence target="https://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Creative Commons : Paternité - Pas d’Utilisation Commerciale - Pas de Modification ; 2.0 France</licence></availability>
+      </publicationStmt>
+      <notesStmt><note type="citation">École nationale des chartes, Chartes de l’abbaye de Saint-Denis — pages éditoriales historiques, 2026. [En ligne : http://saint-denis.enc.sorbonne.fr/]</note></notesStmt><sourceDesc>
+        <p>Source : http://saint-denis.enc.sorbonne.fr/ ; crawl structurel du 10 septembre 2026.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Pages éditoriales du site historique consacrées au Cartulaire blanc (introduction, présentation, tables, recherche, auteurs d’actes, images, aspects scientifiques), détachées le 19 octobre 2026 des pages du site de Saint-Denis pour rejoindre les sept chapitres édités, sous-collection des cartulaires.</p>
+      </projectDesc>
+      <refsDecl>
+        <citeStructure unit="partie" match="/TEI/text/body/div[@xml:id]" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">français</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-11-12">Plan d’Olivier Canteaut du 12 novembre 2026 : les pages du Cartulaire blanc réparties en quatre sections (introduction ; édition, avec la liste cumulative des actes et les chapitres ; images ; index et recherche). Ressource tirée de cartulaire-blanc.xml (dont l’historique des modifications vaut pour ce fichier).</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="page" xml:id="sd-recherche-cartulaire">
+            <head>Recherche dans les chartes éditées</head>
+            <p>Recherche plein texte dans les ressources DTS du Cartulaire blanc. Le formulaire est rendu par saint-denis.xsl et interroge dots-cli-es.</p>
+            <div type="search"/>
+          </div>
+      <div type="page" xml:id="sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/auteurs-actes-principales-entrees.html">
+              <head>Auteurs d’actes : les choix d’indexation</head>
+              <div type="legacy-block" rend="static-content">
+<p>Une liste alphabétique de toutes les entrées réelles de l’index des auteurs d’actes est consultable à partir des formulaires de recherche, et directement, pour l’Inventaire général et pour le Cartulaire blanc.</p>
+<p>Voici, dans un autre ordre, une liste des principales entrées, qui donne des explications sur le sens qu’on a donné à ces entrées et sur leur emploi :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Pape</hi></item><item>
+<hi rend="cite">Cardinal</hi> (sans autres précisions)
+            </item><item><hi rend="cite">Légat du pape</hi></item><item><hi rend="cite">Juges délégués</hi> (les ecclésiastiques agissant sur délégation du pape ou d’un légat sont indexés à la fois personnellement avec leur titre, et collectivement comme juges délégués)</item><item><hi rend="cite">Archevêque de …</hi></item><item><hi rend="cite">Évêques</hi> [en groupe, synode…]. De façon générale, on ne donne pas de précision de siège ou de lieu s’il y a plus de trois représentants d’un groupe</item><item><hi rend="cite">Évêque de …</hi></item><item><hi rend="cite">Archidiacre de …</hi></item><item>
+<hi rend="cite">Officialité de …</hi> (lieu seul pour une officialité épiscopale et pour celle de Saint-Denis)</item><item><hi rend="cite">Officialité de l’archidiacre de …</hi></item><item><hi rend="cite">Official de …</hi> (agissant à titre personnel, hors juridiction gracieuse)</item><item><hi rend="cite"> Prévôté de …</hi> (abbatiale) pour les lettres de prévôté</item><item><hi rend="cite">Doyen du chapitre cathédral de …</hi> (inclut les actes passés collectivement par le chapitre, mais pas les actes passés par d’autres dignitaires)</item><item><hi rend="cite">Doyen de … 
+           </hi>(pour  un chapitre ; inclut les actes passés par les chanoines)</item><item><hi rend="cite">Chapitre Saint-Paul de Saint-Denis</hi> (par exception ; inclut les actes du chantre)</item><item><hi rend="cite">Abbé de Saint-Denis</hi> (inclut les actes du convent, du prieur)</item><item><hi rend="cite">Abbé de …</hi> (inclut les actes du convent, les prieurs à la tête de prieurés indépendants), abbé de Saint-Victor de Paris, abbé de Saint-Germain-des-Prés, abbé de Sainte-Geneviève de Paris etc.</item><item><hi rend="cite">Abbesse de…</hi></item><item><hi rend="cite">Templiers</hi></item><item><hi rend="cite">Hospitaliers</hi></item><item><hi rend="cite">Franciscains</hi></item><item><hi rend="cite">Dominicains</hi></item><item><hi rend="cite">Trinitaires</hi></item><item><hi rend="cite">Mathurins</hi></item><item><hi rend="cite">Hôpital de …</hi></item><item><hi rend="cite">Léproserie de …</hi></item><item><hi rend="cite">Auteurs ecclésiastiques</hi> (auteur d’acte n’entrant pas dans les catégories ci-dessus)</item><item><hi rend="cite">Divers ecclésiastiques</hi> (idem, pour un notificateur, un enquêteur, un arbitre, y compris juges délégués, doyens de chrétienté…)</item><item><hi rend="cite">Roi de France</hi></item><item><hi rend="cite">Reine de France</hi></item><item><hi rend="cite">Comte de …</hi>,  <hi rend="cite">Comte</hi> s’il n’y a pas de circonscription. On retient le titre usuel chez les historiens, p. ex. « comte de Champagne », « comte de Toulouse » ou « duc de Normandie », et non celui que donne l’acte, « comte de Troyes », « comte de Normandie ». Même principe pour les femmes, indexées au nom masculin. Si plusieurs titres sont cumulés, on n’indique que le ressort concerné par l’acte (on néglige par exemple « roi de Navarre » pour la Champagne)</item><item><hi rend="cite">Duc de …</hi> Mêmes remarques que pour « comte »</item><item><hi rend="cite">Marquis de …</hi> Mêmes remarques que pour « comte »</item><item><hi rend="cite">Maire du palais</hi></item><item><hi rend="cite">Parlement</hi></item><item><hi rend="cite">Clercs royaux</hi> (membres de l’administration royale centrale hors Parlement)</item><item><hi rend="cite">Bailliage de …</hi> pour les lettres de bailliage</item><item><hi rend="cite">Bailli de …</hi>, <hi rend="cite">Bailli</hi> tout court s’il n’a pas de circonscription fixe, pour les interventions hors juridiction royale</item><item><hi rend="cite">Châtelet</hi> [de Paris]</item><item><hi rend="cite">Prévôté de …</hi> (royale, princière…, sauf Paris : voir « Châtelet ») pour les lettres de prévôté</item><item><hi rend="cite">Prévôt de …</hi> (hors juridiction gracieuse)</item><item><hi rend="cite">Châtellenie de …</hi> (circonscription royale de Normandie)</item><item><hi rend="cite">Ville de …</hi> (autorités municipales de tout genre, y compris Marchandise de l’eau de Paris)</item><item><hi rend="cite">Roi de Wessex</hi></item><item><hi rend="cite">Roi de Mercie</hi></item><item><hi rend="cite">Roi d’Angleterre</hi></item><item><hi rend="cite">Roi de Lotharingie</hi></item><item><hi rend="cite">Roi de Germanie</hi></item><item><hi rend="cite">Empereur</hi> (s’il n’a pas régné sur la France)</item><item><hi rend="cite">Auteurs laïques</hi> (pour les auteurs d’actes n’entrant pas dans les catégories ci-dessus)</item><item><hi rend="cite">Divers laïques</hi> (pour un notificateur, un enquêteur, un arbitre, un tabellion à partir de 1293…)</item><item><hi rend="cite">- sans auteur</hi> (notice, acte ou document sans auteur déclaré)</item></list>
+</div>
+            </div>
+      <div type="index" xml:id="sd-index-auteurs-cartulaire">
+            <head>Index des auteurs d’actes — Cartulaire blanc</head>
+            <list type="index" n="A">
+              <head>A</head>
+              <item xml:id="sd-auteur-cb-0001" n="1"><term>abbé d’Igny</term>
+                <ptr target="tremblay.xml#tremblay-acte15" n="Tremblay 15"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0002" n="1"><term>abbé d’Ourscamp</term>
+                <ptr target="ully.xml#ully-acte40" n="Ully 40"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0003" n="1"><term>abbé de Chaalis</term>
+                <ptr target="tremblay.xml#tremblay-acte24" n="Tremblay 24"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0004" n="4"><term>abbé de Froidmont</term>
+                <ptr target="ully.xml#ully-acte12" n="Ully 12"/>
+                <ptr target="ully.xml#ully-acte13" n="Ully 13"/>
+                <ptr target="ully.xml#ully-acte21" n="Ully 21"/>
+                <ptr target="ully.xml#ully-acte41" n="Ully 41"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0005" n="1"><term>abbé de Juilly</term>
+                <ptr target="dugny.xml#dugny-acte11" n="Dugny 11"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0006" n="1"><term>abbé de Livry</term>
+                <ptr target="tremblay.xml#tremblay-acte25" n="Tremblay 25"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0007" n="1"><term>abbé de Marcheroux</term>
+                <ptr target="saint-martin.xml#saint-martin-acte26" n="Saint-Martin 26"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0008" n="1"><term>abbé de Mortemer</term>
+                <ptr target="saint-martin.xml#saint-martin-acte31" n="Saint-Martin 31"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0009" n="2"><term>abbé de Notre-Dame de la Roche</term>
+                <ptr target="beaurain.xml#beaurain-acte65" n="Beaurain 65"/>
+                <ptr target="beaurain.xml#beaurain-acte66" n="Beaurain 66"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0010" n="1"><term>abbé de Notre-Dame-du-Val</term>
+                <ptr target="saint-martin.xml#saint-martin-acte65" n="Saint-Martin 65"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0011" n="27"><term>abbé de Saint-Denis</term>
+                <ptr target="beaurain.xml#beaurain-acte2" n="Beaurain 2"/>
+                <ptr target="beaurain.xml#beaurain-acte5" n="Beaurain 5"/>
+                <ptr target="beaurain.xml#beaurain-acte37" n="Beaurain 37"/>
+                <ptr target="beaurain.xml#beaurain-acte48" n="Beaurain 48"/>
+                <ptr target="beaurain.xml#beaurain-acte58a" n="Beaurain 58a"/>
+                <ptr target="beaurain.xml#beaurain-acte80b" n="Beaurain 80b"/>
+                <ptr target="beaurain.xml#beaurain-acte86" n="Beaurain 86"/>
+                <ptr target="beaurain.xml#beaurain-acte91" n="Beaurain 91"/>
+                <ptr target="beaurain.xml#beaurain-acte92" n="Beaurain 92"/>
+                <ptr target="dugny.xml#dugny-acte1" n="Dugny 1"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte27" n="Pierrefitte 27"/>
+                <ptr target="rueil.xml#rueil-acte11" n="Rueil 11"/>
+                <ptr target="rueil.xml#rueil-acte13" n="Rueil 13"/>
+                <ptr target="rueil.xml#rueil-acte28b" n="Rueil 28b"/>
+                <ptr target="rueil.xml#rueil-acte40" n="Rueil 40"/>
+                <ptr target="saint-martin.xml#saint-martin-acte3" n="Saint-Martin 3"/>
+                <ptr target="saint-martin.xml#saint-martin-acte4" n="Saint-Martin 4"/>
+                <ptr target="saint-martin.xml#saint-martin-acte5" n="Saint-Martin 5"/>
+                <ptr target="saint-martin.xml#saint-martin-acte14" n="Saint-Martin 14"/>
+                <ptr target="tremblay.xml#tremblay-acte7" n="Tremblay 7"/>
+                <ptr target="tremblay.xml#tremblay-acte9" n="Tremblay 9"/>
+                <ptr target="tremblay.xml#tremblay-acte51a" n="Tremblay 51a"/>
+                <ptr target="ully.xml#ully-acte5" n="Ully 5"/>
+                <ptr target="ully.xml#ully-acte12" n="Ully 12"/>
+                <ptr target="ully.xml#ully-acte13" n="Ully 13"/>
+                <ptr target="ully.xml#ully-acte77" n="Ully 77"/>
+                <ptr target="ully.xml#ully-acte93" n="Ully 93"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0012" n="2"><term>abbé de Sainte-Geneviève de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte8" n="Beaurain 8"/>
+                <ptr target="tremblay.xml#tremblay-acte8" n="Tremblay 8"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0013" n="1"><term>abbé de Saint-Germain-en-Laye</term>
+                <ptr target="saint-martin.xml#saint-martin-acte34" n="Saint-Martin 34"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0014" n="1"><term>abbé de Saint-Leu d’Esserent</term>
+                <ptr target="saint-martin.xml#saint-martin-acte48" n="Saint-Martin 48"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0015" n="2"><term>abbé de Saint-Victor de Paris</term>
+                <ptr target="dugny.xml#dugny-acte29" n="Dugny 29"/>
+                <ptr target="dugny.xml#dugny-acte55" n="Dugny 55"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0016" n="1"><term>abbé de Tiron</term>
+                <ptr target="rueil.xml#rueil-acte31" n="Rueil 31"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0017" n="3"><term>abbé des Vaux-de-Cernay</term>
+                <ptr target="beaurain.xml#beaurain-acte12" n="Beaurain 12"/>
+                <ptr target="beaurain.xml#beaurain-acte58a" n="Beaurain 58a"/>
+                <ptr target="beaurain.xml#beaurain-acte104" n="Beaurain 104"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0018" n="1"><term>abbé du Bec</term>
+                <ptr target="saint-martin.xml#saint-martin-acte35" n="Saint-Martin 35"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0019" n="1"><term>abbesse de Fontevraud</term>
+                <ptr target="beaurain.xml#beaurain-acte68" n="Beaurain 68"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0020" n="1"><term>abbesse de Pentemont</term>
+                <ptr target="saint-martin.xml#saint-martin-acte46" n="Saint-Martin 46"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0021" n="1"><term>archevêque de Reims</term>
+                <ptr target="saint-martin.xml#saint-martin-acte22" n="Saint-Martin 22"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0022" n="1"><term>archidiacre de Bayeux</term>
+                <ptr target="rueil.xml#rueil-acte40" n="Rueil 40"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0023" n="2"><term>archidiacre de Chartres</term>
+                <ptr target="beaurain.xml#beaurain-acte53" n="Beaurain 53"/>
+                <ptr target="beaurain.xml#beaurain-acte61" n="Beaurain 61"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0024" n="23"><term>archidiacre de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte27" n="Beaurain 27"/>
+                <ptr target="beaurain.xml#beaurain-acte28" n="Beaurain 28"/>
+                <ptr target="beaurain.xml#beaurain-acte56" n="Beaurain 56"/>
+                <ptr target="dugny.xml#dugny-acte7" n="Dugny 7"/>
+                <ptr target="dugny.xml#dugny-acte8" n="Dugny 8"/>
+                <ptr target="dugny.xml#dugny-acte12" n="Dugny 12"/>
+                <ptr target="dugny.xml#dugny-acte14" n="Dugny 14"/>
+                <ptr target="dugny.xml#dugny-acte16" n="Dugny 16"/>
+                <ptr target="dugny.xml#dugny-acte17" n="Dugny 17"/>
+                <ptr target="dugny.xml#dugny-acte18" n="Dugny 18"/>
+                <ptr target="dugny.xml#dugny-acte20" n="Dugny 20"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte3" n="Pierrefitte 3"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte5" n="Pierrefitte 5"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte11" n="Pierrefitte 11"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte18" n="Pierrefitte 18"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte25" n="Pierrefitte 25"/>
+                <ptr target="rueil.xml#rueil-acte7" n="Rueil 7"/>
+                <ptr target="rueil.xml#rueil-acte12" n="Rueil 12"/>
+                <ptr target="rueil.xml#rueil-acte48" n="Rueil 48"/>
+                <ptr target="rueil.xml#rueil-acte63" n="Rueil 63"/>
+                <ptr target="tremblay.xml#tremblay-acte12" n="Tremblay 12"/>
+                <ptr target="tremblay.xml#tremblay-acte14" n="Tremblay 14"/>
+                <ptr target="tremblay.xml#tremblay-acte23" n="Tremblay 23"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0025" n="6"><term>archidiacre de Pincerais</term>
+                <ptr target="beaurain.xml#beaurain-acte22" n="Beaurain 22"/>
+                <ptr target="beaurain.xml#beaurain-acte40" n="Beaurain 40"/>
+                <ptr target="beaurain.xml#beaurain-acte57" n="Beaurain 57"/>
+                <ptr target="beaurain.xml#beaurain-acte59" n="Beaurain 59"/>
+                <ptr target="beaurain.xml#beaurain-acte69" n="Beaurain 69"/>
+                <ptr target="beaurain.xml#beaurain-acte103" n="Beaurain 103"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0026" n="3"><term>auteurs ecclésiastiques</term>
+                <ptr target="pierrefitte.xml#pierrefitte-acte1" n="Pierrefitte 1"/>
+                <ptr target="tremblay.xml#tremblay-acte15" n="Tremblay 15"/>
+                <ptr target="ully.xml#ully-acte10" n="Ully 10"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0027" n="135"><term>auteurs laïques</term>
+                <ptr target="beaurain.xml#beaurain-acte4" n="Beaurain 4"/>
+                <ptr target="beaurain.xml#beaurain-acte9" n="Beaurain 9"/>
+                <ptr target="beaurain.xml#beaurain-acte11" n="Beaurain 11"/>
+                <ptr target="beaurain.xml#beaurain-acte15" n="Beaurain 15"/>
+                <ptr target="beaurain.xml#beaurain-acte23" n="Beaurain 23"/>
+                <ptr target="beaurain.xml#beaurain-acte24" n="Beaurain 24"/>
+                <ptr target="beaurain.xml#beaurain-acte26" n="Beaurain 26"/>
+                <ptr target="beaurain.xml#beaurain-acte33" n="Beaurain 33"/>
+                <ptr target="beaurain.xml#beaurain-acte35" n="Beaurain 35"/>
+                <ptr target="beaurain.xml#beaurain-acte38" n="Beaurain 38"/>
+                <ptr target="beaurain.xml#beaurain-acte39" n="Beaurain 39"/>
+                <ptr target="beaurain.xml#beaurain-acte49" n="Beaurain 49"/>
+                <ptr target="beaurain.xml#beaurain-acte50" n="Beaurain 50"/>
+                <ptr target="beaurain.xml#beaurain-acte52" n="Beaurain 52"/>
+                <ptr target="beaurain.xml#beaurain-acte55" n="Beaurain 55"/>
+                <ptr target="beaurain.xml#beaurain-acte58b" n="Beaurain 58b"/>
+                <ptr target="beaurain.xml#beaurain-acte63" n="Beaurain 63"/>
+                <ptr target="beaurain.xml#beaurain-acte64" n="Beaurain 64"/>
+                <ptr target="beaurain.xml#beaurain-acte71" n="Beaurain 71"/>
+                <ptr target="beaurain.xml#beaurain-acte72" n="Beaurain 72"/>
+                <ptr target="beaurain.xml#beaurain-acte75" n="Beaurain 75"/>
+                <ptr target="beaurain.xml#beaurain-acte77" n="Beaurain 77"/>
+                <ptr target="beaurain.xml#beaurain-acte78" n="Beaurain 78"/>
+                <ptr target="beaurain.xml#beaurain-acte79" n="Beaurain 79"/>
+                <ptr target="beaurain.xml#beaurain-acte80a" n="Beaurain 80a"/>
+                <ptr target="beaurain.xml#beaurain-acte81" n="Beaurain 81"/>
+                <ptr target="beaurain.xml#beaurain-acte82" n="Beaurain 82"/>
+                <ptr target="beaurain.xml#beaurain-acte83" n="Beaurain 83"/>
+                <ptr target="beaurain.xml#beaurain-acte95" n="Beaurain 95"/>
+                <ptr target="beaurain.xml#beaurain-acte96" n="Beaurain 96"/>
+                <ptr target="beaurain.xml#beaurain-acte100" n="Beaurain 100"/>
+                <ptr target="beaurain.xml#beaurain-acte102" n="Beaurain 102"/>
+                <ptr target="dugny.xml#dugny-acte2" n="Dugny 2"/>
+                <ptr target="dugny.xml#dugny-acte4" n="Dugny 4"/>
+                <ptr target="dugny.xml#dugny-acte5" n="Dugny 5"/>
+                <ptr target="dugny.xml#dugny-acte6" n="Dugny 6"/>
+                <ptr target="dugny.xml#dugny-acte30" n="Dugny 30"/>
+                <ptr target="dugny.xml#dugny-acte32" n="Dugny 32"/>
+                <ptr target="dugny.xml#dugny-acte46" n="Dugny 46"/>
+                <ptr target="dugny.xml#dugny-acte58" n="Dugny 58"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte4" n="Pierrefitte 4"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte15" n="Pierrefitte 15"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte17" n="Pierrefitte 17"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte23" n="Pierrefitte 23"/>
+                <ptr target="rueil.xml#rueil-acte5" n="Rueil 5"/>
+                <ptr target="rueil.xml#rueil-acte6" n="Rueil 6"/>
+                <ptr target="rueil.xml#rueil-acte16b" n="Rueil 16b"/>
+                <ptr target="rueil.xml#rueil-acte18" n="Rueil 18"/>
+                <ptr target="rueil.xml#rueil-acte19" n="Rueil 19"/>
+                <ptr target="rueil.xml#rueil-acte23" n="Rueil 23"/>
+                <ptr target="rueil.xml#rueil-acte24" n="Rueil 24"/>
+                <ptr target="rueil.xml#rueil-acte29" n="Rueil 29"/>
+                <ptr target="rueil.xml#rueil-acte34" n="Rueil 34"/>
+                <ptr target="rueil.xml#rueil-acte39" n="Rueil 39"/>
+                <ptr target="rueil.xml#rueil-acte49" n="Rueil 49"/>
+                <ptr target="saint-martin.xml#saint-martin-acte13" n="Saint-Martin 13"/>
+                <ptr target="saint-martin.xml#saint-martin-acte20" n="Saint-Martin 20"/>
+                <ptr target="saint-martin.xml#saint-martin-acte24" n="Saint-Martin 24"/>
+                <ptr target="saint-martin.xml#saint-martin-acte25" n="Saint-Martin 25"/>
+                <ptr target="saint-martin.xml#saint-martin-acte32" n="Saint-Martin 32"/>
+                <ptr target="saint-martin.xml#saint-martin-acte33" n="Saint-Martin 33"/>
+                <ptr target="saint-martin.xml#saint-martin-acte36" n="Saint-Martin 36"/>
+                <ptr target="saint-martin.xml#saint-martin-acte37" n="Saint-Martin 37"/>
+                <ptr target="saint-martin.xml#saint-martin-acte41" n="Saint-Martin 41"/>
+                <ptr target="saint-martin.xml#saint-martin-acte42" n="Saint-Martin 42"/>
+                <ptr target="saint-martin.xml#saint-martin-acte47" n="Saint-Martin 47"/>
+                <ptr target="saint-martin.xml#saint-martin-acte52" n="Saint-Martin 52"/>
+                <ptr target="saint-martin.xml#saint-martin-acte56" n="Saint-Martin 56"/>
+                <ptr target="saint-martin.xml#saint-martin-acte57" n="Saint-Martin 57"/>
+                <ptr target="saint-martin.xml#saint-martin-acte58" n="Saint-Martin 58"/>
+                <ptr target="saint-martin.xml#saint-martin-acte60" n="Saint-Martin 60"/>
+                <ptr target="saint-martin.xml#saint-martin-acte61" n="Saint-Martin 61"/>
+                <ptr target="saint-martin.xml#saint-martin-acte62" n="Saint-Martin 62"/>
+                <ptr target="saint-martin.xml#saint-martin-acte63" n="Saint-Martin 63"/>
+                <ptr target="saint-martin.xml#saint-martin-acte64" n="Saint-Martin 64"/>
+                <ptr target="tremblay.xml#tremblay-acte3" n="Tremblay 3"/>
+                <ptr target="tremblay.xml#tremblay-acte4" n="Tremblay 4"/>
+                <ptr target="tremblay.xml#tremblay-acte5" n="Tremblay 5"/>
+                <ptr target="tremblay.xml#tremblay-acte11" n="Tremblay 11"/>
+                <ptr target="tremblay.xml#tremblay-acte15" n="Tremblay 15"/>
+                <ptr target="tremblay.xml#tremblay-acte16" n="Tremblay 16"/>
+                <ptr target="tremblay.xml#tremblay-acte18" n="Tremblay 18"/>
+                <ptr target="tremblay.xml#tremblay-acte19" n="Tremblay 19"/>
+                <ptr target="tremblay.xml#tremblay-acte20" n="Tremblay 20"/>
+                <ptr target="tremblay.xml#tremblay-acte21" n="Tremblay 21"/>
+                <ptr target="tremblay.xml#tremblay-acte28" n="Tremblay 28"/>
+                <ptr target="tremblay.xml#tremblay-acte29" n="Tremblay 29"/>
+                <ptr target="tremblay.xml#tremblay-acte30" n="Tremblay 30"/>
+                <ptr target="tremblay.xml#tremblay-acte44" n="Tremblay 44"/>
+                <ptr target="ully.xml#ully-acte3" n="Ully 3"/>
+                <ptr target="ully.xml#ully-acte4" n="Ully 4"/>
+                <ptr target="ully.xml#ully-acte7" n="Ully 7"/>
+                <ptr target="ully.xml#ully-acte8" n="Ully 8"/>
+                <ptr target="ully.xml#ully-acte11" n="Ully 11"/>
+                <ptr target="ully.xml#ully-acte16" n="Ully 16"/>
+                <ptr target="ully.xml#ully-acte18" n="Ully 18"/>
+                <ptr target="ully.xml#ully-acte19" n="Ully 19"/>
+                <ptr target="ully.xml#ully-acte23" n="Ully 23"/>
+                <ptr target="ully.xml#ully-acte24" n="Ully 24"/>
+                <ptr target="ully.xml#ully-acte27" n="Ully 27"/>
+                <ptr target="ully.xml#ully-acte28" n="Ully 28"/>
+                <ptr target="ully.xml#ully-acte30" n="Ully 30"/>
+                <ptr target="ully.xml#ully-acte33" n="Ully 33"/>
+                <ptr target="ully.xml#ully-acte34" n="Ully 34"/>
+                <ptr target="ully.xml#ully-acte35" n="Ully 35"/>
+                <ptr target="ully.xml#ully-acte36" n="Ully 36"/>
+                <ptr target="ully.xml#ully-acte37" n="Ully 37"/>
+                <ptr target="ully.xml#ully-acte43" n="Ully 43"/>
+                <ptr target="ully.xml#ully-acte45" n="Ully 45"/>
+                <ptr target="ully.xml#ully-acte46" n="Ully 46"/>
+                <ptr target="ully.xml#ully-acte49" n="Ully 49"/>
+                <ptr target="ully.xml#ully-acte51" n="Ully 51"/>
+                <ptr target="ully.xml#ully-acte52" n="Ully 52"/>
+                <ptr target="ully.xml#ully-acte53" n="Ully 53"/>
+                <ptr target="ully.xml#ully-acte61" n="Ully 61"/>
+                <ptr target="ully.xml#ully-acte62" n="Ully 62"/>
+                <ptr target="ully.xml#ully-acte63" n="Ully 63"/>
+                <ptr target="ully.xml#ully-acte67" n="Ully 67"/>
+                <ptr target="ully.xml#ully-acte69" n="Ully 69"/>
+                <ptr target="ully.xml#ully-acte71" n="Ully 71"/>
+                <ptr target="ully.xml#ully-acte72" n="Ully 72"/>
+                <ptr target="ully.xml#ully-acte73" n="Ully 73"/>
+                <ptr target="ully.xml#ully-acte74" n="Ully 74"/>
+                <ptr target="ully.xml#ully-acte75" n="Ully 75"/>
+                <ptr target="ully.xml#ully-acte84" n="Ully 84"/>
+                <ptr target="ully.xml#ully-acte85" n="Ully 85"/>
+                <ptr target="ully.xml#ully-acte87" n="Ully 87"/>
+                <ptr target="ully.xml#ully-acte88b" n="Ully 88b"/>
+                <ptr target="ully.xml#ully-acte90" n="Ully 90"/>
+                <ptr target="ully.xml#ully-acte91" n="Ully 91"/>
+                <ptr target="ully.xml#ully-acte93" n="Ully 93"/>
+                <ptr target="ully.xml#ully-acte94" n="Ully 94"/>
+                <ptr target="ully.xml#ully-acte95" n="Ully 95"/>
+                <ptr target="ully.xml#ully-acte96" n="Ully 96"/>
+                <ptr target="ully.xml#ully-acte97" n="Ully 97"/>
+              </item>
+            </list>
+            <list type="index" n="B">
+              <head>B</head>
+              <item xml:id="sd-auteur-cb-0028" n="2"><term>bailliage de Senlis</term>
+                <ptr target="ully.xml#ully-acte88b" n="Ully 88b"/>
+                <ptr target="ully.xml#ully-acte97" n="Ully 97"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0029" n="1"><term>baillis royaux</term>
+                <ptr target="ully.xml#ully-acte14" n="Ully 14"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0030" n="1"><term>Biard Michel</term>
+                <ptr target="ully.xml#ully-acte38" n="Ully 38"/>
+              </item>
+            </list>
+            <list type="index" n="C">
+              <head>C</head>
+              <item xml:id="sd-auteur-cb-0031" n="1"><term>chapitre cathédral de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte18" n="Beaurain 18"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0032" n="47"><term>Châtelet</term>
+                <ptr target="beaurain.xml#beaurain-acte94" n="Beaurain 94"/>
+                <ptr target="beaurain.xml#beaurain-acte97" n="Beaurain 97"/>
+                <ptr target="beaurain.xml#beaurain-acte99a" n="Beaurain 99a"/>
+                <ptr target="beaurain.xml#beaurain-acte101" n="Beaurain 101"/>
+                <ptr target="beaurain.xml#beaurain-acte106" n="Beaurain 106"/>
+                <ptr target="beaurain.xml#beaurain-acte108" n="Beaurain 108"/>
+                <ptr target="dugny.xml#dugny-acte33" n="Dugny 33"/>
+                <ptr target="dugny.xml#dugny-acte39" n="Dugny 39"/>
+                <ptr target="dugny.xml#dugny-acte50" n="Dugny 50"/>
+                <ptr target="dugny.xml#dugny-acte53" n="Dugny 53"/>
+                <ptr target="dugny.xml#dugny-acte54" n="Dugny 54"/>
+                <ptr target="dugny.xml#dugny-acte56" n="Dugny 56"/>
+                <ptr target="dugny.xml#dugny-acte57" n="Dugny 57"/>
+                <ptr target="dugny.xml#dugny-acte59" n="Dugny 59"/>
+                <ptr target="dugny.xml#dugny-acte60" n="Dugny 60"/>
+                <ptr target="dugny.xml#dugny-acte61" n="Dugny 61"/>
+                <ptr target="dugny.xml#dugny-acte63" n="Dugny 63"/>
+                <ptr target="dugny.xml#dugny-acte64" n="Dugny 64"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte26" n="Pierrefitte 26"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte32" n="Pierrefitte 32"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte33" n="Pierrefitte 33"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte36" n="Pierrefitte 36"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte37" n="Pierrefitte 37"/>
+                <ptr target="rueil.xml#rueil-acte47" n="Rueil 47"/>
+                <ptr target="rueil.xml#rueil-acte54" n="Rueil 54"/>
+                <ptr target="rueil.xml#rueil-acte57" n="Rueil 57"/>
+                <ptr target="rueil.xml#rueil-acte58" n="Rueil 58"/>
+                <ptr target="rueil.xml#rueil-acte60" n="Rueil 60"/>
+                <ptr target="rueil.xml#rueil-acte61" n="Rueil 61"/>
+                <ptr target="rueil.xml#rueil-acte62" n="Rueil 62"/>
+                <ptr target="rueil.xml#rueil-acte64" n="Rueil 64"/>
+                <ptr target="rueil.xml#rueil-acte65" n="Rueil 65"/>
+                <ptr target="rueil.xml#rueil-acte66" n="Rueil 66"/>
+                <ptr target="rueil.xml#rueil-acte67" n="Rueil 67"/>
+                <ptr target="rueil.xml#rueil-acte68" n="Rueil 68"/>
+                <ptr target="rueil.xml#rueil-acte70" n="Rueil 70"/>
+                <ptr target="tremblay.xml#tremblay-acte32b" n="Tremblay 32b"/>
+                <ptr target="tremblay.xml#tremblay-acte35b" n="Tremblay 35b"/>
+                <ptr target="tremblay.xml#tremblay-acte36" n="Tremblay 36"/>
+                <ptr target="tremblay.xml#tremblay-acte38" n="Tremblay 38"/>
+                <ptr target="tremblay.xml#tremblay-acte39" n="Tremblay 39"/>
+                <ptr target="tremblay.xml#tremblay-acte42" n="Tremblay 42"/>
+                <ptr target="tremblay.xml#tremblay-acte43" n="Tremblay 43"/>
+                <ptr target="tremblay.xml#tremblay-acte49" n="Tremblay 49"/>
+                <ptr target="tremblay.xml#tremblay-acte50" n="Tremblay 50"/>
+                <ptr target="tremblay.xml#tremblay-acte52" n="Tremblay 52"/>
+                <ptr target="ully.xml#ully-acte98" n="Ully 98"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0033" n="1"><term>châtellenie de Blois</term>
+                <ptr target="ully.xml#ully-acte89" n="Ully 89"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0034" n="11"><term>comte de Beaumont-sur-Oise</term>
+                <ptr target="saint-martin.xml#saint-martin-acte5" n="Saint-Martin 5"/>
+                <ptr target="saint-martin.xml#saint-martin-acte8" n="Saint-Martin 8"/>
+                <ptr target="saint-martin.xml#saint-martin-acte10" n="Saint-Martin 10"/>
+                <ptr target="saint-martin.xml#saint-martin-acte11" n="Saint-Martin 11"/>
+                <ptr target="saint-martin.xml#saint-martin-acte12" n="Saint-Martin 12"/>
+                <ptr target="saint-martin.xml#saint-martin-acte13" n="Saint-Martin 13"/>
+                <ptr target="saint-martin.xml#saint-martin-acte15" n="Saint-Martin 15"/>
+                <ptr target="saint-martin.xml#saint-martin-acte18" n="Saint-Martin 18"/>
+                <ptr target="saint-martin.xml#saint-martin-acte19" n="Saint-Martin 19"/>
+                <ptr target="ully.xml#ully-acte15" n="Ully 15"/>
+                <ptr target="ully.xml#ully-acte26" n="Ully 26"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0035" n="1"><term>comte de Clermont-en-Beauvaisis</term>
+                <ptr target="ully.xml#ully-acte99" n="Ully 99"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0036" n="3"><term>comte de Dammartin</term>
+                <ptr target="tremblay.xml#tremblay-acte2" n="Tremblay 2"/>
+                <ptr target="ully.xml#ully-acte86" n="Ully 86"/>
+                <ptr target="ully.xml#ully-acte94" n="Ully 94"/>
+              </item>
+            </list>
+            <list type="index" n="D">
+              <head>D</head>
+              <item xml:id="sd-auteur-cb-0037" n="17"><term>divers ecclésiastiques</term>
+                <ptr target="beaurain.xml#beaurain-acte6" n="Beaurain 6"/>
+                <ptr target="beaurain.xml#beaurain-acte8" n="Beaurain 8"/>
+                <ptr target="beaurain.xml#beaurain-acte10" n="Beaurain 10"/>
+                <ptr target="beaurain.xml#beaurain-acte42" n="Beaurain 42"/>
+                <ptr target="beaurain.xml#beaurain-acte43" n="Beaurain 43"/>
+                <ptr target="beaurain.xml#beaurain-acte46" n="Beaurain 46"/>
+                <ptr target="beaurain.xml#beaurain-acte47" n="Beaurain 47"/>
+                <ptr target="beaurain.xml#beaurain-acte90" n="Beaurain 90"/>
+                <ptr target="dugny.xml#dugny-acte9" n="Dugny 9"/>
+                <ptr target="dugny.xml#dugny-acte13" n="Dugny 13"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte7" n="Pierrefitte 7"/>
+                <ptr target="rueil.xml#rueil-acte7" n="Rueil 7"/>
+                <ptr target="rueil.xml#rueil-acte9" n="Rueil 9"/>
+                <ptr target="saint-martin.xml#saint-martin-acte16" n="Saint-Martin 16"/>
+                <ptr target="saint-martin.xml#saint-martin-acte43" n="Saint-Martin 43"/>
+                <ptr target="saint-martin.xml#saint-martin-acte59" n="Saint-Martin 59"/>
+                <ptr target="tremblay.xml#tremblay-acte14" n="Tremblay 14"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0038" n="12"><term>divers laïques</term>
+                <ptr target="beaurain.xml#beaurain-acte10" n="Beaurain 10"/>
+                <ptr target="beaurain.xml#beaurain-acte19" n="Beaurain 19"/>
+                <ptr target="beaurain.xml#beaurain-acte20" n="Beaurain 20"/>
+                <ptr target="beaurain.xml#beaurain-acte29" n="Beaurain 29"/>
+                <ptr target="beaurain.xml#beaurain-acte42" n="Beaurain 42"/>
+                <ptr target="rueil.xml#rueil-acte10" n="Rueil 10"/>
+                <ptr target="saint-martin.xml#saint-martin-acte28" n="Saint-Martin 28"/>
+                <ptr target="saint-martin.xml#saint-martin-acte29" n="Saint-Martin 29"/>
+                <ptr target="saint-martin.xml#saint-martin-acte59" n="Saint-Martin 59"/>
+                <ptr target="tremblay.xml#tremblay-acte22" n="Tremblay 22"/>
+                <ptr target="tremblay.xml#tremblay-acte48" n="Tremblay 48"/>
+                <ptr target="ully.xml#ully-acte17" n="Ully 17"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0039" n="1"><term>doyen de Saint-Thomas-du-Louvre</term>
+                <ptr target="rueil.xml#rueil-acte27" n="Rueil 27"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0040" n="2"><term>doyen du chapitre cathédral de Paris</term>
+                <ptr target="rueil.xml#rueil-acte43" n="Rueil 43"/>
+                <ptr target="saint-martin.xml#saint-martin-acte17" n="Saint-Martin 17"/>
+              </item>
+            </list>
+            <list type="index" n="E">
+              <head>E</head>
+              <item xml:id="sd-auteur-cb-0041" n="5"><term>évêque de Beauvais</term>
+                <ptr target="saint-martin.xml#saint-martin-acte9" n="Saint-Martin 9"/>
+                <ptr target="ully.xml#ully-acte1" n="Ully 1"/>
+                <ptr target="ully.xml#ully-acte9" n="Ully 9"/>
+                <ptr target="ully.xml#ully-acte20" n="Ully 20"/>
+                <ptr target="ully.xml#ully-acte22" n="Ully 22"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0042" n="2"><term>évêque de Chartres</term>
+                <ptr target="beaurain.xml#beaurain-acte31" n="Beaurain 31"/>
+                <ptr target="beaurain.xml#beaurain-acte32" n="Beaurain 32"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0043" n="20"><term>évêque de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte13" n="Beaurain 13"/>
+                <ptr target="beaurain.xml#beaurain-acte14" n="Beaurain 14"/>
+                <ptr target="beaurain.xml#beaurain-acte16" n="Beaurain 16"/>
+                <ptr target="beaurain.xml#beaurain-acte17" n="Beaurain 17"/>
+                <ptr target="beaurain.xml#beaurain-acte18" n="Beaurain 18"/>
+                <ptr target="beaurain.xml#beaurain-acte36" n="Beaurain 36"/>
+                <ptr target="beaurain.xml#beaurain-acte44" n="Beaurain 44"/>
+                <ptr target="beaurain.xml#beaurain-acte45" n="Beaurain 45"/>
+                <ptr target="beaurain.xml#beaurain-acte60" n="Beaurain 60"/>
+                <ptr target="beaurain.xml#beaurain-acte67" n="Beaurain 67"/>
+                <ptr target="beaurain.xml#beaurain-acte85" n="Beaurain 85"/>
+                <ptr target="dugny.xml#dugny-acte15" n="Dugny 15"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte8" n="Pierrefitte 8"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte13" n="Pierrefitte 13"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte22" n="Pierrefitte 22"/>
+                <ptr target="rueil.xml#rueil-acte3" n="Rueil 3"/>
+                <ptr target="rueil.xml#rueil-acte22" n="Rueil 22"/>
+                <ptr target="rueil.xml#rueil-acte28a" n="Rueil 28a"/>
+                <ptr target="tremblay.xml#tremblay-acte13" n="Tremblay 13"/>
+                <ptr target="tremblay.xml#tremblay-acte17" n="Tremblay 17"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0044" n="3"><term>évêque de Senlis</term>
+                <ptr target="saint-martin.xml#saint-martin-acte7" n="Saint-Martin 7"/>
+                <ptr target="ully.xml#ully-acte2" n="Ully 2"/>
+                <ptr target="ully.xml#ully-acte6" n="Ully 6"/>
+              </item>
+            </list>
+            <list type="index" n="J">
+              <head>J</head>
+              <item xml:id="sd-auteur-cb-0045" n="3"><term>juges délégués</term>
+                <ptr target="beaurain.xml#beaurain-acte8" n="Beaurain 8"/>
+                <ptr target="saint-martin.xml#saint-martin-acte7" n="Saint-Martin 7"/>
+                <ptr target="ully.xml#ully-acte6" n="Ully 6"/>
+              </item>
+            </list>
+            <list type="index" n="M">
+              <head>M</head>
+              <item xml:id="sd-auteur-cb-0046" n="1"><term>maladrerie de Saint-Lazare de Paris</term>
+                <ptr target="tremblay.xml#tremblay-acte47" n="Tremblay 47"/>
+              </item>
+            </list>
+            <list type="index" n="O">
+              <head>O</head>
+              <item xml:id="sd-auteur-cb-0047" n="1"><term>official de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte90" n="Beaurain 90"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0048" n="1"><term>officialité de Bayeux</term>
+                <ptr target="saint-martin.xml#saint-martin-acte54" n="Saint-Martin 54"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0049" n="32"><term>officialité de Beauvais</term>
+                <ptr target="saint-martin.xml#saint-martin-acte38" n="Saint-Martin 38"/>
+                <ptr target="saint-martin.xml#saint-martin-acte44" n="Saint-Martin 44"/>
+                <ptr target="saint-martin.xml#saint-martin-acte45" n="Saint-Martin 45"/>
+                <ptr target="saint-martin.xml#saint-martin-acte50" n="Saint-Martin 50"/>
+                <ptr target="saint-martin.xml#saint-martin-acte51" n="Saint-Martin 51"/>
+                <ptr target="saint-martin.xml#saint-martin-acte55" n="Saint-Martin 55"/>
+                <ptr target="saint-martin.xml#saint-martin-acte60" n="Saint-Martin 60"/>
+                <ptr target="saint-martin.xml#saint-martin-acte61" n="Saint-Martin 61"/>
+                <ptr target="saint-martin.xml#saint-martin-acte66" n="Saint-Martin 66"/>
+                <ptr target="ully.xml#ully-acte25" n="Ully 25"/>
+                <ptr target="ully.xml#ully-acte29" n="Ully 29"/>
+                <ptr target="ully.xml#ully-acte32" n="Ully 32"/>
+                <ptr target="ully.xml#ully-acte42" n="Ully 42"/>
+                <ptr target="ully.xml#ully-acte44" n="Ully 44"/>
+                <ptr target="ully.xml#ully-acte47" n="Ully 47"/>
+                <ptr target="ully.xml#ully-acte50" n="Ully 50"/>
+                <ptr target="ully.xml#ully-acte54" n="Ully 54"/>
+                <ptr target="ully.xml#ully-acte56" n="Ully 56"/>
+                <ptr target="ully.xml#ully-acte57" n="Ully 57"/>
+                <ptr target="ully.xml#ully-acte58" n="Ully 58"/>
+                <ptr target="ully.xml#ully-acte59" n="Ully 59"/>
+                <ptr target="ully.xml#ully-acte60" n="Ully 60"/>
+                <ptr target="ully.xml#ully-acte65" n="Ully 65"/>
+                <ptr target="ully.xml#ully-acte66" n="Ully 66"/>
+                <ptr target="ully.xml#ully-acte68" n="Ully 68"/>
+                <ptr target="ully.xml#ully-acte70" n="Ully 70"/>
+                <ptr target="ully.xml#ully-acte76" n="Ully 76"/>
+                <ptr target="ully.xml#ully-acte78" n="Ully 78"/>
+                <ptr target="ully.xml#ully-acte81" n="Ully 81"/>
+                <ptr target="ully.xml#ully-acte82" n="Ully 82"/>
+                <ptr target="ully.xml#ully-acte83" n="Ully 83"/>
+                <ptr target="ully.xml#ully-acte96" n="Ully 96"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0050" n="1"><term>officialité de Chartres</term>
+                <ptr target="beaurain.xml#beaurain-acte99b" n="Beaurain 99b"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0051" n="1"><term>officialité de l’archidiacre de Meaux</term>
+                <ptr target="tremblay.xml#tremblay-acte32a" n="Tremblay 32a"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0052" n="17"><term>officialité de l’archidiacre de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte70" n="Beaurain 70"/>
+                <ptr target="dugny.xml#dugny-acte19" n="Dugny 19"/>
+                <ptr target="dugny.xml#dugny-acte21" n="Dugny 21"/>
+                <ptr target="dugny.xml#dugny-acte22" n="Dugny 22"/>
+                <ptr target="dugny.xml#dugny-acte23" n="Dugny 23"/>
+                <ptr target="dugny.xml#dugny-acte25" n="Dugny 25"/>
+                <ptr target="dugny.xml#dugny-acte35" n="Dugny 35"/>
+                <ptr target="dugny.xml#dugny-acte52" n="Dugny 52"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte10" n="Pierrefitte 10"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte14" n="Pierrefitte 14"/>
+                <ptr target="rueil.xml#rueil-acte8" n="Rueil 8"/>
+                <ptr target="rueil.xml#rueil-acte14" n="Rueil 14"/>
+                <ptr target="rueil.xml#rueil-acte26" n="Rueil 26"/>
+                <ptr target="rueil.xml#rueil-acte36" n="Rueil 36"/>
+                <ptr target="rueil.xml#rueil-acte51" n="Rueil 51"/>
+                <ptr target="saint-martin.xml#saint-martin-acte40" n="Saint-Martin 40"/>
+                <ptr target="tremblay.xml#tremblay-acte51b" n="Tremblay 51b"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0053" n="2"><term>officialité de Lisieux</term>
+                <ptr target="pierrefitte.xml#pierrefitte-acte24" n="Pierrefitte 24"/>
+                <ptr target="tremblay.xml#tremblay-acte34" n="Tremblay 34"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0054" n="1"><term>officialité de Meaux</term>
+                <ptr target="pierrefitte.xml#pierrefitte-acte6" n="Pierrefitte 6"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0055" n="65"><term>officialité de Paris</term>
+                <ptr target="beaurain.xml#beaurain-acte34" n="Beaurain 34"/>
+                <ptr target="beaurain.xml#beaurain-acte54" n="Beaurain 54"/>
+                <ptr target="beaurain.xml#beaurain-acte62" n="Beaurain 62"/>
+                <ptr target="beaurain.xml#beaurain-acte73" n="Beaurain 73"/>
+                <ptr target="beaurain.xml#beaurain-acte76" n="Beaurain 76"/>
+                <ptr target="beaurain.xml#beaurain-acte84" n="Beaurain 84"/>
+                <ptr target="beaurain.xml#beaurain-acte89" n="Beaurain 89"/>
+                <ptr target="beaurain.xml#beaurain-acte98" n="Beaurain 98"/>
+                <ptr target="beaurain.xml#beaurain-acte105" n="Beaurain 105"/>
+                <ptr target="beaurain.xml#beaurain-acte107a" n="Beaurain 107a"/>
+                <ptr target="dugny.xml#dugny-acte24" n="Dugny 24"/>
+                <ptr target="dugny.xml#dugny-acte26" n="Dugny 26"/>
+                <ptr target="dugny.xml#dugny-acte27" n="Dugny 27"/>
+                <ptr target="dugny.xml#dugny-acte28" n="Dugny 28"/>
+                <ptr target="dugny.xml#dugny-acte31" n="Dugny 31"/>
+                <ptr target="dugny.xml#dugny-acte34" n="Dugny 34"/>
+                <ptr target="dugny.xml#dugny-acte36" n="Dugny 36"/>
+                <ptr target="dugny.xml#dugny-acte37" n="Dugny 37"/>
+                <ptr target="dugny.xml#dugny-acte38" n="Dugny 38"/>
+                <ptr target="dugny.xml#dugny-acte40" n="Dugny 40"/>
+                <ptr target="dugny.xml#dugny-acte41" n="Dugny 41"/>
+                <ptr target="dugny.xml#dugny-acte44" n="Dugny 44"/>
+                <ptr target="dugny.xml#dugny-acte47" n="Dugny 47"/>
+                <ptr target="dugny.xml#dugny-acte48" n="Dugny 48"/>
+                <ptr target="dugny.xml#dugny-acte49" n="Dugny 49"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte2" n="Pierrefitte 2"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte9" n="Pierrefitte 9"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte12" n="Pierrefitte 12"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte16" n="Pierrefitte 16"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte19" n="Pierrefitte 19"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte20" n="Pierrefitte 20"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte21" n="Pierrefitte 21"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte28" n="Pierrefitte 28"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte29" n="Pierrefitte 29"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte30" n="Pierrefitte 30"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte31" n="Pierrefitte 31"/>
+                <ptr target="rueil.xml#rueil-acte16a" n="Rueil 16a"/>
+                <ptr target="rueil.xml#rueil-acte17" n="Rueil 17"/>
+                <ptr target="rueil.xml#rueil-acte20" n="Rueil 20"/>
+                <ptr target="rueil.xml#rueil-acte21" n="Rueil 21"/>
+                <ptr target="rueil.xml#rueil-acte25" n="Rueil 25"/>
+                <ptr target="rueil.xml#rueil-acte32" n="Rueil 32"/>
+                <ptr target="rueil.xml#rueil-acte35" n="Rueil 35"/>
+                <ptr target="rueil.xml#rueil-acte38" n="Rueil 38"/>
+                <ptr target="rueil.xml#rueil-acte41" n="Rueil 41"/>
+                <ptr target="rueil.xml#rueil-acte42" n="Rueil 42"/>
+                <ptr target="rueil.xml#rueil-acte44" n="Rueil 44"/>
+                <ptr target="rueil.xml#rueil-acte45" n="Rueil 45"/>
+                <ptr target="rueil.xml#rueil-acte46" n="Rueil 46"/>
+                <ptr target="rueil.xml#rueil-acte50" n="Rueil 50"/>
+                <ptr target="rueil.xml#rueil-acte52" n="Rueil 52"/>
+                <ptr target="rueil.xml#rueil-acte56" n="Rueil 56"/>
+                <ptr target="rueil.xml#rueil-acte59" n="Rueil 59"/>
+                <ptr target="rueil.xml#rueil-acte69" n="Rueil 69"/>
+                <ptr target="saint-martin.xml#saint-martin-acte27" n="Saint-Martin 27"/>
+                <ptr target="saint-martin.xml#saint-martin-acte30" n="Saint-Martin 30"/>
+                <ptr target="saint-martin.xml#saint-martin-acte39" n="Saint-Martin 39"/>
+                <ptr target="saint-martin.xml#saint-martin-acte49" n="Saint-Martin 49"/>
+                <ptr target="saint-martin.xml#saint-martin-acte53" n="Saint-Martin 53"/>
+                <ptr target="tremblay.xml#tremblay-acte27" n="Tremblay 27"/>
+                <ptr target="tremblay.xml#tremblay-acte31" n="Tremblay 31"/>
+                <ptr target="tremblay.xml#tremblay-acte33" n="Tremblay 33"/>
+                <ptr target="tremblay.xml#tremblay-acte37" n="Tremblay 37"/>
+                <ptr target="tremblay.xml#tremblay-acte40" n="Tremblay 40"/>
+                <ptr target="tremblay.xml#tremblay-acte41" n="Tremblay 41"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0056" n="1"><term>officialité de Rouen</term>
+                <ptr target="ully.xml#ully-acte55" n="Ully 55"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0057" n="1"><term>officialité de Senlis</term>
+                <ptr target="ully.xml#ully-acte88a" n="Ully 88a"/>
+              </item>
+            </list>
+            <list type="index" n="P">
+              <head>P</head>
+              <item xml:id="sd-auteur-cb-0058" n="3"><term>prévôté de Beaumont-sur-Oise</term>
+                <ptr target="saint-martin.xml#saint-martin-acte70" n="Saint-Martin 70"/>
+                <ptr target="saint-martin.xml#saint-martin-acte71" n="Saint-Martin 71"/>
+                <ptr target="ully.xml#ully-acte64" n="Ully 64"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0059" n="1"><term>prévôté de Châteaufort</term>
+                <ptr target="beaurain.xml#beaurain-acte107b" n="Beaurain 107b"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0060" n="3"><term>prévôté de Gonesse</term>
+                <ptr target="dugny.xml#dugny-acte43" n="Dugny 43"/>
+                <ptr target="dugny.xml#dugny-acte45" n="Dugny 45"/>
+                <ptr target="dugny.xml#dugny-acte51" n="Dugny 51"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0061" n="2"><term>prévôté de Saint-Denis</term>
+                <ptr target="pierrefitte.xml#pierrefitte-acte34" n="Pierrefitte 34"/>
+                <ptr target="pierrefitte.xml#pierrefitte-acte35" n="Pierrefitte 35"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0062" n="1"><term>prieur de Saint-Martin-des-Champs</term>
+                <ptr target="beaurain.xml#beaurain-acte74" n="Beaurain 74"/>
+              </item>
+            </list>
+            <list type="index" n="R">
+              <head>R</head>
+              <item xml:id="sd-auteur-cb-0063" n="38"><term>roi de France</term>
+                <ptr target="beaurain.xml#beaurain-acte1" n="Beaurain 1"/>
+                <ptr target="beaurain.xml#beaurain-acte3" n="Beaurain 3"/>
+                <ptr target="beaurain.xml#beaurain-acte21" n="Beaurain 21"/>
+                <ptr target="beaurain.xml#beaurain-acte25" n="Beaurain 25"/>
+                <ptr target="beaurain.xml#beaurain-acte41" n="Beaurain 41"/>
+                <ptr target="beaurain.xml#beaurain-acte51" n="Beaurain 51"/>
+                <ptr target="beaurain.xml#beaurain-acte88" n="Beaurain 88"/>
+                <ptr target="beaurain.xml#beaurain-acte93" n="Beaurain 93"/>
+                <ptr target="dugny.xml#dugny-acte3" n="Dugny 3"/>
+                <ptr target="dugny.xml#dugny-acte10" n="Dugny 10"/>
+                <ptr target="dugny.xml#dugny-acte62" n="Dugny 62"/>
+                <ptr target="rueil.xml#rueil-acte1" n="Rueil 1"/>
+                <ptr target="rueil.xml#rueil-acte2" n="Rueil 2"/>
+                <ptr target="rueil.xml#rueil-acte4" n="Rueil 4"/>
+                <ptr target="rueil.xml#rueil-acte13" n="Rueil 13"/>
+                <ptr target="rueil.xml#rueil-acte15" n="Rueil 15"/>
+                <ptr target="rueil.xml#rueil-acte30" n="Rueil 30"/>
+                <ptr target="rueil.xml#rueil-acte33" n="Rueil 33"/>
+                <ptr target="rueil.xml#rueil-acte37" n="Rueil 37"/>
+                <ptr target="rueil.xml#rueil-acte53" n="Rueil 53"/>
+                <ptr target="rueil.xml#rueil-acte55" n="Rueil 55"/>
+                <ptr target="saint-martin.xml#saint-martin-acte1" n="Saint-Martin 1"/>
+                <ptr target="saint-martin.xml#saint-martin-acte2" n="Saint-Martin 2"/>
+                <ptr target="saint-martin.xml#saint-martin-acte6" n="Saint-Martin 6"/>
+                <ptr target="saint-martin.xml#saint-martin-acte21" n="Saint-Martin 21"/>
+                <ptr target="saint-martin.xml#saint-martin-acte23" n="Saint-Martin 23"/>
+                <ptr target="saint-martin.xml#saint-martin-acte67" n="Saint-Martin 67"/>
+                <ptr target="saint-martin.xml#saint-martin-acte68" n="Saint-Martin 68"/>
+                <ptr target="tremblay.xml#tremblay-acte1" n="Tremblay 1"/>
+                <ptr target="tremblay.xml#tremblay-acte6" n="Tremblay 6"/>
+                <ptr target="tremblay.xml#tremblay-acte10" n="Tremblay 10"/>
+                <ptr target="tremblay.xml#tremblay-acte26" n="Tremblay 26"/>
+                <ptr target="tremblay.xml#tremblay-acte45" n="Tremblay 45"/>
+                <ptr target="tremblay.xml#tremblay-acte46" n="Tremblay 46"/>
+                <ptr target="ully.xml#ully-acte31" n="Ully 31"/>
+                <ptr target="ully.xml#ully-acte79" n="Ully 79"/>
+                <ptr target="ully.xml#ully-acte80" n="Ully 80"/>
+                <ptr target="ully.xml#ully-acte92" n="Ully 92"/>
+              </item>
+            </list>
+            <list type="index" n="S">
+              <head>S</head>
+              <item xml:id="sd-auteur-cb-0064" n="1"><term>sans auteur déclaré</term>
+                <ptr target="beaurain.xml#beaurain-acte87" n="Beaurain 87"/>
+              </item>
+            </list>
+            <list type="index" n="T">
+              <head>T</head>
+              <item xml:id="sd-auteur-cb-0065" n="2"><term>Templiers</term>
+                <ptr target="beaurain.xml#beaurain-acte7" n="Beaurain 7"/>
+                <ptr target="beaurain.xml#beaurain-acte30" n="Beaurain 30"/>
+              </item>
+              <item xml:id="sd-auteur-cb-0066" n="1"><term>trinitaires</term>
+                <ptr target="dugny.xml#dugny-acte42" n="Dugny 42"/>
+              </item>
+            </list>
+          </div>
+      </body>
+  </text>
+</TEI>
