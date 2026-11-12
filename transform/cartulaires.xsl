@@ -1196,7 +1196,9 @@
   <xsl:function name="cartu:unite-de" as="xs:string?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="e" as="element()?"/>
     <!-- unité = l'ancêtre-ou-soi le plus proche qui est un texte, une division ou un groupe porteur d'@xml:id -->
-    <xsl:sequence select="$e/ancestor-or-self::*[self::tei:text or self::tei:div or self::tei:group][@xml:id][1]/@xml:id/string()"/>
+    <!-- 2026-11-12 : dans un censier (une seule page), l'unité est le groupe du censier, pas l'article -->
+    <xsl:sequence select="($e/ancestor-or-self::tei:group[contains(@xml:id, 'censier')][1]/@xml:id/string(),
+        $e/ancestor-or-self::*[self::tei:text or self::tei:div or self::tei:group][@xml:id][1]/@xml:id/string())[1]"/>
   </xsl:function>
   <xsl:function name="cartu:cible-tei" as="element()?" version="3.0" xmlns:cartu="urn:cartu">
     <xsl:param name="id" as="xs:string"/>
@@ -1229,7 +1231,10 @@
         <!-- 2026-10-29 : renvoi au censier qui vise l'article (@n = page, ex. SMPA-EG « 206 » -> SMPA-EG_censier_0041,
              article des p. 205-206) : ancre sur la page @n dans l'article, sinon on arrivait sur sa première page. -->
         <xsl:variable name="page" select="if ($r/@type = 'censier' and $el/self::tei:text) then ($el//tei:pb[normalize-space(@n) = normalize-space($r/@n)][@xml:id])[1] else ()"/>
+        <!-- 2026-11-12 : article d'un censier (page unique du groupe) : page du censier, puis ancre de la page ou de l'article -->
+        <xsl:variable name="article-censier" select="$el/self::tei:text[parent::tei:group[contains(@xml:id, 'censier')]]"/>
         <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id)
+            else if (exists($article-censier)) then concat($document-base, $res, '?refId=', $article-censier/../@xml:id, '#', ($page/@xml:id, $article-censier/@xml:id)[1])
             else if (exists($page)) then concat($document-base, $res, '?refId=', $el/@xml:id, '#', $page/@xml:id) else ()"/>
       </xsl:when>
       <xsl:when test="$resource = ''"/>
@@ -1568,10 +1573,15 @@
           <xsl:value-of select="normalize-space(../@n)"/>
         </div>
       </xsl:if>
-      <xsl:apply-templates/>
+      <!-- 2026-11-12 (Maxime) : articles d'un censier (page unique du groupe) : ni tableau des témoins ni « D'après »,
+           qui répétaient à chaque article l'édition déjà connue. -->
+      <xsl:variable name="censier" select="exists(ancestor::tei:group[contains(@xml:id, 'censier')])"/>
+      <xsl:apply-templates select="node()[not($censier and self::tei:div[@type = 'tradition'])]"/>
       <!-- mention « D'apres <temoin edite> », comme chez hteiml -->
       <!-- 2026-10-19 : un seul « D'après » : le premier témoin suivi (B, puis l'édition a, SMPA-AB-03) -->
-      <xsl:apply-templates select="(.//tei:witness[@ana='edited'])[1]" mode="according"/>
+      <xsl:if test="not($censier)">
+        <xsl:apply-templates select="(.//tei:witness[@ana='edited'])[1]" mode="according"/>
+      </xsl:if>
     </xsl:element>
   </xsl:template>
 
@@ -1680,9 +1690,9 @@
       <!-- 2026-10-28 (Maxime, NDPA-EG-04_group-4 : « les deux pouillés sont vides ») : texte du groupe qui n'est pas
            une unité citable (text sans xml:id : pouillés de NDPA-EG-04) ; absent du sommaire, il s'affiche ici. -->
       <xsl:apply-templates select="tei:text[not(@xml:id)]"/>
-      <!-- 2026-11-12 : censier de l'Hôtel-Dieu : ses articles ont un xml:id mais ne sont pas des actes (citeStructure
-           acte « not(../@xml:id='HDPAR-HD_censier') ») : la page du groupe est leur seule page. -->
-      <xsl:apply-templates select="self::tei:group[@xml:id = 'HDPAR-HD_censier']/tei:text[@xml:id]"/>
+      <!-- 2026-11-12 : censiers (HDPAR-HD, SMPA-EG, SSCO-AB) : leurs articles ont un xml:id mais ne sont pas des actes
+           (citeStructure acte « not(../@xml:id = '…censier…') ») : la page du groupe est leur seule page. -->
+      <xsl:apply-templates select="self::tei:group[contains(@xml:id, 'censier')]/tei:text[@xml:id]"/>
     </div>
   </xsl:template>
 
