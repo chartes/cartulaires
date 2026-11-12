@@ -31,7 +31,8 @@
     <dct:created scope="document" xpath="/TEI/teiHeader/profileDesc/creation/date[not(@type)]"/>
     <dct:isVersionOf scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/title/tokenize(@ref)" type="array"/>
     <dct:language scope="document" xpath="/TEI/teiHeader/profileDesc/langUsage/language/tokenize(@ident)"/>
-    <dct:contributor scope="document" xpath="/TEI/teiHeader/fileDesc/titleStmt/principal | /TEI/teiHeader/fileDesc/titleStmt/editor"/>
+    <!-- 2026-11-12 (Maxime) : les crédits (respStmt/name) aussi, sans adresse électronique ni affiliation entre parenthèses, dédoublonnés avec principal et editor. -->
+    <dct:contributor scope="document" xpath="distinct-values((/TEI/teiHeader/fileDesc/titleStmt/(principal | editor) ! normalize-space(.), /TEI/teiHeader/fileDesc/titleStmt/respStmt/name ! replace(normalize-space(string-join(node()[not(self::email)], '')), '\s*\(.*\)$', '')))"/>
     <dct:source scope="document" xpath="/TEI/teiHeader/fileDesc/sourceDesc/bibl"/>
     <dct:publisher scope="document" xpath="/TEI/teiHeader/fileDesc/publicationStmt/publisher"/>
     <dct:issued scope="document" xpath="/TEI/teiHeader/fileDesc/publicationStmt/date[1]"/>

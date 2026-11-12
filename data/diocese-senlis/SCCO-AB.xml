@@ -68,10 +68,10 @@
         <p>Transformation automatique depuis les XML du dossier fichier_en_cours, d'apres les patrons TEI du corpus existant.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-01']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure unit="part" match="group[1]/group[1]/group[1]" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-01']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure unit="part" match="../group[1]/group[1]/group[1]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -89,10 +89,10 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-02']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure unit="part" match="group[1]/group[1]/group[1]" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-02']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure unit="part" match="../group[1]/group[1]/group[1]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -110,10 +110,10 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-03']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure unit="part" match="group[1]/group[1]/group[1]" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SCCO-AB-03']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure unit="part" match="../group[1]/group[1]/group[1]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -158,7 +158,7 @@
   <text>
     <group xml:id="SCCO-AB_tomes">
       <text type="volume" xml:id="SCCO-AB-01" n="Tome I">
-    <front>
+    <front xml:id="SCCO-AB-01_front">
       <head>Notice introductive</head>
       <argument>
         <p>
@@ -23783,7 +23783,7 @@
     </group>
   </text>
       <text type="volume" xml:id="SCCO-AB-02" n="Tome II">
-    <front>
+    <front xml:id="SCCO-AB-02_front">
       <head>Notice introductive</head>
       <argument>
         <p>
@@ -47746,7 +47746,7 @@
     </group>
   </text>
       <text type="volume" xml:id="SCCO-AB-03" n="Tome III">
-    <front>
+    <front xml:id="SCCO-AB-03_front">
       <head>Notice introductive</head>
       <argument>
         <p>

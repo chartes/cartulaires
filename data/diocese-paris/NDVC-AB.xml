@@ -131,7 +131,7 @@
           </citeStructure>
         </citeStructure>
         <citeStructure match="/TEI[1]/text[1]/back[1]/div" use="dots" unit="Index">
-          <citeStructure match="list[@type='index']" use="dots">
+          <citeStructure unit="lettre" match="list[@type='index']" use="dots">
             <citeData use="head" property="dct:title"/>
           </citeStructure>
         </citeStructure>

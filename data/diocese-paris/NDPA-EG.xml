@@ -64,10 +64,10 @@
         <p>Ce fichier est issu d'une numérisation OCR dans le cadre du projet de numérisation des cartulaires d'Île-de-France mené par la bibliothèque de l'Ecole des chartes.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-01']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="group[1]/group" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-01']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="../group[1]/group" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure match="group" use="@xml:id" unit="part">
@@ -89,10 +89,10 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-02']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="group[1]/group[1]/group" use="@xml:id" unit="par">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-02']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="../group[1]/group[1]/group" use="@xml:id" unit="par">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure match="group" use="@xml:id" unit="part">
@@ -114,10 +114,10 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-03']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="group[1]/group" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-03']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="../group[1]/group" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -152,10 +152,10 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-04']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="group[1]/group[1]" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='NDPA-EG-04']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="../group[1]/group[1]" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -172,7 +172,7 @@
               <citeData property="schema:creditText" use="descendant::listWit[@type='édition']//witness[@ana='edited']"/>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="group[1]/group[2]/text/body/div[@type='index']" use="@xml:id" unit="part">
+          <citeStructure match="../group[1]/group[2]/text/body/div[@type='index']" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure match="list" use="@xml:id" unit="partie">
@@ -180,11 +180,11 @@
               <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="group[1]/group[3]" use="@xml:id" unit="partie">
+          <citeStructure match="../group[1]/group[3]" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
-          <citeStructure match="group[1]/group[4]" use="@xml:id" unit="partie">
+          <citeStructure match="../group[1]/group[4]" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
@@ -214,7 +214,7 @@
   <text>
     <group xml:id="NDPA-EG_tomes">
       <text type="volume" xml:id="NDPA-EG-01" n="Tome I">
-    <front>
+    <front xml:id="NDPA-EG-01_front">
       <head>Notice introductive</head>
       <!--<head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>-->
       <argument>
@@ -16579,7 +16579,7 @@
     </group>
   </text>
       <text type="volume" xml:id="NDPA-EG-02" n="Tome II">
-    <front>
+    <front xml:id="NDPA-EG-02_front">
       <head>Notice introductive</head>
       <!--<head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>-->
       <argument>
@@ -41962,7 +41962,7 @@
     </group>
   </text>
       <text type="volume" xml:id="NDPA-EG-03" n="Tome III">
-    <front>
+    <front xml:id="NDPA-EG-03_front">
       <head>Notice introductive</head>
       <argument>
         <p><!-- TODO --></p>
@@ -58844,7 +58844,7 @@
     </group>
   </text>
       <text type="volume" xml:id="NDPA-EG-04" n="Tome IV">
-    <front>
+    <front xml:id="NDPA-EG-04_front">
       <head>Notice introductive</head>
       <!--<head>ECCLESIÆ PARISIENSIS CHARTULARIUM</head>-->
       <argument>

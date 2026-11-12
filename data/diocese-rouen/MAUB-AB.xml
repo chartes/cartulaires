@@ -68,10 +68,10 @@
           corpus existant.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='MAUB-AB-01']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="group[1]/group[1]/group" use="@xml:id" unit="part">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='MAUB-AB-01']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="../group[1]/group[1]/group" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head"/>
             <citeData property="schema:name" use="head"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -89,13 +89,13 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='MAUB-AB-02']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="front[1]/div[1]/div" use="@xml:id" unit="partie">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='MAUB-AB-02']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="div" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-            <citeStructure match="div" use="@xml:id">
+            <citeStructure match="div" use="@xml:id" unit="section">
               <citeData property="dct:title" use="head[1]"/>
               <citeData property="schema:name" use="head[1]"/>
             </citeStructure>
@@ -128,7 +128,7 @@
   <text>
     <group xml:id="MAUB-AB_tomes">
       <text type="volume" xml:id="MAUB-AB-01" n="Première partie">
-    <front>
+    <front xml:id="MAUB-AB-01_front">
       <head>Notice introductive</head>
       <argument>
         <p>
@@ -14714,7 +14714,7 @@
     </group>
   </text>
       <text type="volume" xml:id="MAUB-AB-02" n="Seconde partie">
-    <front>
+    <front xml:id="MAUB-AB-02_front">
       <head>Introduction</head>
       <argument>
         <p>
@@ -14724,7 +14724,6 @@
       <byline>
         <!-- TODO -->
       </byline>
-      <div type="souspartie" xml:id="MAUB-AB-02_front_0001" subtype="article">
         <label/>
         <div xml:id="MAUB-AB-02_analyse">
           <pb n="229" facs="https://iiif.archive.org/image/iiif/3/labbayedemaubui00depogoog%2Flabbayedemaubui00depogoog_jp2.zip%2Flabbayedemaubui00depogoog_jp2%2Flabbayedemaubui00depogoog_0255.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/labbayedemaubui00depogoog/manifest.json"/>
@@ -16087,7 +16086,7 @@
                   Roi du Royaume de France.</p><p>Les actes des Princes et Princesses de sang royal, concernant Maubuisson, sont compris dans 13
                     titres dont le plus ancien date de 1240 — et le plus récent de février 1404.</p><p>Enfin les Bulles des Papes sont au nombre de 42 (de 1243 à 1301) et émanent des Souverains Pontifes
                       dont les noms suivent :</p><p>Innocent IV, 16 bulles ; — Alexandre IV, 5 ; — Urbain IV, 4 ; — Clément IV, 3 ; — Grégoire X, 2 ; —
-                        Jean II, 1 ; — Nicolas, 3 ; — Martin IV, 2 ; — Honoré IV, 2 ; — Boniface VIII, 4.</p></div></div>
+                        Jean II, 1 ; — Nicolas, 3 ; — Martin IV, 2 ; — Honoré IV, 2 ; — Boniface VIII, 4.</p></div>
     </front>
   </text>
     </group>

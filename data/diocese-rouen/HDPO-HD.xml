@@ -125,7 +125,7 @@
         <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure match="group" use="@xml:id">
+          <citeStructure unit="part" match="group" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">

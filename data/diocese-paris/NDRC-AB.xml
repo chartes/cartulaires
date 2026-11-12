@@ -49,6 +49,9 @@
 
 
       </titleStmt>
+      <editionStmt>
+        <edition>Première édition électronique : <date when="2006">2006</date></edition>
+      </editionStmt>
       <extent/>
       <publicationStmt>
         <date>2009</date>
@@ -150,7 +153,7 @@
         <citeStructure match="/TEI[1]/text[1]/back[1]" use="@xml:id" unit="Index">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
-          <citeStructure match="div" use="@xml:id">
+          <citeStructure unit="index" match="div" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           <citeStructure unit="lettre" match="list[@type='index'][head]" use="@xml:id"><citeData property="dct:title" use="head"/><citeData property="schema:name" use="head"/></citeStructure></citeStructure>

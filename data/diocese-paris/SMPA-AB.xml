@@ -57,22 +57,18 @@
         <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL.</p>
       </projectDesc>
       <refsDecl>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-01']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure match="front[1]" use="@xml:id" unit="part">
-            <citeData property="dct:title" use="head[1]"/>
-            <citeData property="schema:name" use="head[1]"/>
-            <citeStructure match="div[@xml:id]" use="@xml:id" unit="partie">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-01']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure match="div[@xml:id]" use="@xml:id" unit="partie">
               <citeData property="dct:title" use="head[1]"/>
               <citeData property="schema:name" use="head[1]"/>
-              <citeStructure match="div[@xml:id]" use="@xml:id">
+              <citeStructure match="div[@xml:id]" use="@xml:id" unit="section">
                 <citeData property="dct:title" use="head[1]"/>
                 <citeData property="schema:name" use="head[1]"/>
               </citeStructure>
             </citeStructure>
-          </citeStructure>
-          <citeStructure match="group[1]/group[1]/group" use="@xml:id" unit="part">
+          <citeStructure match="../group[1]/group[1]/group" use="@xml:id" unit="part">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -124,11 +120,11 @@
               </citeStructure>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="back[1]/div[1]" use="@xml:id" unit="partie">
+          <citeStructure match="../back[1]/div[1]" use="@xml:id" unit="partie">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
           </citeStructure>
-          <citeStructure match="back[1]/div[2]" use="@xml:id">
+          <citeStructure match="../back[1]/div[2]" use="@xml:id" unit="index">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure unit="index" match="list[@type='index']" use="@xml:id">
@@ -137,18 +133,14 @@
             </citeStructure>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-02']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure unit="paratexte" match="front" use="@xml:id">
-            <citeData property="dct:title" use="head"/>
-            <citeData property="schema:name" use="head"/>
-            <citeStructure unit="partie" match="div" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-02']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
               <citeData property="dct:title" use="head"/>
               <citeData property="schema:name" use="head"/>
             </citeStructure>
-          </citeStructure>
-          <citeStructure unit="part" match="group[1]" use="@xml:id">
+          <citeStructure unit="part" match="../group[1]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
             <citeStructure match="group" use="@xml:id" unit="part">
@@ -170,13 +162,13 @@
               <citeStructure match="group" use="@xml:id" unit="part">
                 <citeData property="dct:title" use="head"/>
                 <citeData property="schema:name" use="head[1]"/>
-                <citeStructure match="group" use="@xml:id">
+                <citeStructure match="group" use="@xml:id" unit="part">
                   <citeData property="dct:title" use="head"/>
                   <citeData property="schema:name" use="head[1]"/>
                   <citeStructure match="group" use="@xml:id" unit="part">
                     <citeData property="dct:title" use="head"/>
                     <citeData property="schema:name" use="head[1]"/>
-                    <citeStructure match="group" use="@xml:id">
+                    <citeStructure match="group" use="@xml:id" unit="part">
                       <citeData property="dct:title" use="head"/>
                       <citeData property="schema:name" use="head[1]"/>
                     </citeStructure>
@@ -224,37 +216,33 @@
               </citeStructure>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="back[1]/div[1]" use="@xml:id" unit="partie">
+          <citeStructure match="../back[1]/div[1]" use="@xml:id" unit="partie">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
           </citeStructure>
-          <citeStructure match="back[1]/div[2]" use="@xml:id" unit="Index">
+          <citeStructure match="../back[1]/div[2]" use="@xml:id" unit="Index">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
             <citeStructure match="list[@type='index']" use="@xml:id" unit="index">
               <citeData use="head" property="dct:title"/>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="back[1]/div[3]" use="@xml:id" unit="partie">
+          <citeStructure match="../back[1]/div[3]" use="@xml:id" unit="partie">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
           </citeStructure>
         </citeStructure>
-        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-03']" use="@xml:id">
-          <citeData property="dct:title" use="@n"/>
-          <citeData property="schema:name" use="@n"/>
-          <citeStructure unit="paratexte" match="front" use="@xml:id">
-            <citeData property="dct:title" use="head"/>
-            <citeData property="schema:name" use="head"/>
-            <citeStructure unit="partie" match="div" use="@xml:id">
+        <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]/text[@xml:id='SMPA-AB-03']/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeData property="schema:name" use="ancestor::text[@type='volume'][1]/@n"/>
+          <citeStructure unit="partie" match="div" use="@xml:id">
               <citeData property="dct:title" use="head"/>
               <citeData property="schema:name" use="head"/>
             </citeStructure>
-          </citeStructure>
-          <citeStructure unit="part" match="group[1]" use="@xml:id">
+          <citeStructure unit="part" match="../group[1]" use="@xml:id">
             <citeData property="dct:title" use="head[1]"/>
             <citeData property="schema:name" use="head[1]"/>
-            <citeStructure match="group" use="@xml:id">
+            <citeStructure match="group" use="@xml:id" unit="part">
               <citeData property="dct:title" use="head"/>
               <citeData property="schema:name" use="head"/>
               <citeStructure unit="acte" match="text[@xml:id]" use="@xml:id">
@@ -272,18 +260,18 @@
               </citeStructure>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="back[1]/div[1]" use="@xml:id" unit="partie">
+          <citeStructure match="../back[1]/div[1]" use="@xml:id" unit="partie">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
           </citeStructure>
-          <citeStructure match="back[1]/div[2]" use="@xml:id" unit="Index">
+          <citeStructure match="../back[1]/div[2]" use="@xml:id" unit="Index">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
             <citeStructure match="list[@type='index']" use="@xml:id" unit="index">
               <citeData use="head" property="dct:title"/>
             </citeStructure>
           </citeStructure>
-          <citeStructure match="back[1]/div[3]" use="@xml:id" unit="partie">
+          <citeStructure match="../back[1]/div[3]" use="@xml:id" unit="partie">
             <citeData use="head" property="dct:title"/>
             <citeData use="head" property="schema:name"/>
           </citeStructure>
