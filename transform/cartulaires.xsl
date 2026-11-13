@@ -1548,7 +1548,10 @@
     <xsl:variable name="temoin-page" select="(.//tei:witness[@ana = 'edited'][starts-with(normalize-space(@facs), 'http')])[1]"/>
     <xsl:variable name="page-debut" version="3.0"
       select="if ($temoin-page) then replace(normalize-space(string-join($temoin-page//text(), '')), '^.*[\s,]p\.\s*([IVX]+\.\s*)?(\d+)[^\d]*?(-.*)?$', '$2') else ''"/>
-    <xsl:if test="../parent::dts:wrapper and not(../tei:pb[following-sibling::tei:front]) and matches($page-debut, '^\d+$')" version="3.0">
+    <!-- 2026-11-13 (Maxime) : ni quand le <front> porte déjà un <pb> de cette image (MAUB-AB-01_0001 : pb dans l'argument ;
+         NDVC-AB : pb n="1_0058" dans la date) : sinon deux vignettes de la même image en tête d'acte. -->
+    <xsl:variable name="image-debut" select="substring-before(concat(normalize-space($temoin-page/@facs), ' '), ' ')"/>
+    <xsl:if test="../parent::dts:wrapper and not(../tei:pb[following-sibling::tei:front]) and not(.//tei:pb[normalize-space(@facs) = $image-debut]) and matches($page-debut, '^\d+$')" version="3.0">
       <xsl:variable name="image" select="substring-before(concat(normalize-space($temoin-page/@facs), ' '), ' ')"/>
       <a class="pb facs" href="{$image}">
         <xsl:attribute name="data-source">
@@ -1618,13 +1621,9 @@
             <xsl:attribute name="href"><xsl:value-of select="normalize-space(@source)"/></xsl:attribute>
             <xsl:apply-templates/>
           </a>
-          <!-- 2026-11-12 (Maxime) : manuscrit sur Gallica : lien vers son manifeste IIIF. Pas de folio par acte
-               dans les témoins (La Roche, ms. lat. 10996) : le lien mène au manuscrit, pas à la page de l'acte. -->
-          <xsl:if test="matches(normalize-space(@source), '^https?://gallica\.bnf\.fr/ark:/')">
-            <xsl:text> </xsl:text>
-            <a class="witness-manifest-link" target="_blank" rel="noopener" title="Manifeste IIIF du manuscrit numérisé"
-               href="{replace(normalize-space(@source), '^https?://gallica\.bnf\.fr/ark:/', 'https://gallica.bnf.fr/iiif/ark:/')}/manifest.json">[manifeste IIIF]</a>
-          </xsl:if>
+          <!-- 2026-11-13 (Maxime) : plus de lien « [manifeste IIIF] » (12/11) : les témoins B de La Roche portent
+               désormais @facs (vue Gallica de l'acte) + @corresp (manifeste) et passent par le modèle tei:witness[@facs]
+               (vignette). Ne restent ici que les témoins sans image relevée (NDRC-AB_0100, absent du ms.). -->
         </xsl:when>
         <xsl:otherwise><xsl:apply-templates/></xsl:otherwise>
       </xsl:choose>
