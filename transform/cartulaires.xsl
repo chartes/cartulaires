@@ -149,11 +149,37 @@
     <xsl:value-of select="cartu:blanc-apres-note(string(.))"/>
   </xsl:template>
 
-  <!-- 2026-11-11 : CARTE DE CASSINI NON RENDUE. Seize cartulaires portent une <graphic> vers /images/cartulaires/…-cassini.png, image
-       qui n'est déployée nulle part : hteiml la rend en lien cassé, à côté du <ref> vers le Géoportail, qui marche. On ne rend que
-       le <ref>. Le <p> qui ne contient que cette image est retiré aussi (sinon il laisse un blanc vide). Les autres <graphic> ne sont pas touchés. -->
-  <xsl:template match="tei:graphic[contains(@url, '-cassini.png')]" priority="10"/>
-  <xsl:template match="tei:p[not(text()[normalize-space()])][tei:graphic[contains(@url, '-cassini.png')]][not(*[not(self::tei:graphic[contains(@url, '-cassini.png')])])]" priority="10"/>
+  <!-- 2026-11-13 : CARTES DE SITUATION DES NOTICES (plans de Paris, Atlas de Cassini). Le <p> qui ne contient qu'une
+       <graphic> vers /images/cartulaires/ devient une figure, légende = <desc> (la source de la carte). Cassini : le TEI
+       donne le lien Géoportail dans le <p><ref> qui précède ; le lien est porté par l'image et la légende, et ce <p> seul
+       n'est plus rendu. Les fichiers sont servis par les settings (cartulaires.customFonts.css). -->
+  <xsl:template match="tei:p[not(text()[normalize-space()])][count(*) = 1][tei:graphic[starts-with(@url, '/images/cartulaires/')]]" priority="10">
+    <xsl:variable name="g" select="tei:graphic"/>
+    <xsl:variable name="desc" select="normalize-space($g/tei:desc)"/>
+    <xsl:variable name="lien" select="preceding-sibling::*[1][self::tei:p][not(text()[normalize-space()])][count(*) = 1]/tei:ref/@target[contains($g/@url, '-cassini.png')]"/>
+    <figure class="cartu-carte">
+      <xsl:choose>
+        <xsl:when test="$lien">
+          <a href="{$lien}" target="_blank" rel="noopener" title="{$desc} (Géoportail)">
+            <img src="{$g/@url}" alt="{$desc}" loading="lazy"/>
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <img src="{$g/@url}" alt="{$desc}" loading="lazy"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:if test="$desc != ''">
+        <figcaption>
+          <xsl:choose>
+            <xsl:when test="$lien"><a href="{$lien}" target="_blank" rel="noopener"><xsl:value-of select="$desc"/></a></xsl:when>
+            <xsl:otherwise><xsl:value-of select="$desc"/></xsl:otherwise>
+          </xsl:choose>
+        </figcaption>
+      </xsl:if>
+    </figure>
+  </xsl:template>
+  <xsl:template match="tei:p[not(text()[normalize-space()])][count(*) = 1][tei:ref]
+                            [following-sibling::*[1][self::tei:p][not(text()[normalize-space()])][count(*) = 1]/tei:graphic[contains(@url, '-cassini.png')]]" priority="10"/>
 
 
   <!-- 2026-09-11 (autopilote, B8b 8) : fragment sans tei:text (index, parties) servi dans un dts:wrapper : hteiml traverse
