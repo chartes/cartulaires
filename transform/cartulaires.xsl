@@ -1549,9 +1549,10 @@
     <xsl:variable name="page-debut" version="3.0"
       select="if ($temoin-page) then replace(normalize-space(string-join($temoin-page//text(), '')), '^.*[\s,]p\.\s*([IVX]+\.\s*)?(\d+)[^\d]*?(-.*)?$', '$2') else ''"/>
     <!-- 2026-11-13 (Maxime) : ni quand le <front> porte déjà un <pb> de cette image (MAUB-AB-01_0001 : pb dans l'argument ;
-         NDVC-AB : pb n="1_0058" dans la date) : sinon deux vignettes de la même image en tête d'acte. -->
+         NDVC-AB : pb n="1_0058" dans la date) : sinon deux vignettes de la même image en tête d'acte.
+         Ni quand le premier <pb> de l'acte, même dans le corps, porte cette image (NDMT-AB_0001, NDVC-AB_0001). -->
     <xsl:variable name="image-debut" select="substring-before(concat(normalize-space($temoin-page/@facs), ' '), ' ')"/>
-    <xsl:if test="../parent::dts:wrapper and not(../tei:pb[following-sibling::tei:front]) and not(.//tei:pb[normalize-space(@facs) = $image-debut]) and matches($page-debut, '^\d+$')" version="3.0">
+    <xsl:if test="../parent::dts:wrapper and not(../tei:pb[following-sibling::tei:front]) and not(.//tei:pb[normalize-space(@facs) = $image-debut]) and not((..//tei:pb)[1][normalize-space(@facs) = $image-debut]) and matches($page-debut, '^\d+$')" version="3.0">
       <xsl:variable name="image" select="substring-before(concat(normalize-space($temoin-page/@facs), ' '), ' ')"/>
       <a class="pb facs" href="{$image}">
         <xsl:attribute name="data-source">

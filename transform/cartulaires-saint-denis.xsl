@@ -681,22 +681,8 @@
       <h2 class="sd-index-auteurs-titre">
         <xsl:value-of select="tei:head[1]"/>
       </h2>
-      <p class="sd-index-auteurs-chapeau">
-        <xsl:value-of select="count(tei:list/tei:item)"/>
-        <xsl:text> termes, </xsl:text>
-        <xsl:value-of select="count(tei:list/tei:item/tei:ptr)"/>
-        <xsl:text> renvois. Index reconstitué depuis le texte encodé, en parité avec l’index publié par le site d’origine.</xsl:text>
-      </p>
-      <nav class="sd-index-lettres" aria-label="Aller à une initiale">
-        <xsl:for-each select="tei:list">
-          <a class="sd-index-lettre-lien" href="#sd-index-auteurs-{$cle}-{translate(@n, '*', '0')}">
-            <xsl:choose>
-              <xsl:when test="@n = '*'">&#8226;</xsl:when>
-              <xsl:otherwise><xsl:value-of select="@n"/></xsl:otherwise>
-            </xsl:choose>
-          </a>
-        </xsl:for-each>
-      </nav>
+      <!-- 2026-11-13 (Maxime) : ni phrase « N termes, N renvois. Index reconstitué… » (note de fabrication, absente du site
+           d’origine) ni barre des initiales (index trop court) ; les initiales restent en intertitres. -->
       <xsl:for-each select="tei:list">
         <div class="sd-index-groupe" id="sd-index-auteurs-{$cle}-{translate(@n, '*', '0')}">
           <h3 class="sd-index-initiale"><xsl:value-of select="tei:head[1]"/></h3>
@@ -1178,8 +1164,7 @@
         <xsl:otherwise>cartulaire</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <a class="sd-internal sd-index-ancre" href="#sd-index-auteurs-{$cle}"
-       title="Index reconstitué depuis le texte encodé, au bas de cette page.">
+    <a class="sd-internal sd-index-ancre" href="#sd-index-auteurs-{$cle}">
       <xsl:apply-templates/>
     </a>
   </xsl:template>

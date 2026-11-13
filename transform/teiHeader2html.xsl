@@ -38,6 +38,12 @@
   <xsl:variable name="th-date" select="replace(normalize-space((//tei:fileDesc/tei:publicationStmt/tei:date)[1]), '^\D*(\d{4}).*$', '$1')"/>
   <!-- 2026-11-12 (Maxime, La Roche) : date de la première édition électronique (editionStmt) : « 2006-2009 ». -->
   <xsl:variable name="th-date-premiere" select="replace(normalize-space((//tei:fileDesc/tei:editionStmt//tei:date)[1]), '^\D*(\d{4}).*$', '$1')"/>
+  <!-- 2026-11-13 (Maxime) : période « première publication - dernière intervention ». Début : editionStmt (première
+       publication en ligne, dates d'Olivier Canteaut du 13/11), à défaut la plus ancienne année des respStmt et de
+       publicationStmt ; fin : la plus récente de ces années (« Indexation (2008) », « Suivi technique (2007–…) »). -->
+  <xsl:variable name="th-annees" as="xs:integer*" select="(for $r in $th-ts/tei:respStmt/tei:resp, $a in tokenize(replace(string($r), '\D+', ' '), ' ')[matches(., '^(1[89]|20)\d\d$')] return xs:integer($a), for $d in $th-date[matches(., '^\d{4}$')] return xs:integer($d))"/>
+  <xsl:variable name="th-debut" as="xs:integer?" select="if (matches($th-date-premiere, '^\d{4}$')) then xs:integer($th-date-premiere) else min($th-annees)"/>
+  <xsl:variable name="th-fin" as="xs:integer?" select="max($th-annees)"/>
 
   <!-- Nom affiché : prénom et nom quand ils sont balisés (persName avec rôle, affiliation…),
        sinon le texte. Accepte aussi des chaînes. -->
@@ -76,8 +82,8 @@
         <!-- « et al. » : principal seul, si le titleStmt contient au moins un respStmt (pas pour les chapitres de Saint-Denis). -->
         <xsl:with-param name="etal" select="not($th-sd) and exists($th-ts/tei:respStmt)"/>
       </xsl:call-template>
-      <xsl:if test="$th-date != ''">
-        <span class="date"><xsl:value-of select="if (matches($th-date-premiere, '^\d{4}$') and $th-date-premiere &lt; $th-date) then concat($th-date-premiere, '-', $th-date) else $th-date"/></span>
+      <xsl:if test="exists($th-debut)">
+        <span class="date"><xsl:value-of select="if (exists($th-fin) and $th-fin gt $th-debut) then concat($th-debut, '-', $th-fin) else $th-debut"/></span>
       </xsl:if>
     </div>
   </xsl:template>
