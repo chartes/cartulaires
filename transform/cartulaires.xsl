@@ -151,23 +151,14 @@
 
   <!-- 2026-11-13 : CARTES DE SITUATION DES NOTICES (plans de Paris, Atlas de Cassini). Le <p> qui ne contient qu'une
        <graphic> vers /images/cartulaires/ devient une figure, légende = <desc> (la source de la carte). Cassini : le TEI
-       donne le lien Géoportail dans le <p><ref> qui précède ; le lien est porté par l'image et la légende, et ce <p> seul
+       donne le lien Géoportail dans le <p><ref> qui précède ; le lien est porté par la légende (pas par l'image), et ce <p> seul
        n'est plus rendu. Les fichiers sont servis par les settings (cartulaires.customFonts.css). -->
   <xsl:template match="tei:p[not(text()[normalize-space()])][count(*) = 1][tei:graphic[starts-with(@url, '/images/cartulaires/')]]" priority="10">
     <xsl:variable name="g" select="tei:graphic"/>
     <xsl:variable name="desc" select="normalize-space($g/tei:desc)"/>
     <xsl:variable name="lien" select="preceding-sibling::*[1][self::tei:p][not(text()[normalize-space()])][count(*) = 1]/tei:ref/@target[contains($g/@url, '-cassini.png')]"/>
     <figure class="cartu-carte">
-      <xsl:choose>
-        <xsl:when test="$lien">
-          <a href="{$lien}" target="_blank" rel="noopener" title="{$desc} (Géoportail)">
-            <img src="{$g/@url}" alt="{$desc}" loading="lazy"/>
-          </a>
-        </xsl:when>
-        <xsl:otherwise>
-          <img src="{$g/@url}" alt="{$desc}" loading="lazy"/>
-        </xsl:otherwise>
-      </xsl:choose>
+      <img src="{$g/@url}" alt="{$desc}" loading="lazy"/>
       <xsl:if test="$desc != ''">
         <figcaption>
           <xsl:choose>
