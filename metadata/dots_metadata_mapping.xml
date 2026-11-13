@@ -64,6 +64,15 @@
       <dots:objectProperty name="name" xpath="."/>
       <dots:objectProperty name="sameAs" xpath="subsequence(tokenize(@ref), 2)"/>
     </schema:editor>
+    <!-- 2026-11-13 (Maxime) : collaborateurs affichés après l'éditeur scientifique : les respStmt hors principal et editor,
+         avec leur fonction (« Joana Casenave, édition électronique (2011) ») et leurs autorités (@ref : Wikidata, BnF, IdRef).
+         dct:contributor reste pour la facette. -->
+    <schema:contributor scope="document" xpath="let $ts := /TEI/teiHeader/fileDesc/titleStmt, $ed := $ts/(principal | editor) ! normalize-space(.) for $x in $ts/respStmt/name let $n := replace(normalize-space(string-join($x/node()[not(self::email)], '')), '\s*\(.*\)$', '') where $n != '' and not($n = $ed) group by $n return $x[1]" type="object">
+      <dots:objectProperty name="@type" resourceId="all">schema:Person</dots:objectProperty>
+      <dots:objectProperty name="@id" xpath="tokenize(@ref)[1]"/>
+      <dots:objectProperty name="name" xpath="let $c := function($x) { replace(normalize-space(string-join($x/node()[not(self::email)], '')), '\s*\(.*\)$', '') }, $n := $c(.) return concat($n, ', ', string-join(distinct-values(ancestor::titleStmt/respStmt[name[$c(.) = $n]]/resp ! normalize-space(.) ! concat(lower-case(substring(., 1, 1)), substring(., 2))), ' ; '))"/>
+      <dots:objectProperty name="sameAs" xpath="subsequence(tokenize(@ref), 2)"/>
+    </schema:contributor>
     <schema:isBasedOn scope="document" xpath="/TEI/teiHeader/fileDesc/sourceDesc/bibl[@source]" type="object">
       <dots:objectProperty name="@type" resourceId="all">schema:CreativeWork</dots:objectProperty>
       <dots:objectProperty name="@id" xpath="let $sources := tokenize(@source) return $sources[1]"/>
