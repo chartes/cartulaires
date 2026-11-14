@@ -3,11 +3,9 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGPA-AB"><teiHeader>
     <fileDesc>
       <titleStmt>
-        <!-- À CONFIRMER : titre déduit d'une notice AMAD (2009), concordant avec les dates du fichier. -->
-        <title>Recueil des chartes de l’abbaye Sainte-Geneviève de Paris ([996-1016]-1200)</title>
+        <title>Recueil des chartes de l’abbaye Sainte-Geneviève de Paris</title>
         <title type="short">Sainte-Geneviève de Paris</title>
-        <!-- À COMPLÉTER : <author ref="Wikidata BnF IdRef">NOM DE L'ÉLÈVE</author> (inconnu, ne pas inventer). -->
-        <principal xml:id="OC" ref="https://www.wikidata.org/wiki/Q41431010 https://data.bnf.fr/fr/ark:/12148/cb178392047 https://www.idref.fr/101839839">Olivier Canteaut</principal>
+        <author>Noémie Escher</author>
         <respStmt>
           <name xml:id="MP">Maxime Popineau</name>
           <resp>Conversion en TEI, normalisation et teiHeader (2026)</resp>
@@ -35,17 +33,15 @@
         <idno type="vol">11</idno>
       </seriesStmt>
       <notesStmt>
-        <!-- À COMPLÉTER avec le nom de l'auteur : « NOM, Olivier Canteaut (éd.), … ». -->
-        <note type="citation">Olivier Canteaut (éd.), Recueil des chartes de l’abbaye Sainte-Geneviève de Paris ([996-1016]-1200), École nationale des chartes – PSL, 2026.</note>
+        <note type="citation">Recueil des chartes de l’abbaye Sainte-Geneviève de Paris, éd. Noémie Escher, École nationale des chartes – PSL, 2026 (édition électronique).</note>
       </notesStmt>
       <sourceDesc>
-        <!-- À COMPLÉTER : référence de l'édition d'origine (thèse/mémoire, année) que reprend ce fichier. -->
-        <bibl><title>Recueil des chartes de l’abbaye Sainte-Geneviève de Paris ([996-1016]-1200)</title>, <date>2009</date>.</bibl>
+        <bibl><title>Recueil des chartes de l’abbaye Sainte-Geneviève de Paris</title>, éd. <author>Noémie Escher</author>, thèse pour le diplôme d’archiviste paléographe, <date>2009</date>.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
-        <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL, à partir de la reprise en XML d’une édition préparée par une élève de l’École.</p>
+        <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL, à partir de la reprise en XML de l’édition de Noémie Escher (thèse pour le diplôme d’archiviste paléographe, 2009).</p>
       </projectDesc>
       <refsDecl>
         <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
@@ -89,7 +85,7 @@
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-08" who="#MP">Conversion en TEI de la reprise XML transmise par Olivier Canteaut : balisage typographique en hi, commentaires en div[@type='dissertation'], catégories de copies en listWit[@type='copie']/@subtype, renvois entre actes en ref, identifiants d’actes et de notes.</change>
+      <change when="2026-11-08" who="#MP">Conversion en TEI de la reprise XML : balisage typographique en hi, commentaires en div[@type='dissertation'], catégories de copies en listWit[@type='copie']/@subtype, renvois entre actes en ref, identifiants d’actes et de notes.</change>
     </revisionDesc>
   </teiHeader><text><group xml:id="SGPA-AB_edition-group"><head>Édition</head><group xml:id="SGPA-AB_actes"><head>Actes</head><text subtype="article" n="1" xml:id="SGPA-AB_0001"><front><docDate>
 				<date>[996, 24 octobre-1016, 12 septembre]</date>
