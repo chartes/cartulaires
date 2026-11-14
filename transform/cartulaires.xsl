@@ -416,6 +416,15 @@
   <xsl:template match="tei:p[@type = 'note']" priority="35">
     <p class="cartu-note-censier{if (preceding-sibling::*[1][self::tei:p[@type = 'note']]) then '' else ' premiere'}"><xsl:apply-templates/></p>
   </xsl:template>
+  <!-- 2026-11-14 (Olivier Canteaut, 13/11 : « un long texte continu, entrecoupé de titres ») : titres des sections d'un
+       censier en texte continu, deux niveaux : petites capitales (rend="sc"), italique (rend="i"). Sans le « § » de
+       hteiml ; la section garde l'identifiant de l'ancien article (renvois des index). -->
+  <xsl:template match="tei:div[@type = 'section'][ancestor::tei:group[contains(@xml:id, 'censier')]]/tei:head" priority="50" version="3.0">
+    <xsl:element name="{if (@rend = 'sc') then 'h3' else 'h4'}" namespace="http://www.w3.org/1999/xhtml">
+      <xsl:attribute name="class" select="concat('censier-titre censier-niveau-', if (@rend = 'sc') then '1' else '2')"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
   <!-- 2026-10-27 : Corpus sigillorum (annexes de SAPC-AB) : paragraphes plats dans la source ; une classe par sorte de
        ligne pour la mise en retrait (CSS) : sigillant (« I. INNOCENTIUS III. »), lieu (« – Embrun. »), date et cote
        (« 1 - 1207, 19 février. L 237 n° 58. »), description du sceau (le reste). -->
@@ -1247,11 +1256,14 @@
         <xsl:variable name="unite" select="cartu:unite-de($el)"/>
         <!-- 2026-10-29 : renvoi au censier qui vise l'article (@n = page, ex. SMPA-EG « 206 » -> SMPA-EG_censier_0041,
              article des p. 205-206) : ancre sur la page @n dans l'article, sinon on arrivait sur sa première page. -->
-        <xsl:variable name="page" select="if ($r/@type = 'censier' and $el/self::tei:text) then ($el//tei:pb[normalize-space(@n) = normalize-space($r/@n)][@xml:id])[1] else ()"/>
+        <xsl:variable name="page" select="if ($r/@type = 'censier' and $el[self::tei:text or self::tei:div]) then ($el//tei:pb[normalize-space(@n) = normalize-space($r/@n)][@xml:id])[1] else ()"/>
         <!-- 2026-11-12 : article d'un censier (page unique du groupe) : page du censier, puis ancre de la page ou de l'article -->
-        <xsl:variable name="article-censier" select="$el/self::tei:text[parent::tei:group[contains(@xml:id, 'censier')]]"/>
-        <xsl:sequence select="if ($el/self::tei:pb and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id)
-            else if (exists($article-censier)) then concat($document-base, $res, '?refId=', $article-censier/../@xml:id, '#', ($page/@xml:id, $article-censier/@xml:id)[1])
+        <!-- 2026-11-14 (retours d'Olivier Canteaut du 13/11) : censiers en texte continu ; l'ancien article est une
+             section (div) du texte, et un repère de page répété une ancre (anchor) : même page du groupe, ancre
+             de la page visée dans la section si elle s'y trouve, sinon de la section. -->
+        <xsl:variable name="article-censier" select="$el[self::tei:text or self::tei:div][ancestor::tei:group[contains(@xml:id, 'censier')]]"/>
+        <xsl:sequence select="if ($el[self::tei:pb or self::tei:anchor] and exists($unite)) then concat($document-base, $res, '?refId=', $unite, '#', $el/@xml:id)
+            else if (exists($article-censier)) then concat($document-base, $res, '?refId=', $unite, '#', ($page/@xml:id, $article-censier/@xml:id)[1])
             else if (exists($page)) then concat($document-base, $res, '?refId=', $el/@xml:id, '#', $page/@xml:id) else ()"/>
       </xsl:when>
       <xsl:when test="$resource = ''"/>
@@ -1589,7 +1601,7 @@
     <xsl:element name="{$el}" namespace="http://www.w3.org/1999/xhtml">
       <xsl:call-template name="atts"/>
       <!-- 2026-10-28 : censier de l'Hôtel-Dieu, @n = rang (exigé par le schéma) absent de l'édition Brièle : pas affiché -->
-      <xsl:if test="normalize-space(../@n) != '' and not(starts-with(../@xml:id, 'HDPAR-HD_censier_'))">
+      <xsl:if test="normalize-space(../@n) != '' and not(contains(../@xml:id, '_censier'))">
         <div class="docNum">
           <xsl:value-of select="normalize-space(../@n)"/>
         </div>

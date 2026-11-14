@@ -6,16 +6,16 @@
         <title type="short">Saint-Spire de Corbeil</title>
         <author ref="https://www.idref.fr/057155186 https://data.bnf.fr/ark:/12148/cb12988707x">Emile Coüard-Luys</author>
         <principal xml:id="OGJ" ref="https://www.idref.fr/026911337 https://catalogue.bnf.fr/ark:/12148/cb11906612z">Olivier Guyotjeannin</principal>
-        <editor ref="https://www.idref.fr/149856520 https://data.bnf.fr/ark:/12148/cb15100705p">Anastasia Iline</editor>
+        <respStmt><name ref="https://www.idref.fr/149856520 https://data.bnf.fr/ark:/12148/cb15100705p">Anastasia Iline</name><resp>Rédaction de la notice</resp></respStmt>
         
         <respStmt>
           <name xml:id="OC" ref="https://www.wikidata.org/wiki/Q41431010 https://www.idref.fr/101839839">Olivier Canteaut (École des chartes) <email>olivier.canteaut@enc.sorbonne.fr</email></name>
-          <resp>Direction éditoriale</resp>
+          <resp>Suivi éditorial (2008–…)</resp>
         </respStmt>
         <respStmt>
           <name xml:id="FG" ref="https://www.wikidata.org/wiki/Q25611829 https://catalogue.bnf.fr/ark:/12148/cb170808031 https://www.idref.fr/268665818">Frédéric Glorieux (École des chartes)
             <email>frederic.glorieux@enc.sorbonne.fr</email></name>
-          <resp>Suivi technique (2007–…)</resp>
+          <resp>Suivi technique (2007–2011)</resp>
         </respStmt>
         <respStmt>
           <name xml:id="JC" ref="https://www.idref.fr/24143453X">Joana Casenave (École des chartes)</name>
@@ -8088,123 +8088,35 @@
       <!-- BEGIN SSCO-AB CENSIER WORKING COPY -->
       <group xml:id="SSCO-AB_censier_group">
         <head>Census et redditus</head>
-        <argument>
-          <table type="actes">
-            <head>Liste des actes</head>
-            <row role="label"><cell>N°</cell><cell>Date</cell><cell>Analyse</cell><cell>Page</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0001">C1</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Census et redditus.</cell><cell>113</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0002">C2</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hii sunt census qui debentur capitalo Beati Exuperii Corboliensis. Actum anno Domini millesimo ducentesimo quinquagesimo secundo, mense marcio.</cell><cell>113</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0003">C3</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de claustro reddendus in festo Beati Exuperii, qui pertinet ad cameram cum omni proventu.</cell><cell>113</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0004">C4</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census quem dedit Andreas de Ulmeio pro suo anniversario, qui debet reddi in festo Sancti Remigii ecclesie Beati Exuperii.</cell><cell>115</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0005">C5</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census pertinens ad cameram, qui redditur in festo Sancti Remigii.</cell><cell>115</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0006">C6</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de ultra pontem, qui redditur in festo Sancti Remigii et est de sex prebendis.</cell><cell>117</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0007">C7</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census sex prebendarum, qui redditur in octabis Sancti Dyonisii.</cell><cell>119</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0008">C8</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census qui redditur in festo Beati Remigii, quem excambiaverunt censui de Evriaco in Bria.</cell><cell>119</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0009">C9</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Chatrois qui pertinet ad sex prebendas, qui redditur in festo Sancti Remigii.</cell><cell>119</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0010">C10</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de camera in festo Sancti Crucis in maio.</cell><cell>119</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0011">C11</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Census de camera in festo Sancti Johannes Baptiste.</cell><cell>120</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0012">C12</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census sex prebendarum, qui redditur in festo Sancte Crucis in maio.</cell><cell>120</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0013">C13</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census sex prebendarum in festo Sancti Johannis.</cell><cell>120</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0014">C14</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census sex prebendarum de Evriaco et de Chemino in festo Sancti Remigii.</cell><cell>120</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0015">C15</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Pulli ad sex prebendas, qui redditur in Nativitate Domini.</cell><cell>122</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0016">C16</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Villa Dudonis pertinens ad sex prebendas, qui redditur in festo Sancte Crucis in Maio.</cell><cell>122</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0017">C17</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Miseri ad sex prebendas qui redditur in festo Sancti Michaelis.</cell><cell>122</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0018">C18</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Omnes isti debent minellum et dimidium frumenti et totidem avene.</cell><cell>123</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0019">C19</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hii sunt redditus de Chatris (vel Chatrois) ad sex prebendas pertinentes, qui redduntur ad Nativitatem Domini.</cell><cell>123</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0020">C20</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hii sunt redditus de camera ad Nativitatem Domini apud Corbolium.</cell><cell>123</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0021">C21</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Soisiaco qui pertinet ad sex prebendas qui redditur in festo Sancti Remigii.</cell><cell>124</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0022">C22</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census quem canonici Sancti Exuperii vel ejus camerarius debent reddere in festo Sancti Remigii.</cell><cell>124</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0023">C23</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census quem refectorium Beati Exuperii debet in festo Sancti Remigii.</cell><cell>125</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0024">C24</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Monte Eschoue in Adnunciacione Dominica.</cell><cell>126</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0025">C25</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Sacro-Portu qui redditur in prima dominica quadragesime seu ad Brandones.</cell><cell>126</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0026">C26</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Soisiaco reddendus in Adnunciacione Dominica.</cell><cell>128</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0027">C27</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Item census de claustro pertinens ad cameram redditus in festo Sancti Exuperii, receptus per manum Rogeri canonici, anno Domini millesimo ducentesimo quinquagesimo sexto, die...</cell><cell>130</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0028">C28</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Extra clausum eodem die census ultra pontellum.</cell><cell>132</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0029">C29</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de plantis de Villa Dudonis qui redditur in festo Mortuorum, receptus per manus Rogeri canonici, anno millesimo ducentesimo quinquagesimo sexto, dicto festo.</cell><cell>133</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0030">C30</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hic est census de Poulli qui redditur in crastino Natalis, receptus per manum Rogeri, canonici, anno Domini millesimo ducentesimo quinquagesimo nono, die predicta.</cell><cell>136</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0031">C31</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Possessiones Altaris Sancti Blasii.</cell><cell>137</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0032">C32</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Possessiones que pertinent ad matutinas.</cell><cell>141</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0033">C33</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Possessiones que pertinent ad distribucionem panis.</cell><cell>143</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0034">C34</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Hec sunt que pertinent ad distribucionem piscium in Quadragesima solis canonicis residentibus.</cell><cell>145</cell></row>
-            <row><cell><ref target="#SSCO-AB_censier_0035">C35</ref></cell><cell><date notBefore="1252" notAfter="1256">1252-1256</date></cell><cell>Possessiones que pertinent ad refectorium.</cell><cell>145</cell></row>
-          </table>
-        </argument>
-        <text xml:id="SSCO-AB_censier_0001" n="C1" subtype="article">
+        <text xml:id="SSCO-AB_censier_texte" n="censier" subtype="article">
           <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c1"/>
           <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Census et redditus.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 113.</witness>
-              </listWit>
-            </div>
+            <docDate><date notBefore="1252" notAfter="1256">1252-1256</date></docDate>
+            <index><term type="nature" key="cens">cens</term></index>
+            <argument><p>Census et redditus</p></argument>
           </front>
           <body>
             <div type="transcription" xml:lang="lat">
-              <p>CENSUS ET REDDITUS.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0002" n="C2" subtype="article">
-          <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c2"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hii sunt census qui debentur capitalo Beati Exuperii Corboliensis. Actum anno Domini millesimo ducentesimo quinquagesimo secundo, mense marcio.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 113.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hii sunt census qui debentur capitalo Beati Exuperii Corboliensis. Actum anno Domini millesimo ducentesimo quinquagesimo secundo, mense marcio.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0003" n="C3" subtype="article">
-          <pb n="113" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p113_c3"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de claustro reddendus in festo Beati Exuperii, qui pertinet ad cameram cum omni proventu.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f173/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f174/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 113-115.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de claustro reddendus in festo Beati Exuperii, qui pertinet ad cameram cum omni proventu.</p>
-              <p>— Dominus Balduinus de Corbolio pro domo sua, 2 solidi.</p>
-              <p>— Jaie Judeus pro domo sua, 3 s.</p>
+<anchor xml:id="SSCO-AB_censier_0001"/>
+<anchor xml:id="SSCO-AB_censier_p113_c2"/>
+<div type="section" xml:id="SSCO-AB_censier_0002"><head rend="sc">Hii sunt census qui debentur capitulo Beati Exuperii Corboliensis. Actum anno Domini millesimo ducentesimo quinquagesimo secundo, mense marcio.</head>
+
+<anchor xml:id="SSCO-AB_censier_p113_c3"/>
+<div type="section" xml:id="SSCO-AB_censier_0003"><head rend="i">Hic est census de claustro reddendus in festo Beati Exuperii, qui pertinet ad cameram cum omni proventu.</head>
+<p>— Dominus Balduinus de Corbolio pro domo sua, 2 solidi.</p>
+              <p>— Jaïe Judeus pro domo sua, 3 s.</p>
               <p>— Hugo de Nagi pro domo sua, 7 denarii.</p>
               <p>— Domus Trinitatis, 12 d.</p>
               <p>— Isabel de claustro, 16 d.</p>
-              <p>— Anselius cantor, 3 s.</p>
+              <p>— Ansellus cantor, 3 s.</p>
               <p>— Domus Sancte Crucis, 10 s.</p>
-              <p>— Domus (*) + Theolbaldi, 18 d.</p>
+              <p>— Domus<note n="*" place="foot">Ce signe + correspond à l'abréviation de obiit qui se trouve figurée dans le manuscrit par un signe ressemblant beaucoup au théta grec.</note> + Theolbaldi, 18 d.</p>
               <p>— Stephanus Morel, 18 d.</p>
               <p>— Guillelmus de Prunoi, 3 s.</p>
               <p>— Hubertus capicerius (?) et Simon de Breia, 16 d.</p>
-              <p>— Dominus Stephanus de Moreto, 2 s.</p>
-              <p type="note">(*) Ce signe + correspond à l'abréviation de obiit qui se trouve figurée dans le manuscrit par un signe ressemblant beaucoup au théta grec.<pb n="114" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f174/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p114_c3_14"/> — Petrus Lemovicensis pro domo sua retro ecclesiam Beati Egidii, 2 s., et pro pratello, 2 d.</p>
+              <p>— Dominus Stepanus de Moreto, 2 s.</p>
+              <pb n="114" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f174/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p114_c3_14"/>
+              <p>— Petrus Lemovicensis pro domo sua retro ecclesiam Beati Egidii, 2 s., et pro pratello, 2 d.</p>
               <p>— Domus Exuperii, 6 d.</p>
               <p>— Dominus Landricus, 14 d.</p>
               <p>— Dominus Robertus de Feritate, 14 d.</p>
@@ -8253,56 +8165,18 @@
               <p>— Martinus de Paris pro domo, 11 d.</p>
               <p>— Brillardus pro eadem domo, 1 d.</p>
               <p>SUMMA : 4 libr. 6 sol. 7 den. obol.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0004" n="C4" subtype="article">
-          <pb n="115" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p115_c4"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census quem dedit Andreas de Ulmeio pro suo anniversario, qui debet reddi in festo Sancti Remigii ecclesie Beati Exuperii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 115.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census quem dedit Andreas de Ulmeio pro suo anniversario, qui debet reddi in festo Sancti Remigii ecclesie Beati Exuperii.</p>
-              <p>— Petrus de Granchia, 12 d., de terra.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p115_c4"/>
+<div type="section" xml:id="SSCO-AB_censier_0004"><head rend="i">Hic est census quem dedit Andreas de Ulmeio pro suo anniversario, qui debet reddi in festo Sancti Remigii ecclesie Beati Exuperii.</head>
+<p>— Petrus de Granchia, 12 d., de terra.</p>
               <p>— Petronilla Lasurcene, 20 d.</p>
               <p>— Droco Brichart, 2 s.</p>
               <p>— Presbiteri altaris Sancti Clementis, 2 s.</p>
               <p>SUMMA : 6 sol. 8 den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0005" n="C5" subtype="article">
-          <pb n="115" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p115_c5"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census pertinens ad cameram, qui redditur in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f175/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f176/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f177/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 115-117.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census pertinens ad cameram, qui redditur in festo Sancti Remigii.</p>
-              <p>— Monachi de Barbeel, 10 d. ob. pro vinea que fuit Guerini Bouchier.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p115_c5"/>
+<div type="section" xml:id="SSCO-AB_censier_0005"><head rend="i">Hic est census pertinens ad cameram, qui redditur in festo Sancti Remigii.</head>
+<p>— Monachi de Barbeel, 10 d. ob. pro vinea que fuit Guerini Bouchier.</p>
               <p>— Item 4 d., pro vinea que fuit Hoderii Brichart.</p>
               <p>— Terricus Prepositus, 4 d. ob. pro vinea de Vignon.<pb n="116" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f176/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p116_c5_4"/> — Renaudus Houset, d. 10, d. ob. pro vinea de Vignon.</p>
               <p>— Capicerius Beate Marie Corboliensis, 12 d., pro vinea de Boucournu.</p>
@@ -8336,29 +8210,10 @@
               <p>— Galterius canonicus, 2 d. ob. de cistellis (?) de Vignon.</p>
               <p>— Domus + Ade Parvi, 8 d. pro domo retro Muncellum (vel marcellum.)<pb n="117" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f177/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p117_c5_35"/> — Filius + Herberti de Divite Burgo, 8 d. pro vinea de Boucornu.</p>
               <p>SUMMA : 23 sol. 7 den. ob.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0006" n="C6" subtype="article">
-          <pb n="117" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f177/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p117_c6"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de ultra pontem, qui redditur in festo Sancti Remigii et est de sex prebendis.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f177/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f178/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 117-119.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de ultra pontem, qui redditur in festo Sancti Remigii et est de sex prebendis.</p>
-              <p>— Dominus Reginaldus de Cramoello, 2 s.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p117_c6"/>
+<div type="section" xml:id="SSCO-AB_censier_0006"><head rend="i">Hic est census de ultra pontem, qui redditur in festo Sancti Remigii et est de sex prebendis.</head>
+<p>— Dominus Reginaldus de Cramoello, 2 s.</p>
               <p>— Uxor + Simonis de Porta, 8 d. pro vinea de Maugarde.</p>
               <p>— Petrus Guagnart et Balduinus gener ejus, 3 d. ob. pro vinea de Gripetcin.</p>
               <p>— Petrus de Atheis, 4 d.</p>
@@ -8409,167 +8264,53 @@
               <p>— Petrus de Coupegni, 3 d. pro terra sua.</p>
               <p>— Hubertus Pavator, 15 d. pro domo sua.</p>
               <p>— Gualterius Racicaut, 3 s. pro domo sua.</p>
-              <p>— Jeubertus textor, 12 d. pro domo, et preposito, 3 s.</p>
+              <p>— Jeubertus textor, 12 d. pro domo, et preposito, 5 s.</p>
               <p>— Tibaut Carro pro domo, 3 s.</p>
-              <p>— Guillelmus Bertaudi, 9 d. pro domo, et pro vinea sua de Soufflet, 6 d.<pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c6_56"/> — Johannes Sutor, 9 d. pro domo, et 6 d. pro vinea.</p>
+              <p>— Guillelmus Bertaudi, 9 d. pro domo, et pro vinea sua de Souflet, 6 d.<pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c6_56"/> — Johannes Sutor, 9 d. pro domo, et 6 d. pro vinea.</p>
               <p>— Richardus Textor, 8 d. pro domo sua.</p>
               <p>— Radulphus Gonteri, 6 d. pro domo sua.</p>
               <p>— Domus Belotin, 6 s.</p>
               <p>— Luminare Sancti Exuperii, 2 s. pro vinea de Maugarde.</p>
               <p>SUMMA : 55 sol.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0007" n="C7" subtype="article">
-          <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c7"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census sex prebendarum, qui redditur in octabis Sancti Dyonisii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 119.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census sex prebendarum, qui redditur in octabis Sancti Dyonisii.</p>
-              <p>— Guillelmus Bertaudi, pro domo sua, 19 d.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p119_c7"/>
+<div type="section" xml:id="SSCO-AB_censier_0007"><head rend="i">Hic est census sex prebendarum, qui redditur in octabis Sancti Dyonisii.</head>
+<p>— Guillelmus Bertaudi, pro domo sua, 19 d.</p>
               <p>— Johannes Sutor, pro domo sua, 3 s. uno denario minus.</p>
               <p>SUMMA : 4 sol. et den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0008" n="C8" subtype="article">
-          <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c8"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census qui redditur in festo Beati Remigii, quem excambiaverunt censui de Evriaco in Bria.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 119.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census qui redditur in festo Beati Remigii, quem excambiaverunt censui de Evriaco in Bria.</p>
-              <p>— Johannes Joumeril, 12 d. pro platea sua post domum suam.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p119_c8"/>
+<div type="section" xml:id="SSCO-AB_censier_0008"><head rend="i">Hic est census qui redditur in festo Beati Remigii, quem excambiaverunt censui de Evriaco in Bria.</head>
+<p>— Johannes Joumeril, 12 d. pro platea sua post domum suam.</p>
               <p>— Eramburgis de Evriaco relicta Guiardi Bodet, 1 d. pro terra de Tigiriaco.</p>
               <p>— Adam Cochetarius, 18 d. pro clauso defuncti Jadonis.</p>
               <p>— Galterus Hamonis, 4 d. pro vinea de Saintri.</p>
               <p>— Robertus Torrel, 2 d. pro terra sua prope monasterium de Seintriaco.</p>
               <p>SUMMA : 4 sol.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0009" n="C9" subtype="article">
-          <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c9"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Chatrois qui pertinet ad sex prebendas, qui redditur in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 119.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Chatrois qui pertinet ad sex prebendas, qui redditur in festo Sancti Remigii.</p>
-              <p>— Liberi + Landrici Turion, 2 d. pro terra sua de Leudeville.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p119_c9"/>
+<div type="section" xml:id="SSCO-AB_censier_0009"><head rend="i">Hic est census de Chatrois qui pertinet ad sex prebendas, qui redditur in festo Sancti Remigii.</head>
+<p>— Liberi + Landrici Turion, 2 d. pro terra sua de Leudeville.</p>
               <p>— Gaufridus de Vere Magno, 2 d. ob. pro terra sua.</p>
               <p>— Radulphus Oberti de Vere Parvo, 2 d. de terra sua.</p>
               <p>— Hubertus frater ejus, 6 d.</p>
               <p>— Robertus de Leudeville, 6 d.</p>
               <p>SUMMA : 18 den. ob.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0010" n="C10" subtype="article">
-          <pb n="119" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p119_c10"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de camera in festo Sancti Crucis in maio.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f179/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 119-120.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de camera in festo Sancti Crucis in maio.<pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c10_1"/> — Ramboldus, 5 d. pro vinea de Braatel.</p>
-              <p>— Adam Gontier, 5 d. pro terra sua super ripam Secane.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p119_c10"/>
+<div type="section" xml:id="SSCO-AB_censier_0010"><head rend="i">Hic est census de camera in festo Sancti Crucis in maio.<pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c10_1"/> — Ramboldus, 5 d. pro vinea de Braatel.</head>
+<p>— Adam Gontier, 5 d. pro terra sua super ripam Secane.</p>
               <p>SUMMA : 10 den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0011" n="C11" subtype="article">
-          <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c11"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Census de camera in festo Sancti Johannes Baptiste.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 120.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Census de camera in festo Sancti Johannes Baptiste.</p>
-              <p>— Ramboldus, 12 d. pro vinea sua.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p120_c11"/>
+<div type="section" xml:id="SSCO-AB_censier_0011"><head rend="i">Census de camera in festo Sancti Johannes Baptiste.</head>
+<p>— Ramboldus, 12 d. pro vinea sua.</p>
               <p>— Adam Gonteri, 12 d.</p>
               <p>SUMMA : 2 sol.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0012" n="C12" subtype="article">
-          <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c12"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census sex prebendarum, qui redditur in festo Sancte Crucis in maio.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 120.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census sex prebendarum, qui redditur in festo Sancte Crucis in maio.</p>
-              <p>— Johannes de Moisiaco, 2 d.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p120_c12"/>
+<div type="section" xml:id="SSCO-AB_censier_0012"><head rend="i">Hic est census sex prebendarum, qui redditur in festo Sancte Crucis in maio.</head>
+<p>— Johannes de Moisiaco, 2 d.</p>
               <p>— Robertus Engelart, 4 d. pro domo sua, et pro platea, 3 p.</p>
               <p>— Domus + Houdesent, 3 d. pro domo, et pro platea, 7 p.</p>
               <p>— Guillelmus Peschapie, 5 d. pro domo sua, et mater ejus, 2 d.</p>
@@ -8578,54 +8319,16 @@
               <p>— Adam Gontier, 5 d. pro domo sua de Bordis.</p>
               <p>— Altare Sancti Nicholai, 4 d. pro virgulto juxta Fontem Ordeorum.</p>
               <p>SUMMA : 4 den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0013" n="C13" subtype="article">
-          <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c13"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census sex prebendarum in festo Sancti Johannis.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 120.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census sex prebendarum in festo Sancti Johannis.</p>
-              <p>— Obertus de Nagi, 12 d.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p120_c13"/>
+<div type="section" xml:id="SSCO-AB_censier_0013"><head rend="i">Hic est census sex prebendarum in festo Sancti Johannis.</head>
+<p>— Obertus de Nagi, 12 d.</p>
               <p>— Adam Gontier pro domo sua de Bordis, 12 d.</p>
               <p>SUMMA : 2 sol.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0014" n="C14" subtype="article">
-          <pb n="120" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p120_c14"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census sex prebendarum de Evriaco et de Chemino in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f180/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f181/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 120-122.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census sex prebendarum de Evriaco et de Chemino in festo Sancti Remigii.</p>
-              <p>— Galterus canoninus pro vinea Furcarum et decima, 2 s., quos nunc debet altare Trinitatis.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p120_c14"/>
+<div type="section" xml:id="SSCO-AB_censier_0014"><head rend="i">Hic est census sex prebendarum de Evriaco et de Chemino in festo Sancti Remigii.</head>
+<p>— Galterus canoninus pro vinea Furcarum et decima, 2 s., quos nunc debet altare Trinitatis.</p>
               <p>— Herberta pro granchia + Ludovici, 12 d.<pb n="121" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f181/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p121_c14_3"/> — Liberi + Galteri Angelart, 4 d.</p>
               <p>— Relicta + Renoldi Goncelin, 1 d.</p>
               <p>— Galterus Numerius, 3 d. pro vinea.</p>
@@ -8659,29 +8362,10 @@
               <p>— Evrardus Flaon, 18 d.<pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c14_34"/> — Dominus Theolbaldus Buinelle, 12 d.</p>
               <p>— Tencura Otranni de Evriaco, 10 d.</p>
               <p>SUMMA : 24 sol. 4 d.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0015" n="C15" subtype="article">
-          <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c15"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Pulli ad sex prebendas, qui redditur in Nativitate Domini.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 122.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Pulli ad sex prebendas, qui redditur in Nativitate Domini.</p>
-              <p>— Harduinus de Corciaus, 2 d.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p122_c15"/>
+<div type="section" xml:id="SSCO-AB_censier_0015"><head rend="i">Hic est census de Pulli ad sex prebendas, qui redditur in Nativitate Domini.</head>
+<p>— Harduinus de Corciaus, 2 d.</p>
               <p>— Richardus Papillons, 3 d.</p>
               <p>— Galterius filius + Nicholai, 8 d.</p>
               <p>— Thomas de Bordis, 5 d.</p>
@@ -8689,106 +8373,31 @@
               <p>— Johannes Auscheri, 2 d.</p>
               <p>— Gaufridus Bobe, 2 d.</p>
               <p>— Ferricus Popin, 8 d.</p>
-              <p>— Lambertus de Poulli et Doela, 3 d. picta minus.</p>
+              <p>— Lambertus de Poulli et Doeta, 3 d. picta minus.</p>
               <p>— Sanctus Lazarus de Meleduno, 18 d.</p>
               <p>— Formundus Mancerius (?), 8 d.</p>
               <p>— Dominus Berterius de Gallande, 7 d.</p>
               <p>— Odo Raimbierge, 2 d.</p>
               <p>— Theophania de Vallibus, 2 d.</p>
               <p>SUMMA : 7 sol. 6 den. picta minus.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0016" n="C16" subtype="article">
-          <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c16"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Villa Dudonis pertinens ad sex prebendas, qui redditur in festo Sancte Crucis in Maio.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 122.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Villa Dudonis pertinens ad sex prebendas, qui redditur in festo Sancte Crucis in Maio.</p>
-              <p>SUMMA ejusdem : 12 sol., et de Camera 2 den., apud Moiriacum, 4 den.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p122_c16"/>
+<div type="section" xml:id="SSCO-AB_censier_0016"><head rend="i">Hic est census de Villa Dudonis pertinens ad sex prebendas, qui redditur in festo Sancte Crucis in Maio.</head>
+<p>SUMMA ejusdem : 12 sol., et de Camera 2 den., apud Moiriacum, 4 den.</p>
               <p>Item alius census de Villa Dudonis in festo Sancti Andree sex prebendis : 13 sol. 8 den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0017" n="C17" subtype="article">
-          <pb n="122" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p122_c17"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Miseri ad sex prebendas qui redditur in festo Sancti Michaelis.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f182/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 122-123.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Miseri ad sex prebendas qui redditur in festo Sancti Michaelis.</p>
-              <p>— Odo de Miseri, 1 d. pro vinea.<pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c17_2"/> — Droco de Miseri, 1 d. de eadem villa, obolum ad consuetudinem bladi.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p122_c17"/>
+<div type="section" xml:id="SSCO-AB_censier_0017"><head rend="i">Hic est census de Miseri ad sex prebendas qui redditur in festo Sancti Michaelis.</head>
+<p>— Odo de Miseri, 1 d. pro vinea.<pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c17_2"/> — Droco de Miseri, 1 d. de eadem villa, obolum ad consuetudinem bladi.</p>
               <p>— Johannes filius ejus, 1 d.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0018" n="C18" subtype="article">
-          <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c18"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Omnes isti debent minellum et dimidium frumenti et totidem avene.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 123.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Omnes isti debent minellum et dimidium frumenti et totidem avene.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0019" n="C19" subtype="article">
-          <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c19"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hii sunt redditus de Chatris (vel Chatrois) ad sex prebendas pertinentes, qui redduntur ad Nativitatem Domini.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 123.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hii sunt redditus de Chatris (vel Chatrois) ad sex prebendas pertinentes, qui redduntur ad Nativitatem Domini.</p>
-              <p>— Apud Evrainville (?) 4 d. de censu, unam dreturam, unum minellum ordei.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p123_c18"/>
+<div type="section" xml:id="SSCO-AB_censier_0018"><head rend="i">Omnes isti debent minellum et dimidium frumenti et totidem avene.</head>
+
+</div>
+<anchor xml:id="SSCO-AB_censier_p123_c19"/>
+<div type="section" xml:id="SSCO-AB_censier_0019"><head rend="i">Hii sunt redditus de Chatris (vel Chatrois) ad sex prebendas pertinentes, qui redduntur ad Nativitatem Domini.</head>
+<p>— Apud Evrainville (?) 4 d. de censu, unam dreturam, unum minellum ordei.</p>
               <p>— Apud Miseri, 6 d. de censu et campipartem et unam dreturam.</p>
               <p>— Apud Leudeville duas dreturas.</p>
               <p>— Apud Ver magnum unam dreturam.</p>
@@ -8798,170 +8407,54 @@
               <p>— Apud Saintriacum duas dreturas.</p>
               <p>— Apud Villam Dudonem, 34 dreturas, et de camera ibidem unam et dimidiam, et unam prepositi vel majoris, et debet omnes alias querere et reddere pro illa.</p>
               <p>— Apud Chevanes, 39 dreturas, de quibus prepositus habet unam et major unam.</p>
-              <p>— Apud Soisiacum, 34 dreturas uno quarterio minus de quibus prepositus habet unam, et major unam et dimidiam.</p>
+              <p>— Apud Soisiacum, 31 dreturas uno quarterio minus de quibus prepositus habet unam, et major unam et dimidiam.</p>
               <p>— Apud Evriacum et apud Chiminum, 12 dreturas.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0020" n="C20" subtype="article">
-          <pb n="123" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p123_c20"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hii sunt redditus de camera ad Nativitatem Domini apud Corbolium.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f183/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 123-124.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hii sunt redditus de camera ad Nativitatem Domini apud Corbolium.</p>
-              <p>— 3 dreturas, de quibus Guillelmus de Prunaio debet unam pro terra de Nagi, Adam Gonteri unam de terra que est super ripam Secane, Rainboldus de Bordis unam versus boscum de Soisiaco.<pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c20_2"/> — 5 dreturas, de quibus Guillelmus de Prunaio debet unam et sex denarios de censu in festo Sancti Remigii.</p>
-              <p>Ad distribucionem piscium in quadragesima solis canonicis, de terra de Montescouve 3 dreturas et unum quarterium et XII d. de censu in Adnunciacione Dominica in marcio et campi partem in eadem terra.</p>
-              <p>Apud Balencuriam, pro terra defuncti Galeran, quam dedit ecclesie Sancti Exuperii, XII d. de censu in festo Omnium Sanctorum et tres dreturas ad Natale et campi partem ejusdem terre.</p>
-              <p>Item XII d. de censu pro eadem terra in festo Beate Marie in marcio et IV solidos ad qui habitat, dominica Brandonum: de istis redditibus retinet camerarius, 26 d. qui distribuuntur pauperibus in Cena Domini.</p>
-              <p>Item in Adnunciacione Domini, 2 s. pro domo Hugonis de Liciis.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0021" n="C21" subtype="article">
-          <pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c21"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Soisiaco qui pertinet ad sex prebendas qui redditur in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 124.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Soisiaco qui pertinet ad sex prebendas qui redditur in festo Sancti Remigii.</p>
-              <p>SUMMA ejusdem : 30 sol.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p123_c20"/>
+<div type="section" xml:id="SSCO-AB_censier_0020"><head rend="i">Hii sunt redditus de camera ad Nativitatem Domini apud Corbolium.</head>
+<p>— 3 dreturas, de quibus Guillelmus de Prunaio debet unam pro terra de Nagi, Adam Gonteri unam de terra que est super ripam Secane, Rainboldus de Bordis unam versus boscum de Soisiaco.<pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c20_2"/> — 5 dreturas, de quibus Guillelmus de Prunaio debet unam et sex denarios de censu in festo Sancti Remigii.</p>
+              <p>Ad distribucionem piscium in quadragesima solis canonicis, de terra de Montescouve 3 dreturas et unum quarterium et xii d. de censu in Adnunciacione Dominia in marcio et campi partem in eadem terra.</p>
+              <p>Apud Balencuriam, pro terra defuncti Galeran, quam dedit ecclesie Sancti Exuperii, xii d. de censu in festo Omnium Sanctorum et tres dreturas ad Natale et campi partem ejusdem terre. Item xii d., de censu pro eadem terra in festo Beate Marie in marcio et iv solidos ad qui habitat, dominica Brandonum: de istis redditibus retinet camerarius, 26 d. qui distribuuntur pauperibus in Cena Domini. Item in Adnunciacione Domini, 2 s. pro domo Hugonis de Liciis.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p124_c21"/>
+<div type="section" xml:id="SSCO-AB_censier_0021"><head rend="i">Hic est census de Soisiaco qui pertinet ad sex prebendas qui redditur in festo Sancti Remigii.</head>
+<p>SUMMA ejusdem : 30 sol.</p>
               <p>— Item de Chevanes, 39 s. tunc in eodem festo.</p>
               <p>— Item de Soisiaco in Adnunciatione Dominica, 11 s. 6 d. ob. et 1 p., et preposito, 5 d., et maiori 6 d. et ob.</p>
               <p>— Eodem die liberi Turion de Leudevilla, 8 d. de censu.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0022" n="C22" subtype="article">
-          <pb n="124" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p124_c22"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census quem canonici Sancti Exuperii vel ejus camerarius debent reddere in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f184/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 124-125.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census quem canonici Sancti Exuperii vel ejus camerarius debent reddere in festo Sancti Remigii.</p>
-              <p>— Beate Marie de Corbolio pro camera, 12 s. pro molendino de Essona, et 6 d. de re eis ignota.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p124_c22"/>
+<div type="section" xml:id="SSCO-AB_censier_0022"><head rend="i">Hic est census quem canonici Sancti Exuperii vel ejus camerarius debent reddere in festo Sancti Remigii.</head>
+<p>— Beate Marie de Corbolio pro camera, 12 s. pro molendino de Essona, et 6 d. de re eis ignota.</p>
               <p>— Item ecclesie Fossatensi, 6 s. pro clauso de Tartaret.</p>
               <p>— Priori Sancti Johannis de Corbolio, 4 d. pro medietate muri Charausauz.<pb n="125" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p125_c22_4"/> — Priori de Campis pro clauso de Vignon, 9 s. in octabis Beati Dyonisii.</p>
               <p>— Famulo Sancti Exuperii pro custodia vinearum, 6 s.</p>
               <p>— In festo Sancti Exuperii quibusdam de villa de Cons, 6 s.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0023" n="C23" subtype="article">
-          <pb n="125" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p125_c23"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census quem refectorium Beati Exuperii debet in festo Sancti Remigii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f185/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 125.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census quem refectorium Beati Exuperii debet in festo Sancti Remigii.</p>
-              <p>— Hospitali de Corbolio, 12 d. pro chaneveria.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p125_c23"/>
+<div type="section" xml:id="SSCO-AB_censier_0023"><head rend="i">Hic est census quem refectorium Beati Exuperii debet in festo Sancti Remigii.</head>
+<p>— Hospitali de Corbolio, 12 d. pro chaneveria.</p>
               <p>— Priori de Campis in octabis Beati Dyonisii, 4 d. et ob. pro vinea de Frileuse, et totidem de prisona.</p>
               <p>— Ecclesie Beate Marie Parisiensis de clauso de Braatel pro matutinis, 6 s. in festo Beati Remigii.</p>
               <p>— Majori de Balencuria, 4 d. pro domo vicariorum.</p>
               <p>— Pro vineis + Stephani de Feritate, 13 d. et 6 d. de guardia famulo ejusdem terre.</p>
               <p>— Pro vineis de Chieveroche, 15 d.</p>
               <p>— Apud Chevanes sex prebendis in Adnunciacione Dominica pro corveiis, 3 s. 3 d.</p>
-              <p>— Apud Villam Novam Regis in festo Sancti Remigii, 5 s. super quadraginta arpenta terre quos (sic) donavit Ferricus Briardi pro suo anniversario ecclesie Beati Exuperii.</p>
+              <p>— Apud Villam Novam Regis in festo Sancti Remigii, 5 s. super quadraginta arpenta terre quos (<hi rend="i">sic</hi>) donavit Ferricus Briardi pro suo anniversario ecclesie Beati Exuperii.</p>
               <p>— Apud Feritatem Aales, 60 s. de censu in festo Sancti Remigii, quos Angevinus canonicus dedit Ecclesie Beati Exuperii, de quibus viginti solidi distribuuntur in die anniversarii ejusdem Angevini ; totum residuum distribuitur in matutinis.</p>
               <p>— Item super vineas nostras de Braatel habemus, 39 s. ad Nativitatem Beate Marie, de quibus capitulum Beate Marie Parisiensis habet, 6 s. de censu in festo Sancti Remigii, et 12 s. pro uno anniversario ; totum residuum distribuitur ad matutinas.</p>
-              <p>— Item matutine habent super nemora nostra de Villadudone 6 libras singulis annis, quarum distribucio incipit ad « Deus omnium. »</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0024" n="C24" subtype="article">
-          <pb n="126" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p126_c24"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Monte Eschoue in Adnunciacione Dominica.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 126.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Monte Eschoue in Adnunciacione Dominica.</p>
-              <p>— Dominus Aubertus de Monte Sancti Petri, 8 d. et ob. et duas dreturas pro terra de Monte Eschoue.</p>
+              <p>— Item matutine habent super nemora nostra de Villadudone 6 libras singulis annis, quarum distribucio incipit ad « <hi rend="i">Deus omnium.</hi> »</p>
+</div>
+<pb n="126" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p126_c24"/>
+<div type="section" xml:id="SSCO-AB_censier_0024"><head rend="i">Hic est census de Monte Eschoue in Adnunciacione Dominica.</head>
+<p>— Dominus Aubertus de Monte Sancti Petri, 8 d. et ob. et duas dreturas pro terra de Monte Eschoue.</p>
               <p>— Aubertus Dure-Borse, 3 d. pro tribus quarteriis.</p>
               <p>— Girardus Richardi, 2 d. et dimidiam dreturam.</p>
               <p>SUMMA : 13 den.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0025" n="C25" subtype="article">
-          <pb n="126" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p126_c25"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Sacro-Portu qui redditur in prima dominica quadragesime seu ad Brandones.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f186/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f187/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f188/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 126-128.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Sacro-Portu qui redditur in prima dominica quadragesime seu ad Brandones.</p>
-              <p>— Arnulphus de Verneuille, 3 d. pro dimidio arpento vinee que est ad portum de Verneuille.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p126_c25"/>
+<div type="section" xml:id="SSCO-AB_censier_0025"><head rend="i">Hic est census de Sacro-Portu qui redditur in prima dominica quadragesime seu ad Brandones.</head>
+<p>— Arnulphus de Verneuille, 3 d. pro dimidio arpento vinee que est ad portum de Verneuille.</p>
               <p>— Johannes de Danemarie, 3 ob. pro uno quarterio vinee ejusdem portus.</p>
               <p>— Stephanus de Ulmeio, 6 d. pro uno arpento vinee juxta eumdem portum.</p>
               <p>— Bartholomeus de Forges, 2 d. pro uno arpento terre que est ultra nemus.</p>
@@ -8979,7 +8472,7 @@
               <p>— Nantiers de Sancto Lupo, 9 d. et obolum pro tribus arpentis terre, et dimidio quarterio vinee que est a Bletart.</p>
               <p>— Mahis de Sancto Lupo, 6 d. pro duobus arpentis terre que est apud Bletart.</p>
               <p>— Isabel de Sancto Lupo, 4 d. et obolum pro jornel et dimidio terre et dimidio quarterio vinee.</p>
-              <p>— Simon Rex, 3 d. pro uno arpento terre que est au gros buison.</p>
+              <p>— Simon Rex, 3 d. pro uno arpenno terre que est au gros buison.</p>
               <p>— Johannes Magnus, 3 d. pro uno arpento terre et dimidio qui sunt ultra nemus de Nanziaco.</p>
               <p>— Reginaldus Gilout, 3 ob. pro tribus quarteriis terre in eodem loco.</p>
               <p>— Odo Ribillart, 4 d. pro uno jornel terre que est au Maupertuis.</p>
@@ -8996,29 +8489,10 @@
               <p>— Petrus de Eprena, 1 d.</p>
               <p>— Arnulphus Faber de Forges, 5 d. et pictam.</p>
               <p>SUMMA : 14 sol. 8 den. et obol., de quibus corpus prebendarum habet quinque solidos de capitali censu ; totum residuum pertinet ad distribucionem piscis in quadragesima scilicet decima, foragium, pedagium, rotagium et omnia alia que ad censivam pertinent.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0026" n="C26" subtype="article">
-          <pb n="128" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f188/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p128_c26"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Soisiaco reddendus in Adnunciacione Dominica.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f188/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f189/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f190/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 128-130.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Soisiaco reddendus in Adnunciacione Dominica.</p>
-              <p>— Stephanus de Bello-Visu, 2 d. et obolum pro dimidio dreture.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p128_c26"/>
+<div type="section" xml:id="SSCO-AB_censier_0026"><head rend="i">Hic est census de Soisiaco reddendus in Adnunciacione Dominica.</head>
+<p>— Stephanus de Bello-Visu, 2 d. et obolum pro dimidio dreture.</p>
               <p>— Stephanus de Manessiaco, 5 p. pro quarterio dreture.</p>
               <p>— Andreas Berte, 2 d. et obolum pro dimidio dreture.</p>
               <p>— Radulphus Basim, 5 p. pro quarterio dreture.</p>
@@ -9028,20 +8502,20 @@
               <p>— Relicta Pichardi et Laurencius de Bouseinvilla, 2 d. et obolum pro dimidio dreture.</p>
               <p>— Theolbaldus Rex, 2 d. et obolum pro dimidio dreture.</p>
               <p>— Isembert Goin, 2 d. et obolum pro dimidio dreture.</p>
-              <p>— Arnulphus Monachus, 2 d. ob. pro dimidio droitura.</p>
+              <p>— Arnulphus Monachus, 2 d. ob. pro dimidio droiture.</p>
               <p>— Ermanjart La Chambellande, 2 d. et obolum pro dimidio dreture.</p>
               <p>— Vitalis de Villa, 5 p. pro quarterio dreture.</p>
               <p>— Odinus Borrel, 5 p. pro quarterio dreture.</p>
               <p>— Guillelmus Cambellarius, 5 p. pro quarterio dreture.</p>
               <p>— Renaudus Glene, 5 p. pro quarterio dreture.</p>
-              <p>— Guillelmus d'Arondel, 11 d. pictam pro duabus dreturis et uno quarterio.<pb n="129" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f189/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p129_c26_18"/> — Stephanus de Bordis, 5 d. et obolum et dimidiam pictam pro una droitura et dimidio quarterio.</p>
+              <p>— Guillelmus d'Arondel, 11 d. pictam pro duabus dreturis et uno quarterio.<pb n="129" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f189/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p129_c26_18"/> — Stepanus de Bordis, 5 d. et obolum et dimidiam pictam pro una droitura et dimidio quarterio.</p>
               <p>— Floria uxor Hermerii, 5 p. pro dimidio quarterio.</p>
               <p>— Gaufridus Sutor, 2 d. et obolum pro dimidia droitura.</p>
               <p>— Andreas Ligart, 2 d. et obolum pro dimidia droitura.</p>
               <p>— Aubertus Carnifex, 7 p. et dimidiam pictam pro quarterio et dimidio.</p>
               <p>— Jameline, 7 p. et dimidiam pictam pro quarterio et dimidio.</p>
               <p>— Milo Richart, 2 d. et obolum pro dimidia droitura nova.</p>
-              <p>— Relicta Renaudi Fortis, 2 d. obolum pro dimidio droitura.</p>
+              <p>— Relicta Renaudi Fortis, 2 d. obolum pro dimidio droiture.</p>
               <p>— Roce, 5 p. pro quarterio.</p>
               <p>— Guillelmus Jeumeri, 5 p. pro quarterio.</p>
               <p>— Emanjart Hupeoire, 5 p. pro quarterio.</p>
@@ -9050,7 +8524,7 @@
               <p>— Relicta Houderii, 2 d.</p>
               <p>— Mainfredus, 7 p. pro droitura et 5 p. pro quarterio.</p>
               <p>— Guillelmus Gainart (?), 5 p. pro eadem droitura.</p>
-              <p>— Radulphus Morel, 2 d. et obolum pro dimidio droitura.</p>
+              <p>— Radulphus Morel, 2 d. et obolum pro dimidio droiture.</p>
               <p>— Alexander Joce, 7 d. et obolum pro droitura et dimidia.</p>
               <p>— Formundus de Bordis, 9 d. picta minus pro septem quarteriis.</p>
               <p>— Johannes Boivin, 2 d. et obolum.</p>
@@ -9069,33 +8543,15 @@
               <p>— Dominus Peregrinus presbiter, 2 d. et obolum.</p>
               <p>— Andreas de Bordis, 5 d. pro dretura.</p>
               <p>— Odo Parvus Deus, 2 d. et obolum sine dretura.</p>
-              <p>— Tibaut Jeremie, 1 d. picta minus pro tribus quarteriis de Majoria.</p>
+              <p>— Tibaut Jeremie, 4 d. picta minus pro tribus quarteriis de Majoria.</p>
               <p>— Maiorissa, 5 p. pro quarterio de Majoria.</p>
-              <p>— Et sciendum est quod de isto censu habet prepositus, quinque denarios et unam dreturam.</p>
+              <p>— <hi rend="i">Et sciendum est quod de isto censu habet prepositus, quinque denarios et unam dreturam.</hi></p>
               <p>SUMMA : 12 sol. 5 den. et obolum.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0027" n="C27" subtype="article">
-          <pb n="130" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f190/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p130_c27"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Item census de claustro pertinens ad cameram redditus in festo Sancti Exuperii, receptus per manum Rogeri canonici, anno Domini millesimo ducentesimo quinquagesimo sexto, die...</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f190/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f191/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f192/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 130-132.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Item census de claustro pertinens ad cameram redditus in festo Sancti Exuperii, receptus per manum Rogeri canonici, anno Domini millesimo ducentesimo quinquagesimo sexto, die martis ipso die festi supradicti.</p>
-              <p>— Dominus Simon de Corbolio, 2 s. pro quadam parte domus sue site in fine claustri.</p>
+</div>
+</div>
+<anchor xml:id="SSCO-AB_censier_p130_c27"/>
+<div type="section" xml:id="SSCO-AB_censier_0027"><head rend="sc">Item census de claustro pertinens ad cameram redditus in festo Sancti Exuperii, receptus per manum Rogeri canonici, anno Domini millesimo ducentesimo quinquagesimo sexto, die martis ipso die festi supradicti.</head>
+<p>— Dominus Simon de Corbolio, 2 s. pro quadam parte domus sue site in fine claustri.</p>
               <p>— Nicholaus canonicus, 12 d. pro domo capituli ; et pro duabus domibus suis propriis que fuerunt Plomart, 12 d.</p>
               <p>— Johannes de Sancto Quintino, 12 d. pro domo sua.</p>
               <p>— Capellanus Sancti Bartholomei, 12 d. pro domo sua.</p>
@@ -9129,7 +8585,7 @@
               <p>— Item, pro orto, 12 d.</p>
               <p>— Item, pro ruella, 6 d.</p>
               <p>— Domus Roberti Brichardi, 4 s. 3 ob.</p>
-              <p>— Domus refrectorii (sic), 18 d.</p>
+              <p>— Domus refrectorii (<hi rend="i">sic</hi>), 18 d.</p>
               <p>— Domus que fuit Niquerel, 9 d., que est capituli.</p>
               <p>— Confratria, 12 d. pro domibus que fuerunt Poilevant.</p>
               <p>— Item, pro domuncula que fuit Richeri Pion, 6 d.</p>
@@ -9148,29 +8604,9 @@
               <p>— Gourdevant, 3 d. pro domo.</p>
               <p>— Domus + Bertranni, 6 d.</p>
               <p>— Domus + Hamonis canonici, 6 d.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0028" n="C28" subtype="article">
-          <pb n="132" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f192/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p132_c28"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Extra clausum eodem die census ultra pontellum.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f192/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f193/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 132-133.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Extra clausum eodem die census ultra pontellum.</p>
-              <p>— Dominus Philipus de Joiaco de omnibus que habet ultra pontellum macerie, 16 d.</p>
+<anchor xml:id="SSCO-AB_censier_p132_c28"/>
+<div type="section" xml:id="SSCO-AB_censier_0028"><head rend="i">Extra clausum eodem die census ultra pontellum.</head>
+<p>— Dominus Philipus de Joiaco de omnibus que habet ultra pontellum macerie, 16 d.</p>
               <p>— Domus que fuit Droconis Clamatoris, 8 d. pro jacteia super aquam.</p>
               <p>— Domus J. Belli carnificis, 4 d. ob. pro jacteia.</p>
               <p>— Bertaudus Jocelini, 9 d. pro domo.</p>
@@ -9182,29 +8618,11 @@
               <p>— Domus Iahie Judei super vicum magnum, 3 s.</p>
               <p>— Dominus Matheus, capellanus, in domo Dei, 3 s. pro vineis de Vignon.<pb n="133" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f193/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p133_c28_12"/> — Relicta Bricii Sutoris, 1 d. pro caneveria juxta pratum Sancti Johannis.</p>
               <p>SUMMA istius census per totum : 4 lib. 10 sol. 10 d. ob.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0029" n="C29" subtype="article">
-          <pb n="133" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f193/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p133_c29"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de plantis de Villa Dudonis qui redditur in festo Mortuorum, receptus per manus Rogeri canonici, anno millesimo ducentesimo quinquagesimo sexto, dicto festo.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f193/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f194/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f195/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f196/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 133-136.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de plantis de Villa Dudonis qui redditur in festo Mortuorum, receptus per manus Rogeri canonici, anno millesimo ducentesimo quinquagesimo sexto, dicto festo.</p>
-              <p>— Girardus Cordarius, 13 d. ob.</p>
+</div>
+</div>
+<anchor xml:id="SSCO-AB_censier_p133_c29"/>
+<div type="section" xml:id="SSCO-AB_censier_0029"><head rend="sc">Hic est census de plantis de Villa Dudonis qui redditur in festo Mortuorum, receptus per manus Rogeri canonici, anno millesimo ducentesimo quinquagesimo sexto, dicto festo.</head>
+<p>— Girardus Cordarius, 13 d. ob.</p>
               <p>— Maria La Peletiere, 3 d.</p>
               <p>— Gilo dictus Marcellus, 6 d.</p>
               <p>— Robertus des Broces, 6 d.</p>
@@ -9220,19 +8638,19 @@
               <p>— Robertus Pousemie, 3 ob.</p>
               <p>— Galterius Corvelier, 3 d.</p>
               <p>— Ferricus Doiart, 3 d.</p>
-              <p>— Matheus (effacé), 3 ob.</p>
+              <p>— Matheus (<hi rend="i">effacé</hi>), 3 ob.</p>
               <p>— Relicta Roberti Normanni, 5 s.</p>
               <p>— Gilo Haviart, 1 d.</p>
               <p>— Johannes de Broces, 3 d. (?)</p>
               <p>— Gila la Foretiere et relicta Ferrici Le Maçon, 3 ob.<pb n="134" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f194/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p134_c29_22"/> — Milo Cavatarius, 3 d.</p>
-              <p>— Girardus de Villepaacle et sa filatre, 9 d.</p>
+              <p>— Girardus de Villepaacle et sa filâtre, 9 d.</p>
               <p>— Odo des Broces, 10 d. picta minus.</p>
               <p>— Nicholaus de Varatres, 9 d.</p>
               <p>— Johannes de Genouli, 3 d.</p>
               <p>— Guillelmus Ferrant, 6 d. et pictam.</p>
               <p>— Adam Comes, 6 d.</p>
               <p>— Relicta Andree Cadot, 3 d.</p>
-              <p>— Robertus (efface), 6 d.</p>
+              <p>— Robertus (<hi rend="i">effacé</hi>), 6 d.</p>
               <p>— Johannes Herbertus, 3 d.</p>
               <p>— Bernardus de Varatres, 3 d.</p>
               <p>— Johannes Li Boiteus, 7 d. ob.</p>
@@ -9249,7 +8667,7 @@
               <p>— Relicta Bertaudi de Tourailes, 4 d.</p>
               <p>— Légier Jadais, 6 d.</p>
               <p>— Simon de Campania, 6 d.</p>
-              <p>— Simon (efface), 3 ob.</p>
+              <p>— Simon (<hi rend="i">effacé</hi>), 3 ob.</p>
               <p>— Adam Muriau, 3 ob.</p>
               <p>— Bertaudus Belot, 3 d.</p>
               <p>— Gervasius, 4 d. ob.</p>
@@ -9267,7 +8685,7 @@
               <p>— Item, ille Johannes, 3 ob.</p>
               <p>— Houdenon la Jeuberte, 3 ob.</p>
               <p>— Hiart (?) de Vilededon, 3 d.</p>
-              <p>— Heustachia de Leurseint, 4 d. picta minus.</p>
+              <p>— Heustachia de Leurseint, 4 d. picta minus</p>
               <p>— Trébuchet, 3 ob.</p>
               <p>— Rogerius Monachus, 7 d. ob.</p>
               <p>— Petrus Lauvernat, 7 d. ob.</p>
@@ -9281,7 +8699,7 @@
               <p>— Robertus de Neinvillé (?), 3 ob.</p>
               <p>— Alein lo Fevre, 7 d. picta minus.</p>
               <p>— Major de Paroi, 3 ob.</p>
-              <p>— Macellus, 2 d.</p>
+              <p>— Macellus. 2 d.</p>
               <p>— Stephanus Geubert, 4 d. picta minus.</p>
               <p>— Stephanus Landri, 3 d.</p>
               <p>— Reginaldus des Broces, 3 d.</p>
@@ -9304,29 +8722,10 @@
               <p>— Dominus Nicholaus de Menesi, 3 d.</p>
               <p>— Petrus ad dominas, 3 d.</p>
               <p>— Richardus Goderau, 3 d.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0030" n="C30" subtype="article">
-          <pb n="136" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f196/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p136_c30"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hic est census de Poulli qui redditur in crastino Natalis, receptus per manum Rogeri, canonici, anno Domini millesimo ducentesimo quinquagesimo nono, die predicta.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f196/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f197/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 136-137.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hic est census de Poulli qui redditur in crastino Natalis, receptus per manum Rogeri, canonici, anno Domini millesimo ducentesimo quinquagesimo nono, die predicta.</p>
-              <p>— Domina de Guallande, 7 d. super omnes terras arabiles quas hospites sui tenent apud Poulli.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p136_c30"/>
+<div type="section" xml:id="SSCO-AB_censier_0030"><head rend="sc">Hic est census de Poulli qui redditur in crastino Natalis, receptus per manum Rogeri, canonici, anno Domini millesimo ducentesimo quinquagesimo nono, die predicta.</head>
+<p>— Domina de Guallande, 7 d. super omnes terras arabiles quas hospites sui tenent apud Poulli.</p>
               <p>— Sanctus Lazarus de Meleduno, 18 d. de sex arpentis vel circa.</p>
               <p>— Symon Menant, 2 d. pro dimidio arpento.</p>
               <p>— Arnulphus de Yardo, 4 d. pro dimidio arpento.</p>
@@ -9348,34 +8747,15 @@
               <p>— Edelina relicta Stephani Ferrici, 4 d. pro arpento.</p>
               <p>— Johannes li Megeiciers de Meleduno, 4 d. pro arpento.</p>
               <p>SUMMA : 6 s. 7 d.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0031" n="C31" subtype="article">
-          <pb n="137" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f197/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p137_c31"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Possessiones Altaris Sancti Blasii.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f197/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f198/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f199/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f200/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f201/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 137-141.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Possessiones Altaris Sancti Blasii.</p>
-              <p>— Altare Sancti Blasii habet unum arpentum vinee in territorio de Mauguarde in censiva capituli Sancti Exuperii de cujus emptione habet litteras.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p137_c31"/>
+<div type="section" xml:id="SSCO-AB_censier_0031"><head rend="sc">Possessiones Altaris Sancti Blasii.</head>
+<p>— Altare Sancti Blasii habet unum arpentum vinee in territorio de Mauguarde in censiva capituli Sancti Exuperii de cujus emptione habet litteras.</p>
               <p>Omnibus presentes litteras inspecturis officialis curie Parisiensis salutem in Domino.</p>
               <p>Notum facimus quod, in nostra presencia constituti, Robertus et Radulphus ad capellanos fratres recognoverunt se vendidisse Andree et Stephano, capellanis in ecclesia Sancti Exuperii<pb n="138" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f198/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p138_c31_4"/> Corboliensis, pro viginti quatuor libris Parisiensium sibi solutis, prout confessi sunt coram nobis quoddam arpentum vinee site in territorio de Malguarde, in censiva Sancti Exuperii, ut dicitur, promittentes fide prestita quod contra venditionem istam per se vel per alium non.venient in futurum, et quod dictum arpentum vinee eisdem capellanis et eis qui in illa vinea ab ipsis causam habebunt contra omnes in perpetuum garentizabunt. Preterea dicti Robertus et Radulphus et Renaudus Housez, coram nobis constituti, promiserunt fide prestita quod cum Colinus, filius dicti Roberti, ad legitimam etatem perveniret, ipsi procurarent quod idem Colinus vendicionem istam laudaret et concederet fide data. Si vero istud procurare non possent, promiserunt sub predicte fidei religione se reddituros dictis capellanis septem libras Parisiensium que contingunt dictum Colinum de vendicione supradicta, et se servaturos indempnes dictos capellanos super fructibus dicte vinee interdum ab ipsis capellanis perceptis, vel valorem eorumdem proventuum se eisdem capellanis reddituros. Et de omnibus premissis inviolabiliter observandis supradicti Robertus et Radulphus et Renaudus se plegios et principales debitores constituerunt quilibet eorum insolidum fide data.</p>
               <p>Actum anno Domini millesimo ducentesimo tricesimo quinto, mense septembri.</p>
               <p>— Item altare Sancti Blasii habet duo arpenta vinee in territorio de Cocigniaco in censiva domini [de] Ulmeio de quibus habet litteras.</p>
-              <p>Ego Guillelmus de Guillervilla notum facio presentibus et futuris quod ego et Ferricus de Moleignon et Robertus, frater ejus, concessimus ecclesie Beati Exuperii de Corbolio duo arpenta vinearum sita in territorio de Cocigniaco ad duodecim denarios<pb n="139" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f199/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p139_c31_8"/> censuales quiete et pacifice in perpetuum possidenda, salvo tamen censu et justiciis ad censum pertinentibus, et salvo auxilio nostro quod nobis persolvit aliarum territorium vinearum excepta prisione de torneamentis. Quod ut ratum permaneat, assensu predicti Ferrici et Roberti, fratris ejus, presentem paginam sigilli mei munimine roboravi.</p>
+              <p>Ego Guillelmus de Guillervilla notum facio presentibus et futuris quod ego et Ferricus de Moleignon et Robertus, frater ejus, concessimus ecclesie Beati Exuperii de Corbolio duo arpenta vinearum sita in territorio de Cocigniaco ad duodecim denarios<pb n="139" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f199/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p139_c31_8"/> censuales quiete et pacifice in perpetuum possidenda, salvo tamen censu et justiciis ad censum pertinentibus, et salvo auxilio nostro quod nobis persolvit aliarum territorium vinearum excepta prisione de torneamentis. Quod ut ratum permaneat, assensu predicti Ferrici, et Roberti, fratris ejus, presentem paginam sigilli mei munimine roboravi.</p>
               <p>Actum anno gracie millesimo ducentesimo.</p>
               <p>— Altare Sancti Blasii habet unum arpentum vinee apud Seintriacum de quo habet litteras.</p>
               <p>Omnibus presentes litteras inspecturis R., Meledunensis decanus, salutem in Domino.</p>
@@ -9387,61 +8767,23 @@
               <p>— Item, altare Sancti Blasii habet apud Tartaret duo arpenta vinee.<pb n="141" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f201/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p141_c31_19"/> — Item, altare Sancti Blasii in guageria decime de Egrefein decem libras quando redimetur.</p>
               <p>— Item, idem habet in claustro duas domos in censiva capituli et unam plateam similiter in eadem censiva.</p>
               <p>— Item, idem habet quamdam domum in magno vico in censiva capituli Beati Exuperii.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0032" n="C32" subtype="article">
-          <pb n="141" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f201/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p141_c32"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Possessiones que pertinent ad matutinas.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f201/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f202/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 141-142.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Possessiones que pertinent ad matutinas.</p>
-              <p>— Matutine habent super nemo a nostra de Villedudone 6 libras Parisiensium quarum distribucio incipit ad « Deum omnium. »</p>
-              <p>— Item matutine habent, sicut quidam dicunt, in nemoribus nestris quamdam peciam nemoris que vocatur Boscus de Forgiis, que empta fuit de denariis matutinarum.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p141_c32"/>
+<div type="section" xml:id="SSCO-AB_censier_0032"><head rend="sc">Possessiones que pertinent ad matutinas.</head>
+<p>— Matutine habent super nemo a nostra de Villedudone 6 libras Parisiensium quarum distribucio incipit ad « Deum omnium. »</p>
+              <p>— Item matutine habent, sicut quidam dicunt, in nemoribus nostris quamdam peciam nemoris que vocatur Boscus de Forgiis, que empta fuit de denariis matutinarum.</p>
               <p>— Item matutine habent super vineas de Braatel 39 solidos Parisiensium, de quibus capitulum Beate Marie Parisiensis habet 6 solidos de censu in festo Sancti Remigio, et quoddam anniversarium 12 solidos. Residuum totum pertinet ad matutinas.</p>
               <p>— Item matutine habent super domum Helyot que est supra magnum vicum in fine refectorii 50 solidos singulis annis.</p>
               <p>— Item matutine habent super domum Ade Coillart in maceria, que domus dicitur domus Guiberti Maderinarii 4 libras Parisiensium, exceptis 12 solidis qui distribuuntur in anniversario Thome de Pareto, clerici.</p>
               <p>— Item matutine habent apud Feritatem Aales 60 solidos Parisiensium<pb n="142" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f202/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p142_c32_7"/> minuti census in festo Sancti Remigii et omnes proventus ad censivam pertinentes, de quibus distribuimus 20 solidos in anniversario Angevini, canonici, qui dedit predictum censum. Totum residuum pertinet ad matutinas.</p>
               <p>— Item matutine habent quintum Reginaldi de Cramoello, canonici quondam hujus Ecclesie, situm apud Viriacum, tria arpenta pratorum et unum hospitem et duo arpenta terre apud Castellionem super ripam Secane, et censum apud Plessetum Comitis, circiter 60 solidos ; que omnia valent circiter 7 libras Parisiensium,de quibus distribuimus decem solidos in anniversario dicti Reginaldi et decem solidos in anniversario patris et matris et matris ejusdem Reginaldi. Totum residuum pertinet ad matutinas.</p>
               <p>— Si aliquis canonicus non fecerit stagium suum per octo menses prout tenetur per juramentum suum singulis annis, omnes grossi fructus prebende illius canonici per singulos annos per quos non fecerit stagium erunt ad distribucionem matutinarum, sumptis prius expensis que necesse erunt ad tractanda negocia dicte ecclesie sicut et de aliis prebendis, et vicario ejusdem prebende prius renumerato de fructibus prebende illius anni sicut alii vicarii.</p>
-              <p>— Item matutine habent locaciones domorum quas Bertrannus diaconus dedit, que valent circiter 40 solidos Parisiensium, que domus sunt in claustro versus finem, juxta portam † Balduini de Corbolio usque ad magnum vicum.</p>
+              <p>— Item matutine habent locaciones domorum quas Bertrannus diaconus dedit, que valent circiter 40 solidos Parisiensium, que domus sunt in claustro versus finem, juxta portam + Balduini de Corbolio usque ad magnum vicum.</p>
               <p>— Item matutine habent super sex arpenta terre arabilis apud Montem Renardi juxta Nagiacum 14 solidos Parisiensium annui redditus, que sex arpenta terre dicte valent ad firmam 40 solidos Parisiensium, de quibus capitulum, in cujus censiva terra sedet, habet 25 solidos et 12 denarios pro capitali censu. Totum residuum scilicet 14 solidi ad matutinas.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0033" n="C33" subtype="article">
-          <pb n="143" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f203/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p143_c33"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Possessiones que pertinent ad distribucionem panis.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f203/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f204/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 143-144.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Possessiones que pertinent ad distribucionem panis.</p>
-              <p>— Apud Villam Dudonem, 38 arpenta terre arabilis cum herberguagio que valent in admodiacione 28 sextaria bladi, videlicet medietatem ybernagii et alteram medietatem avene, reddenda in festo Sancti Remigii vel Omnium Sanctorum ; et hujus panis distribucio pertinet ad Adventum Domini, in qua capellani et vicarii pares sunt canonicis, quod est in prejudicium canonicorum et contra consuetudines, cum in nullis aliis distribucionibus pares sint canonicis : et hoc provenit ex defectu canonicorum.</p>
+</div>
+<pb n="143" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f203/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p143_c33"/>
+<div type="section" xml:id="SSCO-AB_censier_0033"><head rend="sc">Possessiones que pertinent ad distribucionem panis.</head>
+<p>— Apud Villam Dudonem, 38 arpenta terre arabilis cum herberguagio que valent in admodiacione 28 sextaria bladi, videlicet medietatem ybernagii et alteram medietatem avene, reddenda in festo Sancti Remigii vel Omnium Sanctorum ; et hujus panis distribucio pertinet ad Adventum Domini, in qua capellani et vicarii pares sunt canonicis, quod est in prejudicium canonicorum et contra consuetudines, cum in nullis aliis distribucionibus pares sint canonicis : et hoc provenit ex defectu canonicorum.</p>
               <p>— Item distribucio panis in quadragesima habet apud Echercon 4 libras annui redditus videlicet in censu et in dreturis et in campiparte et in rebus provenientibus de censiva que empta fuerat de denariis quos Ansellus de Scala, qui habebat in nostra ecclesia prebendam Regis, dedit Ecclesie nostre. In cujus anniversario distribuimus de eisdem denariis 20 solidos Parisiensium. Totum residuum pertinet ad distribucionem panis in quadragesima.</p>
               <p>— Item distribucio panis quadragesime habet apud Santriacum in territorio de Buinart arpentum et dimidium vinee quam dedit Gaufridus, quondam presbiter de Santriaco, que valet singulis annis 65 solidos Parisiensium, de quibus dominus fundi habet pro mortificacione annuatim 6 solidos. Totum residuum ad panem ; et sciendum quod in nullis distribucionibus panis capellani pares sunt canonicis preterquam in pane Adventus Domini.<pb n="144" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f204/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p144_c33_4"/> — Item panis quadragesime habet apud Cheneium unum arpentum vinee quam dedit Radulphus Anglicus, quondam capellanus altaris Sancti Thome, que valet per annum quinquaginta solidos Parisiensium, de quibus prior de Campis habet pro mortificacione 3 solidos. Totum residuum ad panem quadragesime.</p>
               <p>— Item distribucio panis quadragesimalis habet quintum Guillelmi de Chancolia, clerici, videlicet unum arpentum vinee apud Perreium et quinque quarteria apud Cheneium.</p>
@@ -9450,55 +8792,17 @@
               <p>— Item panis habet in thesauro 8 libras de vinea vendita que fuit Bertranni, diaconi, quam dedit ad distribucionem panis quadragesimalis.</p>
               <p>— Item panis habet 20 libras Parisiensium que debent esse in thesauro, quas dominus Hernaudus de Moiri, presbiter, dedit, et alios denarios debet habere in redempcione decime Johannis Monasterii, militis, de Veteri Corbolio.</p>
               <p>— Item panis quadragesimalis debet habere 90 libras Parisiensium quas Reginaldus de Sauceto dedit ecclesie nostre, quas magister Johannes de Balencuria, nepos dicti Reginaldi debet. De quarum solucione obligavit duo arpenta vinearum in Vallibus et unum arpentum apud Ulmeium, que omnia acquisivit, et eciam partem sagene quam habet in Secana, quam emit.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0034" n="C34" subtype="article">
-          <pb n="145" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p145_c34"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Hec sunt que pertinent ad distribucionem piscium in Quadragesima solis canonicis residentibus.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 145.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Hec sunt que pertinent ad distribucionem piscium in Quadragesima solis canonicis residentibus.</p>
-              <p>— Distribucio piscium in quadragesima habet apud Soisiacum super Scolam campipartem de Monte Escouve ; item in eadem terra tres dreturas et unum quarterium ; item de eadem 13 denarios de censu in Adnunciacione Dominica in marcio.</p>
+</div>
+<pb n="145" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p145_c34"/>
+<div type="section" xml:id="SSCO-AB_censier_0034"><head rend="sc">Hec sunt que pertinent ad distribucionem piscium in Quadragesima solis canonicis residentibus.</head>
+<p>— Distribucio piscium in quadragesima habet apud Soisiacum super Scolam campipartem de Monte Escouve ; item in eadem terra tres dreturas et unum quarterium ; item de eadem 13 denarios de censu in Adnunciacione Dominica in marcio.</p>
               <p>— Distribucio piscis habet apud Balencuriam duas dreturas et dimidiam, et campipartem cujusdam terre juxta viam de Salceto.</p>
               <p>— Item distribucio piscis habet apud Sacrum Portum 14 solidos minuti census in die Brandonum, et in omni illa censiva omnes proventus pertinentes ad censivam, scilicet decimam, pedagium, rotagium, foragium, pressoragium, revestiagium, abonagium, vendas et laudes et omnia alia ad censivam pertinencia, de quibus corpus prebendarum debet habere quinque solidos de capitali censu. Totum residuum pertinet ad distribucionem piscis.</p>
               <p>— Item distribucio piscis habet apud Perrolium unum sextarium bladi.</p>
-            </div>
-          </body>
-        </text>
-        <text xml:id="SSCO-AB_censier_0035" n="C35" subtype="article">
-          <pb n="145" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p145_c35"/>
-          <front>
-            <docDate>
-              <date notBefore="1252" notAfter="1256">1252-1256</date>
-            </docDate>
-            <index>
-              <term type="nature" key="cens">cens</term>
-            </index>
-            <head>Possessiones que pertinent ad refectorium.</head>
-            <div type="tradition">
-              <listWit type="édition">
-                <witness n="a" ana="edited" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f205/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f206/full/full/0/default.jpg https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f207/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json"><title>Cartulaire de Saint-Spire de Corbeil au diocèse de Paris</title>, éd. Émile Coüard-Luys, Rambouillet, 1882, p. 145-147.</witness>
-              </listWit>
-            </div>
-          </front>
-          <body>
-            <div type="transcription" xml:lang="lat">
-              <p>Possessiones que pertinent ad refectorium.</p>
-              <p>— Refectorium habet apud Vetus Corbolium duo quarteria vinearum, in territorio quod dicitur Coquille in censiva capituli,<pb n="146" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f206/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p146_c35_2"/> que debent duos denarios capitulo tantum in festo Sancti Remigii.</p>
+</div>
+<anchor xml:id="SSCO-AB_censier_p145_c35"/>
+<div type="section" xml:id="SSCO-AB_censier_0035"><head rend="sc">Possessiones que pertinent ad refectorium.</head>
+<p>— Refectorium habet apud Vetus Corbolium duo quarteria vinearum, in territorio quod dicitur Coquille in censiva capituli,<pb n="146" facs="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/f206/full/full/0/default.jpg" corresp="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k454174b/manifest.json" xml:id="SSCO-AB_censier_p146_c35_2"/> que debent duos denarios capitulo tantum in festo Sancti Remigii.</p>
               <p>— Item refectorium habet juxta crucem Lemovicensis 4 quarteria vinearum, que vinea dicitur vinea de Nesplier.</p>
               <p>— Item refectorium habet apud Santriacum duo arpenta vinearum juxta viam que ducit ad Furcas, que vinea dicitur vinea de Fonte, in censiva capituli.</p>
               <p>— Item refectorium habet apud Tartaret, juxta granchiam Ludovici, 3 arpenta vinearum que dicuntur Lestrelles.</p>
@@ -9514,6 +8818,7 @@
               <p>— Item refectorium habet juxta pressorium de Vignon quoddam arpentum vinee quod dicitur arpentum de pressorio.</p>
               <p>— Item refectorium habet apud Vignon, juxta vineam altaris Sancti Johannis Baptiste, unum arpentum vinee quod dicitur magnum arpentum.</p>
               <p>— Item refectorium habet apud Tartaret, sub clauso canonicorum, duo arpenta vinee que dicitur La Traverseinne.</p>
+</div>
             </div>
           </body>
         </text>
