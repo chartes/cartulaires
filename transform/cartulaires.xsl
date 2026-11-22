@@ -422,6 +422,7 @@
   <xsl:template match="tei:div[@type = 'section'][ancestor::tei:group[contains(@xml:id, 'censier')]]/tei:head" priority="50" version="3.0">
     <xsl:element name="{if (@rend = 'sc') then 'h3' else 'h4'}" namespace="http://www.w3.org/1999/xhtml">
       <xsl:attribute name="class" select="concat('censier-titre censier-niveau-', if (@rend = 'sc') then '1' else '2')"/>
+      <xsl:attribute name="id" select="concat('ct-', generate-id(.))"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -1420,6 +1421,11 @@
     </xsl:if>
     <a class="pb facs">
       <xsl:attribute name="href"><xsl:value-of select="@facs"/></xsl:attribute>
+      <!-- 2026-11-22 : page d'un PDF (thèse de Saint-Antoine sur Thenca, #page=N) : nouvel onglet, pas de visionneuse. -->
+      <xsl:if test="not(contains(@facs, 'iiif'))">
+        <xsl:attribute name="target">_blank</xsl:attribute>
+        <xsl:attribute name="rel">noopener</xsl:attribute>
+      </xsl:if>
       <xsl:if test="@source or @facs">
         <xsl:attribute name="data-source">
           <xsl:call-template name="cartulaires-image-source">
@@ -1609,7 +1615,8 @@
       <!-- 2026-11-12 (Maxime) : articles d'un censier (page unique du groupe) : ni tableau des témoins ni « D'après »,
            qui répétaient à chaque article l'édition déjà connue. -->
       <xsl:variable name="censier" select="exists(ancestor::tei:group[contains(@xml:id, 'censier')])"/>
-      <xsl:apply-templates select="node()[not($censier and self::tei:div[@type = 'tradition'])]"/>
+      <!-- 2026-11-22 : le censier n'est plus qu'un texte : sa tradition (manuscrit, Olivier Canteaut) s'affiche. -->
+      <xsl:apply-templates select="node()"/>
       <!-- mention « D'apres <temoin edite> », comme chez hteiml -->
       <!-- 2026-10-19 : un seul « D'après » : le premier témoin suivi (B, puis l'édition a, SMPA-AB-03) -->
       <xsl:if test="not($censier)">
@@ -1721,6 +1728,22 @@
       <xsl:apply-templates select="tei:text[not(@xml:id)]"/>
       <!-- 2026-11-12 : censiers (HDPAR-HD, SMPA-EG, SSCO-AB) : leurs articles ont un xml:id mais ne sont pas des actes
            (citeStructure acte « not(../@xml:id = '…censier…') ») : la page du groupe est leur seule page. -->
+      <!-- 2026-11-22 (Olivier Canteaut : « afficher le plan de l'ensemble, tout en le maintenant sur une page ») : plan
+           dépliable des titres du censier, liens vers les titres (id posés par le modèle des titres de section). Les
+           enfants du <details> en display:block en ligne (html.css de hteiml les masque). -->
+      <xsl:if test="contains(@xml:id, 'censier') and exists(.//tei:div[@type = 'section']/tei:head)">
+        <details class="censier-plan">
+          <summary>Plan du censier</summary>
+          <ul style="display: block">
+            <xsl:for-each select=".//tei:div[@type = 'section']/tei:head">
+              <xsl:variable name="t" select="normalize-space(string-join(.//text()[not(ancestor::tei:note)], ''))"/>
+              <li class="censier-plan-niveau-{if (@rend = 'sc') then '1' else '2'}">
+                <a href="#ct-{generate-id(.)}"><xsl:value-of select="if (string-length($t) gt 110) then concat(substring($t, 1, 105), '…') else $t"/></a>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </details>
+      </xsl:if>
       <xsl:apply-templates select="self::tei:group[contains(@xml:id, 'censier')]/tei:text[@xml:id]"/>
     </div>
   </xsl:template>
