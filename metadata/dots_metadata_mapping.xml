@@ -106,7 +106,7 @@
       <!-- 2026-11-13 : @facs peut lister un manifeste par volume (Notre-Dame de Chartres) -->
       <dots:objectProperty name="contentUrl" xpath="tokenize(normalize-space(.), ' ')"/>
     </schema:associatedMedia>
-    <dts:download xmlns="http://www.tei-c.org/ns/1.0" scope="document" xpath="let $id := /TEI/@xml:id return concat('api/dts/document?resource=', $id)" prefix="https://data.chartes.psl.eu/"/>
+    <dts:download scope="document" xpath="let $id := /TEI/@xml:id return concat('api/dts/document?resource=', $id)" prefix="https://data.chartes.psl.eu/"/>
     <!-- 2026-11-13 (Maxime) : TOUS les manifestes du cartulaire, car dots-vue (search-navigation-v3) ne charge que ceux
          déclarés ici : en tête l'édition que nous avons reprise (sourceDesc/@facs, un manifeste par volume), puis ceux des pages
          (pb/@corresp : volumes d'une édition en plusieurs parties, Maubuisson) et des témoins (witness/@corresp : manuscrits, autres éditions, originaux de Notre-Dame de Chartres réunis dans un seul
