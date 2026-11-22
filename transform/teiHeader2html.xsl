@@ -29,7 +29,8 @@
 
   <!-- Éditeurs : les auteurs du livre imprimé ; pour les chapitres du Cartulaire blanc (sans author), le
        principal, et l'édition électronique par les respStmt de modélisation ou de publication. -->
-  <xsl:variable name="th-label-editeurs">Édité par </xsl:variable>
+  <!-- 2026-11-22 (Olivier Canteaut) : un texte d'auteur sans principal ni respStmt (introduction du Cartulaire blanc) = « Par ». -->
+  <xsl:variable name="th-label-editeurs" select="if (exists($th-ts/tei:author) and empty($th-ts/tei:principal) and empty($th-ts/tei:respStmt)) then 'Par ' else 'Édité par '"/>
   <xsl:variable name="th-sd" select="empty($th-ts/tei:author) and exists($th-ts/tei:respStmt[contains(tei:resp, 'modélisation') or contains(tei:resp, 'publication')])"/>
   <xsl:variable name="th-editeurs" select="if ($th-sd) then $th-ts/tei:principal else $th-ts/tei:author"/>
   <xsl:variable name="th-edition-electronique" select="if ($th-sd) then $th-ts/tei:respStmt[contains(tei:resp, 'modélisation') or contains(tei:resp, 'publication')]/tei:name else $th-ts/tei:principal"/>
@@ -76,14 +77,21 @@
         <xsl:with-param name="label" select="$th-label-editeurs"/>
         <xsl:with-param name="noms" select="$th-editeurs"/>
       </xsl:call-template>
+      <!-- 2026-11-22 (Olivier Canteaut, « direction scientifique ») : le principal = « sous la direction de » ; plus de
+           « et al. » (les collaborateurs sont dans la notice). Chapitres de Saint-Denis : « Édition électronique par ». -->
+      <xsl:variable name="premier" select="if (exists($th-edition-electronique)) then th:nom($th-edition-electronique[1]) else ''"/>
       <xsl:call-template name="th-ligne">
-        <xsl:with-param name="label">Édition électronique par </xsl:with-param>
+        <xsl:with-param name="label" select="if ($th-sd) then 'Édition électronique par '
+          else if (matches($premier, '^[AEIOUYHÉÈÂÎaeiouyh]')) then 'Édition électronique sous la direction d’'
+          else 'Édition électronique sous la direction de '"/>
         <xsl:with-param name="noms" select="$th-edition-electronique"/>
-        <!-- « et al. » : principal seul, si le titleStmt contient au moins un respStmt (pas pour les chapitres de Saint-Denis). -->
-        <xsl:with-param name="etal" select="not($th-sd) and exists($th-ts/tei:respStmt)"/>
       </xsl:call-template>
       <xsl:if test="exists($th-debut)">
-        <span class="date"><xsl:value-of select="if (exists($th-fin) and $th-fin gt $th-debut) then concat($th-debut, '-', $th-fin) else $th-debut"/></span>
+        <xsl:variable name="periode" select="if (exists($th-fin) and $th-fin gt $th-debut) then concat($th-debut, '-', $th-fin) else string($th-debut)"/>
+        <!-- 2026-11-22 (Olivier Canteaut, Saint-Antoine) : date de l'édition imprimée (sourceDesc/bibl/date) à côté de
+             celle de l'édition électronique. -->
+        <xsl:variable name="imprime" select="normalize-space((//tei:fileDesc/tei:sourceDesc//tei:bibl//tei:date)[1])"/>
+        <span class="date"><xsl:value-of select="if ($imprime != '') then concat('Édition imprimée : ', $imprime, ' — édition électronique : ', $periode) else $periode"/></span>
       </xsl:if>
     </div>
   </xsl:template>

@@ -1420,6 +1420,11 @@
     </xsl:if>
     <a class="pb facs">
       <xsl:attribute name="href"><xsl:value-of select="@facs"/></xsl:attribute>
+      <!-- 2026-11-22 : page d'un PDF (thèse de Saint-Antoine sur Thenca, #page=N) : nouvel onglet, pas de visionneuse. -->
+      <xsl:if test="not(contains(@facs, 'iiif'))">
+        <xsl:attribute name="target">_blank</xsl:attribute>
+        <xsl:attribute name="rel">noopener</xsl:attribute>
+      </xsl:if>
       <xsl:if test="@source or @facs">
         <xsl:attribute name="data-source">
           <xsl:call-template name="cartulaires-image-source">
