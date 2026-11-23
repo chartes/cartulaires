@@ -1526,7 +1526,9 @@
       </xsl:if>
       <xsl:apply-templates/>
       <xsl:text> </xsl:text>
-      <a class="pb facs witness-facs-link" title="Voir le cartulaire" aria-label="Voir le cartulaire">
+      <!-- Édition imprimée (Gallia christiana sur Internet Archive, 23/11) : libellé « Voir l'édition ». -->
+      <xsl:variable name="libelle" select="if (contains(@source, 'archive.org/details/')) then 'Voir l''édition' else 'Voir le cartulaire'"/>
+      <a class="pb facs witness-facs-link" title="{$libelle}" aria-label="{$libelle}">
         <xsl:attribute name="href"><xsl:value-of select="$firstFacs"/></xsl:attribute>
         <xsl:if test="@source or $firstFacs != ''">
           <xsl:attribute name="data-source">
@@ -1539,9 +1541,21 @@
         <xsl:if test="$manifestUrl != ''">
           <xsl:attribute name="data-manifest"><xsl:value-of select="$manifestUrl"/></xsl:attribute>
         </xsl:if>
-        <span class="sr-only">Voir le cartulaire</span>
+        <span class="sr-only"><xsl:value-of select="$libelle"/></span>
       </a>
     </li>
+  </xsl:template>
+
+  <!-- Lien externe dans un témoin (visionneuse des Archives nationales, page Internet Archive de la
+       Gallia christiana, 23/11) : nouvel onglet, pour ne pas quitter l'édition. -->
+  <xsl:template match="tei:witness//tei:ref[starts-with(@target, 'http')]" priority="12">
+    <a href="{@target}" target="_blank" rel="noopener">
+      <xsl:if test="@type = 'archives-nationales'">
+        <xsl:attribute name="class">lien-archives-nationales</xsl:attribute>
+        <xsl:attribute name="title">Voir aux Archives nationales</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </a>
   </xsl:template>
 
   <!-- ==== C2-TEMOINS-FIN ==== -->
