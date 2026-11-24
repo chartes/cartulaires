@@ -35,7 +35,13 @@
        l'Inventaire général (ISD-vol1-3) et les pages du site par le projet saint-denis. Liens
        relatifs à /elec/<projet>/document/<ressource>, justes depuis l'un et l'autre projet. -->
   <xsl:variable name="sd-vers-chapitres" select="'../../cartulaires/document/'"/>
-  <xsl:variable name="sd-vers-sd" select="'../../saint-denis/document/'"/>
+  <!-- 2026-11-24 : les pages du site (saint-denis-site) sont elles aussi passées dans les cartulaires : le projet
+       saint-denis est vide. -->
+  <xsl:variable name="sd-vers-sd" select="'../../cartulaires/document/'"/>
+  <!-- 2026-11-24 : l'Inventaire général (ISD-vol1-3, avec son introduction, ses images et son index des auteurs)
+       quitte le projet saint-denis pour la collection « Chartes médiévales de l'abbaye de Saint-Denis » des
+       cartulaires, à côté du Cartulaire blanc. -->
+  <xsl:variable name="sd-vers-isd" select="'../../cartulaires/document/'"/>
 
   <xsl:output indent="no"/>
 
@@ -159,6 +165,10 @@
         <span class="witness">
           <xsl:if test="@xml:id"><xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute></xsl:if>
           <xsl:apply-templates/>
+          <!-- 24/11 : page citée du Cartulaire blanc (@facs = image IIIF de l'IRHT, @corresp = manifeste) : vignette dots-vue. -->
+          <xsl:if test="starts-with(@facs, 'https://')">
+            <a class="pb" href="{@facs}" data-manifest="{@corresp}" title="Voir le cartulaire"/>
+          </xsl:if>
         </span>
       </xsl:for-each>
     </xsl:variable>
@@ -538,7 +548,8 @@
     </section>
   </xsl:template>
 
-  <!-- Rôle : Page de présentation (div type="page") : article.sd-static-page avec un titre h1. -->
+  <!-- Rôle : Page de présentation (div type="page") : article.sd-static-page.
+       Le titre suit la profondeur éditoriale : seul le titre de la page courante est un h1. -->
   <xsl:template match="tei:div[@type='page']" priority="12">
     <article class="sd-static-page">
       <xsl:if test="@xml:id">
@@ -547,7 +558,10 @@
       <xsl:if test="@corresp">
         <xsl:attribute name="data-legacy-source"><xsl:value-of select="@corresp"/></xsl:attribute>
       </xsl:if>
-      <h1 class="sd-page-title"><xsl:value-of select="tei:head[1]"/></h1>
+      <xsl:element name="{concat('h', min((count(ancestor::tei:div[@type = 'page']) + 1, 6)))}">
+        <xsl:attribute name="class">sd-page-title</xsl:attribute>
+        <xsl:value-of select="tei:head[1]"/>
+      </xsl:element>
       <xsl:apply-templates select="node()[not(self::tei:head[1])]"/>
     </article>
   </xsl:template>
@@ -593,6 +607,38 @@
     <img class="sd-graphic" loading="lazy" src="{$sd-images}assets/{substring-after(@url, 'legacy-source/assets/')}" alt="{normalize-space(@n)}"/>
   </xsl:template>
 
+  <!-- Rôle : Saut de page dont l'image est IIIF (Cartulaire blanc numérisé par l'IRHT, 24/11) : lien a.pb vers
+       l'image, avec son manifeste (@corresp) ; dots-vue en fait une vignette en marge qui ouvre Mirador sur la vue.
+       Libellé « Cartulaire blanc, tome 1 (LL 1157), page N ». Pages « Images du Cartulaire blanc » : seule la
+       première image d'un chapitre ou d'un tome porte la vignette (« Feuilleter… ») ; le reste se parcourt dans Mirador. -->
+  <xsl:template match="tei:pb[starts-with(@facs, 'https://')]" priority="21">
+    <xsl:variable name="tome" select="if (contains(@corresp, 'fe28wcx1rnz1')) then '2' else '1'"/>
+    <xsl:variable name="galerie" select="exists(ancestor-or-self::tei:div[starts-with(@xml:id, 'sd-les-images--images-cb--')])"/>
+    <xsl:variable name="premiere" select="generate-id(.) = generate-id((ancestor::tei:div[@type = ('subpart', 'page')][1]//tei:pb[@facs])[1])"/>
+    <xsl:variable name="libelle">
+      <xsl:choose>
+        <xsl:when test="$galerie and ancestor::tei:div[@type = 'subpart']">
+          <xsl:value-of select="concat('Feuilleter les images du chapitre « ', normalize-space(ancestor::tei:div[@type = 'subpart'][1]/tei:head[1]), ' »')"/>
+        </xsl:when>
+        <xsl:when test="$galerie">
+          <xsl:value-of select="concat('Feuilleter les images de ', normalize-space(ancestor-or-self::tei:div[@type = 'page'][starts-with(@xml:id, 'sd-les-images--images-cb--')][1]/tei:head[1]))"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat('Cartulaire blanc, tome ', $tome, ' (LL 115', 6 + number($tome), ')', if (normalize-space(@n) != '') then concat(', page ', normalize-space(@n)) else '')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$galerie and not($premiere)"/>
+      <xsl:otherwise>
+        <span class="sd-pb sd-pb-iiif">
+          <a class="pb" href="{@facs}" data-manifest="{@corresp}"/>
+          <span class="sd-folio-libelle"><xsl:value-of select="$libelle"/></span>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <!-- Rôle : Saut de page avec fac-similé : folio dépliable (« Cartulaire blanc, tome 1 (LL 1157), page N » puis l'image). -->
   <xsl:template match="tei:pb[@facs]" priority="20">
     <xsl:variable name="rel" select="substring-after(@facs, 'images/saint-denis/')"/>
@@ -618,11 +664,18 @@
     </xsl:variable>
     <!-- 2026-11-12 : pages « Images du Cartulaire blanc » (une par tome) : la page quand un chapitre la cite,
          sinon le numéro de la vue dans le nom du fichier des Archives nationales (0231R). -->
-    <xsl:variable name="galerie" select="exists(ancestor::tei:div[starts-with(@xml:id, 'sd-les-images--images-cb--')])"/>
+    <xsl:variable name="galerie" select="exists(ancestor-or-self::tei:div[starts-with(@xml:id, 'sd-les-images--images-cb--')])"/>
     <xsl:variable name="vue" select="replace($fichier, '^.*_(\d+[RV])_L\.jpg$', '$1')"/>
     <xsl:variable name="libelle">
       <xsl:if test="$galerie">
-        <xsl:value-of select="if (normalize-space(@n) != '') then concat('page ', normalize-space(@n), ' (image ', $vue, ')') else concat('image ', $vue)"/>
+        <xsl:choose>
+          <xsl:when test="ancestor::tei:div[@type = 'subpart']">
+            <xsl:value-of select="concat('Feuilleter les images du chapitre « ', normalize-space(ancestor::tei:div[@type = 'subpart'][1]/tei:head[1]), ' »')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="concat('Feuilleter les images de ', normalize-space(ancestor-or-self::tei:div[@type = 'page'][starts-with(@xml:id, 'sd-les-images--images-cb--')][1]/tei:head[1]))"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:if>
       <xsl:if test="not($galerie)">
       <xsl:value-of select="$ouvrage"/>
@@ -639,6 +692,19 @@
       </xsl:if>
       </xsl:if>
     </xsl:variable>
+    <!-- Les pages « Images du Cartulaire blanc » donnent un lien de consultation simple :
+         le tome commence au début ; un chapitre à sa première image. -->
+    <xsl:variable name="premiere" select="generate-id(.) = generate-id((ancestor::tei:div[@type = ('subpart', 'page')][1]//tei:pb[@facs])[1])"/>
+    <xsl:choose>
+      <xsl:when test="$galerie and $premiere">
+        <p class="sd-gallery-link">
+          <a href="http://saint-denis.enc.sorbonne.fr/images/{$serie}/voir.html{if (ancestor::tei:div[@type = 'subpart']) then concat('?ns=', $fichier) else ''}" target="_blank" rel="noopener">
+            <xsl:value-of select="$libelle"/>
+          </a>
+        </p>
+      </xsl:when>
+      <xsl:when test="$galerie"/>
+      <xsl:otherwise>
     <details class="sd-folio sd-pb">
       <summary>
         <span class="sd-folio-libelle">
@@ -648,6 +714,8 @@
       <img class="sd-folio-img" loading="lazy" src="{$sd-images}{$serie}/{$fichier}"
            alt="{if (normalize-space($libelle) != '') then $libelle else $fichier}"/>
     </details>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <!-- Rôle : Développement d'abréviation : sans les crochets que met hteiml. -->
@@ -732,6 +800,12 @@
   </xsl:template>
 
   <!-- ==== 4. MÉCANISMES COMMUNS : tableau filtrable (tf-*), liens vers l'ancien site (D5), liens internes entre fragments ==== -->
+
+  <!-- Rôle : sommaire des images du Cartulaire blanc. Chaque entrée mène vers son
+       fragment éditorial (tome ou chapitre), et non directement vers la visionneuse. -->
+  <xsl:template match="tei:div[@xml:id = 'sd-les-images--images-cb']//tei:ref[starts-with(@target, '#sd-les-images--images-cb--')]" priority="30">
+    <a class="sd-internal" href="?refId={substring-after(@target, '#')}"><xsl:apply-templates/></a>
+  </xsl:template>
 
   <!-- Rôle : Renvoi à une illustration : image dépliable, lien vers le PDF, ou mention de son absence. -->
   <xsl:template match="tei:ref[starts-with(@target, 'illustrations/')] | tei:ptr[starts-with(@target, 'illustrations/')]" priority="12">
@@ -882,7 +956,7 @@
                           and not(contains($sd-ig-lacunes, concat(' ', $v, '-', $num, ' ')))">
             <a class="sd-inventaire sd-ig-renvoi"
                title="Notice n° {$num} de l'Inventaire général, tome {regex-group(1)}"
-               href="{$sd-vers-sd}ISD-vol{$v}?refId=ISD-vol{$v}_notice{$num}">
+               href="{$sd-vers-isd}ISD-vol{$v}?refId=ISD-vol{$v}_notice{$num}">
               <xsl:value-of select="."/>
             </a>
           </xsl:when>
@@ -988,7 +1062,7 @@
         <a class="sd-internal" href="{$sd-vers-chapitres}{$file}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:when test="starts-with($file, 'ISD-vol') and starts-with($frag, 'notice')">
-        <a class="sd-inventaire" href="{$sd-vers-sd}{$file}?refId={$file}_{$frag}"><xsl:apply-templates/></a>
+        <a class="sd-inventaire" href="{$sd-vers-isd}{$file}?refId={$file}_{$frag}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:otherwise><xsl:apply-imports/></xsl:otherwise>
     </xsl:choose>
@@ -1031,7 +1105,7 @@
     <xsl:variable name="chap" select="substring-before(substring-after($url, '/cartulaire/tome1/'), '/')"/>
     <xsl:choose>
       <xsl:when test="$url = 'http://saint-denis.enc.sorbonne.fr/'">
-        <a class="idno d5-local" href="../../saint-denis/"><xsl:apply-templates/></a>
+        <a class="idno d5-local" href="../../cartulaires/"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:when test="contains($sd-chapitres, concat(' ', $chap, ' ')) and $url = concat('http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/', $chap, '/')">
         <a class="idno d5-local" href="{$sd-vers-chapitres}{$chap}"><xsl:apply-templates/></a>
@@ -1065,6 +1139,18 @@
         else if (starts-with($cb-page, 'sd-les-images--images-cb')) then 'cartulaire-blanc-images'
         else if ($cb-page = $cb-pages[position() = (6, 7, 12)]) then 'cartulaire-blanc-index'
         else 'cartulaire-blanc'"/>
+    <!-- 2026-11-24 : pages de l'Inventaire général, passées dans les cartulaires (sous-collection inventaire-general) :
+         inventaire-introduction (introduction en tête, présentation, édition électronique), inventaire-images,
+         inventaire-index (index des auteurs d'actes). Même règle que ci-dessus : page = plus long préfixe de la cible. -->
+    <xsl:variable name="ig-pages" select="('sd-les-textes--inventaire--introduction', 'sd-les-textes--inventaire--presentation', 'sd-les-textes--inventaire--parcourir', 'sd-les-images--images-ig', 'sd-index-auteurs-inventaire', 'sd-scientifique-inventaire', 'sd-informatique-inventaire')"/>
+    <xsl:variable name="ig-page" select="if ($id = 'sd-inventaire-general') then $ig-pages[1]
+        else if (starts-with($id, 'sd-index-auteurs-inventaire')) then $ig-pages[5]
+        else if (starts-with($id, 'sd-le-projet--aspects-scientifiques--inventaire')) then $ig-pages[6]
+        else if (starts-with($id, 'sd-le-projet--aspects-informatiques--inventaire') and $id != 'sd-le-projet--aspects-informatiques--inventaire--encodage-des-enrichissements-editoriaux') then $ig-pages[7]
+        else $ig-pages[$id = . or starts-with($id, concat(., '--'))][last()]"/>
+    <xsl:variable name="ig-res" select="if ($ig-page = $ig-pages[4]) then 'inventaire-images'
+        else if ($ig-page = $ig-pages[5]) then 'inventaire-index'
+        else 'inventaire-introduction'"/>
     <xsl:variable name="rub">
       <xsl:choose>
         <xsl:when test="$id = 'sd-les-images--accueil'
@@ -1102,6 +1188,11 @@
           <xsl:apply-templates/>
         </a>
       </xsl:when>
+      <xsl:when test="exists($ig-page)">
+        <a class="sd-internal sd-site-page" href="{$sd-vers-chapitres}{$ig-res}?refId={$ig-page}{if ($id != $ig-page) then concat('#', $id) else ''}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
       <xsl:when test="$rub != '' and $rub != $id">
         <a class="sd-internal sd-site-page" href="{$sd-vers-sd}saint-denis-site?refId={$rub}#{$id}">
           <xsl:apply-templates/>
@@ -1123,10 +1214,10 @@
     <xsl:variable name="notice" select="substring-after($apres, '/')"/>
     <xsl:choose>
       <xsl:when test="$tome != '' and starts-with($notice, 'notice')">
-        <a class="sd-inventaire sd-inventaire-url" href="{$sd-vers-sd}ISD-vol{$tome}?refId=ISD-vol{$tome}_{$notice}"><xsl:apply-templates/></a>
+        <a class="sd-inventaire sd-inventaire-url" href="{$sd-vers-isd}ISD-vol{$tome}?refId=ISD-vol{$tome}_{$notice}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:when test="$tome != '' and normalize-space($notice) = ''">
-        <a class="sd-inventaire sd-inventaire-tome" href="{$sd-vers-sd}ISD-vol{$tome}"><xsl:apply-templates/></a>
+        <a class="sd-inventaire sd-inventaire-tome" href="{$sd-vers-isd}ISD-vol{$tome}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:otherwise>
         <a class="sd-legacy-inventaire" href="{@target}" target="_blank" rel="noopener"><xsl:apply-templates/></a>
@@ -1141,7 +1232,7 @@
     <xsl:choose>
       <xsl:when test="starts-with($file, 'ISD-vol')">
         <a class="sd-inventaire sd-index-renvoi"
-           href="{$sd-vers-sd}{$file}?refId={$file}_{$frag}">
+           href="{$sd-vers-isd}{$file}?refId={$file}_{$frag}">
           <xsl:value-of select="@n"/>
         </a>
       </xsl:when>
@@ -1164,7 +1255,35 @@
         <xsl:otherwise>cartulaire</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <a class="sd-internal sd-index-ancre" href="#sd-index-auteurs-{$cle}">
+    <a class="sd-internal sd-index-ancre" href="{if ($cle = 'inventaire') then concat($sd-vers-chapitres, 'inventaire-index?refId=sd-index-auteurs-inventaire') else concat('#sd-index-auteurs-', $cle)}">
+      <xsl:apply-templates/>
+    </a>
+  </xsl:template>
+
+  <!-- 2026-11-24 : modèles de la feuille du projet saint-denis nécessaires aux pages du site (parties, blocs en ligne,
+       adresse de l'ancien site) et à la page des images de l'Inventaire, depuis que ces pages sont servies ici. -->
+  <xsl:template match="tei:div[@type='part']" priority="12">
+    <section class="sd-part">
+      <xsl:if test="@xml:id">
+        <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
+      </xsl:if>
+      <h1 class="head sd-part-title"><xsl:value-of select="tei:head[1]"/></h1>
+      <xsl:apply-templates select="node()[not(self::tei:head[1])]"/>
+    </section>
+  </xsl:template>
+
+  <xsl:template match="tei:ab[@type = 'legacy-inline']" priority="12">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="tei:idno[not(@type = 'URI' and ../tei:title)][normalize-space(.) = 'http://saint-denis.enc.sorbonne.fr/']" priority="14">
+    <a class="idno d5-local" href="../../cartulaires/"><xsl:apply-templates/></a>
+  </xsl:template>
+
+  <xsl:template match="tei:ref[contains(@target, 'images/inventaire/tome')][contains(@target, '/voir.html')][not(contains(@target, 'ns='))]"
+                priority="16">
+    <a class="sd-internal sd-site-page"
+       href="{$sd-vers-isd}ISD-vol{substring(substring-before(substring-after(@target, 'images/inventaire/tome'), '/voir.html'), 1, 1)}">
       <xsl:apply-templates/>
     </a>
   </xsl:template>

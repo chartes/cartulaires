@@ -1,0 +1,435 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="saint-denis-site">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Chartes de l’abbaye de Saint-Denis — pages éditoriales historiques</title>
+        <title type="short">Saint-Denis : pages du site</title><editor ref="https://www.wikidata.org/wiki/Q273570 https://data.bnf.fr/fr/ark:/12148/cb118634749 https://www.idref.fr/026375052">École nationale des chartes</editor>
+      </titleStmt>
+      <publicationStmt>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
+        <date when="2026">2026</date>
+        <idno>http://saint-denis.enc.sorbonne.fr/</idno><availability>
+          <p>Reconstruction de migration à partir du site ÉLEC historique ; conserver les droits et licences des sources.</p>
+        <licence target="https://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Creative Commons : Paternité - Pas d’Utilisation Commerciale - Pas de Modification ; 2.0 France</licence></availability>
+      </publicationStmt>
+      <notesStmt><note type="citation">École nationale des chartes, Chartes de l’abbaye de Saint-Denis — pages éditoriales historiques, 2026. [En ligne : http://saint-denis.enc.sorbonne.fr/]</note></notesStmt><sourceDesc>
+        <p>Source : http://saint-denis.enc.sorbonne.fr/ ; crawl structurel du 10 septembre 2026.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Reconstruction des pages éditoriales statiques du site historique et de leur hiérarchie, séparée des six ressources TEI du Cartulaire blanc.</p>
+      </projectDesc>
+      <refsDecl>
+        <!-- 2026-09-24 : plan editorial du responsable scientifique (une page d'introduction
+             generale + quatre parties), en remplacement des trois rubriques de l'ancien site.
+             Une seule citeStructure par niveau : DoTS construit le registre des fragments
+             citeStructure par citeStructure, et des structures soeurs desordonneraient le
+             sommaire. 'partie' = niveau 1 (l'introduction generale y figure comme page) ;
+             'section' = niveau ou pages et sous-parties se melent.
+             Le div[@type='ecarte'] en fin de body n'est capte par aucun niveau : son contenu
+             reste dans le fichier mais hors sommaire. -->
+        <citeStructure unit="partie" match="/TEI/text/body/div[@type=('page','part')]" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeStructure unit="section" match="div[@type=('page','subpart','index')][not(@xml:id = 'sd-le-projet--credits')]" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeStructure unit="section" match="div[@type=('page','subpart')] | list[@type='index'][head]" use="@xml:id">
+              <citeData property="dct:title" use="head[1]"/>
+              <citeStructure unit="page" match="div[@type='page']" use="@xml:id">
+                <citeData property="dct:title" use="head[1]"/>
+              </citeStructure>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">français</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-11-24">Les pages du site quittent le projet saint-denis pour la collection « Chartes médiévales de l’abbaye de Saint-Denis » des cartulaires, avec le Cartulaire blanc et l’Inventaire général. Retirées d’ici : la partie « L’Inventaire général » (introduction, présentation, édition électronique, index des auteurs, images) et les pages « Pour l’Inventaire » du projet, passées dans les ressources inventaire-introduction, inventaire-images et inventaire-index ; « Aspects scientifiques », vide, retiré.</change>
+      <change when="2026-09-25">Les cinq renvois de visionneuse de serie portent desormais en @n le nombre de pages conservees localement : 968 et 629 pour les deux tomes du Cartulaire blanc, 938, 1029 et 804 pour les trois tomes de l’Inventaire, soit 4 368 pages. Ces nombres sont un ETAT ARRETE du fonds, releve le 2026-09-24 sur le dossier d’images servi, et non un calcul : le TEI ne liste pas les folios un a un et rien ici ne permet de les recalculer. Ils remplacent un decompte que la feuille tirait du fichier compagnon saint-denis-images-locales.xml, supprime le meme jour. Le fonds etant clos, ils n’ont pas vocation a changer ; s’il s’ouvrait de nouveau, ils seraient a reprendre a la main.</change>
+      <change when="2026-09-24">Refonte du sommaire selon le plan editorial du responsable scientifique : une page d'introduction generale puis quatre parties (actes du haut Moyen Age, Cartulaire blanc, Inventaire general, le projet). Les trois rubriques de navigation de l'ancien site disparaissent ; la rubrique Les images aussi, ses deux pages de feuilletage rejoignant les parties 2 et 3. Pages ecartees du sommaire regroupees dans div[@xml:id='sd-ecarte'], hors citeStructure. refsDecl adapte.</change><change when="2026-09-10">Enrichissement du teiHeader selon le modèle DoTS : title[@type=short], publisher/@ref, date/@when, idno, licence/@target, notesStmt/note[@type=citation].</change><change when="2026-09-10">Création à partir du dump structurel du site historique Saint-Denis.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="page" xml:id="sd-les-textes--accueil" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/index.html">
+          <head>Chartes de l’abbaye de Saint-Denis : présentation</head>
+          <anchor xml:id="sd-les-textes--accueil--preambule"/>
+          <!-- 2026-10-28 : menu de l'ancien site retiré (doublon du sommaire de dots-vue) -->
+          <anchor xml:id="sd-les-textes--accueil--histoire"/>
+          <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Histoire et patrimoine de l’abbaye</p>
+<p>L’abbaye de Saint-Denis, à l’origine de l’actuelle agglomération (Seine-Saint-Denis, ch.-l. arr.), trouve son origine dans la sépulture du martyr et premier évêque supposé de Paris, Denis, que la tradition tendit rapidement à confondre avec le disciple de saint Paul, Denis l’Aréopagite, premier évêque d’Athènes et lui-même présenté comme auteur d’une série d’écrits théologiques, pour la première fois traduits du grec en latin au début du IX<hi rend="sup">e</hi> siècle.</p>
+<p>Fondée sur ce lieu par sainte Geneviève vers 475, une basilique prospéra avec la faveur des rois mérovingiens dominant Paris, qui en firent l’un de leurs lieux de sépulture. Au milieu du
+VII<hi rend="sup">e</hi> siècle, les desservants furent « régularisés », le statut monastique se voyant un moment remis en question au début du IX<hi rend="sup">e</hi> siècle (scission entre moines et chanoines), pour être finalement acquis jusqu’à la fin de l’Ancien Régime. En même temps que saint Denis devenait le « patron particulier » des rois et du royaume, et que les abbés nouaient des liens étroits avec les dynasties carolingienne et capétienne (comme auparavant, par habileté et par chance, avec les ancêtres pippinides puis robertiens qui leur préparaient la voie), l’abbaye développait une relation privilégiée avec la royauté, l’histoire du royaume, les objets du sacre et l’oriflamme, les corps et la mémoire des rois défunts.</p>
+<p>Conséquence directe de la faveur rencontrée, soutien d’une liturgie fastueuse, d’une politique monumentale grandiose et souvent à la pointe du goût, d’une thésaurisation intense, d’une vie conventuelle qui a dû voir coexister autour de cent à cent cinquante moines aux bonnes époques, le patrimoine, encore assez mal connu dans le détail, est sans doute moins exceptionnel par sa richesse propre et par le talent gestionnaire des moines que par la permanence assez rare de sa structure. En dépit de multiples remous, il livre encore, au XIII<hi rend="sup">e</hi> siècle, une image complexe où se lisent à la fois le statut de très grand propriétaire à Saint-Denis et aux alentours, dans une « France » du nord de Paris, et le maintien d’une structure haut-médiévale où la faveur des grands et des rois comme le souci de maintenir des zones variées d’approvisionnement expliquent l’existence d’une nébuleuse de possessions disposées en cercles concentriques, du Chartrain à la vallée de l’Aisne, de la Normandie à la Champagne, plus loin encore de l’Angleterre à l’Alsace, et du Limousin à la Hesbaye.</p>
+<p rend="smaller">
+    Nous espérons fournir progressivement des outils permettant de mieux percevoir le patrimoine de l’abbaye et son histoire ; une première approche, très imparfaite, est possible grâce aux cartes de localisation associées à la Table des chapitres du Cartulaire blanc.
+                </p>
+<p><ref target="#sd-les-textes--accueil--preambule">Retour au début</ref></p>
+</div>
+          <anchor xml:id="sd-les-textes--accueil--sort"/>
+          <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Le sort du chartrier monastique</p>
+<p>De nombreux documents attestent le soin exceptionnel que les moines des époques médiévale et moderne ont consacré à leur chartrier. Celui-ci a été moins la victime de pertes et de vols que de démembrements, sans compter sa masse même, qui a découragé les entreprises individuelles de repérage et d’édition.</p>
+<p>On sait encore peu de choses des réalités médiévales d’un chartrier dont l’unité est sûrement plus virtuelle qu’effective, même si l’on pressent, au travers des cartulaires et inventaires successifs, les efforts de centralisation autour des archives de l’abbé.</p>
+<p>Le premier grand démembrement, aux effets limités, est antérieur à la Révolution : il remonte au règne de Louis XIV et à la création de la « Maison royale de Saint-Louis à Saint-Cyr ». Cet établissement se vit affecter les revenus de la mense abbatiale de Saint-Denis et, en conséquence, non seulement des copies d’actes, des extraits de cartulaires, des doubles d’inventaires d’archives, mais encore des lots d’originaux, tous documents qui plus tard gagnèrent les actuelles Archives départementales des Yvelines.</p>
+<p>Pour le reste, remis en large partie aux Archives nationales après la fermeture de l’abbaye (quelques originaux passèrent aux Archives départementales de Paris, aux Archives municipales de Saint-Denis…), les fonds encore conservés au moment de la Révolution ont été victimes du démembrement qui a atteint l’ensemble des fonds ecclésiastiques nationalisés à Paris et dans le département de la Seine.</p>
+<p>Certains, jugés spécialement précieux pour l’histoire, ont été éparpillés dans la série K ; il se peut aussi (on le vérifiera progressivement au fur et à mesure de l’avancement du travail) que d’autres, utiles à la gestion des biens et domaines nationaux, l’aient été dans la sous-série Q1. La plupart toutefois des actes ont été répartis entre les séries L et S, d’où une grande partie des plans gagna la série N. Contrairement aux intitulés des séries L et S, nos premières investigations montrent que la répartition des documents (originaux et copies anciennes) entre « Monuments ecclésiastiques » (L) et « Temporel » (S) est demeurée inachevée et a largement consisté dans l’extraction, au profit de la série L, des actes les plus séduisants par leur ancienneté, leur forme ou leur texte, après un écrémage plus sévère encore à destination des « Cartons des rois » (en tête de la série K) et du « Bullaire » (en tête de la série L). De ce fait, les dossiers de la série S, plus riches en actes à compter du XIII<hi rend="sup">e</hi> siècle au moins, ont souvent gardé la trace de leur organisation archivistique ancienne.</p>
+<p><ref target="#sd-les-textes--accueil--preambule">Retour au début</ref></p>
+</div>
+          <anchor xml:id="sd-les-textes--accueil--inventaires"/>
+          <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Les inventaires anciens des archives</p>
+<p>Notable par la masse de la documentation conservée, l’histoire archivistique de Saint-Denis est proprement exceptionnelle par la densité d’inventaires d’archives, au sens large, qui nous ont été conservés du Moyen Âge et de l’époque moderne. On n’évoquera ici que les principaux et les plus généraux d’entre eux, et seulement dans leurs grands traits, directement nécessaires à l’exploitation du Cartulaire blanc.</p>
+<p rend="smaller">Première approche : O. Guyotjeannin, « La science des archives à Saint-Denis (fin du XIII<hi rend="sup">e</hi>-début du XVI<hi rend="sup">e</hi> siècle) », dans <hi rend="italic">Saint-Denis et la royauté : études offertes à Bernard Guenée</hi>, Paris, 1999 (Histoire ancienne et médiévale, 59), p. 339-353 ; « La tradition de l’ombre : les actes sous le regard des archivistes médiévaux (Saint-Denis, XII<hi rend="sup">e</hi>-XV<hi rend="sup">e</hi> siècles)  », dans <hi rend="italic">Charters, cartularies and archives : the preservation and transmission of documents in the medieval West, proceedings of a colloquium of the Commission internationale de diplomatique (Princeton and New York, 16-18 september 1999)</hi>, ed. by Adam J. Kosto and Anders Winroth, Toronto, 2002 (<hi rend="italic">Papers in mediaeval studies</hi>, 17), p. 81-112.</p>
+<list type="unordered"><item>L’Ancien inventaire noir (Arch. nat., LL 1184 ; cité “Anc. inv. noir”) est bien moins un inventaire d’archives qu’un résumé du Cartulaire blanc. Réalisé, sous réserve d’examen plus
+approfondi, aux années 1287-1289 (donc sans doute une dizaine d’années après l’achèvement du premier noyau du Cartulaire blanc), il reprend, mais parfois avec des erreurs, la numérotation des actes au
+Cartulaire, et ne donne pas davantage de « cote ». Il lui arrive toutefois, par exception, de signaler un acte non transcrit au Cartulaire blanc ; mais son intérêt tient essentiellement à la formulation qui est donnée au regeste des actes (annexe photo01 : p. 191).<lb/>L’Anc. inv. noir est aussi connu par une copie, dite « Inventaire jaune » (Arch. nat., LL 1186 ; cité “Inv. jaune”) ; elle n’a présenté pour l’heure que de rares variantes autres que de pure forme.</item><item>L’Ancien inventaire jaune (Arch. nat., LL 1185 ; cité “Anc. inv. jaune”) est d’une conception tout différente. Réalisé aux années 1320-1330 environ, en liaison avec la compilation d’une série de cartulaires spécialisés, il reprend à nouveaux frais l’inventoriage du chartrier, dont la répartition par masses est sensiblement la même, mais où le désordre a crû à l’intérieur des layettes, et où les originaux portent de nouvelles « cotes » (<hi rend="italic">signa</hi>), marquages qui remplacent les anciens numéros progressifs, toujours à l’intérieur d’une layette non explicitement nommée (annexe photo02 : p. 190).</item><item>On conserve aussi, dans un état daté de 1520, un inventaire entrepris à la fin du XVe siècle (Arch. nat., LL 1187 ; cité “Inv. de 1520”) ; ses regestes sont de faible intérêt en dehors de l’histoire du traitement des archives à l’extrême fin du Moyen Âge.</item><item>L’Inventaire général chronologique a été compilé des années 1680 aux années 1720 (cité “Inv. gén. I”, “Inv. gén. II” et “Inv. gén. III”, pour les trois premiers volumes, Arch. nat.,
+LL 1189, LL 1190 et LL 1191, qui vont respectivement des origines à 1224, de 1225 à 1300, et après 1300). Cette partie de la compilation est ici accessible <ref target="#sd-les-images--images-ig" corresp="http://saint-denis.enc.sorbonne.fr/les-images/images-ig.html">en images</ref> et
+<ref target="#sd-les-textes--inventaire--parcourir" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/parcourir.html">en édition critique</ref>.</item></list>
+<p><ref target="#sd-les-textes--accueil--preambule">Retour au début</ref></p>
+</div>
+          <anchor xml:id="sd-les-textes--accueil--biblio"/>
+          <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Orientation bibliographique</p>
+<p>Deux excellents instruments permettent de prolonger l’enquête historique.</p>
+<list type="unordered"><item>Sur l’histoire de Saint-Denis et plus précisément sur tout ce qui touche à l’archéologie du bâti et du paysage, <hi rend="italic">Atlas historique de Saint-Denis, des origines au XVIII<hi rend="sup">e</hi> siècle</hi>, dir. Michaël Wyss, Paris, 1996 (<hi rend="italic">Documents d’archéologie française</hi>, 59).</item><item>Sur les archives anciennes de l’abbaye, Rolf Grosse, <hi rend="italic">Papsturkunden in Frankreich</hi>, Neue Folge, 9. Band, <hi rend="italic">Diözese Paris</hi>, II, <hi rend="italic">Abtei Saint-Denis</hi>, Göttingen : Vandenhoeck &amp; Ruprecht, 1998, 257 p. (<hi rend="italic">Abhandlungen der Akademie der Wissenschaften in Göttingen, Philologisch-historische Klasse</hi>, Dritte Folge, 225) avec une bibliographie quasi exhaustive jusqu’à la date de parution, p. 9-20.</item></list>
+<p><ref target="#sd-les-textes--accueil--preambule">Retour au début</ref></p>
+</div>
+        </div>
+<div type="part" xml:id="sd-actes-haut-moyen-age">
+          <head>Actes du haut Moyen Âge</head>
+        <anchor xml:id="sd-les-textes--actes-du-haut-moyen-age--introduction"/><!-- 2026-10-28 : unique page de la partie, fusionnée avec elle -->
+            <div type="legacy-block" rend="static-content">
+<p>En 2003, Daniel Sonzogni confiait un mémoire original, « Le chartrier de l’abbaye de Saint-Denis en France au haut Moyen Âge : essai de reconstitution », à la revue <hi rend="italic">Pecia, ressources en archivistique</hi>, volume 3, [Saint-Denis], 2003, p. 9-210. Après une brève introduction, il y donnait un état détaillé des sources et de la bibliographie disponibles sur l’histoire de l’abbaye jusqu’en l’an mil, puis le catalogue des 267 actes retrouvés du chartrier de l’établissement, qu’ils fussent publiés ou inédits, connus par une tradition foisonnante ou par d’allusives mentions. Cette mise au point a été reprise à l’identique par les Éditions Brepols, dans la collection « Pecia : le livre et l’écrit », dédiée à la codicologie et à l’histoire du livre.</p>
+<p>Ce premier catalogue, qui a apporté une aide décisive, pour les premiers siècles, à l’édition numérique de l’Inventaire général des archives dionysiennes de 1680-1720, était, tout ce temps durant, poursuivi par l’auteur, jusqu’à former un ouvrage totalement nouveau, à l’information décuplée : pourvu d’une introduction étoffée sur les particularité de la fabrication, de la tradition et de l’archivage des actes du fonds de Saint-Denis, il ajoute aux sèches notices du catalogue primitif quelques nouvelles mentions, et surtout le fruit d’un examen attentif des originaux et copies anciennes, notes dorsales comprises, des discussions chronologiques et critiques, des identifications toponymiques serrées, et <hi rend="italic">last but not least</hi>, des extraits copieux de la plupart des actes, qui permettent au chercheur d’approfondir commodément sa lecture. Ces extraits sont pris aux meilleures éditions, et aussi souvent que possible à la base « Chartes originales antérieures à 1121 conservées en France » (&lt;<ref target="http://www.cn-telma.fr/originaux/index/">http://www.cn-telma.fr/originaux/index/</ref>&gt;).</p>
+<p>Ce nouvel ouvrage, intitulé <hi rend="italic">Les actes du fonds d’archives de Saint-Denis, VI<hi rend="sup">e</hi>-X<hi rend="sup">e</hi> siècle : étude critique et catalogue raisonné</hi>, a été généreusement confié par l’auteur à l’École nationale des chartes, pour insertion dans l’application « Chartes de l’abbaye de Saint-Denis ». Il est pour l’heure <hi rend="bold">disponible sous la forme de simples fichiers PDF zippés</hi> :</p>
+<list type="unordered"><item>I. <ref target="http://saint-denis.enc.sorbonne.fr/les-textes/actes-du-haut-moyen-age/Sonzogni_introduction.zip">Introduction, sources manuscrites, sources imprimées, bibliographie</ref> (texte mis à jour le 11 juillet 2016).</item><item> II. <ref target="http://saint-denis.enc.sorbonne.fr/les-textes/actes-du-haut-moyen-age/Sonzogni_catalogue_I.zip">Catalogue des actes, I, Actes n° 1-130 (VI<hi rend="sup">e</hi> siècle-780)</ref>.</item><item>III. <ref target="http://saint-denis.enc.sorbonne.fr/les-textes/actes-du-haut-moyen-age/Sonzogni_catalogue_II.zip">Catalogue des actes, II, Actes n° 131-184 (781-840)</ref> (texte mis à jour en juillet 2016 et janvier 2017).</item><item> IV. <ref target="http://saint-denis.enc.sorbonne.fr/les-textes/actes-du-haut-moyen-age/Sonzogni_catalogue_III.zip">Catalogue des actes, III, Actes n° 185-267 (841-fin du X<hi rend="sup">e</hi> siècle)</ref>.</item></list>
+<p>Noter que <hi rend="bold">ces fichiers sont placés sous la même licence que les autres contenus textuels du site</hi> ; les informations concernant cette licence figurent à la page de <ref target="#sd-le-projet--mentions-legales" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/mentions-legales.html">mentions légales</ref>.</p>
+<p><hi rend="bold">Il est projeté à brève échéance d’intégrer directement les données à l’édition numérisée, en cours, du chartrier</hi>.</p>
+
+</div>
+            <div type="legacy-block" rend="static-content">
+              <p rend="date">[Auteur de cette page : Olivier Guyotjeannin ; date de la dernière mise à jour : 20 janvier 2017]</p>
+            </div>
+          
+      </div>
+<div type="part" xml:id="sd-le-projet">
+        <head>Le projet</head>
+        <div type="page" xml:id="sd-le-projet--accueil" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/index.html">
+          <head>Présentation</head>
+          <div type="legacy-block" rend="static-content"><p>Cette partie du site rassemble toutes les informations
+                disponibles pour en savoir plus sur le présent projet.</p>
+<p>Il s’agit bien d’un projet - au sens où rien n’est terminé ; au contraire nous
+                espérons que le site Web et ses contenus vont s’enrichir et se transformer.</p><p>
+                C’est aussi un projet d’humanités numériques ; à tout le moins, les principes,
+                objectifs et besoins scientifiques sont autant que possible exprimés, accompagnés et
+                aidés par des travaux informatiques. Le travail du chercheur et le travail
+                informatique sont intimement liés.</p>
+<p>Ces pages seront progressivement complétées.</p>
+
+<p>On peut aussi consulter l’article intitulé « The digital edition of the medieval charters of the Abbey of Saint-Denis: first results and prospects », publié dans la revue électronique <hi rend="italic">Digital Medievalist</hi> (n° 8, 2012 ; voir &lt;<ref target="http://doi.org/10.16995/dm.48">http://doi.org/10.16995/dm.48</ref>&gt;).</p></div>
+          <div type="legacy-block" rend="static-content">
+            <p rend="date">[Auteurs des textes de cette section : Olivier
+                Guyotjeannin (aspects scientifiques), Florence Clavaud (aspects informatiques) ; date
+                de la dernière mise à jour : 4 août 2021]</p>
+          </div>
+        </div>
+        
+        <div type="subpart" xml:id="sd-aspects-informatiques">
+          <head>Aspects informatiques</head>
+          <div type="subpart" xml:id="sd-informatique-generalites">
+            <head>Généralités</head>
+          <div type="page" xml:id="sd-le-projet--aspects-informatiques--generalites--fabrique-du-corpus-numerique" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/generalites/fabrique-du-corpus-numerique.html">
+              <head>La fabrique du corpus numérique</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--generalites--fabrique-du-corpus-numerique--fabrique-du-corpus"/>
+              <div type="legacy-block" rend="static-content">
+<p>Les deux documents primaires étudiés ici ont été informatisés, et ce qu’on manipule
+                dans la présente application est le résultat actuel de ce processus
+                d’informatisation. Nous appellerons ce résultat corpus numérique ; nous présentons
+                ci-après les grandes caractéristiques de ce corpus.</p>
+<p>Les choix technologiques sont tous faits en tenant compte de la nécessité de garantir
+                la réutilisabilité des fichiers à moyen et long terme, que ce soit pour les porteurs
+                du projet, qui s’inscrit dans la longue durée, ou pour d’autres potentiels
+                utilisateurs. D’où l’emploi de standards, au premier plan desquels XML.</p>
+<div type="legacy-block">
+<p rend="heading-h2">Les images numériques</p>
+<p>Les images numériques disponibles reproduisent la totalité des registres
+                    originaux pour la période étudiée (du Haut Moyen Âge à 1302). La décision de
+                    numériser ces documents (pour l’Inventaire, les images numériques n’existaient
+                    pas) et d’intégrer toutes les images au corpus numérique a été prise dès le
+                    début du projet, en 2007. En effet, beaucoup de travail restant à faire pour
+                    éditer ou simplement mieux exploiter le Cartulaire blanc après l’édition de
+                    quatre de ses chapitres, on souhaitait offrir aux chercheurs des moyens
+                    efficaces de voir les registres eux-mêmes. Par ailleurs, qu’il s’agisse de
+                    l’Inventaire ou du Cartulaire blanc, les images sont publiées comme la référence
+                    de l’édition scientifique qui en a été faite, qui si elle est exhaustive et
+                    critique, n’en exprime pas tous les aspects, n’en donne qu’un point de vue, et
+                    peut toujours être modifiée.</p><p>Pour obtenir la qualité nécessaire, le choix
+                    de la numérisation couleur directe à une résolution relativement élevée s’est
+                    imposé. Techniquement il s’agit aujourd’hui d’une opération classique. La
+                    numérisation à la page a été choisie ; ce choix convenait à tous. Il est
+                    conforme à la pratique habituelle en cas de numérisation directe de registre. La
+                    page (ou le feuillet) est la principale unité d’organisation physique des
+                    documents, numériser en double page ouverte aurait produit des collections
+                    d’images structurées selon un autre modèle et compliqué une donne déjà complexe.
+                    Les images ont été stockées dans un système de fichiers, un dossier par document
+                    (l’inventaire, le cartulaire), un sous-dossier par tome.</p>
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">L’édition structurée en XML/EAD de l’Inventaire général</p>
+<p>Le deuxième composant du corpus numérique est constitué de l’édition structurée
+                    de l’Inventaire général, qu’il fallait absolument rendre lisible et cherchable.
+                    Ce texte a certaines des caractéristiques d’un inventaire analytique d’archives,
+                    comme le montre la <ref target="#sd-les-textes--inventaire--presentation--contenu-et-presentation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/contenu-et-presentation.html">présentation</ref> qui en est faite. Ce qui intéresse les porteurs du projet
+                    de recherche dans ce texte, c’est avant tout son contenu. Il a donc été décidé
+                    d’utiliser le modèle <ref target="http://www.loc.gov/ead/">XML/EAD 2002</ref>, qui permet de baliser efficacement des
+                    métadonnées archivistiques, pour encoder cet ancien inventaire ; ce choix
+                    correspond aussi aux travaux entrepris par les Archives nationales il y a près
+                    de dix ans pour convertir les très nombreux inventaires de ses fonds et
+                    collections en fichiers XML/EAD. L’Inventaire général est cependant également un
+                    manuscrit ancien, qu’il fallait éditer. Des règles spécifiques d’emploi du
+                    modèle EAD ont donc été définies, visant notamment à distinguer nettement le
+                    texte original transcrit des interventions éditoriales telles que les notes, et
+                    à intégrer aux fichiers XML toutes les informations supplémentaires jugées
+                    utiles par l’éditeur scientifique (datation avec les méthodes scientifiques
+                    actuelles, indexation des auteurs d’actes, éléments de bibliographie).</p><p> Au total, trois fichiers XML/EAD ont été produits,
+                    un par tome de l’Inventaire général. </p>
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">L’édition structurée en XML/TEI P5 du Cartulaire blanc</p>
+<p>Le troisième composant du corpus numérique, qui est appelé (nous l’espérons en
+                    tout cas) à beaucoup s’enrichir, est au 15 juin 2011 constituée de l’édition
+                    structurée de cinq chapitres du Cartulaire blanc. En 2006, l’édition de deux
+                    de ces chapitres avait déjà été publiée, sans les images numériques, par l’Ecole
+                    des chartes. Les lignes de force des choix faits à ce moment-là ont été
+                    conservées : c’est donc le modèle TEI qui a été utilisé. Depuis 2006 ce modèle a
+                    lui-même beaucoup évolué, avec la publication d’une <ref target="http://www.tei-c.org/Guidelines/P5/">version P5</ref> majeure en
+                    novembre 2007, légèrement revue depuis. Le travail de structuration s’est fait
+                    après avoir défini de nouvelles règles d’encodage, les fichiers anciens ont été
+                    revus pour être rendus conformes à ces règles. Ce travail a été mené en même
+                    temps que beaucoup d’autres de même nature à l’Ecole des chartes ; il a été affiné au printemps 2011. L’essentiel a été fait manuellement. </p><p>
+</p>
+<p>Les fichiers XML/TEI produits, accompagnés
+                    de leur modèle XML documenté, seront très bientôt téléchargeables. Le modèle TEI est proche de celui défini pour d’autres projets d’édition d’actes par l'Ecole des chartes, avec quelques particularités qui l’en distinguent. Pour le projet, l’important est qu’<hi rend="bold">il sera désormais beaucoup plus facile, grâce à ce modèle d’une part, et à l’application d’autre part, de poursuivre le travail d’édition structurée, et de publier d’autres chapitres</hi>.</p>
+
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">Liens entre composants</p>
+<p>Un des souhaits du responsable scientifique du projet, et un des objectifs
+                    informatiques importants, était de permettre la navigation entre les regestes de
+                    l’Inventaire et les actes que ces regestes décrivent tels que copiés au
+                    Cartulaire, et vice-versa, qu’il s’agisse des images ou des textes édités. Les
+                    deux collections d’images, et les deux groupes de fichiers XML (EAD et TEI)
+                    décrits rapidement ci-dessus ont cependant été produits séparément, par des
+                    processus distincts ; de plus on souhaitait pouvoir les faire évoluer, les
+                    réutiliser et les rendre réutilisables par d’autres, indépendamment l’un de
+                    l’autre. Rappelons que les collections d’images ont été produites en prenant
+                    comme base de travail les principales unités d’organisation physique des
+                    originaux, tome et page ; les fichiers XML ont, eux, été produits en prenant
+                    comme base de travail les unités principale d’organisation logique, le regeste
+                    et l’acte. La correspondance entre les quatre composants ne pouvait être déduite
+                    de cet existant. Il fallait donc une solution externe à ces fichiers pour
+                    exprimer les liens entre ces quatre composants.</p><p>Le choix fait a consisté à
+                    déclarer ces liens à l’intérieur de fichiers <ref target="http://www.loc.gov/standards/mets/">METS</ref> (un modèle XML pour
+                    décrire des paquets de fichiers, et pour stocker des métadonnées sur ces
+                    paquets, en particulier des métadonnées de préservation). Chacun des fichiers
+                    METS produits l’a été par la société Dataland, en même temps qu’elle procédait à
+                    la numérisation, en partant des documents originaux ou des images numériques. En
+                    effet, pour l’Inventaire général et pour le Cartulaire blanc, il fallait
+                    déclarer le lien entre le numéro de page et l’image correspondante, donc revenir
+                    aux originaux. D’autre part un regeste de l’Inventaire général mentionne le cas
+                    échéant la copie de l’acte au Cartulaire blanc. Les fichiers METS ont ensuite
+                    été revus à la main ; pour le Cartulaire blanc, les tableaux de la tradition
+                    présents dans l’édition critique des actes ont servi de base de travail pour
+                    encoder le lien avec le regeste de l’Inventaire général. Les fichiers METS
+                    servent donc actuellement de ressource pour : </p>
+<list type="unordered"><item>générer la table cumulative des actes en rapportant à chaque acte édité du
+                        Cartulaire tous les liens qu’il entretient avec d’autres unités ;</item><item>ajouter certains critères de recherche dans les formulaires de recherche
+                        avancée ;</item><item>augmenter de liens l’édition d’un acte ou d’un regeste, ou la page de
+                        consultation des images ;</item><item>permettre la recherche par page dans la fenêtre de consultation des
+                        images.</item></list>
+</div>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-informatiques--generalites--caracteristiques-de-l-application" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/generalites/caracteristiques-de-l-application.html">Quelques caractéristiques de
+                    l’application</ref></p>
+</div>
+            </div>
+        </div>
+          
+        </div>
+        <div type="page" xml:id="sd-le-projet--telecharger" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/telecharger.html">
+          <head>Téléchargements</head>
+          <div type="legacy-block" rend="static-content">
+<p>Vous pouvez télécharger depuis cette page :</p>
+<list type="unordered"><item>la <hi rend="bold"><ref target="http://saint-denis.enc.sorbonne.fr/le-projet/ENC-ChartesSaintDenis-TEIfiles.zip">dernière version en date des fichiers TEI de l’édition critique du Cartulaire blanc</ref></hi> (à ce jour, six chapitres soit 411 actes, en six fichiers TEI), ainsi que le fichier ODD et le schéma RELAX NG
+                    associés (dans une version préliminaire qui sera fortement revue prochainement), produits à l’aide de l’application <ref target="http://www.tei-c.org/Roma/">Roma</ref> ;</item><item>la <hi rend="bold"><ref target="http://saint-denis.enc.sorbonne.fr/les-textes/cartulaire-blanc/parcourir/ENC-ChartesSaintDenis-liste-des-actes.zip">table cumulative des actes édités</ref></hi> au format CSV - l’équivalent dans ce format de la table disponible ici : &lt;<ref target="#sd-les-textes--cartulaire-blanc--parcourir--table-des-actes" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/cartulaire-blanc/parcourir/table-des-actes.html">http://saint-denis.enc.sorbonne.fr/les-textes/cartulaire-blanc/parcourir/table-des-actes.html</ref>&gt; (fichier encodé en UTF-8, tabulation comme séparateur de valeurs).</item></list>
+<p>Comme tous les composants des corpus numériques rendus accessibles par l’École nationale des chartes, ces fichiers sont placés sous licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas d’Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> ».</p>
+<p>Date de mise à disposition de ces fichiers : <hi rend="bold">14 juin 2012</hi>. Date de dernière modification : <hi rend="bold">14 juin 2012</hi>.</p>
+<p>Comme l’édition est progressive et évolutive aussi bien dans ses contenus que dans ses fonctionnalités, ces fichiers vont continuer d’évoluer. D’autres fichiers seront rendus disponibles prochainement.</p>
+<p>Pour toute question ou observation sur ces fichiers, merci d’utiliser la boîte aux lettres <ref target="mailto:info.saint-denis@enc.sorbonne.fr?subject=saint-denis">info.saint-denis@enc.sorbonne.fr</ref>.</p>
+</div>
+        </div>
+        <div type="page" xml:id="sd-le-projet--contacts" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/contacts.html">
+          <head>Contacts</head>
+          <div type="legacy-block" rend="static-content"> <p>Ce site Web en est à une première version, beaucoup de choses ne fonctionnent pas encore de manière optimale, et des fonctionnalités ne sont pas encore en place. Par ailleurs les contenus seront enrichis dans les prochains mois. La <ref target="#sd-le-projet--feuille-de-route" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/feuille-de-route.html">feuille de route</ref> vous en dira plus sur ce qui est prévu.</p>
+<p>Vous voulez faire une suggestion, une remarque, poser une question, signaler un problème ? Vous êtes chercheur et vous aimeriez contribuer aux contenus ? Vous vous intéressez aux aspects informatiques ? Vous pouvez prendre contact avec nous en utilisant la boîte aux lettres <ref target="mailto:info.saint-denis@enc.sorbonne.fr?subject=saint-denis">info.saint-denis@enc.sorbonne.fr</ref>.</p></div>
+        </div>
+      </div>
+      <div type="ecarte" xml:id="sd-ecarte" rend="hors-sommaire">
+        <head>Pages ecartees du sommaire</head>
+        <!-- ecartee le 2026-10-28 : crédits, déjà dans la page « À propos » de dots-vue (about4.vue) ; s'affichaient sur la page « Le projet » -->
+        <div type="page" xml:id="sd-le-projet--credits" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/credits.html">
+          <head>Crédits</head>
+          <div type="legacy-block" rend="static-content">
+<list type="unordered"><item>Direction scientifique : Olivier Guyotjeannin (École nationale des chartes)</item><item>Conception et développement de l’application :
+                    Florence Clavaud (École nationale des chartes)</item><item>Administration système : Nicolas Legrand puis Samuel Desseaux (École nationale des chartes)</item><item>Financement : École nationale des chartes ; ministère de la Culture et de la
+                    Communication (Département de la Recherche, de l’Enseignement supérieur et de la Technologie)</item><item>Numérisation en mode image et premier encodage en XML/EAD de l’Inventaire
+                    général, premiers fichiers de déclaration des liens : société Dataland
+                    (2007-2008)</item><item>Fourniture des images numériques du Cartulaire blanc et contrôle des images
+                    numériques de l’Inventaire général : Archives nationales, Département de la conservation, atelier de photographie et de numérisation                   </item><item>Relecture intégrale et enrichissement des fichiers XML/EAD de l’Inventaire
+                    général : Sandrine della Bartolomea, Olivier Guyotjeannin et Florence Clavaud
+                    (École nationale des chartes) (2008-2010)</item><item>Édition critique au traitement de texte du Cartulaire blanc : Olivier
+                    Guyotjeannin, et de nombreux étudiants de l’École nationale des chartes</item><item>Premier encodage en XML/TEI de l'édition des chapitres de Rueil-Malmaison et de
+                    Tremblay-en-France - et première édition électronique : Gautier Poupeau (École nationale des chartes)
+                    (2006)</item><item>Premier encodage en XML/TEI de l’édition des chapitres de Beaurain et de
+                    Pierrefitte : Alexandre Monnin (École nationale des chartes) (2008)</item><item>Premier encodage en XML/TEI de l’édition des chapitres de Dugny, Saint-Martin-du-Tertre et Ully-Saint-Georges : Laura Gili (École nationale des chartes) (2011-2014)</item><item>Conversion des fichiers TEI existants en TEI P5, relecture de l’ensemble, homogénéisation, définition du modèle TEI, enrichissements et mises à jour : Florence Clavaud (2009-2019)</item><item>Relecture et enrichissement des fichiers METS : Alexandre
+                    Monnin, Florence Clavaud et Laura Gili (2008-2019)</item></list>
+
+</div>
+        </div>
+        <!-- Pages retirees du plan editorial (mail du responsable scientifique, et pages
+             vides). Conservees ici hors citeStructure : elles ne paraissent plus au
+             sommaire DoTS mais restent dans le fichier, et les ref/@target internes
+             continuent de resoudre. -->
+        <!-- ecartee : introduction aux images jugee sans utilite -->
+        <div type="page" xml:id="sd-les-images--accueil" corresp="http://saint-denis.enc.sorbonne.fr/les-images/index.html">
+          <head>Les collections d’images</head>
+          <div type="legacy-block" rend="static-content">
+<p>Les utilisateurs qui s’intéresseraient avant tout aux sources primaires des éditions présentées ici peuvent accéder directement aux images numériques des documents. On peut ainsi notamment <hi rend="bold">feuilleter</hi> les images, et <hi rend="bold">charger à l’écran l’image de la page dont on connaît le numéro</hi>.</p>
+<p>On dispose aussi, toujours dans la même fenêtre, pour la totalité des volumes traités de l’Inventaire général, et pour les pages du Cartulaire blanc correspondant aux chapitres déjà édités, de trois types d’informations ou moyens de navigation :</p>
+<list type="unordered"><item>la <hi rend="bold">liste des regestes ou des actes présents sur la page</hi>, donnant leur numéro, et le début du regeste et sa date (pour un regeste de l’Inventaire général) ou la transcription de la rubrique (intitulé en rouge) de l’acte (pour un acte du Cartulaire blanc) ;</item><item>le cas échéant, pour chacun des regestes ou actes,<hi rend="bold"> la mention de leur correspondance avec les pages numérisées du Cartulaire blanc</hi> (« acte copié au Cartulaire blanc [...] », <hi rend="bold">ou avec l’édition du regeste</hi> (« analysé dans l’Inventaire général [...] »);</item><item>dans une colonne qui s’affiche à droite de l’image lorsqu’on clique sur le texte du début du regeste ou de la rubrique de l’acte, <hi rend="bold">l’édition</hi> (allégée de tous les liens) <hi rend="bold">du regeste ou de l’acte concerné</hi>.</item></list>
+<p>La fenêtre de consultation des images ne fonctionnera correctement qu’avec un navigateur Web récent dans lequel l’exécution des scripts Javascript aura été activée.</p>
+</div>
+        </div>
+        <!-- ecartee : perimee -->
+        <div type="page" xml:id="sd-le-projet--feuille-de-route" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/feuille-de-route.html">
+          <head>Feuille de route du projet</head>
+          <div type="legacy-block" rend="static-content">
+<p>Au 15 juin 2012, après l’édition du chapitre de Dugny en 2011, <hi rend="bold">l’édition d’un 6<hi rend="sup">e</hi> chapitre, celui de Saint-Martin-du-Tertre, est effective</hi>, ce qui porte à <hi rend="bold">411 le nombre d’actes édités</hi> (sur 2600). Par ailleurs le modèle d’encodage est aujourd’hui relativement stabilisé, tous les fichiers TEI ont été relus et rendus conformes à ce modèle. Les fichiers TEI et le schéma Relax NG défini sont téléchargeables (voir la page <ref target="#sd-le-projet--telecharger" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/telecharger.html">Télécharger</ref>). Les fichiers METS ont aussi subi des changements pour être rendus tout à fait conformes au standard METS actuel.</p>
+<p>Sont par ailleurs en cours ou prévus, pour parvenir à une version 2 de l’application à l’été 2012 :</p>
+<list type="unordered"><item>divers ajustements et améliorations ponctuels</item><item>la finalisation des pages de présentation</item><item>l’intégration de documents et illustrations annexes</item><item>l’ajout de métadonnées pour chaque page Web, notamment pour chacun des composants du corpus</item><item>la création d’un entrepôt de métadonnées OAI-PMH pour la totalité des ressources textuelles éditées</item><item>l’export PDF depuis l’édition des actes du Cartulaire blanc</item><item>une table des actes dynamique et téléchargeable</item><item>l’enrichissement de la table des chapitres</item><item>la mise en place de dispositifs graphiques pour présenter autrement certains résultats de recherche</item></list>
+</div>
+        </div>
+        <!-- ecartee : CC-BY 2.0 : licence a trancher -->
+        <div type="page" xml:id="sd-le-projet--mentions-legales" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/mentions-legales.html">
+          <head>Mentions légales</head>
+          <div type="legacy-block" rend="static-content">
+<p>Le contenu de ce site Web est protégé par le code de la propriété intellectuelle sur
+                les bases de données (<ref target="http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006279245&amp;cidTexte=LEGITEXT000006069414">L341-1</ref>).</p>
+<p><hi rend="bold">Les fichiers XML correspondant aux contenus textuels de ce site (textes de
+                présentation des documents et du projet, éditions électroniques du Cartulaire blanc
+                et de l’Inventaire général) sont placés sous licence Creative Commons : « <ref target="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Paternité - Pas
+                    d’Utilisation Commerciale - Pas de Modification ; 2.0 France</ref> »</hi>. </p>
+<p>Paternité : nous demandons que toute publication dérivée de ces ressources
+                électroniques comporte :</p>
+<list type="unordered"><item>un lien vers l’adresse pérenne de la dernière version de la ressource sur notre
+                    site ;</item><item>la date du fichier source utilisé ;</item><item>les noms des auteurs.</item></list>
+<p>Pas d’Utilisation Commerciale : nous souhaitons encourager l’utilisation et
+                l’amélioration de nos ressources électroniques, pour les intérêts de l’enseignement
+                et de la recherche. Toute autorisation au-delà du champ de la licence Creative
+                Commons visée doit être obtenue auprès de nous.</p>
+<p>Pas de Modification : afin de mieux servir la communauté scientifique, nous nous
+                engageons à conserver et à toujours offrir publiquement la version la plus à jour de
+                nos ressources électroniques par une URI pérenne. Nous nous engageons à corriger et
+                à améliorer ces ressources, à intégrer les contributions qui nous sont soumises
+                (après validation par un comité scientifique), et à référencer l’origine de ces
+                contributions. Toute modification de ces ressources qui ne serait pas reversée à la
+                version de référence sous notre autorité éditoriale devra faire l’objet d’un accord,
+                afin de ne pas disperser les contributions et de permettre les meilleures conditions
+                possibles de collaboration scientifique.</p>
+<p>Les documents qui font l’objet d’une édition au sein du présent site web et qui sont conservés aux Archives nationales sont des « informations publiques » au sens du code des relations entre le public et l’Administration (CRPA). <hi rend="bold">Toute personne souhaitant utiliser les images numériques de ces documents dispose donc d’un droit non exclusif et gratuit de libre « réutilisation » à des fins commerciales ou non, dans le monde entier et pour une durée illimitée. Elle doit accompagner chaque rediffusion de ces images de l’indication précise de l’origine et du lieu de conservation du document « Archives nationales (France) », cote, titre, référence précise le cas échéant</hi> (par ex. : « Archives nationales (France), LL1157 page 748 (Cartulaire blanc de l’abbaye de Saint-Denis, chapitre d’Ully-Saint-Georges, acte n° 50 »). Un exemplaire justificatif de la publication illustrée avec des documents conservés aux Archives nationales est à envoyer à l’adresse suivante : Archives nationales, DIRP, 59 rue Guynemer, 93380 Pierrefitte-sur-Seine Cedex.</p>
+<p>Pour plus d’information sur la réutilisation des informations publiques produites ou reçues par les Archives nationales, voir la page <ref target="http://www.archives-nationales.culture.gouv.fr/fr/web/guest/reutilisation-des-donnees-publiques">http://www.archives-nationales.culture.gouv.fr/fr/web/guest/reutilisation-des-donnees-publiques</ref> sur le site web des Archives nationales.</p>
+
+</div>
+        </div>
+        <!-- ecartee : perime, a supprimer -->
+        <div type="page" xml:id="sd-le-projet--aspects-scientifiques--cartulaire-blanc--etat-d-avancement" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/cartulaire-blanc/etat-d-avancement.html">
+              <head>État d’avancement de l’édition</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--cartulaire-blanc--etat-d-avancement--etat-avancement"/>
+              <div type="legacy-block" rend="static-content">
+<p>La <ref target="#sd-les-textes--cartulaire-blanc--parcourir--table-des-chapitres" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/cartulaire-blanc/parcourir/table-des-chapitres.html">Table des
+                    chapitres</ref> du Cartulaire blanc signale en gras les chapitres déjà
+                disponibles, qui sont accessibles depuis la table (en cliquant sur le nom français
+                du chapitre) comme depuis un menu déroulant.</p>
+<p><hi rend="bold">L’<ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/saint-martin/">édition du chapitre de Saint-Martin-du-Tertre est effective</ref> au 20 mai 2012.</hi></p>
+<p>L’<ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/dugny/">édition du chapitre de Dugny (Université Paris X, Julien De Nauw, coord. François Bougard) est effective</ref> au 10 juin 2011.</p>
+<p>L’édition des chapitres suivants est en cours :</p>
+<list type="unordered"><item>École nationale des chartes : Montmorency, Deuil, Le Pré-Saint-Gervais,
+                    Cormeilles.</item><item>Université Paris X (coord. François Bougard) : Chars
+                    (Christophe Araujo), Argenteuil (Jean-Baptiste Scref).</item><item>École pratique des hautes études (coord. Laurent Morelle) : Chaourse (Zuzana
+                    Vengrinova).</item><item>Samuel Leturcq : Toury.</item><item>Thomas Roche : Berneval, Angleterre.</item><item>Denise Angers : autres chapitres normands.</item></list></div>
+            </div>
+        <!-- ecartee : decrit PLEADE, application disparue -->
+        <div type="page" xml:id="sd-le-projet--aspects-informatiques--generalites--caracteristiques-de-l-application" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/generalites/caracteristiques-de-l-application.html">
+              <head>Quelques caractéristiques de l’application</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--generalites--caracteristiques-de-l-application--caracteristiques-application"/>
+              <div type="legacy-block" rend="static-content">
+<p>Cette partie sera complétée ultérieurement.</p>
+<p>Pour développer l’application en utilisant, comme l’École des chartes le fait
+                toujours, des logiciels libres, nous sommes partis du logiciel libre PLEADE, qui
+                offrait déjà un environnement Web de recherche et de publication de documents
+                XML/EAD et des services de gestion et de consultation de collections d’images
+                numériques, soit deux des principaux groupes de fonctionnalités attendus. Ce
+                logiciel est par ailleurs hautement configurable. Il peut aussi être adapté ; c’est
+                ce qui a été fait, ce de manière assez forte, en particulier pour permettre la
+                recherche et la consultation des fichiers XML/TEI, l’affichage des informations
+                utiles dans la fenêtre de consultation des images et de manière plus générale la
+                gestion des liens. De nombreux fichiers de configuration, sitemaps, programmes
+                XSLT et scripts Javascript/AJAX ont donc été modifiés et ajoutés. La société AJLSM a auparavant animé pour nous et d’autres personnes une
+                formation technique à PLEADE 3, puis nous a fourni un embryon de module TEI ; nous
+                l’en remercions vivement.</p>
+<p>Le système d’URL utilisé à été « francisé », et surtout nous avons mis en place la
+                logique nécessaire pour que l’utilisateur cherchant une unité intellectuelle précise
+                (un tome de l’Inventaire, un chapitre du Cartulaire blanc, un regeste, un acte)
+                puisse former seul une URL. Ainsi : </p>
+<list type="unordered"><item>Pour consulter l’édition du tome 1 de l’Inventaire taper <lb/>
+<ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome1/"><code>http://saint-denis.enc.sorbonne.fr/inventaire/tome1/</code></ref></item><item>Pour consulter l’édition du regeste 408 de l’Inventaire taper <lb/><ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome1/notice408"><code>http://saint-denis.enc.sorbonne.fr/inventaire/tome1/notice408</code></ref></item><item>Pour consulter l’édition du chapitre de Beaurain du Cartulaire blanc taper
+                        <lb/><ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/beaurain/"><code>http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/beaurain/</code></ref></item><item>Pour consulter l’édition de l’acte 12 du chapitre de Beaurain du Cartulaire
+                    blanc taper <lb/><ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/beaurain/acte12"><code>http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/beaurain/acte12</code></ref>
+</item><item>Pour consulter l’édition de l’acte 5 du chapitre de Saint-Martin-du-Tertre du Cartulaire
+                    blanc taper <lb/><ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/saint-martin/acte5"><code>http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/saint-martin/acte5</code></ref>
+</item></list>
+</div>
+            </div>
+        <!-- ecartee : page vide (texte a ecrire au 3 septembre 2010) -->
+        <div type="page" xml:id="sd-le-projet--aspects-informatiques--generalites--format-d-affichage-des-documents" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/generalites/format-d-affichage-des-documents.html">
+              <head>Le format d’affichage à l’écran des regestes et des actes</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--generalites--format-d-affichage-des-documents--format-d-affichage"/>
+              <div type="legacy-block" rend="static-content">
+<p>Texte qui reste à écrire au 3 septembre 2010...</p>
+</div>
+            </div>
+        <!-- ecartee : page vide (texte a ecrire) -->
+        <div type="page" xml:id="sd-le-projet--aspects-informatiques--cartulaire-blanc-projet-inf" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/cartulaire-blanc-projet-inf.html">
+              <head>Le Cartulaire blanc informatisé</head>
+              <p rend="static-content">Texte qui reste à écrire...</p>
+            </div>
+        <!-- ecartee : page vide (texte a ecrire au 3 septembre 2010) -->
+        <div type="page" xml:id="sd-le-projet--aspects-informatiques--inventaire--encodage-des-enrichissements-editoriaux" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/encodage-des-enrichissements-editoriaux.html">
+              <head>Encodage des enrichissements éditoriaux</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--inventaire--encodage-des-enrichissements-editoriaux--enrichissements-editoriaux"/>
+              <div type="legacy-block" rend="static-content">
+<p>Texte qui reste à écrire au 3 septembre 2010...</p>
+</div>
+            </div>
+      </div>
+    </body>
+  </text>
+</TEI>

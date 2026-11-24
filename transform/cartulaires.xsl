@@ -55,13 +55,24 @@
   <xsl:variable name="document-base" select="''"/>
   <xsl:output indent="no"/><!-- autopilote 2026-09-11 : sinon DoTS-vue colle les mots (condense) -->
   <!-- 2026-10-20 : chapitres du Cartulaire blanc de Saint-Denis (beaurain, dugny, pierrefitte, rueil, saint-martin,
-       tremblay, ully) et ses pages (cartulaire-blanc, sd-…) : rendus par cartulaires-saint-denis.xsl, appelée ici par
+       tremblay, ully) et ses pages (cartulaire-blanc, sd-…), ainsi que les pages de l'Inventaire général (inventaire-…)
+       et celles du site de Saint-Denis (saint-denis-site), 2026-11-24, : rendus par cartulaires-saint-denis.xsl, appelée ici par
        transform(), au lieu d'une feuille <ressource>.xsl par chapitre (routes.xqm). Repérés à leur premier identifiant. -->
   <xsl:variable name="cartu-sd" as="xs:boolean"
-    select="matches(string((//@xml:id)[1]), '^((beaurain|dugny|pierrefitte|rueil|saint-martin|tremblay|ully|cartulaire-blanc)(-|$)|sd-)')"/>
+    select="matches(string((//@xml:id)[1]), '^((beaurain|dugny|pierrefitte|rueil|saint-martin|tremblay|ully|cartulaire-blanc|inventaire|saint-denis-site)(-|$)|sd-)')"/>
   <xsl:template match="document-node()[$cartu-sd]" priority="1000">
     <xsl:sequence select="transform(map {
         'stylesheet-location': resolve-uri('cartulaires-saint-denis.xsl', static-base-uri()),
+        'source-node': .,
+        'stylesheet-params': map { QName('', 'static_path'): $static_path } })?output"/>
+  </xsl:template>
+  <!-- 2026-11-24 : l'Inventaire général des chartes de Saint-Denis (ISD-vol1-3), rangé avec le Cartulaire blanc dans la
+       collection « Chartes médiévales de l'abbaye de Saint-Denis » : rendu par cartulaires-inventaire.xsl (copie de la
+       feuille du projet saint-denis), repéré à son premier identifiant (« ISD-vol1 », « ISD-vol2_notice1182 »). -->
+  <xsl:variable name="cartu-isd" as="xs:boolean" select="starts-with(string((//@xml:id)[1]), 'ISD-vol')"/>
+  <xsl:template match="document-node()[$cartu-isd]" priority="1001">
+    <xsl:sequence select="transform(map {
+        'stylesheet-location': resolve-uri('cartulaires-inventaire.xsl', static-base-uri()),
         'source-node': .,
         'stylesheet-params': map { QName('', 'static_path'): $static_path } })?output"/>
   </xsl:template>

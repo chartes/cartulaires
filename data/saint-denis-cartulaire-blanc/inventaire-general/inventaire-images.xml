@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="inventaire-images" xml:lang="fre">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+                <title>Images de l’Inventaire général</title>
+                <title type="short">Inventaire général : images</title><funder ref="https://www.wikidata.org/wiki/Q273570 https://data.bnf.fr/fr/ark:/12148/cb118634749 https://www.idref.fr/026375052">École nationale des chartes</funder>
+                <author ref="https://www.wikidata.org/wiki/Q3351082 https://data.bnf.fr/fr/ark:/12148/cb11906612z https://www.idref.fr/026911337" xml:id="OGJ"><forename>Olivier</forename> <surname>Guyotjeannin</surname></author>
+                </titleStmt>
+      <publicationStmt>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
+        <date when="2026">2026</date>
+        <idno>http://saint-denis.enc.sorbonne.fr/</idno><availability>
+          <p>Reconstruction de migration à partir du site ÉLEC historique ; conserver les droits et licences des sources.</p>
+        <licence target="https://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Creative Commons : Paternité - Pas d’Utilisation Commerciale - Pas de Modification ; 2.0 France</licence></availability>
+      </publicationStmt>
+      <notesStmt><note type="citation">École nationale des chartes, Chartes de l’abbaye de Saint-Denis — pages éditoriales historiques, 2026. [En ligne : http://saint-denis.enc.sorbonne.fr/]</note></notesStmt><sourceDesc>
+        <p>Source : http://saint-denis.enc.sorbonne.fr/ ; crawl structurel du 10 septembre 2026.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Pages éditoriales du site historique consacrées à l’Inventaire général des chartes de Saint-Denis (séries d’images des trois tomes), détachées le 24 novembre 2026 des pages du site de Saint-Denis pour rejoindre les trois tomes de l’Inventaire, sous-collection des cartulaires, à côté du Cartulaire blanc.</p>
+      </projectDesc>
+      <refsDecl>
+        <citeStructure unit="partie" match="/TEI/text/body/div[@xml:id]" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">français</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-11-24">L’Inventaire général quitte le projet saint-denis pour la collection « Chartes médiévales de l’abbaye de Saint-Denis » des cartulaires (sous-collection inventaire-general, avec les trois tomes), sur le modèle du Cartulaire blanc (plan d’Olivier Canteaut du 12 novembre 2026). Ici : la page « Les images » de l’Inventaire.</change>
+      <change when="2026-09-25">Les cinq renvois de visionneuse de serie portent desormais en @n le nombre de pages conservees localement : 968 et 629 pour les deux tomes du Cartulaire blanc, 938, 1029 et 804 pour les trois tomes de l’Inventaire, soit 4 368 pages. Ces nombres sont un ETAT ARRETE du fonds, releve le 2026-09-24 sur le dossier d’images servi, et non un calcul : le TEI ne liste pas les folios un a un et rien ici ne permet de les recalculer. Ils remplacent un decompte que la feuille tirait du fichier compagnon saint-denis-images-locales.xml, supprime le meme jour. Le fonds etant clos, ils n’ont pas vocation a changer ; s’il s’ouvrait de nouveau, ils seraient a reprendre a la main.</change><change when="2026-09-24">Refonte du sommaire selon le plan editorial du responsable scientifique : une page d'introduction generale puis quatre parties (actes du haut Moyen Age, Cartulaire blanc, Inventaire general, le projet). Les trois rubriques de navigation de l'ancien site disparaissent ; la rubrique Les images aussi, ses deux pages de feuilletage rejoignant les parties 2 et 3. Pages ecartees du sommaire regroupees dans div[@xml:id='sd-ecarte'], hors citeStructure. refsDecl adapte.</change><change when="2026-09-10">Enrichissement du teiHeader selon le modèle DoTS : title[@type=short], publisher/@ref, date/@when, idno, licence/@target, notesStmt/note[@type=citation].</change><change when="2026-09-10">Création à partir du dump structurel du site historique Saint-Denis.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="page" xml:id="sd-les-images--images-ig" corresp="http://saint-denis.enc.sorbonne.fr/les-images/images-ig.html">
+            <head>Les images</head>
+            <div type="legacy-block" rend="static-content">
+<p>En suivant ces liens vous accèderez directement aux séries d’images numériques produites à partir de chacun des tomes de l’Inventaire général.</p>
+<list type="unordered"><item><ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html" n="938">Tome 1 (Archives nationales, LL 1189)</ref></item><item><ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome2/voir.html" n="1029">Tome 2 (Archives nationales, LL 1190)</ref></item><item><ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome3/voir.html" n="804">Tome 3 (Archives nationales, LL 1191)</ref></item></list>
+</div>
+          </div>
+    </body>
+  </text>
+</TEI>

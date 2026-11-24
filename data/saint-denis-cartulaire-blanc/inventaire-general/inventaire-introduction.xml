@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="inventaire-introduction" xml:lang="fre">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+                <title>L’Inventaire général des chartes de Saint-Denis : introduction</title>
+                <title type="short">Inventaire général : introduction</title><funder ref="https://www.wikidata.org/wiki/Q273570 https://data.bnf.fr/fr/ark:/12148/cb118634749 https://www.idref.fr/026375052">École nationale des chartes</funder>
+                <author ref="https://www.wikidata.org/wiki/Q3351082 https://data.bnf.fr/fr/ark:/12148/cb11906612z https://www.idref.fr/026911337" xml:id="OGJ"><forename>Olivier</forename> <surname>Guyotjeannin</surname></author>
+                </titleStmt>
+      <publicationStmt>
+        <publisher ref="https://www.chartes.psl.eu/">École nationale des chartes</publisher>
+        <date when="2026">2026</date>
+        <idno>http://saint-denis.enc.sorbonne.fr/</idno><availability>
+          <p>Reconstruction de migration à partir du site ÉLEC historique ; conserver les droits et licences des sources.</p>
+        <licence target="https://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Creative Commons : Paternité - Pas d’Utilisation Commerciale - Pas de Modification ; 2.0 France</licence></availability>
+      </publicationStmt>
+      <notesStmt><note type="citation">École nationale des chartes, Chartes de l’abbaye de Saint-Denis — pages éditoriales historiques, 2026. [En ligne : http://saint-denis.enc.sorbonne.fr/]</note></notesStmt><sourceDesc>
+        <p>Source : http://saint-denis.enc.sorbonne.fr/ ; crawl structurel du 10 septembre 2026.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Pages éditoriales du site historique consacrées à l’Inventaire général des chartes de Saint-Denis (introduction, présentation, édition électronique, aspects scientifiques et informatiques de l’édition), détachées le 24 novembre 2026 des pages du site de Saint-Denis pour rejoindre les trois tomes de l’Inventaire, sous-collection des cartulaires, à côté du Cartulaire blanc.</p>
+      </projectDesc>
+      <refsDecl>
+        <citeStructure unit="part" match="/TEI/text/body/div" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeStructure unit="partie" match="div[@type=('page','subpart')]" use="@xml:id">
+            <citeData property="dct:title" use="head[1]"/>
+            <citeStructure unit="section" match="div[@type='page']" use="@xml:id">
+              <citeData property="dct:title" use="head[1]"/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">français</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-11-24">L’Inventaire général quitte le projet saint-denis pour la collection « Chartes médiévales de l’abbaye de Saint-Denis » des cartulaires (sous-collection inventaire-general, avec les trois tomes), sur le modèle du Cartulaire blanc (plan d’Olivier Canteaut du 12 novembre 2026). Ici : l’introduction devient la partie de tête, dont « Présentation » (et ses cinq pages) « Édition électronique », « Présentation de l’édition » (ex-« Pour l’Inventaire », aspects scientifiques du projet) et « Aspects informatiques de l’édition » (ex-« Pour l’Inventaire », aspects informatiques) sont les sous-parties.</change>
+      <change when="2026-09-25">Les cinq renvois de visionneuse de serie portent desormais en @n le nombre de pages conservees localement : 968 et 629 pour les deux tomes du Cartulaire blanc, 938, 1029 et 804 pour les trois tomes de l’Inventaire, soit 4 368 pages. Ces nombres sont un ETAT ARRETE du fonds, releve le 2026-09-24 sur le dossier d’images servi, et non un calcul : le TEI ne liste pas les folios un a un et rien ici ne permet de les recalculer. Ils remplacent un decompte que la feuille tirait du fichier compagnon saint-denis-images-locales.xml, supprime le meme jour. Le fonds etant clos, ils n’ont pas vocation a changer ; s’il s’ouvrait de nouveau, ils seraient a reprendre a la main.</change><change when="2026-09-24">Refonte du sommaire selon le plan editorial du responsable scientifique : une page d'introduction generale puis quatre parties (actes du haut Moyen Age, Cartulaire blanc, Inventaire general, le projet). Les trois rubriques de navigation de l'ancien site disparaissent ; la rubrique Les images aussi, ses deux pages de feuilletage rejoignant les parties 2 et 3. Pages ecartees du sommaire regroupees dans div[@xml:id='sd-ecarte'], hors citeStructure. refsDecl adapte.</change><change when="2026-09-10">Enrichissement du teiHeader selon le modèle DoTS : title[@type=short], publisher/@ref, date/@when, idno, licence/@target, notesStmt/note[@type=citation].</change><change when="2026-09-10">Création à partir du dump structurel du site historique Saint-Denis.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="page" xml:id="sd-les-textes--inventaire--introduction" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/introduction.html">
+            <head>Introduction</head>
+            <div type="legacy-block" rend="static-content">
+<p>L’Inventaire général des archives de Saint-Denis procède du labeur d’un moine de
+                l’abbaye, Dom Antoine Thomas, et de successeurs anonymes, dont le travail s’est
+                étendu sur un demi-siècle, aux années 1680-1720.</p>
+<p>Ce travail colossal est, après une longue série d’inventaires, le premier à viser une
+                description fine et complète du trésor archivistique de l’abbaye, qu’il soit à son
+                époque disponible en originaux, en copies authentiques ou dans des cartulaires. En
+                dehors même de son intérêt historiographique (ses concepteurs sont contemporains des
+                deux premières générations de la diplomatique savante), il constitue, en dépit de
+                quelques lacunes, le point d’entrée le plus commode et le plus sûr dans le chartrier
+                monastique d’avant la Révolution.</p>
+<p>Il est imparfait : les dates, critère de classement des regestes, au détriment des
+                cotes, sont parfois erronées ou approximatives ; les traductions de noms propres
+                sont souvent lâches ou fantaisistes ; les graphies, hésitantes.</p>
+<p>Cette combinaison d’abondance et de travers, aggravée par la médiocre qualité d’index
+                partiels, rend délicate et incertaine l’exploitation manuelle, et décuple l’intérêt
+                d’une édition électronique. Celle-ci, associée aux images numérisées du manuscrit,
+                enrichie de corrections, d’additions (renvoi aux éditions scientifiques, conversions
+                chronologique…) et de compléments (indexation des types d’auteurs d’actes, renvois
+                aux actes déjà édités du Cartulaire blanc…) vise à faciliter et démultiplier les
+                usages de ce monument d’érudition.</p>
+
+</div>
+            <div type="legacy-block" rend="static-content">
+              <p rend="date">[Auteur des textes de cette section : Olivier Guyotjeannin ; date de la dernière mise à jour : 21 juin 2010]</p>
+            </div>
+            <div type="page" xml:id="sd-les-textes--inventaire--presentation">
+          <head>Présentation</head>
+        <div type="page" xml:id="sd-les-textes--inventaire--presentation--distribution-des-volumes" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/distribution-des-volumes.html">
+              <head>Distribution des volumes</head>
+              <div type="legacy-block" rend="static-content">
+<p>L’« Inventaire des chartes de l’abbaye de Saint-Denis en France selon l’ordre des dattes d’icelles, commencé en l’année 1688 » est le dernier grand représentant d’une longue suite de travaux archivistiques, ouverte à l’abbaye dès le début du XIVe siècle. Fort de quatorze volumes (Arch. nat., LL 1189-1202) de grandes dimensions (hauteur 43 cm x  largeur 28 cm), mené jusqu’en 1728, il doit à sa volonté affichée d’exhaustivité son titre postérieur d’« Inventaire général ».</p>
+<p>En dépit de quelques défauts et lacunes, il est un guide irremplaçable dans le chartrier de Saint-Denis, dont il permet en outre de prendre la mesure avant les saisies révolutionnaires et les démembrements qui ont suivi.</p>
+<p>L’Inventaire est ici offert à la consultation pour la tranche chronologique couverte par le Cartulaire blanc, c’est-à-dire jusqu’en 1301/1302. Sont ainsi concernés par l’entreprise :</p>
+<list type="unordered"><item>le tome I (LL 1189) : des origines à 1224 (915 pages, regestes n° 1-1181) ;</item><item>le tome II (LL 1190) : de 1225 à 1299 (1028 pages, regestes n° 1182-3195) ;</item><item>le début du tome III (LL 1191) : années 1300-1302 (p. 1-34, regestes n° 3196-3265).</item></list>
+<p>Les regestes du tome I sont précédés d’une longue introduction, foliotée en chiffres romains (disponible uniquement en mode image) :</p>
+<p rend="encadré">Fol. I-III, présentation ; fol. III-IXv, origines de l’abbaye ; fol. IXv-XIII, catalogue des abbés ; fol. XIIIv-XVIv, catalogue des rois de France ; fol. XVII-XXVIIv, traité de chronologie technique.</p>
+<p>Plusieurs tables des noms propres ont été confectionnées au XVIII<hi rend="sup">e</hi> siècle (Arch. nat., LL 1204A-C à LL 1207), dont la version la plus complète nous semble pour l’heure formée par les volumes LL 1206 (table cumulative des tomes I-V) et LL 1207 (table cumulative des tomes VI-XIV). Ces tables demeurent pourtant très partielles et pour cette raison n’ont pas été reproduites.</p>
+<p>Suite : <ref target="#sd-les-textes--inventaire--presentation--les-auteurs" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/les-auteurs.html">Les auteurs</ref></p>
+</div>
+            </div>
+        <div type="page" xml:id="sd-les-textes--inventaire--presentation--les-auteurs" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/les-auteurs.html">
+              <head>Les auteurs</head>
+              <div type="legacy-block" rend="static-content">
+<p>L’auteur, ou plus exactement l’initiateur et premier auteur de l’Inventaire général est un moine de l’abbaye, Dom François Thomas, qualifié en 1681 de « frère procureur » (Arch. nat., LL 1228,
+                Relevés des délibérations capitulaires, au 31 mars 1681). Son confrère Dom Michel Félibien rendit à sa personne et à son œuvre un hommage d’autant plus soutenu qu’il venait clore son <hi rend="italic">Histoire de
+                    l’abbaye royale de Saint-Denys</hi> parue en 1706 (p. 524) :</p>
+<quote><p>« Depuis environ vingt ans, celuy des religieux de Saint-Denys qui eut plus de part au maniement des affaires temporelles fut Dom François Thomas [<hi rend="italic">en marge</hi> : natif de Nogent-le-Rotrou au diocèse de Chartres], dont je ne puis assez louer la vertu, la sagesse et l’assiduité au travail. Mon sujet m’engage de marquer icy qu’il dressa un ample extrait en forme d’inventaire de toutes les chartes de l’abbaye de Saint-Denys depuis le premier siècle de sa fondation jusque vers l’an 1500. Ce travail qui luy a cousté près de dix ans est le fruit d’une patience incroyable, et l’ordre joint à l’exactitude qu’il y a apportée pour rendre son ouvrage utile est la preuve de son bon esprit et de sa profonde intelligence dans les affaires. Aussi ne manquoit-il pas d’expérience, ayant eu pendant plus de trente années la conduite du temporel dans plusieurs monastères et dans Saint-Denys même, où après s’estre acquité de son employ avec beaucoup d’honneur et d’édification il obtint par ses instances réitérées d’en estre déchargé, afin de vivre plus retiré et mettre quelques années d’intervalle entre la dissipation presque inséparable du maniement des affaires temporelles et le repos de l’éternité [<hi rend="italic">en marge</hi> : il mourut le 11 novembre 1698, âgé de 69 ans]. Exemple qui doit servir d’instruction à tous ceux qui passent la meilleure partie de leur vie dans les mêmes fonctions. »</p></quote>
+<p>Un ou plusieurs continuateurs anonymes ont donc pris la suite de Dom Thomas, trente ans durant, jusqu’à la mise au propre actuelle, parfaitement homogène. Mais ils ne se contentèrent pas de poursuivre l’inventaire après 1500 ; ils remanièrent aussi l’ensemble du texte, non sans de menues incohérences. C’est ainsi que, dès le tout début de l’Inventaire, la <ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0057.jpg">notice n° 2</ref> identifie le possesseur d’un manuscrit « en la présente année 1688 », mais cite aussi l’ouvrage de dom Félibien paru en 1706 ; et que l’on mentionne en note à la <ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0059.jpg">notice n° 3</ref> : « Il n’existoit du tems de Dom Mabillon et de Dom François Thomas qu'une copie bien postérieure à Dagobert ».</p>
+<p>Une fois la compilation achevée, elle reçut encore quelques additions clairsemées et cursives (nouveaux regestes, souvent brefs et très cursifs, en fin d’année ; signalement d’originaux retrouvés…).</p>
+<p>Passé aux Archives nationales, l’Inventaire général demeura vivant ; au XIX<hi rend="sup">e</hi> siècle, en effet, un archiviste numérota les regestes (originels comme ajoutés) à l’encre rouge, dans une suite continue que nous utilisons encore comme le moyen le plus commode de citation (échappent à la numérotation quelques regestes d’actes apparemment insérés pour intéresser l’histoire de l’abbaye sans être à son chartrier : nous les avons numérotés dans une série à part d’actes « non numérotés »). On retrouve aujourd’hui, de la même main et de la même encre, ces numéros portés au dos de certains originaux de la série L des Arch. nat., trace d’une tentative inaboutie de récolement des restes du chartrier.</p>
+<p>Suite : <ref target="#sd-les-textes--inventaire--presentation--circonstances-et-visees-de-la-compilation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/circonstances-et-visees-de-la-compilation.html">Circonstances et visées de la compilation</ref></p>
+</div>
+            </div>
+        <div type="page" xml:id="sd-les-textes--inventaire--presentation--circonstances-et-visees-de-la-compilation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/circonstances-et-visees-de-la-compilation.html">
+              <head>Circonstances et visées de la compilation</head>
+              <div type="legacy-block" rend="static-content">
+<p>L’Inventaire général n’est jamais que le dernier d’une série de travaux de récolement et d’inventoriage qui se sont accélérés au XVII<hi rend="sup">e</hi> siècle et qui, sans atteindre la même ampleur ni le même souci d’érudition, attirent l’attention mais restent à étudier (1619 par Jacques Coignée, 1647 par Jean Le Poix, 1681 par Locquet).</p>
+<p>Le dernier quart du XVII<hi rend="sup">e</hi> siècle fut, pour l’abbaye, le temps de grands changements, dont l’importance justifiait aisément, à elle seule, la confection d’un inventaire détaillé de l’ensemble du chartrier, sur un pied que n’avait connu aucune des entreprises précédentes, même récentes, et toutes d’ailleurs organisées dans l’ordre de coffres et de layettes qui pouvaient sembler intangibles. C’est d’abord le partage des biens de l’abbaye entre l’abbé (alors le cardinal de Retz) et les moines, sanctionné le 5 avril 1672 et ratifié les 9-11 février 1673. C’est ensuite, et surtout, l’affectation de la mense abbatiale à la fondation et à l’entretien de la Maison royale Saint-Louis de Saint-Cyr, instituée à l’instigation de Mme de Maintenon, avec pour conséquence  la suppression de la charge et du titre d’abbé, projet lancé en 1686, finalement sanctionné par le pape le 23 février 1691.</p>
+<p>Ce rapprochement entre les bouleversements du patrimoine et la compilation d’un inventaire monumental – hypothèse que nous n’avons pu étayer d’aucun document précis – est encore renforcé par la constatation de l’intense activité de copies de chartes, de cartulaires et d’inventaires qui se manifeste alors (car la grande majorité des originaux médiévaux demeura à Saint-Denis), et dont témoigne encore, malgré de possibles pertes, l’actuel fonds de la maison Saint-Louis à Saint-Cyr, recueilli par les Archives départementales des Yvelines (en particulier D 504-508, copie des cinq premiers volumes de l’Inventaire général ; D 509, Table des précédents ; D 518, copie du t. II du Cartulaire blanc…).</p>
+<p>Mais l’Inventaire général n’est pas qu’un instrument pratique ; il est aussi conçu dans les années où Mabillon, d’ailleurs abondamment cité, a mis en lumière et exploité les documents les
+                plus anciens du chartrier ; et il est outil d’histoire autant que de gestion, une constatation qui se marque à sa disposition chronologique, comme à l’absence – très fâcheuse pour nous – de toute
+                mention d’ordre archivistique, comme encore à l’intérêt – très heureux pour nous – porté aux sources autres que les originaux. Plus exactement : informé des plus récentes conquêtes de l’érudition
+                monastique, mais gardant de l’esprit des anciens cartulaires, il donne à voir un déploiement de droits, une cohorte d’actes disposés pour un accès commode et immédiat. C’est, de fait, en praticien
+                saisi par l’Histoire que Dom Thomas présente en introduction (<ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0002.jpg">LL 1189, fol. I</ref>) l’évolution de sa conception de l’instrument :</p>
+<quote><p>« L’obéissance m’ayant engagé à travailler à l’inventaire des chartes de l’illustre abbaye de Saint-Denis, j’avois d’abord divisé cet ouvrage en autant de chapitres que cet auguste monastère possède ou a possédé de différents droits, privilèges et revenus depuis sa fondation, sans m’arrester à  l’ordre chronologique ny à la suitte des tems. Mais la lecture de nos anciennes chartes m’ayant ouvert les yeux sur plusieurs points de l’histoire que j’ay trouvez opposez à ce qu’en ont escrit divers auteurs, et la découverte qu’on y peut faire de beaucoup d’autres connoissances touchant la généalogie, le règne et les plus mémorables actions de nos roys, reynes, princes et princesses du sang royal, évêques, prélats, abbez et autres personnes de qualité, m’ont obligé de quitter la méthode que je m’estois proposée, pour réduire cet abbrégé en ordre chronologique, afin de le rendre utile non seulement à ceux qui auront l’administration des affaires, mais aussy à ceux qui voudront s’appliquer à l’histoire soit de ce monastère en particulier soit du royaume en général, lesquels pourront puiser dans ces archives originales comme dans une source très pure la vérité de l’antiquité qui s’est si fort altérée en passant depuis tant de siècles par différens canaux, qui en ont corrompu la pureté par le meslange de la fable et du mensonge. »</p></quote>
+<p>Ainsi venait se fondre dans l’Histoire la série de travaux sur sources illustrée avec éclat dès le XIII<hi rend="sup">e</hi> siècle par des moines historiens qui concevaient déjà que l’histoire du royaume s’incarnait dans l’histoire de leur maison et de ses plus menues affaires.</p>
+<p>Suite : <ref target="#sd-les-textes--inventaire--presentation--contenu-et-presentation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/contenu-et-presentation.html">Contenu et présentation</ref></p>
+</div>
+            </div>
+        <div type="page" xml:id="sd-les-textes--inventaire--presentation--contenu-et-presentation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/contenu-et-presentation.html">
+              <head>Contenu et présentation</head>
+              <div type="legacy-block" rend="static-content">
+<ab type="legacy-inline"><ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0477.jpg">
+<graphic url="legacy-source/assets/les-textes/inventaire/presentation/tome1_image0477_notice408.jpg" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/tome1_image0477_notice408.jpg" n="Inventaire général, tome 1 (LL1189), page 436, extrait, notice 408. Cliquer pour voir l’image entière"/>
+</ref></ab>
+<p>L’Inventaire général prend en compte, en premier lieu, les originaux conservés et accessibles à son époque ; la mention de leur existence a parfois été ajoutée après coup, au gré donc de trouvailles, dans le courant du XVIII<hi rend="sup">e</hi> siècle. Ces indications, précieuses pour un premier bilan de la conservation des actes entre Moyen Âge et décennies antérieures à la Révolution, souffrent toutefois quelques lacunes, certains actes aujourd’hui conservés en original n’étant pas signalés comme tels. Et surtout, on l’a dit, la mention n’est assortie d’aucune description ni indication de cote ou de classement, et se limite à l’invariable formule : « En original » (ou « En original double » pour une double expédition).</p>
+<p>Les copies simples sont très rarement mentionnées, Dom Thomas et ses successeurs concentrant alors leur attention sur des vidimus d’actes, conservés ou non en original.</p>
+<p>Les transcriptions des actes au Cartulaire blanc, au cartulaire « de Thou » comme à leurs copies réalisées peu auparavant au XVII<hi rend="sup">e</hi> siècle, ainsi qu’à quelques autres cartulaires mineurs (inégalement exploités), sont par contre, et pour la première fois, délibérément mentionnées. Il est même probable que l’entreprise a commencé par la mise en regeste du Cartulaire blanc. Nous avons pu toutefois noter, de façon significative, que Dom Thomas avait écarté quelques transcriptions du Cartulaire blanc (par exemple <ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome1/notice287">regeste n° 287</ref>, introduit plus tard à partir du seul original = <ref target="http://saint-denis.enc.sorbonne.fr/cartulaire/tome1/rueil/acte30">acte Rueil n° 30</ref>) : il s’agit d’actes (souvent des <hi rend="italic">munimina</hi>) qui n’ont pas de lien direct ou explicite avec l’abbaye.</p>
+<p>Les auteurs de l’Inventaire général ont enfin poussé le souci de l’érudition jusqu’à donner, au moins pour les plus anciennes périodes, les principales caractéristiques chronologiques des années, et surtout jusqu’à rechercher et citer les éditions déjà produites par les savants de leur temps.</p>
+<p>
+                La disposition des regestes est rigoureuse.
+                Elle met en valeur, en tête, le type (assez lâche) de l’acte et, en fin, centré, le millésime (a. st.), exprimé, converti ou approximatif (ici « environ l’an 1174 »), qui sert au classement des actes (classement affiné d’après les autres précisions chronologiques de l’acte, reproduites telles, mais en général sans conversion). Les termes laissés en latin (noms de lieu, de droit…) sont grossis. Le regeste est suivi de l’état de la tradition (dans l’ordre : original, copies de cartulaires, éditions), et parfois assorti de la mention d’un lieu concerné.</p><p>Suite : <ref target="#sd-les-textes--inventaire--presentation--richesses-et-faiblesses" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/richesses-et-faiblesses.html">Richesses et faiblesses</ref></p>
+</div>
+            </div>
+        <div type="page" xml:id="sd-les-textes--inventaire--presentation--richesses-et-faiblesses" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/richesses-et-faiblesses.html">
+              <head>Richesses et faiblesses</head>
+              <div type="legacy-block" rend="static-content">
+<p>On a vu que l’Inventaire laissait échapper des documents, originaux non retrouvés ou copies de cartulaire jugées sans intérêt pour la défense et illustration de l’abbaye ; il n’en demeure pas moins le moyen de saisir le plus commodément et le plus largement les richesses du chartrier, avec près de 3300 regestes d’actes jusqu’à l’orée du XIV<hi rend="sup">e</hi> siècle, à comparer avec les quelque 2600 transcriptions du Cartulaire blanc, auxquelles il offre aussi du coup un accès commode.</p>
+<p>La même constatation s’impose au fond : le détail et la précision des regestes font de ceux-ci des outils précieux, mais à recevoir avec autant de prudence ; les identifications de lieux sont sujettes à caution, les termes institutionnels parfois travestis, les mots latins décalqués mécaniquement, certains montages compris de travers, et le tout est souvent recouvert d’un vernis d’anachronisme qui peut être trompeur si la traduction (puisque aussi bien la longueur de certains regestes confine à la traduction) n’est mise en rapport avec la version originelle du document. Historiens amateurs à bonne école, l’auteur ou plutôt les auteurs de l’Inventaire sont avant tout des praticiens, dont la maîtrise des clauses et des négoces devient patente dans le traitement des actes de juridiction gracieuse du XIII<hi rend="sup">e</hi> siècle, qui devaient leur être encore assez familiers.</p>
+<p>Un autre écueil réside dans le classement chronologique en apparence strict, au mois et au jour près, des actes. Écueil d’abord avec les conversions de millésime qui, en début d’année, sont bien prises en compte, mais non indiquées (le millésime exprimé demeure en ancien style : « février 1230 » suit « décembre 1230 »), et surtout apparemment pliées à l’usage du style de Pâques, dont l’emploi est tout autre que sûr. Écueil aussi du fait que certaines dates sont mal interprétées, certains auteurs confondus (lettres d’Alexandre IV pris pour Alexandre III, classées à l’année 1163 au lieu de 1258 : n° 354-355 ; acte du roi Robert Ier pris pour Robert II, à la suite de Doublet d’ailleurs, et classé à l’année 988 au lieu de 923 : n° 166), des actes non datés, enfin, assignés à toute force à une année précise (« Environ l’an… ») mais très arbitraire.</p>
+</div>
+            </div>
+        </div>
+        <div type="page" xml:id="sd-les-textes--inventaire--parcourir" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/parcourir.html">
+            <head>Édition électronique</head>
+            <div type="legacy-block" rend="static-content">
+<list type="unordered"><item>Les tomes édités <list type="unordered"><item>Accès direct aux éditions<list type="unordered"><item><ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome1/">Le tome I dans son
+                                        intégralité</ref> (Archives nationales, LL 1189 : notices 1 à
+                                    1181, du VII<hi rend="sup">e</hi> siècle à 1224).</item><item><ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome2/">Le tome II dans son
+                                        intégralité</ref> (Archives nationales, LL 1190 : notices 1182
+                                    à 3195, de 1225 à 1300)</item><item><ref target="http://saint-denis.enc.sorbonne.fr/inventaire/tome3/">Le tome III</ref> (Archives
+                                    nationales, LL 1191 : uniquement les notices 3196 à 3265, pages
+                                    1-34, de 1300 à 1302)</item></list></item><item><ref target="http://saint-denis.enc.sorbonne.fr/navindex.html?base=ead&amp;f=fauteursactes">Index des
+                                auteurs d’actes</ref> (<ref target="#sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/auteurs-actes-principales-entrees.html">en savoir plus sur les choix d’indexation</ref>)</item><item>
+<ref target="http://saint-denis.enc.sorbonne.fr/recherche-avancee.html?document=inventaire">Formulaire de
+                                recherche avancée</ref></item></list>
+</item></list>
+</div>
+          </div>
+        <div type="page" xml:id="sd-scientifique-inventaire">
+            <head>Présentation de l’édition</head>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire-projet-sc.html">
+              <head>Le travail de l’éditeur scientifique</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule"/>
+              <div type="legacy-block" rend="static-content">
+<p>Riche, l’Inventaire général est aussi d’un emploi complexe ; aussi convient-il avant
+                toute recherche d’être averti de certaines de ses particularités et des choix de
+                traitement et de présentation auxquels nous avons été amenés.</p>
+<div type="legacy-block" rend="tdm">
+<list type="unordered"><item><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--transcription">Transcription</ref></item><item><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--dates">Dates</ref></item><item><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--donnees-archivistiques">Données archivistiques</ref></item><item><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--donnees-bibliographiques">Données bibliographiques</ref></item><item><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--types-auteurs-actes">Types d’auteurs d’actes</ref></item></list>
+</div>
+</div>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--transcription"/>
+              <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Transcription</p>
+<p>Conformément aux habitudes des diplomatistes, le texte de l’Inventaire a été
+                transcrit en suivant les usages contemporains en matière d’accentuation, de
+                ponctuation, de majuscules, tout en respectant ses graphies. Corrections d’époque et
+                erreurs de langue sont signalées en note. Il a été impossible pour l’heure de
+                vérifier et reprendre les identifications de toponymes comme les traductions de noms
+                personnels, qui souvent en outre apparaissent dans des graphies non normalisées
+                (l’abbé Suger est systématiquement appelé « Sugère » et son prédécesseur Fulrad
+                apparaît sous diverses formes). Il est donc recommandé de prendre contact avec le
+                texte avant une première interrogation, et de recourir autant que de besoin à la
+                recherche floue.</p>
+<p><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule">Retour au début</ref></p>
+</div>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--dates"/>
+              <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Dates</p>
+<p>Les auteurs de l’Inventaire général convertissent les dates des seuls actes
+                haut-médiévaux et pontificaux, non sans erreur ; pour les autres, ils traduisent
+                simplement les données chronologiques en français moderne sans les convertir ; ils
+                donnent des approximations assez arbitraires pour les actes non datés, classent les
+                autres avec quelque incohérence.</p>
+<p>Les datations fines proposées dans les chapitres déjà publiés du Cartulaire blanc
+                sont automatiquement et progressivement proposées au fil de l’édition de
+                l’Inventaire. Les actes sans date ont été assignés à des fourchettes larges, qui
+                seront progressivement affinées. Pour les autres actes, les dates exprimées ont été
+                autant que possible converties ; pour les actes antérieurs à l’An mil, on a repris à
+                l’identique les indications de l’excellent catalogue de Daniel Sonzogni.</p>
+<p>On a tenu compte aussi des connaissances sur les styles employés pour le changement
+                du millésime ; ces connaissances sont imparfaites aujourd’hui encore, et suggèrent
+                un paysage complexe : en plein XIII<hi rend="sup">e</hi> siècle, on voit que la « France » de
+                Saint-Denis connaît la concurrence entre le style de Pâques de l’administration
+                royale et le style de l’Annonciation florentine, auquel les ecclésiastiques et leurs
+                juridictions gracieuses semblent rester fidèles au moins jusque vers les années
+                1250-1260. Lorsque l’incertitude ne pouvait être levée par déduction ou recoupement,
+                essentiellement pour les actes datés du mois de mars, le millésime a été laissé en
+                ancien style.</p>
+<p><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule">Retour au début</ref></p>
+</div>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--donnees-archivistiques"/>
+              <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Données archivistiques</p>
+<p>L’Inventaire général donne un tableau de tradition qui mentionne, le cas échéant,
+                l’existence d’un original, puis fournit les références précises à des copies de
+                cartulaires (les copies authentiques, vidimus en tête, sont traitées comme des actes
+                à part entière, sous une entrée spéciale, tantôt à la suite de l’acte vidimé, tantôt
+                à leur date propre). Nous avons pu retrouver la plupart des volumes cités de façon
+                abrégée :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Cartulaire blanc</hi>, t. I ou t. II : appellation conservée jusqu’à nos
+                    jours (auj. Arch. nat., LL 1157-1158).</item><item><hi rend="cite">Copie du Cartulaire blanc</hi> : copie du précédent, fin du
+                        XVII<hi rend="sup">e</hi> siècle, dont nous connaissons deux exemplaires : (a)
+                    complet en six volumes (Arch. mun. Saint-Denis, GG 10-15) ; (b) limité
+                    aujourd’hui à deux volumes de copie du t. II (Arch. dép. Yvelines, D 518) ;
+                    quelques pointages nous ont montré que l’Inventaire général fait renvoi à ce
+                    second exemplaire.</item><item><hi rend="cite">Copie du cartulaire de M. Colbert</hi>, ou <hi rend="cite">Coppie du cartulaire de
+                        Saint-Denis estant en possession de M. Colbert</hi>, ou <hi rend="cite">Copie du
+                        Colbertin</hi> : copie XVII<hi rend="sup">e</hi> siècle du cartulaire dit de Thou
+                    (auj. Arch. nat., LL 1160). L’Inventaire n’a apparemment pas eu accès à
+                    l’original, XIII<hi rend="sup">e</hi> siècle, qui avait été intégré à la bibliothèque de
+                    Jacques-Auguste de Thou (cf. <hi rend="italic">Catalogus bibliothecae thuanae</hi>, Paris, 1677,
+                    section Manuscrits, p. 431), puis acquis en 1680 par Colbert (auj. Bibl. nat. de
+                    Fr., lat. 5415).</item><item><hi rend="cite">Petit Cartulaire blanc</hi> : dit plus tard Cartulaire de la Pitancerie,
+                    considéré à tort comme le t. III du Cartulaire blanc (auj. Arch. nat.,
+                    LL 1159).</item><item><hi rend="cite">Petit cartulaire de l’office de chantre</hi> : cartulaire de la
+                    chantrerie (auj. Arch. nat., LL 1163).</item><item><hi rend="cite">Petit cartulaire de Chaource</hi> (auj. Arch. nat., LL 1172).</item><item><hi rend="cite">Cartulaire du prieuré de la Chapellaude</hi>, « dépendant de l'abbaye de
+                    Saint-Denis estant en la possession du sieur de Vion de Hérouval, auditeur des
+                    comptes à Paris en la présente année 1688 » (regeste n° 2) : cartulaire qui
+                    semble aujourd’hui perdu (voir Sonzogni, n° 8).</item><item><hi rend="cite">Gros registre des fiefs</hi> : non identifié.</item></list>
+<p>Nous ne sommes pas encore en mesure de donner les cotes contemporaines des originaux
+                signalés, ce travail de repérage étant effectué, beaucoup plus lentement, dans le
+                cadre de l’édition des chapitres du Cartulaire blanc.</p>
+<p><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule">Retour au début</ref></p>
+</div>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--donnees-bibliographiques"/>
+              <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Données bibliographiques</p>
+<p>L’Inventaire général a tenté de mentionner les éditions d’actes du haut Moyen Âge. On
+                peut rétablir comme suit la liste des ouvrages ainsi exploités, d’après des mentions
+                abrégées peu normalisées, mais transparentes :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Diplomatique</hi> (parfois <hi rend="cite">Mabillon, Diplomatica</hi>) : J.
+                    Mabillon, <hi rend="italic">De re diplomatica libri VI</hi>, Paris, 1681.</item><item><hi rend="cite">Supplément de la diplomatique</hi> : J. Mabillon, <hi rend="italic">De re diplomatica
+                        supplementum</hi>, Paris, 1704.</item><item><hi rend="cite">Bouquet</hi>, ou <hi rend="cite">Bouquet, Collection des historiens de
+                        France</hi>, ou <hi rend="cite">Collection des historiens de France</hi> : M.
+                    Bouquet et succ., <hi rend="italic">Recueil des historiens des Gaules et de la France</hi>,
+                    Paris, 1738-</item><item><hi rend="cite">Actes des saints de l’ordre de saint Benoist</hi> : L. d’Achery, J.
+                    Mabillon et al., <hi rend="italic">Acta sanctorum ordinis sancti Benedicti</hi>, Paris,
+                    1668-1701.</item><item><hi rend="cite">Doublet</hi> : J. Doublet, <hi rend="italic">Histoire de l’abbaye de Sainct-Denys en
+                        France</hi>, Paris, 1625.</item><item><hi rend="cite">Félibien</hi> : M. Félibien, <hi rend="italic">Histoire de l’abbaye royale de
+                        Saint-Denys en France</hi>, Paris, 1706.</item></list>
+<p>Sont aussi, beaucoup plus ponctuellement, cités pour quelques actes très
+                anciens :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Annales du père Lecointe</hi> : C. Lecointe, <hi rend="italic">Annales ecclesiastici
+                        Francorum</hi>, Paris, 1665-1683.</item><item><hi rend="cite">Formules de Malculphi par Mr Bignon</hi> : Marculfe, <hi rend="italic">Formulae
+                        veteres… accessit liber legis salicae</hi>, éd. J. Bignon, Paris, 1666.</item><item><hi rend="cite">Aimonius</hi> : <hi rend="italic">Aimoini… Libri quinque de gestis Francorum</hi>, éd.
+                    J. du Breul, Paris, 1602.</item><item><hi rend="cite">Conciles recueillis</hi> (ou <hi rend="cite">Recueil des conciles</hi>)
+                        <hi rend="cite">par le Père Labbe</hi> : P. Labbe et G. Cossart, <hi rend="italic">Sacrosancta
+                        concilia</hi>, Paris, 1671-1672.</item><item><hi rend="cite">Mémoires de Papire Masson</hi> : Œuvre non identifiée de Jean-Papire
+                    Masson.</item><item><hi rend="cite">Istoire de France par le sieur Duchesne</hi> : A. Du Chesne,
+                        <hi rend="italic">Historiae Francorum scriptores coaetanei…</hi>, Paris, 1636-1649.</item></list>
+<p>Nous avons poursuivi ce travail en donnant la référence des actes (essentiellement
+                royaux et pontificaux) recensés ou publiés dans les ouvrages suivants :</p>
+<list type="unordered" rend="encadré"><item>Actes antérieurs à l’An mil<list type="unordered"><item><abbr>Sonzogni</abbr> : D. Sonzogni, <hi rend="italic">Le chartrier de l’abbaye de
+                                Saint-Denis en France au haut Moyen Âge, essai de
+                            reconstitution</hi>, Saint-Denis, 2003 (<hi rend="italic">Pecia</hi>, 3).</item></list>
+</item><item>Actes pontificaux<list type="unordered"><item>Avant 1198 : <list type="unordered"><item><abbr>Grosse</abbr> (« indiqué » si le document est uniquement
+                                    mentionné dans la liste initiale, p. 31-46, ou « édition » s’il
+                                    fait partie des textes publiés, p. 61-247, sous un nouveau
+                                    numéro) : R. Grosse, <hi rend="italic">Papsturkunden in Frankreich</hi>, Neue
+                                    Folge, 9. Band,<hi rend="italic"> Diözese Paris</hi>, II, <hi rend="italic">Abtei
+                                        Saint-Denis</hi>, Göttingen : Vandenhoeck &amp; Ruprecht,
+                                    1998, 257 p. (<hi rend="italic">Abhandlungen der Akademie der Wissenschaften in
+                                        Göttingen, Philologisch-historische Klasse</hi>, Dritte
+                                    Folge, 225).</item></list>
+</item><item>Après 1198 :<list type="unordered"><item><abbr>Barbiche</abbr> : B. Barbiche, <hi rend="italic">Les actes pontificaux
+                                        originaux des Archives nationales de Paris</hi>, Vatican,
+                                    1975-1982, 3 vol.</item></list>
+</item></list></item><item>Actes des rois de France avant 1226<list type="unordered"><item><abbr>Recueil des actes de Charles le Chauve</abbr> (uniquement quand
+                            l’acte n’est pas dans la liste de Sonzogni) : éd. G. Tessier, Paris,
+                            1943-1955, 3vol. (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Newman</abbr> : W. Newman, <hi rend="italic">Catalogue des actes de Robert II roi
+                                de France</hi>, Paris, 1937.</item><item><abbr>Soehnée</abbr> : F. Soehnée, <hi rend="italic">Catalogue des actes de Henri
+                                    I<hi rend="sup">er</hi> roi de France</hi>, Paris, 1907 (<hi rend="italic">Bibliothèque
+                                de l’École pratique des hautes études, Sciences philologiques et
+                                historiques</hi>, 161).</item><item><abbr>Recueil des actes de Philippe I<hi rend="sup">er</hi></abbr> : éd. M. Prou,
+                            Paris, 1908 (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Recueil des actes de Louis VI</abbr> : éd. J. Dufour, 1992-1994, 4
+                            vol. (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Luchaire</abbr> : A. Luchaire, <hi rend="italic">Études sur les actes de
+                                Louis VII</hi>, Paris, 1885.</item><item><abbr>Recueil des actes de Philippe II</abbr> : éd. H.-F. Delaborde, C.
+                            Petit-Dutaillis, J. Boussard, M. Nortier, Paris, 1916-1979, 4 vol. ;
+                            t. V, <hi rend="italic">Suppléments</hi>, par M. Nortier, Paris, 2004 (<hi rend="italic">Chartes et
+                                diplômes</hi>).</item><item><abbr>Petit-Dutaillis</abbr> : C. Petit-Dutaillis, <hi rend="italic">Étude sur le règne
+                                de Louis VIII</hi>, Paris, 1894 (<hi rend="italic">Bibliothèque de l’École pratique
+                                des hautes études, Sciences philologiques et historiques</hi>, 101 ;
+                            catalogue des actes du roi, appendice VI, p. 449-508).</item></list></item><item>Actes d’autres souverains <list type="unordered"><item><abbr>Die Urkunden Heinrichs des III.</abbr> : éd. H. Bresslau, Berlin,
+                            1931 (M.G.H.).</item><item><abbr>The acta of William I</abbr> : D. Bates, <hi rend="italic">The acta of
+                                William I</hi>, 1066-1087, Oxford, 1998 (<hi rend="italic">Regesta regum
+                                anglo-normannorum</hi>).</item></list></item><item>Actes d’autres auteurs
+                <list type="unordered"><item><abbr>Chartes de Suger</abbr> : Suger, <hi rend="italic">Œuvres</hi>, éd. F. Gasparri, t. II, Paris, 2001 (<hi rend="italic">Les classiques de l’histoire de France au Moyen Âge</hi>), p. 156-267.</item><item><abbr>Actes des évêques de Laon </abbr>: A. Dufour-Malbezin, <hi rend="italic">Actes des évêques de Laon des origines à 1151</hi>, Paris, 2001 (<hi rend="italic">Documents, études et répertoires publiés par l’I.R.H.T.</hi>, 61).</item><item><abbr>Chartes des évêques d’Arras</abbr> : B.-M. Tock, <hi rend="italic">Les chartes des évêques d’Arras, 1093-1203</hi>, Paris, 1991 (<hi rend="italic">Documents inédits in-8°</hi>, 21).</item><item><abbr>Van de Kieft</abbr> : C. Van de Kieft, <hi rend="italic">Étude sur le chartrier et la seigneurie du prieuré de la Chapelle-Aude, XI<hi rend="sup">e</hi>-XIII<hi rend="sup">e</hi> siècle,</hi> Amsterdam, 1960, (pour les pièces justificatives, p. 203-262).</item><item><abbr>Guillaume de Massouris</abbr> : J. Cordey, « Guillaume de Massouris, abbé de Saint-Denis, 1245-1254 », dans <hi rend="italic">Troisièmes mélanges d’histoire du Moyen Âge publiés sous la dir. de M. le Professeur Luchaire</hi>, p. 187-266 (non mentionné pour le catalogue des actes, p. 220-256 ; mais, sous la mention « édition », pour les seules pièces justificatives, p. 257-262).</item></list></item></list>
+<p><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule">Retour au début</ref></p>
+</div>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire-projet-sc--types-auteurs-actes"/>
+              <div type="legacy-block" rend="static-content">
+<p rend="heading-h2">Types d’auteurs d’actes</p>
+<p>Pour tous les documents jusqu’en 1302 (vidimus compris), on a indexé le ou les auteurs de l’acte diplomatique, précisément (pour les dignitaires ecclésiastiques et laïques) ou par catégorie générale. La grille, mise au point dans l’optique de la diplomatique, pour faciliter certains repérages et comptages, ne renseigne donc pas en détail sur des auteurs mineurs (seigneurs, doyens de chrétienté…) ni sur les auteurs des actions juridiques notifiées par un tiers : ceux-ci devront être cherchés en plein texte.</p>
+<p>La mise au point de cette grille repose comme toujours sur une part d’arbitraire et d’anachronisme.</p>
+<list type="unordered" rend="encadré"><item>a. Les plus hauts dignitaires (roi de France pour tout souverain ayant régné sur la Francie de l’ouest ou royaume de France, ducs, comtes…, évêques, abbés, doyens de chapitres, archidiacres agissant ex officio…) sont mentionnés sous leur titre (la plupart du temps titre+lieu) dans tous les cas. Les juridictions gracieuses sont désignées par leur nom institutionnel (« officialité » seul pour une officialité épiscopale, « Châtelet » seul pour le Châtelet de Paris…).</item><item>b. Dans les autres cas (dignités ou offices inférieurs aux précédents,  tels que doyens de chrétienté ou seigneurs, personnes citées sans titres…), l’indexation est générique, faisant seulement le départ entre laïques et ecclésiastiques, et distinguant entre « auteurs » et « divers » :
+                <list type="unordered"><item>La mention « Auteurs laïques », « Auteurs ecclésiastiques » (le pluriel, générique, ne renseigne nullement sur le nombre d’auteurs de chaque acte séparément, qu’ils soient un ou plusieurs) signifie que les actes sont au nom du (des) auteur(s) de l’action juridique mentionnée dans le regeste.</item><item>Pour les autres personnes agissant comme notificateurs, ou à des titres divers (arbitres, etc.), on emploie l’expression générique « Divers laïques » ou « Divers ecclésiastiques ».</item></list></item><item>c. Les « juges délégués » (du pape, voire d’un légat) sont mentionnés comme tels, en sus de l’indexation de chacun des auteurs.</item></list>
+<p>Une liste déroulante de toutes les entrées est consultable à partir de l’écran de recherche. Les principales entrées de cette liste font également l’objet d’une <ref target="#sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/auteurs-actes-principales-entrees.html">présentation séparée</ref>.</p>
+<p><ref target="#sd-le-projet--aspects-scientifiques--inventaire-projet-sc--preambule">Retour au début</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire--transcription" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/transcription.html">
+              <head>Transcription</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire--transcription--transcription"/>
+              <div type="legacy-block" rend="static-content">
+<p>Riche, l’Inventaire général est aussi d’un emploi complexe ; aussi convient-il avant
+                toute recherche d’être averti de certaines de ses particularités et des choix de
+                traitement et de présentation auxquels nous avons été amenés.</p>
+<p>Conformément aux habitudes des diplomatistes, le texte de l’Inventaire a été
+                transcrit en suivant les usages contemporains en matière d’accentuation, de
+                ponctuation, de majuscules, tout en respectant ses graphies. Corrections d’époque et
+                erreurs de langue sont signalées en note. Il a été impossible pour l’heure de
+                vérifier et reprendre les identifications de toponymes comme les traductions de noms
+                personnels, qui souvent en outre apparaissent dans des graphies non normalisées
+                (l’abbé Suger est systématiquement appelé « Sugère » et son prédécesseur Fulrad
+                apparaît sous diverses formes). Il est donc recommandé de prendre contact avec le
+                texte avant une première interrogation, et de recourir autant que de besoin à la
+                recherche floue.</p>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-scientifiques--inventaire--dates" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/dates.html">Dates</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire--dates" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/dates.html">
+              <head>Dates</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire--dates--dates"/>
+              <div type="legacy-block" rend="static-content">
+<p>Les auteurs de l’Inventaire général convertissent les dates des seuls actes
+                haut-médiévaux et pontificaux, non sans erreur ; pour les autres, ils traduisent
+                simplement les données chronologiques en français moderne sans les convertir ; ils
+                donnent des approximations assez arbitraires pour les actes non datés, classent les
+                autres avec quelque incohérence.</p>
+<p>Les datations fines proposées dans les chapitres déjà publiés du Cartulaire blanc
+                sont automatiquement et progressivement proposées au fil de l’édition de
+                l’Inventaire. Les actes sans date ont été assignés à des fourchettes larges, qui
+                seront progressivement affinées. Pour les autres actes, les dates exprimées ont été
+                autant que possible converties ; pour les actes antérieurs à l’An mil, on a repris à
+                l’identique les indications de l’excellent catalogue de Daniel Sonzogni.</p>
+<p>On a tenu compte aussi des connaissances sur les styles employés pour le changement
+                du millésime ; ces connaissances sont imparfaites aujourd’hui encore, et suggèrent
+                un paysage complexe : en plein XIII<hi rend="sup">e</hi> siècle, on voit que la « France » de
+                Saint-Denis connaît la concurrence entre le style de Pâques de l’administration
+                royale et le style de l’Annonciation florentine, auquel les ecclésiastiques et leurs
+                juridictions gracieuses semblent rester fidèles au moins jusque vers les années
+                1250-1260. Lorsque l’incertitude ne pouvait être levée par déduction ou recoupement,
+                essentiellement pour les actes datés du mois de mars, le millésime a été laissé en
+                ancien style.</p>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-scientifiques--inventaire--donnees-archivistiques" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/donnees-archivistiques.html">Données archivistiques</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire--donnees-archivistiques" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/donnees-archivistiques.html">
+              <head>Données archivistiques</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire--donnees-archivistiques--donnees-archivistiques"/>
+              <div type="legacy-block" rend="static-content">
+<p>L’Inventaire général donne un tableau de tradition qui mentionne, le cas échéant,
+                l’existence d’un original, puis fournit les références précises à des copies de
+                cartulaires (les copies authentiques, vidimus en tête, sont traitées comme des actes
+                à part entière, sous une entrée spéciale, tantôt à la suite de l’acte vidimé, tantôt
+                à leur date propre). Nous avons pu retrouver la plupart des volumes cités de façon
+                abrégée :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Cartulaire blanc</hi>, t. I ou t. II : appellation conservée jusqu’à nos
+                    jours (auj. Arch. nat., LL 1157-1158).</item><item><hi rend="cite">Copie du Cartulaire blanc</hi> : copie du précédent, fin du
+                        XVII<hi rend="sup">e</hi> siècle, dont nous connaissons deux exemplaires : (a)
+                    complet en six volumes (Arch. mun. Saint-Denis, GG 10-15) ; (b) limité
+                    aujourd’hui à deux volumes de copie du t. II (Arch. dép. Yvelines, D 518) ;
+                    quelques pointages nous ont montré que l’Inventaire général fait renvoi à ce
+                    second exemplaire.</item><item><hi rend="cite">Copie du cartulaire de M. Colbert</hi>, ou <hi rend="cite">Coppie du cartulaire de
+                        Saint-Denis estant en possession de M. Colbert</hi>, ou <hi rend="cite">Copie du
+                        Colbertin</hi> : copie XVII<hi rend="sup">e</hi> siècle du cartulaire dit de Thou
+                    (auj. Arch. nat., LL 1160). L’Inventaire n’a apparemment pas eu accès à
+                    l’original, XIII<hi rend="sup">e</hi> siècle, qui avait été intégré à la bibliothèque de
+                    Jacques-Auguste de Thou (cf. <hi rend="italic">Catalogus bibliothecae thuanae</hi>, Paris, 1677,
+                    section Manuscrits, p. 431), puis acquis en 1680 par Colbert (auj. Bibl. nat. de
+                    Fr., lat. 5415).</item><item><hi rend="cite">Petit Cartulaire blanc</hi> : dit plus tard Cartulaire de la Pitancerie,
+                    considéré à tort comme le t. III du Cartulaire blanc (auj. Arch. nat.,
+                    LL 1159).</item><item><hi rend="cite">Petit cartulaire de l’office de chantre</hi> : cartulaire de la
+                    chantrerie (auj. Arch. nat., LL 1163).</item><item><hi rend="cite">Petit cartulaire de Chaource</hi> (auj. Arch. nat., LL 1172).</item><item><hi rend="cite">Cartulaire du prieuré de la Chapellaude</hi>, « dépendant de l'abbaye de
+                    Saint-Denis estant en la possession du sieur de Vion de Hérouval, auditeur des
+                    comptes à Paris en la présente année 1688 » (regeste n° 2) : cartulaire qui
+                    semble aujourd’hui perdu (voir Sonzogni, n° 8).</item><item><hi rend="cite">Gros registre des fiefs</hi> : non identifié.</item></list>
+<p>Nous ne sommes pas encore en mesure de donner les cotes contemporaines des originaux
+                signalés, ce travail de repérage étant effectué, beaucoup plus lentement, dans le
+                cadre de l’édition des chapitres du Cartulaire blanc.</p>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-scientifiques--inventaire--donnees-bibliographiques" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/donnees-bibliographiques.html">Données bibliographiques</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire--donnees-bibliographiques" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/donnees-bibliographiques.html">
+              <head>Données bibliographiques</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire--donnees-bibliographiques--donnees-bibliographiques"/>
+              <div type="legacy-block" rend="static-content">
+<p>L’Inventaire général a tenté de mentionner les éditions d’actes du haut Moyen Âge. On
+                peut rétablir comme suit la liste des ouvrages ainsi exploités, d’après des mentions
+                abrégées peu normalisées, mais transparentes :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Diplomatique</hi> (parfois <hi rend="cite">Mabillon, Diplomatica</hi>) : J.
+                    Mabillon, <hi rend="italic">De re diplomatica libri VI</hi>, Paris, 1681.</item><item><hi rend="cite">Supplément de la diplomatique</hi> : J. Mabillon, <hi rend="italic">De re diplomatica
+                        supplementum</hi>, Paris, 1704.</item><item><hi rend="cite">Bouquet</hi>, ou <hi rend="cite">Bouquet, Collection des historiens de
+                        France</hi>, ou <hi rend="cite">Collection des historiens de France</hi> : M.
+                    Bouquet et succ., <hi rend="italic">Recueil des historiens des Gaules et de la France</hi>,
+                    Paris, 1738-</item><item><hi rend="cite">Actes des saints de l’ordre de saint Benoist</hi> : L. d’Achery, J.
+                    Mabillon et al., <hi rend="italic">Acta sanctorum ordinis sancti Benedicti</hi>, Paris,
+                    1668-1701.</item><item><hi rend="cite">Doublet</hi> : J. Doublet, <hi rend="italic">Histoire de l’abbaye de Sainct-Denys en
+                        France</hi>, Paris, 1625.</item><item><hi rend="cite">Félibien</hi> : M. Félibien, <hi rend="italic">Histoire de l’abbaye royale de
+                        Saint-Denys en France</hi>, Paris, 1706.</item></list>
+<p>Sont aussi, beaucoup plus ponctuellement, cités pour quelques actes très
+                anciens :</p>
+<list type="unordered" rend="encadré"><item><hi rend="cite">Annales du père Lecointe</hi> : C. Lecointe, <hi rend="italic">Annales ecclesiastici
+                        Francorum</hi>, Paris, 1665-1683.</item><item><hi rend="cite">Formules de Malculphi par Mr Bignon</hi> : Marculfe, <hi rend="italic">Formulae
+                        veteres… accessit liber legis salicae</hi>, éd. J. Bignon, Paris, 1666.</item><item><hi rend="cite">Aimonius</hi> : <hi rend="italic">Aimoini… Libri quinque de gestis Francorum</hi>, éd.
+                    J. du Breul, Paris, 1602.</item><item><hi rend="cite">Conciles recueillis</hi> (ou <hi rend="cite">Recueil des conciles</hi>)
+                        <hi rend="cite">par le Père Labbe</hi> : P. Labbe et G. Cossart, <hi rend="italic">Sacrosancta
+                        concilia</hi>, Paris, 1671-1672.</item><item><hi rend="cite">Mémoires de Papire Masson</hi> : Œuvre non identifiée de Jean-Papire
+                    Masson.</item><item><hi rend="cite">Istoire de France par le sieur Duchesne</hi> : A. Du Chesne,
+                        <hi rend="italic">Historiae Francorum scriptores coaetanei…</hi>, Paris, 1636-1649.</item></list>
+<p>Nous avons poursuivi ce travail en donnant la référence des actes (essentiellement
+                royaux et pontificaux) recensés ou publiés dans les ouvrages suivants :</p>
+<list type="unordered" rend="encadré"><item>Actes antérieurs à l’An mil<list type="unordered"><item><abbr>Sonzogni</abbr> : D. Sonzogni, <hi rend="italic">Le chartrier de l’abbaye de
+                                Saint-Denis en France au haut Moyen Âge, essai de
+                            reconstitution</hi>, Saint-Denis, 2003 (<hi rend="italic">Pecia</hi>, 3).</item></list>
+</item><item>Actes pontificaux<list type="unordered"><item>Avant 1198 : <list type="unordered"><item><abbr>Grosse</abbr> (« indiqué » si le document est uniquement
+                                    mentionné dans la liste initiale, p. 31-46, ou « édition » s’il
+                                    fait partie des textes publiés, p. 61-247, sous un nouveau
+                                    numéro) : R. Grosse, <hi rend="italic">Papsturkunden in Frankreich</hi>, Neue
+                                    Folge, 9. Band,<hi rend="italic"> Diözese Paris</hi>, II, <hi rend="italic">Abtei
+                                        Saint-Denis</hi>, Göttingen : Vandenhoeck &amp; Ruprecht,
+                                    1998, 257 p. (<hi rend="italic">Abhandlungen der Akademie der Wissenschaften in
+                                        Göttingen, Philologisch-historische Klasse</hi>, Dritte
+                                    Folge, 225).</item></list>
+</item><item>Après 1198 :<list type="unordered"><item><abbr>Barbiche</abbr> : B. Barbiche, <hi rend="italic">Les actes pontificaux
+                                        originaux des Archives nationales de Paris</hi>, Vatican,
+                                    1975-1982, 3 vol.</item></list>
+</item></list></item><item>Actes des rois de France avant 1226<list type="unordered"><item><abbr>Recueil des actes de Charles le Chauve</abbr> (uniquement quand
+                            l’acte n’est pas dans la liste de Sonzogni) : éd. G. Tessier, Paris,
+                            1943-1955, 3vol. (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Newman</abbr> : W. Newman, <hi rend="italic">Catalogue des actes de Robert II roi
+                                de France</hi>, Paris, 1937.</item><item><abbr>Soehnée</abbr> : F. Soehnée, <hi rend="italic">Catalogue des actes de Henri
+                                    I<hi rend="sup">er</hi> roi de France</hi>, Paris, 1907 (<hi rend="italic">Bibliothèque
+                                de l’École pratique des hautes études, Sciences philologiques et
+                                historiques</hi>, 161).</item><item><abbr>Recueil des actes de Philippe I<hi rend="sup">er</hi></abbr> : éd. M. Prou,
+                            Paris, 1908 (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Recueil des actes de Louis VI</abbr> : éd. J. Dufour, 1992-1994, 4
+                            vol. (<hi rend="italic">Chartes et diplômes</hi>).</item><item><abbr>Luchaire</abbr> : A. Luchaire, <hi rend="italic">Études sur les actes de
+                                Louis VII</hi>, Paris, 1885.</item><item><abbr>Recueil des actes de Philippe II</abbr> : éd. H.-F. Delaborde, C.
+                            Petit-Dutaillis, J. Boussard, M. Nortier, Paris, 1916-1979, 4 vol. ;
+                            t. V, <hi rend="italic">Suppléments</hi>, par M. Nortier, Paris, 2004 (<hi rend="italic">Chartes et
+                                diplômes</hi>).</item><item><abbr>Petit-Dutaillis</abbr> : C. Petit-Dutaillis, <hi rend="italic">Étude sur le règne
+                                de Louis VIII</hi>, Paris, 1894 (<hi rend="italic">Bibliothèque de l’École pratique
+                                des hautes études, Sciences philologiques et historiques</hi>, 101 ;
+                            catalogue des actes du roi, appendice VI, p. 449-508).</item></list></item><item>Actes d’autres souverains <list type="unordered"><item><abbr>Die Urkunden Heinrichs des III.</abbr> : éd. H. Bresslau, Berlin,
+                            1931 (M.G.H.).</item><item><abbr>The acta of William I</abbr> : D. Bates, <hi rend="italic">The acta of
+                                William I</hi>, 1066-1087, Oxford, 1998 (<hi rend="italic">Regesta regum
+                                anglo-normannorum</hi>).</item></list></item><item>Actes d’autres auteurs <list type="unordered"><item><abbr>Chartes de Suger</abbr> : Suger, <hi rend="italic">Œuvres</hi>, éd. F. Gasparri,
+                            t. II, Paris, 2001 (<hi rend="italic">Les classiques de l’histoire de France au Moyen
+                                Âge</hi>), p. 156-267.</item><item><abbr>Actes des évêques de Laon </abbr>: A. Dufour-Malbezin, <hi rend="italic">Actes
+                                des évêques de Laon des origines à 1151</hi>, Paris, 2001
+                                (<hi rend="italic">Documents, études et répertoires publiés par l’I.R.H.T.</hi>,
+                            61).</item><item><abbr>Chartes des évêques d’Arras</abbr> : B.-M. Tock, <hi rend="italic">Les chartes
+                                des évêques d’Arras, 1093-1203</hi>, Paris, 1991 (<hi rend="italic">Documents
+                                inédits in-8°</hi>, 21).</item><item><abbr>Van de Kieft</abbr> : C. Van de Kieft, <hi rend="italic">Étude sur le chartrier
+                                et la seigneurie du prieuré de la Chapelle-Aude,
+                                    XI<hi rend="sup">e</hi>-XIII<hi rend="sup">e</hi> siècle,</hi> Amsterdam, 1960,
+                            (pour les pièces justificatives, p. 203-262).</item><item><abbr>Guillaume de Massouris</abbr> : J. Cordey, « Guillaume de
+                            Massouris, abbé de Saint-Denis, 1245-1254 », dans <hi rend="italic">Troisièmes mélanges
+                                d’histoire du Moyen Âge publiés sous la dir. de M. le Professeur
+                                Luchaire</hi>, p. 187-266 (non mentionné pour le catalogue des actes,
+                            p. 220-256 ; mais, sous la mention « édition », pour les seules pièces
+                            justificatives, p. 257-262).</item></list></item></list>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-scientifiques--inventaire--types-d-auteurs-d-actes" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/types-d-auteurs-d-actes.html">Types d’auteurs d’actes</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-scientifiques--inventaire--types-d-auteurs-d-actes" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/inventaire/types-d-auteurs-d-actes.html">
+              <head>Types d’auteurs d’actes</head>
+              <anchor xml:id="sd-le-projet--aspects-scientifiques--inventaire--types-d-auteurs-d-actes--types-auteurs-actes"/>
+              <div type="legacy-block" rend="static-content">
+<p>Pour tous les documents jusqu’en 1302 (vidimus compris), on a indexé le ou les
+                auteurs de l’acte diplomatique, précisément (pour les dignitaires ecclésiastiques et
+                laïques) ou par catégorie générale. La grille, mise au point dans l’optique de la
+                diplomatique, pour faciliter certains repérages et comptages, ne renseigne donc pas
+                en détail sur des auteurs mineurs (seigneurs, doyens de chrétienté…) ni sur les
+                auteurs des actions juridiques notifiées par un tiers : ceux-ci devront être
+                cherchés en plein texte.</p>
+<p>La mise au point de cette grille repose comme toujours sur une part d’arbitraire et
+                d’anachronisme.</p>
+<list type="unordered" rend="encadré"><item>a. Les plus hauts dignitaires (roi de France pour tout souverain ayant régné sur
+                    la Francie de l’ouest ou royaume de France, ducs, comtes…, évêques, abbés,
+                    doyens de chapitres, archidiacres agissant ex officio…) sont mentionnés sous
+                    leur titre (la plupart du temps titre+lieu) dans tous les cas. Les juridictions
+                    gracieuses sont désignées par leur nom institutionnel (« officialité » seul pour
+                    une officialité épiscopale, « Châtelet » seul pour le Châtelet de Paris…).</item><item>b. Dans les autres cas (dignités ou offices inférieurs aux précédents, tels que
+                    doyens de chrétienté ou seigneurs, personnes citées sans titres…), l’indexation
+                    est générique, faisant seulement le départ entre laïques et ecclésiastiques, et
+                    distinguant entre « auteurs » et « divers » : <list type="unordered"><item>La mention « Auteurs laïques », « Auteurs ecclésiastiques » (le pluriel,
+                            générique, ne renseigne nullement sur le nombre d’auteurs de chaque acte
+                            séparément, qu’ils soient un ou plusieurs) signifie que les actes sont
+                            au nom du (des) auteur(s) de l’action juridique mentionnée dans le
+                            regeste.</item><item>Pour les autres personnes agissant comme notificateurs, ou à des titres
+                            divers (arbitres, etc.), on emploie l’expression générique « Divers
+                            laïques » ou « Divers ecclésiastiques ».</item></list></item><item>c. Les « juges délégués » (du pape, voire d’un légat) sont mentionnés comme
+                    tels, en sus de l’indexation de chacun des auteurs.</item></list>
+<p>Une liste déroulante de toutes les entrées est consultable à partir de l’écran de
+                recherche. Les principales entrées de cette liste font également l’objet d’une <ref target="#sd-le-projet--aspects-scientifiques--auteurs-actes-principales-entrees" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-scientifiques/auteurs-actes-principales-entrees.html">présentation séparée</ref>.</p>
+</div>
+            </div>
+        </div>
+        <div type="page" xml:id="sd-informatique-inventaire">
+            <head>Aspects informatiques de l’édition</head>
+          <div type="page" xml:id="sd-le-projet--aspects-informatiques--inventaire--principes-generaux-de-structuration" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/principes-generaux-de-structuration.html">
+              <head>Principes généraux de structuration</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--inventaire--principes-generaux-de-structuration--structure"/>
+              <div type="legacy-block" rend="static-content">
+<p>Commençons par un rappel des constats et principes qui ont gouverné l’informatisation
+                du texte de l’Inventaire général. Comme déjà expliqué dans la <ref target="#sd-les-textes--inventaire--presentation--contenu-et-presentation" corresp="http://saint-denis.enc.sorbonne.fr/les-textes/inventaire/presentation/contenu-et-presentation.html">section de présentation du contenu de l'Inventaire</ref>, les trois volumes
+                concernés par le projet sont comparables à un instrument de recherche archivistique
+                moderne, plus précisément à un <hi rend="bold">inventaire analytique</hi>. Chacun des volumes
+                possède une page de titre, puis, si on laisse de côté l’introduction présente au
+                début du volume I, on y trouve une séquence plate de regestes classés dans l’ordre
+                chronologique tel qu’établi à l’époque.</p>
+<p>On rencontre dans les centres d’archives nombre d’inventaires analytiques construits
+                selon ce modèle séquentiel plat, en particulier pour les fonds anciens classés et
+                inventoriés au XIX<hi rend="sup">e</hi> siècle et au début du XX<hi rend="sup">e</hi> siècle.
+                Cependant le plus souvent au XIX<hi rend="sup">e</hi> siècle on décrit réellement des
+                documents physiquement présents, en donnant leur cote ou en organisant l’inventaire
+                par unités de cotation, ou en fonction d’un plan de classement. L’Inventaire général
+                est, lui, conçu de manière un peu plus abstraite, incluant à peu près tous les
+                témoins des chartes, même si l’original est manquant. De ce fait cet inventaire n’a
+                pas de structure hiérarchique interne - la logique de rédaction est purement
+                chronologique, aucun plan de classement n’est présent.</p>
+<p>Un autre point est important : l’Inventaire général fournit systématiquement les
+                mêmes informations pour chaque acte, et ces informations sont placées au même
+                endroit sur la page et présentées de la même manière ; cette <hi rend="bold">homogénéité</hi> en
+                faisait un bon candidat pour une opération de structuration directe (une seule phase de travail combinant transcription et structuration, suivie bien sûr de travaux de relecture), cohérente et efficace.</p>
+<p>Le choix du <hi rend="bold">standard XML/EAD 2002</hi> pour baliser cet inventaire analytique était
+                naturel car adapté à la nature du document et aux besoins du projet. Une seule autre
+                option pouvait être envisagée, consistant à utiliser le modèle TEI P5. Cette option
+                aurait été choisie si on avait eu un point de vue différent sur cet inventaire, si
+                on l’avait avant tout considéré comme un document et s’il avait été l’objet principal
+                d’étude du projet. Mais comme on l’a déjà dit on souhaitait avant tout exploiter son
+                contenu, constitué de métadonnées archivistiques, pour lesquelles le standard EAD a
+                justement été défini.</p>
+<p>Chacun des volumes traités étant doté de sa page de titre et constituant une unité,
+                    <hi rend="bold">un fichier XML/EAD a été produit par volume</hi> ; on a donc au total trois
+                fichiers XML/EAD, interrogeables séparément ou ensemble. Dans chaque fichier, on a
+                encodé la page de titre. Pour faciliter la navigation au sein de ces fichiers, on a
+                choisi d’y regrouper les regestes en une vingtaine de blocs en tout, correspondant à
+                autant de tranches chronologiques. Cet aménagement est facilement réversible et n’a
+                pas d’incidence sur les fonctionnalités de recherche. Une <hi rend="bold">table des matières</hi>
+                facile à utiliser a pu ainsi être générée pour chaque volume.</p><p>Chaque regeste
+                a été encodé au sein d’un élément conteneur qui lui est propre, et qui dispose d’un
+                    <hi rend="bold">identifiant informatique dérivé du numéro de regeste</hi> fourni par
+                l’Inventaire. Cet identifiant a été utilisé pour indexer le regeste, donc pour générer
+                l’URL pérenne.</p>
+<p><hi rend="bold">Chacun des segments d’information identifiés pour les besoins du projet dans le
+                    texte original a été encodé dans un élément EAD spécifique</hi>, celui qui est
+                approprié. Ainsi, au sein de chaque regeste, on a isolé (autrement dit balisé) le numéro du regeste, la date,
+                l’analyse proprement dite, les références données dans le tableau de la tradition,
+                les informations complémentaires apportées par l’auteur. Ultérieurement, on pourra
+                isoler les toponymes, les noms de personnes, ou d’autres segments, en fonction des
+                besoins qui se feront jour. Isoler ces informations permet de les indexer
+                séparément, donc de les rendre cherchables. C’est ainsi que l’on peut faire des
+                recherches sur les mots de l’analyse, par exemple. On a gardé aussi la trace des
+                changements de taille de l’écriture, pour les termes en langue latine écrits en
+                caractères plus gros.</p>
+<p>Pour tirer un parti plus avancé des possibilités de l’informatique, et en s’éloignant
+                de ce qu’une édition imprimée aurait offert, une <hi rend="bold">indexation des types d’auteur
+                    d’actes</hi> a aussi été réalisée, pour permettre la recherche par ce critère.
+                Enfin les renvois explicites faits par l’auteur d’un regeste à un autre ont été
+                exprimés sous la forme de <hi rend="bold">liens</hi> hypertextes. Par la suite chacun des regestes
+                édités a été relié à l’image ou aux images numériques de la ou des pages sur
+                laquelle il est inscrit.</p><p>Même si le projet s’intéresse surtout au document en
+                tant que point d’accès au chartrier, donc aux métadonnées de description des chartes
+                qu’il donne à lire, et non pas au document pour lui-même, au contexte et aux
+                modalités de sa rédaction, à sa forme ou à son écriture, on avait aussi affaire à un
+                document manuscrit rédigé sous l’Ancien Régime. Il fallait impérativement, pour
+                rendre le texte intelligible et pleinement utilisable, en faire une <hi rend="bold">édition
+                    scientifique</hi>, même assez rapide, et en compléter ou corriger le contenu. Il
+                a donc été choisi d’ajouter au moins au texte initial, lui-même édité selon les
+                règles classiques d’édition des textes de l’époque moderne, des notes relevant les
+                erreurs de syntaxe et les hésitations de l’auteur, des éléments de datation fine
+                (servant également à la recherche par date) et des références bibliographiques.</p>
+<p>Dans les fichiers EAD, <hi rend="bold">chacune des interventions éditoriales listées ci-dessus est
+                    l’objet d’un élément ou d’un attribut distinct</hi>, en fonction de la nature de
+                l’intervention. On a ainsi utilisé ainsi les éléments et attributs EAD de balisage des
+                notes, de normalisation des dates, de saisie de références bibliographiques.</p>
+<p>De manière plus générale, dès lors qu’on a ajouté au texte original une information
+                (intervention éditoriale, élément d’indexation, lien, etc.), l’élément utilisé, si
+                c’est un élément, a été marqué par un attribut spécifiant que l’auteur de l’ajout est
+                l’École des chartes. Il est alors facile de retrouver et de modifier ces ajouts. De
+                plus, si on a besoin de revenir au texte transcrit brut, il suffira de supprimer par
+                programme tout ou partie de ces ajouts.</p>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-informatiques--inventaire--structuration-du-texte" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/structuration-du-texte.html">La structuration du texte proprement
+                    dit</ref></p>
+</div>
+            </div>
+          <div type="page" xml:id="sd-le-projet--aspects-informatiques--inventaire--structuration-du-texte" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/structuration-du-texte.html">
+              <head>La structuration du texte de l’Inventaire</head>
+              <anchor xml:id="sd-le-projet--aspects-informatiques--inventaire--structuration-du-texte--structuration-du-texte"/>
+              <div type="legacy-block" rend="static-content">
+<ab type="legacy-inline"><ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0477.jpg">
+<graphic url="legacy-source/assets/le-projet/aspects-informatiques/inventaire/tome1_image0477_notice408.jpg" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/tome1_image0477_notice408.jpg" n="Inventaire général, tome 1 (LL1189), page 436, extrait, notice 408. Cliquer pour voir l’image de la page entière"/>
+</ref></ab>
+<p>Nous donnons ici quelques explications sur les règles qui ont été suivies pour la
+                mise en œuvre de l’EAD 2002 lors du processus de transcription du texte de
+                l’Inventaire. Le standard EAD 2002 et sa documentation sont supposés connus.</p>
+<p>Les exemples fournis sont extraits du fichier EAD correspondant au volume I ; on
+                utilise notamment le regeste 408 ci-contre 
+                (Inventaire général, tome 1 (LL1189), page 436), déjà montré ailleurs sur ce site.</p>
+<div type="legacy-block">
+<p rend="heading-h2">Le conteneur du regeste et son identifiant informatique</p>
+<p>On utilise tout naturellement l’élément EAD Composant &lt;c&gt; pour englober le texte d’un regeste, avec un attribut <hi rend="bold att">level</hi> de valeur "<code>item</code>". On ajoute à cet élément un attribut <code>id</code>, qui permet de lui affecter un identifiant unique : la valeur de l’attribut est formée par concaténation du préfixe "<code>notice</code>" et du numéro du regeste inscrit au XIX<hi rend="sup">e</hi> siècle en rouge dans la marge de gauche du texte. Si le regeste n’est pas numéroté, le préfixe utilisé est "<code>noticenn</code>", suivi d’un numéro d’ordre incrémenté de 1 à n pour chaque regeste non numéroté dans l’Inventaire. Pour le regeste 408, on aura donc :</p>
+
+<div type="legacy-block" rend="code">
+<p rend="open">&lt;<hi rend="span el">c <hi rend="bold att">level</hi>="<code>item</code>" <hi rend="bold att">id</hi>="<code>notice408</code>"&gt;</hi></p>
+<p rend="comment">&lt;!-- éléments de balisage du texte du regeste --&gt;</p>
+<p rend="close">&lt;/<hi rend="span el">c</hi>&gt;</p>
+</div>
+
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">Informations d’identification et de description du regeste</p>
+<p>Ces informations sont englobées dans l’élément EAD Description et Identification &lt;did&gt;.</p>
+<list type="unordered"><item>Le numéro du regeste est transcrit tel quel, précédé de "n° ", pour ensuite être affiché sur la page Web de consultation, au sein de l’élément EAD Identifiant de l’unité documentaire &lt;unitid&gt;. Lorsque le regeste n’est pas numéroté, on a saisi l’expression "<code>notice non numérotée</code>" dans  &lt;unitid&gt;. Si le regeste est qui plus est barré, on a utilisé l’expression "<code>notice non numérotée, barrée</code>".</item><item>La date chiffrée (en général un millésime seul) figurant en fin d’analyse dans le regeste est encodée à l’aide de l’élément Date de l’unité documentaire &lt;unitdate&gt;, telle quelle, dans &lt;did&gt;. On verra plus loin qu’au moins un autre élément &lt;unitdate&gt; est systématiquement ajouté pour y fournir la date souvent plus précise établie par l’éditeur scientifique.</item><item>Notons qu’il n’y a pas d’intitulé dans le texte de l’Inventaire (l’analyse proprement dite, bien souvent longue, n’est pas considérée comme un intitulé). Pour les regestes, l’élément EAD Intitulé de l’unité documentaire &lt;unittitle&gt; n’est utilisé que rarement pour ce projet, et dans deux cas précis, tous les deux liés à des interventions éditoriales ; nous y revenons plus loin. </item><item>En marge du regeste, on trouve parfois la mention de l’existence d’un original - dans ce cas le tableau de la tradition contient aussi la même information. Cette information marginale est parfois complétée par une description physique de l’original, donnant des indications sur son support. Dans un tel cas, on utilise l’élément EAD Description physique &lt;physdesc&gt; pour transcrire ces informations, et &lt;physfacet&gt; pour y noter le type de support. <lb/>Voici un exemple pour le regeste n° 4 :
+                        <table><row><cell>
+<ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0059.jpg">
+<graphic url="legacy-source/assets/le-projet/aspects-informatiques/inventaire/tome1_image059_regeste4_extrait_physdesc.jpg" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/tome1_image059_regeste4_extrait_physdesc.jpg" n="Inventaire général, tome 1 (LL1189), page 4, extrait du regeste 4. Cliquer pour voir l’image de la page entière"/>
+</ref>
+</cell><cell> <p rend="code">
+<hi rend="span open">&lt;<hi rend="span el">physdesc&gt;</hi></hi><hi rend="span text">original ;</hi><hi rend="span open">&lt;<hi rend="span el">physfacet <hi rend="bold att">type</hi>="<code>support</code>"&gt;</hi></hi><hi rend="span text">écorce</hi><hi rend="span close">&lt;/<hi rend="span el">physfacet</hi>&gt;</hi><hi rend="span close">&lt;/<hi rend="span el">physdesc</hi>&gt;</hi>
+</p></cell></row></table>
+                       
+                        On a également décidé d’utiliser systématiquement &lt;physdesc&gt; dans un premier temps, pour y reporter la mention "<code>original</code>" dès qu’elle figure dans le tableau de la tradition. L’objectif est de pouvoir indexer ces mentions afin de permettre de chercher les originaux uniquement. Pour la version 2 de l’application, ces mentions seront basculées dans un élément EAD &lt;genreform&gt; et rendues cherchables.</item></list>
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">L’analyse du regeste</p>
+<p>L’analyse a été transcrite au sein de l’élément EAD Présentation du contenu &lt;scopecontent&gt;. Dans la très grande majorité des cas, l’analyse est donnée en un seul paragraphe de texte dans l’Inventaire général ; dans l’immédiat, on trouve donc le plus souvent un seul élément EAD Paragraphe &lt;p&gt; dans &lt;scopecontent&gt;.</p>
+<p>Quelques-unes des analyses inscrites dans les deux premiers volumes de l’Inventaire général (comme celles des regestes <ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0060.jpg">7</ref> et <ref target="http://saint-denis.enc.sorbonne.fr/images/inventaire/tome1/voir.html?ns=inventairejpg_0062.jpg">10</ref>) comportent des notes des auteurs, facilement reconnaissables par des appels de notes sous la forme de croix ou de lettres ; le texte des notes est alors le plus souvent écrit dans la marge. Dans de tels cas, on a utilisé l’élément EAD Note &lt;note&gt;, marqué par un attribut <hi rend="bold att">altrender</hi> de valeur "<code>ms</code>", afin de distinguer les notes de l’Inventaire de celles ajoutées par l’éditeur scientifique.</p>
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">
+                    Le tableau de la tradition
+                </p>
+<p>Le tableau de la tradition, qui contient une série de références bibliographiques, est encodé à l’aide de l’élément EAD Bibliographie &lt;bibliography&gt;. Chacune des références est saisie dans un élément Référence bibliographique &lt;bibref&gt;. Pour le regeste n° 408, on a donc, pour le début du tableau de la tradition :</p>
+<div type="legacy-block" rend="code">
+<p rend="open">&lt;<hi rend="span el">bibliography</hi>&gt;</p><p rend="open">&lt;<hi rend="span el">bibref</hi>&gt;</p><ab type="legacy-inline"><hi rend="span texte">En original</hi></ab><p rend="close">&lt;/<hi rend="span el">bibref</hi>&gt;</p><p rend="open">&lt;<hi rend="span el">bibref</hi>&gt;</p><ab type="legacy-inline"><hi rend="span texte">Au second tome du cartulaire blanc p. 518.</hi></ab><p rend="close">&lt;/<hi rend="span el">bibref</hi>&gt;</p><p rend="comment">&lt;!-- etc. --&gt;</p><p rend="close">&lt;/<hi rend="span el">bibliography</hi>&gt;</p>
+</div>
+
+</div>
+<div type="legacy-block">
+<p rend="heading-h2">Les autres informations</p>
+<p>De nombreux regestes sont complétés, soit en marge soit en fin de texte, par diverses informations (indications liées au calendrier comme la date de Pâques, commentaires sur le texte, noms propres apparaissant dans l’acte...). Il a été choisi d’encoder ces informations à l’aide d’un élément EAD Autres informations descriptives &lt;odd&gt;, chacun des segments d’information y faisant l’objet d’un élément &lt;p&gt;. Pour le regeste n° 408, on a donc :</p>
+<div type="legacy-block" rend="code">
+<p rend="open">&lt;<hi rend="span el">odd</hi>&gt;</p><p rend="open">&lt;<hi rend="span el">p</hi>&gt;</p><ab type="legacy-inline"><hi rend="span texte">1174</hi></ab><p rend="close">&lt;/<hi rend="span el">p</hi>&gt;</p><p rend="open">&lt;<hi rend="span el">p</hi>&gt;</p><ab type="legacy-inline"><hi rend="span texte">nombre d’or 16, Pâques 24 mars, dominicale F</hi></ab><p rend="close">&lt;/<hi rend="span el">p</hi>&gt;</p><p rend="close">&lt;/<hi rend="span el">odd</hi>&gt;</p>
+</div>
+
+</div>
+<div type="legacy-block"><p rend="heading-h2">Informations sur la mise en forme du texte</p>
+<p>L’élément EAD Mise en valeur &lt;emph&gt; a été utilisé, dans le corps de l’analyse ou ailleurs dans le texte des regestes, pour baliser les mots ou expressions écrits en caractères plus gros (le plus souvent, des termes en latin ou des entités nommées dont le nom a été écrit tel que déchiffré par l’auteur de l’Inventaire). Dans quelques cas, un mot ou une expression a été souligné d’un trait de plume ; l’élément &lt;emph&gt; est alors marqué par un attribut <hi rend="bold att">render</hi> de valeur "<code>underline</code>". Cet élément sert aussi, très classiquement, pour baliser les lettres écrites en exposant, où qu’elles se trouvent. Dans ce dernier cas, on ajoute à l’élément &lt;emph&gt; un attribut <hi rend="bold att">render</hi> de valeur "<code>super</code>".</p>
+</div>
+</div>
+              <div type="legacy-block" rend="static-content">
+<p>Suite : <ref target="#sd-le-projet--aspects-informatiques--inventaire--encodage-des-enrichissements-editoriaux" corresp="http://saint-denis.enc.sorbonne.fr/le-projet/aspects-informatiques/inventaire/encodage-des-enrichissements-editoriaux.html">Encodage des enrichissements éditoriaux</ref></p>
+</div>
+            </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
