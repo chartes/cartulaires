@@ -1822,64 +1822,41 @@
        - Appendice en inventaire (VNDP-AB) ................ N° | Rubrique | Lieu | Article
        - Annexes de SAPC-AB : abbesses ...................... N° | Abbesse | Dates
                               sceaux ........................ N° | Sigillant | Date | Rubrique | Lieu | Notice
-       - Tableaux des introductions (répartition chronologique…) : lignes de titre en en-tête, lignes
-         d'intertitre en colonne « Section » ; un intertitre qui porte un total (« XIIe siècle | 7 »)
-         reste une ligne « Total », pour ne rien perdre. Un tableau à cellules fusionnées dans le corps
-         (HDPAR-HD) ne peut pas être trié : il reste un tableau simple. -->
+       - Tableaux des introductions : rendu hteiml, tableaux non triables. Les titres avec total restent
+         des intertitres ; les sauts de page entre lignes gardent le rendu de folio standard. -->
 
   <!-- ==================================================================================================
-       Tableaux des introductions (hors des actes).
+       Tableaux des introductions (hors des actes) : rendu de base hteiml (table.table), avec seulement
+       trois adaptations. Les tableaux des actes restent au rendu hteiml existant.
        ================================================================================================== -->
-  <xsl:template match="tei:table[not(ancestor::tei:text[parent::tei:group])]" priority="5" version="3.0">
-    <xsl:variable name="lignes" select="tei:row"/>
-    <!-- ligne d'en-tête : ligne de titre en tête de tableau, sans cellule purement numérique (une ligne
-         « XIIe siècle | 7 » est un intertitre qui porte un total, pas un en-tête) -->
-    <xsl:variable name="tete" select="$lignes[@role = 'label'][not(preceding-sibling::tei:row[not(@role = 'label')])][not(tei:cell[matches(normalize-space(.), '^\d+$')])]"/>
-    <xsl:variable name="corps" select="$lignes except $tete"/>
-    <!-- 2026-10-20 : tous les tableaux des introductions sont rendus en tableau simple (non triable),
-         comme le rendu de base de dots-vue ; plus de tableau filtrable (constructeur cartu-tf retiré
-         des appels). -->
-    <table class="cartu-tableau cartu-tableau-simple">
-      <xsl:apply-templates select="tei:head"/>
-      <xsl:if test="$tete">
-        <thead><xsl:apply-templates select="$tete" mode="tableau-simple"/></thead>
-      </xsl:if>
-      <tbody>
-        <xsl:apply-templates select="$corps | tei:pb" mode="tableau-simple">
-          <xsl:with-param name="ncols" select="max((1, for $r in tei:row return sum(for $c in $r/tei:cell return if ($c/@cols) then xs:integer($c/@cols) else 1)))" tunnel="yes"/>
-        </xsl:apply-templates>
-      </tbody>
-    </table>
-  </xsl:template>
-
-  <!-- Tableau simple (non triable) : lignes et cellules, fusions comprises ; lignes de titre en th. -->
-
-
-
-  <xsl:template version="3.0" match="tei:row" mode="tableau-simple">
-    <tr>
-      <xsl:if test="@role = 'label' and preceding-sibling::tei:row[not(@role = 'label')]">
-        <xsl:attribute name="class">cartu-tm-partie</xsl:attribute>
-      </xsl:if>
-      <xsl:for-each select="tei:cell">
-        <xsl:element name="{if (../@role = 'label' or @role = 'label') then 'th' else 'td'}" namespace="http://www.w3.org/1999/xhtml">
-          <xsl:if test="@rows &gt; 1"><xsl:attribute name="rowspan" select="@rows"/></xsl:if>
-          <xsl:if test="@cols &gt; 1"><xsl:attribute name="colspan" select="@cols"/></xsl:if>
-          <!-- 2026-10-28 (Maxime, SMPA-AB-02_back-1 : « on peut pas tout lire sur le tableau ») : seules les
-               cellules courtes (numéros, sigles, cotes) restent sur une ligne ; la CSS supposait que les trois
-               premières colonnes étaient des numéros, et l'analyse de SMPA-AB-02 ne revenait plus à la ligne. -->
-          <xsl:if test="not(@cols &gt; 1) and string-length(normalize-space(.)) le 14"><xsl:attribute name="class">cartu-court</xsl:attribute></xsl:if>
-          <xsl:apply-templates/>
-        </xsl:element>
-      </xsl:for-each>
-    </tr>
-  </xsl:template>
-  <!-- saut de page posé entre deux lignes : une ligne discrète, pleine largeur (vignette, repère) -->
-  <xsl:template version="3.0" match="tei:pb" mode="tableau-simple">
-    <xsl:param name="ncols" as="xs:integer" tunnel="yes" select="1"/>
+  <!-- Le saut de page entre deux lignes doit être une ligne du tableau. Priorité 12 pour passer avant
+       les modèles généraux de tei:pb (priorité 10) ; next-match appelle ensuite le modèle normal du folio. -->
+  <xsl:template match="tei:table[not(ancestor::tei:text[parent::tei:group])]/tei:pb" priority="12" version="3.0">
     <tr class="cartu-tm-pb">
-      <td colspan="{$ncols}"><xsl:apply-templates select="." mode="#default"/></td>
+      <td colspan="{max((1, for $r in ../tei:row return sum(for $c in $r/tei:cell return if ($c/@cols) then xs:integer($c/@cols) else 1)))}"><xsl:next-match/></td>
     </tr>
+  </xsl:template>
+  <!-- Cellules courtes : éviter les retours à la ligne sur les numéros, sigles et cotes. -->
+  <xsl:template match="tei:table[not(ancestor::tei:text[parent::tei:group])]//tei:cell[not(@cols &gt; 1)][string-length(normalize-space(.)) le 14]" priority="5" version="3.0">
+    <xsl:variable name="cell"><xsl:next-match/></xsl:variable>
+    <xsl:for-each select="$cell/*">
+      <xsl:copy>
+        <xsl:copy-of select="@* except @class"/>
+        <xsl:attribute name="class" select="normalize-space(string-join((@class, 'cartu-court'), ' '))"/>
+        <xsl:copy-of select="node()"/>
+      </xsl:copy>
+    </xsl:for-each>
+  </xsl:template>
+  <!-- Une ligne de titre avec total (ex. « XIe siècle | 5 ») reste un intertitre, même en tête du tableau. -->
+  <xsl:template match="tei:table[not(ancestor::tei:text[parent::tei:group])]/tei:row[@role = 'label'][tei:cell[matches(normalize-space(.), '^\d+$')]]" priority="5" version="3.0">
+    <xsl:variable name="row"><xsl:next-match/></xsl:variable>
+    <xsl:for-each select="$row/*">
+      <xsl:copy>
+        <xsl:copy-of select="@* except @class"/>
+        <xsl:attribute name="class" select="normalize-space(string-join((@class, 'cartu-tm-partie'), ' '))"/>
+        <xsl:copy-of select="node()"/>
+      </xsl:copy>
+    </xsl:for-each>
   </xsl:template>
 
 
