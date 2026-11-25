@@ -602,8 +602,11 @@
   </xsl:template>
 
   <!-- 2026-10-19 : bloc de présentation ou signature vides (<p><!- - TODO - -></p>, SAPC-AB, SMPA-AB-03, SMMI-AB…) :
-       rien, au lieu d'un cadre vide ; la page garde alors le sommaire de ses sous-parties (CSS). -->
-  <xsl:template match="tei:front/tei:argument[not(normalize-space())] | tei:front/tei:byline[not(normalize-space())]" priority="16"/>
+       rien, au lieu d'un cadre vide ; la page garde alors le sommaire de ses sous-parties (CSS).
+       2026-11-25 : même règle pour un <head/> vide (rubriques vides des actes de La Roche, NDRC-AB_1001…), sauf s'il
+       porte un élément (<pb/>), qui doit rester. -->
+  <xsl:template match="tei:front/tei:argument[not(normalize-space())] | tei:front/tei:byline[not(normalize-space())]
+      | tei:front/tei:head[not(normalize-space())][not(*)]" priority="16"/>
 
   <!-- 2026-10-19 : BIBLIOGRAPHIES NON ENCODÉES EN listBibl, passées au module commun (une ligne par
        référence) : une liste dont chaque item porte un <bibl> (NDCH-EG), et dans une page « Orientation
