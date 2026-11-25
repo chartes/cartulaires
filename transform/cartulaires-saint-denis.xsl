@@ -612,7 +612,7 @@
        Libellé « Cartulaire blanc, tome 1 (LL 1157), page N ». Pages « Images du Cartulaire blanc » : seule la
        première image d'un chapitre ou d'un tome porte la vignette (« Feuilleter… ») ; le reste se parcourt dans Mirador. -->
   <xsl:template match="tei:pb[starts-with(@facs, 'https://')]" priority="21">
-    <xsl:variable name="tome" select="if (contains(@corresp, 'fe28wcx1rnz1')) then '2' else '1'"/>
+    <xsl:variable name="tome" select="if (contains(@corresp, 'fe28wcx1rnz1') or contains(@corresp, 'saint-denis-LL1158')) then '2' else '1'"/>
     <xsl:variable name="galerie" select="exists(ancestor-or-self::tei:div[starts-with(@xml:id, 'sd-les-images--images-cb--')])"/>
     <xsl:variable name="premiere" select="generate-id(.) = generate-id((ancestor::tei:div[@type = ('subpart', 'page')][1]//tei:pb[@facs])[1])"/>
     <xsl:variable name="libelle">
@@ -833,6 +833,23 @@
         <span class="sd-illustration-absente" title="Illustration du site d’origine absente de cette copie ({$file})">
           <xsl:apply-templates/>
         </span>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- Rôle (25/11) : renvoi vers une image Nakala du dépôt Saint-Denis (nkl.9b4el93a). Inventaire général
+       (LL 1189-1191, ex-liens SIV) : lien vers l'image, nouvel onglet ; Cartulaire blanc (LL 1157-1158,
+       ex-voir.html?ns=) : folio dépliable avec l'image IIIF. -->
+  <xsl:template match="tei:ref[starts-with(@target, 'https://api.nakala.fr/iiif/')]" priority="18">
+    <xsl:choose>
+      <xsl:when test="some $d in ('nkl.3071p6i6', 'nkl.e8ead29u', 'nkl.27fah120') satisfies contains(@target, $d)">
+        <a class="lien-archives-nationales lien-nakala" href="{@target}" target="_blank" rel="noopener" title="Voir l'image"><xsl:apply-templates/></a>
+      </xsl:when>
+      <xsl:otherwise>
+        <details class="sd-folio">
+          <summary><span class="sd-folio-libelle"><xsl:apply-templates/></span></summary>
+          <img class="sd-folio-img" loading="lazy" src="{@target}" alt="{normalize-space(.)}"/>
+        </details>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -1060,6 +1077,10 @@
       </xsl:when>
       <xsl:when test="contains($sd-chapitres, concat(' ', $file, ' '))">
         <a class="sd-internal" href="{$sd-vers-chapitres}{$file}"><xsl:apply-templates/></a>
+      </xsl:when>
+      <!-- 2026-11-25 : renvoi au catalogue de Sonzogni (sonzogni.xml#sonzogni_022) : lien vers l'acte -->
+      <xsl:when test="$file = 'sonzogni' and $frag != ''">
+        <a class="sd-internal" href="{$sd-vers-chapitres}sonzogni?refId={$frag}"><xsl:apply-templates/></a>
       </xsl:when>
       <xsl:when test="starts-with($file, 'ISD-vol') and starts-with($frag, 'notice')">
         <a class="sd-inventaire" href="{$sd-vers-isd}{$file}?refId={$file}_{$frag}"><xsl:apply-templates/></a>

@@ -210,6 +210,11 @@
     <a class="sd-internal" href="{$sd-vers-isd}ISD-vol{substring-before($id, '_')}?refId=ISD-vol{$id}"><xsl:apply-templates/></a>
   </xsl:template>
 
+  <!-- 2026-11-25 : « Indiqué : Sonzogni, n° 22 » → acte du catalogue de Sonzogni (sonzogni.xml#sonzogni_022) -->
+  <xsl:template match="tei:ref[starts-with(@target, 'sonzogni.xml#')]" priority="17">
+    <a class="sd-internal" href="{$sd-vers-sd}sonzogni?refId={substring-after(@target, '#')}"><xsl:apply-templates/></a>
+  </xsl:template>
+
   <!-- dates des notices (TEI refait depuis l'EAD) : deux modèles hteiml de même priorité visent tei:date (XTDE0540) -->
   <xsl:template match="tei:div[@type = 'notice']//tei:date" priority="15">
     <span class="date"><xsl:apply-templates/></span>
@@ -373,6 +378,17 @@
     <img class="sd-graphic" loading="lazy" src="{$sd-images}assets/{substring-after(@url, 'legacy-source/assets/')}" alt="{normalize-space(@n)}"/>
   </xsl:template>
 
+  <!-- Rôle (25/11) : saut de page de l'Inventaire général dont l'image est sur Nakala (@facs IIIF, @corresp = manifeste
+       GitLab saint-denis-LL1189|1190|1191) : a.pb, dont dots-vue fait une vignette qui ouvre Mirador sur la vue. -->
+  <xsl:template match="tei:pb[starts-with(@facs, 'https://')]" priority="21">
+    <xsl:variable name="cote" select="replace(@corresp, '^.*saint-denis-LL(\d+)\.json$', 'LL $1')"/>
+    <xsl:variable name="tome" select="if ($cote = 'LL 1189') then '1' else if ($cote = 'LL 1190') then '2' else '3'"/>
+    <span class="sd-pb sd-pb-iiif">
+      <a class="pb" href="{@facs}" data-manifest="{@corresp}"/>
+      <span class="sd-folio-libelle"><xsl:value-of select="concat('Inventaire général, tome ', $tome, ' (', $cote, ')', if (normalize-space(@n) != '') then concat(', page ', normalize-space(@n)) else '')"/></span>
+    </span>
+  </xsl:template>
+
   <xsl:template match="tei:pb[@facs]" priority="20">
     <xsl:variable name="rel" select="substring-after(@facs, 'images/saint-denis/')"/>
     <xsl:variable name="fichier" select="tokenize($rel, '/')[last()]"/>
@@ -510,6 +526,23 @@
 
   <!-- 24/11 : page de l'Inventaire général (LL 1189-1191) dans la visionneuse des Archives nationales (image exacte) ;
        remplace l'image de l'ancien site (voir.html?ns=inventairejpg_N, même numérisation). Nouvel onglet. -->
+  <!-- Rôle (25/11) : renvoi vers une image Nakala du dépôt Saint-Denis (nkl.9b4el93a). Inventaire général
+       (LL 1189-1191, ex-liens SIV) : lien vers l'image, nouvel onglet ; Cartulaire blanc (LL 1157-1158,
+       ex-voir.html?ns=) : folio dépliable avec l'image IIIF. -->
+  <xsl:template match="tei:ref[starts-with(@target, 'https://api.nakala.fr/iiif/')]" priority="18">
+    <xsl:choose>
+      <xsl:when test="some $d in ('nkl.3071p6i6', 'nkl.e8ead29u', 'nkl.27fah120') satisfies contains(@target, $d)">
+        <a class="lien-archives-nationales lien-nakala" href="{@target}" target="_blank" rel="noopener" title="Voir l'image"><xsl:apply-templates/></a>
+      </xsl:when>
+      <xsl:otherwise>
+        <details class="sd-folio">
+          <summary><span class="sd-folio-libelle"><xsl:apply-templates/></span></summary>
+          <img class="sd-folio-img" loading="lazy" src="{@target}" alt="{normalize-space(.)}"/>
+        </details>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="tei:ref[@type = 'archives-nationales'][starts-with(@target, 'https://')]" priority="17">
     <a class="lien-archives-nationales" href="{@target}" target="_blank" rel="noopener" title="Voir aux Archives nationales"><xsl:apply-templates/></a>
   </xsl:template>
