@@ -190,14 +190,27 @@
 
   <xsl:template match="tei:div[@type = 'notice']" priority="14">
     <article class="isd-notice" id="{@xml:id}" data-pdf="">
-      <!-- 2026-11-16 : outils de l'ancien site (comportements : blocs 5 et 6 de elec.customJs.js) : porte-documents,
-           PDF de la notice, PDF de la période et de toutes ses notices (« avec ses sous-unités ») -->
-      <div class="elec-outils">
-        <button type="button" class="elec-panier" data-panier-id="{@xml:id}" data-panier-titre="{normalize-space(tei:head[1])}">Ajouter au porte-documents</button>
-        <button type="button" class="elec-pdf" title="Obtenir cette notice en PDF">PDF</button>
-        <button type="button" class="elec-pdf" data-pdf-parent="{@xml:id}" title="Obtenir en PDF la période et toutes ses notices">PDF de la période</button>
-      </div>
+      <!-- 2026-11-26 (Maxime) : porte-documents et boutons PDF retirés de la tête de notice ; à leur place, « Image de
+           l'acte » et « Édition de l'acte » (rubrique « Correspondance avec le cartulaire blanc »). Exports EAD et PDF :
+           dans les métadonnées (dl.isd-champs). -->
+      <xsl:call-template name="isd-acte-liens"><xsl:with-param name="forme" select="'tete'"/></xsl:call-template>
       <h3 class="isd-notice-head"><xsl:apply-templates select="tei:head[1]/node()"/></h3>
+      <!-- 2026-11-26 (Maxime : « le lien vers les AN mais pas la vignette dots-vue ») : le pb n'est que dans la notice qui
+           ouvre la page de l'imprimé (567 notices sur 1 196 au t. 1) ; les autres reçoivent la vignette de leur première
+           page, tirée du lien « Édition réalisée d'après … pages 882 et 883 » (image Nakala du tome), rendue par le modèle
+           tei:pb ci-dessous avec le manifeste du tome. -->
+      <xsl:if test="not(tei:pb)">
+        <xsl:variable name="ref" select="(tei:list[@type = 'gloss']/tei:item[starts-with(normalize-space(preceding-sibling::tei:label[1]), 'Édition réalisée')]
+            //tei:ref[matches(@target, 'nkl\.(3071p6i6|e8ead29u|27fah120)/')])[1]"/>
+        <xsl:if test="$ref">
+          <xsl:variable name="ll" select="if (contains($ref/@target, '3071p6i6')) then '1189' else if (contains($ref/@target, 'e8ead29u')) then '1190' else '1191'"/>
+          <xsl:variable name="pb" as="element()">
+            <tei:pb n="{normalize-space($ref)}" facs="{$ref/@target}"
+                    corresp="https://cartulaires-2fe77c.gitpages.huma-num.fr/manifests/saint-denis-LL{$ll}.json"/>
+          </xsl:variable>
+          <xsl:apply-templates select="$pb"/>
+        </xsl:if>
+      </xsl:if>
       <xsl:apply-templates select="node() except tei:head[1]"/>
       <xsl:call-template name="isd-pied-notes"/>
     </article>
@@ -317,7 +330,68 @@
           </xsl:choose>
         </dd>
       </xsl:for-each>
+      <!-- 2026-11-26 (Maxime) : liens vers l'image et l'édition de l'acte, et exports, dans les métadonnées de la notice -->
+      <xsl:for-each select="ancestor::tei:div[@type = 'notice'][1][current() is (.//tei:list[@type = 'gloss'])[1]]">
+        <xsl:call-template name="isd-acte-liens"><xsl:with-param name="forme" select="'dl'"/></xsl:call-template>
+        <dt>Exports</dt>
+        <dd class="isd-exports">
+          <button type="button" class="elec-ead" data-ead-id="{@xml:id}"
+                  data-ead-src="https://raw.githubusercontent.com/chartes/saint-denis/migration/ead/{substring-before(@xml:id, '_')}.xml"
+                  title="Télécharger cette notice en EAD (reconstitution de l'EAD de l'ancien site)">EAD</button>
+          <button type="button" class="elec-pdf" title="Obtenir cette notice en PDF">PDF</button>
+        </dd>
+      </xsl:for-each>
     </dl>
+  </xsl:template>
+
+  <!-- 2026-11-26 : « Image de l'acte » = première page de la copie au Cartulaire blanc (« la copie figure page 537
+       (tome 1) », image Nakala) ; « Édition de l'acte » = acte(s) édité(s) du Cartulaire blanc (« L'édition de l'acte
+       existe déjà sous le(s) numéro(s) : Beaurain 1 »), adresse calculée par le modèle des renvois au Cartulaire blanc.
+       forme 'tete' : liens en tête de notice ; 'dl' : lignes dt/dd des métadonnées. Contexte : la notice. -->
+  <xsl:template name="isd-acte-liens">
+    <xsl:param name="forme"/>
+    <!-- La rubrique a deux formes : label type="section" suivi de ses paragraphes (TEI publié) ou div type="related-material"
+         (TEI resémantisé, chantier en pause) ; les deux sont prises. -->
+    <xsl:variable name="lab" select="(.//tei:label[@type = 'section'][contains(lower-case(.), 'cartulaire blanc')])[1]"/>
+    <xsl:variable name="cb" select="tei:div[@type = 'related-material'][contains(lower-case(tei:head[1]), 'cartulaire blanc')]
+        | $lab/following-sibling::*[not(self::tei:label[@type = 'section'])][preceding-sibling::tei:label[@type = 'section'][1] is $lab]"/>
+    <xsl:variable name="img" select="($cb/descendant-or-self::tei:p[contains(., 'copie figure')]//tei:ref[starts-with(@target, 'http')])[1]"/>
+    <xsl:variable name="eds" as="element()*">
+      <xsl:for-each select="$cb//tei:ref[contains(@target, 'saint-denis.enc.sorbonne.fr/cartulaire/tome')]">
+        <xsl:variable name="rendu"><xsl:apply-templates select="."/></xsl:variable>
+        <xsl:for-each select="($rendu//*:a[@href])[1]">
+          <a class="sd-internal isd-lien-edition" href="{@href}" title="Édition de l'acte : {normalize-space(.)}"><xsl:value-of select="normalize-space(.)"/></a>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$forme = 'tete' and ($img or exists($eds))">
+        <p class="isd-acte-liens">
+          <xsl:if test="$img">
+            <a class="isd-lien-image lien-nakala" href="{$img/@target}" target="_blank" rel="noopener"
+               title="Image de l'acte : copie au Cartulaire blanc, {normalize-space($img)}">Image de l'acte</a>
+          </xsl:if>
+          <xsl:for-each select="$eds">
+            <a class="isd-lien-edition sd-internal" href="{@href}" title="{@title}">Édition de l'acte<xsl:if test="count($eds) gt 1"> (<xsl:value-of select="."/>)</xsl:if></a>
+          </xsl:for-each>
+        </p>
+      </xsl:when>
+      <xsl:when test="$forme = 'dl'">
+        <xsl:if test="$img">
+          <dt>Image de l'acte</dt>
+          <dd><a class="lien-nakala" href="{$img/@target}" target="_blank" rel="noopener" title="Voir l'image">Cartulaire blanc, <xsl:value-of select="normalize-space($img)"/></a></dd>
+        </xsl:if>
+        <xsl:if test="exists($eds)">
+          <dt>Édition de l'acte</dt>
+          <dd>
+            <xsl:for-each select="$eds">
+              <xsl:if test="position() gt 1"> ; </xsl:if>
+              <a class="sd-internal" href="{@href}">Cartulaire blanc, <xsl:value-of select="."/></a>
+            </xsl:for-each>
+          </dd>
+        </xsl:if>
+      </xsl:when>
+    </xsl:choose>
   </xsl:template>
 
   <!-- 2026-11-19 : termes d'une notice (types d'auteur d'acte, types de documents) = lien vers la recherche plein texte
