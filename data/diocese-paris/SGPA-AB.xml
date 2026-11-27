@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGPA-AB"><teiHeader>
+<?xml-model href="../schema/cartulaires.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="SGPA-AB"><teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Recueil des chartes de l’abbaye Sainte-Geneviève de Paris</title>
@@ -44,6 +43,10 @@
         <p>Édition numérique réalisée dans le cadre du projet d’édition électronique des cartulaires d’Île-de-France mené par l’École nationale des chartes - PSL, à partir de la reprise en XML de l’édition de Noémie Escher (thèse pour le diplôme d’archiviste paléographe, 2009).</p>
       </projectDesc>
       <refsDecl>
+        <citeStructure unit="part" match="/TEI[1]/text[1]/front[1]" use="@xml:id">
+          <citeData property="dct:title" use="head[1]"/>
+          <citeData property="schema:name" use="head[1]"/>
+        </citeStructure>
         <citeStructure unit="part" match="/TEI[1]/text[1]/group[1]" use="@xml:id">
           <citeData property="dct:title" use="head[1]"/>
           <citeData property="schema:name" use="head[1]"/>
@@ -87,7 +90,13 @@
     <revisionDesc>
       <change when="2026-11-08" who="#MP">Conversion en TEI de la reprise XML : balisage typographique en hi, commentaires en div[@type='dissertation'], catégories de copies en listWit[@type='copie']/@subtype, renvois entre actes en ref, identifiants d’actes et de notes.</change>
     </revisionDesc>
-  </teiHeader><text><group xml:id="SGPA-AB_edition-group"><head>Édition</head><group xml:id="SGPA-AB_actes"><head>Actes</head><text subtype="article" n="1" xml:id="SGPA-AB_0001"><front><docDate>
+  </teiHeader><text><front xml:id="SGPA-AB_front">
+      <head>Introduction</head>
+      <argument>
+        <p><ref target="https://cartes.gouv.fr/explorer-les-cartes/?c=2.347833,48.845889&amp;z=14&amp;l=BNF-IGNF_GEOGRAPHICALGRIDSYSTEMS.CASSINI$GEOPORTAIL:OGC:WMTS(1;1;1;0)&amp;permalink=yes">Carte de situation (Atlas de Cassini)</ref></p>
+        <p><graphic url="/images/cartulaires/SGPA-AB-cassini.png"><desc>Carte de situation (Atlas de Cassini)</desc></graphic></p>
+      </argument>
+    </front><group xml:id="SGPA-AB_edition-group"><head>Édition</head><group xml:id="SGPA-AB_actes"><head>Actes</head><text subtype="article" n="1" xml:id="SGPA-AB_0001"><front><docDate>
 				<date>[996, 24 octobre-1016, 12 septembre]</date>
 			</docDate><index><term type="nature" key="act"/></index><argument>
 				<p>Le roi Robert <hi rend="i">[</hi>II le Pieux<hi rend="i">]</hi>, à la prière des chanoines de Sainte-Geneviève, confirme tous leurs biens, leur cloître, leurs <hi rend="i">villae</hi>, leurs prébendes et prévôtés <hi rend="i">(prȩfecturis)</hi> ; il ordonne que leur communauté soit soumise à la règle canoniale et ait toujours un doyen issu de leurs rangs ; enfin, il défend à quiconque d’exercer un pouvoir injuste sur eux ou de leur imposer contre leur volonté quelqu’un à la tête de leur communauté, mais que tout demeure à sa juste place, afin que les chanoines, priant pour le roi, la stabilité du royaume, le salut de l’âme de leurs donateurs passés et futurs, puissent accomplir en toute tranquillité leur devoir.</p>
@@ -100,7 +109,7 @@
 					<witness n="C">Copie figurée et collationnée du XVIII<hi rend="sup">e</hi> s., en vue de la reconstitution des registres des chartes de la Chambre des comptes ; Arch. nat., K 181, n<hi rend="sup">o</hi> 1<hi rend="sup">4</hi> ; d’après <hi rend="i">A</hi>, représenté le 18 février 1739.</witness>
 				</listWit>
 				<listWit type="édition">
-					<witness n="a"><hi rend="i">Gallia christiana</hi>, t. VII, Paris, 1744, <hi rend="i">Instrumenta</hi>, col. 221.</witness>
+					<witness n="a" source="https://books.google.com/books?id=7ftgAAAAcAAJ"><hi rend="i">Gallia christiana</hi>, t. VII, Paris, 1744, <hi rend="i">Instrumenta</hi>, col. 221.</witness>
 					<witness n="b" source="https://archive.org/details/monumentshistori00tard/page/n304/mode/1up" facs="https://iiif.archive.org/image/iiif/3/monumentshistori00tard%2Fmonumentshistori00tard_jp2.zip%2Fmonumentshistori00tard_jp2%2Fmonumentshistori00tard_0307.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/monumentshistori00tard/manifest.json">J. Tardif, <hi rend="i">Monuments historiques</hi>, Paris, 1866, n<hi rend="sup">o</hi> 251, p. 159-160, d’après <hi rend="i">A</hi> (édition partielle).</witness>
 					<witness n="c" source="https://archive.org/details/cartulairegn01lastuoft/page/n178/mode/1up" facs="https://iiif.archive.org/image/iiif/3/cartulairegn01lastuoft%2Fcartulairegn01lastuoft_jp2.zip%2Fcartulairegn01lastuoft_jp2%2Fcartulairegn01lastuoft_0189.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairegn01lastuoft/manifest.json">R. de Lasteyrie, <hi rend="i">Cartulaire général de Paris</hi>, Paris, 1887, n<hi rend="sup">o</hi> 79, p. 109-110, d’après <hi rend="i">A</hi>.</witness>
 				</listWit>
@@ -135,7 +144,7 @@
 					<witness n="D">Copie partielle du XVIII<hi rend="sup">e</hi> s., pour l’Agence générale du clergé ; Arch. nat., G<hi rend="sup">8</hi> 734 ; indirectement d’après <hi rend="i">a</hi>.</witness>
 				</listWit>
 				<listWit type="édition">
-					<witness n="a">G. Dubois, <hi rend="i">Historia ecclesiæ Parisiensis</hi>, t. I, Paris, 1690, p. 654.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/bub_gb_Pre7xtzhQKMC%2Fbub_gb_Pre7xtzhQKMC_jp2.zip%2Fbub_gb_Pre7xtzhQKMC_jp2%2Fbub_gb_Pre7xtzhQKMC_0705.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/bub_gb_Pre7xtzhQKMC/manifest.json" n="a" source="https://archive.org/details/bub_gb_Pre7xtzhQKMC/page/n705/mode/1up">G. Dubois, <hi rend="i">Historia ecclesiæ Parisiensis</hi>, t. I, Paris, 1690, p. 654.</witness>
 					<witness n="b" source="https://archive.org/details/bub_gb_kQl32blTHe8C/page/n668/mode/1up" facs="https://iiif.archive.org/image/iiif/3/bub_gb_kQl32blTHe8C%2Fbub_gb_kQl32blTHe8C_jp2.zip%2Fbub_gb_kQl32blTHe8C_jp2%2Fbub_gb_kQl32blTHe8C_0668.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/bub_gb_kQl32blTHe8C/manifest.json"><hi rend="i">Gallia christiana</hi>, t. VII, <hi rend="i">Instrumenta</hi>, col. 221-222 (édition partielle).</witness>
 					<witness n="c" source="https://archive.org/details/monumentshistori00tard/page/n311/mode/1up" facs="https://iiif.archive.org/image/iiif/3/monumentshistori00tard%2Fmonumentshistori00tard_jp2.zip%2Fmonumentshistori00tard_jp2%2Fmonumentshistori00tard_0314.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/monumentshistori00tard/manifest.json">Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 264, p. 166-167, d’après <hi rend="i">A</hi> (édition partielle).</witness>
 					<witness n="d" source="https://archive.org/details/cartulairegn01lastuoft/page/n185/mode/1up" facs="https://iiif.archive.org/image/iiif/3/cartulairegn01lastuoft%2Fcartulairegn01lastuoft_jp2.zip%2Fcartulairegn01lastuoft_jp2%2Fcartulairegn01lastuoft_0196.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairegn01lastuoft/manifest.json">Lasteyrie, <hi rend="i">Cartulaire général</hi>, n<hi rend="sup">o</hi> 88, p. 116-117, d’après <hi rend="i">A</hi> (extrait).</witness>
@@ -219,10 +228,10 @@
 					<witness n="C">Copie partielle et validée sous trois sceaux (dont il ne reste plus que des fragments et les attaches), XIII<hi rend="sup">e</hi> s., à côté de deux autres actes concernant les mêmes autels (ci-dessous, n<hi rend="sup">o</hi> <ref target="#SGPA-AB_0048"><hi rend="b">48</hi></ref> et <ref target="#SGPA-AB_0049"><hi rend="b">49</hi></ref>) et un acte d’un pape Grégoire en faveur de Sainte-Geneviève ; Arch. nat., L 885, n<hi rend="sup">o</hi> 78 ; sans indication de source, probablement d’après <hi rend="i">A.</hi></witness>
 				</listWit>
 				<listWit type="édition">
-					<witness n="a">R. Giard, <hi rend="i">Étude sur l’histoire de l’abbaye de Sainte-Geneviève de Paris jusqu’à la fin du XIII<hi rend="sup">e</hi> s.</hi>, dans <hi rend="i">Mémoires de la Soc. de l’hist. de Paris et de l’Ile-de-France</hi>, t. XXX, 1903, n<hi rend="sup">o</hi> I, p. 109-110, d’après <hi rend="i">A</hi>.</witness>
+					<witness n="a" facs="https://archive.org/download/memoiresdelasocihistoparis30/page/n124_w1500.jpg" source="https://archive.org/details/memoiresdelasocihistoparis30/page/n124/mode/1up" corresp="https://iiif.archive.org/iiif/memoiresdelasocihistoparis30/manifest.json">R. Giard, <hi rend="i">Étude sur l’histoire de l’abbaye de Sainte-Geneviève de Paris jusqu’à la fin du XIII<hi rend="sup">e</hi> s.</hi>, dans <hi rend="i">Mémoires de la Soc. de l’hist. de Paris et de l’Ile-de-France</hi>, t. XXX, 1903, n<hi rend="sup">o</hi> I, p. 109-110, d’après <hi rend="i">A</hi>.</witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Inventaire, Arch. nat., S *1625, <hi rend="i">Marisy, primordiaux</hi>, n<hi rend="sup">o</hi> 1, p. 169. — Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 213. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 301, <ref target="https://archive.org/details/monumentshistori00tard/page/n333/mode/1up">p. 188</ref>. — G. Brunel, <hi rend="i">Chartes et chancelleries épiscopales du Nord de la France au XI<hi rend="sup">e</hi> siècle</hi>, dans <hi rend="i">A propos des actes d’évêques : hommage à Lucie Fossier</hi>, études réunies par M. Parisse, Nancy, 1991, p. 227-244.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/monumentshistori00tard%2Fmonumentshistori00tard_jp2.zip%2Fmonumentshistori00tard_jp2%2Fmonumentshistori00tard_0336.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/monumentshistori00tard/manifest.json">Inventaire, Arch. nat., S *1625, <hi rend="i">Marisy, primordiaux</hi>, n<hi rend="sup">o</hi> 1, p. 169. — Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 213. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 301, <ref target="https://archive.org/details/monumentshistori00tard/page/n333/mode/1up">p. 188</ref>. — G. Brunel, <hi rend="i">Chartes et chancelleries épiscopales du Nord de la France au XI<hi rend="sup">e</hi> siècle</hi>, dans <hi rend="i">A propos des actes d’évêques : hommage à Lucie Fossier</hi>, études réunies par M. Parisse, Nancy, 1991, p. 227-244.</witness>
 				</listWit>
 			</div><div type="dissertation">
 				<p>Cette concession sera par la suite à l’origine d’un conflit entre Sainte-Geneviève et le chapitre cathédral de Soissons (ci-dessous, n<hi rend="sup">o</hi> <ref target="#SGPA-AB_0048"><hi rend="b">48</hi></ref> et <ref target="#SGPA-AB_0049"><hi rend="b">49</hi></ref>).</p>
@@ -323,10 +332,10 @@
 					<witness n="B1">Cartulaire, p. 196-197 : <hi rend="i">Commutatio de Autolio et de Vernon</hi> ; annotation marginale partiellement non déchiffrée et incomplète suite au rognage du bord, XIII<hi rend="sup">e</hi> s. : [...] <hi rend="i">I</hi>. — <hi rend="i">C<hi rend="sup">1</hi>.</hi> Copie figurée et collationnée du XVIII<hi rend="sup">e</hi> s., en vue de la reconstitution des registres des chartes de la Chambre des comptes ; Arch. nat., K 181, n<hi rend="sup">o</hi> 4<hi rend="sup">4</hi> ; d’après <hi rend="i">A<hi rend="sup">1</hi></hi>, représenté le 18 février 1739.</witness>
 				</listWit>
 				<listWit type="édition">
-					<witness n="a1">Lasteyrie, <hi rend="i">Cartulaire général</hi>, n<hi rend="sup">o</hi> 155, <ref target="https://archive.org/details/cartulairegn01lastuoft/page/n244/mode/1up">p. 175</ref>-176, d’après <hi rend="i">A<hi rend="sup">1</hi></hi>. — <hi rend="i">b<hi rend="sup">1</hi>.</hi> Dufour, <hi rend="i">Recueil</hi>, t. III, Paris, 1993, p. 77, d’après <hi rend="i">a<hi rend="sup">1</hi></hi> (édition partielle).</witness>
+					<witness n="a1" source="https://archive.org/details/cartulairegn01lastuoft/page/n254/mode/1up" facs="https://iiif.archive.org/image/iiif/3/cartulairegn01lastuoft%2Fcartulairegn01lastuoft_jp2.zip%2Fcartulairegn01lastuoft_jp2%2Fcartulairegn01lastuoft_0255.jp2/full/max/0/default.jpg https://iiif.archive.org/image/iiif/3/cartulairegn01lastuoft%2Fcartulairegn01lastuoft_jp2.zip%2Fcartulairegn01lastuoft_jp2%2Fcartulairegn01lastuoft_0256.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/cartulairegn01lastuoft/manifest.json">Lasteyrie, <hi rend="i">Cartulaire général</hi>, n<hi rend="sup">o</hi> 155, <ref target="https://archive.org/details/cartulairegn01lastuoft/page/n244/mode/1up">p. 175</ref>-176, d’après <hi rend="i">A<hi rend="sup">1</hi></hi>. — <hi rend="i">b<hi rend="sup">1</hi>.</hi> Dufour, <hi rend="i">Recueil</hi>, t. III, Paris, 1993, p. 77, d’après <hi rend="i">a<hi rend="sup">1</hi></hi> (édition partielle).</witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Inventaire, Arch. nat., S *1624, <hi rend="i">Auteuil, primordiaux</hi>, n<hi rend="sup">o</hi> 1, p. 57. — Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 402. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 342, <ref target="https://archive.org/details/monumentshistori00tard/page/n344/mode/1up">p. 199</ref>. — Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 94, p. 52.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/monumentshistori00tard%2Fmonumentshistori00tard_jp2.zip%2Fmonumentshistori00tard_jp2%2Fmonumentshistori00tard_0351.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/monumentshistori00tard/manifest.json">Inventaire, Arch. nat., S *1624, <hi rend="i">Auteuil, primordiaux</hi>, n<hi rend="sup">o</hi> 1, p. 57. — Bréquigny, <hi rend="i">Table chronologique</hi>, t. II, p. 402. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 342, <ref target="https://archive.org/details/monumentshistori00tard/page/n344/mode/1up">p. 199</ref>. — Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 94, p. 52.</witness>
 				</listWit>
 			</div><div type="dissertation">
 				<p><hi rend="i">Cet échange est confirmé au chapitre de Notre-Dame du Bec</hi>[<hi rend="i">-Hellouin</hi>]<hi rend="i">, le 16 janvier 1110.</hi></p>
@@ -385,7 +394,7 @@
 					<witness n="b">Dufour, <hi rend="i">Recueil</hi>, t. III, p. 77-78, d’après <hi rend="i">A</hi> (édition partielle).</witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 208, p. 103.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/louisvilegrosann00luchuoft%2Flouisvilegrosann00luchuoft_jp2.zip%2Flouisvilegrosann00luchuoft_jp2%2Flouisvilegrosann00luchuoft_0309.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/louisvilegrosann00luchuoft/manifest.json">Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 208, p. 103.</witness>
 				</listWit>
 			</div></front><body>
 			<div type="transcription" xml:lang="lat">
@@ -440,7 +449,7 @@
 					<witness n="c">Dufour, <hi rend="i">Recueil</hi>, t. I, n<hi rend="sup">o</hi> 216, p. 450-452, d’après <hi rend="i">A.</hi></witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Inventaire, Arch. nat., LL 1445, <hi rend="i">Paris, chartres des roys</hi>, n<hi rend="sup">o</hi> 6, p. 250. — Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 344, p. 158-159.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/louisvilegrosann00luchuoft%2Flouisvilegrosann00luchuoft_jp2.zip%2Flouisvilegrosann00luchuoft_jp2%2Flouisvilegrosann00luchuoft_0364.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/louisvilegrosann00luchuoft/manifest.json">Inventaire, Arch. nat., LL 1445, <hi rend="i">Paris, chartres des roys</hi>, n<hi rend="sup">o</hi> 6, p. 250. — Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 344, p. 158-159.</witness>
 				</listWit>
 			</div></front><body>
 			<div type="transcription" xml:lang="lat">
@@ -467,7 +476,7 @@
 					<witness n="b">Dufour, <hi rend="i">Recueil</hi>, t. I, n<hi rend="sup">o</hi> 217, p. 452-454, d’après <hi rend="i">A.</hi></witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 347, p. 159.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/louisvilegrosann00luchuoft%2Flouisvilegrosann00luchuoft_jp2.zip%2Flouisvilegrosann00luchuoft_jp2%2Flouisvilegrosann00luchuoft_0365.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/louisvilegrosann00luchuoft/manifest.json">Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 347, p. 159.</witness>
 				</listWit>
 			</div></front><body>
 			<div type="transcription" xml:lang="lat">
@@ -489,7 +498,7 @@
 					<witness n="a">Dufour, <hi rend="i">Recueil</hi>, t. I, n<hi rend="sup">o</hi> 222, p. 470-471, d’après <hi rend="i">B.</hi></witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 351, p. 162.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/louisvilegrosann00luchuoft%2Flouisvilegrosann00luchuoft_jp2.zip%2Flouisvilegrosann00luchuoft_jp2%2Flouisvilegrosann00luchuoft_0368.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/louisvilegrosann00luchuoft/manifest.json">Luchaire, <hi rend="i">Louis VI</hi>, n<hi rend="sup">o</hi> 351, p. 162.</witness>
 				</listWit>
 			</div></front><body>
 			<div type="transcription" xml:lang="lat">
@@ -1227,7 +1236,7 @@
 					<witness n="a">Giard, <hi rend="i">Étude</hi>, n<hi rend="sup">o</hi> III, p. 111, d’après <hi rend="i">A</hi>.</witness>
 				</listWit>
 				<listWit type="indiqué">
-					<witness>Inventaire, Arch. nat., S *1625, <hi rend="i">Marisy, primordiaux</hi>, n<hi rend="sup">o</hi> 3, p. 169-170. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 675, <ref target="https://archive.org/details/monumentshistori00tard/page/n476/mode/1up">p. 331</ref>.</witness>
+					<witness facs="https://iiif.archive.org/image/iiif/3/monumentshistori00tard%2Fmonumentshistori00tard_jp2.zip%2Fmonumentshistori00tard_jp2%2Fmonumentshistori00tard_0485.jp2/full/max/0/default.jpg" corresp="https://iiif.archive.org/iiif/3/monumentshistori00tard/manifest.json">Inventaire, Arch. nat., S *1625, <hi rend="i">Marisy, primordiaux</hi>, n<hi rend="sup">o</hi> 3, p. 169-170. — Tardif, <hi rend="i">Monuments historiques</hi>, n<hi rend="sup">o</hi> 675, <ref target="https://archive.org/details/monumentshistori00tard/page/n476/mode/1up">p. 331</ref>.</witness>
 				</listWit>
 			</div><div type="dissertation">
 				<p>Puisqu’il n’est pas possible de déterminer avec certitude le style de changement du millésime pour cet acte (Annonciation ou Pâques), les termes indiqués correspondent à la fourchette de datation la plus large.</p>
@@ -1454,7 +1463,7 @@
 					<witness n="C">Copie du XVIII<hi rend="sup">e</hi> s. ; Arch. nat., S 1612, n<hi rend="sup">o</hi> 7 ; sans indication de source, peut-être indirectement d’après <hi rend="i">B</hi>.</witness>
 				</listWit>
 				<listWit type="édition">
-					<witness n="a"><hi rend="i">Gallia christiana</hi>, t. X, Paris, 1751, <hi rend="i">Instrumenta</hi>, col. 219 (édition partielle).</witness>
+					<witness n="a" source="https://books.google.com/books?id=BK0Uqas_HU8C"><hi rend="i">Gallia christiana</hi>, t. X, Paris, 1751, <hi rend="i">Instrumenta</hi>, col. 219 (édition partielle).</witness>
 				</listWit>
 				<listWit type="indiqué">
 					<witness>Inventaire, Arch. nat., S *1624, <hi rend="i">Borrest, primordiaux</hi>, n<hi rend="sup">o</hi> 1, p. 165. — Bréquigny/J.-M. Pardessus, <hi rend="i">Table chronologique</hi>, t. IV, Paris, 1836, p. 12.</witness>
